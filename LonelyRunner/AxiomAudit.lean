@@ -32,6 +32,9 @@ project-specific axiom.
 #print axioms LonelyRunner.card_pivotCandidates
 #print axioms LonelyRunner.circleNorm_nat_div_ge
 #print axioms LonelyRunner.pivotResidueWitness
+#print axioms LonelyRunner.card_strictCyclicBall
+#print axioms LonelyRunner.card_mul_mod_strictCyclicBall
+#print axioms LonelyRunner.card_pivotBadResidues_exact
 #print axioms LonelyRunner.circleNorm_mul_abs_right
 #print axioms LonelyRunner.exists_stationaryWitness_abs_iff
 #print axioms LonelyRunner.exists_stationaryWitness_scale_iff

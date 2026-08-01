@@ -7,6 +7,7 @@ import LonelyRunner.FastRunnerInsertion
 import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
+import LonelyRunner.PivotCounts
 import LonelyRunner.Normalization
 import LonelyRunner.SmallDimensions
 
