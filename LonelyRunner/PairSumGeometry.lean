@@ -43,6 +43,58 @@ def PositiveIntegerPairSumCertificateConjecture : Prop :=
       Function.Injective speeds → (∀ i, 0 < speeds i) →
         PairSumCertificate (n + 1) speeds
 
+/-- The natural pair-sum certificate is exactly the corresponding finite
+family of closed circle inequalities.  This theorem retains the chosen pair
+and reduced numerator, unlike the witness-only corollary below. -/
+theorem pairSumCertificate_iff_pair_time {n N : ℕ} (speeds : Fin n → ℕ)
+    (hN : 0 < N) (hspeeds : ∀ i, 0 < speeds i) :
+    PairSumCertificate N speeds ↔
+      ∃ p q : Fin n, p ≠ q ∧
+        ∃ r : ℕ, r < speeds p + speeds q ∧
+          ∀ i, (N : ℝ)⁻¹ ≤
+            circleNorm (((r : ℝ) / ((speeds p + speeds q : ℕ) : ℝ)) *
+              (speeds i : ℝ)) := by
+  constructor
+  · rintro ⟨p, q, hpq, r, hr, hgood⟩
+    refine ⟨p, q, hpq, r, hr, fun i => ?_⟩
+    let D := speeds p + speeds q
+    have hD : 0 < D := Nat.add_pos_left (hspeeds p) (speeds q)
+    have hND : (D : ℝ) ≤ (N : ℝ) *
+        (cyclicResidueDistance D (r * speeds i) : ℝ) := by
+      exact_mod_cast hgood i
+    have hNreal : (0 : ℝ) < (N : ℝ) := by exact_mod_cast hN
+    have hDreal : (0 : ℝ) < (D : ℝ) := by exact_mod_cast hD
+    have hphase :
+        ((r * speeds i : ℕ) : ℝ) / (D : ℝ) =
+          ((r : ℝ) / (D : ℝ)) * (speeds i : ℝ) := by
+      push_cast
+      ring
+    change (N : ℝ)⁻¹ ≤
+      circleNorm (((r : ℝ) / (D : ℝ)) * (speeds i : ℝ))
+    rw [← hphase, circleNorm_nat_div_eq, inv_eq_one_div]
+    exact (div_le_div_iff₀ hNreal hDreal).2 (by
+      simpa [mul_comm] using hND)
+  · rintro ⟨p, q, hpq, r, hr, hgood⟩
+    refine ⟨p, q, hpq, r, hr, fun i => ?_⟩
+    let D := speeds p + speeds q
+    have hD : 0 < D := Nat.add_pos_left (hspeeds p) (speeds q)
+    have hNreal : (0 : ℝ) < (N : ℝ) := by exact_mod_cast hN
+    have hDreal : (0 : ℝ) < (D : ℝ) := by exact_mod_cast hD
+    have hphase :
+        ((r * speeds i : ℕ) : ℝ) / (D : ℝ) =
+          ((r : ℝ) / (D : ℝ)) * (speeds i : ℝ) := by
+      push_cast
+      ring
+    have hi := hgood i
+    change (N : ℝ)⁻¹ ≤
+      circleNorm (((r : ℝ) / (D : ℝ)) * (speeds i : ℝ)) at hi
+    rw [← hphase, circleNorm_nat_div_eq, inv_eq_one_div] at hi
+    have hND : (D : ℝ) ≤ (N : ℝ) *
+        (cyclicResidueDistance D (r * speeds i) : ℝ) := by
+      have := (div_le_div_iff₀ hNreal hDreal).1 hi
+      simpa [mul_comm] using this
+    exact_mod_cast hND
+
 /-- The cyclic-residue inequalities in a pair-sum certificate give the exact
 closed circle-distance inequalities at its rational time. -/
 theorem pairSumCertificate_circleNorm {n N : ℕ} (speeds : Fin n → ℕ)

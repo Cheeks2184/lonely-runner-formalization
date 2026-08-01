@@ -61,7 +61,8 @@ at the boundary.
 
 `LonelyRunner/PairSumGeometry.lean` defines this as `PairSumCertificate` and
 kernel-checks both the exact residue-to-circle bridge
-`pairSumCertificate_circleNorm` and
+`pairSumCertificate_iff_pair_time`, its witness corollary
+`pairSumCertificate_circleNorm`, and
 
 ```text
 PositiveIntegerPairSumCertificateConjecture -> PositiveIntegerConjecture.
