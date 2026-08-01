@@ -17,6 +17,8 @@ import LonelyRunner.KroneckerAveraging
 import LonelyRunner.KroneckerCharacters
 import LonelyRunner.KroneckerSeparationSetup
 import LonelyRunner.KroneckerSeparation
+import LonelyRunner.RationalRelationSpace
+import LonelyRunner.BHKAdjacentRatios
 import LonelyRunner.SmallDimensions
 
 /-!

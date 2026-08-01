@@ -61,6 +61,9 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_mFourier_separating
 #print axioms LonelyRunner.orbitHom_mem_orbitTopologicalClosure_of_relations
 #print axioms LonelyRunner.orbitHom_mem_closure_range_of_relations
+#print axioms LonelyRunner.velocity_reconstruction
+#print axioms LonelyRunner.integer_relation_annihilates_row
+#print axioms LonelyRunner.bhk_adjacentRatioCombination
 #print axioms LonelyRunner.twoMovingSpeeds_of_abs_le
 #print axioms LonelyRunner.twoMovingSpeeds
 #print axioms LonelyRunner.twoMovingRunners
