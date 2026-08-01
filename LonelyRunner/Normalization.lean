@@ -14,11 +14,8 @@ namespace LonelyRunner
 distance at any fixed time. -/
 theorem circleNorm_mul_abs_right (time speed : ℝ) :
     circleNorm (time * |speed|) = circleNorm (time * speed) := by
-  calc
-    circleNorm (time * |speed|) = circleNorm |time * |speed|| :=
-      (circleNorm_abs _).symm
-    _ = circleNorm |time * speed| := by simp [abs_mul]
-    _ = circleNorm (time * speed) := circleNorm_abs _
+  rw [← circleNorm_abs (time * |speed|), ← circleNorm_abs (time * speed)]
+  simp [abs_mul]
 
 /-- Multiplying every speed by a common nonzero real scale can be undone by
 dividing the witnessing time by that scale. -/
