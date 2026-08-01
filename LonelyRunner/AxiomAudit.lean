@@ -58,6 +58,9 @@ project-specific axiom.
 #print axioms LonelyRunner.continuous_integral_add_closedSubgroup
 #print axioms LonelyRunner.integral_mFourier_closedSubgroup_eq_zero_of_exists_ne_one
 #print axioms LonelyRunner.closedSubgroupCosetSeparator_eq_one
+#print axioms LonelyRunner.exists_mFourier_separating
+#print axioms LonelyRunner.orbitHom_mem_orbitTopologicalClosure_of_relations
+#print axioms LonelyRunner.orbitHom_mem_closure_range_of_relations
 #print axioms LonelyRunner.twoMovingSpeeds_of_abs_le
 #print axioms LonelyRunner.twoMovingSpeeds
 #print axioms LonelyRunner.twoMovingRunners

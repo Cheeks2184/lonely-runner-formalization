@@ -16,6 +16,7 @@ import LonelyRunner.KroneckerOrbit
 import LonelyRunner.KroneckerAveraging
 import LonelyRunner.KroneckerCharacters
 import LonelyRunner.KroneckerSeparationSetup
+import LonelyRunner.KroneckerSeparation
 import LonelyRunner.SmallDimensions
 
 /-!
