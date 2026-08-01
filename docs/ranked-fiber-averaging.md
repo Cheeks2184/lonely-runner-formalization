@@ -159,8 +159,10 @@ pure Hall or random-order argument.
 The exact natural-mask implementation in
 `scripts/search_fiber_average.py` found:
 
-- no RF-UNIF failure among every primitive tuple with three through eight
-  speeds selected from `1,...,15`;
+- no RF-UNIF failure in the complete primitive boxes with three speeds through
+  `40`, four through `30`, five through `20`, six through `15`, and seven
+  through `12` (55,265 tuples in total); the previously recorded complete
+  three-through-eight-speed boxes in `1,...,15` also remain clean;
 - no failure in 250 deterministic primitive ten-speed samples through speed
   `100` with seed `37`;
 - no failure in 100 deterministic primitive twelve-speed samples through
@@ -169,6 +171,17 @@ The exact natural-mask implementation in
   `(1,2,5,7,9,11,12,13)` and `(1,5,7,8,9,11,13,15)`.
 
 This is evidence only. No height bound or uniform proof of RF-UNIF is known.
+
+Further exact diagnostics expose useful symmetries but do not prove
+strictness.  Multiplying every speed by `d` multiplies each bad-set size,
+fiber intersection, additive bound, ranked score, candidate count, and margin
+by `d`.  At a fixed pivot, each bad mask depends on a nonpivot speed only up
+to sign and residue modulo `N*A`.  The optimized additive bound is at most the
+ranked expectation because some order is no worse than the average.  Finally,
+the ranked inequality is genuinely pivot-sensitive: for consecutive tuples
+the largest-speed pivot first fails in the tested cases at 14 and 15 speeds,
+with ranked excesses `-37/20` and `-7597/1260`, while other pivots in each
+tuple have positive best excess `8`.
 
 Reproduce the exact computations with:
 

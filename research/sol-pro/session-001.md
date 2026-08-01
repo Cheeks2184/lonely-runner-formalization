@@ -1001,3 +1001,15 @@ and telescoping.  Sol Pro was asked for a genuinely arithmetic cross-pivot
 inequality, a concrete minimal-failure structure, or a counterexample to
 `RF-UNIF`.  The rejected pairwise and second-moment compressions, literal
 unions, and unbounded refinement were excluded.
+
+The parallel exact audit was stopped at a deterministic boundary.  It found
+no all-pivot ranked failure in complete primitive boxes through three speeds
+and maximum `40`, four/`30`, five/`20`, six/`15`, and seven/`12`, nor in the
+recorded residual boxes through ten speeds.  A targeted family audit of 101
+consecutive, gapped, arithmetic-progression, near-multiple, divisor-rich, and
+previously hard tuples found no additive failure.  The ranked condition is
+pivot-sensitive: the largest-speed pivot of consecutive 14- and 15-speed
+tuples has negative ranked excess, while another pivot has excess `8` in each
+case.  Common scaling and fixed-pivot speed reduction modulo `N*A` up to sign
+were verified exactly.  None of these finite or symmetry observations proves
+the cross-pivot inequality.
