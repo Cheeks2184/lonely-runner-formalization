@@ -203,8 +203,15 @@ This proves `exists_mFourier_separating`, followed by
 `orbitHom_mem_orbitTopologicalClosure_of_relations` and the ordinary set form
 `orbitHom_mem_closure_range_of_relations`.
 
-The remaining Lean gap is now the preceding BHK linear-algebra construction:
-from a positive real tuple with an irrational coordinate ratio, build a
-rational vector annihilated by every integer relation of the tuple, with no
-zero coordinates and with a repeated absolute value. The paper obtains it
-from a rational basis of the relation kernel and an adjacent-ratio argument.
+The BHK linear-algebra construction and endpoint transfer are now formalized.
+`RationalRelationSpace.lean` constructs rational coordinate rows;
+`PositiveRationalRelation.lean` finds a positive compatible rational row
+combination; `BHKNongenericRow.lean` detects an irrational coordinate ratio;
+and the `BHKAdjacent*`, `BHKBridgeAssembly`, and `BHKPositiveCollision`
+modules produce the nowhere-zero collision vector with a strict magnitude-
+cardinality drop.  `BHKCollisionToWitness.lean` carries the lower-dimensional
+rational witness through the open strict-good cube, and
+`BHKRealReduction.lean` completes both the rational-collinear and sign cases.
+The resulting compiled theorem is
+`conjecture_iff_positiveIntegerConjecture`; the unresolved problem is proving
+either side of that equivalence, not the real-to-integer reduction itself.

@@ -21,12 +21,13 @@ uniform certificate proposition. This does not supply that uniform
 certificate. Exact common-denominator clearing and finite-range deduplication
 are also kernel-checked, giving an equivalence between the positive-natural
 formulation and both the distinct and repeated positive-rational formulations.
-The BHK-sufficient one-way multidimensional Kronecker orbit-closure theorem is
-also kernel-checked. Rational basis rows, relation preservation, and the
-adjacent-ratio algebra are now kernel-checked as well. Completing the
-real-to-rational reduction still requires the positive rational dual
-approximation, a nonproportional second dual, and the final open-neighborhood
-assembly.
+The full Bohman--Holzman--Kleitman real-to-rational reduction is now
+kernel-checked, including the one-way multidimensional Kronecker theorem,
+rational relation-space construction, collision/cardinality drop, strict
+open-neighborhood transfer, rational-collinear branch, and sign normalization.
+Consequently `Conjecture ↔ PositiveIntegerConjecture` is a compiled theorem.
+This equivalence does not prove either proposition; the uniform positive-
+integer arithmetic problem remains open.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or

@@ -64,6 +64,16 @@ project-specific axiom.
 #print axioms LonelyRunner.velocity_reconstruction
 #print axioms LonelyRunner.integer_relation_annihilates_row
 #print axioms LonelyRunner.bhk_adjacentRatioCombination
+#print axioms LonelyRunner.exists_adjacent_image_values
+#print axioms LonelyRunner.bhk_collisionWitness_of_adjacentRatios
+#print axioms LonelyRunner.exists_positive_rational_of_integer_relations
+#print axioms LonelyRunner.exists_rationalRow_ratio_ne_of_irrational
+#print axioms LonelyRunner.exists_bhk_collisionWitness_of_irrational
+#print axioms LonelyRunner.exists_stationaryWitness_of_rational_collision
+#print axioms LonelyRunner.positiveRationalConjecture_implies_positiveRealWitness
+#print axioms LonelyRunner.positiveRationalConjecture_implies_stationaryConjecture
+#print axioms LonelyRunner.stationaryConjecture_iff_positiveRationalConjecture
+#print axioms LonelyRunner.conjecture_iff_positiveIntegerConjecture
 #print axioms LonelyRunner.twoMovingSpeeds_of_abs_le
 #print axioms LonelyRunner.twoMovingSpeeds
 #print axioms LonelyRunner.twoMovingRunners

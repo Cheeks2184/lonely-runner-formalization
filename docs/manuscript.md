@@ -121,10 +121,24 @@ declarations
 `exists_mFourier_separating` and
 `orbitHom_mem_closure_range_of_relations` prove that inclusion of integer
 relation lattices implies the pointwise orbit-closure inclusion used by BHK.
-This still does not cover arbitrary irrational real ratios by itself: the
-remaining unformalized part constructs the special rational vector in the
-annihilator of the real tuple's integer relations and proves its coordinate
-properties.
+The remaining BHK construction is now formalized as well.  A rational basis
+of the finite `ℚ`-span of the velocities supplies coordinate rows.
+`exists_positive_rational_of_integer_relations` uses density of rational
+basis coefficients inside a finite open positivity cone.  If a selected real
+speed ratio is irrational, `exists_rationalRow_ratio_ne_of_irrational` proves
+that one basis row has nonconstant ratios relative to that positive rational
+tuple.  Finite adjacent-ratio selection and the BHK linear combination then
+produce a nowhere-zero compatible rational tuple whose magnitude image has
+strictly smaller cardinality.
+
+`exists_stationaryWitness_of_rational_collision` invokes the repeated
+positive-rational conjecture on that smaller magnitude image.  Its bound is at
+least `1/m`, strictly above the desired `1/(m+1)` threshold, so an open torus
+neighborhood transfers through orbit closure without losing the endpoint.
+`BHKRealReduction.lean` handles the rational-collinear alternative, removes
+coordinate signs, and composes all earlier equivalences to prove
+`conjecture_iff_positiveIntegerConjecture`.  This completes the reduction but
+does not prove the equivalent positive-integer conjecture.
 
 Two further structured classes are proved in `docs/structured-classes.md`.
 The first uses the explicit time determined by a positive base scale when

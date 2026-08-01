@@ -149,13 +149,10 @@ Completed milestones are the canonical and stationary equivalences, the
 one-moving-runner base case, the quantitative fast-runner insertion theorem,
 and the exact fixed-tuple checker. The live priorities are now:
 
-1. Complete the real-to-integer reduction. Exact denominator clearing, the
-   all-dimensional repeated-rational bridge, closed-subgroup character
-   separation, and the BHK-sufficient one-way multidimensional Kronecker
-   theorem now compile. Rational basis rows, relation preservation, and the
-   adjacent-ratio algebra also compile. The live piece is BHK's positive-dual
-   approximation and finite-dimensional construction of a nonzero-coordinate
-   rational vector with a repeated absolute value.
+1. Attack the positive-integer formulation now proved exactly equivalent to
+   the canonical real conjecture. The entire BHK real-to-rational reduction,
+   including its endpoint topology and finite-dimensional collision argument,
+   now compiles.
 2. Make bounded modular certificates kernel-checkable by encoding and checking
    selected-parent intersection data.
 3. Prove or refute the exact uniform pivot-certificate proposition now known

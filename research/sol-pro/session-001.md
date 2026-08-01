@@ -787,3 +787,34 @@ obligation in Route B.  Its exact declaration and several cited API names must
 therefore be compiler-audited rather than trusted.  Independent work had
 already begun on both the rational basis-coordinate construction and the
 adjacent-ratio calculation when this response arrived.
+
+## Prompt 18: positive rational row combination
+
+The newly compiled rational-basis rows, reconstruction, relation preservation,
+finite adjacent-value selection, and collision assembly were reported to Sol
+Pro.  It was asked for a complete Lean 4.32.1 proof that rational basis
+coefficients can be chosen so every row combination is positive, using
+`DenseRange.piMap` and `Rat.denseRange_cast`.  It was also asked to audit the
+simpler observation that an irrational coordinate ratio must be detected by
+one existing rational basis row relative to the positive rational tuple.
+
+## Response 18 and independent completion
+
+Sol Pro honestly reported that its auxiliary execution environment lacked the
+project and a Lean toolchain.  It identified the correct finite open-cone and
+density strategy but stopped at `IsOpen U`; it also endorsed the basis-row
+irrationality argument.  One cited identifier, `Irrational.ne_rat`, is not the
+pinned API (`Irrational.ne_rational` is available), so no code from this
+response was accepted without checking.
+
+Independent formalization then completed both requested theorems.  The open
+finite intersection and `DenseRange.piMap` construction produce a positive
+rational tuple preserving all integer relations.  A separate compiled lemma
+uses `velocity_reconstruction` to show that if every rational basis row had the
+same selected coordinate ratio relative to that tuple, the original real
+speed ratio would be a rational cast, contradicting irrationality.  Together
+with the compiled adjacent-ratio and collision modules, this gives a
+nowhere-zero rational compatible tuple with strictly fewer distinct absolute
+values.  The endpoint-safe closure transfer to an actual real-orbit witness is
+also now compiled; final all-dimensional case splitting and sign normalization
+remain under audit.
