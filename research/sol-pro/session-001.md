@@ -901,3 +901,91 @@ are now formalized in `FiberCredits.lean`; the failed uniform premise is not.
 The exact optimized search, brute-permutation cross-check, hard-tuple tables,
 and bounded coverage data are recorded in `docs/fiberwise-hall-audit.md` and
 `scripts/search_fiber_hall.py`.
+
+## Response 21: balanced versus additive fiber credit
+
+Sol Pro correctly identified that the counterexample rejects only the common-
+`q` balanced relaxation, not the sharper additive fiber-credit bound already
+formalized in `exists_mem_avoiding_of_fiberCredit_sum_lt_card`.  For
+`(1,2,3,5)`, pivot speed `3` and order `(1,2,5)` give insertion costs
+`4,2,4`, hence additive bound `10 < 12`, while the common-`q` envelope uses
+`q=4` and reaches `12`.  The existing search optimized the latter bottleneck
+objective exactly; it did not claim to optimize the additive sum.
+
+The response then proposed a two-level strengthening: choose an anchor parent,
+partition each child fiber again by the anchor's modular target, count every
+subfiber covered by the anchor, and on uncovered subfibers credit the best
+remaining parent.  This is generically sound, dominates the one-level bound,
+and is still computable from fixed-depth simultaneous congruence counts.
+Unbounded refinement eventually becomes literal union enumeration, so the
+substantive question is whether some uniformly bounded depth suffices.
+
+Exact additive-objective search and an abstract Lean proof of the two-level
+subfiber inequality were started.  No uniformity claim is accepted until both
+are independently checked.
+
+## Prompt 22: additive fiber-credit frontier
+
+The exact additive subset DP was reported to Sol Pro after it found no failure
+in large complete primitive/residual boxes through ten speeds or in 5,500
+deterministic random residual tuples through twelve speeds and speed 200.  The
+generic additive certificate and the two-level anchored strengthening are both
+now Lean-checked.  Sol Pro was asked for a genuine global ordering/arithmetic
+inequality, a structural description of a minimal failure, or a concrete
+counterexample construction.  Literal unions, unbounded refinement, and the
+rejected second-moment condition were excluded.
+
+## Response 22: ranked random-order reduction
+
+Sol Pro did not claim a proof of the additive criterion.  It derived a new
+generic averaging identity.  For a fixed child fiber, sort its intersections
+with the other possible parents as
+
+```text
+nu_1 >= nu_2 >= ... >= nu_p.
+```
+
+In a uniform random order the expected largest intersection contributed by a
+preceding parent is exactly
+
+```text
+sum_{q=1}^p nu_q / (q * (q + 1)).
+```
+
+The coefficient is independently verified: the event that the credited
+maximum is at least a given height has probability `c/(c+1)`, where `c` is
+the number of parents reaching that height; summing the tail probabilities
+and telescoping gives `1/(q*(q+1))`.  Linearity then proves that some order has
+additive bound no larger than the resulting ranked expectation.  This is a
+generic finite set-system theorem and supplies no strict inequality by itself.
+
+The response isolated the first unsupported arithmetic assertion as
+`RF-UNIF`: some pivot must make the ranked expected upper bound strictly less
+than the `n*A` pivot-candidate count.  It also gave a pair-congruence count by
+CRT and correctly subtracted the solutions `r=N*s` modulo `A`.  An independent
+audit sharpened this to the coordinate-free condition: a simultaneous system
+`a_i*r = t_i (mod M)` has `g=gcd(M,a_1,...,a_k)` solutions exactly when every
+`g` divides `t_i` and every cross difference is zero modulo `M*g`; candidate
+counts subtract the analogous `h=gcd(A,a_1,...,a_k)` term with divisibility by
+`N*h`.  Pair and triple versions were exhaustively/randomly checked, but are
+not yet kernel-checked.
+
+Independent exact computation reproduced Sol Pro's reported values:
+
+```text
+(1,2,5,7,9,11,12,13), pivot 7:
+  S=82, |R|=56, Q=89/3, expected bound=157/3 < 56.
+(1,5,7,8,9,11,13,15), pivot 8:
+  S=92, |R|=64, Q=168/5, expected bound=292/5 < 64.
+(1,2,3,5,7,8,12), pivot 5:
+  expected bound=69/2 < 35.
+```
+
+The weaker compression using only total pair intersections and the largest
+parent per fiber was rejected.  A separate exact audit found the still simpler
+pairwise-average criterion fails at every pivot of `(1,2,5,6,8)`, while the
+ranked expectation and optimized additive order both give `23<25` at pivot
+`5`.  Exact ranked search found no failure among all primitive 3--8 speed
+tuples in `1..15` or the documented larger samples.  This is evidence only;
+the ranked modular inequality and the more general optimized-order assertion
+remain open.
