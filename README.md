@@ -67,6 +67,8 @@ disproof claim.
   dichotomy.
 - `docs/hall-overlap-credits.md`: capacitated Hall accounting, exact cut
   counterexamples, and the remaining arithmetic cut inequalities.
+- `docs/fiberwise-hall-audit.md`: exact fiber-credit certificates, bounded
+  coverage, and the smallest counterexample to their uniformity.
 - `docs/pair-sum-geometry.md`: exact pair-sum certificates, restricted-selector
   counterexamples, and bounded unrestricted searches.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
@@ -81,6 +83,8 @@ disproof claim.
   fast/band/divisor/pivot induction branches.
 - `scripts/search_hall_credits.py`: exact matching and truncated Hall-cut
   counterexample search.
+- `scripts/search_fiber_hall.py`: exact optimized fiber-credit search and
+  brute-order regression audit.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.

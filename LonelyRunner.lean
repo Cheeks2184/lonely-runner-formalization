@@ -11,6 +11,7 @@ import LonelyRunner.PivotResidues
 import LonelyRunner.PivotCounts
 import LonelyRunner.PivotBoundary
 import LonelyRunner.HallCredits
+import LonelyRunner.FiberCredits
 import LonelyRunner.PairSumGeometry
 import LonelyRunner.IntegerInduction
 import LonelyRunner.Normalization

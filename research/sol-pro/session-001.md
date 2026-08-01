@@ -884,3 +884,20 @@ integer relation, but a separate relation-elimination theorem is still needed;
 short relations alone do not bound speed height.  Independent computation and
 generic Lean formalization of the new fiberwise Hall bound were started before
 accepting its reported tables or CRT formula.
+
+## Prompt 21: fiberwise counterexample
+
+Independent exact computation verified both reported hard-tuple tables, but
+then refuted uniform fiberwise balanced growth at `(1,2,3,5)`.  For pivot
+speeds `1,2,3,5`, the optimal bounds over every ordering are respectively
+`4,8,12,20`, exactly the corresponding candidate-set cardinalities, so no
+strict certificate exists.  The tuple itself has the valid witness `t=1/4`.
+These results were returned to Sol Pro with a request for a stronger
+within-fiber interaction bound or an explicit admission that the route is
+only partial.
+
+The generic fiber-credit inequality and balanced ordered-union implication
+are now formalized in `FiberCredits.lean`; the failed uniform premise is not.
+The exact optimized search, brute-permutation cross-check, hard-tuple tables,
+and bounded coverage data are recorded in `docs/fiberwise-hall-audit.md` and
+`scripts/search_fiber_hall.py`.

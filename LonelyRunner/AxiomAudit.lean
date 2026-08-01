@@ -49,6 +49,8 @@ project-specific axiom.
 #print axioms LonelyRunner.positiveIntegerConjecture_iff_divisorOrUncoveredPivotPrinciple
 #print axioms LonelyRunner.capacitatedHall_iff_existsInjective
 #print axioms LonelyRunner.card_orderedFinsetUnion_add_orderedOverlapCredit
+#print axioms LonelyRunner.fiberCredit_le_card_inter_biUnion
+#print axioms LonelyRunner.exists_mem_avoiding_of_balanced_fiberCredit
 #print axioms LonelyRunner.pairSumCertificate_iff_pair_time
 #print axioms LonelyRunner.positiveIntegerPairSumCertificateConjecture_imp_positiveIntegerConjecture
 #print axioms LonelyRunner.circleNorm_mul_abs_right
