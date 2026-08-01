@@ -51,6 +51,8 @@ project-specific axiom.
 #print axioms LonelyRunner.clearRationalSpeed_cast
 #print axioms LonelyRunner.clearRationalSpeed_injective
 #print axioms LonelyRunner.positiveIntegerConjecture_iff_distinctPositiveRationalConjecture
+#print axioms LonelyRunner.distinctPositiveRationalConjecture_iff_positiveRationalConjecture
+#print axioms LonelyRunner.positiveIntegerConjecture_iff_positiveRationalConjecture
 #print axioms LonelyRunner.twoMovingSpeeds_of_abs_le
 #print axioms LonelyRunner.twoMovingSpeeds
 #print axioms LonelyRunner.twoMovingRunners

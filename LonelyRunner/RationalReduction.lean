@@ -1,6 +1,8 @@
 import LonelyRunner.Formulations
 import LonelyRunner.Normalization
 import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Data.Fintype.EquivFin
+import Mathlib.Data.Set.Finite.Range
 
 namespace LonelyRunner
 
@@ -72,7 +74,7 @@ theorem clearRationalSpeed_injective {n : ℕ} (speeds : Fin n → ℚ)
   apply hinjective
   exact Rat.cast_injective hratCast
 
-/-- The fixed-dimensional positive rational formulation with distinct speeds. -/
+/-- The all-dimensional positive rational formulation with distinct speeds. -/
 def DistinctPositiveRationalConjecture : Prop :=
   ∀ (n : ℕ), 1 ≤ n →
     ∀ speeds : Fin n → ℚ,
@@ -113,5 +115,79 @@ theorem positiveIntegerConjecture_iff_distinctPositiveRationalConjecture :
       hRational n hn rationalSpeeds hrationalInjective hrationalPos
     refine ⟨time, fun i => ?_⟩
     simpa [circleNorm, rationalSpeeds] using htime i
+
+/-- The all-dimensional positive rational formulation allowing repeated
+speeds. Its bound still uses the original tuple cardinality. -/
+def PositiveRationalConjecture : Prop :=
+  ∀ (n : ℕ), 1 ≤ n →
+    ∀ speeds : Fin n → ℚ, (∀ i, 0 < speeds i) →
+      ∃ time : ℝ, ∀ i,
+        (((n + 1 : ℕ) : ℝ)⁻¹) ≤
+          circleNorm (time * (speeds i : ℝ))
+
+/-- Repeated positive rational speeds do not strengthen the all-dimensional
+distinct positive-rational conjecture. -/
+theorem distinctPositiveRationalConjecture_iff_positiveRationalConjecture :
+    DistinctPositiveRationalConjecture ↔ PositiveRationalConjecture := by
+  constructor
+  · intro hDistinct n hn speeds hpos
+    classical
+    let speedRange := Set.range speeds
+    letI : Fintype speedRange := (Set.finite_range speeds).fintype
+    let m := Fintype.card speedRange
+    let enumerate : Fin m ≃ speedRange := (Fintype.equivFin speedRange).symm
+    let distinctSpeeds : Fin m → ℚ := fun j => (enumerate j : ℚ)
+
+    have hm_pos : 1 ≤ m := by
+      let first : Fin n := ⟨0, Nat.zero_lt_of_lt hn⟩
+      have hRangeNonempty : Nonempty speedRange :=
+        ⟨⟨speeds first, ⟨first, rfl⟩⟩⟩
+      have hm_zero_lt : 0 < m := by
+        simpa [m] using (Fintype.card_pos_iff.mpr hRangeNonempty)
+      omega
+
+    have hDistinctSpeeds : Function.Injective distinctSpeeds := by
+      intro a b hab
+      apply enumerate.injective
+      apply Subtype.ext
+      exact hab
+
+    have hDistinctPos : ∀ j, 0 < distinctSpeeds j := by
+      intro j
+      rcases (enumerate j).property with ⟨i, hi⟩
+      change 0 < (enumerate j : ℚ)
+      rw [← hi]
+      exact hpos i
+
+    obtain ⟨time, htime⟩ :=
+      hDistinct m hm_pos distinctSpeeds hDistinctSpeeds hDistinctPos
+
+    have hm_le_n : m ≤ n := by
+      simpa [m, speedRange] using Fintype.card_range_le speeds
+
+    have hbound : (((n + 1 : ℕ) : ℝ)⁻¹) ≤ (((m + 1 : ℕ) : ℝ)⁻¹) := by
+      apply inv_anti₀
+      · positivity
+      · exact_mod_cast Nat.add_le_add_right hm_le_n 1
+
+    refine ⟨time, fun i => ?_⟩
+    let occurrence : speedRange := ⟨speeds i, ⟨i, rfl⟩⟩
+    let j : Fin m := enumerate.symm occurrence
+    have hspeed : distinctSpeeds j = speeds i := by
+      change ((enumerate (enumerate.symm occurrence) : speedRange) : ℚ) = speeds i
+      simp [occurrence]
+    calc
+      (((n + 1 : ℕ) : ℝ)⁻¹) ≤ (((m + 1 : ℕ) : ℝ)⁻¹) := hbound
+      _ ≤ circleNorm (time * (distinctSpeeds j : ℝ)) := htime j
+      _ = circleNorm (time * (speeds i : ℝ)) := by rw [hspeed]
+  · intro hRepeated n hn speeds _hinjective hpos
+    exact hRepeated n hn speeds hpos
+
+/-- Positive natural speeds, distinct positive rationals, and arbitrary
+positive rationals are equivalent as all-dimensional conjectures. -/
+theorem positiveIntegerConjecture_iff_positiveRationalConjecture :
+    PositiveIntegerConjecture ↔ PositiveRationalConjecture :=
+  positiveIntegerConjecture_iff_distinctPositiveRationalConjecture.trans
+    distinctPositiveRationalConjecture_iff_positiveRationalConjecture
 
 end LonelyRunner
