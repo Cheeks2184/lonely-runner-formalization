@@ -74,7 +74,8 @@ The composed declaration is
 `LonelyRunner.conjecture_iff_stationaryConjecture`.
 
 `LonelyRunner.PositiveIntegerConjecture` records the pairwise-distinct
-positive-integer formulation; no real-to-integer reduction is assumed.
+positive-integer formulation.  It is a definition, not an assumption; the
+equivalence with the canonical real-speed statement is proved in Section 4.
 
 ## 4. Verified partial mathematics
 
@@ -185,16 +186,22 @@ same equivalence under all quantifiers of the positive-integer conjecture.
 It neither proves the certificate proposition nor reduces real speeds to
 integers.
 
-Second, the global maximum of
-`min_i ||a_i t||` occurs on a pair-sum grid `r/(a_p+a_q)`. Third, a runner can
-be inserted over a common divisor of all other speeds when the exact orbit-size
-inequality holds, conditional on lower-dimensional LRC. The third result is
+Second, a candidate time on a pair-sum grid `r/(a_p+a_q)` is encoded by
+`PairSumCertificate`.  `pairSumCertificate_iff_pair_time` proves its exact
+equivalence with the corresponding circle inequalities, including the closed
+boundary, and
+`positiveIntegerPairSumCertificateConjecture_imp_positiveIntegerConjecture`
+proves that universal existence of such certificates would imply the
+positive-integer conjecture.  Universal existence remains open; exact small
+counterexamples reject four restricted pair-selection rules without rejecting
+unrestricted pairs.  Third, a runner can be inserted over a common divisor of
+all other speeds when the exact orbit-size inequality holds, conditional on
+lower-dimensional LRC. The third result is
 formalized by `exists_int_grid_circleNorm_ge`,
 `exists_int_coprime_grid_circleNorm_ge`, and
-`codimensionOneDivisorInsertion` in `LonelyRunner/DivisorInsertion.lean`; the
-pair-sum result remains a paper proof. These results clarify finite candidate sets and
-an inductive arithmetic class but do not bound the speed height of a
-counterexample.
+`codimensionOneDivisorInsertion` in `LonelyRunner/DivisorInsertion.lean`.
+These results clarify finite candidate sets and an inductive arithmetic class
+but do not bound the speed height of a counterexample.
 
 The current induction branches are synthesized in
 `LonelyRunner/IntegerInduction.lean`. For an appended positive natural speed,
@@ -210,6 +217,31 @@ exact map of the residual integer obstruction, not a proof of it. The finite
 audit and the first counterexample `(1,3,4)` to exhaustiveness of the three
 non-pivot structural branches are documented in
 `docs/integer-induction-cover.md`.
+
+The finite overlap layer has three additional kernel-checked interfaces.
+`HallCredits.lean` proves the exact finite capacitated Hall criterion and
+sound ordered-union overlap allocation; bounded arithmetic examples show that
+small cut sizes do not replace the full cut family.  `FiberCredits.lean`
+partitions a child bad set into disjoint target fibers and, in each fiber,
+credits only the largest intersection with one earlier parent.
+`fiberCredit_le_card_inter_biUnion` proves that these credits never
+double-count, and `exists_mem_avoiding_of_fiberCredit_sum_lt_card` converts a
+strict sum of net insertion costs into an uncovered pivot candidate.
+`TwoLevelFiberCredits.lean` refines each child fiber by an anchor parent;
+`fiberCredit_le_twoLevelFiberCredit_le_card_inter_biUnion` proves that the
+anchored score dominates the one-level score and remains below the true
+overlap.  None of these generic set-system theorems supplies the missing
+uniform modular inequality.
+
+Finally, `docs/ranked-fiber-averaging.md` derives an exact random-order
+identity for the one-level score.  If the possible-parent intersection sizes
+inside one child fiber are sorted as `nu_1 >= ... >= nu_p`, the expected
+credit is `sum_q nu_q/(q*(q+1))`.  The proof uses integer tail probabilities
+and telescoping, so ties are harmless.  Literal permutation enumeration and
+exact rational computations reproduce the identity and the documented hard
+tuples.  This generic identity is currently `proved-math`, not yet
+kernel-checked.  Its proposed arithmetic premise `RF-UNIF`--that some pivot
+has ranked expected union bound strictly below its candidate count--is open.
 
 ## 5. Remaining obstruction
 
@@ -232,3 +264,15 @@ The two-parent pattern also stops being universal in the next audited box: it
 fails for exactly two of the 1,716 residual eight-speed tuples through speed
 15. Both failures admit three-parent certificates. Thus even the strengthened
 half-parent rule remains only a computational conjecture.
+
+The strongest surviving overlap route is the optimized additive one-level
+fiber certificate.  Exact subset dynamic programming finds no failure in the
+documented complete boxes through ten speeds or in the larger deterministic
+samples, but no ordering theorem proves this for all tuples.  Random ordering
+reduces it to the stronger, falsifiable ranked inequality `RF-UNIF`; this too
+has no bounded counterexample in the recorded search and no proof.  A still
+coarser pairwise-average inequality is genuinely false at every pivot of
+`(1,2,5,6,8)`, even though the ranked and optimized bounds both succeed at
+pivot `5`.  The remaining gap is therefore arithmetic control of ranked
+simultaneous congruence counts across at least one pivot, not the generic
+finite union argument.

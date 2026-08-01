@@ -989,3 +989,15 @@ ranked expectation and optimized additive order both give `23<25` at pivot
 tuples in `1..15` or the documented larger samples.  This is evidence only;
 the ranked modular inequality and the more general optimized-order assertion
 remain open.
+
+## Prompt 23: ranked arithmetic obstruction
+
+The independently reproduced hard-tuple scores, wider exact search, and
+audited simultaneous-congruence formula were returned to Sol Pro.  A flaw in
+the informal event interpretation was made explicit: ties prevent assigning
+probability `1/(q*(q+1))` to the event that the `q`th named parent is exactly
+the maximum, although the ranked formula remains valid by integer tail sums
+and telescoping.  Sol Pro was asked for a genuinely arithmetic cross-pivot
+inequality, a concrete minimal-failure structure, or a counterexample to
+`RF-UNIF`.  The rejected pairwise and second-moment compressions, literal
+unions, and unbounded refinement were excluded.
