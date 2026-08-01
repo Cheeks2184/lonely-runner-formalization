@@ -56,11 +56,12 @@ def pivot_ranked_fiber_expectation(speeds: tuple[int, ...], pivot: int) -> dict[
     """Compute the exact random-order expectation using fiberwise ranks.
 
     Fix a child fiber and sort all other-parent intersection sizes as
-    ``y_1 >= ... >= y_(m-1)``.  In a uniformly random order, the chance that
-    ``y_j`` is the largest available predecessor value is ``1/(j(j+1))``.
-    Therefore its expected one-level credit is the corresponding weighted
-    sum.  Linearity of expectation applies across children and fibers even
-    though the credit events are dependent.
+    ``y_1 >= ... >= y_(m-1)``.  At integer height ``t``, if ``c_t`` parents
+    have intersection at least ``t``, the chance that one precedes the child
+    is ``c_t/(c_t+1)``.  The integer tail-sum formula telescopes to weights
+    ``1/(j(j+1))`` on the ranked values.  This remains valid with ties.
+    Linearity of expectation applies across children and fibers even though
+    the credit events are dependent.
     """
 
     children = tuple(i for i in range(len(speeds)) if i != pivot)

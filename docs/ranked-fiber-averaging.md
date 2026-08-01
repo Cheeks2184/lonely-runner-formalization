@@ -88,22 +88,31 @@ other nonpivot bad sets:
  y_j=|F\cap B_{c_j}|.
 \]
 
-In a uniformly random order, the credited maximum equals `y_j` exactly when
-parent `c_j` precedes `b` and the `j-1` better-ranked parents follow `b`.
-Among `b,c_1,...,c_j`, this requires `c_j` first and `b` second. Hence
+Ties make it unsafe to assign a disjoint event directly to each ranked
+parent.  Instead, for every integer height `t>=1`, let
 
 \[
- \Pr(\text{credited maximum}=y_j)=\frac{(j-1)!}{(j+1)!}
- =\frac1{j(j+1)}.
+ c_t=|\{j:y_j\geq t\}|.
 \]
 
-The remaining event, of probability `1/m`, has no preceding parent and
-credit zero. Therefore
+The credited maximum is at least `t` exactly when at least one of these
+`c_t` parents occurs before `b`.  Among `b` and those parents, `b` is first
+with probability `1/(c_t+1)`, so
+
+\[
+ \Pr(\text{credited maximum}\geq t)=\frac{c_t}{c_t+1}.
+\]
+
+The integer tail-sum formula and telescoping, with `y_m=0`, therefore give
 
 \[
  \mathbb E\max_{c\in P_b}|F\cap B_c|
+ =\sum_{t\geq1}\frac{c_t}{c_t+1}
+ =\sum_{j=1}^{m-1}(y_j-y_{j+1})\frac{j}{j+1}
  =\sum_{j=1}^{m-1}\frac{y_j}{j(j+1)}.
 \]
+
+This proof remains valid when several `y_j` are equal.
 
 Linearity of expectation across all fibers and children gives an exact
 formula despite dependencies among their predecessor events. In particular,
