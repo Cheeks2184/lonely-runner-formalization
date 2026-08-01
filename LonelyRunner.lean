@@ -13,6 +13,7 @@ import LonelyRunner.PivotBoundary
 import LonelyRunner.HallCredits
 import LonelyRunner.FiberCredits
 import LonelyRunner.TwoLevelFiberCredits
+import LonelyRunner.RankedFiberAveraging
 import LonelyRunner.PairSumGeometry
 import LonelyRunner.IntegerInduction
 import LonelyRunner.Normalization

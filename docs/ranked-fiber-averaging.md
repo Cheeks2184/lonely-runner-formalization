@@ -4,7 +4,9 @@ This note gives a new exact generic inequality for the one-level additive
 fiber-credit certificate and audits the arithmetic statement that would be
 needed to turn it into a uniform Lonely Runner proof. The generic averaging
 lemma is proved below on paper and independently checked by literal
-permutation enumeration. The remaining strict modular inequality is open.
+permutation enumeration. The proposed strict modular inequality is now
+rejected by an exact nine-speed counterexample; the optimized deterministic
+ordering problem remains open.
 
 ## 1. Setup
 
@@ -131,7 +133,7 @@ partitions. `tests/test_fiber_average.py` literally enumerates every order of
 the tuple `(1,2,5,6,8)` at pivot `5` and confirms that both the computed
 expectation and the formula equal `23`.
 
-## 4. The genuinely arithmetic conjecture
+## 4. A falsified arithmetic strengthening
 
 The random-order theorem reduces UNIF-06 to the following falsifiable
 number-theoretic inequality:
@@ -147,17 +149,56 @@ If RF-UNIF holds, `RANK-FIBER-AVG` supplies a concrete order whose one-level
 additive credit is strict, and the existing Lean theorem
 `exists_mem_avoiding_of_fiberCredit_sum_lt_card` supplies a pivot witness.
 
-The distinction is essential. The averaging theorem alone cannot imply
+RF-UNIF is false.  The primitive tuple
+
+```text
+(2,3,7,9,10,12,15,16,19)
+```
+
+has the following exact values at every pivot.  Here `E=S-Q` is the uniform-
+order expected additive upper bound.
+
+| pivot | `|R|` | `S` | `Q` | `E` |
+|---:|---:|---:|---:|---:|
+| 2 | 18 | 24 | 6 | 18 |
+| 3 | 27 | 42 | 251/20 | 589/20 |
+| 7 | 63 | 98 | 4517/140 | 9203/140 |
+| 9 | 81 | 114 | 1933/60 | 4907/60 |
+| 10 | 90 | 134 | 2531/60 | 5509/60 |
+| 12 | 108 | 156 | 597/14 | 1587/14 |
+| 15 | 135 | 206 | 7061/105 | 14569/105 |
+| 16 | 144 | 224 | 4741/60 | 8699/60 |
+| 19 | 171 | 266 | 39491/420 | 72229/420 |
+
+Thus `E>=|R|` at every pivot, with equality only at pivot `2`.  Nevertheless
+the deterministic additive criterion succeeds at pivot `3` with order
+
+```text
+(10,15,2,16,7,9,12,19)
+```
+
+and insertion costs `(9,8,2,2,0,0,2,2)`, totaling `25<27`.  The explicit
+time `t=7/30` has exact distances
+
+```text
+(7/15,3/10,11/30,1/10,1/3,1/5,1/2,4/15,13/30),
+```
+
+so the tuple itself satisfies the target `1/10`.  RF-UNIF's failure therefore
+rejects only uniform random ordering: a rare coordinated order can outperform
+its average substantially.  The optimized additive claim remains open.
+
+This distinction is essential. The averaging theorem alone cannot imply
 strictness for arbitrary set systems: if every `B_b=R` and each child has one
 fiber, the expected bound is exactly `|R|`, as it must be because the union
-covers `R`. Any proof of RF-UNIF must use multiplication modulo `NA`, the
-strict central interval, distinct speeds, or pivot selection. It cannot be a
-pure Hall or random-order argument.
+covers `R`.  The arithmetic counterexample shows that even multiplication
+modulo `NA`, the strict central interval, distinct speeds, and pivot selection
+do not rescue uniform averaging.
 
-## 5. Exact evidence
+## 5. Audit trail and reproduction
 
-The exact natural-mask implementation in
-`scripts/search_fiber_average.py` found:
+Before the counterexample was located, the exact natural-mask implementation
+in `scripts/search_fiber_average.py` found:
 
 - no RF-UNIF failure in the complete primitive boxes with three speeds through
   `40`, four through `30`, five through `20`, six through `15`, and seven
@@ -170,7 +211,8 @@ The exact natural-mask implementation in
 - successful certificates for the previously documented difficult tuples
   `(1,2,5,7,9,11,12,13)` and `(1,5,7,8,9,11,13,15)`.
 
-This is evidence only. No height bound or uniform proof of RF-UNIF is known.
+These bounded successes illustrate why they could not be promoted to a
+uniform claim: the first recorded failure lies outside all those boxes.
 
 Further exact diagnostics expose useful symmetries but do not prove
 strictness.  Multiplying every speed by `d` multiplies each bad-set size,
@@ -187,13 +229,17 @@ Reproduce the exact computations with:
 
 ```sh
 python3 scripts/search_fiber_average.py --tuple 1 2 5 6 8
+python3 scripts/search_fiber_average.py --tuple 2 3 7 9 10 12 15 16 19
+python3 scripts/search_fiber_hall.py --tuple 2 3 7 9 10 12 15 16 19 --objective additive --show-all-pivots
 python3 scripts/search_fiber_average.py --criterion ranked-fiber --runners 8 --max-speed 15
 python3 scripts/search_fiber_average.py --criterion ranked-fiber --runners 10 --max-speed 100 --samples 250 --seed 37
 python3 scripts/search_fiber_average.py --criterion ranked-fiber --runners 12 --max-speed 200 --samples 100 --seed 41
 python3 -m unittest tests.test_fiber_average -v
 ```
 
-The next proof obligation is to express the ranked intersection values in
-terms of gcds and short centered arithmetic progressions, then prove RF-UNIF
-for at least one pivot. Formalizing the generic permutation-expectation lemma
-in Lean is also pending.
+The next mathematical obligation is no longer RF-UNIF.  It is to explain why
+a suitably biased or adaptive global order satisfies the additive bound, or
+to find a counterexample to that optimized-order statement.  Exact gcd/CRT
+formulas for pair and triple fibers may support such an adaptive rule.
+Formalizing the valid generic permutation-expectation lemma in Lean is also
+pending and does not assume RF-UNIF.

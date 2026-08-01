@@ -240,8 +240,16 @@ credit is `sum_q nu_q/(q*(q+1))`.  The proof uses integer tail probabilities
 and telescoping, so ties are harmless.  Literal permutation enumeration and
 exact rational computations reproduce the identity and the documented hard
 tuples.  This generic identity is currently `proved-math`, not yet
-kernel-checked.  Its proposed arithmetic premise `RF-UNIF`--that some pivot
-has ranked expected union bound strictly below its candidate count--is open.
+fully kernel-checked.  Its per-fiber core is formalized by
+`average_rankedTailCredit`, and
+`exists_code_cost_lt_of_rankedTailAverage` gives the corresponding strict
+insertion-code witness.  Decoding those marginal insertion codes to one
+shared permutation for all children and fibers remains unformalized.  Its
+proposed arithmetic premise `RF-UNIF`--that some pivot
+has ranked expected union bound strictly below its candidate count--is false.
+The exact primitive tuple `(2,3,7,9,10,12,15,16,19)` fails it at every
+pivot.  This does not reject the deterministic additive route: pivot `3` has
+an optimized additive bound `25<27` and the explicit lonely time `7/30`.
 
 ## 5. Remaining obstruction
 
@@ -269,10 +277,11 @@ The strongest surviving overlap route is the optimized additive one-level
 fiber certificate.  Exact subset dynamic programming finds no failure in the
 documented complete boxes through ten speeds or in the larger deterministic
 samples, but no ordering theorem proves this for all tuples.  Random ordering
-reduces it to the stronger, falsifiable ranked inequality `RF-UNIF`; this too
-has no bounded counterexample in the recorded search and no proof.  A still
+gives the stronger ranked inequality `RF-UNIF`, now rejected by the exact
+nine-speed tuple above because a favorable order can be much better than the
+uniform-order average.  A still
 coarser pairwise-average inequality is genuinely false at every pivot of
 `(1,2,5,6,8)`, even though the ranked and optimized bounds both succeed at
-pivot `5`.  The remaining gap is therefore arithmetic control of ranked
-simultaneous congruence counts across at least one pivot, not the generic
-finite union argument.
+pivot `5`.  The remaining gap is therefore an arithmetic construction of a
+suitably biased or adaptive order, or a stronger bounded-depth overlap
+certificate, not the generic finite union argument.

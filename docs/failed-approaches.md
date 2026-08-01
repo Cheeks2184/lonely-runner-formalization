@@ -118,3 +118,25 @@ while at pivot `1` the filtered-`beta` factorization passes and the raw-`g`
 factorization fails. The regression script reproduces these values and an
 all-pivot certified failure at `(4,5,9)`. Absolute triangle bounds therefore
 discard essential cancellation and cannot serve as a uniform proof condition.
+
+## 2026-08-01: uniform ranked random-order fiber credit
+
+The exact ranked tail-sum identity correctly computes the average one-level
+fiber-credit bound over all orders, but the proposed assertion that this
+average is strict at some pivot is false.  The primitive tuple
+
+```text
+(2,3,7,9,10,12,15,16,19)
+```
+
+has expected bound at least the candidate count at every pivot.  At pivot
+speed `3`, for example, `|R|=27`, the bad-size sum is `42`, the expected
+credit is `251/20`, and the expected upper bound is `589/20>27`.
+
+This is not a failure of the optimized additive method or of Lonely Runner.
+At the same pivot, the order `(10,15,2,16,7,9,12,19)` has exact insertion
+costs `(9,8,2,2,0,0,2,2)`, totaling `25<27`; `t=7/30` is an explicit closed-
+boundary witness.  The failure mechanism is therefore genuine: a favorable
+coordinated order can be substantially better than the uniform average.
+Exact all-pivot scores and reproduction commands are in
+`docs/ranked-fiber-averaging.md`.

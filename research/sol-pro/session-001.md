@@ -1013,3 +1013,52 @@ tuples has negative ranked excess, while another pivot has excess `8` in each
 case.  Common scaling and fixed-pivot speed reduction modulo `N*A` up to sign
 were verified exactly.  None of these finite or symmetry observations proves
 the cross-pivot inequality.
+
+## Response 23: exact rejection of ranked uniformity
+
+Sol Pro supplied the primitive nine-speed tuple
+
+```text
+(2,3,7,9,10,12,15,16,19)
+```
+
+as a counterexample to `RF-UNIF`.  Independent execution of
+`search_fiber_average.py` reproduced every pivot score.  Listed as
+`(pivot, |R|, S, Q, S-Q)`, they are
+
+```text
+(2,18,24,6,18)
+(3,27,42,251/20,589/20)
+(7,63,98,4517/140,9203/140)
+(9,81,114,1933/60,4907/60)
+(10,90,134,2531/60,5509/60)
+(12,108,156,597/14,1587/14)
+(15,135,206,7061/105,14569/105)
+(16,144,224,4741/60,8699/60)
+(19,171,266,39491/420,72229/420)
+```
+
+Thus the ranked expected upper bound is never strictly below the candidate
+count.  This is not an LRC counterexample.  Independent additive subset DP
+reproduced pivot `3`, order `(10,15,2,16,7,9,12,19)`, with insertion costs
+`(9,8,2,2,0,0,2,2)` and total `25<27`.  Exact rational evaluation at
+`t=7/30` gives distances
+
+```text
+(7/15,3/10,11/30,1/10,1/3,1/5,1/2,4/15,13/30),
+```
+
+all at least `1/10`.  Uniform random ordering can therefore be worse than a
+rare globally coordinated order.  `RF-UNIF` and every nonnegative weighted
+cross-pivot argument forcing one of its individual margins positive are
+rejected; the optimized deterministic additive claim remains open.
+
+## Prompt 24: biased or adaptive ordering
+
+After exact independent verification, Sol Pro was told that `RF-UNIF` is
+rejected while the optimized additive certificate remains live.  The exact
+subset recurrence was supplied only as notation.  Sol Pro was asked for a
+non-tautological greedy potential, a tractable biased random-order law that
+survives the nine-speed counterexample, or a minimal-failure/dual theorem with
+a concrete arithmetic consequence.  Uniform averaging, pairwise and second-
+moment compression, literal unions, and unbounded refinement were excluded.

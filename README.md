@@ -41,8 +41,11 @@ exhaustive and deterministic-random searches, but its uniform arithmetic
 premise remains unproved.
 An exact random-order calculation further reduces the search for a useful
 order to a ranked sum of child-fiber/parent intersection counts.  The identity
-and extensive exact tests are recorded, while its strict modular inequality
-is explicitly left open and the generic identity is being formalized in Lean.
+and extensive exact tests are recorded.  Its proposed uniform strict modular
+inequality is now rejected by an exact nine-speed counterexample, while the
+stronger optimized-order certificate remains open.  The tie-safe per-fiber
+tail identity and deterministic average extraction are kernel-checked; the
+remaining shared-permutation bridge is documented but not yet formalized.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or

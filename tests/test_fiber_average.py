@@ -47,6 +47,28 @@ class FiberAverageTests(unittest.TestCase):
             average.first_failure(5, 9, "ranked_fiber_certified")
         )
 
+    def test_ranked_uniformity_counterexample_keeps_additive_witness(self) -> None:
+        speeds = (2, 3, 7, 9, 10, 12, 15, 16, 19)
+        report = average.tuple_report(speeds)
+        self.assertFalse(report["ranked_fiber_certified"])
+        self.assertTrue(report["additive_certified"])
+        self.assertTrue(
+            all(not pivot["strict"] for pivot in report["ranked_fiber_pivots"])
+        )
+
+        pivot_three = report["ranked_fiber_pivots"][1]
+        self.assertEqual(
+            Fraction(pivot_three["expected_credit"]), Fraction(251, 20)
+        )
+        self.assertEqual(
+            Fraction(pivot_three["expected_upper"]), Fraction(589, 20)
+        )
+        certificate = fiber_hall.find_additive_certificate(speeds)
+        self.assertIsNotNone(certificate)
+        assert certificate is not None
+        self.assertEqual(speeds[certificate.pivot], 3)
+        self.assertEqual(certificate.final_upper_bound, 25)
+
 
 if __name__ == "__main__":
     unittest.main()
