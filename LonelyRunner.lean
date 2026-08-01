@@ -12,6 +12,7 @@ import LonelyRunner.PivotCounts
 import LonelyRunner.PivotBoundary
 import LonelyRunner.Normalization
 import LonelyRunner.RationalReduction
+import LonelyRunner.KroneckerAveraging
 import LonelyRunner.SmallDimensions
 
 /-!

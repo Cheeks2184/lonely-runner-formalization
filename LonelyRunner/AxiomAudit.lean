@@ -53,6 +53,7 @@ project-specific axiom.
 #print axioms LonelyRunner.positiveIntegerConjecture_iff_distinctPositiveRationalConjecture
 #print axioms LonelyRunner.distinctPositiveRationalConjecture_iff_positiveRationalConjecture
 #print axioms LonelyRunner.positiveIntegerConjecture_iff_positiveRationalConjecture
+#print axioms LonelyRunner.continuous_integral_add_closedSubgroup
 #print axioms LonelyRunner.twoMovingSpeeds_of_abs_le
 #print axioms LonelyRunner.twoMovingSpeeds
 #print axioms LonelyRunner.twoMovingRunners
