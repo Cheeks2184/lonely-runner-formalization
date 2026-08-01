@@ -18,9 +18,12 @@ of an arbitrary real witness is equivalent to existence of a canonical finite
 modular pivot certificate. Consequently the global positive-integer
 formulation is kernel-checked as exactly equivalent to the corresponding
 uniform certificate proposition. This does not supply that uniform
-certificate, nor does it reduce arbitrary real speeds to integers. The bounded
-search and its selected-parent intersection data are not end-to-end Lean
-proofs.
+certificate. Exact common-denominator clearing and finite-range deduplication
+are also kernel-checked, giving an equivalence between the positive-natural
+formulation and both the distinct and repeated positive-rational formulations.
+The irrational real-to-rational Kronecker step remains open.
+The bounded search and its selected-parent intersection data are not
+end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
 disproof claim.
 
@@ -28,7 +31,8 @@ disproof claim.
 
 - `LonelyRunner/`: Lean definitions, formulations, proved equivalences, base
   cases through three total runners, normalization and modular-certificate
-  layers, the fast-runner insertion theorem, and the explicit axiom audit.
+  layers, rational denominator clearing, the fast-runner insertion theorem,
+  and the explicit axiom audit.
 - `docs/canonical-statement.md`: exact quantifiers, indexing, and boundary
   conventions.
 - `docs/literature.md`: primary-source literature and current known results.

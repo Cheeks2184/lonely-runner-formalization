@@ -149,8 +149,9 @@ Completed milestones are the canonical and stationary equivalences, the
 one-moving-runner base case, the quantitative fast-runner insertion theorem,
 and the exact fixed-tuple checker. The live priorities are now:
 
-1. Formalize a precise real-to-integer reduction with its Kronecker and
-   lower-dimensional dependencies exposed.
+1. Complete the real-to-integer reduction. Exact denominator clearing and the
+   all-dimensional repeated-rational bridge now compile; the live central
+   piece is the one-way multidimensional Kronecker orbit-closure theorem.
 2. Make bounded modular certificates kernel-checkable by encoding and checking
    selected-parent intersection data.
 3. Prove or refute the exact uniform pivot-certificate proposition now known
@@ -200,5 +201,8 @@ convolution. The complete formulas and strict-endpoint audit are in
 
 Obstruction: the elementary Dirichlet bound does not control the combined
 nonzero spectrum of the product of all good-set indicators at the sharp
-threshold. A uniform cancellation estimate or an arithmetic pivot-selection
+threshold. More strongly, factorwise absolute main-term domination fails at
+the certified tuple `(1,2,3)` and can change truth value under algebraically
+equivalent factorizations. A uniform signed-cancellation estimate,
+positive-definite/Riesz-product construction, or an arithmetic pivot-selection
 lemma remains open.

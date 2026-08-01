@@ -44,6 +44,30 @@ It is not the same-dimensional instruction "clear denominators." Globally,
 induction over `m`, followed by clearing denominators only for rational tuples,
 gives the usual integer equivalence.
 
+The denominator-clearing component is now kernel-checked in
+`LonelyRunner/RationalReduction.lean`. The definition
+`rationalCommonDenominator` takes the product of the positive reduced
+denominators, and `clearRationalSpeed` constructs the corresponding positive
+natural speed. The theorems `clearRationalSpeed_cast`,
+`clearRationalSpeed_pos`, and `clearRationalSpeed_injective` prove the cast,
+positivity, and distinctness obligations. Consequently
+
+```text
+PositiveIntegerConjecture ↔ DistinctPositiveRationalConjecture
+                           ↔ PositiveRationalConjecture
+```
+
+The first equivalence is
+`positiveIntegerConjecture_iff_distinctPositiveRationalConjecture`, with the
+forward witness time multiplied by the common denominator. The second is
+`distinctPositiveRationalConjecture_iff_positiveRationalConjecture`: it
+enumerates the finite range of a repeated tuple, applies the all-dimensional
+distinct statement in cardinality `m ≤ n`, and weakens the stronger
+`1/(m+1)` bound to `1/(n+1)`. The composed theorem is
+`positiveIntegerConjecture_iff_positiveRationalConjecture`. These are the
+elementary rational-to-integer and repetition steps only; they do not address
+irrational real ratios.
+
 ## Irrational-ratio branch
 
 BHK Lemma 8, reindexed, says that for `0 < delta < 1/2`, if every positive
@@ -118,6 +142,17 @@ positive-natural formulation, a fixed `m`-dimensional real instance can
 therefore depend on integer statements in several lower dimensions, not just
 dimension `m`.
 
+There is one interface distinction that must remain explicit. The BHK
+fixed-dimensional schema uses arbitrary positive rational tuples, including
+repetitions, while `DistinctPositiveRationalConjecture` is injective. The
+all-dimensional Lean theorem bridges this by deduplicating and invoking the
+distinct conjecture in the smaller cardinality; it therefore uses the global
+quantification over every dimension. If one instead assumes an injective
+statement only at one fixed cardinality and wants the same-cardinality BHK
+hypothesis, a separate padding lemma is still required. The current global
+reduction needs no such lemma. Sign normalization can create repetitions, so
+the repeated formulation remains essential.
+
 ## Closure-only warning
 
 Henze--Malikiosis, Theorem 2.2 and Lemmas 2.3 and 5.3
@@ -134,8 +169,8 @@ statement.
 
 Mathlib v4.32.1 already provides finite tori, compact topological groups,
 closure/open-set lemmas, dense rational casts, finite-dimensional rational
-linear algebra, and `Fin.succAbove`. The missing central theorem is the
-multidimensional character form of Kronecker approximation:
+linear algebra, and `Fin.succAbove`. The missing central theorem is the reverse
+direction of the multidimensional character form of Kronecker approximation:
 
 ```lean
 x in closure (Set.range (fun t : Real =>
@@ -147,6 +182,18 @@ x in closure (Set.range (fun t : Real =>
 
 The pinned tree contains the one-circle theorem
 `AddCircle.denseRange_zsmul_coe_iff`, but no suitable simultaneous theorem was
-located. This theorem must be proved rather than introduced as a project axiom.
-After it is available, the remaining work is rational-subspace algebra, finite
-reindexing, topology, and reciprocal-bound arithmetic.
+located. The full equivalence is stronger than BHK needs. It suffices to prove
+the following one-way, pointwise form: whenever every integer relation
+annihilating `u` also annihilates `w`, the point `tau*w mod 1` belongs to the
+closure of the continuous orbit `t*u mod 1`, for every real `tau`. This is
+still the hard generalized Kronecker direction.
+
+A plausible proof route is closed-subgroup character separation. If `H` is a
+closed subgroup of a finite unit torus and `x` is not in `H`, Haar-average a
+continuous function separating `H` and `x+H`, approximate it by the dense
+multivariate Fourier algebra, and use character orthogonality on `H` to find
+an integer character trivial on `H` but nontrivial at `x`. Mathlib contains
+finite tori and `UnitAddTorus.mFourierSubalgebra_closure_eq_top`, but the
+subgroup-averaging and separation-character theorem are not packaged and have
+not yet been compiled here. They must be proved rather than introduced as a
+project axiom.

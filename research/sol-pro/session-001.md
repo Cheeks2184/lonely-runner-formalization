@@ -6,6 +6,12 @@ Environment: separate signed-in ChatGPT browser conversation. Model family
 `GPT-5.6 Sol` and intelligence level `Pro` were selected through the page's
 accessibility interface.
 
+Browser control is performed against the live `ChatGPT - Google Chrome` window
+through Windows UI Automation. The Codex tool inventory does not expose a
+dedicated Chrome/Computer Use endpoint in this session, but that does not
+prevent control of the signed-in browser: the prompt editor and response
+buttons are discoverable and invocable through the host accessibility tree.
+
 ## Prompt 1: strategy generation
 
 > Act as the primary mathematical research agent on the Lonely Runner
@@ -599,3 +605,113 @@ therefore have no uniform spectral gap. A Fourier proof would need genuine
 cancellation or arithmetic correlation control across runners. No such lemma
 was supplied, so this round closes with an exact fixed-pivot formula and a
 precise obstruction, not a proof of LRC.
+
+## Prompt 14: multidimensional Kronecker routes
+
+The next pass moved to the remaining real-to-integer reduction. Sol Pro was
+given the exact character description of the continuous one-parameter orbit
+closure in `(R/Z)^m` and the fact that pinned mathlib contains only the
+one-circle theorem `AddCircle.denseRange_zsmul_coe_iff`. It was asked for
+three materially different constructions: induction from one circle,
+closed-subgroup character separation, and a BHK-specific geometry-of-numbers
+approximation lemma. Every new lemma and existing mathlib dependency had to be
+identified explicitly.
+
+## Response 14 and audit
+
+Sol Pro correctly found that the elementary induction route still needs both
+classification of continuous torus-to-circle homomorphisms and an integer
+matrix image/annihilator theorem, while the transference route simply moves the
+same hard content into inhomogeneous Kronecker or Minkowski machinery.
+
+Its most promising route separates a point from a closed finite-torus subgroup
+using Haar averaging and multivariate Fourier density. Average a continuous
+function distinguishing `H` from `x+H`; character orthogonality removes every
+Fourier term nontrivial on `H`; if all surviving characters were also trivial
+at `x`, the averaged approximants could not distinguish `0` and `x`. This is a
+valid paper proof strategy for the missing separation character.
+
+The response overstated the Lean status: subgroup averaging, its sup-norm
+contraction, orthogonality on the subgroup subtype, and extraction of an
+integer vector from `mFourier` have not been matched to compiling APIs. An
+independent search confirmed that neither Pontryagin duality nor simultaneous
+Kronecker is packaged in the pinned tree. BHK needs only the reverse,
+pointwise inclusion for targets `tau*w`, but that remains the mathematically
+hard direction.
+
+In parallel, exact common-denominator clearing was completed in Lean as
+`positiveIntegerConjecture_iff_distinctPositiveRationalConjecture`. An audit
+found one remaining interface issue: BHK applies its lower-dimensional
+rational hypothesis to a tuple with a forced repeated magnitude, whereas the
+new rational formulation is injective. A separate deduplicate-and-pad lemma is
+required.
+
+## Fourier criterion audit returned with Prompt 15
+
+Exact enumeration refuted absolute main-term domination at `(1,2,3)`, pivot
+`3`, despite good residues `3,9`; the excess is
+`(4*sqrt(3)-5)/72`. Equivalent factorizations give opposite outcomes, and
+`(4,5,9)` fails at every pivot although every pivot is certified. These facts
+and the compiled rational equivalence were returned to Sol Pro. The next task
+asks for a formalization-grade proof of the closed-subgroup separation theorem
+using exact pinned mathlib types, Haar APIs, Fourier-density declarations,
+orthogonality lemmas, and a complete dependency DAG. No completion claim is
+permitted until the theorem compiles.
+
+## Response 15: subgroup separation DAG
+
+Sol Pro proposed the expected Haar/Fourier proof. For a closed subgroup `H` of
+a finite unit torus and `x ∉ H`, use Urysohn separation on `H` and `x + H`,
+average over normalized Haar measure on `H`, approximate the invariant
+continuous function by the dense span of `UnitAddTorus.mFourier`, and use Haar
+orthogonality to extract an integer character trivial on `H` but nontrivial at
+`x`. It gave the intended theorem statement
+
+```lean
+∃ a : Fin m → ℤ,
+  (∀ h : H, UnitAddTorus.mFourier a (h : UnitAddTorus (Fin m)) = 1) ∧
+  UnitAddTorus.mFourier a x ≠ 1
+```
+
+but no compiling proof.
+
+The pinned API audit confirmed
+`MeasureTheory.Measure.addHaarMeasure`,
+`MeasureTheory.Measure.addHaarMeasure_self`,
+`MeasureTheory.integral_add_left_eq_self`,
+`exists_continuous_zero_one_of_isClosed`,
+`MeasureTheory.continuous_of_dominated`, and both the star-subalgebra and
+linear-span Fourier closure theorems. It also found a concrete bad identifier:
+`IsCompact.compactSpace` does not exist; the available conversion is
+`isCompact_iff_compactSpace.mp`.
+
+More importantly, the response's proposed orbit lemma asserted that
+`Set.range orbit` is closed. This is false for a general irrational torus
+orbit. The correct construction must form the range as an `AddSubgroup` of a
+continuous additive hom and then use `AddSubgroup.topologicalClosure`.
+
+There is also a missing mathematical direction. Separation produces a
+character trivial on the orbit closure. To recover an integer relation one
+must prove
+
+```text
+(∀ t : ℝ, mFourier a (orbit u t) = 1)
+  → ∑ i, (a i : ℝ) * u i = 0.
+```
+
+Response 15 proved only the converse. The missing implication is elementary
+on paper—if the sum is nonzero, evaluate at a time producing the antipodal
+complex exponential—but its exact quotient/Fourier calculation has not been
+compiled. Further uncompiled obligations include the translated coset's
+closedness/disjointness, the averaged function as an actual `ContinuousMap`,
+the topological-closure-to-norm-approximant extraction, the bounded difference
+functional, and all cases of `Submodule.span_induction`.
+
+## Prompt 16: exact subgroup-separation repair
+
+These mathematical and compiler objections were returned verbatim. Sol Pro
+was required either to supply a complete v4.32.1 Lean file proving both the
+separation theorem and the BHK-sufficient one-way orbit-closure theorem, or to
+report the earliest exact unsolved Lean goal after compiling the preceding
+declarations. In particular, it was forbidden to call another uncompiled DAG
+complete or fully formalizable.

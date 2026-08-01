@@ -99,3 +99,22 @@ sum_{j in Q} w_ij <= |union_{j in Q} (Bi intersect Bj)|
 for every child `i` and every subset `Q` of its parents. Consequently pairwise
 gcd counts alone do not justify the missing implication; one needs arithmetic
 control of these higher-union cuts.
+
+## 2026-08-01: absolute Fourier main-term domination
+
+The sufficient criterion that the all-zero Fourier convolution term dominate
+the absolute sum of all other zero-sum terms is not necessary, even for a
+certified three-speed tuple. For `(1,2,3)`, `N=4`, pivot `3`, residues `3` and
+`9` are good, but the `c*prod(1-beta_i)` factorization has
+
+```text
+T0 = 7/24
+A  = 37/72 + sqrt(3)/18
+A - 2*T0 = (4*sqrt(3)-5)/72 > 0.
+```
+
+It is not even factorization invariant: `c*prod(1-g_i)` passes at this pivot,
+while at pivot `1` the filtered-`beta` factorization passes and the raw-`g`
+factorization fails. The regression script reproduces these values and an
+all-pivot certified failure at `(4,5,9)`. Absolute triangle bounds therefore
+discard essential cancellation and cannot serve as a uniform proof condition.

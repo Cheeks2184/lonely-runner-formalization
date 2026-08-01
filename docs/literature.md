@@ -45,6 +45,10 @@ found; `N >= 14` remains open at the cutoff.
 - Tao improves this asymptotically, proves finite reducibility to bounded
   integer speeds, and handles several structured speed classes:
   <https://arxiv.org/abs/1701.02048>.
+- Bedert obtains the newer asymptotic lower bound
+  `1/(2n) + 1/n^(5/3+o(1))` using Riesz products:
+  <https://arxiv.org/abs/2511.16636>. This is a 2025 preprint and does not
+  reach the conjectured sharp constant.
 - Malikiosis--Santos--Schymura give the strongest clean published finite
   checking bound used by the recent computer proofs:
   <https://doi.org/10.1017/fms.2025.10107>.
@@ -57,6 +61,11 @@ found; `N >= 14` remains open at the cutoff.
   runner spectra: <https://doi.org/10.1017/S0305004125101497>.
 - Bohman--Peng prove large families of slow-speed instances and discuss tight
   examples: <https://arxiv.org/abs/2109.09860>.
+- Jensen develops mixed coordinate thresholds, arithmetic-progression
+  summation formulas for safe/unsafe indicators, and the exact two-speed mixed
+  parameter space: <https://arxiv.org/abs/2605.27941>. These 2026 preprint
+  formulas suggest divisibility-based structured reductions but do not prove
+  the uniform conjecture.
 
 ## Obstructions that affect formalization
 

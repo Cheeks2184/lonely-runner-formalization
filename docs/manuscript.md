@@ -100,6 +100,21 @@ Fixed-instance sign and common-scale reductions are formalized in
 by magnitudes and dividing out a common nonzero factor, while making no claim
 that arbitrary real ratios can be converted to rational ones.
 
+The elementary rational-to-integer step is formalized separately in
+`LonelyRunner/RationalReduction.lean`. For a distinct positive rational tuple,
+`rationalCommonDenominator` is the product of its reduced denominators and
+`clearRationalSpeed` gives positive natural speeds. The cast, positivity, and
+injectivity lemmas culminate in
+`positiveIntegerConjecture_iff_distinctPositiveRationalConjecture`. This theorem
+rescales time in the exact direction and uses the closed boundary. The finite
+range of a repeated positive rational tuple is then enumerated explicitly;
+the stronger bound for its smaller distinct range is weakened to the original
+tuple's bound. This gives
+`distinctPositiveRationalConjecture_iff_positiveRationalConjecture` and the
+composed `positiveIntegerConjecture_iff_positiveRationalConjecture`. None of
+these declarations covers arbitrary irrational real ratios; that step still
+needs the multidimensional orbit theorem.
+
 Two further structured classes are proved in `docs/structured-classes.md`.
 The first uses the explicit time determined by a positive base scale when
 every normalized magnitude lies in one of a family of closed residue bands.
@@ -166,6 +181,12 @@ strengthening is false. These are mathematical obstructions, not Lean syntax
 issues. In particular, the two-parent modular certificate succeeds throughout
 the audited primitive speed-30 boxes for 3--6 moving runners, but no theorem
 forces such a certificate for unbounded speeds.
+
+The fixed-pivot Fourier formulas are exact, but factorwise absolute
+main-term domination is already non-necessary at `(1,2,3)` and depends on the
+chosen algebraic factorization of the same good-count function. Thus a Fourier
+completion would need signed cancellation, a positive-definite construction,
+or a new arithmetic correlation theorem rather than a triangle inequality.
 
 The two-parent pattern also stops being universal in the next audited box: it
 fails for exactly two of the 1,716 residual eight-speed tuples through speed
