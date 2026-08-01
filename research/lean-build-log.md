@@ -112,6 +112,41 @@ A preliminary build on `/mnt/c` was deliberately terminated after final source
 edits made its already-running dependency pass stale. The clean Linux-native
 clone above is the authoritative result.
 
+## 2026-08-01: pivot counts, normalization, and divisor insertion
+
+The clean Linux-native checkout was advanced to
+`601bb4b6483939c8751f8b0afc1a4e3e4068ec45`. From
+`/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`, the final
+commands reported:
+
+```text
+Build completed successfully (1856 jobs).
+Ran 22 tests in 5.815s
+OK
+```
+
+The new audited Lean layer includes fixed-instance sign/common-scale
+normalization, the full two-moving-runner case, the modular pivot residue
+bridge, the exact strict bad-set gcd/ceiling formula, and conditional
+codimension-one divisor insertion. `AxiomAudit.lean` printed exactly
+
+```text
+[propext, Classical.choice, Quot.sound]
+```
+
+for every declaration, including `card_pivotBadResidues_exact` and
+`codimensionOneDivisorInsertion`. An adversarial audit compared the former
+against 45,450 literal modular sets with zero mismatches and separately checked
+the latter's factorization, Bézout signs, casts, old-phase preservation,
+threshold indices, and equality endpoint.
+
+The Python suite independently compares the bounded-parent dynamic program
+with exhaustive permutation search, the pair-sum spectrum with the exact
+piecewise-linear optimizer on 784 tuples, and both eight-speed two-parent
+failures with their three-parent witnesses. A tracked Lean-source scan found no
+`sorry`, `admit`, custom `axiom`, or disabled checks. The verification checkout
+had empty `git status --short` after all commands.
+
 ## Earlier 2026-08-01 baseline clean-checkout verification
 
 The staged repository was committed locally and cloned, rather than copied,
