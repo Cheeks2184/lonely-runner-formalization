@@ -286,3 +286,75 @@ therefore miss overlap among those remainders. At pivot `5` this overcounts by
 `2`; at pivot `7` it overcounts by `6`. As requested, it proposed no replacement
 without a prior six-runner residual audit. No uniform modular statement
 survives this round.
+
+## Prompt 6: post-anchor residual strategies
+
+The coordinator supplied the rejected six-runner anchor conjecture and asked
+for three materially different strategies: adaptive higher-order overlap, a
+minimal-height or finite-critical-time route, and arithmetic gcd/divisor
+structure. Every proposed uniform statement had to survive an exact
+six-runner search, and the response was required to decide whether pivot grids
+were merely an ansatz.
+
+## Response 6
+
+After 18m24s, Sol Pro returned four claims, with no global proof claim.
+
+1. **Boundary-pivot lemma (claimed proved).** For positive integer speeds, any
+   witness can be replaced by a witness of the form
+   `(N*m+epsilon)/(N*a_j)`. The proposed proof takes a boundary point of the
+   nonempty proper closed safe subset of `R/Z`; some coordinate is then exactly
+   at distance `1/N`. Thus pivot-grid universality is equivalent to the
+   integer LRC instance, not a stronger ansatz.
+2. **Half-parent certificate (computational conjecture).** With parent capacity
+   `ceil((n-2)/2)`, some pivot and ordering should satisfy the audited ordered
+   overlap inequality. The response reported complete success for `n=6`
+   through speed 30, `n=7` through speed 20, and `n=8` through speed 15. It
+   claimed `(1,2,5,7,9,11,12,13)` is the first exhibited tuple failing every
+   two-parent certificate but passing a three-parent bound `50<56` at pivot
+   `7` with surviving residue `8`.
+3. **Pair-sum critical spectrum (claimed proved).** For
+   `F_A(t)=min_i ||a_i t||`, a global maximizing time occurs at
+   `r/(a_p+a_q)` for two indices `p<q`. At a maximizer below `1/2`, active
+   triangular-wave slopes of both signs give `(a_p+a_q)t` integral; at value
+   `1/2`, all coordinates are half-integral. This yields a finite blocking
+   incidence system but no height bound.
+4. **Codimension-one divisor insertion (claimed proved conditional on the
+   lower-dimensional integer theorem).** If all speeds except `a_j` have gcd
+   `D`, put `m=D/gcd(D,a_j)`. Shifts by `k/D` preserve the old coordinates and
+   move the exceptional coordinate through an `m`-point grid. The condition
+   `N(m-1)>=2m` supplies the new `1/N` bound. Consequently a primitive integer
+   counterexample with at least three moving speeds must have deletion gcd one
+   at every index, a corollary later corrected to require the lower-dimensional
+   theorem or minimal counterexample dimension.
+
+The response reported additional bounded data: all 239,928 six-runner
+residual tuples through speed 30 pass two-parent certificates; the divisor
+lemma covers 20,878 of them.
+
+## Independent objections and Sol Pro corrections
+
+The boundary-pivot, pair-sum, and divisor-insertion proofs survived an
+independent mathematical audit, including the closed endpoint. Two corrections
+were returned to the separate Sol Pro conversation:
+
+1. The invariant pair-sum denominator bound is
+   `max_{p<q}(a_p+a_q)`. A sorted tuple gives at most `2*a_n`; only a sorted
+   pairwise-distinct positive-integer tuple gives
+   `a_(n-1)+a_n <= 2*a_n-1`. Sol Pro explicitly retracted the hypothesis-free
+   sharper bound.
+2. For a primitive tuple, the divisor orbit size is the deletion gcd `D_j`.
+   An arbitrary primitive counterexample does not automatically have
+   `D_j=1`, because lower-dimensional LRC is a premise of insertion. Sol Pro's
+   corrected corollary applies to a minimal-dimensional counterexample or
+   after dimension `n-1` is established. The condition
+   `(n+1)(D_j-1)>=2D_j` is equivalent to `(n-1)D_j>=n+1`; for `n>=3` it holds
+   exactly when `D_j>=2`, while for `n=2` it only rules out `D_j>=3`.
+
+Exact independent enumeration reproduced the reported six- and seven-runner
+data. At eight speeds through 15, it found a second two-parent failure omitted
+from the response: `(1,5,7,8,9,11,13,15)`. Together with
+`(1,2,5,7,9,11,12,13)`, these are the only failures among 1,716 residual
+tuples. Both pass a three-parent bound `50<56` at pivot `7`, with witnesses
+`20/63` and `8/63` respectively. The proposed half-parent rule survives this
+box but remains unproved.

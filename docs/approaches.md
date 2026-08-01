@@ -13,8 +13,11 @@ The current concrete version chooses a tuple speed `a_j` as pivot, uses
 denominator `(n+1)a_j`, and represents every other runner's violating
 numerators as a finite bad set. Exact gcd/ceiling formulas count individual
 bad sets, while a two-parent certificate retains selected pair/triple overlap.
-The abstract union and ordered-overlap implications now compile in Lean; see
-`docs/modular-pivot-certificates.md`.
+The candidate/bad residue model, explicit real witness bridge, and abstract
+union and ordered-overlap implications now compile in Lean; see
+`docs/modular-pivot-certificates.md`. The exact gcd/ceiling count for each bad
+set also compiles in Lean. The remaining certificate trust boundary is the
+selected-parent intersection data and its per-tuple encoding.
 
 Dependencies:
 
@@ -28,10 +31,17 @@ Dependencies:
 
 Obstruction: CRT does not allow a different favorable numerator for each
 coordinate; all conditions share one time. This route has been highly effective
-through the currently verified finite dimensions but gives no known uniform
+through the currently verified finite boxes but gives no known uniform
 argument for all dimensions. In particular, exhaustive two-parent success for
-primitive tuples of 3--5 moving speeds through maximum speed 30 supplies
+primitive tuples of 3--6 moving speeds through maximum speed 30 supplies
 neither a minimal-counterexample height bound nor an unbounded-speed theorem.
+
+The boundary-pivot lemma in `docs/round6-strategies.md` shows that these pivot
+grids are complete for a fixed positive-integer instance: if any witness
+exists, a safe-set boundary point is a witness on one of the grids. This
+removes the concern that the grids are an ansatz, but it is logically
+conditional on the instance already having a witness and therefore does not
+prove the conjecture.
 
 ## B. Fourier, measure, and inclusion-exclusion
 
@@ -105,6 +115,32 @@ Dependencies:
 This lane is decisive for a fixed tuple or finite search box. It does not turn
 finite checking for each `n` into a proof of `forall n`.
 
+## F. Pair-sum critical spectrum
+
+For a positive integer tuple with at least two entries, a global maximum of
+`min_i ||a_i t||` occurs at `t = r/(a_p+a_q)` for two distinct indices. The
+audited proof uses opposite slopes among active triangular waves, with the
+value `1/2` handled separately. This gives a second finite candidate spectrum
+whose invariant denominator bound is `max_{p<q}(a_p+a_q)`; the sharper
+`2a_n-1` bound requires a sorted pairwise-distinct tuple.
+
+Obstruction: the spectrum is finite only after the speeds are fixed. No bound
+on a minimal counterexample's speeds follows from it. Formalization of the
+piecewise-linear maximum argument remains open; see
+`docs/round6-strategies.md`.
+
+## G. Codimension-one divisor insertion
+
+If deleting one speed leaves gcd `D`, lower-dimensional LRC can be lifted by
+shifts of size `1/D`. The exceptional coordinate visits an equally spaced
+orbit of size `m = D/gcd(D,a_j)`, and the exact sufficient inequality is
+`(n+1)(m-1) >= 2m`. This covers a rigorously identifiable arithmetic class.
+
+Obstruction: it requires the lower-dimensional theorem. The deletion-gcd-one
+conclusion is valid for a minimal-dimensional primitive counterexample (or
+after the previous dimension has been established), not for an arbitrary
+counterexample. See `docs/round6-strategies.md`.
+
 ## Current priority
 
 Completed milestones are the canonical and stationary equivalences, the
@@ -113,8 +149,8 @@ and the exact fixed-tuple checker. The live priorities are now:
 
 1. Formalize a precise real-to-integer reduction with its Kronecker and
    lower-dimensional dependencies exposed.
-2. Complete the number-theoretic Lean layer for modular pivot certificates and
-   make bounded certificates kernel-checkable.
+2. Make bounded modular certificates kernel-checkable by encoding and checking
+   selected-parent intersection data.
 3. Find or refute a uniform overlap theorem for the residual comparable-speed
    class; the speed-30 computation is evidence only.
 4. Formalize the two irrational rank-one-block theorem using a torus-density
@@ -125,5 +161,6 @@ and the exact fixed-tuple checker. The live priorities are now:
 The fourth Sol Pro round produced two valid but limited structured-class
 lemmas. The fifth produced exact modular certificates and a bounded dataset,
 then retracted an incorrect claim that the simple union bound subsumed the
-band theorem. Their exact residual class is now a sharper target than the
-undifferentiated phrase "comparable speeds."
+band theorem. The sixth produced three independently audited finite-structure
+lemmas but no all-dimensional implication; its proposed two-parent pattern
+already has two exact failures at eight moving speeds.

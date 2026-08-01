@@ -88,6 +88,18 @@ The one-moving-runner base case is formalized as
 `LonelyRunner.oneMovingRunner`: for nonzero relative speed `v`, the explicit
 time `1/(2v)` places the runner at circular distance exactly `1/2`.
 
+The full two-moving-runner case, corresponding to three total runners, is
+formalized as `LonelyRunner.twoMovingSpeeds` and
+`LonelyRunner.twoMovingRunners`. After ordering magnitudes, a ratio at least
+two is handled by `fastRunnerInsertion` from the one-moving-runner witness; the
+complementary ratio interval `[1,2]` is the first closed residue band. No
+density or integer reduction is used.
+
+Fixed-instance sign and common-scale reductions are formalized in
+`LonelyRunner/Normalization.lean`. They justify replacing individual speeds
+by magnitudes and dividing out a common nonzero factor, while making no claim
+that arbitrary real ratios can be converted to rational ones.
+
 Two further structured classes are proved in `docs/structured-classes.md`.
 The first uses the explicit time determined by a positive base scale when
 every normalized magnitude lies in one of a family of closed residue bands.
@@ -109,9 +121,23 @@ purely finite implications are formalized as
 `LonelyRunner.exists_mem_avoiding_ordered_of_sum_lt_card`. These prove that a
 strict cardinality or ordered-overlap certificate leaves an uncovered finite
 candidate.
-The gcd formula for the individual bad-set sizes and the connection from the
-modular residue model to `circleNorm` remain paper proofs plus exact executable
-tests, so no end-to-end modular theorem is labeled formal.
+The actual residue model and its connection to `circleNorm` are formalized by
+`pivotCandidates`, `pivotBadResidues`, `card_pivotCandidates`,
+`circleNorm_nat_div_ge`, and `pivotResidueWitness`. The exact gcd/ceiling
+formula for individual bad-set sizes is formalized as
+`card_pivotBadResidues_exact`, supported by the strict cyclic-ball and uniform
+multiplication-fiber results in `LonelyRunner/PivotCounts.lean`. What remains
+outside the kernel is the bounded search's selected-parent intersection data
+and per-tuple certificate encoding.
+
+Three further fixed-integer structural lemmas have paper proofs and independent
+audits in `docs/round6-strategies.md`. First, every nonempty integer safe set
+has a boundary witness on a pivot grid. Second, the global maximum of
+`min_i ||a_i t||` occurs on a pair-sum grid `r/(a_p+a_q)`. Third, a runner can
+be inserted over a common divisor of all other speeds when the exact orbit-size
+inequality holds, conditional on lower-dimensional LRC. These results clarify
+finite candidate sets and an inductive arithmetic class, but are not yet Lean
+theorems and do not bound the speed height of a counterexample.
 
 ## 5. Remaining obstruction
 
@@ -121,5 +147,10 @@ still requires a separate finite computation in every dimension; Fourier
 methods do not reach the sharp constant; and the universal shifted-zonotope
 strengthening is false. These are mathematical obstructions, not Lean syntax
 issues. In particular, the two-parent modular certificate succeeds throughout
-the audited primitive speed-30 boxes for 3--5 moving runners, but no theorem
+the audited primitive speed-30 boxes for 3--6 moving runners, but no theorem
 forces such a certificate for unbounded speeds.
+
+The two-parent pattern also stops being universal in the next audited box: it
+fails for exactly two of the 1,716 residual eight-speed tuples through speed
+15. Both failures admit three-parent certificates. Thus even the strengthened
+half-parent rule remains only a computational conjecture.

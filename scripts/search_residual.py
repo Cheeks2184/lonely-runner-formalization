@@ -37,6 +37,29 @@ def covered_by_minimum_residue_bands(speeds: tuple[int, ...]) -> bool:
     return True
 
 
+def divisor_insertion_condition_indices(speeds: tuple[int, ...]) -> tuple[int, ...]:
+    """Return exceptional indices satisfying Sol Pro's divisor inequality.
+
+    For an exceptional runner ``j``, let ``D`` be the gcd of all other speeds
+    and ``m = D / gcd(D, a_j)``.  The arithmetic condition is
+    ``(n + 1) * (m - 1) >= 2 * m``.  Turning this condition into an LRC proof
+    also requires the conjecture for the divided ``n - 1`` tuple; this helper
+    deliberately reports only the independently checkable arithmetic part.
+    """
+
+    if len(speeds) < 2:
+        return ()
+    modulus_factor = len(speeds) + 1
+    result = []
+    for exceptional, speed in enumerate(speeds):
+        others = speeds[:exceptional] + speeds[exceptional + 1 :]
+        deletion_gcd = math.gcd(*others)
+        orbit_size = deletion_gcd // math.gcd(deletion_gcd, speed)
+        if modulus_factor * (orbit_size - 1) >= 2 * orbit_size:
+            result.append(exceptional)
+    return tuple(result)
+
+
 def witness_on_minimum_grid(speeds: tuple[int, ...]) -> Fraction | None:
     """Find a witness ``k / ((n+1) min(speeds))`` in one exact period."""
 
@@ -72,6 +95,28 @@ def witness_on_anchor_grid(speeds: tuple[int, ...], anchor: int) -> Fraction | N
         if all(circle_distance(speed, time) >= target for speed in speeds):
             return time
     return None
+
+
+def pair_sum_spectrum_optimum(
+    speeds: tuple[int, ...],
+) -> tuple[Fraction, Fraction, tuple[int, int]]:
+    """Optimize exactly over the audited pair-sum critical spectrum."""
+
+    if len(speeds) < 2:
+        raise ValueError("pair-sum spectrum requires at least two speeds")
+    best_value = Fraction(-1)
+    best_time = Fraction(0)
+    best_pair = (0, 1)
+    for first, second in itertools.combinations(range(len(speeds)), 2):
+        denominator = speeds[first] + speeds[second]
+        for numerator in range(denominator):
+            time = Fraction(numerator, denominator)
+            value = min(circle_distance(speed, time) for speed in speeds)
+            if value > best_value:
+                best_value = value
+                best_time = time
+                best_pair = (first, second)
+    return best_value, best_time, best_pair
 
 
 def fastest_half_period_certificate(
@@ -161,6 +206,51 @@ def pivot_bad_count_formula(speeds: tuple[int, ...], pivot: int, other: int) -> 
     return all_bad - excluded_pivot_bad
 
 
+def _best_ordered_parent_bound(
+    others: tuple[int, ...],
+    masks: dict[int, int],
+    counts: dict[int, int],
+    parent_capacity: int,
+) -> int:
+    """Exact dynamic program over all orders and bounded parent subsets."""
+
+    if not others:
+        return 0
+    positions = {other: position for position, other in enumerate(others)}
+    full_state = (1 << len(others)) - 1
+    infinity = sum(counts.values()) + 1
+    best = [infinity] * (full_state + 1)
+    best[0] = 0
+    for state in range(full_state + 1):
+        if best[state] == infinity:
+            continue
+        previous = tuple(
+            other
+            for other in others
+            if state & (1 << positions[other])
+        )
+        for other in others:
+            bit = 1 << positions[other]
+            if state & bit:
+                continue
+            best_overlap = 0
+            max_parents = min(parent_capacity, len(previous))
+            for parent_count in range(1, max_parents + 1):
+                for parents in itertools.combinations(previous, parent_count):
+                    parent_union = 0
+                    for parent in parents:
+                        parent_union |= masks[parent]
+                    best_overlap = max(
+                        best_overlap,
+                        (masks[other] & parent_union).bit_count(),
+                    )
+            next_state = state | bit
+            best[next_state] = min(
+                best[next_state], best[state] + counts[other] - best_overlap
+            )
+    return best[full_state]
+
+
 def pivot_certificates(
     speeds: tuple[int, ...],
 ) -> tuple[bool, bool, bool, int]:
@@ -195,32 +285,46 @@ def pivot_certificates(
             union_mask |= mask
         actual_pivot_witness |= union_mask.bit_count() < universe_size
 
-        if two_parent_certified:
-            continue
-        for order in itertools.permutations(others):
-            upper_bound = counts[order[0]] if order else 0
-            previous: list[int] = []
-            for other in order:
-                if not previous:
-                    previous.append(other)
-                    continue
-                best_overlap = 0
-                for parent_count in (1, 2):
-                    for parents in itertools.combinations(previous, parent_count):
-                        parent_union = 0
-                        for parent in parents:
-                            parent_union |= masks[parent]
-                        best_overlap = max(
-                            best_overlap,
-                            (masks[other] & parent_union).bit_count(),
-                        )
-                upper_bound += counts[other] - best_overlap
-                previous.append(other)
-            if upper_bound < universe_size:
-                two_parent_certified = True
-                break
+        if not two_parent_certified:
+            two_parent_certified |= (
+                _best_ordered_parent_bound(others, masks, counts, 2)
+                < universe_size
+            )
 
     return union_certified, two_parent_certified, actual_pivot_witness, formula_mismatches
+
+
+def pivot_parent_best_bounds(
+    speeds: tuple[int, ...], parent_capacity: int
+) -> tuple[tuple[int, int, int], ...]:
+    """Return best bounded-parent, universe, and exact-union sizes per pivot.
+
+    `parent_capacity = 0` is the simple sum bound.  A positive capacity allows
+    each newly ordered bad set to credit overlap with a union of at most that
+    many earlier bad sets.  Every permutation and allowable parent subset is
+    searched exactly, so this is intended for small research instances rather
+    than large production enumeration.
+    """
+
+    if parent_capacity < 0:
+        raise ValueError("parent capacity must be nonnegative")
+    modulus_factor = len(speeds) + 1
+    results = []
+    for pivot, pivot_speed in enumerate(speeds):
+        others = tuple(index for index in range(len(speeds)) if index != pivot)
+        masks = {other: pivot_bad_mask(speeds, pivot, other) for other in others}
+        counts = {other: masks[other].bit_count() for other in others}
+        exact_union = 0
+        for mask in masks.values():
+            exact_union |= mask
+        simple = sum(counts.values())
+        best = simple if parent_capacity == 0 else _best_ordered_parent_bound(
+            others, masks, counts, parent_capacity
+        )
+        results.append(
+            (best, (modulus_factor - 1) * pivot_speed, exact_union.bit_count())
+        )
+    return tuple(results)
 
 
 def adjacent_anchor_bounds(
@@ -287,9 +391,18 @@ def main() -> int:
         action="store_true",
         help="audit Sol round-5 pivot formulas and certificate coverage",
     )
+    parser.add_argument(
+        "--parent-capacity",
+        type=int,
+        help="also count ordered certificates with this parent capacity",
+    )
     args = parser.parse_args()
     if not 1 <= args.runners <= args.max_speed:
         parser.error("require 1 <= runners <= max-speed")
+    if args.parent_capacity is not None and args.parent_capacity < 0:
+        parser.error("parent capacity must be nonnegative")
+    if args.parent_capacity is not None and not args.sol_pivot_counts:
+        parser.error("--parent-capacity requires --sol-pivot-counts")
 
     if args.equality_blocks:
         target = Fraction(1, args.runners + 1)
@@ -317,6 +430,8 @@ def main() -> int:
     pivot_two_parent_count = 0
     pivot_actual_count = 0
     pivot_formula_mismatches = 0
+    selected_parent_count = 0
+    divisor_condition_count = 0
     for speeds in itertools.combinations(range(1, args.max_speed + 1), args.runners):
         if args.primitive_only and math.gcd(*speeds) != 1:
             continue
@@ -328,12 +443,20 @@ def main() -> int:
             band_after_nonfast_count += 1
             continue
         residual_count += 1
+        divisor_condition_count += bool(divisor_insertion_condition_indices(speeds))
         if args.sol_pivot_counts:
             union_ok, two_parent_ok, actual_ok, mismatches = pivot_certificates(speeds)
             pivot_union_count += union_ok
             pivot_two_parent_count += two_parent_ok
             pivot_actual_count += actual_ok
             pivot_formula_mismatches += mismatches
+            if args.parent_capacity is not None:
+                selected_parent_count += any(
+                    bound < universe
+                    for bound, universe, _ in pivot_parent_best_bounds(
+                        speeds, args.parent_capacity
+                    )
+                )
             continue
         if args.counts_only:
             half_witness, actual_half_witness, _ = fastest_half_period_certificate(speeds)
@@ -358,6 +481,12 @@ def main() -> int:
 
     scope = "primitive" if args.primitive_only else "all"
     if args.sol_pivot_counts:
+        parent_summary = ""
+        if args.parent_capacity is not None:
+            parent_summary = (
+                f" pivot_parent_capacity={args.parent_capacity} "
+                f"pivot_parent_certified={selected_parent_count}"
+            )
         print(
             f"scope={scope} max_speed={args.max_speed} runners={args.runners} "
             f"total={total_count} fast={fast_count} "
@@ -365,7 +494,9 @@ def main() -> int:
             f"residual={residual_count} pivot_formula_mismatches={pivot_formula_mismatches} "
             f"pivot_union_certified={pivot_union_count} "
             f"pivot_two_parent_certified={pivot_two_parent_count} "
-            f"pivot_actual={pivot_actual_count}"
+            f"pivot_actual={pivot_actual_count} "
+            f"divisor_insertion_condition={divisor_condition_count}"
+            f"{parent_summary}"
         )
         return 0
     if args.counts_only:
@@ -373,7 +504,8 @@ def main() -> int:
             f"scope={scope} max_speed={args.max_speed} "
             f"runners={args.runners} residual={residual_count} "
             f"fastest_half_period_certified={half_certificate_count} "
-            f"fastest_half_period_actual={half_actual_count}"
+            f"fastest_half_period_actual={half_actual_count} "
+            f"divisor_insertion_condition={divisor_condition_count}"
         )
         return 0
 

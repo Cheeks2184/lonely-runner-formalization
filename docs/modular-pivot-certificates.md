@@ -28,6 +28,12 @@ B_{ij}=\{r\in R_j:\rho_{M_j}(ra_i)<a_j\}.
 The strict inequality is essential: its complement gives the closed Lonely
 Runner boundary `>= 1/N`.
 
+This residue layer is now kernel-checked in `LonelyRunner/PivotResidues.lean`:
+`pivotCandidates`, `pivotBadResidues`, and `card_pivotCandidates` implement the
+finite model; `circleNorm_nat_div_ge` proves the exact natural-residue to real
+circle-distance step; and `pivotResidueWitness` handles the pivot and every
+non-pivot coordinate at the explicit time `r/(Na_j)`.
+
 ## Exact single-set count and union certificate
 
 Write
@@ -59,9 +65,12 @@ Consequently, if for some pivot
 
 then an `r` outside the bad union remains and `r/(Na_j)` is a witness.  The
 finite-union implication is kernel-checked as
-`exists_mem_avoiding_of_sum_card_lt_card`; the number-theoretic cardinality
-formula is presently proved on paper and exhaustively regression-tested, but
-not yet formalized in Lean.
+`exists_mem_avoiding_of_sum_card_lt_card`. The number-theoretic formula is
+kernel-checked as `card_pivotBadResidues_exact` in
+`LonelyRunner/PivotCounts.lean`; its proof includes strict cyclic-ball counts,
+uniform multiplication fibers, the residues divisible by `N`, and the natural
+subtraction step. The executable formula is also regression-tested against
+literal bitsets.
 
 This criterion and the minimum-scale residue-band theorem are incomparable.
 The pivot grids allow many more candidate numerators, but the union bound may
@@ -153,13 +162,29 @@ cardinality; every successful strict certificate has slack at least two. This
 explains, but does not force, the minimum slack observed in the six-runner
 search.
 
+The next exact boxes test where the fixed two-parent choice stops being
+universal. For seven moving runners through speed 20, all 28,259 primitive
+residual tuples are two-parent certified. For eight moving runners through
+speed 15, 1,714 of 1,716 residual tuples are two-parent certified. The two
+failures are
+
+```text
+(1,2,5,7,9,11,12,13)
+(1,5,7,8,9,11,13,15)
+```
+
+Both pass a three-parent certificate at pivot `7`, with bound `50<56`.
+Surviving residues `8` and `20` give witnesses `8/63` and `20/63`. Thus the
+round-6 half-parent rule remains compatible with this finite box, but the
+stronger claim that two parents always suffice is false even at speed 15.
+
 ## Remaining obligations
 
-The bounded audit is not a theorem for unbounded speeds.  A Lean end-to-end
-certificate layer still needs: finite cyclic residue definitions; the exact
-`|R_j|` and `|B_ij|` formulas; a checked encoding of pair/triple intersection
-counts; parsing or generation of per-tuple certificates; and a theorem
-connecting an uncovered residue to `circleNorm (t*a_i) >= 1/N`.
+The bounded audit is not a theorem for unbounded speeds. The finite cyclic
+residue definitions, exact `|R_j|` and `|B_ij|`, and uncovered-residue witness
+bridge are now in Lean. An end-to-end certificate layer still needs a checked
+encoding of pair/triple/higher intersection counts and parsing or generation
+of per-tuple certificates.
 
 No uniform theorem ensuring a successful pivot and two-parent ordering is
 known.  In particular, the computation does not supply a height bound for a

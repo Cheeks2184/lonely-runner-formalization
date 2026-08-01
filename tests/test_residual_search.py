@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import importlib.util
 import itertools
+import math
 import sys
 import unittest
 from fractions import Fraction
@@ -86,6 +87,18 @@ class ResidualSearchTests(unittest.TestCase):
             (Fraction(2, 13), Fraction(4, 13)),
         )
 
+    def test_pair_sum_spectrum_against_exact_optimizer(self) -> None:
+        checked = 0
+        for runner_count in range(2, 6):
+            for speeds in itertools.combinations_with_replacement(
+                range(1, 8), runner_count
+            ):
+                spectrum_value, _, _ = search.pair_sum_spectrum_optimum(speeds)
+                exact_value, _, _ = checker.optimal_loneliness(speeds)
+                self.assertEqual(spectrum_value, exact_value, speeds)
+                checked += 1
+        self.assertEqual(checked, 784)
+
     def test_adjacent_anchor_uniform_conjecture_counterexample(self) -> None:
         speeds = (1, 2, 3, 4, 5, 7)
         self.assertFalse(search.covered_by_fast_insertion(speeds))
@@ -98,6 +111,83 @@ class ResidualSearchTests(unittest.TestCase):
         )
         self.assertTrue(all(bound >= universe for bound, universe, _ in results))
         self.assertTrue(any(exact < universe for _, universe, exact in results))
+
+    def test_parent_capacity_hierarchy(self) -> None:
+        speeds = (1, 2, 7, 10, 11, 14)
+        pivot = speeds.index(14)
+        expected = {0: 110, 1: 78, 2: 70, 3: 66, 4: 64}
+        for capacity, bound in expected.items():
+            result = search.pivot_parent_best_bounds(speeds, capacity)[pivot]
+            self.assertEqual(result, (bound, 84, 64))
+
+    def test_parent_dynamic_program_against_permutation_reference(self) -> None:
+        def reference_bound(
+            speeds: tuple[int, ...], pivot: int, capacity: int
+        ) -> int:
+            others = tuple(i for i in range(len(speeds)) if i != pivot)
+            masks = {
+                other: search.pivot_bad_mask(speeds, pivot, other)
+                for other in others
+            }
+            best = sum(mask.bit_count() for mask in masks.values())
+            for order in itertools.permutations(others):
+                previous: list[int] = []
+                bound = 0
+                for other in order:
+                    overlap = 0
+                    for size in range(1, min(capacity, len(previous)) + 1):
+                        for parents in itertools.combinations(previous, size):
+                            parent_union = 0
+                            for parent in parents:
+                                parent_union |= masks[parent]
+                            overlap = max(
+                                overlap,
+                                (masks[other] & parent_union).bit_count(),
+                            )
+                    bound += masks[other].bit_count() - overlap
+                    previous.append(other)
+                best = min(best, bound)
+            return best
+
+        for runner_count in range(2, 6):
+            for speeds in itertools.combinations(range(1, 8), runner_count):
+                for capacity in range(4):
+                    dynamic = search.pivot_parent_best_bounds(speeds, capacity)
+                    for pivot in range(runner_count):
+                        self.assertEqual(
+                            dynamic[pivot][0],
+                            reference_bound(speeds, pivot, capacity),
+                            (speeds, pivot, capacity),
+                        )
+
+    def test_two_parent_failure_three_parent_witness(self) -> None:
+        speeds = (1, 2, 5, 7, 9, 11, 12, 13)
+        two_parent = search.pivot_parent_best_bounds(speeds, 2)
+        self.assertTrue(all(bound >= universe for bound, universe, _ in two_parent))
+        pivot = speeds.index(7)
+        three_parent = search.pivot_parent_best_bounds(speeds, 3)
+        self.assertEqual(three_parent[pivot], (50, 56, 50))
+        self.assertEqual(search.witness_on_anchor_grid(speeds, 7), Fraction(8, 63))
+
+    def test_second_two_parent_failure_three_parent_witness(self) -> None:
+        speeds = (1, 5, 7, 8, 9, 11, 13, 15)
+        two_parent = search.pivot_parent_best_bounds(speeds, 2)
+        self.assertTrue(all(bound >= universe for bound, universe, _ in two_parent))
+        pivot = speeds.index(7)
+        three_parent = search.pivot_parent_best_bounds(speeds, 3)
+        self.assertEqual(three_parent[pivot], (50, 56, 50))
+        self.assertEqual(search.witness_on_anchor_grid(speeds, 7), Fraction(20, 63))
+
+    def test_divisor_insertion_arithmetic_condition(self) -> None:
+        speeds = (1, 2, 4, 6, 8, 14)
+        self.assertEqual(search.divisor_insertion_condition_indices(speeds), (0,))
+        deletion_gcd = 2
+        orbit_size = deletion_gcd // math.gcd(deletion_gcd, speeds[0])
+        self.assertEqual(orbit_size, 2)
+        self.assertGreaterEqual((len(speeds) + 1) * (orbit_size - 1), 2 * orbit_size)
+
+        # In a nonprimitive tuple m need not equal the deletion gcd.
+        self.assertEqual(search.divisor_insertion_condition_indices((2, 4, 6)), ())
 
 
 if __name__ == "__main__":

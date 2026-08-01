@@ -6,17 +6,21 @@ proved, not evidence that a proof has been found.
 
 Current result: the canonical statement, its nonnegative-time, relative-speed,
 distinct-stationary, and repeated-stationary equivalences, the one-moving-runner
-base case, a quantitative fast-runner insertion theorem, and a minimum-scale
-residue-band structured class are kernel-checked. Generic finite union and
-ordered-overlap certificate soundness are also kernel-checked; the associated
-number-theoretic counts and bounded search are not yet end-to-end Lean proofs.
+and two-moving-runner base cases, a quantitative fast-runner insertion theorem,
+and a minimum-scale residue-band structured class are kernel-checked. Sign and
+common-scale normalization, the modular pivot residue model and witness bridge,
+the exact individual bad-set gcd count, and generic finite union and
+ordered-overlap certificate soundness are also kernel-checked. The bounded
+search and its selected-parent intersection data are not end-to-end Lean
+proofs.
 The general conjecture remains open, and this repository makes no proof or
 disproof claim.
 
 ## Repository map
 
 - `LonelyRunner/`: Lean definitions, formulations, proved equivalences, base
-  cases, the fast-runner insertion theorem, and the explicit axiom audit.
+  cases through three total runners, normalization and modular-certificate
+  layers, the fast-runner insertion theorem, and the explicit axiom audit.
 - `docs/canonical-statement.md`: exact quantifiers, indexing, and boundary
   conventions.
 - `docs/literature.md`: primary-source literature and current known results.
@@ -29,6 +33,8 @@ disproof claim.
   lower-dimensional dependency, and the formalization gap.
 - `docs/modular-pivot-certificates.md`: exact modular bad-set counts, generic
   Lean-checked certificate soundness, bounded audits, and the uniform gap.
+- `docs/round6-strategies.md`: audited boundary-pivot, pair-sum, and divisor
+  insertion lemmas, plus the failed two-parent extrapolation at eight speeds.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
 - `scripts/check_integer_tuple.py`: exact-rational fixed-instance optimizer and
   deterministic certificate verifier.
