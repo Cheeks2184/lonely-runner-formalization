@@ -145,6 +145,52 @@ theorem circleNorm_nat_div_ge {M x b : ℕ} (hM : 0 < M)
       exact (div_le_one hMreal).mpr hsum
     linarith
 
+/-- Exact circle distance for a natural rational phase.  This complements
+`circleNorm_nat_div_ge`: the cyclic residue model is not merely a sufficient
+lower bound, but computes the unit-circle norm exactly. -/
+theorem circleNorm_nat_div_eq (M x : ℕ) :
+    circleNorm ((x : ℝ) / (M : ℝ)) =
+      (cyclicResidueDistance M x : ℝ) / (M : ℝ) := by
+  simpa [circleNorm, cyclicResidueDistance] using
+    (AddCircle.norm_div_natCast (p := (1 : ℝ)) (m := x) (n := M))
+
+/-- At a fixed candidate residue, membership in a coordinate's strict bad set
+is exactly failure of the corresponding closed Lonely Runner inequality. -/
+theorem mem_pivotBadResidues_iff_circleNorm_lt {N pivot other r : ℕ}
+    (hN : 0 < N) (hpivot : 0 < pivot)
+    (hr : r ∈ pivotCandidates N pivot) :
+    r ∈ pivotBadResidues N pivot other ↔
+      circleNorm (((r : ℝ) / ((N * pivot : ℕ) : ℝ)) * (other : ℝ)) <
+        (N : ℝ)⁻¹ := by
+  have hM : 0 < N * pivot := Nat.mul_pos hN hpivot
+  have hMreal : (0 : ℝ) < ((N * pivot : ℕ) : ℝ) := by
+    exact_mod_cast hM
+  have hphase : ((r * other : ℕ) : ℝ) / ((N * pivot : ℕ) : ℝ) =
+      ((r : ℝ) / ((N * pivot : ℕ) : ℝ)) * (other : ℝ) := by
+    push_cast
+    ring
+  have hbound : (pivot : ℝ) / ((N * pivot : ℕ) : ℝ) = (N : ℝ)⁻¹ := by
+    have hNreal : (N : ℝ) ≠ 0 := by exact_mod_cast hN.ne'
+    have hpivotReal : (pivot : ℝ) ≠ 0 := by exact_mod_cast hpivot.ne'
+    push_cast
+    field_simp
+  rw [mem_pivotBadResidues, and_iff_right hr]
+  rw [← hphase, circleNorm_nat_div_eq, ← hbound]
+  rw [div_lt_div_iff_of_pos_right hMreal]
+  norm_cast
+
+/-- Closed-good counterpart of `mem_pivotBadResidues_iff_circleNorm_lt`.
+The strict bad-set boundary is essential: equality at distance `1 / N`
+remains a valid Lonely Runner witness. -/
+theorem not_mem_pivotBadResidues_iff_circleNorm_ge {N pivot other r : ℕ}
+    (hN : 0 < N) (hpivot : 0 < pivot)
+    (hr : r ∈ pivotCandidates N pivot) :
+    r ∉ pivotBadResidues N pivot other ↔
+      (N : ℝ)⁻¹ ≤
+        circleNorm (((r : ℝ) / ((N * pivot : ℕ) : ℝ)) * (other : ℝ)) := by
+  rw [mem_pivotBadResidues_iff_circleNorm_lt hN hpivot hr]
+  exact not_lt
+
 /-- A candidate residue makes the pivot coordinate itself good. -/
 theorem pivot_circleNorm_ge {N pivot r : ℕ} (hN : 0 < N)
     (hpivot : 0 < pivot) (hr : r ∈ pivotCandidates N pivot) :
