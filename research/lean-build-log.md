@@ -80,7 +80,39 @@ terminated with `SIGTERM` after its working directory and process tree were
 verified; it was only a redundant slow-filesystem compilation and no source
 files were removed.
 
-## 2026-08-01: clean-checkout verification
+## 2026-08-01: structured classes and modular certificates
+
+The audited changes were committed as
+`c58f4fc8885a5abbd9f4aabf0399313b04dac25f` and cloned into the previously
+absent Linux-native directory
+`/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`. No build output
+was inherited from the working tree. After `lake update` and
+`lake exe cache get`, the authoritative command reported:
+
+```text
+Build completed successfully (1847 jobs).
+```
+
+`lake env lean LonelyRunner/AxiomAudit.lean` checked the new residue-band and
+five modular finite-set declarations in addition to the existing development.
+Every printed declaration used exactly:
+
+```text
+[propext, Classical.choice, Quot.sound]
+```
+
+The clean checkout also passed all 16 Python tests. The three primitive
+speed-30 commands reproduced all table entries with zero bad-count formula
+mismatches. A tracked-Lean-source scan found no `sorry`, `admit`, custom
+`axiom`, explicit `opaque`, `unsafe`, `extern`, `implemented_by`,
+`partial_fixpoint`, disabled check, or `native_decide`. `git status --short`
+was empty.
+
+A preliminary build on `/mnt/c` was deliberately terminated after final source
+edits made its already-running dependency pass stale. The clean Linux-native
+clone above is the authoritative result.
+
+## Earlier 2026-08-01 baseline clean-checkout verification
 
 The staged repository was committed locally and cloned, rather than copied,
 to `/home/joshu/code/lonely-runner-clean-checkout`. From that checkout, with no
