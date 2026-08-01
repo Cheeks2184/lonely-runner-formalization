@@ -167,33 +167,44 @@ statement.
 
 ## Lean dependency map
 
-Mathlib v4.32.1 already provides finite tori, compact topological groups,
-closure/open-set lemmas, dense rational casts, finite-dimensional rational
-linear algebra, and `Fin.succAbove`. The missing central theorem is the reverse
-direction of the multidimensional character form of Kronecker approximation:
+Mathlib v4.32.1 provides finite tori, compact topological groups,
+closure/open-set lemmas, normalized Haar measure, Urysohn separation, and the
+dense multivariate Fourier span. The reverse direction of the multidimensional
+character form of Kronecker approximation was not packaged, so it is now
+proved locally.
 
 ```lean
-x in closure (Set.range (fun t : Real =>
-      fun i => ((t * u i : Real) : UnitCircle))) <->
-  forall a : Fin m -> Int,
-    (sum i, (a i : Real) * u i = 0) ->
-      sum i, a i • x i = 0
+theorem orbitHom_mem_closure_range_of_relations
+    (u w : Fin m → ℝ) (τ : ℝ)
+    (hrelations : ∀ a : Fin m → ℤ,
+      (∑ i, (a i : ℝ) * u i = 0) →
+        ∑ i, (a i : ℝ) * w i = 0) :
+    orbitHom w τ ∈ closure (Set.range (orbitHom u))
 ```
 
-The pinned tree contains the one-circle theorem
-`AddCircle.denseRange_zsmul_coe_iff`, but no suitable simultaneous theorem was
-located. The full equivalence is stronger than BHK needs. It suffices to prove
-the following one-way, pointwise form: whenever every integer relation
-annihilating `u` also annihilates `w`, the point `tau*w mod 1` belongs to the
-closure of the continuous orbit `t*u mod 1`, for every real `tau`. This is
-still the hard generalized Kronecker direction.
+The project needs only the one-way, pointwise form: whenever every integer
+relation annihilating `u` also annihilates `w`, the point `tau*w mod 1` belongs
+to the closure of the continuous orbit `t*u mod 1`, for every real `tau`.
 
-A plausible proof route is closed-subgroup character separation. If `H` is a
-closed subgroup of a finite unit torus and `x` is not in `H`, Haar-average a
-continuous function separating `H` and `x+H`, approximate it by the dense
-multivariate Fourier algebra, and use character orthogonality on `H` to find
-an integer character trivial on `H` but nontrivial at `x`. Mathlib contains
-finite tori and `UnitAddTorus.mFourierSubalgebra_closure_eq_top`, but the
-subgroup-averaging and separation-character theorem are not packaged and have
-not yet been compiled here. They must be proved rather than introduced as a
-project axiom.
+`LonelyRunner/KroneckerOrbit.lean` constructs the continuous additive orbit
+homomorphism and its topological range closure, proves its exact multivariate
+Fourier evaluation, and establishes that a character is one on the full real
+orbit exactly when its integer index is a real relation among the speeds.
+`KroneckerAveraging.lean`, `KroneckerCharacters.lean`, and
+`KroneckerSeparationSetup.lean` provide normalized subgroup Haar measure,
+translate integrability and continuity, spatial character multiplicativity,
+Haar orthogonality, and a complex Urysohn separator for `H` and `x+H`.
+
+Finally, `KroneckerSeparation.lean` defines a bounded difference-of-integrals
+functional. If no integer character separates `x` from `H`, its closed kernel
+contains the dense span of `UnitAddTorus.mFourier`, hence every continuous
+function. The Urysohn separator has difference integral one, a contradiction.
+This proves `exists_mFourier_separating`, followed by
+`orbitHom_mem_orbitTopologicalClosure_of_relations` and the ordinary set form
+`orbitHom_mem_closure_range_of_relations`.
+
+The remaining Lean gap is now the preceding BHK linear-algebra construction:
+from a positive real tuple with an irrational coordinate ratio, build a
+rational vector annihilated by every integer relation of the tuple, with no
+zero coordinates and with a repeated absolute value. The paper obtains it
+from a rational basis of the relation kernel and an adjacent-ratio argument.

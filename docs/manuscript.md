@@ -111,9 +111,20 @@ range of a repeated positive rational tuple is then enumerated explicitly;
 the stronger bound for its smaller distinct range is weakened to the original
 tuple's bound. This gives
 `distinctPositiveRationalConjecture_iff_positiveRationalConjecture` and the
-composed `positiveIntegerConjecture_iff_positiveRationalConjecture`. None of
-these declarations covers arbitrary irrational real ratios; that step still
-needs the multidimensional orbit theorem.
+composed `positiveIntegerConjecture_iff_positiveRationalConjecture`.
+
+The hard reverse direction of the required multidimensional orbit theorem is
+now formalized in the five `Kronecker*.lean` modules. Integer Fourier
+characters separate a point from a closed finite-torus subgroup by normalized
+Haar orthogonality, Urysohn separation, and the dense Fourier span. The final
+declarations
+`exists_mFourier_separating` and
+`orbitHom_mem_closure_range_of_relations` prove that inclusion of integer
+relation lattices implies the pointwise orbit-closure inclusion used by BHK.
+This still does not cover arbitrary irrational real ratios by itself: the
+remaining unformalized part constructs the special rational vector in the
+annihilator of the real tuple's integer relations and proves its coordinate
+properties.
 
 Two further structured classes are proved in `docs/structured-classes.md`.
 The first uses the explicit time determined by a positive base scale when

@@ -715,3 +715,75 @@ separation theorem and the BHK-sufficient one-way orbit-closure theorem, or to
 report the earliest exact unsolved Lean goal after compiling the preceding
 declarations. In particular, it was forbidden to call another uncompiled DAG
 complete or fully formalizable.
+
+## Response 16 and independent repair
+
+Sol Pro chose the permitted incomplete option and named continuity of the
+subgroup average as its first unresolved goal. Its claimed compiled prefix was
+still not compiler-backed: it used the wrong notation for a continuous
+additive hom, applied algebraic `AddSubgroup.closure` where topological closure
+was required, omitted the hom's continuity field, contained an ill-typed coset
+membership proof, and left the half-period exponential contradiction as
+pseudocode.
+
+The alleged continuity blocker was discharged directly with
+`MeasureTheory.continuous_of_dominated`, including all measurability,
+domination, integrability, and parameter-continuity obligations. Independent
+formalization then completed:
+
+- the continuous real orbit and its topological range closure;
+- exact Fourier evaluation on the orbit and the character/relation iff;
+- normalized closed-subgroup Haar measure and character orthogonality;
+- the closed translated coset and complex Urysohn separator;
+- a bounded difference-of-Haar-integrals functional;
+- the Fourier-span closed-kernel argument and
+  `exists_mFourier_separating`;
+- `orbitHom_mem_closure_range_of_relations`, the exact one-way generalized
+  Kronecker inclusion required by BHK.
+
+Every module compiles without placeholders or project axioms. Two independent
+adversarial agents checked the measure normalization, density dependency,
+coset orientation, relation direction, orbit closure type, and final
+quantifiers. Both found no gap; the axiom footprint is only `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+## Prompt 17: BHK rational relation-subspace construction
+
+The compiled declarations and exact defects in Response 16 were reported to
+Sol Pro. The next request moved to the remaining BHK bridge: construct, from a
+positive real tuple with an irrational coordinate ratio, a rational vector
+annihilated by every integer relation of the tuple, with all coordinates
+nonzero and at least one repeated absolute value. Sol Pro was asked for both a
+rational-kernel-basis route and a direct dual-annihilator route, with exact
+pinned Lean types and either a compiling milestone or the earliest honest
+unsolved goal.
+
+## Response 17: two BHK bridge routes
+
+Sol Pro returned two materially different constructions and explicitly chose
+the permitted incomplete outcome.  Route A forms a rational matrix whose rows
+span the rational relations of the speed tuple, then asks for coordinatewise
+density of the rational kernel inside the corresponding real kernel.  Its
+first unsupported theorem is `rational_kernel_dense`.
+
+Route B works in `SpeedSpan u := Submodule.span ℚ (Set.range u)`.  A rational
+dual functional gives weights automatically annihilated by every rational
+relation.  Sol Pro proposed approximating the real inclusion functional on a
+finite basis by a rational dual functional to obtain a positive rational
+weight vector `r`; dimension at least two then supplies a second functional
+`s` not proportional to `r`.  Adjacent coordinate ratios of `s k / r k` and
+
+```text
+w k = (r i + r j) * s k - (s i + s j) * r k
+```
+
+give `w i = -w j`, while the strict weighted-mean inequality prevents every
+coordinate of `w` from vanishing.  This is the BHK collision needed to reduce
+the number of distinct absolute rational speeds.
+
+The response did not compile either route.  It identified finite-product
+density of rational casts, `denseRange_fin_ratCast`, as the first API-sensitive
+obligation in Route B.  Its exact declaration and several cited API names must
+therefore be compiler-audited rather than trusted.  Independent work had
+already begun on both the rational basis-coordinate construction and the
+adjacent-ratio calculation when this response arrived.
