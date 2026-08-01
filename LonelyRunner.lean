@@ -6,6 +6,8 @@ import LonelyRunner.BaseCases
 import LonelyRunner.FastRunnerInsertion
 import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
+import LonelyRunner.Normalization
+import LonelyRunner.SmallDimensions
 
 /-!
 Root import for the formal Lonely Runner development.

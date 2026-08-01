@@ -35,7 +35,8 @@ disproof claim.
 - `scripts/check_bad_sets.py`: exact rational interval-union and
   inclusion--exclusion audit utilities.
 - `scripts/search_residual.py`: exact residual-class, pivot, overlap, and
-  half-period searches.
+  half-period searches, including complete primitive speed-30 audits through
+  six moving runners.
 - `certificates/`: reproducible finite-search outputs.
 - `research/`: Lean build history and archived GPT-5.6 Sol Pro sessions.
 

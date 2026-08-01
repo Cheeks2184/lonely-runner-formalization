@@ -41,6 +41,7 @@ python3 scripts/check_integer_tuple.py exhaustive --max-runners 4 --max-speed 8
 python3 scripts/search_residual.py --runners 3 --max-speed 30 --primitive-only --sol-pivot-counts
 python3 scripts/search_residual.py --runners 4 --max-speed 30 --primitive-only --sol-pivot-counts
 python3 scripts/search_residual.py --runners 5 --max-speed 30 --primitive-only --sol-pivot-counts
+python3 scripts/search_residual.py --runners 6 --max-speed 30 --primitive-only --sol-pivot-counts
 python3 -m unittest discover -s tests -v
 ```
 
@@ -82,8 +83,11 @@ overstrong candidate lemmas.
 The regression tests compare the count formula with literal residue sets,
 check certificate soundness on small boxes, and preserve counterexamples to
 minimum-grid, fastest-half-period, fastest-pivot, and false criterion-
-subsumption claims. These are independent executable checks of formulas and
-finite data, not a formal enumeration or an all-dimensional result.
+subsumption claims. The complete six-runner speed-30 run additionally checks
+588,559 primitive tuples, including 239,928 residual tuples, all of which pass
+the unrestricted two-parent certificate. These are independent executable
+checks of formulas and finite data, not a formal enumeration or an
+all-dimensional result.
 
 ## Exact bad-set interval audit
 

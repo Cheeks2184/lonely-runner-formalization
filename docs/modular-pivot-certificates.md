@@ -111,6 +111,7 @@ the residual tuples.
 | 3 | 3,472 | 355 | 1,981 | 1,136 | 992 | 1,136 |
 | 4 | 25,819 | 241 | 15,281 | 10,297 | 4,819 | 10,297 |
 | 5 | 139,246 | 45 | 84,885 | 54,316 | 12,565 | 54,316 |
+| 6 | 588,559 | 1 | 348,630 | 239,928 | 97,395 | 239,928 |
 
 Reproduce the rows with:
 
@@ -118,6 +119,7 @@ Reproduce the rows with:
 python3 scripts/search_residual.py --runners 3 --max-speed 30 --primitive-only --sol-pivot-counts
 python3 scripts/search_residual.py --runners 4 --max-speed 30 --primitive-only --sol-pivot-counts
 python3 scripts/search_residual.py --runners 5 --max-speed 30 --primitive-only --sol-pivot-counts
+python3 scripts/search_residual.py --runners 6 --max-speed 30 --primitive-only --sol-pivot-counts
 ```
 
 The tight stress tuple `(1,9,10,11,12)` has pivot `9`, an ordered two-parent
@@ -130,6 +132,26 @@ counts is below `V`, an uncovered `k` exists.  This certifies respectively
 467, 735, and 2,792 of the residual tuples above; literal half-period witnesses
 exist for 1,075, 10,094, and 52,306.  It is useful evidence but weaker than
 the two-parent computation.
+
+The six-runner row was added by an independent complete enumeration. Smaller
+cutoffs `15,20,25` have respectively `2,240`, `14,120`, and `65,066` residual
+tuples, all two-parent certified. A deterministic sample (seed `20260801`) of
+5,000 primitive six-tuples from speeds through 200 contained 2,281 residual
+tuples, all two-parent certified. The sample is evidence only.
+
+The parent hierarchy is not cosmetic. `(1,2,3,5,7,8)` is the first tuple in
+the complete speed-15 enumeration for which every one-parent certificate
+fails. At pivot `5`, a two-parent ordering gives the exact bound `26<30`; the
+surviving residue `r=6` gives `t=6/35`. For `(1,2,7,10,11,14)` at pivot `14`,
+the best simple, one-parent, two-parent, three-parent, and full-history bounds
+are respectively `110,78,70,66,64` against universe size `84`. Thus even three
+parents need not recover the exact union.
+
+Negation of residues preserves every candidate and bad set and has no fixed
+point among candidates. Hence all bad unions and witness complements have even
+cardinality; every successful strict certificate has slack at least two. This
+explains, but does not force, the minimum slack observed in the six-runner
+search.
 
 ## Remaining obligations
 

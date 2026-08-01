@@ -29,3 +29,10 @@ project-specific axiom.
 #print axioms LonelyRunner.card_union_le_card_add_selected_remainder
 #print axioms LonelyRunner.card_ordered_union_le_sum_selected_remainders
 #print axioms LonelyRunner.exists_mem_avoiding_ordered_of_sum_lt_card
+#print axioms LonelyRunner.circleNorm_mul_abs_right
+#print axioms LonelyRunner.exists_stationaryWitness_abs_iff
+#print axioms LonelyRunner.exists_stationaryWitness_scale_iff
+#print axioms LonelyRunner.exists_stationaryWitness_natScale_iff
+#print axioms LonelyRunner.twoMovingSpeeds_of_abs_le
+#print axioms LonelyRunner.twoMovingSpeeds
+#print axioms LonelyRunner.twoMovingRunners
