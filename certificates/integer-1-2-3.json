@@ -1,0 +1,18 @@
+{
+  "candidate_count": 13,
+  "distances": [
+    "1/4",
+    "1/2",
+    "1/4"
+  ],
+  "meets_target": true,
+  "optimum": "1/4",
+  "schema": "lonely-runner-integer-certificate-v1",
+  "speeds": [
+    1,
+    2,
+    3
+  ],
+  "target": "1/4",
+  "witness": "1/4"
+}
