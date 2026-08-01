@@ -4,6 +4,7 @@ import LonelyRunner.StationaryEquivalence
 import LonelyRunner.RepeatedStationaryEquivalence
 import LonelyRunner.BaseCases
 import LonelyRunner.FastRunnerInsertion
+import LonelyRunner.DivisorInsertion
 import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues

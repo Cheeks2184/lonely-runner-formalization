@@ -22,6 +22,9 @@ project-specific axiom.
 #print axioms LonelyRunner.abs_circleNorm_sub_circleNorm_le
 #print axioms LonelyRunner.exists_small_shift_circleNorm_ge
 #print axioms LonelyRunner.fastRunnerInsertion
+#print axioms LonelyRunner.exists_int_grid_circleNorm_ge
+#print axioms LonelyRunner.exists_int_coprime_grid_circleNorm_ge
+#print axioms LonelyRunner.codimensionOneDivisorInsertion
 #print axioms LonelyRunner.circleNorm_ge_of_int_band
 #print axioms LonelyRunner.minimumScaleResidueBands
 #print axioms LonelyRunner.card_biUnion_le_sum_card
