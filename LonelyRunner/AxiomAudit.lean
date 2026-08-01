@@ -54,6 +54,7 @@ project-specific axiom.
 #print axioms LonelyRunner.distinctPositiveRationalConjecture_iff_positiveRationalConjecture
 #print axioms LonelyRunner.positiveIntegerConjecture_iff_positiveRationalConjecture
 #print axioms LonelyRunner.mFourier_orbitHom_eq_one_iff
+#print axioms LonelyRunner.integrable_add_closedSubgroup
 #print axioms LonelyRunner.continuous_integral_add_closedSubgroup
 #print axioms LonelyRunner.integral_mFourier_closedSubgroup_eq_zero_of_exists_ne_one
 #print axioms LonelyRunner.closedSubgroupCosetSeparator_eq_one

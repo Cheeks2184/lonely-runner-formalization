@@ -33,6 +33,27 @@ theorem closedSubgroupHaar_univ {m : ℕ}
     (Measure.addHaarMeasure_self
       (K₀ := (⊤ : TopologicalSpace.PositiveCompacts H)))
 
+/-- Restricting a continuous torus function to a translate of a closed
+subgroup is integrable for normalized subgroup Haar measure. -/
+theorem integrable_add_closedSubgroup {m : ℕ}
+    (H : AddSubgroup (UnitAddTorus (Fin m)))
+    (hH : IsClosed (H : Set (UnitAddTorus (Fin m))))
+    (f : C(UnitAddTorus (Fin m), ℂ))
+    (x : UnitAddTorus (Fin m)) :
+    Integrable (fun h : H => f (x + (h : UnitAddTorus (Fin m))))
+      (closedSubgroupHaar H hH) := by
+  letI : CompactSpace H := isCompact_iff_compactSpace.mp hH.isCompact
+  let μH : Measure H := closedSubgroupHaar H hH
+  have hμH_univ : μH Set.univ = 1 := by
+    simpa [μH] using closedSubgroupHaar_univ H hH
+  letI : IsProbabilityMeasure μH := IsProbabilityMeasure.mk hμH_univ
+  apply Integrable.of_bound
+    (f.continuous.comp
+      (continuous_const.add continuous_subtype_val)).aestronglyMeasurable
+    ‖f‖
+  filter_upwards [] with h
+  exact f.norm_coe_le_norm (x + (h : UnitAddTorus (Fin m)))
+
 /-- Averaging a continuous complex-valued function over a closed subgroup of
 a finite unit torus is continuous in the translating point. -/
 theorem continuous_integral_add_closedSubgroup {m : ℕ}
