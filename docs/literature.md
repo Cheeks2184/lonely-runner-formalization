@@ -69,3 +69,11 @@ found; `N >= 14` remains open at the cutoff.
   stronger shifted statement is immediately suspect.
 - Allowing duplicate stationary speeds is harmless only after explicitly
   invoking lower-dimensional cases.
+
+The exact real-to-rational reduction used here is BHK Lemma 8, not a direct
+continuity argument. In moving dimension `m`, its endpoint-safe form combines
+the rational cases in dimensions `m` and `m-1`; see
+`docs/real-to-integer-reduction.md`. Henze--Malikiosis give a useful
+same-dimensional orbit-closure reduction for supremal constants, but an
+additional attainment or open-slack argument is required for the closed
+existential formulation.

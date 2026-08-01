@@ -191,6 +191,98 @@ Sol Pro returned two lemmas after 8m42s:
    arcs.
 
 Both proofs are accepted as mathematical partial results and are written out
-in `docs/structured-classes.md`. Neither supplies the full conjecture. The
-first remains to be formalized directly; the second also needs a formal
+in `docs/structured-classes.md`. Neither supplies the full conjecture. At this
+point the first remained to be formalized directly; it was subsequently proved
+as `minimumScaleResidueBands`. The second still needs a formal
 Kronecker/two-torus density theorem.
+
+## Prompt 5: residual primitive-integer modular search
+
+The coordinator restricted the next round to primitive positive increasing
+integer tuples left after fast insertion and the minimum-scale band filter. It
+requested at most two exact structural certificates based on common
+numerators, adjacent gaps, or subset gcds, with exact tests for 3--5 moving
+runners through maximum speed 30. The prompt expressly prohibited an
+unjustified real-to-integer reduction or any all-dimensional conclusion from
+the bounded computation.
+
+## Response 5
+
+After 11m47s, Sol Pro proposed the pivot grid `t=r/((n+1)a_j)`. It defined the
+pivot-good residue set `R_j`, strict bad sets `B_ij`, and supplied the exact
+gcd/ceiling formula
+
+`|B_ij| = g_ij(2 ceil(a_j/g_ij)-1)
+          - h_ij(2 ceil(a_j/((n+1)h_ij))-1)`
+
+with `g_ij=gcd(a_i,(n+1)a_j)` and `h_ij=gcd(a_i,a_j)`. A strict sum-cardinality
+bound yields a good residue. Its second lemma retained overlap by ordering the
+bad sets and, at each step, subtracting overlap with a selected union of one or
+two earlier parent sets.
+
+The response reported the exact partition and coverage table now preserved in
+`docs/modular-pivot-certificates.md`: among primitive increasing tuples with
+maximum speed 30, the two-parent certificate covered every one of the 1,136,
+10,297, and 54,316 residual tuples for 3, 4, and 5 moving runners. It clearly
+labeled this finite evidence rather than a uniform theorem. It also supplied
+the stress tuple `(1,9,10,11,12)` with witness `t=13/27`.
+
+## Independent audit and objection
+
+Two independent exact implementations reproduced the formula, strict
+boundary, induction, all table entries, and the stress witness. The coordinator
+found one false comparison claim: the single-set union bound does **not**
+subsume the minimum-scale band theorem, because it can discard decisive
+overlap even when `r=1` is visibly good. Exact counterexamples are `(4,5,9)`,
+`(2,3,5,7)`, and `(2,3,4,5,6)`, which satisfy the band criterion but fail the
+union-bound inequality at every pivot. This objection, along with the exact
+counterexamples, was returned to Sol Pro.
+
+## Corrected response 5
+
+After 4m45s, Sol Pro explicitly retracted the false subsumption wording and
+gave the corrected map:
+
+- fast insertion and the band condition are incomparable;
+- the band condition fixes pivot `a_1` and numerator `1`, while the simple
+  union criterion searches broader grids but loses all overlap;
+- the simple union criterion and band condition are incomparable, with
+  `(1,2,4)` witnessing the opposite direction;
+- the two-parent condition subsumes the simple union criterion;
+- for 3 and 4 moving runners it computes a complete bad union and therefore
+  subsumes a known band witness, whereas no such global relationship is proved
+  for 5 or more moving runners.
+
+It then listed the precise residue-model, cardinality, datatype, soundness, and
+enumeration-completeness obligations for an end-to-end Lean verifier. As a
+possible uniform target it proposed an **open** adjacent-anchor domination
+inequality requiring two neighboring-speed bad sets at one pivot to account
+for enough of every other bad set. That statement is not accepted into the
+ledger without a separate counterexample search; even if it survives bounded
+testing, it remains an unproved strengthening, not progress on `FULL-01`.
+
+## Coordinator audit of the corrected response
+
+The proposed adjacent-anchor statement was immediately falsified. For six
+moving runners, the primitive residual tuple `(1,2,3,4,5,7)` gives proposed
+bounds versus candidate-set sizes
+
+`6=6, 12=12, 18=18, 24=24, 30=30, 46>42`
+
+over the six pivots, so no required strict inequality holds. Exact full-union
+sizes `28<30` at pivot `5` and `40<42` at pivot `7` show that the failure comes
+from the fixed anchors losing overlap, not from absence of a grid witness. The
+counterexample and exact per-pivot figures were submitted back to Sol Pro with
+a request for explicit retraction and no untested replacement. The statement
+is recorded as `rejected`, not `open`.
+
+## Sol Pro retraction
+
+Sol Pro responded after 52 seconds and explicitly retracted the
+adjacent-anchor domination conjecture. It verified all six failed strict
+bounds and the two exact-union witnesses. Its diagnosis agrees with the
+coordinator's: fixed anchors count each non-anchor remainder separately and
+therefore miss overlap among those remainders. At pivot `5` this overcounts by
+`2`; at pivot `7` it overcounts by `6`. As requested, it proposed no replacement
+without a prior six-runner residual audit. No uniform modular statement
+survives this round.

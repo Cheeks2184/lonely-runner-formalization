@@ -9,6 +9,13 @@ For a prime or modulus `p`, search for one shared numerator `a` such that all
 least absolute residues of `a v_i` are large enough. A modular witness gives
 the real witness `t = a/p`.
 
+The current concrete version chooses a tuple speed `a_j` as pivot, uses
+denominator `(n+1)a_j`, and represents every other runner's violating
+numerators as a finite bad set. Exact gcd/ceiling formulas count individual
+bad sets, while a two-parent certificate retains selected pair/triple overlap.
+The abstract union and ordered-overlap implications now compile in Lean; see
+`docs/modular-pivot-certificates.md`.
+
 Dependencies:
 
 1. Exact floor/ceiling conventions for the central forbidden residues.
@@ -22,7 +29,9 @@ Dependencies:
 Obstruction: CRT does not allow a different favorable numerator for each
 coordinate; all conditions share one time. This route has been highly effective
 through the currently verified finite dimensions but gives no known uniform
-argument for all dimensions.
+argument for all dimensions. In particular, exhaustive two-parent success for
+primitive tuples of 3--5 moving speeds through maximum speed 30 supplies
+neither a minimal-counterexample height bound nor an unbounded-speed theorem.
 
 ## B. Fourier, measure, and inclusion-exclusion
 
@@ -102,16 +111,19 @@ Completed milestones are the canonical and stationary equivalences, the
 one-moving-runner base case, the quantitative fast-runner insertion theorem,
 and the exact fixed-tuple checker. The live priorities are now:
 
-1. Formalize the minimum-scale residue-band lemma.
-2. Formalize a precise real-to-integer reduction with its Kronecker and
+1. Formalize a precise real-to-integer reduction with its Kronecker and
    lower-dimensional dependencies exposed.
-3. Prove the finite-extrema certificate theorem in Lean and transfer trust from
-   the Python checker.
-4. Attack the residual comparable-speed class not covered by insertion or the
-   two structured-class lemmas.
+2. Complete the number-theoretic Lean layer for modular pivot certificates and
+   make bounded certificates kernel-checkable.
+3. Find or refute a uniform overlap theorem for the residual comparable-speed
+   class; the speed-30 computation is evidence only.
+4. Formalize the two irrational rank-one-block theorem using a torus-density
+   lemma.
 5. State and test the exact distinguished-coset zonotope equivalence without
    strengthening it to the false shifted problem.
 
 The fourth Sol Pro round produced two valid but limited structured-class
-lemmas, recorded in `docs/structured-classes.md`. Their exact residual class is
-now a sharper target than the undifferentiated phrase "comparable speeds."
+lemmas. The fifth produced exact modular certificates and a bounded dataset,
+then retracted an incorrect claim that the simple union bound subsumed the
+band theorem. Their exact residual class is now a sharper target than the
+undifferentiated phrase "comparable speeds."

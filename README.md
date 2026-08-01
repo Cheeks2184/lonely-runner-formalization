@@ -6,7 +6,10 @@ proved, not evidence that a proof has been found.
 
 Current result: the canonical statement, its nonnegative-time, relative-speed,
 distinct-stationary, and repeated-stationary equivalences, the one-moving-runner
-base case, and a quantitative fast-runner insertion theorem are kernel-checked.
+base case, a quantitative fast-runner insertion theorem, and a minimum-scale
+residue-band structured class are kernel-checked. Generic finite union and
+ordered-overlap certificate soundness are also kernel-checked; the associated
+number-theoretic counts and bounded search are not yet end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
 disproof claim.
 
@@ -22,11 +25,17 @@ disproof claim.
 - `docs/failed-approaches.md`: rejected arguments and explicit counterexamples.
 - `docs/structured-classes.md`: two audited comparable-speed class results and
   their residual obstruction.
+- `docs/real-to-integer-reduction.md`: the exact BHK reduction, its
+  lower-dimensional dependency, and the formalization gap.
+- `docs/modular-pivot-certificates.md`: exact modular bad-set counts, generic
+  Lean-checked certificate soundness, bounded audits, and the uniform gap.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
 - `scripts/check_integer_tuple.py`: exact-rational fixed-instance optimizer and
   deterministic certificate verifier.
 - `scripts/check_bad_sets.py`: exact rational interval-union and
   inclusion--exclusion audit utilities.
+- `scripts/search_residual.py`: exact residual-class, pivot, overlap, and
+  half-period searches.
 - `certificates/`: reproducible finite-search outputs.
 - `research/`: Lean build history and archived GPT-5.6 Sol Pro sessions.
 

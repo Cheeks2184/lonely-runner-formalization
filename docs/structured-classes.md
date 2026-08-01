@@ -1,7 +1,9 @@
 # Two structured comparable-speed classes
 
-These are audited mathematical partial results obtained in Sol Pro session
-001, round 4. Neither resolves the general comparable-speed regime. Write
+These are audited partial results obtained in Sol Pro session 001, round 4.
+The first is now formalized in `LonelyRunner/StructuredClasses.lean`; the
+second remains a human-checked mathematical proof. Neither resolves the
+general comparable-speed regime. Write
 
 \[
   d(x)=\lVert x\rVert_{\mathbb R/\mathbb Z},\qquad N=n+1.
@@ -97,6 +99,7 @@ cases where the displayed `x_0+epsilon` construction loses its guaranteed
 positive margin. Equality does not imply that no other open good arc exists;
 it simply requires a separate argument.
 
-The first lemma is elementary and a good Lean target. The second additionally
-requires a formal two-torus density theorem. Neither may be used as a hidden
+The first lemma is kernel-checked as
+`LonelyRunner.minimumScaleResidueBands`. The second additionally requires a
+formal two-torus density theorem. Neither may be used as a hidden
 real-to-integer reduction.

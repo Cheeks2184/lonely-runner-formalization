@@ -43,3 +43,27 @@ minimum distance exactly `1/3`, never strictly greater than `1/3`.
 
 The claimed proof cannot be repaired locally: its central induction lemma,
 time reduction, and target inequality all fail independently.
+
+## 2026-08-01: adjacent-anchor domination conjecture
+
+Sol Pro proposed that, for every residual primitive integer tuple, some pivot's
+two neighboring-speed bad sets would overlap all remaining bad sets strongly
+enough to give a strict two-parent union bound. This proposed uniform
+strengthening is false.
+
+The smallest counterexample found has six moving runners:
+
+`(1,2,3,4,5,7)`, with `N=7`.
+
+It is primitive and increasing. Fast insertion fails (`7 < 6*5`), and the
+minimum-scale band criterion fails because `7` lies in the open gap `(6,8)`.
+For pivots of speeds `1,2,3,4,5,7`, the proposed adjacent-anchor upper bounds
+and candidate-set cardinalities are respectively
+
+`6=6, 12=12, 18=18, 24=24, 30=30, 46>42`.
+
+The condition requires strict inequality, so every pivot fails. This is a
+failure of the proposed anchor restriction, not a counterexample to Lonely
+Runner: the exact complete bad unions at pivots `5` and `7` have sizes `28<30`
+and `40<42`, so those grids contain witnesses. The fixed adjacent anchors lose
+decisive higher overlap.

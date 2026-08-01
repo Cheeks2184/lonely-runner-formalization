@@ -4,6 +4,8 @@ import LonelyRunner.StationaryEquivalence
 import LonelyRunner.RepeatedStationaryEquivalence
 import LonelyRunner.BaseCases
 import LonelyRunner.FastRunnerInsertion
+import LonelyRunner.StructuredClasses
+import LonelyRunner.ModularCertificates
 
 /-!
 Root import for the formal Lonely Runner development.

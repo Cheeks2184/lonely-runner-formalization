@@ -88,14 +88,30 @@ The one-moving-runner base case is formalized as
 `LonelyRunner.oneMovingRunner`: for nonzero relative speed `v`, the explicit
 time `1/(2v)` places the runner at circular distance exactly `1/2`.
 
-Two further human-checked structured classes are proved in
-`docs/structured-classes.md`. The first uses the explicit time determined by
-the smallest speed when every normalized magnitude lies in one of a family of
-closed residue bands. The second treats two rational rank-one blocks whose
-scales have irrational ratio and whose internal multiplier spreads are small;
-it uses nonempty open good arcs and the exact two-torus density criterion.
-These results are not yet Lean declarations and are not used by any formal
-theorem in this manuscript.
+Two further structured classes are proved in `docs/structured-classes.md`.
+The first uses the explicit time determined by a positive base scale when
+every normalized magnitude lies in one of a family of closed residue bands.
+It is formalized as `LonelyRunner.minimumScaleResidueBands`, supported by
+`circleNorm_neg`, `circleNorm_abs`, `circleNorm_ge_of_int_band`, and
+`circleNorm_ge_of_abs_int_band`. The second treats two rational rank-one blocks
+whose scales have irrational ratio and whose internal multiplier spreads are
+small; it uses nonempty open good arcs and the exact two-torus density
+criterion. The second result is not yet a Lean declaration and is not used by
+any formal theorem in this manuscript.
+
+For fixed positive integer tuples, `docs/modular-pivot-certificates.md`
+develops exact finite bad sets on grids with denominator `(n+1)a_j`. The
+purely finite implications are formalized as
+`LonelyRunner.card_biUnion_le_sum_card`,
+`LonelyRunner.exists_mem_avoiding_of_sum_card_lt_card`,
+`LonelyRunner.card_union_le_card_add_selected_remainder`, and
+`LonelyRunner.card_ordered_union_le_sum_selected_remainders`, followed by
+`LonelyRunner.exists_mem_avoiding_ordered_of_sum_lt_card`. These prove that a
+strict cardinality or ordered-overlap certificate leaves an uncovered finite
+candidate.
+The gcd formula for the individual bad-set sizes and the connection from the
+modular residue model to `circleNorm` remain paper proofs plus exact executable
+tests, so no end-to-end modular theorem is labeled formal.
 
 ## 5. Remaining obstruction
 
@@ -104,4 +120,6 @@ dimensions. Fast-runner induction leaves comparable speeds; finite checking
 still requires a separate finite computation in every dimension; Fourier
 methods do not reach the sharp constant; and the universal shifted-zonotope
 strengthening is false. These are mathematical obstructions, not Lean syntax
-issues.
+issues. In particular, the two-parent modular certificate succeeds throughout
+the audited primitive speed-30 boxes for 3--5 moving runners, but no theorem
+forces such a certificate for unbounded speeds.

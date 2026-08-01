@@ -38,6 +38,9 @@ python3 scripts/check_integer_tuple.py check 1 2 3
 python3 scripts/check_integer_tuple.py check 1 2 3 --certificate /tmp/lr-123.json
 python3 scripts/check_integer_tuple.py verify /tmp/lr-123.json
 python3 scripts/check_integer_tuple.py exhaustive --max-runners 4 --max-speed 8
+python3 scripts/search_residual.py --runners 3 --max-speed 30 --primitive-only --sol-pivot-counts
+python3 scripts/search_residual.py --runners 4 --max-speed 30 --primitive-only --sol-pivot-counts
+python3 scripts/search_residual.py --runners 5 --max-speed 30 --primitive-only --sol-pivot-counts
 python3 -m unittest discover -s tests -v
 ```
 
@@ -63,6 +66,24 @@ maximum for each such tuple. It does **not** prove any of the following:
 In particular, these are executable certificates checked by an ordinary Python
 program, not Lean-formalized certificates. They may support testing and
 counterexample search, but they cannot be labeled `proved-lean`.
+
+## Residual modular-certificate audit
+
+`scripts/search_residual.py` partitions primitive increasing tuples by the
+formal fast-insertion inequality, the minimum-scale residue bands, and the
+remaining residual class. On that residual class it constructs the modular
+bad sets described in `docs/modular-pivot-certificates.md`, compares every
+literal bad-set cardinality with the gcd/ceiling formula, and searches all
+pivots, runner orderings, and allowable one- or two-parent choices. The three
+commands above reproduce the complete speed-30 table in that note. The script
+also exposes exact fastest-half-period and anchor-grid searches used to reject
+overstrong candidate lemmas.
+
+The regression tests compare the count formula with literal residue sets,
+check certificate soundness on small boxes, and preserve counterexamples to
+minimum-grid, fastest-half-period, fastest-pivot, and false criterion-
+subsumption claims. These are independent executable checks of formulas and
+finite data, not a formal enumeration or an all-dimensional result.
 
 ## Exact bad-set interval audit
 
