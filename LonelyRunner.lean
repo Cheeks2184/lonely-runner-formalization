@@ -6,6 +6,7 @@ import LonelyRunner.BaseCases
 import LonelyRunner.FastRunnerInsertion
 import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
+import LonelyRunner.PivotResidues
 import LonelyRunner.Normalization
 import LonelyRunner.SmallDimensions
 
