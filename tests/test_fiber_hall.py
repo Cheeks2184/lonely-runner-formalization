@@ -13,12 +13,16 @@ SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
 from search_fiber_hall import (  # noqa: E402
+    additive_certificate_is_valid,
     audit_box,
+    best_additive_pivot_attempt,
     best_pivot_attempt,
     certificate_is_valid,
     child_fibers,
+    evaluate_additive_order,
     evaluate_order,
     fiber_lower_bound_from_masks,
+    find_additive_certificate,
     find_certificate,
 )
 from search_residual import pivot_bad_mask  # noqa: E402
@@ -101,7 +105,18 @@ class FiberHallTests(unittest.TestCase):
                 )
                 self.assertEqual(best_pivot_attempt(speeds, pivot).final_upper_bound, brute)
 
-    def test_smallest_bounded_counterexample(self) -> None:
+                additive_brute = min(
+                    evaluate_additive_order(
+                        speeds, pivot, order
+                    ).final_upper_bound
+                    for order in itertools.permutations(others)
+                )
+                self.assertEqual(
+                    best_additive_pivot_attempt(speeds, pivot).final_upper_bound,
+                    additive_brute,
+                )
+
+    def test_smallest_bounded_balanced_counterexample(self) -> None:
         speeds = (1, 2, 3, 5)
         self.assertIsNone(find_certificate(speeds))
         self.assertEqual(
@@ -120,6 +135,27 @@ class FiberHallTests(unittest.TestCase):
         self.assertEqual(
             audit_box(4, 5, residual_only=False),
             (5, 4, speeds),
+        )
+
+    def test_additive_objective_repairs_balanced_counterexample(self) -> None:
+        speeds = (1, 2, 3, 5)
+        pivot = speeds.index(3)
+        order = tuple(speeds.index(speed) for speed in (1, 2, 5))
+        certificate = evaluate_additive_order(speeds, pivot, order)
+        self.assertEqual(
+            tuple(
+                (step.bad_size, step.fiber_lower_bound, step.increment_bound)
+                for step in certificate.steps
+            ),
+            ((4, 0, 4), (4, 2, 2), (4, 0, 4)),
+        )
+        self.assertEqual(certificate.final_upper_bound, 10)
+        self.assertEqual(certificate.universe_size, 12)
+        self.assertTrue(additive_certificate_is_valid(certificate))
+        self.assertIsNotNone(find_additive_certificate(speeds))
+        self.assertEqual(
+            audit_box(4, 5, residual_only=False, objective="additive"),
+            (5, 5, None),
         )
 
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit the fiberwise single-parent overlap criterion on exact pivot masks.
+"""Audit balanced and additive fiberwise overlap criteria on exact masks.
 
 For a pivot speed ``A`` and ``N = len(speeds) + 1``, the candidate universe is
 the residues modulo ``N*A`` that are not divisible by ``N``.  The bad masks
@@ -13,7 +13,9 @@ parents ``P``, the program uses only
     sum_x max_{c in P} |F_b(x) intersect B_c|.
 
 In particular, it never replaces a fiber's maximum single-parent
-intersection by its intersection with the union of all parents.
+intersection by its intersection with the union of all parents.  Two exact
+subset DPs optimize respectively the common-``q`` bottleneck bound and the
+sharper sum of the individual insertion bounds.
 """
 
 from __future__ import annotations
@@ -21,6 +23,7 @@ from __future__ import annotations
 import argparse
 import itertools
 import math
+import random
 from dataclasses import dataclass
 from typing import Iterable
 
@@ -60,6 +63,20 @@ class FiberCertificate:
         return self.steps[0].bad_size + (len(self.steps) - 1) * self.q
 
 
+@dataclass(frozen=True)
+class AdditiveFiberCertificate:
+    """An exact fiber-credit certificate using every insertion separately."""
+
+    pivot: int
+    order: tuple[int, ...]
+    universe_size: int
+    steps: tuple[FiberStep, ...]
+
+    @property
+    def final_upper_bound(self) -> int:
+        return sum(step.increment_bound for step in self.steps)
+
+
 def pivot_candidates(speeds: tuple[int, ...], pivot: int) -> int:
     """Return the literal candidate-universe mask for ``pivot``."""
 
@@ -88,18 +105,19 @@ def child_fibers(
     pivot_speed = speeds[pivot]
     modulus = modulus_factor * pivot_speed
     candidates = pivot_candidates(speeds, pivot)
-    result: list[tuple[int, int]] = []
-    for target in range(-pivot_speed + 1, pivot_speed):
-        mask = 0
-        target_modulus = target % modulus
-        for residue in range(modulus):
-            if (
-                candidates & (1 << residue)
-                and (speeds[child] * residue) % modulus == target_modulus
-            ):
-                mask |= 1 << residue
-        if mask:
-            result.append((target, mask))
+    grouped: dict[int, int] = {}
+    for residue in range(modulus):
+        if not candidates & (1 << residue):
+            continue
+        image = (speeds[child] * residue) % modulus
+        if image < pivot_speed:
+            target = image
+        elif image > modulus - pivot_speed:
+            target = image - modulus
+        else:
+            continue
+        grouped[target] = grouped.get(target, 0) | (1 << residue)
+    result = sorted(grouped.items())
 
     # This identity checks both the strict endpoint convention and that the
     # fibers really partition the current literal bad mask.
@@ -176,6 +194,26 @@ def certificate_is_valid(certificate: FiberCertificate) -> bool:
             for step in certificate.steps[1:]
         )
     )
+
+
+def evaluate_additive_order(
+    speeds: tuple[int, ...], pivot: int, order: tuple[int, ...]
+) -> AdditiveFiberCertificate:
+    """Evaluate the sum of the individual fiberwise insertion bounds."""
+
+    balanced = evaluate_order(speeds, pivot, order)
+    return AdditiveFiberCertificate(
+        pivot=pivot,
+        order=order,
+        universe_size=balanced.universe_size,
+        steps=balanced.steps,
+    )
+
+
+def additive_certificate_is_valid(certificate: AdditiveFiberCertificate) -> bool:
+    """Check that the additive union upper bound is strictly below ``|R|``."""
+
+    return certificate.final_upper_bound < certificate.universe_size
 
 
 def _pivot_tables(
@@ -303,6 +341,76 @@ def find_certificate(speeds: tuple[int, ...]) -> FiberCertificate | None:
     return None
 
 
+def best_additive_pivot_attempt(
+    speeds: tuple[int, ...], pivot: int
+) -> AdditiveFiberCertificate:
+    """Minimize the sum of insertion bounds over every child order."""
+
+    others, counts, _fiber_masks, lower_bounds = _pivot_tables(speeds, pivot)
+    positions = {child: position for position, child in enumerate(others)}
+    full_state = (1 << len(others)) - 1
+    infinity = sum(counts.values()) + 1
+    cost = [infinity] * (full_state + 1)
+    predecessor: list[tuple[int, int] | None] = [None] * (full_state + 1)
+
+    # Every possible first child is an initial state with cost |B_first|.
+    for first in others:
+        cost[1 << positions[first]] = counts[first]
+    for state in range(1, full_state + 1):
+        if cost[state] == infinity:
+            continue
+        for child in others:
+            child_bit = 1 << positions[child]
+            if state & child_bit:
+                continue
+            increment = counts[child] - lower_bounds[(child, state)]
+            next_state = state | child_bit
+            candidate = cost[state] + increment
+            if candidate < cost[next_state]:
+                cost[next_state] = candidate
+                predecessor[next_state] = (state, child)
+
+    reverse_order: list[int] = []
+    state = full_state
+    while state & (state - 1):
+        link = predecessor[state]
+        if link is None:
+            raise AssertionError("broken additive-DP predecessor")
+        state, child = link
+        reverse_order.append(child)
+    first = others[state.bit_length() - 1]
+    order = (first, *reversed(reverse_order))
+    certificate = evaluate_additive_order(speeds, pivot, order)
+    if certificate.final_upper_bound != cost[full_state]:
+        raise AssertionError("additive DP disagrees with direct evaluation")
+    return certificate
+
+
+def find_additive_pivot_certificate(
+    speeds: tuple[int, ...], pivot: int
+) -> AdditiveFiberCertificate | None:
+    """Return the best additive certificate for one pivot, if it is strict."""
+
+    certificate = best_additive_pivot_attempt(speeds, pivot)
+    return certificate if additive_certificate_is_valid(certificate) else None
+
+
+def find_additive_certificate(
+    speeds: tuple[int, ...],
+) -> AdditiveFiberCertificate | None:
+    """Return the first additive fiber certificate over every pivot."""
+
+    if len(speeds) < 2:
+        raise ValueError("at least two speeds are required")
+    if any(speed <= 0 for speed in speeds) or len(set(speeds)) != len(speeds):
+        raise ValueError("speeds must be distinct positive integers")
+    for pivot in range(len(speeds)):
+        certificate = find_additive_pivot_certificate(speeds, pivot)
+        if certificate is not None:
+            return certificate
+    return None
+
+
 def is_structural_residual(speeds: tuple[int, ...]) -> bool:
     """Test the repository's three already-proved elementary branches."""
 
@@ -314,9 +422,15 @@ def is_structural_residual(speeds: tuple[int, ...]) -> bool:
 
 
 def audit_box(
-    runners: int, max_speed: int, residual_only: bool = True
+    runners: int,
+    max_speed: int,
+    residual_only: bool = True,
+    objective: str = "balanced",
 ) -> tuple[int, int, tuple[int, ...] | None]:
     """Audit all primitive increasing tuples in the indicated finite box."""
+
+    if objective not in {"balanced", "additive"}:
+        raise ValueError("objective must be 'balanced' or 'additive'")
 
     checked = 0
     certified = 0
@@ -327,11 +441,53 @@ def audit_box(
         if residual_only and not is_structural_residual(speeds):
             continue
         checked += 1
-        if find_certificate(speeds) is not None:
+        certificate = (
+            find_certificate(speeds)
+            if objective == "balanced"
+            else find_additive_certificate(speeds)
+        )
+        if certificate is not None:
             certified += 1
         elif first_failure is None:
             first_failure = speeds
     return checked, certified, first_failure
+
+
+def audit_random(
+    runners: int,
+    max_speed: int,
+    samples: int,
+    seed: int,
+    residual_only: bool = True,
+    objective: str = "additive",
+) -> tuple[int, int, tuple[int, ...] | None]:
+    """Audit a reproducible sample of distinct primitive increasing tuples."""
+
+    if samples < 1:
+        raise ValueError("samples must be positive")
+    generator = random.Random(seed)
+    checked: set[tuple[int, ...]] = set()
+    certified = 0
+    attempts = 0
+    while len(checked) < samples and attempts < 1000 * samples:
+        attempts += 1
+        speeds = tuple(sorted(generator.sample(range(1, max_speed + 1), runners)))
+        if speeds in checked or math.gcd(*speeds) != 1:
+            continue
+        if residual_only and not is_structural_residual(speeds):
+            continue
+        checked.add(speeds)
+        certificate = (
+            find_certificate(speeds)
+            if objective == "balanced"
+            else find_additive_certificate(speeds)
+        )
+        if certificate is None:
+            return len(checked), certified, speeds
+        certified += 1
+    if len(checked) != samples:
+        raise RuntimeError("could not generate the requested number of eligible samples")
+    return len(checked), certified, None
 
 
 def _format_certificate(
@@ -355,6 +511,26 @@ def _format_certificate(
     )
 
 
+def _format_additive_certificate(
+    speeds: tuple[int, ...], certificate: AdditiveFiberCertificate
+) -> str:
+    step_rows = tuple(
+        (
+            speeds[step.child],
+            step.bad_size,
+            step.fiber_lower_bound,
+            step.increment_bound,
+        )
+        for step in certificate.steps
+    )
+    return (
+        f"pivot={speeds[certificate.pivot]} universe={certificate.universe_size} "
+        f"order={tuple(speeds[index] for index in certificate.order)} "
+        f"rows(speed,bad,fiberLB,increment)={step_rows} "
+        f"additive_upper_bound={certificate.final_upper_bound}"
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--tuple", nargs="+", type=int, dest="speeds")
@@ -366,6 +542,18 @@ def main() -> int:
     parser.add_argument("--runners", type=int)
     parser.add_argument("--max-speed", type=int)
     parser.add_argument(
+        "--samples",
+        type=int,
+        help="audit this many deterministic pseudorandom eligible tuples",
+    )
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument(
+        "--objective",
+        choices=("balanced", "additive"),
+        default="balanced",
+        help="order objective to optimize (default: balanced)",
+    )
+    parser.add_argument(
         "--all-tuples",
         action="store_true",
         help="include tuples covered by an existing elementary branch",
@@ -375,28 +563,60 @@ def main() -> int:
         speeds = tuple(args.speeds)
         if args.show_all_pivots:
             for pivot in range(len(speeds)):
-                attempt = best_pivot_attempt(speeds, pivot)
-                print(
-                    f"speeds={speeds} valid={certificate_is_valid(attempt)} "
-                    f"{_format_certificate(speeds, attempt)}"
-                )
+                if args.objective == "balanced":
+                    attempt = best_pivot_attempt(speeds, pivot)
+                    valid = certificate_is_valid(attempt)
+                    formatted = _format_certificate(speeds, attempt)
+                else:
+                    attempt = best_additive_pivot_attempt(speeds, pivot)
+                    valid = additive_certificate_is_valid(attempt)
+                    formatted = _format_additive_certificate(speeds, attempt)
+                print(f"speeds={speeds} valid={valid} {formatted}")
             return 0
-        certificate = find_certificate(speeds)
+        certificate = (
+            find_certificate(speeds)
+            if args.objective == "balanced"
+            else find_additive_certificate(speeds)
+        )
         if certificate is None:
-            print(f"speeds={speeds} fiber_certificate=None")
+            print(
+                f"speeds={speeds} objective={args.objective} "
+                "fiber_certificate=None"
+            )
         else:
-            print(f"speeds={speeds} {_format_certificate(speeds, certificate)}")
+            formatted = (
+                _format_certificate(speeds, certificate)
+                if isinstance(certificate, FiberCertificate)
+                else _format_additive_certificate(speeds, certificate)
+            )
+            print(f"speeds={speeds} objective={args.objective} {formatted}")
         return 0
     if args.runners is None or args.max_speed is None:
         parser.error("supply --tuple, or both --runners and --max-speed")
     if not 2 <= args.runners <= args.max_speed:
         parser.error("require 2 <= runners <= max-speed")
-    checked, certified, failure = audit_box(
-        args.runners, args.max_speed, residual_only=not args.all_tuples
-    )
+    if args.samples is None:
+        checked, certified, failure = audit_box(
+            args.runners,
+            args.max_speed,
+            residual_only=not args.all_tuples,
+            objective=args.objective,
+        )
+        search_kind = "exhaustive"
+    else:
+        checked, certified, failure = audit_random(
+            args.runners,
+            args.max_speed,
+            args.samples,
+            args.seed,
+            residual_only=not args.all_tuples,
+            objective=args.objective,
+        )
+        search_kind = f"random(seed={args.seed})"
     print(
         f"runners={args.runners} max_speed={args.max_speed} "
         f"scope={'all-primitive' if args.all_tuples else 'structural-residual'} "
+        f"objective={args.objective} search={search_kind} "
         f"checked={checked} certified={certified} "
         f"uncertified={checked - certified} first_failure={failure}"
     )
