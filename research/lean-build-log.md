@@ -79,3 +79,24 @@ shown above for every audited declaration. One orphaned `/mnt/c` Lake build was
 terminated with `SIGTERM` after its working directory and process tree were
 verified; it was only a redundant slow-filesystem compilation and no source
 files were removed.
+
+## 2026-08-01: clean-checkout verification
+
+The staged repository was committed locally and cloned, rather than copied,
+to `/home/joshu/code/lonely-runner-clean-checkout`. From that checkout, with no
+project build directory inherited from the working tree, dependency hydration
+was followed by:
+
+```sh
+lake build
+lake env lean LonelyRunner/AxiomAudit.lean
+python3 -m unittest discover -s tests -v
+```
+
+The clean checkout built all 1845 jobs. The axiom output was unchanged, all
+nine Python tests passed, and `git status --short` was empty because the local
+build directory is ignored. A forbidden-declaration scan found no source use
+of `sorry`, `admit`, custom `axiom`, explicit `opaque`, `unsafe`, `extern`,
+`implemented_by`, `partial_fixpoint`, or disabled `set_option`; the only text
+match was the explanatory phrase "project-specific axiom" in the audit file's
+module comment.
