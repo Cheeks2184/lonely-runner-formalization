@@ -818,3 +818,69 @@ nowhere-zero rational compatible tuple with strictly fewer distinct absolute
 values.  The endpoint-safe closure transfer to an actual real-orbit witness is
 also now compiled; final all-dimensional case splitting and sign normalization
 remain under audit.
+
+## Prompt 19: return to the integer core
+
+After the complete reduction theorem
+`conjecture_iff_positiveIntegerConjecture` passed two independent audits, Sol
+Pro was asked for three materially different strategies for the exact uniform
+pivot-certificate proposition.  The prompt supplied the already rejected
+union-bound, fixed-anchor, pairwise-credit, and absolute-Fourier approaches and
+required a falsifiable finite claim for each new route.
+
+## Response 19: Hall growth, flatness, and a second moment
+
+Sol Pro proposed: (1) an ordered balanced-growth certificate expressed by a
+Hall/min-cut condition on earlier bad-set intersections; (2) a projected-box
+flatness argument that would force a short integer relation; and (3) a
+second-moment obstruction comparing total pair intersections with the minimum
+possible multiplicity energy of a full cover.  It correctly declined to claim
+that any route proves the conjecture.
+
+The audit found that route (1)'s stated max-flow is exactly the cardinality of
+the already desired union intersection, so the min-cut reformulation adds no
+arithmetic lower bound by itself.  Literal enumeration nevertheless confirms
+the stronger balanced-growth certificate on both previously hard eight-speed
+tuples.  Route (3)'s proposed uniform strict inequality is false.  For
+`(1,2,5,7,9,11,12,13)`, the per-pivot quadruples `(P, Phi, S, R)` are
+
+```text
+(2,2,10,8), (6,6,22,16), (18,16,56,40), (38,26,82,56),
+(56,36,108,72), (68,44,132,88), (84,48,144,96), (100,54,158,104).
+```
+
+Thus neither `S < R` nor `P < Phi(S,R)` holds at any pivot.  The flatness
+route may yield a short relation but still lacks a deduction from that
+relation to a lonely-runner witness.
+
+## Prompt 20: exact Hall objection and repair request
+
+These computations and the tautological min-cut objection were returned to
+Sol Pro.  It was asked either for a genuine gcd/congruence lower bound on every
+Hall cut, or for a proof that a simpler checkable cut family suffices for the
+cyclic bad sets.  The false second-moment route was explicitly withdrawn, and
+the flatness route was required to state what its short relation would
+actually imply.
+
+## Response 20: fiberwise Hall lower bound
+
+Sol Pro repaired the Hall route with a genuinely non-tautological lower bound.
+For a fixed child bad set, decompose it into disjoint fibers according to the
+child's centered modular target.  Within each fiber credit only the parent
+having the largest exact intersection.  Summing those maxima is bounded by the
+true overlap with the union of all earlier parents, but can be calculated from
+pair-fiber congruence counts rather than literal unions.
+
+The response gave a generalized-CRT formula for each child/parent target-pair
+count modulo `M = N*A`, then subtracted the solutions divisible by `N` through
+the corresponding system modulo `A`.  It reported exact balanced-growth
+certificates for both hard eight-speed tuples using only this fiberwise lower
+bound.  The uniform claim remains explicitly open: every residual tuple would
+need some pivot and ordering satisfying the fiberwise growth inequalities.
+
+The second-moment route was withdrawn.  The flatness route was sharpened to a
+valid conditional statement: a counterexample would yield a bounded-`ℓ¹`
+integer relation, but a separate relation-elimination theorem is still needed;
+short relations alone do not bound speed height.  Independent computation and
+generic Lean formalization of the new fiberwise Hall bound were started before
+accepting its reported tables or CRT formula.

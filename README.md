@@ -32,6 +32,9 @@ The four existing integer induction branches are now combined in Lean, and
 the sharp divisor-or-uncovered-pivot covering principle is proved equivalent
 to `PositiveIntegerConjecture`; this isolates rather than resolves the open
 uniform covering obstruction.
+Capacitated Hall overlap allocation and exact finite pair-sum certificates
+are now kernel-checked too. Full Hall-cut inequalities and unrestricted
+pair-sum existence remain open arithmetic obligations.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
@@ -51,8 +54,8 @@ disproof claim.
 - `docs/failed-approaches.md`: rejected arguments and explicit counterexamples.
 - `docs/structured-classes.md`: two audited comparable-speed class results and
   their residual obstruction.
-- `docs/real-to-integer-reduction.md`: the exact BHK reduction, its
-  lower-dimensional dependency, and the formalization gap.
+- `docs/real-to-integer-reduction.md`: the completed exact BHK reduction and
+  its lower-dimensional and endpoint dependencies.
 - `docs/modular-pivot-certificates.md`: exact modular bad-set counts, generic
   Lean-checked certificate soundness, bounded audits, and the uniform gap.
 - `docs/fourier-pivot-badsets.md`: exact candidate-filter and gcd-pullback
@@ -62,6 +65,10 @@ disproof claim.
 - `docs/integer-induction-cover.md`: exact combined induction interface,
   finite counterexamples to simpler covers, and the residual covering
   dichotomy.
+- `docs/hall-overlap-credits.md`: capacitated Hall accounting, exact cut
+  counterexamples, and the remaining arithmetic cut inequalities.
+- `docs/pair-sum-geometry.md`: exact pair-sum certificates, restricted-selector
+  counterexamples, and bounded unrestricted searches.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
 - `scripts/check_integer_tuple.py`: exact-rational fixed-instance optimizer and
   deterministic certificate verifier.
@@ -72,6 +79,9 @@ disproof claim.
   six moving runners.
 - `scripts/search_induction_cover.py`: exact bounded audit of the combined
   fast/band/divisor/pivot induction branches.
+- `scripts/search_hall_credits.py`: exact matching and truncated Hall-cut
+  counterexample search.
+- `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.
 - `certificates/`: reproducible finite-search outputs.
