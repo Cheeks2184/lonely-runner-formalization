@@ -31,8 +31,39 @@ Runner boundary `>= 1/N`.
 This residue layer is now kernel-checked in `LonelyRunner/PivotResidues.lean`:
 `pivotCandidates`, `pivotBadResidues`, and `card_pivotCandidates` implement the
 finite model; `circleNorm_nat_div_ge` proves the exact natural-residue to real
-circle-distance step; and `pivotResidueWitness` handles the pivot and every
-non-pivot coordinate at the explicit time `r/(Na_j)`.
+circle-distance step; `mem_pivotBadResidues_iff_circleNorm_lt` and
+`not_mem_pivotBadResidues_iff_circleNorm_ge` identify the strict bad set and
+its closed complement exactly; and `pivotResidueWitness` handles the pivot and
+every non-pivot coordinate at the explicit time `r/(Na_j)`.
+
+The converse is also kernel-checked in `LonelyRunner/PivotBoundary.lean`.
+For every fixed nonempty positive-natural speed family and every `N≥2`,
+`exists_witness_iff_exists_pivot_certificate` proves the exact equivalence
+
+```text
+(∃ t, ∀ i, N⁻¹ ≤ circleNorm (t * speeds i))
+  ↔
+∃ pivot r,
+  r ∈ pivotCandidates N (speeds pivot) ∧
+  ∀ i ≠ pivot,
+    r ∉ pivotBadResidues N (speeds pivot) (speeds i).
+```
+
+Its forward direction takes a boundary point of the finite minimum-distance
+function, extracts the tight coordinate's signed grid numerator, and reduces
+that numerator to a natural candidate modulo `N a_j`; integral time shifts
+preserve all natural-speed phases. The proof includes `N=2`. Globally,
+`PositiveIntegerPivotCertificateConjecture` is the corresponding finite
+certificate proposition, and
+`positiveIntegerConjecture_iff_pivotCertificateConjecture` proves
+
+```text
+PositiveIntegerConjecture ↔ PositiveIntegerPivotCertificateConjecture.
+```
+
+This is an exact reformulation, not a proof that the required finite
+certificate always exists. It also makes no reduction from arbitrary real
+relative velocities to positive integers.
 
 ## Exact single-set count and union certificate
 
@@ -181,15 +212,24 @@ stronger claim that two parents always suffice is false even at speed 15.
 ## Remaining obligations
 
 The bounded audit is not a theorem for unbounded speeds. The finite cyclic
-residue definitions, exact `|R_j|` and `|B_ij|`, and uncovered-residue witness
-bridge are now in Lean. An end-to-end certificate layer still needs a checked
-encoding of pair/triple/higher intersection counts and parsing or generation
-of per-tuple certificates.
+residue definitions, exact `|R_j|` and `|B_ij|`, both directions of the
+fixed-instance witness/certificate equivalence, and the global equivalence
+with `PositiveIntegerConjecture` are now in Lean. A checked layer for the
+stronger *compressed overlap certificates* would still need encodings of
+pair/triple/higher intersection counts and reproducible parsing or generation
+of per-tuple certificate data.
 
-No uniform theorem ensuring a successful pivot and two-parent ordering is
-known.  In particular, the computation does not supply a height bound for a
-minimal counterexample, so exhaustive success through speed 30 has no
-all-speed consequence.
+No uniform theorem ensures that the bad-set union is proper for some pivot,
+or even that a successful half-parent ordering exists. In particular, the
+computation supplies no speed-height bound for a minimal counterexample, so
+exhaustive success through speed 30 has no all-speed consequence. The exact
+global equivalence merely identifies this certificate-existence statement as
+the positive-integer LRC itself.
+
+Finally, none of this proves the separate reduction from arbitrary real
+relative velocities to positive integers. The required simultaneous
+approximation/Kronecker argument and its preservation of the closed threshold
+remain outside the current Lean development.
 
 A proposed adjacent-anchor strengthening was tested and rejected. The
 primitive residual tuple `(1,2,3,4,5,7)` makes its proposed bound at least

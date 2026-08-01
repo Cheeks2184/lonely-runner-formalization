@@ -403,3 +403,199 @@ preserves every integer-speed phase. Since `r` is congruent to `epsilon`
 modulo `N`, it is not divisible by `N`. Sol Pro also downgraded the interval
 argument to a Lean-suitable lemma DAG pending compilation and confirmed that
 the half-parent lane proves no sufficient structural theorem.
+
+## Prompt 8: exact certificate equivalence and different strategies
+
+After the boundary file compiled, Sol Pro was given the exact canonical pivot
+statement and asked to audit it, state the fixed-instance and global
+equivalences, and develop two materially different uniform certificate
+strategies. It was specifically told to confront the two eight-speed cases
+requiring parent capacity three rather than extrapolate from smaller boxes.
+
+## Response 8 and audit
+
+The response repeated two lanes. Its boundary lane gave the same real-interval
+argument and correctly treated it as a reduction, but again wrote
+`1/N < 1/2` and therefore omitted the `N=2` endpoint in its prose. The actual
+Lean development handles both signs and `N=2`, so the compiled result is
+stronger than that narrative.
+
+The half-parent lane proved only a necessary accounting inequality: an
+ordered certificate must obtain overlap credit exceeding
+`sum_i |B_i| - |R|`. It then proposed a directed pairwise-overlap budget. The
+response itself identified the first unsupported implication: pairwise edge
+weights can count the same residue more than once among a child's parents,
+whereas the required union overlap counts it once. Thus the proposed graph
+condition is not sufficient without a disjoint allocation theorem. Its
+claimed `n=6`, speed-15 brute-force check supplied no code or certificates and
+was not used as evidence in this repository.
+
+## Prompt 9: exact objections returned
+
+The coordinator reported the clean Lean build and the declarations
+`exists_witness_iff_exists_pivot_certificate` and
+`positiveIntegerConjecture_iff_pivotCertificateConjecture`, then returned five
+objections: necessity is not sufficiency; the pairwise-to-union implication
+double-counts; the computation was unreproducible; the test did not confront
+the 1,716 residual eight-speed tuples and their two capacity-three cases; and
+the remaining target is uniform certificate existence, not another boundary
+proof. Sol Pro was asked for both a Hall/max-flow disjoint-allocation attack
+and a materially different Fourier, character-sum, or divisor-lattice attack,
+with every open step labeled and every computational claim reproducible.
+
+## Response 9 and audit
+
+Sol Pro accepted the exact fixed-instance theorem and independently listed the
+necessary hypotheses: a finite nonempty family, positive natural speeds, and
+`N >= 2`, with no injectivity, primitivity, or relation between `N` and the
+number of coordinates. Its signed-boundary and negative-numerator audit agrees
+with the Lean proof, including the fact that both signs are congruent to one
+modulo two at `N=2`.
+
+For the uniform problem it offered two open lemmas. The first was the complete
+half-parent assertion itself, with parent capacity
+`ceil((n-2)/2)`; this only moved the full unknown certificate existence into a
+single premise. The second asserted that complete coverage of every pivot grid
+forces some deletion gcd at least two. Together with minimal-dimension
+induction and the already checked divisor-insertion theorem, that assertion
+would prove the positive-integer conjecture. No arithmetic argument toward it
+was supplied, and the successful finite boxes cannot test an implication whose
+all-pivot-cover antecedent is false on every tested tuple. Thus neither lemma
+was promoted in the obligation ledger.
+
+## Prompt 10: require a bounded combinatorial or Fourier derivation
+
+The coordinator rejected the two open restatements as carrying essentially the
+whole theorem and noted that the requested non-parent attack had not been
+delivered. Sol Pro was given a forced choice: either construct an explicit
+finite set-system counterexample to pairwise-overlap accounting and prove an
+exact integral max-flow formulation for disjoint credit, or derive a complete
+Fourier/character-sum expansion for the arithmetic bad-set indicator and
+isolate a genuinely new uniform exponential-sum bound. It was instructed not
+to repeat the pivot equivalence or conceal LRC inside one open lemma.
+
+## Response 10 and audit
+
+Sol Pro again supplied two generic sufficient conditions. Its disjoint-credit
+lane contained an incorrect multiplicity identity: summing `mu(r)-1` over all
+of `R` gives negative contributions at uncovered residues. The correct
+redundancy is
+
+```text
+S - |union_i B_i| = sum_r max(mu(r)-1, 0).
+```
+
+After this repair, the maximum proposed credit is exactly that redundancy, so
+credit greater than `S-|R|` is equivalent to the desired proper union. The
+claimed uniform lemma was therefore a tautological restatement, not new
+structure. The minimal pairwise-accounting counterexample is `R={x}` and
+`B1=B2=B3={x}` with two parents allowed: the three directed pair intersections
+sum to `3 > S-|R| = 2`, while sequential union credit is only `2`. A distinct
+variant is `R={x,y,z}`, `B1={x}`, `B2={x,y}`, `B3={x,z}`.
+
+An independent audit supplied the exact fixed-order flow formulation. Parent
+arcs carry proposed credits, eligibility arcs to child-residue nodes have a
+conceptually infinite capacity, and residue-to-sink arcs have capacity one.
+Integral max flow is precisely disjoint union credit. The min-cut inequalities
+are the capacitated Hall conditions
+
+```text
+sum_{j in Q} w_ij <= |union_{j in Q} (B_i intersect B_j)|
+```
+
+for every child and parent subset. Thus pairwise counts alone cannot prove the
+needed flow; arithmetic control of all relevant cuts is required.
+
+The Fourier lane stated only the generic product/convolution identity and a
+main-term-dominance criterion. It did not calculate the coefficients of the
+candidate filter or the gcd-dependent preimage of the strict cyclic interval,
+so it did not yet meet the requested arithmetic task.
+
+## Prompt 11: explicit arithmetic Fourier coefficients
+
+The multiplicity correction, tautology objection, minimal counterexample, and
+exact Hall/min-cut formulation were returned to Sol Pro. The next prompt asks
+only for normalized Fourier coefficients of the candidate filter and each
+arithmetic bad-set indicator, the exact convolution formula for the good
+count, and a genuine Dirichlet-kernel or gcd-support bound. It explicitly
+forbids presenting a condition equivalent to a good residue as progress.
+
+## Response 11 and audit
+
+The response did not perform the requested Fourier calculation. It instead
+returned the abstract counterexample and a tagged-occurrence flow network.
+That network is a valid generic repair: edge nodes represent proposed
+parent-child quotas, tagged `(child,residue)` nodes prevent double counting
+within a child, and an integral flow saturating every quota is equivalent to a
+disjoint allocation. Cloning quota nodes yields the corresponding Hall
+conditions. A quota sum above `S-|R|` is therefore sufficient once all Hall
+cuts hold.
+
+This is useful as a diagnostic but supplies no arithmetic expansion theorem.
+The response correctly labels its uniform bounded-parent Hall assertion as
+strictly stronger than LRC and leaves its entire arithmetic existence step
+open. The result was recorded as a rejected pairwise-only implication plus a
+possible higher-union proof interface, not as progress on `FULL-01`.
+
+## Prompt 12: one bounded Fourier calculation
+
+Because the Fourier instruction was ignored, the next prompt asks only for
+five explicit formulas on `Z/(N a)`: the candidate-filter transform, the
+strict cyclic interval transform, the gcd-dependent pullback under
+multiplication by another speed, the convolution for their pointwise product,
+and one honest coefficient bound. Parent and flow arguments are excluded from
+this round.
+
+## Response 12 and audit
+
+Sol Pro correctly derived the sparse candidate-filter transform and the
+gcd-supported Dirichlet pullback, including the inverse multiplier on the
+quotient cycle. Its alternative subtraction formula for removing
+`N`-divisible residues is compatible with the simpler convolution formula in
+`docs/fourier-pivot-badsets.md`. The zero-frequency terms, strict radius, and
+support divisibilities survived independent checking.
+
+The response's final boxed estimate was not valid. From
+
+```text
+|beta-hat(k)| <= |p-hat(k)|
+  + (1/N) sum_t |p-hat(k-t*a)|
+```
+
+and `C=N*h/d` surviving shifts, one obtains at most
+`(1+C/N) * max |p-hat|`, not `C * max |p-hat|`. For `C=1` the claimed bound
+simply discards a positive `1/N` contribution. No cancellation supporting that
+step was proved, and the phrase that `d` is typically close to `N*h` was
+unsupported. The repository therefore records only the directly proved
+Dirichlet estimate and exact convolution, not Sol Pro's stronger box.
+
+Independently, the exact formulas were audited at the `N=2` antipode,
+`M'=1`, inverse direction, and normalization. The deterministic script
+`scripts/check_fourier_badsets.py` cross-checks 120,060 pullback and
+bad-indicator coefficients in its default box.
+
+## Prompt 13: coefficient-bound correction
+
+The missing factor was returned explicitly. Sol Pro was asked either to prove
+actual cancellation or retract the boxed estimate in favor of the valid
+`(1+C/N)` bound, and to confirm that the repaired elementary estimate still
+does not imply uniform main-term domination.
+
+## Response 13 and final audit of this pass
+
+Sol Pro rederived the candidate filter, strict cyclic interval, gcd pullback,
+and bad-indicator convolution without the invalid boxed estimate. The formulas
+match `docs/fourier-pivot-badsets.md`. It also recorded the valid support
+restriction `gcd(b,a) | k` for a nonzero bad-indicator coefficient and the
+exact number `N*gcd(b,a)/gcd(b,N*a)` of surviving shifted terms when the
+frequency congruence is soluble.
+
+The repaired response explicitly confirms that these bounds do not give
+uniform main-term domination. When the reduced strict interval has radius
+zero, every Fourier coefficient has the same magnitude as its density; in
+sparse interval regimes the first nonzero Dirichlet coefficient can be
+arbitrarily close to the zero-frequency coefficient. Absolute-value estimates
+therefore have no uniform spectral gap. A Fourier proof would need genuine
+cancellation or arithmetic correlation control across runners. No such lemma
+was supplied, so this round closes with an exact fixed-pivot formula and a
+precise obstruction, not a proof of LRC.

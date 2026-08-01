@@ -67,3 +67,35 @@ failure of the proposed anchor restriction, not a counterexample to Lonely
 Runner: the exact complete bad unions at pivots `5` and `7` have sizes `28<30`
 and `40<42`, so those grids contain witnesses. The fixed adjacent anchors lose
 decisive higher overlap.
+
+## 2026-08-01: pairwise overlap budget without Hall constraints
+
+A sum of directed pairwise intersections cannot replace the union-overlap
+credit in an ordered certificate. The smallest abstract counterexample has
+
+```text
+R = {x},
+B1 = B2 = B3 = {x},
+P2 = {1},
+P3 = {1,2}.
+```
+
+Here `S=3` and `S-|R|=2`. The three directed pairwise intersections have total
+cardinality `3>2`, but the actual union credit is only `1+1=2`; the residue
+`x` is counted twice among the two parents of `B3`. A distinct-set version is
+`R={x,y,z}`, `B1={x}`, `B2={x,y}`, and `B3={x,z}`, with the same strict
+failure.
+
+For a fixed order and parent sets, an integral flow network computes the exact
+disjoint credit: parent-child arcs carry proposed weights, eligibility arcs to
+child-residue nodes have sufficiently large capacity, and every residue node
+has unit capacity to the sink. Saturating all proposed weights is equivalent
+to the Hall inequalities
+
+```text
+sum_{j in Q} w_ij <= |union_{j in Q} (Bi intersect Bj)|
+```
+
+for every child `i` and every subset `Q` of its parents. Consequently pairwise
+gcd counts alone do not justify the missing implication; one needs arithmetic
+control of these higher-union cuts.

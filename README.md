@@ -12,8 +12,15 @@ common-scale normalization, the modular pivot residue model and witness bridge,
 the exact individual bad-set gcd count, and generic finite union and
 ordered-overlap certificate soundness are also kernel-checked. A conditional
 codimension-one divisor-insertion theorem is kernel-checked with its
-lower-dimensional premise explicit. The bounded search and its selected-parent
-intersection data are not end-to-end Lean proofs.
+lower-dimensional premise explicit. Pivot-grid completeness is now
+kernel-checked for every nonempty fixed positive-integer instance: existence
+of an arbitrary real witness is equivalent to existence of a canonical finite
+modular pivot certificate. Consequently the global positive-integer
+formulation is kernel-checked as exactly equivalent to the corresponding
+uniform certificate proposition. This does not supply that uniform
+certificate, nor does it reduce arbitrary real speeds to integers. The bounded
+search and its selected-parent intersection data are not end-to-end Lean
+proofs.
 The general conjecture remains open, and this repository makes no proof or
 disproof claim.
 
@@ -34,6 +41,8 @@ disproof claim.
   lower-dimensional dependency, and the formalization gap.
 - `docs/modular-pivot-certificates.md`: exact modular bad-set counts, generic
   Lean-checked certificate soundness, bounded audits, and the uniform gap.
+- `docs/fourier-pivot-badsets.md`: exact candidate-filter and gcd-pullback
+  Fourier coefficients, with the remaining uniform spectral obstruction.
 - `docs/round6-strategies.md`: audited boundary-pivot, pair-sum, and divisor
   insertion lemmas, plus the failed two-parent extrapolation at eight speeds.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
@@ -44,6 +53,8 @@ disproof claim.
 - `scripts/search_residual.py`: exact residual-class, pivot, overlap, and
   half-period searches, including complete primitive speed-30 audits through
   six moving runners.
+- `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
+  of the fixed-pivot Fourier formulas and strict endpoint conventions.
 - `certificates/`: reproducible finite-search outputs.
 - `research/`: Lean build history and archived GPT-5.6 Sol Pro sessions.
 

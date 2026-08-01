@@ -112,6 +112,33 @@ A preliminary build on `/mnt/c` was deliberately terminated after final source
 edits made its already-running dependency pass stale. The clean Linux-native
 clone above is the authoritative result.
 
+## 2026-08-01: exact boundary-to-pivot equivalence
+
+The Linux-native verification checkout was advanced to commit
+`9e3c5c2` and checked from
+`/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`. The root build
+reported:
+
+```text
+Build completed successfully (1857 jobs).
+```
+
+`lake env lean LonelyRunner/AxiomAudit.lean` included the new exact residue
+lemmas, boundary witness, canonical pivot reduction, and global
+positive-integer certificate equivalence. Every probe reported only:
+
+```text
+[propext, Classical.choice, Quot.sound]
+```
+
+The subsequent full `lake build` also completed successfully. After adding the
+independent Fourier regression audit, all 23 Python tests passed and the
+default Fourier script checked 120,060 coefficients. The tracked Lean scan found no `sorry`, `admit`,
+custom axiom, or disabled check, and the verification checkout remained clean.
+An independent formal audit separately checked `n=0` exclusion, `N=n+1`, the
+`N=2` signed endpoint, strict bad-set boundaries, Euclidean normalization, and
+the forward/reverse quantifiers without finding a gap.
+
 ## 2026-08-01: pivot counts, normalization, and divisor insertion
 
 The clean Linux-native checkout was advanced to

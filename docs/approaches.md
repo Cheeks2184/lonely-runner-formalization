@@ -153,8 +153,11 @@ and the exact fixed-tuple checker. The live priorities are now:
    lower-dimensional dependencies exposed.
 2. Make bounded modular certificates kernel-checkable by encoding and checking
    selected-parent intersection data.
-3. Find or refute a uniform overlap theorem for the residual comparable-speed
-   class; the speed-30 computation is evidence only.
+3. Prove or refute the exact uniform pivot-certificate proposition now known
+   in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
+   completeness is no longer an assumption; the remaining issue is uniform
+   avoidance of the finite arithmetic bad-set union. The bounded computation
+   is evidence only.
 4. Formalize the two irrational rank-one-block theorem using a torus-density
    lemma.
 5. State and test the exact distinguished-coset zonotope equivalence without
@@ -166,3 +169,36 @@ then retracted an incorrect claim that the simple union bound subsumed the
 band theorem. The sixth produced three independently audited finite-structure
 lemmas but no all-dimensional implication; its proposed two-parent pattern
 already has two exact failures at eight moving speeds.
+
+## H. Exact boundary-to-pivot reduction
+
+For a nonempty finite family of positive integer speeds and `N >= 2`, follow
+the segment from time zero to any safe witness and take the finite minimum of
+the circle norms. Continuity and the intermediate value theorem give a safe
+boundary time at which some pivot coordinate has norm exactly `1/N`. The two
+signed grid forms are normalized by integer Euclidean remainder modulo
+`N * a_j`; integer phase invariance then gives a canonical candidate residue.
+
+This argument is kernel-checked in `LonelyRunner/PivotBoundary.lean` as
+`exists_safe_pivot_residue` and the exact bidirectional interface
+`exists_witness_iff_exists_pivot_certificate`. Its specialization
+`positiveIntegerConjecture_iff_pivotCertificateConjecture` copies the
+quantifiers of `PositiveIntegerConjecture`, including positivity,
+injectivity, `1 <= n`, and denominator `n+1`. The reverse implication is the
+previously checked `pivotResidueWitness`. Thus the grid ansatz is complete;
+the open step is the all-tuples modular certificate theorem itself.
+
+## I. Fixed-pivot Fourier expansion
+
+The candidate filter and each strict cyclic bad-set indicator have sparse,
+explicit normalized Fourier transforms. Multiplication by another speed
+restricts Fourier support according to `gcd(a_i, N*a_j)` and reduces the
+remaining coefficient to a Dirichlet kernel on the quotient cycle. Pointwise
+multiplication by the nondivisibility filter is an explicit `N`-term
+convolution. The complete formulas and strict-endpoint audit are in
+`docs/fourier-pivot-badsets.md`.
+
+Obstruction: the elementary Dirichlet bound does not control the combined
+nonzero spectrum of the product of all good-set indicators at the sharp
+threshold. A uniform cancellation estimate or an arithmetic pivot-selection
+lemma remains open.

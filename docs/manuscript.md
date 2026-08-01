@@ -130,16 +130,29 @@ multiplication-fiber results in `LonelyRunner/PivotCounts.lean`. What remains
 outside the kernel is the bounded search's selected-parent intersection data
 and per-tuple certificate encoding.
 
-Three further fixed-integer structural lemmas have paper proofs and independent
-audits in `docs/round6-strategies.md`. First, every nonempty integer safe set
-has a boundary witness on a pivot grid. Second, the global maximum of
+Three further fixed-integer structural lemmas are audited in
+`docs/round6-strategies.md`. First, every nonempty integer safe set has a
+boundary witness on a pivot grid. This is now formalized in
+`LonelyRunner/PivotBoundary.lean`: `continuous_minimumCircleNorm` and
+`exists_boundary_witness` produce an active equality,
+`boundary_time_eq_signed_grid` and `signed_grid_normalizes_to_pivotCandidate`
+normalize both signs (including `N=2`), and `exists_safe_pivot_residue`
+preserves every phase. With the exact bad-set equivalence from
+`LonelyRunner/PivotResidues.lean`,
+`exists_witness_iff_exists_pivot_certificate` proves the fixed-instance iff.
+Finally, `positiveIntegerConjecture_iff_pivotCertificateConjecture` states the
+same equivalence under all quantifiers of the positive-integer conjecture.
+It neither proves the certificate proposition nor reduces real speeds to
+integers.
+
+Second, the global maximum of
 `min_i ||a_i t||` occurs on a pair-sum grid `r/(a_p+a_q)`. Third, a runner can
 be inserted over a common divisor of all other speeds when the exact orbit-size
 inequality holds, conditional on lower-dimensional LRC. The third result is
 formalized by `exists_int_grid_circleNorm_ge`,
 `exists_int_coprime_grid_circleNorm_ge`, and
 `codimensionOneDivisorInsertion` in `LonelyRunner/DivisorInsertion.lean`; the
-first two remain paper proofs. These results clarify finite candidate sets and
+pair-sum result remains a paper proof. These results clarify finite candidate sets and
 an inductive arithmetic class but do not bound the speed height of a
 counterexample.
 

@@ -3,8 +3,9 @@
 This note separates three mathematically valid fixed-integer-tuple lemmas from
 the computational conjecture suggested in GPT-5.6 Sol Pro round 6. None is a
 proof of the Lonely Runner Conjecture. The lemmas have been independently
-audited on paper and by exact computation where applicable. The divisor
-insertion lemma is now formalized in Lean; the other two remain paper proofs.
+audited on paper and by exact computation where applicable. The boundary-pivot
+and divisor-insertion lemmas are now formalized in Lean; the pair-sum theorem
+remains a paper proof.
 
 Throughout, `a_1,...,a_n` are positive integers, `N=n+1`, and
 
@@ -17,8 +18,10 @@ The boundary convention is closed: a witness satisfies
 
 ## 1. Boundary-pivot completeness
 
-For a fixed tuple, if a witness exists, then a witness exists in one of the
-modular pivot grids:
+For a fixed nonempty positive-integer tuple, existence of an arbitrary real
+witness is equivalent to existence of a canonical natural modular-pivot
+certificate. In particular, if a witness exists, then one exists in a pivot
+grid:
 
 \[
 t=\frac{Nm\mathbin\pm1}{Na_j}
@@ -40,12 +43,41 @@ continuity would give a safe neighborhood, making `t'` interior. Thus
 `||a_j t'||=1/N` for some `j`. Solving this equality modulo one gives the
 displayed form.
 
-Consequently the pivot-grid formulation is equivalent to the positive-integer
-instance, not a stronger ansatz. The proof is conditional on the existence of
-a witness and supplies no uniform certificate inequality. The finite residue
-model and residue-to-real direction are formalized in
-`LonelyRunner/PivotResidues.lean`; the topological converse above remains a
-Lean obligation.
+The Lean proof in `LonelyRunner/PivotBoundary.lean` implements the same
+boundary principle through a finite minimum and the intermediate value
+theorem along the segment from time zero to the supplied witness. It then
+extracts a signed numerator, normalizes it modulo `N a_j`, and preserves every
+integer-speed phase under the resulting integral time shift. The argument is
+uniform at the antipodal endpoint `N=2`.
+
+More precisely, `exists_witness_iff_exists_pivot_certificate` proves, for
+fixed `speeds : Fin n → ℕ`, an anchor witnessing `n>0`, `N≥2`, and positive
+speeds, the equivalence
+
+```text
+(∃ t, ∀ i, N⁻¹ ≤ circleNorm (t * speeds i))
+  ↔
+∃ pivot r,
+  r ∈ pivotCandidates N (speeds pivot) ∧
+  ∀ i ≠ pivot,
+    r ∉ pivotBadResidues N (speeds pivot) (speeds i).
+```
+
+The reverse direction uses `pivotResidueWitness`; the forward direction uses
+the new boundary-pivot completeness theorem and the exact bad-residue
+converse from `LonelyRunner/PivotResidues.lean`. At conjecture level,
+`positiveIntegerConjecture_iff_pivotCertificateConjecture` proves
+
+```text
+PositiveIntegerConjecture ↔ PositiveIntegerPivotCertificateConjecture.
+```
+
+Thus the pivot-grid formulation is exactly equivalent to the positive-integer
+problem, not a stronger ansatz. This equivalence supplies no uniform theorem
+that a certificate exists: proving that some pivot bad-set union is proper for
+every tuple remains the central integer obstruction. It also does not reduce
+arbitrary real relative velocities to positive integers; that separate
+simultaneous-approximation/Kronecker step remains open in Lean.
 
 ## 2. Pair-sum critical spectrum
 
