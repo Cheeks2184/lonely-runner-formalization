@@ -28,6 +28,10 @@ open-neighborhood transfer, rational-collinear branch, and sign normalization.
 Consequently `Conjecture ↔ PositiveIntegerConjecture` is a compiled theorem.
 This equivalence does not prove either proposition; the uniform positive-
 integer arithmetic problem remains open.
+The four existing integer induction branches are now combined in Lean, and
+the sharp divisor-or-uncovered-pivot covering principle is proved equivalent
+to `PositiveIntegerConjecture`; this isolates rather than resolves the open
+uniform covering obstruction.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
@@ -55,6 +59,9 @@ disproof claim.
   Fourier coefficients, with the remaining uniform spectral obstruction.
 - `docs/round6-strategies.md`: audited boundary-pivot, pair-sum, and divisor
   insertion lemmas, plus the failed two-parent extrapolation at eight speeds.
+- `docs/integer-induction-cover.md`: exact combined induction interface,
+  finite counterexamples to simpler covers, and the residual covering
+  dichotomy.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
 - `scripts/check_integer_tuple.py`: exact-rational fixed-instance optimizer and
   deterministic certificate verifier.
@@ -63,6 +70,8 @@ disproof claim.
 - `scripts/search_residual.py`: exact residual-class, pivot, overlap, and
   half-period searches, including complete primitive speed-30 audits through
   six moving runners.
+- `scripts/search_induction_cover.py`: exact bounded audit of the combined
+  fast/band/divisor/pivot induction branches.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.
 - `certificates/`: reproducible finite-search outputs.

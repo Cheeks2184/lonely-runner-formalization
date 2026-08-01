@@ -207,3 +207,15 @@ the certified tuple `(1,2,3)` and can change truth value under algebraically
 equivalent factorizations. A uniform signed-cancellation estimate,
 positive-definite/Riesz-product construction, or an arithmetic pivot-selection
 lemma remains open.
+
+## J. Exact integer induction cover
+
+`LonelyRunner/IntegerInduction.lean` now packages fast insertion,
+codimension-one divisor insertion, the minimum-scale bands, and exact pivot
+noncoverage into one checked induction interface. The sharp residual
+dichotomy is: either divisor insertion applies, or some pivot candidate is
+uncovered. Lean proves that this principle is equivalent to
+`PositiveIntegerConjecture`, so it identifies the exact obstruction but does
+not reduce its logical strength. Exact finite searches, counterexamples to
+simpler structural and bounded-overlap covers, and reproduction commands are
+in `docs/integer-induction-cover.md`.

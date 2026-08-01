@@ -44,6 +44,9 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_safe_pivot_residue
 #print axioms LonelyRunner.exists_witness_iff_exists_pivot_certificate
 #print axioms LonelyRunner.positiveIntegerConjecture_iff_pivotCertificateConjecture
+#print axioms LonelyRunner.divisorInsertionCase_of_coprime_commonDivisor_two_le
+#print axioms LonelyRunner.exists_appended_witness_of_integerInsertionCover
+#print axioms LonelyRunner.positiveIntegerConjecture_iff_divisorOrUncoveredPivotPrinciple
 #print axioms LonelyRunner.circleNorm_mul_abs_right
 #print axioms LonelyRunner.exists_stationaryWitness_abs_iff
 #print axioms LonelyRunner.exists_stationaryWitness_scale_iff

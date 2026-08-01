@@ -196,6 +196,21 @@ pair-sum result remains a paper proof. These results clarify finite candidate se
 an inductive arithmetic class but do not bound the speed height of a
 counterexample.
 
+The current induction branches are synthesized in
+`LonelyRunner/IntegerInduction.lean`. For an appended positive natural speed,
+`exists_appended_witness_of_integerInsertionCover` proves that any of fast
+insertion, divisor insertion, the minimum-scale bands, or an uncovered pivot
+candidate yields a witness, assuming the previous dimension where required.
+The finite obstruction `AllPivotCandidatesCovered` is exactly negated by
+`PivotInsertionCase`. Strong induction then proves
+`positiveIntegerConjecture_of_divisorOrUncoveredPivotPrinciple`, and the
+converse supplied by pivot completeness gives
+`positiveIntegerConjecture_iff_divisorOrUncoveredPivotPrinciple`. This is an
+exact map of the residual integer obstruction, not a proof of it. The finite
+audit and the first counterexample `(1,3,4)` to exhaustiveness of the three
+non-pivot structural branches are documented in
+`docs/integer-induction-cover.md`.
+
 ## 5. Remaining obstruction
 
 No audited route currently controls all primitive integer tuples in all

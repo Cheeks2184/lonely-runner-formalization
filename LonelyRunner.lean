@@ -10,6 +10,7 @@ import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
 import LonelyRunner.PivotCounts
 import LonelyRunner.PivotBoundary
+import LonelyRunner.IntegerInduction
 import LonelyRunner.Normalization
 import LonelyRunner.RationalReduction
 import LonelyRunner.KroneckerOrbit

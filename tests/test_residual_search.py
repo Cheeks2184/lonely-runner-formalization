@@ -24,6 +24,16 @@ SEARCH_SPEC = importlib.util.spec_from_file_location("search_residual", SEARCH_P
 assert SEARCH_SPEC and SEARCH_SPEC.loader
 search = importlib.util.module_from_spec(SEARCH_SPEC)
 SEARCH_SPEC.loader.exec_module(search)
+sys.modules["search_residual"] = search
+
+INDUCTION_PATH = ROOT / "scripts" / "search_induction_cover.py"
+INDUCTION_SPEC = importlib.util.spec_from_file_location(
+    "search_induction_cover", INDUCTION_PATH
+)
+assert INDUCTION_SPEC and INDUCTION_SPEC.loader
+induction = importlib.util.module_from_spec(INDUCTION_SPEC)
+sys.modules["search_induction_cover"] = induction
+INDUCTION_SPEC.loader.exec_module(induction)
 
 
 class ResidualSearchTests(unittest.TestCase):
@@ -188,6 +198,25 @@ class ResidualSearchTests(unittest.TestCase):
 
         # In a nonprimitive tuple m need not equal the deletion gcd.
         self.assertEqual(search.divisor_insertion_condition_indices((2, 4, 6)), ())
+
+    def test_exact_induction_cover_audit(self) -> None:
+        audit = induction.audit_box(3, 12, parent_capacity=1)
+        self.assertEqual(audit.total, 196)
+        self.assertEqual(audit.structural_residual, 25)
+        self.assertEqual(audit.fully_deletion_coprime_residual, 25)
+        self.assertEqual(audit.exact_pivot_certified_residual, 25)
+        self.assertEqual(audit.all_pivot_covered, 0)
+        self.assertEqual(audit.first_structural_residual, (1, 3, 4))
+        self.assertEqual(audit.first_simple_union_failure, (1, 4, 5))
+        self.assertIsNone(audit.first_parent_failure)
+
+    def test_first_structural_induction_residual(self) -> None:
+        speeds = (1, 3, 4)
+        self.assertFalse(search.covered_by_fast_insertion(speeds))
+        self.assertFalse(search.covered_by_minimum_residue_bands(speeds))
+        self.assertEqual(search.divisor_insertion_condition_indices(speeds), ())
+        self.assertEqual(induction.deletion_gcds(speeds), (1, 1, 1))
+        self.assertEqual(search.witness_on_any_speed_grid(speeds), Fraction(5, 12))
 
 
 if __name__ == "__main__":
