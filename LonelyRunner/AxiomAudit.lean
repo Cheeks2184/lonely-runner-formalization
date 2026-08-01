@@ -34,10 +34,16 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_mem_avoiding_ordered_of_sum_lt_card
 #print axioms LonelyRunner.card_pivotCandidates
 #print axioms LonelyRunner.circleNorm_nat_div_ge
+#print axioms LonelyRunner.circleNorm_nat_div_eq
+#print axioms LonelyRunner.not_mem_pivotBadResidues_iff_circleNorm_ge
 #print axioms LonelyRunner.pivotResidueWitness
 #print axioms LonelyRunner.card_strictCyclicBall
 #print axioms LonelyRunner.card_mul_mod_strictCyclicBall
 #print axioms LonelyRunner.card_pivotBadResidues_exact
+#print axioms LonelyRunner.exists_boundary_witness
+#print axioms LonelyRunner.exists_safe_pivot_residue
+#print axioms LonelyRunner.exists_witness_iff_exists_pivot_certificate
+#print axioms LonelyRunner.positiveIntegerConjecture_iff_pivotCertificateConjecture
 #print axioms LonelyRunner.circleNorm_mul_abs_right
 #print axioms LonelyRunner.exists_stationaryWitness_abs_iff
 #print axioms LonelyRunner.exists_stationaryWitness_scale_iff
