@@ -139,7 +139,9 @@ orbit of size `m = D/gcd(D,a_j)`, and the exact sufficient inequality is
 Obstruction: it requires the lower-dimensional theorem. The deletion-gcd-one
 conclusion is valid for a minimal-dimensional primitive counterexample (or
 after the previous dimension has been established), not for an arbitrary
-counterexample. See `docs/round6-strategies.md`.
+counterexample. The insertion theorem and its translated coprime-grid lemmas
+are formalized in `LonelyRunner/DivisorInsertion.lean`; see
+`docs/round6-strategies.md` for the corrected corollary.
 
 ## Current priority
 

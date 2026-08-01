@@ -135,9 +135,13 @@ audits in `docs/round6-strategies.md`. First, every nonempty integer safe set
 has a boundary witness on a pivot grid. Second, the global maximum of
 `min_i ||a_i t||` occurs on a pair-sum grid `r/(a_p+a_q)`. Third, a runner can
 be inserted over a common divisor of all other speeds when the exact orbit-size
-inequality holds, conditional on lower-dimensional LRC. These results clarify
-finite candidate sets and an inductive arithmetic class, but are not yet Lean
-theorems and do not bound the speed height of a counterexample.
+inequality holds, conditional on lower-dimensional LRC. The third result is
+formalized by `exists_int_grid_circleNorm_ge`,
+`exists_int_coprime_grid_circleNorm_ge`, and
+`codimensionOneDivisorInsertion` in `LonelyRunner/DivisorInsertion.lean`; the
+first two remain paper proofs. These results clarify finite candidate sets and
+an inductive arithmetic class but do not bound the speed height of a
+counterexample.
 
 ## 5. Remaining obstruction
 

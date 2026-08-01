@@ -358,3 +358,48 @@ from the response: `(1,5,7,8,9,11,13,15)`. Together with
 tuples. Both pass a three-parent bound `50<56` at pivot `7`, with witnesses
 `20/63` and `8/63` respectively. The proposed half-parent rule survives this
 box but remains unproved.
+
+## Prompt 7: half-parent structure and interval boundary proof
+
+The coordinator returned the complete seven- and eight-speed data, including
+both two-parent failures, and reported that the exact strict bad-set formula
+now compiles in Lean. Sol Pro was asked either to advance the half-parent rule
+without appealing to the finite searches or identify the first unsupported
+structural implication. It was separately asked for a Lean-friendly
+boundary-pivot proof on a real interval rather than on `R/Z`.
+
+## Response 7 and audit
+
+The half-parent lane produced only a necessary overlap-budget condition. Any
+ordered capacity-`p` certificate must credit total overlap strictly exceeding
+`sum_i |B_i|-|R|`. Assigning each credited residue to one selected parent gives
+a directed graph of indegree at most `p` with bounded pairwise edge weights.
+The converse does not follow: summing pairwise overlaps can count one residue
+several times, while the ordered certificate may credit it only through its
+union overlap. Sol Pro explicitly identified this disjoint-allocation step as
+the first unsupported implication. Thus no sufficient uniform half-parent
+theorem emerged from the round.
+
+The boundary lane replaced circle topology by a real path. Reduce a witness
+`x` modulo one to `x0 in [0,1)`, define
+`f(s)=min_i ||a_i*s*x0||` on `[0,1]`, and take the least point of the nonempty
+closed safe set `{s : f(s)>=1/N}`. It is positive because `f(0)=0`; if its
+value were strictly above the target, continuity and finite slack would give a
+smaller safe point. Hence one coordinate is exactly at distance `1/N`, which
+yields a pivot rational and then a canonical residue modulo `N*a_j`.
+
+The audit found one omitted endpoint in Sol Pro's extraction step. It wrote
+`1/N<1/2`, but the one-moving-runner case has `N=2` and equality. The argument
+remains repairable by handling the antipodal value explicitly; the exact
+objection was returned to Sol Pro. The response's phrase "fully formalizable"
+was also too strong before exact mathlib lemma names and a compiling proof are
+verified. The interval argument remains `proved-math`, not `proved-lean`.
+
+Sol Pro accepted both objections. Its corrected extraction splits `N>2`, where
+a nearest integer differs by `±1/N`, from `N=2`, where the phase is a
+half-integer and `epsilon=+1` suffices. Writing `q=Nm+epsilon`, taking the
+Euclidean remainder `r` modulo `M=Na_j`, and subtracting the integral quotient
+preserves every integer-speed phase. Since `r` is congruent to `epsilon`
+modulo `N`, it is not divisible by `N`. Sol Pro also downgraded the interval
+argument to a Lean-suitable lemma DAG pending compilation and confirmed that
+the half-parent lane proves no sufficient structural theorem.

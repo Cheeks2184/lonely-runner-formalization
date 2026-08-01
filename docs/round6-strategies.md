@@ -3,8 +3,8 @@
 This note separates three mathematically valid fixed-integer-tuple lemmas from
 the computational conjecture suggested in GPT-5.6 Sol Pro round 6. None is a
 proof of the Lonely Runner Conjecture. The lemmas have been independently
-audited on paper and by exact computation where applicable; they are not yet
-formalized in Lean unless another file is cited explicitly.
+audited on paper and by exact computation where applicable. The divisor
+insertion lemma is now formalized in Lean; the other two remain paper proofs.
 
 Throughout, `a_1,...,a_n` are positive integers, `N=n+1`, and
 
@@ -108,6 +108,14 @@ Proof. Let `s` witness the divided tuple. At times
 form a rotated equally spaced orbit of size `m`. One of its points has circle
 distance at least `(m-1)/(2m)`, which is at least `1/N` by the displayed
 condition. Equality is allowed throughout.
+
+This argument is kernel-checked as `codimensionOneDivisorInsertion` in
+`LonelyRunner/DivisorInsertion.lean`. Its interface factors
+`D=g*m` and the exceptional speed as `g*c` with `c` coprime to `m`; hence `m`
+is exactly the reduced orbit size. The supporting theorems
+`exists_int_grid_circleNorm_ge` and
+`exists_int_coprime_grid_circleNorm_ge` prove the translated-grid bound and
+the coprime-step permutation without finite enumeration.
 
 For a primitive tuple, `gcd(D_j,a_j)=1`, hence `m=D_j`. The exact valid
 deletion-gcd corollary must retain the induction hypothesis:

@@ -10,9 +10,10 @@ and two-moving-runner base cases, a quantitative fast-runner insertion theorem,
 and a minimum-scale residue-band structured class are kernel-checked. Sign and
 common-scale normalization, the modular pivot residue model and witness bridge,
 the exact individual bad-set gcd count, and generic finite union and
-ordered-overlap certificate soundness are also kernel-checked. The bounded
-search and its selected-parent intersection data are not end-to-end Lean
-proofs.
+ordered-overlap certificate soundness are also kernel-checked. A conditional
+codimension-one divisor-insertion theorem is kernel-checked with its
+lower-dimensional premise explicit. The bounded search and its selected-parent
+intersection data are not end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
 disproof claim.
 
