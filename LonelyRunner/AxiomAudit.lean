@@ -48,6 +48,9 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_stationaryWitness_abs_iff
 #print axioms LonelyRunner.exists_stationaryWitness_scale_iff
 #print axioms LonelyRunner.exists_stationaryWitness_natScale_iff
+#print axioms LonelyRunner.clearRationalSpeed_cast
+#print axioms LonelyRunner.clearRationalSpeed_injective
+#print axioms LonelyRunner.positiveIntegerConjecture_iff_distinctPositiveRationalConjecture
 #print axioms LonelyRunner.twoMovingSpeeds_of_abs_le
 #print axioms LonelyRunner.twoMovingSpeeds
 #print axioms LonelyRunner.twoMovingRunners

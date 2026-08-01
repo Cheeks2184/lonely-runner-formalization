@@ -11,6 +11,7 @@ import LonelyRunner.PivotResidues
 import LonelyRunner.PivotCounts
 import LonelyRunner.PivotBoundary
 import LonelyRunner.Normalization
+import LonelyRunner.RationalReduction
 import LonelyRunner.SmallDimensions
 
 /-!
