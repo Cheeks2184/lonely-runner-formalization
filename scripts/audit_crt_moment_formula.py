@@ -9,12 +9,14 @@ of one-variable congruence classes by the generalized CRT.
 
 from __future__ import annotations
 
+from fractions import Fraction
 from itertools import combinations
 from math import comb, gcd, lcm
 
 
 G = (15, 21, 40, 48, 56, 105, 126, 280, 1200)
 EXPECTED_G_MOMENTS_0_TO_4 = (17019, 27432, 18203, 7492, 2709)
+EXPECTED_G_DEPTH_TWO_BOUND = Fraction(3305, 2)
 
 
 def circular_residue(value: int, modulus: int) -> int:
@@ -159,6 +161,17 @@ def direct_pivot_moment(speeds: tuple[int, ...], order: int) -> int:
     return total
 
 
+def depth_two_bound_from_moments(moments: tuple[int, ...]) -> Fraction:
+    """Compute `L_(n,2)` from `H_0,...,H_4`, with `n=len(G)=9` here."""
+
+    if len(moments) != 5:
+        raise ValueError("depth two needs exactly moments H_0 through H_4")
+    return sum(
+        (Fraction((-1) ** order * moments[order]) for order in range(4)),
+        Fraction(0),
+    ) + Fraction(4, len(G) - 1) * moments[4]
+
+
 def audit_g() -> tuple[int, ...]:
     moments = tuple(crt_moment(G, order) for order in range(5))
     if moments != EXPECTED_G_MOMENTS_0_TO_4:
@@ -166,6 +179,8 @@ def audit_g() -> tuple[int, ...]:
     direct = tuple(direct_pivot_moment(G, order) for order in range(5))
     if direct != moments:
         raise AssertionError(f"CRT/direct disagreement: CRT={moments}, direct={direct}")
+    if depth_two_bound_from_moments(moments) != EXPECTED_G_DEPTH_TWO_BOUND:
+        raise AssertionError("G's noncircular depth-two lower bound changed")
 
     # Boundary audit: equality at distance pivot is good, while pivot-1 is bad.
     pivot = 15
@@ -205,6 +220,7 @@ def main() -> None:
     audit_small_rows()
     moments = audit_g()
     print("G CRT moments H_0..H_4:", moments)
+    print("G depth-two lower bound:", depth_two_bound_from_moments(moments))
     print("Verified by generalized CRT and an independent direct pivot-grid sum.")
     print("No weighted k histogram or safe-set enumeration was constructed.")
 

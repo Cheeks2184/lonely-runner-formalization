@@ -1,9 +1,11 @@
 import unittest
 
 from audit_crt_moment_formula import (
+    EXPECTED_G_DEPTH_TWO_BOUND,
     EXPECTED_G_MOMENTS_0_TO_4,
     audit_g,
     audit_small_rows,
+    depth_two_bound_from_moments,
 )
 
 
@@ -12,7 +14,11 @@ class CrtMomentFormulaTests(unittest.TestCase):
         audit_small_rows()
 
     def test_g(self) -> None:
-        self.assertEqual(audit_g(), EXPECTED_G_MOMENTS_0_TO_4)
+        moments = audit_g()
+        self.assertEqual(moments, EXPECTED_G_MOMENTS_0_TO_4)
+        self.assertEqual(
+            depth_two_bound_from_moments(moments), EXPECTED_G_DEPTH_TWO_BOUND
+        )
 
 
 if __name__ == "__main__":
