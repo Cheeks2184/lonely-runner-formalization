@@ -31,7 +31,7 @@ theorem subfiber_pair_anchor_credit_eq_card_inter_union
     (subfiber : Finset α) (parent : ι → Finset α)
     (anchor other : ι) (hne : anchor ≠ other) :
     (subfiber ∩ parent anchor).card +
-        ({anchor, other}.erase anchor).sup (fun i =>
+        (({anchor, other} : Finset ι).erase anchor).sup (fun i =>
           ((subfiber \ parent anchor) ∩ parent i).card) =
       (subfiber ∩ (parent anchor ∪ parent other)).card := by
   classical
@@ -74,10 +74,15 @@ theorem sum_add_directionalGain_eq_sum_max
   intro cell _
   exact add_natSub_eq_max (old cell) (new cell)
 
+/-- Symmetric pairwise dispersion of two natural-number cell counts. -/
+def natPairwiseDispersion (a b : ℕ) : ℕ :=
+  max a b - min a b
+
 /-- The two orientations of a positive-part difference add to the symmetric
-natural-number distance. -/
-theorem directionalGains_add_reverse_eq_natDist (a b : ℕ) :
-    (b - a) + (a - b) = Nat.dist a b := by
+pairwise dispersion. -/
+theorem directionalGains_add_reverse_eq_natPairwiseDispersion (a b : ℕ) :
+    (b - a) + (a - b) = natPairwiseDispersion a b := by
+  unfold natPairwiseDispersion
   omega
 
 /-- Safe natural-number form of the anchor-prefix/tail cancellation.  Stating

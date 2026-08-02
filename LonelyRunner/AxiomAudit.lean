@@ -81,7 +81,7 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_threeDistinctAnchors_of_anchorStar_gt
 #print axioms LonelyRunner.exists_threeDistinctAnchors_of_anchorStar_gt_of_card
 #print axioms LonelyRunner.subfiber_pair_anchor_credit_eq_card_inter_union
-#print axioms LonelyRunner.directionalGains_add_reverse_eq_natDist
+#print axioms LonelyRunner.directionalGains_add_reverse_eq_natPairwiseDispersion
 #print axioms LonelyRunner.orderedDistinctPairAverage_mono_of_nat
 #print axioms LonelyRunner.exists_cost_lt_of_decreasing_move
 #print axioms LonelyRunner.prefixDependentCost_relocate
