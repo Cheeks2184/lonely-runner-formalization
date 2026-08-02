@@ -93,8 +93,10 @@ all at least the closed threshold `1/6`.
 ## Search provenance
 
 The primary exact Python scanner finds this after 84 primitive shell cases in
-the ordering `n=3,4,5`, increasing maximum, then lexicographic tuple. Reproduce
-the canonical output with:
+the ordering `n=3,4,5`, increasing maximum, then lexicographic tuple. Its
+degree table explicitly records the independently checked exact ceilings
+`3,4,5`, so the certificate generator contains no floating-point degree
+selection. Reproduce the canonical output with:
 
 ```bash
 bash scripts/audit_quadratic_chebyshev_failure.sh
@@ -103,7 +105,7 @@ bash scripts/audit_quadratic_chebyshev_failure.sh
 Its source and output hashes are
 
 ```text
-66ddc5aafa2f465245e82f163b18f8f016e57fc3b05c65caf3b40a95670e8429
+6a930127e3bdfa83a9cb2aa46e34e7c1fc1360adf8f4fc553794e739fdce2e62
   scripts/search_quadratic_chebyshev_failure.py
 fa5f00fd042f71e98207eb40c640a3b1801bd5ed8627c75651f3e66480210532
   certificates/quadratic_chebyshev_failure_expected.txt

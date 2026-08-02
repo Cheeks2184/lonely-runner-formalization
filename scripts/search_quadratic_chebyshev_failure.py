@@ -12,11 +12,17 @@ import argparse
 from fractions import Fraction
 from hashlib import sha256
 from itertools import combinations
-from math import ceil, comb, gcd, log, sqrt
+from math import comb, gcd
 
 
 def degree(n: int) -> int:
-    return ceil(sqrt(n - 1) * log(4 * n * (n + 1)) / 2)
+    # These are the exact prescribed ceilings for the only dimensions reached
+    # by the canonical search.  Keeping them explicit avoids a floating-point
+    # precomputation inside an otherwise exact certificate generator.
+    exact_audited_degrees = {3: 3, 4: 4, 5: 5}
+    if n not in exact_audited_degrees:
+        raise ValueError("the exact audited degree table covers only n=3,4,5")
+    return exact_audited_degrees[n]
 
 
 def scaled_T(r: int, y: int, c: int) -> int:
@@ -107,7 +113,7 @@ def scan_box(n: int, B: int):
 
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("--n-max", type=int, default=12)
+    p.add_argument("--n-max", type=int, default=5, choices=range(3, 6))
     p.add_argument("--B-max", type=int, default=40)
     args = p.parse_args()
     grand = 0
