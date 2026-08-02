@@ -278,7 +278,25 @@ the same tuple at pivot `16`, whose chain row is `(58,46,42,36)` instead.
 weight, exhaustively verifies the nested minima and the inequality against the
 successive cardinality sums, and regression-checks this table.
 
-Thus `B_3` certifies all mandatory rows, including the top-only counterexample.
-The new open sufficient condition `CHAIN3-UNIF` asks whether every primitive
-tuple has some pivot with `B_3<beta`. Its failure would not imply failure of
-unrestricted optimized ordering or LRC.
+Thus `B_3` certifies all mandatory rows, including the top-only counterexample,
+but the corresponding uniform statement is false. The primitive tuple
+
+```text
+F = (8,15,35,40,48,56,75,132,147)
+```
+
+has exact margins
+
+```text
+B_3-beta = (2,1,6,16,50,24,0,96,72),
+```
+
+so no pivot has `B_3<beta`; equality at pivot `75` is nonstrict and therefore
+insufficient. Two independent literal residue/token implementations reproduce
+the full table and the components `B_3=b_3(8)+b_3(5)+b_2(2)`. This refutes
+`CHAIN3-UNIF`, not unrestricted optimized ordering or LRC. Indeed, pivot `15`
+has optimized additive cost `131<135`, and pivot `8` has the direct residue
+certificate `r=13`, corresponding to `t=13/80`. The strict hierarchy shown
+here is between fixed-pivot predicates; this one tuple does not separate the
+existential uniform statements. Full reproduction details are in
+`docs/chain3-counterexample-audit.md`.

@@ -115,7 +115,13 @@ and critical-core contrapositive are now kernel-checked in
 `B_3` is proved mathematically and exhaustively audited; it is strictly tighter
 than the one-step cardinality sum and passes every mandatory stress row. At
 `E` pivot `165`, `B_3=187<211` while the exact soft optimum is `165`.
-`CHAIN3-UNIF` is the next sufficient condition under active investigation.
+Nevertheless, `CHAIN3-UNIF` is false. The primitive tuple
+`(8,15,35,40,48,56,75,132,147)` has `B_3>=beta` at every pivot, with equality
+at pivot `75`; two independent exact implementations reproduce the complete
+table. This rejects only the bounded-depth sufficient condition. At pivot
+`15`, unrestricted optimized additive cost is `131<135`, and `t=13/80` is a
+direct lonely time. The surviving finite-cover target is again unrestricted
+`OPT-ADD-UNIF`, not LRC itself.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all

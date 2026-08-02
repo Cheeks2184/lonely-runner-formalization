@@ -229,11 +229,16 @@ and the exact fixed-tuple checker. The live priorities are now:
    remaining much cheaper than the full Bellman DP. Its exact theorem gives
    `B_3<=B_1`; an independent exhaustive subset verifier matches every stress
    row. At the difficult tuple above, pivot `165` has `B_3=187<211` although
-   the one- and two-step bounds are `259` and `219`. The current bounded-depth
-   frontier is therefore `CHAIN3-UNIF`: prove that some pivot always has a
-   strict three-step bound, or find an all-pivot counterexample and return to
-   the unrestricted objective. No cross-pivot common-modulus inequality for
-   the nested three-deletion maxima is known.
+   the one- and two-step bounds are `259` and `219`. This bounded-depth route
+   is not uniform: the primitive tuple
+   `(8,15,35,40,48,56,75,132,147)` has `B_3>=beta` at every pivot, with the
+   sole equality at pivot `75`. Independent literal implementations reproduce
+   the complete table. At fixed pivot `15`, the three-step bound fails while
+   unrestricted additive cost is `131<135`; at fixed pivot `8`, additive cost
+   is exactly the threshold while residue `13` is an exact pivot witness.
+   These are fixed-pivot separations only, not separations of the existential
+   uniform statements. The frontier therefore returns to `OPT-ADD-UNIF` and
+   the still stronger exact pivot-certificate proposition.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform

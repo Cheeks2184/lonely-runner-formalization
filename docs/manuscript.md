@@ -657,7 +657,21 @@ cardinality proves `B_k<=B_1`; strict improvement is possible because one
 block must follow a single nested chain. An independent exhaustive subset
 verifier reproduces all recorded rows. At `E` pivot `165`,
 `(B_1,B_2,B_3,opt)=(259,219,187,165)` against strict budget `211`.
-Whether some pivot always satisfies `B_3<beta` is open.
+The uniform conclusion is nevertheless false. For
+
+```text
+F=(8,15,35,40,48,56,75,132,147),
+```
+
+the exact pivotwise margins are
+`B_3-beta=(2,1,6,16,50,24,0,96,72)`. Hence no pivot satisfies the required
+strict inequality; equality at pivot `75` is not enough. Two independent
+literal implementations reproduce all rows. This is only a failure of the
+three-step sufficient condition: pivot `15` has unrestricted optimized
+additive cost `131<135`, and the exact time `13/80` is lonely. The unresolved
+finite target is therefore unrestricted optimized additive uniformity, with
+the exact pivot-certificate proposition still strictly stronger at a fixed
+pivot.
 
 The independent unrestricted search also completely checks every increasing
 ten-speed tuple through maximum `22`: `646,646` tuples total, `646,635`

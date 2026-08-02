@@ -1787,3 +1787,91 @@ three-step values are strict on every mandatory stress row; on `E` at pivot
 Independent exact verification of all displayed block rows is in progress.
 No cross-pivot argument forces `B_3<beta` at some pivot, so neither
 `OPT-ADD-UNIF` nor LRC is resolved.
+
+## Prompt 37: prove or refute three-step chain uniformity
+
+The complete-box result, greedy row, token-coupled SCC theorem, and every
+chain table were returned as independently verified. One labeling correction
+was supplied: the reported RF chain row uses pivot `19`; the earlier
+conditioned RF tables use pivot `16` and have a different exact row. Sol Pro
+was asked to prove or refute `CHAIN3-UNIF`, requiring some pivot with
+`B_3(n-1)<beta_j`, through a common-modulus nested-chain inequality, a
+signed-replacement descent controlling the new pivot, and an exact all-pivot
+counterexample search. Equality remains failure, and failure of this
+sufficient condition must not be promoted to failure of unrestricted
+optimized ordering or LRC.
+
+## Response 37: exact rejection of `CHAIN3-UNIF`
+
+After 16 minutes 29 seconds, Sol Pro returned the primitive tuple
+
+```text
+F = (8,15,35,40,48,56,75,132,147).
+```
+
+For `n=9`, `N=10`, its claimed exact rows were
+
+| `A` | `S` | `F*` | `beta` | `B1` | `B2` | `B3` | soft optimum | `Dopt` | `9A` |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 8 | 104 | 40 | 8 | 10 | 8 | 10 | 8 | 72 | 72 |
+| 15 | 237 | 121 | 19 | 23 | 21 | 20 | 15 | 131 | 135 |
+| 35 | 503 | 242 | 54 | 63 | 62 | 60 | 38 | 299 | 315 |
+| 40 | 554 | 222 | 28 | 50 | 44 | 44 | 34 | 366 | 360 |
+| 48 | 706 | 288 | 14 | 74 | 62 | 64 | 44 | 462 | 432 |
+| 56 | 812 | 348 | 40 | 82 | 64 | 64 | 58 | 522 | 504 |
+| 75 | 1057 | 515 | 133 | 149 | 139 | 133 | 93 | 635 | 675 |
+| 132 | 1880 | 756 | 64 | 172 | 162 | 160 | 118 | 1242 | 1188 |
+| 147 | 2115 | 945 | 153 | 256 | 227 | 225 | 180 | 1350 | 1323 |
+
+Thus
+
+```text
+B3-beta = (2,1,6,16,50,24,0,96,72).
+```
+
+Every pivot is nonstrict, including equality at pivot `75`, so the required
+strict condition is false. Sol's pivot-`15` optimal order was
+
+```text
+(40,75,48,35,132,8,56,147)
+```
+
+with insertion costs `(25,50,14,8,12,10,8,4)`, totaling `131<135`.
+At pivot `8`, although optimized additive cost is exactly the threshold, the
+direct residue `r=13` gives `t=13/80` and distance numerators
+`(24,35,25,40,16,8,15,36,9)` over `80`. The equality at speed `56` is good
+because the bad inequalities are strict.
+
+Two independent audits reproduced every table row. One reused only the
+repository's literal residue/token oracle with a separately implemented
+subset recurrence. The other was a clean-room verifier importing no Sol or
+repository fiber implementation; it additionally reproduced each component
+`B3=b3(8)+b3(5)+b2(2)`, the optimal order, strict endpoint conventions,
+candidate exclusion, and the direct lonely time. That verifier and regression
+suite are committed in `2858bf1`; the verifier's SHA-256 is
+`133b4aad0552ca47298677beb1ff2e82532a27aba17b04e99f4983acc6153384`.
+
+An adversarial theory review confirmed the max/min order, block concatenation,
+`B_k<=B_1`, beta algebra, homogeneity, and old-pivot signed-replacement
+invariance. It imposed three qualifications: define the maximum over no
+parents as zero or restrict the canonical definition to at least three
+runners; preserve positivity and distinctness in any replacement; and state
+the demonstrated strict hierarchy only for fixed-pivot predicates. The tuple
+does not separate the existential uniform optimized-additive and exact
+pivot-certificate statements. Accordingly this response rejects
+`CHAIN3-UNIF` only, not `OPT-ADD-UNIF` or LRC.
+
+## Prompt 38: unrestricted optimized ordering and direct coverage
+
+The complete independent acceptance record and all three qualifications were
+returned to the same signed-in GPT-5.6 Sol Pro conversation. Sol was asked to
+prove or refute unrestricted `OPT-ADD-UNIF` through three materially different
+routes: a complete exact all-pivot counterexample search around `F` and in
+nine- and ten-speed families; a common-LCM or cross-pivot theorem for the full
+Bellman/acyclic-selector optimum; and a direct multi-parent union method that
+can succeed beyond every additive order. Any computation must include a
+standalone verifier, expected output, hashes, and proved-complete pruning. Any
+counterexample must include its entire pivot table and an exact direct-pivot
+check. Strict endpoints, candidate exclusion, positivity, distinctness, and
+`N=n+1` were made explicit, and Sol was again forbidden to infer an LRC result
+from failure of a sufficient condition. This response is pending.

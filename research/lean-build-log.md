@@ -343,3 +343,37 @@ scan again found no `sorry`, `admit`, custom `axiom`, `opaque`, `unsafe`,
 `extern`, `implemented_by`, `partial_fixpoint`, `native_decide`, or disabled
 checks. Commits after `be9064f` changed only documentation and exact Python
 audit material, not Lean source.
+
+## 2026-08-02: deterministic witness bridge and soft-chain frontier
+
+The clean ext4 checkout was advanced to commit `e4ece99`. The root build,
+including the completed modular witness bridge and the new threshold-layer
+module, reported:
+
+```text
+Build completed successfully (3530 jobs).
+```
+
+`lake env lean LonelyRunner/AxiomAudit.lean` completed successfully. The new
+order-credit avoidance/witness declarations, threshold-layer loss identities,
+budgeted peeling theorem, and critical-core contrapositive all report only
+`[propext, Classical.choice, Quot.sound]`.
+
+The complete exact Python regression suite reported:
+
+```text
+Ran 104 tests in 249.672s
+OK
+```
+
+The added chain-block regression exhaustively recomputes the nested
+`B_1,B_2,B_3` values and all stress rows. Separately, the complete primitive
+ten-speed scan through maximum `22` enumerated `646,646` increasing tuples,
+retained `646,635` primitive tuples, and found no unrestricted all-pivot
+failure; its minimum best margin was `+4` on fourteen tuples. The independent
+run took 1,690.90 seconds and matched the committed expected output exactly.
+
+A source scan found no `sorry`, `admit`, custom `axiom`, `opaque`, `unsafe`,
+`extern`, `implemented_by`, `partial_fixpoint`, `native_decide`, or disabled
+checks. Both the main worktree and clean checkout were empty after
+verification.
