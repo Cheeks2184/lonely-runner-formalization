@@ -41,8 +41,10 @@ exhaustive and deterministic-random searches, but its uniform arithmetic
 premise remains unproved.
 The exact two-equation simultaneous-congruence compatibility criterion and
 fiber cardinality are kernel-checked as the arithmetic core for pair-fiber
-counts; pivot-candidate subtraction and the full modular specialization remain
-to be connected.
+counts. Strict pivot target fibers now kernel-check as a disjoint decomposition
+of each bad set, and their pair overlaps are exactly a finite sum of candidate
+simultaneous-congruence counts. The remaining arithmetic bridge is the explicit
+subtraction of raw solutions divisible by the pivot-grid scale.
 An exact random-order calculation further reduces the search for a useful
 order to a ranked sum of child-fiber/parent intersection counts.  The identity
 and extensive exact tests are recorded.  Its proposed uniform strict modular
@@ -50,12 +52,12 @@ inequality is now rejected by an exact nine-speed counterexample, while the
 stronger optimized-order certificate remains open.  The tie-safe per-fiber
 tail identity and deterministic average extraction are kernel-checked; the
 remaining shared-permutation bridge is documented but not yet formalized.
-A GCD-rate exponential-clock bias repairs the known uniform-average failure
-and derandomizes by conditional expectation on every recorded hard tuple.
-Its cross-pivot uniformity is a new open arithmetic hypothesis, not a result.
+A GCD-rate exponential-clock bias repairs the first known uniform-average
+failure and derandomizes by conditional expectation, but its cross-pivot
+uniformity is now rejected by an exact primitive nine-speed counterexample.
 The generic positive-weight conditional-expectation step and finite complete-
 order extraction are kernel-checked; the exact GCD-clock potential identity
-and its arithmetic strictness remain separate obligations.
+remains a paper/computational identity rather than a route to uniformity.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
@@ -89,7 +91,12 @@ disproof claim.
 - `docs/hall-overlap-credits.md`: capacitated Hall accounting, exact cut
   counterexamples, and the remaining arithmetic cut inequalities.
 - `docs/fiberwise-hall-audit.md`: exact fiber-credit certificates, bounded
-  coverage, and the smallest counterexample to their uniformity.
+  coverage, and the smallest counterexample to the balanced common-credit
+  strengthening.
+- `docs/ranked-fiber-averaging.md`: tie-safe random-order identity, exact
+  tests, and the all-pivot counterexample to its proposed uniform premise.
+- `docs/adaptive-order-heuristics.md`: exact failures of four local rules and
+  the all-pivot rejection of the GCD-rate conditional-expectation proposal.
 - `docs/pair-sum-geometry.md`: exact pair-sum certificates, restricted-selector
   counterexamples, and bounded unrestricted searches.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
@@ -106,6 +113,10 @@ disproof claim.
   counterexample search.
 - `scripts/search_fiber_hall.py`: exact optimized fiber-credit search and
   brute-order regression audit.
+- `scripts/search_fiber_average.py`: exact ranked-average and regression
+  counterexample calculations.
+- `scripts/search_adaptive_orders.py`: exact adaptive-order, exponential-clock,
+  and conditional-potential calculations.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.

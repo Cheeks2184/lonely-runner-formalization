@@ -1129,3 +1129,44 @@ positive weighted-average choice and an induction producing a complete
 duplicate-free removal order with terminal potential no larger than the
 initial potential.  It assumes the concrete potential recurrence; neither the
 exponential-clock identity nor `GCD-CLOCK-UNIF` is imported as an axiom.
+
+## Response 25: exact rejection of GCD-clock uniformity
+
+After 17 minutes of research, Sol Pro returned the primitive all-pivot
+counterexample
+
+```text
+(8,15,35,40,48,56,63,75,78).
+```
+
+For pivot speeds in tuple order, it reported the exact margins
+`9*A - expected_cost`
+
+```text
+-306535/6748764
+-45774477372115417671047/11080678499995494450060
+-10092964235504317757/1440523581046830280
+-3193009367893/203795336745
+-302891714608332136588331/5467133235691463095760
+-4794129545369388453438975200557/115115210899045744802513047950
+-3327760206087107597795619165287/65752240224785488917083991450
+-4670513694295489/330094903238100
+-1059497781243660599/16137451462532400
+```
+
+so every margin is strictly negative.  Independent execution of the existing
+`gcd_clock_result` implementation reproduced all nine fractions exactly and
+checked the conditional-expectation recurrence at every greedy step.  A new
+regression test also verifies primitiveness and distinctness.
+
+Sol Pro correctly separated this from the optimized deterministic claim.  At
+pivot `8`, the order `(75,48,40,15,78,35,63,56)` has insertion costs
+`(14,6,28,8,4,8,2,0)` and total `70<72`.  Independent direct order evaluation
+reproduced those costs.  Exact rational evaluation at `t=13/80` reproduced
+
+```text
+(3/10,7/16,5/16,1/2,1/5,1/10,19/80,3/16,13/40),
+```
+
+all at least `1/10`.  Thus `GCD-CLOCK-UNIF` is rejected, while the optimized
+additive ordering assertion and LRC remain open.

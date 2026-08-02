@@ -153,16 +153,25 @@ and the exact fixed-tuple checker. The live priorities are now:
    the canonical real conjecture. The entire BHK real-to-rational reduction,
    including its endpoint topology and finite-dimensional collision argument,
    now compiles.
-2. Make bounded modular certificates kernel-checkable by encoding and checking
-   selected-parent intersection data.
-3. Prove or refute the exact uniform pivot-certificate proposition now known
+2. Complete the arithmetic specialization of pair-fiber intersections. Lean
+   now decomposes every strict pivot bad set into exact-target fibers, transfers
+   the raw simultaneous-congruence gcd count, and sums candidate overlaps. The
+   remaining bridge subtracts exactly the raw residues divisible by `N` via
+   the explicit map `q -> N*q`.
+3. Attack the optimized additive ordering principle without a fixed-rate
+   surrogate. Uniform random ordering and the GCD-rate exponential clock now
+   both have exact all-pivot counterexamples, while favorable deterministic
+   orders survive on those tuples. A completion needs genuinely state-adaptive
+   arithmetic structure, a stronger bounded-depth credit, or a counterexample
+   to the optimized principle itself.
+4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform
    avoidance of the finite arithmetic bad-set union. The bounded computation
    is evidence only.
-4. Formalize the two irrational rank-one-block theorem using a torus-density
+5. Formalize the two irrational rank-one-block theorem using a torus-density
    lemma.
-5. State and test the exact distinguished-coset zonotope equivalence without
+6. State and test the exact distinguished-coset zonotope equivalence without
    strengthening it to the false shifted problem.
 
 The fourth Sol Pro round produced two valid but limited structured-class

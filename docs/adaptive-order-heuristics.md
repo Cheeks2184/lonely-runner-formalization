@@ -107,9 +107,35 @@ The reported examples reproduce exactly:
 | `(1,2,3,5)` | 3 | `10` | `(1,2,5)` | `(4,2,4)` / 10 |
 | `(1,2,5,6,8)` | 5 | `23` | `(1,2,6,8)` | `(8,5,4,6)` / 23 |
 
-No tuple in the four complete boxes from Section 3 failed the GCD-clock
-expectation at every pivot.  This does **not** establish `GCD-CLOCK-UNIF`;
-that cross-pivot assertion remains unsupported.
+Those bounded boxes do not establish `GCD-CLOCK-UNIF`.  The exact primitive
+nine-speed tuple
+
+```text
+(8,15,35,40,48,56,63,75,78)
+```
+
+fails the strict expectation at every pivot.  For pivot speeds in tuple order,
+the margins `9*A - expected_cost` are
+
+```text
+-306535/6748764
+-45774477372115417671047/11080678499995494450060
+-10092964235504317757/1440523581046830280
+-3193009367893/203795336745
+-302891714608332136588331/5467133235691463095760
+-4794129545369388453438975200557/115115210899045744802513047950
+-3327760206087107597795619165287/65752240224785488917083991450
+-4670513694295489/330094903238100
+-1059497781243660599/16137451462532400
+```
+
+All are negative.  This rejects the fixed GCD-rate uniform premise, not the
+generic exponential-race identity.  It also does not reject the deterministic
+additive route: at pivot `8`, order `(75,48,40,15,78,35,63,56)` has costs
+`(14,6,28,8,4,8,2,0)` and total `70<72`.  The explicit time `t=13/80` gives
+distances `(3/10,7/16,5/16,1/2,1/5,1/10,19/80,3/16,13/40)`, all at least
+`1/10`.  The regression suite independently recomputes the fractions, order,
+and witness from the strict pivot model.
 
 ## 5. Reproduction
 
@@ -134,6 +160,7 @@ Reproduce the GCD-clock fraction and scan with:
 
 ```sh
 python3 scripts/search_adaptive_orders.py gcd-clock 2 3 7 9 10 12 15 16 19 --pivot-speed 3
+python3 scripts/search_adaptive_orders.py gcd-clock 8 15 35 40 48 56 63 75 78 --pivot-speed 8
 python3 scripts/search_adaptive_orders.py gcd-clock-box --runners 4 --max-speed 20
 python3 -m unittest tests.test_adaptive_orders -v
 ```

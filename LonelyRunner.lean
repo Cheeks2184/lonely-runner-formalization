@@ -10,6 +10,7 @@ import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
 import LonelyRunner.PivotCounts
 import LonelyRunner.SimultaneousCongruence
+import LonelyRunner.PivotPairFiberCounts
 import LonelyRunner.PivotBoundary
 import LonelyRunner.HallCredits
 import LonelyRunner.FiberCredits

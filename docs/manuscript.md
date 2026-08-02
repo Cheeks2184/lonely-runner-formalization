@@ -241,8 +241,15 @@ divides both targets and `c*x=b*y` modulo `M*g`.
 `card_simultaneousCongruenceResidues` proves that a compatible fiber has
 exactly `g` residues and an incompatible fiber is empty.  Congruence only
 modulo `M` is insufficient, as `(M,b,c,x,y)=(8,2,4,2,0)` shows.  The remaining
-pivot-specific interface must subtract residues divisible by `N` and sum over
-the strict target ball; that subtraction is not hidden in this theorem.
+pivot specialization is in `PivotPairFiberCounts.lean`.
+`biUnion_pivotTargetFiber_eq_pivotBadResidues` decomposes a strict pivot bad
+set into disjoint exact-target fibers without changing its open bad endpoint,
+and `card_pivotTargetFiber_inter_pivotBadResidues` writes a target fiber's
+overlap with a second bad set as the sum of candidate simultaneous-congruence
+counts over the second strict target ball.  The raw natural-representative
+count is also transferred from the exact gcd theorem.  What remains is the
+explicit `q -> N*q` bijection needed to subtract precisely the raw residues
+divisible by `N`; no closed formula for the candidate count is yet claimed.
 
 Finally, `docs/ranked-fiber-averaging.md` derives an exact random-order
 identity for the one-level score.  If the possible-parent intersection sizes
@@ -300,16 +307,22 @@ certificate, not the generic finite union argument.
 Four natural state-local adaptive rules are already insufficient at a fixed
 pivot, even after optimizing globally over every tied choice; the exact
 counterexamples are in `docs/adaptive-order-heuristics.md`.  A more structured
-survivor assigns exponential-clock rate `gcd(a_i,(n+1)A)` to child `i`.
+proposal assigns exponential-clock rate `gcd(a_i,(n+1)A)` to child `i`.
 Tail probabilities give an exact rational expected credit, and exponential
 memorylessness derandomizes it by choosing a nonincreasing conditional-
 expectation branch.  The implementation checks that recurrence at every
-step and repairs the nine-speed uniform-average failure.  The cross-pivot
-claim `GCD-CLOCK-UNIF` has no counterexample in the recorded boxes but no
-proof.  The algebraic derandomization core is now in Lean:
+step and repairs the first nine-speed uniform-average failure.  It is not
+uniform: `(8,15,35,40,48,56,63,75,78)` makes the exact GCD-clock expected
+cost exceed the candidate count at every pivot.  The closest failure is at
+pivot `8`, with margin `-306535/6748764`.  Yet the deterministic order
+`(75,48,40,15,78,35,63,56)` costs `70<72`, and `t=13/80` is an explicit
+lonely witness.  Thus the counterexample rejects this fixed-rate law, not the
+optimized additive route or LRC.  The algebraic derandomization core remains
+valid and is now in Lean:
 `exists_nextPotential_le_of_eq_weightedAverage` gives a nonincreasing branch
 of any exact positive rational weighted average, and
 `exists_removalOrder_terminalPotential_le` iterates the choice to a complete
 duplicate-free order.  The exponential-clock tail formula and the exact
 identification of the runner potential with that weighted recurrence remain
-paper/computational interfaces, not hidden hypotheses of the Lean theorem.
+paper/computational interfaces, not hidden hypotheses of the Lean theorem and
+no longer a candidate uniform completion under the GCD rates.

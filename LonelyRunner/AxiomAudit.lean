@@ -42,6 +42,9 @@ project-specific axiom.
 #print axioms LonelyRunner.card_pivotBadResidues_exact
 #print axioms LonelyRunner.simultaneousCongruenceCompatible_iff_nonempty
 #print axioms LonelyRunner.card_simultaneousCongruenceResidues
+#print axioms LonelyRunner.biUnion_pivotTargetFiber_eq_pivotBadResidues
+#print axioms LonelyRunner.card_simultaneousCongruenceNatResidues_exact
+#print axioms LonelyRunner.card_pivotTargetFiber_inter_pivotBadResidues
 #print axioms LonelyRunner.exists_boundary_witness
 #print axioms LonelyRunner.exists_safe_pivot_residue
 #print axioms LonelyRunner.exists_witness_iff_exists_pivot_certificate

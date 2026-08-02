@@ -140,3 +140,35 @@ boundary witness.  The failure mechanism is therefore genuine: a favorable
 coordinated order can be substantially better than the uniform average.
 Exact all-pivot scores and reproduction commands are in
 `docs/ranked-fiber-averaging.md`.
+
+## 2026-08-01: GCD-rate exponential-clock uniformity
+
+The generic exponential-race and conditional-expectation identities are
+valid, but the proposed fixed rates `gcd(a_i,(n+1)A)` do not give a strict
+expected bound at some pivot for every primitive tuple.  The exact all-pivot
+counterexample is
+
+```text
+(8,15,35,40,48,56,63,75,78).
+```
+
+For pivot speeds in tuple order, the margins `9*A - expected_cost` are
+
+```text
+-306535/6748764
+-45774477372115417671047/11080678499995494450060
+-10092964235504317757/1440523581046830280
+-3193009367893/203795336745
+-302891714608332136588331/5467133235691463095760
+-4794129545369388453438975200557/115115210899045744802513047950
+-3327760206087107597795619165287/65752240224785488917083991450
+-4670513694295489/330094903238100
+-1059497781243660599/16137451462532400
+```
+
+All are negative.  The regression suite recomputes every fraction from the
+strict pivot masks and also verifies that the tuple is primitive.  This is not
+an optimized-additive or Lonely Runner counterexample.  At pivot `8`, order
+`(75,48,40,15,78,35,63,56)` has costs `(14,6,28,8,4,8,2,0)` and total
+`70<72`; the explicit time `13/80` gives distances
+`(3/10,7/16,5/16,1/2,1/5,1/10,19/80,3/16,13/40)`.
