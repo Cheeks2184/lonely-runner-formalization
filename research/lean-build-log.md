@@ -576,3 +576,50 @@ successful verification. Exact-path child compiler processes were terminated,
 without affecting other WSL processes. The successful 3560-job result above
 uses a Git-clean source checkout with previously compiled ignored dependencies,
 the same clean-checkout protocol used in earlier rounds.
+
+## 2026-08-01: Response 42 bounded-height kernel and exact scans
+
+The warmed ext4 verification checkout was fast-forwarded without local
+changes to source commit `9e7ef2e1093fc990178789e28d065052f829686e`.
+The root build, including `BoundedHeight.lean`, reported:
+
+```text
+Build completed successfully (3561 jobs).
+```
+
+The new Lean file checks interval selection for a residue congruent to one,
+an inverse representative, exclusion of residues `0,+/-1`, and the complete
+two-hole denominator witness with the closed endpoint `q<=2N`. It does not
+yet extract the two holes from an injective bounded family or instantiate the
+four elementary cases; the full height theorem remains `proved-math` in the
+ledger rather than `proved-lean`.
+
+The explicit axiom audit completed successfully. The four new probes report:
+
+```text
+exists_modEq_one_in_interval:
+  [propext, Classical.choice, Quot.sound]
+exists_inverseRepresentative:
+  [propext, Quot.sound]
+two_le_cyclicResidueDistance_of_inverse_avoids_two_holes:
+  [propext, Quot.sound]
+twoHoleDenominator_family_witness:
+  [propext, Classical.choice, Quot.sound]
+```
+
+The complete exact Python regression suite, including three independent
+Response 42 tests, reported:
+
+```text
+Ran 140 tests in 214.268s
+OK
+```
+
+Separately, `scripts/audit_response42.sh` recompiled both `cpp_int` scanners,
+ran the Python reference, and compared all three outputs byte-for-byte with
+their checked-in certificates. Independent source review accepted the exact
+score arithmetic and candidate enumeration within the five stated boxes and
+the 4,276-tuple mutation domain. A complete Lean source scan found no `sorry`,
+`admit`, custom `axiom`, `opaque`, `unsafe`, `extern`, `implemented_by`,
+`partial_fixpoint`, `native_decide`, or disabled checks. The clean ext4
+checkout remained empty after verification.
