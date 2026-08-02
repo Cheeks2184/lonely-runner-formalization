@@ -62,7 +62,22 @@ def has_full_matching(C, G):
     return all(augment(c, set()) for c in C)
 
 
+EXPECTED_SINGLETON_ROWS = [
+    (4, 1, 2, 5), (4, 2, 2, 5), (4, 2, 3, 5),
+    (5, 2, 2, 7), (5, 2, 3, 7),
+    (6, 2, 4, 7), (6, 3, 2, 9), (6, 3, 4, 7),
+    (7, 2, 4, 9), (7, 3, 4, 9),
+    (9, 3, 6, 11), (9, 4, 6, 11),
+    (11, 2, 6, 13), (11, 3, 6, 13), (11, 4, 6, 13),
+    (11, 5, 6, 13), (11, 5, 8, 13),
+    (14, 6, 10, 17), (14, 7, 10, 17),
+    (17, 7, 12, 19), (17, 8, 12, 19),
+    (19, 9, 14, 23),
+]
+
 failures = []
+singleton_rows = []
+empty_rows = []
 for N in range(4, 301):
     for t in range(1, N // 2 + 1):
         C = [
@@ -71,12 +86,22 @@ for N in range(4, 301):
             if candidate(N, t, c) and not automatic(N, t, c)
         ]
         G = {c: gamma(N, t, c) for c in C}
+        singleton_rows.extend(
+            (N, t, c, neighbors[0])
+            for c, neighbors in G.items()
+            if len(neighbors) == 1
+        )
+        empty_rows.extend((N, t, c) for c, neighbors in G.items() if not neighbors)
         if not has_full_matching(C, G):
             failures.append((N, t, C, G))
 
+assert singleton_rows == EXPECTED_SINGLETON_ROWS
+assert empty_rows == [(8, 4, 6)]
 expected_pairs = [(4, 2), (5, 2), (8, 4), (11, 5)]
 assert [(N, t) for N, t, _, _ in failures] == expected_pairs
 print("range=N:4..300,t:1..floor(N/2)")
+print("singleton_gamma_rows=" + repr(singleton_rows))
+print("empty_gamma_rows=" + repr(empty_rows))
 print("selector_failures=" + repr(expected_pairs))
 for N, t, C, G in failures:
     print(f"failure[{N},{t}].C={C}")
