@@ -22,6 +22,7 @@ import LonelyRunner.CoefficientThreeHeight
 import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts
+import LonelyRunner.CommonPivotBadCount
 import LonelyRunner.SimultaneousCongruence
 import LonelyRunner.TripleCongruence
 import LonelyRunner.PivotPairFiberCounts

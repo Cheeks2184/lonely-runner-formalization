@@ -53,6 +53,11 @@ project-specific axiom.
 #print axioms LonelyRunner.card_strictCyclicBall
 #print axioms LonelyRunner.card_mul_mod_strictCyclicBall
 #print axioms LonelyRunner.card_pivotBadResidues_exact
+#print axioms LonelyRunner.commonPivotBadCount_eq_card
+#print axioms LonelyRunner.exists_commonPivotCandidate_of_sum_badCount_lt
+#print axioms LonelyRunner.commonPivotCandidate_avoids_unitMultiple
+#print axioms LonelyRunner.scaledCommonPivotTime_eq
+#print axioms LonelyRunner.simultaneousTopTwo_of_commonPivotBadCount
 #print axioms LonelyRunner.simultaneousCongruenceCompatible_iff_nonempty
 #print axioms LonelyRunner.card_simultaneousCongruenceResidues
 #print axioms LonelyRunner.tripleCongruenceCompatible_iff_nonempty
