@@ -203,6 +203,156 @@ theorem fiberCredit_modularOrdered_eq_selectedEarlierParentFiberCredit
   rw [modularEarlierParents_vertexOrderAt o hcard hk]
   rfl
 
+/-- A child's selected earlier-parent credit cannot exceed the cardinality of
+that child's bad set.  Positivity is used only for the exact target-fiber
+decomposition. -/
+theorem selectedEarlierParentFiberCredit_le_card_pivotBadResidues
+    {n : ℕ} (N : ℕ) (speeds : Fin n → ℕ) (pivot : Fin n)
+    (o : VertexOrder (NonpivotVertex pivot))
+    (hN : 0 < N) (hpivot : 0 < speeds pivot)
+    (child : NonpivotVertex pivot) :
+    selectedEarlierParentFiberCredit N speeds pivot o child ≤
+      (pivotBadResidues N (speeds pivot) (speeds child.1)).card := by
+  classical
+  apply (fiberCredit_le_card_inter_biUnion
+    (pivotBadResidues N (speeds pivot) (speeds child.1))
+    (strictPivotTargets N (speeds pivot))
+    (fun target =>
+      pivotTargetFiber N (speeds pivot) (speeds child.1) target)
+    (modularEarlierParents o child)
+    (fun parent => pivotBadResidues N (speeds pivot) (speeds parent.1))
+    (by
+      simpa [strictPivotTargets] using
+        biUnion_pivotTargetFiber_eq_pivotBadResidues
+          N (speeds pivot) (speeds child.1) hN hpivot)
+    (by
+      intro x _ y _ hxy
+      exact disjoint_pivotTargetFiber_of_ne
+        N (speeds pivot) (speeds child.1) x y hxy)).trans
+  exact Finset.card_le_card Finset.inter_subset_left
+
+/-- Since every selected credit is genuinely contained in its child bad set,
+natural subtraction distributes across the finite sum.  This rules out the
+otherwise-invalid replacement of a sum of truncated remainders by one global
+subtraction. -/
+theorem sum_card_sub_modularOrderFiberCredit_eq_sum_child_net
+    {n : ℕ} (N : ℕ) (speeds : Fin n → ℕ) (pivot : Fin n)
+    (o : VertexOrder (NonpivotVertex pivot))
+    (hN : 0 < N) (hpivot : 0 < speeds pivot) :
+    (∑ child : NonpivotVertex pivot,
+        (pivotBadResidues N (speeds pivot) (speeds child.1)).card) -
+        modularOrderFiberCredit N speeds pivot o =
+      ∑ child : NonpivotVertex pivot,
+        ((pivotBadResidues N (speeds pivot) (speeds child.1)).card -
+          selectedEarlierParentFiberCredit N speeds pivot o child) := by
+  classical
+  symm
+  simpa [modularOrderFiberCredit] using
+    (Finset.sum_tsub_distrib (Finset.univ : Finset (NonpivotVertex pivot))
+      (fun child _ =>
+        selectedEarlierParentFiberCredit_le_card_pivotBadResidues
+          N speeds pivot o hN hpivot child))
+
+/-! ## Ordered modular avoidance and witness transport -/
+
+/-- A strict optimized additive bound for one concrete nonempty nonpivot
+order leaves a pivot candidate outside every nonpivot bad set.
+
+This is the deterministic application bridge.  It does not assert that a
+suitable pivot or order always exists. -/
+theorem exists_pivotCandidate_avoiding_of_modularOrderFiberCredit
+    {n : ℕ} (N : ℕ) (speeds : Fin n → ℕ) (pivot : Fin n)
+    (o : VertexOrder (NonpivotVertex pivot))
+    (hN : 0 < N) (hpivot : 0 < speeds pivot)
+    (hvertices : 0 < Fintype.card (NonpivotVertex pivot))
+    (hcost :
+      (∑ child : NonpivotVertex pivot,
+          (pivotBadResidues N (speeds pivot) (speeds child.1)).card) -
+          modularOrderFiberCredit N speeds pivot o <
+        (pivotCandidates N (speeds pivot)).card) :
+    ∃ r ∈ pivotCandidates N (speeds pivot),
+      ∀ i, i ≠ pivot →
+        r ∉ pivotBadResidues N (speeds pivot) (speeds i) := by
+  classical
+  let m := Fintype.card (NonpivotVertex pivot)
+  let sets : ℕ → Finset ℕ :=
+    modularOrderedBadSet N speeds pivot o hvertices
+  let fibers : ℕ → ℕ → Finset ℕ :=
+    modularOrderedTargetFiber N speeds pivot o hvertices
+  have hdecomp : ∀ k < m,
+      (strictPivotTargets N (speeds pivot)).biUnion (fibers k) = sets k := by
+    intro k hk
+    simpa [m, sets, fibers, strictPivotTargets] using
+      biUnion_pivotTargetFiber_eq_pivotBadResidues N (speeds pivot)
+        (speeds (vertexOrderAt o hvertices k).1) hN hpivot
+  have hdisjoint : ∀ k < m, ∀ x ∈ strictPivotTargets N (speeds pivot),
+      ∀ y ∈ strictPivotTargets N (speeds pivot), x ≠ y →
+        Disjoint (fibers k x) (fibers k y) := by
+    intro k _ x _ y _ hxy
+    exact disjoint_pivotTargetFiber_of_ne N (speeds pivot)
+      (speeds (vertexOrderAt o hvertices k).1) x y hxy
+  have htyped :
+      (∑ child : NonpivotVertex pivot,
+        ((pivotBadResidues N (speeds pivot) (speeds child.1)).card -
+          selectedEarlierParentFiberCredit N speeds pivot o child)) <
+        (pivotCandidates N (speeds pivot)).card := by
+    rw [← sum_card_sub_modularOrderFiberCredit_eq_sum_child_net
+      N speeds pivot o hN hpivot]
+    exact hcost
+  have hsum :
+      (∑ k ∈ Finset.range m,
+        ((sets k).card - fiberCredit (strictPivotTargets N (speeds pivot))
+          (fibers k) (Finset.range k) sets)) =
+      ∑ child : NonpivotVertex pivot,
+        ((pivotBadResidues N (speeds pivot) (speeds child.1)).card -
+          selectedEarlierParentFiberCredit N speeds pivot o child) := by
+    rw [← Fin.sum_univ_eq_sum_range]
+    exact Fintype.sum_equiv (vertexOrderEquivFin o) _ _ (fun k => by
+      have hk : k.1 < Fintype.card (NonpivotVertex pivot) := k.2
+      rw [fiberCredit_modularOrdered_eq_selectedEarlierParentFiberCredit
+        N speeds pivot o hvertices hk]
+      simp [m, sets, fibers, vertexOrderAt_eq o hvertices hk])
+  have hsequence :
+      ∃ r ∈ pivotCandidates N (speeds pivot),
+        ∀ k < m, r ∉ sets k := by
+    apply exists_mem_avoiding_of_fiberCredit_sum_lt_card
+      (pivotCandidates N (speeds pivot)) sets
+      (fun _ => strictPivotTargets N (speeds pivot)) fibers m
+      hdecomp hdisjoint
+    rw [hsum]
+    exact htyped
+  obtain ⟨r, hr, havoid⟩ := hsequence
+  refine ⟨r, hr, ?_⟩
+  intro i hi
+  let child : NonpivotVertex pivot := ⟨i, hi⟩
+  let k : Fin m := (vertexOrderEquivFin o).symm child
+  have hk : k.1 < m := k.2
+  have hgood := havoid k.1 hk
+  have hvertex : vertexOrderAt o hvertices k.1 = child := by
+    rw [vertexOrderAt_eq o hvertices (by simpa [m] using hk)]
+    simp [k, child]
+  simpa [sets, modularOrderedBadSet, hvertex, child] using hgood
+
+/-- The same optimized additive certificate, transported through the existing
+exact residue interface to a real Lonely Runner witness time. -/
+theorem exists_real_witness_of_modularOrderFiberCredit
+    {n : ℕ} (N : ℕ) (speeds : Fin n → ℕ) (pivot : Fin n)
+    (o : VertexOrder (NonpivotVertex pivot))
+    (hN : 0 < N) (hspeeds : ∀ i, 0 < speeds i)
+    (hvertices : 0 < Fintype.card (NonpivotVertex pivot))
+    (hcost :
+      (∑ child : NonpivotVertex pivot,
+          (pivotBadResidues N (speeds pivot) (speeds child.1)).card) -
+          modularOrderFiberCredit N speeds pivot o <
+        (pivotCandidates N (speeds pivot)).card) :
+    ∃ time : ℝ, ∀ i,
+      (N : ℝ)⁻¹ ≤ circleNorm (time * (speeds i : ℝ)) := by
+  obtain ⟨r, hr, havoid⟩ :=
+    exists_pivotCandidate_avoiding_of_modularOrderFiberCredit
+      N speeds pivot o hN (hspeeds pivot) hvertices hcost
+  refine ⟨(r : ℝ) / ((N * speeds pivot : ℕ) : ℝ), ?_⟩
+  exact pivotResidueWitness speeds pivot hN hspeeds r hr havoid
+
 /-- Tokenwise, the abstract predecessor supremum is exactly the largest
 intersection with one earlier nonpivot parent. -/
 theorem orderedTokenCredit_modular_eq
