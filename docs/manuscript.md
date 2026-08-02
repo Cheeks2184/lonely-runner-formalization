@@ -256,6 +256,22 @@ compatibility/gcd count from the raw count.  Finally,
 expression into every strict-ball summand.  Thus pair-fiber evaluation is now
 kernel-checked; no ordering or uniform overlap inequality is inferred from it.
 
+`TripleCongruence.lean` supplies the next bounded-depth arithmetic layer.  For
+three equations modulo positive `M`, it defines
+`g=gcd(M,a,b,c)` and proves compatibility exactly when `g` divides all three
+targets and all three pairwise cross congruences hold modulo `M*g`.
+`tripleCongruenceCompatible_iff_nonempty` proves this is necessary and
+sufficient, while `card_tripleCongruenceResidues` gives cardinality `g` in the
+compatible branch and zero otherwise.  The proof includes an explicit
+four-term Bézout construction and handles zero coefficients.  It evaluates
+the raw triple congruence fiber needed by the repaired two-level anchor lane.
+`PivotTripleFiberCounts.lean` completes the specialization.  Its explicit
+`q -> N*q` image theorem subtracts the divisible smaller-modulus fiber;
+`candidateTripleCongruenceCount_exact` gives the closed compatibility/gcd
+formula for candidate residues; and the pair-target intersection theorem is
+the exact cell interface needed by the repaired anchored construction.  None
+of these theorems proves that a bounded anchor set always exists.
+
 Finally, `docs/ranked-fiber-averaging.md` derives an exact random-order
 identity for the one-level score.  If the possible-parent intersection sizes
 inside one child fiber are sorted as `nu_1 >= ... >= nu_p`, the expected
@@ -338,3 +354,44 @@ clock margins; at pivot `75` the same conditional-expectation greedy procedure
 nevertheless yields deterministic cost `643<675`.  This strengthens the
 rejection of the fixed expectation while leaving the optimized additive
 principle unchanged.
+
+One further state-dependent candidate uses two-sided one-item relocations of
+an order.  `prefixDependentCost_relocate` proves the exact block identity for
+any insertion cost depending only on the set of earlier entries, including
+formal cancellation of every suffix term.  The finite theorem
+`exists_cost_lt_of_decreasing_move` proves that if every order at or above the
+candidate bound has a strictly cheaper allowed neighbor, then some order is
+strictly below the bound.  Exact enumeration verifies this local-minimum
+property on the recorded hard tuples only.  The arithmetic statement
+`RELOC-UNIF` asserting an appropriate pivot for every tuple is open and is not
+an assumption of either Lean theorem.
+
+Sol Pro's first three-anchor formula was malformed: it left the target set and
+the full anchor-fiber range undefined, so two advertised costs could not arise
+from the then-stated construction.  After this objection, Response 27 repaired
+the definition using the complete anchor residue partition.  Strict-target
+subfibers are covered by the anchor; complementary subfibers credit the best
+other fixed anchor.  This is precisely the sound construction already proved
+in `TwoLevelFiberCredits.lean`.  Independent exact recomputation reproduces all
+six repaired tables, including totals `70<72` and `48<54` on the two
+fixed-clock failures.
+`exists_mem_avoiding_of_twoLevelFiberCredit_sum_lt_card_of_parent_subset`
+then gives the generic ordered-union certificate with an explicit condition
+that every selected parent is earlier.  This formally justifies ignoring
+previous nonanchors for each tail child.  The statement that three anchors
+always suffice,
+`3-ANCHOR-UNIF`, remains open.  Full definitions and tables are in
+`docs/response26-audit.md`.
+
+Response 28 further averages over the choices of second and third anchors.
+For a first anchor `h`, its score `Xi_j(h)` combines its pair degree, the
+average exact second-anchor gain, and the conditional average third-anchor
+gain.  If `Xi_j(h) > S_j-n*A`, two successive average arguments select a
+three-anchor certificate.  Independent exact computation verifies the
+identity, nonnegative third gain, all six rational stress rows, and the
+zero-target divisor/cross-pivot formulas.  No failure appears in the recorded
+complete primitive boxes through `(runners,maxSpeed)=(4,12),(5,15),(6,12)`.
+This is finite evidence only.  `ANCHOR-STAR-UNIF` is stronger than the already
+open three-anchor assertion and remains unproved; the uncontrolled term is the
+average nonzero-target triple compatibility gain.  See
+`docs/anchor-star-audit.md`.

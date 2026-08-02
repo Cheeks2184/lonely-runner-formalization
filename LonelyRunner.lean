@@ -10,13 +10,16 @@ import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
 import LonelyRunner.PivotCounts
 import LonelyRunner.SimultaneousCongruence
+import LonelyRunner.TripleCongruence
 import LonelyRunner.PivotPairFiberCounts
+import LonelyRunner.PivotTripleFiberCounts
 import LonelyRunner.PivotBoundary
 import LonelyRunner.HallCredits
 import LonelyRunner.FiberCredits
 import LonelyRunner.TwoLevelFiberCredits
 import LonelyRunner.RankedFiberAveraging
 import LonelyRunner.WeightedConditionalExpectation
+import LonelyRunner.RelocationDescent
 import LonelyRunner.PairSumGeometry
 import LonelyRunner.IntegerInduction
 import LonelyRunner.Normalization

@@ -46,6 +46,14 @@ of each bad set, and their pair overlaps are exactly a finite sum of candidate
 simultaneous-congruence counts. The explicit `q -> N*q` bijection now subtracts
 the raw solutions divisible by the pivot-grid scale and yields a closed exact
 compatibility/gcd formula for every pair-target count and overlap sum.
+The corresponding three-equation theorem is also kernel-checked: compatibility
+uses the four-way gcd and all three cross congruences modulo the strengthened
+product modulus, and a compatible triple fiber has exactly that gcd many
+residues. This supplies the raw arithmetic core for depth-two triple
+intersections. The pivot specialization is now kernel-checked too: an explicit
+`q -> N*q` bijection subtracts the divisible smaller-modulus fiber, producing a
+closed exact candidate triple-target count and pair-target intersection
+interface. No three-anchor uniformity is asserted.
 An exact random-order calculation further reduces the search for a useful
 order to a ranked sum of child-fiber/parent intersection counts.  The identity
 and extensive exact tests are recorded.  Its proposed uniform strict modular
@@ -59,6 +67,19 @@ uniformity is now rejected by an exact primitive nine-speed counterexample.
 The generic positive-weight conditional-expectation step and finite complete-
 order extraction are kernel-checked; the exact GCD-clock potential identity
 remains a paper/computational identity rather than a route to uniformity.
+The generic finite relocation-descent implication and an exact block-
+relocation identity for prefix-dependent costs are kernel-checked. Exact
+enumeration supports a two-sided relocation criterion on the recorded hard
+tuples, but its uniform arithmetic premise remains open; a proposed
+three-anchor formula was malformed as first stated, then repaired into the
+existing sound two-level pattern. All repaired fixed-instance tables reproduce
+exactly. The selected-earlier-parent ordered-union and avoidance theorem is
+now kernel-checked too, so tail children may soundly ignore non-anchor
+predecessors; cross-tuple three-anchor uniformity remains open.
+The stronger anchor-star double average is algebraically verified and all
+reported exact values reproduce. It has no counterexample in the documented
+small complete boxes, but its cross-pivot strict inequality is a new open
+arithmetic premise, not a theorem.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
@@ -98,6 +119,10 @@ disproof claim.
   tests, and the all-pivot counterexample to its proposed uniform premise.
 - `docs/adaptive-order-heuristics.md`: exact failures of four local rules and
   the all-pivot rejection of the GCD-rate conditional-expectation proposal.
+- `docs/response26-audit.md`: exact reconstruction of relocation minima, the
+  malformed first anchor formula, and the verified repaired construction.
+- `docs/anchor-star-audit.md`: exact double-averaging identities, divisor
+  input, stress tables, and bounded complete-box audit.
 - `docs/pair-sum-geometry.md`: exact pair-sum certificates, restricted-selector
   counterexamples, and bounded unrestricted searches.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
@@ -118,6 +143,14 @@ disproof claim.
   counterexample calculations.
 - `scripts/search_adaptive_orders.py`: exact adaptive-order, exponential-clock,
   and conditional-potential calculations.
+- `scripts/audit_relocation_descent.py`: exact two-sided/left-only relocation
+  enumeration and delta verification.
+- `scripts/audit_three_anchor.py`: maximal sound reading of the rejected
+  first formula and exact verification of the repaired full-fiber tables.
+- `scripts/audit_triangle_lp.py`: minimal exact integrality gap for the
+  clause/triangle ordering relaxation.
+- `scripts/audit_anchor_star.py`: exact anchor-star values and complete-box
+  scans for the stronger three-anchor average.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.

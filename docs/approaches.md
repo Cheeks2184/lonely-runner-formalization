@@ -157,14 +157,28 @@ and the exact fixed-tuple checker. The live priorities are now:
    decomposes every strict pivot bad set into exact-target fibers, transfers
    the raw simultaneous-congruence gcd count, subtracts exactly the raw
    residues divisible by `N` via `q -> N*q`, and sums the resulting closed
-   counts. The remaining obstacle is an ordering or bounded-depth inequality,
-   not evaluation of a pair intersection.
+   counts. The analogous exact three-equation compatibility and gcd count is
+   also kernel-checked, including the pivot-candidate subtraction and exact
+   pair-target/triple-target cell used by the two-level construction. The
+   remaining obstacle is an ordering or bounded-depth inequality, not
+   evaluation of a pair or triple intersection.
 3. Attack the optimized additive ordering principle without a fixed-rate
    surrogate. Uniform random ordering and the GCD-rate exponential clock now
    both have exact all-pivot counterexamples, while favorable deterministic
-   orders survive on those tuples. A completion needs genuinely state-adaptive
-   arithmetic structure, a stronger bounded-depth credit, or a counterexample
-   to the optimized principle itself.
+   orders survive on those tuples. Two-sided one-item relocation descent is
+   the current precise state-adaptive candidate: its finite descent and block-
+   cost identity are kernel-checked, and exact enumeration supports the hard
+   tuples, but `RELOC-UNIF` is open. A completion still needs arithmetic
+   control of every expensive local minimum, a sound stronger bounded-depth
+   credit, or a counterexample to the optimized principle itself.
+   A separate repaired front-loaded construction uses at most three fixed
+   anchors and the Lean-checked two-level residual-subfiber credit. Exact
+   tables cover all current hard tuples, but `3-ANCHOR-UNIF` is likewise an
+   open arithmetic claim rather than an observed theorem.
+   Double averaging the second- and third-anchor gains gives the stronger
+   `ANCHOR-STAR-UNIF` inequality. Its generic implication and exact values are
+   independently verified, and small complete boxes have no failure; the
+   decisive nonzero-target triple compatibility mass remains uncontrolled.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform

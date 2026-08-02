@@ -1184,3 +1184,146 @@ its first unsupported arithmetic inequality and must be tested against both
 nine-speed average failures and `(1,2,3,5)`.  Fixed clocks, literal union
 enumeration, unbounded refinement, generic conditional expectation, and broad
 random sampling were excluded as substitutes for the arithmetic step.
+
+While Prompt 26 ran, independent work found two further exact facts.  First,
+conditioning the rejected GCD clock on speed `48` first at pivot `8` gives
+
+```text
+V_48 = 120979207/1687191 < 72.
+```
+
+The one-prefix potential fails at the other eight pivots, so this is a new
+open adaptive principle rather than a proof.  Second, a targeted divisor-
+template search found the simpler primitive all-pivot clock failure
+`(6,8,15,21,28,35,40,48,75)`.  Its nine exact margins and a deterministic
+cost `643<675` certificate are regression-tested.  The bounded search did not
+establish global minimality.  These results sharpen the distinction between a
+failed fixed expectation and the still-open optimized additive ordering claim.
+
+## Response 26: relocation descent, bounded anchors, and an LP diagnostic
+
+Sol Pro returned three proposed lanes and did not claim a proof.
+
+1. **Relocation descent.**  It defined the marginal benefit
+   `g_(i->k)(P)=C(k,P)-C(k,P union {i})` and the exact change from moving `i`
+   earlier across a contiguous block `T`.  Finite descent is immediate if
+   every bad order admits a negative-change relocation.  The unsupported
+   arithmetic statement `RELOC-UNIF` asserts that some pivot has this property.
+   Sol Pro reported exhaustive local-minimum counts and claimed every local
+   minimum is strict on the required stress tuples; these computations require
+   independent reproduction.
+2. **Three-anchor front-loading.**  It proposed a bounded depth-two credit and
+   reported strict costs with anchor sets of size at most three on each stress
+   tuple.  As returned, the displayed formula contains an undefined target set
+   `A` and does not specify enough of the anchor ordering/interface to reproduce
+   the claimed costs.  `3-ANCHOR-UNIF` is therefore not yet a well-formed
+   accepted obligation; the existing generic two-level soundness theorem does
+   not repair the missing specialization by itself.
+3. **Clause/triangle LP.**  A threshold clause `(i,x,t)` is satisfied when a
+   qualifying parent precedes child `i`; the additive cost counts unsatisfied
+   clauses.  Pair-order variables, triangle inequalities, and relaxed clause
+   variables give an LP lower bound on the optimal additive cost.  Thus an LP
+   value at least `n*A` would certify fixed-pivot failure, but good orders on
+   the stress tuples only show that their LP values are below threshold.  The
+   proposed `SHORT-CYCLE-LP` completeness of this relaxation is unsupported
+   and was described as likely false in general.
+
+The relocation identity and LP inequality directions appear mathematically
+coherent on inspection.  No arithmetic uniformity claim or three-anchor
+numeric table is accepted pending independent reconstruction.
+
+## Prompt 27: exact objections to the three proposed lanes
+
+Sol Pro was told that the relocation formula is coherent but its enumeration
+needs a precise verifier specification.  The undefined set `A`, changing
+meaning of the anchor argument, unspecified order, and unjustified “any order”
+phrase in the three-anchor lane were returned as blocking objections.  It was
+asked to restate that construction using the repository's actual target and
+anchored residual subfibers, provide complete orders and reproducible tables,
+or retract the numbers if they came from literal union/additive optimization.
+The triangle LP was acknowledged only as a lower bound; Sol Pro was asked for
+a counterexample to its likely-false completeness or a narrower structural
+condition.  The simpler tuple `(6,8,15,21,28,35,40,48,75)` was added as a
+mandatory stress case.  No uniformity inference from finite tests was allowed.
+
+## Response 27: clarified two-sided moves and repaired two-level anchors
+
+Sol Pro clarified that relocation means removing one item and reinserting it
+at any other final position; both directions are allowed and only strict cost
+decreases disqualify a local minimum.  Its supplied verifier reproduces the
+reported counts and additionally reports 100 local minima of costs
+`299,302,305<315` for the simpler clock tuple at pivot `35`.  Independent
+enumeration had already found exactly the same counts for all five original
+tables and showed that left-only moves would be false.  The two-sided
+convention is therefore essential.
+
+The malformed three-anchor formula was explicitly retracted.  The repair sets
+`A` to the strict target ball and partitions each child target fiber by every
+full anchor target fiber.  Anchor-ball subfibers are credited completely;
+outside the anchor bad set, the best other parent is credited.  This is the
+repository's already Lean-checked anchored residual-subfiber construction,
+not literal union credit.  Sol Pro supplied complete anchor-first orders and
+claimed exact totals `25,70,52,58,10`, plus total `48<54` for the simpler
+clock tuple at pivot `6`.  These tables were sent for independent exact
+reproduction; the bounded assertion that three anchors always suffice remains
+open regardless of the fixed examples.
+
+Finally, Sol Pro withdrew `SHORT-CYCLE-LP` using a three-item abstract gap.
+Each item's threshold clause accepts either other item.  Every total order
+leaves the first item's clause unsatisfied, so integral cost is one, while
+pair variables `y_pq=1/2` satisfy all triangle constraints and allow relaxed
+cost zero.  Thus the LP remains a sound lower-bound diagnostic but is not a
+complete ordering formulation.
+
+## Prompt 28: three-anchor arithmetic frontier
+
+The exact two-sided relocation counts, all six repaired anchor tables, and the
+minimal triangle-LP gap were reported as independently reproduced.  Sol Pro
+was asked to prove or refute the precisely quantified `3-ANCHOR-UNIF`
+statement.  The required next step is a nontrivial cross-pivot or divisor
+inequality derived from exact pair/triple congruence counts, or an exact tuple
+failing the bounded certificate at every pivot.  Both fixed-clock failures,
+the RF tuple, and `(1,2,3,5)` are mandatory stress cases.  Broad random search,
+literal unions, more than three anchors, and repetition of generic soundness
+were excluded.  Any counterexample must be identified only as a failure of
+the bounded anchor lane unless optimized additive ordering or LRC is separately
+and exactly refuted.
+
+## Response 28: anchor-star double averaging
+
+Sol Pro reported neither a proof nor a counterexample to `3-ANCHOR-UNIF`.
+It instead defined the exact fixed-anchor functional `U_j(H)` using inclusion-
+exclusion for the anchor prefix and the repaired two-level credit for every
+tail child.  It then introduced pair degree `D_j(h)`, the exact gain
+`E_j(q|h)` from a second anchor, and the nonnegative gain `G_j(r|h,q)` from a
+third.  Double averaging gives the generic implication
+
+```text
+Xi_j(h) > S_j - n*A  ==>  some {h,q,r} has U_j({h,q,r}) < n*A.
+```
+
+The response isolates `ANCHOR-STAR-UNIF`--some pivot and first anchor satisfy
+that strict inequality--as the first unsupported arithmetic lemma.  The
+averaging becomes equality when the second-anchor scores are constant and the
+conditional third-anchor gains are constant; equality at the final threshold
+is insufficient because the pivot certificate is strict.
+
+An algebraic inspection confirms the generic identities: summing `E` counts
+each non-`h` pair twice and each triple containing `h` twice, while summing `G`
+over ordered `(q,r)` gives the displayed average of pair- versus triple-anchor
+costs.  The response also derived a genuine zero-target divisor lower bound
+
+```text
+gcd(N*a_j,a_h,a_i) - gcd(a_j,a_h,a_i)
+= d * (gcd(N,a_h/d,a_i/d) - 1),
+```
+
+with `d=gcd(a_j,a_h,a_i)`, plus its three-pivot sum identity.  It explicitly
+notes that this bound misses the decisive nonzero targets on the hard tuples.
+
+Exact `Xi` surpluses and selected triples were reported for the RF tuple, both
+fixed-clock failures, both earlier hard tuples, and `(1,2,3,5)`.  These tables
+and the generic arithmetic identities were assigned to an independent exact
+audit.  No claim is promoted beyond fixed-instance evidence; failure of the
+double average would reject only this stronger route, and failure of three
+anchors would still not reject optimized additive ordering or LRC.
