@@ -379,9 +379,9 @@ fixed-clock failures.
 then gives the generic ordered-union certificate with an explicit condition
 that every selected parent is earlier.  This formally justifies ignoring
 previous nonanchors for each tail child.  The statement that three anchors
-always suffice,
-`3-ANCHOR-UNIF`, remains open.  Full definitions and tables are in
-`docs/response26-audit.md`.
+always suffice was still open at that stage; it is now rejected by the exact
+tuple and audit recorded below. Full definitions and the repaired Response 27
+tables are in `docs/response26-audit.md`.
 
 Response 28 further averages over the choices of second and third anchors.
 For a first anchor `h`, its score `Xi_j(h)` combines its pair degree, the
@@ -392,9 +392,10 @@ identity, nonnegative third gain, all six rational stress rows, and the
 zero-target divisor/cross-pivot formulas.  No failure appears in the recorded
 complete primitive boxes through `(runners,maxSpeed)=(4,12),(5,15),(6,12)`.
 This is finite evidence only.  `ANCHOR-STAR-UNIF` is stronger than the already
-open three-anchor assertion and remains unproved; the uncontrolled term is the
-average nonzero-target triple compatibility gain.  See
-`docs/anchor-star-audit.md`.
+then-open three-anchor assertion. Its uncontrolled term was the average
+nonzero-target triple compatibility gain. The later exact counterexample
+below rejects both this uniform premise and the stronger dispersion closure.
+See `docs/anchor-star-audit.md`.
 
 The finite selection part of this argument is now kernel-checked in
 `AnchorStarAveraging.lean`. `exists_secondaryAnchors_of_anchorStar_gt` turns
@@ -525,7 +526,7 @@ constructs tokenwise maximizers from an order;
 selector in an order; and
 `exists_orderCredit_ge_iff_exists_acyclicSelectorWeight_ge` states the exact
 threshold equivalence. `ModularAcyclicSelector.lean` supplies the concrete
-application. Its token type pairs a nonpivot child with every strict target;
+finite-optimization instantiation. Its token type pairs a nonpivot child with every strict target;
 empty fibers merely have zero weight. `modularFiberWeight` is exactly the
 cardinality of the candidate-filtered child fiber intersected with the
 parent's strict bad set. `orderedTokenCredit_modular_eq` and
@@ -534,6 +535,11 @@ credits, while
 `exists_modularOrderFiberCredit_ge_iff_exists_acyclicSelectorWeight_ge`
 specializes the threshold equivalence. Candidate exclusion and strict target
 endpoints are inherited from `pivotTargetFiber` and `strictCyclicBall`.
+Lean still must enumerate the resulting `VertexOrder` into the existing
+ordered-union avoidance theorem, apply target-fiber decomposition and
+disjointness, discharge the natural-subtraction bookkeeping, and transport
+the uncovered candidate through the pivot-certificate theorem. This is
+application plumbing separate from the open uniform selector lower bound.
 
 This preserves the single-parent-per-fiber rule and is not the earlier
 tautological union/Hall relaxation. Restricting each positive token to one of
