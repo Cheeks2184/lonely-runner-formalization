@@ -107,6 +107,102 @@ theorem vertexOrderEquivFin_key_lt_iff {V : Type*} [Fintype V]
   simpa [vertexOrderEquivFin] using
     (monoEquivOfFin V rfl).lt_iff_lt
 
+/-- Total natural-indexed enumeration associated to a nonempty vertex order.
+Modulo is used only to make the function total; below the cardinality it is
+literally `vertexOrderEquivFin`. -/
+noncomputable def vertexOrderAt {V : Type*} [Fintype V]
+    (o : VertexOrder V) (hcard : 0 < Fintype.card V) (k : ℕ) : V :=
+  vertexOrderEquivFin o ⟨k % Fintype.card V, Nat.mod_lt k hcard⟩
+
+theorem vertexOrderAt_eq {V : Type*} [Fintype V]
+    (o : VertexOrder V) (hcard : 0 < Fintype.card V) {k : ℕ}
+    (hk : k < Fintype.card V) :
+    vertexOrderAt o hcard k = vertexOrderEquivFin o ⟨k, hk⟩ := by
+  simp [vertexOrderAt, Nat.mod_eq_of_lt hk]
+
+/-- The first `k` vertices of the natural enumeration are exactly the
+predecessors of its `k`th vertex. -/
+theorem image_range_vertexOrderAt_eq_predecessors {V : Type*}
+    [Fintype V] [DecidableEq V] (o : VertexOrder V)
+    (hcard : 0 < Fintype.card V) {k : ℕ}
+    (hk : k < Fintype.card V) :
+    (Finset.range k).image (vertexOrderAt o hcard) =
+      Finset.univ.filter (fun parent =>
+        o.key parent < o.key (vertexOrderAt o hcard k)) := by
+  classical
+  ext parent
+  constructor
+  · intro hparent
+    obtain ⟨j, hj, rfl⟩ := Finset.mem_image.mp hparent
+    have hjk : j < k := Finset.mem_range.mp hj
+    have hjcard : j < Fintype.card V := hjk.trans hk
+    apply Finset.mem_filter.mpr
+    refine ⟨Finset.mem_univ _, ?_⟩
+    rw [vertexOrderAt_eq o hcard hjcard, vertexOrderAt_eq o hcard hk]
+    exact (vertexOrderEquivFin_key_lt_iff o ⟨j, hjcard⟩ ⟨k, hk⟩).2 hjk
+  · intro hparent
+    have hkey := (Finset.mem_filter.mp hparent).2
+    let j : Fin (Fintype.card V) := (vertexOrderEquivFin o).symm parent
+    have hjk : j.1 < k := by
+      rw [vertexOrderAt_eq o hcard hk] at hkey
+      have hkey' :
+          o.key (vertexOrderEquivFin o j) <
+            o.key (vertexOrderEquivFin o ⟨k, hk⟩) := by
+        simpa [j] using hkey
+      exact (vertexOrderEquivFin_key_lt_iff o j ⟨k, hk⟩).1 hkey'
+    apply Finset.mem_image.mpr
+    refine ⟨j.1, Finset.mem_range.mpr hjk, ?_⟩
+    rw [vertexOrderAt_eq o hcard (hjk.trans hk)]
+    simp [j]
+
+/-- The nonpivot bad sets listed in increasing order of `o.key`. -/
+noncomputable def modularOrderedBadSet {n : ℕ} (N : ℕ)
+    (speeds : Fin n → ℕ) (pivot : Fin n)
+    (o : VertexOrder (NonpivotVertex pivot))
+    (hcard : 0 < Fintype.card (NonpivotVertex pivot)) (k : ℕ) :
+    Finset ℕ :=
+  pivotBadResidues N (speeds pivot)
+    (speeds (vertexOrderAt o hcard k).1)
+
+/-- The target fibers of the nonpivot bad sets in increasing key order. -/
+noncomputable def modularOrderedTargetFiber {n : ℕ} (N : ℕ)
+    (speeds : Fin n → ℕ) (pivot : Fin n)
+    (o : VertexOrder (NonpivotVertex pivot))
+    (hcard : 0 < Fintype.card (NonpivotVertex pivot))
+    (k target : ℕ) : Finset ℕ :=
+  pivotTargetFiber N (speeds pivot)
+    (speeds (vertexOrderAt o hcard k).1) target
+
+theorem modularEarlierParents_vertexOrderAt {n : ℕ} {pivot : Fin n}
+    (o : VertexOrder (NonpivotVertex pivot))
+    (hcard : 0 < Fintype.card (NonpivotVertex pivot)) {k : ℕ}
+    (hk : k < Fintype.card (NonpivotVertex pivot)) :
+    (Finset.range k).image (vertexOrderAt o hcard) =
+      modularEarlierParents o (vertexOrderAt o hcard k) := by
+  simpa [modularEarlierParents] using
+    image_range_vertexOrderAt_eq_predecessors o hcard hk
+
+/-- At every valid position, the sequence-level fiber credit used by the
+ordered-union theorem is exactly the concrete modular order credit of that
+child. -/
+theorem fiberCredit_modularOrdered_eq_selectedEarlierParentFiberCredit
+    {n : ℕ} (N : ℕ) (speeds : Fin n → ℕ) (pivot : Fin n)
+    (o : VertexOrder (NonpivotVertex pivot))
+    (hcard : 0 < Fintype.card (NonpivotVertex pivot)) {k : ℕ}
+    (hk : k < Fintype.card (NonpivotVertex pivot)) :
+    fiberCredit (strictPivotTargets N (speeds pivot))
+        (modularOrderedTargetFiber N speeds pivot o hcard k)
+        (Finset.range k) (modularOrderedBadSet N speeds pivot o hcard) =
+      selectedEarlierParentFiberCredit N speeds pivot o
+        (vertexOrderAt o hcard k) := by
+  classical
+  unfold fiberCredit selectedEarlierParentFiberCredit
+  apply Finset.sum_congr rfl
+  intro target _
+  rw [← Finset.sup_image]
+  rw [modularEarlierParents_vertexOrderAt o hcard hk]
+  rfl
+
 /-- Tokenwise, the abstract predecessor supremum is exactly the largest
 intersection with one earlier nonpivot parent. -/
 theorem orderedTokenCredit_modular_eq
