@@ -210,9 +210,9 @@ and the exact fixed-tuple checker. The live priorities are now:
    literal implementations reproduce every row, including equality at pivots
    `5` and `35`. Lower-ranked parents matter: at pivot `28`, unrestricted
    cost is `250 < 252` although top-only cost is `258`. The direct time
-   `3/140` is lonely. Thus the surviving finite-cover target is unrestricted
-   `OPT-ADD-UNIF`, not the rejected top-parent restriction, and neither this
-   target nor LRC is proved.
+   `3/140` is lonely. Thus unrestricted `OPT-ADD-UNIF` was the next stronger
+   target after the top-parent restriction; it is itself rejected below,
+   without rejecting LRC.
    The exact full-weight refinement expands each token into nested unit
    threshold layers. Its loss is the number of layers whose entire supporting
    parent set remains later, so it retains every lower-ranked rescue and gives
@@ -237,8 +237,8 @@ and the exact fixed-tuple checker. The live priorities are now:
    unrestricted additive cost is `131<135`; at fixed pivot `8`, additive cost
    is exactly the threshold while residue `13` is an exact pivot witness.
    These are fixed-pivot separations only, not separations of the existential
-   uniform statements. The frontier therefore returns to `OPT-ADD-UNIF` and
-   the still stronger exact pivot-certificate proposition. The generic block
+   uniform statements. At this stage the frontier returned to `OPT-ADD-UNIF`
+   and the still stronger exact pivot-certificate proposition. The generic block
    concatenation, strict/non-strict budget propagation, exact final-block
    length, and comparison with one-step peeling are kernel-checked in
    `BlockPeeling.lean`; the rejected modular uniform premise is not encoded.
@@ -255,6 +255,24 @@ and the exact fixed-tuple checker. The live priorities are now:
    `sum_j M_j/a_j=-1863/4312`. Any viable cross-pivot argument must therefore
    retain nonlinear incidence correlations rather than only normalized
    per-pivot margins.
+   The exact unrestricted uniform condition is now rejected by
+   `(15,21,40,48,56,105,126,280,1200)`. Its pivotwise optimized surpluses are
+   `(0,-31,0,-32,-2,-2,-62,-48,-24)` in speed order: every value is
+   nonpositive, and equality at pivots `15` and `40` is insufficient. Two
+   independent literal implementations reproduce the full
+   `(S,F*,soft-optimum,Dopt,9A)` table, and one enumerates all `8!` orders at
+   every pivot. The direct residue `39` at pivot `48` gives time `13/160`, so
+   this rejects only `OPT-ADD-UNIF`.
+   A sound direct strengthening drops global acyclicity but retains whole
+   token-parent overlap blocks. If their use count at every residue is at most
+   its duplicate-incidence capacity `mu(r)-1`, then their total credit is
+   bounded by `S-|union B_i|`. Every additive order induces such a packing,
+   but cycles are allowed. On the earlier tuple `F` at pivot `8`, a verified
+   24-block packing has credit `34`, versus additive credit `32`, and proves
+   `|union B_i|<=70<72` (the literal union is `68`). Turning this fixed-instance
+   packing into a uniform CRT theorem is open. The active frontier is therefore
+   the exact pivot-certificate proposition, equivalent in Lean to the
+   positive-integer conjecture.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform

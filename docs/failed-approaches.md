@@ -214,3 +214,27 @@ explicit candidate `r=6`, or time `t=3/140`, has minimum circular distance
 `3/28>1/10`. Thus this section rejects `TOP-CYCLE-UNIF` only. It is not a
 counterexample to `OPT-ADD-UNIF`, the pivot-certificate formulation, or LRC.
 Reproduction details are in `docs/top-cycle-failure-audit.md`.
+
+## 2026-08-02: bounded-depth chain and unrestricted additive uniformity
+
+The nested three-deletion bound `CHAIN3-UNIF` is a sound strengthening of
+one-step peeling but is not uniform. The primitive tuple
+`(8,15,35,40,48,56,75,132,147)` has
+`B_3-beta=(2,1,6,16,50,24,0,96,72)`, so every pivot is nonstrict. It does not
+reject unrestricted additive ordering: pivots `15`, `35`, and `75` succeed,
+and `t=13/80` is lonely.
+
+Even the exact unrestricted additive-order condition is not uniform. For
+
+```text
+(15,21,40,48,56,105,126,280,1200),
+```
+
+the optimized surpluses `9A-Dopt` are
+`(0,-31,0,-32,-2,-2,-62,-48,-24)`. A clean-room literal oracle checks every
+strict residue/fiber construction and all `362,880` pivot-order pairs. Equality
+at pivots `15` and `40` is insufficient, so `OPT-ADD-UNIF` is false. This
+rejects the ordering surrogate only. Pivot `48`, residue `39`, gives
+`t=13/160`; every circular distance is at least `1/10`, and the exact witness
+is kernel-checked in `OptAddCounterexample.lean`. The surviving target is the
+strictly stronger exact pivot-certificate proposition.

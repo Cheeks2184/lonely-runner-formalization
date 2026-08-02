@@ -120,20 +120,28 @@ Nevertheless, `CHAIN3-UNIF` is false. The primitive tuple
 at pivot `75`; two independent exact implementations reproduce the complete
 table. This rejects only the bounded-depth sufficient condition. At pivot
 `15`, unrestricted optimized additive cost is `131<135`, and `t=13/80` is a
-direct lonely time. The surviving finite-cover target is again unrestricted
-`OPT-ADD-UNIF`, not LRC itself. `BlockPeeling.lean` kernel-checks the generic
+direct lonely time. `BlockPeeling.lean` kernel-checks the generic
 non-strict and strict repeated-block implications, the exact short-final-block
 cardinality, and equality with ordinary peeling when a block merely regroups
 one-step bounds; it assumes no arithmetic uniformity premise.
-The unrestricted fixed-pivot Bellman optimum also has an exact subset-DAG
-unit-flow dual: failure is certified by a pivot-specific feasible potential,
-which exposes the remaining quantifier obstruction across pivots. On the new
-tuple, both equal averaging of full optimized margins and the natural
-common-LCM density weighting are negative, so neither linear average can prove
-uniform success. An exact search of five finite mutation/deletion/extension
-domains around the tuple checked 11,723 domain entries with no all-pivot
-OPT-ADD failure; the minimum best-pivot surplus was `+16`. These bounded counts
-have no unbounded consequence.
+The still stronger unrestricted condition `OPT-ADD-UNIF` is also false. The
+primitive tuple `(15,21,40,48,56,105,126,280,1200)` has optimized additive
+cost at least the strict threshold at every pivot, with equality only at
+pivots `15` and `40`. A clean-room literal verifier agrees with the prior
+subset DP after enumerating all `9*8!=362,880` pivot-order pairs. This rejects
+only the additive-order sufficient condition: pivot `48`, residue `39`, gives
+the exact lonely time `13/160`, now kernel-checked in
+`OptAddCounterexample.lean`.
+The fixed-pivot Bellman potential dual, its exact recursive optimum,
+attainment, and greatest-feasible-potential characterization are kernel-checked
+in `BellmanPeeling.lean`. They explain the failure certificate but do not force
+a shared potential across pivot moduli. A capacity-respecting whole-overlap
+packing is strictly stronger at a fixed pivot: on the earlier tuple at pivot
+`8`, 24 whole token-parent blocks have credit `34>32`, proving union size at
+most `70<72` even though additive cost is exactly `72`. The remaining live
+finite target is the exact pivot-certificate proposition already proved in
+Lean equivalent to the positive-integer conjecture, not another ordering
+surrogate.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all

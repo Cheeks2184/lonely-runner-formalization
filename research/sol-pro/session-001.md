@@ -1892,3 +1892,86 @@ perturbations, 291 one-speed extensions, and all nine deletions. No all-pivot
 optimized-additive failure appeared; the minimum best-pivot surplus was
 `+16`. These counts are per finite domain and do not settle the uniform
 statement.
+
+## Response 38: exact rejection of `OPT-ADD-UNIF`
+
+After 33 minutes 28 seconds, Sol Pro returned
+
+```text
+G=(15,21,40,48,56,105,126,280,1200)
+```
+
+as an all-pivot counterexample to the unrestricted additive-order sufficient
+condition. Its reported exact table was
+
+| pivot | `S` | `F*` | soft optimum | `Dopt` | `9A` | surplus |
+|---:|---:|---:|---:|---:|---:|---:|
+| 15 | 290 | 182 | 27 | 135 | 135 | 0 |
+| 21 | 356 | 164 | 28 | 220 | 189 | -31 |
+| 40 | 780 | 492 | 72 | 360 | 360 | 0 |
+| 48 | 856 | 448 | 56 | 464 | 432 | -32 |
+| 56 | 896 | 442 | 52 | 506 | 504 | -2 |
+| 105 | 1410 | 529 | 66 | 947 | 945 | -2 |
+| 126 | 1822 | 728 | 102 | 1196 | 1134 | -62 |
+| 280 | 3790 | 1376 | 154 | 2568 | 2520 | -48 |
+| 1200 | 17232 | 7636 | 1228 | 10824 | 10800 | -24 |
+
+Every row is nonstrict; equality at pivots `15` and `40` is failure. A
+pre-existing repository optimizer immediately reproduced every `Dopt`. A new
+clean-room literal verifier then reconstructed all candidates, fibers, and
+weights, compared the subset DP with all `9*8!=362,880` pivot-order pairs, and
+reproduced the entire table. It also checked positivity, distinctness,
+primitivity, strict endpoints, and candidate exclusion. The acceptance record
+is committed in `03afe15`.
+
+This rejects only `OPT-ADD-UNIF`. At pivot `48`, residue `39` gives
+`t=39/480=13/160` and exact distance numerators
+
+```text
+(105,141,120,48,216,225,114,120,240),
+```
+
+all at least `48`. The direct witness is also kernel-checked in
+`OptAddCounterexample.lean`. Sol described `G` as the smaller of two failures
+in one reported mutation domain and supplied search artifacts and hashes, but
+the independent acceptance deliberately does not promote the reported search
+provenance or local-minimality claim.
+
+Sol's common-LCM route correctly embeds every pivot problem in
+`Z/(N*lcm(a))Z`, but the subgroup slice remains pivot-dependent. Since `G`
+has no positive optimized margin, no nonnegative weighted average of those
+margins can prove uniform additive success.
+
+The third route selects whole token-parent overlap blocks without requiring a
+globally acyclic parent graph. If the number of selected blocks using each
+residue is at most its duplicate-incidence capacity `(mu(r)-1)_+`, summing the
+exact duplicate identity gives
+
+```text
+|union B_i| <= S - sum_e |Q_e|.
+```
+
+Every additive order induces a legal packing, but cyclic selections may be
+strictly stronger. Sol reported a 24-block packing for the earlier tuple `F`
+at pivot `8`, with credit `34>32` and bound `70<72`. An independent agent
+reconstructed the blocks without the Sol artifact and verified every whole
+fiber-parent intersection, unique token, capacity saturation, the exact union
+`68`, and good residues `13,29,51,67`. The verifier is committed in
+`fc1d752`. The qualification returned to Sol is that a literal fixed-instance
+capacity audit already reveals the union; uniform progress requires deriving
+the packing symbolically from CRT structure.
+
+## Prompt 39: exact pivot certificates beyond ordering
+
+The full acceptance record, the unaccepted search-minimality qualification,
+and the fixed-instance packing qualification were returned to the same
+signed-in GPT-5.6 Sol Pro conversation. Sol was asked for three materially
+different routes to the exact pivot-certificate proposition: a uniform
+CRT/hypergraph capacity-packing theorem, a common-LCM direct-union correlation
+inequality stated before pivotwise optimization, and a positivity/distinctness-
+preserving minimal-counterexample descent controlling the new pivot. Exact
+quantifiers, strict endpoints, candidate exclusion, non-tautology checks,
+complete computational verifiers, and active counterexample searches were
+required. Sol was again forbidden to infer LRC from a fixed-instance
+certificate or from failure of another sufficient condition. This response is
+pending.

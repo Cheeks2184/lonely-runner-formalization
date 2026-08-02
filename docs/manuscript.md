@@ -580,7 +580,8 @@ Indeed, lower-ranked rescue separates the two objectives. At pivot `28`, the
 top-only cost is `258 >= 252`, but unrestricted additive cost is `250 < 252`.
 The candidate `r=6` corresponds to `t=3/140`; the distance numerators modulo
 `280` are `(30,112,70,40,128,32,88,48,130)`, all at least `28`.
-Consequently unrestricted optimized additive uniformity and LRC remain open.
+At this stage unrestricted optimized additive uniformity remained open; the
+later counterexample below rejects it while leaving LRC open.
 For every fixed order the exact identity
 
 ```text
@@ -669,9 +670,8 @@ strict inequality; equality at pivot `75` is not enough. Two independent
 literal implementations reproduce all rows. This is only a failure of the
 three-step sufficient condition: pivot `15` has unrestricted optimized
 additive cost `131<135`, and the exact time `13/80` is lonely. The unresolved
-finite target is therefore unrestricted optimized additive uniformity, with
-the exact pivot-certificate proposition still strictly stronger at a fixed
-pivot.
+target at this stage was unrestricted optimized additive uniformity, with the
+exact pivot-certificate proposition still strictly stronger at a fixed pivot.
 
 The generic repeated-block implication is kernel-checked in
 `BlockPeeling.lean`. It tracks valid prefixes and exact remaining sets, forces
@@ -698,6 +698,11 @@ fixed-pivot success is exactly `Lambda*<beta`, and failure is exactly a
 feasible potential with top value at least `beta`. This exposes the remaining
 quantifier issue: all-pivot failure would provide a different feasible
 potential for every pivot modulus, with no canonical shared dual object.
+`BellmanPeeling.lean` kernel-checks the potential weak duality, exact recursive
+optimum, feasibility, attainment by a complete order, minimum-order
+characterization, and greatest-feasible-potential theorem. The flow language
+is an equivalent human-readable reformulation; no linear-programming axiom is
+imported.
 
 The most direct linear cross-pivot closures already fail on `F`. Its optimized
 margins `beta-Lambda*` are
@@ -718,6 +723,63 @@ perturbations, 5,376 three-coordinate radius-2 perturbations, 291 one-speed
 extensions, and all nine deletions. No all-pivot optimized-additive failure was
 found; the smallest best-pivot surplus was `+16`. The counts are per defined
 domain and may overlap, and the result has no unbounded consequence.
+
+The unrestricted additive uniform statement is nevertheless false. The
+primitive tuple
+
+```text
+G=(15,21,40,48,56,105,126,280,1200)
+```
+
+has optimized additive surpluses
+
+```text
+(0,-31,0,-32,-2,-2,-62,-48,-24)
+```
+
+in pivot order. Hence every pivot is nonstrict; equality at pivots `15` and
+`40` still fails the required strict inequality. Two independent exact
+implementations reproduce every `(S,F*,soft optimum,Dopt,9A)` row. A
+clean-room literal oracle also enumerates all `8!` orders per pivot, for
+`362,880` pivot-order pairs total, and agrees with the subset DP.
+
+This is not a counterexample to the exact pivot certificate or LRC. At pivot
+`48`, residue `39` corresponds to `t=39/480=13/160`. Its circular-distance
+numerators modulo `480` are
+
+```text
+(105,141,120,48,216,225,114,120,240),
+```
+
+all at least `48`. The closed `1/10` boundary is attained by speed `48`.
+`OptAddCounterexample.lean` kernel-checks this exact witness. Thus the live
+finite target is now the exact pivot-certificate proposition, already proved
+in Lean equivalent to the positive-integer conjecture.
+
+There is a direct fixed-pivot certificate strictly stronger than additive
+ordering. Partition each bad set into target fibers and select whole
+fiber-parent intersections, at most one parent per token. If the number of
+selected blocks using residue `r` is at most its duplicate-incidence capacity
+`mu(r)-1`, summing the exact identity
+
+```text
+S - |union B_i| = sum_r (mu(r)-1)_+
+```
+
+over bad residues proves that total selected credit is at most the available
+overlap debt. Every additive order induces a legal acyclic packing, but the
+capacity condition also permits directed cycles. On `F` at pivot `8`, an
+independent literal audit verifies 24 whole blocks with credit `34`, exceeding
+the additive credit `32`. It proves
+
+```text
+|union B_i| <= 104 - 34 = 70 < 72;
+```
+
+the literal union size is `68`, with good residues `13,29,51,67`. This is a
+genuine fixed-pivot separation, but a literal capacity audit already contains
+enough residue information to find a witness directly. Its unbounded value
+would require a symbolic CRT theorem constructing such a packing.
 
 The independent unrestricted search also completely checks every increasing
 ten-speed tuple through maximum `22`: `646,646` tuples total, `646,635`
