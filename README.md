@@ -55,21 +55,24 @@ largest integer gain is `(N*Q_N-1) div (4*P_N-Q_N)`. This is a verified
 bounded-height result, not a proof of unrestricted LRC.
 
 `KanoldVandermonde.lean` first gives the unconditional linear bound
-`17*t<=3*N`; `CoefficientFiveHeight.lean` improves it to `5*t<=N`;
-`CoefficientFourHeight.lean` strengthens it again. For positive injective
-integer speeds with `N=n+1`, maximum speed at most `N+t`, and
+`17*t<=3*N`; the coefficient-five and coefficient-four modules improve it;
+`CoefficientThreeHeight.lean` is currently strongest. For
+`speeds : Fin n -> Nat`, assume `n+1=N`, `t>0`, every speed is positive,
+the speeds are injective, every speed is at most `N+t`, and
 
 ```text
-4*t <= N,
+3*t <= N.
 ```
 
-`fourHeight_family_witness` gives a common real time at the closed `1/N`
-threshold. Lean proves the required half-open Kanold interval bound by a
-roots-of-unity expansion and an invertible Vandermonde system. It then proves
-that only twelve short-interval triples can occur, supplies explicit coprime
-denominators for nine, and repairs the other three by a complementary-hole
-and second-missing-value argument. No number-theoretic premise is assumed as
-an axiom. This remains a bounded-height theorem, not unrestricted LRC.
+Then `threeHeight_family_witness` gives one real time at which every speed has
+closed circular distance at least `1/N`. The proof uses the Lean-verified
+Kanold interval theorem. Under a hypothetical failure, every missing height
+`c` in `[1,N]` must force the distinct occupied extra height `2*c`; the set of
+missing base heights has cardinality one larger than the set of extra heights,
+so this injection is impossible. Three small parameter pairs are repaired by
+explicit reciprocal or complementary-hole witnesses. No number-theoretic
+premise is assumed as an axiom. This remains a bounded-height theorem and does
+not prove or disprove unrestricted LRC.
 
 The strongest additional computer-assisted manuscript theorem covers maximum
 speed `n+5`. Its 134,568-case finite core and uniform arithmetic proof have

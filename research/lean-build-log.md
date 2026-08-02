@@ -994,3 +994,51 @@ replay above began.
 
 These are bounded-height and structured-class results only. They do not prove
 the unrestricted top-two conjecture or unrestricted LRC.
+
+## 2026-08-02: coefficient-three isolated verification
+
+The authoritative working tree adds `CoefficientThreeHeight.lean` and the
+theorem `threeHeight_family_witness`. Its exact hypotheses are `n+1=N`,
+`t>0`, positivity and injectivity of the natural speed family, maximum speed
+at most `N+t`, and `3*t<=N`; its conclusion is one common real witness at the
+closed `1/N` threshold.
+
+An isolated target build completed successfully with the pinned toolchain:
+
+```text
+lake -Kjobs=2 build LonelyRunner.CoefficientThreeHeight
+Build completed successfully (3011 jobs).
+```
+
+A separate independent compile ran the exact authoritative source against the
+already built ext4 dependency environment:
+
+```text
+lake env lean /absolute/path/to/LonelyRunner/CoefficientThreeHeight.lean
+```
+
+It completed in 54.1 seconds. The only diagnostics were six
+`unnecessarySimpa` linter warnings; there was no elaboration or kernel error.
+Independent adversarial review then checked the five-case short-interval
+classification, the exact identity `|M|=|E|+1`, negation of the full common-
+witness existential, injectivity of `c |-> 2*c`, every natural-subtraction
+guard, and the repairs at `(N,t)=(6,2),(12,4),(13,4)`, and returned `ACCEPT`.
+
+Targeted axiom probes for
+
+```text
+three_short_interval_large_or_exception
+three_witness_or_large_or_exception
+threeHeight_family_witness
+```
+
+each report exactly the permitted standard foundations `propext`,
+`Classical.choice`, and `Quot.sound`. A source scan found no `sorry`, `admit`,
+custom axiom, unsafe declaration, `native_decide`, or disabled check.
+
+This is isolated and standalone verification, not yet the authoritative clean
+full-project replay. A fresh no-local-checkout build, complete trust audit, and
+all regression/certificate tests remain pending, so no full-build job count,
+test count, timing, commit, or CI result is claimed for the coefficient-three
+checkpoint here. The theorem is bounded-height progress only and does not
+prove unrestricted LRC.

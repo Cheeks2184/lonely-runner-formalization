@@ -41,6 +41,8 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_fastestPivotCertificate_of_ratio
 #print axioms LonelyRunner.fastestPivot_family_witness
 #print axioms LonelyRunner.slowest_fastest_gap_of_no_fastestPivotCertificate
+#print axioms LonelyRunner.pivot_le_cyclicResidueDistance_mul_of_band
+#print axioms LonelyRunner.exists_fastestPivotCertificate_of_extremal_band
 #print axioms LonelyRunner.saturatedTopTwoPivotCertificate
 #print axioms LonelyRunner.saturatedTopTwo_avoids_pivotBadResidues
 #print axioms LonelyRunner.card_strictCyclicBall
@@ -199,6 +201,9 @@ project-specific axiom.
 #print axioms LonelyRunner.four_short_interval_exception_classification
 #print axioms LonelyRunner.four_witness_or_exception
 #print axioms LonelyRunner.fourHeight_family_witness
+#print axioms LonelyRunner.three_short_interval_large_or_exception
+#print axioms LonelyRunner.three_witness_or_large_or_exception
+#print axioms LonelyRunner.threeHeight_family_witness
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
 #print axioms LonelyRunner.top_signed_forces_sum

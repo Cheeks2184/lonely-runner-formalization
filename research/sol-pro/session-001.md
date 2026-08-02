@@ -2670,3 +2670,58 @@ and a fresh adversarial audit independently reproduced the classification,
 all twelve denominator/second-hole branches, the final hypotheses, and
 returned `ACCEPT`. The integrated trust and clean-checkout replay remain the
 publication gates; this is bounded-height progress only.
+
+## Response 49: recovery ordering corrected
+
+Chrome exposed three virtualized `Copy response` controls whose UI Automation
+enumeration order was not chronological. Selecting the final enumerated
+control first recovered a 15,660-character Prompt 45-era primorial response
+with SHA-256
+`05997776b0c0b675f303efad333448e9ac61d487c513730e301a21b4f75a0c11`.
+That text was not Response 49 and is not treated as one. The discrepancy was
+caught before committing or submitting a follow-up objection.
+
+The actual Response 49 begins `Status corrections`, has 16,115 PowerShell
+characters, and has raw clipboard UTF-8 SHA-256
+`b553c921e824c2ee3769442e439a64842000ef4c8d2ec0aee151e8b9a33613ff`.
+Its LF-normalized preserved form has 15,400 characters, 15,477 UTF-8 bytes,
+715 line feeds, a final line feed, and SHA-256
+`25168ac758f8be28ca31eee9e9b8d2e22b4cbd762ca7e57dbbbe0e98b3a1838a`.
+It supplies a compiler-targeted saturated-class module, fastest-pivot interval
+compression, a common top-grid intersection criterion, and a complete
+manuscript coefficient-four proof with verifier hashes. Its formal labels are
+appropriately conservative: its Lean attachment is not claimed to compile,
+and neither global strategy is claimed to prove the top-two conjecture.
+
+The independent local branch had already formalized and audited the
+coefficient-four, fastest-pivot, and saturated-class results while the response
+was running. The exact Sol saturated attachment, SHA-256
+`7f112ac4b2f2f281d609cc393521fe3d6d73a193ecd0830536692f834c9c4072`,
+was recovered and rejected as formal evidence after compiler failures at
+lines 66, 117, 143, 148, 178, 192, 236, and 249. The independent tracked
+alternative remains the accepted Lean source.
+
+Independent audit accepted the mathematics of Response 49's fastest interval
+compression and common-grid count/union criterion. The common slice is empty
+at `(N,A,B)=(7,98,187)`, so the latter does not settle the hard row. The
+interval-compression certificate has now been independently formalized; its
+separate ceiling/floor failure corollary remains manuscript-only.
+
+## Prompt 50 submitted: coefficient three and the empty common slice
+
+While Response 49 was audited, the independent branch proved and compiled
+`threeHeight_family_witness` under `3*t<=N`. The exact source SHA-256 is
+`f903274ade7d4daea6737b9f28fe967934348fdd4d857fc270471dc0dc07d56e`.
+An isolated 3,011-job target build, a separate 54.1-second standalone compile,
+targeted standard-only axiom reports, and an independent adversarial audit all
+succeeded. The full authoritative clean integration replay remains pending.
+
+Prompt 50 returns every exact Response 49 compiler failure and the corrected
+formal status, then asks for a nonvacuous replacement when the common slice is
+empty, an audit of the robust-pivot transversal target, and a symbolic attack
+on the coefficient-two height regime. Windows UI Automation explicitly showed
+the `Pro` radio and the `GPT-5.6 Sol` radio selected. The exact 7,615-character
+composer readback matched the archived prompt with UTF-8 SHA-256
+`f7976002198a949c596d9fd5627d71ac2c714946cdbb9d2151720f5576ef2695`.
+The composer cleared and the live `Stop answering` control confirmed
+submission. No future Response 50 claim is accepted without independent audit.

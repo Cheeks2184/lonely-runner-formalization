@@ -65,6 +65,71 @@ theorem pivot_le_cyclicResidueDistance_N_sub_one_mul
       Nat.add_le_add_left hupper pivot
     _ = N * pivot := by simpa [Nat.add_comm] using hmuldecomp.symm
 
+/-- Any numerator whose product with a speed lies in the closed safe band
+`[pivot, (N - 1) * pivot]` has cyclic residue distance at least `pivot`.
+This is the arithmetic core of the fastest-pivot interval-compression
+criterion. -/
+theorem pivot_le_cyclicResidueDistance_mul_of_band
+    {N pivot r other : Nat} (hN : 2 ≤ N) (hpivot : 0 < pivot)
+    (hlower : pivot ≤ r * other)
+    (hupper : r * other ≤ (N - 1) * pivot) :
+    pivot ≤ cyclicResidueDistance (N * pivot) (r * other) := by
+  have hNm1N : N - 1 < N := Nat.sub_lt (by omega) (by omega)
+  have hupperLt : (N - 1) * pivot < N * pivot :=
+    Nat.mul_lt_mul_of_pos_right hNm1N hpivot
+  have hlt : r * other < N * pivot := hupper.trans_lt hupperLt
+  rw [cyclicResidueDistance, Nat.mod_eq_of_lt hlt]
+  apply le_min hlower
+  exact Nat.le_sub_of_add_le (by
+    have hdecomp : N * pivot = (N - 1) * pivot + pivot := by
+      have hNdecomp : N = (N - 1) + 1 := by omega
+      calc
+        N * pivot = ((N - 1) + 1) * pivot :=
+          congrArg (fun k => k * pivot) hNdecomp
+        _ = (N - 1) * pivot + pivot := by rw [Nat.add_mul, Nat.one_mul]
+    calc
+      pivot + r * other ≤ pivot + (N - 1) * pivot :=
+        Nat.add_le_add_left hupper pivot
+      _ = N * pivot := by simpa [Nat.add_comm] using hdecomp.symm)
+
+/-- Sol Pro Response 49's exact fastest-pivot interval-compression lemma.
+If all nonpivot speeds lie between a chosen lower and upper extremum, and one
+numerator maps those extrema into the closed safe band, that numerator is a
+canonical certificate at the fastest pivot. -/
+theorem exists_fastestPivotCertificate_of_extremal_band
+    {n N upper r : Nat} (speeds : Fin n → Nat)
+    (slowest fastest : Fin n) (hN : 2 ≤ N)
+    (hpos : ∀ i, 0 < speeds i) (hupperPos : 0 < upper)
+    (hslowest : ∀ i, i ≠ fastest → speeds slowest ≤ speeds i)
+    (hupper : ∀ i, i ≠ fastest → speeds i ≤ upper)
+    (hlowerBand : speeds fastest ≤ r * speeds slowest)
+    (hupperBand : r * upper ≤ (N - 1) * speeds fastest)
+    (hrNotDvd : ¬N ∣ r) :
+    ∃ q : Nat,
+      q ∈ pivotCandidates N (speeds fastest) ∧
+        ∀ i, i ≠ fastest →
+          q ∉ pivotBadResidues N (speeds fastest) (speeds i) := by
+  have hrUpper : r ≤ r * upper := by
+    simpa using Nat.mul_le_mul_left r hupperPos
+  have hNm1N : N - 1 < N := Nat.sub_lt (by omega) (by omega)
+  have hbandLt : (N - 1) * speeds fastest < N * speeds fastest :=
+    Nat.mul_lt_mul_of_pos_right hNm1N (hpos fastest)
+  have hrLt : r < N * speeds fastest :=
+    lt_of_le_of_lt hrUpper (hupperBand.trans_lt hbandLt)
+  have hrCandidate : r ∈ pivotCandidates N (speeds fastest) := by
+    rw [mem_pivotCandidates]
+    exact ⟨hrLt, hrNotDvd⟩
+  refine ⟨r, hrCandidate, ?_⟩
+  intro i hi
+  intro hbad
+  have hlower : speeds fastest ≤ r * speeds i :=
+    hlowerBand.trans (Nat.mul_le_mul_left r (hslowest i hi))
+  have hupp : r * speeds i ≤ (N - 1) * speeds fastest :=
+    (Nat.mul_le_mul_left r (hupper i hi)).trans hupperBand
+  have hdist := pivot_le_cyclicResidueDistance_mul_of_band
+    hN (hpos fastest) hlower hupp
+  exact (Nat.not_lt_of_ge hdist) (mem_pivotBadResidues.mp hbad).2
+
 /-- Normalization regression for `N=4`, fastest speed `10`, and speed `4`.
 The pivot time is `3 / (4*10)`, not `3 / 10`; the resulting phase is `3/10`
 and meets the closed `1/4` threshold. -/

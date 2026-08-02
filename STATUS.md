@@ -8,11 +8,11 @@ claim that it has been proved or disproved.
 ## Strongest verified theorem
 
 The strongest fully Lean-verified bounded-height result is
-`LonelyRunner.fourHeight_family_witness`. If `n+1=N`, `t>0`, and
+`LonelyRunner.threeHeight_family_witness`. If `n+1=N`, `t>0`, and
 an injective family of `n` positive integer speeds is bounded by `N+t`, then
 
 ```text
-4*t <= N
+3*t <= N
 ```
 
 implies one common real time at closed circular distance at least `1/N` for
@@ -20,11 +20,20 @@ every speed. `kanoldIntervalBound_vandermonde` proves, rather than assumes,
 that every half-open interval of `2^omega(c)` consecutive natural numbers
 contains a number coprime to positive `c`. Its proof uses an exact
 roots-of-unity powerset expansion and a Vandermonde system with pairwise
-distinct nodes. `four_short_interval_exception_classification` proves that a
-selected missing modulus can have a short interval only at twelve exact
-triples. Nine explicit coprime denominators and three complementary-hole
-repairs at `(4,1,2)`, `(11,2,6)`, and `(20,5,12)` close every family. These
-results do not prove unrestricted LRC.
+distinct nodes. `three_short_interval_large_or_exception` proves that every
+unrepaired short missing height lies strictly above `N/2`, apart from five
+small triples. If no common witness existed, every missing height `c` would
+therefore force the occupied extra height `2*c`. The missing-height set has
+cardinality one larger than the extra-height set, contradicting injectivity of
+`c |-> 2*c`. Explicit arguments close `(N,t)=(6,2),(12,4),(13,4)`; the two
+remaining triples use the coefficient-four theorem. These results do not
+prove unrestricted LRC.
+
+The exact coefficient-three source has passed an isolated ext4 target build,
+a separate standalone compile, targeted axiom probes, and independent
+adversarial review. The authoritative clean full-project build, trust audit,
+and regression replay for this new source are still pending; the latest clean
+checkpoint below therefore remains the coefficient-four/pivot checkpoint.
 
 The exact primorial result remains fully verified. Let `P_N` be the largest
 primorial at most `N`, and let `Q_N=phi(P_N)`. Lean proves the exact maximum
@@ -49,7 +58,7 @@ integer gain
 ```
 
 This theorem is useful independently but is weaker as a uniform height bound
-than the `17/3` theorem above.
+than the coefficient-three theorem above.
 
 The real-speed conjecture has also been formally reduced to the
 positive-integer conjecture:
@@ -96,12 +105,24 @@ This equivalence does not prove either side.
   moduli, and repairs three complementary-boundary cases by a second missing
   value. A fresh adversarial audit reproduced every case and returned
   `ACCEPT`. This remains bounded-height progress only.
+- **Lean-verified source, clean integration replay pending:**
+  `CoefficientThreeHeight.lean` proves `threeHeight_family_witness` under
+  `3*t<=N`. Its missing-versus-extra cardinality proof, doubling injection,
+  three exceptional-pair repairs, exact final quantifiers, and axiom reports
+  passed standalone compilation and independent audit. It is still only a
+  bounded-height theorem.
 - **Lean-verified fastest-pivot restriction:** if the maximum positive integer
   speed `B` satisfies `B<=(N-1)*s` for every speed `s`, the explicit numerator
   `r=N-1` is a fastest-pivot certificate and gives a common closed `1/N`
   witness. Consequently, failure at the fastest pivot forces
   `(N-1)*a_min<a_max`. This is only a necessary condition for a failed
   fastest/top-two strategy, not a proof that a top pivot always succeeds.
+- **Lean-verified source, clean integration replay pending:** the more general
+  `exists_fastestPivotCertificate_of_extremal_band` accepts any numerator
+  mapping explicit lower and upper nonpivot bounds into the closed fastest-
+  pivot safe band. The associated ceiling/floor compression corollary remains
+  an audited manuscript result. Neither statement forces the other top pivot
+  in the residual regime.
 - **Finite evidence only:** targeted full Chebyshev/CRT score searches and the
   top-two pivot stress certificate. The latter checks 878,245 primitive box
   tuples plus 86,745 structured mutations without a failure; it is a proposed
@@ -129,9 +150,9 @@ restrictions do not force such a pivot.
 
 Active research branches are:
 
-1. determine whether the coefficient-four bounded-height theorem can be
-   improved further; the coefficient-three arbitrary-hole selector has an
-   infinite zero-length regime whose possible family repairs are under audit;
+1. determine whether the coefficient-three bounded-height theorem can be
+   improved further; no coefficient-two analogue of the missing-to-extra
+   injection argument has been established;
 2. control or refute the full Chebyshev/CRT pivot score, after rejection of
    the quadratic shortcut;
 3. strengthen the least-counterexample residual class until its conditions
@@ -175,7 +196,9 @@ unconditional Kanold build, 235-report trust audit, and all 153 tests. Public
 run 30761838846 passed both jobs at commit `b302212`, including the 3,573-job
 coefficient-five build, 240-report trust audit, and all 153 tests. The
 coefficient-four/pivot source checkpoint above awaits publication after this
-local audit record.
+local audit record. The newer coefficient-three source has only the isolated
+and standalone verification described above; it is not included in these
+clean-checkpoint counts.
 
 This replay includes the unconditional Kanold interval, `17*t<=3*N`,
 `5*t<=N`, and `4*t<=N` height theorems; the primorial theorem; the fastest-

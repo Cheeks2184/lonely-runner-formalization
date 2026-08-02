@@ -1746,3 +1746,250 @@ coordinate and `B` to the repository's canonical strict bad-set formulation.
 Equality at cyclic distance equal to the pivot remains good throughout. This
 is a proof for one structured family only and supplies neither the unrestricted
 top-two conjecture nor unrestricted LRC.
+
+## 41A. Coefficient-three bounded height
+
+Let `speeds : Fin n -> Nat`, and assume
+
+```text
+n+1=N,  t>0,  0<speeds_i,  speeds is injective,
+speeds_i<=N+t,  and  3*t<=N.
+```
+
+The theorem `threeHeight_family_witness` proves that one real `tau` satisfies
+
+```text
+(N:Real)^-1 <= circleNorm (tau * speeds_i)
+```
+
+for every index `i`. The proof still uses
+`kanoldIntervalBound_vandermonde`, so no Jacobsthal or interval statement is
+assumed as an axiom. The new step is a global count over every missing base
+height; an arbitrary single missing height need not have a sufficiently long
+Kanold interval in this coefficient range.
+
+For a missing `c in [1,N]`, first use the reciprocal witness if
+`N+t<2*c`. Otherwise set
+
+```text
+ell = N-c-t.
+```
+
+The hypotheses `2*c<=N+t` and `3*t<=N` guard the subtraction by giving
+`c+t<=N`. If `2^omega(c)<=ell`, the verified Kanold theorem supplies a
+coprime integer in
+
+```text
+[N+c+t+1, 2*N],
+```
+
+and the existing two-hole bridge gives the common closed `1/N` witness.
+
+It remains to classify a short interval. For `c>=11`, the already verified
+inequality
+
+```text
+3 * 2^omega(c) <= c
+```
+
+applies (`c=10` is outside this range). If also `2*c<=N`, then the three
+inequalities `3*t<=N`, `2*c<=N`, and
+`N-c-t<2^omega(c)` contradict that bound. Hence every such unrepaired hole
+satisfies `N<2*c`. Lean evaluates `omega(c)` exactly for `c<11` and proves in
+`three_short_interval_large_or_exception` that the only non-large cases are
+
+```text
+(N,t,c) = (4,1,2), (6,2,3), (12,3,6),
+            (12,4,6), (13,4,6).
+```
+
+`three_witness_or_large_or_exception` combines this classification with the
+reciprocal, Kanold, and two-hole branches. Its first disjunct is the complete
+common-witness existential, not a coordinatewise or hole-dependent surrogate.
+
+Now let `S` be the image of the speed family and define
+
+```text
+U = [1,N],       M = U \ S,       E = S \ U.
+```
+
+Injectivity gives `|S|=n=N-1`, while `|U|=N`. Applying the finite-set
+difference/intersection cardinality identity in both orders gives exactly
+
+```text
+|M| = |E| + 1.
+```
+
+Assume, for contradiction, that no common witness exists. Take any `c in M`
+outside the special parameter pairs. The selector cannot return a witness,
+so its classification gives `N<2*c`. If speed `2*c` were absent, then no
+selected speed would be divisible by `c`: positivity excludes multiplier
+zero, `c` itself is missing, `2*c` is absent, and every multiplier at least
+three exceeds the height bound because
+
+```text
+3*t<=N<2*c  implies  t<c  and  N+t<3*c.
+```
+
+The reciprocal `1/c` would then be a common witness, a contradiction.
+Therefore speed `2*c` occurs. Since `N<2*c`, it belongs to `E`. The map
+`c |-> 2*c` is injective on naturals, so Lean obtains
+
+```text
+(M.image (fun c => 2*c)).card = |M|
+and
+M.image (fun c => 2*c) subset E.
+```
+
+This would give `|M|<=|E|`, contradicting `|M|=|E|+1`.
+
+Three parameter pairs require local repairs before that global injection can
+be applied.
+
+- For `(N,t)=(6,2)`, every missing base height lies in `{3,4}`. If `4` is
+  missing and speed `8` is absent, the reciprocal `1/4` works. If `8` occurs,
+  the exact identity `|M|=|E|+1` forces both `3` to be missing and `7` to be
+  absent. If `4` is not missing, the same identity again forces `3` and `7`
+  to be missing. In both remaining cases `q=10` has complementary holes
+  `3` and `7`, is coprime to `3`, and satisfies `N<q<=2*N`.
+
+- For `(N,t)=(12,4)`, every missing base height lies in `{6,7,8}`. A missing
+  `7` or `8` forces the extra speed `14` or `16`, respectively. Mapping every
+  missing value other than `6` to its double and comparing cardinalities
+  first forces `6 in M`. Put `D=(M.erase 6).image (fun c => 2*c)`. Lean proves
+  `D subset E` and `|D|+1=|M|`, hence `|D|=|E|`. If speed `13` occurred, the
+  odd value `13` would lie in `E` but outside `D`, contradicting those equal
+  cardinalities. Thus `6` and `13` are missing, and `q=19` supplies the
+  two-hole witness.
+
+- For `(N,t)=(13,4)`, the short classification reduces `M` to `{6,8}`; the
+  apparent large case `c=7` fails its exact short-interval inequality. A
+  missing `8` forces speed `16`. The identity `|M|=|E|+1` then forces
+  `6 in M` and, whether or not `8` is missing, forces speed `17` to be absent.
+  The modulus `q=23` has complementary holes `6` and `17` and gives the
+  witness.
+
+The remaining two small triples, `(4,1,2)` and `(12,3,6)`, satisfy
+`4*t<=N` and are discharged by `fourHeight_family_witness`. The final source
+therefore retains exactly the original positivity, injectivity, height, and
+closed-boundary quantifiers. Targeted axiom reports for
+`three_short_interval_large_or_exception`,
+`three_witness_or_large_or_exception`, and `threeHeight_family_witness` contain
+only `propext`, `Classical.choice`, and `Quot.sound`.
+
+This proves a larger bounded-height region than the coefficient-four theorem.
+It does not bound arbitrary positive integer speeds and does not prove or
+disprove unrestricted LRC.
+
+## 42. Response 49 global top-two reductions
+
+Let
+
+```text
+0<a_1<...<a_(n-1)=A<a_n=B,  N=n+1.
+```
+
+Two independently audited manuscript lemmas narrow the global top-two
+frontier without closing it.
+
+First, suppose an integer `r` satisfies
+
+```text
+N∤r,  B<=r*a_1,  r*A<=(N-1)*B.
+```
+
+Then every nonpivot product at the fastest pivot lies in the closed interval
+
+```text
+B <= r*a_i <= N*B-B.
+```
+
+It follows directly that `r` is a canonical fastest-pivot certificate. Put
+
+```text
+L=ceil(B/a_1),  U=floor((N-1)*B/A).
+```
+
+If pivot `B` fails, `[L,U]` contains no integer not divisible by `N`. Since
+two consecutive integers cannot both be multiples of `N>=2`, failure forces
+`U<L`, or the singleton case `U=L` with `N|L`. The earlier numerator `N-1`
+is the special case `B<=(N-1)*a_1`; failure there gives the large-gap
+condition `(N-1)*a_1<B`. The closed-band certificate is mapped to
+`pivot_le_cyclicResidueDistance_mul_of_band` and
+`exists_fastestPivotCertificate_of_extremal_band` and is `proved-lean` after
+an independent ext4 compile and axiom audit. The ceiling/floor failure
+dichotomy remains `proved-math`; it is not yet a Lean declaration. The full
+authoritative integration replay is still pending.
+
+Second, write
+
+```text
+g=gcd(A,B),  A=g*alpha,  B=g*beta.
+```
+
+For
+
+```text
+C={u:0<=u<N*g, N∤alpha*u, N∤beta*u},
+```
+
+the two numerators `r_A=alpha*u` and `r_B=beta*u` are candidates on their
+respective top grids and give the identical time
+
+```text
+r_A/(N*A)=r_B/(N*B)=u/(N*g).
+```
+
+If `d_A=gcd(N,alpha)` and `d_B=gcd(N,beta)`, kernel counting modulo `N`
+gives
+
+```text
+|C|=g*(N-d_A-d_B+1).
+```
+
+For each lower speed `s`, let
+
+```text
+D_s={u in C: cyclicResidueDistance (N*g) (s*u)<g}.
+```
+
+The sets `D_s` have exact generalized-CRT counts. Consequently
+
+```text
+sum_s |D_s| < |C|
+```
+
+leaves one common time outside every lower bad set and is a sufficient
+top-two certificate. The identity, cardinality, and union criterion are all
+`proved-math`, not a global theorem.
+
+The exact obstruction is already present at `(N,A,B)=(7,98,187)`. Here
+`g=1`, `d_A=7`, and `d_B=1`, so `|C|=0`; the common-grid method is vacuous.
+Interval compression likewise supplies no theorem forcing pivot `A` in its
+residual regime.
+
+Two almost-saturated examples explain why the verified Section 41 formulas
+cannot simply be reused after insertion. At `N=5`, the prescribed pivot-`4`
+residue `4` fails on `(2,3,4,5)`, and the prescribed pivot-`20` residue `19`
+fails on `(1,3,4,20)` because its distance at speed `1` is only `19`.
+Finally, coarse top divisibility data cannot select a pivot: the `N=7`
+families
+
+```text
+(1,4,5,6,7,11),
+(1,3,4,5,7,18)
+```
+
+have matching basic top residue and divisibility flags, but their exact safe
+profiles are respectively
+
+```text
+pivot 7: [15,34], pivot 11: [];
+pivot 7: [],      pivot 18: [57,58,68,69].
+```
+
+These examples refute only the naive extension and coarse classification.
+They are not top-two counterexamples. A global proof still requires a finer
+integral-cover or signed cross-pivot theorem, and unrestricted LRC remains
+open. The exact Response 49 recovery, attachment failures, and audit boundary
+are recorded in `docs/response49-audit.md`.

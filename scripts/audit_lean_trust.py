@@ -60,7 +60,11 @@ def main() -> None:
         "LonelyRunner.seventeenThirdsHeight_family_witness",
         "LonelyRunner.fiveHeight_family_witness",
         "LonelyRunner.fourHeight_family_witness",
+        "LonelyRunner.three_short_interval_large_or_exception",
+        "LonelyRunner.three_witness_or_large_or_exception",
+        "LonelyRunner.threeHeight_family_witness",
         "LonelyRunner.slowest_fastest_gap_of_no_fastestPivotCertificate",
+        "LonelyRunner.exists_fastestPivotCertificate_of_extremal_band",
         "LonelyRunner.saturatedTopTwo_avoids_pivotBadResidues",
     }
     missing_probes = sorted(probe for probe in required_probes if probe not in run.stdout)

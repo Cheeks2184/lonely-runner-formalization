@@ -358,3 +358,88 @@ enumeration of all 3,464,840 four-lower-speed subsets finds no cover in this
 instance; the best covers 1,142 vertices. The failure is specifically the
 fractional proof invariant. See
 `docs/top-two-fractional-obstruction.md` for the exact formulation.
+
+## 2026-08-02: naive almost-saturated insertion formulas are not stable
+
+The verified saturated family uses the relation between the runner count
+`N`, the second-largest speed `A=N-2`, and its explicit residues. Replacing
+one lower speed by a new speed `C>N-2` breaks that arithmetic; deletion and
+insertion cannot simply reuse the same three formulas.
+
+For
+
+```text
+N=5, speeds=(2,3,4,5), C=4, B=5,
+```
+
+one has `B=N*1` and `C` does not divide `1`. Naively transplanting the second
+saturated case selects pivot `C` and residue `r=N-1=4`. It fails exactly at
+the other top speed because
+
+```text
+cyclicResidueDistance 20 (4*5) = 0 < 4.
+```
+
+The actual complete top-pivot safe-residue sets are
+
+```text
+pivot 4: [2,3,17,18]
+pivot 5: [3,4,21,22].
+```
+
+The transplanted fastest formula also fails. For
+
+```text
+N=5, speeds=(1,3,4,20), C=4, B=N*C*1,
+```
+
+it prescribes `r=(N-1)*N*1-1=19` at pivot `20`, but speed `1` has distance
+`19<20`. The complete top-pivot profiles are
+
+```text
+pivot 4:  []
+pivot 20: [41,42,43,44,56,57,58,59].
+```
+
+This failure isolates the missing minimum-speed hypothesis. If speed `1` is
+deleted instead, then on `(2,3,4,20)` the same `r=19` gives respective cyclic
+distances
+
+```text
+38,43,24,20
+```
+
+and succeeds. More generally, when `B=N*C*k`, the transplanted fastest
+residue works under the additional condition `B<=r*m`, where `m` is the
+least nonpivot speed. These examples reject the unconditional insertion
+step, not the top-two conjecture.
+
+## 2026-08-02: coarse top-speed divisibility cannot choose the pivot
+
+The largest two speeds' residues modulo `N` and their basic divisibility flags
+do not determine which top pivot succeeds. Consider the exact pair of
+six-runner instances
+
+```text
+(1,4,5,6,7,11),
+(1,3,4,5,7,18).
+```
+
+Both have `N=7`, second-largest speed `C=7`, `B congruent to 4 mod 7`,
+`gcd(C,B)=1`, `C` not dividing `B`, and `N*C` not dividing `B`. Nevertheless
+their complete top-pivot profiles require opposite pivots:
+
+```text
+(1,4,5,6,7,11):
+  pivot 7:  [15,34]
+  pivot 11: []
+
+(1,3,4,5,7,18):
+  pivot 7:  []
+  pivot 18: [57,58,68,69].
+```
+
+Thus a case split using only those coarse invariants is refuted. It does not
+rule out a finer classification retaining the exact top speeds and the lower
+residue classes. It also does not refute the top-two conjecture: each tuple
+has the displayed certificate at one top pivot.
