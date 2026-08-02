@@ -779,3 +779,36 @@ directories were verified before signaling the listed compiler processes,
 and no live Lean worker remained. Neither incomplete invocation produced a
 diagnostic or counts as verification; the clean-ext4 results above are the
 authoritative runs.
+
+## 2026-08-02: fully assembled logarithmic bounded-height theorem
+
+Commits `bde1cf648275490dc583301d0a82dc4871c0b174` through
+`6b100209c6078579ae0660b6479743eaefbab9ec` close the arithmetic and assembly
+obligations for the elementary logarithmic height result. In particular,
+`LonelyRunner/LogarithmicHeight.lean` now kernel-checks:
+
+- the telescoping prime-factor product inequality;
+- `c <= (omega(c)+1)*phi(c)` and `omega(c)<=Nat.log 2 c`;
+- complete-period and short-interval coprime selectors;
+- missing-height extraction and the reciprocal branch;
+- the exact interval `[N+c+t+1,2N]` and inverse-residue branch;
+- `logarithmicHeight_family_witness` and its stationary, explicit-gain, and
+  canonical `UnitCircle` wrappers.
+
+At final source commit `6b100209c6078579ae0660b6479743eaefbab9ec`, the clean
+ext4 checkout reported:
+
+```text
+Build completed successfully (3562 jobs).
+Ran 147 tests in 272.894s
+OK
+```
+
+The explicit axiom audit reports only subsets of
+`[propext, Classical.choice, Quot.sound]`; the arithmetic gain specification
+itself uses only `propext`. An independent adversarial reviewer checked the
+quantifiers, image-card missing-height argument, reciprocal divisibility
+case, natural-subtraction guard, every interval endpoint, totient
+contradiction, and the closed `q=2N` boundary, and returned `ACCEPT`. This
+promotes the bounded-height theorem from `proved-math` to `proved-lean`; it
+does not promote the unrestricted Lonely Runner Conjecture.
