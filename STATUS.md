@@ -126,7 +126,7 @@ Active research branches are:
 ## Latest verification
 
 Last clean mathematical source checkpoint:
-`2cfefb947777bd790bf777238b728e1eb155584c`.
+`56d00efcf75b916c474609648fd23a83ad8ea33d`.
 
 Pinned environment:
 
@@ -139,9 +139,9 @@ Pinned environment:
 Clean no-local-clone ext4 verification at that source checkpoint:
 
 ```text
-Build completed successfully (3572 jobs).
-Trust audit: 235 theorem reports; only propext, Classical.choice, Quot.sound
-Ran 153 tests in 330.179s
+Build completed successfully (3573 jobs).
+Trust audit: 240 theorem reports; only propext, Classical.choice, Quot.sound
+Ran 153 tests in 308.615s
 OK
 ```
 
@@ -154,22 +154,25 @@ suite. Follow-up run 30755579476 passed both jobs at commit `b8b047e`: the
 cached Lean build, trust audit, and all 147 certificate tests are green. This
 was a CI environment repair, not a reduced verification target.
 Public run 30758736845 then passed both jobs at commit `a95fc5f`, including
-the 3,571-job Lean checkpoint, trust audit, and all 151 tests. The current
-153-test source checkpoint awaits publication after this local audit record.
+the 3,571-job Lean checkpoint, trust audit, and all 151 tests. Public run
+30760626494 passed both jobs at commit `c12c3a5`, including the 3,572-job
+unconditional Kanold build, 235-report trust audit, and all 153 tests. The
+coefficient-five source checkpoint above awaits publication after this local
+audit record.
 
-This replay includes the unconditional Kanold interval and `17*t<=3*N`
-height theorems, the primorial theorem, the Response 45--47 audits, the
-top-two searches, and both the fixed fractional dual and its exact global
+This replay includes the unconditional Kanold interval, `17*t<=3*N`, and
+`5*t<=N` height theorems, the primorial theorem, the Response 45--48 audits,
+the top-two searches, and both the fixed fractional dual and its exact global
 obstruction.
 The source was cloned with `git clone --no-local` into a fresh ext4 checkout;
 the checkout was clean and its HEAD matched the checkpoint above before any
 build or test ran.
 
-The first highly parallel build attempt triggered a WSL memory-pressure
-restart. No Lean diagnostic was emitted and that attempt is not counted.
-Replaying Lake's complete target graph in the same untouched source checkout
-then completed all 3,572 jobs; the trust audit and full test suite above ran
-after that successful build.
+The coefficient-five replay fetched the pinned cache and ran with
+`lake -Kjobs=2 build`; all 3,573 jobs completed. A preceding timing-wrapper
+invocation did not start Lean because its arguments were lost at the
+PowerShell-to-WSL boundary, and is not counted as a build attempt. The trust
+audit and full test suite above ran only after the successful direct build.
 
 Every explicit axiom probe reports only subsets of `propext`,
 `Classical.choice`, and `Quot.sound`. See

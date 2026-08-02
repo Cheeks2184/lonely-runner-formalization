@@ -895,3 +895,51 @@ The fractional-obstruction verifier checks all 1,224 constraints and all
 3,464,840 four-lower-speed subsets. These computations support their stated
 partial or negative claims only. The unrestricted Lonely Runner Conjecture
 remains open.
+
+## 2026-08-02: coefficient-five bounded-height checkpoint
+
+Source commit `56d00efcf75b916c474609648fd23a83ad8ea33d` was cloned
+with `git clone --no-local` into a new ext4 checkout. The checkout was clean
+and its HEAD matched the source commit before any verification command ran.
+This checkpoint adds `CoefficientFiveHeight.lean`, promotes PART-57 from an
+audited manuscript result to `proved-lean`, and records the exact failures of
+Sol Pro Response 48's separate candidate module.
+
+After fetching the pinned dependency cache, the authoritative low-memory
+build command was:
+
+```text
+lake -Kjobs=2 build
+```
+
+It completed in 153.722 seconds:
+
+```text
+Build completed successfully (3573 jobs).
+```
+
+The successful build was followed by:
+
+```text
+python3 scripts/audit_lean_trust.py
+python3 -m unittest discover -s tests -v
+```
+
+Results:
+
+```text
+Trust audit accepted 240 theorem reports.
+Ran 153 tests in 308.615s
+OK
+```
+
+Every reported axiom is among `propext`, `Classical.choice`, and
+`Quot.sound`. An independent adversarial reviewer checked the large-modulus
+classification, all guarded natural subtractions, the second-missing-value
+cardinality argument, the three exceptional-family repairs, the exact final
+quantifiers and hypotheses, and the trust report, then returned `ACCEPT`.
+
+`fiveHeight_family_witness` is an unconditional bounded-height theorem for
+positive injective integer speeds under `5*t<=N` and maximum speed `N+t`.
+It does not cover arbitrary integer heights and does not prove unrestricted
+LRC.
