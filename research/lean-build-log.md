@@ -309,3 +309,37 @@ criterion and all eight reported stress rows. A project-source scan found no
 `sorry`, `admit`, custom declaration `axiom`, `opaque`, `unsafe`, `extern`,
 `implemented_by`, `partial_fixpoint`, or `native_decide`. The clean ext4
 checkout remained clean after Lean verification.
+
+## 2026-08-02: concrete modular selector and top-cycle rejection
+
+The concrete modular selector commit `be9064f` was copied to the Linux-native
+ext4 checkout and verified before any later documentation or Python-only
+commits. The scoped module build completed 1,851 jobs, the full root build
+completed 3,529 jobs, and `lake env lean LonelyRunner/AxiomAudit.lean` passed.
+The two new selector probes reported only
+`[propext, Classical.choice, Quot.sound]`. An independent adversarial Lean
+review rebuilt the same 3,529-job root and reproduced those axiom reports.
+
+After advancing the clean checkout through documentation commit `6dbd999`, a
+fresh root build reported:
+
+```text
+Build completed successfully (3529 jobs).
+```
+
+The complete exact Python suite, now including the two independent
+`TOP-CYCLE-UNIF` audits, reported:
+
+```text
+Ran 103 tests in 406.746s
+OK
+```
+
+The new tuple `(5,28,35,40,68,88,108,148,165)` was additionally reconstructed
+by a third clean-room oracle which exhaustively enumerated all `8!` orders at
+all nine pivots. It reproduced every top-only and unrestricted optimum,
+strict endpoint convention, and the direct `t=3/140` witness. A project-source
+scan again found no `sorry`, `admit`, custom `axiom`, `opaque`, `unsafe`,
+`extern`, `implemented_by`, `partial_fixpoint`, `native_decide`, or disabled
+checks. Commits after `be9064f` changed only documentation and exact Python
+audit material, not Lean source.
