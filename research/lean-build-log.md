@@ -220,3 +220,57 @@ recomputed all nine negative GCD-clock margins for
 the explicit `t=13/80` circle distances. A project-source scan found no
 `sorry`, `admit`, `unsafe`, or custom `axiom`; the clean checkout status was
 empty after verification.
+
+## 2026-08-01: completed pair-fiber subtraction bridge
+
+The clean checkout was advanced to `48f4dee`. The authoritative commands
+reported:
+
+```text
+Build completed successfully (3520 jobs).
+Ran 50 tests in 5.255s
+OK
+```
+
+The expanded axiom audit covers the explicit `q -> N*q` image bijection,
+conditional divisible count, exact candidate count, raw-minus-divisible
+overlap sum, and closed exact overlap sum. Every declaration reports only
+`[propext, Classical.choice, Quot.sound]`.
+
+An independent adversarial audit also compiled the completed module and the
+full audit with `--trust=0`. Direct exhaustive checks covered 1,002,001
+canonical pair-fiber/count instances, 247,779 scaling-image instances, and
+the corresponding strict-ball overlap sums. They found no modular-
+cancellation, truncated-subtraction, target-bound, zero-modulus, endpoint, or
+summation gap. A noncanonical-target mismatch was exhibited separately,
+confirming that the bounds present in the formal theorems are necessary.
+
+## 2026-08-01: relocation, two-level, and triple-congruence frontier
+
+The Linux-native clean checkout was advanced to commit `0009cf0` and verified
+from `/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`. The root
+build reported:
+
+```text
+Build completed successfully (3523 jobs).
+Ran 61 tests in 15.612s
+OK
+```
+
+The new kernel-checked layer includes generic finite relocation descent and
+its exact prefix-dependent block identity; selected-earlier-parent two-level
+ordered-union avoidance; exact raw three-equation compatibility/cardinality;
+and the complete pivot-candidate triple subtraction and target-cell interface.
+The expanded `AxiomAudit.lean` covers all of these declarations, and every
+probe reports only `[propext, Classical.choice, Quot.sound]`.
+
+Independent exact tests reproduce the two-sided relocation local minima,
+reject left-only descent, verify every repaired three-anchor cost vector,
+exhibit the minimal clause/triangle LP integrality gap, and reproduce every
+anchor-star rational value and divisor identity. Complete anchor-star scans
+cover 479 primitive four-speed tuples through 12, 2,981 five-speed tuples
+through 15, and 923 six-speed tuples through 12, with no bounded failure and
+no unbounded inference. A project-source scan found no `sorry`, `admit`,
+custom `axiom`, `opaque`, `unsafe`, `extern`, `implemented_by`,
+`partial_fixpoint`, `native_decide`, or disabled checks. The verification
+checkout remained clean.
