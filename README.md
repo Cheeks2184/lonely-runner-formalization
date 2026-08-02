@@ -336,6 +336,10 @@ disproof claim.
   error, and the exact remaining obstruction after the third browser round.
 - `docs/height-n-plus-5.md`: independently audited five-hole theorem, exact
   134,568-case finite core, and the constructive square-root height gain.
+- `docs/height-logarithmic.md`: elementary logarithmic-height gain, exact
+  audit, and the current Lean decomposition.
+- `docs/quadratic-chebyshev-failure.md`: exact all-pivot rejection of the
+  quadratic Chebyshev sufficient condition, with finite calibration.
 - `docs/response44-audit.md`: browser artifact recovery, mathematical audit,
   Chebyshev stress, and corrected residual-class synthesis.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
@@ -408,6 +412,10 @@ disproof claim.
   multi-coordinate Chebyshev stress domains.
 - `scripts/audit_residual_compatibility_family.sh`: checks the infinite
   residual-compatible family through `N=500` and its explicit witness.
+- `scripts/audit_logarithmic_height.sh`: audits 553,106 arithmetic cases and
+  all 361,220 admissible hole configurations through `N=60`.
+- `scripts/audit_quadratic_chebyshev_failure.sh`: reproduces the first exact
+  all-pivot failure of the quadratic Chebyshev sufficient condition.
 - `scripts/analyze_consecutive_correlation_depth.py`: exact depth profiles and
   regression checks for the proved near-tautological consecutive theorem.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
@@ -421,14 +429,18 @@ positive-integer `n`-tuple with maximum at most `n+5` is lonely, and more
 generally maximum at most
 
 ```text
-N+max(4,floor((sqrt(64N+1)-1)/32)),  where N=n+1,
+N+max(4,N div (4*(Nat.log 2 N+1)+1)),  where N=n+1,
 ```
 
 is sufficient. The five-hole finite core and the general arithmetic argument
 have passed independent adversarial review. They are proved mathematically
 with reproducible computation, but have not yet been combined into one Lean
-declaration. The kernel-checked bounded-height theorem currently reaches
-maximum `n+2`. None of these statements proves the unrestricted conjecture.
+declaration. Lean now checks the inverse-residue selector interface and the
+bound `omega(c)<=Nat.log 2 c`; the sharp totient product inequality, interval
+selector, missing-height extraction, and final assembly remain open formal
+obligations. The fully assembled kernel-checked bounded-height theorem still
+reaches maximum `n+2`. None of these statements proves the unrestricted
+conjecture.
 
 ## Reproducible build
 

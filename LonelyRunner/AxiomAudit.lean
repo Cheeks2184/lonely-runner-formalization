@@ -132,6 +132,11 @@ project-specific axiom.
 #print axioms LonelyRunner.twoHoleDenominator_family_witness
 #print axioms LonelyRunner.boundedHeight_family_witness_of_two_holes
 #print axioms LonelyRunner.boundedHeight_stationary_witness
+#print axioms LonelyRunner.cardDistinctFactors_eq_primeFactors_card
+#print axioms LonelyRunner.two_pow_cardDistinctFactors_le
+#print axioms LonelyRunner.cardDistinctFactors_le_log_two
+#print axioms LonelyRunner.log_totient_bound_of_cardDistinctFactors_totient_bound
+#print axioms LonelyRunner.twoHole_witness_of_coprime_modulus_above_height
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
 #print axioms LonelyRunner.top_signed_forces_sum

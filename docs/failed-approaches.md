@@ -324,3 +324,17 @@ Finally, zero exact all-pivot Chebyshev-score failures across the recorded
 finite domains is not a proof of uniform positivity. A score failure would
 reject only that sufficient certificate, while absence of one provides no
 compactness or induction step.
+
+The stronger quadratic shortcut now has an exact all-pivot failure. For
+`(1,3,5,6,7)`, the scaled values of
+`H_0-H_1+alpha_5*H_2` are
+`(-14722,0,-324,-486,-972)`, so no pivot meets the strict condition. This does
+not refute the sound pointwise minorant, the full Chebyshev score, or LRC:
+the last three full scores are positive, and `t=7/30` is a direct witness.
+See `docs/quadratic-chebyshev-failure.md`.
+
+One tempting summary of the logarithmic-height argument is also false: the
+growth condition does not force the denominator interval length `L` to satisfy
+`L>=c`. The exact case `N=21,t=1,c=11` has `L=9<c`. The valid conclusion is
+only that `L<c` and absence of a coprime denominator cannot occur together;
+the complement/totient contradiction is essential.

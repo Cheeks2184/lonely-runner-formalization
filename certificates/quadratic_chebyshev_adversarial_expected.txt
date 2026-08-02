@@ -1,0 +1,6 @@
+pool n=3 total=27720 primitive=5960 hash=ffd0395c36d5b56f
+mutations n=3 total=89972 primitive=50461 hash=945cf5ad10da95f2
+random n=3 total=20000 primitive=16581 hash=ee095fe79c101ea9
+pool n=4 total=367290 primitive=119876 hash=318ef210a2a72fab
+mutations n=4 total=119951 primitive=77542 hash=702add43b03085bb
+random n=4 total=20000 primitive=18459 hash=6ef654f7d2c80e08

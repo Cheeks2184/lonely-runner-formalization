@@ -125,6 +125,8 @@ bash scripts/audit_height_n_plus_5.sh
 bash scripts/audit_response44.sh
 bash scripts/audit_response42_cheb_multi.sh
 bash scripts/audit_residual_compatibility_family.sh
+bash scripts/audit_logarithmic_height.sh
+bash scripts/audit_quadratic_chebyshev_failure.sh
 ```
 
 The first exhausts 134,568 five-hole configurations for `N=4,...,19` and
@@ -134,7 +136,15 @@ configurations, 92 exceptional rows, and 190,488 adversarial Chebyshev tuples.
 The third checks 374,850 two-coordinate mutations and 297,847 new
 divisor-covering three-coordinate mutations. The last verifies the compatible
 family `U_N` for `N=5,...,500`, including every deletion gcd, divisor-incidence
-bound, signed replacement, and its explicit lonely time.
+bound, signed replacement, and its explicit lonely time. The logarithmic-height
+audit checks 553,106 nonreciprocal arithmetic triples through `N=500`, including
+15,955 short intervals, and all 361,220 admissible hole configurations through
+`N=60`. The final command reproduces the exact tuple `(1,3,5,6,7)` and all
+five nonpositive quadratic bounds. The optional several-minute command
+`scripts/audit_quadratic_chebyshev_calibration.sh` exhausts 126,768,878
+primitive lower-dimensional tuples through maximum 240 and checks 288,879
+additional adversarial tuples; this finite calibration is not a minimality
+proof.
 
 All of these are finite executable audits. The bounded-height proof outside
 the finite range is deductive, while the full conjecture remains open.

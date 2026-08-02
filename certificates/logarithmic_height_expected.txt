@@ -1,0 +1,15 @@
+arithmetic_N=2..500
+nonreciprocal_cases=553106
+short_interval_cases=15955
+short_selector_sha256=c4f1cb356647ba4a0ea0208b48f0d5356f72ef8af74ded18e872f3bbeafafd6d
+hole_configurations_N=2..60
+configurations=361220
+certificate_sha256=7c0044899fcfe22244ede5394d4bcf93ca476f36f08941504746f7b3bc16c1e6
+samples=(N,N_div_D,N_plus_N_div_D)
+(21, 1, 22)
+(60, 2, 62)
+(100, 3, 103)
+(500, 13, 513)
+(1000, 24, 1024)
+(10000, 175, 10175)
+(1000000, 12345, 1012345)

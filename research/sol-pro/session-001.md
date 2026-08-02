@@ -2330,3 +2330,34 @@ Both Prompt 44 attachments were recovered byte-for-byte from the Chrome file
 viewer. The source hashes match Sol's report, and `scripts/audit_response44.sh`
 reproduces both outputs exactly. The complete audit is
 `docs/response44-audit.md`. No full proof or disproof has resulted.
+
+## Prompt 45 preparation and independent objections
+
+A follow-up prompt was prepared for the same signed-in GPT-5.6 Sol Pro
+conversation. It asks for an audit of the elementary logarithmic-height route,
+an exact search for failure of the quadratic sufficient condition, and a Lean
+decomposition. Chrome and the conversation remain readable, and this workflow
+previously submitted and recovered the earlier rounds successfully. At the
+time of this pass, Windows exposed no foreground input target: UI Automation
+could read Chrome, but focus, paste, and submit injection were denied. The
+prompt was therefore not submitted, and no Sol response is claimed.
+
+The independent work continued meanwhile. An adversarial reviewer accepted
+the theorem
+
+```text
+(4*(Nat.log 2 N+1)+1)*t<=N and max A<=N+t  ==>  A is lonely,
+```
+
+with the explicit correction that the hypothesis does not force `L>=c`; it
+rules out `L<c` together with absence of a coprime denominator. Exact audits
+cover 553,106 arithmetic triples and 361,220 hole configurations. The first
+Lean decomposition now checks `2^omega(c)<=c`, `omega(c)<=Nat.log 2 c`, and
+the coprime-selector interface, while leaving the sharp totient product and
+interval selector explicit.
+
+The quadratic condition was rejected exactly at `(1,3,5,6,7)`: its scaled
+five-pivot bounds are `(-14722,0,-324,-486,-972)`. Three full Chebyshev scores
+are nevertheless positive and `t=7/30` is lonely, so only the shortcut is
+rejected. This exact objection will be included when foreground submission
+becomes available.

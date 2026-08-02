@@ -1,0 +1,23 @@
+n=3 degree=3 Pden=98 alpha=48/49
+  shell_max=3 primitive=1 hash=5371ce0ce465be9f
+  shell_max=4 primitive=3 hash=bb558f1bb51b6d99
+  shell_max=5 primitive=6 hash=b3c07111ba757b74
+  shell_max=6 primitive=9 hash=d27c8765dd933cbb
+  shell_max=7 primitive=15 hash=380707652dc5c22b
+n=4 degree=4 Pden=1536 alpha=2/3
+  shell_max=4 primitive=1 hash=9e4f77e8404cc5b1
+  shell_max=5 primitive=4 hash=13819347442ca48e
+  shell_max=6 primitive=10 hash=1fd2f53c4d7aa893
+  shell_max=7 primitive=20 hash=21975355e720c067
+n=5 degree=5 Pden=29282 alpha=7280/14641
+  shell_max=5 primitive=1 hash=b479b8a473b4b9d1
+  shell_max=6 primitive=5 hash=c17c8e564743904b
+  shell_max=7 primitive=9 hash=c435dd76ec61ce90
+FOUND tuple=(1, 3, 5, 6, 7) n=5 degree=5 Pden=29282 alpha=7280/14641
+pivot=1 H=(5,7,2) quadratic_scaled=-14722/14641 full_scaled=-4/29282 full_sign=-1 safe_r=0 time=0/0
+pivot=3 H=(15,15,0) quadratic_scaled=0/14641 full_scaled=0/29282 full_sign=0 safe_r=0 time=0/0
+pivot=5 H=(25,29,8) quadratic_scaled=-324/14641 full_scaled=117112/29282 full_sign=1 safe_r=7 time=7/30
+pivot=6 H=(30,36,12) quadratic_scaled=-486/14641 full_scaled=116148/29282 full_sign=1 safe_r=9 time=9/36
+pivot=7 H=(35,47,24) quadratic_scaled=-972/14641 full_scaled=174696/29282 full_sign=1 safe_r=10 time=10/42
+checked_total=84
+transcript_sha256=d823a8701de72ccf6bedf2322c8ae294e658d4f70566376241fb1d81b384518e

@@ -1267,3 +1267,79 @@ accepted signed-compatible downward replacement. It is nevertheless lonely
 at `t=1/(3N)`. Thus a proof still needs genuinely new control of total pivot
 coverage; the current height and descent restrictions alone cannot close the
 argument.
+
+## 34. An elementary logarithmic height gain
+
+The missing-height denominator construction admits a sharper elementary
+estimate than the square-root totient bound. Let `N,t>=1`, let
+`K=Nat.log 2 N`, and suppose
+
+```text
+(4*(K+1)+1)*t<=N.
+```
+
+Choose a missing `c<=N`. The reciprocal branch works when `2c>N+t`.
+Otherwise use
+
+```text
+I=[N+c+t+1,2N],             L=N-c-t.
+```
+
+If `I` has no number coprime to `c`, the only nontrivial case is `L<c`.
+The `L` residues are distinct, so all `phi(c)` unit residues lie in a
+complement of size `c-L=2c+t-N<=2t`. If the distinct prime divisors of `c`
+are `p_1<...<p_k`, then `p_i>=i+1`, whence
+
+```text
+c/phi(c)=product_i p_i/(p_i-1)<=product_i (i+1)/i=k+1.
+```
+
+Moreover `2^k<=rad(c)<=c<=N`, so `k<=K`. Therefore `c<=2t(K+1)`, while
+the short-interval condition gives
+
+```text
+N<2c+t<=(4*(K+1)+1)*t<=N,
+```
+
+a contradiction. A coprime denominator therefore exists, and the previously
+formalized inverse-residue theorem supplies the lonely time. Combining this
+with the five-hole theorem gives
+
+```text
+T_N=max(4,N div (4*(Nat.log 2 N+1)+1)),
+max A<=N+T_N  implies A is lonely.
+```
+
+This gain is asymptotic to `N/(4*log_2 N)`. Exact audits cover 553,106
+arithmetic cases and all 361,220 admissible hole configurations through
+`N=60`. In Lean, `LogarithmicHeight.lean` proves the selector interface,
+`2^omega(c)<=c`, and `omega(c)<=Nat.log 2 c`. The sharp totient product,
+interval selector, missing-height extraction, and assembled theorem remain
+formal obligations, so this result is `proved-math`, not `proved-lean`.
+
+## 35. The quadratic Chebyshev shortcut fails
+
+The pointwise quadratic minorant of the exact Chebyshev polynomial remains
+valid, but it is not uniformly decisive. For the primitive tuple
+
+```text
+(1,3,5,6,7),
+```
+
+the five scaled values of `H_0-H_1+alpha_5*H_2` are
+
+```text
+(-14722,0,-324,-486,-972).
+```
+
+Thus every pivot fails the required strict inequality. This is not a failure
+of the full score: its exact numerators have signs `(-,0,+,+,+)`, and the
+direct time `7/30` has distances
+
+```text
+7/30, 3/10, 1/6, 2/5, 11/30,
+```
+
+all at least `1/6`. The computation therefore rejects only the quadratic
+sufficient condition. It neither refutes the full Chebyshev route nor proves
+or disproves LRC.

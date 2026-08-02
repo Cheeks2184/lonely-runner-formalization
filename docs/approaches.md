@@ -509,26 +509,34 @@ For an `(N-1)`-element integer speed set in `[1,N+t]`, at least one missing
 height `c` lies at most `N`. If `2c>N+t`, the reciprocal `1/c` is an immediate
 witness. Otherwise denominators in `[N+c+t+1,2N]` make both residues adjacent
 to zero correspond to absent heights. The interval omits at most `2t` residue
-classes modulo `c`; `phi(c)>=sqrt(c/2)` closes the construction whenever
-`16*t^2+t<=N`.
+classes modulo `c`. The bound `phi(c)>=sqrt(c/2)` closes the construction
+whenever `16*t^2+t<=N`.
 
 At `t=4`, exact totient classification plus a finite certificate proves the
-stronger all-dimensional max-speed `n+5` theorem. In general the method gives
-an unconditional height gain asymptotic to `sqrt(N)/4`. The reusable two-hole
-inverse bridge is kernel-checked, but the stronger arithmetic selector and
-finite core have not yet been assembled into one Lean theorem. See
-`docs/height-n-plus-5.md`.
+stronger all-dimensional max-speed `n+5` theorem. More strongly, the elementary
+factorization estimate
+
+```text
+c/phi(c)<=omega(c)+1<=Nat.log 2 N+1
+```
+
+shows that `(4*(Nat.log 2 N+1)+1)*t<=N` is sufficient. This gives an
+unconditional height gain asymptotic to `N/(4*log_2 N)`. Lean checks the
+two-hole inverse bridge and `omega(c)<=Nat.log 2 c`; the sharp totient product,
+interval selector, missing-height extraction, and final assembly remain open.
+See `docs/height-n-plus-5.md` and `docs/height-logarithmic.md`.
 
 ## L. Quadratic Chebyshev moment test
 
-The exact Chebyshev score admits the pointwise minorant
+The exact Chebyshev score admits the sound pointwise minorant
 
 ```text
 P_n(k)>=1-k+alpha_n*choose(k,2),
 ```
 
-where `alpha_n>0` is the minimum permitted coefficient. This yields the
-noncircular sufficient condition `H_0-H_1+alpha_n*H_2>0`, using only direct
-CRT intersection moments. Extensive exact stress has not found an all-pivot
-score failure, but no arithmetic inequality forces this test—or the full
-score—to succeed at some pivot uniformly.
+where `alpha_n>0` is the minimum permitted coefficient. However, the primitive
+tuple `(1,3,5,6,7)` has `H_0-H_1+alpha_5*H_2<=0` at every pivot, even though
+three full Chebyshev scores are positive and `t=7/30` is a direct lonely
+witness. Thus the quadratic sufficient condition is rejected as a uniform
+route. The full score and exact pivot-certificate proposition remain open;
+see `docs/quadratic-chebyshev-failure.md`.
