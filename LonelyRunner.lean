@@ -8,6 +8,8 @@ import LonelyRunner.DivisorInsertion
 import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
+import LonelyRunner.SmallDenominatorWitness
+import LonelyRunner.CrossPivotScaling
 import LonelyRunner.PivotCounts
 import LonelyRunner.SimultaneousCongruence
 import LonelyRunner.TripleCongruence
