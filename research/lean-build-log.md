@@ -943,3 +943,54 @@ quantifiers and hypotheses, and the trust report, then returned `ACCEPT`.
 positive injective integer speeds under `5*t<=N` and maximum speed `N+t`.
 It does not cover arbitrary integer heights and does not prove unrestricted
 LRC.
+
+## 2026-08-02: coefficient four and pivot-class checkpoint
+
+Source commit `104014a2a1821f94c458afbc6341fb01b07a51fa` was cloned
+with `git clone --no-local` into a new ext4 checkout. The checkout was clean
+and its HEAD matched the source commit before verification. This checkpoint
+adds `fourHeight_family_witness`, the fastest-pivot ratio restriction, and the
+canonical saturated lower-interval top-two certificate.
+
+The pinned cache was fetched, after which
+
+```text
+lake -Kjobs=2 build
+```
+
+completed in 209.906 seconds:
+
+```text
+Build completed successfully (3576 jobs).
+```
+
+The successful build was followed by:
+
+```text
+python3 scripts/audit_lean_trust.py
+python3 -m unittest discover -s tests -v
+```
+
+Results:
+
+```text
+Trust audit accepted 249 theorem reports.
+Ran 153 tests in 316.099s
+OK
+```
+
+Every reported axiom is among `propext`, `Classical.choice`, and
+`Quot.sound`. A fresh adversarial reviewer independently reproduced the exact
+twelve coefficient-four exception triples, checked all nine above-height and
+three complementary-hole repairs, compiled the source, and returned
+`ACCEPT`. Separate review checked the fastest-pivot normalization and all
+three saturated-class divisibility cases.
+
+Earlier mounted-checkout integration commands were stopped after the root
+source changed mid-run or timed out while orphaned WSL build processes were
+still active. They emitted no Lean diagnostic and are not verification. The
+orphaned task processes were terminated before the successful immutable-clone
+replay above began.
+
+These are bounded-height and structured-class results only. They do not prove
+the unrestricted top-two conjecture or unrestricted LRC.
