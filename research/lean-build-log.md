@@ -485,3 +485,41 @@ source scan found no `sorry`, `admit`, custom `axiom`, `opaque`, `unsafe`,
 `extern`, `implemented_by`, `partial_fixpoint`, `native_decide`, or disabled
 checks. Both the main worktree and the clean verification checkout were empty
 at commit `c8377d3179584301c0061b4c1eb9d76481189c29` before this log update.
+
+## 2026-08-02: optimized moments and consecutive adaptive depth
+
+The clean ext4 checkout was fast-forwarded through source commit `192f601`.
+The root build, including the new abstract consecutive-obstruction kernel,
+reported:
+
+```text
+Build completed successfully (3538 jobs).
+```
+
+`ConsecutiveCorrelationObstruction.lean` proves the ordinary and weighted
+hockey-stick identities, denominator-cleared correlation debt, and the
+abstract histogram bound
+
+```text
+sum_k D_k W_(n,d)(k)
+  <= (n-1)D_0 - 2*C(n-1,2d+1)
+```
+
+under explicit zero-mass and two-incidence hypotheses. The new axiom probes
+report only `[propext, Classical.choice, Quot.sound]`; no arithmetic histogram
+or LRC assertion is encoded.
+
+The enlarged exact regression suite includes rational primal/dual moment-LP
+certificates, the infinite fixed-order obstruction checks, and the exact
+adaptive-depth scan. It reported:
+
+```text
+Ran 133 tests in 169.732s
+OK
+```
+
+Independent adversarial audits accepted the LP vertex classification,
+low-totient fixed-order theorem, high-layer rigidity, depth-one debt constants,
+near-cutoff evaluations, and infinite cutoff-gap branches. Source files after
+`192f601` changed documentation only; the formal and computational artifacts
+tested here are identical at the subsequent integration commit.
