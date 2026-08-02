@@ -377,3 +377,39 @@ A source scan found no `sorry`, `admit`, custom `axiom`, `opaque`, `unsafe`,
 `extern`, `implemented_by`, `partial_fixpoint`, `native_decide`, or disabled
 checks. Both the main worktree and clean checkout were empty after
 verification.
+
+## 2026-08-02: block peeling and the exact CHAIN3 scope guard
+
+The clean ext4 checkout was fast-forwarded to commit `d7b897a`. Scoped checks
+first compiled `BlockPeeling.lean` and `Chain3Counterexample.lean` separately.
+The concrete witness module initially exposed a syntactic rewrite mismatch
+between two elaborated rational denominators; replacing it with an explicit
+`calc` normalization repaired the goal without adding an assumption. The root
+build then reported:
+
+```text
+Build completed successfully (3532 jobs).
+```
+
+The complete axiom audit passed. In particular, the four new repeated-block
+theorems and `chain3Counterexample_directWitness` each report exactly:
+
+```text
+[propext, Classical.choice, Quot.sound]
+```
+
+The full exact Python regression suite, including the independent CHAIN3
+counterexample verifier, reported:
+
+```text
+Ran 107 tests in 133.152s
+OK
+```
+
+The clean-room counterexample script separately reproduced all nine pivot
+rows, every `B3=b3(8)+b3(5)+b2(2)` component, the pivot-`15` optimum, strict
+endpoints, candidate exclusion, and the exact `13/80` witness. A tracked Lean
+scan found no `sorry`, `admit`, custom `axiom`, `opaque`, `unsafe`, `extern`,
+`implemented_by`, `partial_fixpoint`, `native_decide`, or disabled checks.
+Both the main worktree and the verification checkout were clean after these
+commands.
