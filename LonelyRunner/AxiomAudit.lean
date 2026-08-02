@@ -83,6 +83,10 @@ project-specific axiom.
 #print axioms LonelyRunner.subfiber_pair_anchor_credit_eq_card_inter_union
 #print axioms LonelyRunner.directionalGains_add_reverse_eq_natPairwiseDispersion
 #print axioms LonelyRunner.orderedDistinctPairAverage_mono_of_nat
+#print axioms LonelyRunner.pairMultiplicityContribution_num
+#print axioms LonelyRunner.sum_pairMultiplicityContribution_num
+#print axioms LonelyRunner.residueEnergy_nat_add_mod_le
+#print axioms LonelyRunner.residueEnergy_sum_mod_le
 #print axioms LonelyRunner.exists_cost_lt_of_decreasing_move
 #print axioms LonelyRunner.prefixDependentCost_relocate
 #print axioms LonelyRunner.pairSumCertificate_iff_pair_time

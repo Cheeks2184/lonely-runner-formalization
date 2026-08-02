@@ -21,6 +21,7 @@ import LonelyRunner.RankedFiberAveraging
 import LonelyRunner.WeightedConditionalExpectation
 import LonelyRunner.AnchorStarAveraging
 import LonelyRunner.AnchorStarDispersion
+import LonelyRunner.ResidualVariationEnergy
 import LonelyRunner.RelocationDescent
 import LonelyRunner.PairSumGeometry
 import LonelyRunner.IntegerInduction
