@@ -289,6 +289,92 @@ function targetedFailureSearch(seeds, maximum, steps, randomSeed) {
   return { speeds: fallback, score: fallbackScore, examined, found: false };
 }
 
+function* increasingTuples(runners, maximum) {
+  const tuple = new Array(runners);
+  function* extend(position, next) {
+    if (position === runners) {
+      yield [...tuple];
+      return;
+    }
+    const last = maximum - (runners - position) + 1;
+    for (let value = next; value <= last; value += 1) {
+      tuple[position] = value;
+      yield* extend(position + 1, value + 1);
+    }
+  }
+  yield* extend(0, 1);
+}
+
+function scanCompletePrimitiveBox(runners, maximum) {
+  if (runners < 2 || maximum < runners) throw new Error("invalid complete box");
+  const matching = seeds.filter(
+    (seed) => seed.length === runners && seed[seed.length - 1] <= maximum,
+  );
+  let closest = matching.length ? normalize(matching[0]) : null;
+  let closestScore = closest === null ? null : scoreTuple(closest);
+  for (const seed of matching.slice(1)) {
+    const normalized = normalize(seed);
+    const candidateScore = scoreTuple(normalized);
+    if (compareScores(candidateScore, closestScore) < 0) {
+      closest = normalized;
+      closestScore = candidateScore;
+    }
+  }
+  let total = 0;
+  let primitive = 0;
+  let pivotDps = 0;
+  let fullyScored = 0;
+  for (const speeds of increasingTuples(runners, maximum)) {
+    total += 1;
+    if (speeds.reduce(gcd2) !== 1) continue;
+    primitive += 1;
+    const center = Math.floor(runners / 2);
+    const pivotOrder = [];
+    for (let distance = 0; distance < runners; distance += 1) {
+      if (center + distance < runners) pivotOrder.push(center + distance);
+      if (distance && center - distance >= 0) pivotOrder.push(center - distance);
+    }
+    const rows = new Array(runners);
+    let pruned = false;
+    for (const pivot of pivotOrder) {
+      const row = scorePivot(speeds, pivot);
+      pivotDps += 1;
+      rows[pivot] = row;
+      // The objective is the maximum pivot surplus.  Once this strict
+      // inequality holds, the tuple cannot equal or improve the incumbent.
+      if (closestScore !== null && row.surplus > closestScore.objective) {
+        pruned = true;
+        break;
+      }
+    }
+    if (pruned) continue;
+    fullyScored += 1;
+    const profile = rows.map((row) => row.surplus).sort((a, b) => b - a);
+    const candidateScore = { objective: profile[0], profile, rows };
+    if (
+      closestScore === null
+      || compareScores(candidateScore, closestScore) < 0
+      || (
+        compareScores(candidateScore, closestScore) === 0
+        && speeds.join(",") < closest.join(",")
+      )
+    ) {
+      closest = speeds;
+      closestScore = candidateScore;
+      console.log(
+        `scan primitive=${primitive} objective=${closestScore.objective} tuple=${closest}`,
+      );
+    }
+  }
+  return {
+    speeds: closest,
+    score: closestScore,
+    examined: primitive,
+    found: closestScore.objective <= 0,
+    scan: { total, primitive, pivotDps, fullyScored },
+  };
+}
+
 const E = [5, 28, 35, 40, 68, 88, 108, 148, 165];
 const seeds = [
   E,
@@ -305,6 +391,7 @@ function printResult(result) {
   const found = result.found ?? result.score.objective <= 0;
   console.log(`RESULT found=${found} objective=${result.score.objective} examined=${result.examined} tuple=${result.speeds}`);
   console.log(`profile=${result.score.profile}`);
+  if (result.scan !== undefined) console.log(`scan=${JSON.stringify(result.scan)}`);
   for (const row of result.score.rows) console.log(JSON.stringify(row));
 }
 
@@ -313,7 +400,10 @@ const get = (name, fallback) => {
   const index = args.indexOf(name);
   return index === -1 ? fallback : Number(args[index + 1]);
 };
-if (args.includes("--tuple")) {
+if (args.includes("--scan-runners")) {
+  printResult(scanCompletePrimitiveBox(
+    get("--scan-runners", 10), get("--maximum", 22)));
+} else if (args.includes("--tuple")) {
   const index = args.indexOf("--tuple");
   const speeds = normalize(args[index + 1].split(",").map(Number));
   printResult({ speeds, score: scoreTuple(speeds), examined: 1 });
