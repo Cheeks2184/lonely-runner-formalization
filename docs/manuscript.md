@@ -673,6 +673,15 @@ finite target is therefore unrestricted optimized additive uniformity, with
 the exact pivot-certificate proposition still strictly stronger at a fixed
 pivot.
 
+The generic repeated-block implication is kernel-checked in
+`BlockPeeling.lean`. It tracks valid prefixes and exact remaining sets, forces
+each block to have length `min(k,|Q|)`, and proves both non-strict and strict
+global loss bounds from their corresponding local block hypotheses. The
+strict theorem makes nonemptiness explicit. A separate equality theorem shows
+that blocks which merely regroup descending one-step bounds have exactly the
+ordinary peeling budget. These declarations validate the finite deduction
+used above; they do not assert the rejected cross-pivot arithmetic premise.
+
 The independent unrestricted search also completely checks every increasing
 ten-speed tuple through maximum `22`: `646,646` tuples total, `646,635`
 primitive, no all-pivot additive failure, and minimum best margin `+4` on

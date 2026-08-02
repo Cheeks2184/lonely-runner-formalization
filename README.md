@@ -121,7 +121,10 @@ at pivot `75`; two independent exact implementations reproduce the complete
 table. This rejects only the bounded-depth sufficient condition. At pivot
 `15`, unrestricted optimized additive cost is `131<135`, and `t=13/80` is a
 direct lonely time. The surviving finite-cover target is again unrestricted
-`OPT-ADD-UNIF`, not LRC itself.
+`OPT-ADD-UNIF`, not LRC itself. `BlockPeeling.lean` kernel-checks the generic
+non-strict and strict repeated-block implications, the exact short-final-block
+cardinality, and equality with ordinary peeling when a block merely regroups
+one-step bounds; it assumes no arithmetic uniformity premise.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all

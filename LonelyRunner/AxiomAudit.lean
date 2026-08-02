@@ -94,6 +94,11 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_peelingList_of_localBudget
 #print axioms LonelyRunner.exists_criticalCore_of_budget_lt_every_peeling
 #print axioms LonelyRunner.exists_criticalSoftCore_of_budget_lt_every_peeling
+#print axioms LonelyRunner.exists_blockPeelingList_of_localBudget
+#print axioms LonelyRunner.exists_blockPeelingList_of_strictLocalBudget
+#print axioms LonelyRunner.blockPeelingBudget_oneStepBlockBudget
+#print axioms LonelyRunner.exists_blockPeelingList_of_localVertexBudget
+#print axioms LonelyRunner.chain3Counterexample_directWitness
 #print axioms LonelyRunner.pairMultiplicityContribution_num
 #print axioms LonelyRunner.sum_pairMultiplicityContribution_num
 #print axioms LonelyRunner.residueEnergy_nat_add_mod_le

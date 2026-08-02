@@ -24,6 +24,8 @@ import LonelyRunner.AnchorStarDispersion
 import LonelyRunner.AcyclicFiberSelector
 import LonelyRunner.ModularAcyclicSelector
 import LonelyRunner.SoftFeedbackLayers
+import LonelyRunner.BlockPeeling
+import LonelyRunner.Chain3Counterexample
 import LonelyRunner.ResidualVariationEnergy
 import LonelyRunner.ResidualVariationDebt
 import LonelyRunner.RelocationDescent

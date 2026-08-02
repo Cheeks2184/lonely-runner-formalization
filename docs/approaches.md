@@ -238,7 +238,10 @@ and the exact fixed-tuple checker. The live priorities are now:
    is exactly the threshold while residue `13` is an exact pivot witness.
    These are fixed-pivot separations only, not separations of the existential
    uniform statements. The frontier therefore returns to `OPT-ADD-UNIF` and
-   the still stronger exact pivot-certificate proposition.
+   the still stronger exact pivot-certificate proposition. The generic block
+   concatenation, strict/non-strict budget propagation, exact final-block
+   length, and comparison with one-step peeling are kernel-checked in
+   `BlockPeeling.lean`; the rejected modular uniform premise is not encoded.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform
