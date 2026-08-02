@@ -1,0 +1,5 @@
+domain=core_plus_two_distinct_speeds_50_through_600
+tuples=150426
+all_pivot_failures=0
+first_new_pivot_nonpositive=0
+both_new_pivots_nonpositive=0

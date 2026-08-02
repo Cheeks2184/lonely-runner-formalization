@@ -1,0 +1,2 @@
+53d525d152044fd2502550fa2854a2944441073c9c879e633bfb7cc345a1f261  research/sol-pro/artifacts/prompt46_linear_height_verifier.py
+23dbf402f45274bb77d28bc537b0ee26875bb34c2a1103fe229ff0bc5909f253  certificates/prompt46_linear_height_expected.txt

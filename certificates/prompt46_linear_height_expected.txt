@@ -1,0 +1,5 @@
+small_g=(1, 2, 2, 2, 2, 4)
+kanold_checked_through=5000
+linear_17t_le_3N_nonreciprocal_triples_N_le_500=3978332
+linear_6t_le_N_nonreciprocal_triples_N_le_500=3742532
+coefficient5_local_failure=(N,t,c)=(11,2,6) interval=(20, 21, 22)

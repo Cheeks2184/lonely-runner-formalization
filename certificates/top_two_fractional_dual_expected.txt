@@ -1,0 +1,9 @@
+instance n=7 N=8 top=(14,16) lower=1..13
+mutually_top_good total=168 pivot_14=84 pivot_16=84 zero_signatures=0
+integral_signature_packing=5 target_n_minus_1=6 unique_nonzero_patterns=43 reachable_states=1186
+packing_witness=((14, 39), (14, 15), (14, 30), (14, 46), (16, 60))
+packing_witness_signatures=(36, 192, 1032, 2576, 4098)
+dual_weights=((14, 5, 1, 2), (14, 13, 1, 2), (14, 15, 1, 2), (14, 19, 1, 2), (14, 22, 1, 2), (14, 30, 1, 1), (14, 34, 1, 2), (14, 36, 1, 2), (14, 47, 1, 2), (16, 60, 1, 2))
+dual_total=11/2 cover_budget_n_minus_2=5
+lower_speed_bad_weights=1:1/1 2:1/1 3:1/1 4:1/1 5:1/1 6:1/1 7:1/1 8:1/1 9:1/1 10:1/1 11:1/1 12:1/1 13:1/1
+AUDIT OK: integral disjoint-signature packing is too small, while the exact fractional dual blocks every five-lower-speed cover.

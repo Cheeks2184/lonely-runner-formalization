@@ -1,0 +1,14 @@
+* text=auto
+
+# Reproducible source and certificate hashes must not depend on checkout OS.
+*.lean text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.sh text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.lock text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf

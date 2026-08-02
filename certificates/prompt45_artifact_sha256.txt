@@ -1,0 +1,2 @@
+68d23c43a8fdc9b7d67a09ebb23d02ce6f72719ea2874c35a49eaa9c664b6a6d  research/sol-pro/artifacts/prompt45_cheb_grid.cpp
+f766d44fd2937b0bb3ab85d5e47b3dd21be06e36c831a9faa7eff3dcfddd3653  research/sol-pro/artifacts/prompt45_primorial_residual_verifier.py
