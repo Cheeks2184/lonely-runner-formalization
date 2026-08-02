@@ -409,6 +409,29 @@ theorem card_pivotTargetFiber_inter_pivotBadResidues
   rw [← hdecomp]
   exact card_biUnion_eq_sum_card_of_pairwise_disjoint targets pieces hdisjoint
 
+/-- The pair-fiber overlap written directly as raw simultaneous-congruence
+counts minus their `N`-divisible smaller-modulus counts. -/
+theorem card_pivotTargetFiber_inter_pivotBadResidues_eq_sum_raw_sub_if
+    (N pivot b c x : ℕ) (hN : 0 < N) (hpivot : 0 < pivot)
+    (hxBall : x ∈ strictCyclicBall (N * pivot) pivot) :
+    (pivotTargetFiber N pivot b x ∩
+        pivotBadResidues N pivot c).card =
+      ∑ y ∈ strictCyclicBall (N * pivot) pivot,
+        ((simultaneousCongruenceNatResidues
+            (N * pivot) b c x y).card -
+          if N ∣ x ∧ N ∣ y then
+            (simultaneousCongruenceNatResidues
+              pivot b c (x / N) (y / N)).card
+          else 0) := by
+  rw [card_pivotTargetFiber_inter_pivotBadResidues
+    N pivot b c x hN hpivot]
+  apply Finset.sum_congr rfl
+  intro y hyBall
+  apply candidateSimultaneousCongruenceCount_eq_raw_sub_if
+    N pivot b c x y hN hpivot
+  · exact Finset.mem_range.mp (Finset.mem_filter.mp hxBall).1
+  · exact Finset.mem_range.mp (Finset.mem_filter.mp hyBall).1
+
 /-- Exact arithmetic expansion of every summand in the target-fiber overlap.
 Membership of `x` in the strict ball supplies its canonical-target bound;
 the summation membership supplies the corresponding bound for every `y`. -/
