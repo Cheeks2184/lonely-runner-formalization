@@ -743,3 +743,39 @@ and repository working directory; only process group `96462` was sent `TERM`,
 and a readback confirmed that no member remained. The incomplete mounted run
 produced no diagnostic and is not counted as verification. The explicit
 clean-ext4 run above is authoritative.
+
+## 2026-08-01: logarithmic height and quadratic rejection
+
+Commit `19632f9cc038189ebdf9b2462a4fc65b74f16753` records the independently
+audited logarithmic bounded-height theorem, its exact finite verifier, the
+exact all-pivot failure of the quadratic Chebyshev sufficient condition, and
+the first Lean decomposition. From the clean ext4 checkout at that commit:
+
+```text
+Build completed successfully (3562 jobs).
+Ran 147 tests in 308.392s
+OK
+```
+
+`LonelyRunner/LogarithmicHeight.lean` compiled as part of the root build. Its
+axiom probes, together with every existing probe, reported only subsets of
+`[propext, Classical.choice, Quot.sound]`. The new executable audits reproduced
+the 553,106 arithmetic cases, 361,220 hole configurations, and the exact
+quadratic failure. An independent reviewer also replayed the optional C++
+calibration over 126,768,878 primitive lower-dimensional tuples and 288,879
+adversarial tuples.
+
+The reviewer identified one low-level reproducibility qualification: the
+Python failure scanner initially selected its prescribed degree through
+floating `sqrt` and `log`. Commit `55002943de32dbec6790f11861c461fd10c7af99`
+replaces that step with the independently checked exact degree table
+`(3,4,5)`. Its canonical output did not change, and the affected clean-ext4
+test passed again. The new scanner source hash is
+`6a930127e3bdfa83a9cb2aa46e34e7c1fc1360adf8f4fc553794e739fdce2e62`.
+
+Two accidental invocations were started against the slow mounted worktree
+during this pass. Both were terminated, their exact repository working
+directories were verified before signaling the listed compiler processes,
+and no live Lean worker remained. Neither incomplete invocation produced a
+diagnostic or counts as verification; the clean-ext4 results above are the
+authoritative runs.
