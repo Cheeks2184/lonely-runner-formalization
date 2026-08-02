@@ -24,10 +24,14 @@ theorem chain3Counterexample_directWitness :
   have hphase (speed : ℕ) :
       circleNorm (((13 : ℝ) / 80) * (speed : ℝ)) =
         (cyclicResidueDistance 80 (13 * speed) : ℝ) / 80 := by
-    rw [← circleNorm_nat_div_eq 80 (13 * speed)]
-    congr 1
-    push_cast
-    ring
+    calc
+      circleNorm (((13 : ℝ) / 80) * (speed : ℝ)) =
+          circleNorm (((13 * speed : ℕ) : ℝ) / (80 : ℝ)) := by
+            congr 1
+            push_cast
+            ring
+      _ = (cyclicResidueDistance 80 (13 * speed) : ℝ) / 80 :=
+        circleNorm_nat_div_eq 80 (13 * speed)
   rw [hphase]
   fin_cases i <;>
     norm_num [chain3CounterexampleSpeeds, cyclicResidueDistance]
