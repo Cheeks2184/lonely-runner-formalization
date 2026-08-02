@@ -199,6 +199,7 @@ theorem fiberCredit_modularOrdered_eq_selectedEarlierParentFiberCredit
   unfold fiberCredit selectedEarlierParentFiberCredit
   apply Finset.sum_congr rfl
   intro target _
+  simp only [modularOrderedTargetFiber, modularOrderedBadSet]
   rw [← Finset.sup_image]
   rw [modularEarlierParents_vertexOrderAt o hcard hk]
   rfl
@@ -282,7 +283,8 @@ theorem exists_pivotCandidate_avoiding_of_modularOrderFiberCredit
   have hdecomp : ∀ k < m,
       (strictPivotTargets N (speeds pivot)).biUnion (fibers k) = sets k := by
     intro k hk
-    simpa [m, sets, fibers, strictPivotTargets] using
+    simpa [m, sets, fibers, strictPivotTargets, modularOrderedTargetFiber,
+      modularOrderedBadSet] using
       biUnion_pivotTargetFiber_eq_pivotBadResidues N (speeds pivot)
         (speeds (vertexOrderAt o hvertices k).1) hN hpivot
   have hdisjoint : ∀ k < m, ∀ x ∈ strictPivotTargets N (speeds pivot),
@@ -311,7 +313,8 @@ theorem exists_pivotCandidate_avoiding_of_modularOrderFiberCredit
       have hk : k.1 < Fintype.card (NonpivotVertex pivot) := k.2
       rw [fiberCredit_modularOrdered_eq_selectedEarlierParentFiberCredit
         N speeds pivot o hvertices hk]
-      simp [m, sets, fibers, vertexOrderAt_eq o hvertices hk])
+      simp [m, sets, modularOrderedBadSet,
+        vertexOrderAt_eq o hvertices hk])
   have hsequence :
       ∃ r ∈ pivotCandidates N (speeds pivot),
         ∀ k < m, r ∉ sets k := by
