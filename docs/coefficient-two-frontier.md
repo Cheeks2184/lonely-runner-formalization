@@ -206,4 +206,3 @@ at modulus `q` gives a common closed `1/N` witness.
   coefficient-two height theorem.
 
 The coefficient-two bounded-height theorem remains conjectural/open.
-
