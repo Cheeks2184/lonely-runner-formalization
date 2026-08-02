@@ -227,10 +227,13 @@ Choose a squarefree product `Q` of sufficiently many primes that
 phi(Q)/Q < 1/[96*(12r)^(r-1)].
 ```
 
-Such a finite product exists by the classical fact that the finite Euler
-products `product_(p<=x)(1-1/p)` tend to zero.  Take arbitrarily large
-multiples `N` of `Q`.  Then `phi(N)/N<=phi(Q)/Q`; since `N=m+2<=2m` for
-`m>=2`, this makes
+Such a finite product exists elementarily.  The reciprocal finite Euler
+product over the primes at most `x` expands into a sum of reciprocals of
+integers having no larger prime factor, and therefore is at least
+`sum_(j=1)^floor(x) 1/j`.  The latter sums are unbounded (group the terms in
+dyadic blocks), so the original finite products tend to zero.  Take
+arbitrarily large multiples `N` of `Q`.  Then
+`phi(N)/N<=phi(Q)/Q`; since `N=m+2<=2m` for `m>=2`, this makes
 
 ```text
 D_0=(N-1)phi(N) < m^2/[24*(12r)^(r-1)].
