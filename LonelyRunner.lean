@@ -14,6 +14,7 @@ import LonelyRunner.LogarithmicHeight
 import LonelyRunner.PrimorialHeight
 import LonelyRunner.KanoldHeight
 import LonelyRunner.KanoldVandermonde
+import LonelyRunner.CoefficientFiveHeight
 import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts

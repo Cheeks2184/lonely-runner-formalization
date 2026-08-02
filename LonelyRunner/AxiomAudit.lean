@@ -184,6 +184,11 @@ project-specific axiom.
 #print axioms LonelyRunner.kanoldIntervalBound_vandermonde
 #print axioms LonelyRunner.seventeenThirdsHeight_family_witness
 #print axioms LonelyRunner.sixHeight_family_witness
+#print axioms LonelyRunner.three_mul_two_pow_omega_le
+#print axioms LonelyRunner.five_short_interval_exception_classification
+#print axioms LonelyRunner.five_witness_or_exception
+#print axioms LonelyRunner.exists_second_missing_of_extra_speed
+#print axioms LonelyRunner.fiveHeight_family_witness
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
 #print axioms LonelyRunner.top_signed_forces_sum
