@@ -85,8 +85,18 @@ triple-congruence profiles. It is independently audited and succeeds on every
 recorded hard tuple. The one-cell two-parent equality, positive-part/max
 identity, symmetric pair dispersion, safe additive cost cancellation, and
 ordered-average monotonicity are now kernel-checked in
-`AnchorStarDispersion.lean`. The concrete global cell reindexing and the
-cross-pivot `DISPERSION-STAR` inequality remain open, not theorems.
+`AnchorStarDispersion.lean`. These implications are sound, but their proposed
+uniform premises are false. Exact literal and optimized audits of
+`(8,15,35,40,48,56,68,75,78)` find strictly negative best margins at every
+pivot for both `ANCHOR-STAR` and `DISPERSION-STAR`.
+A further range-sum majorization replaces each full profile by its minimum,
+maximum, and sum. It is exact through six runners and keeps every mandatory
+stress certificate strict, but the same nine-speed tuple strictly refutes its
+`RANGE-SUM-STAR` premise. The exact three-anchor certificate still succeeds on
+that tuple (`133 < 135`), as does an optimized additive order (`285 < 315`).
+Independent audits reject two tempting simplifications: first/second profile
+moments fail on an exact all-pivot tuple, and deletion is not monotone for a
+fixed pivot-anchor row.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
@@ -136,6 +146,13 @@ disproof claim.
 - `docs/anchor-star-search-round2.md`: independent optimized evaluator,
   complete/structured/seeded search boundaries, and exact closest margins for
   the nested dispersion, anchor-star, and three-anchor conditions.
+- `docs/rv-energy-audit.md`: exact pair-multiplicity identity, valid integer
+  moment bounds, and the all-pivot rejection of their profile-free closure.
+- `docs/rv-descent-audit.md`: common-scale and fixed-pivot residue invariance,
+  plus an exact obstruction to deletion monotonicity.
+- `docs/range-sum-audit.md`: range-profile majorization, the exact
+  uncovered/debt/loss identity, and independently checked all-pivot failures
+  of the three averaging premises.
 - `docs/pair-sum-geometry.md`: exact pair-sum certificates, restricted-selector
   counterexamples, and bounded unrestricted searches.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
@@ -170,6 +187,12 @@ disproof claim.
   modular reconstruction of the dispersion inequality.
 - `scripts/search_anchor_star_failures.py`: exact optimized all-pivot search
   for the three nested bounded-anchor sufficient conditions.
+- `scripts/audit_rv_energy.py`: exact pair-multiplicity and integer-profile
+  energy/majorization audit.
+- `scripts/audit_rv_descent.py`: exact scaling, signed-residue, and deletion
+  checks for residual variation.
+- `scripts/audit_range_sum.py`: exact range/full-dispersion rows, slow literal
+  residue oracle, debt-identity checks, and surviving certificate witnesses.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.

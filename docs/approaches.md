@@ -178,13 +178,24 @@ and the exact fixed-tuple checker. The live priorities are now:
    Double averaging the second- and third-anchor gains gives the stronger
    `ANCHOR-STAR-UNIF` inequality. Its generic implication and exact values are
    independently verified, and the abstract strict-average selection theorem
-   is now in Lean. The remaining third-anchor term has a rigorous cellwise
+   is now in Lean. The third-anchor term has a rigorous cellwise
    lower bound `Gamma_j(h) >= Delta_j(h)`: `Delta` is the normalized sum of
    pairwise absolute differences between exact candidate-filtered triple-
    congruence profiles inside every nonbad first-anchor subfiber. This avoids
-   the failed zero-target-only and aggregate-cell bounds. The new sufficient
-   `DISPERSION-STAR` premise succeeds in the audited boxes but still needs a
-   cross-pivot arithmetic proof or an all-pivot counterexample.
+   the failed zero-target-only and aggregate-cell bounds. However,
+   `(8,15,35,40,48,56,68,75,78)` has strictly negative best margins at every
+   pivot for both `ANCHOR-STAR` and the stronger sufficient
+   `DISPERSION-STAR` premise. These averaging routes are therefore closed.
+   A min/max/sum range-sum bound is exact through six runners and narrows this
+   to `RANGE-SUM-STAR`, but it becomes lossy at seven runners and is strictly
+   refuted by the same nine-speed tuple. Averaging the pair part gives an exact
+   point-multiplicity deficit identity. Attempts to pay that deficit using only
+   first and second profile moments fail on a mandatory fixed-clock tuple, and
+   fixed-row deletion is nonmonotone. The surviving bounded-depth target is
+   `3-ANCHOR-UNIF`: the counterexample has a pivot-15 triple of cost
+   `133 < 135`, even though every anchor-star average fails. Any completion
+   must select exceptional triples/orders directly or discover a different
+   state-adaptive cross-pivot principle.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform

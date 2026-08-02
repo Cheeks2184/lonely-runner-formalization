@@ -424,6 +424,52 @@ reusable local ingredients: exact two-parent cell coverage, the positive-part
 to maximum identity, both orientations to symmetric dispersion, additive
 cost cancellation without unsafe natural subtraction, and ordered-average
 monotonicity. The concrete modular global cancellation and cell reindexing
-are not yet formalized. What remains open arithmetically is `DISPERSION-STAR`: some
-pivot and first anchor must make the pair part plus `Delta` strictly exceed
-`S_j-n*a_j`. See `docs/gamma-arithmetic-audit.md`.
+are not yet formalized. The proposed uniform conclusion is nevertheless now
+refuted computationally: for `(8,15,35,40,48,56,68,75,78)`, exact literal
+enumeration gives a negative best pair-part-plus-`Delta` margin at every
+pivot. See `docs/gamma-arithmetic-audit.md` and the range-sum audit. This
+rejects the stronger sufficient condition, not the sound `Gamma >= Delta`
+lemma and not the Lonely Runner Conjecture.
+
+A second compression keeps the profile minimum, maximum, and sum. Choosing
+one minimum and maximum contributes `(r-1)(max-min)` to pairwise `L1`; after
+removing them, integer balancing of the remaining fixed-sum entries contributes
+the residue energy `eta*(r-2-eta)`. This `w(c)` lower bound equals exact
+profile dispersion through length three, hence through six runners, and its
+normalized `W_j(h)` remains strictly sufficient on all mandatory stress
+rows. It is not exact in general: at pivot `18`, anchor `4` of
+`(2,4,8,16,18,26,27)`, two profiles `(0,2,2,0)` cause
+`Delta-W=1/5`. The nine-speed tuple above strictly refutes the resulting
+`RANGE-SUM-STAR-UNIF` premise as well.
+
+The reusable algebraic core is partly kernel-checked in
+`ResidualVariationEnergy.lean`. In particular,
+`pairMultiplicityContribution_num` proves the denominator-free pointwise
+multiplicity identity, `residueEnergy_sum_mod_le` proves modular energy
+balancing, and `rangeProfileDispersion_eq` proves the exact min/max endpoint
+contribution. `rangeSumProfileLowerBound_of_cutDecomposition` is deliberately
+conditional on an explicit cut decomposition; existence of the standard
+layer-cake cuts and their exact internal-`L1` energy identity remain
+paper-level obligations, so Lean does not yet assert the unconditional
+range-sum profile theorem.
+
+The first-anchor-averaged pair term also has an exact multiplicity formula:
+uncovered candidate residues contribute positively, while points belonging to
+an intermediate number of bad sets contribute an explicit cubic deficit.
+Integer balancing and quadratic energy provide valid lower bounds for the
+cell dispersion, but their combined profile-free closure fails at every pivot
+of the first fixed-clock tuple, with best margin `-2/3`. Full `Delta` repairs
+that row to `4/21`. Common scaling of all speeds is exactly homogeneous and
+permits primitive normalization; signed residue normalization is valid only
+at a fixed pivot. Deletion is not monotone even for a fixed speed-valued row:
+the RF example changes from `42/5` after deleting speed `2` to `-41/7` in the
+full tuple. These exact failures delimit the surviving cross-pivot problem.
+
+The strict counterexample audit also separates the nested certificate
+schemes. All best `ANCHOR-STAR`, `DISPERSION-STAR`, and `RANGE-SUM-STAR`
+margins for `(8,15,35,40,48,56,68,75,78)` are negative. Nonetheless, at pivot
+`15` the three anchors `(35,48,75)` have corrected two-level cost `133 < 135`,
+and at pivot `35` an optimized additive order has cost `285 < 315`. The tuple
+also has the direct lonely-runner witness `t=1/30`. Thus the audit closes the
+three averaging premises while leaving `3-ANCHOR-UNIF`, optimized additive
+ordering, the exact pivot-certificate theorem, and LRC open.

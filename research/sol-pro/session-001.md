@@ -1369,4 +1369,103 @@ It was asked to develop cross-pivot summation, energy/majorization, and
 minimal-counterexample/descent routes before selecting one. A useful response
 must prove a new arithmetic lemma, prove the uniform residual-variation
 principle, or give an exact all-pivot counterexample; rederiving the dispersion
-bound or adding finite search is expressly excluded. The response is pending.
+bound or adding finite search is expressly excluded.
+
+## Response 30: range-sum profile majorization
+
+After 20 minutes, Sol Pro supplied neither a proof nor a counterexample to
+residual-profile uniformity. It proved a simpler per-cell lower bound. For an
+integer profile `c` of length `r`, let `ell=min c`, `u=max c`, `R=u-ell`, and
+`s=sum c`. For `r>=3`, put `k=r-2`, write
+`s-r*ell-R = q*k+eta` with `0<=eta<k`, and define
+
+```text
+w(c) = (r-1)*R + eta*(k-eta).
+```
+
+The cases `r<=1` or `R=0` have `w=0`, and `r=2` has `w=R`. Choosing one
+minimum and one maximum accounts for `(r-1)R`; integer balancing of the
+remaining coordinates proves `sum_{p<q}|c_p-c_q| >= w(c)`. Equality is
+automatic through `r=3`, hence the resulting normalized cell sum `W_j(h)`
+equals `Delta_j(h)` through six runners. Sol's six exact values reproduced
+independently. The second fixed-clock tuple is the first mandatory row with a
+loss, `W=394/21 < 58/3=Delta`, but it retains strict surplus `10/21`.
+
+The bound is genuinely lossy on `(2,4,8,16,18,26,27)` at pivot `18`, first
+anchor `4`: two cells have profile `(0,2,2,0)`, giving `Delta=52/5` and
+`W=51/5`. Sol isolated `RANGE-SUM-STAR-UNIF`, the existence of a row whose
+pair part plus `W` is strictly above the required threshold. This is stronger
+than `DISPERSION-STAR` from seven runners onward and remains unsupported.
+
+Response 30 also derived the exact fixed-pivot sum of the pair part and a
+valid fixed-pivot descent when a common divisor of all nonpivots is coprime to
+the pivot modulus. It correctly warned that changing pivot moduli prevents
+this from being a global descent. Independent parallel work sharpened the
+warning: deletion monotonicity is false, and a combined first/second-moment
+profile compression has an exact all-pivot failure even though full `Delta`
+and `W` succeed.
+
+## Prompt 31: multiplicity payment for range-sum variation
+
+The independently validated range-sum lemma, moment-collapse counterexample,
+and deletion obstruction were returned to Sol Pro. It was asked to prove or
+refute `RANGE-SUM-STAR-UNIF`, with priority on an exact relationship between
+the fixed-pivot intermediate-multiplicity deficit and the cell profile
+range/imbalance. Cross-pivot divisor structure and an exact all-pivot
+counterexample remain alternative outcomes. More finite search, the rejected
+moment closure, and deletion monotonicity were excluded. The response is
+recorded below.
+
+## Response 31: strict all-pivot failure and an exact debt identity
+
+After 14 minutes, Sol Pro returned the primitive tuple
+`(8,15,35,40,48,56,68,75,78)`. Independent optimized and literal audits agree
+on all 72 pivot-anchor rows. For pivots in tuple order, the best range-sum
+margins are
+
+```text
+-76/21, -76/21, -284/21, -464/21, -668/21,
+-74/3, -64/3, -718/21, -928/21.
+```
+
+The best full-dispersion margins are
+
+```text
+-76/21, -76/21, -12, -464/21, -662/21,
+-488/21, -352/21, -212/7, -878/21.
+```
+
+The best exact anchor-star margins are likewise all negative, with global
+best `-32/21`. Thus `RANGE-SUM-STAR-UNIF`, `DISPERSION-STAR`, and
+`ANCHOR-STAR-UNIF` are false. The logical separation was also checked: pivot
+`15` has the three-anchor certificate `(35,48,75)` of cost `133<135`; pivot
+`35` has an optimized additive order of cost `285<315`; and `t=1/30` is a
+direct lonely-runner witness.
+
+Sol also proposed an exact fixed-row decomposition. If `k(r)` is the point
+multiplicity, `Unc` is the number of uncovered candidates, and residual-cell
+`Loss` is the gap between pointwise binary dispersion and the range-sum
+profile bound, then
+
+```text
+Xi0(h)+W(h)-(S-|R|)
+  = Unc - (Debt(h)+Loss(h))/((m-1)(m-2)),
+```
+
+where `Debt(h)` sums
+`(k-1)(m-k-1)(m-k-2)` over candidates outside the first anchor with
+`2<=k<=m-3`. The pointwise coefficient calculation is plausible and the
+identity was then checked by a separate clean-room implementation on all 72
+rows of the strict counterexample. All scaled discrepancies were zero; all
+20,181 retained cells had nonnegative `Theta-w`. It cannot establish
+uniformity because the displayed counterexample makes every row negative.
+
+## Prompt 32: surviving three-anchor and optimized-order frontier
+
+The fully reproduced counterexample and exact negative margins were returned
+to Sol Pro. It was asked to prove or refute `3-ANCHOR-UNIF`, while separately
+assessing optimized additive ordering, via materially different triple-
+selection, local-exchange/descent, and counterexample/minimal-obstruction
+routes. All three rejected averaging premises, random/GCD-clock averaging,
+moment closure, and deletion monotonicity were excluded. The response is
+pending.
