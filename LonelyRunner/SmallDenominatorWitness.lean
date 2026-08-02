@@ -48,6 +48,19 @@ theorem smallDenominator_family_witness {n N q : Nat}
   convert hi using 1
   field_simp
 
+/-- Specialization with the standard stationary-runner denominator `n+1`.
+This conclusion is definitionally the witness clause of the positive-integer
+formulation, so no separate encoding convention is hidden here. -/
+theorem smallDenominator_stationary_witness {n q : Nat}
+    (speeds : Fin n -> Nat) (hq : 2 <= q) (hqN : q <= n + 1)
+    (hmiss : forall i, not (q ∣ speeds i)) :
+    exists t : Real, forall i,
+      (((n + 1 : Nat) : Real)⁻¹) <=
+        ‖((t * (speeds i : Real) : Real) : UnitCircle)‖ := by
+  obtain ⟨t, ht⟩ := smallDenominator_family_witness
+    speeds (N := n + 1) (q := q) (by omega) (by omega) hqN hmiss
+  exact ⟨t, fun i => by simpa [circleNorm] using ht i⟩
+
 /-- Contrapositive divisor-cover obstruction.  If no real time witnesses the
 closed bound, then every integer denominator `q` from `2` through `N` divides
 at least one speed.  This condition is necessary, not sufficient. -/

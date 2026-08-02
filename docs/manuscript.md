@@ -1019,7 +1019,7 @@ declaration asserts a failure of LRC.
 
 For `A_n=(1,...,n)`, let `d_min(n)` be the least depth at which the original
 correlation score is positive, and put `c=floor(n/2)`. The tautological exact
-inclusion--exclusion depth is `c`. For every `n>=90`, one has
+inclusion--exclusion depth is `c`. For every `n>=84`, one has
 
 ```text
 n even:  d_min=c-2;
@@ -1043,9 +1043,9 @@ n*phi(n+1) - (2/(n-1))*C(n-1,2d+1).
 At `d=c-2` and `c-1`, this gives the displayed classification. To prove
 minimality rather than merely compare two late depths, binomial unimodality
 makes every depth `2<=d<=c-3` negative. Depth one is handled separately by
-retaining the distinct candidate residues `+/-s` for `1<=s<=4`; their exact
+retaining the distinct candidate residues `+/-s` for `1<=s<=5`; their exact
 bad count is `floor((p-1)/s)`, and a closed floor-free debt bound exceeds
-`n^2` from `n=90` onward.
+`n^2` from `n=84` onward.
 
 The cutoff gap is therefore always one or two in this range. Multiples of 30
 in `n+1` give infinitely many gap-one cases, while even `n` and
@@ -1053,3 +1053,46 @@ in `n+1` give infinitely many gap-one cases, while even `n` and
 smaller `n` separately. This result is not currently in Lean beyond the
 abstract histogram kernel of Section 27, and it proves nothing new about the
 already-lonely consecutive tuples themselves.
+
+## 29. Response 41 arithmetic and Chebyshev kernels
+
+For `n>=3`, a shifted Chebyshev polynomial gives a rational feasible
+zero-indicator minorant of degree `O(sqrt(n) log n)`. It equals one at zero
+and is bounded below by `-2*epsilon/(1-epsilon)` on every positive
+multiplicity. Applied to consecutive speeds, the exact total candidate mass
+and the previously classified safe mass make its score positive. This is not
+an independent proof for the consecutive tuple: the inequality uses
+`D_0=n*phi(n+1)>=n`, which already records the known safe times. It proves
+only that the near-tautological obstruction in Section 28 is specific to the
+alternating polynomial.
+
+The corresponding finite algebra is kernel-checked by
+`momentHistogramScore_ge_zero_sub_tail`, `rationalChebyshevValue_bounds`,
+`chebyshevMomentGrid_boundedZeroTest`, and
+`chebyshevMomentHistogramScore_pos`. The final declaration assumes the exact
+Chebyshev growth inequality transparently; formalizing the analytic
+`arcosh`/exponential estimate that discharges it is still open.
+
+Two new Lean modules encode arithmetic restrictions that do not assume a safe
+mass. `SmallDenominatorWitness.lean` proves that if some `2<=q<=N` divides no
+speed, then `t=1/q` satisfies the closed lonely boundary, and hence every
+integer counterexample would have to cover all those moduli by divisibility.
+`CrossPivotScaling.lean` proves the exact circular-residue scaling identity
+and uses coprimality to inject the safe candidates of a pivot into those of a
+multiple pivot while preserving every strict bad predicate along the image.
+
+On paper, the signed-divisor descent is also completely characterized when
+`a_n<n*a_(n-1)`: its replacement must have
+`a_n=q*b`, `b=N*a_(n-1)/(q+1)`, `2<=q<=N-2`, together with the lower-pivot
+divisor alternatives. This is a necessary irreducibility condition on a
+sum-minimal counterexample, not a contradiction. The remaining task is to
+derive a positive growing-order CRT-moment score without using `D_0`, or to
+show that the divisor-cover, cross-pivot, and descent constraints exclude the
+irreducible class.
+
+The arithmetic characterization itself is kernel-checked by
+`top_signed_forces_sum`, `comparable_signedDivisor_necessary`,
+`comparable_signedDivisor_sufficient`, `comparable_signedDivisor_iff`, and
+`replacement_sum_lt`. The minimal-counterexample composition is deliberately
+not packaged as a theorem until the sorted-family and certificate-transport
+interfaces are connected explicitly.

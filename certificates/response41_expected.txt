@@ -1,0 +1,7 @@
+n=59 chebyshev_degree=37 score_positive=True
+n=84 chebyshev_degree=47 score_positive=True
+small_denominator=(1,5,7,11),q=2
+divisor_cover_only=(2,3,4,5),q=2..5
+cross_pivot=(2,3,4,6),2->6,q=3
+largest_descent=(1,2,6,20)->(1,2,6,10)
+largest_descent_G=none

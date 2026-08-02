@@ -33,6 +33,7 @@ import LonelyRunner.OverlapCapacity
 import LonelyRunner.CorrelationPolynomial
 import LonelyRunner.WeightedZeroCount
 import LonelyRunner.ConsecutiveCorrelationObstruction
+import LonelyRunner.ChebyshevMoment
 import LonelyRunner.Chain3Counterexample
 import LonelyRunner.OptAddCounterexample
 import LonelyRunner.ResidualVariationEnergy

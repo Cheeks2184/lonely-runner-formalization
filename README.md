@@ -192,7 +192,7 @@ kernel-checks the weighted hockey-stick identity and the abstract cleared
 histogram inequality underlying these obstruction arguments. The remaining
 arithmetic histogram construction and asymptotic number theory are stated as
 explicit formalization obligations.
-The consecutive family can be classified more sharply. For every `n>=90`,
+The consecutive family can be classified more sharply. For every `n>=84`,
 its first positive Response 39 depth is exactly one or two below the
 tautological cutoff `floor(n/2)`: even `n` always has gap two, while odd `n`
 is decided by the explicit totient inequality
@@ -201,6 +201,15 @@ adaptive use of this polynomial becomes almost exact inclusion--exclusion on
 the canonical tight family. The theorem and finite scan are recorded in
 `research/consecutive-correlation-adaptive-depth.md`; it remains a result
 about this certificate, not LRC.
+A different shifted Chebyshev polynomial has a positive consecutive score at
+degree `O(sqrt(n) log n)`, proving that the preceding obstruction is specific
+to the alternating coefficient pattern. Its positivity proof uses the
+already-known consecutive safe mass, so it is not a new proof of a lonely
+time. Independently, `SmallDenominatorWitness.lean` kernel-checks the witness
+`t=1/q` whenever `2<=q<=n+1` divides no speed, and
+`CrossPivotScaling.lean` kernel-checks the coprime scaling injection between
+divisibility-related pivot grids. These give necessary arithmetic structure
+for any counterexample but do not close the uniform pivot-certificate theorem.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all

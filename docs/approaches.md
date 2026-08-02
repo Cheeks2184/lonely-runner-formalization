@@ -388,16 +388,39 @@ hockey-stick identity and the abstract denominator-cleared histogram bound;
 the consecutive histogram and totient estimates remain outside Lean.
 
 The original polynomial's adaptive-depth behavior is now exact on the tight
-consecutive family. Let `c=floor(n/2)`. For every `n>=90`, the first positive
+consecutive family. Let `c=floor(n/2)`. For every `n>=84`, the first positive
 depth is `c-2` for even `n`; for odd `n` it is `c-2` exactly when
 `3*n*phi(n+1)>(n-2)*(n-3)`, and otherwise `c-1`. The proof classifies every
 bad-count layer above `floor(n/2)` as having multiplicity exactly two, derives
-the two near-cutoff scores in closed form, and uses additional `+/-1,...,+/-4`
+the two near-cutoff scores in closed form, and uses additional `+/-1,...,+/-5`
 incidences to rule out depth one without assuming score monotonicity. All
 intermediate depths are excluded by binomial unimodality. Both cutoff gaps one
 and two occur infinitely often. Hence this adaptive polynomial is
 near-tautological even on `(1,...,n)`; a useful general bridge must use a
 different growing-order shape or retain more arithmetic structure.
+
+Response 41 supplies such a different shape for this test family. A shifted
+Chebyshev polynomial of degree `O(sqrt(n) log n)` is one at multiplicity zero
+and lies in a short nonpositive interval at every positive multiplicity. Its
+score on the consecutive histogram is therefore positive. The derivation,
+however, explicitly uses `D_0=n*phi(n+1)>=n`, already obtained from the known
+lonely times, so it is not a noncircular proof of pivot noncoverage. The live
+question is whether its binomial-moment objective can be proved positive for
+arbitrary tuples directly from the generalized-CRT intersection formula.
+
+Two arithmetic constraints are also exact. If some `2<=q<=N` divides no
+speed, `t=1/q` is immediately lonely; a counterexample must therefore cover
+every such modulus. If one pivot speed is a coprime integer multiple of
+another, scaling the candidate numerator injects the smaller pivot grid into
+the larger while preserving its entire strict bad vector along the image.
+Both kernels are formalized in `SmallDenominatorWitness.lean` and
+`CrossPivotScaling.lean`. Neither constraint by itself forces a safe point.
+
+Finally, in the comparable regime `a_n<n*a_(n-1)`, the largest-speed signed
+replacement exists exactly when `a_n=q*b`, `b=N*a_(n-1)/(q+1)`,
+`2<=q<=N-2`, and every lower pivot satisfies one of two explicit divisor
+conditions. This sharply describes the descent-irreducible remainder but does
+not eliminate it. See `docs/response41-audit.md`.
 
 The fourth Sol Pro round produced two valid but limited structured-class
 lemmas. The fifth produced exact modular certificates and a bounded dataset,

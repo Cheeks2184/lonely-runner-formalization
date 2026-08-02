@@ -2122,3 +2122,61 @@ complete and accepts the high-layer rigidity, all debt estimates and
 constants, the exclusion of earlier depths, and both infinite branches. This
 result concerns only the correlation certificate on the already solved tuple
 `(1,...,n)`.
+
+## Response 41: adaptive-depth bound, Chebyshev polynomial, and divisibility
+
+After 28 minutes 44 seconds, Sol Pro explicitly reported that it had no
+uniform proof or LRC counterexample. It supplied five partial theorems.
+
+First, retaining the exact `+/-1` incidences and selected `+/-s` incidences
+for `s=2,...,5` proves that the Response 39 depth on consecutive speeds is at
+least `ceil((n-5)/2)` for every `n>=84`; the tautological cutoff supplies the
+corresponding upper bound. Independent algebra reproduced the polynomial
+threshold exactly. Combining this with the previously proved high-layer
+identity strengthens the complete `d_min` classification from `n>=90` to
+`n>=84`.
+
+Second, Sol constructed a shifted Chebyshev zero-indicator minorant. Its
+degree is `O(sqrt(n) log n)` and its consecutive histogram score is positive.
+Independent review accepts every inequality and the exact examples
+`(n,r)=(59,37),(84,47)`, but imposed `n>=3` and the convention `H_q=0` past
+the maximum multiplicity. Crucially, the positivity derivation uses the
+already-known safe mass `D_0=n*phi(n+1)>=n`. It therefore demonstrates that
+the earlier obstruction is polynomial-family-specific; it is not an
+independent proof of a safe point.
+
+Third, if some modulus `2<=q<=N` divides no integer speed, the explicit time
+`t=1/q` is lonely. Thus any integer counterexample must cover all those
+moduli by divisibility. Fourth, when one pivot speed is `q` times another and
+`gcd(q,N)=1`, the numerator map `r->q*r` injects the smaller candidate grid
+into the larger and preserves the complete strict bad vector along its image.
+Both results are now kernel-checked in `SmallDenominatorWitness.lean` and
+`CrossPivotScaling.lean`. The divisor-cover condition is only necessary, and
+the injection does not exhaust the target grid.
+
+Fifth, in the comparable regime `a_n<n*a_(n-1)`, Sol exactly characterized
+the possible largest-speed signed descent by
+`b=N*a_(n-1)/(q+1)`, `a_n=q*b`, `2<=q<=N-2`, coprimality, and explicit
+lower-pivot divisor alternatives. Independent review accepts the iff and the
+examples, while requiring the existing pivot-completeness theorem for its
+minimal-counterexample interpretation. It leaves a nonempty irreducible
+class and hence no contradiction.
+
+The downloaded attachment hash
+`5f49c4d72b964a327d94b5e3124132f8403b7e5548df94ad01c07dcd0905cc66`
+matches Sol's report, and its outputs reproduce. A separate implementation is
+in `scripts/audit_response41.py`; the full acceptance record is
+`docs/response41-audit.md`.
+
+## Prompt 42: noncircular Chebyshev test and divisor-cover synthesis
+
+The exact audit and qualifications were returned to the same signed-in GPT-5.6
+Sol Pro conversation. Sol was asked to evaluate the growing-degree Chebyshev
+score for arbitrary tuples solely through the direct CRT moments, actively
+search for all-pivot failures before asserting uniformity, and prove any
+surviving positivity inequality without using `D_0` or a full histogram. A
+second route asks it to combine modulus cover, divisibility-poset pigeonhole
+constraints, coprime cross-pivot injection, normalization, and the exact
+comparable descent characterization in a primitive sum-minimal counterexample.
+Precise scope, exact verifiers, strict endpoints, and separation from LRC are
+again mandatory. Response 42 is pending.
