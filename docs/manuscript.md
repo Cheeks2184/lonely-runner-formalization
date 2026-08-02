@@ -885,3 +885,78 @@ contrapositive, but no theorem yet forces such a replacement. The exact audit
 checks `(1,2,3,24)->(1,2,3,6)` and finds no eligible replacement in `G`. This
 section currently has no Lean declaration and is not used by the formal
 equivalence chain.
+
+## 25. Direct generalized-CRT formulas for the moments
+
+The moment formula itself need not pass through the full bad-multiplicity
+histogram. Expanding `C(k(s),q)` as the square-free sum over `q`-element
+runner-index subsets and then expanding slice multiplicity gives
+
+```text
+H_q = sum_j sum_(|I|=q) T(j,I),
+```
+
+where `T(j,I)` counts pivot-`j` candidates simultaneously bad for every
+runner in `I`. For pivot speed `A`, modulus `M=N*A`, and runner `i`, the strict
+bad ball is the disjoint set of targets `h` with `-(A-1)<=h<=A-1`. Solving
+`a_i*r=h (mod M)` reduces by `gcd(a_i,M)` to disjoint classes. A vector of
+these classes has a common solution exactly under the generalized pairwise
+CRT compatibility conditions. Its class count modulo `M` is `M/m_I`, where
+`m_I` is the lcm of the reduced moduli. Intersecting once more with
+`r=0 (mod N)` gives the exact number of excluded pivot multiples, which is
+subtracted. Empty subsets give `n*A`, a subset containing the pivot gives
+zero, and repeated numerical speeds remain separate indices.
+
+The standalone exact evaluator gives
+
+```text
+(H_0,H_1,H_2,H_3,H_4)
+  = (17019,27432,18203,7492,2709)
+```
+
+for `G` without constructing a safe set or `D_0`. An independent literal
+pivot-grid sum verifies the same values but is used only as an audit.
+
+The finite summation kernel is formalized abstractly as follows:
+
+- `sum_card_zeroCandidateSlice_eq_weighted_zero_count` proves the exact
+  slice-incidence double count;
+- `cast_sum_card_zeroCandidateSlice_eq_weightedZeroIndicatorSum` casts it to
+  the rational form used by the polynomial;
+- `weightedStatisticSum_le_weightedZeroIndicatorSum` proves the summed
+  inequality while requiring `count<=n-1` only where the weight is positive;
+- `weightedCandidateStatisticSum_le_cast_sum_card_zeroCandidateSlice`
+  combines the two steps.
+
+These Lean declarations are arithmetic-agnostic. The generalized-CRT term
+formula is proved and independently computed but is not yet formalized in
+Lean.
+
+## 26. Infinite obstructions to prescribed correlation depth
+
+Consider the consecutive tuple `A_n=(1,...,n)`. A time is lonely for all its
+speeds exactly when it is `m/(n+1)` with `gcd(m,n+1)=1`: the `n+1` points
+`0,t,...,n*t` must have all circular gaps at least `1/(n+1)`, hence all gaps
+are equal. Every such time occurs once on each pivot grid, giving total safe
+incidence `n*phi(n+1)`.
+
+At pivot `j`, the two candidate residues `+1` and `-1` have bad multiplicity
+exactly `j-1`. Retaining only these nonpositive polynomial terms and applying
+a weighted hockey-stick identity yields
+
+```text
+L_(n,d)(A_n)
+  <= n*phi(n+1) - (2/(n-1))*C(n-1,2d+1).
+```
+
+For every fixed positive `d`, the binomial term eventually dominates on an
+infinite congruence class, so the lower bound is strictly negative infinitely
+often. More strongly, if `n congruent to 59 mod 60` and `d=(n-3)/4`, the
+central-binomial lower bound makes the score negative for every such `n`.
+Nevertheless `t=1/(n+1)` is an explicit lonely time for every consecutive
+tuple. Thus fixed depth and this linear sub-tautological rule are genuinely
+rejected as sufficient strategies; LRC is not.
+
+This theorem remains human-checked and exact-computation-checked rather than
+Lean-formalized. The formal files establish only the polynomial and weighted
+summation kernels used in its proof.

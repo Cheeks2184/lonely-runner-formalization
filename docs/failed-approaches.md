@@ -238,3 +238,24 @@ rejects the ordering surrogate only. Pivot `48`, residue `39`, gives
 `t=13/160`; every circular distance is at least `1/10`, and the exact witness
 is kernel-checked in `OptAddCounterexample.lean`. The surviving target is the
 strictly stronger exact pivot-certificate proposition.
+
+## 2026-08-02: fixed and prescribed correlation depth
+
+The alternating-binomial correlation polynomial gives a sound lower bound on
+the sum of safe pivot candidates, and its low moments now have a noncircular
+generalized-CRT formula. It cannot, however, be closed by any fixed depth. For
+the consecutive tuple `A_n=(1,...,n)`, the exact estimate
+
+```text
+L_(n,d)(A_n)
+  <= n*phi(n+1) - (2/(n-1))*C(n-1,2d+1)
+```
+
+is negative for infinitely many `n` at every fixed `d`. The linearly growing
+choice `d=(n-3)/4` is also negative whenever `n congruent to 59 mod 60`.
+These are genuine infinite theorems, not extrapolations from the bounded
+verifier. Nevertheless every consecutive tuple has the exact lonely time
+`t=1/(n+1)`. The failure is therefore in the prescribed-depth sufficient
+certificate, not the pivot-certificate proposition or LRC. Arbitrary adaptive
+depths, other feasible zero-indicator polynomials, and additional cross-pivot
+CRT constraints remain open.

@@ -336,6 +336,35 @@ the tuple `G` has no eligible replacement. Progress by this lane needs a
 structural theorem forcing an eligible replacement in every minimal
 counterexample or sharply classifying the irreducible remainder.
 
+The low-moment formula obligation is now closed. Expanding
+`C(k(s),q)` over square-free `q`-subsets of runner indices reduces `H_q` to
+pivotwise intersections. Each strict bad condition is a disjoint family of
+linear congruence classes; generalized CRT compatibility counts the common
+class, and adjoining `r=0 (mod N)` subtracts the excluded pivot candidates.
+The formula handles empty subsets, self-pivot zero terms, repeated numerical
+speeds as distinct indices, and closed good endpoints. Its primary evaluator
+reproduces `G`'s first five moments without constructing a zero count or full
+histogram. The abstract finite double count and pointwise-to-weighted-sum
+deduction are kernel-checked in `WeightedZeroCount.lean`, where the
+`weight>0` hypothesis explicitly guards the `k<=n-1` premise.
+
+Uniform fixed depth is rigorously impossible for this polynomial. For
+`A_n=(1,...,n)`, exact safe times are the primitive fractions `m/(n+1)`, so
+the total safe pivot-incidence count is `n*phi(n+1)`. The two residues
+`r=+1,-1` at pivot `j` have bad multiplicity `j-1`, which yields
+
+```text
+L_(n,d)(A_n)
+  <= n*phi(n+1) - (2/(n-1))*C(n-1,2d+1).
+```
+
+Consequently every fixed `d` gives negative scores for infinitely many `n`.
+Even `d=(n-3)/4` is negative for every `n congruent to 59 mod 60`, while
+`t=1/(n+1)` remains an explicit certificate. This rejects fixed depth and one
+substantial linear rule only. It does not exclude arbitrary adaptive depths,
+other feasible moment polynomials, or a cross-pivot theorem using more than
+the numerical moments.
+
 The fourth Sol Pro round produced two valid but limited structured-class
 lemmas. The fifth produced exact modular certificates and a bounded dataset,
 then retracted an incorrect claim that the simple union bound subsumed the

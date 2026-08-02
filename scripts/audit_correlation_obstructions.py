@@ -157,7 +157,7 @@ def _factorial(value: int) -> int:
 
 
 def audit_bounded(max_n: int = 35) -> list[tuple[int, int, Fraction]]:
-    """Complete finite scan of 4<=n<=max_n at all non-tautological depths."""
+    """Complete finite scan through depth floor((n-1)/2)."""
     rows: list[tuple[int, int, Fraction]] = []
     for n in range(4, max_n + 1):
         histogram = consecutive_histogram(n)

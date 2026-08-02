@@ -2023,4 +2023,51 @@ infinite obstruction to sub-tautological depth or a different moment
 certificate. A descent continuation is admissible only with a structural
 minimal-counterexample theorem. Precise quantifiers, line-by-line proofs,
 exact verifiers, and separation of pivot-certificate results from LRC remain
-mandatory. Response 40 is pending.
+mandatory. The response is recorded below.
+
+## Response 40: direct moments, moment obstructions, and restricted descent
+
+After 20 minutes 57 seconds, Sol Pro explicitly reported that it had neither
+a uniform bridge nor a counterexample to LRC. It supplied four partial
+results.
+
+First, it expanded each pivotwise moment over `q`-element runner subsets and
+gave a simultaneous-congruence count with a second congruence count
+subtracting candidates divisible by `N`. Its stress calculation again gives
+
+```text
+(H_0,...,H_4)=(17019,27432,18203,7492,2709),
+L_(9,2)=3305/2.
+```
+
+An independently developed generalized-CRT derivation reaches the same
+formula and values without using Sol's artifact or enumerating a safe set.
+The abstract weighted zero-count bridge is now kernel-checked in
+`WeightedZeroCount.lean`.
+
+Second, Sol proved that the first `r` binomial moments do not determine a
+zero count for arbitrary finite set systems: the even and odd parts of row
+`r+1` of Pascal's triangle have equal moments through order `r` but zero
+counts one and zero. This is an information obstruction only; Sol correctly
+qualified that both histograms need not arise from arithmetic pivot bad sets.
+
+Third, for each fixed depth `e`, Sol gave a primitive infinite family whose
+pivot-`1` histogram is `D_0=p,D_(2e+1)=p-1` and whose depth-`e` bound is
+nonpositive. It explicitly qualified this as a fixed-pivot obstruction, not a
+global all-pivot result. Independently, the stronger consecutive-speed theorem
+in `docs/correlation-obstruction-family.md` shows that the global correlation
+score is negative infinitely often for every fixed depth and for one linear
+depth rule, while `t=1/(n+1)` remains lonely.
+
+Fourth, in the comparable largest-speed regime `a_n<n*a_(n-1)`, Sol observed
+that any eligible signed replacement of `a_n` must be
+`b=N*a_(n-1)-a_n`, must satisfy `2a_n>N*a_(n-1)`, and must obey explicit
+divisor alternatives at every smaller pivot. This narrows the irreducible
+minimal-counterexample class but does not exclude it.
+
+Sol attached `prompt40_crt_moment_descent_verifier.py` with reported SHA-256
+`fa8c7419bf707cd6b3f2da4bb41bed5e9d1145e224f858081a4340acf9f03829`;
+the expected-output hash was
+`7fa44df2bb0ff371b036421bc5b1587e8a2801e4d89a8c238eaadc9ac982a0d4`.
+Repository acceptance relies on the independent scripts and proof audits,
+not these reported hashes alone. No LRC conclusion is accepted.

@@ -111,6 +111,10 @@ project-specific axiom.
 #print axioms LonelyRunner.correlationPolynomial_cleared_nonpos
 #print axioms LonelyRunner.correlationPolynomial_zero
 #print axioms LonelyRunner.correlationPolynomial_le_zeroIndicator
+#print axioms LonelyRunner.sum_card_zeroCandidateSlice_eq_weighted_zero_count
+#print axioms LonelyRunner.cast_sum_card_zeroCandidateSlice_eq_weightedZeroIndicatorSum
+#print axioms LonelyRunner.weightedStatisticSum_le_weightedZeroIndicatorSum
+#print axioms LonelyRunner.weightedCandidateStatisticSum_le_cast_sum_card_zeroCandidateSlice
 #print axioms LonelyRunner.chain3Counterexample_directWitness
 #print axioms LonelyRunner.optAddCounterexample_directWitness
 #print axioms LonelyRunner.pairMultiplicityContribution_num

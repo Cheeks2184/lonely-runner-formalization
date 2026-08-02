@@ -165,6 +165,22 @@ CRT formulas and estimates for only the low moments, not safe-residue
 enumeration. A signed-divisor replacement also transports certificates from
 the smaller tuple to the original tuple, but only in that direction at the
 replaced pivot; the OPT-ADD stress tuple admits no such replacement.
+The first noncircular low-moment step is now complete: every `H_q` is an
+explicit finite sum of generalized-CRT intersection counts over pivot slices
+and `q`-element runner-index subsets. Candidate multiples are subtracted by a
+second gcd/lcm compatibility test, and strict boundary points are excluded.
+For `G`, this direct formula gives
+`(H_0,...,H_4)=(17019,27432,18203,7492,2709)` without constructing `D_0`, a
+safe set, or the full multiplicity histogram. `WeightedZeroCount.lean`
+kernel-checks the abstract slice double count and the summed polynomial bound,
+including the necessary positive-weight guard.
+This still does not provide uniform positivity. In fact, the consecutive
+family `(1,...,n)` proves an infinite obstruction: every fixed depth is
+negative infinitely often, and the linear rule `d=(n-3)/4` fails for all
+`n congruent to 59 mod 60`, although `t=1/(n+1)` is always an exact lonely
+time. Thus any surviving correlation proof must use an adaptive depth nearer
+the exact cutoff, a different polynomial, or additional cross-pivot CRT
+structure. No proof or disproof of LRC follows.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all
@@ -262,6 +278,10 @@ disproof claim.
 - `docs/lcm-slice-response39-audit.md`: independent reconstruction of the
   common-LCM histogram, low-depth moment bounds, direct witnesses, and the
   signed-divisor replacement example.
+- `docs/crt-moment-formula.md`: the noncircular generalized-CRT formula for
+  every fixed-order moment.
+- `docs/correlation-obstruction-family.md`: infinite consecutive-speed
+  obstructions to fixed and one linearly growing correlation depth.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
 - `scripts/check_integer_tuple.py`: exact-rational fixed-instance optimizer and
   deterministic certificate verifier.
@@ -313,6 +333,10 @@ disproof claim.
   nested `B_1,B_2,B_3` soft-peeling bounds and every reported stress row.
 - `scripts/audit_lcm_slice_bounds.py`: clean-room common-LCM slice, polynomial,
   witness, and signed-replacement verifier.
+- `scripts/audit_crt_moment_formula.py`: direct low-moment CRT evaluator with
+  independent pivot-grid comparison.
+- `scripts/audit_correlation_obstructions.py`: exact finite checks for the
+  proved infinite correlation-obstruction family.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.
