@@ -125,6 +125,15 @@ direct lonely time. The surviving finite-cover target is again unrestricted
 non-strict and strict repeated-block implications, the exact short-final-block
 cardinality, and equality with ordinary peeling when a block merely regroups
 one-step bounds; it assumes no arithmetic uniformity premise.
+The unrestricted fixed-pivot Bellman optimum also has an exact subset-DAG
+unit-flow dual: failure is certified by a pivot-specific feasible potential,
+which exposes the remaining quantifier obstruction across pivots. On the new
+tuple, both equal averaging of full optimized margins and the natural
+common-LCM density weighting are negative, so neither linear average can prove
+uniform success. An exact search of five finite mutation/deletion/extension
+domains around the tuple checked 11,723 domain entries with no all-pivot
+OPT-ADD failure; the minimum best-pivot surplus was `+16`. These bounded counts
+have no unbounded consequence.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all

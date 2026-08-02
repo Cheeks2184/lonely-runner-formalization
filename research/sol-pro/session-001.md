@@ -1875,3 +1875,20 @@ counterexample must include its entire pivot table and an exact direct-pivot
 check. Strict endpoints, candidate exclusion, positivity, distinctness, and
 `N=n+1` were made explicit, and Sol was again forbidden to infer an LRC result
 from failure of a sufficient condition. This response is pending.
+
+While Sol worked, independent agents established the exact fixed-pivot
+subset-DAG flow dual and audited two natural closures. A feasible dual
+potential satisfies `y_Q-y_(Q\{i})<=delta_i(Q)` with `y_empty=0`; the Bellman
+value attains the dual maximum. This exactly characterizes a fixed-pivot
+failure but supplies a different potential at every pivot. For `F`, the full
+optimized margins are `(0,4,16,-6,-30,-18,40,-54,-27)`. Their unweighted sum
+is `-75`; the common-LCM density weighting is `-279450`, or normalized
+`-1863/4312`. Both linear cross-pivot candidates are therefore false.
+
+A separate exact scanner exhaustively checked five explicitly bounded domains
+around `F`: 2,619 single replacements through speed 300, 3,428 valid
+two-coordinate radius-5 perturbations, 5,376 three-coordinate radius-2
+perturbations, 291 one-speed extensions, and all nine deletions. No all-pivot
+optimized-additive failure appeared; the minimum best-pivot surplus was
+`+16`. These counts are per finite domain and do not settle the uniform
+statement.

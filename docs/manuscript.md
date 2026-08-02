@@ -682,6 +682,43 @@ that blocks which merely regroup descending one-step bounds have exactly the
 ordinary peeling budget. These declarations validate the finite deduction
 used above; they do not assert the rejected cross-pivot arithmetic premise.
 
+For one fixed pivot, the full Bellman optimum has an exact subset-DAG flow
+dual. Give every arc `Q -> Q\{i}` its external-deficit cost `delta_i(Q)`.
+Unit flows from the full set to the empty set decompose into weighted order
+paths, so their minimum cost is the optimized soft loss `Lambda*`. After
+normalizing `y_empty=0`, the dual constraints are
+
+```text
+y_Q - y_(Q\{i}) <= delta_i(Q).
+```
+
+Every feasible potential telescopes below the cost of every order, while the
+Bellman value function is feasible and attains `y_full=Lambda*`. Thus
+fixed-pivot success is exactly `Lambda*<beta`, and failure is exactly a
+feasible potential with top value at least `beta`. This exposes the remaining
+quantifier issue: all-pivot failure would provide a different feasible
+potential for every pivot modulus, with no canonical shared dual object.
+
+The most direct linear cross-pivot closures already fail on `F`. Its optimized
+margins `beta-Lambda*` are
+
+```text
+(0,4,16,-6,-30,-18,40,-54,-27).
+```
+
+Their unweighted sum is `-75`. With `ell=lcm(F)=646800`, the natural common
+subgroup-density weighting gives `sum (ell/a_j)M_j=-279450`, equivalently
+`sum M_j/a_j=-1863/4312`. A viable common-modulus inequality must retain
+nonlinear correlations among subgroup intersections and pivot-dependent
+Bellman choices.
+
+An exact finite search around `F` checked five exhaustive domains: 2,619
+single replacements through speed 300, 3,428 valid two-coordinate radius-5
+perturbations, 5,376 three-coordinate radius-2 perturbations, 291 one-speed
+extensions, and all nine deletions. No all-pivot optimized-additive failure was
+found; the smallest best-pivot surplus was `+16`. The counts are per defined
+domain and may overlap, and the result has no unbounded consequence.
+
 The independent unrestricted search also completely checks every increasing
 ten-speed tuple through maximum `22`: `646,646` tuples total, `646,635`
 primitive, no all-pivot additive failure, and minimum best margin `+4` on

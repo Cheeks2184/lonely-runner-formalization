@@ -242,6 +242,19 @@ and the exact fixed-tuple checker. The live priorities are now:
    concatenation, strict/non-strict budget propagation, exact final-block
    length, and comparison with one-step peeling are kernel-checked in
    `BlockPeeling.lean`; the rejected modular uniform premise is not encoded.
+   For the full fixed-pivot objective, the subset Bellman DAG has an exact
+   unit-flow formulation and potential dual. With `V(empty)=0`, dual
+   feasibility is `V(Q)-V(Q\{i})<=delta_i(Q)`, and Bellman's value attains the
+   maximum. Thus failure at pivot `j` is exactly a pivot-specific feasible
+   potential with top value at least `beta_j`. This reformulates, rather than
+   removes, the uniform quantifier obstruction: simultaneous failure supplies
+   a different potential for every modulus. On `F`, the full margins are
+   `(0,4,16,-6,-30,-18,40,-54,-27)`. Their sum is `-75`, and with
+   `ell=lcm(F)=646800`, the natural common-subgroup weighting gives
+   `sum_j (ell/a_j) M_j=-279450`, equivalently
+   `sum_j M_j/a_j=-1863/4312`. Any viable cross-pivot argument must therefore
+   retain nonlinear incidence correlations rather than only normalized
+   per-pivot margins.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform
