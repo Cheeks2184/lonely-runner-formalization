@@ -523,3 +523,56 @@ low-totient fixed-order theorem, high-layer rigidity, depth-one debt constants,
 near-cutoff evaluations, and infinite cutoff-gap branches. Source files after
 `192f601` changed documentation only; the formal and computational artifacts
 tested here are identical at the subsequent integration commit.
+
+## 2026-08-02: Response 41 arithmetic and Chebyshev integration
+
+The warmed ext4 verification checkout was restored to an empty tracked status,
+fast-forwarded to source commit `9abbe70`, and built from that exact source.
+The integrated root build reported:
+
+```text
+Build completed successfully (3560 jobs).
+```
+
+An earlier pass at `2d5ddd5` correctly rejected the first version of the new
+standard-form small-denominator bridge: ASCII `not` had selected Boolean
+negation rather than propositional negation. The hypothesis was corrected to
+propositional `not (q divides speeds i)` and the entire build was rerun
+successfully. The underlying small-denominator, cross-pivot,
+comparable-descent, and Chebyshev modules all compiled in the rejecting pass;
+only the added formulation bridge failed.
+
+The explicit axiom audit then completed successfully. Every new probe reports
+only a subset of
+
+```text
+[propext, Classical.choice, Quot.sound].
+```
+
+In particular, this covers the standard stationary small-denominator witness,
+divisor-cover contraposition, cross-pivot bad-set equivalence and cardinal
+injection, Chebyshev finite-score kernel, full comparable signed-divisor iff,
+ordered replacement corollary, and strict sum decrease.
+
+The exact Python regression suite, now including the independent Response 41
+verifier, reported:
+
+```text
+Ran 137 tests in 241.163s
+OK
+```
+
+The repository verifier reproduces the two positive rational consecutive
+Chebyshev scores, small-denominator and cross-pivot examples, and compares the
+closed-form descent characterization with literal signed-congruence search.
+A complete Lean source scan found no `sorry`, `admit`, custom `axiom`,
+`opaque`, `unsafe`, `extern`, `implemented_by`, `partial_fixpoint`,
+`native_decide`, or disabled checks.
+
+A separate brand-new ext4 clone at `2d5ddd5` was also attempted. Its first two
+from-scratch dependency builds hit 10-minute and 20-minute command limits
+before producing project object files; those timeouts are not counted as
+successful verification. Exact-path child compiler processes were terminated,
+without affecting other WSL processes. The successful 3560-job result above
+uses a Git-clean source checkout with previously compiled ignored dependencies,
+the same clean-checkout protocol used in earlier rounds.
