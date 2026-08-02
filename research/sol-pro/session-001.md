@@ -1574,3 +1574,72 @@ The claim that the top-parent condition is *strictly* stronger was not
 established by a separating instance; only its one-way implication to
 optimized additive success is accepted. The surviving obligations are
 `TOP-CYCLE-UNIF` and the less restrictive `UNIF-06`, not LRC itself.
+
+## Prompt 34: test the top-parent feedback-cycle condition
+
+The corrected top-only recurrence, the exact soft-rescue identity, and the
+independently verified fixed-pivot separating rows were returned to Sol Pro.
+It was asked to prove or refute `TOP-CYCLE-UNIF`, with three independent
+routes required before selecting one: a weighted cycle theorem, a
+cross-pivot CRT/gcd inequality, or an exact all-pivot counterexample. The
+prompt explicitly preserved strict endpoint and candidate-filter conventions
+and prohibited treating failure of this sufficient condition as failure of
+the optimized certificate or of LRC.
+
+## Response 34: exact all-pivot failure of `TOP-CYCLE-UNIF`
+
+After 18 minutes 59 seconds, Sol Pro returned the primitive tuple
+
+```text
+E = (5,28,35,40,68,88,108,148,165).
+```
+
+For each pivot it reported `(a_j,S,F_top,tau_top,D_top,D_opt,n*a_j)`:
+
+```text
+(5,    50,    6,   1,   45,   45,   45)
+(28,  360,  148,  46,  258,  250,  252)
+(35,  500,  245,  60,  315,  299,  315)
+(40,  562,  322, 122,  362,  344,  360)
+(68,  958,  480, 146,  624,  606,  612)
+(88, 1254,  568, 124,  810,  786,  792)
+(108,1544,  756, 194,  982,  940,  972)
+(148,2110, 1040, 294, 1364, 1334, 1332)
+(165,2360, 1086, 215, 1489, 1439, 1485)
+```
+
+Thus every top-only bound is non-strict; equality occurs at pivots `5` and
+`35`. Two independent implementations reproduced every row, one by literal
+set arithmetic and one by a clean-room residue/fiber oracle. The latter also
+exhaustively enumerated all `8! = 40,320` orders at every pivot. This is an
+exact rejection of `TOP-CYCLE-UNIF`.
+
+The response correctly kept the logical layers separate. At pivot `28`, an
+unrestricted order `(40,35,88,165,148,108,68,5)` has insertion costs
+`(36,24,42,36,24,30,30,28)`, totaling `250 < 252`. A second implementation
+found another optimal order `(35,40,68,5,165,88,108,148)`. Moreover, the
+candidate `r=6` gives `t=3/140`; its nine distance numerators modulo `280`
+are `(30,112,70,40,128,32,88,48,130)`, all at least `28`. Consequently this
+tuple refutes neither unrestricted optimized additive uniformity, nor the
+exact pivot-certificate formulation, nor LRC.
+
+Sol Pro also supplied a size-layer peeling bound. For a remaining vertex set
+`Q`, let `g_i(Q)` be the top weight lost when `i` is placed next, and put
+`lambda_q = min_{|Q|=q} max_{i in Q} g_i(Q)`. Iterative peeling gives the
+valid fixed-pivot lower bound `H_j(I_j) >= sum_q lambda_q`. It cannot prove
+the desired uniform top-only condition because the exact tuple above is a
+counterexample to that condition.
+
+## Prompt 35: unrestricted acyclic-selector frontier
+
+The exact counterexample and both independent validations were returned to
+Sol Pro, together with the soft-feedback identity
+`D(o)=S-F_top+L_top(o)-R(o)` and the kernel-checked abstract selector/order
+equivalence. It was asked to prove or refute `OPT-ADD-UNIF`: must some pivot
+admit a valid acyclic selector of weight strictly greater than
+`S_j-n*a_j`, allowing every token to choose any eligible parent with its
+exact candidate-filtered weight? Required routes were a full weighted
+soft-feedback theorem, a cross-pivot exact CRT/gcd inequality surviving all
+known counterexamples, and an exact search for an all-pivot unrestricted
+counterexample. The prompt again forbade inferring LRC failure from failure of
+this sufficient certificate. This response is pending.

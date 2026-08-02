@@ -194,21 +194,25 @@ and the exact fixed-tuple checker. The live priorities are now:
    refuted by the same nine-speed tuple. Averaging the pair part gives an exact
    point-multiplicity deficit identity. Attempts to pay that deficit using only
    first and second profile moments fail on a mandatory fixed-clock tuple, and
-   fixed-row deletion is nonmonotone. The surviving bounded-depth target is
-   `3-ANCHOR-UNIF`: the averaging counterexample has a pivot-15 triple of cost
-   `133 < 135`, even though every anchor-star average fails; the later exact
-   counterexample shows that exceptional triples are not uniform either. Any
-   completion of this finite-cover lane must now use genuinely adaptive full
-   orders or a different state-adaptive cross-pivot principle.
+   fixed-row deletion is nonmonotone. The averaging counterexample does have
+   a pivot-15 triple of cost `133 < 135`, but the later exact counterexample
+   shows that exceptional triples are not uniform. Any completion of this
+   finite-cover lane must now use genuinely adaptive full orders or a
+   different state-adaptive cross-pivot principle.
    For the full-order objective, each bad child-target fiber can be treated as
    a token selecting one earlier parent with its exact intersection weight.
    Valid orders are exactly maximum-weight selectors whose parent-to-child
-   support is acyclic. Restricting tokens to globally best parents gives a
-   weighted feedback-cycle sufficient condition and the precise open premise
-   `TOP-CYCLE-UNIF`. Literal subset-DP audits certify all mandatory stress
-   tuples and both new certificate counterexamples. This restriction may fail
-   even when a second-best parent repairs a cycle, so neither it nor optimized
-   additive uniformity is proved.
+   support is acyclic. Both optimization directions and their exact modular
+   instantiation are now kernel-checked. Restricting tokens to globally best
+   parents gives a weighted feedback-cycle sufficient condition, but
+   `TOP-CYCLE-UNIF` is false: the primitive tuple
+   `(5,28,35,40,68,88,108,148,165)` has no strict top-only pivot. Independent
+   literal implementations reproduce every row, including equality at pivots
+   `5` and `35`. Lower-ranked parents matter: at pivot `28`, unrestricted
+   cost is `250 < 252` although top-only cost is `258`. The direct time
+   `3/140` is lonely. Thus the surviving finite-cover target is unrestricted
+   `OPT-ADD-UNIF`, not the rejected top-parent restriction, and neither this
+   target nor LRC is proved.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform

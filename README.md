@@ -87,12 +87,16 @@ The surviving optimized additive objective has an exact finite reformulation:
 its maximum achieved credit is the maximum weight of a selector choosing at
 most one parent for each child target fiber subject to acyclic parent-to-child
 support. Restricting every token to globally best parents gives a computable
-weighted feedback-cycle sufficient condition. Independent literal audits
-reproduce eight strict stress certificates, but its cross-pivot
-`TOP-CYCLE-UNIF` premise and optimized additive uniformity remain open. Both
-directions of the abstract finite selector/order equivalence are kernel-checked
-in `AcyclicFiberSelector.lean`, including zero-credit choices and refinement
-of a topological rank to an injective order.
+weighted feedback-cycle sufficient condition. Its cross-pivot premise is now
+exactly rejected by `(5,28,35,40,68,88,108,148,165)`: every top-only row is
+nonstrict, with equality at pivots `5` and `35`. Two independent literal
+implementations reproduce the complete table. This does not reject the
+unrestricted objective: at pivot `28` its optimum is `250 < 252`, and
+`t=3/140` is a direct lonely time. Both directions of the abstract finite
+selector/order equivalence are kernel-checked in `AcyclicFiberSelector.lean`,
+and `ModularAcyclicSelector.lean` now instantiates its tokens, owners,
+eligibility, and exact candidate-filtered weights. Unrestricted optimized
+additive uniformity remains open.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all
@@ -177,6 +181,11 @@ disproof claim.
   of the three averaging premises.
 - `docs/top-parent-cycle-audit.md`: literal reconstruction of the top-parent
   feedback-cycle criterion and eight exact stress rows.
+- `docs/top-parent-rescue-audit.md`: exact lower-ranked rescue identity and
+  prefix-conditioned hierarchy between random order and the top-only DP.
+- `docs/top-cycle-failure-audit.md`: two-oracle all-pivot rejection of
+  `TOP-CYCLE-UNIF`, exhaustive reproductions, and logical separation from the
+  unrestricted certificate and LRC.
 - `docs/pair-sum-geometry.md`: exact pair-sum certificates, restricted-selector
   counterexamples, and bounded unrestricted searches.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
@@ -219,6 +228,9 @@ disproof claim.
   residue oracle, debt-identity checks, and surviving certificate witnesses.
 - `scripts/audit_top_parent_cycles.py`: independent exact top-parent and
   unrestricted additive subset dynamic programs.
+- `scripts/audit_top_cycle_failure.py` and
+  `scripts/search_top_cycle_failures.py`: independent exact reconstruction and
+  search provenance for the all-pivot top-only counterexample.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.

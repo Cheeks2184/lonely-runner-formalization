@@ -180,3 +180,37 @@ regression suite recomputes all nine strictly negative margins.  At pivot
 `75`, conditional-expectation greedy still produces cost `643<675`, so the
 same separation from the deterministic additive route remains explicit.  The
 bounded search does not establish global minimality.
+
+## 2026-08-02: globally best-parent feedback-cycle uniformity
+
+The top-parent restriction is a sound sufficient condition for the optimized
+additive certificate: give every child-target token only a globally
+maximum-weight parent, then pay the minimum backward top-edge weight
+`tau_top`. The resulting cost bound is `D_top=S-F_top+tau_top`. It is not a
+uniform condition. The primitive tuple
+
+```text
+(5,28,35,40,68,88,108,148,165)
+```
+
+has, in pivot order, exact top costs and thresholds
+
+```text
+45/45, 258/252, 315/315, 362/360, 624/612,
+810/792, 982/972, 1364/1332, 1489/1485.
+```
+
+Every row therefore fails the required strict inequality. Two implementations
+independently reconstruct the strict candidate sets, fibers, parent weights,
+top ties, and subset recurrence. One clean-room audit exhaustively enumerates
+all `8!` orders at every pivot. Candidate sets have cardinality `9*a_j`, and
+strict boundary hits remain good.
+
+This counterexample does not propagate to unrestricted optimized ordering.
+At pivot `28`, a lower-ranked-parent order has cost `250<252`; the best
+top-only order costs `258`, and merely applying second-best rescue to that
+same order gives `254`, showing that a different order is essential. The
+explicit candidate `r=6`, or time `t=3/140`, has minimum circular distance
+`3/28>1/10`. Thus this section rejects `TOP-CYCLE-UNIF` only. It is not a
+counterexample to `OPT-ADD-UNIF`, the pivot-certificate formulation, or LRC.
+Reproduction details are in `docs/top-cycle-failure-audit.md`.

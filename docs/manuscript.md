@@ -524,8 +524,16 @@ constructs tokenwise maximizers from an order;
 `exists_order_with_selectorWeight_le` refines an acyclic rank and realizes a
 selector in an order; and
 `exists_orderCredit_ge_iff_exists_acyclicSelectorWeight_ge` states the exact
-threshold equivalence. The modular application must still instantiate token
-owners, eligibility, and weights from the strict pivot fibers.
+threshold equivalence. `ModularAcyclicSelector.lean` supplies the concrete
+application. Its token type pairs a nonpivot child with every strict target;
+empty fibers merely have zero weight. `modularFiberWeight` is exactly the
+cardinality of the candidate-filtered child fiber intersected with the
+parent's strict bad set. `orderedTokenCredit_modular_eq` and
+`orderCredit_modular_eq_fiberCredit_sum` identify the abstract and modular
+credits, while
+`exists_modularOrderFiberCredit_ge_iff_exists_acyclicSelectorWeight_ge`
+specializes the threshold equivalence. Candidate exclusion and strict target
+endpoints are inherited from `pivotTargetFiber` and `strictCyclicBall`.
 
 This preserves the single-parent-per-fiber rule and is not the earlier
 tautological union/Hall relaxation. Restricting each positive token to one of
@@ -542,11 +550,36 @@ Hence `tau_top < F_top-(S_j-n*a_j)` is sufficient; equality is not. The exact
 top-only subset recurrence must maximize over the last child `i` and add the
 weights of its tokens whose top-parent set meets the predecessor state. The
 short recurrence in Sol Response 33 omitted that outer maximum and state
-subtraction; the audit records the corrected formula. A separate literal
-implementation reproduces strict top-parent certificates on all six mandatory
-stress tuples and on both nine-speed counterexamples to earlier routes. This
-is finite evidence only. `TOP-CYCLE-UNIF` and the less restrictive optimized
-additive uniformity remain open.
+subtraction; the audit records the corrected formula.
+
+The top-only condition is not uniform. For the primitive tuple
+
+```text
+(5,28,35,40,68,88,108,148,165),
+```
+
+the top-only costs minus their strict thresholds are
+`(0,6,0,2,12,18,10,32,4)`. Hence no pivot satisfies the strict condition;
+equality at pivots `5` and `35` is still failure. Two independent literal
+residue/fiber implementations reproduce every row. One also exhaustively
+enumerates all `8!` vertex orders at every pivot. This proves the finite
+counterexample to `TOP-CYCLE-UNIF`, not a counterexample to the conjecture.
+
+Indeed, lower-ranked rescue separates the two objectives. At pivot `28`, the
+top-only cost is `258 >= 252`, but unrestricted additive cost is `250 < 252`.
+The candidate `r=6` corresponds to `t=3/140`; the distance numerators modulo
+`280` are `(30,112,70,40,128,32,88,48,130)`, all at least `28`.
+Consequently unrestricted optimized additive uniformity and LRC remain open.
+For every fixed order the exact identity
+
+```text
+D(o) = S - F_top + L_top(o) - R(o)
+```
+
+measures the lower-ranked rescue `R`. The prefix-conditioned bound in
+`docs/top-parent-rescue-audit.md` interpolates exactly from tie-aware random
+ordering to the full top-only DP, but its endpoint cannot evade this
+counterexample.
 
 The companion relocation calculation is also exact. If `F` is achieved
 credit, `F_infinity` is full all-parent credit, `R_k` is nonnegative
