@@ -52,7 +52,16 @@ theorem subfiber_pair_anchor_credit_eq_card_inter_union
         subfiber ∩ (parent anchor ∪ parent other) := by
     ext a
     simp only [Finset.mem_union, Finset.mem_inter, Finset.mem_sdiff]
-    aesop
+    constructor
+    · rintro (⟨haSubfiber, haAnchor⟩ |
+        ⟨⟨haSubfiber, _haNotAnchor⟩, haOther⟩)
+      · exact ⟨haSubfiber, Or.inl haAnchor⟩
+      · exact ⟨haSubfiber, Or.inr haOther⟩
+    · rintro ⟨haSubfiber, haAnchor | haOther⟩
+      · exact Or.inl ⟨haSubfiber, haAnchor⟩
+      · by_cases haAnchor : a ∈ parent anchor
+        · exact Or.inl ⟨haSubfiber, haAnchor⟩
+        · exact Or.inr ⟨⟨haSubfiber, haAnchor⟩, haOther⟩
   rw [← hunion]
   exact (Finset.card_union_of_disjoint hdisjoint).symm
 
