@@ -239,6 +239,60 @@ with insertion costs `(63,56,40,46,30,28,14,8)`.  This strictly rejects all
 three averaging premises while again leaving the constructive routes and LRC
 untouched.
 
+## Exact failure of `3-ANCHOR-UNIF`
+
+The primitive tuple
+
+```text
+(10,37,45,51,54,56,61,71,91)
+```
+
+fails the corrected bounded three-anchor certificate at every pivot.  This is
+a stronger obstruction than the averaging failures above, but it is still not
+an LRC counterexample.  The optimized additive certificate succeeds, and an
+explicit lonely time exists.
+
+For every pivot, the cached triple evaluator was compared with the slower
+`anchor_cost` implementation on all `C(8,3)=56` triples.  The audit also
+enumerated every one- and two-anchor set and checked every adjacent inclusion
+`H subset H union {q}` has nonincreasing cost.  Thus a one- or two-anchor set
+cannot rescue a tuple whose best three-anchor cost is already non-strict.
+
+| pivot | threshold | min 1-anchor | min 2-anchor | min 3-anchor | minimizing triples |
+|---:|---:|---:|---:|---:|---|
+| 10 | 90 | 116 | 102 | 92 | `(37,56,71)`, `(37,61,71)`, `(54,56,71)` |
+| 37 | 333 | 431 | 367 | 333 | `(45,54,61)` |
+| 45 | 405 | 531 | 443 | 407 | `(54,56,91)` |
+| 51 | 459 | 603 | 513 | 461 | `(37,45,56)` |
+| 54 | 486 | 626 | 540 | 492 | `(45,51,56)` |
+| 56 | 504 | 652 | 552 | 504 | `(37,45,51)`, `(45,51,54)`, `(45,54,91)` |
+| 61 | 549 | 723 | 615 | 553 | `(45,56,91)` |
+| 71 | 639 | 847 | 721 | 645 | `(37,45,56)` |
+| 91 | 819 | 1083 | 923 | 827 | `(45,54,56)` |
+
+Strictness is essential at pivots `37` and `56`: equality with the threshold
+does not produce an avoidance certificate.  Consequently `3-ANCHOR-UNIF` is
+false for the exact repaired functional used throughout this repository.
+
+At pivot `10`, the proposed ordinary additive order
+
+```text
+(56,45,91,71,61,54,51,37)
+```
+
+has independently reconstructed insertion costs
+`(18,8,14,12,10,8,8,6)`, total `84<90`.  Therefore the optimized additive
+route remains live.  Moreover, at `t=3/100`, the circular-distance numerators
+over denominator `100`, in tuple order, are
+
+```text
+(30,11,35,47,38,32,17,13,27).
+```
+
+Every value is at least `10`, directly verifying loneliness at the required
+`1/10` boundary.  This last calculation confirms again that failure of the
+three-anchor sufficient method says nothing adverse about LRC on this tuple.
+
 ## Search boundary
 
 Before the targeted failures were found, complete primitive scans found no
@@ -296,6 +350,7 @@ python3 scripts/audit_range_sum.py
 python3 scripts/audit_range_sum.py --deep-tuple 1,14,27,40,53,66,79,92,105
 python3 scripts/audit_range_sum.py --deep-tuple 1,4,5,7,8,9,10,11,17
 python3 scripts/audit_range_sum.py --deep-tuple 8,15,35,40,48,56,68,75,78
+python3 scripts/audit_range_sum.py --audit-three-anchor-failure
 python3 scripts/audit_range_sum.py --scan-runners 9 --max-speed 12
 python3 scripts/audit_range_sum.py --scan-runners 9 --max-speed 120 --structured
 python3 scripts/audit_range_sum.py --near-nine --max-speed 60

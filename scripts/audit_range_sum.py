@@ -14,17 +14,25 @@ import itertools
 from fractions import Fraction
 from math import gcd
 
-from audit_anchor_star import STRESS_CASES, pair_degree, pivot_bad_mask, second_anchor_gain
+from audit_anchor_star import (
+    STRESS_CASES,
+    anchor_cost,
+    pair_degree,
+    pivot_bad_mask,
+    second_anchor_gain,
+)
 from audit_gamma_dispersion import gamma_dispersion_bound, has_dispersion_star_certificate
 from search_anchor_star_failures import ExactPivot, structured_cases
 from search_fiber_hall import (
     additive_certificate_is_valid,
     best_additive_pivot_attempt,
     child_fibers,
+    evaluate_additive_order,
 )
 
 
 LOSSY_TUPLE = (2, 4, 8, 16, 18, 26, 27)
+THREE_ANCHOR_FAILURE = (10, 37, 45, 51, 54, 56, 61, 71, 91)
 
 
 def range_profile_lower(counts: tuple[int, ...]) -> int:
@@ -474,6 +482,80 @@ def deep_audit_tuple(speeds: tuple[int, ...]) -> dict[str, object]:
     }
 
 
+def audit_three_anchor_failure(
+    speeds: tuple[int, ...] = THREE_ANCHOR_FAILURE,
+) -> dict[str, object]:
+    """Cross-check all anchor sets through size three and the live witnesses."""
+
+    n = len(speeds)
+    pivots = []
+    for pivot in range(n):
+        others = tuple(i for i in range(n) if i != pivot)
+        costs_by_size = {
+            size: {
+                anchors: anchor_cost(speeds, pivot, anchors)
+                for anchors in itertools.combinations(others, size)
+            }
+            for size in (1, 2, 3)
+        }
+        optimized = ExactPivot(speeds, pivot)
+        optimized_result = optimized.evaluate(reference_check=True)
+        for anchors, cost in costs_by_size[3].items():
+            if optimized.triple_cost(anchors) != cost:
+                raise AssertionError("optimized/slow triple mismatch")
+        # Adding an anchor must not worsen this corrected functional.  Checking
+        # every adjacent inclusion also rules out a hidden 1/2-anchor rescue.
+        for size in (1, 2):
+            for anchors, cost in costs_by_size[size].items():
+                for extra in others:
+                    if extra in anchors:
+                        continue
+                    extension = tuple(sorted((*anchors, extra)))
+                    if costs_by_size[size + 1][extension] > cost:
+                        raise AssertionError(
+                            f"anchor cost increased: {anchors} -> {extension}"
+                        )
+        minimums = {size: min(costs.values()) for size, costs in costs_by_size.items()}
+        tied_triples = tuple(
+            tuple(speeds[i] for i in anchors)
+            for anchors, cost in costs_by_size[3].items()
+            if cost == minimums[3]
+        )
+        if optimized_result.minimum_cost != minimums[3]:
+            raise AssertionError("optimized minimum disagrees with slow enumeration")
+        pivots.append(
+            {
+                "pivot": speeds[pivot],
+                "threshold": n * speeds[pivot],
+                "minimum_by_size": minimums,
+                "tied_best_triples": tied_triples,
+            }
+        )
+
+    pivot = speeds.index(10)
+    proposed_order = tuple(
+        speeds.index(speed) for speed in (56, 45, 91, 71, 61, 54, 51, 37)
+    )
+    additive = evaluate_additive_order(speeds, pivot, proposed_order)
+    distances = tuple(
+        min((3 * speed) % 100, 100 - ((3 * speed) % 100))
+        for speed in speeds
+    )
+    return {
+        "primitive": gcd(*speeds) == 1,
+        "positive_distinct": min(speeds) > 0 and len(set(speeds)) == n,
+        "pivots": pivots,
+        "three_anchor_succeeds": any(
+            row["minimum_by_size"][3] < row["threshold"] for row in pivots
+        ),
+        "proposed_additive_bound": additive.final_upper_bound,
+        "proposed_additive_costs": tuple(step.increment_bound for step in additive.steps),
+        "proposed_additive_valid": additive_certificate_is_valid(additive),
+        "distance_numerators_at_3_over_100": distances,
+        "lonely_time_valid": min(distances) >= 10,
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--scan-runners", type=int)
@@ -482,6 +564,7 @@ def main() -> None:
     parser.add_argument("--near-nine", action="store_true")
     parser.add_argument("--tuple", dest="tuple_text")
     parser.add_argument("--deep-tuple", dest="deep_tuple_text")
+    parser.add_argument("--audit-three-anchor-failure", action="store_true")
     args = parser.parse_args()
     if not args.near_nine and (args.scan_runners is None) != (args.max_speed is None):
         parser.error("--scan-runners and --max-speed must be supplied together")
@@ -490,6 +573,9 @@ def main() -> None:
     if args.deep_tuple_text:
         speeds = tuple(int(value) for value in args.deep_tuple_text.split(","))
         print(deep_audit_tuple(speeds))
+        return
+    if args.audit_three_anchor_failure:
+        print(audit_three_anchor_failure())
         return
     if args.tuple_text:
         speeds = tuple(int(value) for value in args.tuple_text.split(","))

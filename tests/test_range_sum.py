@@ -15,6 +15,8 @@ if str(SCRIPTS) not in sys.path:
 from audit_anchor_star import STRESS_CASES  # noqa: E402
 from audit_range_sum import (  # noqa: E402
     LOSSY_TUPLE,
+    THREE_ANCHOR_FAILURE,
+    audit_three_anchor_failure,
     deep_audit_tuple,
     profile_dispersion,
     incidence_theta_and_profile,
@@ -169,6 +171,46 @@ class RangeSumTests(unittest.TestCase):
                         terms = range_sum_identity_terms(speeds, pivot, h)
                         self.assertGreaterEqual(terms["loss"], 0)
                         self.assertGreaterEqual(terms["debt"], 0)
+
+    def test_three_anchor_uniformity_failure_and_live_witnesses(self) -> None:
+        report = audit_three_anchor_failure(THREE_ANCHOR_FAILURE)
+        self.assertTrue(report["primitive"])
+        self.assertTrue(report["positive_distinct"])
+        self.assertFalse(report["three_anchor_succeeds"])
+        expected_minimums = (
+            (116, 102, 92), (431, 367, 333), (531, 443, 407),
+            (603, 513, 461), (626, 540, 492), (652, 552, 504),
+            (723, 615, 553), (847, 721, 645), (1083, 923, 827),
+        )
+        self.assertEqual(
+            tuple(
+                tuple(row["minimum_by_size"][size] for size in (1, 2, 3))
+                for row in report["pivots"]
+            ),
+            expected_minimums,
+        )
+        self.assertEqual(
+            tuple(row["tied_best_triples"] for row in report["pivots"]),
+            (
+                ((37, 56, 71), (37, 61, 71), (54, 56, 71)),
+                ((45, 54, 61),),
+                ((54, 56, 91),),
+                ((37, 45, 56),),
+                ((45, 51, 56),),
+                ((37, 45, 51), (45, 51, 54), (45, 54, 91)),
+                ((45, 56, 91),),
+                ((37, 45, 56),),
+                ((45, 54, 56),),
+            ),
+        )
+        self.assertEqual(report["proposed_additive_bound"], 84)
+        self.assertEqual(report["proposed_additive_costs"], (18, 8, 14, 12, 10, 8, 8, 6))
+        self.assertTrue(report["proposed_additive_valid"])
+        self.assertEqual(
+            report["distance_numerators_at_3_over_100"],
+            (30, 11, 35, 47, 38, 32, 17, 13, 27),
+        )
+        self.assertTrue(report["lonely_time_valid"])
 
 
 if __name__ == "__main__":
