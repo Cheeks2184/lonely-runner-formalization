@@ -1171,3 +1171,40 @@ byte-for-byte, independently rejected all 3,464,840 four-speed transversals,
 and accepted the displayed five-speed transversal. It completed in 12.43
 seconds with maximum RSS 19,252 KB. This is finite evidence for the fixed pair
 `(7,98,187)`, not a uniform top-two theorem or unrestricted LRC proof.
+
+## 2026-08-02: abstract top-two transversal target verification
+
+`TopTwoTransversal.lean` formalizes only the sound robust-pair implication. An
+initial tracked target compile exposed two exact proof-script errors:
+
+```text
+line 87: the second robust membership had not been rewritten before projection
+line 88: `push Not` made no progress on an already explicit universal goal
+```
+
+The repair applies `mem_topRobustCandidates` separately to both endpoints and
+introduces the universal variables directly. The exact repaired source then
+compiled against the pinned ext4 dependency checkout in 32.1 seconds. The
+tracked target build reported:
+
+```text
+Build completed successfully (1842 jobs).
+ELAPSED_SECONDS=438.91
+```
+
+Temporary direct `#print axioms` probes, removed immediately after the audit,
+reported only `propext`, `Classical.choice`, and `Quot.sound` for both new
+theorems. A subsequent NTFS root-target replay spent ten minutes traversing
+the full graph and was terminated after the command timeout; it produced no
+Lean error and is not verification evidence. The authoritative full replay
+will use a fresh native-WSL ext4 checkout of the committed source.
+
+The separate coefficient-two Gamma audit
+
+```text
+bash scripts/audit_coefficient_two_gamma.sh
+```
+
+matched the exact source hash and expected output, completed in 8.24 seconds,
+and used maximum RSS 28,996 KB. Its `N<=300` selector results are finite
+evidence only; the uniform Hall statement remains conjectural.

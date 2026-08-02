@@ -139,6 +139,17 @@ This equivalence does not prove either side.
   accept `{7,63,70,77,84}`, proving `tau_H=5` for this fixed shift family.
   No uniform construction of such a family is known. See
   [the Response 50 audit](docs/response50-audit.md).
+- **Lean-verified abstract bridge:** `TopTwoTransversal.lean` proves that a
+  lower-speed set covering both robust top grids spoils every selected robust
+  pair, while failure of two-sided transversality extracts a complete
+  certificate at one top pivot. The unconditional paired-shift premise is
+  false at `(N,A,B)=(4,2,8)` because one robust grid is empty. The surviving
+  frontier is disjunctive; no uniform top-two theorem follows.
+- **Audited mathematics plus finite evidence:** coefficient-two no-witness
+  assumptions force every coprime complementary extra in `Gamma(c)` to be
+  occupied. A uniform Hall selector would close coefficient two. Exact tests
+  through `N=300` leave four repaired small pairs, but the selector theorem is
+  unproved. See [the Gamma audit](docs/coefficient-two-gamma.md).
 - **Refuted strategy:** the proposed global fractional two-grid dual
   invariant fails exactly at top speeds `(98,187)` for `N=7`. A feasible
   fractional cover of mass `962/241<4` rules out the required dual mass by
@@ -165,8 +176,9 @@ Active research branches are:
    improved further; the coefficient-two short-hole cases are classified,
    but the natural missing-to-extra Hall argument is refuted and no
    internal-blocker charging theorem is known;
-2. construct uniform multi-shift affine transversals for arbitrary top pairs,
-   or find a pair for which the required transversal inequality fails;
+2. prove the corrected disjunction between one-sided robust cover numbers and
+   nonempty multi-shift transversals; unconditional paired existence is
+   refuted by an empty-grid row;
 3. control or refute the full Chebyshev/CRT pivot score, after rejection of
    the quadratic shortcut;
 4. strengthen the least-counterexample residual class until its conditions
@@ -212,9 +224,10 @@ coefficient-five build, 240-report trust audit, and all 153 tests. Public run
 30764615804 passed both jobs at commit `0f0f9a6`, including the 3,576-job
 coefficient-four/pivot build, 249-report trust audit, and all 153 tests. Public
 run 30766497706 passed both jobs at commit `a6041e3`, including the
-coefficient-three verification record and all 153 tests. The newer
-fastest-interval checkpoint above awaits publication after this local audit
-record.
+coefficient-three verification record and all 153 tests.
+Public run 30768884839 passed both jobs at commit `4b31c22`, including the
+fastest-interval theorem, Response 50 artifact replay, trust audit, and all
+153 tests.
 
 This replay includes the unconditional Kanold interval, `17*t<=3*N`,
 `5*t<=N`, `4*t<=N`, and `3*t<=N` height theorems; the primorial theorem;

@@ -118,6 +118,14 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 - [top-two-fractional-obstruction.md](docs/top-two-fractional-obstruction.md):
   exact weak-duality obstruction to that global fractional invariant; the
   integral top-two conjecture remains open.
+- [response50-audit.md](docs/response50-audit.md): independently reproduced
+  finite affine-transversal certificate for the fixed hard top pair.
+- [affine-transversal-frontier.md](docs/affine-transversal-frontier.md): the
+  Lean-formalized abstract bridge, empty-grid counterexample, and corrected
+  disjunctive frontier.
+- [coefficient-two-gamma.md](docs/coefficient-two-gamma.md): complementary
+  coprime forcing, exact Hall bottleneck, finite repairs, and reproducible
+  evidence.
 - [computation.md](docs/computation.md): computational scope and interpretation.
 - [publication-audit.md](docs/publication-audit.md): public-release privacy,
   secret-scanning, and redistribution audit.
@@ -160,6 +168,7 @@ bash scripts/audit_response45.sh
 bash scripts/audit_response46.sh
 bash scripts/audit_response47.sh
 bash scripts/audit_response50.sh
+bash scripts/audit_coefficient_two_gamma.sh
 bash scripts/audit_top_two_pivot_search.sh
 bash scripts/audit_top_two_fractional_dual.sh
 bash scripts/audit_top_two_fractional_obstruction.sh

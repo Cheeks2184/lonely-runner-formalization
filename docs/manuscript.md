@@ -2216,3 +2216,84 @@ Their exact hashes, outputs, endpoint audit, and replay command are in
 such a shift family for arbitrary `(N,A,B)`, or a proof that another finite
 family always yields the required transversal inequality.  Nothing here
 proves the top-two conjecture or unrestricted Lonely Runner.
+
+## 46. The corrected affine-transversal bridge
+
+For top speeds `0<A<B`, let `R_A` be the canonical `A`-pivot candidates at
+which runner `B` is not strict-bad, and define `R_B` symmetrically.  Given any
+finite pair family `C subset R_A x R_B`, a lower-speed set `S` is a two-sided
+transversal if every pair has an `A`-bad member of `S` at its first endpoint
+and a `B`-bad member, possibly different, at its second endpoint.
+
+The logical certificate bridge is now formal.  In
+`TopTwoTransversal.lean`, `isTwoSidedTransversal_of_covers` proves that a set
+covering both complete robust grids is a transversal for every such `C`.
+Conversely,
+`exists_top_certificate_of_not_isTwoSidedTransversal` proves that failure of
+transversality supplies one endpoint which is a pivot candidate, is good for
+the other top speed, and avoids every lower runner's canonical strict bad set.
+It is therefore a complete certificate at `A` or `B`.  This theorem assumes no
+affine arithmetic and does not assert that a useful `C` exists.
+
+The unconditional paired target is false.  At
+
+```text
+N=4, A=2, B=8,
+```
+
+every `A`-candidate has `rho_8(8*r)=0<2`; hence `R_A` and every robust pair
+family are empty.  The empty lower set is a transversal, so every paired
+transversal number is zero.  Nevertheless `(1,2,8)` has a `B`-pivot
+certificate at numerator `9`, with cyclic distances `(9,14,8)` modulo `32`.
+This refutes only unconditional paired-fiber existence.
+
+The surviving sufficient frontier is disjunctive.  With `k=N-3`, one must
+show that the individual `A` robust grid needs more than `k` lower speeds to
+cover, or the individual `B` grid does, or both grids are nonempty and some
+selected pair family has transversal number greater than `k`.  Taking all
+affine shifts does not solve the problem: it selects the entire Cartesian
+product and merely restates the minimum common-cover question.  The exact
+audit and remaining obligation are in `docs/affine-transversal-frontier.md`.
+
+## 47. Complementary-hole charging at coefficient two
+
+Let `H=N+t`, with `2*t<=N`.  For a missing base height `c`, define the
+coprime complementary-extra neighborhood
+
+```text
+Gamma(c)={d:N<d<=H, H<c+d<=2N, gcd(c,d)=1}.
+```
+
+This relation has a direct no-witness interpretation.  If any `d in Gamma(c)`
+were also missing, then `q=c+d` would satisfy `H<q<=2N`; all selected speeds
+would lie below `q`; the complementary heights `c,q-c` would be missing; and
+`gcd(c,q)=1`.  The verified two-hole denominator theorem would give the
+closed `1/N` witness.  The same argument applies immediately when a coprime
+complement exists above `H`.  Thus a hypothetical no-witness family forces
+every member of `Gamma(c)` to be an occupied extra.
+
+Combining the reciprocal branch, Kanold branch, coefficient-two 22-case
+classifier, and above-height complement elimination produces an exact finite
+candidate set `C(N,t)` containing every missing base height.  A system of
+distinct representatives for the neighborhoods `Gamma(c)`, `c in C(N,t)`,
+would restrict to an injection from the actual missing set `M` into occupied
+extras `E`, contradicting `|M|=|E|+1`.
+
+The required selector theorem remains conjectural.  A deterministic exact
+search through `N=300` finds only four parameter failures:
+
+```text
+(4,2),(5,2),(8,4),(11,5).
+```
+
+Under the forced-neighborhood and cardinality conditions, those rows have
+only five total configurations, and each has an explicit reciprocal witness.
+This proves the finite repairs but not the all-`N` selector.  The simpler rule
+choosing one of `3c+1,3c-1,2c` is exactly refuted at `N=19,t=9`; the same
+families have the complementary two-hole witness `(q,c,q-c)=(29,9,20)`.
+
+The exact definitions, configurations, source/output hashes, and primary
+coprime-matching references are in `docs/coefficient-two-gamma.md`.  Existing
+rectangular interval-matching results do not directly prove this sliding,
+truncated Hall condition.  The coefficient-two theorem remains open at that
+uniform selector obligation.

@@ -516,3 +516,44 @@ This is a failure of the selected `k=1` affine row, not of the complete affine
 family.  It is not a counterexample to the top-two pivot conjecture or to
 Lonely Runner.  Exact formulas and the endpoint audit are in
 `docs/top-two-affine-fibers.md`.
+
+## 2026-08-02: unconditional paired-transversal existence has an empty-grid counterexample
+
+The proposed assertion that every top pair admits a shift family `H` with
+`tau_H>N-3` is false under the robust-pair definition. At
+
+```text
+N=4, A=2, B=8,
+```
+
+every `A`-candidate has `rho_8(8*r)=0<2`, so the `A`-robust grid is empty.
+Every selected robust-pair family is consequently empty for every `H`, and
+the empty lower set is a transversal: `tau_H=0<=1`.
+
+This does not refute top-two. The family `(1,2,8)` has the `B`-pivot
+certificate `r=9`, with distances `(9,14,8)` modulo `32`. What fails is only
+an unconditional theorem that insists on a paired robust fiber even when one
+robust grid is empty. The corrected sufficient frontier is disjunctive: one
+individual robust grid has cover number greater than `N-3`, or both grids are
+nonempty and a selected pair family has transversal number greater than
+`N-3`. See `docs/affine-transversal-frontier.md`.
+
+## 2026-08-02: fixed affine internal-blocker charges collide
+
+A coefficient-two charge choosing one of `3*c+1`, `3*c-1`, or `2*c` is not
+injective even when every reciprocal is blocked. At `N=19,t=9`, the missing
+and extra sets
+
+```text
+M={9,14}, E={28}
+```
+
+satisfy `3*9+1=28=2*14`. Retaining both low-hole alternatives still fails for
+`M={9,13,14}`, `E={26,28}` because `3*9-1=26=2*13` and
+`3*9+1=28=2*14`.
+
+Neither family is an LRC counterexample. In both, `q=29`, `c=9`, and the
+complementary missing height `20` give a direct two-hole witness. These rows
+motivate the full coprime complementary neighborhood `Gamma(c)` recorded in
+`docs/coefficient-two-gamma.md`; they refute only premature one-output
+charging rules.

@@ -206,3 +206,8 @@ at modulus `q` gives a common closed `1/N` witness.
   coefficient-two height theorem.
 
 The coefficient-two bounded-height theorem remains conjectural/open.
+
+The complementary-extra relation in `docs/coefficient-two-gamma.md` is now
+the sharpest viable family-level use: its forcing lemma is sound and one
+uniform Hall theorem would close coefficient two, but that selector theorem
+remains conjectural despite exact evidence through `N=300`.

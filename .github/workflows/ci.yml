@@ -47,3 +47,5 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Replay Response 50 affine transversal certificate
         run: bash scripts/audit_response50.sh
+      - name: Replay coefficient-two Gamma selector evidence
+        run: bash scripts/audit_coefficient_two_gamma.sh

@@ -2750,3 +2750,21 @@ construction of a shift family with `tau_H>N-3` for arbitrary `(N,A,B)`; the
 quotient route lacks cross-pivot cover transport, and coefficient two lacks
 an internal-blocker charging theorem. The exact audit and replay commands are
 in `docs/response50-audit.md`. No unrestricted LRC or top-two theorem follows.
+
+## Prompt 51 submitted: uniform shifts, symbolic classes, and coefficient two
+
+The Prompt 51 composer value matched the archived prompt after removing only
+its terminal newline: 9,156 characters, 9,172 UTF-8 bytes, 133 line feeds,
+and SHA-256
+`0a5f3cc5e30e2f51aa1159643edaeb304af9efe243835a99992a2f8ac1f04df0`.
+Windows UI Automation exposed `GPT-5.6 Sol`; the `Pro` radio reported selected
+before and after an explicit selection. Invoking the enabled `Send prompt`
+control produced the submitted user turn, visible `Pro thinking`, and the
+live `Stop answering` control. Prompt 51 is running.
+
+An independent audit immediately found an exact correction to the requested
+uniform target. At `(N,A,B)=(4,2,8)`, the `A`-robust grid is empty, so every
+paired affine family is empty and `tau_H=0<=N-3` for every `H`. Nevertheless,
+`(1,2,8)` has a `B`-pivot certificate at `r=9`. Thus only the unconditional
+paired-transversal target is rejected; the top-two and LRC statements are not.
+The exact objection will be returned to Sol Pro after Response 51 is recovered.
