@@ -128,28 +128,64 @@ theorem exists_secondaryAnchors_of_anchorStar_gt
   rw [haverage]
   linarith
 
+/-- With a fixed eligible anchor, two remaining eligible choices exist
+exactly when the complete eligible set has at least three elements. -/
+theorem two_le_card_erase_anchor_iff_three_le_card
+    {ι : Type*} [DecidableEq ι]
+    (indices : Finset ι) (anchor : ι) (hanchor : anchor ∈ indices) :
+    2 ≤ (indices.erase anchor).card ↔ 3 ≤ indices.card := by
+  rw [Finset.card_erase_of_mem hanchor]
+  omega
+
 /-- Version exposing a fixed first anchor `anchor` and a complete eligible
-anchor set `indices`.  Membership in `indices.erase anchor` records both that
-the selected anchors are eligible and that all three anchors are distinct. -/
+anchor set `indices`.  The first hypothesis certifies that the fixed anchor is
+eligible.  Membership in `indices.erase anchor` then records both eligibility
+of the selected secondary anchors and pairwise distinctness of all three. -/
 theorem exists_threeDistinctAnchors_of_anchorStar_gt
     {ι : Type*} [DecidableEq ι]
     (indices : Finset ι) (anchor : ι) (cost : ι → ι → ℚ)
     (total star threshold : ℚ)
+    (hanchor : anchor ∈ indices)
     (hcard : 2 ≤ (indices.erase anchor).card)
     (haverage :
       orderedDistinctPairSum (indices.erase anchor) cost /
           (((indices.erase anchor).card : ℚ) *
             ((indices.erase anchor).card - 1 : ℕ)) = total - star)
     (hstar : total - threshold < star) :
-    ∃ q ∈ indices, q ≠ anchor ∧
-      ∃ r ∈ indices, r ≠ anchor ∧ r ≠ q ∧ cost q r < threshold := by
+    anchor ∈ indices ∧
+      ∃ q ∈ indices, q ≠ anchor ∧
+        ∃ r ∈ indices, r ≠ anchor ∧ r ≠ q ∧ cost q r < threshold := by
   obtain ⟨q, hq, r, hr, hcost⟩ :=
     exists_secondaryAnchors_of_anchorStar_gt (indices.erase anchor) cost
       total star threshold hcard haverage hstar
   have hq' := Finset.mem_erase.mp hq
   have hrq := Finset.mem_erase.mp hr
   have hr' := Finset.mem_erase.mp hrq.2
-  exact ⟨q, hq'.2, hq'.1, r, hr'.2, hr'.1, hrq.1,
+  exact ⟨hanchor, q, hq'.2, hq'.1, r, hr'.2, hr'.1, hrq.1,
     hcost⟩
+
+/-- Cardinality-`3` interface to the fixed-anchor theorem.  The preceding
+equivalence shows that this is exactly the same size condition as requiring
+two secondary choices after erasing an eligible fixed anchor. -/
+theorem exists_threeDistinctAnchors_of_anchorStar_gt_of_card
+    {ι : Type*} [DecidableEq ι]
+    (indices : Finset ι) (anchor : ι) (cost : ι → ι → ℚ)
+    (total star threshold : ℚ)
+    (hanchor : anchor ∈ indices)
+    (hcard : 3 ≤ indices.card)
+    (haverage :
+      orderedDistinctPairSum (indices.erase anchor) cost /
+          (((indices.erase anchor).card : ℚ) *
+            ((indices.erase anchor).card - 1 : ℕ)) = total - star)
+    (hstar : total - threshold < star) :
+    anchor ∈ indices ∧
+      ∃ q ∈ indices, q ≠ anchor ∧
+        ∃ r ∈ indices, r ≠ anchor ∧ r ≠ q ∧ cost q r < threshold := by
+  apply exists_threeDistinctAnchors_of_anchorStar_gt indices anchor cost
+    total star threshold hanchor
+  · exact (two_le_card_erase_anchor_iff_three_le_card
+      indices anchor hanchor).2 hcard
+  · exact haverage
+  · exact hstar
 
 end LonelyRunner
