@@ -225,6 +225,15 @@ and the exact fixed-tuple checker. The live priorities are now:
    arithmetic rather than graph-theoretic: no proof forces some pivot to have
    a prefix with `B_core` below its strict budget, and large SCCs can make the
    randomized compression much weaker than the exact Bellman optimum.
+   A three-step block bound retains a short nested deletion chain while
+   remaining much cheaper than the full Bellman DP. Its exact theorem gives
+   `B_3<=B_1`; an independent exhaustive subset verifier matches every stress
+   row. At the difficult tuple above, pivot `165` has `B_3=187<211` although
+   the one- and two-step bounds are `259` and `219`. The current bounded-depth
+   frontier is therefore `CHAIN3-UNIF`: prove that some pivot always has a
+   strict three-step bound, or find an all-pivot counterexample and return to
+   the unrestricted objective. No cross-pivot common-modulus inequality for
+   the nested three-deletion maxima is known.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform

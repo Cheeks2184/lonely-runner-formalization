@@ -535,11 +535,16 @@ credits, while
 `exists_modularOrderFiberCredit_ge_iff_exists_acyclicSelectorWeight_ge`
 specializes the threshold equivalence. Candidate exclusion and strict target
 endpoints are inherited from `pivotTargetFiber` and `strictCyclicBall`.
-Lean still must enumerate the resulting `VertexOrder` into the existing
-ordered-union avoidance theorem, apply target-fiber decomposition and
-disjointness, discharge the natural-subtraction bookkeeping, and transport
-the uncovered candidate through the pivot-certificate theorem. This is
-application plumbing separate from the open uniform selector lower bound.
+The remaining deterministic application plumbing is now kernel-checked.
+`vertexOrderAt_eq`, `image_range_vertexOrderAt_eq_predecessors`, and
+`fiberCredit_modularOrdered_eq_selectedEarlierParentFiberCredit` enumerate the
+order and identify every earlier prefix. Fiber decomposition, disjointness,
+and natural-subtraction bookkeeping feed
+`exists_pivotCandidate_avoiding_of_modularOrderFiberCredit`, while
+`exists_real_witness_of_modularOrderFiberCredit` produces the corresponding
+real time. Its hypotheses explicitly include `N>0`, positive speeds, a
+nonempty nonpivot type, and the strict cost bound. It does not assert that a
+suitable pivot and order always exist.
 
 This preserves the single-parent-per-fiber rule and is not the earlier
 tautological union/Hall relaxation. Restricting each positive token to one of
@@ -625,6 +630,39 @@ of the same tuple, the soft optimum is `264`, above its strict budget `262`;
 and no arithmetic argument forces some other pivot to admit a sufficiently
 cheap SCC prefix for every primitive tuple. The remaining obligation is the
 cross-pivot modular incidence inequality, not the threshold expansion itself.
+
+The reusable finite layer algebra is kernel-checked in
+`SoftFeedbackLayers.lean`. In particular,
+`orderedTokenCredit_eq_card_metOrderUnitLayers` proves the tie-safe threshold
+count, `tokenPotential_eq_orderedTokenCredit_add_card_trapped` and
+`orderPotential_eq_orderCredit_add_orderSoftLoss` give the exact loss
+identities, and `exists_peelingList_of_localBudget` with
+`exists_criticalCore_of_budget_lt_every_peeling` formalizes budgeted peeling
+and its core contrapositive. Inducing a `VertexOrder` from the generic complete
+peeling list and instantiating its deficit with the modular fibers remain
+separate Lean obligations.
+
+A stronger finite bound keeps three consecutive choices on one nested chain.
+For `Q` and `k<=|Q|`, let `g_k(Q)` minimize the total external deficit along
+an ordered deletion of `k` distinct vertices from `Q`, and let
+`b_k(q)=max_(|Q|=q) g_(min(k,q))(Q)`. Removing optimal blocks gives
+
+```text
+B_k(m) = sum_(q=m,m-k,m-2k,...>0) b_(min(k,q))(q).
+```
+
+Every block is an actual deletion segment, so this is a sound order bound.
+Successively bounding each step by the worst minimum at its current
+cardinality proves `B_k<=B_1`; strict improvement is possible because one
+block must follow a single nested chain. An independent exhaustive subset
+verifier reproduces all recorded rows. At `E` pivot `165`,
+`(B_1,B_2,B_3,opt)=(259,219,187,165)` against strict budget `211`.
+Whether some pivot always satisfies `B_3<beta` is open.
+
+The independent unrestricted search also completely checks every increasing
+ten-speed tuple through maximum `22`: `646,646` tuples total, `646,635`
+primitive, no all-pivot additive failure, and minimum best margin `+4` on
+fourteen tuples. This finite result has no unbounded consequence.
 
 The companion relocation calculation is also exact. If `F` is achieved
 credit, `F_infinity` is full all-parent credit, `R_k` is nonnegative

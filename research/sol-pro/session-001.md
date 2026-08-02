@@ -1717,3 +1717,73 @@ signed-replacement claims. It was then asked for two stronger token-coupled
 routes: a nested-layer SCC/cycle theorem respecting shared token choices, and
 an exact chain-aware LP/min-cut or peeling dual strictly tighter than the
 rejected cardinality-only sum. This response is pending.
+
+## Response 36: reproducible complete box and chain-aware peeling
+
+After 24 minutes 36 seconds, Sol Pro repaired the missing computational
+record. Its standalone enumerator covers every increasing ten-subset of
+`1..22`: `646,646` total, of which `646,635` are primitive. The only excluded
+tuples are the eleven all-even ten-subsets. It reported
+
+```text
+all_pivot_failures=0
+minimum_best_margin=4
+closest_count=14
+pivot_checksum=7650936981035135288
+result_checksum=1046218365575918053
+```
+
+The first closest tuple is `(1,2,3,4,5,6,7,8,9,11)`, with optimized costs
+`(10,20,28,40,50,58,68,80,86,108)` against thresholds
+`(10,20,30,40,50,60,70,80,90,110)`. The supplied expected-output artifact has
+SHA-256
+`38cda37fd9c2243f5cacf003aa8fde8aaa5849a4ea75662370b6cb7819a6db7c`.
+An independent literal JavaScript oracle then enumerated the same complete
+domain in 1,690.90 seconds. It reproduced all counts, the absence of failures,
+the minimum margin, the 14 fully closest candidates, and the first tuple's
+complete pivot vector. This is an exact finite-box result, not an unbounded
+theorem.
+
+The response repaired every soft-layer edge case: owner weight is zero,
+zero-potential tokens have no layers, the empty external set has maximum zero,
+ties retain all parents, peeling sets are indexed consistently, and the strict
+budget `beta=n*A-S+F*` lives in the integers. It also strengthened the core
+cycles so that all trapped layers of a token use one chosen globally top
+parent. Give that token edge capacity equal to its external deficit. A source
+SCC then has internal weighted indegree at least `lambda`; splitting capacities
+into labelled parallel units produces `lambda` edge-disjoint directed cycles
+without violating the single-parent-per-token choice. This remains a necessary
+failure obstruction, not a sufficient or uniform condition.
+
+The common-LCM embedding and signed-replacement routes were proved in detail.
+Every pivot candidate set embeds into `H_j minus N*H_j` inside modulus
+`N*lcm(a)`, and the strict target radius becomes the common `lcm(a)`. A speed
+replacement congruent to `+/-a_k` modulo every old pivot modulus preserves all
+old optimized additive values up to target relabelling. CRT compatibility is
+exactly
+
+```text
+N*gcd(a_j,a_l) divides (epsilon_j-epsilon_l)*a_k.
+```
+
+The new pivot remains uncontrolled, so this is not a descent proof. The exact
+pair-fiber congruence moduli were confirmed as the products `M*g` and `M*h`,
+not quotients.
+
+Finally, Sol introduced a chain-aware block bound. For an unplaced set `Q`,
+let `g_k(Q)` be the least total external deficit along any ordered deletion of
+`k` distinct vertices from that same nested chain, and let
+`b_k(q)=max_(|Q|=q) g_(min(k,q))(Q)`. Removing blocks of size `k` gives
+
+```text
+B_k(m) = sum_(q=m,m-k,m-2k,...>0) b_(min(k,q))(q).
+```
+
+The theorem is sound because each chosen block is an actual nested deletion
+segment. Moreover `B_k<=B_1=sum_q d(q)`, since at each step the minimum local
+deficit is at most the worst minimum for that cardinality. The reported
+three-step values are strict on every mandatory stress row; on `E` at pivot
+`165`, `(B_1,B_2,B_3,optimum)=(259,219,187,165)` against budget `211`.
+Independent exact verification of all displayed block rows is in progress.
+No cross-pivot argument forces `B_3<beta` at some pivot, so neither
+`OPT-ADD-UNIF` nor LRC is resolved.

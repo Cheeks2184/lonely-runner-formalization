@@ -218,3 +218,67 @@ or to replace `B_core` by a stronger token-coupled bound with a provable
 cross-pivot inequality. Divisor data alone cannot determine this quantity,
 and failure of this sufficient route would imply neither failure of the exact
 pivot certificate nor failure of LRC.
+
+## Lean formalization
+
+`LonelyRunner/SoftFeedbackLayers.lean` kernel-checks the reusable finite
+algebra. Its central declarations are:
+
+- `orderedTokenCredit_eq_card_metOrderUnitLayers` for the tie/zero-safe unit
+  threshold count;
+- `tokenPotential_eq_orderedTokenCredit_add_card_trapped` and
+  `orderPotential_eq_orderCredit_add_orderSoftLoss` for the exact token and
+  total loss identities;
+- `exists_peelingList_of_localBudget` for generic finite budgeted peeling;
+- `exists_criticalCore_of_budget_lt_every_peeling` and its soft specialization
+  for the failure contrapositive.
+
+The owner is excluded explicitly, and `q<weight` means zero-potential tokens
+have no layers. Axiom probes report only `propext`, `Classical.choice`, and
+`Quot.sound`. The remaining formal bridge is to turn a complete peeling list
+into a `VertexOrder` with identical loss and instantiate the abstract deficit
+with the modular token data.
+
+## Three-step chain-aware strengthening
+
+The cardinality-only sum chooses its worst set independently at every size.
+To retain a short nested chain, define
+
+```text
+g_k(Q) = minimum total deficit along an ordered deletion
+         of k distinct vertices from Q,
+b_k(q) = max_(|Q|=q) g_(min(k,q))(Q).
+```
+
+Deleting optimal blocks of size `k` produces an order of loss at most
+
+```text
+B_k(m) = sum_(q=m,m-k,m-2k,...>0) b_(min(k,q))(q).
+```
+
+At each intermediate size one may choose a minimum-deficit vertex, proving
+`B_k<=B_1`. This can be strict because all vertices in a block must lie on one
+actual nested chain. Exact exhaustive subset calculations give:
+
+| tuple/pivot | budget | `B_1` | `B_2` | `B_3` | optimum |
+|---|---:|---:|---:|---:|---:|
+| RF, pivot `19` | 54 | 62 | 50 | 49 | 44 |
+| fixed-clock 1, pivot `75` | 105 | 115 | 101 | 95 | 77 |
+| fixed-clock 2, pivot `75` | 107 | 107 | 95 | 89 | 75 |
+| hard A, pivot `9` | 36 | 28 | 28 | 28 | 28 |
+| hard B, pivot `15` | 46 | 34 | 34 | 34 | 34 |
+| `(1,2,3,5)`, pivot `3` | 4 | 2 | 2 | 2 | 2 |
+| `D`, pivot `91` | 243 | 169 | 153 | 151 | 151 |
+| `C`, pivot `75` | 129 | 111 | 95 | 93 | 85 |
+| `E`, pivot `165` | 211 | 259 | 219 | 187 | 165 |
+
+The RF pivot is stated explicitly because earlier conditioned-top tables use
+the same tuple at pivot `16`, whose chain row is `(58,46,42,36)` instead.
+`scripts/audit_soft_chain_blocks.py` reconstructs every strict residue/fiber
+weight, exhaustively verifies the nested minima and the inequality against the
+successive cardinality sums, and regression-checks this table.
+
+Thus `B_3` certifies all mandatory rows, including the top-only counterexample.
+The new open sufficient condition `CHAIN3-UNIF` asks whether every primitive
+tuple has some pivot with `B_3<beta`. Its failure would not imply failure of
+unrestricted optimized ordering or LRC.

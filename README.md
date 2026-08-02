@@ -95,8 +95,10 @@ unrestricted objective: at pivot `28` its optimum is `250 < 252`, and
 `t=3/140` is a direct lonely time. Both directions of the abstract finite
 selector/order equivalence are kernel-checked in `AcyclicFiberSelector.lean`,
 and `ModularAcyclicSelector.lean` now instantiates its tokens, owners,
-eligibility, and exact candidate-filtered weights. Unrestricted optimized
-additive uniformity remains open.
+eligibility, and exact candidate-filtered weights. It also kernel-checks the
+deterministic bridge from a strict modular order-credit bound, through ordered
+fiber-union avoidance, to an explicit real lonely-time witness. Unrestricted
+optimized additive uniformity remains open.
 Retaining all lower-ranked parents gives a stronger exact threshold-layer
 model. A token of maximum weight `W` contributes one unit layer for every
 `q<W`, supported by all parents of weight greater than `q`; its lost credit is
@@ -107,6 +109,13 @@ predecessor subsets. On the tuple above, prefix `(35,40,88)` at pivot `28`
 has exact soft loss `38<40`, recovering optimized cost `250<252`. All eight
 prior stress rows also pass the SCC bound with at most one prefix vertex.
 There is still no theorem forcing such a prefix at some pivot uniformly.
+The unit-layer potential/credit identity, generic budgeted peeling theorem,
+and critical-core contrapositive are now kernel-checked in
+`SoftFeedbackLayers.lean`. Independently, the nested three-deletion bound
+`B_3` is proved mathematically and exhaustively audited; it is strictly tighter
+than the one-step cardinality sum and passes every mandatory stress row. At
+`E` pivot `165`, `B_3=187<211` while the exact soft optimum is `165`.
+`CHAIN3-UNIF` is the next sufficient condition under active investigation.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all
@@ -245,8 +254,11 @@ disproof claim.
   `scripts/search_top_cycle_failures.py`: independent exact reconstruction and
   search provenance for the all-pivot top-only counterexample.
 - `scripts/search_opt_add_failures.js`: independent literal unrestricted
-  subset-DP search across 9--11 speeds; its bounded searches found no
-  all-pivot failure and make no uniform inference.
+  subset-DP search across 9--11 speeds, including the complete primitive
+  ten-speed box through maximum `22`; its bounded searches found no all-pivot
+  failure and make no uniform inference.
+- `scripts/audit_soft_chain_blocks.py`: exhaustive subset verifier for the
+  nested `B_1,B_2,B_3` soft-peeling bounds and every reported stress row.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.
