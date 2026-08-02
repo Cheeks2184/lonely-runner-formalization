@@ -119,9 +119,14 @@ This equivalence does not prove either side.
 - **Lean-verified:** the more general
   `exists_fastestPivotCertificate_of_extremal_band` accepts any numerator
   mapping explicit lower and upper nonpivot bounds into the closed fastest-
-  pivot safe band. The associated ceiling/floor compression corollary remains
-  an audited manuscript result. Neither statement forces the other top pivot
-  in the residual regime.
+  pivot safe band. `exists_fastestPivotCertificate_of_mem_extremal_interval`
+  proves that every nonmultiple in the exact closed ceiling/floor interval is
+  such a certificate, and
+  `extremal_interval_compression_of_no_fastestPivotCertificate` proves that
+  failure leaves only an empty interval or a divisible singleton. The new
+  declarations passed standalone compilation, an ext4 target build, and the
+  trust audit; their authoritative clean full-project replay is pending.
+  None of these statements forces the other top pivot in the residual regime.
 - **Finite evidence only:** targeted full Chebyshev/CRT score searches and the
   top-two pivot stress certificate. The latter checks 878,245 primitive box
   tuples plus 86,745 structured mutations without a failure; it is a proposed

@@ -43,6 +43,8 @@ project-specific axiom.
 #print axioms LonelyRunner.slowest_fastest_gap_of_no_fastestPivotCertificate
 #print axioms LonelyRunner.pivot_le_cyclicResidueDistance_mul_of_band
 #print axioms LonelyRunner.exists_fastestPivotCertificate_of_extremal_band
+#print axioms LonelyRunner.exists_fastestPivotCertificate_of_mem_extremal_interval
+#print axioms LonelyRunner.extremal_interval_compression_of_no_fastestPivotCertificate
 #print axioms LonelyRunner.saturatedTopTwoPivotCertificate
 #print axioms LonelyRunner.saturatedTopTwo_avoids_pivotBadResidues
 #print axioms LonelyRunner.card_strictCyclicBall

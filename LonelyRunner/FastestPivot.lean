@@ -1,4 +1,5 @@
 import LonelyRunner.PivotResidues
+import Mathlib.Algebra.Order.Floor.Div
 
 /-!
 # A sufficient criterion at the fastest pivot
@@ -129,6 +130,74 @@ theorem exists_fastestPivotCertificate_of_extremal_band
   have hdist := pivot_le_cyclicResidueDistance_mul_of_band
     hN (hpos fastest) hlower hupp
   exact (Nat.not_lt_of_ge hdist) (mem_pivotBadResidues.mp hbad).2
+
+/-- Every nonmultiple in the exact natural ceiling/floor interval gives the
+fastest-pivot certificate supplied by the extremal-band theorem.  The lower
+and upper endpoints are closed. -/
+theorem exists_fastestPivotCertificate_of_mem_extremal_interval
+    {n N upper r : Nat} (speeds : Fin n → Nat)
+    (slowest fastest : Fin n) (hN : 2 ≤ N)
+    (hpos : ∀ i, 0 < speeds i) (hupperPos : 0 < upper)
+    (hslowest : ∀ i, i ≠ fastest → speeds slowest ≤ speeds i)
+    (hupper : ∀ i, i ≠ fastest → speeds i ≤ upper)
+    (hrLower : speeds fastest ⌈/⌉ speeds slowest ≤ r)
+    (hrUpper : r ≤ ((N - 1) * speeds fastest) / upper)
+    (hrNotDvd : ¬ N ∣ r) :
+    ∃ q : Nat,
+      q ∈ pivotCandidates N (speeds fastest) ∧
+        ∀ i, i ≠ fastest →
+          q ∉ pivotBadResidues N (speeds fastest) (speeds i) := by
+  apply exists_fastestPivotCertificate_of_extremal_band
+    speeds slowest fastest hN hpos hupperPos hslowest hupper
+  · have h := (ceilDiv_le_iff_le_mul (hpos slowest)).mp hrLower
+    simpa [Nat.mul_comm] using h
+  · exact (Nat.le_div_iff_mul_le hupperPos).mp hrUpper
+  · exact hrNotDvd
+
+/-- If the fastest pivot has no certificate, its exact ceiling/floor interval
+is either empty or a singleton consisting of a multiple of `N`. -/
+theorem extremal_interval_compression_of_no_fastestPivotCertificate
+    {n N upper : Nat} (speeds : Fin n → Nat)
+    (slowest fastest : Fin n) (hN : 2 ≤ N)
+    (hpos : ∀ i, 0 < speeds i) (hupperPos : 0 < upper)
+    (hslowest : ∀ i, i ≠ fastest → speeds slowest ≤ speeds i)
+    (hupper : ∀ i, i ≠ fastest → speeds i ≤ upper)
+    (hfail : ¬ ∃ r : Nat,
+      r ∈ pivotCandidates N (speeds fastest) ∧
+        ∀ i, i ≠ fastest →
+          r ∉ pivotBadResidues N (speeds fastest) (speeds i)) :
+    let L := speeds fastest ⌈/⌉ speeds slowest
+    let U := ((N - 1) * speeds fastest) / upper
+    U < L ∨ (U = L ∧ N ∣ L) := by
+  dsimp only
+  let L := speeds fastest ⌈/⌉ speeds slowest
+  let U := ((N - 1) * speeds fastest) / upper
+  by_cases hUL : U < L
+  · exact Or.inl hUL
+  have hLU : L ≤ U := Nat.le_of_not_gt hUL
+  by_cases hEq : U = L
+  · refine Or.inr ⟨hEq, ?_⟩
+    by_contra hnotDvd
+    exact hfail (exists_fastestPivotCertificate_of_mem_extremal_interval
+      speeds slowest fastest hN hpos hupperPos hslowest hupper
+      (r := L) (by simp [L]) (by simpa [U] using hLU) hnotDvd)
+  have hLt : L < U := by omega
+  by_cases hdiv : N ∣ L
+  · have hnotSucc : ¬ N ∣ L + 1 := by
+      intro hsucc
+      have hNOne : N ∣ 1 := (Nat.dvd_add_iff_left hdiv).mpr (by
+        simpa [Nat.add_comm] using hsucc)
+      have hNleOne : N ≤ 1 := Nat.le_of_dvd (by decide) hNOne
+      omega
+    exfalso
+    exact hfail (exists_fastestPivotCertificate_of_mem_extremal_interval
+      speeds slowest fastest hN hpos hupperPos hslowest hupper
+      (r := L + 1) (by simp [L])
+      (by simpa [U] using (show L + 1 ≤ U by omega)) hnotSucc)
+  · exfalso
+    exact hfail (exists_fastestPivotCertificate_of_mem_extremal_interval
+      speeds slowest fastest hN hpos hupperPos hslowest hupper
+      (r := L) (by simp [L]) (by simpa [U] using hLU) hdiv)
 
 /-- Normalization regression for `N=4`, fastest speed `10`, and speed `4`.
 The pivot time is `3 / (4*10)`, not `3 / 10`; the resulting phase is `3/10`

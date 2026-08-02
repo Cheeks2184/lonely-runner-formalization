@@ -102,8 +102,15 @@ core is now also `proved-lean` as
 `exists_fastestPivotCertificate_of_extremal_band`; the first draft exposed a
 strict/non-strict `.trans` elaboration error, and the repaired
 `lt_of_le_of_lt` source compiled in an isolated ext4 target with only standard
-axioms. The separate ceiling/floor failure dichotomy remains `proved-math` and
-has not yet been formalized.
+axioms. `exists_fastestPivotCertificate_of_mem_extremal_interval` formally
+converts the closed bounds `L<=r<=U` to the two extremal product inequalities,
+with positivity hypotheses guarding both natural divisions.
+`extremal_interval_compression_of_no_fastestPivotCertificate` then proves the
+exact empty-or-divisible-singleton dichotomy. If `L<U`, it uses `L` when that
+integer is not divisible by `N`, and otherwise uses `L+1`; divisibility of both
+would force `N|1`, contradicting `N>=2`. Both declarations passed standalone
+compilation, a 1,843-job ext4 target build, and the required trust probes.
+The authoritative full-project replay for these two declarations is pending.
 
 The remaining obstruction is global: the compressed alternatives constrain
 only the multiplicative range of the lower speeds. They do not control their
@@ -205,7 +212,8 @@ grids. No such replacement is supplied by Response 49.
 
 - B1 closed-band certificate: `proved-lean`; authoritative clean integration
   replay passed.
-- B1 ceiling/floor failure dichotomy: `proved-math`.
+- B1 ceiling/floor failure dichotomy: `proved-lean`; standalone, ext4 target,
+  and trust checks passed, with the authoritative full replay pending.
 - B2 common-time identity and exact slice count: `proved-math`.
 - B2 strict union criterion: `proved-math`, sufficient only.
 - Response 49 Lean attachment: rejected as formal evidence.

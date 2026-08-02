@@ -1086,3 +1086,43 @@ OK
 
 All exact artifact hashes and certificate outputs matched. No unrestricted
 LRC or unrestricted top-two claim follows from this replay.
+
+## 2026-08-02: fastest-pivot ceiling/floor interval verification
+
+`FastestPivot.lean` now includes
+`exists_fastestPivotCertificate_of_mem_extremal_interval` and
+`extremal_interval_compression_of_no_fastestPivotCertificate`. The first uses
+the exact natural bounds
+
+```text
+L = speeds fastest ⌈/⌉ speeds slowest
+U = ((N-1) * speeds fastest) / upper
+```
+
+and proves that every `r` with `L<=r<=U` and `N∤r` is a fastest-pivot
+certificate. Positivity of the selected lower speed and the explicit
+`0<upper` hypothesis guard both divisions. The second theorem proves that
+failure of every fastest-pivot certificate forces exactly
+`U<L` or `U=L ∧ N|L`. All safe-band endpoints remain closed; the underlying
+bad-residue predicate remains strict.
+
+The exact authoritative source compiled standalone against the ext4
+dependency environment in 6.8 seconds. After transplanting that exact source
+into the isolated ext4 verification checkout, the target command
+
+```text
+lake -Kjobs=2 build LonelyRunner.FastestPivot
+```
+
+completed successfully in 13.11 seconds:
+
+```text
+Build completed successfully (1843 jobs).
+```
+
+The expanded axiom and required-probe audit accepted 256 theorem reports.
+Both new declarations report only `propext`, `Classical.choice`, and
+`Quot.sound`; the forbidden-source scan also passed. The authoritative clean
+full-project build and regression replay containing these two declarations
+remain pending. This interval restriction does not prove that either top
+pivot always succeeds and does not prove unrestricted LRC.
