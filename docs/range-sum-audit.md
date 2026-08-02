@@ -192,9 +192,10 @@ optimized additive: pivot 5, bound 41 < 45,
   costs (8,7,8,4,4,4,6,0).
 ```
 
-Therefore `RANGE-SUM-STAR`, `DISPERSION-STAR`, and (on the latter two tuples)
-`ANCHOR-STAR` are rejected only as uniform sufficient premises.  The exact
-three-anchor and optimized additive assertions remain open.
+Therefore the first two tuples reject `RANGE-SUM-STAR` and `DISPERSION-STAR`,
+and the second also rejects `ANCHOR-STAR`, only as uniform sufficient
+premises.  The exact three-anchor and optimized additive assertions remain
+open.
 
 The strongest strict failure found in this audit is
 

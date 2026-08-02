@@ -453,6 +453,17 @@ layer-cake cuts and their exact internal-`L1` energy identity remain
 paper-level obligations, so Lean does not yet assert the unconditional
 range-sum profile theorem.
 
+The exact fixed-row debt algebra is separately kernel-checked in
+`ResidualVariationDebt.lean`. The declaration
+`fixedRow_pairDeficit_add_binary_eq_neg_debt` proves the pointwise polynomial
+identity after clearing denominators; its finite-sum version and
+`fixedRowCellLoss_nonneg` handle aggregation and the compression loss.
+`fixedRow_debt_loss_decomposition` exposes, rather than assumes away, the two
+application hypotheses identifying the pair numerator and reindexing exact
+cell dispersion by point multiplicity. Proving those hypotheses for the
+concrete modular cells, then splitting the polynomial sum into uncovered and
+restricted debt terms, remains a formal proof obligation.
+
 The first-anchor-averaged pair term also has an exact multiplicity formula:
 uncovered candidate residues contribute positively, while points belonging to
 an intermediate number of bad sets contribute an explicit cubic deficit.

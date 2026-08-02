@@ -96,7 +96,10 @@ stress certificate strict, but the same nine-speed tuple strictly refutes its
 that tuple (`133 < 135`), as does an optimized additive order (`285 < 315`).
 Independent audits reject two tempting simplifications: first/second profile
 moments fail on an exact all-pivot tuple, and deletion is not monotone for a
-fixed pivot-anchor row.
+fixed pivot-anchor row. The new denominator-free debt polynomial, its finite
+sum, nonnegative cell loss, and an abstract debt/loss decomposition with
+explicit pair/reindexing hypotheses are kernel-checked in
+`ResidualVariationDebt.lean`; the concrete modular reindexing remains open.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
