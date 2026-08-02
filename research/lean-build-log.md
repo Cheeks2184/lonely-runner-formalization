@@ -194,3 +194,29 @@ of `sorry`, `admit`, custom `axiom`, explicit `opaque`, `unsafe`, `extern`,
 `implemented_by`, `partial_fixpoint`, or disabled `set_option`; the only text
 match was the explanatory phrase "project-specific axiom" in the audit file's
 module comment.
+
+## 2026-08-01: pivot target fibers and rejected GCD-clock uniformity
+
+The Linux-native clean checkout was fast-forwarded to commit `06b0358` and
+verified from
+`/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`. The root build
+reported:
+
+```text
+Build completed successfully (3520 jobs).
+```
+
+`lake env lean LonelyRunner/AxiomAudit.lean` included the strict pivot-target
+decomposition, transferred natural simultaneous-congruence count, and exact
+pair-overlap sum. Every probe again reported only
+`[propext, Classical.choice, Quot.sound]`. An independent adversarial audit
+also compiled the module at `--trust=0`, checked the principal identities
+exhaustively in small boxes, and found no endpoint, canonical-target, or
+multiplication-order gap.
+
+All 49 exact Python regressions passed. The new regression independently
+recomputed all nine negative GCD-clock margins for
+`(8,15,35,40,48,56,63,75,78)`, its strict additive pivot-8 certificate, and
+the explicit `t=13/80` circle distances. A project-source scan found no
+`sorry`, `admit`, `unsafe`, or custom `axiom`; the clean checkout status was
+empty after verification.

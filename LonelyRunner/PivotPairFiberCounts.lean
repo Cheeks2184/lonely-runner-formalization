@@ -154,6 +154,234 @@ theorem mem_pivotPairTargetFiber_iff_modEq
     · change (c * r) % (N * pivot) = y % (N * pivot) at hc
       simpa [Nat.mul_comm, Nat.mod_eq_of_lt hy] using hc
 
+/-- The candidate target fiber is the non-`N`-divisible part of the raw
+simultaneous-congruence fiber.  The target bounds are essential: raw
+congruences interpret arbitrary targets modulo `N * pivot`, whereas exact
+target fibers use canonical representatives. -/
+theorem pivotPairTargetFiber_eq_filter_not_dvd
+    (N pivot b c x y : ℕ) (hN : 0 < N) (hpivot : 0 < pivot)
+    (hx : x < N * pivot) (hy : y < N * pivot) :
+    pivotPairTargetFiber N pivot b c x y =
+      (simultaneousCongruenceNatResidues (N * pivot) b c x y).filter
+        fun r => ¬N ∣ r := by
+  have hM : 0 < N * pivot := Nat.mul_pos hN hpivot
+  ext r
+  rw [mem_pivotPairTargetFiber_iff_modEq hM hx hy]
+  simp only [Finset.mem_filter, mem_simultaneousCongruenceNatResidues]
+  tauto
+
+/-- The `N`-divisible part complementary to the candidate target fiber. -/
+def divisibleSimultaneousCongruenceNatResidues
+    (N pivot b c x y : ℕ) : Finset ℕ :=
+  (simultaneousCongruenceNatResidues (N * pivot) b c x y).filter
+    fun r => N ∣ r
+
+theorem mem_divisibleSimultaneousCongruenceNatResidues
+    {N pivot b c x y r : ℕ} :
+    r ∈ divisibleSimultaneousCongruenceNatResidues N pivot b c x y ↔
+      r < N * pivot ∧ N ∣ r ∧
+        Nat.ModEq (N * pivot) (b * r) x ∧
+        Nat.ModEq (N * pivot) (c * r) y := by
+  simp only [divisibleSimultaneousCongruenceNatResidues,
+    Finset.mem_filter, mem_simultaneousCongruenceNatResidues]
+  tauto
+
+/-- Scaling by `N` carries a smaller-modulus solution to precisely an
+`N`-divisible solution at modulus `N * pivot`. -/
+theorem mul_mem_divisibleSimultaneousCongruenceNatResidues_iff
+    (N pivot b c x y q : ℕ) (hN : 0 < N)
+    (hxDvd : N ∣ x) (hyDvd : N ∣ y) :
+    N * q ∈ divisibleSimultaneousCongruenceNatResidues
+        N pivot b c x y ↔
+      q ∈ simultaneousCongruenceNatResidues
+        pivot b c (x / N) (y / N) := by
+  rw [mem_divisibleSimultaneousCongruenceNatResidues,
+    mem_simultaneousCongruenceNatResidues]
+  have hxScale : N * (x / N) = x := Nat.mul_div_cancel' hxDvd
+  have hyScale : N * (y / N) = y := Nat.mul_div_cancel' hyDvd
+  constructor
+  · rintro ⟨hq, -, hb, hc⟩
+    refine ⟨(Nat.mul_lt_mul_left hN).mp hq, ?_, ?_⟩
+    · apply Nat.ModEq.mul_left_cancel' hN.ne'
+      simpa [Nat.mul_assoc, Nat.mul_left_comm, Nat.mul_comm,
+        hxScale] using hb
+    · apply Nat.ModEq.mul_left_cancel' hN.ne'
+      simpa [Nat.mul_assoc, Nat.mul_left_comm, Nat.mul_comm,
+        hyScale] using hc
+  · rintro ⟨hq, hb, hc⟩
+    refine ⟨(Nat.mul_lt_mul_left hN).mpr hq, dvd_mul_right N q, ?_, ?_⟩
+    · simpa [Nat.mul_assoc, Nat.mul_left_comm, Nat.mul_comm,
+        hxScale] using hb.mul_left' N
+    · simpa [Nat.mul_assoc, Nat.mul_left_comm, Nat.mul_comm,
+        hyScale] using hc.mul_left' N
+
+/-- Explicit image form of the bijection `q ↦ N * q`. -/
+theorem divisibleSimultaneousCongruenceNatResidues_eq_image
+    (N pivot b c x y : ℕ) (hN : 0 < N)
+    (hxDvd : N ∣ x) (hyDvd : N ∣ y) :
+    divisibleSimultaneousCongruenceNatResidues N pivot b c x y =
+      (simultaneousCongruenceNatResidues
+        pivot b c (x / N) (y / N)).image fun q => N * q := by
+  classical
+  ext r
+  simp only [Finset.mem_image]
+  constructor
+  · intro hr
+    have hrDvd :=
+      (mem_divisibleSimultaneousCongruenceNatResidues.mp hr).2.1
+    have hrScale : N * (r / N) = r := Nat.mul_div_cancel' hrDvd
+    refine ⟨r / N, ?_, hrScale⟩
+    rw [← mul_mem_divisibleSimultaneousCongruenceNatResidues_iff
+      N pivot b c x y (r / N) hN hxDvd hyDvd]
+    simpa [hrScale] using hr
+  · rintro ⟨q, hq, rfl⟩
+    exact (mul_mem_divisibleSimultaneousCongruenceNatResidues_iff
+      N pivot b c x y q hN hxDvd hyDvd).2 hq
+
+theorem card_divisibleSimultaneousCongruenceNatResidues
+    (N pivot b c x y : ℕ) (hN : 0 < N)
+    (hxDvd : N ∣ x) (hyDvd : N ∣ y) :
+    (divisibleSimultaneousCongruenceNatResidues
+      N pivot b c x y).card =
+      (simultaneousCongruenceNatResidues
+        pivot b c (x / N) (y / N)).card := by
+  classical
+  rw [divisibleSimultaneousCongruenceNatResidues_eq_image
+    N pivot b c x y hN hxDvd hyDvd]
+  apply Finset.card_image_iff.mpr
+  intro q hq r hr hqr
+  exact Nat.mul_left_cancel hN hqr
+
+theorem dvd_left_target_of_mem_divisibleSimultaneousCongruenceNatResidues
+    {N pivot b c x y r : ℕ}
+    (hr : r ∈ divisibleSimultaneousCongruenceNatResidues
+      N pivot b c x y) :
+    N ∣ x := by
+  have hrData := mem_divisibleSimultaneousCongruenceNatResidues.mp hr
+  have hrDvd : N ∣ r := hrData.2.1
+  have hbrDvd : N ∣ b * r := dvd_mul_of_dvd_right hrDvd b
+  have hbMod : Nat.ModEq N (b * r) x :=
+    hrData.2.2.1.of_dvd (dvd_mul_right N pivot)
+  exact Nat.modEq_zero_iff_dvd.mp
+    ((hbrDvd.zero_modEq_nat.trans hbMod).symm)
+
+theorem dvd_right_target_of_mem_divisibleSimultaneousCongruenceNatResidues
+    {N pivot b c x y r : ℕ}
+    (hr : r ∈ divisibleSimultaneousCongruenceNatResidues
+      N pivot b c x y) :
+    N ∣ y := by
+  have hrData := mem_divisibleSimultaneousCongruenceNatResidues.mp hr
+  have hrDvd : N ∣ r := hrData.2.1
+  have hcrDvd : N ∣ c * r := dvd_mul_of_dvd_right hrDvd c
+  have hcMod : Nat.ModEq N (c * r) y :=
+    hrData.2.2.2.of_dvd (dvd_mul_right N pivot)
+  exact Nat.modEq_zero_iff_dvd.mp
+    ((hcrDvd.zero_modEq_nat.trans hcMod).symm)
+
+/-- Exact count of the divisible part.  It vanishes unless both targets are
+divisible by `N`; otherwise the explicit scaling bijection gives the
+smaller-modulus count. -/
+theorem card_divisibleSimultaneousCongruenceNatResidues_if
+    (N pivot b c x y : ℕ) (hN : 0 < N) :
+    (divisibleSimultaneousCongruenceNatResidues
+      N pivot b c x y).card =
+      if N ∣ x ∧ N ∣ y then
+        (simultaneousCongruenceNatResidues
+          pivot b c (x / N) (y / N)).card
+      else 0 := by
+  classical
+  by_cases hx : N ∣ x
+  · by_cases hy : N ∣ y
+    · rw [if_pos ⟨hx, hy⟩]
+      exact card_divisibleSimultaneousCongruenceNatResidues
+        N pivot b c x y hN hx hy
+    · rw [if_neg (fun h => hy h.2)]
+      apply Finset.card_eq_zero.mpr
+      rw [Finset.eq_empty_iff_forall_notMem]
+      intro r hr
+      exact hy
+        (dvd_right_target_of_mem_divisibleSimultaneousCongruenceNatResidues hr)
+  · rw [if_neg (fun h => hx h.1)]
+    apply Finset.card_eq_zero.mpr
+    rw [Finset.eq_empty_iff_forall_notMem]
+    intro r hr
+    exact hx
+      (dvd_left_target_of_mem_divisibleSimultaneousCongruenceNatResidues hr)
+
+/-- Candidate count equals the raw modulus-`N * pivot` count minus its
+`N`-divisible part. -/
+theorem candidateSimultaneousCongruenceCount_eq_raw_sub_divisible
+    (N pivot b c x y : ℕ) (hN : 0 < N) (hpivot : 0 < pivot)
+    (hx : x < N * pivot) (hy : y < N * pivot) :
+    candidateSimultaneousCongruenceCount N pivot b c x y =
+      (simultaneousCongruenceNatResidues (N * pivot) b c x y).card -
+        (divisibleSimultaneousCongruenceNatResidues
+          N pivot b c x y).card := by
+  rw [candidateSimultaneousCongruenceCount,
+    pivotPairTargetFiber_eq_filter_not_dvd
+      N pivot b c x y hN hpivot hx hy]
+  have hsplit := Finset.card_filter_add_card_filter_not
+    (s := simultaneousCongruenceNatResidues (N * pivot) b c x y)
+    (p := fun r => N ∣ r)
+  change
+    ((simultaneousCongruenceNatResidues (N * pivot) b c x y).filter
+      fun r => N ∣ r).card +
+      ((simultaneousCongruenceNatResidues (N * pivot) b c x y).filter
+        fun r => ¬N ∣ r).card =
+      (simultaneousCongruenceNatResidues (N * pivot) b c x y).card at hsplit
+  change
+    ((simultaneousCongruenceNatResidues (N * pivot) b c x y).filter
+      fun r => ¬N ∣ r).card =
+      (simultaneousCongruenceNatResidues (N * pivot) b c x y).card -
+        ((simultaneousCongruenceNatResidues (N * pivot) b c x y).filter
+          fun r => N ∣ r).card
+  omega
+
+/-- Candidate count as the raw count minus the conditional smaller-modulus
+count supplied by the scaling bijection. -/
+theorem candidateSimultaneousCongruenceCount_eq_raw_sub_if
+    (N pivot b c x y : ℕ) (hN : 0 < N) (hpivot : 0 < pivot)
+    (hx : x < N * pivot) (hy : y < N * pivot) :
+    candidateSimultaneousCongruenceCount N pivot b c x y =
+      (simultaneousCongruenceNatResidues (N * pivot) b c x y).card -
+        if N ∣ x ∧ N ∣ y then
+          (simultaneousCongruenceNatResidues
+            pivot b c (x / N) (y / N)).card
+        else 0 := by
+  rw [candidateSimultaneousCongruenceCount_eq_raw_sub_divisible
+    N pivot b c x y hN hpivot hx hy]
+  rw [card_divisibleSimultaneousCongruenceNatResidues_if
+    N pivot b c x y hN]
+
+/-- Closed arithmetic expression for one candidate pair-target count.  Each
+branch uses the exact compatibility predicate, including its strengthened
+cross modulus. -/
+def exactCandidateSimultaneousCongruenceCount
+    (N pivot b c x y : ℕ) : ℕ :=
+  (if SimultaneousCongruenceCompatible (N * pivot) b c x y then
+      (N * pivot).gcd (b.gcd c)
+    else 0) -
+    if N ∣ x ∧ N ∣ y then
+      if SimultaneousCongruenceCompatible
+          pivot b c (x / N) (y / N) then
+        pivot.gcd (b.gcd c)
+      else 0
+    else 0
+
+/-- Fully evaluated candidate pair-target count. -/
+theorem candidateSimultaneousCongruenceCount_exact
+    (N pivot b c x y : ℕ) (hN : 0 < N) (hpivot : 0 < pivot)
+    (hx : x < N * pivot) (hy : y < N * pivot) :
+    candidateSimultaneousCongruenceCount N pivot b c x y =
+      exactCandidateSimultaneousCongruenceCount N pivot b c x y := by
+  rw [candidateSimultaneousCongruenceCount_eq_raw_sub_if
+    N pivot b c x y hN hpivot hx hy]
+  rw [card_simultaneousCongruenceNatResidues_exact
+    (N * pivot) b c x y (Nat.mul_pos hN hpivot)]
+  rw [card_simultaneousCongruenceNatResidues_exact
+    pivot b c (x / N) (y / N) hpivot]
+  rfl
+
 /-- A target fiber's overlap with another pivot bad set is the sum of the
 exact candidate simultaneous-congruence counts over all strict-ball targets
 of the second speed. -/
@@ -181,24 +409,23 @@ theorem card_pivotTargetFiber_inter_pivotBadResidues
   rw [← hdecomp]
   exact card_biUnion_eq_sum_card_of_pairwise_disjoint targets pieces hdisjoint
 
-/-!
-## Remaining subtraction bridge
-
-The next arithmetic lemma should identify each candidate count with the raw
-modulus-`N * pivot` count minus its `N`-divisible part.  For positive `N` and
-`pivot`, and canonical targets `x,y < N * pivot`, the intended exact formula
-is
-
-`candidateSimultaneousCongruenceCount N pivot b c x y =`
-`  card (simultaneousCongruenceNatResidues (N * pivot) b c x y) -`
-`  if N ∣ x ∧ N ∣ y then`
-`    card (simultaneousCongruenceNatResidues pivot b c (x / N) (y / N))`
-`  else 0`.
-
-Its remaining proof obligation is the explicit bijection `q ↦ N * q`
-between the smaller-modulus fiber and the `N`-divisible part of the raw
-fiber, using `Nat.ModEq.mul_left_cancel_iff'`.  No ordering or uniformity
-claim is needed for that finite subtraction step.
--/
+/-- Exact arithmetic expansion of every summand in the target-fiber overlap.
+Membership of `x` in the strict ball supplies its canonical-target bound;
+the summation membership supplies the corresponding bound for every `y`. -/
+theorem card_pivotTargetFiber_inter_pivotBadResidues_exact
+    (N pivot b c x : ℕ) (hN : 0 < N) (hpivot : 0 < pivot)
+    (hxBall : x ∈ strictCyclicBall (N * pivot) pivot) :
+    (pivotTargetFiber N pivot b x ∩
+        pivotBadResidues N pivot c).card =
+      ∑ y ∈ strictCyclicBall (N * pivot) pivot,
+        exactCandidateSimultaneousCongruenceCount N pivot b c x y := by
+  rw [card_pivotTargetFiber_inter_pivotBadResidues
+    N pivot b c x hN hpivot]
+  apply Finset.sum_congr rfl
+  intro y hyBall
+  apply candidateSimultaneousCongruenceCount_exact
+    N pivot b c x y hN hpivot
+  · exact Finset.mem_range.mp (Finset.mem_filter.mp hxBall).1
+  · exact Finset.mem_range.mp (Finset.mem_filter.mp hyBall).1
 
 end LonelyRunner
