@@ -1468,4 +1468,109 @@ assessing optimized additive ordering, via materially different triple-
 selection, local-exchange/descent, and counterexample/minimal-obstruction
 routes. All three rejected averaging premises, random/GCD-clock averaging,
 moment closure, and deletion monotonicity were excluded. The response is
-pending.
+recorded below.
+
+## Response 32: exact three-anchor counterexample
+
+After 13 minutes, Sol Pro returned the primitive tuple
+`(10,37,45,51,54,56,61,71,91)`. For pivots in tuple order, it claimed minimum
+corrected three-anchor costs and thresholds
+
+```text
+92/90, 333/333, 407/405, 461/459, 492/486,
+504/504, 553/549, 645/639, 827/819.
+```
+
+A clean-room literal implementation then evaluated every one of the
+`9*choose(8,3)=504` triples, including the maximum over all distinguished
+anchors inside each tail-child credit, and reproduced the table exactly.
+Every minimum is non-strict; equality at pivots `37` and `56` is not a
+certificate. Direct enumeration of all one- and two-anchor sets also found no
+smaller-cardinality rescue. This rejects `3-ANCHOR-UNIF`.
+
+The logical separation again checks. At pivot `10`, an independently computed
+optimal additive value is `84<90`; one optimal order is
+`(45,56,37,51,54,61,71,91)` with insertion costs
+`(10,16,12,10,12,8,6,10)`. The direct time `t=3/100` gives distance numerators
+`(30,11,35,47,38,32,17,13,27)/100`, all at least `1/10`. Thus neither the
+optimized additive assertion nor LRC is refuted.
+
+## Prompt 33: optimized adaptive ordering frontier
+
+The independently reproduced three-anchor failure, every exact minimum, the
+surviving adaptive order, and the direct lonely time were returned to Sol Pro.
+It was asked to prove or refute optimized additive-ordering uniformity via
+materially different subset-DP/exchange, non-tautological min-cut/coverage,
+and exact-counterexample or valid minimal-descent routes. All rejected
+averaging, fixed-anchor, moment, and deletion arguments were excluded. The
+response is recorded below.
+
+## Response 33: acyclic selectors and top-parent feedback cycles
+
+After 35 minutes, Sol Pro reported neither a proof nor an all-pivot
+counterexample to optimized additive ordering. It supplied an exact structural
+reformulation. Make one token for each nonempty bad child-target fiber
+`(i,x)`, with parent weight `|F_i(x) intersect B_p|`. A selector chooses at
+most one parent per token and places the directed edge `p -> i`. Choosing an
+earlier maximum for every token maps an order to an acyclic selector of equal
+credit. Conversely, a topological order of any acyclic selector earns at
+least its weight. Thus
+
+```text
+min_order U_j = S_j - max_acyclic_selector weight.
+```
+
+The independent audit found no empty-maximum, zero-weight, tie, parallel-edge,
+orientation, or finiteness gap. All-bottom is always feasible, and feedback
+constraints must include directed two-cycles.
+
+The abstract selector/order equivalence was then formalized in Lean. The new
+module constructs exact tokenwise maximizers from an order, refines an
+acyclic rank to an injective order, proves the reverse weight inequality, and
+packages the result as achievable-threshold and universal-upper-bound
+equivalences. Concrete modular token instantiation remains open.
+
+Sol then restricted each positive token to its globally best parents. Let
+`F_top` be total top-token weight and `tau_top` the minimum weighted backward
+edge loss, first over vertex orders and then over choices among top-parent
+ties. Removing those edges proves
+
+```text
+min_order U_j <= S_j - F_top + tau_top.
+```
+
+Therefore `tau_top < F_top-(S_j-n*a_j)` is sufficient; equality gives only a
+nonstrict bound. The displayed subset recurrence in the response was
+incomplete. The corrected recurrence for nonempty `Q`, placing `i` last, is
+
+```text
+TopDP(Q) = max_{i in Q} [TopDP(Q\{i})
+  + sum_{e=(i,x), T_e intersects (Q\{i})} W_e].
+```
+
+A separate literal implementation rebuilt every residue, strict bad set,
+fiber, token weight, top-only DP, and unrestricted DP. It reproduced all
+eight claimed rows exactly. The top-parent costs versus thresholds are
+`132<144`, `657<675`, `649<675`, `64<72`, `108<120`, `10<12`,
+`736<819`, and `643<675`; the corresponding unrestricted optima are no
+larger. This does not prove `TOP-CYCLE-UNIF`.
+
+The response also derived an exact relocation identity
+
+```text
+2*F = F_infinity + sum R_k + sum s_k,
+```
+
+where submodularity makes later-parent redundancy `R_k` nonnegative and
+`s_k` is precisely the change in cost `U` when item `k` moves to the front
+(`Delta F=-s_k`). At a move-to-front local minimum of cost, `s_k>=0`, but the
+stress tuples show that dropping these slacks is too weak. Finally,
+fixed-pivot independent signed residue replacement preserves the full
+objective. The proposed global minimal descent is valid only with global
+scaling/primitive normalization stated explicitly, and simultaneous smaller
+signed representatives need not exist.
+
+The claim that the top-parent condition is *strictly* stronger was not
+established by a separating instance; only its one-way implication to
+optimized additive success is accepted. The surviving obligations are
+`TOP-CYCLE-UNIF` and the less restrictive `UNIF-06`, not LRC itself.

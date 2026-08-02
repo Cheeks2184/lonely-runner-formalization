@@ -482,5 +482,84 @@ margins for `(8,15,35,40,48,56,68,75,78)` are negative. Nonetheless, at pivot
 `15` the three anchors `(35,48,75)` have corrected two-level cost `133 < 135`,
 and at pivot `35` an optimized additive order has cost `285 < 315`. The tuple
 also has the direct lonely-runner witness `t=1/30`. Thus the audit closes the
-three averaging premises while leaving `3-ANCHOR-UNIF`, optimized additive
-ordering, the exact pivot-certificate theorem, and LRC open.
+three averaging premises without refuting any later scheme.
+
+Fixed three-anchor selection is not uniform either. For
+`(10,37,45,51,54,56,61,71,91)`, independent literal enumeration of all
+`9*choose(8,3)=504` corrected triple costs gives per-pivot minima
+
+```text
+92/90, 333/333, 407/405, 461/459, 492/486,
+504/504, 553/549, 645/639, 827/819,
+```
+
+where each fraction is minimum cost over strict threshold. Equality at pivots
+`37` and `56` is still failure because the avoidance theorem requires strict
+cost `< n*a_j`. Direct enumeration of all one- and two-anchor sets also finds
+no rescue. Abstractly, `twoLevelFiberCredit_mono_parents` and
+`boundedAnchorCost_insert_le` prove in Lean that enlarging a sound anchor set
+cannot increase its bounded cost. Instantiating these generic declarations
+with the concrete modular target-fiber data still requires the existing
+saturation/decomposition bridge. Nevertheless, at pivot `10` the adaptive full order
+`(45,56,37,51,54,61,71,91)` has insertion costs
+`(10,16,12,10,12,8,6,10)`, totaling `84 < 90`, and `t=3/100` is a direct
+lonely time. Thus `3-ANCHOR-UNIF` is rejected while optimized additive
+ordering, the exact pivot-certificate theorem, and LRC remain open.
+
+The remaining optimized additive cost has an exact graph interpretation. For
+each nonempty bad child-target fiber `(i,x)`, make a token whose possible
+parent `p` has weight `|F_i(x) intersect B_p|`. A selector chooses at most one
+parent per token. An order produces an acyclic selector by choosing a
+maximum-weight earlier parent; conversely, a topological order of any acyclic
+selector earns at least its selected weight. Therefore
+
+```text
+minimum additive order cost
+  = S_j - maximum weight of an acyclic fiber-parent selector.
+```
+
+The abstract finite equivalence is kernel-checked in
+`AcyclicFiberSelector.lean`. `exists_acyclicSelector_with_weight_eq_orderCredit`
+constructs tokenwise maximizers from an order;
+`exists_order_with_selectorWeight_le` refines an acyclic rank and realizes a
+selector in an order; and
+`exists_orderCredit_ge_iff_exists_acyclicSelectorWeight_ge` states the exact
+threshold equivalence. The modular application must still instantiate token
+owners, eligibility, and weights from the strict pivot fibers.
+
+This preserves the single-parent-per-fiber rule and is not the earlier
+tautological union/Hall relaxation. Restricting each positive token to one of
+its globally best parents gives total weight `F_top`. For a top selector, let
+`tau_top` be the least aggregate weight of backward edges over all vertex
+orders, minimized over choices among top-parent ties. Removing those edges
+and topologically ordering proves
+
+```text
+minimum additive cost <= S_j - F_top + tau_top.
+```
+
+Hence `tau_top < F_top-(S_j-n*a_j)` is sufficient; equality is not. The exact
+top-only subset recurrence must maximize over the last child `i` and add the
+weights of its tokens whose top-parent set meets the predecessor state. The
+short recurrence in Sol Response 33 omitted that outer maximum and state
+subtraction; the audit records the corrected formula. A separate literal
+implementation reproduces strict top-parent certificates on all six mandatory
+stress tuples and on both nine-speed counterexamples to earlier routes. This
+is finite evidence only. `TOP-CYCLE-UNIF` and the less restrictive optimized
+additive uniformity remain open.
+
+The companion relocation calculation is also exact. If `F` is achieved
+credit, `F_infinity` is full all-parent credit, `R_k` is nonnegative
+later-parent redundancy, and `s_k` is the cost change when item `k` moves to
+the front, then
+
+```text
+2*F = F_infinity + sum_k R_k + sum_k s_k.
+```
+
+At a move-to-front local minimum of cost, every `s_k` is nonnegative, but the
+stress rows show that discarding these slacks is too weak. Fixed-pivot signed
+residue replacement also preserves the complete additive objective. A valid
+global minimal-counterexample descent needs global scaling invariance and a
+simultaneous smaller signed representative for one coordinate across every
+other pivot modulus; such a representative need not exist.

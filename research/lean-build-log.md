@@ -274,3 +274,38 @@ no unbounded inference. A project-source scan found no `sorry`, `admit`,
 custom `axiom`, `opaque`, `unsafe`, `extern`, `implemented_by`,
 `partial_fixpoint`, `native_decide`, or disabled checks. The verification
 checkout remained clean.
+
+## 2026-08-01: residual-profile, bounded-anchor, and acyclic-selector frontier
+
+The Linux-native clean checkout was advanced through commit `12be8ff` and
+verified from
+`/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`. The root build
+reported:
+
+```text
+Build completed successfully (3528 jobs).
+```
+
+The new kernel-checked layer includes fixed-anchor strict-average selection,
+abstract cellwise dispersion algebra, pair-multiplicity and modular residue
+energy identities, a conditional range-profile cut decomposition, the
+fixed-row debt/loss polynomial decomposition, bounded-anchor cost monotonicity,
+and both directions of the finite acyclic fiber-selector/order optimization
+equivalence. `AxiomAudit.lean` covers the new declarations; every probe again
+reports only `[propext, Classical.choice, Quot.sound]`.
+
+The full exact Python suite reported:
+
+```text
+Ran 89 tests in 282.335s
+OK
+```
+
+Independent literal oracles reproduce all rows of the exact counterexamples
+to `RANGE-SUM-STAR`, `DISPERSION-STAR`, `ANCHOR-STAR`, and
+`3-ANCHOR-UNIF`; each tuple retains a later certificate or direct lonely-time
+witness. A separate implementation reconstructs the top-parent feedback-cycle
+criterion and all eight reported stress rows. A project-source scan found no
+`sorry`, `admit`, custom declaration `axiom`, `opaque`, `unsafe`, `extern`,
+`implemented_by`, `partial_fixpoint`, or `native_decide`. The clean ext4
+checkout remained clean after Lean verification.

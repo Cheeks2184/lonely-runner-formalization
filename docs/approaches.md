@@ -173,8 +173,11 @@ and the exact fixed-tuple checker. The live priorities are now:
    credit, or a counterexample to the optimized principle itself.
    A separate repaired front-loaded construction uses at most three fixed
    anchors and the Lean-checked two-level residual-subfiber credit. Exact
-   tables cover all current hard tuples, but `3-ANCHOR-UNIF` is likewise an
-   open arithmetic claim rather than an observed theorem.
+   tables cover the earlier hard tuples, but `3-ANCHOR-UNIF` is false:
+   `(10,37,45,51,54,56,61,71,91)` has minimum corrected three-anchor costs
+   at or above `n*a_j` at every pivot. One- and two-anchor sets do no better.
+   The same tuple has an adaptive full-order certificate `84 < 90`, so the
+   fixed-anchor failure does not close optimized additive ordering.
    Double averaging the second- and third-anchor gains gives the stronger
    `ANCHOR-STAR-UNIF` inequality. Its generic implication and exact values are
    independently verified, and the abstract strict-average selection theorem
@@ -192,10 +195,20 @@ and the exact fixed-tuple checker. The live priorities are now:
    point-multiplicity deficit identity. Attempts to pay that deficit using only
    first and second profile moments fail on a mandatory fixed-clock tuple, and
    fixed-row deletion is nonmonotone. The surviving bounded-depth target is
-   `3-ANCHOR-UNIF`: the counterexample has a pivot-15 triple of cost
-   `133 < 135`, even though every anchor-star average fails. Any completion
-   must select exceptional triples/orders directly or discover a different
-   state-adaptive cross-pivot principle.
+   `3-ANCHOR-UNIF`: the averaging counterexample has a pivot-15 triple of cost
+   `133 < 135`, even though every anchor-star average fails; the later exact
+   counterexample shows that exceptional triples are not uniform either. Any
+   completion of this finite-cover lane must now use genuinely adaptive full
+   orders or a different state-adaptive cross-pivot principle.
+   For the full-order objective, each bad child-target fiber can be treated as
+   a token selecting one earlier parent with its exact intersection weight.
+   Valid orders are exactly maximum-weight selectors whose parent-to-child
+   support is acyclic. Restricting tokens to globally best parents gives a
+   weighted feedback-cycle sufficient condition and the precise open premise
+   `TOP-CYCLE-UNIF`. Literal subset-DP audits certify all mandatory stress
+   tuples and both new certificate counterexamples. This restriction may fail
+   even when a second-best parent repairs a cycle, so neither it nor optimized
+   additive uniformity is proved.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform
