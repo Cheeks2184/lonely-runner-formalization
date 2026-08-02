@@ -53,7 +53,7 @@ This conclusion is definitionally the witness clause of the positive-integer
 formulation, so no separate encoding convention is hidden here. -/
 theorem smallDenominator_stationary_witness {n q : Nat}
     (speeds : Fin n -> Nat) (hq : 2 <= q) (hqN : q <= n + 1)
-    (hmiss : forall i, not (q ∣ speeds i)) :
+    (hmiss : ∀ i, ¬ q ∣ speeds i) :
     exists t : Real, forall i,
       (((n + 1 : Nat) : Real)⁻¹) <=
         ‖((t * (speeds i : Real) : Real) : UnitCircle)‖ := by
