@@ -143,13 +143,13 @@ theorem exists_coprime_in_Ico_of_complement_lt_totient
     (hphi : c - ell < c.totient) :
     ∃ q, q ∈ Finset.Ico start (start + ell) ∧ c.Coprime q := by
   by_contra hnone
-  push_neg at hnone
+  push Not at hnone
   have hsubset :
       (Finset.Ico start (start + c)).filter (c.Coprime ·) ⊆
         Finset.Ico (start + ell) (start + c) := by
     intro q hq
     have hqFull : start ≤ q ∧ q < start + c :=
-      Finset.mem_Ico.mp (Finset.mem_of_mem_filter hq)
+      Finset.mem_Ico.mp (Finset.mem_filter.mp hq).1
     have hqCoprime : c.Coprime q := (Finset.mem_filter.mp hq).2
     apply Finset.mem_Ico.mpr
     constructor
