@@ -238,12 +238,14 @@ explicit pair/reindexing hypotheses are kernel-checked in
 `ResidualVariationDebt.lean`; the concrete modular reindexing remains open.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
-The latest constructive advance is a two-hole bounded-height theorem: every
-distinct positive-integer `n`-tuple with maximum at most `n+2` has an explicit
-closed-boundary lonely time, so an integer counterexample would have maximum
-at least `n+3`. `BoundedHeight.lean` kernel-checks the modular denominator
-construction, four-case split, and finite-family two-hole extraction for the
-nontrivial range `n>=3`; earlier modules cover the smaller base cases.
+The kernel-checked two-hole bounded-height theorem gives every distinct
+positive-integer `n`-tuple of maximum at most `n+2` an explicit
+closed-boundary lonely time. Independent work strengthens the mathematical
+bound to maximum `n+4`: the `N>=12` proof is deductive and independently
+audited, while the 2,982 residual `N=4..11` configurations have an exact
+reproducible certificate. Thus an integer counterexample would have maximum
+at least `n+5`. The stronger computer-assisted theorem is not yet one Lean
+declaration; see `docs/height-n-plus-4.md`.
 Response 42 also supplies an exact Chebyshev pivot score computable from
 direct generalized-CRT moments without a known safe count or full histogram.
 Exact searches find a positive pivot score in five stated near-consecutive
@@ -328,6 +330,10 @@ disproof claim.
   fixed-order zero-indicator polynomials and its infinite fixed-order failure.
 - `docs/response42-audit.md`: exact CRT Chebyshev score, finite scan scope,
   two-hole bounded-height theorem, and the corrected minimality quantifiers.
+- `docs/height-n-plus-4.md`: independently audited four-hole/totient proof,
+  exact small-case certificate, and the improved counterexample height bound.
+- `docs/response43-audit.md`: accepted observation, repeated fixed-dimension
+  error, and the exact remaining obstruction after the third browser round.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
 - `scripts/check_integer_tuple.py`: exact-rational fixed-instance optimizer and
   deterministic certificate verifier.
@@ -388,6 +394,8 @@ disproof claim.
 - `scripts/audit_response42_cheb_stress.sh`: recompiles and reproduces the
   275,494-execution no-speed-1 and highly composite exact Chebyshev stress
   pass, including the previously omitted `n=19` box.
+- `scripts/audit_height_n_plus_4.sh`: reproduces all 2,982 small four-hole
+  certificates for the computer-assisted max-speed `n+4` theorem.
 - `scripts/analyze_consecutive_correlation_depth.py`: exact depth profiles and
   regression checks for the proved near-tautological consecutive theorem.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.

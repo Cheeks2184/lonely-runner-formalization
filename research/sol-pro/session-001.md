@@ -2229,7 +2229,7 @@ largest constructive height extension obtainable from more missing residues.
 Route C asks for a correctly quantified least-dimension, then sum-minimal,
 counterexample theorem. Exact counterexamples to proposed constructions are
 required, and no use of known safe counts, fixed/minimal-dimension interchange,
-or real-to-integer normalization is permitted. Response 43 is pending.
+or real-to-integer normalization is permitted.
 
 While Prompt 43 ran, an independent exact stress search extended Route A's
 finite evidence. It checked 275,494 targeted primitive scan executions across
@@ -2240,3 +2240,51 @@ output hash is
 `ee405227f9671f8ac3f3132c2f760dbe31d03b56cc2799f74acafe17cee82e96`.
 This covers the previously omitted `n=19` box but remains finite evidence;
 it neither proves uniform certificate positivity nor LRC.
+
+## Response 43: no bridge and a repeated quantifier error
+
+After 49 minutes 6 seconds, Sol Pro reported no proof or counterexample. It
+restated the exact Newton/CRT score, all Response 42 scans, the two-hole
+height theorem, and the divisor/descent restrictions. Its one accepted new
+calculation proves that the Chebyshev score is positive at a speed-1 pivot
+when no other speed is divisible by `N`; this class is already solved directly
+by `t=1/N`.
+
+Response 43 did not extend the height theorem or find a uniform CRT-table
+inequality. More seriously, its Section 4 again chose only a fixed-`n`
+sum-minimal counterexample and then asserted `a_n<n*a_(n-1)`. This repeats
+the invalid lower-dimensional inference explicitly rejected in Prompt 43.
+That residual theorem is rejected as stated and is valid only at a least
+counterexample dimension or under `LRC(n-1)`. No new attachments were
+provided; all three linked artifacts are the already reproduced Response 42
+files. The audit is `docs/response43-audit.md`.
+
+## Independent advance during Response 43: maximum `n+4`
+
+Parallel work extended the constructive route beyond Sol's response. For
+`N>=12`, four holes in `[1,N+3]`, an interval of candidate denominators, and
+the exact exceptional classification `phi(c)<=6` prove a reciprocal or
+inverse witness. An independent adversarial agent regenerated every
+exceptional table row and found only a minor prose omission (`72` must also
+be discarded during the `2^a*3^b` enumeration; the final list was correct).
+
+The remaining 2,982 four-hole configurations for `N=4..11` have exact
+integer certificates. Two `N=4` configurations require a three-residue
+inverse pattern. The verifier output and row-certificate hashes reproduce.
+Together with the `N=2,3` base cases, this proves the computer-assisted
+theorem that maximum speed at most `n+4` is sufficient; therefore an integer
+counterexample would have maximum at least `n+5`. The uniform large-`N`
+argument and finite certificate are accepted mathematically but not yet one
+Lean theorem. See `docs/height-n-plus-4.md`.
+
+## Prompt 44: five holes, max-pivot Chebyshev, and corrected residual class
+
+The Response 43 error and the complete independent audit were returned to the
+same signed-in GPT-5.6 Sol Pro conversation. Sol was asked first to audit the
+max-speed `n+4` theorem and then attempt the next five-hole height
+`H=N+4=n+5`, preserving `q<=bN` and closed endpoints. A second route now
+targets the logically stronger certificate statement `exists j, S_j>0`, not
+merely positivity of a global sum, and requires an exact all-pivot failure if
+no cross-pivot CRT-table inequality can be proved. The third route must use
+least counterexample dimension before sum minimality and incorporate the
+corrected `max>=n+5` restriction. Prompt 44 is generating.

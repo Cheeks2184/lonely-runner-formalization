@@ -1146,3 +1146,49 @@ dimension (or under an explicit lower-dimensional hypothesis), not from
 fixed-dimension sum minimality alone. Under that correction the height, lcm,
 divisor-cover, and signed-descent conditions remain compatible. No complete
 proof or disproof follows from this section.
+
+## 31. Four holes improve the height bound
+
+Put `N=n+1` and `H=N+3=n+4`. An `(N-1)`-element speed set in `[1,H]` has
+four holes, and at least one hole `c` lies at most `N`. If `2c>H`, `t=1/c`
+works because no selected speed is divisible by `c`.
+
+Assume `2c<=H` and `N>=12`. The interval
+
+```text
+I=[N+c+4,2N]
+```
+
+has `L=N-c-3` elements. Every `q in I` has `q>H`, `q-c>H`, and `q<=2N`.
+Thus any `q` coprime to `c` makes the inverse of `c` a two-hole witness. If
+`L>=c`, the interval contains a complete residue system. Otherwise its
+residue complement has size
+
+```text
+c-L=2c-N+3<=6.
+```
+
+Consequently `phi(c)>6` forces a unit in the interval. The exact exceptions
+are `{1,2,3,4,5,6,7,8,9,10,12,14,18}`; a short explicit `(N,q)` table
+handles their residual ranges. Independent review regenerated the
+classification, every table row, and all eligible pairs through `N=1000`.
+
+For `N=4,...,11`, an exact certificate enumerates all 2,982 four-hole sets
+and verifies reciprocal, two-residue, or three-residue inverse witnesses by
+the integer inequality `N*rho_q(r*a)>=q`. Together with the elementary
+`N=2` case and the kernel-checked two-moving-runner theorem at `N=3`, this
+proves the computer-assisted structured result
+
+```text
+max_i a_i <= n+4  implies a lonely time exists.
+```
+
+Hence an integer counterexample would have maximum at least `n+5`. The exact
+finite certificate is `verify_height_n_plus_4.py`; the full proof and audit
+are in `docs/height-n-plus-4.md`. The large-`N` theorem and small certificate
+have not yet been combined into one Lean declaration, so this section is not
+claimed `proved-lean`. The declaration
+`boundedHeightThree_stationary_witness_of_selector` checks the entire
+large-`N` runner bridge under the explicit arithmetic proposition
+`HeightThreeCoprimeSelector`; discharging that selector is the remaining Lean
+obligation for the uniform branch.

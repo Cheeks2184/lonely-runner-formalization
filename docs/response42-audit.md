@@ -160,7 +160,8 @@ Its eight data lines have SHA-256
 ## Remaining obstruction
 
 No arithmetic inequality is known that forces one Chebyshev pivot score to
-be positive for every tuple. The constructive height theorem covers only
-maximum `n+2`; extending it requires controlling more than two holes. The
-corrected least-dimension restrictions do not presently conflict. These are
-the three live routes returned to Sol Pro in Prompt 43.
+be positive for every tuple. Response 42 itself covers maximum `n+2`; later
+independent work extends the computer-assisted bound to `n+4` by controlling
+four holes. The corrected least-dimension restrictions do not presently
+conflict. See `docs/height-n-plus-4.md` and `docs/response43-audit.md` for the
+subsequent status.

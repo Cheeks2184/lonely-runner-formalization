@@ -437,6 +437,17 @@ height restriction `max>=n+3` on any integer counterexample. Extending the
 construction to more than two holes is a live route. See
 `docs/response42-audit.md`.
 
+That live route now yields a stronger partial theorem. With four holes in
+`[1,N+3]`, choose one `c<=N`. Either `1/c` works, or the interval
+`[N+c+4,2N]` contains a number coprime to `c`. The only obstruction to the
+simple residue-count proof is `phi(c)<=6`; the complete exceptional list and
+a finite `(N,q)` table close every `N>=12` case. An exact 2,982-case
+certificate closes `N=4..11`, using a three-residue inverse witness in two
+small configurations. Therefore maximum `n+4` is sufficient and a
+positive-integer counterexample would have maximum at least `n+5`. The
+computer-assisted small range is not yet Lean-formalized; see
+`docs/height-n-plus-4.md`.
+
 The fourth Sol Pro round produced two valid but limited structured-class
 lemmas. The fifth produced exact modular certificates and a bounded dataset,
 then retracted an incorrect claim that the simple union bound subsumed the

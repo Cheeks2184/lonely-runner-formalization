@@ -288,4 +288,13 @@ invalid interchange of dimensions. The conclusion is retained only after
 choosing a least counterexample dimension, or by explicitly assuming LRC in
 dimension `n-1`. The corrected restriction is compatible with divisor cover,
 the height bound, and signed-descent irreducibility, so it does not currently
-yield a contradiction.
+yield a contradiction. Response 43 repeated the same fixed-dimension claim
+after receiving this objection; its residual-class theorem is rejected for
+the same reason.
+
+The direct two-residue hole construction also stops being complete at the
+next height. At `N=4`, speeds `(3,4,7)` leave holes `(1,2,5,6)` in `[1,7]`.
+No reciprocal or `C_2` inverse witness exists, but the `C_3` witness `t=1/10`
+has scaled residues `(12,16,12)>=10`. This rejects only the restricted
+two-residue construction. The stronger max-speed `n+4` theorem survives by
+allowing `C_3` in two small cases.

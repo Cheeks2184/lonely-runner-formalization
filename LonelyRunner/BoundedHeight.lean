@@ -386,4 +386,95 @@ theorem boundedHeight_stationary_witness {n : Nat} (speeds : Fin n → Nat)
       speeds hN hyBounds.1 hyx (by omega) hpos hbound hyMissing hxMissing
     exact ⟨t, fun i => by simpa [circleNorm] using ht i⟩
 
+/-- Arithmetic selector needed by the height-`N+3` argument.  The hypotheses
+are deliberately explicit so the finite totient classification can be
+audited independently of the Lonely Runner bridge. -/
+def HeightThreeCoprimeSelector : Prop :=
+  ∀ N c : Nat, 12 ≤ N → 0 < c → c ≤ N → 2 * c ≤ N + 3 →
+    ∃ q, N + c + 4 ≤ q ∧ q ≤ 2 * N ∧ c.Coprime q
+
+/-- An injective family of `N-1` naturals misses at least one positive height
+at most `N`.  This cardinality lemma is independent of all speed bounds. -/
+theorem exists_missing_height_le {N : Nat} (speeds : Fin (N - 1) → Nat)
+    (hinj : Function.Injective speeds) :
+    ∃ c, 0 < c ∧ c ≤ N ∧ ∀ i, speeds i ≠ c := by
+  classical
+  let S : Finset Nat := Finset.univ.image speeds
+  let U : Finset Nat := Finset.Icc 1 N
+  have hcardS : S.card = N - 1 := by
+    dsimp [S]
+    rw [Finset.card_image_iff.mpr]
+    · simp
+    · intro i _ j _ hij
+      exact hinj hij
+  have hcardU : U.card = N := by
+    dsimp [U]
+    rw [Nat.card_Icc]
+    omega
+  have hcardlt : S.card < U.card := by rw [hcardS, hcardU]; omega
+  obtain ⟨c, hcU, hcNot⟩ :=
+    Finset.exists_mem_not_mem_of_card_lt_card hcardlt
+  have hcmem : c ∈ Finset.Icc 1 N := by simpa [U] using hcU
+  have hcIcc := Finset.mem_Icc.mp hcmem
+  refine ⟨c, by omega, by omega, ?_⟩
+  intro i heq
+  apply hcNot
+  exact Finset.mem_image.mpr ⟨i, Finset.mem_univ i, heq⟩
+
+/-- Conditional height-`N+3` theorem.  All geometric and finite-family work
+is discharged here; the sole remaining input is the explicit coprime-modulus
+selector `HeightThreeCoprimeSelector`. -/
+theorem boundedHeightThree_circleNorm_witness_of_selector
+    (hselector : HeightThreeCoprimeSelector) {N : Nat}
+    (hN : 12 ≤ N) (speeds : Fin (N - 1) → Nat)
+    (hpos : ∀ i, 0 < speeds i) (hinj : Function.Injective speeds)
+    (hbound : ∀ i, speeds i ≤ N + 3) :
+    ∃ t : Real, ∀ i,
+      (N : Real)⁻¹ ≤ circleNorm (t * (speeds i : Real)) := by
+  obtain ⟨c, hc, hcN, hcMissing⟩ := exists_missing_height_le speeds hinj
+  have hNpos : 0 < N := by omega
+  by_cases hcLarge : N + 3 < 2 * c
+  · apply smallDenominator_family_witness speeds hNpos hc hcN
+    intro i hdiv
+    rcases hdiv with ⟨k, hk⟩
+    have hkpos : 0 < k := by
+      by_contra hk0
+      have : k = 0 := by omega
+      subst k
+      simp at hk
+      exact (Nat.ne_of_gt (hpos i)) hk
+    have hkle : k = 1 := by
+      by_contra hk1
+      have hk2 : 2 ≤ k := by omega
+      have hmul := Nat.mul_le_mul_left c hk2
+      have hb := hbound i
+      omega
+    subst k
+    apply hcMissing i
+    simpa using hk
+  · have hcSmall : 2 * c ≤ N + 3 := by omega
+    obtain ⟨q, hqLower, hqUpper, hcoprime⟩ :=
+      hselector N c hN hc hcN hcSmall
+    apply twoHoleDenominator_family_witness speeds hNpos hc
+      (q := q) (by omega) (by omega) hqUpper hcoprime hpos
+    · intro i
+      have hb := hbound i
+      omega
+    · exact hcMissing
+    · intro i heq
+      have hb := hbound i
+      omega
+
+/-- Unit-circle-norm form of the conditional height-`N+3` theorem. -/
+theorem boundedHeightThree_stationary_witness_of_selector
+    (hselector : HeightThreeCoprimeSelector) {N : Nat}
+    (hN : 12 ≤ N) (speeds : Fin (N - 1) → Nat)
+    (hpos : ∀ i, 0 < speeds i) (hinj : Function.Injective speeds)
+    (hbound : ∀ i, speeds i ≤ N + 3) :
+    ∃ t : Real, ∀ i,
+      (N : Real)⁻¹ ≤ ‖((t * (speeds i : Real) : Real) : UnitCircle)‖ := by
+  obtain ⟨t, ht⟩ := boundedHeightThree_circleNorm_witness_of_selector
+    hselector hN speeds hpos hinj hbound
+  exact ⟨t, fun i => by simpa [circleNorm] using ht i⟩
+
 end LonelyRunner

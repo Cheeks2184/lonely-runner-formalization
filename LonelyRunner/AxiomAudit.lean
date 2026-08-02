@@ -132,6 +132,8 @@ project-specific axiom.
 #print axioms LonelyRunner.twoHoleDenominator_family_witness
 #print axioms LonelyRunner.boundedHeight_family_witness_of_two_holes
 #print axioms LonelyRunner.boundedHeight_stationary_witness
+#print axioms LonelyRunner.exists_missing_height_le
+#print axioms LonelyRunner.boundedHeightThree_stationary_witness_of_selector
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
 #print axioms LonelyRunner.top_signed_forces_sum

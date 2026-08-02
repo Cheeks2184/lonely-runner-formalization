@@ -1,0 +1,10 @@
+N=4 cases=35 types={'R': 26, 'C2': 7, 'C3': 2}
+N=5 cases=70 types={'C2': 16, 'R': 54}
+N=6 cases=126 types={'C2': 25, 'R': 101}
+N=7 cases=210 types={'C2': 41, 'R': 169}
+N=8 cases=330 types={'C2': 55, 'R': 275}
+N=9 cases=495 types={'C2': 85, 'R': 410}
+N=10 cases=715 types={'C2': 105, 'R': 610}
+N=11 cases=1001 types={'C2': 155, 'R': 846}
+total=2982 certificate_sha256=dda4a7f68573195efc13338f6252712352a2efd7c18ca3d8ddd38bad02e0cd96
+b2_obstruction=speeds(3, 4, 7) holes(1, 2, 5, 6) b3_witness('C3', 10, 1) scaled_residues(12, 16, 12)
