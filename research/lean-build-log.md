@@ -623,3 +623,29 @@ the 4,276-tuple mutation domain. A complete Lean source scan found no `sorry`,
 `admit`, custom `axiom`, `opaque`, `unsafe`, `extern`, `implemented_by`,
 `partial_fixpoint`, `native_decide`, or disabled checks. The clean ext4
 checkout remained empty after verification.
+
+## 2026-08-01: complete bounded-height wrapper and larger stress scan
+
+The clean warmed ext4 checkout was fast-forwarded to source commit
+`1102186`. The completed `BoundedHeight.lean` now proves the coprimality
+bridge, all four explicit-hole cases, exact two-hole extraction from the
+bounded injective family, and the final theorem
+`boundedHeight_stationary_witness`. The root verification reported:
+
+```text
+Build completed successfully (3561 jobs).
+```
+
+The explicit axiom audit also completed. The new final probes
+`boundedHeight_family_witness_of_two_holes` and
+`boundedHeight_stationary_witness` use only
+`[propext, Classical.choice, Quot.sound]`. The checkout remained clean.
+
+An independent C++ exact stress scanner was then integrated at commit
+`1807f7c`. GCC 15.2.0 with `-O3 -std=c++20` reproduced all eight canonical
+rows in 64.5 seconds through `scripts/audit_response42_cheb_stress.sh`. The
+data-row SHA-256 is
+`ee405227f9671f8ac3f3132c2f760dbe31d03b56cc2799f74acafe17cee82e96`.
+All 275,494 targeted primitive scan executions had some positive exact pivot
+score. This is bounded certificate evidence, not a uniform theorem or an LRC
+conclusion.
