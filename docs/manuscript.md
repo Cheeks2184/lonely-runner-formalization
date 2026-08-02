@@ -1312,10 +1312,15 @@ max A<=N+T_N  implies A is lonely.
 
 This gain is asymptotic to `N/(4*log_2 N)`. Exact audits cover 553,106
 arithmetic cases and all 361,220 admissible hole configurations through
-`N=60`. In Lean, `LogarithmicHeight.lean` proves the selector interface,
-`2^omega(c)<=c`, and `omega(c)<=Nat.log 2 c`. The sharp totient product,
-interval selector, missing-height extraction, and assembled theorem remain
-formal obligations, so this result is `proved-math`, not `proved-lean`.
+`N=60`. In Lean, `LogarithmicHeight.lean` proves the sharp totient product,
+both interval-selector branches, missing-height extraction, the reciprocal
+case, and the closed inverse-residue witness. The declarations
+`logarithmicHeight_family_witness`, `logarithmicHeight_stationary_witness`, and
+`logarithmicHeightGain_stationary_witness` correspond to the theorem and its
+explicit integer-gain corollary.
+`logarithmicHeightGain_positiveInteger_witness` gives the identical conclusion
+using the canonical `UnitCircle` norm. This bounded-height result is
+`proved-lean`.
 
 ## 35. The quadratic Chebyshev shortcut fails
 

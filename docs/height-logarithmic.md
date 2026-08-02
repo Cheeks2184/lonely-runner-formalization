@@ -123,12 +123,17 @@ proved by the deductive argument above.
 
 ## Formalization status
 
-`twoHoleDenominator_family_witness` in `LonelyRunner/BoundedHeight.lean`
-already kernel-checks the inverse-residue witness and the closed `q<=2N`
-endpoint. `LonelyRunner/LogarithmicHeight.lean` now additionally checks
-`2^omega(c)<=c`, `omega(c)<=Nat.log 2 c`, a transparent conditional totient
-bridge, and the selector-to-two-hole witness interface. Formalizing the full
-theorem still requires the unconditional sharp product
-`c<=(omega(c)+1)*phi(c)`, interval unit selection, missing-hole extraction,
-and final assembly. Until those declarations compile, the assembled theorem
-remains `proved-math`, not `proved-lean`.
+`LonelyRunner/LogarithmicHeight.lean` kernel-checks the full theorem. Its
+declarations prove `2^omega(c)<=c`, `omega(c)<=Nat.log 2 c`, the unconditional
+sharp product `c<=(omega(c)+1)*phi(c)`, the complete-period and short-interval
+coprime selectors, missing-height extraction, the reciprocal branch, and the
+inverse-residue branch with `q<=2N`. The declarations
+`logarithmicHeight_family_witness` and
+`logarithmicHeight_stationary_witness` expose the exact quantified theorem;
+`logarithmicHeightGain_stationary_witness` specializes it to
+`N div (4*(Nat.log 2 N+1)+1)`, while
+`logarithmicHeightGain_positiveInteger_witness` states the same result with
+exactly the `UnitCircle` norm of the positive-integer conjecture. Their axiom
+probes use only Lean's standard
+`propext`, `Classical.choice`, and `Quot.sound`. This bounded-height result is
+therefore `proved-lean`; the unrestricted conjecture remains open.

@@ -435,12 +435,12 @@ N+max(4,N div (4*(Nat.log 2 N+1)+1)),  where N=n+1,
 is sufficient. The five-hole finite core and the general arithmetic argument
 have passed independent adversarial review. They are proved mathematically
 with reproducible computation, but have not yet been combined into one Lean
-declaration. Lean now checks the inverse-residue selector interface and the
-bound `omega(c)<=Nat.log 2 c`; the sharp totient product inequality, interval
-selector, missing-height extraction, and final assembly remain open formal
-obligations. The fully assembled kernel-checked bounded-height theorem still
-reaches maximum `n+2`. None of these statements proves the unrestricted
-conjecture.
+declaration with the five-hole finite core. Independently, the full
+logarithmic theorem is now kernel-checked in Lean: it includes missing-height
+extraction, the sharp totient product, both interval-selector branches, the
+reciprocal case, and the closed `1/N` witness. The explicit formal gain is
+`N div (4*(Nat.log 2 N+1)+1)`. None of these statements proves the
+unrestricted conjecture.
 
 ## Reproducible build
 

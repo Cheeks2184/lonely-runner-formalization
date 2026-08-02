@@ -143,6 +143,9 @@ project-specific axiom.
 #print axioms LonelyRunner.twoHole_witness_of_coprime_modulus_above_height
 #print axioms LonelyRunner.logarithmicHeight_family_witness
 #print axioms LonelyRunner.logarithmicHeight_stationary_witness
+#print axioms LonelyRunner.logarithmicHeightGain_spec
+#print axioms LonelyRunner.logarithmicHeightGain_stationary_witness
+#print axioms LonelyRunner.logarithmicHeightGain_positiveInteger_witness
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
 #print axioms LonelyRunner.top_signed_forces_sum

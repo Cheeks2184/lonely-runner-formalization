@@ -521,10 +521,11 @@ c/phi(c)<=omega(c)+1<=Nat.log 2 N+1
 ```
 
 shows that `(4*(Nat.log 2 N+1)+1)*t<=N` is sufficient. This gives an
-unconditional height gain asymptotic to `N/(4*log_2 N)`. Lean checks the
-two-hole inverse bridge and `omega(c)<=Nat.log 2 c`; the sharp totient product,
-interval selector, missing-height extraction, and final assembly remain open.
-See `docs/height-n-plus-5.md` and `docs/height-logarithmic.md`.
+unconditional height gain asymptotic to `N/(4*log_2 N)`. Lean now checks the
+whole logarithmic theorem: missing-height extraction, the reciprocal branch,
+the sharp totient product, both interval-selector branches, and the closed
+inverse-residue witness. See `docs/height-n-plus-5.md` and
+`docs/height-logarithmic.md`.
 
 ## L. Quadratic Chebyshev moment test
 

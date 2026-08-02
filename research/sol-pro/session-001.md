@@ -2351,13 +2351,31 @@ the theorem
 
 with the explicit correction that the hypothesis does not force `L>=c`; it
 rules out `L<c` together with absence of a coprime denominator. Exact audits
-cover 553,106 arithmetic triples and 361,220 hole configurations. The first
-Lean decomposition now checks `2^omega(c)<=c`, `omega(c)<=Nat.log 2 c`, and
-the coprime-selector interface, while leaving the sharp totient product and
-interval selector explicit.
+cover 553,106 arithmetic triples and 361,220 hole configurations. A subsequent
+Lean pass completed the entire bounded-height theorem: the sharp totient
+product, both interval-selector branches, missing-height extraction, the
+reciprocal case, and the closed inverse-residue witness now compile in
+`logarithmicHeight_family_witness`. The explicit division gain also has a
+checked stationary wrapper.
 
 The quadratic condition was rejected exactly at `(1,3,5,6,7)`: its scaled
 five-pivot bounds are `(-14722,0,-324,-486,-972)`. Three full Chebyshev scores
 are nevertheless positive and `t=7/30` is lonely, so only the shortcut is
 rejected. This exact objection will be included when foreground submission
 becomes available.
+
+## Prompt 45 submitted in GPT-5.6 Pro
+
+On 2026-08-02 the Chrome UI became writable again through UI Automation. The
+visible response-model menu identified `5.6 Pro`; the preserved conversation
+and Prompt 44 artifacts remained intact after a safe reload. The repaired
+4,959-character prompt is archived at
+`research/sol-pro/prompts/prompt45.md`. It includes the fully compiled
+logarithmic-height theorem, the exact `(1,3,5,6,7)` quadratic failure, and
+three distinct requests: a stronger explicit height theorem, the full
+Chebyshev/CRT score, and a corrected least-dimension residual analysis.
+
+The composer readback matched all prompt characters except the trailing file
+newline, and invoking `composer-submit-button` produced the live `Cancel`
+control. Prompt 45 is therefore submitted and running; no response is claimed
+until its completed text is recovered and independently audited.

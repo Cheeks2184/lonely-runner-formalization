@@ -326,4 +326,43 @@ theorem logarithmicHeight_stationary_witness
         circleNorm (tau * (speeds i : Real)) := by
   exact logarithmicHeight_family_witness speeds rfl ht hpos hinj hbound hgrowth
 
+/-- Explicit integer gain delivered by the logarithmic bounded-height
+theorem. -/
+def logarithmicHeightGain (N : Nat) : Nat :=
+  N / (4 * (Nat.log 2 N + 1) + 1)
+
+/-- The explicit gain satisfies the arithmetic hypothesis by Euclidean
+division. -/
+theorem logarithmicHeightGain_spec (N : Nat) :
+    (4 * (Nat.log 2 N + 1) + 1) * logarithmicHeightGain N ≤ N := by
+  simpa [logarithmicHeightGain, Nat.mul_comm] using
+    Nat.div_mul_le_self N (4 * (Nat.log 2 N + 1) + 1)
+
+/-- Constructive specialization at the explicit logarithmic gain. Positivity
+is stated because the general theorem requires at least one extra height. -/
+theorem logarithmicHeightGain_stationary_witness
+    {n : Nat} (speeds : Fin n → Nat)
+    (hgain : 0 < logarithmicHeightGain (n + 1))
+    (hpos : ∀ i, 0 < speeds i) (hinj : Function.Injective speeds)
+    (hbound : ∀ i, speeds i ≤ n + 1 + logarithmicHeightGain (n + 1)) :
+    ∃ tau : Real, ∀ i,
+      (((n + 1 : Nat) : Real)⁻¹) ≤
+        circleNorm (tau * (speeds i : Real)) := by
+  exact logarithmicHeight_stationary_witness speeds hgain hpos hinj hbound
+    (logarithmicHeightGain_spec (n + 1))
+
+/-- The explicit gain written with exactly the `UnitCircle` norm used by the
+positive-integer formulation of the conjecture. -/
+theorem logarithmicHeightGain_positiveInteger_witness
+    {n : Nat} (speeds : Fin n → Nat)
+    (hgain : 0 < logarithmicHeightGain (n + 1))
+    (hpos : ∀ i, 0 < speeds i) (hinj : Function.Injective speeds)
+    (hbound : ∀ i, speeds i ≤ n + 1 + logarithmicHeightGain (n + 1)) :
+    ∃ tau : Real, ∀ i,
+      (((n + 1 : Nat) : Real)⁻¹) ≤
+        ‖((tau * (speeds i : Real) : Real) : UnitCircle)‖ := by
+  obtain ⟨tau, htau⟩ :=
+    logarithmicHeightGain_stationary_witness speeds hgain hpos hinj hbound
+  exact ⟨tau, fun i => by simpa [circleNorm] using htau i⟩
+
 end LonelyRunner
