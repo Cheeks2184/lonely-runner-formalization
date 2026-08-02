@@ -382,6 +382,147 @@ theorem fiberCredit_le_twoLevelFiberCredit_le_card_inter_biUnion
       subfiberIndices subfibers parents parent hfiberDecomp hfiberDisjoint
       hsubfiberDecomp hsubfiberDisjoint⟩
 
+/-! ## Monotonicity and bounded-anchor costs
+
+The two-level construction is monotone when more parents are made available.
+This is the finite bookkeeping needed for bounded front-loaded anchor sets:
+adding a new anchor can only improve every remaining child's credit, while
+soundness pays for the increase of the prefix union by removing the new
+anchor's former tail cost.
+-/
+
+/-- A fixed anchor's credit cannot decrease when its available parent set is
+enlarged.  The fiber/subfiber data are unchanged; only the supremum over
+non-anchor parents grows. -/
+theorem anchoredSubfiberCredit_mono_parents
+    {α κ ι ν : Type*} [DecidableEq α] [DecidableEq ι]
+    (fiberIndices : Finset κ) (subfiberIndices : κ → Finset ν)
+    (subfibers : κ → ν → Finset α) (parents parents' : Finset ι)
+    (parent : ι → Finset α) (anchor : ι)
+    (hparents : parents ⊆ parents') :
+    anchoredSubfiberCredit fiberIndices subfiberIndices subfibers
+        parents parent anchor ≤
+      anchoredSubfiberCredit fiberIndices subfiberIndices subfibers
+        parents' parent anchor := by
+  classical
+  apply Finset.sum_le_sum
+  intro x hx
+  apply Finset.sum_le_sum
+  intro y hy
+  apply Nat.add_le_add_left
+  apply Finset.sup_le
+  intro i hi
+  exact Finset.le_sup
+    (f := fun i => (((subfibers x y) \ parent anchor) ∩ parent i).card)
+    (Finset.mem_erase.mpr
+      ⟨(Finset.mem_erase.mp hi).1, hparents (Finset.mem_erase.mp hi).2⟩)
+
+/-- Maximized two-level credit is monotone under enlargement of the parent
+set.  This theorem has no cardinality restriction on the parent sets. -/
+theorem twoLevelFiberCredit_mono_parents
+    {α κ ι ν : Type*} [DecidableEq α] [DecidableEq ι]
+    (fiberIndices : Finset κ)
+    (subfiberIndices : ι → κ → Finset ν)
+    (subfibers : ι → κ → ν → Finset α)
+    (parents parents' : Finset ι) (parent : ι → Finset α)
+    (hparents : parents ⊆ parents') :
+    twoLevelFiberCredit fiberIndices subfiberIndices subfibers parents parent ≤
+      twoLevelFiberCredit fiberIndices subfiberIndices subfibers parents' parent := by
+  classical
+  apply Finset.sup_le
+  intro anchor hanchor
+  exact (anchoredSubfiberCredit_mono_parents fiberIndices
+    (subfiberIndices anchor) (subfibers anchor) parents parents' parent anchor
+    hparents).trans (Finset.le_sup
+      (f := fun a => anchoredSubfiberCredit fiberIndices
+        (subfiberIndices a) (subfibers a) parents' parent a)
+      (hparents hanchor))
+
+/-- Abstract total cost of a front-loaded anchor set.  Anchors pay their
+literal union cardinality.  Every selected non-anchor pays its cardinality
+minus a certified overlap credit against the anchors. -/
+def boundedAnchorCost
+    {α ι : Type*} [DecidableEq α] [DecidableEq ι]
+    (indices : Finset ι) (sets : ι → Finset α)
+    (credit : ι → Finset ι → ℕ) (anchors : Finset ι) : ℕ :=
+  (anchors.biUnion sets).card +
+    (indices \ anchors).sum (fun i => (sets i).card - credit i anchors)
+
+/-- Adding an anchor does not increase the abstract bounded-anchor cost,
+provided (1) every remaining child's credit is monotone and (2) the new
+anchor's old credit is sound for its true overlap with the old anchor union.
+
+The proof is exact finite-set bookkeeping.  In particular, it does not use a
+bound such as `|anchors ∪ {q}| ≤ 3`; that restriction belongs only to a later
+uniform existence problem. -/
+theorem boundedAnchorCost_insert_le
+    {α ι : Type*} [DecidableEq α] [DecidableEq ι]
+    (indices : Finset ι) (sets : ι → Finset α)
+    (credit : ι → Finset ι → ℕ) (anchors : Finset ι) (q : ι)
+    (hqIndices : q ∈ indices) (hqAnchors : q ∉ anchors)
+    (hmono : ∀ i ∈ (indices \ insert q anchors),
+      credit i anchors ≤ credit i (insert q anchors))
+    (hsound : credit q anchors ≤
+      (sets q ∩ anchors.biUnion sets).card) :
+    boundedAnchorCost indices sets credit (insert q anchors) ≤
+      boundedAnchorCost indices sets credit anchors := by
+  classical
+  let oldUnion := anchors.biUnion sets
+  let remaining := indices \ insert q anchors
+  have hsdiff : indices \ anchors = insert q remaining := by
+    ext i
+    by_cases hiq : i = q
+    · subst i
+      simp [remaining, hqIndices, hqAnchors]
+    · simp [remaining, hiq]
+  have hqRemaining : q ∉ remaining := by
+    simp [remaining]
+  have htail :
+      remaining.sum (fun i =>
+          (sets i).card - credit i (insert q anchors)) ≤
+        remaining.sum (fun i => (sets i).card - credit i anchors) := by
+    apply Finset.sum_le_sum
+    intro i hi
+    have hcredit := hmono i hi
+    omega
+  have hsoundSet : credit q anchors ≤ (sets q).card :=
+    hsound.trans (Finset.card_le_card Finset.inter_subset_left)
+  have hunionCard :
+      ((insert q anchors).biUnion sets).card +
+          (sets q ∩ oldUnion).card =
+        (sets q).card + oldUnion.card := by
+    rw [Finset.biUnion_insert]
+    simpa [oldUnion, Finset.inter_comm] using
+      Finset.card_union_add_card_inter (sets q) oldUnion
+  have hsound' : credit q anchors ≤ (sets q ∩ oldUnion).card := by
+    simpa [oldUnion] using hsound
+  have hprefix :
+      ((insert q anchors).biUnion sets).card ≤
+        oldUnion.card + ((sets q).card - credit q anchors) := by
+    omega
+  change
+    ((insert q anchors).biUnion sets).card +
+        remaining.sum (fun i =>
+          (sets i).card - credit i (insert q anchors)) ≤
+      oldUnion.card +
+        (indices \ anchors).sum
+          (fun i => (sets i).card - credit i anchors)
+  rw [hsdiff, Finset.sum_insert hqRemaining]
+  calc
+    ((insert q anchors).biUnion sets).card +
+        remaining.sum (fun i =>
+          (sets i).card - credit i (insert q anchors)) ≤
+      ((insert q anchors).biUnion sets).card +
+        remaining.sum (fun i => (sets i).card - credit i anchors) :=
+      Nat.add_le_add_left htail _
+    _ ≤ (oldUnion.card + ((sets q).card - credit q anchors)) +
+        remaining.sum (fun i => (sets i).card - credit i anchors) :=
+      Nat.add_le_add_right hprefix _
+    _ = oldUnion.card +
+        ((sets q).card - credit q anchors +
+          remaining.sum (fun i => (sets i).card - credit i anchors)) := by
+      omega
+
 /-! ## Ordered-union certificates
 
 The preceding soundness theorem is local to one child.  The next results
