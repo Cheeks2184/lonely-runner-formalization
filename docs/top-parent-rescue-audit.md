@@ -155,6 +155,55 @@ finite average contains at least one order no worse than its mean.
 This improves unconditioned random ordering, including repairing RF, but it
 does not supply the missing cross-pivot theorem.
 
+## Prefix-conditioned peeling hierarchy
+
+The one-vertex calculation extends to an exact partial-peeling hierarchy.
+For a prefix set `P`, let `H(P)` be the minimum deterministic top loss among
+orders of exactly those prefix vertices. Appending `i` last gives the exact
+recurrence
+
+\[
+H(P)=\min_{i\in P}\left[
+  H(P\setminus\{i\})+
+  \sum_{\substack{e:\operatorname{owner}(e)=i\\
+                    T_e\cap(P\setminus\{i\})=\varnothing}} W_e
+\right].
+\]
+
+After fixing a prefix order realizing `H(P)`, uniformly permute the remaining
+vertices. Its expected top loss is
+
+\[
+B(P)=H(P)+
+\sum_{\substack{e:\operatorname{owner}(e)\notin P\\
+                  T_e\cap P=\varnothing}}
+\frac{W_e}{|T_e|+1}.
+\]
+
+Therefore `tau_top <= B(P)` for every `P`. The two endpoints are exact:
+`B(empty)` is the tie-aware random-order bound, while
+`B(V)=H(V)=tau_top`. Minimizing `B(P)` separately among sets of each size
+interpolates from the generic probabilistic estimate to the complete top-only
+subset DP.
+
+| row | first prefix size giving a strict certificate | bound | required bound |
+|---|---:|---:|---:|
+| RF | 1 | `3113/70` | 48 |
+| GCD1 | 4 | 96 | 105 |
+| GCD2 | 4 | 103 | 107 |
+| hard A | 0 | `917/30` | 36 |
+| hard B | 0 | `128/3` | 46 |
+| small | 0 | 2 | 4 |
+| D | 2 | `3074/15` | 243 |
+| C | 3 | `362/3` | 129 |
+
+Thus a prefix of size at most four certifies all eight established stress
+rows. This is a useful compact finite certificate pattern, not a uniform
+theorem: no argument currently proves that four vertices, or any fixed number
+independent of `n`, suffice for some pivot of every speed tuple. At full
+prefix size the method is simply the exact `TOP-CYCLE` DP, so its endpoint
+does not evade a counterexample to that stronger premise.
+
 ## Divisor-only obstruction
 
 Individual fixed-pivot gcd data do not determine top credit. For `n=5`,

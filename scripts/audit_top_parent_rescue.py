@@ -268,6 +268,109 @@ def conditioned_random_loss(data: LiteralPivot) -> tuple[Fraction, int, str]:
     return min(choices)
 
 
+def prefix_conditioned_bounds(
+    data: LiteralPivot,
+) -> tuple[tuple[Fraction, tuple[int, ...]], ...]:
+    """Best top-loss bound after optimizing a prefix of each cardinality.
+
+    For a prefix set Q, ``H(Q)`` is the least deterministic loss among orders
+    of Q.  Choosing the last prefix child gives the exact recurrence
+
+        H(Q) = min_{i in Q} [H(Q minus {i})
+          + sum_{owner(e)=i, T_e intersect (Q minus {i}) empty} W_e].
+
+    Once a minimizing prefix is fixed, uniformly permute its complement.  A
+    tail token already covered by a prefix top parent loses with probability
+    zero; every other tail token loses with probability 1/(|T_e|+1).
+    Therefore the exact expected loss of this randomized completion is
+
+        B(P) = H(P)
+          + sum_{owner(e) notin P, T_e intersect P empty} W_e/(|T_e|+1).
+
+    A finite average contains a completion with loss at most B(P).  At the
+    full set the random-tail sum vanishes and H is the exact top feedback
+    loss, so this hierarchy interpolates between random ordering and the full
+    top-only subset DP.
+    """
+
+    position = {vertex: index for index, vertex in enumerate(data.others)}
+    full_state = (1 << len(data.others)) - 1
+    infinity = data.top_weight + 1
+    prefix_loss = [infinity] * (full_state + 1)
+    prefix_order: list[tuple[int, ...] | None] = [None] * (full_state + 1)
+    prefix_loss[0] = 0
+    prefix_order[0] = ()
+    by_child = {
+        child: tuple(
+            token
+            for token in data.tokens
+            if token.child == child and token.top_weight
+        )
+        for child in data.others
+    }
+
+    best_by_size: list[tuple[Fraction, tuple[int, ...]] | None] = [
+        None
+    ] * (len(data.others) + 1)
+    for state in range(full_state + 1):
+        order = prefix_order[state]
+        if order is None:
+            continue
+        prefix = {
+            vertex
+            for vertex in data.others
+            if state & (1 << position[vertex])
+        }
+
+        expected = Fraction(prefix_loss[state])
+        for token in data.tokens:
+            if (
+                token.top_weight
+                and token.child not in prefix
+                and not (token.top_parents & prefix)
+            ):
+                expected += Fraction(
+                    token.top_weight, len(token.top_parents) + 1
+                )
+        speed_order = tuple(data.speeds[vertex] for vertex in order)
+        size = len(prefix)
+        candidate = (expected, speed_order)
+        if best_by_size[size] is None or candidate < best_by_size[size]:
+            best_by_size[size] = candidate
+
+        for child in data.others:
+            bit = 1 << position[child]
+            if state & bit:
+                continue
+            increment = sum(
+                token.top_weight
+                for token in by_child[child]
+                if not (token.top_parents & prefix)
+            )
+            successor = state | bit
+            candidate_loss = prefix_loss[state] + increment
+            candidate_order = order + (child,)
+            old_order = prefix_order[successor]
+            candidate_key = tuple(
+                data.speeds[vertex] for vertex in candidate_order
+            )
+            old_key = (
+                tuple(data.speeds[vertex] for vertex in old_order)
+                if old_order is not None
+                else None
+            )
+            if candidate_loss < prefix_loss[successor] or (
+                candidate_loss == prefix_loss[successor]
+                and (old_key is None or candidate_key < old_key)
+            ):
+                prefix_loss[successor] = candidate_loss
+                prefix_order[successor] = candidate_order
+
+    if any(bound is None for bound in best_by_size):
+        raise AssertionError("prefix DP did not populate every cardinality")
+    return tuple(bound for bound in best_by_size if bound is not None)
+
+
 def reciprocal_base(
     data: LiteralPivot, top_order: tuple[int, ...]
 ) -> tuple[int, int]:
@@ -340,6 +443,19 @@ CONDITIONED_ROWS = (
 )
 
 
+PREFIX_ROWS = (
+    # name, speeds, pivot, first strict prefix size, its bound, threshold
+    ("RF", (2, 3, 7, 9, 10, 12, 15, 16, 19), 16, 1, Fraction(3113, 70), 48),
+    ("GCD1", (8, 15, 35, 40, 48, 56, 63, 75, 78), 75, 4, Fraction(96), 105),
+    ("GCD2", (6, 8, 15, 21, 28, 35, 40, 48, 75), 75, 4, Fraction(103), 107),
+    ("hardA", (1, 2, 5, 7, 9, 11, 12, 13), 9, 0, Fraction(917, 30), 36),
+    ("hardB", (1, 5, 7, 8, 9, 11, 13, 15), 15, 0, Fraction(128, 3), 46),
+    ("small", (1, 2, 3, 5), 3, 0, Fraction(2), 4),
+    ("D", (10, 37, 45, 51, 54, 56, 61, 71, 91), 91, 2, Fraction(3074, 15), 243),
+    ("C", (8, 15, 35, 40, 48, 56, 68, 75, 78), 75, 3, Fraction(362, 3), 129),
+)
+
+
 DIVISOR_ROWS = (
     ((1, 4, 10, 29, 30), 10, (1, 4, 1, 30), (50, 70, 32, 8, 46)),
     ((1, 10, 28, 29, 30), 10, (1, 4, 1, 30), (50, 70, 28, 8, 50)),
@@ -385,6 +501,27 @@ def main() -> None:
         print(
             f"{name}: conditioned loss {bound} ({vertex} {placement}) "
             f"{relation} required {threshold}"
+        )
+
+    for name, speeds, pivot, expected_size, expected_bound, threshold in PREFIX_ROWS:
+        data = literal_pivot(speeds, pivot)
+        hierarchy = prefix_conditioned_bounds(data)
+        strict = tuple(
+            (size, bound, order)
+            for size, (bound, order) in enumerate(hierarchy)
+            if bound < threshold
+        )
+        if not strict:
+            raise AssertionError(f"{name}: no strict prefix-conditioned bound")
+        size, bound, order = strict[0]
+        if (size, bound) != (expected_size, expected_bound):
+            raise AssertionError(
+                f"{name}: first strict {(size, bound)} != "
+                f"{(expected_size, expected_bound)}"
+            )
+        print(
+            f"{name}: first strict prefix k={size}, loss={bound}<{threshold}, "
+            f"prefix={order}; exact endpoint={hierarchy[-1][0]}"
         )
 
     for speeds, pivot, expected_gcds, expected in DIVISOR_ROWS:

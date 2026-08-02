@@ -7,11 +7,13 @@ import unittest
 from audit_top_parent_rescue import (
     CONDITIONED_ROWS,
     DIVISOR_ROWS,
+    PREFIX_ROWS,
     SEPARATING_ROWS,
     conditioned_random_loss,
     exhaustive_optima,
     literal_pivot,
     order_credits,
+    prefix_conditioned_bounds,
     reciprocal_base,
 )
 
@@ -107,6 +109,38 @@ class TopParentRescueTests(unittest.TestCase):
                         for target in targets
                     )
                 )
+
+    def test_prefix_conditioned_hierarchy(self) -> None:
+        for name, speeds, pivot, expected_size, expected_bound, threshold in PREFIX_ROWS:
+            with self.subTest(name=name):
+                data = literal_pivot(speeds, pivot)
+                hierarchy = prefix_conditioned_bounds(data)
+                strict = tuple(
+                    (size, bound)
+                    for size, (bound, _order) in enumerate(hierarchy)
+                    if bound < threshold
+                )
+                self.assertTrue(strict)
+                self.assertEqual(strict[0], (expected_size, expected_bound))
+                # The empty-prefix endpoint is ordinary tie-aware random
+                # ordering, while the full-prefix endpoint has no random
+                # tail and is the exact top feedback loss.
+                random_bound = sum(
+                    Fraction(token.top_weight, len(token.top_parents) + 1)
+                    for token in data.tokens
+                    if token.top_weight
+                )
+                self.assertEqual(hierarchy[0][0], random_bound)
+                self.assertIsInstance(hierarchy[-1][0], Fraction)
+
+    def test_full_prefix_endpoint_equals_exhaustive_top_loss(self) -> None:
+        # Use the small row so the independent permutation oracle is tiny.
+        data = literal_pivot((1, 2, 3, 5), 3)
+        hierarchy = prefix_conditioned_bounds(data)
+        optima = exhaustive_optima(data)
+        self.assertEqual(
+            hierarchy[-1][0], data.top_weight - optima.maximum_top
+        )
 
     def test_ordered_gcd_data_do_not_determine_top_credit(self) -> None:
         observed_rows = []
