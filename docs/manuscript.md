@@ -1514,3 +1514,69 @@ Axiom probes for the algebraic proof and final height theorem report only
 
 This proves a uniform linear bounded-height region. It does not bound
 arbitrary integer speeds, so it does not prove unrestricted LRC.
+
+## 38. Coefficient-five bounded height
+
+The preceding argument can be sharpened from `17*t<=3*N` to
+
+```text
+5*t <= N.
+```
+
+The chosen missing `c` is still arbitrary. In the nonreciprocal branch put
+`ell=N-c-t`. The first new arithmetic input is
+`three_mul_two_pow_omega_le`: if `c>=7` and `c!=10`, then
+
+```text
+3 * 2^omega(c) <= c.
+```
+
+For at most two prime factors this is direct, with `c=10` isolated. For at
+least three prime factors, remove the largest prime from the radical. If it
+is at least seven, the remaining prime product dominates the required power
+of two; if it is five, the prime-factor set is exactly `{2,3,5}`. Euler's
+radical divisibility then transfers the bound to `c`.
+
+Assume `2*c<=N+t`; otherwise the reciprocal branch already works. If
+`c<=3*t`, then `N>=5*t` gives `ell>=4*t-c` and hence `3*ell>=c`. If
+`3*t<=c`, the lower bound `N>=2*c-t` gives `ell>=c-2*t` and again
+`3*ell>=c`. Therefore `ell<2^omega(c)` is impossible for `c>=7`, except
+possibly `c=10`. Lean checks `c=10` and `c=1,...,6` exactly. The declaration
+`five_short_interval_exception_classification` proves that the complete
+exception list is
+
+```text
+(N,t,c) = (5,1,3), (10,2,6), (11,2,6).
+```
+
+`five_witness_or_exception` packages this classification with the reciprocal
+and Kanold/inverse branches. If the selected missing value is not exceptional,
+it already returns the common closed `1/N` witness.
+
+The exceptional families are repaired without changing the original
+quantifiers:
+
+- At `(10,2,6)`, the denominator `q=19` satisfies
+  `N<q<=2*N`, `N+t+c<q`, and `Coprime 6 19`.
+- At `(5,1,3)`, if speed 6 is missing then no selected speed is divisible by
+  3 and the reciprocal witness works. If speed 6 occurs,
+  `exists_second_missing_of_extra_speed` supplies a second missing
+  `d in [1,5]`, `d!=3`; rerunning the generic selector at `d` cannot return
+  any listed exception.
+- At `(11,2,6)`, if speed 12 is missing then the reciprocal witness works.
+  If 12 occurs but 13 is missing, `q=19` avoids the two forbidden heights
+  `6` and `19-6=13`. If both occur, the same cardinality lemma supplies a
+  second missing `d in [1,11]`, `d!=6`, and rerunning the selector cannot
+  return the sole `(11,2,_)` exception.
+
+The cardinality lemma uses only injectivity and `n+1=N`: if every member of
+`[1,N]` except `c` occurred and one additional speed `e>N` occurred, the
+image would contain `N` distinct values despite having cardinality `N-1`.
+No minimality, uniqueness, or optimized choice of `c` is assumed.
+
+`fiveHeight_family_witness` assembles these branches. It retains `t>0`,
+positivity and injectivity of the speeds, `n+1=N`, maximum speed `N+t`, and
+the closed circular-distance threshold `1/N`. Its axiom report contains only
+`propext`, `Classical.choice`, and `Quot.sound`. This is `proved-lean`, but it
+still covers only a bounded-height region and therefore does not prove
+unrestricted LRC.

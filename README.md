@@ -54,19 +54,20 @@ and maximum speed at most `N+t` imply a common closed `1/N` witness. The exact
 largest integer gain is `(N*Q_N-1) div (4*P_N-Q_N)`. This is a verified
 bounded-height result, not a proof of unrestricted LRC.
 
-The strongest fully Lean-verified height theorem is now the unconditional
-linear bound in `KanoldVandermonde.lean`. For positive injective integer
-speeds with `N=n+1`, maximum speed at most `N+t`, and
+`KanoldVandermonde.lean` first gives the unconditional linear bound
+`17*t<=3*N`. `CoefficientFiveHeight.lean` strengthens it. For positive
+injective integer speeds with `N=n+1`, maximum speed at most `N+t`, and
 
 ```text
-17*t <= 3*N,
+5*t <= N,
 ```
 
-`seventeenThirdsHeight_family_witness` gives a common real time at the closed
-`1/N` threshold. Lean proves the required half-open Kanold interval bound by
-a roots-of-unity expansion and an invertible Vandermonde system; it is not
-assumed as an axiom. This remains a bounded-height theorem, not unrestricted
-LRC.
+`fiveHeight_family_witness` gives a common real time at the closed `1/N`
+threshold. Lean proves the required half-open Kanold interval bound by a
+roots-of-unity expansion and an invertible Vandermonde system, classifies the
+only three short-interval exceptions, and repairs each exceptional family.
+No number-theoretic premise is assumed as an axiom. This remains a
+bounded-height theorem, not unrestricted LRC.
 
 The strongest additional computer-assisted manuscript theorem covers maximum
 speed `n+5`. Its 134,568-case finite core and uniform arithmetic proof have
@@ -102,8 +103,9 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 - [response46-audit.md](docs/response46-audit.md): independently audited
   and Lean-verified roots-of-unity/Vandermonde proof of Kanold's interval
   bound.
-- [response47-audit.md](docs/response47-audit.md): audited coefficient-five
-  manuscript improvement, saturated top-two class, and recovered verifier.
+- [response47-audit.md](docs/response47-audit.md): Lean-verified
+  coefficient-five improvement, audited saturated top-two class, and
+  recovered verifier.
 - [top-two-pivot-search.md](docs/top-two-pivot-search.md): a sharp conjectural
   pivot restriction and its reproducible bounded stress search.
 - [top-two-fractional-dual.md](docs/top-two-fractional-dual.md): a fixed exact

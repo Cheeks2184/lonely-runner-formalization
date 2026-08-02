@@ -8,11 +8,11 @@ claim that it has been proved or disproved.
 ## Strongest verified theorem
 
 The strongest fully Lean-verified bounded-height result is
-`LonelyRunner.seventeenThirdsHeight_family_witness`. If `n+1=N`, `t>0`, and
+`LonelyRunner.fiveHeight_family_witness`. If `n+1=N`, `t>0`, and
 an injective family of `n` positive integer speeds is bounded by `N+t`, then
 
 ```text
-17*t <= 3*N
+5*t <= N
 ```
 
 implies one common real time at closed circular distance at least `1/N` for
@@ -20,8 +20,10 @@ every speed. `kanoldIntervalBound_vandermonde` proves, rather than assumes,
 that every half-open interval of `2^omega(c)` consecutive natural numbers
 contains a number coprime to positive `c`. Its proof uses an exact
 roots-of-unity powerset expansion and a Vandermonde system with pairwise
-distinct nodes. The unconditional coefficient-six theorem remains as a
-corollary. These results do not prove unrestricted LRC.
+distinct nodes. Lean then proves that a selected missing modulus has enough
+interval length except at exactly `(5,1,3)`, `(10,2,6)`, and `(11,2,6)`;
+an explicit `q=19` witness or a second missing modulus repairs those families.
+These results do not prove unrestricted LRC.
 
 The exact primorial result remains fully verified. Let `P_N` be the largest
 primorial at most `N`, and let `Q_N=phi(P_N)`. Lean proves the exact maximum
@@ -79,12 +81,12 @@ This equivalence does not prove either side.
   `17*t<=3*N` bounded-height theorem. The original conditional declarations
   are retained to expose the dependency boundary. See
   [the audit](docs/response46-audit.md).
-- **Audited manuscript proof:** Response 47 improves the bounded-height
+- **Lean-verified:** Response 47 improves the bounded-height
   hypothesis to `5*t<=N` by classifying three short-interval exceptions and
-  repairing them at the family level. It also proves the top-two pivot
-  property for `(1,2,...,N-2,B)`. Both arguments passed mathematical audit,
-  but neither has yet been assembled as a Lean theorem. See
-  [the audit](docs/response47-audit.md).
+  repairing them at the family level. The height theorem is fully assembled
+  in `CoefficientFiveHeight.lean`. The separate top-two pivot property for
+  `(1,2,...,N-2,B)` remains an audited manuscript theorem, not yet Lean.
+  See [the audit](docs/response47-audit.md).
 - **Finite evidence only:** targeted full Chebyshev/CRT score searches and the
   top-two pivot stress certificate. The latter checks 878,245 primitive box
   tuples plus 86,745 structured mutations without a failure; it is a proposed
@@ -112,10 +114,9 @@ restrictions do not force such a pivot.
 
 Active research branches are:
 
-1. determine whether the `17/3` coefficient can be improved by selecting a
-   missing modulus globally rather than applying Kanold's bound to an
-   arbitrary missing modulus; the fixed-hole coefficient-five shortcut is
-   already known to fail at `(N,t,c)=(11,2,6)`;
+1. determine whether the coefficient-five bounded-height theorem can be
+   improved further by a sharper global choice of missing modulus or a
+   stronger Jacobsthal estimate;
 2. control or refute the full Chebyshev/CRT pivot score, after rejection of
    the quadratic shortcut;
 3. strengthen the least-counterexample residual class until its conditions

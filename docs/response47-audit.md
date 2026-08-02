@@ -22,8 +22,9 @@ fully Lean-verified. Response 47's alternate uncompiled module is not used.
 
 ## Coefficient-five bounded-height theorem
 
-Response 47 strengthens the height hypothesis on paper from
-`17*t<=3*N` to `5*t<=N`. This is `proved-math`, not yet `proved-lean`.
+Response 47 strengthens the height hypothesis from `17*t<=3*N` to
+`5*t<=N`. The argument is now fully assembled in
+`LonelyRunner/CoefficientFiveHeight.lean` and is `proved-lean`.
 
 Under `5*t<=N`, `2*c<=N+t`, and `ell=N-c-t`, the response proves that
 
@@ -57,9 +58,17 @@ The exceptions are repaired at the family level:
   `d`.
 
 No uniqueness, minimality, or special choice of the initial missing modulus
-is used. The surviving formal obligation is to kernel-check the exception
-classification, the two missing-value cardinality arguments, and their
-assembly with the existing inverse-residue bridge.
+is used. Lean kernel-checks the exception classification in
+`five_short_interval_exception_classification`, the cardinality bridge in
+`exists_second_missing_of_extra_speed`, the generic branch in
+`five_witness_or_exception`, and the final assembly in
+`fiveHeight_family_witness`. Its axiom report contains only `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+Response 48 later supplied a separate compiler-targeted module, but the exact
+attachment failed with unresolved `c=8`, `c=9`, maximal-prime, multiplication-
+order, and exception-branch goals. The verified project theorem is the
+independent tracked implementation, not that attachment.
 
 ## Saturated top-two class
 
