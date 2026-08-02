@@ -812,8 +812,7 @@ does not promote the unrestricted Lonely Runner Conjecture.
 ## 2026-08-02: primorial maximum, conditional Kanold height, and pivot certificates
 
 Source commit `f749d9e8b6a4f0f7ef33de0cfb20b545a80ea110` was cloned
-with `git clone --no-local` into the fresh ext4 checkout
-`/home/joshu/code/lonely-runner-verification-f749d9e`. Before verification,
+with `git clone --no-local` into a fresh ext4 checkout. Before verification,
 the checkout was clean and its HEAD matched the source commit. The exact
 replay command sequence was:
 
