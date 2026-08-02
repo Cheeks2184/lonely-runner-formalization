@@ -11,6 +11,8 @@ import LonelyRunner.PivotResidues
 import LonelyRunner.SmallDenominatorWitness
 import LonelyRunner.BoundedHeight
 import LonelyRunner.LogarithmicHeight
+import LonelyRunner.PrimorialHeight
+import LonelyRunner.KanoldHeight
 import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts
