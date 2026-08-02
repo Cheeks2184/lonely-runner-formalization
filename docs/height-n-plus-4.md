@@ -12,10 +12,10 @@ audit. `N=2` is elementary and `N=3` is already kernel-checked by the
 two-moving-runner theorem. The 2,982 residual configurations for `N=4..11`
 are covered by an exact reproducible finite certificate. The all-dimensional
 statement is therefore a computer-assisted mathematical theorem, but is not
-yet one Lean declaration. `BoundedHeight.lean` formalizes the entire
-large-`N` runner/family bridge conditionally on the explicit arithmetic
-selector `HeightThreeCoprimeSelector`; formalizing the totient classification
-and exceptional table as a proof of that selector remains open.
+yet one Lean declaration. A conditional large-`N` bridge was attempted, but
+its elaboration did not terminate promptly even after decomposition; it was
+removed rather than counted as verified progress. Formalizing both the
+runner bridge and the arithmetic selector remains open.
 
 This is a bounded-height partial result, not a proof of LRC.
 

@@ -1187,8 +1187,6 @@ Hence an integer counterexample would have maximum at least `n+5`. The exact
 finite certificate is `verify_height_n_plus_4.py`; the full proof and audit
 are in `docs/height-n-plus-4.md`. The large-`N` theorem and small certificate
 have not yet been combined into one Lean declaration, so this section is not
-claimed `proved-lean`. The declaration
-`boundedHeightThree_stationary_witness_of_selector` checks the entire
-large-`N` runner bridge under the explicit arithmetic proposition
-`HeightThreeCoprimeSelector`; discharging that selector is the remaining Lean
-obligation for the uniform branch.
+claimed `proved-lean`. A conditional large-`N` wrapper was attempted, but its
+elaboration did not finish promptly after decomposition and it was removed;
+the runner bridge and arithmetic selector remain formal obligations.

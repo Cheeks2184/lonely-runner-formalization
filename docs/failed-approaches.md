@@ -298,3 +298,10 @@ No reciprocal or `C_2` inverse witness exists, but the `C_3` witness `t=1/10`
 has scaled residues `(12,16,12)>=10`. This rejects only the restricted
 two-residue construction. The stronger max-speed `n+4` theorem survives by
 allowing `C_3` in two small cases.
+
+An attempted conditional Lean wrapper for the uniform `N>=12` height proof
+did not elaborate within repeated 60--180 second checks, even after the
+missing-hole and reciprocal/coprime branches were separated. No Lean error
+was produced, so this is recorded as a formalization-performance obstruction,
+not a mathematical objection. The unverified declarations were removed; only
+the previously clean `n+2` height theorem remains in the kernel.
