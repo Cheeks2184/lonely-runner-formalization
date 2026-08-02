@@ -306,4 +306,10 @@ memorylessness derandomizes it by choosing a nonincreasing conditional-
 expectation branch.  The implementation checks that recurrence at every
 step and repairs the nine-speed uniform-average failure.  The cross-pivot
 claim `GCD-CLOCK-UNIF` has no counterexample in the recorded boxes but no
-proof; the generic biased-order theorem is also not yet in Lean.
+proof.  The algebraic derandomization core is now in Lean:
+`exists_nextPotential_le_of_eq_weightedAverage` gives a nonincreasing branch
+of any exact positive rational weighted average, and
+`exists_removalOrder_terminalPotential_le` iterates the choice to a complete
+duplicate-free order.  The exponential-clock tail formula and the exact
+identification of the runner potential with that weighted recurrence remain
+paper/computational interfaces, not hidden hypotheses of the Lean theorem.

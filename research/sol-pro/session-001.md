@@ -1122,3 +1122,10 @@ failure structure, or an explicit GCD-clock counterexample.  Minimum-margin
 tuples from the complete boxes were supplied as mandatory stress tests, and
 broad random sampling or a repetition of the generic race argument was
 excluded as a substitute for arithmetic progress.
+
+The generic algebraic derandomization was then kernel-checked independently
+in `WeightedConditionalExpectation.lean`.  It proves both the one-step
+positive weighted-average choice and an induction producing a complete
+duplicate-free removal order with terminal potential no larger than the
+initial potential.  It assumes the concrete potential recurrence; neither the
+exponential-clock identity nor `GCD-CLOCK-UNIF` is imported as an axiom.

@@ -57,6 +57,8 @@ project-specific axiom.
 #print axioms LonelyRunner.subfiber_anchor_add_sup_eq_if_of_saturated
 #print axioms LonelyRunner.average_rankedTailCredit
 #print axioms LonelyRunner.exists_code_cost_lt_of_rankedTailAverage
+#print axioms LonelyRunner.exists_nextPotential_le_of_eq_weightedAverage
+#print axioms LonelyRunner.exists_removalOrder_terminalPotential_le
 #print axioms LonelyRunner.pairSumCertificate_iff_pair_time
 #print axioms LonelyRunner.positiveIntegerPairSumCertificateConjecture_imp_positiveIntegerConjecture
 #print axioms LonelyRunner.circleNorm_mul_abs_right

@@ -53,6 +53,9 @@ remaining shared-permutation bridge is documented but not yet formalized.
 A GCD-rate exponential-clock bias repairs the known uniform-average failure
 and derandomizes by conditional expectation on every recorded hard tuple.
 Its cross-pivot uniformity is a new open arithmetic hypothesis, not a result.
+The generic positive-weight conditional-expectation step and finite complete-
+order extraction are kernel-checked; the exact GCD-clock potential identity
+and its arithmetic strictness remain separate obligations.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
