@@ -2230,3 +2230,13 @@ Route C asks for a correctly quantified least-dimension, then sum-minimal,
 counterexample theorem. Exact counterexamples to proposed constructions are
 required, and no use of known safe counts, fixed/minimal-dimension interchange,
 or real-to-integer normalization is permitted. Response 43 is pending.
+
+While Prompt 43 ran, an independent exact stress search extended Route A's
+finite evidence. It checked 275,494 targeted primitive scan executions across
+no-speed-1 boxes for every `n=15,...,20`, divisor-covering subsets, a highly
+composite 20-element pool, and one-coordinate mutations through speed 2000.
+Every tuple has some exact positive pivot score. The canonical eight-line
+output hash is
+`ee405227f9671f8ac3f3132c2f760dbe31d03b56cc2799f74acafe17cee82e96`.
+This covers the previously omitted `n=19` box but remains finite evidence;
+it neither proves uniform certificate positivity nor LRC.

@@ -385,6 +385,9 @@ disproof claim.
   proved infinite correlation-obstruction family.
 - `scripts/audit_moment_lp.py`: exact polynomial-vertex enumeration, rational
   primal/dual certificates, and structured-family audit.
+- `scripts/audit_response42_cheb_stress.sh`: recompiles and reproduces the
+  275,494-execution no-speed-1 and highly composite exact Chebyshev stress
+  pass, including the previously omitted `n=19` box.
 - `scripts/analyze_consecutive_correlation_depth.py`: exact depth profiles and
   regression checks for the proved near-tautological consecutive theorem.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.

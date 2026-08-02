@@ -1,0 +1,9 @@
+box_2_to_22_choose_15 distinct=54264 primitive=54264 divisor_cover=5202 exact_all_pivot_failures=0 divisor_cover_failures=0
+hc_pool_20_choose_15 distinct=15504 primitive=15503 divisor_cover=7992 exact_all_pivot_failures=0 divisor_cover_failures=0
+hc_seed_one_replacement_2_to_2000 distinct=29761 primitive=29761 divisor_cover=24265 exact_all_pivot_failures=0 divisor_cover_failures=0
+no_speed_1_box_n=16_max=22 distinct=20349 primitive=20349 divisor_cover=2178 exact_all_pivot_failures=0 divisor_cover_failures=0
+no_speed_1_box_n=17_max=23 distinct=26334 primitive=26334 divisor_cover=2442 exact_all_pivot_failures=0 divisor_cover_failures=0
+no_speed_1_box_n=18_max=24 distinct=33649 primitive=33649 divisor_cover=3312 exact_all_pivot_failures=0 divisor_cover_failures=0
+no_speed_1_box_n=19_max=25 distinct=42504 primitive=42504 divisor_cover=3652 exact_all_pivot_failures=0 divisor_cover_failures=0
+no_speed_1_box_n=20_max=26 distinct=53130 primitive=53130 divisor_cover=4862 exact_all_pivot_failures=0 divisor_cover_failures=0
+OUTPUT_SHA256=ee405227f9671f8ac3f3132c2f760dbe31d03b56cc2799f74acafe17cee82e96

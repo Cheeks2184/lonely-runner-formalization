@@ -53,6 +53,16 @@ The mutation scanner checks exactly 4,276 deduplicated one-coordinate
 replacements of `(1,...,14,210)`, with the replacement in `1..300`. Each has
 some positive pivot score. It does not cover multi-coordinate mutations.
 
+An independent Prompt 43 stress pass then checked 275,494 targeted primitive
+scan executions with exact score signs and found no certificate failure. Its
+domains are all no-speed-1 boxes for `n=15,...,20` with respective maxima
+`22,22,23,24,25,26`, every 15-subset of a stated 20-element highly composite
+pool, and every one-coordinate replacement through 2000 of a stated
+15-element seed. The boxes include the previously omitted `n=19`; 21,648 of
+the 230,230 no-speed-1 tuples satisfy divisor cover. The highly composite
+domains add 32,257 divisor-covering scan executions. Domain overlap is not
+deduplicated across these separately described runs.
+
 These conclusions mean only that the sufficient pivot-polynomial certificate
 succeeds on the enumerated tuples. They do not say that every pivot works,
 that a sum over pivots is positive, or that arbitrary real velocities are
@@ -137,6 +147,15 @@ The shell audit recompiles both exact C++ programs and compares all three
 outputs byte-for-byte with the files in `certificates/`. Independent review
 also compared the downloaded attachment hashes and inspected candidate
 enumeration, strict endpoints, sign normalization, and overflow behavior.
+
+The larger independent stress pass is reproduced separately by:
+
+```bash
+bash scripts/audit_response42_cheb_stress.sh
+```
+
+Its eight data lines have SHA-256
+`ee405227f9671f8ac3f3132c2f760dbe31d03b56cc2799f74acafe17cee82e96`.
 
 ## Remaining obstruction
 
