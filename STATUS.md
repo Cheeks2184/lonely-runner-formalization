@@ -89,6 +89,13 @@ Ran 147 tests in 272.894s
 OK
 ```
 
+The same full 147-test suite passed again at public-release commit
+`854567aa8e05ff05714ed5de4a1353d57b4fd105` in 401.780 seconds. The first
+hosted run passed the Lean build and trust audit; it also exposed that the
+certificate job needs the Boost C++ headers used by the Response 42 replay.
+The workflow now installs `libboost-dev` before running the unchanged complete
+suite. This is a CI environment repair, not a reduced verification target.
+
 Every explicit axiom probe reports only subsets of `propext`,
 `Classical.choice`, and `Quot.sound`. See
 [the build log](research/lean-build-log.md) and
