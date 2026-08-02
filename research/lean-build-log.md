@@ -413,3 +413,38 @@ scan found no `sorry`, `admit`, custom `axiom`, `opaque`, `unsafe`, `extern`,
 `implemented_by`, `partial_fixpoint`, `native_decide`, or disabled checks.
 Both the main worktree and the verification checkout were clean after these
 commands.
+
+## 2026-08-02: Bellman duality and rejection of optimized additive uniformity
+
+The clean ext4 checkout was fast-forwarded to commit `f4da966`. Scoped builds
+first checked `BellmanPeeling.lean` and `OptAddCounterexample.lean`; the root
+build then reported:
+
+```text
+Build completed successfully (3534 jobs).
+```
+
+`BellmanPeeling.lean` kernel-checks weak duality for arbitrary finite states,
+the exact recursive optimum, feasibility, attainment, minimum-order
+characterization, and greatest-feasible-potential characterization.
+`OptAddCounterexample.lean` independently proves the exact `13/160` witness
+for the all-pivot additive counterexample. All new axiom probes report exactly
+
+```text
+[propext, Classical.choice, Quot.sound].
+```
+
+The complete exact regression suite, now including the clean-room exhaustive
+OPT-ADD counterexample oracle and whole-overlap capacity certificate, reported:
+
+```text
+Ran 112 tests in 158.036s
+OK
+```
+
+The counterexample test compares the subset DP with all `362,880` pivot-order
+pairs. The capacity test reconstructs all 24 whole token-parent blocks and
+every used residue capacity. A tracked Lean scan found no `sorry`, `admit`,
+custom `axiom`, `opaque`, `unsafe`, `extern`, `implemented_by`,
+`partial_fixpoint`, `native_decide`, or disabled checks. Both the main
+worktree and clean checkout were empty after verification.
