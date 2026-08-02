@@ -7,7 +7,8 @@ disproves unrestricted LRC.
 
 Response 46 supplied an independent proof of the classical bound that every
 block of `2^omega(c)` consecutive integers contains an integer coprime to
-positive `c`. This is `proved-math`, not yet `proved-lean`.
+positive `c`. The argument is now fully assembled in
+`LonelyRunner/KanoldVandermonde.lean` and is `proved-lean`.
 
 Let `P` be the distinct prime divisors of `c`, let `M` be their product, and
 choose a primitive `M`-th complex root of unity `zeta`. For each `p in P`, set
@@ -37,17 +38,23 @@ coefficients `(-1)^|S|*lambda_S^a` to vanish. The empty-subset coefficient is
 one, so this is impossible. The cases `c=1` and `x=0` are compatible with the
 same interval convention.
 
-The argument has survived an independent mathematical audit. It does not
-reconstruct Kanold's original analytic proof, and it has not yet been fully
-formalized. Scratch Lean now verifies subset-exponent and primitive-root node
-injectivity, the exact powerset expansion, and the Vandermonde nonvanishing
-kernel. Full interval/coprimality assembly remains.
+The argument first survived an independent mathematical audit and then a
+line-by-line formal audit. `subsetExponent_mod_injective` verifies the modular
+node separation; `primitiveRoot_subset_nodes_injective` transfers it to the
+complex roots; `roots_product_expansion` and
+`roots_product_eq_zero_of_dvd` verify the filter identity; and
+`exponential_sum_not_vanish_consecutively` invokes Mathlib's Vandermonde
+kernel. `exists_avoiding_prime_set` assembles the consecutive interval, while
+`coprime_of_avoids_primeFactors` closes the prime-factor bridge. The exact
+public theorem is `kanoldIntervalBound_vandermonde : KanoldIntervalBound`.
+Its axiom report contains only `propext`, `Classical.choice`, and
+`Quot.sound`.
 
 Primary source for the classical bound: H.-J. Kanold,
 [“Über eine zahlentheoretische Funktion von Jacobsthal”](https://doi.org/10.1007/BF01350607),
 *Mathematische Annalen* 170 (1967), 314–326.
 
-## Stronger conditional height constant
+## Stronger verified height constant
 
 Response 46 sharpened the interval arithmetic from `6*t<=N` to
 
@@ -65,18 +72,14 @@ In the nonreciprocal branch, `2*c<=N+t`. Multiplying this by seven and using
 so for `ell=N-c-t`, `5*ell>=2*c`. Together with the Lean-verified estimate
 `5*2^omega(c)<=2*c` for `c>=7`, this supplies enough interval length. The
 six small moduli satisfy the required length bounds directly. Thus the
-closed `1/N` witness follows from the exact `KanoldIntervalBound` premise.
+closed `1/N` witness follows from the exact `KanoldIntervalBound` theorem.
 The integer gain is `floor(3*N/17)`.
 
-The conditional wrapper now compiles as
-`seventeenThirdsHeight_family_witness_of_kanold`; the earlier `6*t<=N`
-declaration is retained as a corollary. The result remains conditional because
-the roots-of-unity proof of `KanoldIntervalBound` is not yet fully formalized.
-The abstract Vandermonde consecutive-vanishing kernel, primitive-root node
-injectivity, subset-exponent injectivity, exact powerset product expansion,
-and divisibility-to-vanishing direction compile together in scratch. The
-remaining bridge is the full interval/coprimality assembly and reindexing into
-the compiled Vandermonde kernel.
+The dependency-exposing wrapper remains
+`seventeenThirdsHeight_family_witness_of_kanold`; the unconditional public
+theorem is `seventeenThirdsHeight_family_witness`. Likewise,
+`sixHeight_family_witness` is an unconditional corollary. Every positivity,
+injectivity, speed-bound, and closed-boundary hypothesis is unchanged.
 
 The condition `5*t<=N` still fails for the arbitrary fixed-hole selector at
 `(N,t,c)=(11,2,6)`, where the interval is `(20,21,22)`. This does not refute a

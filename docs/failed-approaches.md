@@ -338,3 +338,23 @@ growth condition does not force the denominator interval length `L` to satisfy
 `L>=c`. The exact case `N=21,t=1,c=11` has `L=9<c`. The valid conclusion is
 only that `L<c` and absence of a coprime denominator cannot occur together;
 the complement/totient contradiction is essential.
+
+## 2026-08-02: the global fractional top-two dual is false
+
+The fixed top pair `(14,16)` at `N=8` admits a useful vertex weighting of
+mass `11/2>5`, with every possible lower speed seeing bad mass at most one.
+This suggested a global fractional-dual invariant for every top pair. The
+invariant is false.
+
+At `N=7` and top speeds `(98,187)`, an exact nonnegative fractional cover of
+all 1,224 mutually-top-good vertices has total mass `962/241<4`; every vertex
+receives cover mass at least one. Weak LP duality therefore bounds every
+candidate vertex weighting of the proposed kind below four, whereas the
+strategy requires mass greater than `n-2=4`. The certificate is reproduced
+by `scripts/audit_top_two_fractional_obstruction.sh`.
+
+This does not refute the integral top-two pivot conjecture. Exhaustive exact
+enumeration of all 3,464,840 four-lower-speed subsets finds no cover in this
+instance; the best covers 1,142 vertices. The failure is specifically the
+fractional proof invariant. See
+`docs/top-two-fractional-obstruction.md` for the exact formulation.

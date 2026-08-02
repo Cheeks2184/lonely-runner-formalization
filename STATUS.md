@@ -8,7 +8,22 @@ claim that it has been proved or disproved.
 ## Strongest verified theorem
 
 The strongest fully Lean-verified bounded-height result is
-`LonelyRunner.boundedPrimorialHeight_family_witness`. Let `P_N` be the largest
+`LonelyRunner.seventeenThirdsHeight_family_witness`. If `n+1=N`, `t>0`, and
+an injective family of `n` positive integer speeds is bounded by `N+t`, then
+
+```text
+17*t <= 3*N
+```
+
+implies one common real time at closed circular distance at least `1/N` for
+every speed. `kanoldIntervalBound_vandermonde` proves, rather than assumes,
+that every half-open interval of `2^omega(c)` consecutive natural numbers
+contains a number coprime to positive `c`. Its proof uses an exact
+roots-of-unity powerset expansion and a Vandermonde system with pairwise
+distinct nodes. The unconditional coefficient-six theorem remains as a
+corollary. These results do not prove unrestricted LRC.
+
+The exact primorial result remains fully verified. Let `P_N` be the largest
 primorial at most `N`, and let `Q_N=phi(P_N)`. Lean proves the exact maximum
 
 ```text
@@ -30,7 +45,8 @@ integer gain
 (N*Q_N-1) div (4*P_N-Q_N).
 ```
 
-This theorem does not prove unrestricted LRC.
+This theorem is useful independently but is weaker as a uniform height bound
+than the `17/3` theorem above.
 
 The real-speed conjecture has also been formally reduced to the
 positive-integer conjecture:
@@ -56,24 +72,30 @@ This equivalence does not prove either side.
   exchange proof, maximum characterization and attainment, strict height
   algebra, closed-boundary witness, and exact gain all compile without an
   extra arithmetic premise.
-- **Conditional Lean theorem:**
-  `seventeenThirdsHeight_family_witness_of_kanold` proves that
-  `17*t<=3*N` and maximum speed at most `N+t` give the same closed `1/N`
-  witness, assuming the exact half-open interval proposition
-  `KanoldIntervalBound`. Lean verifies the `c<=6` cases, the estimate
-  `5*2^omega(c)<=2*c` for `c>=7`, and every endpoint. A self-contained Lean
-  proof of the interval bound remains open. The coefficient-six declaration
-  is retained as a corollary.
-- **Audited manuscript proof:** Response 46 proves the Kanold interval bound
-  independently by a roots-of-unity expansion and an invertible Vandermonde
-  system, and sharpens the conditional height arithmetic to `17*t<=3*N`.
-  The proof has passed mathematical audit but its algebraic core is not yet
-  kernel-checked; [the audit](docs/response46-audit.md) records the boundary.
+- **Lean-verified:** Response 46's independent roots-of-unity/Vandermonde
+  proof of the Kanold interval bound is fully assembled in
+  `KanoldVandermonde.lean`. Combined with the already verified interval
+  arithmetic, `seventeenThirdsHeight_family_witness` proves the unconditional
+  `17*t<=3*N` bounded-height theorem. The original conditional declarations
+  are retained to expose the dependency boundary. See
+  [the audit](docs/response46-audit.md).
+- **Audited manuscript proof:** Response 47 improves the bounded-height
+  hypothesis to `5*t<=N` by classifying three short-interval exceptions and
+  repairing them at the family level. It also proves the top-two pivot
+  property for `(1,2,...,N-2,B)`. Both arguments passed mathematical audit,
+  but neither has yet been assembled as a Lean theorem. See
+  [the audit](docs/response47-audit.md).
 - **Finite evidence only:** targeted full Chebyshev/CRT score searches and the
   top-two pivot stress certificate. The latter checks 878,245 primitive box
   tuples plus 86,745 structured mutations without a failure; it is a proposed
   strengthening that would imply LRC, not a proved reduction or theorem. No
   finite search implies a uniform result.
+- **Refuted strategy:** the proposed global fractional two-grid dual
+  invariant fails exactly at top speeds `(98,187)` for `N=7`. A feasible
+  fractional cover of mass `962/241<4` rules out the required dual mass by
+  weak duality. Exhaustive search finds no four-speed integral cover in that
+  instance, so the integral top-two conjecture remains open. See
+  [the obstruction](docs/top-two-fractional-obstruction.md).
 - **Conditional:** declarations whose theorem statements retain an explicit
   arithmetic or analytic premise.
 - **Refuted strategy:** files under the failed-approach and counterexample
@@ -90,10 +112,10 @@ restrictions do not force such a pivot.
 
 Active research branches are:
 
-1. formalize the audited roots-of-unity/Vandermonde proof of Kanold's
-   Jacobsthal bound; the conditional `17*t<=3*N` bounded-height theorem, its
-   coefficient-six corollary, and interval arithmetic compile in
-   `KanoldHeight.lean`;
+1. determine whether the `17/3` coefficient can be improved by selecting a
+   missing modulus globally rather than applying Kanold's bound to an
+   arbitrary missing modulus; the fixed-hole coefficient-five shortcut is
+   already known to fail at `(N,t,c)=(11,2,6)`;
 2. control or refute the full Chebyshev/CRT pivot score, after rejection of
    the quadratic shortcut;
 3. strengthen the least-counterexample residual class until its conditions

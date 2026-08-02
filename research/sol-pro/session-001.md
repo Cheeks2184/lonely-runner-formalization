@@ -2511,3 +2511,88 @@ attainment at `c=P_N`. The unconditional height and exact-gain wrappers now
 compile in `PrimorialHeight.lean`. This closes a bounded-height partial
 theorem only; unrestricted LRC and the uniform pivot-certificate frontier
 remain open.
+
+## Independent Lean closure of the Response 46 Kanold obligation
+
+While Prompt 47 was still generating, the local formalization closed every
+remaining interval/coprimality bridge. The tracked module
+`KanoldVandermonde.lean` now compiles the subset-exponent injection,
+primitive-root node injection, exact powerset expansion, divisor-factor
+vanishing, consecutive Vandermonde contradiction, prime-set interval
+selector, and prime-factor-to-coprimality conversion. Its public conclusion
+is exactly
+
+```lean
+kanoldIntervalBound_vandermonde : KanoldIntervalBound
+```
+
+with the half-open interval, arbitrary natural start, positive modulus, and
+`2^omega(c)` length unchanged. The `c=1` and `start=0` cases are included.
+Combining this declaration with the prior conditional reduction gives the
+unconditional theorem `seventeenThirdsHeight_family_witness` under
+`17*t<=3*N`. Initial ext4 compilation succeeded, and every printed axiom set
+was a subset of `propext`, `Classical.choice`, and `Quot.sound`. An
+independent adversarial audit subsequently returned `ACCEPT`; a fresh clean
+replay remains required before publication of this checkpoint.
+
+## Exact obstruction to the proposed global fractional-dual invariant
+
+An independent exact search refuted the fractional proof strengthening, not
+the top-two pivot conjecture itself. At `n=6`, `N=7`, and top speeds
+`98<187`, there are 1,224 mutually-top-good candidate vertices. An explicit
+rational fractional cover has total weight
+
+```text
+962/241 < 4 = n-2,
+```
+
+while every candidate constraint receives numerator weight at least
+`248>241`. Weak LP duality therefore rules out any dual of the proposed form
+having the required mass greater than four. Exhaustive exact enumeration of
+all `C(97,4)=3,464,840` actual four-lower-speed subsets found no integral
+cover: the best covers 1,142 vertices and leaves 82. Thus the fractional
+invariant is rejected, while this instance still supports the integer
+top-two conjecture. A reproducible public certificate must be packaged and
+audited before these counts are promoted from the research log.
+
+## Response 47: coefficient-five repair and saturated top-two class
+
+Response 47 completed after 40 minutes 16 seconds and was recovered from the
+Chrome accessibility document. Its status for Kanold was stale: the response
+offered an uncompiled alternate subset-injectivity file while the independent
+tracked proof had already closed the full theorem. That alternate file is not
+used.
+
+The genuinely new mathematical contribution is a coefficient-five repair.
+Under `5*t<=N`, failure of the arbitrary missing-modulus interval length is
+classified exactly at `(5,1,3)`, `(10,2,6)`, and `(11,2,6)`. The middle case
+uses `q=19`; the other cases choose a second missing modulus by family
+cardinality or use the reciprocal witness. The classification and both
+family-level repairs passed an independent mathematical audit. The result is
+`proved-math`, not yet a compiled Lean theorem.
+
+The response also proves the top-two pivot property for the infinite class
+`(1,2,...,N-2,B)` by three explicit divisibility cases. This class proof
+passed mathematical audit but does not imply the global top-two conjecture.
+No all-pivot full Chebyshev-score result was found.
+
+The recovered arithmetic verifier source and output hashes are respectively
+`a7e7a302aabfb1a57b4a26d004459a58ea05727b8e11969bcefa8ca24b6d2703`
+and `19ffaeeb20fec5ed27bae8c84a9cf2fdb9025094be0a4ae244c5e20c1bdf2161`.
+It reproduces 36,601,650 admissible triples through `N=1000`, the three
+exceptions, the endpoint table, and 15,818 saturated-class checks.
+
+## Prompt 48 submitted: formal coefficient-five target
+
+Prompt 48 returned the exact compiled Kanold signatures, the independent
+`ACCEPT` audit, and the new fractional-dual obstruction. It asks Sol Pro to
+stop treating `KanoldIntervalBound` as open and to formalize the coefficient-
+five exception classification and family repairs against the existing
+unconditional theorem. It also requests a Lean-ready saturated-class
+formulation while keeping the global top-two frontier explicit.
+
+The 4,521-character composer readback matched the archived prompt exactly
+apart from its trailing newline; both UTF-8 SHA-256 values were
+`6352c55b7407e99dc744f8a4cf7aba1cb89ee53b2136dc9a99886b04d3a71985`.
+The composer cleared and the live `Stop answering` control confirmed that
+Prompt 48 was submitted in the signed-in GPT-5.6 Pro conversation.

@@ -41,7 +41,7 @@ Fully Lean-verified results include:
   explicit gain `N div (4*(Nat.log 2 N+1)+1)` using exactly the canonical
   `UnitCircle` norm.
 
-`PrimorialHeight.lean` proves a stronger unconditional bounded-height theorem.
+`PrimorialHeight.lean` proves an exact unconditional bounded-height theorem.
 Let `P_N` be the largest primorial at most `N` and `Q_N=phi(P_N)`. Lean proves
 that `P_N/Q_N` is the maximum of `c/phi(c)` for `1<=c<=N`, in exact
 cross-multiplied natural arithmetic. Therefore
@@ -52,9 +52,21 @@ cross-multiplied natural arithmetic. Therefore
 
 and maximum speed at most `N+t` imply a common closed `1/N` witness. The exact
 largest integer gain is `(N*Q_N-1) div (4*P_N-Q_N)`. This is a verified
-bounded-height result, not a proof of unrestricted LRC. Separately,
-`KanoldHeight.lean` proves the stronger linear condition `17*t<=3*N` assuming
-the still-open Lean premise `KanoldIntervalBound`.
+bounded-height result, not a proof of unrestricted LRC.
+
+The strongest fully Lean-verified height theorem is now the unconditional
+linear bound in `KanoldVandermonde.lean`. For positive injective integer
+speeds with `N=n+1`, maximum speed at most `N+t`, and
+
+```text
+17*t <= 3*N,
+```
+
+`seventeenThirdsHeight_family_witness` gives a common real time at the closed
+`1/N` threshold. Lean proves the required half-open Kanold interval bound by
+a roots-of-unity expansion and an invertible Vandermonde system; it is not
+assumed as an axiom. This remains a bounded-height theorem, not unrestricted
+LRC.
 
 The strongest additional computer-assisted manuscript theorem covers maximum
 speed `n+5`. Its 134,568-case finite core and uniform arithmetic proof have
@@ -88,11 +100,17 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 - [response45-audit.md](docs/response45-audit.md): exact primorial-height
   manuscript theorem and reproducible Sol Pro artifacts.
 - [response46-audit.md](docs/response46-audit.md): independently audited
-  roots-of-unity/Vandermonde route to Kanold's interval bound.
+  and Lean-verified roots-of-unity/Vandermonde proof of Kanold's interval
+  bound.
+- [response47-audit.md](docs/response47-audit.md): audited coefficient-five
+  manuscript improvement, saturated top-two class, and recovered verifier.
 - [top-two-pivot-search.md](docs/top-two-pivot-search.md): a sharp conjectural
   pivot restriction and its reproducible bounded stress search.
 - [top-two-fractional-dual.md](docs/top-two-fractional-dual.md): a fixed exact
-  fractional certificate and a refuted integral packing strategy.
+  fractional certificate whose proposed global extension is now refuted.
+- [top-two-fractional-obstruction.md](docs/top-two-fractional-obstruction.md):
+  exact weak-duality obstruction to that global fractional invariant; the
+  integral top-two conjecture remains open.
 - [computation.md](docs/computation.md): computational scope and interpretation.
 - [publication-audit.md](docs/publication-audit.md): public-release privacy,
   secret-scanning, and redistribution audit.
@@ -130,8 +148,10 @@ bash scripts/audit_quadratic_chebyshev_failure.sh
 bash scripts/audit_response44.sh
 bash scripts/audit_response45.sh
 bash scripts/audit_response46.sh
+bash scripts/audit_response47.sh
 bash scripts/audit_top_two_pivot_search.sh
 bash scripts/audit_top_two_fractional_dual.sh
+bash scripts/audit_top_two_fractional_obstruction.sh
 bash scripts/audit_response42_cheb_multi.sh
 bash scripts/audit_residual_compatibility_family.sh
 ```

@@ -1410,7 +1410,7 @@ the general ratio-premise interface remains available as
 bounded-height theorem is therefore `proved-lean`. It remains only a
 bounded-height partial result and does not prove unrestricted LRC.
 
-## 37. Conditional Kanold/Jacobsthal linear height
+## 37. Kanold/Jacobsthal linear height
 
 For a positive natural `c`, consider the exact interval assertion
 
@@ -1426,9 +1426,56 @@ literature inequality `g(c)<=2^omega(c)`. The primary source is H.-J. Kanold,
 Jacobsthal”](https://doi.org/10.1007/BF01350607), *Mathematische Annalen* 170
 (1967), 314–326, Theorem 4.
 
-`KanoldHeight.lean` names this still-open local formal premise
-`KanoldIntervalBound`. It then proves the following conditional theorem. Let
-`n+1=N`, let `t>0`, and let `a : Fin n -> Nat` be positive and injective. If
+`KanoldHeight.lean` names this assertion `KanoldIntervalBound`, keeping the
+arithmetic reduction separate from the number-theoretic proof.
+`KanoldVandermonde.lean` proves the assertion as follows.
+
+Let `P` be the finite set of prime factors of `c`, let
+`M=product_(p in P) p`, and choose a primitive `M`-th complex root `zeta`.
+For `T subset P`, define
+
+```text
+e_T = sum_(p in T) product_(q in P, q != p) q,
+lambda_T = zeta^e_T.
+```
+
+`subsetExponent_mod_injective` proves that the residues `e_T mod M` are
+pairwise distinct. If `p` belongs to exactly one of `T,U`, reduction modulo
+`p` kills every summand except `M/p` on that side. That remaining product is
+nonzero modulo `p`, since every other factor is a distinct prime.
+`primitiveRoot_subset_nodes_injective` transfers residue injectivity to the
+complex nodes `lambda_T`.
+
+For a natural `x`, set
+
+```text
+F(x) = product_(p in P) (1 - (zeta^(M/p))^x).
+```
+
+`roots_product_expansion` checks the exact identity
+
+```text
+F(x) = sum_(T subset P) (-1)^|T| * lambda_T^x.
+```
+
+If a prime `p in P` divides `x`, `roots_product_eq_zero_of_dvd` proves that
+the `p` factor is zero, hence `F(x)=0`. Suppose every integer `start+i`, for
+`0<=i<2^|P|`, were divisible by a prime in `P`. After absorbing
+`lambda_T^start` into the coefficients, the expanded sum would vanish at all
+exponents `i=0,...,2^|P|-1`. The nodes are distinct and the empty-subset
+coefficient is nonzero. `exponential_sum_not_vanish_consecutively` applies
+Mathlib's Vandermonde kernel to contradict simultaneous vanishing. This is
+`exists_avoiding_prime_set`.
+
+Finally, `coprime_of_avoids_primeFactors` converts avoidance of every prime
+factor into `Nat.Coprime`; positivity of `c` supplies `c != 0`. The resulting
+theorem is exactly `kanoldIntervalBound_vandermonde : KanoldIntervalBound`.
+It also covers `c=1`, where the prime set is empty and the interval has length
+one, and `start=0`; no boundary convention changes.
+
+Combining this result with the height reduction gives the following
+unconditional theorem. Let `n+1=N`, let `t>0`, and let
+`a : Fin n -> Nat` be positive and injective. If
 
 ```text
 max_i a_i <= N+t       and       17*t <= 3*N,
@@ -1449,16 +1496,21 @@ start+ell = 2*N+1.
 For `c>=7`, Lean proves `5*2^omega(c)<=2*c`; the height inequalities give
 `2*c<=5*ell`, hence `2^omega(c)<=ell`. For `c<=6`, Lean computes the exact
 values `omega(1),...,omega(6)=(0,1,1,1,1,2)` and proves the same length bound
-directly. The Kanold premise supplies a coprime `q` in the initial subinterval.
+directly. The verified Kanold theorem supplies a coprime `q` in the initial
+subinterval.
 Because the full upper endpoint is `2*N+1`, the allowed integer `q=2*N` is
 retained. The existing two-hole inverse bridge then gives the closed witness.
 
-The declarations `five_mul_two_pow_omega_le_two_mul`,
+The declarations `subsetExponent_mod_injective`,
+`exponential_sum_not_vanish_consecutively`, `roots_product_expansion`,
+`exists_avoiding_prime_set`, `kanoldIntervalBound_vandermonde`,
+`five_mul_two_pow_omega_le_two_mul`,
 `small_modulus_power_le_interval_seventeen`, and
-`seventeenThirdsHeight_family_witness_of_kanold` are `proved-lean`;
-`sixHeight_family_witness_of_kanold` is retained as a corollary. The unconditional
-theorem is not: the first unresolved proposition is exactly
-`KanoldIntervalBound`. The original proof is not a short combinatorial
-induction; it develops gap-count identities and auxiliary estimates, treats
-finite ranges, and invokes Rosser bounds for primes. Those dependencies must
-be reconstructed rather than hidden as an axiom.
+`seventeenThirdsHeight_family_witness` are all `proved-lean`.
+`sixHeight_family_witness` is an unconditional corollary. The earlier
+`*_of_kanold` declarations remain available and expose the dependency split.
+Axiom probes for the algebraic proof and final height theorem report only
+`propext`, `Classical.choice`, and `Quot.sound`.
+
+This proves a uniform linear bounded-height region. It does not bound
+arbitrary integer speeds, so it does not prove unrestricted LRC.
