@@ -39,6 +39,10 @@ One- and two-level disjoint-fiber overlap lower bounds are kernel-checked. The
 sharper additive one-level certificate has no counterexample in the recorded
 exhaustive and deterministic-random searches, but its uniform arithmetic
 premise remains unproved.
+The exact two-equation simultaneous-congruence compatibility criterion and
+fiber cardinality are kernel-checked as the arithmetic core for pair-fiber
+counts; pivot-candidate subtraction and the full modular specialization remain
+to be connected.
 An exact random-order calculation further reduces the search for a useful
 order to a ranked sum of child-fiber/parent intersection counts.  The identity
 and extensive exact tests are recorded.  Its proposed uniform strict modular

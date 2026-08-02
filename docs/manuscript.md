@@ -233,6 +233,17 @@ anchored score dominates the one-level score and remains below the true
 overlap.  None of these generic set-system theorems supplies the missing
 uniform modular inequality.
 
+The arithmetic core of a pair-fiber count is now formalized independently in
+`SimultaneousCongruence.lean`.  With `g=gcd(M,b,c)`,
+`simultaneousCongruenceCompatible_iff_nonempty` proves that the two equations
+`b*r=x` and `c*r=y` modulo positive `M` have a solution exactly when `g`
+divides both targets and `c*x=b*y` modulo `M*g`.
+`card_simultaneousCongruenceResidues` proves that a compatible fiber has
+exactly `g` residues and an incompatible fiber is empty.  Congruence only
+modulo `M` is insufficient, as `(M,b,c,x,y)=(8,2,4,2,0)` shows.  The remaining
+pivot-specific interface must subtract residues divisible by `N` and sum over
+the strict target ball; that subtraction is not hidden in this theorem.
+
 Finally, `docs/ranked-fiber-averaging.md` derives an exact random-order
 identity for the one-level score.  If the possible-parent intersection sizes
 inside one child fiber are sorted as `nu_1 >= ... >= nu_p`, the expected

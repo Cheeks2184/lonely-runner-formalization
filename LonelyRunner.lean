@@ -9,6 +9,7 @@ import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
 import LonelyRunner.PivotCounts
+import LonelyRunner.SimultaneousCongruence
 import LonelyRunner.PivotBoundary
 import LonelyRunner.HallCredits
 import LonelyRunner.FiberCredits

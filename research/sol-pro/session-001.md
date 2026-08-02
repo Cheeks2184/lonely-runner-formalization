@@ -1062,3 +1062,9 @@ non-tautological greedy potential, a tractable biased random-order law that
 survives the nine-speed counterexample, or a minimal-failure/dual theorem with
 a concrete arithmetic consequence.  Uniform averaging, pairwise and second-
 moment compression, literal unions, and unbounded refinement were excluded.
+
+In parallel, the raw two-equation CRT claim was kernel-checked in
+`SimultaneousCongruence.lean`.  The formal theorem uses the corrected modulus
+`M*gcd(M,b,c)`, proves compatibility iff nonemptiness, and gives exact fiber
+cardinality.  Only the pivot-candidate subtraction and strict-ball summation,
+not the raw pair count, remain outside Lean.
