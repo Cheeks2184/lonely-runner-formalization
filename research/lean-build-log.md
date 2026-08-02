@@ -846,3 +846,52 @@ roots-of-unity manuscript argument, and the top-two fractional certificate,
 then returned `ACCEPT`. The unrestricted Lonely Runner Conjecture remains
 open; neither finite pivot evidence nor the conditional Kanold theorem is
 reported as an unrestricted proof.
+
+## 2026-08-02: unconditional Kanold theorem and Response 47 checkpoint
+
+Source commit `2cfefb947777bd790bf777238b728e1eb155584c` was cloned
+with `git clone --no-local` into a fresh ext4 checkout. The source tree was
+clean and its HEAD matched the commit before verification. The checkpoint
+adds the fully formal roots-of-unity/Vandermonde proof of
+`KanoldIntervalBound`, the unconditional `17*t<=3*N` bounded-height wrapper,
+Response 47's recovered arithmetic certificate, and the exact rejection of
+the proposed global fractional top-two dual invariant.
+
+The first default-parallelism build reached the final project modules but
+triggered a WSL memory-pressure restart before completion. The kernel log
+recorded memory exhaustion and an ext4 remount; Lean emitted no theorem or
+compiler error. That incomplete environment run is not verification. The
+same untouched source checkout was resumed with Lake configuration
+`-Kjobs=2`; Lake replayed its target graph and reported:
+
+```text
+Build completed successfully (3572 jobs).
+```
+
+The successful build was followed by the authoritative trust and regression
+commands:
+
+```text
+python3 scripts/audit_lean_trust.py
+python3 -m unittest discover -s tests -v
+```
+
+Results:
+
+```text
+Trust audit accepted 235 theorem reports.
+Ran 153 tests in 330.179s
+OK
+```
+
+Every reported axiom is among `propext`, `Classical.choice`, and
+`Quot.sound`. An independent adversarial reviewer checked the empty-prime-set
+case, primitive-root order one, subset-node injectivity, Vandermonde shift,
+prime-factor coprimality bridge, exact half-open interval, and all hypotheses
+of `seventeenThirdsHeight_family_witness`, then returned `ACCEPT`.
+
+The Response 47 verifier reproduces its 36,601,650 bounded arithmetic cases.
+The fractional-obstruction verifier checks all 1,224 constraints and all
+3,464,840 four-lower-speed subsets. These computations support their stated
+partial or negative claims only. The unrestricted Lonely Runner Conjecture
+remains open.

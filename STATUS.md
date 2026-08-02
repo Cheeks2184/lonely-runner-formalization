@@ -125,7 +125,7 @@ Active research branches are:
 ## Latest verification
 
 Last clean mathematical source checkpoint:
-`f749d9e8b6a4f0f7ef33de0cfb20b545a80ea110`.
+`2cfefb947777bd790bf777238b728e1eb155584c`.
 
 Pinned environment:
 
@@ -138,9 +138,9 @@ Pinned environment:
 Clean no-local-clone ext4 verification at that source checkpoint:
 
 ```text
-Build completed successfully (3571 jobs).
-Trust audit: 225 theorem reports; only propext, Classical.choice, Quot.sound
-Ran 151 tests in 346.552s
+Build completed successfully (3572 jobs).
+Trust audit: 235 theorem reports; only propext, Classical.choice, Quot.sound
+Ran 153 tests in 330.179s
 OK
 ```
 
@@ -152,13 +152,23 @@ The workflow now installs `libboost-dev` before running the unchanged complete
 suite. Follow-up run 30755579476 passed both jobs at commit `b8b047e`: the
 cached Lean build, trust audit, and all 147 certificate tests are green. This
 was a CI environment repair, not a reduced verification target.
+Public run 30758736845 then passed both jobs at commit `a95fc5f`, including
+the 3,571-job Lean checkpoint, trust audit, and all 151 tests. The current
+153-test source checkpoint awaits publication after this local audit record.
 
-This replay includes the unconditional primorial maximum and bounded-height
-theorems, the conditional Kanold-height theorem, and the Response 45,
-Response 46, top-two search, and fixed fractional-dual certificate audits.
+This replay includes the unconditional Kanold interval and `17*t<=3*N`
+height theorems, the primorial theorem, the Response 45--47 audits, the
+top-two searches, and both the fixed fractional dual and its exact global
+obstruction.
 The source was cloned with `git clone --no-local` into a fresh ext4 checkout;
 the checkout was clean and its HEAD matched the checkpoint above before any
 build or test ran.
+
+The first highly parallel build attempt triggered a WSL memory-pressure
+restart. No Lean diagnostic was emitted and that attempt is not counted.
+Replaying Lake's complete target graph in the same untouched source checkout
+then completed all 3,572 jobs; the trust audit and full test suite above ran
+after that successful build.
 
 Every explicit axiom probe reports only subsets of `propext`,
 `Classical.choice`, and `Quot.sound`. See
