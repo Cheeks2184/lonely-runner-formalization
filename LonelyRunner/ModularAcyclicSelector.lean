@@ -1,5 +1,6 @@
 import LonelyRunner.AcyclicFiberSelector
 import LonelyRunner.PivotPairFiberCounts
+import Mathlib.Data.Fintype.Sort
 
 /-!
 # Concrete modular acyclic fiber selectors
@@ -84,6 +85,27 @@ def modularOrderFiberCredit {n : ℕ} (N : ℕ)
     (speeds : Fin n → ℕ) (pivot : Fin n)
     (o : VertexOrder (NonpivotVertex pivot)) : ℕ :=
   ∑ child, selectedEarlierParentFiberCredit N speeds pivot o child
+
+/-! ## Enumerating a vertex order by consecutive natural indices -/
+
+/-- The canonical enumeration of a finite `VertexOrder`, in increasing order
+of its injective natural-valued keys.  The temporary lifted order is used only
+to construct the equivalence; the comparison theorem below states its exact
+relationship with the original keys. -/
+noncomputable def vertexOrderEquivFin {V : Type*} [Fintype V]
+    (o : VertexOrder V) : Fin (Fintype.card V) ≃ V := by
+  letI : LinearOrder V := LinearOrder.lift' o.key o.key_injective
+  exact (monoEquivOfFin V rfl).toEquiv
+
+/-- The canonical enumeration preserves and reflects strict key order. -/
+theorem vertexOrderEquivFin_key_lt_iff {V : Type*} [Fintype V]
+    (o : VertexOrder V) (a b : Fin (Fintype.card V)) :
+    o.key (vertexOrderEquivFin o a) < o.key (vertexOrderEquivFin o b) ↔
+      a < b := by
+  letI : LinearOrder V := LinearOrder.lift' o.key o.key_injective
+  change vertexOrderEquivFin o a < vertexOrderEquivFin o b ↔ a < b
+  simpa [vertexOrderEquivFin] using
+    (monoEquivOfFin V rfl).lt_iff_lt
 
 /-- Tokenwise, the abstract predecessor supremum is exactly the largest
 intersection with one earlier nonpivot parent. -/
