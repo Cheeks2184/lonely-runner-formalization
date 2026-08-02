@@ -649,3 +649,45 @@ data-row SHA-256 is
 All 275,494 targeted primitive scan executions had some positive exact pivot
 score. This is bounded certificate evidence, not a uniform theorem or an LRC
 conclusion.
+
+## 2026-08-01: max-speed `n+4` integration and clean fallback
+
+The repository added the independently audited max-speed `n+4` manuscript
+theorem, exact 2,982-case small certificate, Response 43 audit, and Prompt 44
+log. A conditional Lean wrapper for the uniform `N>=12` branch was attempted
+and decomposed into missing-height, reciprocal, and coprime-modulus lemmas.
+Repeated 60--180 second checks failed to finish elaboration without producing
+a Lean diagnostic. Those unverified declarations and probes were removed at
+commit `eb6c050e7e275ccb4e7251900e1a6d8666f593ef`; the result is not counted
+as Lean progress.
+
+The warm clean checkout initially appeared slow because six completed
+subagent searches had left exact inline Python workers consuming six cores
+and roughly 70 percent of WSL memory. The six repository-scoped workers were
+identified by exact PID and working directory and terminated; unrelated WSL
+processes were untouched. The clean checkout then completed the root build:
+
+```text
+Build completed successfully (3561 jobs).
+```
+
+The explicit axiom audit succeeded and continues to report only subsets of
+`[propext, Classical.choice, Quot.sound]`. The enlarged exact regression suite
+reported:
+
+```text
+Ran 141 tests in 173.216s
+OK
+```
+
+`scripts/audit_height_n_plus_4.sh` independently matches the checked-in
+canonical output. The source hash is
+`7e461a44b61f2b6655feb5d9e0054507ce56c70f1d53b6a5a970cd9ebccd490e`,
+the output-file hash is
+`505a91fe3be6a6adaa4440c9df3183ddaeb74cab13422e68e3c7e6d10cd4da9e`,
+and the row-certificate hash is
+`dda4a7f68573195efc13338f6252712352a2efd7c18ca3d8ddd38bad02e0cd96`.
+A complete Lean source scan found no `sorry`, `admit`, custom `axiom`,
+`opaque`, `unsafe`, `extern`, `implemented_by`, `partial_fixpoint`,
+`native_decide`, or disabled checks. Both main and clean verification
+worktrees were empty after verification.
