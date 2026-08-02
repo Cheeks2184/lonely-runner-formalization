@@ -1130,8 +1130,8 @@ pivot always succeeds and does not prove unrestricted LRC.
 ## 2026-08-02: clean fastest-interval and Response 50 checkpoint
 
 Source commit `9d45be484cb7dd91b4228e44ded7e66a9006e616` was cloned with
-`git clone --no-local` into the fresh native-WSL ext4 directory
-`/home/joshu/code/lonely-runner-verification-9d45be4`. The checkout was clean
+`git clone --no-local` into a fresh native-WSL ext4 verification directory.
+The checkout was clean
 and its HEAD matched the source commit. `lake exe cache get` restored 8,638
 pinned artifacts. The authoritative command
 
