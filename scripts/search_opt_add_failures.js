@@ -395,25 +395,30 @@ function printResult(result) {
   for (const row of result.score.rows) console.log(JSON.stringify(row));
 }
 
-const args = process.argv.slice(2);
-const get = (name, fallback) => {
-  const index = args.indexOf(name);
-  return index === -1 ? fallback : Number(args[index + 1]);
-};
-if (args.includes("--scan-runners")) {
-  printResult(scanCompletePrimitiveBox(
-    get("--scan-runners", 10), get("--maximum", 22)));
-} else if (args.includes("--tuple")) {
-  const index = args.indexOf("--tuple");
-  const speeds = normalize(args[index + 1].split(",").map(Number));
-  printResult({ speeds, score: scoreTuple(speeds), examined: 1 });
-} else if (args.includes("--descent")) {
-  const index = get("--descent", 0);
-  printResult(deterministicDescent(
-    seeds[index], get("--maximum", 200), get("--radius", 3), get("--rounds", 20)));
-} else {
-  const n = get("--runners", 9);
-  const matching = seeds.filter((seed) => seed.length === n);
-  const search = args.includes("--targeted") ? targetedFailureSearch : randomSearch;
-  printResult(search(matching, get("--maximum", 200), get("--steps", 2000), get("--seed", 20260802)));
+function main(args) {
+  const get = (name, fallback) => {
+    const index = args.indexOf(name);
+    return index === -1 ? fallback : Number(args[index + 1]);
+  };
+  if (args.includes("--scan-runners")) {
+    printResult(scanCompletePrimitiveBox(
+      get("--scan-runners", 10), get("--maximum", 22)));
+  } else if (args.includes("--tuple")) {
+    const index = args.indexOf("--tuple");
+    const speeds = normalize(args[index + 1].split(",").map(Number));
+    printResult({ speeds, score: scoreTuple(speeds), examined: 1 });
+  } else if (args.includes("--descent")) {
+    const index = get("--descent", 0);
+    printResult(deterministicDescent(
+      seeds[index], get("--maximum", 200), get("--radius", 3), get("--rounds", 20)));
+  } else {
+    const n = get("--runners", 9);
+    const matching = seeds.filter((seed) => seed.length === n);
+    const search = args.includes("--targeted") ? targetedFailureSearch : randomSearch;
+    printResult(search(matching, get("--maximum", 200), get("--steps", 2000), get("--seed", 20260802)));
+  }
 }
+
+module.exports = { compareScores, normalize, scorePivot, scoreTuple };
+
+if (require.main === module) main(process.argv.slice(2));
