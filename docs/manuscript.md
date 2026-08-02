@@ -247,9 +247,14 @@ set into disjoint exact-target fibers without changing its open bad endpoint,
 and `card_pivotTargetFiber_inter_pivotBadResidues` writes a target fiber's
 overlap with a second bad set as the sum of candidate simultaneous-congruence
 counts over the second strict target ball.  The raw natural-representative
-count is also transferred from the exact gcd theorem.  What remains is the
-explicit `q -> N*q` bijection needed to subtract precisely the raw residues
-divisible by `N`; no closed formula for the candidate count is yet claimed.
+count is also transferred from the exact gcd theorem.
+`divisibleSimultaneousCongruenceNatResidues_eq_image` proves the explicit
+`q -> N*q` image bijection for the divisible part, and
+`candidateSimultaneousCongruenceCount_exact` subtracts its smaller-modulus
+compatibility/gcd count from the raw count.  Finally,
+`card_pivotTargetFiber_inter_pivotBadResidues_exact` substitutes this closed
+expression into every strict-ball summand.  Thus pair-fiber evaluation is now
+kernel-checked; no ordering or uniform overlap inequality is inferred from it.
 
 Finally, `docs/ranked-fiber-averaging.md` derives an exact random-order
 identity for the one-level score.  If the possible-parent intersection sizes
@@ -326,3 +331,10 @@ duplicate-free order.  The exponential-clock tail formula and the exact
 identification of the runner potential with that weighted recurrence remain
 paper/computational interfaces, not hidden hypotheses of the Lean theorem and
 no longer a candidate uniform completion under the GCD rates.
+
+A subsequent targeted search found the simpler primitive fixed-rate failure
+`(6,8,15,21,28,35,40,48,75)`.  Exact regression checks all nine negative
+clock margins; at pivot `75` the same conditional-expectation greedy procedure
+nevertheless yields deterministic cost `643<675`.  This strengthens the
+rejection of the fixed expectation while leaving the optimized additive
+principle unchanged.

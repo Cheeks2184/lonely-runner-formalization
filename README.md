@@ -43,8 +43,9 @@ The exact two-equation simultaneous-congruence compatibility criterion and
 fiber cardinality are kernel-checked as the arithmetic core for pair-fiber
 counts. Strict pivot target fibers now kernel-check as a disjoint decomposition
 of each bad set, and their pair overlaps are exactly a finite sum of candidate
-simultaneous-congruence counts. The remaining arithmetic bridge is the explicit
-subtraction of raw solutions divisible by the pivot-grid scale.
+simultaneous-congruence counts. The explicit `q -> N*q` bijection now subtracts
+the raw solutions divisible by the pivot-grid scale and yields a closed exact
+compatibility/gcd formula for every pair-target count and overlap sum.
 An exact random-order calculation further reduces the search for a useful
 order to a ranked sum of child-fiber/parent intersection counts.  The identity
 and extensive exact tests are recorded.  Its proposed uniform strict modular

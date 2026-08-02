@@ -153,11 +153,12 @@ and the exact fixed-tuple checker. The live priorities are now:
    the canonical real conjecture. The entire BHK real-to-rational reduction,
    including its endpoint topology and finite-dimensional collision argument,
    now compiles.
-2. Complete the arithmetic specialization of pair-fiber intersections. Lean
-   now decomposes every strict pivot bad set into exact-target fibers, transfers
-   the raw simultaneous-congruence gcd count, and sums candidate overlaps. The
-   remaining bridge subtracts exactly the raw residues divisible by `N` via
-   the explicit map `q -> N*q`.
+2. Use the now-complete exact pair-fiber arithmetic specialization. Lean
+   decomposes every strict pivot bad set into exact-target fibers, transfers
+   the raw simultaneous-congruence gcd count, subtracts exactly the raw
+   residues divisible by `N` via `q -> N*q`, and sums the resulting closed
+   counts. The remaining obstacle is an ordering or bounded-depth inequality,
+   not evaluation of a pair intersection.
 3. Attack the optimized additive ordering principle without a fixed-rate
    surrogate. Uniform random ordering and the GCD-rate exponential clock now
    both have exact all-pivot counterexamples, while favorable deterministic

@@ -145,8 +145,8 @@ Exact all-pivot scores and reproduction commands are in
 
 The generic exponential-race and conditional-expectation identities are
 valid, but the proposed fixed rates `gcd(a_i,(n+1)A)` do not give a strict
-expected bound at some pivot for every primitive tuple.  The exact all-pivot
-counterexample is
+expected bound at some pivot for every primitive tuple.  Sol Pro's first exact
+all-pivot counterexample was
 
 ```text
 (8,15,35,40,48,56,63,75,78).
@@ -172,3 +172,11 @@ an optimized-additive or Lonely Runner counterexample.  At pivot `8`, order
 `(75,48,40,15,78,35,63,56)` has costs `(14,6,28,8,4,8,2,0)` and total
 `70<72`; the explicit time `13/80` gives distances
 `(3/10,7/16,5/16,1/2,1/5,1/10,19/80,3/16,13/40)`.
+
+A targeted independent divisor-template search subsequently found the simpler
+primitive failure `(6,8,15,21,28,35,40,48,75)`.  Its maximum speed is `75`
+and its speed sum is `276`, versus `78` and `418` for the first tuple.  The
+regression suite recomputes all nine strictly negative margins.  At pivot
+`75`, conditional-expectation greedy still produces cost `643<675`, so the
+same separation from the deterministic additive route remains explicit.  The
+bounded search does not establish global minimality.

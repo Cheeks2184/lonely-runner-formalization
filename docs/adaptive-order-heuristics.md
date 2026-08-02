@@ -137,6 +137,30 @@ distances `(3/10,7/16,5/16,1/2,1/5,1/10,19/80,3/16,13/40)`, all at least
 `1/10`.  The regression suite independently recomputes the fractions, order,
 and witness from the strict pivot model.
 
+A subsequent targeted divisor-template search found the simpler primitive
+counterexample `(6,8,15,21,28,35,40,48,75)`, reducing the maximum speed from
+`78` to `75` and the sum from `418` to `276`.  Its exact margins in pivot order
+are
+
+```text
+-7433/5005
+-32867003/5493180
+-19175889760529488809632/5362730157041001800055
+-200335434661649682409981/13664286714720816736380
+-49692982521124046/5980611967458975
+-2988900599127036599/1691049421228887720
+-9571173212872199911/1230772381826387400
+-1416033648132831007380029/25885073210703704197200
+-1225799332469/98520942520
+```
+
+The conditional-expectation greedy order still gives additive cost `643<675`
+at pivot `75`.  A complete 101,679-instance scan of the generating template
+found eight failures, all with maximum `75`, and this tuple uniquely minimized
+their speed sum.  Additional local searches found no smaller example, but no
+global minimality is claimed.  The regression suite recomputes all nine exact
+margins and the surviving deterministic certificate.
+
 ## 5. A one-prefix adaptive repair and the scaling obstruction
 
 The counterexample rejects the initial GCD-clock expectation, but it also
@@ -230,6 +254,7 @@ Reproduce the GCD-clock fraction and scan with:
 ```sh
 python3 scripts/search_adaptive_orders.py gcd-clock 2 3 7 9 10 12 15 16 19 --pivot-speed 3
 python3 scripts/search_adaptive_orders.py gcd-clock 8 15 35 40 48 56 63 75 78 --pivot-speed 8
+python3 scripts/search_adaptive_orders.py gcd-clock 6 8 15 21 28 35 40 48 75 --pivot-speed 75
 python3 scripts/search_adaptive_orders.py gcd-clock-box --runners 4 --max-speed 20
 python3 -m unittest tests.test_adaptive_orders -v
 ```

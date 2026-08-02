@@ -243,6 +243,43 @@ class AdaptiveOrderTests(unittest.TestCase):
         )
         self.assertTrue(all(distance >= Fraction(1, 10) for distance in distances))
 
+        # A targeted divisor-template search subsequently found this smaller
+        # primitive all-pivot failure (maximum 75 and sum 276).  It is again
+        # only a counterexample to the fixed clock expectation.
+        smaller = (6, 8, 15, 21, 28, 35, 40, 48, 75)
+        smaller_margins = (
+            Fraction(-7433, 5005),
+            Fraction(-32867003, 5493180),
+            Fraction(-19175889760529488809632, 5362730157041001800055),
+            Fraction(-200335434661649682409981, 13664286714720816736380),
+            Fraction(-49692982521124046, 5980611967458975),
+            Fraction(-2988900599127036599, 1691049421228887720),
+            Fraction(-9571173212872199911, 1230772381826387400),
+            Fraction(-1416033648132831007380029, 25885073210703704197200),
+            Fraction(-1225799332469, 98520942520),
+        )
+        self.assertEqual(math.gcd(*smaller), 1)
+        for pivot, margin in enumerate(smaller_margins):
+            result = gcd_clock_result(smaller, pivot)
+            self.assertEqual(
+                Fraction(result.universe_size) - result.expected_bound,
+                margin,
+            )
+            self.assertLess(margin, 0)
+
+        pivot_75 = smaller.index(75)
+        repaired = gcd_clock_result(smaller, pivot_75)
+        self.assertEqual(
+            tuple(smaller[i] for i in repaired.greedy_order),
+            (40, 15, 6, 35, 48, 21, 8, 28),
+        )
+        self.assertEqual(
+            tuple(step.increment_bound for step in repaired.greedy_steps),
+            (135, 110, 88, 88, 74, 64, 40, 44),
+        )
+        self.assertEqual(repaired.greedy_bound, 643)
+        self.assertLess(repaired.greedy_bound, repaired.universe_size)
+
     def test_one_prefix_repairs_clock_counterexample_at_exactly_pivot_eight(self) -> None:
         speeds = (8, 15, 35, 40, 48, 56, 63, 75, 78)
         best_steps = []
