@@ -780,6 +780,19 @@ the literal union size is `68`, with good residues `13,29,51,67`. This is a
 genuine fixed-pivot separation, but a literal capacity audit already contains
 enough residue information to find a witness directly. Its unbounded value
 would require a symbolic CRT theorem constructing such a packing.
+`OverlapCapacity.lean` kernel-checks the two incidence double counts, the
+subtraction-free union-plus-credit inequality, its natural-subtraction
+corollary, and an abstract ordered-parent route to the pointwise capacity.
+
+The exact packing optimization is a multiple-choice hypergraph `b`-matching:
+choose at most one whole parent block per token and respect every residue
+capacity. Its linear relaxation is not integral in general. With unit
+capacities and blocks `{a,b}`, `{b,c}`, and `{c,a}`, the integer optimum is
+`2` while taking half of every block has fractional value `3`. Ordinary
+max-flow is therefore exact only in special cases such as singleton blocks;
+splitting a nonsingleton block into independent residue flows illegally trims
+the arithmetic block. Any uniform result must obtain additional balanced or
+integral structure from the congruence cosets themselves.
 
 The independent unrestricted search also completely checks every increasing
 ten-speed tuple through maximum `22`: `646,646` tuples total, `646,635`

@@ -270,7 +270,12 @@ and the exact fixed-tuple checker. The live priorities are now:
    but cycles are allowed. On the earlier tuple `F` at pivot `8`, a verified
    24-block packing has credit `34`, versus additive credit `32`, and proves
    `|union B_i|<=70<72` (the literal union is `68`). Turning this fixed-instance
-   packing into a uniform CRT theorem is open. The active frontier is therefore
+   packing into a uniform CRT theorem is open. `OverlapCapacity.lean`
+   kernel-checks the incidence double counts, subtraction-free capacity
+   inequality, and an abstract ordered-parent dominance theorem. The exact
+   optimization is a multiple-choice hypergraph b-matching, not generally a
+   max-flow problem: three unit-capacity two-point blocks on a triangle have
+   integer credit `2` but fractional credit `3`. The active frontier is therefore
    the exact pivot-certificate proposition, equivalent in Lean to the
    positive-integer conjecture.
 4. Prove or refute the exact uniform pivot-certificate proposition now known

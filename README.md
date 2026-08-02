@@ -138,7 +138,9 @@ in `BellmanPeeling.lean`. They explain the failure certificate but do not force
 a shared potential across pivot moduli. A capacity-respecting whole-overlap
 packing is strictly stronger at a fixed pivot: on the earlier tuple at pivot
 `8`, 24 whole token-parent blocks have credit `34>32`, proving union size at
-most `70<72` even though additive cost is exactly `72`. The remaining live
+most `70<72` even though additive cost is exactly `72`. The duplicate-incidence
+identity, subtraction-free capacity bound, and abstract order-dominance route
+are kernel-checked in `OverlapCapacity.lean`. The remaining live
 finite target is the exact pivot-certificate proposition already proved in
 Lean equivalent to the positive-integer conjecture, not another ordering
 surrogate.

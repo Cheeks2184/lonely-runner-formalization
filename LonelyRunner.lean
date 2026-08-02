@@ -26,6 +26,7 @@ import LonelyRunner.ModularAcyclicSelector
 import LonelyRunner.SoftFeedbackLayers
 import LonelyRunner.BlockPeeling
 import LonelyRunner.BellmanPeeling
+import LonelyRunner.OverlapCapacity
 import LonelyRunner.Chain3Counterexample
 import LonelyRunner.OptAddCounterexample
 import LonelyRunner.ResidualVariationEnergy
