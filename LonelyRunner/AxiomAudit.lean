@@ -87,6 +87,9 @@ project-specific axiom.
 #print axioms LonelyRunner.sum_pairMultiplicityContribution_num
 #print axioms LonelyRunner.residueEnergy_nat_add_mod_le
 #print axioms LonelyRunner.residueEnergy_sum_mod_le
+#print axioms LonelyRunner.rangeProfileDispersion_eq
+#print axioms LonelyRunner.rangeSumProfileLowerBound_of_cutDecomposition
+#print axioms LonelyRunner.rangeProfileDispersion_singleton
 #print axioms LonelyRunner.exists_cost_lt_of_decreasing_move
 #print axioms LonelyRunner.prefixDependentCost_relocate
 #print axioms LonelyRunner.pairSumCertificate_iff_pair_time

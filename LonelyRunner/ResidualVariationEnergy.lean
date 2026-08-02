@@ -178,4 +178,105 @@ both the exact cut energy and the modular lower bound vanish. -/
         (fun a => residueEnergy (K : ℤ) (a : ℤ))).sum = 0 := by
   simp [residueEnergy]
 
+/-- Pairwise `L1` dispersion of a natural-number list, counting every
+unordered pair exactly once. -/
+def listNatPairwiseDispersion : List ℕ → ℕ
+  | [] => 0
+  | a :: rest =>
+      (rest.map (fun b => max a b - min a b)).sum +
+        listNatPairwiseDispersion rest
+
+/-- Dispersion of a profile presented as one selected minimum, one selected
+maximum, and the remaining entries.  This presentation avoids any ambiguity
+when an extremal value occurs more than once. -/
+def rangeProfileDispersion (low high : ℕ) (interior : List ℕ) : ℕ :=
+  (high - low) +
+    (interior.map (fun x => (x - low) + (high - x))).sum +
+      listNatPairwiseDispersion interior
+
+/-- Every interior coordinate contributes exactly the full range through its
+two pairs with the selected minimum and maximum. -/
+theorem sum_endpointDistances_eq
+    (low high : ℕ) (interior : List ℕ)
+    (hinterior : ∀ x ∈ interior, low ≤ x ∧ x ≤ high) :
+    (interior.map (fun x => (x - low) + (high - x))).sum =
+      interior.length * (high - low) := by
+  induction interior with
+  | nil => simp
+  | cons x interior ih =>
+      have hx := hinterior x (by simp)
+      have htail : ∀ y ∈ interior, low ≤ y ∧ y ≤ high := by
+        intro y hy
+        exact hinterior y (by simp [hy])
+      simp only [List.map_cons, List.sum_cons, List.length_cons]
+      rw [ih htail]
+      have hxrange : (x - low) + (high - x) = high - low := by omega
+      rw [hxrange, Nat.add_mul]
+      omega
+
+/-- Exact min/max accounting identity behind the range--sum profile bound.
+For a profile of length `interior.length + 2`, the selected extremal pairs
+contribute `(r-1) * (high-low)` and all remaining dispersion is internal. -/
+theorem rangeProfileDispersion_eq
+    (low high : ℕ) (interior : List ℕ)
+    (hinterior : ∀ x ∈ interior, low ≤ x ∧ x ≤ high) :
+    rangeProfileDispersion low high interior =
+      (interior.length + 1) * (high - low) +
+        listNatPairwiseDispersion interior := by
+  unfold rangeProfileDispersion
+  rw [sum_endpointDistances_eq low high interior hinterior]
+  rw [Nat.add_mul]
+  omega
+
+/-- **Range--sum lower bound with an explicit cut decomposition.**
+
+The list `cuts` is the layer-cake data for the shifted interior profile.  Its
+first hypothesis identifies the total residue, and its second says that the
+sum of cut energies is bounded by the exact internal pairwise dispersion.
+Under these transparent obligations, the complete profile dispersion is at
+least the min/max range contribution plus the balancing residue energy.
+
+No existence theorem for `cuts` is asserted here.  Establishing the standard
+layer-cake decomposition for an arbitrary natural profile is the remaining
+formal bridge to the unconditional Response 30 inequality. -/
+theorem rangeSumProfileLowerBound_of_cutDecomposition
+    (low high : ℕ) (interior cuts : List ℕ)
+    (hK : 0 < interior.length)
+    (hinterior : ∀ x ∈ interior, low ≤ x ∧ x ≤ high)
+    (hcuts : ∀ a ∈ cuts, a < interior.length)
+    (hresidue :
+      (cuts.sum % interior.length) =
+        ((interior.map (fun x => x - low)).sum % interior.length))
+    (hcutEnergy :
+      (cuts.map (fun a =>
+        residueEnergy (interior.length : ℤ) (a : ℤ))).sum ≤
+          (listNatPairwiseDispersion interior : ℤ)) :
+    ((interior.length + 1 : ℕ) : ℤ) * ((high - low : ℕ) : ℤ) +
+        residueEnergy (interior.length : ℤ)
+          ((((interior.map (fun x => x - low)).sum %
+            interior.length : ℕ)) : ℤ) ≤
+      (rangeProfileDispersion low high interior : ℤ) := by
+  have hbalance := residueEnergy_sum_mod_le
+    interior.length cuts hK hcuts
+  rw [hresidue] at hbalance
+  have hinteriorBalance :
+      residueEnergy (interior.length : ℤ)
+          ((((interior.map (fun x => x - low)).sum %
+            interior.length : ℕ)) : ℤ) ≤
+        (listNatPairwiseDispersion interior : ℤ) :=
+    le_trans hbalance hcutEnergy
+  rw [rangeProfileDispersion_eq low high interior hinterior]
+  simp only [Nat.cast_add, Nat.cast_one, Nat.cast_mul]
+  gcongr
+
+/-- Equality case for a three-entry profile: after selecting the minimum and
+maximum, the one-entry interior profile has no internal pairwise dispersion,
+so the exact dispersion is twice the range. -/
+theorem rangeProfileDispersion_singleton
+    (low middle high : ℕ) (hlow : low ≤ middle) (hhigh : middle ≤ high) :
+    rangeProfileDispersion low high [middle] = 2 * (high - low) := by
+  rw [rangeProfileDispersion_eq]
+  · simp [listNatPairwiseDispersion]
+  · simp [hlow, hhigh]
+
 end LonelyRunner
