@@ -90,6 +90,12 @@ project-specific axiom.
 #print axioms LonelyRunner.rangeProfileDispersion_eq
 #print axioms LonelyRunner.rangeSumProfileLowerBound_of_cutDecomposition
 #print axioms LonelyRunner.rangeProfileDispersion_singleton
+#print axioms LonelyRunner.fixedRow_pairDeficit_add_binary_eq_neg_debt
+#print axioms LonelyRunner.sum_fixedRow_pairDeficit_add_binary_eq_neg_debt
+#print axioms LonelyRunner.fixedRowDebtContributionNum_nonneg
+#print axioms LonelyRunner.fixedRowCellLoss_nonneg
+#print axioms LonelyRunner.fixedRow_debt_loss_decomposition
+#print axioms LonelyRunner.sum_fixedRowCellLoss_nonneg
 #print axioms LonelyRunner.exists_cost_lt_of_decreasing_move
 #print axioms LonelyRunner.prefixDependentCost_relocate
 #print axioms LonelyRunner.pairSumCertificate_iff_pair_time
