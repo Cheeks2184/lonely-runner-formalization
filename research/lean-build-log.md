@@ -691,3 +691,51 @@ A complete Lean source scan found no `sorry`, `admit`, custom `axiom`,
 `opaque`, `unsafe`, `extern`, `implemented_by`, `partial_fixpoint`,
 `native_decide`, or disabled checks. Both main and clean verification
 worktrees were empty after verification.
+
+## 2026-08-02: five-hole theorem and Prompt 44 integration
+
+Commit `0083e6622e5098eb76b44177d188ff6182f420cd` records the independently
+audited max-speed `n+5` theorem, its 134,568-case finite core, the general
+`16*t^2+t<=N` constructive height theorem, recovered Prompt 44 artifacts,
+larger exact Chebyshev stress domains, and the residual-compatible family.
+The mathematical `n+5` and square-root-height theorems are deliberately
+classified `proved-math`, not `proved-lean`; no Lean source changed in this
+pass.
+
+The mounted worktree's complete Python suite reported:
+
+```text
+Ran 145 tests in 255.938s
+OK
+```
+
+The committed source was then fast-forwarded without reset into the warm clean
+ext4 checkout `/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`.
+From that checkout the pinned root build and explicit axiom audit completed:
+
+```text
+Build completed successfully (3561 jobs).
+```
+
+Every axiom probe continues to report only subsets of
+`[propext, Classical.choice, Quot.sound]`. The clean checkout's full committed
+regression replay reported:
+
+```text
+Ran 145 tests in 550.010s
+OK
+```
+
+The recovered Prompt 44 source/output hash pairs are
+`ae713fc8.../a8defd9e...` for the height verifier and
+`f9076573.../cb7bec18...` for the Chebyshev scanner; all full hashes are in
+`docs/response44-audit.md`. The five-hole verifier and canonical output hashes
+are `6f401c0d...` and `884e01a2...`. Byte-for-byte audit scripts passed for
+all artifacts. A complete Lean source scan found no `sorry`, `admit`, custom
+`axiom`, `opaque`, `unsafe`, `extern`, `implemented_by`, `partial_fixpoint`,
+`native_decide`, or disabled checks.
+
+An accidental first build invocation inherited the slower mounted WSL path;
+it produced no diagnostic and was terminated after about three minutes. It
+is not counted as a verification result and left no background worker. The
+explicit clean-ext4 run above is the authoritative build.
