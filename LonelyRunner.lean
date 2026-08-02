@@ -27,6 +27,7 @@ import LonelyRunner.TripleCongruence
 import LonelyRunner.PivotPairFiberCounts
 import LonelyRunner.PivotTripleFiberCounts
 import LonelyRunner.PivotBoundary
+import LonelyRunner.TopTwoTransversal
 import LonelyRunner.HallCredits
 import LonelyRunner.FiberCredits
 import LonelyRunner.TwoLevelFiberCredits

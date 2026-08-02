@@ -67,6 +67,8 @@ def main() -> None:
         "LonelyRunner.exists_fastestPivotCertificate_of_extremal_band",
         "LonelyRunner.exists_fastestPivotCertificate_of_mem_extremal_interval",
         "LonelyRunner.extremal_interval_compression_of_no_fastestPivotCertificate",
+        "LonelyRunner.isTwoSidedTransversal_of_covers",
+        "LonelyRunner.exists_top_certificate_of_not_isTwoSidedTransversal",
         "LonelyRunner.saturatedTopTwo_avoids_pivotBadResidues",
     }
     missing_probes = sorted(probe for probe in required_probes if probe not in run.stdout)

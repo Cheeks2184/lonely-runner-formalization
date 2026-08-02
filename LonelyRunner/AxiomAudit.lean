@@ -1,5 +1,6 @@
 import LonelyRunner
 import LonelyRunner.FastestPivot
+import LonelyRunner.TopTwoTransversal
 
 /-!
 Run with `lake env lean LonelyRunner/AxiomAudit.lean`.
@@ -45,6 +46,8 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_fastestPivotCertificate_of_extremal_band
 #print axioms LonelyRunner.exists_fastestPivotCertificate_of_mem_extremal_interval
 #print axioms LonelyRunner.extremal_interval_compression_of_no_fastestPivotCertificate
+#print axioms LonelyRunner.isTwoSidedTransversal_of_covers
+#print axioms LonelyRunner.exists_top_certificate_of_not_isTwoSidedTransversal
 #print axioms LonelyRunner.saturatedTopTwoPivotCertificate
 #print axioms LonelyRunner.saturatedTopTwo_avoids_pivotBadResidues
 #print axioms LonelyRunner.card_strictCyclicBall
