@@ -1170,3 +1170,17 @@ reproduced those costs.  Exact rational evaluation at `t=13/80` reproduced
 
 all at least `1/10`.  Thus `GCD-CLOCK-UNIF` is rejected, while the optimized
 additive ordering assertion and LRC remain open.
+
+## Prompt 26: beyond fixed-rate averaging
+
+The independently reproduced all-pivot failure, deterministic additive order,
+and explicit lonely time were returned to Sol Pro.  It was asked for at least
+three materially different next strategies for the optimized additive claim:
+a genuinely state-dependent potential or distribution, a bounded-depth
+two-level/anchor mechanism using exact congruence counts, and a minimal-
+counterexample or dynamic-program dual route that could instead expose an
+all-pivot additive failure.  Each proposal must identify explicit lemmas and
+its first unsupported arithmetic inequality and must be tested against both
+nine-speed average failures and `(1,2,3,5)`.  Fixed clocks, literal union
+enumeration, unbounded refinement, generic conditional expectation, and broad
+random sampling were excluded as substitutes for the arithmetic step.
