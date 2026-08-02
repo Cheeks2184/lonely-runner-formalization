@@ -9,12 +9,16 @@ from audit_top_parent_rescue import (
     DIVISOR_ROWS,
     PREFIX_ROWS,
     SEPARATING_ROWS,
+    TOP_UNIF_COUNTEREXAMPLE,
+    TOP_UNIF_COUNTEREXAMPLE_ROWS,
     conditioned_random_loss,
+    direct_witness_distances,
     exhaustive_optima,
     literal_pivot,
     order_credits,
     prefix_conditioned_bounds,
     reciprocal_base,
+    top_unif_counterexample_rows,
 )
 
 
@@ -46,9 +50,17 @@ class TopParentRescueTests(unittest.TestCase):
                 )
                 # Equality would still fail the avoidance theorem.  These
                 # rows genuinely separate non-strict top failure from strict
-                # unrestricted additive success at one fixed pivot.
+                # unrestricted additive success at one fixed pivot.  On the
+                # E row, unlike the first two rows, a different order is
+                # required to turn the available rescue into a certificate.
                 self.assertGreaterEqual(top_cost, data.candidate_count)
-                self.assertLess(same_order_cost, data.candidate_count)
+                self.assertLess(optimum_cost, data.candidate_count)
+                if name == "E-28":
+                    self.assertGreaterEqual(
+                        same_order_cost, data.candidate_count
+                    )
+                else:
+                    self.assertLess(same_order_cost, data.candidate_count)
 
     def test_rescue_identity_on_every_order(self) -> None:
         # ``exhaustive_optima`` calls ``order_credits`` on every permutation;
@@ -141,6 +153,41 @@ class TopParentRescueTests(unittest.TestCase):
         self.assertEqual(
             hierarchy[-1][0], data.top_weight - optima.maximum_top
         )
+
+    def test_all_pivot_top_unif_counterexample(self) -> None:
+        observed = top_unif_counterexample_rows()
+        self.assertEqual(
+            tuple(row[:6] for row in observed),
+            tuple(row[:6] for row in TOP_UNIF_COUNTEREXAMPLE_ROWS),
+        )
+        self.assertTrue(
+            all(top_cost >= threshold for _a, threshold, _s, _f, _tau, top_cost, _opt in observed)
+        )
+        self.assertEqual(
+            tuple(
+                pivot
+                for pivot, threshold, _s, _f, _tau, top_cost, _opt in observed
+                if top_cost == threshold
+            ),
+            (5, 35),
+        )
+
+    def test_counterexample_pivot_28_direct_lonely_witness(self) -> None:
+        pivot = 28
+        residue = 6
+        modulus = (len(TOP_UNIF_COUNTEREXAMPLE) + 1) * pivot
+        self.assertNotEqual(residue % (len(TOP_UNIF_COUNTEREXAMPLE) + 1), 0)
+        witness = direct_witness_distances(
+            TOP_UNIF_COUNTEREXAMPLE, pivot, residue
+        )
+        self.assertEqual(
+            tuple(distance for _speed, _image, distance in witness),
+            (30, 112, 70, 40, 128, 32, 88, 48, 130),
+        )
+        self.assertTrue(
+            all(distance >= pivot for _speed, _image, distance in witness)
+        )
+        self.assertEqual(Fraction(residue, modulus), Fraction(3, 140))
 
     def test_ordered_gcd_data_do_not_determine_top_credit(self) -> None:
         observed_rows = []

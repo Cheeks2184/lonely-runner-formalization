@@ -73,7 +73,7 @@ The inequalities are deliberately non-strict on the top side and strict on
 the unrestricted side. Equality would not suffice for the avoidance theorem.
 These are fixed-pivot separations: they prove that the top-parent relaxation
 is genuinely stricter than unrestricted additive ordering, but do not refute
-the existential cross-pivot statement `TOP-CYCLE-UNIF`.
+the existential cross-pivot statement by themselves.
 
 For the first row, the top-optimal order is
 
@@ -92,6 +92,64 @@ For the second row, one top-optimal order is
 
 Its unrestricted cost is already `500<504`; moving `75` before `8` improves
 the unrestricted optimum to `498` without changing maximum top credit.
+
+## All-pivot counterexample to `TOP-CYCLE-UNIF`
+
+The later tuple
+
+```text
+E = (5,28,35,40,68,88,108,148,165)
+```
+
+does refute the existential top-parent premise. The full-prefix endpoint of
+the exact recurrence below gives the complete top-only DP at every pivot. A
+separate clean-room run also enumerated all `40,320` orders at every pivot and
+reproduced the same top values; pass `--exhaustive-top-counterexample` to the
+audit script to repeat that slower check. The unrestricted column comes from
+the same literal exhaustive enumeration.
+
+| pivot `A` | `nA` | `S` | `F_top` | `tau_top` | top cost | unrestricted optimum |
+|---:|---:|---:|---:|---:|---:|---:|
+| 5 | 45 | 50 | 6 | 1 | 45 | 45 |
+| 28 | 252 | 360 | 148 | 46 | 258 | 250 |
+| 35 | 315 | 500 | 245 | 60 | 315 | 299 |
+| 40 | 360 | 562 | 322 | 122 | 362 | 344 |
+| 68 | 612 | 958 | 480 | 146 | 624 | 606 |
+| 88 | 792 | 1254 | 568 | 124 | 810 | 786 |
+| 108 | 972 | 1544 | 756 | 194 | 982 | 940 |
+| 148 | 1332 | 2110 | 1040 | 294 | 1364 | 1334 |
+| 165 | 1485 | 2360 | 1086 | 215 | 1489 | 1439 |
+
+Every top cost is at least `nA`; equality occurs exactly at pivots `5` and
+`35`, and equality still fails the strict avoidance criterion. Therefore
+`TOP-CYCLE-UNIF` is false. At pivot `28`, however, unrestricted additive cost
+is `250<252`, so the stronger counterexample does not refute optimized
+additive uniformity or LRC. The top-optimal order
+
+```text
+(40,88,5,35,68,108,148,165)
+```
+
+has rescue `4` and full cost `254`, while the different unrestricted-optimal
+order
+
+```text
+(35,40,68,5,165,88,108,148)
+```
+
+reaches `250`. This shows that merely adding rescue to one chosen top-optimal
+order is not itself an exact optimization principle.
+
+Finally, the direct candidate `r=6` for `A=28`, `M=280` gives time
+`t=6/280=3/140`. The modular images and circular-distance numerators are
+
+```text
+images:    30,168,210,240,128,248,88,48,150
+distances: 30,112, 70, 40,128, 32,88,48,130.
+```
+
+Every distance numerator is at least `28`, including the boundary convention,
+so this tuple has a direct lonely time and is not a counterexample to LRC.
 
 ## Reciprocal two-cycle audit
 
@@ -233,4 +291,6 @@ From the repository root under WSL:
 ```text
 PYTHONPATH=scripts python3 scripts/audit_top_parent_rescue.py
 PYTHONPATH=scripts python3 -m unittest tests/test_top_parent_rescue.py -v
+PYTHONPATH=scripts python3 scripts/audit_top_parent_rescue.py \
+  --exhaustive-top-counterexample
 ```

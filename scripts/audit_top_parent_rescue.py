@@ -23,6 +23,7 @@ additive-order failure: second-best parents can repair lost top edges.
 
 from __future__ import annotations
 
+import argparse
 from dataclasses import dataclass
 from fractions import Fraction
 from itertools import permutations
@@ -428,6 +429,12 @@ SEPARATING_ROWS = (
         56,
         (504, 814, 368, 76, 522, 22, 500, 498, 74, 220),
     ),
+    (
+        "E-28",
+        (5, 28, 35, 40, 68, 88, 108, 148, 165),
+        28,
+        (252, 360, 148, 46, 258, 4, 254, 250, 46, 56),
+    ),
 )
 
 
@@ -456,13 +463,85 @@ PREFIX_ROWS = (
 )
 
 
+TOP_UNIF_COUNTEREXAMPLE = (5, 28, 35, 40, 68, 88, 108, 148, 165)
+
+
+TOP_UNIF_COUNTEREXAMPLE_ROWS = (
+    # pivot A, candidate threshold nA, S, F_top, tau_top, top cost, full optimum
+    (5, 45, 50, 6, 1, 45, 45),
+    (28, 252, 360, 148, 46, 258, 250),
+    (35, 315, 500, 245, 60, 315, 299),
+    (40, 360, 562, 322, 122, 362, 344),
+    (68, 612, 958, 480, 146, 624, 606),
+    (88, 792, 1254, 568, 124, 810, 786),
+    (108, 972, 1544, 756, 194, 982, 940),
+    (148, 1332, 2110, 1040, 294, 1364, 1334),
+    (165, 1485, 2360, 1086, 215, 1489, 1439),
+)
+
+
 DIVISOR_ROWS = (
     ((1, 4, 10, 29, 30), 10, (1, 4, 1, 30), (50, 70, 32, 8, 46)),
     ((1, 10, 28, 29, 30), 10, (1, 4, 1, 30), (50, 70, 28, 8, 50)),
 )
 
 
-def main() -> None:
+def top_unif_counterexample_rows(
+    *, exhaustive_full_orders: bool = False
+) -> tuple[tuple[int, int, int, int, int, int, int | None], ...]:
+    """Recompute every pivot of the all-pivot top-parent counterexample.
+
+    The default route uses the full-prefix endpoint ``H(V)``, which is the
+    exact top-only DP and finishes quickly.  The optional clean-room route
+    enumerates all 40,320 orders independently at every pivot and also returns
+    the unrestricted optimum; it is slower but checks the same top rows.
+    """
+
+    rows = []
+    for pivot in TOP_UNIF_COUNTEREXAMPLE:
+        data = literal_pivot(TOP_UNIF_COUNTEREXAMPLE, pivot)
+        if exhaustive_full_orders:
+            optima = exhaustive_optima(data)
+            tau = data.top_weight - optima.maximum_top
+            unrestricted: int | None = data.bad_sum - optima.maximum_full
+        else:
+            hierarchy = prefix_conditioned_bounds(data)
+            tau_fraction = hierarchy[-1][0]
+            if tau_fraction.denominator != 1:
+                raise AssertionError("full-prefix loss was not integral")
+            tau = tau_fraction.numerator
+            unrestricted = None
+        rows.append(
+            (
+                pivot,
+                data.candidate_count,
+                data.bad_sum,
+                data.top_weight,
+                tau,
+                data.bad_sum - data.top_weight + tau,
+                unrestricted,
+            )
+        )
+    return tuple(rows)
+
+
+def direct_witness_distances(
+    speeds: tuple[int, ...], pivot_speed: int, residue: int
+) -> tuple[tuple[int, int, int], ...]:
+    """Return speed, modular image, and circular numerator for one candidate."""
+
+    modulus = (len(speeds) + 1) * pivot_speed
+    return tuple(
+        (
+            speed,
+            (image := speed * residue % modulus),
+            min(image, modulus - image),
+        )
+        for speed in speeds
+    )
+
+
+def main(*, exhaustive_top_counterexample: bool = False) -> None:
     for name, speeds, pivot, expected in SEPARATING_ROWS:
         data = literal_pivot(speeds, pivot)
         optima = exhaustive_optima(data)
@@ -485,10 +564,14 @@ def main() -> None:
         )
         if observed != expected:
             raise AssertionError(f"{name}: {observed} != {expected}")
+        same_relation = (
+            "<" if same_order_cost < data.candidate_count else ">="
+        )
         print(
             f"{name}: top={top_cost}>={data.candidate_count}, "
             f"rescue={optima.top_order_rescue}, "
-            f"same-order full={same_order_cost}<{data.candidate_count}, "
+            f"same-order full={same_order_cost}{same_relation}"
+            f"{data.candidate_count}, "
             f"opt={optimum_cost}, C2={reciprocal}, residual={residual}"
         )
 
@@ -524,6 +607,28 @@ def main() -> None:
             f"prefix={order}; exact endpoint={hierarchy[-1][0]}"
         )
 
+    expected_top_rows = tuple(row[:6] for row in TOP_UNIF_COUNTEREXAMPLE_ROWS)
+    observed_rows = top_unif_counterexample_rows(
+        exhaustive_full_orders=exhaustive_top_counterexample
+    )
+    if tuple(row[:6] for row in observed_rows) != expected_top_rows:
+        raise AssertionError("all-pivot top counterexample table disagreed")
+    if exhaustive_top_counterexample:
+        expected_full = tuple(row[6] for row in TOP_UNIF_COUNTEREXAMPLE_ROWS)
+        if tuple(row[6] for row in observed_rows) != expected_full:
+            raise AssertionError("all-pivot unrestricted table disagreed")
+    print("all-pivot TOP counterexample:")
+    for row in observed_rows:
+        print("  ", row)
+
+    witness = direct_witness_distances(TOP_UNIF_COUNTEREXAMPLE, 28, 6)
+    expected_distances = (30, 112, 70, 40, 128, 32, 88, 48, 130)
+    if tuple(distance for _speed, _image, distance in witness) != expected_distances:
+        raise AssertionError("direct residue-6 witness disagreed")
+    if not all(distance >= 28 for _speed, _image, distance in witness):
+        raise AssertionError("direct residue-6 witness is not lonely")
+    print(f"direct witness A=28, r=6: {witness}")
+
     for speeds, pivot, expected_gcds, expected in DIVISOR_ROWS:
         data = literal_pivot(speeds, pivot)
         optima = exhaustive_optima(data)
@@ -550,4 +655,11 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--exhaustive-top-counterexample",
+        action="store_true",
+        help="enumerate all 40,320 orders at every counterexample pivot",
+    )
+    arguments = parser.parse_args()
+    main(exhaustive_top_counterexample=arguments.exhaustive_top_counterexample)
