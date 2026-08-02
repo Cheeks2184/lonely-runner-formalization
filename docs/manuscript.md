@@ -2181,3 +2181,38 @@ argument that accounts for occupied base blockers or complementary missing
 heights.  No coefficient-two bounded-height theorem, and no unrestricted
 Lonely Runner theorem, follows from this section.  The complete audit is in
 `docs/coefficient-two-frontier.md`.
+
+## 45. A finite multi-shift certificate for the hard top pair
+
+This section records reproducible finite evidence, not a uniform theorem. For
+`(N,A,B)=(7,98,187)`, fix the fourteen affine shifts
+
+```text
+128273,80,71,151,128210,150,25,
+1156,114,87,149,2946,24,128252.
+```
+
+On each affine fiber, retain only numerator pairs that are candidates at both
+top pivots and for which the other top runner is on or outside the closed safe
+boundary.  A lower-speed set jointly spoils such a pair only when it contains
+a speed in the strict bad set at each endpoint.  Across the fourteen fibers
+there are 64 resulting two-sided constraints, with per-shift counts
+
+```text
+5,5,5,4,5,4,5,4,4,5,4,4,5,5.
+```
+
+Exact enumeration rejects all `C(97,4)=3,464,840` four-element subsets of
+`[1,97]`.  The five-element set `{7,63,70,77,84}` meets both sides of every
+constraint.  Upward closure therefore proves that this fixed constraint
+family has exact transversal number five. Since `5>N-3=4`, every four-speed
+lower set leaves a selected robust pair with at least one unspoiled endpoint,
+which is a top-pivot certificate for that fixed instance.
+
+The recovered GPT-5.6 Sol Pro verifier and an independent implementation that
+directly enumerates both numerator coordinates reproduce the same result.
+Their exact hashes, outputs, endpoint audit, and replay command are in
+`docs/response50-audit.md`.  The missing theorem is a uniform construction of
+such a shift family for arbitrary `(N,A,B)`, or a proof that another finite
+family always yields the required transversal inequality.  Nothing here
+proves the top-two conjecture or unrestricted Lonely Runner.

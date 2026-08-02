@@ -1126,3 +1126,48 @@ Both new declarations report only `propext`, `Classical.choice`, and
 full-project build and regression replay containing these two declarations
 remain pending. This interval restriction does not prove that either top
 pivot always succeeds and does not prove unrestricted LRC.
+
+## 2026-08-02: clean fastest-interval and Response 50 checkpoint
+
+Source commit `9d45be484cb7dd91b4228e44ded7e66a9006e616` was cloned with
+`git clone --no-local` into the fresh native-WSL ext4 directory
+`/home/joshu/code/lonely-runner-verification-9d45be4`. The checkout was clean
+and its HEAD matched the source commit. `lake exe cache get` restored 8,638
+pinned artifacts. The authoritative command
+
+```text
+lake -Kjobs=2 build
+```
+
+completed successfully:
+
+```text
+Build completed successfully (3577 jobs).
+ELAPSED_SECONDS=264.41
+```
+
+The expanded trust audit accepted 256 theorem reports. Every report used only
+`propext`, `Classical.choice`, and `Quot.sound`; required probes for both new
+fastest-interval declarations were present. The audit took 7.84 seconds.
+
+The complete unchanged regression and certificate suite then reported:
+
+```text
+Ran 153 tests in 415.166s
+OK
+ELAPSED_SECONDS=415.69
+```
+
+After the clean source replay, the exact recovered Response 50 verifier and a
+separate direct-coordinate implementation were added to the authoritative
+tree. The combined command
+
+```text
+bash scripts/audit_response50.sh
+```
+
+verified both supplied artifact hashes, reproduced the supplied output
+byte-for-byte, independently rejected all 3,464,840 four-speed transversals,
+and accepted the displayed five-speed transversal. It completed in 12.43
+seconds with maximum RSS 19,252 KB. This is finite evidence for the fixed pair
+`(7,98,187)`, not a uniform top-two theorem or unrestricted LRC proof.

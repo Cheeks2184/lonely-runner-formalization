@@ -2725,3 +2725,28 @@ composer readback matched the archived prompt with UTF-8 SHA-256
 `f7976002198a949c596d9fd5627d71ac2c714946cdbb9d2151720f5576ef2695`.
 The composer cleared and the live `Stop answering` control confirmed
 submission. No future Response 50 claim is accepted without independent audit.
+
+## Response 50: finite affine transversal accepted, uniform bridge open
+
+The exact recovered response begins `Status corrections`, has 15,210
+characters and 15,224 UTF-8 bytes, and has SHA-256
+`45a11b57d8f8068db6ea0e6a8f23b00f65f8061a32ccebca80d418e7127b032c`.
+The supplied source and output hashes are respectively
+`1ef6cf0ec355b10ee452f40f7c716eac5566d3426b45f55f8ea77ef24b8ac733`
+and `04bde9dec49adce42db9024599819153101eedfd9b44969afc844620e4469b57`.
+Both artifacts are preserved under `research/sol-pro/artifacts/`.
+
+The unchanged verifier exited zero in 5.33 seconds, produced empty stderr,
+and reproduced the expected output byte-for-byte. A separate implementation
+enumerated both numerator coordinates directly. It independently recovered
+64 robust-pair constraints from fourteen explicit shifts, rejected all
+3,464,840 four-speed subsets, and accepted `{7,63,70,77,84}`. Upward closure
+therefore proves `tau_H=5` for this fixed hard top pair. The individual robust
+grid cover numbers `kappa_A=kappa_B=6`, the quotient counts, affine formulas,
+strict endpoints, and coefficient-two witness family were also accepted.
+
+The response is accepted only as partial progress. It supplies no uniform
+construction of a shift family with `tau_H>N-3` for arbitrary `(N,A,B)`; the
+quotient route lacks cross-pivot cover transport, and coefficient two lacks
+an internal-blocker charging theorem. The exact audit and replay commands are
+in `docs/response50-audit.md`. No unrestricted LRC or top-two theorem follows.

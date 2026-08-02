@@ -1,0 +1,12 @@
+hard_pair=(N,A,B)=(7,98,187)
+common_slice_size=0
+affine_shift=42698 affine_pair_count=6 robust_pairs=((36, 942), (134, 1129), (428, 381), (526, 568))
+simultaneous_spoiler_candidates=(3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87, 90, 93, 96)
+quotient_A_slice_counts=(70, 70, 70, 70, 70, 70)
+quotient_B_slice_counts=(134, 134, 134, 134, 134, 134)
+kappa_A=6 cover_A=(9, 40, 58, 49, 31, 89) robust_A=420
+kappa_B=6 cover_B=(9, 36, 45, 54, 18, 27) robust_B=804
+affine_integral_certificate_shifts=(128273, 80, 71, 151, 128210, 150, 25, 1156, 114, 87, 149, 2946, 24, 128252)
+affine_constraints=64 checked_four_sets=3464840
+affine_transversal_number=5 witness=(7, 63, 70, 77, 84)
+coefficient_two_internal_blocker_family_checked_m=2..100

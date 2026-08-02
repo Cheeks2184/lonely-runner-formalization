@@ -45,3 +45,5 @@ jobs:
           sudo apt-get install --yes --no-install-recommends libboost-dev
       - name: Run the complete deterministic regression suite
         run: python3 -m unittest discover -s tests -v
+      - name: Replay Response 50 affine transversal certificate
+        run: bash scripts/audit_response50.sh

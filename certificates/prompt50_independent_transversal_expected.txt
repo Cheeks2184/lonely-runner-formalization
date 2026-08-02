@@ -1,0 +1,9 @@
+robust_pairs_per_shift=(5, 5, 5, 4, 5, 4, 5, 4, 4, 5, 4, 4, 5, 5)
+constraints=64
+checked_four_sets=3464840
+no_transversal_of_size_at_most_four=True
+five_transversal=(7, 63, 70, 77, 84)
+tau_H=5
+kappa_A=6 kappa_B=6
+quotient_counts_A=(70, 70, 70, 70, 70, 70) quotient_counts_B=(134, 134, 134, 134, 134, 134)
+coefficient_two_family_checked_m=2..500

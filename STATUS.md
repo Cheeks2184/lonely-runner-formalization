@@ -125,13 +125,20 @@ This equivalence does not prove either side.
   `extremal_interval_compression_of_no_fastestPivotCertificate` proves that
   failure leaves only an empty interval or a divisible singleton. The new
   declarations passed standalone compilation, an ext4 target build, and the
-  trust audit; their authoritative clean full-project replay is pending.
+  authoritative clean full-project build, trust audit, and regression suite.
   None of these statements forces the other top pivot in the residual regime.
 - **Finite evidence only:** targeted full Chebyshev/CRT score searches and the
   top-two pivot stress certificate. The latter checks 878,245 primitive box
   tuples plus 86,745 structured mutations without a failure; it is a proposed
   strengthening that would imply LRC, not a proved reduction or theorem. No
   finite search implies a uniform result.
+- **Reproducible finite evidence:** for the fixed hard pair
+  `(N,A,B)=(7,98,187)`, fourteen explicit affine shifts produce 64 robust-pair
+  constraints. The recovered Sol Pro verifier and an independent direct
+  two-coordinate implementation reject all 3,464,840 four-speed sets and
+  accept `{7,63,70,77,84}`, proving `tau_H=5` for this fixed shift family.
+  No uniform construction of such a family is known. See
+  [the Response 50 audit](docs/response50-audit.md).
 - **Refuted strategy:** the proposed global fractional two-grid dual
   invariant fails exactly at top speeds `(98,187)` for `N=7`. A feasible
   fractional cover of mass `962/241<4` rules out the required dual mass by
@@ -155,18 +162,21 @@ restrictions do not force such a pivot.
 Active research branches are:
 
 1. determine whether the coefficient-three bounded-height theorem can be
-   improved further; no coefficient-two analogue of the missing-to-extra
-   injection argument has been established;
-2. control or refute the full Chebyshev/CRT pivot score, after rejection of
+   improved further; the coefficient-two short-hole cases are classified,
+   but the natural missing-to-extra Hall argument is refuted and no
+   internal-blocker charging theorem is known;
+2. construct uniform multi-shift affine transversals for arbitrary top pairs,
+   or find a pair for which the required transversal inequality fails;
+3. control or refute the full Chebyshev/CRT pivot score, after rejection of
    the quadratic shortcut;
-3. strengthen the least-counterexample residual class until its conditions
+4. strengthen the least-counterexample residual class until its conditions
    become incompatible;
-4. formalize surviving statements and adversarially test every bridge.
+5. formalize surviving statements and adversarially test every bridge.
 
 ## Latest verification
 
 Last clean mathematical source checkpoint:
-`64e00c77dabdbf9907e9832e6218a0d2c47cce5d`.
+`9d45be484cb7dd91b4228e44ded7e66a9006e616`.
 
 Pinned environment:
 
@@ -179,9 +189,9 @@ Pinned environment:
 Clean no-local-clone ext4 verification at that source checkpoint:
 
 ```text
-Build completed successfully (3577 jobs) in 265.66 seconds.
-Trust audit: 254 theorem reports; only propext, Classical.choice, Quot.sound
-Ran 153 tests in 431.513s
+Build completed successfully (3577 jobs) in 264.41 seconds.
+Trust audit: 256 theorem reports; only propext, Classical.choice, Quot.sound
+Ran 153 tests in 415.166s
 OK
 ```
 
@@ -200,8 +210,10 @@ unconditional Kanold build, 235-report trust audit, and all 153 tests. Public
 run 30761838846 passed both jobs at commit `b302212`, including the 3,573-job
 coefficient-five build, 240-report trust audit, and all 153 tests. Public run
 30764615804 passed both jobs at commit `0f0f9a6`, including the 3,576-job
-coefficient-four/pivot build, 249-report trust audit, and all 153 tests. The
-coefficient-three checkpoint above awaits publication after this local audit
+coefficient-four/pivot build, 249-report trust audit, and all 153 tests. Public
+run 30766497706 passed both jobs at commit `a6041e3`, including the
+coefficient-three verification record and all 153 tests. The newer
+fastest-interval checkpoint above awaits publication after this local audit
 record.
 
 This replay includes the unconditional Kanold interval, `17*t<=3*N`,
@@ -213,11 +225,12 @@ The source was cloned with `git clone --no-local` into a fresh ext4 checkout;
 the checkout was clean and its HEAD matched the checkpoint above before any
 build or test ran.
 
-The coefficient-three replay fetched the pinned cache and ran with
-`lake -Kjobs=2 build`; all 3,577 jobs completed in 265.66 seconds. The trust
-audit then accepted 254 reports, and the unchanged full regression/certificate
-suite ran 153 tests in 431.513 seconds. The checkout remained untouched and
-clean throughout.
+The current replay fetched the pinned cache and ran with
+`lake -Kjobs=2 build`; all 3,577 jobs completed in 264.41 seconds. The trust
+audit then accepted 256 reports, and the unchanged full regression/certificate
+suite ran 153 tests in 415.166 seconds. The checkout remained untouched and
+clean throughout. The separately added Response 50 artifact plus independent
+audit passed in 12.43 seconds with maximum RSS 19,252 KB.
 
 Every explicit axiom probe reports only subsets of `propext`,
 `Classical.choice`, and `Quot.sound`. See
