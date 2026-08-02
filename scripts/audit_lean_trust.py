@@ -53,9 +53,15 @@ def main() -> None:
         unexpected = used - ALLOWED_AXIOMS
         if unexpected:
             raise SystemExit("unexpected axiom names: " + ", ".join(sorted(unexpected)))
-    required_probe = "LonelyRunner.logarithmicHeightGain_positiveInteger_witness"
-    if required_probe not in run.stdout:
-        raise SystemExit(f"missing required axiom probe: {required_probe}")
+    required_probes = {
+        "LonelyRunner.logarithmicHeightGain_positiveInteger_witness",
+        "LonelyRunner.boundedPrimorialHeight_family_witness",
+        "LonelyRunner.kanoldIntervalBound_vandermonde",
+        "LonelyRunner.seventeenThirdsHeight_family_witness",
+    }
+    missing_probes = sorted(probe for probe in required_probes if probe not in run.stdout)
+    if missing_probes:
+        raise SystemExit("missing required axiom probes: " + ", ".join(missing_probes))
     print(f"Trust audit accepted {len(reports)} theorem reports.")
 
 

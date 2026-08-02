@@ -174,6 +174,16 @@ project-specific axiom.
 #print axioms LonelyRunner.small_modulus_power_le_interval_seventeen
 #print axioms LonelyRunner.seventeenThirdsHeight_family_witness_of_kanold
 #print axioms LonelyRunner.sixHeight_family_witness_of_kanold
+#print axioms LonelyRunner.subsetExponent_mod_injective
+#print axioms LonelyRunner.exponential_sum_not_vanish_consecutively
+#print axioms LonelyRunner.primitiveRoot_subset_nodes_injective
+#print axioms LonelyRunner.roots_product_expansion
+#print axioms LonelyRunner.roots_product_eq_zero_of_dvd
+#print axioms LonelyRunner.exists_avoiding_prime_set
+#print axioms LonelyRunner.coprime_of_avoids_primeFactors
+#print axioms LonelyRunner.kanoldIntervalBound_vandermonde
+#print axioms LonelyRunner.seventeenThirdsHeight_family_witness
+#print axioms LonelyRunner.sixHeight_family_witness
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
 #print axioms LonelyRunner.top_signed_forces_sum

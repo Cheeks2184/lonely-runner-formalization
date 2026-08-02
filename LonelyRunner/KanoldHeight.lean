@@ -1,12 +1,13 @@
 import LonelyRunner.LogarithmicHeight
 
 /-!
-Conditional linear-height consequence of Kanold's Jacobsthal bound.
+Linear-height reduction from Kanold's Jacobsthal bound.
 
-The literature theorem itself is deliberately retained as the explicit
-proposition `KanoldIntervalBound`; this file does not import it as an axiom.
-All interval arithmetic, including the `c ≤ 6` branch and the inclusive
-upper endpoint `q = 2 * N`, is proved below.
+The interval assertion is retained here as the explicit proposition
+`KanoldIntervalBound`, so every dependency remains visible in this module.
+`KanoldVandermonde.lean` proves that proposition and exposes unconditional
+wrappers. All interval arithmetic, including the `c ≤ 6` branch and the
+inclusive upper endpoint `q = 2 * N`, is proved below.
 -/
 
 open scoped ArithmeticFunction.omega
@@ -108,8 +109,8 @@ theorem five_mul_two_pow_omega_le_two_mul (c : Nat) (hc7 : 7 ≤ c) :
       _ ≤ 2 * c := Nat.mul_le_mul_left 2 hrad_le
 
 /-- Exact half-open-interval formulation of Kanold's bound. The interval has
-exactly `2^omega(c)` natural numbers. This proposition is open in the local
-formal development and is never introduced as an axiom. -/
+exactly `2^omega(c)` natural numbers. It is a proposition, not an axiom;
+`KanoldVandermonde.lean` supplies its proof. -/
 def KanoldIntervalBound : Prop :=
   ∀ (c start : Nat), 0 < c →
     ∃ q, q ∈ Finset.Ico start
