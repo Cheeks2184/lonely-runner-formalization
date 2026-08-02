@@ -735,7 +735,11 @@ all artifacts. A complete Lean source scan found no `sorry`, `admit`, custom
 `axiom`, `opaque`, `unsafe`, `extern`, `implemented_by`, `partial_fixpoint`,
 `native_decide`, or disabled checks.
 
-An accidental first build invocation inherited the slower mounted WSL path;
-it produced no diagnostic and was terminated after about three minutes. It
-is not counted as a verification result and left no background worker. The
-explicit clean-ext4 run above is the authoritative build.
+An accidental first build invocation inherited the slower mounted WSL path.
+The tool cell was terminated after about three minutes, but its subprocess
+group survived that cell termination. After the authoritative clean build and
+tests finished, the orphan was identified by exact PID, process group, command,
+and repository working directory; only process group `96462` was sent `TERM`,
+and a readback confirmed that no member remained. The incomplete mounted run
+produced no diagnostic and is not counted as verification. The explicit
+clean-ext4 run above is authoritative.
