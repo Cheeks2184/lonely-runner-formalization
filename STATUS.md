@@ -103,7 +103,7 @@ Active research branches are:
 ## Latest verification
 
 Last clean mathematical source checkpoint:
-`6b100209c6078579ae0660b6479743eaefbab9ec`.
+`f749d9e8b6a4f0f7ef33de0cfb20b545a80ea110`.
 
 Pinned environment:
 
@@ -113,11 +113,12 @@ Pinned environment:
   under WSL2;
 - public CI: Ubuntu hosted runner and Python 3.14.
 
-Clean ext4 verification at that source checkpoint:
+Clean no-local-clone ext4 verification at that source checkpoint:
 
 ```text
-Build completed successfully (3562 jobs).
-Ran 147 tests in 272.894s
+Build completed successfully (3571 jobs).
+Trust audit: 225 theorem reports; only propext, Classical.choice, Quot.sound
+Ran 151 tests in 346.552s
 OK
 ```
 
@@ -130,12 +131,12 @@ suite. Follow-up run 30755579476 passed both jobs at commit `b8b047e`: the
 cached Lean build, trust audit, and all 147 certificate tests are green. This
 was a CI environment repair, not a reduced verification target.
 
-The current combined primorial/Kanold Lean integration also builds cleanly in
-the ext4 verification checkout: `Build completed successfully (3571 jobs)`.
-The trust audit accepts 225 theorem reports and finds only `propext`,
-`Classical.choice`, and `Quot.sound`. These source changes do not alter the
-Python certificate computations; a new full-suite replay is required at the
-next committed checkpoint.
+This replay includes the unconditional primorial maximum and bounded-height
+theorems, the conditional Kanold-height theorem, and the Response 45,
+Response 46, top-two search, and fixed fractional-dual certificate audits.
+The source was cloned with `git clone --no-local` into a fresh ext4 checkout;
+the checkout was clean and its HEAD matched the checkpoint above before any
+build or test ran.
 
 Every explicit axiom probe reports only subsets of `propext`,
 `Classical.choice`, and `Quot.sound`. See

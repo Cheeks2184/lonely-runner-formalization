@@ -808,3 +808,42 @@ case, natural-subtraction guard, every interval endpoint, totient
 contradiction, and the closed `q=2N` boundary, and returned `ACCEPT`. This
 promotes the bounded-height theorem from `proved-math` to `proved-lean`; it
 does not promote the unrestricted Lonely Runner Conjecture.
+
+## 2026-08-02: primorial maximum, conditional Kanold height, and pivot certificates
+
+Source commit `f749d9e8b6a4f0f7ef33de0cfb20b545a80ea110` was cloned
+with `git clone --no-local` into the fresh ext4 checkout
+`/home/joshu/code/lonely-runner-verification-f749d9e`. Before verification,
+the checkout was clean and its HEAD matched the source commit. The exact
+replay command sequence was:
+
+```text
+lake exe cache get
+lake build
+python3 scripts/audit_lean_trust.py
+python3 -m unittest discover -s tests -v
+```
+
+Results:
+
+```text
+Build completed successfully (3571 jobs).
+Trust audit: 225 theorem reports; only propext, Classical.choice, Quot.sound
+Ran 151 tests in 346.552s
+OK
+```
+
+The build includes the fully assembled `PrimorialHeight.lean` proof of the
+exact bounded primorial-ratio maximum and its bounded-height witness theorem.
+It also includes `KanoldHeight.lean`, whose `17*t <= 3*N` theorem retains the
+explicit `KanoldIntervalBound` hypothesis. The regression suite reproduced
+the Response 45 and Response 46 artifacts, the 878,245-box top-two search,
+and the exact fixed fractional-dual certificate. Their dedicated audit
+scripts and committed SHA-256 files passed as part of the same source state.
+
+An independent adversarial reviewer checked the primorial exchange and
+cancellation arguments, Kanold endpoints and retained premise, the
+roots-of-unity manuscript argument, and the top-two fractional certificate,
+then returned `ACCEPT`. The unrestricted Lonely Runner Conjecture remains
+open; neither finite pivot evidence nor the conditional Kanold theorem is
+reported as an unrestricted proof.
