@@ -443,3 +443,76 @@ Thus a case split using only those coarse invariants is refuted. It does not
 rule out a finer classification retaining the exact top speeds and the lower
 residue classes. It also does not refute the top-two conjecture: each tuple
 has the displayed certificate at one top pivot.
+
+## 2026-08-02: coefficient-two extra-blocker Hall matching fails
+
+In the generic short-hole band under `2*t<=N`, every missing blocker `c`
+satisfies `c>3*N/8`. Only `2*c` and `3*c` can be occupied multiples below
+height `N+t`, and `3*c` is always above `N`. This suggests matching every
+missing base height to an occupied extra multiple. The matching claim is
+false.
+
+For every `u>=1`, take
+
+```text
+N=4*u,
+t=2*u,
+S=[1,4*u] \ {2*u,3*u} union {6*u}.
+```
+
+This is a valid `N-1`-speed family of height `N+t`. Its base holes and extras
+are
+
+```text
+M={2*u,3*u},  E={6*u}.
+```
+
+The extra speed `6*u` is simultaneously `3*(2*u)` and `2*(3*u)`, so both
+holes have the same singleton neighborhood in `E`. Hall fails because
+`2=|M|>|E|=1`. Moreover `4*u=2*(2*u)` is an occupied base blocker, confirming
+that blocking need not consume an extra speed.
+
+This infinite family does not refute the coefficient-two height theorem or
+LRC. Put `q=6*u+1`. The complementary missing heights `2*u` and `4*u+1`
+are below `q`, every selected speed is below `q`, `4*u<q<=8*u`, and
+`gcd(2*u,q)=1` because `q-3*(2*u)=1`. The exact two-hole denominator lemma
+therefore supplies a common closed `1/N` witness. What fails is only the
+proposed injection/Hall closure. See `docs/coefficient-two-frontier.md`.
+
+## 2026-08-02: the hard affine `k=1` fiber is jointly covered
+
+The affine common-LCM construction is algebraically sound, but its principal
+hard row does not supply the hoped-for cross-pivot rescue.  At
+
+```text
+N=7, A=98, B=187, epsilon=+1, k=1,
+```
+
+the six pairs that are candidates on both top grids are
+
+```text
+(87,166), (185,353), (283,540),
+(381,727), (479,914), (577,1101).
+```
+
+The exact cross-top distances are `(195,295,99,97,293,197)` on the `A`-grid
+and constantly `560` on the `B`-grid.  Thus the fourth `A`-grid pair is
+already cross-top strict-bad because `97<98`; the other five are cross-top
+good, and all six `B`-grid pairs are cross-top good.  More decisively, lower
+speed `63` has distance constantly `7<98` on the first grid and `14<187` on
+the second.  Thus it is strict-bad at both pivots for every pair, and the
+single intersection
+
+```text
+D^A_63 intersect D^B_63
+```
+
+already covers the entire fiber.  The strict double-intersection sum
+criterion necessarily fails there.  The quotient-lift identities reproduce
+the same obstruction because `63=0 mod 7` and both base products have
+quotient `55=6 mod 7` with positive remainder.
+
+This is a failure of the selected `k=1` affine row, not of the complete affine
+family.  It is not a counterexample to the top-two pivot conjecture or to
+Lonely Runner.  Exact formulas and the endpoint audit are in
+`docs/top-two-affine-fibers.md`.

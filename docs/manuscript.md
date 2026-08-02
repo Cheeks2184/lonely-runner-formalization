@@ -1917,9 +1917,16 @@ is the special case `B<=(N-1)*a_1`; failure there gives the large-gap
 condition `(N-1)*a_1<B`. The closed-band certificate is mapped to
 `pivot_le_cyclicResidueDistance_mul_of_band` and
 `exists_fastestPivotCertificate_of_extremal_band` and is `proved-lean` after
-an independent ext4 compile and axiom audit. The ceiling/floor failure
-dichotomy remains `proved-math`; it is not yet a Lean declaration. The full
-authoritative integration replay passed.
+an independent ext4 compile and axiom audit. The exact interval conversion is
+`exists_fastestPivotCertificate_of_mem_extremal_interval`: positivity of
+`a_1` changes `L<=r` into `B<=r*a_1`, while positivity of `A` changes `r<=U`
+into `r*A<=(N-1)*B`. The failure dichotomy is
+`extremal_interval_compression_of_no_fastestPivotCertificate`. Its only new
+arithmetic step is that, for `N>=2`, `N|L` implies `N∤L+1`; otherwise `N`
+would divide `1`. These declarations are `proved-lean` after standalone
+compilation, an ext4 target build, and axiom/trust probes. The earlier
+closed-band core passed the full authoritative integration replay; the next
+full replay containing these interval declarations is pending.
 
 Second, write
 
@@ -1993,3 +2000,184 @@ They are not top-two counterexamples. A global proof still requires a finer
 integral-cover or signed cross-pivot theorem, and unrestricted LRC remains
 open. The exact Response 49 recovery, attachment failures, and audit boundary
 are recorded in `docs/response49-audit.md`.
+
+## 43. Affine common-LCM fibers and their first exact obstruction
+
+The common slice can be enlarged by allowing a fixed signed phase difference.
+Write `A=g*alpha`, `B=g*beta`, with `g=gcd(A,B)`, and put
+
+```text
+H=lcm(A,B)=g*alpha*beta,  Q=N*H.
+```
+
+For `epsilon` equal to `+1` or `-1`, the homomorphism
+
+```text
+(r_A,r_B) |-> beta*r_A-epsilon*alpha*r_B mod Q
+```
+
+from `Z/(N*A) x Z/(N*B)` is well-defined and surjective.  Every fiber has
+size `N*g`.  If `d_A=gcd(N,alpha)` and `d_B=gcd(N,beta)`, then the exact
+number of points in phase `k` at which both numerators are pivot candidates is
+
+```text
+g*(N - 1_[d_A|k]*d_A - 1_[d_B|k]*d_B + 1_[N|k]).
+```
+
+The proof is elementary kernel counting followed by inclusion-exclusion.
+Scaling the strict cyclic-distance inequalities to modulus `Q` gives
+
+```text
+A-bad(s) iff rho_Q(s*(epsilon*alpha*r_B+k))<H,
+B-bad(s) iff rho_Q(s*alpha*r_B)<H.
+```
+
+On the both-candidate part of a fiber, let `E_A` and `E_B` be the unions of
+all nonpivot bad sets for the respective grids, including the other top speed.
+Then
+
+```text
+|E_A intersect E_B|
+ <= sum_(i!=p_A,j!=p_B) |D^A_i intersect D^B_j|.
+```
+
+A strict right-hand side below the fiber size therefore gives a certificate
+at one of the two pivots.  This implication is sound, but it is not uniform.
+
+Indeed, for `(N,A,B,epsilon,k)=(7,98,187,+1,1)`, the six both-candidate
+pairs are
+
+```text
+(87,166), (185,353), (283,540),
+(381,727), (479,914), (577,1101).
+```
+
+The cross-top distances are `(195,295,99,97,293,197)` on the `A`-grid and
+constantly `560` on the `B`-grid.  The fourth `A`-grid pair is therefore
+cross-top strict-bad (`97<98`), while the other five and all six `B`-grid
+cross-top conditions are good.  Lower speed `63` gives the stronger uniform
+obstruction: its distances are constantly `7<98` and `14<187` on the two
+grids.  It jointly covers all six pairs and defeats the strict
+double-intersection criterion on this row.
+
+The constant obstruction has an exact quotient explanation.  For
+`r=u+j*P`, write `u*s=q*P+v` and `h=(q+j*s) mod N`.  When `N>=2`,
+
+```text
+rho_(N*P)(r*s)<P iff h=0 or (v>0 and h=N-1).
+```
+
+The guard `v>0` preserves the closed boundary: `v=0,h=N-1` has distance
+exactly `P`.  For the bases `87,166` and speed `63`, both quotients are
+`55=6 mod 7`, both remainders are positive, and `63=0 mod 7`; all lifts are
+therefore bad on both grids.  Candidate lifts themselves number `N-d` when
+`d=gcd(N,P)` divides `u`, and `N` otherwise.
+
+These affine and quotient statements are independently audited
+`proved-math`, not Lean-verified.  The hard row refutes only that particular
+rescue and its strict-sum certificate.  Other phases and stronger ways of
+combining them remain open, as does the global top-two conjecture.  Full
+details are in `docs/top-two-affine-fibers.md`.
+
+## 44. The coefficient-two short-hole frontier
+
+The next bounded-height target would replace `3*t<=N` by `2*t<=N`.  The
+arithmetic part can be isolated exactly.  Suppose
+
+```text
+0<t,  0<c<=N,  2*t<=N,  2*c<=N+t,
+N-c-t<2^omega(c).
+```
+
+Then either
+
+```text
+3*(N-t)<4*c
+```
+
+or `(N,t,c)` belongs to the following list:
+
+```text
+(4,1,2), (5,2,2), (6,3,2),
+(5,1,3), (6,2,3), (7,3,3), (8,4,3),
+(10,2,6), (11,2,6), (11,3,6), (12,3,6),
+(12,4,6), (13,4,6), (13,5,6), (14,5,6),
+(14,6,6), (15,6,6), (15,7,6), (16,7,6),
+(16,8,6), (17,8,6), (18,9,6).
+```
+
+Indeed, failure of the displayed band gives `4*c<=3*(N-t)`.  Together with
+`2*t<=N`, this implies `c+t<=N`.  Put `ell=N-c-t`.  Direct substitution then
+gives
+
+```text
+c<=3*ell<3*2^omega(c).
+```
+
+The audited bound `3*2^omega(c)<=c` eliminates every `c>=7` except `c=10`;
+that exception is also impossible because `omega(10)=2` forces
+`3*ell<=9<10`.  Thus `c<=6`, and the remaining inequalities leave exactly
+
+```text
+(c,ell)=(2,1),(3,1),(6,2),(6,3).
+```
+
+Substituting `N=c+t+ell` and imposing the two height inequalities yields the
+22 triples above.  An independent exact enumeration through `N=500`
+reproduced the table, but the preceding argument is uniform.  This
+classification is `proved-math`, not Lean-verified.
+
+The already Lean-verified coefficient-three theorem handles the nine rows
+with `3*t<=N`.  The exact residual table has 13 rows:
+
+```text
+(5,2,2), (6,3,2), (7,3,3), (8,4,3),
+(13,5,6), (14,5,6), (14,6,6), (15,6,6),
+(15,7,6), (16,7,6), (16,8,6), (17,8,6),
+(18,9,6).
+```
+
+In the generic band, `2*t<=N` and `3*(N-t)<4*c` imply `c>3*N/8`, hence
+`3*c>N` and `4*c>N+t`.  The only possible occupied positive multiples of a
+missing `c` below the allowed height are consequently `2*c` and `3*c`.
+Here `3*c` is necessarily an extra speed, but `2*c` may be a base speed.
+That distinction prevents the coefficient-three injection from carrying
+over.
+
+In fact the natural extra-blocker Hall relation fails in an infinite family.
+For `u>=1`, let
+
+```text
+N=4*u,  t=2*u,
+S=([1,4*u] minus {2*u,3*u}) union {6*u}.
+```
+
+There are `N-1` distinct positive speeds, the maximum is `N+t`, and the two
+base holes `{2*u,3*u}` have the same singleton extra neighborhood `{6*u}`:
+
+```text
+6*u=3*(2*u)=2*(3*u).
+```
+
+Thus Hall fails on the two-hole set.  The smaller hole is also blocked by the
+occupied base speed `4*u`.  This rigorously refutes the proposed matching
+proof, but not the coefficient-two theorem.
+
+Indeed, the same family has a direct two-hole certificate.  Take
+
+```text
+q=6*u+1,  c=2*u,  d=q-c=4*u+1.
+```
+
+Then `N<q<=2*N`, `gcd(c,q)=1` because `q-3*c=1`, and every selected speed is
+less than `q`.  The two complementary heights `c` and `d` are both missing:
+`c` was deleted, while `4*u<d<6*u` and `6*u` is the only selected speed above
+`4*u`.  The existing two-hole denominator theorem therefore supplies a
+closed `1/N` witness.  This confirms that the infinite construction is only
+a proof-method obstruction.
+
+What remains is a family-level repair of the 13 finite rows and a generic
+argument that accounts for occupied base blockers or complementary missing
+heights.  No coefficient-two bounded-height theorem, and no unrestricted
+Lonely Runner theorem, follows from this section.  The complete audit is in
+`docs/coefficient-two-frontier.md`.
