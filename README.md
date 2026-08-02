@@ -192,6 +192,15 @@ kernel-checks the weighted hockey-stick identity and the abstract cleared
 histogram inequality underlying these obstruction arguments. The remaining
 arithmetic histogram construction and asymptotic number theory are stated as
 explicit formalization obligations.
+The consecutive family can be classified more sharply. For every `n>=90`,
+its first positive Response 39 depth is exactly one or two below the
+tautological cutoff `floor(n/2)`: even `n` always has gap two, while odd `n`
+is decided by the explicit totient inequality
+`3*n*phi(n+1)>(n-2)*(n-3)`. Both gaps occur infinitely often. Thus even an
+adaptive use of this polynomial becomes almost exact inclusion--exclusion on
+the canonical tight family. The theorem and finite scan are recorded in
+`research/consecutive-correlation-adaptive-depth.md`; it remains a result
+about this certificate, not LRC.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all
@@ -352,6 +361,8 @@ disproof claim.
   proved infinite correlation-obstruction family.
 - `scripts/audit_moment_lp.py`: exact polynomial-vertex enumeration, rational
   primal/dual certificates, and structured-family audit.
+- `scripts/analyze_consecutive_correlation_depth.py`: exact depth profiles and
+  regression checks for the proved near-tautological consecutive theorem.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.

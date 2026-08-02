@@ -1014,3 +1014,42 @@ They assume the zero mass and the two-incidence lower bounds as histogram
 inputs. Formalizing the consecutive pivot histogram, its totient zero mass,
 and the asymptotic low-totient construction remains future work. No
 declaration asserts a failure of LRC.
+
+## 28. Exact adaptive depth on consecutive speeds
+
+For `A_n=(1,...,n)`, let `d_min(n)` be the least depth at which the original
+correlation score is positive, and put `c=floor(n/2)`. The tautological exact
+inclusion--exclusion depth is `c`. For every `n>=90`, one has
+
+```text
+n even:  d_min=c-2;
+
+n odd:   d_min=c-2  if 3*n*phi(n+1)>(n-2)(n-3),
+         d_min=c-1  otherwise.
+```
+
+The key structural fact is exact: every bad-count layer `D_k` with
+`k>floor(n/2)` contains only the two incidences represented by residues
+`+1,-1` at pivot `k+1`. A set of more than half the consecutive speed indices
+contains adjacent indices; subtracting their strict bad representatives
+forces the signed candidate numerator below twice the pivot. Direct interval
+analysis then excludes every numerator except `+/-1`. This turns every
+high-depth score into
+
+```text
+n*phi(n+1) - (2/(n-1))*C(n-1,2d+1).
+```
+
+At `d=c-2` and `c-1`, this gives the displayed classification. To prove
+minimality rather than merely compare two late depths, binomial unimodality
+makes every depth `2<=d<=c-3` negative. Depth one is handled separately by
+retaining the distinct candidate residues `+/-s` for `1<=s<=4`; their exact
+bad count is `floor((p-1)/s)`, and a closed floor-free debt bound exceeds
+`n^2` from `n=90` onward.
+
+The cutoff gap is therefore always one or two in this range. Multiples of 30
+in `n+1` give infinitely many gap-one cases, while even `n` and
+`n=2^a-1` give infinitely many gap-two cases. The exact scan covers every
+smaller `n` separately. This result is not currently in Lean beyond the
+abstract histogram kernel of Section 27, and it proves nothing new about the
+already-lonely consecutive tuples themselves.

@@ -2108,3 +2108,17 @@ intersection tables rather than moments alone. A descent route remains
 admissible only if it excludes the comparable irreducible class. Exact LP
 duals, counterexample searches, scope labels, and standalone verifiers are
 mandatory. Response 41 is pending.
+
+While Prompt 41 ran, an independent exact analysis resolved the consecutive
+adaptive-depth question. For every `n>=90`, the first positive Response 39
+depth is exactly one or two below `floor(n/2)`. Even `n` always has gap two;
+odd `n` is governed by the explicit inequality
+`3*n*phi(n+1)>(n-2)(n-3)`. Both gaps occur infinitely often. The proof uses
+an exact high-layer classification, separate depth-one debt, and binomial
+unimodality rather than assuming the scores are monotone in depth. The exact
+finite scan and proof are in
+`research/consecutive-correlation-adaptive-depth.md`; adversarial review is
+complete and accepts the high-layer rigidity, all debt estimates and
+constants, the exclusion of earlier depths, and both infinite branches. This
+result concerns only the correlation certificate on the already solved tuple
+`(1,...,n)`.

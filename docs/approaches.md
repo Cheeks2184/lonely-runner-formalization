@@ -387,6 +387,18 @@ moments. `ConsecutiveCorrelationObstruction.lean` formalizes the weighted
 hockey-stick identity and the abstract denominator-cleared histogram bound;
 the consecutive histogram and totient estimates remain outside Lean.
 
+The original polynomial's adaptive-depth behavior is now exact on the tight
+consecutive family. Let `c=floor(n/2)`. For every `n>=90`, the first positive
+depth is `c-2` for even `n`; for odd `n` it is `c-2` exactly when
+`3*n*phi(n+1)>(n-2)*(n-3)`, and otherwise `c-1`. The proof classifies every
+bad-count layer above `floor(n/2)` as having multiplicity exactly two, derives
+the two near-cutoff scores in closed form, and uses additional `+/-1,...,+/-4`
+incidences to rule out depth one without assuming score monotonicity. All
+intermediate depths are excluded by binomial unimodality. Both cutoff gaps one
+and two occur infinitely often. Hence this adaptive polynomial is
+near-tautological even on `(1,...,n)`; a useful general bridge must use a
+different growing-order shape or retain more arithmetic structure.
+
 The fourth Sol Pro round produced two valid but limited structured-class
 lemmas. The fifth produced exact modular certificates and a bounded dataset,
 then retracted an incorrect claim that the simple union bound subsumed the

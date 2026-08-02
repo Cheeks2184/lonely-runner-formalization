@@ -269,3 +269,11 @@ forces every nonzero primal vertex to have negative objective. The zero
 polynomial then proves the exact optimum is zero. This closes all uniform
 fixed-order moment-only strategies, not growing order or methods retaining the
 full CRT intersection table.
+
+For the original Response 39 polynomial, allowing the depth to adapt does not
+produce a meaningfully low-order theorem on the standard tight family. For
+all `n>=90`, `(1,...,n)` first becomes positive only one or two depths below
+the tautological cutoff `floor(n/2)`, with both gaps occurring infinitely
+often. This does not reject all growing-degree polynomials, but it closes the
+hope that the original coefficient pattern remains uniformly far from exact
+inclusion--exclusion.
