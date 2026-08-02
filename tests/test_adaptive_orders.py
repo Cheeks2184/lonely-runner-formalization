@@ -18,6 +18,7 @@ from search_adaptive_orders import (  # noqa: E402
     admissible_children,
     audit_cross_pivot_box,
     best_heuristic_attempt,
+    gcd_clock_first_step_values,
     gcd_clock_result,
 )
 from search_fiber_hall import (  # noqa: E402
@@ -241,6 +242,53 @@ class AdaptiveOrderTests(unittest.TestCase):
             ),
         )
         self.assertTrue(all(distance >= Fraction(1, 10) for distance in distances))
+
+    def test_one_prefix_repairs_clock_counterexample_at_exactly_pivot_eight(self) -> None:
+        speeds = (8, 15, 35, 40, 48, 56, 63, 75, 78)
+        best_steps = []
+        for pivot, pivot_speed in enumerate(speeds):
+            values = gcd_clock_first_step_values(speeds, pivot)
+            self.assertEqual(len(values), len(speeds) - 1)
+            best = min(
+                values,
+                key=lambda value: (
+                    value.conditional_bound,
+                    speeds[value.child],
+                    value.child,
+                ),
+            )
+            best_steps.append(best)
+            if pivot_speed == 8:
+                self.assertEqual(speeds[best.child], 48)
+                self.assertEqual(
+                    best.conditional_bound,
+                    Fraction(120979207, 1687191),
+                )
+                self.assertEqual(
+                    Fraction(9 * pivot_speed) - best.conditional_bound,
+                    Fraction(498545, 1687191),
+                )
+            else:
+                self.assertGreaterEqual(
+                    best.conditional_bound, Fraction(9 * pivot_speed)
+                )
+
+        # Common dilation preserves the entire clock calculation: candidate
+        # fibers and intersection counts, rates, potentials, and margins all
+        # scale by the dilation factor.
+        doubled = tuple(2 * speed for speed in speeds)
+        original = gcd_clock_result(speeds, 0)
+        scaled = gcd_clock_result(doubled, 0)
+        self.assertEqual(scaled.expected_bound, 2 * original.expected_bound)
+        doubled_best = min(
+            gcd_clock_first_step_values(doubled, 0),
+            key=lambda value: value.conditional_bound,
+        )
+        self.assertEqual(doubled[doubled_best.child], 96)
+        self.assertEqual(
+            doubled_best.conditional_bound,
+            2 * best_steps[0].conditional_bound,
+        )
 
 
 if __name__ == "__main__":

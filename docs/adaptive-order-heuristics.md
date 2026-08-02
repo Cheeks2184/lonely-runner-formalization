@@ -137,7 +137,76 @@ distances `(3/10,7/16,5/16,1/2,1/5,1/10,19/80,3/16,13/40)`, all at least
 `1/10`.  The regression suite independently recomputes the fractions, order,
 and witness from the strict pivot model.
 
-## 5. Reproduction
+## 5. A one-prefix adaptive repair and the scaling obstruction
+
+The counterexample rejects the initial GCD-clock expectation, but it also
+shows exactly why that is not the end of the additive route.  For a possible
+first child `i`, let
+
+\[
+  V_i=c(i,\varnothing)+E(\{i\}),
+\]
+
+where `E({i})` is the conditional expected cost of all remaining insertions
+after `i` is forced first.  The exponential-race recurrence gives
+
+\[
+  E(\varnothing)=\frac{\sum_i d_iV_i}{\sum_i d_i}.
+\]
+
+If one `V_i` is already below the candidate count, force that first child and
+apply conditional expectation only to the remaining children.  PART-22 then
+extracts a complete order whose terminal additive cost is at most `V_i`.
+This **one-prefix criterion** strictly dominates testing the unconditioned
+expectation.
+
+For the nine-speed counterexample at pivot `8`, the initial value is
+
+\[
+  E(\varnothing)=\frac{486217543}{6748764}>72,
+\]
+
+but forcing speed `48` first gives
+
+\[
+  V_{48}=\frac{120979207}{1687191}<72,
+  \qquad
+  72-V_{48}=\frac{498545}{1687191}.
+\]
+
+The first-step values fail to be strict at the other eight pivots.  Thus this
+tuple verifies the one-prefix repair only at pivot `8`; it is not evidence for
+a uniform one-prefix theorem.  Allowing longer deliberately chosen prefixes
+produces a hierarchy ending at unrestricted additive order optimization, so
+proving uniform success at any fixed level remains a separate arithmetic
+obligation.
+
+The failure is homogeneous.  If every speed is multiplied by an integer
+`k>0`, project residues modulo `k*N*A` to residues modulo `N*A`.  Each base
+residue has exactly `k` lifts, and divisibility by `N` is preserved because
+`N*A` is itself divisible by `N`.  Cyclic distances, bad-set sizes, target
+fibers, and all fiber intersections therefore scale by `k`.  The clock rates
+satisfy
+
+\[
+  \gcd(k a_i,k N A)=k\gcd(a_i,N A).
+\]
+
+At each fiber tail, both the child rate and qualifying-parent rate sum scale
+by `k`, leaving `Lambda/(d_i+Lambda)` unchanged; each old tail level occurs
+`k` times.  Hence the expected cost, every conditional potential, every
+additive insertion cost, and the candidate count all scale by `k`.  Every
+common dilation of the displayed tuple is consequently another all-pivot
+failure of the expectation criterion.  For `k>1` these are nonprimitive and
+normalize back to the same LRC instance, so this family supplies no new LRC
+counterexample.
+
+The public helper `gcd_clock_first_step_values` reports the exact `V_i`
+values and checks their weighted-average identity.  A regression verifies
+the pivot-`8` strict value, failure of the one-prefix test at all other pivots,
+and dilation by `2`.
+
+## 6. Reproduction
 
 Evaluate the four local counterexamples with:
 

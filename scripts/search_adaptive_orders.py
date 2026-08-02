@@ -96,6 +96,23 @@ class GCDClockResult:
 
 
 @dataclass(frozen=True)
+class GCDClockFirstStep:
+    """Exact conditional potential after forcing one child to be first.
+
+    ``conditional_bound`` includes both the forced child's literal insertion
+    cost and the GCD-clock expectation for every remaining child.  It can be
+    below the candidate-universe size even when the unconditioned expectation
+    is not, so this is a strictly more flexible certificate interface than
+    testing ``GCDClockResult.expected_bound`` alone.
+    """
+
+    child: int
+    rate: int
+    increment_bound: int
+    conditional_bound: Fraction
+
+
+@dataclass(frozen=True)
 class GCDClockBoxAudit:
     """Cross-pivot GCD-clock expectation audit for one finite box."""
 
@@ -373,6 +390,50 @@ def _gcd_clock_remaining_expectation(
                     )
         total += counts[child] - expected_credit
     return total
+
+
+def gcd_clock_first_step_values(
+    speeds: tuple[int, ...], pivot: int
+) -> tuple[GCDClockFirstStep, ...]:
+    """Return every exact first-step conditional GCD-clock potential.
+
+    The returned child is an index into ``speeds``.  The function also checks
+    the exponential-race identity at the root: the initial potential must be
+    the rate-weighted average of these conditional potentials.  A caller may
+    therefore force a favorable first child and then apply conditional
+    expectation only to the remaining children.
+    """
+
+    data = _gcd_clock_data(speeds, pivot)
+    others, counts, _fibers, lower_bounds, positions, _masks, rates = data
+    if not others:
+        return ()
+    values = tuple(
+        GCDClockFirstStep(
+            child=child,
+            rate=rates[child],
+            increment_bound=_increment(child, 0, counts, lower_bounds),
+            conditional_bound=(
+                _increment(child, 0, counts, lower_bounds)
+                + _gcd_clock_remaining_expectation(
+                    data, 1 << positions[child]
+                )
+            ),
+        )
+        for child in others
+    )
+    initial = _gcd_clock_remaining_expectation(data, 0)
+    total_rate = sum(value.rate for value in values)
+    averaged = sum(
+        (
+            Fraction(value.rate, total_rate) * value.conditional_bound
+            for value in values
+        ),
+        Fraction(0),
+    )
+    if averaged != initial:
+        raise AssertionError("GCD-clock first-step weighted average mismatch")
+    return values
 
 
 def gcd_clock_result(speeds: tuple[int, ...], pivot: int) -> GCDClockResult:
