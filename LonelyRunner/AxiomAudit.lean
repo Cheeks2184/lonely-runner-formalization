@@ -135,7 +135,10 @@ project-specific axiom.
 #print axioms LonelyRunner.cardDistinctFactors_eq_primeFactors_card
 #print axioms LonelyRunner.two_pow_cardDistinctFactors_le
 #print axioms LonelyRunner.cardDistinctFactors_le_log_two
-#print axioms LonelyRunner.log_totient_bound_of_cardDistinctFactors_totient_bound
+#print axioms LonelyRunner.prod_le_card_succ_mul_prod_pred
+#print axioms LonelyRunner.le_cardDistinctFactors_succ_mul_totient
+#print axioms LonelyRunner.le_log_succ_mul_totient
+#print axioms LonelyRunner.exists_coprime_in_Ico_of_complement_lt_totient
 #print axioms LonelyRunner.twoHole_witness_of_coprime_modulus_above_height
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
