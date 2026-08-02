@@ -87,8 +87,12 @@ explicit cases are:
 3. If `B=N*A*k`, use pivot `B` and `r=(N-1)*N*k-1`.
 
 Direct modular inequalities verify every lower speed and the other top speed
-in all three cases. This is an infinite `proved-math` class, not the global
-top-two conjecture and not unrestricted LRC. Formalization remains open.
+in all three cases. The result is now `proved-lean` in
+`LonelyRunner/SaturatedTopTwo.lean`. The theorem
+`saturatedTopTwo_avoids_pivotBadResidues` uses the canonical strict bad sets,
+retains the closed-good equality boundary, and explicitly restricts the pivot
+to `N-2` or `B`. This remains one infinite structured class, not the global
+top-two conjecture and not unrestricted LRC.
 
 ## Recovered computation
 

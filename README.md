@@ -55,19 +55,21 @@ largest integer gain is `(N*Q_N-1) div (4*P_N-Q_N)`. This is a verified
 bounded-height result, not a proof of unrestricted LRC.
 
 `KanoldVandermonde.lean` first gives the unconditional linear bound
-`17*t<=3*N`. `CoefficientFiveHeight.lean` strengthens it. For positive
-injective integer speeds with `N=n+1`, maximum speed at most `N+t`, and
+`17*t<=3*N`; `CoefficientFiveHeight.lean` improves it to `5*t<=N`;
+`CoefficientFourHeight.lean` strengthens it again. For positive injective
+integer speeds with `N=n+1`, maximum speed at most `N+t`, and
 
 ```text
-5*t <= N,
+4*t <= N,
 ```
 
-`fiveHeight_family_witness` gives a common real time at the closed `1/N`
+`fourHeight_family_witness` gives a common real time at the closed `1/N`
 threshold. Lean proves the required half-open Kanold interval bound by a
-roots-of-unity expansion and an invertible Vandermonde system, classifies the
-only three short-interval exceptions, and repairs each exceptional family.
-No number-theoretic premise is assumed as an axiom. This remains a
-bounded-height theorem, not unrestricted LRC.
+roots-of-unity expansion and an invertible Vandermonde system. It then proves
+that only twelve short-interval triples can occur, supplies explicit coprime
+denominators for nine, and repairs the other three by a complementary-hole
+and second-missing-value argument. No number-theoretic premise is assumed as
+an axiom. This remains a bounded-height theorem, not unrestricted LRC.
 
 The strongest additional computer-assisted manuscript theorem covers maximum
 speed `n+5`. Its 134,568-case finite core and uniform arithmetic proof have

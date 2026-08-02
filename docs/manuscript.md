@@ -1580,3 +1580,169 @@ the closed circular-distance threshold `1/N`. Its axiom report contains only
 `propext`, `Classical.choice`, and `Quot.sound`. This is `proved-lean`, but it
 still covers only a bounded-height region and therefore does not prove
 unrestricted LRC.
+
+## 39. Fastest-pivot ratio criterion
+
+Let `N>=2`, and let `B` be the largest member of a positive integer speed
+family. Suppose every speed `s` satisfies
+
+```text
+B <= (N-1)*s.
+```
+
+Use the `B`-pivot grid and numerator `r=N-1`. The candidate time is
+
+```text
+tau = (N-1)/(N*B).
+```
+
+The factor `N` in this denominator is essential. For example, when
+`(N,B,s)=(4,10,4)`, the phase is `3*4/40=3/10`, not `3*4/10`; it is at
+distance `3/10>=1/4`. This exact check is the theorem
+`fastestPivot_normalization_regression`.
+
+Candidate membership follows from `N-1<N*B` and `N` not dividing `N-1`.
+For each speed, maximality and the ratio hypothesis give
+
+```text
+B <= (N-1)*s <= (N-1)*B = N*B-B < N*B.
+```
+
+Thus reduction modulo `N*B` changes nothing, while both the residue and its
+complement are at least `B`. In the repository's notation,
+
+```text
+B <= cyclicResidueDistance (N*B) ((N-1)*s).
+```
+
+Because a pivot bad set uses the strict inequality `<B`, equality at either
+endpoint remains good. The declarations
+`N_sub_one_mem_pivotCandidates`,
+`pivot_le_cyclicResidueDistance_N_sub_one_mul`, and
+`N_sub_one_not_mem_fastestPivotBadResidues` formalize these three steps.
+`exists_fastestPivotCertificate_of_ratio` assembles the finite certificate,
+and `fastestPivot_family_witness` passes it through `pivotResidueWitness` to
+obtain the common closed `1/N` real witness.
+
+Taking the contrapositive, if the fastest pivot has no modular certificate,
+some speed satisfies `(N-1)*s<B`. If `a_min` and `a_max=B` are chosen
+minimum and maximum indices, monotonicity gives
+
+```text
+(N-1)*a_min < a_max.
+```
+
+This is `slowest_fastest_gap_of_no_fastestPivotCertificate`. A failure of the
+top-two strategy in particular includes failure at the fastest pivot, so it
+obeys the same necessary spread condition. The theorem does not show that a
+fastest or top-two pivot always succeeds and does not prove unrestricted LRC.
+
+## 40. Coefficient-four bounded height
+
+The missing-height selector can be sharpened once more. Assume the same
+positive injective integer family, `n+1=N`, maximum speed at most `N+t`, and
+
+```text
+4*t <= N.
+```
+
+For a selected missing `c`, the reciprocal branch works when `N+t<2*c`.
+Otherwise put `ell=N-c-t`. The inequalities `2*c<=N+t` and `4*t<=N`
+imply
+
+```text
+c <= 5*ell.
+```
+
+The declaration `five_mul_two_pow_omega_le_of_40_le` proves
+
+```text
+5 * 2^omega(c) <= c
+```
+
+for every `c>=40`. If `omega(c)<=2`, this follows directly from `c>=40`.
+For at least three prime factors, remove the largest prime. If it is at least
+ten, the remaining product contributes `2^(omega(c)-1)` and the largest
+prime contributes the required factor ten. If it is below ten, every prime
+factor lies in `{2,3,5,7}`; the cases of at most three factors again use
+`c>=40`, while four factors give radical `210`.
+
+Consequently a short Kanold interval forces `c<40`. Lean evaluates
+`omega(c)` for those finitely many natural numbers with kernel-checked
+`norm_num`, not `native_decide`, and `four_short_interval_exception_classification`
+proves that the complete list is
+
+```text
+(4,1,2),   (5,1,3),   (8,2,5),   (10,2,6),
+(11,2,6),  (12,3,6),  (16,4,10), (17,4,10),
+(20,5,12), (24,6,15), (48,12,30),(49,12,30).
+```
+
+`four_witness_or_exception` combines this classification with the reciprocal
+and Kanold branches. Nine exceptions have an explicit modulus strictly above
+both forbidden heights:
+
+```text
+(5,1,3)->10,   (8,2,5)->16,   (10,2,6)->19,
+(12,3,6)->23,  (16,4,10)->31, (17,4,10)->33,
+(24,6,15)->46, (48,12,30)->91,(49,12,30)->97.
+```
+
+Each modulus satisfies `N<q<=2*N`, `N+t+c<q`, and `Coprime c q`, so
+`twoHole_witness_of_coprime_modulus_above_height` supplies the common closed
+`1/N` witness.
+
+The remaining three use a complementary boundary hole:
+
+```text
+(N,t,c,q,q-c) = (4,1,2,7,5),
+                  (11,2,6,19,13),
+                  (20,5,12,37,25).
+```
+
+Here `q-c=N+t`. If that top height is missing,
+`twoHoleDenominator_family_witness` applies directly to the two explicit
+missing values. If it occurs, it lies strictly above `N`, so
+`exists_second_missing_of_extra_speed` produces another missing
+`d in [1,N]` with `d!=c`. Rerunning `four_witness_or_exception` at `d`
+cannot return an exception: for each of these fixed pairs `(N,t)`, the table
+contains only the original value `c`.
+
+`fourHeight_family_witness` assembles all branches without changing the
+original quantifiers. Its exact assumptions are `n+1=N`, `t>0`, positivity,
+injectivity, maximum speed `N+t`, and `4*t<=N`; its conclusion is a common
+real time at the closed circular-distance threshold `1/N`. This remains a
+bounded-height region and does not prove unrestricted LRC.
+
+## 41. Saturated lower-interval top-two certificate
+
+Fix `N>=4`, put `A=N-2`, and let `B>A`. For the speed family
+
+```text
+1,2,...,A,B,
+```
+
+there is a canonical pivot certificate at one of the two largest speeds.
+The three exhaustive divisibility cases use:
+
+```text
+N∤B:                 pivot A, residue A;
+B=N*k and A∤k:       pivot A, residue N-1;
+B=N*A*k:             pivot B, residue (N-1)*N*k-1.
+```
+
+For the first residue, multiplication by each `1<=a<=A` stays in the
+interval from `A` to `N*A-A`; multiplication by `B` reduces to `A*(B mod N)`,
+whose nonzero residue has cyclic distance at least `A`. For the second,
+`(N-1)*a` lies from `A` to `N*A-A`, while the top coordinate reduces to
+`N*(k mod A)` and `A∤k` makes both cyclic sides at least `A`. In the last
+case every lower product lies between `B` and `N*B-B`; the residue is not
+divisible by `N`, so the pivot coordinate is good as well.
+
+`SaturatedTopTwoPivotCertificate` records the non-strict cyclic-distance
+statement. `saturatedTopTwoPivotCertificate` proves it by exactly these three
+cases. `saturatedTopTwo_avoids_pivotBadResidues` then translates every lower
+coordinate and `B` to the repository's canonical strict bad-set formulation.
+Equality at cyclic distance equal to the pivot remains good throughout. This
+is a proof for one structured family only and supplies neither the unrestricted
+top-two conjecture nor unrestricted LRC.

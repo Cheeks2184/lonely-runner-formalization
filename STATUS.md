@@ -8,11 +8,11 @@ claim that it has been proved or disproved.
 ## Strongest verified theorem
 
 The strongest fully Lean-verified bounded-height result is
-`LonelyRunner.fiveHeight_family_witness`. If `n+1=N`, `t>0`, and
+`LonelyRunner.fourHeight_family_witness`. If `n+1=N`, `t>0`, and
 an injective family of `n` positive integer speeds is bounded by `N+t`, then
 
 ```text
-5*t <= N
+4*t <= N
 ```
 
 implies one common real time at closed circular distance at least `1/N` for
@@ -20,10 +20,11 @@ every speed. `kanoldIntervalBound_vandermonde` proves, rather than assumes,
 that every half-open interval of `2^omega(c)` consecutive natural numbers
 contains a number coprime to positive `c`. Its proof uses an exact
 roots-of-unity powerset expansion and a Vandermonde system with pairwise
-distinct nodes. Lean then proves that a selected missing modulus has enough
-interval length except at exactly `(5,1,3)`, `(10,2,6)`, and `(11,2,6)`;
-an explicit `q=19` witness or a second missing modulus repairs those families.
-These results do not prove unrestricted LRC.
+distinct nodes. `four_short_interval_exception_classification` proves that a
+selected missing modulus can have a short interval only at twelve exact
+triples. Nine explicit coprime denominators and three complementary-hole
+repairs at `(4,1,2)`, `(11,2,6)`, and `(20,5,12)` close every family. These
+results do not prove unrestricted LRC.
 
 The exact primorial result remains fully verified. Let `P_N` be the largest
 primorial at most `N`, and let `Q_N=phi(P_N)`. Lean proves the exact maximum
@@ -85,8 +86,22 @@ This equivalence does not prove either side.
   hypothesis to `5*t<=N` by classifying three short-interval exceptions and
   repairing them at the family level. The height theorem is fully assembled
   in `CoefficientFiveHeight.lean`. The separate top-two pivot property for
-  `(1,2,...,N-2,B)` remains an audited manuscript theorem, not yet Lean.
+  `(1,2,...,N-2,B)` is also Lean-verified for every `N>=4` and `B>N-2` by
+  `saturatedTopTwo_avoids_pivotBadResidues`; it is only a structured class,
+  not the unrestricted top-two conjecture.
   See [the audit](docs/response47-audit.md).
+- **Lean-verified:** `CoefficientFourHeight.lean` strengthens the same
+  bounded-height architecture to `4*t<=N`. It proves an exact twelve-triple
+  exception classification, closes nine cases by explicit above-height
+  moduli, and repairs three complementary-boundary cases by a second missing
+  value. A fresh adversarial audit reproduced every case and returned
+  `ACCEPT`. This remains bounded-height progress only.
+- **Lean-verified fastest-pivot restriction:** if the maximum positive integer
+  speed `B` satisfies `B<=(N-1)*s` for every speed `s`, the explicit numerator
+  `r=N-1` is a fastest-pivot certificate and gives a common closed `1/N`
+  witness. Consequently, failure at the fastest pivot forces
+  `(N-1)*a_min<a_max`. This is only a necessary condition for a failed
+  fastest/top-two strategy, not a proof that a top pivot always succeeds.
 - **Finite evidence only:** targeted full Chebyshev/CRT score searches and the
   top-two pivot stress certificate. The latter checks 878,245 primitive box
   tuples plus 86,745 structured mutations without a failure; it is a proposed
@@ -114,9 +129,9 @@ restrictions do not force such a pivot.
 
 Active research branches are:
 
-1. determine whether the coefficient-five bounded-height theorem can be
-   improved further by a sharper global choice of missing modulus or a
-   stronger Jacobsthal estimate;
+1. determine whether the coefficient-four bounded-height theorem can be
+   improved further; the coefficient-three arbitrary-hole selector has an
+   infinite zero-length regime whose possible family repairs are under audit;
 2. control or refute the full Chebyshev/CRT pivot score, after rejection of
    the quadratic shortcut;
 3. strengthen the least-counterexample residual class until its conditions

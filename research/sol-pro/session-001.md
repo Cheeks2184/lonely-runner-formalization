@@ -2642,3 +2642,31 @@ accepted the exact source: the exception classification, guarded natural
 subtractions, second-missing cardinality argument, all three repairs, and
 the final theorem statement survived without an objection. No unrestricted
 LRC claim follows.
+
+## Prompt 49 submitted: verified coefficient five and top-two frontier
+
+Prompt 49 returned the exact compiler failures in Response 48's attachment
+and promoted only the independent tracked coefficient-five implementation.
+It asks for canonical Lean code for the saturated top-two class, at least two
+materially different analytic strategies for the global top-two frontier,
+and a separate classification of the `4*t<=N` height regime. It explicitly
+incorporates the exact fractional-dual obstruction and treats Response 48's
+fastest-pivot restriction as `proved-math` pending Lean.
+
+Windows UI Automation exposed the signed-in Chrome conversation and the
+model hierarchy `GPT-5.6 Sol` with its `Pro` radio item selected. The exact
+6,073-character composer value matched the archived prompt after removing
+only the file's trailing newline. Both UTF-8 SHA-256 values were
+`6806bf5a74076515d974521473b1945c44e71e50714ea3e6ea38b6e01097ba4d`.
+Invoking `composer-submit-button` produced the live `Stop answering` control,
+so Prompt 49 is running. No claim based on its response is accepted until the
+completed text is recovered and independently audited.
+
+While Prompt 49 was running, the independent local branch closed its requested
+coefficient-four investigation. `CoefficientFourHeight.lean` proves the exact
+twelve short-interval exceptions and repairs all of them, yielding
+`fourHeight_family_witness` under `4*t<=N`. Standalone compilation succeeded,
+and a fresh adversarial audit independently reproduced the classification,
+all twelve denominator/second-hole branches, the final hypotheses, and
+returned `ACCEPT`. The integrated trust and clean-checkout replay remain the
+publication gates; this is bounded-height progress only.
