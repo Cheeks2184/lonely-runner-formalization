@@ -162,6 +162,19 @@ theorem exists_coprime_in_Ico_of_complement_lt_totient
   rw [Nat.filter_coprime_Ico_eq_totient, Nat.card_Ico] at hcard
   omega
 
+/-- Every complete interval of residues modulo a positive `c` contains an
+integer coprime to `c`. -/
+theorem exists_coprime_in_Ico_full_period {c start : Nat} (hc : 0 < c) :
+    ∃ q, q ∈ Finset.Ico start (start + c) ∧ c.Coprime q := by
+  have hcard :
+      ((Finset.Ico start (start + c)).filter (c.Coprime ·)).card = c.totient :=
+    Nat.filter_coprime_Ico_eq_totient c start
+  have hpos : 0 < ((Finset.Ico start (start + c)).filter (c.Coprime ·)).card := by
+    rw [hcard]
+    exact Nat.totient_pos.mpr hc
+  obtain ⟨q, hq⟩ := Finset.card_pos.mp hpos
+  exact ⟨q, (Finset.mem_filter.mp hq).1, (Finset.mem_filter.mp hq).2⟩
+
 /-- A selector producing a coprime `q > H+c` automatically places both
 omitted residues, `c` and `q-c`, above or outside the selected speed family.
 This packages the interface to `twoHoleDenominator_family_witness`. -/
@@ -182,5 +195,135 @@ theorem twoHole_witness_of_coprime_modulus_above_height
   · intro i hi
     have := hbound i
     omega
+
+/-- Elementary logarithmic bounded-height theorem. An injective family of
+`n=N-1` positive integer speeds of height at most `N+t` is lonely whenever
+`(4*(Nat.log 2 N+1)+1)*t ≤ N`. The conclusion uses the exact closed `1/N`
+boundary. -/
+theorem logarithmicHeight_family_witness
+    {n N t : Nat} (speeds : Fin n → Nat)
+    (hnN : n + 1 = N) (ht : 0 < t)
+    (hpos : ∀ i, 0 < speeds i) (hinj : Function.Injective speeds)
+    (hbound : ∀ i, speeds i ≤ N + t)
+    (hgrowth : (4 * (Nat.log 2 N + 1) + 1) * t ≤ N) :
+    ∃ tau : Real, ∀ i,
+      (N : Real)⁻¹ ≤ circleNorm (tau * (speeds i : Real)) := by
+  classical
+  have hN5t : 5 * t ≤ N := by
+    have hfive : 5 ≤ 4 * (Nat.log 2 N + 1) + 1 := by omega
+    exact (Nat.mul_le_mul_right t hfive).trans hgrowth
+  have hN : 0 < N := by omega
+  let S : Finset Nat := Finset.univ.image speeds
+  let U : Finset Nat := Finset.Icc 1 N
+  have hcardS : S.card = n := by
+    dsimp [S]
+    rw [Finset.card_image_iff.mpr]
+    · simp
+    · intro i _ j _ hij
+      exact hinj hij
+  have hcardU : U.card = N := by
+    dsimp [U]
+    rw [Nat.card_Icc]
+    omega
+  have hnotSubset : ¬ U ⊆ S := by
+    intro hsub
+    have hcard := Finset.card_le_card hsub
+    rw [hcardU, hcardS] at hcard
+    omega
+  obtain ⟨c, hcU, hcNotS⟩ := Finset.not_subset.mp hnotSubset
+  have hcBounds : 0 < c ∧ c ≤ N := by
+    have : c ∈ Finset.Icc 1 N := by simpa [U] using hcU
+    have := Finset.mem_Icc.mp this
+    omega
+  have hmissc : ∀ i, speeds i ≠ c := by
+    intro i heq
+    apply hcNotS
+    exact Finset.mem_image.mpr ⟨i, Finset.mem_univ i, heq⟩
+  by_cases hrecip : N + t < 2 * c
+  · apply smallDenominator_family_witness speeds hN hcBounds.1 hcBounds.2
+    intro i hdiv
+    rcases hdiv with ⟨k, hk⟩
+    have hkpos : 0 < k := by
+      by_contra hkzero
+      have : k = 0 := by omega
+      subst k
+      simp at hk
+      exact (Nat.ne_of_gt (hpos i)) hk
+    have hkle : k = 1 := by
+      by_contra hkone
+      have hk2 : 2 ≤ k := by omega
+      have hmul := Nat.mul_le_mul_left c hk2
+      have hb := hbound i
+      omega
+    subst k
+    apply hmissc i
+    simpa using hk
+  · have h2c : 2 * c ≤ N + t := by omega
+    have hctlt : c + t < N := by omega
+    let start := N + c + t + 1
+    let ell := N - c - t
+    have hellpos : 0 < ell := by
+      dsimp [ell]
+      omega
+    have hsum : start + ell = 2 * N + 1 := by
+      dsimp [start, ell]
+      omega
+    have hselector : ∃ q, q ∈ Finset.Ico start (start + ell) ∧ c.Coprime q := by
+      by_cases hlong : c ≤ ell
+      · obtain ⟨q, hq, hcop⟩ :=
+          exists_coprime_in_Ico_full_period (start := start) hcBounds.1
+        refine ⟨q, ?_, hcop⟩
+        have hqm := Finset.mem_Ico.mp hq
+        exact Finset.mem_Ico.mpr ⟨hqm.1, by omega⟩
+      · have hellc : ell < c := by omega
+        have hphi : c - ell < c.totient := by
+          by_contra hnot
+          have htotle : c.totient ≤ c - ell := by omega
+          have hcomp : c - ell ≤ 2 * t := by
+            dsimp [ell]
+            omega
+          have homegaN :
+              ArithmeticFunction.cardDistinctFactors c ≤ Nat.log 2 N :=
+            (cardDistinctFactors_le_log_two c (Nat.ne_of_gt hcBounds.1)).trans
+              (Nat.log_mono_right hcBounds.2)
+          have hcUpper : c ≤ (Nat.log 2 N + 1) * (2 * t) := by
+            calc
+              c ≤ (ArithmeticFunction.cardDistinctFactors c + 1) * c.totient :=
+                le_cardDistinctFactors_succ_mul_totient c
+              _ ≤ (Nat.log 2 N + 1) * (c - ell) :=
+                Nat.mul_le_mul (Nat.add_le_add_right homegaN 1) htotle
+              _ ≤ (Nat.log 2 N + 1) * (2 * t) :=
+                Nat.mul_le_mul_left (Nat.log 2 N + 1) hcomp
+          have hNlt : N < 2 * c + t := by
+            dsimp [ell] at hellc
+            omega
+          have hupper :
+              2 * c + t ≤ (4 * (Nat.log 2 N + 1) + 1) * t := by
+            nlinarith
+          omega
+        exact exists_coprime_in_Ico_of_complement_lt_totient hellc hphi
+    obtain ⟨q, hq, hcop⟩ := hselector
+    have hqmem := Finset.mem_Ico.mp hq
+    apply twoHole_witness_of_coprime_modulus_above_height
+      speeds hN hcBounds.1 hpos hbound hmissc
+    refine ⟨q, ?_, ?_, ?_, hcop⟩
+    · dsimp [start] at hqmem
+      omega
+    · rw [hsum] at hqmem
+      omega
+    · dsimp [start] at hqmem
+      omega
+
+/-- Standard stationary-runner specialization of
+`logarithmicHeight_family_witness`, with `N=n+1` visible in the statement. -/
+theorem logarithmicHeight_stationary_witness
+    {n t : Nat} (speeds : Fin n → Nat) (ht : 0 < t)
+    (hpos : ∀ i, 0 < speeds i) (hinj : Function.Injective speeds)
+    (hbound : ∀ i, speeds i ≤ n + 1 + t)
+    (hgrowth : (4 * (Nat.log 2 (n + 1) + 1) + 1) * t ≤ n + 1) :
+    ∃ tau : Real, ∀ i,
+      (((n + 1 : Nat) : Real)⁻¹) ≤
+        circleNorm (tau * (speeds i : Real)) := by
+  exact logarithmicHeight_family_witness speeds rfl ht hpos hinj hbound hgrowth
 
 end LonelyRunner

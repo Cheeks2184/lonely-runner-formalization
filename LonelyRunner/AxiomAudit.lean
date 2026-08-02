@@ -139,7 +139,10 @@ project-specific axiom.
 #print axioms LonelyRunner.le_cardDistinctFactors_succ_mul_totient
 #print axioms LonelyRunner.le_log_succ_mul_totient
 #print axioms LonelyRunner.exists_coprime_in_Ico_of_complement_lt_totient
+#print axioms LonelyRunner.exists_coprime_in_Ico_full_period
 #print axioms LonelyRunner.twoHole_witness_of_coprime_modulus_above_height
+#print axioms LonelyRunner.logarithmicHeight_family_witness
+#print axioms LonelyRunner.logarithmicHeight_stationary_witness
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
 #print axioms LonelyRunner.top_signed_forces_sum
