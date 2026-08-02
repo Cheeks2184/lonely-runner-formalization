@@ -85,6 +85,8 @@ project-specific axiom.
 #print axioms LonelyRunner.orderedDistinctPairAverage_mono_of_nat
 #print axioms LonelyRunner.exists_orderCredit_ge_iff_exists_acyclicSelectorWeight_ge
 #print axioms LonelyRunner.orderCredit_le_iff_acyclicSelectorWeight_le
+#print axioms LonelyRunner.orderCredit_modular_eq_fiberCredit_sum
+#print axioms LonelyRunner.exists_modularOrderFiberCredit_ge_iff_exists_acyclicSelectorWeight_ge
 #print axioms LonelyRunner.pairMultiplicityContribution_num
 #print axioms LonelyRunner.sum_pairMultiplicityContribution_num
 #print axioms LonelyRunner.residueEnergy_nat_add_mod_le

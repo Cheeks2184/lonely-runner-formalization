@@ -22,6 +22,7 @@ import LonelyRunner.WeightedConditionalExpectation
 import LonelyRunner.AnchorStarAveraging
 import LonelyRunner.AnchorStarDispersion
 import LonelyRunner.AcyclicFiberSelector
+import LonelyRunner.ModularAcyclicSelector
 import LonelyRunner.ResidualVariationEnergy
 import LonelyRunner.ResidualVariationDebt
 import LonelyRunner.RelocationDescent
