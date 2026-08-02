@@ -382,6 +382,173 @@ theorem fiberCredit_le_twoLevelFiberCredit_le_card_inter_biUnion
       subfiberIndices subfibers parents parent hfiberDecomp hfiberDisjoint
       hsubfiberDecomp hsubfiberDisjoint⟩
 
+/-! ## Ordered-union certificates
+
+The preceding soundness theorem is local to one child.  The next results
+compose those local certificates along an ordering.  We deliberately allow
+each child to retain only a selected subset of its earlier parents.  This is
+the interface needed by front-loaded-anchor arguments: omitting a predecessor
+can weaken the numerical credit, but cannot make the resulting union bound
+unsound.
+-/
+
+/-- Additive ordered-union bound from two-level credits computed against an
+arbitrary selected subset of the earlier sets.
+
+All fiber and subfiber decompositions are explicit.  No modular-arithmetic or
+uniformity hypothesis is hidden in this finite statement. -/
+theorem card_initialFinsetUnion_le_sum_card_sub_twoLevelFiberCredit_of_parent_subset
+    {α κ ν : Type*} [DecidableEq α]
+    (sets : ℕ → Finset α) (fiberIndices : ℕ → Finset κ)
+    (fibers : ℕ → κ → Finset α)
+    (subfiberIndices : ℕ → ℕ → κ → Finset ν)
+    (subfibers : ℕ → ℕ → κ → ν → Finset α)
+    (parents : ℕ → Finset ℕ) (m : ℕ)
+    (hparents : ∀ k < m, parents k ⊆ Finset.range k)
+    (hfiberDecomp : ∀ k < m,
+      (fiberIndices k).biUnion (fibers k) = sets k)
+    (hfiberDisjoint : ∀ k < m,
+      ∀ x ∈ fiberIndices k, ∀ z ∈ fiberIndices k, x ≠ z →
+        Disjoint (fibers k x) (fibers k z))
+    (hsubfiberDecomp : ∀ k < m, ∀ anchor ∈ parents k,
+      ∀ x ∈ fiberIndices k,
+        (subfiberIndices k anchor x).biUnion
+          (subfibers k anchor x) = fibers k x)
+    (hsubfiberDisjoint : ∀ k < m, ∀ anchor ∈ parents k,
+      ∀ x ∈ fiberIndices k,
+      ∀ y ∈ subfiberIndices k anchor x,
+      ∀ z ∈ subfiberIndices k anchor x, y ≠ z →
+        Disjoint (subfibers k anchor x y) (subfibers k anchor x z)) :
+    (initialFinsetUnion sets m).card ≤
+      ∑ k ∈ Finset.range m,
+        ((sets k).card - twoLevelFiberCredit (fiberIndices k)
+          (subfiberIndices k) (subfibers k) (parents k) sets) := by
+  classical
+  apply card_initialFinsetUnion_le_sum_card_sub_credit
+  intro k hk
+  have hlocal :
+      twoLevelFiberCredit (fiberIndices k) (subfiberIndices k)
+          (subfibers k) (parents k) sets ≤
+        (sets k ∩ (parents k).biUnion sets).card :=
+    twoLevelFiberCredit_le_card_inter_biUnion
+      (sets k) (fiberIndices k) (fibers k)
+      (subfiberIndices k) (subfibers k) (parents k) sets
+      (hfiberDecomp k hk) (hfiberDisjoint k hk)
+      (hsubfiberDecomp k hk) (hsubfiberDisjoint k hk)
+  refine hlocal.trans (Finset.card_le_card ?_)
+  intro a ha
+  refine Finset.mem_inter.mpr ⟨(Finset.mem_inter.mp ha).1, ?_⟩
+  obtain ⟨i, hi, hai⟩ := Finset.mem_biUnion.mp (Finset.mem_inter.mp ha).2
+  exact Finset.mem_biUnion.mpr ⟨i, hparents k hk hi, hai⟩
+
+/-- The ordered-union bound when every earlier set is retained as a parent. -/
+theorem card_initialFinsetUnion_le_sum_card_sub_twoLevelFiberCredit
+    {α κ ν : Type*} [DecidableEq α]
+    (sets : ℕ → Finset α) (fiberIndices : ℕ → Finset κ)
+    (fibers : ℕ → κ → Finset α)
+    (subfiberIndices : ℕ → ℕ → κ → Finset ν)
+    (subfibers : ℕ → ℕ → κ → ν → Finset α) (m : ℕ)
+    (hfiberDecomp : ∀ k < m,
+      (fiberIndices k).biUnion (fibers k) = sets k)
+    (hfiberDisjoint : ∀ k < m,
+      ∀ x ∈ fiberIndices k, ∀ z ∈ fiberIndices k, x ≠ z →
+        Disjoint (fibers k x) (fibers k z))
+    (hsubfiberDecomp : ∀ k < m, ∀ anchor ∈ Finset.range k,
+      ∀ x ∈ fiberIndices k,
+        (subfiberIndices k anchor x).biUnion
+          (subfibers k anchor x) = fibers k x)
+    (hsubfiberDisjoint : ∀ k < m, ∀ anchor ∈ Finset.range k,
+      ∀ x ∈ fiberIndices k,
+      ∀ y ∈ subfiberIndices k anchor x,
+      ∀ z ∈ subfiberIndices k anchor x, y ≠ z →
+        Disjoint (subfibers k anchor x y) (subfibers k anchor x z)) :
+    (initialFinsetUnion sets m).card ≤
+      ∑ k ∈ Finset.range m,
+        ((sets k).card - twoLevelFiberCredit (fiberIndices k)
+          (subfiberIndices k) (subfibers k) (Finset.range k) sets) := by
+  exact card_initialFinsetUnion_le_sum_card_sub_twoLevelFiberCredit_of_parent_subset
+    sets fiberIndices fibers subfiberIndices subfibers
+    (fun k => Finset.range k) m (fun _ _ => Finset.Subset.rfl)
+    hfiberDecomp hfiberDisjoint hsubfiberDecomp hsubfiberDisjoint
+
+/-- Sharp avoidance criterion for selected-parent two-level credits.  In
+particular, later children may ignore any non-anchor predecessors, provided
+the retained parent indices are still earlier in the ordering. -/
+theorem exists_mem_avoiding_of_twoLevelFiberCredit_sum_lt_card_of_parent_subset
+    {α κ ν : Type*} [DecidableEq α]
+    (candidate : Finset α) (sets : ℕ → Finset α)
+    (fiberIndices : ℕ → Finset κ) (fibers : ℕ → κ → Finset α)
+    (subfiberIndices : ℕ → ℕ → κ → Finset ν)
+    (subfibers : ℕ → ℕ → κ → ν → Finset α)
+    (parents : ℕ → Finset ℕ) (m : ℕ)
+    (hparents : ∀ k < m, parents k ⊆ Finset.range k)
+    (hfiberDecomp : ∀ k < m,
+      (fiberIndices k).biUnion (fibers k) = sets k)
+    (hfiberDisjoint : ∀ k < m,
+      ∀ x ∈ fiberIndices k, ∀ z ∈ fiberIndices k, x ≠ z →
+        Disjoint (fibers k x) (fibers k z))
+    (hsubfiberDecomp : ∀ k < m, ∀ anchor ∈ parents k,
+      ∀ x ∈ fiberIndices k,
+        (subfiberIndices k anchor x).biUnion
+          (subfibers k anchor x) = fibers k x)
+    (hsubfiberDisjoint : ∀ k < m, ∀ anchor ∈ parents k,
+      ∀ x ∈ fiberIndices k,
+      ∀ y ∈ subfiberIndices k anchor x,
+      ∀ z ∈ subfiberIndices k anchor x, y ≠ z →
+        Disjoint (subfibers k anchor x y) (subfibers k anchor x z))
+    (hcard : (∑ k ∈ Finset.range m,
+      ((sets k).card - twoLevelFiberCredit (fiberIndices k)
+        (subfiberIndices k) (subfibers k) (parents k) sets)) <
+      candidate.card) :
+    ∃ a ∈ candidate, ∀ k < m, a ∉ sets k := by
+  classical
+  have hunionCard : (initialFinsetUnion sets m).card < candidate.card :=
+    (card_initialFinsetUnion_le_sum_card_sub_twoLevelFiberCredit_of_parent_subset
+      sets fiberIndices fibers subfiberIndices subfibers parents m hparents
+      hfiberDecomp hfiberDisjoint hsubfiberDecomp
+      hsubfiberDisjoint).trans_lt hcard
+  by_contra havoid
+  have hsubset : candidate ⊆ initialFinsetUnion sets m := by
+    intro a haCandidate
+    by_contra haUnion
+    apply havoid
+    refine ⟨a, haCandidate, ?_⟩
+    intro k hk hak
+    exact haUnion (Finset.mem_biUnion.mpr
+      ⟨k, Finset.mem_range.mpr hk, hak⟩)
+  exact (Nat.not_lt_of_ge (Finset.card_le_card hsubset)) hunionCard
+
+/-- Sharp avoidance criterion using every earlier set as a parent. -/
+theorem exists_mem_avoiding_of_twoLevelFiberCredit_sum_lt_card
+    {α κ ν : Type*} [DecidableEq α]
+    (candidate : Finset α) (sets : ℕ → Finset α)
+    (fiberIndices : ℕ → Finset κ) (fibers : ℕ → κ → Finset α)
+    (subfiberIndices : ℕ → ℕ → κ → Finset ν)
+    (subfibers : ℕ → ℕ → κ → ν → Finset α) (m : ℕ)
+    (hfiberDecomp : ∀ k < m,
+      (fiberIndices k).biUnion (fibers k) = sets k)
+    (hfiberDisjoint : ∀ k < m,
+      ∀ x ∈ fiberIndices k, ∀ z ∈ fiberIndices k, x ≠ z →
+        Disjoint (fibers k x) (fibers k z))
+    (hsubfiberDecomp : ∀ k < m, ∀ anchor ∈ Finset.range k,
+      ∀ x ∈ fiberIndices k,
+        (subfiberIndices k anchor x).biUnion
+          (subfibers k anchor x) = fibers k x)
+    (hsubfiberDisjoint : ∀ k < m, ∀ anchor ∈ Finset.range k,
+      ∀ x ∈ fiberIndices k,
+      ∀ y ∈ subfiberIndices k anchor x,
+      ∀ z ∈ subfiberIndices k anchor x, y ≠ z →
+        Disjoint (subfibers k anchor x y) (subfibers k anchor x z))
+    (hcard : (∑ k ∈ Finset.range m,
+      ((sets k).card - twoLevelFiberCredit (fiberIndices k)
+        (subfiberIndices k) (subfibers k) (Finset.range k) sets)) <
+      candidate.card) :
+    ∃ a ∈ candidate, ∀ k < m, a ∉ sets k := by
+  exact exists_mem_avoiding_of_twoLevelFiberCredit_sum_lt_card_of_parent_subset
+    candidate sets fiberIndices fibers subfiberIndices subfibers
+    (fun k => Finset.range k) m (fun _ _ => Finset.Subset.rfl)
+    hfiberDecomp hfiberDisjoint hsubfiberDecomp hsubfiberDisjoint hcard
+
 /-- In the modularly saturated case, an anchor-target subfiber is either
 entirely inside the anchor or disjoint from it.  The robust contribution then
 simplifies to “full subfiber cardinality” in the first case and “best
