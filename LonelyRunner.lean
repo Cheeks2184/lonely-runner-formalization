@@ -25,7 +25,9 @@ import LonelyRunner.AcyclicFiberSelector
 import LonelyRunner.ModularAcyclicSelector
 import LonelyRunner.SoftFeedbackLayers
 import LonelyRunner.BlockPeeling
+import LonelyRunner.BellmanPeeling
 import LonelyRunner.Chain3Counterexample
+import LonelyRunner.OptAddCounterexample
 import LonelyRunner.ResidualVariationEnergy
 import LonelyRunner.ResidualVariationDebt
 import LonelyRunner.RelocationDescent

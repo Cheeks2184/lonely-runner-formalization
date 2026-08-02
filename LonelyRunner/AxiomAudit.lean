@@ -98,7 +98,12 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_blockPeelingList_of_strictLocalBudget
 #print axioms LonelyRunner.blockPeelingBudget_oneStepBlockBudget
 #print axioms LonelyRunner.exists_blockPeelingList_of_localVertexBudget
+#print axioms LonelyRunner.bellmanPotential_le_peelingLoss_of_complete
+#print axioms LonelyRunner.bellmanPotential_univ_le_peelingLoss
+#print axioms LonelyRunner.optimalPeelingPotential_characterization
+#print axioms LonelyRunner.bellmanPotential_le_optimalPeelingPotential
 #print axioms LonelyRunner.chain3Counterexample_directWitness
+#print axioms LonelyRunner.optAddCounterexample_directWitness
 #print axioms LonelyRunner.pairMultiplicityContribution_num
 #print axioms LonelyRunner.sum_pairMultiplicityContribution_num
 #print axioms LonelyRunner.residueEnergy_nat_add_mod_le
