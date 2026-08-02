@@ -213,6 +213,18 @@ and the exact fixed-tuple checker. The live priorities are now:
    `3/140` is lonely. Thus the surviving finite-cover target is unrestricted
    `OPT-ADD-UNIF`, not the rejected top-parent restriction, and neither this
    target nor LRC is proved.
+   The exact full-weight refinement expands each token into nested unit
+   threshold layers. Its loss is the number of layers whose entire supporting
+   parent set remains later, so it retains every lower-ranked rescue and gives
+   the unrestricted Bellman recurrence without choosing ties. Conditioning on
+   a prefix and topologically ordering the SCC condensation of the active
+   layer-support graph yields a sound `B_core` bound. It repairs the tuple
+   above at pivot `28`: prefix `(35,40,88)` has prefix loss `24`, residual SCC
+   loss `14`, and total `38<40`. A third implementation checked the layer
+   identity over 537,700 predecessor subsets. The remaining obstruction is
+   arithmetic rather than graph-theoretic: no proof forces some pivot to have
+   a prefix with `B_core` below its strict budget, and large SCCs can make the
+   randomized compression much weaker than the exact Bellman optimum.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform

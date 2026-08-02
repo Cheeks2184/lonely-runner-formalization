@@ -1642,4 +1642,78 @@ exact candidate-filtered weight? Required routes were a full weighted
 soft-feedback theorem, a cross-pivot exact CRT/gcd inequality surviving all
 known counterexamples, and an exact search for an all-pivot unrestricted
 counterexample. The prompt again forbade inferring LRC failure from failure of
-this sufficient certificate. This response is pending.
+this sufficient certificate.
+
+## Response 35: exact full-weight soft cores, no uniform conclusion
+
+After 39 minutes 53 seconds, Sol Pro reported no proof and no all-pivot
+counterexample to `OPT-ADD-UNIF`. Its selected route expands every token's
+full parent-weight list into unit threshold layers. For token `e` with owner
+`i`, maximum weight `W_e`, and
+
+```text
+H_(e,t) = {p != i : w_e(p) >= t},  1 <= t <= W_e,
+```
+
+the external deficit of `i` relative to an unplaced set `Q` is exactly
+
+```text
+delta_i(Q)
+  = sum_(e owned by i) (W_e - max_(p outside Q) w_e(p))
+  = sum_(e owned by i) sum_(t=1..W_e) 1[H_(e,t) subset Q].
+```
+
+Consequently, if an order repeatedly deletes `i_k` from the current unplaced
+set `Q_k`, its full soft loss is exactly `sum_k delta_(i_k)(Q_k)`. Writing
+`F* = sum_e W_e`, `S = sum_i |B_i|`, and
+`beta = F*-(S-n*a_j)` as an integer, optimized cost is strict precisely when
+the soft loss is `< beta`.
+
+Sol derived a valid budgeted peeling implication: if every nonempty set `Q`
+of size `q` contains `i` with `delta_i(Q) <= b_q`, then some order has soft
+loss at most `sum_q b_q`. Its contrapositive yields a nonempty critical soft
+core at any failing pivot with positive budget. Taking
+`lambda=ceil(beta/(n-1))`, every vertex in that core has deficit at least
+`lambda`. Choosing distinct labelled threshold clauses produces a directed
+multigraph of minimum indegree at least `lambda`; iterative removal of a
+directed cycle gives `lambda` edge-disjoint labelled cycles. Parallel edges
+are essential, and this is a necessary obstruction rather than a uniform
+theorem.
+
+An independent implementation then checked the tie-safe layer identity on
+4,328 tokens and 5,113 compressed layers over 537,700 predecessor subsets
+from `E` and eight prior stresses. It also derived the exact soft Bellman
+recurrence and a prefix-conditioned expectation. The stronger SCC refinement
+topologically orders the active threshold-support condensation and randomizes
+only inside SCCs. On `E` at pivot `28`, prefix `{35,40,88}` gives exact soft
+loss `38<40`; on all eight earlier stresses, an SCC certificate needs at most
+one prefix vertex. No argument proves that such a prefix/core exists at some
+pivot uniformly.
+
+The response's cross-pivot route embeds every pivot modulus in
+`L=(n+1)*lcm(a_1,...,a_n)`, sending `r` to `(lcm/a_j)*r`; this makes the
+strict target radius common but supplies no conservation law for the
+per-target parent maxima. Its minimal-counterexample route gave the pairwise
+CRT compatibility condition for simultaneous signed replacement, but could
+not control the replacement coordinate's new pivot. Neither route closes the
+uniform obligation.
+
+Response 35 also claimed a complete primitive ten-speed search through
+maximum speed `22`, plus several exact soft-core/greedy tables, but did not
+include the promised program, enumeration count, closest tuple, or verifier.
+Those computational claims are not accepted yet. Separately, a new local
+literal oracle found no unrestricted all-pivot failure in 62,693 targeted
+exact evaluations across 9--11 speeds and independently reproduced its three
+closest surplus vectors; this is bounded evidence only.
+
+## Prompt 36: reproducibility and token-coupled repair
+
+The missing verifier, unsafe ambiguity around integer `beta`, peeling-index
+notation, labelled parallel edges, zero-weight/no-parent cases, and CRT
+moduli were returned as exact audit obligations. Sol Pro was asked to provide
+the complete ten-speed enumeration source and expected output; a standalone
+verifier for every displayed table; and full proofs of the common-LCM and
+signed-replacement claims. It was then asked for two stronger token-coupled
+routes: a nested-layer SCC/cycle theorem respecting shared token choices, and
+an exact chain-aware LP/min-cut or peeling dual strictly tighter than the
+rejected cardinality-only sum. This response is pending.

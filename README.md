@@ -97,6 +97,16 @@ selector/order equivalence are kernel-checked in `AcyclicFiberSelector.lean`,
 and `ModularAcyclicSelector.lean` now instantiates its tokens, owners,
 eligibility, and exact candidate-filtered weights. Unrestricted optimized
 additive uniformity remains open.
+Retaining all lower-ranked parents gives a stronger exact threshold-layer
+model. A token of maximum weight `W` contributes one unit layer for every
+`q<W`, supported by all parents of weight greater than `q`; its lost credit is
+exactly the number of layers with no earlier supporting parent. This produces
+the unrestricted Bellman recurrence, budgeted soft-core obstructions, and an
+SCC-conditioned prefix bound. An independent audit checked 537,700
+predecessor subsets. On the tuple above, prefix `(35,40,88)` at pivot `28`
+has exact soft loss `38<40`, recovering optimized cost `250<252`. All eight
+prior stress rows also pass the SCC bound with at most one prefix vertex.
+There is still no theorem forcing such a prefix at some pivot uniformly.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all
@@ -186,6 +196,9 @@ disproof claim.
 - `docs/top-cycle-failure-audit.md`: two-oracle all-pivot rejection of
   `TOP-CYCLE-UNIF`, exhaustive reproductions, and logical separation from the
   unrestricted certificate and LRC.
+- `docs/soft-feedback-layer-audit.md`: exact full-parent threshold layers,
+  Bellman loss, critical cores, SCC-conditioned prefixes, and the remaining
+  cross-pivot obstruction.
 - `docs/pair-sum-geometry.md`: exact pair-sum certificates, restricted-selector
   counterexamples, and bounded unrestricted searches.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
@@ -231,6 +244,9 @@ disproof claim.
 - `scripts/audit_top_cycle_failure.py` and
   `scripts/search_top_cycle_failures.py`: independent exact reconstruction and
   search provenance for the all-pivot top-only counterexample.
+- `scripts/search_opt_add_failures.js`: independent literal unrestricted
+  subset-DP search across 9--11 speeds; its bounded searches found no
+  all-pivot failure and make no uniform inference.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.

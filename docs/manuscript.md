@@ -526,8 +526,8 @@ constructs tokenwise maximizers from an order;
 selector in an order; and
 `exists_orderCredit_ge_iff_exists_acyclicSelectorWeight_ge` states the exact
 threshold equivalence. `ModularAcyclicSelector.lean` supplies the concrete
-finite-optimization instantiation. Its token type pairs a nonpivot child with every strict target;
-empty fibers merely have zero weight. `modularFiberWeight` is exactly the
+finite-optimization instantiation. Its token type pairs a nonpivot child with
+every strict target; empty fibers merely have zero weight. `modularFiberWeight` is exactly the
 cardinality of the candidate-filtered child fiber intersected with the
 parent's strict bad set. `orderedTokenCredit_modular_eq` and
 `orderCredit_modular_eq_fiberCredit_sum` identify the abstract and modular
@@ -586,6 +586,45 @@ measures the lower-ranked rescue `R`. The prefix-conditioned bound in
 `docs/top-parent-rescue-audit.md` interpolates exactly from tie-aware random
 ordering to the full top-only DP, but its endpoint cannot evade this
 counterexample.
+
+The unrestricted loss itself has a tie-safe threshold-layer expansion. For a
+token `e` of maximum parent weight `W_e`, make one unit layer for every natural
+`q<W_e`, supported by
+
+```text
+P_(e,q) = {p : q < w_e(p)}.
+```
+
+For any earlier-parent set, its maximum weight is exactly the number of
+supported layers it meets. Thus a token's lost credit is exactly the number
+of its layers having no earlier parent, including the empty-earlier case;
+zero-weight tokens create no layers. If `Q` is the unplaced vertex set, define
+
+```text
+delta_i(Q) = sum_(e owned by i) (W_e - max_(p outside Q) w_e(p)).
+```
+
+Repeatedly removing vertices from `Q` gives the exact unrestricted loss as
+the sum of their `delta` values. This is the unrestricted Bellman recurrence,
+not a relaxation. It yields a budgeted peeling theorem and a necessary
+critical-soft-core condition for any failing pivot. A core of minimum deficit
+`lambda` also contains `lambda` edge-disjoint cycles in the labelled directed
+multigraph of threshold supports; parallel labelled layers are retained.
+
+Conditioning on a prefix and topologically ordering the SCC condensation of
+the active support graph gives a stronger certified bound `B_core`. Cross-SCC
+layers are certainly satisfied, while loss inside each SCC may be bounded by
+random order or computed exactly. The layer identity was independently checked
+on 4,328 tokens and 537,700 predecessor subsets. For the tuple above at pivot
+`28`, prefix `(35,40,88)` has loss `24`; the residual SCC loss is `14`, so
+the full soft loss is `38<40` and the resulting additive cost is `250<252`.
+All eight prior stress rows pass `B_core` with at most one prefix vertex.
+
+This exact full-weight model still does not prove uniformity. At pivot `148`
+of the same tuple, the soft optimum is `264`, above its strict budget `262`;
+and no arithmetic argument forces some other pivot to admit a sufficiently
+cheap SCC prefix for every primitive tuple. The remaining obligation is the
+cross-pivot modular incidence inequality, not the threshold expansion itself.
 
 The companion relocation calculation is also exact. If `F` is achieved
 credit, `F_infinity` is full all-parent credit, `R_k` is nonnegative
