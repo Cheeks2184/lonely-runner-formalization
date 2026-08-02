@@ -1068,3 +1068,57 @@ In parallel, the raw two-equation CRT claim was kernel-checked in
 `M*gcd(M,b,c)`, proves compatibility iff nonemptiness, and gives exact fiber
 cardinality.  Only the pivot-candidate subtraction and strict-ball summation,
 not the raw pair count, remain outside Lean.
+
+## Response 24: GCD-clock biased ordering
+
+Sol Pro proposed a genuinely different biased-order law.  Give each child a
+positive exponential-clock rate `lambda_i`.  For one child-fiber threshold,
+if the qualifying parents have total rate `Lambda`, the probability that one
+precedes the child is exactly `Lambda/(lambda_i+Lambda)`.  The integer
+tail-sum identity therefore gives the exact expected fiber credit.  Given an
+ordered prefix, exponential memorylessness yields the same formula on the
+remaining children with the prefix maximum as baseline.  The conditional
+expectation is the rate-weighted average over choices of the next child, so
+choosing a minimum branch derandomizes the law without subset optimization.
+This generic probability and conditional-expectation argument is
+mathematically valid on paper; it is not yet Lean-formalized.
+
+For pivot modulus `M=(n+1)A`, the proposed arithmetic rates are
+`lambda_i=gcd(a_i,M)`.  The first unsupported assertion is
+`GCD-CLOCK-UNIF`: some pivot's exact biased expectation is strictly below
+`n*A`.  Independent exact computation reproduced all reported values:
+
+```text
+RF counterexample, pivot 3: 17614883/664020 < 27, greedy cost 25.
+hard tuple A, pivot 7:       254/5 < 56, greedy cost 50.
+hard tuple B, pivot 8:       398/7 < 64, greedy cost 56.
+(1,2,3,5), pivot 3:         10 < 12, greedy cost 10.
+(1,2,5,6,8), pivot 5:       23 < 25, greedy cost 23.
+```
+
+The implementation also asserts the conditional-expectation recurrence at
+every greedy step.  No all-pivot GCD-clock failure was found in complete
+primitive boxes through `(runners,maxSpeed)=(3,30),(4,20),(5,15),(6,12),
+(7,11),(8,15),(9,16)`, nor in 250 ten-speed samples through 100 and 100
+twelve-speed samples through 200.  These are bounded tests only;
+`GCD-CLOCK-UNIF` remains open.
+
+A parallel adaptive audit rejected four simpler local rules even after
+optimizing over every admissible tie: minimum current increment fails at
+`(1,5,6,7)`/pivot `6`, one-step lookahead at `(1,5,6,7,8)`/pivot `7`, maximum
+normalized credit at `(4,6,7,10,17)`/pivot `10`, and maximum raw credit at
+`(6,8,11,14,17)`/pivot `14`.  Another pivot rescues each tuple in the audited
+boxes, so cross-pivot versions remain bounded observations rather than
+theorems.
+
+## Prompt 25: GCD-clock arithmetic frontier
+
+The generic exponential-race argument, every reported rational value, and the
+conditional-expectation recurrence were reported as independently verified.
+The clean all-pivot scans through complete eight-speed/15 and nine-speed/16
+boxes and the larger deterministic samples were supplied only as evidence.
+Sol Pro was asked for a cross-pivot gcd/CRT inequality, a minimal all-pivot
+failure structure, or an explicit GCD-clock counterexample.  Minimum-margin
+tuples from the complete boxes were supplied as mandatory stress tests, and
+broad random sampling or a repetition of the generic race argument was
+excluded as a substitute for arithmetic progress.

@@ -296,3 +296,14 @@ coarser pairwise-average inequality is genuinely false at every pivot of
 pivot `5`.  The remaining gap is therefore an arithmetic construction of a
 suitably biased or adaptive order, or a stronger bounded-depth overlap
 certificate, not the generic finite union argument.
+
+Four natural state-local adaptive rules are already insufficient at a fixed
+pivot, even after optimizing globally over every tied choice; the exact
+counterexamples are in `docs/adaptive-order-heuristics.md`.  A more structured
+survivor assigns exponential-clock rate `gcd(a_i,(n+1)A)` to child `i`.
+Tail probabilities give an exact rational expected credit, and exponential
+memorylessness derandomizes it by choosing a nonincreasing conditional-
+expectation branch.  The implementation checks that recurrence at every
+step and repairs the nine-speed uniform-average failure.  The cross-pivot
+claim `GCD-CLOCK-UNIF` has no counterexample in the recorded boxes but no
+proof; the generic biased-order theorem is also not yet in Lean.
