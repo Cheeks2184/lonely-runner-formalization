@@ -1,4 +1,53 @@
+# Lean and Lake build products
 /.lake/
 /build/
+/lake-packages/
+*.olean
+*.ilean
+*.olean.private
+*.trace
+
+# Python environments, bytecode, and tool caches
 __pycache__/
 *.py[cod]
+/.pytest_cache/
+/.mypy_cache/
+/.ruff_cache/
+/.coverage
+/htmlcov/
+/.venv/
+/venv/
+/env/
+
+# Local secrets and authentication material
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+cookies*.json
+session*.json
+
+# Local experiments and verification worktrees
+/scratch/
+/tmp/
+/lonely-runner-clean-checkout*/
+*.tmp
+*.bak
+
+# Native build products
+*.o
+*.obj
+*.exe
+
+# Editors and operating systems
+/.vscode/
+/.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini

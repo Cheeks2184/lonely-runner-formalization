@@ -19,7 +19,7 @@ The first build found these source errors:
    `norm_neg`.
 
 After those repairs, a clean Linux-native verification mirror under
-`/home/joshu/code/lonely-runner-verification` reported:
+`<clean-ext4-checkout>` reported:
 
 ```text
 ✔ [1843/1845] Built LonelyRunner.RepeatedStationaryEquivalence
@@ -84,8 +84,7 @@ files were removed.
 
 The audited changes were committed as
 `c58f4fc8885a5abbd9f4aabf0399313b04dac25f` and cloned into the previously
-absent Linux-native directory
-`/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`. No build output
+absent Linux-native directory `<clean-ext4-checkout>`. No build output
 was inherited from the working tree. After `lake update` and
 `lake exe cache get`, the authoritative command reported:
 
@@ -115,8 +114,7 @@ clone above is the authoritative result.
 ## 2026-08-01: exact boundary-to-pivot equivalence
 
 The Linux-native verification checkout was advanced to commit
-`9e3c5c2` and checked from
-`/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`. The root build
+`9e3c5c2` and checked from `<clean-ext4-checkout>`. The root build
 reported:
 
 ```text
@@ -143,7 +141,7 @@ the forward/reverse quantifiers without finding a gap.
 
 The clean Linux-native checkout was advanced to
 `601bb4b6483939c8751f8b0afc1a4e3e4068ec45`. From
-`/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`, the final
+`<clean-ext4-checkout>`, the final
 commands reported:
 
 ```text
@@ -177,7 +175,7 @@ had empty `git status --short` after all commands.
 ## Earlier 2026-08-01 baseline clean-checkout verification
 
 The staged repository was committed locally and cloned, rather than copied,
-to `/home/joshu/code/lonely-runner-clean-checkout`. From that checkout, with no
+to `<clean-ext4-checkout>`. From that checkout, with no
 project build directory inherited from the working tree, dependency hydration
 was followed by:
 
@@ -198,8 +196,7 @@ module comment.
 ## 2026-08-01: pivot target fibers and rejected GCD-clock uniformity
 
 The Linux-native clean checkout was fast-forwarded to commit `06b0358` and
-verified from
-`/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`. The root build
+verified from `<clean-ext4-checkout>`. The root build
 reported:
 
 ```text
@@ -248,7 +245,7 @@ confirming that the bounds present in the formal theorems are necessary.
 ## 2026-08-01: relocation, two-level, and triple-congruence frontier
 
 The Linux-native clean checkout was advanced to commit `0009cf0` and verified
-from `/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`. The root
+from `<clean-ext4-checkout>`. The root
 build reported:
 
 ```text
@@ -278,8 +275,7 @@ checkout remained clean.
 ## 2026-08-01: residual-profile, bounded-anchor, and acyclic-selector frontier
 
 The Linux-native clean checkout was advanced through commit `12be8ff` and
-verified from
-`/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`. The root build
+verified from `<clean-ext4-checkout>`. The root build
 reported:
 
 ```text
@@ -710,7 +706,7 @@ OK
 ```
 
 The committed source was then fast-forwarded without reset into the warm clean
-ext4 checkout `/home/joshu/code/lonely-runner-clean-checkout-round5-c58f4fc`.
+ext4 checkout `<clean-ext4-checkout>`.
 From that checkout the pinned root build and explicit axiom audit completed:
 
 ```text
