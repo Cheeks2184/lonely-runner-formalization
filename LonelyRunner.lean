@@ -19,6 +19,7 @@ import LonelyRunner.FiberCredits
 import LonelyRunner.TwoLevelFiberCredits
 import LonelyRunner.RankedFiberAveraging
 import LonelyRunner.WeightedConditionalExpectation
+import LonelyRunner.AnchorStarAveraging
 import LonelyRunner.RelocationDescent
 import LonelyRunner.PairSumGeometry
 import LonelyRunner.IntegerInduction

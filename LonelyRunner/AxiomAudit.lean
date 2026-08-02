@@ -77,6 +77,8 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_code_cost_lt_of_rankedTailAverage
 #print axioms LonelyRunner.exists_nextPotential_le_of_eq_weightedAverage
 #print axioms LonelyRunner.exists_removalOrder_terminalPotential_le
+#print axioms LonelyRunner.orderedDistinctPairSum_left
+#print axioms LonelyRunner.exists_threeDistinctAnchors_of_anchorStar_gt
 #print axioms LonelyRunner.exists_cost_lt_of_decreasing_move
 #print axioms LonelyRunner.prefixDependentCost_relocate
 #print axioms LonelyRunner.pairSumCertificate_iff_pair_time
