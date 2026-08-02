@@ -150,6 +150,21 @@ at pivot `56`, a replayed packing has credit `400>392`; pivots `105` and
 `G` pivots, while the hard residual rows are recorded only as certified
 intervals. Eleven fixed stress tuples have a strict packing pivot, but this is
 bounded evidence rather than a uniform theorem.
+Response 39 adds two exact reformulations and one descent rule, without
+closing that uniform gap. Exempt-owner colorings exactly characterize the
+whole-block packing optimum. A common-LCM embedding expresses the sum of all
+safe pivot candidates as a weighted zero-count and gives alternating-binomial
+lower bounds from its moments. The denominator-cleared polynomial identity
+and its zero-indicator inequality are kernel-checked in
+`CorrelationPolynomial.lean`. The bound is nontrivial only below maximal
+depth: once `2*d >= n-1` it is exact inclusion--exclusion, while computing the
+complete weighted histogram already computes the safe count. Exact audits
+nevertheless verify a genuinely low-depth positive value `3305/2` on the
+OPT-ADD stress tuple. Turning this into an unbounded result requires direct
+CRT formulas and estimates for only the low moments, not safe-residue
+enumeration. A signed-divisor replacement also transports certificates from
+the smaller tuple to the original tuple, but only in that direction at the
+replaced pivot; the OPT-ADD stress tuple admits no such replacement.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all
@@ -244,6 +259,9 @@ disproof claim.
   cross-pivot obstruction.
 - `docs/pair-sum-geometry.md`: exact pair-sum certificates, restricted-selector
   counterexamples, and bounded unrestricted searches.
+- `docs/lcm-slice-response39-audit.md`: independent reconstruction of the
+  common-LCM histogram, low-depth moment bounds, direct witnesses, and the
+  signed-divisor replacement example.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
 - `scripts/check_integer_tuple.py`: exact-rational fixed-instance optimizer and
   deterministic certificate verifier.
@@ -293,6 +311,8 @@ disproof claim.
   failure and make no uniform inference.
 - `scripts/audit_soft_chain_blocks.py`: exhaustive subset verifier for the
   nested `B_1,B_2,B_3` soft-peeling bounds and every reported stress row.
+- `scripts/audit_lcm_slice_bounds.py`: clean-room common-LCM slice, polynomial,
+  witness, and signed-replacement verifier.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.

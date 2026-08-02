@@ -1973,5 +1973,54 @@ preserving minimal-counterexample descent controlling the new pivot. Exact
 quantifiers, strict endpoints, candidate exclusion, non-tautology checks,
 complete computational verifiers, and active counterexample searches were
 required. Sol was again forbidden to infer LRC from a fixed-instance
-certificate or from failure of another sufficient condition. This response is
-pending.
+certificate or from failure of another sufficient condition. The response is
+recorded below.
+
+## Response 39: packing colorings, correlation hierarchy, and signed descent
+
+After 32 minutes 46 seconds, Sol Pro returned three exact partial routes and
+explicitly did not claim a proof or disproof of LRC.
+
+The first route characterizes the whole-block packing optimum by an
+exempt-owner coloring. At every used residue one colors by a bad owner whose
+block is not selected. Fiber uniqueness proves the forward capacity bound;
+choosing an unused owner proves the converse. Independent review accepts this
+as an exact reformulation of packing only.
+
+The second route embeds all pivot grids into the common group of order
+`N*lcm(a)`. With candidate-slice multiplicity `d(s)` and bad-event count
+`k(s)`, it proves
+
+```text
+sum_j safeCandidates(j) = sum_s d(s) 1[k(s)=0].
+```
+
+It then lower-bounds the right side using alternating binomial moments. The
+reported histogram and all numerical rows reproduce exactly; on `G`, the
+nonmaximal depth `d=2` gives `3305/2>0`. Independent audit imposed the
+essential `d(s)>0` split, because `k(s)<=n-1` need not hold off candidate
+slices. It also records that maximal depth is tautological exact
+inclusion--exclusion and that a full histogram already computes the zero
+count. The denominator-cleared polynomial identity is now independently
+kernel-checked in `CorrelationPolynomial.lean`.
+
+The third route replaces `a_k=q*b` under coprimality and simultaneous signed
+congruences. Old-pivot bad sets agree, while a changed-pivot certificate for
+`b` maps to one for `a_k` by multiplying the numerator by `q`. Review accepts
+only the global implication from the replaced tuple to the original tuple;
+calling it bidirectional would be wrong. The `(24,6,4)` example reproduces,
+and exhaustive checking finds no eligible replacement in `G`.
+
+## Prompt 40: require noncircular low-moment control
+
+The complete audit was returned to the same signed-in GPT-5.6 Sol Pro
+conversation. Sol was required to rename the conflicting `U_j` quantities,
+split zero-weight slices, preserve the one-directional replacement statement,
+and make no use of a maximal-depth identity or full histogram as a purported
+general bridge. It was asked for two materially different continuations:
+direct CRT formulas and estimates for fixed low moments, and either an
+infinite obstruction to sub-tautological depth or a different moment
+certificate. A descent continuation is admissible only with a structural
+minimal-counterexample theorem. Precise quantifiers, line-by-line proofs,
+exact verifiers, and separation of pivot-certificate results from LRC remain
+mandatory. Response 40 is pending.

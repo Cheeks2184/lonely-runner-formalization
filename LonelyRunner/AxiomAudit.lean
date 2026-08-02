@@ -106,6 +106,11 @@ project-specific axiom.
 #print axioms LonelyRunner.overlapPointUse_le_capacity_of_ordered_injectiveOwner
 #print axioms LonelyRunner.card_biUnion_add_sum_card_blocks_le_sum_card_bad
 #print axioms LonelyRunner.card_biUnion_le_sum_card_bad_sub_sum_card_blocks
+#print axioms LonelyRunner.alternatingChoosePrefix_succ
+#print axioms LonelyRunner.correlationPolynomial_cleared_eq
+#print axioms LonelyRunner.correlationPolynomial_cleared_nonpos
+#print axioms LonelyRunner.correlationPolynomial_zero
+#print axioms LonelyRunner.correlationPolynomial_le_zeroIndicator
 #print axioms LonelyRunner.chain3Counterexample_directWitness
 #print axioms LonelyRunner.optAddCounterexample_directWitness
 #print axioms LonelyRunner.pairMultiplicityContribution_num

@@ -295,6 +295,47 @@ and the exact fixed-tuple checker. The live priorities are now:
 6. State and test the exact distinguished-coset zonotope equivalence without
    strengthening it to the false shifted problem.
 
+## Common-LCM correlation hierarchy and signed replacement
+
+Put every pivot candidate grid into `Z/(N*ell)Z`, where
+`ell=lcm(a_1,...,a_n)`. If `d(s)` is the number of pivot candidate slices
+containing `s` and `k(s)` is the number of strict bad events at `s`, then
+
+```text
+sum_j safeCandidates(j) = sum_s d(s) * 1[k(s)=0].
+```
+
+Writing `H_q=sum_s d(s) C(k(s),q)`, the alternating polynomial of positive
+depth `d` gives
+
+```text
+L_(n,d) = sum_(q<2d) (-1)^q H_q + (2d/(n-1)) H_(2d)
+          <= sum_j safeCandidates(j).
+```
+
+The pointwise proof must separate `d(s)>0` from `d(s)=0`: only on a candidate
+slice is `k(s)<=n-1`. After clearing the positive denominator, the exact
+identity is kernel-checked by `correlationPolynomial_cleared_eq`, with the
+nonpositivity and rational indicator consequences in the same module. On
+`G`, exact arithmetic gives the genuinely sub-tautological value
+`L_(9,2)=3305/2>0`. This is a valid fixed-tuple proof of at least one exact
+pivot certificate. It is not yet a uniform argument, because the verifier's
+full histogram contains the desired zero-count already. Moreover, whenever
+`2d>=n-1`, all relevant nonzero coefficients vanish and the hierarchy reduces
+to exact inclusion--exclusion. The live route is therefore to obtain and
+bound the low moments directly from CRT-compatible runner intersections.
+
+Separately, suppose `a_k=q*b`, `gcd(q,N)=1`, and for every unchanged pivot
+`j` one has `b congruent to +a_k or -a_k (mod N*a_j)`, while positivity and
+distinctness survive. Old-pivot strict bad sets agree. A new-pivot
+certificate for `b` maps to one for `a_k` by `r -> q*r`. Thus certificate
+existence for the replaced tuple implies it for the original tuple, and an
+all-pivot counterexample descends contrapositively. This is not bidirectional
+at the changed pivot. The example `(1,2,3,24)->(1,2,3,6)` audits exactly;
+the tuple `G` has no eligible replacement. Progress by this lane needs a
+structural theorem forcing an eligible replacement in every minimal
+counterexample or sharply classifying the irreducible remainder.
+
 The fourth Sol Pro round produced two valid but limited structured-class
 lemmas. The fifth produced exact modular certificates and a bounded dataset,
 then retracted an incorrect claim that the simple union bound subsumed the

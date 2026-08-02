@@ -826,3 +826,62 @@ residue replacement also preserves the complete additive objective. A valid
 global minimal-counterexample descent needs global scaling invariance and a
 simultaneous smaller signed representative for one coordinate across every
 other pivot modulus; such a representative need not exist.
+
+## 23. A common-LCM correlation certificate
+
+For positive distinct integer speeds `a_1,...,a_n`, set `N=n+1`, let `ell`
+be their least common multiple, and use the common modulus `L=N*ell`. The
+pivot-`j` candidate `r` embeds as `(ell/a_j)r` modulo `L`. Denote the image
+slice by `C_j`. At `s` in the common group, let `d(s)` count the slices `C_j`
+containing `s` and let `k(s)` count the strict bad-runner conditions.
+Injectivity of every embedding gives the exact finite identity
+
+```text
+sum_j (# safe candidates at pivot j)
+  = sum_s d(s) * 1[k(s)=0].
+```
+
+For positive depth `d`, define the low moments
+`H_q=sum_s d(s) C(k(s),q)`. On any point with `d(s)>0`, the pivot runner for
+one containing slice is automatically good, so `k(s)<=n-1`. Points with
+`d(s)=0` contribute zero. The relevant polynomial is therefore bounded by
+the zero indicator because, for `1<=k<=n-1`,
+
+```text
+(n-1) * sum_(q<2d) (-1)^q C(k,q) + 2d*C(k,2d)
+  = -(n-1-k) C(k-1,2d-1) <= 0.
+```
+
+The exact Lean correspondence is:
+
+- `alternatingChoosePrefix_succ`: alternating-binomial prefix identity;
+- `correlationPolynomial_cleared_eq`: the displayed cleared equality;
+- `correlationPolynomial_cleared_nonpos`: its signed consequence;
+- `correlationPolynomial_zero`: the separate zero case;
+- `correlationPolynomial_le_zeroIndicator`: the division-safe rational bound.
+
+These declarations formalize only the universal algebraic kernel. They do not
+assert the common-LCM combinatorics or the Lonely Runner Conjecture. The
+independent exact audit gives `L_(9,2)=3305/2>0` on `G`, but its full histogram
+also contains the desired safe count. At depth `2d>=n-1`, the formula becomes
+exact inclusion--exclusion. A general proof still requires direct CRT
+formulas and estimates for low moments at a non-tautological depth.
+
+## 24. One-directional signed-divisor descent
+
+Let the `k`th speed be `a_k=q*b`, with `0<b<a_k`, `gcd(q,N)=1`, and the
+replacement preserving positivity and distinctness. Assume additionally that
+for each unchanged pivot `a_j`, the new speed is congruent to either `a_k` or
+`-a_k` modulo `N*a_j`. The strict bad sets on every unchanged pivot then
+agree. If `r` certifies the changed pivot `b`, the numerator `q*r` certifies
+the old pivot `a_k`: candidate exclusion is preserved by coprimality and the
+represented time is unchanged. Hence a certificate for the replaced tuple
+implies a certificate for the original tuple.
+
+Only the unchanged pivots are equivalent in both directions. The changed
+pivot transport has no proved reverse because an arbitrary old numerator need
+not be divisible by `q`. The rule supports a valid minimal-counterexample
+contrapositive, but no theorem yet forces such a replacement. The exact audit
+checks `(1,2,3,24)->(1,2,3,6)` and finds no eligible replacement in `G`. This
+section currently has no Lean declaration and is not used by the formal
+equivalence chain.
