@@ -59,6 +59,9 @@ def main() -> None:
         "LonelyRunner.kanoldIntervalBound_vandermonde",
         "LonelyRunner.seventeenThirdsHeight_family_witness",
         "LonelyRunner.fiveHeight_family_witness",
+        "LonelyRunner.fourHeight_family_witness",
+        "LonelyRunner.slowest_fastest_gap_of_no_fastestPivotCertificate",
+        "LonelyRunner.saturatedTopTwo_avoids_pivotBadResidues",
     }
     missing_probes = sorted(probe for probe in required_probes if probe not in run.stdout)
     if missing_probes:

@@ -1,4 +1,5 @@
 import LonelyRunner
+import LonelyRunner.FastestPivot
 
 /-!
 Run with `lake env lean LonelyRunner/AxiomAudit.lean`.
@@ -37,6 +38,11 @@ project-specific axiom.
 #print axioms LonelyRunner.circleNorm_nat_div_eq
 #print axioms LonelyRunner.not_mem_pivotBadResidues_iff_circleNorm_ge
 #print axioms LonelyRunner.pivotResidueWitness
+#print axioms LonelyRunner.exists_fastestPivotCertificate_of_ratio
+#print axioms LonelyRunner.fastestPivot_family_witness
+#print axioms LonelyRunner.slowest_fastest_gap_of_no_fastestPivotCertificate
+#print axioms LonelyRunner.saturatedTopTwoPivotCertificate
+#print axioms LonelyRunner.saturatedTopTwo_avoids_pivotBadResidues
 #print axioms LonelyRunner.card_strictCyclicBall
 #print axioms LonelyRunner.card_mul_mod_strictCyclicBall
 #print axioms LonelyRunner.card_pivotBadResidues_exact
@@ -189,6 +195,10 @@ project-specific axiom.
 #print axioms LonelyRunner.five_witness_or_exception
 #print axioms LonelyRunner.exists_second_missing_of_extra_speed
 #print axioms LonelyRunner.fiveHeight_family_witness
+#print axioms LonelyRunner.five_mul_two_pow_omega_le_of_40_le
+#print axioms LonelyRunner.four_short_interval_exception_classification
+#print axioms LonelyRunner.four_witness_or_exception
+#print axioms LonelyRunner.fourHeight_family_witness
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
 #print axioms LonelyRunner.top_signed_forces_sum

@@ -1,0 +1,162 @@
+import LonelyRunner.PivotResidues
+
+/-!
+# A sufficient criterion at the fastest pivot
+
+Let `B` be a fastest positive integer speed.  If every speed `s` satisfies
+`B ≤ (N - 1) * s`, then the explicit numerator `r = N - 1` is safe on the
+`B`-pivot grid.  Indeed, `(N - 1) * s` lies in the closed interval
+`[B, N * B - B]`, so its cyclic residue distance modulo `N * B` is at least
+`B`.  The endpoints are included, matching the closed `1 / N` Lonely Runner
+boundary.
+
+The final theorem records the useful contrapositive: if the fastest pivot has
+no certificate at all, then `(N - 1) * a_min < a_max`.  This is a restriction
+on a possible failure of the fastest-pivot strategy, not a proof of the
+unrestricted Lonely Runner Conjecture.
+-/
+
+namespace LonelyRunner
+
+open Finset
+
+/-- For `N ≥ 2` and a positive pivot, `N - 1` is a pivot candidate. -/
+theorem N_sub_one_mem_pivotCandidates {N pivot : Nat}
+    (hN : 2 ≤ N) (hpivot : 0 < pivot) :
+    N - 1 ∈ pivotCandidates N pivot := by
+  rw [mem_pivotCandidates]
+  constructor
+  · have hNpos : 0 < N := by omega
+    have hpivotOne : 1 ≤ pivot := hpivot
+    calc
+      N - 1 < N := Nat.sub_lt (by omega) (by omega)
+      _ ≤ N * pivot := by
+        simpa using Nat.mul_le_mul_left N hpivotOne
+  · intro hdvd
+    have hmod : (N - 1) % N = N - 1 := Nat.mod_eq_of_lt (Nat.sub_lt (by omega) (by omega))
+    have hzero : (N - 1) % N = 0 := Nat.dvd_iff_mod_eq_zero.mp hdvd
+    omega
+
+/-- The numerator `N - 1` has cyclic residue distance at least `pivot` for
+every speed between the ratio lower bound and the fastest pivot. -/
+theorem pivot_le_cyclicResidueDistance_N_sub_one_mul
+    {N pivot other : Nat} (hN : 2 ≤ N) (hpivot : 0 < pivot)
+    (hotherPivot : other ≤ pivot)
+    (hratio : pivot ≤ (N - 1) * other) :
+    pivot ≤ cyclicResidueDistance (N * pivot) ((N - 1) * other) := by
+  have hNdecomp : N = (N - 1) + 1 := by omega
+  have hmuldecomp : N * pivot = (N - 1) * pivot + pivot := by
+    calc
+      N * pivot = ((N - 1) + 1) * pivot :=
+        congrArg (fun k => k * pivot) hNdecomp
+      _ = (N - 1) * pivot + pivot := by rw [Nat.add_mul, Nat.one_mul]
+  have hupper : (N - 1) * other ≤ (N - 1) * pivot :=
+    Nat.mul_le_mul_left (N - 1) hotherPivot
+  have hlt : (N - 1) * other < N * pivot := by
+    calc
+      (N - 1) * other ≤ (N - 1) * pivot := hupper
+      _ < (N - 1) * pivot + pivot := Nat.lt_add_of_pos_right hpivot
+      _ = N * pivot := hmuldecomp.symm
+  rw [cyclicResidueDistance, Nat.mod_eq_of_lt hlt]
+  apply le_min hratio
+  apply Nat.le_sub_of_add_le
+  calc
+    pivot + (N - 1) * other ≤ pivot + (N - 1) * pivot :=
+      Nat.add_le_add_left hupper pivot
+    _ = N * pivot := by simpa [Nat.add_comm] using hmuldecomp.symm
+
+/-- Normalization regression for `N=4`, fastest speed `10`, and speed `4`.
+The pivot time is `3 / (4*10)`, not `3 / 10`; the resulting phase is `3/10`
+and meets the closed `1/4` threshold. -/
+theorem fastestPivot_normalization_regression :
+    ((4 : Real)⁻¹) ≤
+      circleNorm (((3 : Real) / ((4 * 10 : Nat) : Real)) * (4 : Real)) := by
+  have hres : 10 ≤ cyclicResidueDistance 40 12 := by
+    norm_num [cyclicResidueDistance]
+  have h := circleNorm_nat_div_ge (M := 40) (x := 12) (b := 10)
+    (by norm_num) hres
+  convert h using 1 <;> norm_num
+
+/-- Under the fastest-pivot ratio condition, `N - 1` avoids every strict bad
+set on the fastest pivot grid. -/
+theorem N_sub_one_not_mem_fastestPivotBadResidues
+    {N pivot other : Nat} (hN : 2 ≤ N) (hpivot : 0 < pivot)
+    (hotherPivot : other ≤ pivot)
+    (hratio : pivot ≤ (N - 1) * other) :
+    N - 1 ∉ pivotBadResidues N pivot other := by
+  intro hbad
+  have hlt := (mem_pivotBadResidues.mp hbad).2
+  exact (Nat.not_lt_of_ge
+    (pivot_le_cyclicResidueDistance_N_sub_one_mul
+      hN hpivot hotherPivot hratio)) hlt
+
+/-- The fastest-pivot ratio hypothesis supplies the explicit pivot
+certificate `r = N - 1`. -/
+theorem exists_fastestPivotCertificate_of_ratio
+    {n N : Nat} (speeds : Fin n → Nat) (fastest : Fin n)
+    (hN : 2 ≤ N) (hpos : ∀ i, 0 < speeds i)
+    (hfastest : ∀ i, speeds i ≤ speeds fastest)
+    (hratio : ∀ i, speeds fastest ≤ (N - 1) * speeds i) :
+    ∃ r : Nat,
+      r ∈ pivotCandidates N (speeds fastest) ∧
+        ∀ i, i ≠ fastest →
+          r ∉ pivotBadResidues N (speeds fastest) (speeds i) := by
+  refine ⟨N - 1, N_sub_one_mem_pivotCandidates hN (hpos fastest), ?_⟩
+  intro i _hi
+  exact N_sub_one_not_mem_fastestPivotBadResidues
+    hN (hpos fastest) (hfastest i) (hratio i)
+
+/-- Real closed-boundary witness obtained from the explicit fastest-pivot
+certificate.  No cardinality relation between `n` and `N` is needed for this
+modular statement. -/
+theorem fastestPivot_family_witness
+    {n N : Nat} (speeds : Fin n → Nat) (fastest : Fin n)
+    (hN : 2 ≤ N) (hpos : ∀ i, 0 < speeds i)
+    (hfastest : ∀ i, speeds i ≤ speeds fastest)
+    (hratio : ∀ i, speeds fastest ≤ (N - 1) * speeds i) :
+    ∃ tau : Real, ∀ i,
+      (N : Real)⁻¹ ≤ circleNorm (tau * (speeds i : Real)) := by
+  let r := N - 1
+  have hr : r ∈ pivotCandidates N (speeds fastest) :=
+    N_sub_one_mem_pivotCandidates hN (hpos fastest)
+  have havoid : ∀ i, i ≠ fastest →
+      r ∉ pivotBadResidues N (speeds fastest) (speeds i) := by
+    intro i _hi
+    exact N_sub_one_not_mem_fastestPivotBadResidues
+      hN (hpos fastest) (hfastest i) (hratio i)
+  refine ⟨(r : Real) / ((N * speeds fastest : Nat) : Real), ?_⟩
+  exact pivotResidueWitness speeds fastest (by omega) hpos r hr havoid
+
+/-- If the fastest pivot has no modular certificate, some speed violates the
+ratio criterion. -/
+theorem exists_ratio_gap_of_no_fastestPivotCertificate
+    {n N : Nat} (speeds : Fin n → Nat) (fastest : Fin n)
+    (hN : 2 ≤ N) (hpos : ∀ i, 0 < speeds i)
+    (hfastest : ∀ i, speeds i ≤ speeds fastest)
+    (hfail : ¬ ∃ r : Nat,
+      r ∈ pivotCandidates N (speeds fastest) ∧
+        ∀ i, i ≠ fastest →
+          r ∉ pivotBadResidues N (speeds fastest) (speeds i)) :
+    ∃ i, (N - 1) * speeds i < speeds fastest := by
+  by_contra hgap
+  exact hfail (exists_fastestPivotCertificate_of_ratio
+    speeds fastest hN hpos hfastest fun i =>
+      Nat.le_of_not_gt (fun hi => hgap ⟨i, hi⟩))
+
+/-- In min/max language, failure of every certificate at the fastest pivot
+forces the strict spread `(N - 1) * a_min < a_max`. -/
+theorem slowest_fastest_gap_of_no_fastestPivotCertificate
+    {n N : Nat} (speeds : Fin n → Nat) (slowest fastest : Fin n)
+    (hN : 2 ≤ N) (hpos : ∀ i, 0 < speeds i)
+    (hslowest : ∀ i, speeds slowest ≤ speeds i)
+    (hfastest : ∀ i, speeds i ≤ speeds fastest)
+    (hfail : ¬ ∃ r : Nat,
+      r ∈ pivotCandidates N (speeds fastest) ∧
+        ∀ i, i ≠ fastest →
+          r ∉ pivotBadResidues N (speeds fastest) (speeds i)) :
+    (N - 1) * speeds slowest < speeds fastest := by
+  obtain ⟨i, hi⟩ := exists_ratio_gap_of_no_fastestPivotCertificate
+    speeds fastest hN hpos hfastest hfail
+  exact lt_of_le_of_lt (Nat.mul_le_mul_left (N - 1) (hslowest i)) hi
+
+end LonelyRunner

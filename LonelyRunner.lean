@@ -8,6 +8,8 @@ import LonelyRunner.DivisorInsertion
 import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
+import LonelyRunner.FastestPivot
+import LonelyRunner.SaturatedTopTwo
 import LonelyRunner.SmallDenominatorWitness
 import LonelyRunner.BoundedHeight
 import LonelyRunner.LogarithmicHeight
@@ -15,6 +17,7 @@ import LonelyRunner.PrimorialHeight
 import LonelyRunner.KanoldHeight
 import LonelyRunner.KanoldVandermonde
 import LonelyRunner.CoefficientFiveHeight
+import LonelyRunner.CoefficientFourHeight
 import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts
