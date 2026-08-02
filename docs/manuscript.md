@@ -395,3 +395,35 @@ This is finite evidence only.  `ANCHOR-STAR-UNIF` is stronger than the already
 open three-anchor assertion and remains unproved; the uncontrolled term is the
 average nonzero-target triple compatibility gain.  See
 `docs/anchor-star-audit.md`.
+
+The finite selection part of this argument is now kernel-checked in
+`AnchorStarAveraging.lean`. `exists_secondaryAnchors_of_anchorStar_gt` turns
+an exact ordered-pair average below a strict threshold into two distinct
+secondary choices. `exists_threeDistinctAnchors_of_anchorStar_gt_of_card`
+adds an eligible fixed first anchor and proves that all three returned anchors
+belong to the eligible set and are pairwise distinct. These theorems assume
+the concrete average identity and strict star inequality; they do not assume
+their uniform arithmetic validity.
+
+The remaining third-anchor term has also been narrowed mathematically. For a
+fixed pivot and first anchor, partition each child bad target fiber by the full
+first-anchor image. On every nonbad first-anchor cell `C`, let `c_q(C)` be its
+intersection count with a possible second anchor `q`. Exact two-anchor credit
+equals literal coverage by the two anchors. When a third anchor is added, the
+growth of the prefix union cancels exactly with removal of that anchor's old
+tail cost. Continuing to distinguish the first anchor therefore increases the
+credit on `C` by at least `(c_r(C)-c_q(C))_+`. Summing both orientations of
+every unordered pair gives `|c_q(C)-c_r(C)|`, with no factor of two. Thus the
+averaged gain satisfies `Gamma_j(h) >= Delta_j(h)`, where `Delta` is the
+normalized cellwise profile dispersion. Every profile value is a strict-ball
+sum of `candidateTripleCongruenceCount`, so the obstruction is an explicit
+gcd/congruence expression rather than informal compatibility mass. An
+independent implementation exhaustively checked arbitrary finite-set models
+and direct modular instances. `AnchorStarDispersion.lean` kernel-checks the
+reusable local ingredients: exact two-parent cell coverage, the positive-part
+to maximum identity, both orientations to symmetric dispersion, additive
+cost cancellation without unsafe natural subtraction, and ordered-average
+monotonicity. The concrete modular global cancellation and cell reindexing
+are not yet formalized. What remains open arithmetically is `DISPERSION-STAR`: some
+pivot and first anchor must make the pair part plus `Delta` strictly exceed
+`S_j-n*a_j`. See `docs/gamma-arithmetic-audit.md`.

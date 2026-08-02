@@ -177,8 +177,14 @@ and the exact fixed-tuple checker. The live priorities are now:
    open arithmetic claim rather than an observed theorem.
    Double averaging the second- and third-anchor gains gives the stronger
    `ANCHOR-STAR-UNIF` inequality. Its generic implication and exact values are
-   independently verified, and small complete boxes have no failure; the
-   decisive nonzero-target triple compatibility mass remains uncontrolled.
+   independently verified, and the abstract strict-average selection theorem
+   is now in Lean. The remaining third-anchor term has a rigorous cellwise
+   lower bound `Gamma_j(h) >= Delta_j(h)`: `Delta` is the normalized sum of
+   pairwise absolute differences between exact candidate-filtered triple-
+   congruence profiles inside every nonbad first-anchor subfiber. This avoids
+   the failed zero-target-only and aggregate-cell bounds. The new sufficient
+   `DISPERSION-STAR` premise succeeds in the audited boxes but still needs a
+   cross-pivot arithmetic proof or an all-pivot counterexample.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform

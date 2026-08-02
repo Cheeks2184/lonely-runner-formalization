@@ -1327,3 +1327,46 @@ and the generic arithmetic identities were assigned to an independent exact
 audit.  No claim is promoted beyond fixed-instance evidence; failure of the
 double average would reject only this stronger route, and failure of three
 anchors would still not reject optimized additive ordering or LRC.
+
+## Prompt 29: nonzero-target Gamma arithmetic
+
+The completed independent audit of Response 28, including every exact stress
+value and finite complete-box boundary, was returned to Sol Pro. It was asked
+not to repeat the generic averaging implication, but to compare an exact
+congruence/divisor route with a character/incidence route and produce either a
+proved lower bound on the nonzero-target third-anchor term, an all-pivot
+counterexample, or a rigorously rejected intermediate inequality. Candidate
+filtering, strengthened triple compatibility, equality cases, and all six hard
+tuples were mandatory.
+
+## Response 29: residual-profile variation
+
+After 21 minutes, Sol Pro independently derived the same cellwise dispersion
+bound found in the parallel audit. For each child target and nonbad full
+first-anchor image cell `C`, write `c_q(C)=|C intersect B_q|`. Exact
+two-anchor credit equals literal two-anchor coverage, so adding the third
+anchor cancels its prefix-union growth against its former tail term. The
+remaining child gain is at least `(c_r(C)-c_q(C))_+`. Summing both ordered
+orientations gives exactly `|c_q(C)-c_r(C)|`, hence
+
+```text
+Gamma_j(h) >= Delta_j(h).
+```
+
+Sol also expanded every `c_q(C)` as a strict-target sum of the exact
+candidate-filtered triple-congruence count. Its six values matched the
+independent computation exactly; the certified strict surpluses were
+`13/21, 4/21, 22/21, 2/5, 4/5, 2`. It correctly identified the new premise,
+called `RV-UNIF` there and `DISPERSION-STAR` in this repository, as strictly
+stronger than `ANCHOR-STAR-UNIF` and supplied neither a proof nor a
+counterexample. The independent adversarial checker subsequently validated
+every cancellation, exclusion, denominator, boundary, and multiplicity.
+
+## Prompt 30: cross-pivot residual-profile frontier
+
+The independent proof and expanded finite search were returned to Sol Pro.
+It was asked to develop cross-pivot summation, energy/majorization, and
+minimal-counterexample/descent routes before selecting one. A useful response
+must prove a new arithmetic lemma, prove the uniform residual-variation
+principle, or give an exact all-pivot counterexample; rederiving the dispersion
+bound or adding finite search is expressly excluded. The response is pending.

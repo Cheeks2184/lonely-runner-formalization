@@ -77,9 +77,16 @@ exactly. The selected-earlier-parent ordered-union and avoidance theorem is
 now kernel-checked too, so tail children may soundly ignore non-anchor
 predecessors; cross-tuple three-anchor uniformity remains open.
 The stronger anchor-star double average is algebraically verified and all
-reported exact values reproduce. It has no counterexample in the documented
-small complete boxes, but its cross-pivot strict inequality is a new open
-arithmetic premise, not a theorem.
+reported exact values reproduce. Its generic strict-average selection step is
+now kernel-checked, including the eligibility and pairwise-distinctness of all
+three anchors. A new exact cellwise-dispersion lemma lower-bounds the otherwise
+uncontrolled third-anchor gain by absolute differences of candidate-filtered
+triple-congruence profiles. It is independently audited and succeeds on every
+recorded hard tuple. The one-cell two-parent equality, positive-part/max
+identity, symmetric pair dispersion, safe additive cost cancellation, and
+ordered-average monotonicity are now kernel-checked in
+`AnchorStarDispersion.lean`. The concrete global cell reindexing and the
+cross-pivot `DISPERSION-STAR` inequality remain open, not theorems.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
 The general conjecture remains open, and this repository makes no proof or
@@ -123,6 +130,12 @@ disproof claim.
   malformed first anchor formula, and the verified repaired construction.
 - `docs/anchor-star-audit.md`: exact double-averaging identities, divisor
   input, stress tables, and bounded complete-box audit.
+- `docs/gamma-arithmetic-audit.md`: exact residual-profile dispersion bound
+  for the nonzero-target third-anchor gain, equality cases, and the remaining
+  cross-pivot obligation.
+- `docs/anchor-star-search-round2.md`: independent optimized evaluator,
+  complete/structured/seeded search boundaries, and exact closest margins for
+  the nested dispersion, anchor-star, and three-anchor conditions.
 - `docs/pair-sum-geometry.md`: exact pair-sum certificates, restricted-selector
   counterexamples, and bounded unrestricted searches.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
@@ -151,6 +164,12 @@ disproof claim.
   clause/triangle ordering relaxation.
 - `scripts/audit_anchor_star.py`: exact anchor-star values and complete-box
   scans for the stronger three-anchor average.
+- `scripts/audit_gamma_dispersion.py`: exact cellwise-dispersion values,
+  nested lower-bound checks, and bounded `DISPERSION-STAR` scans.
+- `scripts/adversarial_gamma_dispersion.py`: independent finite-set and
+  modular reconstruction of the dispersion inequality.
+- `scripts/search_anchor_star_failures.py`: exact optimized all-pivot search
+  for the three nested bounded-anchor sufficient conditions.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.
