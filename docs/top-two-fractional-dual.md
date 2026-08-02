@@ -2,12 +2,15 @@
 
 ## Status
 
-**Exact fixed-instance certificate and rejected proof invariant.** This note
+**Exact fixed-instance certificate; the proposed global invariant is now
+refuted.** This note
 proves a statement only for positive injective integer seven-speed families
 with `n=7`, `N=8`, and numerical top speeds `14,16` (so the five lower speeds
-are distinct members of `1,...,13`). The existence of analogous fractional
-weights for arbitrary top speeds is conjectural. Nothing here proves
-unrestricted top-two pivot existence or LRC.
+are distinct members of `1,...,13`). Nothing here proves unrestricted top-two
+pivot existence or LRC. A later exact fractional-cover obstruction at
+`(n,N,B,A)=(6,7,98,187)` refutes the existence of analogous weights for every
+top pair; see
+[top-two-fractional-obstruction.md](top-two-fractional-obstruction.md).
 
 ## Two-grid model
 
@@ -59,7 +62,10 @@ This is a fractional set-cover dual argument. The proposed global invariant
 would require such nonnegative weights for every `n>=2` and every admissible
 pair `B<A`, with total weight greater than `n-2` and bad weight at most one for
 each possible lower speed `x<B`. That invariant would imply the top-two pivot
-conjecture, but it remains unproved and must be labelled `conjectural`.
+conjecture, but it is false: the exact obstruction linked above has
+fractional-cover mass `962/241<4`, which by weak duality prevents the required
+dual mass greater than four. This does not refute the integral top-two
+conjecture.
 
 ## Reproduction
 

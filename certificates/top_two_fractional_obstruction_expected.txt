@@ -1,0 +1,7 @@
+instance n=6 N=7 top=(98,187) lower=1..97
+mutually_top_good total=1224 pivot_98=420 pivot_187=804
+fractional_cover denominator=241 numerator_sum=962 target=964 total=962/241
+minimum_constraint_numerator=248 minimum_vertices=((98, 6), (98, 211), (98, 475), (98, 680), (187, 11), (187, 218), (187, 1091), (187, 1298))
+fractional_dual_global_invariant=REJECTED_BY_EXACT_WEAK_DUALITY
+integral_four_speed_subsets=3464840 integral_cover_exists=False maximum_covered=1142/1224 best_witness=(3, 89, 92, 95) uncovered=82
+AUDIT OK: the fractional-dual invariant is false, while this exact instance is not an integral top-two counterexample.
