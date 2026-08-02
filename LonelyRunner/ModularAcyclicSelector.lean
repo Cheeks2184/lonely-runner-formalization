@@ -208,7 +208,6 @@ theorem fiberCredit_modularOrdered_eq_selectedEarlierParentFiberCredit
         vertexOrderAt o hcard) = _
   rw [← Finset.sup_image]
   rw [modularEarlierParents_vertexOrderAt o hcard hk]
-  rfl
 
 /-- A child's selected earlier-parent credit cannot exceed the cardinality of
 that child's bad set.  Positivity is used only for the exact target-fiber
