@@ -11,7 +11,7 @@ c(n) = floor(n/2).
 ```
 
 The cutoff `c(n)` is tautological: at that depth the polynomial sees the
-zero-count exactly.  This note determines `d_min` for every `n>=90`:
+zero-count exactly.  This note determines `d_min` for every `n>=84`:
 
 ```text
 n even: d_min(n)=c(n)-2.
@@ -21,7 +21,7 @@ n odd and 3*n*phi(n+1) > (n-2)*(n-3): d_min(n)=c(n)-2.
 n odd and 3*n*phi(n+1) <= (n-2)*(n-3): d_min(n)=c(n)-1.       (A)
 ```
 
-Consequently the distance `c(n)-d_min(n)` is always one or two for `n>=90`.
+Consequently the distance `c(n)-d_min(n)` is always one or two for `n>=84`.
 It equals two for every even `n`, and both values occur infinitely often
 among odd `n`.  Thus
 
@@ -114,7 +114,7 @@ This is an identity, not an estimate from finite data.
 ## Excluding every earlier depth
 
 It remains important not to infer `d_min` merely from the two near-top
-values.  We prove every `d<=c(n)-3` nonpositive once `n>=90`.
+values.  We prove every `d<=c(n)-3` nonpositive once `n>=84`.
 
 For `d>=2`, retain only the two extreme residues at every pivot, as in the
 earlier obstruction theorem.  This gives
@@ -130,41 +130,49 @@ multiplication by `2/(n-1)` for `n>=20`; the odd bound does so for `n>=14`.
 Since `n*phi(n+1)<=n^2`, (4) is then strictly negative.
 
 Depth one needs more incidences.  At every pivot `p`, retain the distinct
-candidate pairs `r=+/-s` for `1<=s<=4` and `s<p`.  Their bad count is exactly
+candidate pairs `r=+/-s` for `1<=s<=5` and `s<p`.  Their bad count is exactly
 
 ```text
 k=floor((p-1)/s).                                       (5)
 ```
 
-For `s=1`, summing their debt gives `(n-2)(n-3)/3`.  For `2<=s<=4`, use
+For `s=1`, summing their debt gives `(n-2)(n-3)/3`.  For `2<=s<=5`, put
+`x=(p-1)/s` and use
 
 ```text
-(p-1)/s - 1 <= k <= (p-1)/s
+x-1 <= k <= x,
+(n-1-k)/(n-1) >= (s-1)/s.
 ```
 
-and the fact that `(n-1-k)(k-1)` is increasing up to the midpoint.  Summing
-from `p=2s+1` gives the following floor-free lower bound for the selected
+For `p>=2s+1`, the pair's debt is therefore at least
+
+```text
+2*(s-1)/s * (x-2).
+```
+
+Summing gives the following floor-free lower bound for the selected
 depth-one debt:
 
 ```text
-B(n)=(490*n^3-5865*n^2+24383*n-29064)/(432*(n-1)).      (6)
+B(n)=(4151*n^2-48071*n+170760)/3600.                    (6)
 ```
 
 Direct subtraction yields
 
 ```text
 B(n)-n^2
- =(58*n^3-5433*n^2+24383*n-29064)/(432*(n-1)).          (7)
+ =(551*n^2-48071*n+170760)/3600.                        (7)
 ```
 
-The numerator is `440106>0` at `n=90`.  Its forward difference is
+The numerator is `20652>0` at `n=84`, equivalently
+`B(84)-84^2=1721/300`.  Its forward difference is
 
 ```text
-174*n^2-10692*n+19008,
+1102*n-47520,
 ```
 
-which is positive and increasing for `n>=90`.  Hence `B(n)>n^2` for every
-`n>=90`, and (1), (2), and the selected incidences show `L_(n,1)<0`.
+which is positive and increasing for `n>=84`.  Hence `B(n)>n^2` for every
+`n>=84`, and (1), (2), and the selected incidences show `L_(n,1)<0`.
 
 Together these arguments exclude *all* earlier depths, without assuming
 monotonicity of `L_(n,d)` in `d`.
@@ -172,7 +180,7 @@ monotonicity of `L_(n,d)` in `d`.
 ## Evaluation of the two possible depths
 
 Let `c=floor(n/2)`.  Formula (3) applies to `d=c-2` and `d=c-1` for
-`n>=90`.
+`n>=84`.
 
 If `n` is even, at `d=c-2` it gives
 
@@ -212,7 +220,9 @@ n=29,41,59,65,77,83,89,
 ```
 
 where it is `floor(n/2)-1`.  These bounded rows are computational facts; the
-unbounded classification for `n>=90` follows from the proofs above.
+unbounded classification for `n>=84` follows from the proofs above.  No
+finite base check at `n=84` is used: the strict inequality in (7), the
+binomial bounds, and the exact high-layer identity all apply there directly.
 
 Reproduce a chosen range with, for example,
 

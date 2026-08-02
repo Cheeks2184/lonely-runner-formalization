@@ -40,25 +40,26 @@ class ConsecutiveCorrelationDepthTests(unittest.TestCase):
                     )
 
     def test_depth_one_selected_debt_bounds(self) -> None:
-        for n in range(9, 121):
+        for n in range(11, 121):
             lower = elementary_depth_one_debt_lower_bound(n)
             self.assertEqual(lower, elementary_depth_one_debt_closed(n))
             self.assertLessEqual(lower, selected_depth_one_debt(n))
-        self.assertLessEqual(elementary_depth_one_debt_closed(89), 89**2)
-        self.assertGreater(elementary_depth_one_debt_closed(90), 90**2)
+        self.assertLessEqual(elementary_depth_one_debt_closed(83), 83**2)
+        self.assertGreater(elementary_depth_one_debt_closed(84), 84**2)
 
         # The numerator of B(n)-n^2 and its forward difference at the
-        # theorem threshold; the latter quadratic increases thereafter.
+        # theorem threshold; the latter increases thereafter.
         gap_numerator = lambda n: (
-            58 * n**3 - 5433 * n**2 + 24383 * n - 29064
+            551 * n**2 - 48071 * n + 170760
         )
-        forward_difference = lambda n: 174 * n**2 - 10692 * n + 19008
-        self.assertEqual(gap_numerator(90), 440106)
-        self.assertGreater(forward_difference(90), 0)
-        self.assertGreater(348 * 90 - 10518, 0)
+        forward_difference = lambda n: 1102 * n - 47520
+        self.assertEqual(gap_numerator(84), 20652)
+        self.assertGreater(forward_difference(84), 0)
+        self.assertGreater(1102, 0)
 
     def test_asymptotic_formula_arithmetic_branches(self) -> None:
         # Every even n follows the gap-two branch.
+        self.assertEqual(asymptotic_minimum_positive_depth(84), 40)
         self.assertEqual(asymptotic_minimum_positive_depth(90), 43)
         self.assertEqual(asymptotic_minimum_positive_depth(120), 58)
 
@@ -71,7 +72,7 @@ class ConsecutiveCorrelationDepthTests(unittest.TestCase):
         self.assertEqual(asymptotic_minimum_positive_depth(255), 125)
 
         with self.assertRaises(ValueError):
-            asymptotic_minimum_positive_depth(89)
+            asymptotic_minimum_positive_depth(83)
         with self.assertRaises(ValueError):
             high_layer_score(20, 3)
 

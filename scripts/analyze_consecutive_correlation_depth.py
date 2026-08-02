@@ -81,7 +81,7 @@ def minimum_positive_depth(n: int, counts: tuple[int, ...]) -> int:
     raise AssertionError("tautological depth must be positive")
 
 
-def selected_depth_one_debt(n: int, max_residue: int = 4) -> Fraction:
+def selected_depth_one_debt(n: int, max_residue: int = 5) -> Fraction:
     """Debt from the distinct pivot residues +/-s, 1 <= s <= max_residue.
 
     At pivot ``p`` their bad count is exactly ``floor((p-1)/s)``.  Terms
@@ -99,36 +99,27 @@ def selected_depth_one_debt(n: int, max_residue: int = 4) -> Fraction:
     return debt
 
 
-def selected_depth_one_obstruction_threshold(max_residue: int = 4) -> int:
-    """First point after which the elementary selected debt exceeds n^2."""
-    last_failure = 0
-    for n in range(4, 2001):
-        if selected_depth_one_debt(n, max_residue) <= n * n:
-            last_failure = n
-    return last_failure + 1
-
-
 def elementary_depth_one_debt_lower_bound(n: int) -> Fraction:
-    """Floor-free lower bound for the debt from +/-1,...,+/-4."""
+    """Floor-free lower bound for the debt from +/-1,...,+/-5."""
     # For s=1 the bad count p-1 is exact.
     total = sum(
         Fraction(2 * (n - pivot) * (pivot - 2), n - 1)
         for pivot in range(3, n + 1)
     )
-    # For s>=2, k=floor((p-1)/s) lies below the midpoint and the displayed
-    # factorwise bounds are nonnegative once p>=2s+1.
-    for residue in range(2, 5):
+    # For s>=2, k=floor((p-1)/s), so k-1 >= (p-1)/s-2.  Also
+    # k <= (n-1)/s, hence (n-1-k)/(n-1) >= (s-1)/s.
+    for residue in range(2, 6):
         for pivot in range(2 * residue + 1, n + 1):
             x = Fraction(pivot - 1, residue)
-            total += Fraction(2, n - 1) * (n - 1 - x) * (x - 2)
+            total += Fraction(2 * (residue - 1), residue) * (x - 2)
     return total
 
 
 def elementary_depth_one_debt_closed(n: int) -> Fraction:
-    """Closed form of ``elementary_depth_one_debt_lower_bound`` for n>=9."""
+    """Closed form of ``elementary_depth_one_debt_lower_bound`` for n>=11."""
     return Fraction(
-        490 * n**3 - 5865 * n**2 + 24383 * n - 29064,
-        432 * (n - 1),
+        4151 * n**2 - 48071 * n + 170760,
+        3600,
     )
 
 
@@ -142,9 +133,9 @@ def high_layer_score(n: int, depth: int) -> Fraction:
 
 
 def asymptotic_minimum_positive_depth(n: int) -> int:
-    """The proved exact d_min formula for every n>=90."""
-    if n < 90:
-        raise ValueError("the theorem is stated only for n>=90")
+    """The proved exact d_min formula for every n>=84."""
+    if n < 84:
+        raise ValueError("the theorem is stated only for n>=84")
     cutoff = n // 2
     if n % 2 == 0:
         return cutoff - 2
@@ -171,7 +162,7 @@ def main() -> None:
     parser.add_argument("--nonextreme", action="store_true")
     parser.add_argument("--all-scores", action="store_true")
     args = parser.parse_args()
-    print("proved exact d_min formula applies for every n >= 90")
+    print("proved exact d_min formula applies for every n >= 84")
     for n, depth, gap, value in profile(args.first, args.last):
         suffix = ""
         if args.tops:
