@@ -17,8 +17,10 @@ from audit_range_sum import (  # noqa: E402
     LOSSY_TUPLE,
     deep_audit_tuple,
     profile_dispersion,
+    incidence_theta_and_profile,
     range_equality_characterization,
     range_profile_lower,
+    range_sum_identity_terms,
     retained_profiles,
     row_data,
     verify_coprime_fixed_pivot_descent,
@@ -33,6 +35,17 @@ class RangeSumTests(unittest.TestCase):
                 lower = range_profile_lower(counts)
                 self.assertLessEqual(lower, exact, counts)
                 self.assertEqual(exact == lower, range_equality_characterization(counts), counts)
+
+    def test_pointwise_theta_dominates_profile_dispersion(self) -> None:
+        universe = range(3)
+        subsets = tuple(
+            {point for point in universe if mask >> point & 1} for mask in range(8)
+        )
+        for length in range(5):
+            for parents in itertools.product(subsets, repeat=length):
+                theta, profile = incidence_theta_and_profile(parents)
+                self.assertGreaterEqual(theta, profile_dispersion(profile))
+                self.assertGreaterEqual(profile_dispersion(profile), range_profile_lower(profile))
 
     def test_six_stress_rows(self) -> None:
         expected = (
@@ -70,7 +83,7 @@ class RangeSumTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             verify_coprime_fixed_pivot_descent((5, 2, 6, 10), 0, 5)
 
-    def test_two_all_pivot_failures_with_literal_oracle_and_live_routes(self) -> None:
+    def test_all_pivot_failures_with_literal_oracle_and_live_routes(self) -> None:
         cases = (
             (
                 (1, 14, 27, 40, 53, 66, 79, 92, 105),
@@ -79,7 +92,13 @@ class RangeSumTests(unittest.TestCase):
                     Fraction(-122, 7), Fraction(-98, 3), Fraction(-604, 21),
                     Fraction(-71, 3), Fraction(-86, 3), Fraction(-160, 7),
                 ),
+                (
+                    Fraction(0), Fraction(-2, 3), Fraction(-52, 7),
+                    Fraction(-122, 7), Fraction(-98, 3), Fraction(-604, 21),
+                    Fraction(-71, 3), Fraction(-86, 3), Fraction(-160, 7),
+                ),
                 True,
+                None,
             ),
             (
                 (1, 4, 5, 7, 8, 9, 10, 11, 17),
@@ -88,24 +107,68 @@ class RangeSumTests(unittest.TestCase):
                     Fraction(-16, 3), Fraction(-76, 21), Fraction(-92, 21),
                     Fraction(-24, 7), Fraction(-16, 3), Fraction(-202, 21),
                 ),
+                (
+                    Fraction(0), Fraction(-40, 21), Fraction(-8, 21),
+                    Fraction(-16, 3), Fraction(-76, 21), Fraction(-92, 21),
+                    Fraction(-24, 7), Fraction(-16, 3), Fraction(-202, 21),
+                ),
                 False,
+                None,
+            ),
+            (
+                (8, 15, 35, 40, 48, 56, 68, 75, 78),
+                (
+                    Fraction(-76, 21), Fraction(-76, 21), Fraction(-284, 21),
+                    Fraction(-464, 21), Fraction(-668, 21), Fraction(-74, 3),
+                    Fraction(-64, 3), Fraction(-718, 21), Fraction(-928, 21),
+                ),
+                (
+                    Fraction(-76, 21), Fraction(-76, 21), Fraction(-12),
+                    Fraction(-464, 21), Fraction(-662, 21), Fraction(-488, 21),
+                    Fraction(-352, 21), Fraction(-212, 7), Fraction(-878, 21),
+                ),
+                False,
+                (
+                    Fraction(-24, 7), Fraction(-32, 21), Fraction(-200, 21),
+                    Fraction(-418, 21), Fraction(-494, 21), Fraction(-430, 21),
+                    Fraction(-104, 7), Fraction(-500, 21), Fraction(-192, 7),
+                ),
             ),
         )
-        for speeds, margins, anchor_star in cases:
+        for speeds, range_margins, dispersion_margins, anchor_star, anchor_margins in cases:
             report = deep_audit_tuple(speeds)
             self.assertFalse(report["range_sum_star"])
             self.assertFalse(report["dispersion_star"])
             self.assertEqual(
                 tuple(row["best_range"][0] for row in report["rows"]["by_pivot"]),
-                margins,
+                range_margins,
             )
             self.assertEqual(
                 tuple(row["best_dispersion"][0] for row in report["rows"]["by_pivot"]),
-                margins,
+                dispersion_margins,
             )
             self.assertEqual(report["anchor_star"], anchor_star)
+            if anchor_margins is not None:
+                self.assertEqual(
+                    tuple(
+                        row["threshold"] - row["anchor_average"]
+                        for row in report["pivots"]
+                    ),
+                    anchor_margins,
+                )
             self.assertTrue(report["three_anchor"])
             self.assertTrue(report["optimized_additive"])
+
+    def test_range_sum_identity_on_every_stress_and_strict_failure_row(self) -> None:
+        tuples = [case[1] for case in STRESS_CASES]
+        tuples.append((8, 15, 35, 40, 48, 56, 68, 75, 78))
+        for speeds in tuples:
+            for pivot in range(len(speeds)):
+                for h in range(len(speeds)):
+                    if h != pivot:
+                        terms = range_sum_identity_terms(speeds, pivot, h)
+                        self.assertGreaterEqual(terms["loss"], 0)
+                        self.assertGreaterEqual(terms["debt"], 0)
 
 
 if __name__ == "__main__":

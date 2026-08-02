@@ -75,6 +75,41 @@ pairPart_j(h) + W_j(h) > S_j-n*a_j.               (RANGE-SUM-STAR)
 The strict inequality matters.  A maximum margin of zero is a failure of the
 certificate, not a certificate at the boundary.
 
+There is also an exact decomposition of this margin.  For a candidate residue
+let `k(r)` be its number of bad nonpivot masks and let `Unc` count the residues
+with `k=0`.  In a retained child/anchor cell `C`, let `z(r)=k(r)-1` be the
+number of comparison parents containing `r`.  With `r_0=m-2` comparison
+parents, define
+
+```text
+Theta(C) = sum_{r in C} z(r)(r_0-z(r)),
+lambda(C) = Theta(C)-w(c(C)),
+Loss(h) = sum_C lambda(C),
+Debt(h) = sum_{r notin B_h, 2<=k(r)<=m-3}
+  (k(r)-1)(m-k(r)-1)(m-k(r)-2).
+```
+
+Pointwise, `Theta(C)` is the sum of pairwise symmetric-difference sizes of
+the comparison-parent subsets of `C`.  Triangle inequality gives
+`Theta(C)>=V(c(C))>=w(c(C))`, so every `lambda(C)` is nonnegative.
+
+The fixed-first-anchor pair part has residue contribution `k-1` when `h` is
+bad and `k(k-1)/(m-1)` when `h` is nonbad.  After subtracting `S-|R|`, a
+nonbad-`h` residue of multiplicity `k>=1` therefore contributes
+`-(k-1)(m-k-1)/(m-1)`.  It occurs in `k` retained child cells, whose total
+`Theta` contribution is `k(k-1)(m-k-1)`.  Clearing
+`(m-1)(m-2)` and combining leaves exactly the negative debt summand.  An
+uncovered residue instead contributes `+1`.  Replacing `Theta` by `w`
+subtracts `Loss`.  This proves the exact identity
+
+```text
+pairPart(h)+W(h)-(S-|R|)
+  = Unc - (Debt(h)+Loss(h))/((m-1)(m-2)).             (2)
+```
+
+The implementation checks `Theta>=V>=w` cell by cell and (2) numerically on
+every pivot--anchor row of all six stress tuples and the strict failure below.
+
 All six mandatory stress rows reproduce exactly:
 
 | case | `W` | `pairPart+W-(S-nA)` |
@@ -93,7 +128,7 @@ The inequality can be lossy.  For
 
 ## Exact all-pivot failures
 
-Two primitive, positive, distinct tuples fail both `RANGE-SUM-STAR` and the
+Three primitive, positive, distinct tuples fail both `RANGE-SUM-STAR` and the
 stronger `DISPERSION-STAR`.  A separate literal oracle enumerates candidate
 residues as Python sets/lists, reconstructs every cell from its two modular
 images, and recounts every anchor membership without using the bit masks or
@@ -157,9 +192,51 @@ optimized additive: pivot 5, bound 41 < 45,
   costs (8,7,8,4,4,4,6,0).
 ```
 
-Therefore `RANGE-SUM-STAR`, `DISPERSION-STAR`, and (on the second tuple)
+Therefore `RANGE-SUM-STAR`, `DISPERSION-STAR`, and (on the latter two tuples)
 `ANCHOR-STAR` are rejected only as uniform sufficient premises.  The exact
 three-anchor and optimized additive assertions remain open.
+
+The strongest strict failure found in this audit is
+
+```text
+(8,15,35,40,48,56,68,75,78).
+```
+
+For pivots in tuple order, its best range, dispersion, and anchor-star margins
+(`threshold - best average` for the last column) are:
+
+| pivot | range | dispersion | anchor-star |
+|---:|---:|---:|---:|
+| 8 | `-76/21` | `-76/21` | `-24/7` |
+| 15 | `-76/21` | `-76/21` | `-32/21` |
+| 35 | `-284/21` | `-12` | `-200/21` |
+| 40 | `-464/21` | `-464/21` | `-418/21` |
+| 48 | `-668/21` | `-662/21` | `-494/21` |
+| 56 | `-74/3` | `-488/21` | `-430/21` |
+| 68 | `-64/3` | `-352/21` | `-104/7` |
+| 75 | `-718/21` | `-212/7` | `-500/21` |
+| 78 | `-928/21` | `-878/21` | `-192/7` |
+
+All entries are strictly negative.  The best range/dispersion row is pivot
+`15`, first anchor `75`.  Its identity data are
+
+```text
+Unc=10, Debt=484, Loss=88, denominator=42,
+margin = 10-(484+88)/42 = -76/21.
+```
+
+The best anchor-star row is also pivot `15`, first anchor `75`, with margin
+`-32/21`.  Nonetheless the tuple has a three-anchor certificate at pivot
+`15`, anchors `(35,48,75)`, cost `133<135`.  It also has an optimized additive
+certificate at pivot `35`, bound `285<315`, order
+
+```text
+(56,75,15,40,8,48,68,78),
+```
+
+with insertion costs `(63,56,40,46,30,28,14,8)`.  This strictly rejects all
+three averaging premises while again leaving the constructive routes and LRC
+untouched.
 
 ## Search boundary
 
@@ -217,6 +294,7 @@ fixed-pivot set-system isomorphism remains true.
 python3 scripts/audit_range_sum.py
 python3 scripts/audit_range_sum.py --deep-tuple 1,14,27,40,53,66,79,92,105
 python3 scripts/audit_range_sum.py --deep-tuple 1,4,5,7,8,9,10,11,17
+python3 scripts/audit_range_sum.py --deep-tuple 8,15,35,40,48,56,68,75,78
 python3 scripts/audit_range_sum.py --scan-runners 9 --max-speed 12
 python3 scripts/audit_range_sum.py --scan-runners 9 --max-speed 120 --structured
 python3 scripts/audit_range_sum.py --near-nine --max-speed 60

@@ -154,6 +154,92 @@ def literal_range_and_dispersion_numerators(
     return total_w, total_v
 
 
+def incidence_theta_and_profile(parent_sets: tuple[set[int], ...]) -> tuple[int, tuple[int, ...]]:
+    """Return the symmetric-difference upper numerator and column counts."""
+
+    universe = set().union(*parent_sets) if parent_sets else set()
+    r = len(parent_sets)
+    theta = sum(
+        (z := sum(point in parent for parent in parent_sets)) * (r - z)
+        for point in universe
+    )
+    return theta, tuple(len(parent) for parent in parent_sets)
+
+
+def range_sum_identity_terms(
+    speeds: tuple[int, ...], pivot: int, h: int
+) -> dict[str, object]:
+    """Audit ``range margin = Unc-(Debt+Loss)/((m-1)(m-2))``.
+
+    ``Loss`` is accumulated cell by cell as ``Theta(C)-w(c(C))``.  The
+    implementation also checks the pointwise chain ``Theta >= V >= w``.
+    """
+
+    n = len(speeds)
+    m = n - 1
+    denominator = (m - 1) * (m - 2)
+    pivot_speed = speeds[pivot]
+    modulus = (n + 1) * pivot_speed
+    candidates = tuple(r for r in range(modulus) if r % (n + 1) != 0)
+    others = tuple(i for i in range(n) if i != pivot)
+    bad = {
+        i: {
+            residue
+            for residue in candidates
+            if _strict_bad_target(
+                speeds[i] * residue % modulus, pivot_speed, modulus
+            )
+        }
+        for i in others
+    }
+    multiplicity = {
+        residue: sum(residue in bad[i] for i in others) for residue in candidates
+    }
+    uncovered = sum(value == 0 for value in multiplicity.values())
+    debt = sum(
+        (k - 1) * (m - k - 1) * (m - k - 2)
+        for residue, k in multiplicity.items()
+        if residue not in bad[h] and 2 <= k <= m - 3
+    )
+    loss = 0
+    cells_checked = 0
+    for child in others:
+        if child == h:
+            continue
+        comparison = tuple(i for i in others if i not in (h, child))
+        cells: dict[tuple[int, int], set[int]] = {}
+        for residue in bad[child]:
+            h_image = speeds[h] * residue % modulus
+            if _strict_bad_target(h_image, pivot_speed, modulus):
+                continue
+            key = (speeds[child] * residue % modulus, h_image)
+            cells.setdefault(key, set()).add(residue)
+        for cell in cells.values():
+            parent_sets = tuple(cell & bad[q] for q in comparison)
+            theta, counts = incidence_theta_and_profile(parent_sets)
+            exact_v = profile_dispersion(counts)
+            lower_w = range_profile_lower(counts)
+            if not theta >= exact_v >= lower_w:
+                raise AssertionError(
+                    f"pointwise majorization failed: {theta=} {exact_v=} {lower_w=}"
+                )
+            loss += theta - lower_w
+            cells_checked += 1
+    row = row_data(speeds, pivot, h)
+    left = row["range_surplus"]
+    right = Fraction(uncovered) - Fraction(debt + loss, denominator)
+    if left != right:
+        raise AssertionError(f"range-sum identity mismatch: {left} != {right}")
+    return {
+        "uncovered": uncovered,
+        "debt": debt,
+        "loss": loss,
+        "denominator": denominator,
+        "margin": left,
+        "cells_checked": cells_checked,
+    }
+
+
 def row_data(speeds: tuple[int, ...], pivot: int, h: int) -> dict[str, object]:
     others = tuple(i for i in range(len(speeds)) if i != pivot)
     pair_part = Fraction(pair_degree(speeds, pivot, h)) + Fraction(
