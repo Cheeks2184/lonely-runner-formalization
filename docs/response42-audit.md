@@ -96,9 +96,9 @@ counterexample would therefore have maximum at least `n+3`.
 The executable audit checks all 1,530 two-hole cases for `N=4..20`; the proof
 is independent of that finite test. `LonelyRunner/BoundedHeight.lean`
 kernel-checks the interval selector, inverse representative, exclusion of
-residues `0,+/-1`, and the complete reusable two-hole denominator witness.
-Extracting the two holes from an injective bounded family and instantiating
-the four elementary cases remain to be formalized.
+residues `0,+/-1`, the reusable denominator witness, all four hole cases, and
+the finite-family extraction. Its final theorem covers the nontrivial range
+`n>=3`; the smaller dimensions are already covered by the base-case modules.
 
 ## 4. Corrected residual counterexample restrictions
 

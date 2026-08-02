@@ -587,12 +587,12 @@ The root build, including `BoundedHeight.lean`, reported:
 Build completed successfully (3561 jobs).
 ```
 
-The new Lean file checks interval selection for a residue congruent to one,
-an inverse representative, exclusion of residues `0,+/-1`, and the complete
-two-hole denominator witness with the closed endpoint `q<=2N`. It does not
-yet extract the two holes from an injective bounded family or instantiate the
-four elementary cases; the full height theorem remains `proved-math` in the
-ledger rather than `proved-lean`.
+The first pass of the new Lean file checked interval selection for a residue
+congruent to one, an inverse representative, exclusion of residues `0,+/-1`,
+and the complete two-hole denominator witness with the closed endpoint
+`q<=2N`. A subsequent source pass adds all four elementary cases and extracts
+exactly two holes from an injective family; its verification is recorded in
+the next build entry.
 
 The explicit axiom audit completed successfully. The four new probes report:
 

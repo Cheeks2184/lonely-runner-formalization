@@ -1119,9 +1119,10 @@ The two holes always construct the required situation. When `d=N+1`, use
 `[N+2,2N-c]`. The interval lengths are at least `c`, so the representative
 exists. This proves that maximum speed at most `n+2` is sufficient. Hence an
 integer counterexample would have maximum at least `n+3`. `BoundedHeight.lean`
-kernel-checks the reusable denominator construction with positivity and all
-closed endpoint hypotheses explicit. The finite-family two-hole extraction
-and the four case instantiations remain to be formalized.
+kernel-checks the denominator construction, all four cases, and the
+finite-family two-hole extraction with positivity and all closed endpoint
+hypotheses explicit. The final declaration is
+`boundedHeight_stationary_witness` for the nontrivial range `n>=3`.
 
 A separate result evaluates a growing-degree certificate without using a
 known safe count. For `n>=3`, `r>=1`, define

@@ -241,9 +241,9 @@ end-to-end Lean proofs.
 The latest constructive advance is a two-hole bounded-height theorem: every
 distinct positive-integer `n`-tuple with maximum at most `n+2` has an explicit
 closed-boundary lonely time, so an integer counterexample would have maximum
-at least `n+3`. `BoundedHeight.lean` kernel-checks the reusable modular
-denominator construction; the four-case family-level wrapper remains a
-formalization obligation.
+at least `n+3`. `BoundedHeight.lean` kernel-checks the modular denominator
+construction, four-case split, and finite-family two-hole extraction for the
+nontrivial range `n>=3`; earlier modules cover the smaller base cases.
 Response 42 also supplies an exact Chebyshev pivot score computable from
 direct generalized-CRT moments without a known safe count or full histogram.
 Exact searches find a positive pivot score in five stated near-consecutive
