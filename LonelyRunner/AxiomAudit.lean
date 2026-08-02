@@ -115,6 +115,10 @@ project-specific axiom.
 #print axioms LonelyRunner.cast_sum_card_zeroCandidateSlice_eq_weightedZeroIndicatorSum
 #print axioms LonelyRunner.weightedStatisticSum_le_weightedZeroIndicatorSum
 #print axioms LonelyRunner.weightedCandidateStatisticSum_le_cast_sum_card_zeroCandidateSlice
+#print axioms LonelyRunner.weighted_hockey_stick
+#print axioms LonelyRunner.consecutive_extreme_debt_sum
+#print axioms LonelyRunner.clearedCorrelationHistogram_le
+#print axioms LonelyRunner.clearedCorrelationHistogram_le_of_zeroMass
 #print axioms LonelyRunner.chain3Counterexample_directWitness
 #print axioms LonelyRunner.optAddCounterexample_directWitness
 #print axioms LonelyRunner.pairMultiplicityContribution_num

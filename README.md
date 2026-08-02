@@ -181,6 +181,17 @@ negative infinitely often, and the linear rule `d=(n-3)/4` fails for all
 time. Thus any surviving correlation proof must use an adaptive depth nearer
 the exact cutoff, a different polynomial, or additional cross-pivot CRT
 structure. No proof or disproof of LRC follows.
+Optimizing the zero-indicator polynomial does improve finite certificates:
+degree 3 gives `6061/6>0` on `G`, and degree 5 rescues T10 and T11. The exact
+finite primal/dual LP and all grid-feasible polynomial vertices are classified
+in `docs/moment-lp-audit.md`. Nevertheless, coefficient choice does not repair
+uniform fixed order. For every fixed degree `r`, infinitely many actual
+consecutive-speed pivot histograms have optimized LP value exactly zero even
+though `t=1/(n+1)` is lonely. `ConsecutiveCorrelationObstruction.lean`
+kernel-checks the weighted hockey-stick identity and the abstract cleared
+histogram inequality underlying these obstruction arguments. The remaining
+arithmetic histogram construction and asymptotic number theory are stated as
+explicit formalization obligations.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all
@@ -282,6 +293,8 @@ disproof claim.
   every fixed-order moment.
 - `docs/correlation-obstruction-family.md`: infinite consecutive-speed
   obstructions to fixed and one linearly growing correlation depth.
+- `docs/moment-lp-audit.md`: exact primal/dual optimization over all feasible
+  fixed-order zero-indicator polynomials and its infinite fixed-order failure.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
 - `scripts/check_integer_tuple.py`: exact-rational fixed-instance optimizer and
   deterministic certificate verifier.
@@ -337,6 +350,8 @@ disproof claim.
   independent pivot-grid comparison.
 - `scripts/audit_correlation_obstructions.py`: exact finite checks for the
   proved infinite correlation-obstruction family.
+- `scripts/audit_moment_lp.py`: exact polynomial-vertex enumeration, rational
+  primal/dual certificates, and structured-family audit.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
 - `scripts/check_fourier_badsets.py`: deterministic numerical regression audit
   of the fixed-pivot Fourier formulas and strict endpoint conventions.

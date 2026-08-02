@@ -2071,3 +2071,40 @@ the expected-output hash was
 `7fa44df2bb0ff371b036421bc5b1587e8a2801e4d89a8c238eaadc9ac982a0d4`.
 Repository acceptance relies on the independent scripts and proof audits,
 not these reported hashes alone. No LRC conclusion is accepted.
+
+## Independent advance after Response 40: optimize every fixed-order polynomial
+
+An independent exact LP audit replaces Sol's selected polynomial by every
+degree-`r` polynomial below the zero indicator. It derives the primal and
+dual, classifies all grid-feasible vertices by their roots, and supplies
+rational complementary dual certificates. This improves finite results:
+degree 3 proves a positive `6061/6` bound on `G`, and degree 5 proves positive
+bounds for T10 and T11.
+
+It also proves a stronger infinite obstruction. For each fixed `r`, an
+infinite low-totient consecutive family makes every nonzero feasible vertex
+objective negative; the zero polynomial then makes the exact optimized value
+zero. These are actual modular pivot histograms, not arbitrary moment twins,
+and `t=1/(n+1)` remains an exact lonely time. Thus changing coefficients
+cannot yield a uniform fixed-order theorem. The verifier and proof are in
+`docs/moment-lp-audit.md`; independent adversarial review accepted the LP
+signs, vertex classification, exact values, low-totient construction, and all
+constants, with the fixed-order scope qualification preserved.
+
+The denominator-cleared hockey-stick and abstract histogram upper bound are
+now kernel-checked in `ConsecutiveCorrelationObstruction.lean`. It does not
+assert the arithmetic histogram hypotheses, totient formula, or an LRC
+conclusion.
+
+## Prompt 41: adaptive order and cross-pivot structure
+
+Response 40's accepted results and qualifications, together with the stronger
+global consecutive obstruction and noncircular CRT formula, were returned to
+the same signed-in GPT-5.6 Sol Pro conversation. Sol was asked to determine
+the minimum successful depth on consecutive tuples, prove an obstruction far
+below the tautological cutoff or construct a different optimal polynomial,
+and formulate a modular cross-pivot constraint using the explicit CRT
+intersection tables rather than moments alone. A descent route remains
+admissible only if it excludes the comparable irreducible class. Exact LP
+duals, counterexample searches, scope labels, and standalone verifiers are
+mandatory. Response 41 is pending.

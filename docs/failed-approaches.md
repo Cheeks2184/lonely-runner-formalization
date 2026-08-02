@@ -259,3 +259,13 @@ verifier. Nevertheless every consecutive tuple has the exact lonely time
 certificate, not the pivot-certificate proposition or LRC. Arbitrary adaptive
 depths, other feasible zero-indicator polynomials, and additional cross-pivot
 CRT constraints remain open.
+
+Optimizing the coefficients does not rescue any fixed moment order. The exact
+degree-`r` primal LP ranges over every polynomial below the zero indicator on
+`0,...,n-1`, and its dual ranges over all nonnegative pseudo-histograms with
+the supplied moments. It gives stronger finite bounds than the original
+polynomial, but for every fixed `r` an infinite low-totient consecutive family
+forces every nonzero primal vertex to have negative objective. The zero
+polynomial then proves the exact optimum is zero. This closes all uniform
+fixed-order moment-only strategies, not growing order or methods retaining the
+full CRT intersection table.

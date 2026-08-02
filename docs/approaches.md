@@ -365,6 +365,28 @@ substantial linear rule only. It does not exclude arbitrary adaptive depths,
 other feasible moment polynomials, or a cross-pivot theorem using more than
 the numerical moments.
 
+Allowing every feasible polynomial of a prescribed degree gives an exact
+finite LP rather than a new heuristic. In the binomial basis, the primal
+maximizes `sum_q c_q H_q` subject to `P(0)<=1` and `P(k)<=0` for every positive
+grid value. Its dual minimizes zero mass among nonnegative pseudo-histograms
+matching the available moments. Every nonzero degree-`r` primal vertex has
+`P(0)=1` and `r` positive integer roots with an explicit adjacent-pair sign
+pattern. Exact enumeration therefore supplies rational primal and dual
+certificates without a floating-point solver. It improves `G` to a positive
+degree-3 bound and T10/T11 to degree-5 bounds.
+
+Even this optimized closure fails uniformly at fixed order. For any fixed
+`r`, low-totient consecutive tuples can be chosen so that the safe mass is
+smaller than the forced negative contribution of the literal `+/-1` pivot
+incidences for every nonzero feasible vertex. All nonzero vertex objectives
+are then negative, while the zero polynomial has value zero, proving that the
+exact optimized LP value is zero. This is an infinite arithmetic theorem, not
+an arbitrary moment-twin construction. A surviving route must let the order
+grow with `n` or use CRT table information discarded by the numerical
+moments. `ConsecutiveCorrelationObstruction.lean` formalizes the weighted
+hockey-stick identity and the abstract denominator-cleared histogram bound;
+the consecutive histogram and totient estimates remain outside Lean.
+
 The fourth Sol Pro round produced two valid but limited structured-class
 lemmas. The fifth produced exact modular certificates and a bounded dataset,
 then retracted an incorrect claim that the simple union bound subsumed the

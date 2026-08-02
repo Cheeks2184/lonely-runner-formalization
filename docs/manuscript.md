@@ -957,6 +957,60 @@ Nevertheless `t=1/(n+1)` is an explicit lonely time for every consecutive
 tuple. Thus fixed depth and this linear sub-tautological rule are genuinely
 rejected as sufficient strategies; LRC is not.
 
-This theorem remains human-checked and exact-computation-checked rather than
-Lean-formalized. The formal files establish only the polynomial and weighted
-summation kernels used in its proof.
+The arithmetic histogram construction and infinite number-theoretic
+consequences remain human-checked and exact-computation-checked. The formal
+files establish the polynomial, weighted summation, hockey-stick, and abstract
+cleared-histogram kernels used in the proof.
+
+## 27. Optimal fixed-order moment certificates
+
+Fix moment order `r` and write a candidate polynomial in the binomial basis,
+
+```text
+P(k)=sum_(q=0)^r c_q C(k,q).
+```
+
+The strongest zero-indicator lower bound using only these moments is the
+finite LP maximizing `sum_q c_q H_q` subject to `P(0)<=1` and `P(k)<=0` for
+`1<=k<=n-1`. Its dual minimizes the zero mass of a nonnegative
+pseudo-histogram matching `H_0,...,H_r`. Pseudo-histograms need not be
+arithmetically realizable; they certify only what the numerical moments can
+force.
+
+Every nonzero primal vertex has `P(0)=1` and exactly `r` positive integer
+roots. Sign feasibility forces the first root to be 1, every interval where
+the sign would otherwise be positive to be closed by adjacent roots, and the
+last root to be `n-1` in even degree. This classifies the exact finite search.
+Complementary dual masses on the active roots independently certify every
+reported positive optimum.
+
+For the stress tuple `G`, roots `(1,3,4)` give the degree-3 value `6061/6`;
+at pivot 56 alone they give `38/3`. T10 and T11 first become positive by
+degree 5 among the checked orders, with values `29/9` and `59/9`. These improve
+the fixed Response 39 polynomial and confirm that its coefficients were not
+always optimal.
+
+No fixed order is uniform. For a fixed `r`, take a feasible nonzero vertex and
+look at middle multiplicities separated from all its roots. There are
+linearly many such integer points, and the polynomial is uniformly negative
+there by a quantity proportional to `n`. Consecutive tuples provide two
+literal incidences at each such multiplicity. Choosing `n+1` divisible by a
+fixed squarefree product with sufficiently small Euler ratio makes the exact
+safe mass smaller than this forced negative contribution. Every nonzero
+vertex objective is then negative, while the zero polynomial has objective
+zero. Hence the optimized degree-`r` value is exactly zero for infinitely many
+actual consecutive tuples, despite the lonely time `1/(n+1)`.
+
+The corresponding Lean declarations are:
+
+- `weighted_hockey_stick` and `consecutive_extreme_debt_sum` for the exact
+  binomial sum;
+- `clearedCorrelationWeight_zero` and
+  `clearedCorrelationWeight_eq_debt` for the histogram weights;
+- `clearedCorrelationHistogram_le` and
+  `clearedCorrelationHistogram_le_of_zeroMass` for the abstract obstruction.
+
+They assume the zero mass and the two-incidence lower bounds as histogram
+inputs. Formalizing the consecutive pivot histogram, its totient zero mass,
+and the asymptotic low-totient construction remains future work. No
+declaration asserts a failure of LRC.
