@@ -422,6 +422,21 @@ replacement exists exactly when `a_n=q*b`, `b=N*a_(n-1)/(q+1)`,
 conditions. This sharply describes the descent-irreducible remainder but does
 not eliminate it. See `docs/response41-audit.md`.
 
+Response 42 makes the Chebyshev computation noncircular for arbitrary integer
+tuples: its forward-Newton score is evaluated entirely through the direct CRT
+moments, with no `D_0` or full histogram. Exact finite searches find some
+positive pivot in five near-consecutive boxes and a 4,276-tuple mutation
+family. The missing step is still uniform: no accepted CRT-table inequality
+forces a positive pivot for every tuple.
+
+Its separate two-hole argument is a genuine unbounded structured theorem.
+Every distinct positive-integer `n`-tuple with maximum at most `n+2` is
+lonely. The proof selects a denominator between `n+2` and `2n+2` whose two
+residues adjacent to zero are exactly the missing speeds. This now supplies a
+height restriction `max>=n+3` on any integer counterexample. Extending the
+construction to more than two holes is a live route. See
+`docs/response42-audit.md`.
+
 The fourth Sol Pro round produced two valid but limited structured-class
 lemmas. The fifth produced exact modular certificates and a bounded dataset,
 then retracted an incorrect claim that the simple union bound subsumed the

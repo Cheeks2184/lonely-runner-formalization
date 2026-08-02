@@ -1096,3 +1096,52 @@ The arithmetic characterization itself is kernel-checked by
 `replacement_sum_lt`. The minimal-counterexample composition is deliberately
 not packaged as a theorem until the sorted-family and certificate-transport
 interfaces are connected explicitly.
+
+## 30. A bounded-height theorem and an exact CRT Chebyshev score
+
+Let `n>=2` and put `N=n+1`. If `n` distinct positive integer speeds are all
+at most `n+2=N+1`, exactly two values `c<d` are missing from `[1,N+1]`.
+The following two-hole observation is the arithmetic core. Suppose
+`N<q<=2N`, `0<c<q`, `gcd(c,q)=1`, and neither `c` nor `q-c` occurs as a
+speed. Choose `0<r<q` with `cr congruent 1 (mod q)`. If a speed had circular
+residue zero or one at numerator `r`, multiplication by `c` would force that
+speed to be congruent to `0`, `c`, or `q-c`; the range below `q` excludes all
+three. Every circular residue is therefore at least two, and
+
+```text
+||a_i r/q|| >= 2/q >= 1/N.
+```
+
+The two holes always construct the required situation. When `d=N+1`, use
+`t=1/N` if `c=N`, use `t=1/c` if `2c>N`, and otherwise choose
+`u congruent 1 (mod c)` in `[N+1,2N-c]` and set `q=c+u`. When `d<=N`, use
+`t=1/d` if `2d>N+1`; otherwise choose the representative in
+`[N+2,2N-c]`. The interval lengths are at least `c`, so the representative
+exists. This proves that maximum speed at most `n+2` is sufficient. Hence an
+integer counterexample would have maximum at least `n+3`. `BoundedHeight.lean`
+kernel-checks the reusable denominator construction with positivity and all
+closed endpoint hypotheses explicit. The finite-family two-hole extraction
+and the four case instantiations remain to be formalized.
+
+A separate result evaluates a growing-degree certificate without using a
+known safe count. For `n>=3`, `r>=1`, define
+
+```text
+P_(n,r)(k)=(T_r((n-2k)/(n-2))-1)/(T_r(n/(n-2))-1).
+```
+
+This is one at `k=0` and nonpositive at every `1<=k<=n-1`. Its forward
+Newton expansion expresses the pivot score using only intersection moments
+through order `min(r,n-1)`, and the direct generalized-CRT formula evaluates
+those moments without constructing `D_0` or the full bad-multiplicity
+histogram. A strictly positive score proves that pivot has a lonely candidate.
+Exact finite searches find such a pivot in five stated near-consecutive boxes
+and a 4,276-tuple mutation family. They do not prove uniform positivity.
+
+Finally, the largest-speed comparison used by the signed-descent route needs
+a corrected quantifier. Deleting the largest speed invokes the conjecture in
+one lower dimension, so `a_n<n*a_(n-1)` follows for a least counterexample
+dimension (or under an explicit lower-dimensional hypothesis), not from
+fixed-dimension sum minimality alone. Under that correction the height, lcm,
+divisor-cover, and signed-descent conditions remain compatible. No complete
+proof or disproof follows from this section.

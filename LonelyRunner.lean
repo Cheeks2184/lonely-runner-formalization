@@ -9,6 +9,7 @@ import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
 import LonelyRunner.SmallDenominatorWitness
+import LonelyRunner.BoundedHeight
 import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts

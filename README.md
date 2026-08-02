@@ -238,6 +238,19 @@ explicit pair/reindexing hypotheses are kernel-checked in
 `ResidualVariationDebt.lean`; the concrete modular reindexing remains open.
 The bounded search and its selected-parent intersection data are not
 end-to-end Lean proofs.
+The latest constructive advance is a two-hole bounded-height theorem: every
+distinct positive-integer `n`-tuple with maximum at most `n+2` has an explicit
+closed-boundary lonely time, so an integer counterexample would have maximum
+at least `n+3`. `BoundedHeight.lean` kernel-checks the reusable modular
+denominator construction; the four-case family-level wrapper remains a
+formalization obligation.
+Response 42 also supplies an exact Chebyshev pivot score computable from
+direct generalized-CRT moments without a known safe count or full histogram.
+Exact searches find a positive pivot score in five stated near-consecutive
+boxes and 4,276 one-coordinate mutations, but no uniform positivity theorem
+is known. A claimed fixed-dimension minimality consequence was rejected and
+is retained only with a least-counterexample-dimension or explicit
+lower-dimensional hypothesis; see `docs/response42-audit.md`.
 The general conjecture remains open, and this repository makes no proof or
 disproof claim.
 
@@ -313,6 +326,8 @@ disproof claim.
   obstructions to fixed and one linearly growing correlation depth.
 - `docs/moment-lp-audit.md`: exact primal/dual optimization over all feasible
   fixed-order zero-indicator polynomials and its infinite fixed-order failure.
+- `docs/response42-audit.md`: exact CRT Chebyshev score, finite scan scope,
+  two-hole bounded-height theorem, and the corrected minimality quantifiers.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
 - `scripts/check_integer_tuple.py`: exact-rational fixed-instance optimizer and
   deterministic certificate verifier.

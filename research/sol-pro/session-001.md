@@ -2179,4 +2179,54 @@ second route asks it to combine modulus cover, divisibility-poset pigeonhole
 constraints, coprime cross-pivot injection, normalization, and the exact
 comparable descent characterization in a primitive sum-minimal counterexample.
 Precise scope, exact verifiers, strict endpoints, and separation from LRC are
-again mandatory. Response 42 is pending.
+again mandatory.
+
+## Response 42: exact CRT score, finite scans, and bounded height
+
+After 41 minutes 49 seconds, Sol Pro again reported no proof or counterexample
+to LRC. It derived a general shifted-Chebyshev pivot score whose Newton
+coefficients use only the direct CRT moments. Independent review accepts the
+identity and the strict-positive-score implication, with `n>=3`, `r>=1`, and
+truncation at `min(r,n-1)`. Unlike Response 41's consecutive positivity
+calculation, this score can be computed without `D_0` or a full histogram.
+What remains missing is an inequality making some pivot score uniformly
+positive.
+
+Three downloaded source files were hash-checked, inspected, compiled, and run.
+The exact box scanner finds a positive pivot score for every tuple in only the
+five domains `(15,20)`, `(16,20)`, `(17,21)`, `(18,22)`, and `(20,24)`; it
+does not scan `n=19`. The mutation scanner checks exactly 4,276 deduplicated
+one-coordinate mutations of `(1,...,14,210)`. Zero failures means existence
+of some positive pivot row, not positivity at every pivot or of a global sum.
+The floating-point degree selection is safe for the reported runs but is not
+a general exact rule. All finite outputs reproduce byte-for-byte through
+`scripts/audit_response42.sh`.
+
+The strongest new theorem is constructive. If `N>=3` and `N-1` distinct
+positive integer speeds lie in `[1,N+1]`, the two missing values provide
+either an immediate reciprocal witness or a denominator `N<q<=2N` whose two
+residues adjacent to zero are both missing. Thus every positive-integer
+`n`-tuple with maximum at most `n+2` is lonely, and a counterexample would
+have maximum at least `n+3`. Independent line-by-line review accepted all
+interval endpoints, coprimality claims, and strict/closed boundaries.
+
+One substantive claim was rejected. Fixed-`n` primitive sum minimality does
+not imply `a_n<n*a_(n-1)`: fast insertion first needs a witness for the
+deleted `(n-1)`-tuple. The comparison is valid only when `n` is the least
+counterexample dimension or when LRC in dimension `n-1` is assumed. The
+corrected residual class also satisfies divisor cover, the lcm restriction,
+the height bound, and signed-descent irreducibility, but these conditions are
+compatible and yield no contradiction. The full audit is
+`docs/response42-audit.md`.
+
+## Prompt 43: submaximal stress, more holes, and corrected minimal dimension
+
+The exact correction and all scan-scope qualifications were returned to the
+same signed-in GPT-5.6 Sol Pro conversation. Route A requests genuinely
+submaximal exact Chebyshev stress on divisor-covering and adversarial families,
+plus an arithmetic CRT-table inequality if one survives. Route B asks for the
+largest constructive height extension obtainable from more missing residues.
+Route C asks for a correctly quantified least-dimension, then sum-minimal,
+counterexample theorem. Exact counterexamples to proposed constructions are
+required, and no use of known safe counts, fixed/minimal-dimension interchange,
+or real-to-integer normalization is permitted. Response 43 is pending.

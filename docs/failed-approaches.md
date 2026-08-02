@@ -277,3 +277,15 @@ the tautological cutoff `floor(n/2)`, with both gaps occurring infinitely
 often. This does not reject all growing-degree polynomials, but it closes the
 hope that the original coefficient pattern remains uniformly far from exact
 inclusion--exclusion.
+
+## 2026-08-01: fixed-dimension minimality does not supply induction
+
+Response 42 claimed that a primitive sum-minimal counterexample at fixed `n`
+must satisfy `a_n<n*a_(n-1)`. The proposed proof deletes `a_n`, applies LRC to
+the remaining `n-1` speeds, and then uses fast insertion. Fixed-`n` sum
+minimality gives no theorem about the lower-dimensional tuple, so this is an
+invalid interchange of dimensions. The conclusion is retained only after
+choosing a least counterexample dimension, or by explicitly assuming LRC in
+dimension `n-1`. The corrected restriction is compatible with divisor cover,
+the height bound, and signed-descent irreducibility, so it does not currently
+yield a contradiction.

@@ -1,0 +1,14 @@
+crt_small_checked=28
+stress_scores
+RF: n=9 degree=9 denominator=15567301250 global=447797979221/7783650625 best=(A=16,score=92701010032/7783650625,safe=12) rows_hash=af4992398f7ee2f9
+fixed_clock_1: n=9 degree=9 denominator=15567301250 global=2967133873574/7783650625 best=(A=78,score=556534422488/7783650625,safe=72) rows_hash=277ab6be73f8e46b
+fixed_clock_2: n=9 degree=9 denominator=15567301250 global=2273233374218/7783650625 best=(A=75,score=634476395906/7783650625,safe=82) rows_hash=6b226bbbb8370a1b
+hard_A: n=8 degree=8 denominator=485359616 global=249733/7406 best=(A=9,score=58889/7406,safe=8) rows_hash=a5f0476c165007c2
+hard_B: n=8 degree=8 denominator=485359616 global=367923/7406 best=(A=15,score=12639/1058,safe=12) rows_hash=babd13d2a2b32c48
+small: n=4 degree=4 denominator=1536 global=4 best=(A=3,score=2,safe=2) rows_hash=07c60bafe6abfdf4
+C: n=9 degree=9 denominator=15567301250 global=3184948138677/7783650625 best=(A=78,score=114456825284/1556730125,safe=74) rows_hash=45b0293b9d314ba4
+D: n=9 degree=9 denominator=15567301250 global=3787678114668/7783650625 best=(A=91,score=710767595126/7783650625,safe=92) rows_hash=a5e88a78b6684dc2
+E: n=9 degree=9 denominator=15567301250 global=5256909836563/7783650625 best=(A=165,score=1174614617461/7783650625,safe=152) rows_hash=3c9e339591930c6d
+F: n=9 degree=9 denominator=15567301250 global=4222093003308/7783650625 best=(A=147,score=1113912342504/7783650625,safe=144) rows_hash=e1d9f05585da2be7
+G: n=9 degree=9 denominator=15567301250 global=17571931134579/7783650625 best=(A=1200,score=2349114657888/1556730125,safe=1518) rows_hash=38d4b3f70f03e1fe
+bounded_height_cases=1530 witness_hash=eae96481c251915c

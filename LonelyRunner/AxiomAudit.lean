@@ -125,6 +125,10 @@ project-specific axiom.
 #print axioms LonelyRunner.chebyshevMomentHistogramScore_pos
 #print axioms LonelyRunner.smallDenominator_stationary_witness
 #print axioms LonelyRunner.divisor_cover_of_no_small_witness
+#print axioms LonelyRunner.exists_modEq_one_in_interval
+#print axioms LonelyRunner.exists_inverseRepresentative
+#print axioms LonelyRunner.two_le_cyclicResidueDistance_of_inverse_avoids_two_holes
+#print axioms LonelyRunner.twoHoleDenominator_family_witness
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
 #print axioms LonelyRunner.top_signed_forces_sum
