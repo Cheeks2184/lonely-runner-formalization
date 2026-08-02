@@ -278,6 +278,13 @@ and the exact fixed-tuple checker. The live priorities are now:
    integer credit `2` but fractional credit `3`. The active frontier is therefore
    the exact pivot-certificate proposition, equivalent in Lean to the
    positive-integer conjecture.
+   A reproducible exact/interval packer decomposes the conflict hypergraph,
+   removes provably nonbinding residues, and uses replay-checked integral lower
+   bounds with combinatorial and grid-dual upper bounds. It rescues `G` at
+   pivot `56` with credit `400>392`, and also at pivots `105` and `1200`.
+   Five other `G` pivots have proved exact optima; remaining rows are explicitly
+   intervals. Every one of eleven fixed stress tuples has some strict packing
+   pivot. This is evidence for the stronger route, not a cross-pivot theorem.
 4. Prove or refute the exact uniform pivot-certificate proposition now known
    in Lean to be equivalent to the positive-integer conjecture. Pivot-grid
    completeness is no longer an assumption; the remaining issue is uniform

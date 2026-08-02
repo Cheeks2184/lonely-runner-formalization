@@ -144,6 +144,12 @@ are kernel-checked in `OverlapCapacity.lean`. The remaining live
 finite target is the exact pivot-certificate proposition already proved in
 Lean equivalent to the positive-integer conjecture, not another ordering
 surrogate.
+An exact componentwise 0-1 packer also rescues the OPT counterexample `G`:
+at pivot `56`, a replayed packing has credit `400>392`; pivots `105` and
+`1200` have separate strict witnesses. Exact optima are proved for five other
+`G` pivots, while the hard residual rows are recorded only as certified
+intervals. Eleven fixed stress tuples have a strict packing pivot, but this is
+bounded evidence rather than a uniform theorem.
 The stronger anchor-star double average is algebraically verified and all
 reported exact values reproduce. Its generic strict-average selection step is
 now kernel-checked, including the eligibility and pairwise-distinctness of all

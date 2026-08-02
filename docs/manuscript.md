@@ -794,6 +794,18 @@ splitting a nonsingleton block into independent residue flows illegally trims
 the arithmetic block. Any uniform result must obtain additional balanced or
 integral structure from the congruence cosets themselves.
 
+A reproducible componentwise integer packer gives rigorous initial evidence
+for this stronger route. For `G`, a replayed pivot-`56` packing has credit
+`400>392`; pivots `105` and `1200` also have strict replayed witnesses. Exact
+optima are proved at pivots `15`, `21`, `40`, `48`, and `126`; the remaining
+hard rows are reported only as certified lower/upper intervals. The same audit
+finds a strict packing pivot for each of eleven fixed tuples (`F`, `G`, and
+nine earlier stress cases). Its pruning is independently checkable: nonbinding
+residue elimination, conflict-component decomposition, combinatorial upper
+bounds, a grid LP-dual upper bound, and memoization all preserve validity, and
+every lower-bound solution is replayed against the literal blocks and
+capacities. This finite collection does not imply a uniform theorem.
+
 The independent unrestricted search also completely checks every increasing
 ten-speed tuple through maximum `22`: `646,646` tuples total, `646,635`
 primitive, no all-pivot additive failure, and minimum best margin `+4` on
