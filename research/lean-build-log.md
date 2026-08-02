@@ -1017,7 +1017,7 @@ already built ext4 dependency environment:
 lake env lean /absolute/path/to/LonelyRunner/CoefficientThreeHeight.lean
 ```
 
-It completed in 54.1 seconds. The only diagnostics were six
+It completed in 54.1 seconds. The only diagnostics were seven
 `unnecessarySimpa` linter warnings; there was no elaboration or kernel error.
 Independent adversarial review then checked the five-case short-interval
 classification, the exact identity `|M|=|E|+1`, negation of the full common-
@@ -1036,9 +1036,53 @@ each report exactly the permitted standard foundations `propext`,
 `Classical.choice`, and `Quot.sound`. A source scan found no `sorry`, `admit`,
 custom axiom, unsafe declaration, `native_decide`, or disabled check.
 
-This is isolated and standalone verification, not yet the authoritative clean
-full-project replay. A fresh no-local-checkout build, complete trust audit, and
-all regression/certificate tests remain pending, so no full-build job count,
-test count, timing, commit, or CI result is claimed for the coefficient-three
-checkpoint here. The theorem is bounded-height progress only and does not
-prove unrestricted LRC.
+That isolated verification was followed by the authoritative clean replay
+below. The theorem is bounded-height progress only and does not prove
+unrestricted LRC.
+
+## 2026-08-02: coefficient-three clean integration replay
+
+Source commit `64e00c77dabdbf9907e9832e6218a0d2c47cce5d` was cloned with
+`git clone --no-local` into a fresh ext4 checkout. Before verification, the
+checkout was clean and its HEAD exactly matched that commit. The pinned cache
+was restored, and the authoritative low-memory command
+
+```text
+lake -Kjobs=2 build
+```
+
+completed in 265.66 seconds:
+
+```text
+Build completed successfully (3577 jobs).
+```
+
+This includes `CoefficientThreeHeight.lean` and the repaired
+`exists_fastestPivotCertificate_of_extremal_band`. The only new diagnostics
+were nonfatal linter suggestions.
+
+The expanded trust audit then reported:
+
+```text
+Trust audit accepted 254 theorem reports.
+```
+
+Every axiom name was among `propext`, `Classical.choice`, and `Quot.sound`.
+The audit also rejected none of the forbidden placeholder, unsafe, external,
+opaque, `native_decide`, or disabled-check source patterns.
+
+Finally,
+
+```text
+python3 -m unittest discover -s tests -v
+```
+
+completed with:
+
+```text
+Ran 153 tests in 431.513s
+OK
+```
+
+All exact artifact hashes and certificate outputs matched. No unrestricted
+LRC or unrestricted top-two claim follows from this replay.

@@ -204,7 +204,7 @@ grids. No such replacement is supplied by Response 49.
 ## Final status
 
 - B1 closed-band certificate: `proved-lean`; authoritative clean integration
-  replay pending.
+  replay passed.
 - B1 ceiling/floor failure dichotomy: `proved-math`.
 - B2 common-time identity and exact slice count: `proved-math`.
 - B2 strict union criterion: `proved-math`, sufficient only.

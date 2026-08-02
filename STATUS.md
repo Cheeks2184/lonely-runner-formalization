@@ -30,10 +30,9 @@ remaining triples use the coefficient-four theorem. These results do not
 prove unrestricted LRC.
 
 The exact coefficient-three source has passed an isolated ext4 target build,
-a separate standalone compile, targeted axiom probes, and independent
-adversarial review. The authoritative clean full-project build, trust audit,
-and regression replay for this new source are still pending; the latest clean
-checkpoint below therefore remains the coefficient-four/pivot checkpoint.
+a separate standalone compile, targeted axiom probes, independent adversarial
+review, and the authoritative clean full-project build, trust audit, and
+regression replay recorded below.
 
 The exact primorial result remains fully verified. Let `P_N` be the largest
 primorial at most `N`, and let `Q_N=phi(P_N)`. Lean proves the exact maximum
@@ -105,7 +104,7 @@ This equivalence does not prove either side.
   moduli, and repairs three complementary-boundary cases by a second missing
   value. A fresh adversarial audit reproduced every case and returned
   `ACCEPT`. This remains bounded-height progress only.
-- **Lean-verified source, clean integration replay pending:**
+- **Lean-verified:**
   `CoefficientThreeHeight.lean` proves `threeHeight_family_witness` under
   `3*t<=N`. Its missing-versus-extra cardinality proof, doubling injection,
   three exceptional-pair repairs, exact final quantifiers, and axiom reports
@@ -117,7 +116,7 @@ This equivalence does not prove either side.
   witness. Consequently, failure at the fastest pivot forces
   `(N-1)*a_min<a_max`. This is only a necessary condition for a failed
   fastest/top-two strategy, not a proof that a top pivot always succeeds.
-- **Lean-verified source, clean integration replay pending:** the more general
+- **Lean-verified:** the more general
   `exists_fastestPivotCertificate_of_extremal_band` accepts any numerator
   mapping explicit lower and upper nonpivot bounds into the closed fastest-
   pivot safe band. The associated ceiling/floor compression corollary remains
@@ -162,7 +161,7 @@ Active research branches are:
 ## Latest verification
 
 Last clean mathematical source checkpoint:
-`104014a2a1821f94c458afbc6341fb01b07a51fa`.
+`64e00c77dabdbf9907e9832e6218a0d2c47cce5d`.
 
 Pinned environment:
 
@@ -175,9 +174,9 @@ Pinned environment:
 Clean no-local-clone ext4 verification at that source checkpoint:
 
 ```text
-Build completed successfully (3576 jobs).
-Trust audit: 249 theorem reports; only propext, Classical.choice, Quot.sound
-Ran 153 tests in 316.099s
+Build completed successfully (3577 jobs) in 265.66 seconds.
+Trust audit: 254 theorem reports; only propext, Classical.choice, Quot.sound
+Ran 153 tests in 431.513s
 OK
 ```
 
@@ -194,28 +193,26 @@ the 3,571-job Lean checkpoint, trust audit, and all 151 tests. Public run
 30760626494 passed both jobs at commit `c12c3a5`, including the 3,572-job
 unconditional Kanold build, 235-report trust audit, and all 153 tests. Public
 run 30761838846 passed both jobs at commit `b302212`, including the 3,573-job
-coefficient-five build, 240-report trust audit, and all 153 tests. The
-coefficient-four/pivot source checkpoint above awaits publication after this
-local audit record. The newer coefficient-three source has only the isolated
-and standalone verification described above; it is not included in these
-clean-checkpoint counts.
+coefficient-five build, 240-report trust audit, and all 153 tests. Public run
+30764615804 passed both jobs at commit `0f0f9a6`, including the 3,576-job
+coefficient-four/pivot build, 249-report trust audit, and all 153 tests. The
+coefficient-three checkpoint above awaits publication after this local audit
+record.
 
 This replay includes the unconditional Kanold interval, `17*t<=3*N`,
-`5*t<=N`, and `4*t<=N` height theorems; the primorial theorem; the fastest-
-pivot restriction; the saturated top-two class; the Response 45--48 audits
-and Prompt 49 record; the top-two searches; and both the fixed fractional
-dual and its exact global obstruction.
+`5*t<=N`, `4*t<=N`, and `3*t<=N` height theorems; the primorial theorem;
+both fastest-pivot restrictions; the saturated top-two class; the Response
+45--49 audits and Prompt 50 record; the top-two searches; and both the fixed
+fractional dual and its exact global obstruction.
 The source was cloned with `git clone --no-local` into a fresh ext4 checkout;
 the checkout was clean and its HEAD matched the checkpoint above before any
 build or test ran.
 
-The coefficient-four/pivot replay fetched the pinned cache and ran with
-`lake -Kjobs=2 build`; all 3,576 jobs completed in 209.906 seconds. Earlier
-mounted-checkout commands were stopped after source changed mid-run or timed
-out under orphaned WSL process contention; they emitted no Lean diagnostic
-and are not counted as verification. The task-owned orphan processes were
-terminated, and the successful build, trust audit, and full test suite above
-then ran alone from the untouched ext4 source clone.
+The coefficient-three replay fetched the pinned cache and ran with
+`lake -Kjobs=2 build`; all 3,577 jobs completed in 265.66 seconds. The trust
+audit then accepted 254 reports, and the unchanged full regression/certificate
+suite ran 153 tests in 431.513 seconds. The checkout remained untouched and
+clean throughout.
 
 Every explicit axiom probe reports only subsets of `propext`,
 `Classical.choice`, and `Quot.sound`. See

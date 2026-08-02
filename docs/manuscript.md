@@ -1919,7 +1919,7 @@ condition `(N-1)*a_1<B`. The closed-band certificate is mapped to
 `exists_fastestPivotCertificate_of_extremal_band` and is `proved-lean` after
 an independent ext4 compile and axiom audit. The ceiling/floor failure
 dichotomy remains `proved-math`; it is not yet a Lean declaration. The full
-authoritative integration replay is still pending.
+authoritative integration replay passed.
 
 Second, write
 

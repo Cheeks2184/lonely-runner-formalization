@@ -131,6 +131,9 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 
 The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
+The current clean mathematical source checkpoint is
+`64e00c77dabdbf9907e9832e6218a0d2c47cce5d`; see
+[STATUS.md](STATUS.md) for its exact build, trust, and test results.
 
 Install [Elan](https://github.com/leanprover/elan), clone the repository, and
 run from its root:
