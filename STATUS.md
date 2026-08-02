@@ -8,21 +8,29 @@ claim that it has been proved or disproved.
 ## Strongest verified theorem
 
 The strongest fully Lean-verified bounded-height result is
-`LonelyRunner.logarithmicHeight_family_witness`. Let `N,t>=1`. If
+`LonelyRunner.boundedPrimorialHeight_family_witness`. Let `P_N` be the largest
+primorial at most `N`, and let `Q_N=phi(P_N)`. Lean proves the exact maximum
 
 ```text
-(4*(Nat.log 2 N+1)+1)*t <= N,
+max_(1<=c<=N) c/phi(c) = P_N/Q_N
+```
+
+in cross-multiplied natural arithmetic. If `N,t>=1` and
+
+```text
+(4*P_N-Q_N)*t < N*Q_N,
 ```
 
 then every injective family of `N-1` positive integer speeds bounded by `N+t`
 has one common real time at closed circular distance at least `1/N` for every
-speed. `logarithmicHeightGain_positiveInteger_witness` gives the explicit gain
+speed. `boundedPrimorialHeightGain_family_witness` gives the exact largest
+integer gain
 
 ```text
-N div (4*(Nat.log 2 N+1)+1)
+(N*Q_N-1) div (4*P_N-Q_N).
 ```
 
-using exactly the `UnitCircle` norm in the positive-integer formulation.
+This theorem does not prove unrestricted LRC.
 
 The real-speed conjecture has also been formally reduced to the
 positive-integer conjecture:
@@ -38,12 +46,34 @@ This equivalence does not prove either side.
 - **Lean-verified:** the canonical formulation/equivalence layer, the full
   real-to-positive-integer reduction, the finite pivot-certificate
   equivalence, base cases through two moving runners, the `n+2`
-  bounded-height theorem, and the logarithmic bounded-height theorem above.
+  bounded-height theorem, the logarithmic bounded-height theorem, and the
+  exact primorial-ratio bounded-height theorem above.
 - **Audited manuscript plus reproducible finite certificate:** every integer
   speed family of maximum at most `n+5` is lonely. Its finite core covers
   134,568 configurations; it is not yet one Lean theorem.
-- **Finite evidence only:** targeted full Chebyshev/CRT score searches. No
-  finite search implies a uniform theorem.
+- **Lean-verified after manuscript audit:** the exact primorial-ratio theorem
+  from [the Response 45 audit](docs/response45-audit.md). The finite-prime
+  exchange proof, maximum characterization and attainment, strict height
+  algebra, closed-boundary witness, and exact gain all compile without an
+  extra arithmetic premise.
+- **Conditional Lean theorem:**
+  `seventeenThirdsHeight_family_witness_of_kanold` proves that
+  `17*t<=3*N` and maximum speed at most `N+t` give the same closed `1/N`
+  witness, assuming the exact half-open interval proposition
+  `KanoldIntervalBound`. Lean verifies the `c<=6` cases, the estimate
+  `5*2^omega(c)<=2*c` for `c>=7`, and every endpoint. A self-contained Lean
+  proof of the interval bound remains open. The coefficient-six declaration
+  is retained as a corollary.
+- **Audited manuscript proof:** Response 46 proves the Kanold interval bound
+  independently by a roots-of-unity expansion and an invertible Vandermonde
+  system, and sharpens the conditional height arithmetic to `17*t<=3*N`.
+  The proof has passed mathematical audit but its algebraic core is not yet
+  kernel-checked; [the audit](docs/response46-audit.md) records the boundary.
+- **Finite evidence only:** targeted full Chebyshev/CRT score searches and the
+  top-two pivot stress certificate. The latter checks 878,245 primitive box
+  tuples plus 86,745 structured mutations without a failure; it is a proposed
+  strengthening that would imply LRC, not a proved reduction or theorem. No
+  finite search implies a uniform result.
 - **Conditional:** declarations whose theorem statements retain an explicit
   arithmetic or analytic premise.
 - **Refuted strategy:** files under the failed-approach and counterexample
@@ -60,8 +90,10 @@ restrictions do not force such a pivot.
 
 Active research branches are:
 
-1. improve the logarithmic bounded-height gain using sharper explicit
-   `c/phi(c)` estimates;
+1. formalize the audited roots-of-unity/Vandermonde proof of Kanold's
+   Jacobsthal bound; the conditional `17*t<=3*N` bounded-height theorem, its
+   coefficient-six corollary, and interval arithmetic compile in
+   `KanoldHeight.lean`;
 2. control or refute the full Chebyshev/CRT pivot score, after rejection of
    the quadratic shortcut;
 3. strengthen the least-counterexample residual class until its conditions
@@ -94,7 +126,16 @@ The same full 147-test suite passed again at public-release commit
 hosted run passed the Lean build and trust audit; it also exposed that the
 certificate job needs the Boost C++ headers used by the Response 42 replay.
 The workflow now installs `libboost-dev` before running the unchanged complete
-suite. This is a CI environment repair, not a reduced verification target.
+suite. Follow-up run 30755579476 passed both jobs at commit `b8b047e`: the
+cached Lean build, trust audit, and all 147 certificate tests are green. This
+was a CI environment repair, not a reduced verification target.
+
+The current combined primorial/Kanold Lean integration also builds cleanly in
+the ext4 verification checkout: `Build completed successfully (3571 jobs)`.
+The trust audit accepts 225 theorem reports and finds only `propext`,
+`Classical.choice`, and `Quot.sound`. These source changes do not alter the
+Python certificate computations; a new full-suite replay is required at the
+next committed checkpoint.
 
 Every explicit axiom probe reports only subsets of `propext`,
 `Classical.choice`, and `Quot.sound`. See

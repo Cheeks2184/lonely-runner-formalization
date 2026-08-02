@@ -1348,3 +1348,117 @@ direct time `7/30` has distances
 all at least `1/6`. The computation therefore rejects only the quadratic
 sufficient condition. It neither refutes the full Chebyshev route nor proves
 or disproves LRC.
+
+## 36. Exact primorial coefficient: formalized boundary
+
+Let `P_N` be the largest primorial not exceeding `N`, and put
+`Q_N=phi(P_N)`, equivalently the product of `p-1` over the primes dividing
+`P_N`. The exact arithmetic input required by the primorial improvement is
+
+```text
+c*Q_N <= phi(c)*P_N                 for every 0<c<=N.
+```
+
+Assuming this inequality, absence of a coprime in the short interval gives
+`phi(c)<=c-L`, where `L=N-c-t`. Combining this with `2c<=N+t` eliminates `c`
+and gives
+
+```text
+N*Q_N <= (4*P_N-Q_N)*t.
+```
+
+Therefore the strict reverse inequality forces a coprime denominator and a
+common witness at the closed `1/N` boundary. Equality gives no conclusion.
+The largest integral gain satisfying the strict inequality is exactly
+
+```text
+floor((N*Q_N-1)/(4*P_N-Q_N)).
+```
+
+`PrimorialHeight.lean` maps these steps to
+`rational_short_interval_bound`,
+`rationalCoefficientHeight_family_witness`,
+`rationalCoefficientHeightGain_spec`, and
+`rationalCoefficientHeightGain_maximal`. The declarations
+`boundedPrimorial_le` and `primorial_le_boundedPrimorial` verify that the
+chosen `P_N` is genuinely the largest primorial value at most `N`, while
+`totient_primorial_eq_prod_primesLE_pred` identifies `Q_N`.
+
+The uniform ratio inequality is also now kernel-checked. For a finite set of
+prime divisors that is not an initial segment of the primes, choose its
+largest member `p` and a missing smaller prime `q`. Replacing `p` by `q`
+strictly decreases the radical and, because
+
+```text
+p*(q-1) <= (p-1)*q,
+```
+
+can only increase the radical divided by the predecessor product. Strong
+induction therefore produces a primorial no larger than the original radical
+whose Euler ratio dominates it. Enlarging that primorial to `P_N` only adds
+factors `(r-1)/r<=1`; Euler's product formula transfers the comparison from
+the radical to the original `c`. This is
+`boundedPrimorial_ratio_dominates`. The declaration
+`boundedPrimorial_ratio_maximum` packages the uniform comparison, verifies
+`0<P_N<=N`, and proves attainment at `c=P_N`.
+
+Consequently `boundedPrimorialHeight_family_witness` and
+`boundedPrimorialHeight_stationary_witness` are unconditional.
+`boundedPrimorialHeightGain_family_witness` gives the exact integral gain;
+the general ratio-premise interface remains available as
+`boundedPrimorialRatioHeight_family_witness`. The complete primorial
+bounded-height theorem is therefore `proved-lean`. It remains only a
+bounded-height partial result and does not prove unrestricted LRC.
+
+## 37. Conditional Kanold/Jacobsthal linear height
+
+For a positive natural `c`, consider the exact interval assertion
+
+```text
+every Ico(start, start + 2^omega(c)) contains q coprime to c.
+```
+
+The half-open interval contains exactly `2^omega(c)` integers. Thus this is
+the same convention as the Jacobsthal function `g(c)` being the least length
+that forces a coprime in every sequence of consecutive integers and the
+literature inequality `g(c)<=2^omega(c)`. The primary source is H.-J. Kanold,
+[“Über eine zahlentheoretische Funktion von
+Jacobsthal”](https://doi.org/10.1007/BF01350607), *Mathematische Annalen* 170
+(1967), 314–326, Theorem 4.
+
+`KanoldHeight.lean` names this still-open local formal premise
+`KanoldIntervalBound`. It then proves the following conditional theorem. Let
+`n+1=N`, let `t>0`, and let `a : Fin n -> Nat` be positive and injective. If
+
+```text
+max_i a_i <= N+t       and       17*t <= 3*N,
+```
+
+then there is a real `tau` for which every runner has circular distance at
+least the closed threshold `1/N`.
+
+The proof selects a missing `c` in `[1,N]`. The reciprocal branch is the
+already verified small-denominator argument. Otherwise `2*c<=N+t`, and the
+inverse-denominator interval has
+
+```text
+start = N+c+t+1,       ell = N-c-t,
+start+ell = 2*N+1.
+```
+
+For `c>=7`, Lean proves `5*2^omega(c)<=2*c`; the height inequalities give
+`2*c<=5*ell`, hence `2^omega(c)<=ell`. For `c<=6`, Lean computes the exact
+values `omega(1),...,omega(6)=(0,1,1,1,1,2)` and proves the same length bound
+directly. The Kanold premise supplies a coprime `q` in the initial subinterval.
+Because the full upper endpoint is `2*N+1`, the allowed integer `q=2*N` is
+retained. The existing two-hole inverse bridge then gives the closed witness.
+
+The declarations `five_mul_two_pow_omega_le_two_mul`,
+`small_modulus_power_le_interval_seventeen`, and
+`seventeenThirdsHeight_family_witness_of_kanold` are `proved-lean`;
+`sixHeight_family_witness_of_kanold` is retained as a corollary. The unconditional
+theorem is not: the first unresolved proposition is exactly
+`KanoldIntervalBound`. The original proof is not a short combinatorial
+induction; it develops gap-count identities and auxiliary estimates, treats
+finite ranges, and invokes Rosser bounds for primes. Those dependencies must
+be reconstructed rather than hidden as an axiom.

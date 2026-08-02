@@ -2379,3 +2379,135 @@ The composer readback matched all prompt characters except the trailing file
 newline, and invoking `composer-submit-button` produced the live `Cancel`
 control. Prompt 45 is therefore submitted and running; no response is claimed
 until its completed text is recovered and independently audited.
+
+## Response 45: exact primorial height and finite full-score stress
+
+Response 45 completed after 37 minutes 8 seconds. It explicitly reported no
+proof or disproof of LRC and accepted the kernel-checked logarithmic-height
+theorem. Its strongest new mathematical result is the exact primorial-ratio
+height theorem. If `P_k` is the largest primorial at most `N` and
+`Q_k=product_{i<=k}(p_i-1)`, then
+
+```text
+max_{1<=c<=N} c/phi(c)=P_k/Q_k
+```
+
+and the existing missing-height architecture gives a common closed `1/N`
+witness under
+
+```text
+(4*P_k-Q_k)*t < N*Q_k.
+```
+
+The strict algebra, maximum formula, endpoints, and gain
+`floor((N*Q_k-1)/(4*P_k-Q_k))` passed an independent audit. The attached
+Python and C++ sources were recovered byte-for-byte, their source hashes
+match the response, and both output hashes reproduce. The C++ search checks
+150,426 prescribed 15-speed tuples and finds no all-pivot full Chebyshev-score
+failure; this remains finite evidence only.
+
+The response also gave a valid infinite residual family with maximum
+`2N-2`, active terminal interval, divisor cover, deletion gcd one, comparable
+top, and blocked signed replacement. Its explicit time is `1/(2N)`, so it is
+a compatibility witness rather than an LRC counterexample. The complete
+independent account is `docs/response45-audit.md`.
+
+## Prompt 46 submitted: Kanold/Jacobsthal route
+
+An independent adversarial pass found a substantially stronger possible
+height theorem. Kanold's classical Jacobsthal bound
+`g(c)<=2^omega(c)` appears to combine with the checked denominator interval
+to prove that `6*t<=N` and `max A<=N+t` imply a common closed `1/N` witness.
+The interval convention, `c>=7` inequality, `c<=6` cases, and all natural
+subtraction guards were stated explicitly in the 6,120-character Prompt 46.
+It asks Sol to reconstruct Kanold's theorem as a self-contained finite proof
+and Lean lemma graph rather than import it as an axiom. It also requests the
+primorial and square-root-log formal fallbacks and continued full-score work.
+
+The Prompt 46 composer readback matched the archived prompt except its
+trailing newline. Invoking the submit control produced the live generation
+control, so the response is running. No claim based on Prompt 46 is accepted
+until its completed text is recovered and independently audited.
+
+## Response 46: independent algebraic Kanold proof
+
+Response 46 completed after 32 minutes 11 seconds. The complete response was
+recovered from Chrome's accessibility text, and its attached Python verifier
+was downloaded and recovered byte-for-byte. It made no unrestricted LRC
+claim.
+
+Its strongest contribution is an independent finite-algebra proof of
+Kanold's bound. For the distinct prime divisors `P` of `c`, their product
+`M`, and a primitive `M`-th complex root `zeta`, it expands
+
+```text
+F(x)=product_{p in P}(1-(zeta^(M/p))^x)
+```
+
+as a sum of `2^|P|` exponential modes. The subset roots are pairwise distinct:
+reducing their exponent sums modulo a prime in the symmetric difference
+leaves exactly one nonzero `+/-M/p` term. If `2^|P|` consecutive values of
+`F` vanished, the Vandermonde matrix on those distinct roots would force all
+nonzero expansion coefficients to vanish. The empty-subset coefficient is
+one. This proves the manuscript interval bound `g(c)<=2^omega(c)` without
+using Kanold as an axiom. The proof passed an independent mathematical audit
+but is not yet Lean-verified; subset-exponent injectivity is the first
+API-heavy formal goal.
+
+The response also sharpened the conditional height arithmetic to
+`17*t<=3*N`, since that condition and `2*c<=N+t` imply
+`5*(N-c-t)>=2*c`. It supplied a sound Wallis-product proof of
+`c^2<=8*omega(c)*phi(c)^2`, while finding no full Chebyshev-score bridge or
+failure. The complete status separation and proof audit are in
+`docs/response46-audit.md`.
+
+The recovered verifier source hash is
+`53d525d152044fd2502550fa2854a2944441073c9c879e633bfb7cc345a1f261`.
+Its output hash reproduces as
+`23dbf402f45274bb77d28bc537b0ee26875bb34c2a1103fe229ff0bc5909f253`.
+The computation checks boundary conventions and finite ranges only.
+
+## Prompt 47 submitted: exact Kanold Lean bridge and top-two frontier
+
+Prompt 47 returned the accepted Response 46 audit, the compiled conditional
+`17*t<=3*N` theorem, the now-unconditional Lean primorial theorem, and the
+exact top-two pivot evidence. Its main formal request quoted the remaining
+context in `subsetExponent_mod_injective`, where the goal was to separate one
+subset term modulo a prime in the symmetric difference. The 7,480-character
+composer value matched the archived prompt exactly before submission, and the
+live `Stop answering` control confirmed generation.
+
+Immediately after submission, the local Lean investigation closed that quoted
+goal using `ZMod p`, `Finset.sum_eq_single`, divisibility of the other erased
+products, and nonvanishing of the distinguished erased product. It then also
+compiled the exact powerset expansion
+
+```text
+product_p (1-zeta^(cofactor_p*x))
+  = sum_T (-1)^|T| * (zeta^(subsetExponent T))^x,
+```
+
+The remaining bridge is the full interval/coprimality assembly and reindexing
+into the compiled Vandermonde kernel. This timing correction will be the first
+feedback returned after Response 47 completes; the submitted prompt is
+preserved unchanged as the exact historical record.
+
+## Independent Lean closure of the Response 45 primorial obligation
+
+After Response 46, Codex independently closed the remaining Response 45
+formal obligation without adding an axiom or premise. The proof does not use
+indexed primes. For a non-initial finite prime set it replaces the maximum
+prime by a missing smaller prime. The radical decreases strictly, while the
+cross-multiplied Euler ratio improves because
+`p*(q-1)<=(p-1)*q`. Strong induction reaches a primorial; subset monotonicity
+and Euler's exact totient product then prove
+
+```text
+c*Q_N <= phi(c)*P_N                 for every 0<c<=N.
+```
+
+`boundedPrimorial_ratio_maximum` also proves positivity, `P_N<=N`, and
+attainment at `c=P_N`. The unconditional height and exact-gain wrappers now
+compile in `PrimorialHeight.lean`. This closes a bounded-height partial
+theorem only; unrestricted LRC and the uniform pivot-certificate frontier
+remain open.

@@ -41,6 +41,21 @@ Fully Lean-verified results include:
   explicit gain `N div (4*(Nat.log 2 N+1)+1)` using exactly the canonical
   `UnitCircle` norm.
 
+`PrimorialHeight.lean` proves a stronger unconditional bounded-height theorem.
+Let `P_N` be the largest primorial at most `N` and `Q_N=phi(P_N)`. Lean proves
+that `P_N/Q_N` is the maximum of `c/phi(c)` for `1<=c<=N`, in exact
+cross-multiplied natural arithmetic. Therefore
+
+```text
+(4*P_N-Q_N)*t < N*Q_N
+```
+
+and maximum speed at most `N+t` imply a common closed `1/N` witness. The exact
+largest integer gain is `(N*Q_N-1) div (4*P_N-Q_N)`. This is a verified
+bounded-height result, not a proof of unrestricted LRC. Separately,
+`KanoldHeight.lean` proves the stronger linear condition `17*t<=3*N` assuming
+the still-open Lean premise `KanoldIntervalBound`.
+
 The strongest additional computer-assisted manuscript theorem covers maximum
 speed `n+5`. Its 134,568-case finite core and uniform arithmetic proof have
 been independently audited, but the combined theorem is not yet one Lean
@@ -69,7 +84,15 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
   [failed-approaches.md](docs/failed-approaches.md): surviving and refuted
   strategies.
 - [height-logarithmic.md](docs/height-logarithmic.md): proof and audit of the
-  strongest Lean-verified height theorem.
+  earlier elementary logarithmic-height theorem.
+- [response45-audit.md](docs/response45-audit.md): exact primorial-height
+  manuscript theorem and reproducible Sol Pro artifacts.
+- [response46-audit.md](docs/response46-audit.md): independently audited
+  roots-of-unity/Vandermonde route to Kanold's interval bound.
+- [top-two-pivot-search.md](docs/top-two-pivot-search.md): a sharp conjectural
+  pivot restriction and its reproducible bounded stress search.
+- [top-two-fractional-dual.md](docs/top-two-fractional-dual.md): a fixed exact
+  fractional certificate and a refuted integral packing strategy.
 - [computation.md](docs/computation.md): computational scope and interpretation.
 - [publication-audit.md](docs/publication-audit.md): public-release privacy,
   secret-scanning, and redistribution audit.
@@ -105,6 +128,10 @@ bash scripts/audit_logarithmic_height.sh
 bash scripts/audit_height_n_plus_5.sh
 bash scripts/audit_quadratic_chebyshev_failure.sh
 bash scripts/audit_response44.sh
+bash scripts/audit_response45.sh
+bash scripts/audit_response46.sh
+bash scripts/audit_top_two_pivot_search.sh
+bash scripts/audit_top_two_fractional_dual.sh
 bash scripts/audit_response42_cheb_multi.sh
 bash scripts/audit_residual_compatibility_family.sh
 ```
