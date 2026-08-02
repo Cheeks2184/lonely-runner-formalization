@@ -120,6 +120,9 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
   integral top-two conjecture remains open.
 - [response50-audit.md](docs/response50-audit.md): independently reproduced
   finite affine-transversal certificate for the fixed hard top pair.
+- [response51-audit.md](docs/response51-audit.md): accepted conditional
+  special classes, the exact affine counterexample, and the corrected
+  coefficient-two frontier.
 - [affine-transversal-frontier.md](docs/affine-transversal-frontier.md): the
   Lean-formalized abstract bridge, empty-grid counterexample, and corrected
   disjunctive frontier.
@@ -140,7 +143,7 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
 The current clean mathematical source checkpoint is
-`9d45be484cb7dd91b4228e44ded7e66a9006e616`; see
+`2e7dc651cb81950ca4fe9f224d5ad3896c2948bd`; see
 [STATUS.md](STATUS.md) for its exact build, trust, and test results.
 
 Install [Elan](https://github.com/leanprover/elan), clone the repository, and

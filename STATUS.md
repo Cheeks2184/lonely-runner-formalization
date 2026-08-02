@@ -188,7 +188,7 @@ Active research branches are:
 ## Latest verification
 
 Last clean mathematical source checkpoint:
-`9d45be484cb7dd91b4228e44ded7e66a9006e616`.
+`2e7dc651cb81950ca4fe9f224d5ad3896c2948bd`.
 
 Pinned environment:
 
@@ -201,11 +201,17 @@ Pinned environment:
 Clean no-local-clone ext4 verification at that source checkpoint:
 
 ```text
-Build completed successfully (3577 jobs) in 264.41 seconds.
-Trust audit: 256 theorem reports; only propext, Classical.choice, Quot.sound
-Ran 153 tests in 415.166s
+Build completed successfully (3578 jobs) in 453.16 seconds.
+Trust audit: 258 theorem reports; only propext, Classical.choice, Quot.sound
+Ran 153 tests in 597.480s
 OK
 ```
+
+The clean checkout also replayed `audit_response50.sh` in 18.04 seconds and
+`audit_coefficient_two_gamma.sh` in 7.84 seconds. The former independently
+checks the fixed `(7,98,187)` transversal certificate; the latter checks the
+guarded `4<=N<=300` Gamma selector evidence. Neither finite replay proves a
+uniform theorem.
 
 The same full 147-test suite passed again at public-release commit
 `854567aa8e05ff05714ed5de4a1353d57b4fd105` in 401.780 seconds. The first
@@ -229,11 +235,18 @@ Public run 30768884839 passed both jobs at commit `4b31c22`, including the
 fastest-interval theorem, Response 50 artifact replay, trust audit, and all
 153 tests.
 
-This replay includes the unconditional Kanold interval, `17*t<=3*N`,
+The local `2e7dc65` checkpoint additionally contains the Lean-verified
+abstract two-sided transversal bridge and the guarded coefficient-two Gamma
+audit. Its public workflow run is pending publication; the clean local replay
+above is authoritative until that hosted run finishes.
+
+The verified source plus the current research record includes the
+unconditional Kanold interval, `17*t<=3*N`,
 `5*t<=N`, `4*t<=N`, and `3*t<=N` height theorems; the primorial theorem;
-both fastest-pivot restrictions; the saturated top-two class; the Response
-45--49 audits and Prompt 50 record; the top-two searches; and both the fixed
-fractional dual and its exact global obstruction.
+both fastest-pivot restrictions; the saturated and abstract transversal
+top-two modules; the Response 45--51 audits and Prompt 52 record; the top-two
+searches; the Gamma evidence; and both the fixed fractional dual and its exact
+global obstruction.
 The source was cloned with `git clone --no-local` into a fresh ext4 checkout;
 the checkout was clean and its HEAD matched the checkpoint above before any
 build or test ran.

@@ -16,8 +16,13 @@ docker run --rm -v "$PWD:/repo" \
   detect --source /repo --redact --no-banner
 ```
 
-Result: 179 commits and approximately 1.95 MB were scanned; no leaks were
+Result: 205 commits and approximately 2.40 MB were scanned; no leaks were
 found.
+
+The exact staged public delta was also passed to Gitleaks through standard
+input so newly added, not-yet-committed files were covered. It scanned 31.58
+KB before the final audit-note update and found no leak; the final staged
+delta was rescanned and also passed.
 
 ## Independent manual audit
 
@@ -40,6 +45,12 @@ image, browser profile, session export, or historical blob over 5 MiB exists.
 Nine non-secret local checkout paths in the build log were replaced by the
 public placeholder `<clean-ext4-checkout>` in the release tree. Ignored local
 state consists of Lake and Python caches.
+
+At the latest checkpoint there are 319 tracked-or-staged public files and no
+untracked public file. The targeted scan found no risky filename, absolute
+local path, email address in file content, high-confidence secret shape,
+file over 5 MiB, or Gitlink. Ignored state is limited to `.lake/`, `scratch/`,
+and Python bytecode caches; none is staged.
 
 The repository has no selected license. The README states this explicitly.
 

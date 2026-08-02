@@ -1208,3 +1208,51 @@ bash scripts/audit_coefficient_two_gamma.sh
 matched the exact source hash and expected output, completed in 8.24 seconds,
 and used maximum RSS 28,996 KB. Its `N<=300` selector results are finite
 evidence only; the uniform Hall statement remains conjectural.
+
+## 2026-08-02: clean transversal and Gamma checkpoint
+
+Source commit `2e7dc651cb81950ca4fe9f224d5ad3896c2948bd` was cloned with
+`git clone --no-local` into a fresh native-WSL ext4 checkout. The checkout was
+clean and its HEAD exactly matched that commit. With the pinned cache restored,
+
+```text
+lake -Kjobs=2 build
+```
+
+completed successfully:
+
+```text
+Build completed successfully (3578 jobs).
+ELAPSED_SECONDS=453.16
+```
+
+The expanded trust audit accepted 258 theorem reports in 9.04 seconds. Every
+reported axiom was one of `propext`, `Classical.choice`, and `Quot.sound`;
+required probes included both declarations in `TopTwoTransversal.lean`.
+
+The complete regression and certificate suite then reported:
+
+```text
+Ran 153 tests in 597.480s
+OK
+real 598.11
+```
+
+Finally, the same clean checkout replayed both newly relevant standalone
+audits:
+
+```text
+bash scripts/audit_response50.sh
+Response 50 artifact and independent transversal audits passed.
+real 18.04
+
+bash scripts/audit_coefficient_two_gamma.sh
+Coefficient-two Gamma finite audit passed.
+real 7.84
+```
+
+The clean formal checkpoint proves only the abstract two-sided implication;
+it does not prove a uniform pair-family premise. The Gamma replay checks every
+`4<=N<=300` row and finite repairs, but the all-`N` Hall selector remains
+conjectural. Adversarial review found and repaired the omitted `4<=N` domain
+guard before publication.

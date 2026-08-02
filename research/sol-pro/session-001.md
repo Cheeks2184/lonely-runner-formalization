@@ -2768,3 +2768,49 @@ paired affine family is empty and `tau_H=0<=N-3` for every `H`. Nevertheless,
 `(1,2,8)` has a `B`-pivot certificate at `r=9`. Thus only the unconditional
 paired-transversal target is rejected; the top-two and LRC statements are not.
 The exact objection will be returned to Sol Pro after Response 51 is recovered.
+
+## Response 51: useful conditional classes, uniform affine target refuted
+
+The recovered response begins `Status corrections`, has 18,958 UTF-8 bytes,
+and has SHA-256
+`3954d503b79a9724008fb407816fb40e53eff714328e2e16f0830b0a012509b8`.
+It supplied no attachment or computational artifact.
+
+Independent audit accepted the affine-support inclusion A1, the large-gap
+fastest-pivot corollary with its omitted family bounds restored, the
+conditional common-`g` bad-count theorem as manuscript mathematics, and the
+generic blocker-path structure. It rejected `AFFINE-SUPPORT-ESCAPE` at the
+already identified `(4,2,8)` empty-grid row. The proposed `CHAIN-REPAIR` is
+not a quantified lemma and leaves isolated internal blockers and the residual
+rows uncontrolled. B2 remains unformalized; its displayed example is only a
+scaling of the saturated family, although the theorem itself applies to a
+genuinely broader class. The exact classification is in
+`docs/response51-audit.md`.
+
+The coefficient-two frontier was sharpened independently to the sliding
+coprime complementary-neighborhood family `Gamma`. A uniform Hall selector
+would close the `2*t<=N` height regime. Deterministic verification through
+`N=300` found four repaired small exceptions. Adversarial review then caught
+an omitted domain guard: at `(N,t)=(3,1)`, the candidate set is `{2}` and its
+`Gamma` neighborhood is empty. The exact selector is therefore stated only
+for `4<=N`; the omitted row is already covered by the Lean-verified
+coefficient-three theorem. A separate implementation found no further failure
+through `N=1000`, which remains finite evidence only.
+
+## Prompt 52 submitted: exact Gamma Hall problem
+
+Prompt 52 returns the fixed affine counterexample, the corrected disjunctive
+top-two frontier, the B1/B2 qualifications, and the exact `4<=N` Gamma Hall
+statement. It asks for three materially different attacks based on minimal
+Hall deficiency and sliding endpoints, published coprime-interval matching
+theorems, and arithmetic incidence/discharging. It separately requests a
+common-denominator alternative and a Lean-oriented special-class theorem.
+
+The archived prompt has 9,785 UTF-8 bytes including its terminal newline.
+The exact composer value removes only that newline: 9,770 characters, 9,784
+UTF-8 bytes, 114 line feeds, and SHA-256
+`7de150ba85aa4220aa6bd87b21862cfcc37135da2e58243c14c10cf031182155`.
+Windows UI Automation exposed the current `GPT-5.6 Sol` menu and the `Pro`
+radio, explicitly selected `Pro`, and read the composer back byte-for-byte
+before submission. The live `Stop answering` control confirms Prompt 52 is
+running. No future response claim will be accepted without independent audit.

@@ -7,7 +7,7 @@ claimed.
 
 ## Complementary-extra neighborhoods
 
-Let `H=N+t`, with `0<t` and `2*t<=N`. For a base height `c`, define
+Let `H=N+t`, with `4<=N`, `0<t`, and `2*t<=N`. For a base height `c`, define
 
 ```text
 Auto(c) iff there exists d with H<d, c+d<=2N, and gcd(c,d)=1.
@@ -75,6 +75,13 @@ eliminated. A selector restricted to the actual missing set `M`, together with
 verified identity `|M|=|E|+1`.
 
 No proof of this selector theorem is known.
+
+The lower bound `4<=N` is essential to this exact exception list. At
+`(N,t)=(3,1)`, one has `C={2}` and `Gamma(2)=empty`, so the unqualified
+selector fails. That row is already covered by the Lean-verified
+coefficient-three theorem because `3*t<=N` (and it also has a direct
+reciprocal repair). The deterministic verifier below intentionally starts at
+`N=4`.
 
 ## Four finite repairs
 
