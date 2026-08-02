@@ -448,3 +448,40 @@ every used residue capacity. A tracked Lean scan found no `sorry`, `admit`,
 custom `axiom`, `opaque`, `unsafe`, `extern`, `implemented_by`,
 `partial_fixpoint`, `native_decide`, or disabled checks. Both the main
 worktree and clean checkout were empty after verification.
+
+## 2026-08-02: correlation polynomial, weighted bridge, and obstruction audits
+
+The cached clean ext4 checkout was fast-forwarded to commit `c8377d3`. The
+root build, now including `CorrelationPolynomial.lean` and
+`WeightedZeroCount.lean`, reported:
+
+```text
+Build completed successfully (3537 jobs).
+```
+
+The complete axiom audit passed. The polynomial prefix identity, cleared
+nonpositivity theorem, rational zero-indicator bound, candidate-slice double
+count, positive-weight guarded summation theorem, and combined weighted bridge
+all report only:
+
+```text
+[propext, Classical.choice, Quot.sound]
+```
+
+The full exact regression suite, including the common-LCM histogram audit,
+direct generalized-CRT low-moment evaluator, consecutive-speed infinite-
+obstruction checks, and whole-block packing replays, reported:
+
+```text
+Ran 124 tests in 171.716s
+OK
+```
+
+The direct CRT evaluator reproduces `G`'s first five moments without
+constructing a safe set or full multiplicity histogram. The obstruction tests
+check every admissible depth for `4<=n<=35` as finite regression evidence;
+the documented infinite conclusions use separate proved inequalities. A Lean
+source scan found no `sorry`, `admit`, custom `axiom`, `opaque`, `unsafe`,
+`extern`, `implemented_by`, `partial_fixpoint`, `native_decide`, or disabled
+checks. Both the main worktree and the clean verification checkout were empty
+at commit `c8377d3179584301c0061b4c1eb9d76481189c29` before this log update.
