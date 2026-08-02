@@ -2282,9 +2282,51 @@ Lean theorem. See `docs/height-n-plus-4.md`.
 The Response 43 error and the complete independent audit were returned to the
 same signed-in GPT-5.6 Sol Pro conversation. Sol was asked first to audit the
 max-speed `n+4` theorem and then attempt the next five-hole height
-`H=N+4=n+5`, preserving `q<=bN` and closed endpoints. A second route now
-targets the logically stronger certificate statement `exists j, S_j>0`, not
-merely positivity of a global sum, and requires an exact all-pivot failure if
-no cross-pivot CRT-table inequality can be proved. The third route must use
-least counterexample dimension before sum minimality and incorporate the
-corrected `max>=n+5` restriction. Prompt 44 is generating.
+`H=N+4=n+5`, preserving `q<=bN` and closed endpoints. A second route targeted
+the logically stronger certificate statement `exists j, S_j>0`, not merely
+positivity of a global sum. The third route was required to use least
+counterexample dimension before sum minimality.
+
+## Response 44: constructive square-root height, finite score stress, no LRC
+
+After 38 minutes 32 seconds, Sol explicitly reported no proof or
+counterexample to LRC or the uniform pivot-certificate proposition. It
+accepted the four-hole theorem, independently found the same five-hole
+conclusion, and proved a genuinely unbounded constructive extension:
+
+```text
+16*t^2+t<=N and max A<=N+t  ==>  A is lonely.
+```
+
+The proof uses the interval `[N+c+t+1,2N]`, an omitted-residue bound `2t`,
+and `phi(c)>=sqrt(c/2)`. Combined with the independently audited five-hole
+theorem it gives
+
+```text
+T_N=max(4,floor((sqrt(64N+1)-1)/32)),
+max A<=N+T_N  ==>  A is lonely.
+```
+
+A separate adversarial reviewer checked the nonempty interval, every endpoint,
+the totient inequality, and the combined floor formula. The independently
+stronger five-hole certificate covers 134,568 configurations for `N=4..19`
+and a uniform proof for `N>=20`; a clean-room C++ implementation regenerated
+all cases and all 70 exceptional rows.
+
+The Chebyshev route produced a sound quadratic minorant
+`S_j>=H_0-H_1+alpha*H_2`, but no uniform positivity argument. Its recovered
+exact scanner checked 190,488 additional `n=15` tuples with no all-pivot score
+failure. Independent two-/three-coordinate searches checked a further 672,697
+tuples with the same outcome. These are finite certificate tests only.
+
+The minimal-counterexample route finally used least dimension before sum
+minimality. Its necessary restrictions remain compatible. Independently, the
+infinite family `U_N=(3,4,...,N,N+4)` attains the prior height boundary and
+satisfies divisor cover, deletion-gcd-one, comparable top speed, lcm/product,
+scaling, and signed-descent irreducibility, while being explicitly lonely at
+`1/(3N)`.
+
+Both Prompt 44 attachments were recovered byte-for-byte from the Chrome file
+viewer. The source hashes match Sol's report, and `scripts/audit_response44.sh`
+reproduces both outputs exactly. The complete audit is
+`docs/response44-audit.md`. No full proof or disproof has resulted.

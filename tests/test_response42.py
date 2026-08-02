@@ -3,6 +3,7 @@ from __future__ import annotations
 from importlib.util import module_from_spec, spec_from_file_location
 from itertools import combinations
 from pathlib import Path
+import subprocess
 import unittest
 
 
@@ -48,6 +49,11 @@ class Response42AuditTests(unittest.TestCase):
                 self.assertTrue(all(P42.rho(q, r * speed) * N >= q for speed in speeds))
                 checked += 1
         self.assertEqual(checked, 445)
+
+    def test_multi_coordinate_stress_reproduces(self) -> None:
+        subprocess.check_call(
+            ["bash", str(ARTIFACT.parents[3] / "scripts" / "audit_response42_cheb_multi.sh")]
+        )
 
 
 if __name__ == "__main__":

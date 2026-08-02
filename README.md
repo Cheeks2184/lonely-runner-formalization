@@ -334,6 +334,10 @@ disproof claim.
   exact small-case certificate, and the improved counterexample height bound.
 - `docs/response43-audit.md`: accepted observation, repeated fixed-dimension
   error, and the exact remaining obstruction after the third browser round.
+- `docs/height-n-plus-5.md`: independently audited five-hole theorem, exact
+  134,568-case finite core, and the constructive square-root height gain.
+- `docs/response44-audit.md`: browser artifact recovery, mathematical audit,
+  Chebyshev stress, and corrected residual-class synthesis.
 - `docs/manuscript.md`: human-readable text mapped to Lean declarations.
 - `scripts/check_integer_tuple.py`: exact-rational fixed-instance optimizer and
   deterministic certificate verifier.
@@ -396,6 +400,14 @@ disproof claim.
   pass, including the previously omitted `n=19` box.
 - `scripts/audit_height_n_plus_4.sh`: reproduces all 2,982 small four-hole
   certificates for the computer-assisted max-speed `n+4` theorem.
+- `scripts/audit_height_n_plus_5.sh`: reproduces all 134,568 small five-hole
+  certificates for the computer-assisted max-speed `n+5` theorem.
+- `scripts/audit_response44.sh`: replays the recovered Prompt 44 height and
+  Chebyshev artifacts byte-for-byte.
+- `scripts/audit_response42_cheb_multi.sh`: checks the independent exact
+  multi-coordinate Chebyshev stress domains.
+- `scripts/audit_residual_compatibility_family.sh`: checks the infinite
+  residual-compatible family through `N=500` and its explicit witness.
 - `scripts/analyze_consecutive_correlation_depth.py`: exact depth profiles and
   regression checks for the proved near-tautological consecutive theorem.
 - `scripts/search_pair_sum_geometry.py`: exact finite pair-selection search.
@@ -403,6 +415,20 @@ disproof claim.
   of the fixed-pivot Fourier formulas and strict endpoint conventions.
 - `certificates/`: reproducible finite-search outputs.
 - `research/`: Lean build history and archived GPT-5.6 Sol Pro sessions.
+
+The strongest current partial theorem is constructive. Every distinct
+positive-integer `n`-tuple with maximum at most `n+5` is lonely, and more
+generally maximum at most
+
+```text
+N+max(4,floor((sqrt(64N+1)-1)/32)),  where N=n+1,
+```
+
+is sufficient. The five-hole finite core and the general arithmetic argument
+have passed independent adversarial review. They are proved mathematically
+with reproducible computation, but have not yet been combined into one Lean
+declaration. The kernel-checked bounded-height theorem currently reaches
+maximum `n+2`. None of these statements proves the unrestricted conjecture.
 
 ## Reproducible build
 

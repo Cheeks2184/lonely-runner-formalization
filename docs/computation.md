@@ -115,3 +115,26 @@ A separate direct interval-union calculation also returns measure `1`. Under
 the strict bad-set and closed safe-set conventions, the safe set is exactly
 `{1/5, 2/5, 3/5, 4/5}`; these four isolated points explain why full bad-set
 measure does not contradict existence of a Lonely Runner witness.
+
+## Max-speed and Response 44 audits
+
+The following deterministic commands reproduce the latest exact outputs:
+
+```bash
+bash scripts/audit_height_n_plus_5.sh
+bash scripts/audit_response44.sh
+bash scripts/audit_response42_cheb_multi.sh
+bash scripts/audit_residual_compatibility_family.sh
+```
+
+The first exhausts 134,568 five-hole configurations for `N=4,...,19` and
+checks all returned rational witnesses with integer inequalities. The second
+replays both byte-exact Prompt 44 artifacts: 18,536 alternate small-height
+configurations, 92 exceptional rows, and 190,488 adversarial Chebyshev tuples.
+The third checks 374,850 two-coordinate mutations and 297,847 new
+divisor-covering three-coordinate mutations. The last verifies the compatible
+family `U_N` for `N=5,...,500`, including every deletion gcd, divisor-incidence
+bound, signed replacement, and its explicit lonely time.
+
+All of these are finite executable audits. The bounded-height proof outside
+the finite range is deductive, while the full conjecture remains open.

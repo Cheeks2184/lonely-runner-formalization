@@ -1190,3 +1190,80 @@ have not yet been combined into one Lean declaration, so this section is not
 claimed `proved-lean`. A conditional large-`N` wrapper was attempted, but its
 elaboration did not finish promptly after decomposition and it was removed;
 the runner bridge and arithmetic selector remain formal obligations.
+
+## 32. Five holes and an unbounded height gain
+
+Put `H=N+4=n+5`. An `(N-1)`-element subset of `[1,H]` has five holes, so one
+hole `c` lies at most `N`. The reciprocal witness applies when `2c>H`.
+Otherwise consider
+
+```text
+I=[N+c+5,2N],             |I|=N-c-4.
+```
+
+For `N>=20`, this interval is nonempty. Every denominator in it exceeds the
+height bound, its complementary residue `q-c` also exceeds the height bound,
+and `q<=2N`. If the interval has at least `c` terms it contains a complete
+residue system modulo `c`. Otherwise its residue complement has size at most
+eight, so a coprime denominator exists unless `phi(c)<=8`. The exact exception
+set is
+
+```text
+{1,2,3,4,5,6,7,8,9,10,12,14,15,16,18,20,24,30},
+```
+
+and a checked 70-row table covers its residual ranges. The inverse of `c`
+modulo the chosen denominator avoids residues `0,+1,-1`; hence every speed has
+scaled circular residue at least two and meets the closed `1/N` boundary.
+
+An exact certificate covers all 134,568 five-hole configurations for
+`N=4,...,19`; three require direct rational witnesses beyond the reciprocal
+and `C_b` patterns. Together with the base cases this proves
+
+```text
+max_i a_i<=n+5  implies a lonely time exists,
+```
+
+so an integer counterexample would have maximum at least `n+6`.
+
+More generally, for positive integers `N,t`, the same interval has a residue
+complement of size at most `2t`. Since `phi(c)>=sqrt(c/2)`, the hypothesis
+
+```text
+16*t^2+t<=N
+```
+
+forces a suitable denominator. Therefore, with
+
+```text
+T_N=max(4,floor((sqrt(64N+1)-1)/32)),
+```
+
+maximum at most `N+T_N` is sufficient. This is an unbounded constructive gain
+of order `sqrt(N)/4`, still far from the unrestricted conjecture. The full
+proof, table, hashes, and independent reviews are in
+`docs/height-n-plus-5.md` and `docs/response44-audit.md`.
+
+## 33. Corrected residual restrictions remain compatible
+
+A minimal-counterexample analysis must choose the least counterexample
+dimension before choosing a primitive sum-minimal tuple. Only then does
+deletion invoke the lower-dimensional theorem and yield the comparable-top
+restriction. Divisor cover plus deletion-gcd-one also implies
+
+```text
+1<=#{i:d divides a_i}<=n-2       for 2<=d<=N.
+```
+
+These restrictions do not contradict one another. For every `N>=5`,
+
+```text
+U_N=(3,4,...,N,N+4)
+```
+
+is primitive, has deletion gcd one in every coordinate, covers every required
+divisor, satisfies the lcm/product and comparable-top bounds, and admits no
+accepted signed-compatible downward replacement. It is nevertheless lonely
+at `t=1/(3N)`. Thus a proof still needs genuinely new control of total pivot
+coverage; the current height and descent restrictions alone cannot close the
+argument.

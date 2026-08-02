@@ -502,3 +502,33 @@ uncovered. Lean proves that this principle is equivalent to
 not reduce its logical strength. Exact finite searches, counterexamples to
 simpler structural and bounded-overlap covers, and reproduction commands are
 in `docs/integer-induction-cover.md`.
+
+## K. Missing-height denominators
+
+For an `(N-1)`-element integer speed set in `[1,N+t]`, at least one missing
+height `c` lies at most `N`. If `2c>N+t`, the reciprocal `1/c` is an immediate
+witness. Otherwise denominators in `[N+c+t+1,2N]` make both residues adjacent
+to zero correspond to absent heights. The interval omits at most `2t` residue
+classes modulo `c`; `phi(c)>=sqrt(c/2)` closes the construction whenever
+`16*t^2+t<=N`.
+
+At `t=4`, exact totient classification plus a finite certificate proves the
+stronger all-dimensional max-speed `n+5` theorem. In general the method gives
+an unconditional height gain asymptotic to `sqrt(N)/4`. The reusable two-hole
+inverse bridge is kernel-checked, but the stronger arithmetic selector and
+finite core have not yet been assembled into one Lean theorem. See
+`docs/height-n-plus-5.md`.
+
+## L. Quadratic Chebyshev moment test
+
+The exact Chebyshev score admits the pointwise minorant
+
+```text
+P_n(k)>=1-k+alpha_n*choose(k,2),
+```
+
+where `alpha_n>0` is the minimum permitted coefficient. This yields the
+noncircular sufficient condition `H_0-H_1+alpha_n*H_2>0`, using only direct
+CRT intersection moments. Extensive exact stress has not found an all-pivot
+score failure, but no arithmetic inequality forces this test—or the full
+score—to succeed at some pivot uniformly.

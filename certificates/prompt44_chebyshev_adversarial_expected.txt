@@ -1,0 +1,4 @@
+G_plus_choose6_pool20 total=38760 primitive=38760 failures=0 max_nonpositive_prefix=2 hardest=15,21,24,32,40,48,56,64,72,80,105,126,280,336,1200,
+F_plus_choose6_pool20 total=38760 primitive=38760 failures=0 max_nonpositive_prefix=0 hardest=
+no1_divisor_cover_mutations_through5000 total=38192 primitive=38192 failures=0 max_nonpositive_prefix=6 hardest=2,3,4,6,7,8,9,10,11,12,13,14,15,16,2688,
+near_consecutive_mutations_through5000 total=74776 primitive=74776 failures=0 max_nonpositive_prefix=8 hardest=1,2,3,4,5,7,8,10,11,12,13,14,15,16,4480,

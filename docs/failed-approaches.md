@@ -305,3 +305,22 @@ missing-hole and reciprocal/coprime branches were separated. No Lean error
 was produced, so this is recorded as a formalization-performance obstruction,
 not a mathematical objection. The unverified declarations were removed; only
 the previously clean `n+2` height theorem remains in the kernel.
+
+The reciprocal/`C_2`/`C_3` construction is not complete even for the accepted
+five-hole theorem. At `N=4`, speeds `(2,6,8)` and holes `(1,3,4,5,7)` admit no
+such pattern under the exact search definitions, although the direct witness
+`t=2/7` satisfies the closed `1/4` boundary. Two further small configurations
+also require direct witnesses. These are method failures, not counterexamples;
+the exhaustive finite certificate preserves the max-speed `n+5` theorem.
+
+Correcting the minimal-counterexample quantifiers does not make the current
+arithmetic restrictions contradictory. The infinite family
+`U_N=(3,4,...,N,N+4)` satisfies divisor cover, deletion-gcd-one, comparable
+top speed, the lcm/product inequalities, nontrivial cross-pivot scaling, and
+signed-descent irreducibility, yet is lonely at `1/(3N)`. Thus height plus the
+existing descent conditions cannot replace the missing total-pivot argument.
+
+Finally, zero exact all-pivot Chebyshev-score failures across the recorded
+finite domains is not a proof of uniform positivity. A score failure would
+reject only that sufficient certificate, while absence of one provides no
+compactness or induction step.

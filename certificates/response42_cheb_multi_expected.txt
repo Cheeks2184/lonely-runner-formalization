@@ -1,0 +1,2 @@
+hc_seed_exact_two_replacements_new_2_to_100 generated=374850 primitive=374850 divisor_cover=248244 exact_all_pivot_failures=0
+hc_seed_exact_three_replacements_add_pool generated=518700 excluded_old_pool=4550 primitive_after_exclusion=514150 divisor_cover_scored=297847 exact_all_pivot_failures=0
