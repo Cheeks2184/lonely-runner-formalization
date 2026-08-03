@@ -41,11 +41,11 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | Integrated deliverable groups | 3 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), and board/Prompts60--63 package (`263a1cb`) are on main. |
 | Active Sol Pro cells | 4 / 4 | Prompt60 PRO-E, Prompt61 PRO-A, Prompt62 PRO-B, and Prompt63 PRO-C are running in four genuinely separate conversations. |
 | Queued Sol Pro cells | 0 | No additional Sol Pro cell may start until an active slot is released. |
-| Active Sol Medium leads | 3 / 3 | Research Operations, Verification, and Formalization are the initial lead lanes. |
+| Active Sol Medium leads | 2 running / 3 roles | Verification is running the authoritative replay and Research Operations is completing this sync; Formalization is interrupted after its stall. |
 | Active Luna workers | 0 / 6 | The recorded DPLP formal and Response59 verification Luna tasks are complete. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 3 | Nested Luna spawn rejection, the downgraded first formal write launch, and one Formalization Lead stall are counted; none is evidence for or against a claim. |
-| Merge conflicts | 0 observed | No conflict is recorded for the three completed integration groups; absence of a record is not a universal no-conflict claim. |
+| Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
 | Integration backlog | 0 ready artifacts | The DPLP selector/correlation remains open research, not an integration-ready deliverable. |
 | Wait time | Not recorded | Prompt60--63 remain active, but trustworthy start timestamps are not present in this repository snapshot. Do not invent elapsed time. |
 
