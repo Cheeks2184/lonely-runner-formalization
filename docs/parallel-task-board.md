@@ -1,7 +1,10 @@
 # Parallel task board
 
-This file is the authoritative coordination record for proof-research work at
-main commit `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. Historical worker rows retain
+This file is the authoritative coordination record for the repository snapshot
+based on main commit `3c0ad8a190a95d69a6e70af3a117a3d12946ff84`.
+The last source-changing checkpoint is
+`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`; later commits through the snapshot
+are documentation or operations changes only. Historical worker rows retain
 their actual fixture bases. The board records task routing and integration
 readiness; it does not promote any mathematical claim.
 
@@ -39,9 +42,10 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | Accepted recovery deliverables | 1 | `SOL-R59-RECOVER-001` recovered and normalized Response59 without promoting its claims. |
 | Accepted implementations | 0 unrestricted; 2 supporting artifacts | The corrected conditional DPLP contract/wrapper and Response59 regression verifier are integrated; neither proves an open bridge. |
 | Integrated deliverable groups | 3 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), and board/Prompts60--63 package (`263a1cb`) are on main. |
+| Authoritative source replay | integrated / verified | `VER-CHECKPOINT-263A1CB-003` verified the detached tracked-clean ext4 replay of source checkpoint `263a1cb`; later snapshot commits are documentation/operations only. |
 | Active Sol Pro cells | 4 / 4 | Prompt60 PRO-E, Prompt61 PRO-A, Prompt62 PRO-B, and Prompt63 PRO-C are running in four genuinely separate conversations. |
 | Queued Sol Pro cells | 0 | No additional Sol Pro cell may start until an active slot is released. |
-| Active Sol Medium leads | 2 running / 3 roles | Verification is running the authoritative replay and Research Operations is completing this sync; Formalization is interrupted after its stall. |
+| Active Sol Medium leads | 0 running / 3 roles | Verification and Research Operations are complete at this snapshot; Formalization remains interrupted after its stall. |
 | Active Luna workers | 0 / 6 | The recorded DPLP formal and Response59 verification Luna tasks are complete. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 3 | Nested Luna spawn rejection, the downgraded first formal write launch, and one Formalization Lead stall are counted; none is evidence for or against a claim. |
@@ -458,6 +462,37 @@ as an accepted implementation or mathematical proof.
   `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. This operational integration
   does not accept a Prompt60--63 result or promote any open theorem.
 
+### VER-CHECKPOINT-263A1CB-003 — authoritative source replay
+
+- **ID:** `VER-CHECKPOINT-263A1CB-003`
+- **Lane:** verification
+- **Owner / supervising lead:** Verification Lead / supervising lead
+- **Base:** `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`
+- **Dependencies:** integrated supporting tranche and Prompt60--63 operations
+  package
+- **Branch:** detached ext4 verification checkout; no repository writes
+- **Status:** `integrated`
+- **Exact deliverable:** Reproduce the pinned cache, full Lean build, trust
+  audit, complete Python regression suite, and direct Response 59 and DPLP
+  certificate comparisons from the last source-changing checkpoint.
+- **Allowed files:** none; read-only verification
+- **Acceptance commands:** Run `lake exe cache get`, `lake build`,
+  `python3 scripts/audit_lean_trust.py`, and
+  `python3 -m unittest discover -s tests -v`; then run the two exact stdout
+  comparisons documented in `STATUS.md` for
+  `scripts/audit_response59_claims.py` and
+  `scripts/audit_deletion_pivot_lift.py`.
+- **Blocker:** none
+- **Final disposition / promotion authority:** Accepted as the authoritative
+  source replay by the supervising lead: 8,638 cache files passed in 884.08
+  seconds; 3,589 build jobs passed in 577.21 seconds; 289 trust reports passed
+  in 10.37 seconds using only `propext`, `Classical.choice`, and `Quot.sound`,
+  or subsets; all 160 tests passed in 428.520 seconds (429.14 seconds wall);
+  and the Response 59 and DPLP exact comparisons passed in 0.75 and 6.46 seconds.
+  The detached tracked tree was clean before and after. Nonfatal warnings are
+  recorded in `STATUS.md`. This verification promotes no theorem and changes
+  no open claim.
+
 ### PRO-E-INTEGRATE-001 — supporting-tranche integration
 
 - **ID:** `PRO-E-INTEGRATE-001`
@@ -484,18 +519,21 @@ as an accepted implementation or mathematical proof.
 
 ## Integration order
 
-1. Preserve the accepted negative `VL-AUDIT-001`, `FL-AUDIT-001`, and
+1. Preserve `VER-CHECKPOINT-263A1CB-003` as the authoritative verified source
+   replay until another source-changing commit receives a complete clean
+   replay.
+2. Preserve the accepted negative `VL-AUDIT-001`, `FL-AUDIT-001`, and
    `VL-LUNA-DPLP-001` results at their historical scope.
-2. Preserve the integrated corrected DPLP contract and conditional wrapper
+3. Preserve the integrated corrected DPLP contract and conditional wrapper
    without promoting the open selector or induction.
-3. Preserve the completed Response59 disposition in
+4. Preserve the completed Response59 disposition in
    `docs/response59-audit.md`; the regression verifier is finite evidence,
    not a uniform proof.
-4. Keep Prompt60--63 active until authoritative completion evidence arrives;
+5. Keep Prompt60--63 active until authoritative completion evidence arrives;
    no fifth Sol Pro cell may start at the current 4/4 cap.
-5. Allocate future `DPLP-REPAIR-001` work only to the open selector/correlation
+6. Allocate future `DPLP-REPAIR-001` work only to the open selector/correlation
    theorem; the formal contract itself is no longer an integration blocker.
-6. Launch any additional Luna/xhigh work only through the verified top-level
+7. Launch any additional Luna/xhigh work only through the verified top-level
    CLI route; external CLI processes are not nested agents, and nested Luna
    delegation must not be retried.
 

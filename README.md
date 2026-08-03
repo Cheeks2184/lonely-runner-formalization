@@ -229,9 +229,11 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
 The current clean Lean source checkpoint is
-`8b2fcd4f2a65cec83eaf8e647834421b0970e4b1`; see
-[STATUS.md](STATUS.md) for its exact build and trust results and the separate
-working-tree test result.
+`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. Later commits through
+`3c0ad8a190a95d69a6e70af3a117a3d12946ff84` change documentation or
+operations records only, so `263a1cb` remains the authoritative source replay.
+See [STATUS.md](STATUS.md) for the exact environment, timings, warnings, and
+historical CI results.
 
 Install [Elan](https://github.com/leanprover/elan), clone the repository, and
 run from its root:
@@ -242,6 +244,14 @@ lake build
 python3 scripts/audit_lean_trust.py
 python3 -m unittest discover -s tests -v
 ```
+
+The authoritative detached ext4 replay was tracked-clean before and after all
+commands. It restored 8,638 cache files in 884.08 seconds, built 3,589 jobs in
+577.21 seconds, audited 289 theorem reports in 10.37 seconds, and passed all
+160 regression tests in 428.520 seconds (429.14 seconds wall time). The direct
+Response 59 and DPLP certificate comparisons also matched exactly in 0.75 and
+6.46 seconds, respectively. These checks verify the recorded source; they do
+not promote a theorem or change any open claim.
 
 The trust audit runs `LonelyRunner/AxiomAudit.lean`, rejects placeholder or
 unsafe source constructs, and permits only Lean's standard `propext`,

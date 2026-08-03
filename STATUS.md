@@ -268,39 +268,55 @@ current arithmetic obstruction to overlap-sensitive singleton counting.
 ## Latest verification
 
 Last clean Lean source checkpoint:
-`8b2fcd4f2a65cec83eaf8e647834421b0970e4b1`.
+`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`.
+
+Every later commit through current base
+`3c0ad8a190a95d69a6e70af3a117a3d12946ff84` changes documentation or
+operations records only. The `263a1cb` detached replay is therefore the
+authoritative source verification for the current repository snapshot.
 
 Pinned environment:
 
-- Lean and mathlib `v4.32.1`;
+- Python `3.14.4`;
+- Lean `4.32.1` (`f054605a`);
+- Lake `5.0.0-src+f054605`;
 - mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`;
-- local authoritative replay: Python `3.14.4`, GCC `15.2.0`, Ubuntu 26.04
-  under WSL2;
+- GCC and G++ `15.2.0`;
+- local authoritative replay: Ubuntu 26.04 under WSL2;
 - public CI: Ubuntu hosted runner and Python 3.14.
 
-Clean no-local-clone ext4 verification at that source checkpoint:
+Authoritative detached ext4 verification at that source checkpoint:
 
 ```text
-Pinned cache restoration: real 182.26
-Build completed successfully (3588 jobs): real 199.72
-Trust audit: 286 theorem reports; only propext, Classical.choice, Quot.sound
-Trust audit: real 7.94
+Pinned cache restoration: 8,638 files; PASS; 884.08s
+Build: 3,589 jobs; PASS; 577.21s
+Trust audit: 289 theorem reports; PASS; 10.37s
+Unit tests: 160/160 PASS; 428.520s (429.14s wall)
+Response 59 direct exact comparison: PASS; 0.75s
+DPLP direct exact comparison: PASS; 6.46s
 ```
 
-The checkout was cloned with `git clone --no-local`, its HEAD exactly matched
-the checkpoint, and its tracked tree remained clean before and after all
-commands. `LEAN_NUM_THREADS=2` constrained the replay to two Lean workers on
-the 8 GB WSL instance.
+The direct comparisons used the documented repository-root commands:
 
-Separately, the authoritative working tree includes source-hashed diagonal
-and fixed-translation obstruction tests and passed the expanded suite:
-
-```text
-Ran 156 tests in 377.203s
-OK
+```bash
+python3 scripts/audit_response59_claims.py | cmp - certificates/response59_claims_expected.txt
+python3 scripts/audit_deletion_pivot_lift.py | cmp - certificates/deletion_pivot_lift_expected.txt
 ```
 
-The added test pins and exactly replays the fixed J1 shift-family audit.
+The detached checkout's HEAD exactly matched the checkpoint, and its tracked
+tree was clean both before and after cache restoration, build, trust audit,
+the complete regression suite, and both direct certificate comparisons. Every
+trust report used only `propext`, `Classical.choice`, and `Quot.sound`, or a
+subset. The build emitted only nonfatal linter/style warnings: unused section
+variables or variables, unnecessary `simpa`, and `simp` suggestions in
+`AcyclicFiberSelector`, `SoftFeedbackLayers`, `ResidualVariationEnergy`,
+`FastestPivot`, `ModularAcyclicSelector`, and `CoefficientThreeHeight`. The
+test suite emitted one nonfatal compiler warning for the unused helper
+`str128(i128)` in `research/sol-pro/artifacts/prompt45_cheb_grid.cpp:35`.
+There were no verification errors. In particular, these warnings do not
+belong to the DPLP or Response 59 verifier results.
+
+### Historical verification and public CI records
 
 The expanded `audit_coefficient_two_gamma.sh` replay passed separately in
 8.50 seconds at computational source commit `4cf1199`; it checks the guarded
