@@ -342,6 +342,15 @@ missing project edge is `2*B<=N*A`, and the owner-aware multi-shift
 transversal remains conjectural/open. No implementation or Lean theorem is
 authorized by that audit.
 
+The [Response 63 audit](docs/response63-audit.md) conditionally accepts an
+independent lead replay of the 4,694-record deletion/correlation census as
+computed finite evidence. A1, B1--B5, and the reverse-grid identity C1 are
+accepted as `proved-math`; C2 requires the explicit deep premise `N*d<n*p`.
+The strict smaller-Delta first-blocker descent and corrected DPLP selector
+remain conjectural/open. The attempted Luna review receives no endorsement
+because it missed both external inputs, and the response's pseudo-Lean block
+is not compilable or Lean-verified.
+
 The remaining active major routes are corrected deletion-pivot/prime forcing
 and an unrestricted top-two/all-pivot certificate. Their exact contracts,
 implication chains, falsification suites, budgets, and abandonment criteria

@@ -383,6 +383,17 @@ family of nonempty deletion certificate sets and the presence of an
 `N`-divisible coordinate. The result must use exact modular structure; merely
 restating that one certificate lifts is not progress.
 
+Response 63 audit update: an independent lead replay verifies 4,694 finite
+records, including 4,296 corrected-DPLP-premise cases with zero failures and
+36 zero-good cases whose minimum-escape selector succeeds finitely. A1,
+B1--B5, and the exact reverse-grid identity C1 are reusable `proved-math`.
+C2 applies only in the deep subcase `N*d<n*p`. The finite census does not test
+the proposed strict smaller-Delta first-blocker transition because each
+minimizing reverse endpoint in the zero-good rows was already a full witness.
+That transition is therefore the surviving local target but remains
+conjectural/open. Formalize C1 with a real typed declaration before attempting
+the descent; the response's pseudo-Lean block is not an implementation.
+
 Equivalently, for each pivot candidate let `S_j(r)` be the nonpivot
 coordinates in the strict deletion-bad set. A deletion certificate has
 `S_j(r) subset {k}`. An empty set lifts immediately; a singleton lifts exactly

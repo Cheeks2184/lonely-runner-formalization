@@ -1,7 +1,7 @@
 # Parallel task board
 
 This file is the authoritative coordination record for the repository snapshot
-based on main commit `4c6c5c45b9a0c750c65bd6d5234784e1ada4e56f`.
+based on main commit `4b6ee54a1c64e847c505b632a46c326616678d1c`.
 The last source-changing checkpoint is
 `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`; later commits through the snapshot
 add documentation, operations records, or research artifacts only. Historical
@@ -37,20 +37,20 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 10 | The prior eight accepted audits plus `VER-R62-AUDIT-010` and `FORM-R62-RESIDUAL-SPEC-012` are accepted at their exact mixed/negative dispositions. |
+| Accepted audit deliverables | 11 | The prior ten accepted audits plus the lead disposition for `VER-R63-AUDIT-013` are accepted at exact conditional scope; no Luna endorsement is counted. |
 | Accepted negative audits | 8 | The prior six negative audits plus Response62's failed project-level branch audit and failed residual assembly are valid negative results. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
 | Accepted implementations | 0 unrestricted; 2 supporting artifacts | The corrected conditional DPLP contract/wrapper and Response59 regression verifier are integrated; neither proves an open bridge. |
 | Integrated deliverable groups | 3 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), and board/Prompts60--63 package (`263a1cb`) are on main. |
 | Authoritative source replay | integrated / verified | `VER-CHECKPOINT-263A1CB-003` verified the detached tracked-clean ext4 replay of source checkpoint `263a1cb`; later snapshot commits are documentation/operations only. |
-| Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered with its independent audit active. |
+| Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited by the lead. |
 | Queued Sol Pro cells | 0 | All four slots are free, but no additional cell is queued in this snapshot. |
 | Active Sol Medium leads | 0 running / 3 roles | Verification and Research Operations are complete at this snapshot; Formalization remains interrupted after its stall. |
-| Active Luna workers | 1 / 6 | Fresh Luna/xhigh task `VER-R63-AUDIT-013` is active read-only; all earlier recorded verification tasks are complete. |
+| Active Luna workers | 0 / 6 | Response63 lead review is complete. The only completed fresh Luna/xhigh turn missed both inputs and is invalid for claim review; two corrected launches failed before a turn. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
-| Failed delegations | 3 | Nested Luna spawn rejection, the downgraded first formal write launch, and one Formalization Lead stall are counted; none is evidence for or against a claim. |
+| Failed delegations | 5 | The prior three failures plus two corrected Response63 launches that ended before a turn (OS errors 3 and 2) are counted. The completed input-missing route is unusable but not counted as a failed launch. |
 | Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
-| Integration backlog | 1 reviewed documentation group | Response62 audit/spec synchronization awaits root integration; no theorem implementation is ready. Response63 audit is still active. |
+| Integration backlog | 1 reviewed documentation group | Response63 conditional audit synchronization awaits root integration; no theorem implementation is ready. |
 | Wait time | None active | No Sol Pro turn remains active in this snapshot. |
 
 Metrics are updated only from a worker result accepted by the supervising
@@ -537,20 +537,53 @@ as an accepted implementation or mathematical proof.
 ### VER-R63-AUDIT-013 — Response 63 verification
 
 - **ID:** `VER-R63-AUDIT-013`
-- **Lane:** Luna verification
-- **Owner / supervising lead:** fresh Luna/xhigh worker / Verification Lead
-  and `/root`
+- **Lane:** verification lead audit; attempted Luna routing invalid
+- **Owner / supervising lead:** Verification Lead / `/root`
 - **Base:** `477fbffc709d0550c163e2812f26193a4ec38cff`
 - **Dependencies:** `OPS-P63-RECOVER-011`
 - **Branch:** read-only verification
-- **Status:** `active`
+- **Status:** `verified`
 - **Exact deliverable:** Independently replay and classify Response63 and its
   preserved audit artifacts without accepting response self-labels.
 - **Allowed files:** none; read-only audit
-- **Acceptance command:** Pending the worker's exact replay report.
-- **Blocker:** Audit is active; no disposition exists yet.
-- **Final disposition / promotion authority:** Pending. Prompt63 remains
-  recovered but **UNVERIFIED** until `/root` accepts the independent audit.
+- **Acceptance command:** Hash all 21 archive members and 13 manifest-declared
+  files; replay generator, Python/C++, analyzer, and census outputs; inspect
+  A1, B1--B5, C1/C2, the active-cycle obstruction, descent, and formal claims.
+- **Blocker:** Conditional corrections are required. C2 needs `N*d<n*p`;
+  strict smaller-Delta descent and the corrected DPLP selector remain open;
+  the pseudo-Lean block is noncompilable.
+- **Final disposition / promotion authority:** **CONDITIONAL ACCEPT** by the
+  lead, with no Luna endorsement. Fingerprint
+  `4d31833037ba35f443d9c9cd71580a510b5c62ffbb56cc975dd3ec0c5d10c16c`
+  belongs to a completed turn that missed both inputs and is invalid for claim
+  review. Corrected launches failed before a turn with OS errors 3 then 2; no
+  more launches. Lead replay verifies finite evidence only. A1, B1--B5, and C1
+  are `proved-math`; C2 is conditional; no Lean or unrestricted claim is
+  promoted.
+
+### OPS-R63-AUDIT-SYNC-015 — Response 63 audit synchronization
+
+- **ID:** `OPS-R63-AUDIT-SYNC-015`
+- **Lane:** research operations / audit synchronization
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `4b6ee54a1c64e847c505b632a46c326616678d1c`
+- **Dependencies:** lead disposition for `VER-R63-AUDIT-013`
+- **Branch:** `research/ops-r63-audit-sync-015`
+- **Status:** `review`
+- **Exact deliverable:** Integrate the lead-verified finite replay, corrected
+  mathematical/formal dispositions, routing failures, packaging defects, and
+  open-descent boundary without assigning Luna endorsement.
+- **Allowed files:** `docs/response63-audit.md`, `README.md`, `STATUS.md`,
+  `docs/full-proof-roadmap.md`, `docs/proof-obligations.md`,
+  `docs/parallel-task-board.md`, `docs/publication-audit.md`, and session log
+  only if necessary
+- **Acceptance command:** Validate links, paths, archive/member/manifest
+  hashes, exact census records, diff hygiene, scope, and privacy.
+- **Blocker:** Root review and integration only; the descent theorem remains
+  open research, not an implementation-ready artifact.
+- **Final disposition / promotion authority:** Documentation synchronization
+  ready for `/root`; only the lead-verified finite evidence and exact
+  `proved-math` lemmas are accepted.
 
 ### DPLP-REPAIR-001 — contract repair
 
@@ -571,8 +604,7 @@ as an accepted implementation or mathematical proof.
   the active Prompt60 turn or this board
 - **Acceptance command:** `git diff --check && lake env lean LonelyRunner/DeletionPivotLifting.lean && lake build && lake env lean LonelyRunner/AxiomAudit.lean`
 - **Blocker:** The formal contract is integrated, but the selector/correlation
-  theorem remains open and has no integration-ready artifact. PRO-C owns the
-  active research cell.
+  theorem remains open and has no integration-ready artifact.
 - **Final disposition / promotion authority:** Queued. It requires a fresh
   Verification Lead audit; `/root` alone may promote or integrate it.
 
@@ -725,13 +757,14 @@ as an accepted implementation or mathematical proof.
 5. Preserve Prompt60/61 at their audited dispositions and Prompt62 at its
    verified mixed **FAIL** disposition; integrate `docs/response62-audit.md`
    without promoting finite evidence or the residual bridge.
-6. Preserve Prompt63 as complete/recovered but **UNVERIFIED** while
-   `VER-R63-AUDIT-013` is active. No Sol Pro cell is occupied.
+6. Integrate Prompt63 only at the lead's **CONDITIONAL ACCEPT** disposition:
+   finite evidence and exact paper lemmas are accepted at stated scope, with
+   no Luna endorsement, Lean promotion, or descent/DPLP selector proof.
 7. Allocate future `DPLP-REPAIR-001` work only to the open selector/correlation
    theorem; the formal contract itself is no longer an integration blocker.
-8. Launch any additional Luna/xhigh work only through the verified top-level
-   CLI route; external CLI processes are not nested agents, and nested Luna
-   delegation must not be retried.
+8. Launch any unrelated future Luna/xhigh work only through the verified
+   top-level CLI route. Do not retry Response63: its input-missing turn is
+   invalid and both corrected launches failed before a turn.
 
 ## Manual field-audit checklist
 
