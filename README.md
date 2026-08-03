@@ -235,10 +235,10 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
 The current clean Lean source checkpoint is
-`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. Later commits through
-`d3b3f4966a4328b837e4df84eb138b48970a1a7e` add documentation, operations
-records, or research artifacts only, so `263a1cb` remains the authoritative
-source replay.
+`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. Every later commit in this
+published snapshot adds documentation, operations records, or research
+artifacts only, so `263a1cb` remains the authoritative source replay. Resolve
+the exact repository snapshot containing this text with `git rev-parse HEAD`.
 See [STATUS.md](STATUS.md) for the exact environment, timings, warnings, and
 historical CI results.
 

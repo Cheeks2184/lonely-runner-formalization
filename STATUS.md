@@ -319,11 +319,10 @@ promote no finite evidence, and change no unrestricted open claim.
 Last clean Lean source checkpoint:
 `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`.
 
-Every later commit through current base
-`4b6ee54a1c64e847c505b632a46c326616678d1c` adds documentation, operations
-records, or research artifacts only. The `263a1cb` detached replay is
-therefore the authoritative source verification for the current repository
-snapshot.
+Every later commit in the current published snapshot adds documentation,
+operations records, or research artifacts only. The `263a1cb` detached replay
+is therefore the authoritative source verification for this repository
+snapshot. Resolve the exact snapshot commit with `git rev-parse HEAD`.
 
 Pinned environment:
 
