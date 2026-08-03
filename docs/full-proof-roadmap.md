@@ -187,9 +187,22 @@ independent `N`. No new `proved-lean` result follows.
 
 ### Exact target
 
-The preferred target is the existing
-`PositiveIntegerPivotCertificateConjecture`. The nearest nontrivial
-strengthening with substantial finite evidence is `TOP-TWO-PIVOT`:
+The existing `PositiveIntegerPivotCertificateConjecture` is the exact target,
+but it is already Lean-equivalent to the positive-integer conjecture and is
+therefore tautological as a new bridge. The selected stronger sufficient lemma
+is `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`: every positive injective tuple has
+some pivot whose exact whole modular fiber blocks admit a capacity-respecting
+selection with strict credit greater than the bad-incidence excess.
+
+For pivot `j`, `p=a_j`, `M=(n+1)*p`, canonical grid `R_j`, and strict nonpivot
+bad sets `B_i^j`, the selection chooses at most one block
+`Q((i,u),k)=F(i,u) intersect B_k^j` for each complete owner-target fiber
+`F(i,u)`. Each residue `r` may be used at most `mu_j(r)-1` times, and the
+selection must satisfy the subtraction-free strict inequality
+`|R_j|+credit>sum_(i!=j)|B_i^j|`. Full definitions and boundaries are frozen in
+`research/sol-pro/prompts/prompt66.md`.
+
+The smallest thin-API alternative remains `TOP-TWO-PIVOT`:
 
 ```text
 For every injective positive integer tuple with at least two coordinates,
@@ -197,14 +210,18 @@ one of the two numerically largest speeds has an uncovered pivot candidate.
 ```
 
 Numerical top-two status must be expressed without an assumed indexing order,
-or after an explicit finite reindexing.
+or after an explicit finite reindexing. It is not a simultaneous cell:
+Prompt62 already attacked its integral transversal and Prompt64 already
+isolated its large-ratio branch.
 
 ### Scope and implication chain
 
-This is an **unrestricted direct bridge**:
+This is an **unrestricted direct sufficient-strengthening bridge**:
 
 ```text
-TOP-TWO-PIVOT
+ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING
+  -> PART-45 capacity inequality
+  -> one canonical pivot grid is not covered
   -> PositiveIntegerPivotCertificateConjecture
   -> PositiveIntegerConjecture
   -> standard LRC.
@@ -221,6 +238,12 @@ TOP-TWO-PIVOT
   tuples and 86,745 structured mutations (`computed finite evidence`).
 - Affine common-LCM fiber identities and quotient lifts are audited
   `proved-math`.
+- `PART-45` is `proved-lean`: it proves the abstract capacity inequality, not
+  existence of a modular threshold-beating selection.
+- `PART-46` and `PACK-08` are `proved-math`: they characterize the integer
+  packing and its exempt-owner coloring but do not prove pivot noncoverage.
+- `COMP-10` is fixed finite `proved-math` evidence: all eleven named stress
+  tuples have a strict packing pivot, with no unbounded consequence.
 
 ### Evidence against naive forms
 
@@ -232,15 +255,23 @@ TOP-TWO-PIVOT
   nonuniform or near-tautological on the consecutive family.
 - Random/additive ordering, GCD-clock, fixed-anchor, star, top-cycle, and
   three-step sufficient conditions all have exact non-LRC counterexamples.
+- General whole-block LP integrality is false: blocks `{x,y}`, `{y,z}`,
+  `{z,x}` with unit capacities have fractional optimum `3` and integer optimum
+  `2`. Ordinary flow handles only singleton blocks.
+- Whole-block packing may fail at a fixed pivot even when literal noncoverage
+  holds; `G=(15,21,40,48,56,105,126,280,1200)` at pivot `48` is exact.
 
 ### Single unresolved lemma
 
-`TOP-TWO-INTEGRAL-TRANSVERSAL`: in the residual large-gap/compressed-interval
-regime, exact affine fibers and the integral lower-speed bad sets cannot cover
-both robust top grids simultaneously.
+`ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`: prove the fully quantified modular
+selection, point-use capacity, and subtraction-free strict-credit statement
+frozen in Prompt66.
+It must exploit modular cosets rather than general hypergraph integrality,
+fractional duality, or literal exact-union computation.
 
-This must be an arithmetic integral statement. The rejected fractional dual
-cannot be reused as if it implied the integral claim.
+`FORM-B-UNIFORM-039` is specification-only and supplies no theorem. It records
+that the exact pivot-certificate conjecture itself is not new progress and that
+the modular instantiation/existence step above is the first unsupported edge.
 
 Response 62 audit update: the 8,108-row exact sweep and the hard
 `(N,A,B)=(7,98,187)` affine transversal number `5` are verified computed
@@ -282,17 +313,18 @@ and Browser/ChatGPT-control is not callable in the current runtime.
 
 ### Falsification and stop contract
 
-- Search top-two exactly on every new primitive box and on structured CRT,
-  large-gap, saturated, deletion, and affine-fiber mutations.
-- Evaluate each sufficient inequality on the RF, GCD-clock, OPT-ADD,
-  anchor-star, TOP-CYCLE, CHAIN3, and consecutive-family stresses before Lean.
-- A genuine exact tuple with both top grids covered refutes `TOP-TWO-PIVOT`
-  and immediately ends this strengthening, while leaving unrestricted pivot
-  existence open.
-- Reassess after **three major Sol Pro turns, one targeted complete affine
-  sweep, and one Lean prototype**. If only another fractional relaxation or a
-  restatement of integral cover survives, freeze top-two and fall back to the
-  unrestricted all-pivot form.
+- Test every sufficient condition on `F`, `G`, the nine other `COMP-10`
+  tuples, every tracked UNIF obstruction, consecutive families, and structured
+  CRT/collision/high-gcd/affine/saturated/deletion/large-gap mutations.
+- An exact tuple whose integer packing optimum never beats the strict threshold
+  at any pivot refutes only the packing lemma, not pivot noncoverage or LRC.
+- Do not restate the exact bad-set union or packing optimization; do not reopen
+  Prompt64 bounded scans or Prompt65 verifiers.
+- Maximum budget is **one Sol Pro turn, at most 10,000 deliberately constructed
+  packing instances, and at most one Lean prototype only after the mathematics
+  survives**. Stop on a lemma counterexample, generic-integrality dependency,
+  duplication, tautological cover restatement, or failure to narrow the lemma.
+- Browser/ChatGPT-control is unavailable, so `SOL-P66-PRO-B-001` is waiting.
 
 ## Bridge C contract: deletion-pivot lifting induction
 
@@ -536,6 +568,23 @@ Malikiosis--Santos--Schymura, used by Rosenfeld's successful finite-dimensional
 proofs. It has not been formalized in this repository and is an explicit
 external dependency.
 
+`VER-C2-DEPENDENCY-038` accepts its exact indexing and strict product
+corollary. The paper's `n` positive speeds give `n+1` total runners after
+adjoining zero, and the induction hypothesis is LRC for `n` total runners. If
+`Q` is a product of forced distinct primes, the sufficient integer comparison
+is
+
+```text
+n^n*Q >= binom(n+1,2)^(n(n-1)).
+```
+
+Weak `>=` is enough because the counterexample product bound is strict. The
+MSS theorem, primitive/induction wrapper, subset-gcd sum, AM--GM corollary,
+forced-prime product assembly, and final contradiction are all missing from
+the Lean project. See
+`docs/c2-prime-forcing-dependency-audit.md`; this is accepted external
+unformalized mathematics, not `proved-lean`.
+
 ### Existing support and evidence against
 
 - Rosenfeld's primary nine-runner paper proves the local forcing implication
@@ -549,6 +598,10 @@ external dependency.
   eventual-validity, or computable all-dimension supply theorem.
 - The local forcing property is itself a growing finite cover statement and
   may encode nearly the original difficulty.
+- The Response60 artifact reports `n=3` premise counts `64`, `256`, `6,912`,
+  `32,000`, and `55,296` for primes `2,3,7,11,13`, with no reported failure,
+  while `(N,p,v)=(4,5,(1,3,4) mod 20)` rejects `PrimeForcing(3,5)`. These are
+  finite evidence only; the whole artifact was not reproducible.
 
 ### Single unresolved lemma
 
@@ -573,9 +626,9 @@ modulus.
 
 | Rank | Bridge | Distance to LRC | Current assessment |
 | ---: | --- | --- | --- |
-| 1 | C1: deletion-pivot lifting | One modular correlation theorem | Sound lift is Lean-verified; exact shell counts and strong targeted survival narrow the gap to singleton overlap |
-| 2 | B: top-two/uniform pivot | One arithmetic theorem | Prompt64's exact large-ratio route is frozen at an incomplete verification stop; the theorem remains open and several relaxations are already refuted |
-| 3 | C2: prime-forcing product induction | One uniform supply theorem plus an external product-bound dependency | Directly extends recent successful finite-dimensional work, but the local cover may remain LRC-hard |
+| 1 | B: unrestricted all-pivot packing | One stronger modular selection lemma, then existing capacity and pivot reductions | `SOL-P66-PRO-B-001` is the selected next cell; abstract integrality is false, but exact modular structure and all eleven fixed stresses support one bounded turn |
+| 2 | C2: prime-forcing product induction | One uniform supply theorem plus induction and an external product-bound dependency | Primary theorem/product logic is accepted but unformalized; local forcing may remain LRC-hard and overlaps prior Prompt60 work |
+| 3 | C1: deletion-pivot lifting | STOP / OPEN | Sound local ReverseGrid arithmetic survives, but the first-blocker transfer verifier route is frozen under the Prompt65 restart rule |
 | 4 | A: height compression | Frozen at the missing replacement-eligibility existential | `STOP` after Response 61: sound signed-divisor transport exists on paper, but the exact route has no supported descent operation and its finite artifact is nonreproducible |
 
 The ranking is provisional and must change when an exact counterexample,
@@ -585,6 +638,10 @@ proof, or budget stop condition is reached.
 
 | Date | Result | Label | Material effect on unrestricted path |
 | --- | --- | --- | --- |
+| 2026-08-03 | `OPS-FULL-REASSESS-037` ranks B before C2; C1 remains STOP/OPEN and A frozen | research recommendation | Selects one direct all-pivot contract without reopening Prompt64/65 or promoting a result |
+| 2026-08-03 | `VER-C2-DEPENDENCY-038` accepts exact MSS indexing/product logic | external unformalized mathematics | Keeps C2 open but second; records missing Lean wrappers and finite-only prime evidence |
+| 2026-08-03 | `FORM-B-UNIFORM-039` isolates modular whole-block existence as the sole new lemma | specification-only/open | Prevents tautological relabeling of the existing pivot equivalence and preserves top-two only as an alternative |
+| 2026-08-03 | `OPS-P66-CONTRACT-040` packages `SOL-P66-PRO-B-001` | queued contract only | One capped unrestricted research cell is waiting for external control; no result is promoted |
 | 2026-08-02 | Entered FULL-PROOF PRIORITY MODE; fixed A/B/C contracts and budgets | research policy | Replaces coefficient-by-coefficient optimization with three explicit unrestricted bridges |
 | 2026-08-02 | Response 57 fixed-shift obstruction: no finite fixed J1 shift family is uniformly row-nonempty | proved-math, independent finite checks | Does not shorten unrestricted path; supports freezing bounded translation variants |
 | 2026-08-02 | Submitted Sol Pro Prompt 58 on A/B/C with adversarial contracts | research in progress | Strategy generation only; no theorem yet |

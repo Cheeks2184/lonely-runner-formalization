@@ -228,16 +228,15 @@ restrictions do not force such a pivot.
 Research is now in **FULL-PROOF PRIORITY MODE**. Tracked unrestricted branches
 and their current dispositions, in priority order, are:
 
-1. C1: **STOP / OPEN** at the first-blocker/maximizer transfer toward corrected
-   DPLP. Further verifier implementation is frozen unless a real nonvacuous
-   exact case, a direct mathematical proof or refutation, or an independently
-   reviewed new contract first becomes available;
-2. B: prove or refute the unrestricted top-two pivot property, then fall back
-   to the exact all-pivot certificate; its immediate target is an integral
-   affine-fiber/transversal theorem, not the rejected fractional dual;
-3. C2: prove a uniform supply of prime-forcing moduli whose product exceeds
+1. B: prove or refute the unrestricted all-pivot modular whole-block packing
+   lemma. The exact pivot-certificate conjecture is already a tautological
+   Lean-equivalent bridge; the new content must be the stronger
+   capacity-respecting whole-fiber selection at some pivot;
+2. C2: prove a uniform supply of prime-forcing moduli whose product exceeds
    the published minimal-counterexample product bound; this route retains an
    external unformalized product-bound dependency;
+3. C1: **STOP / OPEN** at the first-blocker/maximizer transfer. Verifier
+   implementation remains frozen under the Prompt65 restart rule;
 4. A: keep the least-primitive-counterexample height route frozen after
    Response 61; restart it only with a genuinely new replacement operation or
    a proof of signed-divisor eligibility, not more iterations of the stopped
@@ -362,12 +361,34 @@ unsupported chain remains
 N*a_h crossing -> M_h -> active n*a_j -> successor edge -> Delta<=tau.
 ```
 
+`OPS-FULL-REASSESS-037` ranks unrestricted route B before C2 by distance to
+unrestricted LRC, then estimated success, then publishability.
+`FORM-B-UNIFORM-039` is specification-only: the existing
+`PositiveIntegerPivotCertificateConjecture` is already Lean-equivalent to the
+target, so it cannot itself be relabeled as a new bridge. The sole new lemma is
+`ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, whose exact modular token/block,
+capacity, and strict-credit hypotheses must instantiate the existing
+`PART-45` capacity theorem. `PART-46`, `PACK-08`, and `COMP-10` supply only
+proved-math structure and fixed finite evidence at their recorded scopes.
+Top-two remains the smallest thin-API alternative, not a simultaneous cell.
+
+`VER-C2-DEPENDENCY-038` accepts the exact indexing and hypotheses of the
+published Malikiosis--Santos--Schymura Theorem A and its strict product
+corollary, including the sufficient integer comparison
+`n^n*Q >= binom(n+1,2)^(n(n-1))`. This dependency remains external and
+unformalized. The recorded `n=3` prime counts and `PrimeForcing(3,5)` rejection
+are finite evidence only; `UniformPrimeForcingSupply` and the required Lean
+wrappers remain open. See
+[the C2 dependency audit](docs/c2-prime-forcing-dependency-audit.md).
+
 `SOL-P64-PRO-B-001` remains waiting: the Prompt64 contract is integrated as a
 documentary package, but the required signed-in ChatGPT Sol Pro conversation
 has never run and Browser/ChatGPT-control is not callable in the current
 runtime. `SOL-P65-PRO-C-001`, `FIRST-BLOCKER-MAXIMIZER-TRANSFER`, is likewise
-waiting for external signed-in ChatGPT Sol Pro control. Its tracked Prompt65
-package is a contract only and does not reopen verifier implementation.
+waiting/frozen under the Prompt65 stop rule. `SOL-P66-PRO-B-001`,
+`ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, is the selected next unrestricted
+cell, but it is also waiting because external signed-in ChatGPT Sol Pro control
+is unavailable. Its tracked Prompt66 package promotes no result.
 
 The formal source checkpoint is now
 `586b4858cd1b1c513566f3b33d7b5141640e7865`; merged main

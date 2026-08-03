@@ -1,7 +1,7 @@
 # Parallel task board
 
 This file is the authoritative coordination record for the public/base
-snapshot at commit `80e8cee4bb31bf99733c2687e4674bfdafe03889`. The formal
+snapshot at commit `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`. The formal
 source checkpoint remains `586b4858cd1b1c513566f3b33d7b5141640e7865`, as
 recorded below. Historical worker rows retain their actual fixture bases. The
 board records task routing and integration readiness; it does not promote any
@@ -36,14 +36,14 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 15 | The prior eleven plus `FORM-P65-SPEC-028`, `VER-P65-PREFLIGHT-027`, `VER-P65-CODE-AUDIT-030`, and `VER-P65-REPAIR-REVIEW-032` are each accepted only at their exact specification, contract, or negative-audit scope. |
+| Accepted audit deliverables | 18 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, and `FORM-B-UNIFORM-039` are each accepted only at their exact recommendation, external-dependency-audit, or specification scope. |
 | Accepted negative audits | 10 | The prior eight plus the Prompt65 code audit and repair review are valid negative results; rejected verifier output is not counted as computed evidence. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
 | Accepted implementations | 0 unrestricted; 3 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, and exact ReverseGrid arithmetic are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 4 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), board/Prompts60--63 package (`263a1cb`), and ReverseGrid formal source (`586b485`, merged by `99a78c1`) are on main. |
 | Authoritative source replay | integrated / verified warm-cache | Formal source checkpoint `586b485` passed module/root direct compiles, 3,001-job target and 3,590-job root builds, and standard-foundation axiom probes in an isolated warm-cache worktree. Main `99a78c1` has the same Lean tree. The latest full detached clean replay remains the older `263a1cb` record. |
-| Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited by the lead; Prompt64 and Prompt65 external executions are waiting. |
-| Queued Sol Pro cells | 1 | `SOL-P65-PRO-C-001` is waiting for callable signed-in ChatGPT Sol Pro control; the tracked prompt is only a contract. |
+| Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited; Prompt64 is waiting, Prompt65 is waiting/frozen, and Prompt66 cannot launch without external control. |
+| Queued Sol Pro cells | 1 | `SOL-P66-PRO-B-001` is the selected next unrestricted cell and is waiting for callable signed-in ChatGPT Sol Pro control. |
 | Active Sol Medium leads | 0 running / 3 roles | Verification, Formalization, and Research Operations have completed their current reviewed tranches. |
 | Active Luna workers | 0 / 6 | The ReverseGrid worker had genuine fresh top-level Luna/xhigh runtime metadata but exited without a report or commit; the Formalization Lead independently completed and reviewed the theorem. Historical Response63 routing failures retain their recorded scope. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
@@ -52,8 +52,9 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | Prompt65 contracts/specifications | 2 reviewed / 0 promoted | `VER-P65-PREFLIGHT-027` is conditional-ready only and `FORM-P65-SPEC-028` is SPEC-ONLY/OPEN. |
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
-| Integration backlog | 1 documentation group | The Prompt65 preflight stop audit awaits PI review; the Prompt65 prompt package and reviewed ReverseGrid source are already tracked. |
-| Wait time | External control waiting | Browser/ChatGPT-control is not callable in the current runtime; Prompt64 and Prompt65 Sol Pro cells have no submitted response. |
+| Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
+| Integration backlog | 1 contract/documentation group | Prompt66 and the C2 dependency audit await PI review; Prompt64/P65 retain their separate stopped or waiting records. |
+| Wait time | External control waiting | Browser/ChatGPT-control is not callable in the current runtime; Prompt64, Prompt65, and Prompt66 have no submitted external response. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -751,6 +752,119 @@ as an accepted implementation or mathematical proof.
 - **Final disposition / promotion authority:** Documentation review artifact.
   It promotes no computation, formal result, or unrestricted claim.
 
+### OPS-FULL-REASSESS-037 — unrestricted route reassessment
+
+- **ID:** `OPS-FULL-REASSESS-037`
+- **Lane:** research operations / unrestricted route ranking
+- **Owner / supervising lead:** Research-Operations Lead
+- **Base:** `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`
+- **Dependencies:** Prompt65 STOP/OPEN record and current B/C2 contracts
+- **Branch / worktree:** read-only public-main audit; private path omitted
+- **Status:** `verified` (recommendation only)
+- **Exact deliverable:** Re-rank B and C2 by distance to unrestricted LRC,
+  estimated success, then publishability, and identify one nonduplicative cell.
+- **Allowed files:** none; read-only reassessment
+- **Acceptance command:** Inventory Prompt60--65 duplication and preserve every
+  stop/frozen boundary without promoting a result.
+- **Blocker:** Browser/ChatGPT-control prevents external execution, not route
+  analysis.
+- **Final disposition / promotion authority:** B ranks first, C2 second, C1
+  remains STOP/OPEN, and A remains frozen. The single recommendation is the
+  all-pivot modular whole-block packing contract. No status promotion follows.
+
+### VER-C2-DEPENDENCY-038 — C2 primary dependency audit
+
+- **ID:** `VER-C2-DEPENDENCY-038`
+- **Lane:** verification / literature dependency audit
+- **Owner / supervising lead:** Verification Lead
+- **Base:** `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`
+- **Dependencies:** Response59/60 audits and primary MSS/Rosenfeld sources
+- **Branch / worktree:** read-only audit; private path omitted
+- **Status:** `verified` (external dependency only)
+- **Exact deliverable:** Audit MSS Theorem A indexing/hypotheses, its strict
+  product corollary, the forced-prime threshold, and missing Lean wrappers.
+- **Allowed files:** none during audit; documentation synchronization only
+- **Acceptance command:** Match the primary statements and preserve finite
+  prime computations separately from theorem status.
+- **Blocker:** MSS Theorem A, induction indexing, AM--GM product wrapper,
+  forced-prime assembly, and final contradiction are not formalized in Lean;
+  `UniformPrimeForcingSupply` remains open.
+- **Final disposition / promotion authority:** Exact external theorem and
+  `n^n*Q>=binom(n+1,2)^(n(n-1))` comparison accepted as unformalized
+  mathematics. The `n=3` counts and `p=5` rejection are finite evidence only.
+
+### FORM-B-UNIFORM-039 — all-pivot packing specification
+
+- **ID:** `FORM-B-UNIFORM-039`
+- **Lane:** formal specification / unrestricted PRO-B
+- **Owner / supervising lead:** Formalization Lead
+- **Base:** `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`
+- **Dependencies:** `PART-45`, `PART-46`, `PACK-08`, `COMP-10`, and the exact
+  pivot-certificate equivalence
+- **Branch / worktree:** read-only specification audit; private path omitted
+- **Status:** `verified` (specification-only)
+- **Exact deliverable:** Identify the first non-tautological theorem edge and
+  the exact declarations needed to connect modular packing to pivot noncoverage.
+- **Allowed files:** none; read-only specification audit
+- **Acceptance command:** Distinguish existing Lean equivalence and abstract
+  capacity theorems from the missing modular existence statement.
+- **Blocker:** `PositiveIntegerPivotCertificateConjecture` is already
+  Lean-equivalent to the target. The missing content is a stronger selection
+  of whole modular fiber blocks at some pivot with exact point capacities and
+  strict threshold credit.
+- **Final disposition / promotion authority:** **SPEC-ONLY / OPEN.** Top-two
+  remains the smallest thin-API alternative, not a simultaneous cell.
+
+### OPS-P66-CONTRACT-040 — Prompt66 contract packaging
+
+- **ID:** `OPS-P66-CONTRACT-040`
+- **Lane:** research operations / Sol Pro contract
+- **Owner / supervising lead:** Research-Operations Lead
+- **Base:** `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`
+- **Dependencies:** `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, and
+  `FORM-B-UNIFORM-039`
+- **Branch:** `research/ops-p66-contract-040`
+- **Status:** `review`
+- **Exact deliverable:** Package the sole stronger all-pivot modular packing
+  lemma, C2 dependency audit, route ranking, falsification suites, and stop cap.
+- **Allowed files:** `research/sol-pro/prompts/prompt66.md`,
+  `docs/c2-prime-forcing-dependency-audit.md`, `STATUS.md`,
+  `docs/full-proof-roadmap.md`, `docs/proof-obligations.md`, and this board
+- **Acceptance command:** Verify exact base and allowed-file diff; run
+  `git diff --check` and an added-line privacy/secret scan; commit once.
+- **Blocker:** PI review/merge and unavailable external Browser/ChatGPT control.
+- **Final disposition / promotion authority:** Contract/documentation artifact
+  only. It promotes no computation, theorem, Lean result, or unrestricted claim.
+
+### SOL-P66-PRO-B-001 — ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING
+
+- **ID:** `SOL-P66-PRO-B-001`
+- **Lane:** Sol Pro / PRO-B unrestricted all-pivot packing
+- **Owner / supervising lead:** unassigned external worker / Research-Operations Lead
+- **Base:** Prompt66 contract packaged from
+  `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`; exact launch base must be
+  recorded when control becomes available
+- **Dependencies:** exact pivot-certificate equivalence, `PART-45`, `PART-46`,
+  `PACK-08`, `COMP-10`, and accepted specification `FORM-B-UNIFORM-039`
+- **Branch:** none during the external signed-in Sol Pro conversation
+- **Status:** `waiting` (selected next cell)
+- **Exact deliverable:** Prove or refute the sole stronger modular lemma: some
+  pivot admits at most one whole block per token, point use `<=mu(r)-1`, and
+  the subtraction-free strict inequality `|R_j|+credit>sum_i|B_i|`.
+- **Allowed files:** none during the external turn; recovery requires a
+  separately authorized task
+- **Acceptance command:** Verify Prompt66 file SHA-256
+  `99c322dd38943550eabbe29bd7e6fe50c5493912dd3428d282969b19be78799f`,
+  then require full quantified definitions, implication chain, mandatory
+  stress replay, exact certificates, first unsupported implication, and
+  stop/continue decision.
+- **Blocker:** Browser/ChatGPT-control is unavailable. Maximum budget is one
+  Sol Pro turn, at most 10,000 constructed packing instances, and at most one
+  Lean prototype only after the mathematics survives falsification.
+- **Final disposition / promotion authority:** Waiting contract only. A
+  packing failure rejects only the sufficient strengthening; a finite packing
+  witness proves only its instance. No result is promoted without review.
+
 ### SOL-P65-PRO-C-001 — FIRST-BLOCKER-MAXIMIZER-TRANSFER
 
 - **ID:** `SOL-P65-PRO-C-001`
@@ -762,7 +876,7 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** verified integration of ReverseGrid C1 through formal
   checkpoint `586b485`; Prompt64 and Prompt65 stop records
 - **Branch:** none; new unrestricted signed-in ChatGPT Sol Pro conversation
-- **Status:** `queued` (execution waiting)
+- **Status:** `waiting` (frozen; not the active next cell)
 - **Exact deliverable:** Execute `FIRST-BLOCKER-MAXIMIZER-TRANSFER` exactly as
   packaged in `research/sol-pro/prompts/prompt65.md`, preserving the explicit
   maximizer, first-blocker, orientation, and `N*a_h` to `n*a_j` grid-conversion
@@ -776,9 +890,9 @@ as an accepted implementation or mathematical proof.
 - **Blocker:** Browser/ChatGPT-control is not callable in the current runtime,
   so external execution is waiting. The tracked package is a contract only;
   verifier implementation remains frozen under the Prompt65 stop rule.
-- **Final disposition / promotion authority:** Queued/waiting as the next
-  unrestricted C1 cell. No response, proof, finite evidence, or theorem
-  promotion exists yet; only `/root` may launch or promote.
+- **Final disposition / promotion authority:** Waiting/frozen under the
+  Prompt65 stop rule. It is not simultaneous with Prompt66. No response,
+  proof, finite evidence, or theorem promotion exists.
 
 ### SOL-P63-PRO-C-001 — deletion-induction contract
 
@@ -1146,13 +1260,14 @@ as an accepted implementation or mathematical proof.
 9. Preserve `VER-P64-FALSIFY-022` and `VER-P64-REPAIR-023` as incomplete,
    rejected-as-evidence records. Do not promote the repaired domain, the
    prefix, the A/B counts, or the historical pre-defect hash.
-10. Keep `SOL-P65-PRO-C-001` waiting for callable signed-in ChatGPT Sol Pro
-    control. The tracked Prompt65 package is only a contract. Keep C1
-    **STOP / OPEN** and freeze further verifier implementation unless a real
-    nonvacuous exact case, a direct mathematical proof/refutation, or an
-    independently reviewed new contract arises. Preserve the exact
-    `N*a_h crossing -> M_h -> active n*a_j -> successor edge -> Delta<=tau`
-    gap.
+10. Keep Prompt64 waiting and Prompt65 waiting/frozen. Do not restart Prompt64
+    bounded scans or Prompt65 verifier implementation. Preserve C1 **STOP /
+    OPEN** and the exact `N*a_h crossing -> M_h -> active n*a_j -> successor
+    edge -> Delta<=tau` gap.
+11. Select `SOL-P66-PRO-B-001` as the one next unrestricted cell. Its sole new
+    lemma is the stronger all-pivot modular whole-block selection; the exact
+    pivot-certificate conjecture is not itself new progress. Keep C2 second
+    with its external unformalized dependency, C1 STOP/OPEN, and A frozen.
 
 ## Manual field-audit checklist
 
