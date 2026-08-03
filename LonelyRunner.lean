@@ -22,9 +22,12 @@ import LonelyRunner.CoefficientThreeHeight
 import LonelyRunner.CoefficientTwoRectangle
 import LonelyRunner.CoefficientTwoReversal
 import LonelyRunner.CoefficientTwoFeasibleStarts
+import LonelyRunner.CoefficientTwoArbitraryReversal
+import LonelyRunner.GammaTwoTranslation
 import LonelyRunner.PartialMatchingDichotomy
 import LonelyRunner.MatchingDependency
 import LonelyRunner.MatchingContraction
+import LonelyRunner.CriticalCoreContraction
 import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts
