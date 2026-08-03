@@ -1,7 +1,7 @@
 # Parallel task board
 
 This file is the authoritative coordination record for the repository snapshot
-based on main commit `c6003cfee0964d0c935c61a2a66081591008db07`.
+based on main commit `477fbffc709d0550c163e2812f26193a4ec38cff`.
 The last source-changing checkpoint is
 `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`; later commits through the snapshot
 add documentation, operations records, or research artifacts only. Historical
@@ -39,19 +39,19 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | --- | ---: | --- |
 | Accepted audit deliverables | 8 | The prior six accepted audits plus `VER-R60-AUDIT-004` and `VER-R61-AUDIT-005` are accepted at their exact mixed dispositions. |
 | Accepted negative audits | 6 | The prior four negative audits plus the two mandatory Response 60/61 replay failures returned valid negative results. |
-| Accepted recovery deliverables | 2 | `SOL-R59-RECOVER-001` recovered Response59, and `OPS-P62-RECOVER-009` recovered Response62 plus its supplied bundle; neither recovery promotes claims. |
+| Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
 | Accepted implementations | 0 unrestricted; 2 supporting artifacts | The corrected conditional DPLP contract/wrapper and Response59 regression verifier are integrated; neither proves an open bridge. |
 | Integrated deliverable groups | 3 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), and board/Prompts60--63 package (`263a1cb`) are on main. |
 | Authoritative source replay | integrated / verified | `VER-CHECKPOINT-263A1CB-003` verified the detached tracked-clean ext4 replay of source checkpoint `263a1cb`; later snapshot commits are documentation/operations only. |
-| Active Sol Pro cells | 1 / 4 | Prompt60 PRO-E and Prompt61 PRO-A are complete and audited; Prompt62 PRO-B is complete and recovered but unverified; Prompt63 PRO-C remains active. |
-| Queued Sol Pro cells | 0 | Three slots are free, but no additional cell is queued in this snapshot. |
+| Active Sol Pro cells | 0 / 4 | Prompt60/61 are complete and audited; Prompt62/63 are complete and recovered but unverified. |
+| Queued Sol Pro cells | 0 | All four slots are free, but no additional cell is queued in this snapshot. |
 | Active Sol Medium leads | 0 running / 3 roles | Verification and Research Operations are complete at this snapshot; Formalization remains interrupted after its stall. |
 | Active Luna workers | 0 / 6 | The recorded DPLP, Response 59, Response 60, and Response 61 verification tasks are complete. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 3 | Nested Luna spawn rejection, the downgraded first formal write launch, and one Formalization Lead stall are counted; none is evidence for or against a claim. |
 | Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
 | Integration backlog | 0 ready artifacts | The DPLP selector/correlation remains open research, not an integration-ready deliverable. |
-| Wait time | Not recorded | Prompt63 remains active, but a trustworthy start timestamp is not present in this repository snapshot. Do not invent elapsed time. |
+| Wait time | None active | No Sol Pro turn remains active in this snapshot. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -427,7 +427,7 @@ as an accepted implementation or mathematical proof.
   independently accepted proved-math
 - **Branch:** none; genuinely new external ChatGPT conversation, with the
   prompt artifact tracked on main
-- **Status:** `active`
+- **Status:** `review`
 - **Exact deliverable:** Attack only corrected deletion-certificate
   correlation, reverse witness lifting, descent, and induction, with the full
   D6 no-full-witness and nonempty-`K_k` hypotheses. Do not enter height-only
@@ -442,10 +442,45 @@ as an accepted implementation or mathematical proof.
   `8a6714a63d55d155f06cdc433b4b3e19fff100a4a30640fa6a79fa11b3a3ddd7`;
   confirm exact composer readback, exact normalized post-send copy, and live
   `Stop answering`.
-- **Blocker:** The external turn is active. No PRO-C result exists yet.
-- **Final disposition / promotion authority:** Submission evidence accepted;
-  `/root` owns recovery and may accept or promote only an independently
-  audited result.
+- **Blocker:** Response63 and 19 safe supplied bundle members are recovered,
+  but no independent replay or mathematical audit has been accepted. Two
+  redundant generated core outputs are intentionally omitted with exact
+  expected sizes, hashes, and reproduction provenance recorded.
+- **Final disposition / promotion authority:** Prompt63 is complete and
+  recovered by `OPS-P63-RECOVER-011` with status **UNVERIFIED**. Every finite
+  computation remains unverified evidence; response self-labels and its
+  pseudo-Lean declaration are not accepted. `MINIMUM-ESCAPE-FIRST-BLOCKER-DESCENT`
+  and corrected DPLP remain conjectural/open. Only `/root` may promote a claim.
+
+### OPS-P63-RECOVER-011 — Response 63 recovery
+
+- **ID:** `OPS-P63-RECOVER-011`
+- **Lane:** research operations / response recovery
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `477fbffc709d0550c163e2812f26193a4ec38cff`
+- **Dependencies:** completed `SOL-P63-PRO-C-001` external turn and supplied
+  response/bundle recovery material
+- **Branch:** `research/ops-p63-recover-011`
+- **Status:** `review`
+- **Exact deliverable:** Recover exact normalized Response63 and safe
+  public-release text/source/certificate bundle members, record exact
+  provenance and omissions, and preserve the independent-audit boundary.
+- **Allowed files:** `research/sol-pro/responses/response63.md`,
+  `research/sol-pro/artifacts/prompt63/`, `research/sol-pro/session-log.md`,
+  and `docs/parallel-task-board.md`
+- **Acceptance command:** Require normalized response SHA-256
+  `b3db11b42448d3b92d3d9522fdac89128a46ca7de32cca19b033ac202242e134`;
+  require supplied ZIP SHA-256
+  `5832a26d51410dd661c545be4490e39dadc445a65fc80590917dc4e1474a0f8b`;
+  byte-compare all 19 preserved members, validate safe text-only scope and
+  privacy, and document any exact-byte whitespace whitelist.
+- **Blocker:** Independent replay and claim-by-claim mathematical audit remain
+  pending. The two omitted core TSVs must be regenerated for whole-output
+  comparison.
+- **Final disposition / promotion authority:** Recovery is ready for `/root`
+  review. All computations remain unverified finite evidence;
+  `MINIMUM-ESCAPE-FIRST-BLOCKER-DESCENT` and corrected DPLP remain
+  conjectural/open, and no response self-label or pseudo-Lean claim is promoted.
 
 ### DPLP-REPAIR-001 — contract repair
 
@@ -618,8 +653,8 @@ as an accepted implementation or mathematical proof.
    `docs/response59-audit.md`; the regression verifier is finite evidence,
    not a uniform proof.
 5. Preserve Prompt60/61 as completed at their audited dispositions; preserve
-   Prompt62 as complete/recovered but **UNVERIFIED** pending independent replay;
-   keep Prompt63 active. One of four Sol Pro cells is occupied at this snapshot.
+   Prompt62/63 as complete/recovered but **UNVERIFIED** pending independent
+   replay. No Sol Pro cell is occupied at this snapshot.
 6. Allocate future `DPLP-REPAIR-001` work only to the open selector/correlation
    theorem; the formal contract itself is no longer an integration blocker.
 7. Launch any additional Luna/xhigh work only through the verified top-level

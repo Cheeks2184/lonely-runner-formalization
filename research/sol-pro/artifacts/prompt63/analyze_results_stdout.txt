@@ -1,0 +1,1 @@
+{"dplp_failures": 0, "dplp_premise": 4296, "literal_tables_sha256": "14d69a4c22ca0e78ec1d2768dff8c904c3c3494b4c9c99989119314a1d85b1ee", "no_exceptional": 36, "records": 4694, "selector_failures": 0, "selector_tested": 36, "summary_sha256": "ff41f39aeed62517c60be31da2ab056b7f1a7e4f534c66fa8759a7bb508ff042"}
