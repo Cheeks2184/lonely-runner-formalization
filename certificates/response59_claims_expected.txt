@@ -1,0 +1,20 @@
+label=FINITE_COMPUTED_EVIDENCE_ONLY
+vector=(1,3,4,7) d2=(0,-2,-6,-4) d3=(0,0,0,0) actual_good=(0,0,0,0)
+vector=(1,2,3,60) d2=(-1,0,-9,-36) d3=(0,0,0,24) actual_good=(0,0,0,24)
+vector=(1,2,6,8,10) d2=(0,-2,-8,-10,-22) d3=(0,0,0,4,2) actual_good=(0,0,0,4,4)
+vector=OPT-ADD_G d2=(-16,-70,-138,-174,-268,-492,-642,-1422,-5826) d3=(28,26,26,30,26,86,26,-30,90) actual_good=(28,28,52,48,58,126,138,304,1328)
+vector=(1,3,4,5,18) d2=(0,0,-4,-12,-20) d3=(0,0,0,0,0) actual_good=(0,0,0,0,4)
+shell_lifts_speed=((39,5,15),(41,4,16),(49,4,16),(51,5,15))
+shell_lifts_index=((39,3,15),(41,2,16),(49,2,16),(51,3,15))
+p1_A1=(0,1,2,3,4,16,17,18,19)
+p1_A3=(0,1,6,7,8,12,13,14,19)
+p1_A4=(0,1,4,5,6,9,10,11,14,15,16,19)
+p1_deleted_coordinate_gcds=(1,1,1)
+p1_Z0=0
+p1_Z1=13
+p1_2Z0_plus_Z1=13
+p1_lower_bound=4
+p1_no_empty_residue=True
+search=(n=3,max=20) eligible_checked=557 first=NONE
+search=(n=4,max=20) eligible_checked=2864 first=NONE
+search=(n=5,max=18) eligible_checked=266 first=(1,3,4,5,18) d3=(0,0,0,0,0) actual_good=(0,0,0,0,4)
