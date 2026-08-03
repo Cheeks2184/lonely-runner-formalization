@@ -43,27 +43,27 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 27 | The prior 25 plus qualified mathematical/computation audit `FORM-P66-RESPONSE-MATH-AUDIT-067` and mechanical recovery/provenance audit `OPS-P66-RECOVERY-PROVENANCE-068` are accepted only at their exact scopes. Neither promotes a response self-label, theorem, computation, or finite evidence. |
+| Accepted audit deliverables | 28 | The prior 27 plus independently replayed Prompt66 certificate audit `LUNA-P66-CERT-REPLAY-069`, accepted by `VER-LUNA-P66-REPLAY-SUPERVISE-070`, are accepted only at exact finite-evidence scope. No response self-label, theorem, computation, or unrestricted result is promoted. |
 | Accepted negative audits | 14 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, `VER-P66-C2-DOCS-042`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, and `VER-P66-FINAL-REVIEW-051` are valid negative results; the two postfix ACCEPT reviews are nonnegative audits, and rejected verifier output and queued work are not counted as computed evidence. |
-| Accepted operational documentation tasks | 3 | The prior two plus `OPS-P66-P64-LIFECYCLE-SYNC-071` are accepted only for reviewed ownership, lifecycle, launch-state, routing-history, and recovery/audit synchronization; none supplies a research response or result. |
+| Accepted operational documentation tasks | 4 | The prior three plus verified documentation sync `LUNA-P66-REPLAY-DOCSYNC-077` are accepted only for reviewed ownership, lifecycle, launch-state, routing-history, replay/audit, and public-status synchronization; none supplies a research response or result. |
 | Accepted recovery deliverables | 4 | Response59, Response62, Response63, and Prompt66 recovery deliverables are recorded without promoting claims. Prompt66 recovery preserves the exact clipboard, safe ZIP members, and separate SHA list, subject to the recorded path/packaging corrections. |
-| Accepted implementations | 0 unrestricted; 4 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, exact ReverseGrid arithmetic, and supplied packing adapter are integrated; none proves an open bridge. |
-| Integrated deliverable groups | 5 | The prior four groups plus supplied packing adapter merge `fadc65d` are integrated. The adapter promotes only `exists_avoiding_of_overlapCapacity` and `exists_pivot_certificate_of_overlapPacking` to `proved-lean`. |
+| Accepted implementations | 0 unrestricted; 5 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, exact ReverseGrid arithmetic, supplied packing adapter, and independent Prompt66 replay verifier are integrated; none proves an open bridge. |
+| Integrated deliverable groups | 6 | The prior five groups plus the independently reviewed Prompt66 replay package integrated by `/root` in merge `fc2d023e9df1c554cc67fadedece1325e72694b` are integrated. The adapter still promotes only `exists_avoiding_of_overlapCapacity` and `exists_pivot_certificate_of_overlapPacking` to `proved-lean`. |
 | Authoritative source replay | integrated / verified clean ext4 | Merge `fadc65d` passed cache retrieval (8,638 artifacts), full `lake build`, a 302-report standard-foundation trust audit, and all 160 Python tests in a clean ext4 replay. |
 | Active Sol Pro cells | 1 / 4 | `SOL-P64-PRO-B-001` is active in the original signed-in desktop conversation launched by `/root`; Prompt66 is completed/recovered at STOP/OPEN and Prompt65 remains parked/frozen. |
 | Prepared / parked Sol Pro cells | 1 | `SOL-P65-PRO-C-001` is prepared/parked/frozen. Prompt64 is active, not parked; Prompt66 is completed/recovered. |
-| Active Sol Medium leads | 1 running / 3 roles | The Verification Lead read-only supervises active `LUNA-P66-CERT-REPLAY-069`; Formalization and Research Operations have completed their reviewed audit/synchronization tranches. Supervision is not acceptance of replay output. |
-| Active Luna workers | 1 / 6 | `LUNA-P66-CERT-REPLAY-069` is active through a fresh top-level `gpt-5.6-luna`/xhigh CLI route on exact base `136e9c6`. It supplies no result until independent strict replay and review finish. |
-| Queued Luna workers | 0 | The failed packing-search attempts are closed; the independent Prompt66 certificate replay is active, not queued. |
+| Active Sol Medium leads | 0 running / 3 roles | The Verification Lead has completed and accepted read-only supervision of `LUNA-P66-CERT-REPLAY-069`; Formalization and Research Operations have completed their reviewed audit/synchronization tranches. |
+| Active Luna workers | 0 / 6 | `LUNA-P66-CERT-REPLAY-069` completed its independent strict replay and is no longer active. Its exact finite evidence is accepted only at the reviewed scope; it supplies no theorem or unrestricted result. |
+| Queued Luna workers | 0 | The failed packing-search attempts are closed; the independent Prompt66 certificate replay is completed, not queued. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
-| Failed delegations | 8 | The prior seven plus `LUNA-PACKING-SEARCH-RECOVERY-060`, which failed without a commit, replay, report, or manifest. Its 6,527 partial lines are non-evidentiary. |
+| Failed delegations | 9 | The prior eight plus `LUNA-P66-REPLAY-DOCSYNC-076`, whose workspace-write sandbox treated the WSL UNC worktree as read-only and stopped without changes, tests, or a commit. This is a narrow failed runtime delegation record, not evidence about Luna or other runtimes. |
 | Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
 | Prompt65 contracts/specifications | 2 reviewed / 0 promoted | `VER-P65-PREFLIGHT-027` is conditional-ready only and `FORM-P65-SPEC-028` is SPEC-ONLY/OPEN. |
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
 | Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
-| Integration backlog | 1 pending Prompt66 audit group | Recovered Prompt66 is held pending independent strict certificate replay and Verification Lead review. The response's STOP/OPEN self-disposition and finite-evidence claims are not promoted. |
-| Wait time | 0 external-control waits | Prompt64 is active, Prompt65 is deliberately parked/frozen, Prompt66 is recovered, and its independent Luna replay is active. |
+| Integration backlog | 0 pending groups | The Prompt66 replay audit group is integrated by `/root` merge `fc2d023e9df1c554cc67fadedece1325e72694b1` after independent acceptance by `VER-LUNA-P66-REPLAY-SUPERVISE-070`; no group is pending. The response's STOP/OPEN self-disposition remains distinct, and only independently replayed finite evidence is recorded. |
+| Wait time | 0 external-control waits | Prompt64 is active, Prompt65 is deliberately parked/frozen, Prompt66 is recovered, and its independent Luna replay is completed. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -1748,7 +1748,7 @@ as an accepted implementation or mathematical proof.
 - **Branch:** `verify/luna-p66-replay-069`
 - **Worktree:** local isolated worktree (absolute path deliberately omitted
   from public documentation)
-- **Status:** `active`
+- **Status:** `accepted` (independently replayed finite evidence)
 - **Exact deliverable:** Independently and strictly replay the recovered
   Prompt66 certificates without trusting response self-labels or bundled
   conclusions.
@@ -1759,10 +1759,14 @@ as an accepted implementation or mathematical proof.
 - **Acceptance command:** Require exact base, exact four-file diff, strict
   certificate replay, deterministic tests, manifest/report reconciliation,
   hashes, `git diff --check`, and an independently reviewable commit.
-- **Blocker:** Active; no replay result has been reported or accepted.
-- **Final disposition / promotion authority:** Luna supplies an independent
-  replay only. It cannot promote finite evidence, a packing claim, `PACK-09`,
-  or unrestricted LRC; Verification Lead and `/root` retain review authority.
+- **Blocker:** None after the independently reviewed replay and documentation
+  checks.
+- **Final disposition / promotion authority:** Implementation commit
+  `5cf8abd04b40b26183eb3839d3d7a7f8d68a82ab` was independently ACCEPTED by
+  `VER-LUNA-P66-REPLAY-SUPERVISE-070` and integrated by `/root` in merge
+  `fc2d023e9df1c554cc67fadedece1325e72694b1`. The replay records computed
+  finite evidence only; it cannot promote a packing claim, `PACK-09`, the
+  exact pivot selector, or unrestricted LRC.
 
 ### VER-LUNA-P66-REPLAY-SUPERVISE-070 — Prompt66 replay supervision
 
@@ -1770,19 +1774,22 @@ as an accepted implementation or mathematical proof.
 - **Lane:** verification / read-only supervision
 - **Owner / supervising lead:** Verification Lead / `/root`
 - **Base:** `136e9c6e0eeeb608bfe943762969bdc412745da0`
-- **Dependencies:** active `LUNA-P66-CERT-REPLAY-069`
+- **Dependencies:** accepted `LUNA-P66-CERT-REPLAY-069`
 - **Branch / worktree:** read-only against `verify/luna-p66-replay-069` in its
   local isolated worktree (absolute path deliberately omitted from public
   documentation); no separate branch/worktree
-- **Status:** `active`
+- **Status:** `verified` (independent ACCEPT review)
 - **Exact deliverable:** Supervise exact scope and later review the independent
   strict replay; do not author or alter its four files.
 - **Allowed files:** none; read-only
 - **Acceptance command:** Check base, scope, independence, four-file output,
   deterministic replay/test results, hashes, and claim boundaries.
-- **Blocker:** Worker replay has no result yet.
-- **Final disposition / promotion authority:** Supervision only; no acceptance
-  or result is recorded until the worker finishes and review is reported.
+- **Blocker:** None at read-only supervision scope.
+- **Final disposition / promotion authority:** Independently ACCEPTED the Luna
+  implementation and its exact finite replay after checking the four-file
+  output, deterministic counts, claim boundaries, and required verification
+  outcomes. This supervision records no theorem, `PACK-09`, exact pivot
+  selector, or unrestricted LRC promotion.
 
 ### OPS-P66-P64-LIFECYCLE-SYNC-071 — Prompt66 recovery and Prompt64 launch sync
 
@@ -1837,6 +1844,58 @@ as an accepted implementation or mathematical proof.
   only. It changes no lifecycle, response claim, computation, certificate,
   theorem, `PACK-09`, or unrestricted result.
 
+### LUNA-P66-REPLAY-DOCSYNC-076 — failed Prompt66 documentation-sync runtime delegation
+
+- **ID:** `LUNA-P66-REPLAY-DOCSYNC-076`
+- **Lane:** Luna/xhigh runtime delegation / Prompt66 public-status recovery
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `fc2d023e9df1c554cc67fadedece1325e72694b1`
+- **Dependencies:** integrated Prompt66 replay merge and the accepted 069/070
+  replay review
+- **Branch / worktree:** fresh runtime delegation on the exact base; no
+  committed branch or output
+- **Status:** `rejected` (failed runtime delegation)
+- **Exact deliverable:** Synchronize the five allowed public documentation
+  files after the independently reviewed Prompt66 verifier integration.
+- **Allowed files:** `README.md`, `STATUS.md`, `docs/full-proof-roadmap.md`,
+  `docs/proof-obligations.md`, and `docs/parallel-task-board.md`
+- **Acceptance command:** Require exact base and branch, five-file-only diff,
+  targeted tests, release audit, unique task IDs, privacy scan, one commit,
+  and a clean worktree.
+- **Blocker:** The workspace-write sandbox treated the WSL UNC worktree as
+  read-only.
+- **Final disposition / promotion authority:** Rejected/failed runtime
+  delegation. It stopped without changes, tests, or a commit. This is a narrow
+  runtime failure record and is not evidence about Luna or other runtimes.
+
+### LUNA-P66-REPLAY-DOCSYNC-077 — Prompt66 public documentation synchronization
+
+- **ID:** `LUNA-P66-REPLAY-DOCSYNC-077`
+- **Lane:** research operations / public status documentation
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `fc2d023e9df1c554cc67fadedece1325e72694b1`
+- **Dependencies:** accepted `LUNA-P66-CERT-REPLAY-069`, verified
+  `VER-LUNA-P66-REPLAY-SUPERVISE-070`, and rejected 076 runtime delegation
+- **Branch / worktree:** `ops/p66-replay-sync-recovery-077` in its isolated
+  worktree
+- **Status:** `verified` (acceptance checks passed)
+- **Exact deliverable:** Synchronize public status documentation after the
+  independently reviewed Prompt66 certificate verifier was integrated,
+  without changing any theorem, evidence label, source, test, artifact,
+  prompt, launch, or configuration.
+- **Allowed files:** `README.md`, `STATUS.md`, `docs/full-proof-roadmap.md`,
+  `docs/proof-obligations.md`, and `docs/parallel-task-board.md`
+- **Acceptance command:** Require exact HEAD `fc2d023e9df1c554cc67fadedece1325e72694b1`
+  and branch `ops/p66-replay-sync-recovery-077` before editing; run the
+  targeted 5/5 unit tests, `git diff --check`, `bash scripts/audit_public_release.sh`,
+  unique-task-ID and added-line privacy scans; commit only the five allowed
+  documentation files and leave the worktree clean.
+- **Blocker:** None after all acceptance checks pass.
+- **Final disposition / promotion authority:** Verified documentation sync
+  only. It records computed finite evidence, independently replayed, and
+  preserves Prompt64 ownership and lifecycle; it promotes no theorem,
+  `PACK-09`, exact pivot selector, or unrestricted LRC.
+
 ## Integration order
 
 1. Treat `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b` as the authoritative
@@ -1871,11 +1930,16 @@ as an accepted implementation or mathematical proof.
     OPEN** and the exact `N*a_h crossing -> M_h -> active n*a_j -> successor
     edge -> Delta<=tau` gap.
 11. Preserve `SOL-P66-PRO-B-001` as completed/recovered at STOP/OPEN. Its
-    packing lemma and unrestricted LRC remain open; freeze the two rejected
-    uniform criteria as a milestone, not a formalization target. Hold all
-    claimed finite evidence pending `LUNA-P66-CERT-REPLAY-069` and read-only
-    supervision `VER-LUNA-P66-REPLAY-SUPERVISE-070`. Prompt64's
-    `TOP-TWO-LARGE-RATIO-EXCLUSION` is now the closest Bridge-B thin API.
+    packing lemma and unrestricted LRC remain open; freeze only the two
+    rejected uniform criteria as a milestone, not a formalization target.
+    Record `LUNA-P66-CERT-REPLAY-069` as accepted and
+    `VER-LUNA-P66-REPLAY-SUPERVISE-070` as verified after the independent
+    replays and review; their result is computed finite evidence,
+    independently replayed, not a theorem or unrestricted promotion. Record
+    076 as a narrow failed runtime delegation and 077 as verified only after
+    its documentation acceptance checks pass. Prompt64's
+    `TOP-TWO-LARGE-RATIO-EXCLUSION` remains active under the sole top-level
+    Sol High browser owner.
 
 ## Manual field-audit checklist
 

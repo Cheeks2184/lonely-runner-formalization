@@ -441,11 +441,37 @@ and it claims finite evidence, but the operational record promotes no claim.
 `FORM-P66-RESPONSE-MATH-AUDIT-067` gives qualified mathematical/computation
 ACCEPT while rejecting the launch-commit wording and missing-in-ZIP SHA-link
 claim. `OPS-P66-RECOVERY-PROVENANCE-068` mechanically accepts the recovery
-with path/packaging corrections. `LUNA-P66-CERT-REPLAY-069` is active on exact
-base `136e9c6`, independently and strictly replaying four deliverables under
-read-only `VER-LUNA-P66-REPLAY-SUPERVISE-070`; no replay result exists yet.
-The packing lemma and unrestricted LRC remain open. Freeze the two rejected
-uniform criteria as a milestone, not a formalization target.
+with path/packaging corrections. `LUNA-P66-CERT-REPLAY-069` completed its
+independent strict replay on exact base `136e9c6` under read-only
+`VER-LUNA-P66-REPLAY-SUPERVISE-070`. The replay is accepted at its exact finite
+scope: implementation commit
+`5cf8abd04b40b26183eb3839d3d7a7f8d68a82ab` was independently ACCEPTED by
+`VER-LUNA-P66-REPLAY-SUPERVISE-070` and integrated by `/root` in merge
+`fc2d023e9df1c554cc67fadedece1325e72694b1`. The independent verifier checks
+all `4,149` modular instances: `3,714` witness rows and `435` certified
+fixed-pivot failures, split `421` rational-dual and `14` branch-tree failures;
+it checks `472` tuple bundles and finds zero tuple-level all-pivot hits.
+Exact-optimum promotion is limited to `380` cases. The `55` supplied
+`exact_optimum` flags whose feasible lower and certified upper bounds do not
+coincide are explicitly **not promoted**.
+
+For `F=(8,15,35,40,48,56,75,132,147)`, pivot `48` has `R=432`, `S=706`,
+strict required credit `>274`, feasible credit `262`, rational upper bound
+`1314/5`, and integer optimum `262`. This is fixed-pivot evidence only. The
+radial-descent and signed-phase-cell uniform criteria are refuted as sufficient
+conditions on all nine pivots of `F`; only those criteria are rejected. The
+evidence label is **computed finite evidence, independently replayed**. Unit
+tests `5/5` pass. Verification Lead full replay: `PASS` in `13.59s`; `/root`
+independent full replay: `PASS` in `18.516s`, with deterministic semantic
+outputs differing only in runtime and consequent report/manifest hashes. No
+`proved-math` or `proved-lean` promotion follows. The main
+all-pivot packing lemma `PACK-09`, the exact pivot selector, and unrestricted
+LRC remain open. Freeze only the two rejected uniform criteria as a research
+milestone, not a formalization target.
+
+Prompt64 remains active under the sole top-level Sol High browser ownership;
+this exact tracked documentation consistency update does not alter its
+lifecycle.
 
 The earlier `LUNA-PACKING-SEARCH-RECOVERY-060` failed without a commit,
 replay, report, or manifest. Its 6,527 partial lines are non-evidentiary and
