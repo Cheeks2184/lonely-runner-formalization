@@ -58,6 +58,13 @@ project-specific axiom.
 #print axioms LonelyRunner.commonPivotCandidate_avoids_unitMultiple
 #print axioms LonelyRunner.scaledCommonPivotTime_eq
 #print axioms LonelyRunner.simultaneousTopTwo_of_commonPivotBadCount
+#print axioms LonelyRunner.mem_rectangleC0_union_C1_of_generic
+#print axioms LonelyRunner.rectangleD0_disjoint_D1
+#print axioms LonelyRunner.rectangleD0_subset_extra
+#print axioms LonelyRunner.rectangleD1_subset_extra
+#print axioms LonelyRunner.rectangleC0_D1_band
+#print axioms LonelyRunner.rectangleC1_D0_band
+#print axioms LonelyRunner.rectangle_coprime_injections_give_sdr
 #print axioms LonelyRunner.simultaneousCongruenceCompatible_iff_nonempty
 #print axioms LonelyRunner.card_simultaneousCongruenceResidues
 #print axioms LonelyRunner.tripleCongruenceCompatible_iff_nonempty
