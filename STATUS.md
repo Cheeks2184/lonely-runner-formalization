@@ -507,8 +507,19 @@ ACCEPTED by `OPS-P66-REPLAY-DOCSYNC-REVIEW-084` and integrated in merge
 lifecycle only: its replay remains computed finite evidence, and `PACK-09`,
 the exact pivot selector, and unrestricted LRC remain open.
 
-No Sol Pro cell is active. Prompt65 remains prepared/parked/frozen under the
-sole Sol High desktop owner and must not be launched.
+Prompt67, `UNIFORM-PRIME-FORCING-SUPPLY`, is the sole active Sol Pro cell. It
+was launched directly by `/root` in a genuinely new signed-in ChatGPT
+conversation at 2026-08-03 17:17:19 CDT. Direct UI state verified Chat true,
+Work false, `GPT-5.6 Sol` true, Pro true, and active generation after
+submission. The tracked prompt SHA-256 is
+`ea60008204a79434724d8c6fe43b3dcabf576ecebee0c345ace827878d23001a`;
+the exact UI payload/readback SHA-256 is
+`30fefd070ee0a5b091ba520ee779022b7df3f2d489083d63989a77e6d34370b6`
+after the editor removed only the tracked terminal LF. No private URL or
+session identifier is recorded. Prompt preparation and launch are operational
+evidence only; response recovery and independent audit have not begun, and no
+C2 or LRC result is promoted. Prompt65 remains prepared/parked/frozen and must
+not be launched.
 
 The earlier `LUNA-PACKING-SEARCH-RECOVERY-060` failed without a commit,
 replay, report, or manifest. Its 6,527 partial lines are non-evidentiary and
@@ -525,7 +536,18 @@ packing existence, `PACK-09`, and unrestricted LRC remain open.
 ## Latest verification
 
 Current authoritative integrated research checkpoint:
-`ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70`.
+`563a272a2bb6abb784c89d139a344842e4fce0fb`.
+
+The public-release audit wrapper now resolves and mounts the common Git
+metadata read-only in normal checkouts and linked worktrees, mounts the source
+checkout read-only, and fails closed unless the pinned Gitleaks output contains
+exactly one parseable positive history summary. Seven deterministic regression
+tests pass. Independent review reproduced a 273-commit linked-worktree scan
+and a 262-commit fresh-normal-clone scan, both with the manual tracked-file
+pattern scan passing. This is release infrastructure, not mathematical
+evidence. A new authoritative full Lean/trust/regression replay is still
+required after the final lifecycle documentation commit before the public
+checkpoint is pushed.
 
 The last authoritative clean full-project source replay remains supplied-
 packing adapter checkpoint `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`.

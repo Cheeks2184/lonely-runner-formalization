@@ -43,15 +43,15 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 35 | The prior 29 plus `FORM-P64-RESPONSE-MATH-AUDIT-081`, `VER-P64-COMPUTE-REPLAY-082`, `FORM-P64-SCALING-EDGE-083`, `OPS-P66-REPLAY-DOCSYNC-REVIEW-084`, `FORM-P64-PACKAGE-REVIEW-086`, and `VER-P64-PACKAGE-REVIEW-087` are accepted only at their exact qualified mathematics, computed-evidence, correction, or package-review scopes. |
-| Accepted negative audits | 16 | The prior 15 plus `FORM-P64-SCALING-EDGE-083` are valid negative results at exact scope: 083 rejects only the literal strict scaling edge and accepts the manuscript result after `r<M<=dM` correction. |
-| Accepted operational documentation tasks | 4 | The prior three plus corrected Prompt66 replay synchronization `OPS-P66-REPLAY-DOCSYNC-CORRECT-080`, accepted by review 084 and integrated in merge `2f6b3f5f2faea5966d1ecb6f9108b4fb5e6a1d2e`, are accepted. Task 088 remains in review and is not counted. |
+| Accepted audit deliverables | 40 | The prior 35 plus reviews 090, 091, 094, 096, and 097 are accepted at exact status-sync, negative infrastructure, negative contract, corrected-contract, or corrected-infrastructure scopes. Rejection reviews 091 and 094 promote no implementation or research result. |
+| Accepted negative audits | 18 | The prior 16 plus reviews 091 and 094 are valid negative results: 091 rejects ambiguous Gitleaks summary parsing, and 094 rejects three Prompt67 contract classifications/omissions. Both were corrected and re-reviewed. |
+| Accepted operational documentation tasks | 6 | The prior four plus status sync 088 and the corrected Prompt67 preparation group 092/095 are accepted after reviews 090 and 096. Prompt preparation is not Sol Pro execution or mathematical evidence. |
 | Accepted recovery deliverables | 5 | Response59, Response62, Response63, Prompt66, and Prompt64 recovery packages are integrated without promotion by response self-label. Prompt64 preserves one normalized response and exactly three canonical attachments. |
-| Accepted implementations | 0 unrestricted; 7 supporting artifacts | The prior five plus the recovered/replayed Prompt64 C++ sweep and Python targeted-stress implementations are integrated; none proves an open bridge. |
-| Integrated deliverable groups | 8 | The prior six plus corrected Prompt66 documentation merge `2f6b3f5f2faea5966d1ecb6f9108b4fb5e6a1d2e` and accepted Prompt64 recovery-package merge `ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70` are integrated. |
+| Accepted implementations | 0 unrestricted; 9 supporting artifacts | The prior seven plus the corrected public-release audit wrapper and its deterministic regression test are integrated; none proves an open bridge. |
+| Integrated deliverable groups | 11 | The prior eight plus status sync merge `321d29d`, audited Prompt67 contract merge `7c31df7`, and corrected release-audit merge `563a272` are integrated. |
 | Authoritative source replay | integrated / verified clean ext4 | Merge `fadc65d` passed cache retrieval (8,638 artifacts), full `lake build`, a 302-report standard-foundation trust audit, and all 160 Python tests in a clean ext4 replay. |
-| Active Sol Pro cells | 0 / 4 | Prompt64 and Prompt66 are completed/recovered at STOP/OPEN. Prompt65 remains prepared/parked/frozen and must not be launched. |
-| Prepared / parked Sol Pro cells | 1 | `SOL-P65-PRO-C-001` is prepared/parked/frozen and must not be launched. Prompt64's exact top-two ratio route is completed/frozen. |
+| Active Sol Pro cells | 1 / 4 | Prompt67 `UNIFORM-PRIME-FORCING-SUPPLY` is active after direct `/root` desktop launch. Prompt64 and Prompt66 are completed/recovered at STOP/OPEN. |
+| Prepared / parked Sol Pro cells | 1 | `SOL-P65-PRO-C-001` remains prepared/parked/frozen and must not be launched. Prompt67 is active, not merely prepared. |
 | Active Sol Medium leads | 0 running / 3 roles | The Verification Lead has completed and accepted read-only supervision of `LUNA-P66-CERT-REPLAY-069`; Formalization and Research Operations have completed their reviewed audit/synchronization tranches. |
 | Active Luna workers | 0 / 6 | `LUNA-P66-CERT-REPLAY-069` completed its independent strict replay and is no longer active. Its exact finite evidence is accepted only at the reviewed scope; it supplies no theorem or unrestricted result. |
 | Queued Luna workers | 0 | The failed packing-search attempts are closed; the independent Prompt66 certificate replay is completed, not queued. |
@@ -61,9 +61,9 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 | Prompt65 contracts/specifications | 2 reviewed / 0 promoted | `VER-P65-PREFLIGHT-027` is conditional-ready only and `FORM-P65-SPEC-028` is SPEC-ONLY/OPEN. |
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
-| Unrestricted route reassessment | C2 first; B packing open; P64/C1/A frozen | The next distinct unrestricted contract is C2 prime-forcing product induction. `PACK-09` remains open, while Prompt64's ratio route and C1/A are frozen. |
-| Integration backlog | 1 global-status group pending review | P66 correction 080 and the P64 package are integrated; only `OPS-P64-GLOBAL-STATUS-SYNC-088` remains pending independent and root acceptance. |
-| Wait time | 0 external-control waits | No Sol Pro cell is active. Prompt65 is deliberately parked/frozen and must not be launched. |
+| Unrestricted route reassessment | C2 active; B packing open; P64/C1/A frozen | Prompt67 now executes the first-ranked C2 prime-forcing product-induction contract. `PACK-09` remains open, while Prompt64's ratio route and C1/A are frozen. |
+| Integration backlog | 1 active Prompt67 lifecycle group | All reviewed local code/documentation groups through `563a272` are integrated. Prompt67 response recovery, audit, and result integration are future stages, not an unreviewed local queue. |
+| Wait time | 1 active external research turn; no idle orchestration wait | Prompt67 is generating while local release verification and lifecycle recording continue. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -2112,7 +2112,7 @@ as an accepted implementation or mathematical proof.
   package through tasks 080--087
 - **Branch / worktree:** `ops/p64-global-status-sync-088` in its isolated
   worktree
-- **Status:** `review` (pending independent and root acceptance)
+- **Status:** `integrated` (accepted by review 090)
 - **Exact deliverable:** Synchronize the five global status files, close the
   Prompt64 active lifecycle, and re-rank C2 first without changing results.
 - **Allowed files:** `README.md`, `STATUS.md`, `docs/full-proof-roadmap.md`,
@@ -2121,10 +2121,284 @@ as an accepted implementation or mathematical proof.
   Prompt66 five tests, fresh Prompt64 semantic replays, diff-check, unique IDs,
   public path/privacy scans, and a standalone pinned history scan with nonzero
   commits and bytes.
-- **Blocker:** Pending independent review and `/root` acceptance.
-- **Final disposition / promotion authority:** Review-ready only; task 088 is
-  excluded from accepted operational metrics. No result or lifecycle is
-  self-promoted by this row.
+- **Blocker:** None after independent ACCEPT review 090.
+- **Final disposition / promotion authority:** Accepted and integrated by
+  `/root` in merge `321d29dd57b90f5b9996ae8b38ec36afbd419c55`.
+  This promotes no theorem, computation, or unrestricted result.
+
+### LUNA-PUBLIC-AUDIT-WORKTREE-FIX-089 — initial linked-worktree audit fix
+
+- **ID:** `LUNA-PUBLIC-AUDIT-WORKTREE-FIX-089`
+- **Lane:** Luna xhigh / release infrastructure
+- **Owner / supervising lead:** fresh top-level Luna xhigh CLI worker /
+  Verification Lead; final authority `/root`
+- **Base:** `ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70`
+- **Dependencies:** Prompt64 package review 087's zero-history wrapper finding
+- **Branch / worktree:** `infra/public-audit-worktree-089` in its isolated
+  worktree
+- **Status:** `rejected` (corrected by 093)
+- **Exact deliverable:** Make the pinned history scan authoritative in normal
+  checkouts and linked worktrees, with deterministic regression tests.
+- **Allowed files:** `scripts/audit_public_release.sh` and
+  `tests/test_audit_public_release_worktree.py`
+- **Acceptance command:** Unit tests, shell syntax, real linked-worktree scan,
+  diff-check, two-file scope, one commit, and clean status.
+- **Blocker:** Review 091 found that contradictory zero/positive summaries
+  could pass because only the last match was trusted.
+- **Final disposition / promotion authority:** Commit `5526839e95ff9af2055d3f16ffac251616a099b2`
+  is preserved as a rejected first implementation and was not integrated
+  without its correction.
+
+### FORM-P64-GLOBAL-STATUS-REVIEW-090 — status-sync review
+
+- **ID:** `FORM-P64-GLOBAL-STATUS-REVIEW-090`
+- **Lane:** formalization / read-only documentation review
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base / reviewed commit:** `5f44de916ddb3bdb6b8cf7adf09e3440cccc2182`
+  over `ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70`
+- **Dependencies:** task 088
+- **Branch / worktree:** read-only review of the isolated task-088 worktree
+- **Status:** `verified` (ACCEPT)
+- **Exact deliverable:** Verify Prompt64/66 lifecycle, labels, metrics, route
+  ranking, hashes, and five-file scope.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Semantic replays, hash checks, 78/78 unique IDs,
+  diff/privacy checks, and clean status.
+- **Blocker:** None.
+- **Final disposition / promotion authority:** ACCEPT at operational status
+  scope; `/root` integrated task 088 in merge `321d29d`.
+
+### VER-PUBLIC-AUDIT-WORKTREE-REVIEW-091 — initial audit-fix review
+
+- **ID:** `VER-PUBLIC-AUDIT-WORKTREE-REVIEW-091`
+- **Lane:** verification / adversarial infrastructure review
+- **Owner / supervising lead:** Verification Lead / `/root`
+- **Base / reviewed commit:** `5526839e95ff9af2055d3f16ffac251616a099b2`
+- **Dependencies:** task 089
+- **Branch / worktree:** read-only review of `infra/public-audit-worktree-089`
+- **Status:** `verified` negative audit
+- **Exact deliverable:** Reproduce normal/linked scans and falsify parser or
+  mount assumptions.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Real linked and normal scans, path probes, unit
+  tests, syntax, scope, and contradictory-summary probes.
+- **Blocker:** Exact counterexample: `0 commits scanned` followed by
+  `7 commits scanned` returned success.
+- **Final disposition / promotion authority:** REJECT first implementation;
+  require exactly one positive summary and new regressions. This is release
+  evidence only.
+
+### OPS-P67-C2-CONTRACT-PREP-092 — Prompt67 preparation
+
+- **ID:** `OPS-P67-C2-CONTRACT-PREP-092`
+- **Lane:** research operations / prompt preparation
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `321d29dd57b90f5b9996ae8b38ec36afbd419c55`
+- **Dependencies:** C2 roadmap contract and task 088 integration
+- **Branch / worktree:** `ops/p67-c2-contract-prep-092` in its isolated
+  worktree
+- **Status:** `rejected` as first draft; corrected by 095
+- **Exact deliverable:** Prepare `UNIFORM-PRIME-FORCING-SUPPLY` for sole
+  `/root` desktop launch.
+- **Allowed files:** `research/sol-pro/prompts/prompt67.md`
+- **Acceptance command:** Exact C2 quantifiers, implication chain, budget,
+  falsification plan, one-file scope, diff/hash/privacy checks.
+- **Blocker:** Review 094 found MSS/status misclassification, unspecified
+  induction bases, and missing dimension-three threshold reconciliation.
+- **Final disposition / promotion authority:** Prompt preparation only; no
+  browser launch or result promotion.
+
+### LUNA-PUBLIC-AUDIT-WORKTREE-CORRECT-093 — audit-fix correction
+
+- **ID:** `LUNA-PUBLIC-AUDIT-WORKTREE-CORRECT-093`
+- **Lane:** Luna xhigh / release-infrastructure correction
+- **Owner / supervising lead:** fresh top-level Luna xhigh CLI worker /
+  Verification Lead; final authority `/root`
+- **Base:** `5526839e95ff9af2055d3f16ffac251616a099b2`
+- **Dependencies:** negative review 091
+- **Branch / worktree:** `infra/public-audit-worktree-089` in its isolated
+  worktree
+- **Status:** `integrated` after review 097
+- **Exact deliverable:** Reject zero, absent, malformed, repeated, multiple,
+  or contradictory summaries; make both Docker binds read-only.
+- **Allowed files:** the same two paths as task 089
+- **Acceptance command:** Seven tests, `bash -n`, real linked scan, cumulative
+  diff/scope checks, one correction commit, and clean status.
+- **Blocker:** None after review 097.
+- **Final disposition / promotion authority:** Correction commit
+  `855ee8177e6b272d3af21e21f009d0a9e2f41f33` was accepted and integrated by
+  `/root` in merge `563a272a2bb6abb784c89d139a344842e4fce0fb`.
+
+### FORM-P67-CONTRACT-REVIEW-094 — first Prompt67 contract review
+
+- **ID:** `FORM-P67-CONTRACT-REVIEW-094`
+- **Lane:** formalization / research-contract audit
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base / reviewed commit:** `2b02ccd79ffbe0fb3de8ac8a41c420b7ea9b70b7`
+- **Dependencies:** task 092
+- **Branch / worktree:** read-only review of the isolated Prompt67 worktree
+- **Status:** `verified` negative audit
+- **Exact deliverable:** Audit every C2 quantifier, dependency label,
+  threshold, induction boundary, and root-only launch rule.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Compare roadmap, dependency audit, Lean base-case
+  declarations, file scope/hash, and privacy.
+- **Blocker:** Three documentation defects recorded in task 092.
+- **Final disposition / promotion authority:** REJECT first draft; no launch
+  authorized until correction and re-review.
+
+### OPS-P67-CONTRACT-CORRECT-095 — Prompt67 contract correction
+
+- **ID:** `OPS-P67-CONTRACT-CORRECT-095`
+- **Lane:** research operations / prompt correction
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `2b02ccd79ffbe0fb3de8ac8a41c420b7ea9b70b7`
+- **Dependencies:** negative review 094
+- **Branch / worktree:** `ops/p67-c2-contract-prep-092` in its isolated
+  worktree
+- **Status:** `integrated` after review 096
+- **Exact deliverable:** Correct MSS/external labels, explicit induction bases,
+  and exact `n=3` threshold arithmetic without changing the target or budget.
+- **Allowed files:** `research/sol-pro/prompts/prompt67.md`
+- **Acceptance command:** One correction commit, one-file scope, diff/hash,
+  exact declaration-source checks, privacy, and clean status.
+- **Blocker:** None after review 096.
+- **Final disposition / promotion authority:** Corrected tip
+  `63ea6fed746d9dcbe4c3aa7f66c218fef58b46ca` was integrated by `/root` in
+  merge `7c31df78d168014604b5cc83124d067547e9d75b`.
+
+### FORM-P67-CONTRACT-CORRECT-REVIEW-096 — corrected contract review
+
+- **ID:** `FORM-P67-CONTRACT-CORRECT-REVIEW-096`
+- **Lane:** formalization / read-only contract re-review
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base / reviewed commit:** `63ea6fed746d9dcbe4c3aa7f66c218fef58b46ca`
+- **Dependencies:** tasks 094 and 095
+- **Branch / worktree:** read-only review of the isolated Prompt67 worktree
+- **Status:** `verified` (ACCEPT)
+- **Exact deliverable:** Confirm all three blockers are closed and the original
+  unrestricted contract remains exact.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Lean declaration/source inspection, arithmetic,
+  scope/hash/privacy, and clean status.
+- **Blocker:** None.
+- **Final disposition / promotion authority:** ACCEPT at contract scope only;
+  launch and result authority remains solely `/root`.
+
+### VER-PUBLIC-AUDIT-WORKTREE-CORRECT-REVIEW-097 — corrected audit review
+
+- **ID:** `VER-PUBLIC-AUDIT-WORKTREE-CORRECT-REVIEW-097`
+- **Lane:** verification / read-only infrastructure re-review
+- **Owner / supervising lead:** Verification Lead / `/root`
+- **Base / reviewed commit:** `855ee8177e6b272d3af21e21f009d0a9e2f41f33`
+- **Dependencies:** tasks 091 and 093
+- **Branch / worktree:** read-only review of `infra/public-audit-worktree-089`
+- **Status:** `verified` (ACCEPT)
+- **Exact deliverable:** Re-run all adversarial summary cases and real
+  normal/linked history scans.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Seven tests, syntax, exact scope/parents, linked
+  scan, fresh clone scan, and no-output-replay probes.
+- **Blocker:** None.
+- **Final disposition / promotion authority:** ACCEPT release infrastructure;
+  real scans covered 273 linked-worktree and 262 fresh-clone commits.
+
+### SOL-P67-DESKTOP-LAUNCH-098 — Prompt67 desktop launch
+
+- **ID:** `SOL-P67-DESKTOP-LAUNCH-098`
+- **Lane:** Sol High desktop launch
+- **Owner:** `GPT-5.6 Sol High top-level desktop orchestrator`
+- **Supervising authority:** `/root`
+- **Launch runtime:** `original browser-capable desktop Codex session`
+- **Base:** audited prompt merge `7c31df78d168014604b5cc83124d067547e9d75b`
+- **Dependencies:** accepted correction/review 095/096
+- **Branch / worktree:** none; direct signed-in ChatGPT UI lifecycle
+- **Status:** `verified` operational launch
+- **Exact deliverable:** Open a genuinely new conversation, select Chat,
+  GPT-5.6 Sol, and Pro, submit the audited prompt, and record nonprivate
+  provenance.
+- **Allowed files:** launch provenance and lifecycle documentation only
+- **Acceptance command:** Direct UI selected-state readback; tracked prompt
+  SHA-256 `ea600082...01a`; submitted payload SHA-256 `30fefd07...70b6`;
+  active generation control.
+- **Blocker:** None.
+- **Final disposition / promotion authority:** Launch completed at 17:17:19
+  CDT. Launch promotes no theorem, evidence, or response claim.
+
+### SOL-P67-PRO-C2-099 — Prompt67 active research
+
+- **ID:** `SOL-P67-PRO-C2-099`
+- **Lane:** active Sol Pro research
+- **Owner:** `GPT-5.6 Sol High top-level desktop orchestrator`
+- **Supervising authority:** `/root`
+- **Launch runtime:** `original browser-capable desktop Codex session`
+- **Base:** task 098 launch state
+- **Dependencies:** audited Prompt67 contract and completed desktop launch
+- **Branch / worktree:** none; external conversation
+- **Status:** `active`
+- **Exact deliverable:** Return the required C2 research memo under the exact
+  one-turn, one-new-dimension interval, one-wrapper budget.
+- **Allowed files:** none while running
+- **Acceptance command:** Completion permits recovery only; it does not verify
+  any mathematical or computational claim.
+- **Blocker:** None; generation is active.
+- **Final disposition / promotion authority:** `/root` alone will recover the
+  response and decide downstream audits. C2 and unrestricted LRC remain open.
+
+### SOL-P67-RESPONSE-RECOVERY-100 — Prompt67 response recovery
+
+- **ID:** `SOL-P67-RESPONSE-RECOVERY-100`
+- **Lane:** response recovery
+- **Owner / supervising authority:** GPT-5.6 Sol High desktop `/root`
+- **Base:** future completed task 099 response
+- **Dependencies:** Prompt67 completion
+- **Branch / worktree:** future isolated recovery branch/worktree
+- **Status:** `planned`
+- **Exact deliverable:** Recover exact response and attachments, record hashes
+  and provenance, and preserve self-labels without accepting them.
+- **Allowed files:** future Prompt67 response/recovery paths only
+- **Acceptance command:** Exact byte/newline/hash reconciliation plus public
+  privacy and redistribution audit.
+- **Blocker:** Active response has not completed.
+- **Final disposition / promotion authority:** Recovery is not validation;
+  `/root` assigns independent audits after recovery.
+
+### P67-INDEPENDENT-AUDIT-101 — Prompt67 downstream audits
+
+- **ID:** `P67-INDEPENDENT-AUDIT-101`
+- **Lane:** formalization and verification
+- **Owner / supervising leads:** Formalization Lead and Verification Lead /
+  `/root`
+- **Base:** future recovered response commit
+- **Dependencies:** task 100
+- **Branch / worktree:** future isolated read-only review worktrees
+- **Status:** `planned`
+- **Exact deliverable:** Independently audit mathematics, computation,
+  proposed Lean, dependencies, and exact evidence labels.
+- **Allowed files:** none during read-only review
+- **Acceptance command:** Defined after response recovery from its exact claims
+  and artifacts; no worker may weaken a failed target.
+- **Blocker:** No recovered response yet.
+- **Final disposition / promotion authority:** Leads recommend disposition;
+  `/root` alone promotes or rejects claims.
+
+### SOL-P67-INTEGRATION-102 — Prompt67 result integration
+
+- **ID:** `SOL-P67-INTEGRATION-102`
+- **Lane:** PI integration
+- **Owner / supervising authority:** GPT-5.6 Sol High `/root`
+- **Base:** future accepted audits
+- **Dependencies:** tasks 100 and 101
+- **Branch / worktree:** main; root-only merge authority
+- **Status:** `planned`
+- **Exact deliverable:** Integrate only independently accepted response,
+  artifacts, proofs, counterexamples, or stop records with exact labels.
+- **Allowed files:** determined from accepted recovery/audit scope
+- **Acceptance command:** Authoritative clean replay and public-release audit
+  appropriate to the accepted changes.
+- **Blocker:** Active research has not completed or been audited.
+- **Final disposition / promotion authority:** No theorem or LRC status can be
+  promoted from preparation, launch, recovery, or self-label alone.
 
 ## Integration order
 
@@ -2172,10 +2446,11 @@ as an accepted implementation or mathematical proof.
     a verified negative audit, correction 080 as accepted/integrated after
     review 084, and merge `2f6b3f5`. Preserve the Prompt64 package as
     accepted/integrated under merge `ca8f4c5` after reviews 086/087.
-12. Rank C2 prime-forcing product induction first for the next distinct
-    unrestricted contract. Keep Bridge B's exact packing lemma `PACK-09` open,
-    freeze Prompt64's top-two ratio route, and keep C1 and A frozen. Task 088
-    remains review-only until independent and root acceptance.
+12. Keep C2 prime-forcing product induction first while Prompt67 is active
+    under sole `/root` desktop ownership. Keep Bridge B's exact packing lemma
+    `PACK-09` open, freeze Prompt64's top-two ratio route, and keep C1 and A
+    frozen. Preserve the distinct preparation, launch, active research,
+    recovery, audit, and integration stages; launch promotes no result.
 
 ## Manual field-audit checklist
 

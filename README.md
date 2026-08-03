@@ -254,6 +254,7 @@ lake exe cache get
 lake build
 python3 scripts/audit_lean_trust.py
 python3 -m unittest discover -s tests -v
+./scripts/audit_public_release.sh
 ```
 
 At formal checkpoint `586b485`, direct compilation of
@@ -329,10 +330,11 @@ a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
 
 The current authoritative integrated research checkpoint is
-`ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70`. The last authoritative clean
+`563a272a2bb6abb784c89d139a344842e4fce0fb`. The last authoritative clean
 full-project Lean/trust/regression replay remains the supplied-packing adapter
 checkpoint described in `STATUS.md`; the later research merges are
-documentation, recovered artifacts, and independent finite verifiers.
+documentation, recovered artifacts, independent finite verifiers, an audited
+Prompt67 contract, and public-release audit infrastructure.
 
 ## Current research frontier
 
@@ -342,10 +344,12 @@ for every positive injective integer tuple, some pivot candidate must escape
 all strict modular bad sets. Prompt66's
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING` turn completed at STOP/OPEN, leaving
 that packing lemma open. Prompt64's `TOP-TWO-LARGE-RATIO-EXCLUSION` also
-completed/recovered at STOP/OPEN and its exact route is frozen. No Sol Pro cell
-is active. The next distinct unrestricted contract is C2 prime-forcing product
-induction; Bridge B packing remains open, while C1 and A remain frozen. DPLP
-remains open:
+completed/recovered at STOP/OPEN and its exact route is frozen. Prompt67,
+`UNIFORM-PRIME-FORCING-SUPPLY`, is active in a root-controlled GPT-5.6 Sol Pro
+conversation. Its audited contract and launch provenance promote no result;
+response recovery and independent audit have not yet occurred. C2
+prime-forcing product induction is therefore the active first-ranked route;
+Bridge B packing remains open, while C1 and A remain frozen. DPLP remains open:
 together with lower-dimensional LRC, the verified coefficient-three height
 theorem, and the direct `q=N` branch, it would prove unrestricted
 positive-integer LRC. An exact finite audit found no DPLP failure in 243,973

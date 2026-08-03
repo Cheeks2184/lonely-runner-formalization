@@ -103,3 +103,23 @@ Prompt64 is complete/recovered at **STOP/OPEN**. The exact target, downstream
 owner-transversal, exact pivot selector, and unrestricted Lonely Runner remain
 open. No new Lean theorem is promoted, and the route is frozen under its stop
 contract.
+
+## SOL-P67-PRO-C2-099 — Prompt 67 active research
+
+- **Integrated prompt:** `research/sol-pro/prompts/prompt67.md`
+- **Prompt SHA-256:**
+  `ea60008204a79434724d8c6fe43b3dcabf576ecebee0c345ace827878d23001a`
+- **Launch owner:** GPT-5.6 Sol High top-level desktop orchestrator (`/root`)
+- **Launch runtime:** original browser-capable desktop Codex session
+- **Launch time:** 2026-08-03 17:17:19 CDT
+- **Selected UI state:** Chat; `GPT-5.6 Sol`; Pro
+- **Submitted UI payload SHA-256:**
+  `30fefd070ee0a5b091ba520ee779022b7df3f2d489083d63989a77e6d34370b6`
+- **Payload reconciliation:** exact tracked prompt after removal of its sole
+  terminal LF
+- **Lifecycle:** active Sol Pro research; response recovery not yet started
+
+Prompt67 attacks `UniformPrimeForcingSupply`, the currently highest-ranked C2
+unrestricted bridge. Prompt preparation and launch are operational facts only.
+No response claim, finite interval, mathematical lemma, Lean declaration, C2
+bridge, or unrestricted LRC result has been accepted or promoted.
