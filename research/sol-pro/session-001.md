@@ -3168,3 +3168,100 @@ know the independently developed DPLP bridge. DPLP remains provisionally
 ranked first because its sound implication is now kernel-checked and its exact
 single-coordinate shell arithmetic is known; one dedicated Sol Pro
 adversarial turn is required before that ranking is retained.
+## Later unrestricted synchronization: Response 59 recovery and audits
+
+`SOL-R59-RECOVER-001` recovered and normalized Response 59 after the Prompt 59
+turn completed. The normalized response SHA-256 is
+`03265212ef51006bd200efe8f37b0afeeb64a572f9e80c57fb57f1c17459e5f4`.
+The recovered audit-script SHA-256 is
+`406b64139de1f7be51e3f42c750feb2a7e095d58865e82d6bdd76ab76a264e30`.
+The claimed expected-output attachment was unavailable and is not recorded as
+recovered or reproduced. Recovery preserves evidence; it does not accept the
+response's mathematical, computational, formal, or ranking claims.
+
+The independent `VL-R59-AUDIT-001` review completed from fixture
+`64319f1c4f46e1ace1d152cef6b65c6331f60ce5`. Its authoritative top-level CLI
+thread is `019fc66f-818b-7790-b71e-a5ca2780e72b`, with Luna, xhigh, and
+read-only routing metadata. The review accepts D1, the D2 and D3 lower bounds,
+D4, D5, repaired D6, P1, and conditional P2 at their stated strengths; it
+rejects both proposed uniform low-order criteria and records exact
+counterexamples. `docs/response59-audit.md` is the controlling audit.
+
+The earlier `VL-LUNA-DPLP-001` fixture audit returned and was accepted only
+after Verification Lead corrections. It is an accepted negative audit: it
+confirms the DPLP contract mismatch and reports 31 certificate failures in the
+fixture. It was read-only and changed no files. These finite failures do not
+prove or refute corrected DPLP or unrestricted Lonely Runner, and they do not
+constitute an accepted implementation.
+
+The first `FL-LUNA-DPLP-001` workspace-write launch was downgraded by the
+runtime to read-only and was terminated. A fresh top-level CLI session was
+then launched with honored `danger-full-access` in its isolated fixture and
+produced commit `e5a353397008e0d2fcbbb6213972b952055c4dbf`. Independent lead review
+accepted its mathematical and formal content, with the recommendation that the
+intended `n>=2` domain be made explicit. Sol High integrated that correction:
+the tracked module formalizes the corrected contract and a conditional
+selector-consuming wrapper; it proves neither DPLP nor induction.
+
+For all Luna routing records, the authoritative model, reasoning-effort,
+access-mode, and thread metadata come from the top-level CLI session record,
+not from worker prose or an inherited agent identity. Requested write access
+is not treated as honored when the runtime reports a read-only session.
+
+## Prompt 60 PRO-E submitted in a new conversation
+
+Prompt 60 starts a genuinely new ChatGPT conversation for deliberate
+independent replication of Response 59. Direct UI state showed the GPT-5.6
+Sol radio true and the Pro radio true. The tracked prompt file has SHA-256
+`58fe909e504c7c7b2e6b351498ace28498a3037c5dfaf052888935c3728efc65`.
+
+After excluding only the terminal line feed, the submitted composer payload
+has 12,878 characters, 12,882 UTF-8 bytes, 358 line feeds, and SHA-256
+`97c19d8810dd56a093f7b9260a72f5321470bbdc6f53b7881fce0f0d234172e2`.
+The composer read-back matched those exact metrics before submission, and the
+live `Stop answering` control confirmed that PRO-E was running.
+
+No Response 60 result exists at this checkpoint. Submission evidence does not
+promote any Response 59 statement, DPLP, prime forcing, or unrestricted Lonely
+Runner claim.
+
+## Prompts 61--63 submitted in three new conversations
+
+Prompts 61, 62, and 63 were each submitted in a genuinely new ChatGPT
+conversation, separate from Prompt 60 and from one another. For every
+conversation, explicit UI Automation state showed GPT-5.6 Sol true and Pro
+true, and the live `Stop answering` control confirmed generation. These three
+turns fill the remaining Sol Pro cells: PRO-A, PRO-B, PRO-C, and the already
+running PRO-E now occupy the initial cap of four active cells.
+
+### Prompt 61 PRO-A: minimal-counterexample height compression
+
+The Prompt 61 file SHA-256 is
+`d337fc56508ef92c820371cc7e9d2b2091171283b884c982868b2c690931118b`.
+After excluding only the terminal line feed, the exact submitted composer
+payload has 7,039 characters, 7,047 UTF-8 bytes, 172 line feeds, and SHA-256
+`be2abad7d2f0e9a9bcc0187bba9c4c30d7125bd36a02a8de187ca630b3763eed`.
+The pre-submission composer readback matched exactly.
+
+### Prompt 62 PRO-B: unrestricted uniform pivot and top-two
+
+The Prompt 62 file SHA-256 is
+`c33ce233418ae356c0d9a41b35f47bf73598f6012803680a6b710a27cf3ba3e3`.
+After excluding only the terminal line feed, the submitted payload has 7,640
+characters, 7,644 UTF-8 bytes, 186 line feeds, and SHA-256
+`687a774640d4b56b402a2ca2bb8a3c7b84c64b67a04dd5388ad9ee3bb39b875c`.
+The post-send Copy message matched exactly after CRLF-to-LF normalization.
+
+### Prompt 63 PRO-C: deletion, descent, and induction
+
+The Prompt 63 file SHA-256 is
+`88a879a0489cbacf0707edd366527301e34f2c2763f7ed53d53529a8c7a487cb`.
+After excluding only the terminal line feed, the exact submitted composer
+payload has 10,717 characters, 10,723 UTF-8 bytes, 266 line feeds, and SHA-256
+`8a6714a63d55d155f06cdc433b4b3e19fff100a4a30640fa6a79fa11b3a3ddd7`.
+Both the pre-submission composer readback and the normalized post-send copy
+matched exactly.
+
+No PRO-A, PRO-B, or PRO-C result exists at this checkpoint. Submission and
+running-state evidence do not promote a theorem, a counterexample, DPLP,
+top-two, height compression, prime forcing, or unrestricted Lonely Runner.
