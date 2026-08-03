@@ -3126,8 +3126,9 @@ The first `FL-LUNA-DPLP-001` workspace-write launch was downgraded by the
 runtime to read-only and was terminated. A fresh top-level CLI session was
 then launched with honored `danger-full-access` in its isolated fixture and
 produced commit `e5a353397008e0d2fcbbb6213972b952055c4dbf`. That commit remains
-under Formalization Lead review; no formal result or implementation is
-accepted before the lead's final report and top-level disposition.
+pending main integration after Formalization Lead review. The reviewed commit
+formalizes the corrected contract and a conditional selector-consuming
+wrapper; it proves neither DPLP nor induction.
 
 For all Luna routing records, the authoritative model, reasoning-effort,
 access-mode, and thread metadata come from the top-level CLI session record,
@@ -3150,3 +3151,44 @@ live `Stop answering` control confirmed that PRO-E was running.
 No Response 60 result exists at this checkpoint. Submission evidence does not
 promote any Response 59 statement, DPLP, prime forcing, or unrestricted Lonely
 Runner claim.
+
+## Prompts 61--63 submitted in three new conversations
+
+Prompts 61, 62, and 63 were each submitted in a genuinely new ChatGPT
+conversation, separate from Prompt 60 and from one another. For every
+conversation, explicit UI Automation state showed GPT-5.6 Sol true and Pro
+true, and the live `Stop answering` control confirmed generation. These three
+turns fill the remaining Sol Pro cells: PRO-A, PRO-B, PRO-C, and the already
+running PRO-E now occupy the initial cap of four active cells.
+
+### Prompt 61 PRO-A: minimal-counterexample height compression
+
+The Prompt 61 file SHA-256 is
+`d337fc56508ef92c820371cc7e9d2b2091171283b884c982868b2c690931118b`.
+After excluding only the terminal line feed, the exact submitted composer
+payload has 7,039 characters, 7,047 UTF-8 bytes, 172 line feeds, and SHA-256
+`be2abad7d2f0e9a9bcc0187bba9c4c30d7125bd36a02a8de187ca630b3763eed`.
+The pre-submission composer readback matched exactly.
+
+### Prompt 62 PRO-B: unrestricted uniform pivot and top-two
+
+The Prompt 62 file SHA-256 is
+`c33ce233418ae356c0d9a41b35f47bf73598f6012803680a6b710a27cf3ba3e3`.
+After excluding only the terminal line feed, the submitted payload has 7,640
+characters, 7,644 UTF-8 bytes, 186 line feeds, and SHA-256
+`687a774640d4b56b402a2ca2bb8a3c7b84c64b67a04dd5388ad9ee3bb39b875c`.
+The post-send Copy message matched exactly after CRLF-to-LF normalization.
+
+### Prompt 63 PRO-C: deletion, descent, and induction
+
+The Prompt 63 file SHA-256 is
+`88a879a0489cbacf0707edd366527301e34f2c2763f7ed53d53529a8c7a487cb`.
+After excluding only the terminal line feed, the exact submitted composer
+payload has 10,717 characters, 10,723 UTF-8 bytes, 266 line feeds, and SHA-256
+`8a6714a63d55d155f06cdc433b4b3e19fff100a4a30640fa6a79fa11b3a3ddd7`.
+Both the pre-submission composer readback and the normalized post-send copy
+matched exactly.
+
+No PRO-A, PRO-B, or PRO-C result exists at this checkpoint. Submission and
+running-state evidence do not promote a theorem, a counterexample, DPLP,
+top-two, height compression, prime forcing, or unrestricted Lonely Runner.

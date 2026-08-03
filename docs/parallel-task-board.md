@@ -35,15 +35,15 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | Accepted negative audits | 4 | The Luna routing audit and three DPLP contract audits returned valid negative results. |
 | Accepted recovery deliverables | 1 | `SOL-R59-RECOVER-001` recovered and normalized Response59 without promoting its claims. |
 | Accepted implementations | 0 unrestricted; 1 conditional formal artifact | The corrected DPLP contract/wrapper is reviewed in isolation and pending main integration; it proves neither DPLP nor induction. |
-| Active Sol Pro cells | 1 / 4 | Prompt60 PRO-E is running in a genuinely new conversation; Prompt59 is complete. |
-| Queued Sol Pro cells | 3 | Prompt61 PRO-A, Prompt62 PRO-B, and Prompt63 PRO-C are packaged but not submitted. |
+| Active Sol Pro cells | 4 / 4 | Prompt60 PRO-E, Prompt61 PRO-A, Prompt62 PRO-B, and Prompt63 PRO-C are running in four genuinely separate conversations. |
+| Queued Sol Pro cells | 0 | No additional Sol Pro cell may start until an active slot is released. |
 | Active Sol Medium leads | 3 / 3 | Research Operations, Verification, and Formalization are the initial lead lanes. |
 | Active Luna workers | 1 / 6 | The independent Response59 verification audit is active; the formal Luna artifact has completed review. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the active clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 2 | The nested Luna spawn was rejected; the first formal workspace-write launch was downgraded to read-only and terminated. |
 | Merge conflicts | 0 | No task on this board has been merged. |
 | Integration backlog | 3 | Main integration of the corrected formal contract, DPLP selector/correlation work, and the pending-tranche integration decision remain unresolved. |
-| Wait time | Not recorded | Prompt60, the independent Response59 audit, and formal-contract integration are pending, but trustworthy start timestamps are not present in this repository snapshot. Do not invent elapsed time. |
+| Wait time | Not recorded | Prompt60--63, the independent Response59 audit, and formal-contract integration are pending, but trustworthy start timestamps are not present in this repository snapshot. Do not invent elapsed time. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -253,22 +253,26 @@ as an accepted implementation or mathematical proof.
   `fcf082781091f8e59ca43d498a4c37f8723ec599`
 - **Dependencies:** verified bounded-height endpoint and corrected current
   status ledger
-- **Branch:** `ops/parallel-task-board-001`; future execution is a new
-  external ChatGPT conversation
-- **Status:** `queued`
+- **Branch:** none; genuinely new external ChatGPT conversation, with the
+  prompt artifact sourced from `ops/parallel-task-board-001`
+- **Status:** `active`
 - **Exact deliverable:** Attack only
   `MinimalCounterexampleHeightCompression` by replacement/descent operations
   whose conclusion is the coefficient-three height bound. Do not enter direct
   pivot coverage or deletion induction.
-- **Allowed files:** packaged artifact
-  `research/sol-pro/prompts/prompt61.md`; no files during external execution
-- **Acceptance command:** `sha256sum research/sol-pro/prompts/prompt61.md`
-  must return
+- **Allowed files:** none while the external turn is active; recovery requires
+  a separately assigned task
+- **Acceptance command:** Verify UIA reports GPT-5.6 Sol true and Pro true;
+  verify file SHA-256
   `d337fc56508ef92c820371cc7e9d2b2091171283b884c982868b2c690931118b`;
-  run `git diff --check` and the targeted secret/local-path scan.
-- **Blocker:** `/root` has not allocated or submitted the new conversation.
-- **Final disposition / promotion authority:** Queued and unsubmitted. Only
-  `/root` may launch, recover, accept, or promote a result.
+  match the terminal-LF-excluded composer payload at 7,039 characters, 7,047
+  UTF-8 bytes, 172 line feeds, and SHA-256
+  `be2abad7d2f0e9a9bcc0187bba9c4c30d7125bd36a02a8de187ca630b3763eed`;
+  confirm exact composer readback and live `Stop answering`.
+- **Blocker:** The external turn is active. No PRO-A result exists yet.
+- **Final disposition / promotion authority:** Submission evidence accepted;
+  `/root` owns recovery and may accept or promote only an independently
+  audited result.
 
 ### SOL-P62-PRO-B-001 — uniform-pivot contract
 
@@ -279,22 +283,27 @@ as an accepted implementation or mathematical proof.
   `fcf082781091f8e59ca43d498a4c37f8723ec599`
 - **Dependencies:** verified pivot-certificate equivalence, exact CRT counts,
   and corrected current status ledger
-- **Branch:** `ops/parallel-task-board-001`; future execution is a new
-  external ChatGPT conversation
-- **Status:** `queued`
+- **Branch:** none; genuinely new external ChatGPT conversation, with the
+  prompt artifact sourced from `ops/parallel-task-board-001`
+- **Status:** `active`
 - **Exact deliverable:** Attack only unrestricted all-pivot coverage,
   TOP-TWO-PIVOT, and `TOP-TWO-INTEGRAL-TRANSVERSAL` through integral
   CRT/Fourier/transversal methods. Do not enter height descent or deletion
   induction.
-- **Allowed files:** packaged artifact
-  `research/sol-pro/prompts/prompt62.md`; no files during external execution
-- **Acceptance command:** `sha256sum research/sol-pro/prompts/prompt62.md`
-  must return
+- **Allowed files:** none while the external turn is active; recovery requires
+  a separately assigned task
+- **Acceptance command:** Verify UIA reports GPT-5.6 Sol true and Pro true;
+  verify file SHA-256
   `c33ce233418ae356c0d9a41b35f47bf73598f6012803680a6b710a27cf3ba3e3`;
-  run `git diff --check` and the targeted secret/local-path scan.
-- **Blocker:** `/root` has not allocated or submitted the new conversation.
-- **Final disposition / promotion authority:** Queued and unsubmitted. Only
-  `/root` may launch, recover, accept, or promote a result.
+  match the terminal-LF-excluded payload at 7,640 characters, 7,644 UTF-8
+  bytes, 186 line feeds, and SHA-256
+  `687a774640d4b56b402a2ca2bb8a3c7b84c64b67a04dd5388ad9ee3bb39b875c`;
+  confirm the post-send Copy message is exact after CRLF-to-LF normalization
+  and confirm live `Stop answering`.
+- **Blocker:** The external turn is active. No PRO-B result exists yet.
+- **Final disposition / promotion authority:** Submission evidence accepted;
+  `/root` owns recovery and may accept or promote only an independently
+  audited result.
 
 ### SOL-P63-PRO-C-001 — deletion-induction contract
 
@@ -306,22 +315,27 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** reviewed isolated corrected DPLP contract/conditional
   wrapper pending main integration; selected-certificate lift is proved-Lean;
   D4/D5 and repaired D6 are independently accepted proved-math
-- **Branch:** `ops/parallel-task-board-001`; future execution is a new
-  external ChatGPT conversation
-- **Status:** `queued`
+- **Branch:** none; genuinely new external ChatGPT conversation, with the
+  prompt artifact sourced from `ops/parallel-task-board-001`
+- **Status:** `active`
 - **Exact deliverable:** Attack only corrected deletion-certificate
   correlation, reverse witness lifting, descent, and induction, with the full
   D6 no-full-witness and nonempty-`K_k` hypotheses. Do not enter height-only
   descent or direct pivot/top-two coverage.
-- **Allowed files:** packaged artifact
-  `research/sol-pro/prompts/prompt63.md`; no files during external execution
-- **Acceptance command:** `sha256sum research/sol-pro/prompts/prompt63.md`
-  must return
+- **Allowed files:** none while the external turn is active; recovery requires
+  a separately assigned task
+- **Acceptance command:** Verify UIA reports GPT-5.6 Sol true and Pro true;
+  verify file SHA-256
   `88a879a0489cbacf0707edd366527301e34f2c2763f7ed53d53529a8c7a487cb`;
-  run `git diff --check` and the targeted secret/local-path scan.
-- **Blocker:** `/root` has not allocated or submitted the new conversation.
-- **Final disposition / promotion authority:** Queued and unsubmitted. Only
-  `/root` may launch, recover, accept, or promote a result.
+  match the terminal-LF-excluded payload at 10,717 characters, 10,723 UTF-8
+  bytes, 266 line feeds, and SHA-256
+  `8a6714a63d55d155f06cdc433b4b3e19fff100a4a30640fa6a79fa11b3a3ddd7`;
+  confirm exact composer readback, exact normalized post-send copy, and live
+  `Stop answering`.
+- **Blocker:** The external turn is active. No PRO-C result exists yet.
+- **Final disposition / promotion authority:** Submission evidence accepted;
+  `/root` owns recovery and may accept or promote only an independently
+  audited result.
 
 ### DPLP-REPAIR-001 — contract repair
 
