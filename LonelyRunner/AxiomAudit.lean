@@ -39,6 +39,17 @@ project-specific axiom.
 #print axioms LonelyRunner.circleNorm_nat_div_eq
 #print axioms LonelyRunner.not_mem_pivotBadResidues_iff_circleNorm_ge
 #print axioms LonelyRunner.pivotResidueWitness
+#print axioms LonelyRunner.reverseGrid_exact_identity
+#print axioms LonelyRunner.reverseGrid_deficit_pos
+#print axioms LonelyRunner.reverseGrid_residue_lt
+#print axioms LonelyRunner.reverseGrid_residue_modEq
+#print axioms LonelyRunner.reverseGrid_phase_mod_one
+#print axioms LonelyRunner.signedCyclicResidueDistance_ofNat
+#print axioms LonelyRunner.signedCyclicResidueDistance_congr
+#print axioms LonelyRunner.signedCyclicResidueDistance_neg
+#print axioms LonelyRunner.reverseGrid_deleted_boundary
+#print axioms LonelyRunner.reverseGrid_pivot_modEq
+#print axioms LonelyRunner.reverseGrid_pivot_distance
 #print axioms LonelyRunner.exists_fastestPivotCertificate_of_ratio
 #print axioms LonelyRunner.fastestPivot_family_witness
 #print axioms LonelyRunner.slowest_fastest_gap_of_no_fastestPivotCertificate
