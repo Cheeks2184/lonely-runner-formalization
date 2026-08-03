@@ -53,6 +53,7 @@ import LonelyRunner.SoftFeedbackLayers
 import LonelyRunner.BlockPeeling
 import LonelyRunner.BellmanPeeling
 import LonelyRunner.OverlapCapacity
+import LonelyRunner.PivotPackingAdapter
 import LonelyRunner.CorrelationPolynomial
 import LonelyRunner.WeightedZeroCount
 import LonelyRunner.ConsecutiveCorrelationObstruction

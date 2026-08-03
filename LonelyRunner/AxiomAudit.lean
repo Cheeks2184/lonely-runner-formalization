@@ -157,7 +157,9 @@ project-specific axiom.
 #print axioms LonelyRunner.overlapPointUse_le_capacity_of_injectiveOwner_of_unowned
 #print axioms LonelyRunner.overlapPointUse_le_capacity_of_ordered_injectiveOwner
 #print axioms LonelyRunner.card_biUnion_add_sum_card_blocks_le_sum_card_bad
+#print axioms LonelyRunner.exists_avoiding_of_overlapCapacity
 #print axioms LonelyRunner.card_biUnion_le_sum_card_bad_sub_sum_card_blocks
+#print axioms LonelyRunner.exists_pivot_certificate_of_overlapPacking
 #print axioms LonelyRunner.alternatingChoosePrefix_succ
 #print axioms LonelyRunner.correlationPolynomial_cleared_eq
 #print axioms LonelyRunner.correlationPolynomial_cleared_nonpos
