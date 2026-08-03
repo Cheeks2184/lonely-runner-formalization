@@ -116,8 +116,9 @@ Do not infer the target from the finite counts.
   a separately plausible arithmetic inequality is only a restatement.
 
 The DPLP and prime-forcing results from Response59 do not belong to this cell.
-In particular, Response59 D4 and D5 are only candidate proved-math pending the
-independent PRO-E audit; do not use them as inputs.
+The corrected-hypothesis mathematical audit of Response59 D4 and D5 is
+complete and accepts them as proved-math, but they remain outside PRO-B and
+may not be used as inputs.
 
 ## Mandatory adversarial program
 

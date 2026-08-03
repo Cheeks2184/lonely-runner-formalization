@@ -34,16 +34,16 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | Accepted audit deliverables | 5 | `RO-AUDIT-001`, `LUNA-ROUTE-001`, `VL-AUDIT-001`, `FL-AUDIT-001`, and `VL-LUNA-DPLP-001` were accepted as audit evidence. |
 | Accepted negative audits | 4 | The Luna routing audit and three DPLP contract audits returned valid negative results. |
 | Accepted recovery deliverables | 1 | `SOL-R59-RECOVER-001` recovered and normalized Response59 without promoting its claims. |
-| Accepted implementations | 0 | No pending proof or computation tranche has passed its implementation contract. |
+| Accepted implementations | 0 unrestricted; 1 conditional formal artifact | The corrected DPLP contract/wrapper is reviewed in isolation and pending main integration; it proves neither DPLP nor induction. |
 | Active Sol Pro cells | 1 / 4 | Prompt60 PRO-E is running in a genuinely new conversation; Prompt59 is complete. |
 | Queued Sol Pro cells | 3 | Prompt61 PRO-A, Prompt62 PRO-B, and Prompt63 PRO-C are packaged but not submitted. |
 | Active Sol Medium leads | 3 / 3 | Research Operations, Verification, and Formalization are the initial lead lanes. |
-| Active Luna workers | 1 / 6 | The independent Response59 verification audit is active; the formal Luna result is in lead review. |
+| Active Luna workers | 1 / 6 | The independent Response59 verification audit is active; the formal Luna artifact has completed review. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the active clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 2 | The nested Luna spawn was rejected; the first formal workspace-write launch was downgraded to read-only and terminated. |
 | Merge conflicts | 0 | No task on this board has been merged. |
-| Integration backlog | 3 | DPLP contract repair, Formalization Lead review of the Luna commit, and the pending-tranche integration decision remain unresolved. |
-| Wait time | Not recorded | Prompt60, the independent Response59 audit, and Formalization Lead review are pending, but trustworthy start timestamps are not present in this repository snapshot. Do not invent elapsed time. |
+| Integration backlog | 3 | Main integration of the corrected formal contract, DPLP selector/correlation work, and the pending-tranche integration decision remain unresolved. |
+| Wait time | Not recorded | Prompt60, the independent Response59 audit, and formal-contract integration are pending, but trustworthy start timestamps are not present in this repository snapshot. Do not invent elapsed time. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -290,7 +290,7 @@ as an accepted implementation or mathematical proof.
   `research/sol-pro/prompts/prompt62.md`; no files during external execution
 - **Acceptance command:** `sha256sum research/sol-pro/prompts/prompt62.md`
   must return
-  `23dee02ec566f19ea99357d68c53c8dedfec223aec0eba55326d56b6c3b505ed`;
+  `c33ce233418ae356c0d9a41b35f47bf73598f6012803680a6b710a27cf3ba3e3`;
   run `git diff --check` and the targeted secret/local-path scan.
 - **Blocker:** `/root` has not allocated or submitted the new conversation.
 - **Final disposition / promotion authority:** Queued and unsubmitted. Only
@@ -303,8 +303,9 @@ as an accepted implementation or mathematical proof.
 - **Owner / supervising lead:** unassigned new-chat worker / `/root`
 - **Base:** prompt-package base
   `fcf082781091f8e59ca43d498a4c37f8723ec599`
-- **Dependencies:** corrected DPLP formal-status ledger; selected-certificate
-  lift only is proved-Lean; Response59 D4/D5 remain pending PRO-E
+- **Dependencies:** reviewed isolated corrected DPLP contract/conditional
+  wrapper pending main integration; selected-certificate lift is proved-Lean;
+  D4/D5 and repaired D6 are independently accepted proved-math
 - **Branch:** `ops/parallel-task-board-001`; future execution is a new
   external ChatGPT conversation
 - **Status:** `queued`
@@ -316,7 +317,7 @@ as an accepted implementation or mathematical proof.
   `research/sol-pro/prompts/prompt63.md`; no files during external execution
 - **Acceptance command:** `sha256sum research/sol-pro/prompts/prompt63.md`
   must return
-  `cd106157780d81129e7c177b832eac3107b00aa061bc46a3406ce58d2fcb9772`;
+  `88a879a0489cbacf0707edd366527301e34f2c2763f7ed53d53529a8c7a487cb`;
   run `git diff --check` and the targeted secret/local-path scan.
 - **Blocker:** `/root` has not allocated or submitted the new conversation.
 - **Final disposition / promotion authority:** Queued and unsubmitted. Only
@@ -330,20 +331,19 @@ as an accepted implementation or mathematical proof.
 - **Base:** a fresh branch from
   `88c88789f5a503ad24adf54949fb330e88a70f35`, with only explicitly selected
   pending-tranche inputs
-- **Dependencies:** accepted negative results from `VL-AUDIT-001` and
-  `FL-AUDIT-001` and `VL-LUNA-DPLP-001`; final Formalization Lead disposition
-  for `FL-LUNA-DPLP-001`
+- **Dependencies:** accepted negative results from `VL-AUDIT-001`,
+  `FL-AUDIT-001`, and `VL-LUNA-DPLP-001`; reviewed corrected conditional
+  artifact from `FL-LUNA-DPLP-001`
 - **Branch:** to be allocated by `/root`; one isolated worktree
 - **Status:** `queued`
-- **Exact deliverable:** Resolve the exact DPLP contract mismatch identified
-  by verification, preserve the sound-lift/open-selector boundary, and return
-  a minimal repair diff plus replay evidence.
+- **Exact deliverable:** Build selector/correlation work on the corrected
+  formal contract, preserve the sound-lift/open-selector boundary, and return
+  a minimal independently verified diff plus replay evidence.
 - **Allowed files:** must be declared by `/root` before launch; no overlap with
   the active Prompt60 turn or this board
 - **Acceptance command:** `git diff --check && lake env lean LonelyRunner/DeletionPivotLifting.lean && lake build && lake env lean LonelyRunner/AxiomAudit.lean`
-- **Blocker:** The Formalization Lead has not issued a final disposition on the
-  Luna formal commit. An exact repair file-cell assignment is also pending;
-  wait rather than infer acceptance.
+- **Blocker:** The corrected formal artifact remains outside main, and an
+  exact selector/correlation file-cell assignment is pending.
 - **Final disposition / promotion authority:** Queued. It requires a fresh
   Verification Lead audit; `/root` alone may promote or integrate it.
 
@@ -383,7 +383,7 @@ as an accepted implementation or mathematical proof.
   `cd908c8ea148f2e46e19d1e8754497e729bd2716`
 - **Dependencies:** `LUNA-ROUTE-001`, `FL-AUDIT-001`
 - **Branch:** `formal/luna-dplp-contract-001`
-- **Status:** `review`
+- **Status:** `verified`
 - **Exact deliverable:** Independently audit or repair the formal DPLP fixture
   under the exact task contract while preserving the sound-lift/open-selector
   boundary. The session is Luna with xhigh reasoning.
@@ -395,12 +395,12 @@ as an accepted implementation or mathematical proof.
 - **Blocker:** The first workspace-write launch was downgraded to read-only
   and terminated. A fresh `danger-full-access` top-level CLI session was
   runtime-honored and isolated and produced commit
-  `e5a353397008e0d2fcbbb6213972b952055c4dbf`; the Formalization Lead's final
-  report is still pending.
-- **Final disposition / promotion authority:** `review`. Runtime route/model
-  and honored isolation metadata are verified, but the commit is not an
-  accepted implementation until the Formalization Lead reports and `/root`
-  accepts the result.
+  `e5a353397008e0d2fcbbb6213972b952055c4dbf`. Review accepts its corrected
+  DPLP contract and conditional wrapper; main integration remains pending.
+- **Final disposition / promotion authority:** Reviewed conditional formal
+  artifact accepted by the Formalization Lead. It records the structural
+  premises and consumes the DPLP selector but proves neither DPLP nor
+  induction. `/root` alone may integrate it into main.
 
 ### PRO-E-INTEGRATE-001 — pending-tranche integration decision
 
@@ -428,8 +428,8 @@ as an accepted implementation or mathematical proof.
 1. Preserve the accepted negative `VL-AUDIT-001`, `FL-AUDIT-001`, and
    `VL-LUNA-DPLP-001` results; their audited tranche remains rejected and
    blocked.
-2. Wait for the Formalization Lead's `FL-LUNA-DPLP-001` report and the active
-   `VL-R59-AUDIT-001`; do not guess their final dispositions.
+2. Preserve the reviewed `FL-LUNA-DPLP-001` conditional artifact without
+   promoting DPLP, and wait for the active `VL-R59-AUDIT-001` result.
 3. Specify and execute `DPLP-REPAIR-001` in an isolated branch using only
    accepted findings.
 4. Re-run a fresh verification audit; an accepted negative audit cannot be

@@ -16,18 +16,19 @@ coefficient theorem.
 
 ## Correct formal status
 
-The current Lean module proves only:
+The integrated baseline proves that a **selected** deletion certificate
+satisfying the exact exceptional-good inequality gives the explicit full
+witness time `r/(n*p)` at the closed `1/(n+1)` threshold.
 
-1. a **selected** deletion certificate satisfying the exact exceptional-good
-   inequality gives the explicit full witness time `r/(n*p)` at the closed
-   `1/(n+1)` threshold;
-2. a neutral selector-consuming wrapper: if every deletion has a certificate
-   and a selector implication is already supplied, the selected certificate
-   yields the full witness.
-
-The corrected DPLP structural contract and the complete induction bridge are
-not formalized. The neutral wrapper does not prove the selector, height split,
-`N`-divisible premise, or induction. DPLP remains conjectural.
+Separately, reviewed isolated commit
+`e5a353397008e0d2fcbbb6213972b952055c4dbf`, pending main integration,
+formalizes the corrected DPLP contract and a conditional wrapper. It records
+the full positivity, injectivity, primitivity, residual-height,
+`N`-divisibility, and all-deletions-certificate premises. The wrapper consumes
+the corrected DPLP selector as a hypothesis; it does not prove that selector
+or the induction. Thus the isolated contract/wrapper is a proved-Lean
+conditional artifact at the reviewed commit, while corrected DPLP and the
+unrestricted induction conclusion remain conjectural.
 
 ## Exact deletion definitions
 
@@ -109,14 +110,15 @@ Develop at least two materially different attacks before choosing one:
 
 1. exact empty/shell-singleton versus deep-singleton incidence with genuine
    overlap control;
-2. a deletion-safe continuous-maximizer or active-cycle argument, including
-   an exact bridge back to canonical speed-valued certificates;
+2. a deletion-safe maximizer or active-cycle argument that synchronizes the
+   individually canonical active edges across their different times and
+   grids;
 3. a minimal-certificate exchange or phase argument respecting all selector
    quantifiers.
 
 Do not rename the selector conclusion as a lemma and count that as progress.
 
-## Response59 candidate lemmas under independent review
+## Independently accepted active-set lemmas
 
 For
 
@@ -125,21 +127,45 @@ K_k = { t in R/Z : ||t*a_i|| >= 1/n for every i != k },
 eta_k = max_{t in K_k} ||t*a_k||,
 ```
 
-Response59 proposed:
+Independent mathematical audit accepts the following at their exact
+hypotheses:
 
 - D4: if there is no full `1/N` witness, distinct `K_k` are pairwise
   disjoint;
 - D5: if there is no full `1/N` witness, `K_k` is nonempty, and `t_k`
   maximizes the exceptional coordinate on `K_k`, some other coordinate is
   active at equality `1/n`;
-- D6: **only under both no-full-witness and nonempty `K_k` hypotheses**, a
-  self-loop-free choice of active coordinates has a directed cycle.
+- repaired D6: **under both no-full-witness and nonempty `K_k` hypotheses**,
+  choose a maximizer `t_k` and a D5-active index `i(k)!=k` for every `k`; the
+  resulting self-loop-free finite functional graph has a directed cycle.
 
-D4 and D5 are candidate `proved-math` statements pending the independent
-PRO-E audit. D6 must not be stated from “DPLP failure” alone without deriving
-no full witness and every `K_k` nonempty. Continuous maximizers need not be
-canonical pivot certificates; prove an exact bridge or keep the conclusion
-continuous. A directed cycle may avoid the `N`-divisible coordinate.
+D4, D5, and repaired D6 are `proved-math`, not proved-Lean. D6 must not be
+stated from “DPLP failure” alone without deriving no full witness and every
+`K_k` nonempty.
+
+The active equality already supplies the canonical bridge for each individual
+edge. If
+
+```text
+||a_i*t_k|| = 1/n,
+```
+
+then for some integer `z`,
+
+```text
+t_k = (n*z + 1)/(n*a_i)  mod 1
+   or t_k = (n*z - 1)/(n*a_i)  mod 1.
+```
+
+After reducing the numerator modulo `n*a_i`, it is congruent to `+1` or `-1`
+modulo `n`, so it is a canonical pivot candidate at the surviving pivot speed
+`a_i`. Because `t_k` lies in `K_k`, this active edge is individually a
+canonical certificate for deletion `k`.
+
+What remains missing is synchronization: different vertices use different
+maximizing times, numerators, pivot speeds, and canonical grids. The cycle
+does not supply a common time or common grid, and it may avoid the
+`N`-divisible coordinate.
 
 ## Known exact obstructions
 
@@ -189,10 +215,12 @@ For every proposed selector, exchange, cycle, or descent implication:
 3. enumerate all certificates, not one convenient certificate per deletion;
 4. test CRT-structured, `N`-spike, affine-residue, large-`N`-multiple, and
    mutation families around the raw-lift failure;
-5. for continuous arguments, compute all relevant connected components and
-   maximizing choices and test cycles that exclude the divisible coordinate;
-6. for canonical arguments, verify strict/closed endpoints and literal
-   residues with a second implementation.
+5. compute all relevant connected components and maximizing choices and test
+   canonical active-edge cycles that exclude the divisible coordinate;
+6. verify each active edge's `n*z±1` canonical numerator, strict/closed
+   endpoints, pivot grid, and literal residues with a second implementation;
+7. reject any synchronization step that silently identifies the distinct
+   times, numerators, or grids around a cycle.
 
 Return the first exact counterexample to every proposed strengthening. Do not
 spend the turn on another broad box whose only conclusion is zero failures.
@@ -207,10 +235,10 @@ Maximum budget for this cell:
 
 Stop and freeze the attempted route if it reduces to arbitrary per-deletion
 selection, if its cycle can avoid every use of the divisible coordinate, if a
-continuous argument cannot return to a canonical certificate when required,
-or if its first inequality fails a mandatory tuple. Continue only if the
-first unsupported implication becomes strictly narrower than
-`DELETION-CERTIFICATE-CORRELATION`.
+proposed common-time or common-grid step cannot synchronize the individually
+canonical active edges, or if its first inequality fails a mandatory tuple.
+Continue only if the first unsupported implication becomes strictly narrower
+than `DELETION-CERTIFICATE-CORRELATION`.
 
 ## Required output
 
@@ -225,7 +253,8 @@ Return:
    rejected claim;
 6. deterministic audit version, domain, order, runtime, source hash, output
    hash, and independent implementation agreement;
-7. an explicit audit of D4/D5 and the missing D6 hypotheses if they are used;
+7. exact use of accepted D4/D5 and repaired D6, including every hypothesis and
+   the `n*z±1` canonical numerator for each active edge;
 8. the single first unsupported implication after the turn;
 9. at most one next Lean declaration, only if it materially shortens the
    selector chain;
