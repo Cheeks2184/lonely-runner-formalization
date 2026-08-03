@@ -1256,3 +1256,42 @@ it does not prove a uniform pair-family premise. The Gamma replay checks every
 `4<=N<=300` row and finite repairs, but the all-`N` Hall selector remains
 conjectural. Adversarial review found and repaired the omitted `4<=N` domain
 guard before publication.
+
+## 2026-08-02: clean common-grid bad-count checkpoint
+
+Source commit `2158089e3135db42feb1ec6fe8cc79d31c0ef7cd` was cloned with
+`git clone --no-local` into a new native-WSL ext4 checkout. The checkout was
+clean and its HEAD exactly matched that commit before verification. After the
+pinned mathlib cache was restored, the authoritative low-memory command
+
+```text
+lake -Kjobs=2 build
+```
+
+completed successfully:
+
+```text
+Build completed successfully (3579 jobs).
+real 308.87
+```
+
+The expanded trust audit accepted 263 theorem reports in 8.27 seconds. The
+five new probes cover the exact bad-count equality, common-candidate
+extraction, unit-multiple avoidance, scaled-time equality, and final
+simultaneous top-two theorem. Every report used only `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+The complete regression and certificate suite then reported:
+
+```text
+Ran 153 tests in 589.824s
+OK
+real 590.75
+```
+
+This checkpoint proves the common-grid sufficient class under its explicit
+coprimality and strict bad-count-sum hypotheses. It does not prove those
+hypotheses for arbitrary top speeds, unrestricted top-two, or unrestricted
+Lonely Runner. The later computational-only commit `4cf1199` expands the
+Gamma empty/singleton classification; its deterministic audit passed in 8.50
+seconds without changing Lean source.

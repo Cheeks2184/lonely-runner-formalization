@@ -145,11 +145,25 @@ This equivalence does not prove either side.
   certificate at one top pivot. The unconditional paired-shift premise is
   false at `(N,A,B)=(4,2,8)` because one robust grid is empty. The surviving
   frontier is disjunctive; no uniform top-two theorem follows.
+- **Lean-verified common-grid special class:**
+  `simultaneousTopTwo_of_commonPivotBadCount` uses the exact gcd/ceiling bad
+  counts on a positive `g`-pivot grid. When both normalized top speeds are
+  units modulo `N` and the strict lower bad-count sum is below `g*(N-1)`, it
+  returns canonical candidates at both top pivots, mutual top safety, lower
+  safety, and exact equality of the represented real time. The strict count
+  premise is sufficient, not uniform. Its hypotheses do not encode that the
+  lower family is distinct or numerically below those pivots, so those facts
+  remain external in a literal sorted top-two instantiation.
 - **Audited mathematics plus finite evidence:** coefficient-two no-witness
   assumptions force every coprime complementary extra in `Gamma(c)` to be
-  occupied. A uniform Hall selector would close coefficient two. Exact tests
-  through `N=300` leave four repaired small pairs, but the selector theorem is
-  unproved. See [the Gamma audit](docs/coefficient-two-gamma.md).
+  occupied. Exact degree bounds and a complete bounded classification reduce
+  any new Hall failure to a connected deficiency-one core with `N>=20`, at
+  least three left vertices, and minimum incidence degree two on both sides.
+  Pomerance's primary coprime-interval theorem plus an exact rectangle
+  decomposition proves the active generic selector for all sufficiently
+  large `N`, but with an existential cutoff. Exact tests through `N=300`
+  leave four repaired small pairs. The exact all-`N` selector remains open.
+  See [the Gamma audit](docs/coefficient-two-gamma.md).
 - **Refuted strategy:** the proposed global fractional two-grid dual
   invariant fails exactly at top speeds `(98,187)` for `N=7`. A feasible
   fractional cover of mass `962/241<4` rules out the required dual mass by
@@ -172,10 +186,10 @@ restrictions do not force such a pivot.
 
 Active research branches are:
 
-1. determine whether the coefficient-three bounded-height theorem can be
-   improved further; the coefficient-two short-hole cases are classified,
-   but the natural missing-to-extra Hall argument is refuted and no
-   internal-blocker charging theorem is known;
+1. close the finite-to-uniform gap in the coefficient-two Gamma selector;
+   asymptotically the active generic branch follows from coprime interval
+   matchings, while a new exact failure would have to be a connected
+   deficiency-one critical incidence core with `N>=20`;
 2. prove the corrected disjunction between one-sided robust cover numbers and
    nonempty multi-shift transversals; unconditional paired existence is
    refuted by an empty-grid row;
@@ -187,8 +201,8 @@ Active research branches are:
 
 ## Latest verification
 
-Last clean mathematical source checkpoint:
-`2e7dc651cb81950ca4fe9f224d5ad3896c2948bd`.
+Last clean Lean source checkpoint:
+`2158089e3135db42feb1ec6fe8cc79d31c0ef7cd`.
 
 Pinned environment:
 
@@ -201,17 +215,17 @@ Pinned environment:
 Clean no-local-clone ext4 verification at that source checkpoint:
 
 ```text
-Build completed successfully (3578 jobs) in 453.16 seconds.
-Trust audit: 258 theorem reports; only propext, Classical.choice, Quot.sound
-Ran 153 tests in 597.480s
+Build completed successfully (3579 jobs) in 308.87 seconds.
+Trust audit: 263 theorem reports; only propext, Classical.choice, Quot.sound
+Ran 153 tests in 589.824s
 OK
 ```
 
-The clean checkout also replayed `audit_response50.sh` in 18.04 seconds and
-`audit_coefficient_two_gamma.sh` in 7.84 seconds. The former independently
-checks the fixed `(7,98,187)` transversal certificate; the latter checks the
-guarded `4<=N<=300` Gamma selector evidence. Neither finite replay proves a
-uniform theorem.
+The expanded `audit_coefficient_two_gamma.sh` replay passed separately in
+8.50 seconds at computational source commit `4cf1199`; it checks the guarded
+`4<=N<=300` selector evidence plus the globally bounded empty/singleton
+neighborhood classification. This finite replay does not prove a uniform
+theorem.
 
 The same full 147-test suite passed again at public-release commit
 `854567aa8e05ff05714ed5de4a1353d57b4fd105` in 401.780 seconds. The first
@@ -235,10 +249,12 @@ Public run 30768884839 passed both jobs at commit `4b31c22`, including the
 fastest-interval theorem, Response 50 artifact replay, trust audit, and all
 153 tests.
 
-The local `2e7dc65` checkpoint additionally contains the Lean-verified
-abstract two-sided transversal bridge and the guarded coefficient-two Gamma
-audit. Its public workflow run is pending publication; the clean local replay
-above is authoritative until that hosted run finishes.
+The local `2158089` checkpoint additionally contains the Lean-verified
+common-grid exact bad-count top-two class. The later `4cf1199` computational
+checkpoint expands the guarded coefficient-two Gamma audit. Public workflow
+run 30771993686 passed both the Lean/trust job and the complete certificate
+job at the preceding release commit `3b9d591`; the newer checkpoint is pending
+publication and hosted replay.
 
 The verified source plus the current research record includes the
 unconditional Kanold interval, `17*t<=3*N`,

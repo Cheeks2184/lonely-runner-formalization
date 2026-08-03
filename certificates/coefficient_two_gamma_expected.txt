@@ -18,6 +18,8 @@ failure[8,4].all_containment_configs=[((6,), ()), ((4, 5, 6), (9, 11))]
 failure[8,4].all_have_reciprocal_witness=True
 failure[11,5].all_containment_configs=[((6, 8), (13,))]
 failure[11,5].all_have_reciprocal_witness=True
+energy_equality=(N,t,A,e,p,lhs,rhs)=(14,6,(6, 8, 9, 10),9,9,81,81)
+energy_equality.all_proper_and_full_hall_good=True
 collision=(N,t,M,E)=(19,9,{9,14},{28})
 collision_witness=(q,c,q-c)=(29,9,20)
 PASS

@@ -541,3 +541,23 @@ three full Chebyshev scores are positive and `t=7/30` is a direct lonely
 witness. Thus the quadratic sufficient condition is rejected as a uniform
 route. The full score and exact pivot-certificate proposition remain open;
 see `docs/quadratic-chebyshev-failure.md`.
+
+## M. Complementary-hole Gamma incidence
+
+For coefficient two, the sound relation sends a missing base height `c` to
+every occupied-range complement `d` for which `c+d` is an above-height
+two-hole denominator and `gcd(c,d)=1`. No-witness assumptions force all such
+neighbors to be occupied extras. The exact remaining Hall condition is
+equivalent to a triangular coprime-pair theorem for every large pair of
+subsets of the candidate and extra intervals.
+
+Kanold blocks now give an exact degree bound after extending through the
+coprime-free `Auto` suffix. A bounded classification removes every empty and
+singleton neighborhood above `N=19`; hence a new failure must be a connected
+deficiency-one critical core with both incidence degrees at least two.
+
+Pomerance's primary coprime-interval theorem also closes the generic active
+range `2*t<=N<3*t` for all sufficiently large `N`, via an exact one/two-block
+rectangle decomposition and parity shifts. The cutoff is existential and the
+remaining exact finite/uniform bridge is not formalized. See
+`docs/coefficient-two-gamma.md`.

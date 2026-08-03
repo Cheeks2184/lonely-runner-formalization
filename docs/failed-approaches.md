@@ -557,3 +557,48 @@ complementary missing height `20` give a direct two-hole witness. These rows
 motivate the full coprime complementary neighborhood `Gamma(c)` recorded in
 `docs/coefficient-two-gamma.md`; they refute only premature one-output
 charging rules.
+
+## 2026-08-02: matching the full Gamma containing rectangle is too strong
+
+In the range `7*t<=3*N`, the generic Gamma triangle contains an equal pair of
+consecutive intervals. It is tempting to prove a coprime perfect matching of
+those full intervals and then restrict it to the actual candidate set. This
+stronger rectangle statement is false at
+
+```text
+N=17, t=7,
+left=[8,12], right=[18,22].
+```
+
+Both intervals contain three even and two odd numbers. Every left even would
+need a distinct right odd partner, so no coprime perfect matching exists.
+This is not a Gamma Hall counterexample: the short inequality removes `c=8`,
+and `Auto(9)` holds via `d=25`, leaving `{10,11,12}`. The assignments
+`10->21`, `11->18`, and `12->19` are valid Gamma neighbors. A successful
+argument must exploit candidate pruning or split/sliding rectangles rather
+than demand a matching of the full containing hull.
+
+## 2026-08-02: strict Gamma pair-energy exclusion is false
+
+The exact Cauchy--Schwarz pair-energy inequality does not become strict merely
+because every proper subset is Hall-good. At `(N,t)=(14,6)`, let
+
+```text
+A={6,8,9,10},
+Gamma(6)={17,19},
+Gamma(8)={15,17,19},
+Gamma(9)={16,17,19},
+Gamma(10)={17}.
+```
+
+Every proper subset satisfies Hall. With `m=4`, the total incidence count is
+`e=9` and the total pair-intersection energy is `p=9`, so the proposed strict
+comparison fails at equality:
+
+```text
+e^2=(m-1)*(e+2*p)=81.
+```
+
+This is not a selector counterexample: the union is `{15,16,17,19}`, of size
+four, and the full set is Hall-good. It rejects only `ENERGY-EXCLUSION` and
+shows that a successful energy argument needs genuinely new arithmetic input.

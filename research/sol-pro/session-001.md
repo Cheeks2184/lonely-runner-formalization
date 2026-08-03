@@ -2814,3 +2814,64 @@ Windows UI Automation exposed the current `GPT-5.6 Sol` menu and the `Pro`
 radio, explicitly selected `Pro`, and read the composer back byte-for-byte
 before submission. The live `Stop answering` control confirms Prompt 52 is
 running. No future response claim will be accepted without independent audit.
+
+## Response 52: asymptotic coefficient two accepted, exact selector open
+
+The recovered response begins `Status corrections`, has 21,862 PowerShell
+characters, 21,986 UTF-8 bytes, and raw clipboard SHA-256
+`e356b9c4acfdb11ea39d8e81e9dc62625bf0645176f58355ff383fc34bb647db`.
+Its LF-normalized form has 20,908 characters and SHA-256
+`3b2da4acd21c4d28a4f7251f2da428408d33721527d07196f21348a700185717`.
+No attachment or computational artifact was supplied.
+
+Independent audit accepted the minimal critical-core lemmas, monotone endpoint
+and private-strip restrictions, pair-energy identity, exact Mobius overlap
+formula, and common-denominator sufficient criterion. Their proposed uniform
+energy comparison remains conjectural.
+
+The main accepted advance is a parity-free even two-rectangle decomposition.
+For `t>=16`, two left intervals of length `2*floor(t/4)` cover the generic
+candidate band and cross-match into two disjoint extra intervals; every cross
+pair satisfies `H<c+d<=2N`. Pomerance's primary coprime-interval theorem then
+proves the Gamma selector whenever `N` is sufficiently large on the active
+`3*t>N` branch. Combining it with the Lean-verified coefficient-three theorem
+proves coefficient-two bounded height for all sufficiently large dimensions.
+The cutoff is existential and the proof is not in Lean, so exact coefficient
+two and unrestricted LRC remain open. The precise audit is in
+`docs/response52-audit.md`.
+
+Concurrently, the response's common-`g` B2 special class was formalized
+independently as `simultaneousTopTwo_of_commonPivotBadCount`. The tracked
+source, not the response's uncompiled Lean sketch, is the formal evidence.
+
+## Prompt 53 submitted: formal rectangle core and effective asymptotics
+
+Prompt 53 returns the exact Response 52 audit, the independently compiled B2
+theorem, the expanded sparse-`Gamma` classification, and the critical-core
+reduction. It asks for a Lean formalization of the elementary rectangle
+decomposition with an explicit conditional coprime-bijection interface, an
+effective audit of the constants in Pomerance's primary theorem, and two
+independent attacks on the remaining critical incidence core. It explicitly
+forbids importing Pomerance as an axiom and preserves every strict/closed
+endpoint convention.
+
+After removing only the archived file's terminal newline, the exact composer
+value has 7,469 characters, 7,497 UTF-8 bytes, 94 line feeds, and SHA-256
+`47aa4c0f5896d746eb6c67b90f9165032ab3aff342caf09da5776fb0ddd8c0f9`.
+Windows UI Automation exposed the `GPT-5.6 Sol` submenu radio as selected and
+the `Pro` mode radio as selected. The composer read-back matched exactly
+before submission, and the live `Stop answering` control confirmed that the
+turn was running. No claim in Response 53 will be accepted without independent
+mathematical, computational, and Lean audit as applicable.
+
+While Response 53 was running, an independent adversarial audit refuted the
+prompt's still-conjectural `ENERGY-EXCLUSION` target. At
+`(N,t,A)=(14,6,{6,8,9,10})`, the four Gamma rows are respectively
+`{17,19}`, `{15,17,19}`, `{16,17,19}`, and `{17}`. Every proper subset is
+Hall-good, but `m=4,e=9,p=9` makes the proposed strict comparison an equality:
+`e^2=(m-1)*(e+2*p)=81`. The full set is Hall-good, so this is not a selector
+or LRC counterexample. A separate direct implementation reconstructed the
+candidate guards, automatic exclusions, neighborhoods, all proper Hall cuts,
+and the equality. This exact objection will be returned in the next Sol Pro
+turn; the already submitted Prompt 53 archive remains unchanged so its
+recorded composer hash stays valid.

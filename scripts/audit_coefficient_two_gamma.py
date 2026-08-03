@@ -132,6 +132,38 @@ for N, t, C, G in failures:
     print(f"failure[{N},{t}].all_containment_configs={configs}")
     print(f"failure[{N},{t}].all_have_reciprocal_witness=True")
 
+# This Hall-good equality row refutes the proposed strict ENERGY-EXCLUSION
+# closure without being a counterexample to the Gamma selector itself.
+N, t = 14, 6
+energy_A = (6, 8, 9, 10)
+energy_G = {c: set(gamma(N, t, c)) for c in energy_A}
+assert all(candidate(N, t, c) and not automatic(N, t, c) for c in energy_A)
+assert energy_G == {
+    6: {17, 19},
+    8: {15, 17, 19},
+    9: {16, 17, 19},
+    10: {17},
+}
+assert all(
+    has_full_matching(B, energy_G)
+    for size in range(1, len(energy_A))
+    for B in combinations(energy_A, size)
+)
+assert has_full_matching(energy_A, energy_G)
+energy_e = sum(len(row) for row in energy_G.values())
+energy_p = sum(
+    len(energy_G[c1] & energy_G[c2])
+    for c1, c2 in combinations(energy_A, 2)
+)
+energy_lhs = energy_e * energy_e
+energy_rhs = (len(energy_A) - 1) * (energy_e + 2 * energy_p)
+assert (energy_e, energy_p, energy_lhs, energy_rhs) == (9, 9, 81, 81)
+print(
+    "energy_equality=(N,t,A,e,p,lhs,rhs)="
+    f"({N},{t},{energy_A},{energy_e},{energy_p},{energy_lhs},{energy_rhs})"
+)
+print("energy_equality.all_proper_and_full_hall_good=True")
+
 N, t = 19, 9
 M = {9, 14}
 E = {28}

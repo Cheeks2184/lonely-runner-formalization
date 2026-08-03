@@ -83,6 +83,125 @@ coefficient-three theorem because `3*t<=N` (and it also has a direct
 reciprocal repair). The deterministic verifier below intentionally starts at
 `N=4`.
 
+## Degree and minimal-deficiency reduction
+
+There is a useful stronger description under `not Auto(c)`. The coprime part
+of `Gamma(c)` is unchanged if its raw interval is extended above `H`:
+
+```text
+K(c)=[max(N+1,H-c+1), 2N-c].
+```
+
+Indeed, the added suffix is exactly the interval tested by `Auto(c)`, and by
+hypothesis it contains no integer coprime to `c`. The length of `K(c)` is
+`N-max(c,t)`. Partitioning it into disjoint blocks of length `2^omega(c)` and
+applying the Lean-verified Kanold interval theorem gives
+
+```text
+|Gamma(c)| >= floor((N-max(c,t))/2^omega(c)).
+```
+
+For a generic candidate, the original raw interval has length
+`min(c,t,N-c)>=ceil(c/3)`. Elementary prime-factor arithmetic gives
+`3*2^omega(c)<=c` for `c>=7`, except `c=10`, whose interval still has length
+at least four. Hence the only empty candidate neighborhood is
+`(N,t,c)=(8,4,6)`.
+
+Likewise, `6*2^omega(c)>c` holds exactly for
+
+```text
+{1,2,3,4,5,6,7,8,9,10,11,12,14,15,18,20,21,22,30,42}.
+```
+
+Thus every generic candidate with `c>=43` has at least two neighbors. A
+generic singleton must have `c<=42`; the generic band then forces `N<=111`.
+The nongeneric table already has `N<=18`, so the following exact finite
+classification is globally complete, not a search extrapolation:
+
+```text
+(4,1,2;5), (4,2,2;5), (4,2,3;5),
+(5,2,2;7), (5,2,3;7),
+(6,2,4;7), (6,3,2;9), (6,3,4;7),
+(7,2,4;9), (7,3,4;9),
+(9,3,6;11), (9,4,6;11),
+(11,2,6;13), (11,3,6;13), (11,4,6;13),
+(11,5,6;13), (11,5,8;13),
+(14,6,10;17), (14,7,10;17),
+(17,7,12;19), (17,8,12;19),
+(19,9,14;23).
+```
+
+The entry after the semicolon is the unique neighbor. The public verifier now
+asserts and prints this list. It also confirms that the only two-vertex Hall
+defects are the shared-neighbor rows at `(4,2)`, `(5,2)`, and `(11,5)`.
+
+Consequently, outside the four repaired parameter pairs, any
+inclusion-minimal Hall-deficient set `A` would satisfy
+
+```text
+N>=20,
+|A|>=3,
+|Gamma(A)|=|A|-1,
+```
+
+and its induced bipartite incidence graph would be connected with minimum
+degree at least two on both sides. The equality follows by deleting any one
+left vertex and using minimality. A right vertex of degree one would make that
+deletion deficient again. The finite classification supplies the left-degree
+claim. These properties do not themselves contradict deficiency; abstract
+connected critical cores with these parameters exist.
+
+Several stronger exact consequences survive adversarial review. If
+`m=|A|`, `e` is the number of incidence edges, and
+`p=sum_d binom(deg(d),2)` is the pair-intersection energy, then
+
+```text
+e>=2*m,
+p>=e-(m-1)>=m+1,
+cycle_rank=e-2*m+2>=2.
+```
+
+For every nonempty right subset `B`, deletion-perfect matchings give the
+strict dual Hall inequality `|N_A(B)|>=|B|+1`. Every ordered prefix of the
+left vertices is crossed by an actual shared Gamma neighbor. Moreover, every
+portion of a raw or extended interval which belongs to only one left vertex
+must be coprime-free for that vertex, and hence has length below its Kanold
+threshold. In particular, if `c1<c2<...`, then
+
+```text
+c2-c1 < 2^omega(c1).
+```
+
+Here the `N>=20` and left-degree conclusions use the globally bounded
+empty/singleton classification and the finite exclusion of smaller selector
+failures; they do not follow from abstract graph minimality alone. Also, only
+the unfiltered interval supports are monotone. Gcd filtering does not preserve
+biconvexity.
+
+Equivalently, writing `R={N+1,...,N+t}`, the exact remaining theorem is
+
+```text
+for nonempty A subset C and T subset R,
+|A|+|T|>=t+1
+implies some c in A, d in T satisfy
+H<c+d<=2N and gcd(c,d)=1.
+```
+
+This is precisely Hall's condition after taking `T=R\Gamma(A)`. It makes
+clear why scalar degree estimates alone cannot finish the proof.
+
+A proposed strict pair-energy closure is now refuted. At `(N,t)=(14,6)`,
+take `A={6,8,9,10}`. Its neighborhoods are
+
+```text
+6:{17,19}, 8:{15,17,19}, 9:{16,17,19}, 10:{17}.
+```
+
+Every proper subset is Hall-good, but `m=4`, `e=9`, and `p=9`, so
+`e^2=(m-1)*(e+2*p)=81` exactly rather than strictly. The full set is also
+Hall-good because its union has size four. Thus this refutes only
+`ENERGY-EXCLUSION`, not the Gamma selector.
+
 ## Four finite repairs
 
 Assume the no-witness consequences `M subset C`, `Gamma(M) subset E`,
@@ -116,17 +235,18 @@ bash scripts/audit_coefficient_two_gamma.sh
 The exact Python source SHA-256 is
 
 ```text
-508ce445b8fe2d8429878c28eda890a053305964c4a6275e0b577ede2fc04e39
+ba277ba8bcf9783415a68eae955384bb3afbadea3af2af36e466060a1618f970
 ```
 
 and the expected-output SHA-256 is
 
 ```text
-f087834eeb07f4ca1c4b258d16d3dd8ebb23bf5e6bbe15641c6ec28f89dfb925.
+ea0f5e2ca58259e6a644323abe1a8743392b8178ae57a27366edabed602a57ca.
 ```
 
-The public replay under Python 3.14.4 completed in 8.24 seconds with maximum
-RSS 28,996 KB. This finite range cannot promote the selector conjecture.
+The expanded public replay under Python 3.14.4 completed in 8.50 seconds. It
+now also prints the bounded singleton/empty-neighborhood classification. This
+finite range cannot promote the selector conjecture.
 
 ## Refuted simpler charges
 
@@ -149,11 +269,90 @@ Bohman and Peng prove an asymptotic coprime mapping theorem for two equal
 intervals and use it to establish LRC for sufficiently large `n` when the
 maximum speed is below `(2-epsilon)n`. Pomerance improves the interval-length
 requirement to order `(log n)^2`. These primary results concern rectangular
-interval matchings; they do not directly imply the sliding, truncated,
-candidate-dependent `Gamma` Hall condition above, nor do they provide the
-needed exact all-dimension Lean bridge. See
+interval matchings; they do not directly give the exact all-`N`, sliding,
+candidate-dependent `Gamma` Hall condition or the needed Lean bridge. See
 [Bohman--Peng](https://arxiv.org/abs/2109.09860) and
 [Pomerance](https://arxiv.org/abs/2111.07157).
 
-The remaining task is to exploit the monotone sliding endpoints and minimal
-Hall-deficiency incidence, beyond scalar coprime-gap bounds.
+There is nevertheless a rigorous asymptotic specialization. Pomerance proves
+that, for a sufficiently large ambient bound, two consecutive intervals of
+the same even length have a coprime matching once half their length exceeds
+`c*(log n)^2`. His corollary also treats odd length when the least elements
+have opposite parity. The constant and ambient cutoff are existential in the
+published statement used here.
+
+For a direct even-interval reduction, write
+
+```text
+a=floor(3*(N-t)/4)+1,
+b=floor((N+t)/2),
+q=floor(t/4),
+ell=2*q,
+a0=max(t-ell,b-2*ell+1).
+```
+
+The generic candidates are contained in `[a,b]`. When `t>=16` and
+`2*t<=N`, the adjacent length-`ell` intervals
+
+```text
+C0=[a0,a0+ell-1],
+C1=[a0+ell,a0+2*ell-1]
+```
+
+cover `[a,b]`. The nontrivial width estimate is
+
+```text
+b-a+1 <= (5*t-N)/4+1 <= 3*t/4+1 <= t-3 <= 2*ell,
+```
+
+while `t-ell<=a` puts the left endpoint in the right place. Define disjoint
+extra intervals
+
+```text
+D0=[N+1,N+ell],
+D1=[N+ell+1,N+2*ell].
+```
+
+They lie in `(N,N+t]` because `2*ell<=t`. Every pair in `C0 x D1` and
+`C1 x D0` is a Gamma-eligible sum pair. The strict lower endpoint follows
+from `a0+ell>=t`, giving `c+d>N+t`. For the closed upper endpoint, it is
+enough to show `a0+3*ell-1<=N`; the two branches in the maximum defining
+`a0` give respectively `t+2*ell-1<N` and `b+ell<=N`.
+
+All four intervals have the same even length `ell=2*q`. Apply Pomerance to
+`(C0,D1)` and `(C1,D0)`. The two right images are disjoint, so the union of
+the bijections, restricted to actual generic candidates, is a Gamma system of
+distinct representatives. On the active branch `N<3*t`,
+`q=floor(t/4)>N/12-1`, and every value is at most `H=N+t<=3*N/2`.
+
+It follows from Pomerance's theorem that there exists `N0` such that, for
+every `N>=N0` and `t` with
+
+```text
+0<t, 2*t<=N<3*t,
+```
+
+the complete generic candidate family has a Gamma system of distinct
+representatives. All 22 nongeneric triples have `N<=18`, so enlarging `N0`
+gives the full candidate selector on this active asymptotic frontier. This is
+audited manuscript mathematics using a primary published theorem; it is not
+Lean-verified, its cutoff is not explicit, and it does not settle the exact
+all-`N` selector. The `3*t<=N` branch is already bypassed for the
+coefficient-two LRC objective by the Lean-verified coefficient-three theorem.
+
+The published proof does not expose a numerical cutoff. Its first missing
+datum is the absolute constant `c1` imported from Iwaniec's interval-sieve
+estimate; it subsequently uses an unspecified `c2`, sets
+`c=3*c1*c2^2`, and invokes further unnamed constants and sufficiently-large
+thresholds. No inherently ineffective input was identified, but obtaining a
+number would require a new explicit reworking of those estimates. If explicit
+Pomerance constants `(cP,nP)` were supplied, any `N0>=max(45,nP)` satisfying
+`N/12-1>cP*(log(3*N/2))^2` thereafter would suffice for this geometric
+reduction.
+
+A tempting stronger reduction—matching the entire containing rectangle—is
+false at `(N,t)=(17,7)`: the intervals `[8,12]` and `[18,22]` both have an
+even majority and cannot be coprime-matched. Candidate pruning removes `8`
+and `9`, leaving `{10,11,12}`, which does match. Exact finite control of this
+pruning, or a direct triangular coprime-pair theorem for the critical cores,
+is the remaining task.

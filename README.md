@@ -74,6 +74,16 @@ explicit reciprocal or complementary-hole witnesses. No number-theoretic
 premise is assumed as an axiom. This remains a bounded-height theorem and does
 not prove or disprove unrestricted LRC.
 
+`CommonPivotBadCount.lean` verifies a separate nonsaturated top-two special
+class. If the two top speeds are coprime-to-`N` multiples `alpha*g` and
+`beta*g`, and the exact sum of lower-speed strict bad-set cardinalities on the
+common `g`-grid is less than `g*(N-1)`, Lean constructs scaled canonical
+certificates at both top pivots representing the same real time. This is a
+conditional sufficient class, not the unrestricted top-two conjecture. The
+declaration does not itself require the lower family to be distinct or below
+those two speeds; a literal sorted top-two application must supply those outer
+family facts separately.
+
 The strongest additional computer-assisted manuscript theorem covers maximum
 speed `n+5`. Its 134,568-case finite core and uniform arithmetic proof have
 been independently audited, but the combined theorem is not yet one Lean
@@ -123,6 +133,8 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 - [response51-audit.md](docs/response51-audit.md): accepted conditional
   special classes, the exact affine counterexample, and the corrected
   coefficient-two frontier.
+- [response52-audit.md](docs/response52-audit.md): critical Gamma cores, the
+  verified common-grid class, and the asymptotic coefficient-two theorem.
 - [affine-transversal-frontier.md](docs/affine-transversal-frontier.md): the
   Lean-formalized abstract bridge, empty-grid counterexample, and corrected
   disjunctive frontier.
@@ -142,8 +154,8 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 
 The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
-The current clean mathematical source checkpoint is
-`2e7dc651cb81950ca4fe9f224d5ad3896c2948bd`; see
+The current clean Lean source checkpoint is
+`2158089e3135db42feb1ec6fe8cc79d31c0ef7cd`; see
 [STATUS.md](STATUS.md) for its exact build, trust, and test results.
 
 Install [Elan](https://github.com/leanprover/elan), clone the repository, and

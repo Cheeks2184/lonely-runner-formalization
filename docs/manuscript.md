@@ -2297,3 +2297,86 @@ coprime-matching references are in `docs/coefficient-two-gamma.md`.  Existing
 rectangular interval-matching results do not directly prove this sliding,
 truncated Hall condition.  The coefficient-two theorem remains open at that
 uniform selector obligation.
+
+## 48. A Lean-verified common-grid top-two class
+
+Let the two proposed top speeds be `alpha*g` and `beta*g`, where `g>0`,
+`0<alpha<beta`, and both `alpha` and `beta` are coprime to `N`. On the
+canonical `g`-pivot grid define `b(N,g,v)` by the exact gcd/ceiling expression
+for the cardinality of `pivotBadResidues N g v`.
+
+For a Fin-indexed lower-speed family, assume
+
+```text
+sum_i b(N,g,lower_i) < g*(N-1).
+```
+
+There are exactly `g*(N-1)` common-grid candidates. The strict finite union
+bound therefore leaves a numerator `u` which is closed-good for every lower
+speed. A candidate `u` is also automatically good for `q*g` whenever `q` is
+a unit modulo `N`: nondivisibility of `u` is preserved by `q`, so the scaled
+cyclic distance is a positive multiple of `g`.
+
+The numerators `alpha*u` and `beta*u` are consequently candidates at the two
+top pivots, remain good for every lower speed, and are mutually top-good.
+Both represent exactly the same real time:
+
+```text
+(alpha*u)/(N*alpha*g) = u/(N*g) = (beta*u)/(N*beta*g).
+```
+
+Every step is kernel-checked in `CommonPivotBadCount.lean`. The final
+declaration is `simultaneousTopTwo_of_commonPivotBadCount`; the supporting
+declarations identify the exact count, extract `u`, prove unit-multiple
+safety, and prove the real-time scaling identity. Strict badness and closed
+safe equality are inherited from the canonical definitions. This is a
+genuine nonsaturated special class, but its strict sum hypothesis is only a
+sufficient condition. The declaration deliberately accepts an arbitrary
+Fin-indexed lower family; distinctness and the facts that its entries lie
+below the two proposed pivots are outer hypotheses in a literal top-two
+instantiation. It does not prove the unrestricted top-two conjecture.
+
+## 49. Critical Gamma cores and the asymptotic active frontier
+
+Under `not Auto(c)`, the coprime portion of `Gamma(c)` is unchanged when its
+interval is extended through `2*N-c`; the added suffix is precisely the
+coprime-free `Auto` interval. The extended interval has length
+`N-max(c,t)`. Applying the verified Kanold theorem to disjoint blocks gives
+
+```text
+|Gamma(c)| >= floor((N-max(c,t))/2^omega(c)).
+```
+
+Together with elementary bounds on `2^omega(c)`, this proves that every
+generic candidate `c>=43` has at least two neighbors. A complete bounded
+classification finds one empty row, `(8,4,6)`, and 22 singleton rows, all
+with `N<=19`. The expanded deterministic Gamma verifier prints and checks the
+exact list. Therefore, outside the four repaired parameter pairs, a minimal
+Hall-deficient set would have `N>=20`, at least three left vertices,
+deficiency exactly one, connected incidence, and minimum degree at least two
+on both sides. Abstract graphs with those properties exist, so a new
+arithmetic incidence lemma is still needed.
+
+There is also a uniform asymptotic advance. Set
+
+```text
+a=floor(3*(N-t)/4)+1,  b=floor((N+t)/2),
+q=floor(t/4),          ell=2*q,
+a0=max(t-ell,b-2*ell+1).
+```
+
+The generic candidates lie in `[a,b]`. For `t>=16`, the two adjacent
+length-`ell` intervals starting at `a0` cover this band, and the two disjoint
+extra intervals `[N+1,N+ell]` and `[N+ell+1,N+2*ell]` lie in `(N,N+t]`.
+Cross the first left interval with the second extra interval and vice versa.
+The inequalities `a0+ell>=t` and `a0+3*ell-1<=N` prove exactly the strict
+lower and closed upper Gamma sum boundaries. Each block has even length
+`ell=2*q`, so Pomerance's published coprime-interval matching theorem supplies
+the two disjoint bijections once `q` exceeds its logarithmic threshold.
+
+Consequently there exists an `N0` such that the full Gamma selector holds for
+every `N>=N0` and `0<t, 2*t<=N<3*t`. The cutoff is existential because the
+published constant and ambient threshold used here are not explicit, and the
+rectangle reduction is manuscript mathematics rather than Lean code. The
+exact all-`N` selector, coefficient-two height theorem, and unrestricted LRC
+remain open.
