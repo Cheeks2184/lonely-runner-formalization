@@ -246,13 +246,18 @@ Response 62 audit update: the 8,108-row exact sweep and the hard
 `(N,A,B)=(7,98,187)` affine transversal number `5` are verified computed
 finite evidence, but all tested uniform scalar criteria fail. Its proposed
 combined residual is not an assembled project-level theorem. The first open
-edge is exactly `2*B<=N*A`. The weaker `B<n*A` step requires an explicit
-deleted-family witness and reindexing through `FastRunnerInsertion`; the
-terminal-interval step requires the no-full-witness premise plus positivity,
-top-two ordering, and `B<2q`. The surviving named target
+edge is exactly `2*B<=N*A`. Prompt 64 isolates the faithful contrapositive
+contract `N*A<2*B ->` a canonical certificate at one of the two top pivots;
+this is an unbounded, dimension-uniform ratio-branch theorem, not a bounded
+classification or an LRC theorem by itself. The weaker `B<n*A` step requires
+an explicit deleted-family witness and reindexing through
+`FastRunnerInsertion`; the terminal-interval step requires the
+no-full-witness premise plus positivity, top-two ordering, and `B<2q`. The
+surviving named target
 `RESIDUAL-2N-SHIFT-OWNER-TRANSVERSAL` remains conjectural/open and receives no
-implementation until those premises and the missing inequality are supplied
-in a theorem contract.
+implementation until those premises and the missing inequality are proved.
+The queued Prompt 64 contract does not supply that proof and does not promote
+the downstream transversal.
 
 ### Falsification and stop contract
 
