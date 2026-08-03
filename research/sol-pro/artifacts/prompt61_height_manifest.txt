@@ -1,0 +1,23 @@
+Prompt 61 PRO-A deterministic audit manifest
+
+Repository baseline: Cheeks2184/lonely-runner-formalization
+Commit: 88c88789f5a503ad24adf54949fb330e88a70f35
+Checker version: prompt61-height-checker-v1.2.0
+Source: prompt61_height_checker.cpp
+Source bytes: 32358
+Source SHA-256: ab2aa75e019f407aa774ee65afb920a005be25a167db028828cb0e1aa6520084
+Binary SHA-256: 693129b716678902980e7adb5bd026a7d3ab31e03c2dfa09c465a4b0b2c9ca6e
+Output: prompt61_height_sweep.txt
+Output bytes: 12810
+Output SHA-256: 8ed01720195b118e9a3b2b3b5e171c9f7076ca98ea572837dace3482feca5bc2
+Compiler: g++ (Debian 14.2.0-19) 14.2.0
+Compile flags: -O3 -std=c++20 -march=native -DNDEBUG
+Kernel: Linux 6.12.13 x86_64 GNU/Linux
+CPU: AMD EPYC 9V74 80-Core Processor
+Visible logical CPUs: 5
+Recorded runtime: 5,896,358 microseconds
+Arithmetic: uint64_t with uint128_t checked LCM multiplication
+Enumeration domain: primitive strictly increasing tuples, 3 <= n <= 8, maximum <= 40
+Enumeration order: n ascending; maximum ascending; lower tuple lexicographic
+Smallest-record comparison: (n, maximum, sum, sorted tuple, operation parameter, pivot, numerator, failed coordinate)
+Boundary convention: cyclic distance >= pivot is good; cyclic distance < pivot is bad

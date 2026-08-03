@@ -3301,3 +3301,27 @@ and an active-cycle obstruction, but every such claim remains unverified until
 the Verification Lead completes a clean-room mathematical and computational
 audit. No Response 60 statement is promoted here, and unrestricted Lonely
 Runner remains open.
+
+## Response 61 recovered; independent audit pending
+
+The PRO-A height-compression conversation completed after the UI reported 48
+minutes 30 seconds. The CRLF-to-LF normalized response has 25,904 characters,
+26,392 UTF-8 bytes, 694 line feeds, a terminal line feed, and SHA-256
+`02f0155e5fbeaac4705aca8b6be954d75dd2168de46e596b3468385aab39dfe9`.
+The tracked response is byte-identical to that normalized copy.
+
+All three advertised attachments were recovered:
+
+- `prompt61_height_checker.cpp`, SHA-256
+  `ab2aa75e019f407aa774ee65afb920a005be25a167db028828cb0e1aa6520084`;
+- `prompt61_height_sweep.txt`, SHA-256
+  `8ed01720195b118e9a3b2b3b5e171c9f7076ca98ea572837dace3482feca5bc2`;
+- `prompt61_height_manifest.txt`, SHA-256
+  `994cfe7e2762721a33a90cf14c2f61cbdf9bf86b4b29edfff16dd59158fc3d57`.
+
+Response 61 recommends stopping the current minimal-counterexample height
+compression contract and reports a finite residual obstruction plus a local
+transport lemma. Those claims, the checker, its exact sweep, and its stop
+decision remain unverified pending Verification Lead review. Recovery does not
+promote a height-compression theorem, a counterexample to LRC, or unrestricted
+LRC.

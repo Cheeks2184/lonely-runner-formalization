@@ -1,0 +1,164 @@
+checker_version=prompt61-height-checker-v1.2.0
+source_sha256=ab2aa75e019f407aa774ee65afb920a005be25a167db028828cb0e1aa6520084
+compiler=14.2.0
+integer_model=uint64_with_uint128_checked_lcm
+domain=n_ascending_3_to_8;maximum_ascending_n_to_40;lower_tuple_lexicographic
+smallest_record_order=(n,maximum,sum,sorted_tuple,operation_parameter,pivot,numerator,failed_coordinate)
+closed_boundary=good_iff_cyclic_distance_greater_or_equal_pivot;bad_iff_strictly_less
+runtime_microseconds=5896358
+
+[stage_counts]
+n,all_sorted,primitive,modulus_cover,fastest_ratio,fastest_interval,fastest_no_certificate,deletion_gcd,above_height_target
+3,9880,8410,3177,1655,1125,0,0,0
+4,91390,85771,27600,14408,11856,0,0,0
+5,658008,641166,203431,109145,95178,1,0,0
+6,3838380,3797877,861477,431305,387462,1,1,1
+7,18643560,18564316,3965253,1905549,1765047,0,0,0
+8,76904685,76777427,13431573,6160232,5845593,0,0,0
+total,100145903,99874967,18492511,8622294,8106261,2,1,1
+fastest_no_certificate_tuples=(6,18,24,30,37);(1,4,5,6,7,11)
+deletion_gcd_tuples=(1,4,5,6,7,11)
+
+[operation_counts_on_above_height_residual]
+operation,tuples_considered,defined,structurally_valid,reverse_pass_nonvacuous,reverse_pass_vacuous,reverse_fail,certificates_tested
+SUBTRACT_N,1,0,0,0,0,0,0
+FIXED_SIGNED_REP,1,1,1,0,0,1,1
+DIVISOR_SIGNED_ALL_PIVOT,1,0,0,0,0,0,0
+LCM_MIXED_SIGN_ALL_PIVOT,1,0,0,0,0,0,0
+surviving_operation_union_defined=0
+surviving_operation_union_defined_n3=0
+surviving_operation_union_defined_n4=0
+surviving_operation_union_defined_n5=0
+surviving_operation_union_defined_n6=0
+surviving_operation_union_defined_n7=0
+surviving_operation_union_defined_n8=0
+smallest_above_height_residual=(1,4,5,6,7,11);first_global_certificate_pivot=6;r=13
+smallest_uncovered_by_surviving_operations=(1,4,5,6,7,11);first_global_certificate_pivot=6;r=13
+
+[smallest_rejections]
+operation=SUBTRACT_N
+status=NO_REJECTION_IN_FILTERED_DOMAIN
+operation=FIXED_SIGNED_REP
+status=REJECTED
+original=(1,4,5,6,7,11)
+replacement_raw=(1,3,4,5,6,7)
+normalization_factor=1
+replacement_normalized=(1,3,4,5,6,7)
+new_value=3
+operation_parameter=1
+certificate_on_normalized_replacement_pivot=4;raw_pivot=4;r=13
+failed_original_speed=11;cyclic_distance=3;required=4
+all_original_distances=(13,4,9,6,7,3)
+operation=DIVISOR_SIGNED_ALL_PIVOT
+status=NO_REJECTION_IN_FILTERED_DOMAIN
+operation=LCM_MIXED_SIGN_ALL_PIVOT
+status=NO_REJECTION_IN_FILTERED_DOMAIN
+
+[smallest_unfiltered_rejections]
+operation=SUBTRACT_N
+status=REJECTED
+original=(1,4,6)
+replacement_raw=(1,2,4)
+normalization_factor=1
+replacement_normalized=(1,2,4)
+new_value=2;operation_parameter=0
+certificate_on_normalized_replacement_pivot=4;raw_pivot=4;r=5
+failed_original_speed=6;cyclic_distance=2;required=4
+all_original_distances=(5,4,2)
+operation=FIXED_SIGNED_REP
+status=REJECTED
+original=(1,4,6)
+replacement_raw=(1,2,4)
+normalization_factor=1
+replacement_normalized=(1,2,4)
+new_value=2;operation_parameter=1
+certificate_on_normalized_replacement_pivot=4;raw_pivot=4;r=5
+failed_original_speed=6;cyclic_distance=2;required=4
+all_original_distances=(5,4,2)
+
+[stress_suite]
+stress=consecutive_n3;tuple=(1,2,3);primitive=true;modulus_cover=false;fastest_ratio=false;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=false
+  op=SUBTRACT_N;defined=false
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=consecutive_n4;tuple=(1,2,3,4);primitive=true;modulus_cover=false;fastest_ratio=false;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=false
+  op=SUBTRACT_N;defined=false
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=consecutive_n5;tuple=(1,2,3,4,5);primitive=true;modulus_cover=false;fastest_ratio=false;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=false
+  op=SUBTRACT_N;defined=false
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=consecutive_n6;tuple=(1,2,3,4,5,6);primitive=true;modulus_cover=false;fastest_ratio=false;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=false
+  op=SUBTRACT_N;defined=false
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=consecutive_n7;tuple=(1,2,3,4,5,6,7);primitive=true;modulus_cover=false;fastest_ratio=false;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=false
+  op=SUBTRACT_N;defined=false
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=consecutive_n8;tuple=(1,2,3,4,5,6,7,8);primitive=true;modulus_cover=false;fastest_ratio=false;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=false
+  op=SUBTRACT_N;defined=false
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=explicit_1_3_4_7;tuple=(1,3,4,7);primitive=true;modulus_cover=false;fastest_ratio=true;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=true
+  op=SUBTRACT_N;defined=true;raw=(1,2,3,4);d=1;normalized=(1,2,3,4);new=2;parameter=0;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=true;vacuous=false;certificates_tested=16
+  op=FIXED_SIGNED_REP;defined=true;raw=(1,2,3,4);d=1;normalized=(1,2,3,4);new=2;parameter=1;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=true;vacuous=false;certificates_tested=16
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=explicit_1_2_3_60;tuple=(1,2,3,60);primitive=true;modulus_cover=true;fastest_ratio=true;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=true
+  op=SUBTRACT_N;defined=true;raw=(1,2,3,55);d=1;normalized=(1,2,3,55);new=55;parameter=0;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=1;fail_pivot_norm=3;fail_pivot_raw=3;r=4;failed_speed=60;distance=0;required=3
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=true;raw=(1,2,3,30);d=1;normalized=(1,2,3,30);new=30;parameter=2;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=true;vacuous=false;certificates_tested=16
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=constructed_lcm_1_3_10;tuple=(1,3,10);primitive=true;modulus_cover=false;fastest_ratio=true;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=true
+  op=SUBTRACT_N;defined=true;raw=(1,3,6);d=1;normalized=(1,3,6);new=6;parameter=0;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=4;fail_pivot_norm=3;fail_pivot_raw=3;r=5;failed_speed=10;distance=2;required=3
+  op=FIXED_SIGNED_REP;defined=true;raw=(1,2,3);d=1;normalized=(1,2,3);new=2;parameter=1;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=true;vacuous=false;certificates_tested=6
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=true;raw=(1,2,3);d=1;normalized=(1,2,3);new=2;parameter=5;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=true;vacuous=false;certificates_tested=6
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=true;raw=(1,2,3);d=1;normalized=(1,2,3);new=2;parameter=0;parameter2=3;sign_lower=-1;sign_changed=1;reverse_pass=true;vacuous=false;certificates_tested=6
+stress=explicit_1_2_6_8_10;tuple=(1,2,6,8,10);primitive=true;modulus_cover=true;fastest_ratio=true;fastest_interval=true;fastest_no_certificate=false;deletion_gcd=false;above_height=true
+  op=SUBTRACT_N;defined=true;raw=(1,2,4,6,8);d=1;normalized=(1,2,4,6,8);new=4;parameter=0;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=3;fail_pivot_norm=4;fail_pivot_raw=4;r=5;failed_speed=10;distance=2;required=4
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=signed_example_4_6_24;tuple=(4,6,24);primitive=false;modulus_cover=true;fastest_ratio=true;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=false;above_height=true
+  op=SUBTRACT_N;defined=true;raw=(4,6,20);d=2;normalized=(2,3,10);new=20;parameter=0;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=2;fail_pivot_norm=2;fail_pivot_raw=4;r=2;failed_speed=24;distance=0;required=4
+  op=FIXED_SIGNED_REP;defined=true;raw=(4,6,8);d=2;normalized=(2,3,4);new=8;parameter=4;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=3;fail_pivot_norm=3;fail_pivot_raw=6;r=2;failed_speed=24;distance=0;required=6
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=tracked_E;tuple=(5,28,35,40,68,88,108,148,165);primitive=true;modulus_cover=true;fastest_ratio=true;fastest_interval=true;fastest_no_certificate=false;deletion_gcd=true;above_height=true
+  op=SUBTRACT_N;defined=true;raw=(5,28,35,40,68,88,108,148,155);d=1;normalized=(5,28,35,40,68,88,108,148,155);new=155;parameter=0;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=11;fail_pivot_norm=28;fail_pivot_raw=28;r=129;failed_speed=165;distance=5;required=28
+  op=FIXED_SIGNED_REP;defined=true;raw=(5,15,28,35,40,68,88,108,148);d=1;normalized=(5,15,28,35,40,68,88,108,148);new=15;parameter=5;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=17;fail_pivot_norm=28;fail_pivot_raw=28;r=27;failed_speed=165;distance=25;required=28
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=tracked_F;tuple=(8,15,35,40,48,56,75,132,147);primitive=true;modulus_cover=false;fastest_ratio=true;fastest_interval=true;fastest_no_certificate=false;deletion_gcd=true;above_height=true
+  op=SUBTRACT_N;defined=true;raw=(8,15,35,40,48,56,75,132,137);d=1;normalized=(8,15,35,40,48,56,75,132,137);new=137;parameter=0;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=2;fail_pivot_norm=8;fail_pivot_raw=8;r=19;failed_speed=147;distance=7;required=8
+  op=FIXED_SIGNED_REP;defined=true;raw=(3,8,15,35,40,48,56,75,132);d=1;normalized=(3,8,15,35,40,48,56,75,132);new=3;parameter=15;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=6;fail_pivot_norm=8;fail_pivot_raw=8;r=19;failed_speed=147;distance=7;required=8
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=tracked_G;tuple=(15,21,40,48,56,105,126,280,1200);primitive=true;modulus_cover=true;fastest_ratio=true;fastest_interval=true;fastest_no_certificate=false;deletion_gcd=true;above_height=true
+  op=SUBTRACT_N;defined=true;raw=(15,21,40,48,56,105,126,280,1190);d=1;normalized=(15,21,40,48,56,105,126,280,1190);new=1190;parameter=0;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=1;fail_pivot_norm=15;fail_pivot_raw=15;r=2;failed_speed=1200;distance=0;required=15
+  op=FIXED_SIGNED_REP;defined=true;raw=(15,21,40,48,56,60,105,126,280);d=1;normalized=(15,21,40,48,56,60,105,126,280);new=60;parameter=21;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=1;fail_pivot_norm=15;fail_pivot_raw=15;r=1;failed_speed=1200;distance=0;required=15
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=prior_1_9_10_11_12;tuple=(1,9,10,11,12);primitive=true;modulus_cover=true;fastest_ratio=true;fastest_interval=true;fastest_no_certificate=false;deletion_gcd=true;above_height=true
+  op=SUBTRACT_N;defined=true;raw=(1,6,9,10,11);d=1;normalized=(1,6,9,10,11);new=6;parameter=0;parameter2=0;sign_lower=0;sign_changed=0;reverse_pass=false;vacuous=false;certificates_tested=1;fail_pivot_norm=6;fail_pivot_raw=6;r=9;failed_speed=12;distance=0;required=6
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=prior_1_2_3_4_5_7;tuple=(1,2,3,4,5,7);primitive=true;modulus_cover=false;fastest_ratio=true;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=false
+  op=SUBTRACT_N;defined=false
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
+stress=closest_10_speed;tuple=(1,2,3,4,5,6,7,8,9,11);primitive=true;modulus_cover=false;fastest_ratio=true;fastest_interval=false;fastest_no_certificate=false;deletion_gcd=true;above_height=false
+  op=SUBTRACT_N;defined=false
+  op=FIXED_SIGNED_REP;defined=false
+  op=DIVISOR_SIGNED_ALL_PIVOT;defined=false
+  op=LCM_MIXED_SIGN_ALL_PIVOT;defined=false
