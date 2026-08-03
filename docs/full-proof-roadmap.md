@@ -167,6 +167,22 @@ original at the closed `1/N` boundary.
   and one Lean prototype**. Freeze the exact compression route if no operation
   survives the changed-pivot witness-lifting audit.
 
+### Response 61 audit disposition: STOP / frozen
+
+`VER-R61-AUDIT-005` triggers the stop contract. Direct subtraction and
+fixed-pivot signed transport fail at `(1,4,6)`. The sole surviving
+coprime signed-divisor transport is `proved-math` but supplies no replacement
+for the committed residual sweep, whose mandatory compiler/host/timing replay
+is itself nonreproducible. The exact route is frozen: its first unresolved
+existential is to derive an eligible `0<b<a`, `a=q*b`, `Coprime q N`
+replacement with `N*x_i` dividing `a-b` or `a+b` for every lower speed.
+Nothing derives this from minimality. See `docs/response61-audit.md`.
+
+The suggested Lean transport signature is also not contract-faithful as
+written: appending to `lower : Fin n -> Nat` produces `Fin (n+1)`, so the
+stationary threshold denominator must be fixed as `n+2`, not left as an
+independent `N`. No new `proved-lean` result follows.
+
 ## Bridge B contract: uniform pivot certificate
 
 ### Exact target
@@ -461,7 +477,7 @@ modulus.
 | 1 | C1: deletion-pivot lifting | One modular correlation theorem | Sound lift is Lean-verified; exact shell counts and strong targeted survival narrow the gap to singleton overlap |
 | 2 | C2: prime-forcing product induction | One uniform supply theorem plus an external product-bound dependency | Directly extends recent successful finite-dimensional work, but the local cover may remain LRC-hard |
 | 3 | B: top-two/uniform pivot | One arithmetic theorem | Large mature finite evidence and exact formal target; several relaxations already refuted |
-| 4 | A: height compression | One global descent lemma plus proved coefficient-three endpoint | High leverage, but current replacement operations are extremely sparse |
+| 4 | A: height compression | Frozen at the missing replacement-eligibility existential | `STOP` after Response 61: sound signed-divisor transport exists on paper, but the exact route has no supported descent operation and its finite artifact is nonreproducible |
 
 The ranking is provisional and must change when an exact counterexample,
 proof, or budget stop condition is reached.
@@ -478,6 +494,8 @@ proof, or budget stop condition is reached.
 | 2026-08-02 | Lean-verified the sound DPLP lift and exact selector wrapper | proved-lean | Removes every analytic, boundary, and quantifier-order concern after a lifting certificate is selected; only correlation remains |
 | 2026-08-02 | Derived exact deep/shell coordinate counts and refuted two stronger pivot/phase intermediates | proved-math plus exact counterexamples | Narrows DPLP to overlap-sensitive singleton shell surplus and prevents two invalid proof shortcuts |
 | 2026-08-02 | Audited Response 58 and added prime-forcing/product induction | literature-backed conditional route | Adds an unrestricted bridge used successfully in recent finite dimensions; its all-dimension prime supply remains open |
+| 2026-08-03 | Audited Response 60 clean-room replication | mixed proved-math/rejected/conjectural; artifact replay failed | Confirms local counting arguments, stops universal D2/D3, active-cycle, and P1 singleton shortcuts, and leaves only explicit conjectural bridges |
+| 2026-08-03 | Audited Response 61 height compression | mixed proved-math/rejected/open; artifact replay failed | Triggers `STOP`: freezes the exact height route at the unsupported replacement-eligibility existential and records no Lean promotion |
 
 For every future entry, “material effect” must say whether the new result
 removes a dependency, proves/refutes a bridge, improves a stop decision, or

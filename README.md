@@ -215,6 +215,12 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 - [response58-audit.md](docs/response58-audit.md): unrestricted strategy
   generation, literature correction, prime-forcing contract, and rejected
   third-order criterion.
+- [response59-audit.md](docs/response59-audit.md): corrected deletion-pivot
+  and prime-forcing dispositions with a reproducible finite verifier.
+- [response60-audit.md](docs/response60-audit.md): independent mathematical
+  review, mandatory replay failure, and stopped low-order shortcuts.
+- [response61-audit.md](docs/response61-audit.md): nonreproducible height sweep,
+  signed-divisor transport audit, signature defect, and frozen descent route.
 - [computation.md](docs/computation.md): computational scope and interpretation.
 - [publication-audit.md](docs/publication-audit.md): public-release privacy,
   secret-scanning, and redistribution audit.
@@ -230,8 +236,9 @@ The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
 The current clean Lean source checkpoint is
 `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. Later commits through
-`3c0ad8a190a95d69a6e70af3a117a3d12946ff84` change documentation or
-operations records only, so `263a1cb` remains the authoritative source replay.
+`d3b3f4966a4328b837e4df84eb138b48970a1a7e` add documentation, operations
+records, or research artifacts only, so `263a1cb` remains the authoritative
+source replay.
 See [STATUS.md](STATUS.md) for the exact environment, timings, warnings, and
 historical CI results.
 
@@ -317,13 +324,21 @@ integer LRC, unrestricted LRC, or uniform prime supply. See the
 [Response 59 audit](docs/response59-audit.md) for its exact dispositions and
 reproduction metadata.
 
-The other major routes are an unrestricted top-two/all-pivot certificate and
-minimal-counterexample height compression. Their exact contracts, implication
-chains, falsification suites, budgets, and abandonment criteria are in the
-[full-proof roadmap](docs/full-proof-roadmap.md). The coefficient-two Gamma
-selector is frozen after its final bounded audit unless work targets an
-all-`N` proof, an effective cutoff with complete finite verification, a real
-selector counterexample, or an unrestricted reusable lemma.
+The independent [Response 60 audit](docs/response60-audit.md) accepts local
+D1--D6/P1/P2 mathematics at exact strength but rejects the proposed universal
+low-order and cycle shortcuts. Its whole-output artifact replay fails even
+though a narrower deterministic payload matches. The
+[Response 61 audit](docs/response61-audit.md) records a nonreproducible
+compiler/host/timing-bound sweep and freezes the exact minimal-counterexample
+height-compression route. Neither audit promotes finite evidence or adds a
+Lean theorem.
+
+The remaining active major routes are corrected deletion-pivot/prime forcing
+and an unrestricted top-two/all-pivot certificate. Their exact contracts,
+implication chains, falsification suites, budgets, and abandonment criteria
+are in the [full-proof roadmap](docs/full-proof-roadmap.md). The
+coefficient-two Gamma selector and the audited height-compression route are
+frozen unless materially new evidence meets their restart conditions.
 
 ## Public-release safety
 

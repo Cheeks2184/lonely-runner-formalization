@@ -225,8 +225,8 @@ strict modular bad sets do not cover all candidates—or to refute that exact
 proposition. Current overlap, correlation, Chebyshev, descent, and residual
 restrictions do not force such a pivot.
 
-Research is now in **FULL-PROOF PRIORITY MODE**. Active branches, in order,
-are:
+Research is now in **FULL-PROOF PRIORITY MODE**. Tracked unrestricted branches
+and their current dispositions, in priority order, are:
 
 1. prove or refute the corrected deletion-pivot lifting principle (DPLP),
    whose exact induction chain uses lower-dimensional pivot certificates,
@@ -238,9 +238,9 @@ are:
 3. prove or refute the unrestricted top-two pivot property, then fall back to
    the exact all-pivot certificate; the immediate target is an integral
    affine-fiber/transversal theorem, not the rejected fractional dual;
-4. force a least primitive counterexample into the already Lean-verified
-   coefficient-three height range by a well-founded maximum/sum/lexicographic
-   descent with an exact closed-boundary witness lift.
+4. keep the least-primitive-counterexample height route frozen after Response
+   61; restart it only with a genuinely new replacement operation or a proof
+   of signed-divisor eligibility, not more iterations of the stopped descent.
 
 Each branch has an exact theorem contract, implication chain, falsification
 suite, budget, and abandonment criterion in
@@ -265,15 +265,41 @@ wrapper preserves the exact selector quantifiers. This does not prove the
 selector. Exact `proved-math` deep-hole and shell cardinalities reduce the
 current arithmetic obstruction to overlap-sensitive singleton counting.
 
+## Response 60 and 61 verification audits
+
+`VER-R60-AUDIT-004` records `FAIL / nonreproducible` for Response 60's
+mandatory whole-output replay. Python `3.14.4` reproduces the deterministic
+payload hash but not the committed Python `3.13.5` version and runtime footer.
+The audit accepts D1--D6, the active-to-canonical bridge, P1, strengthened P2,
+and the exact product inequality as `proved-math`; it rejects universal D2/D3
+positivity, the active-cycle divisibility shortcut, P1 singleton elimination,
+and `PrimeForcing(3,5)`. Cycle-to-shell lifting and uniform prime supply remain
+conjectural/open. See [the Response 60 audit](docs/response60-audit.md).
+
+`VER-R61-AUDIT-005` records `FAIL / nonreproducible` for Response 61's
+mandatory finite sweep. The required Debian G++ 14.2.0 toolchain is absent;
+`-march=native` makes the binary host-specific and embedded `steady_clock`
+output makes stdout timing-specific. Signed-divisor transport is accepted only
+as `proved-math`, not `proved-lean`; replacement eligibility and
+`MinimalCounterexampleHeightCompression` remain open. The proposed Lean
+signature also leaves `N` independent after appending to `Fin (n+1)`, where
+contract fidelity requires `N=n+2`. The exact height-compression route is
+**STOPPED and frozen**. See [the Response 61 audit](docs/response61-audit.md).
+
+These are documentation and research-artifact audits after source checkpoint
+`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. They add no source theorem,
+promote no finite evidence, and change no unrestricted open claim.
+
 ## Latest verification
 
 Last clean Lean source checkpoint:
 `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`.
 
 Every later commit through current base
-`3c0ad8a190a95d69a6e70af3a117a3d12946ff84` changes documentation or
-operations records only. The `263a1cb` detached replay is therefore the
-authoritative source verification for the current repository snapshot.
+`d3b3f4966a4328b837e4df84eb138b48970a1a7e` adds documentation, operations
+records, or research artifacts only. The `263a1cb` detached replay is
+therefore the authoritative source verification for the current repository
+snapshot.
 
 Pinned environment:
 
