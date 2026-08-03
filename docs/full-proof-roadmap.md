@@ -330,6 +330,12 @@ all-pivot packing lemma `PACK-09`, the exact pivot selector, and unrestricted
 LRC remain open. Freeze only the two rejected uniform criteria as a milestone,
 not a formalization target.
 
+The follow-up documentation correction `OPS-P66-REPLAY-DOCSYNC-CORRECT-080`
+was independently ACCEPTED by `OPS-P66-REPLAY-DOCSYNC-REVIEW-084` and
+integrated in merge `2f6b3f5f2faea5966d1ecb6f9108b4fb5e6a1d2e`. This is an
+operational correction only; Prompt66 remains computed finite evidence and
+`PACK-09`, the exact pivot selector, and unrestricted LRC remain open.
+
 Response 62 audit update: the 8,108-row exact sweep and the hard
 `(N,A,B)=(7,98,187)` affine transversal number `5` are verified computed
 finite evidence, but all tested uniform scalar criteria fail. Its proposed
@@ -344,11 +350,12 @@ no-full-witness premise plus positivity, top-two ordering, and `B<2q`. The
 surviving named target
 `RESIDUAL-2N-SHIFT-OWNER-TRANSVERSAL` remains conjectural/open and receives no
 implementation until those premises and the missing inequality are proved.
-After Prompt66's STOP/OPEN disposition, Prompt64's
-`TOP-TWO-LARGE-RATIO-EXCLUSION` is the closest Bridge-B thin API. `/root`
-launched its exact tracked prompt at 2026-08-03 15:24:40 CDT; it is active.
-Launch does not supply that proof and does not promote the downstream
-transversal.
+After Prompt66's STOP/OPEN disposition, Prompt64 tested
+`TOP-TWO-LARGE-RATIO-EXCLUSION` as the closest Bridge-B thin API. It is now
+completed/recovered at STOP/OPEN and frozen under its exact stop contract.
+Package commit `12922204bdf1ea1c0271767a461d9324a6b40a4f` was accepted by
+reviews 086/087 and integrated in merge
+`ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70`.
 
 Prompt64's Luna verification attempt is recorded as **INCOMPLETE** in
 `docs/prompt64-luna-audit.md`. `VER-P64-FALSIFY-022` omitted mandatory `(2,3)`
@@ -368,11 +375,16 @@ agreement, and incorrect structured-CRT provenance stopped the route. No
 counterexample, `NO-COUNTEREXAMPLE` conclusion, theorem, or finite-evidence
 promotion resulted. `TOP-TWO-LARGE-RATIO-EXCLUSION` and the downstream
 owner-transversal remain open; no larger-bound continuation is recommended.
-Prompt64 remains active under the sole top-level Sol High browser ownership
-after `/root` launched it at 2026-08-03 15:24:40 CDT. This replay
-synchronization does not alter that lifecycle. Earlier Browser/ChatGPT-control
-limitations are narrow observations of the exact worker runtimes that reported
-them, not a top-level desktop blocker.
+The accepted manuscript results are limited to the target/contrapositive
+equivalence, scaling and reindexing, `n=2`, `kB±d` formulas, and conditional
+`1/(m+2)` reduction. Scaling is accepted only with `r<M<=dM`, correcting the
+canonical response's literal false strict edge at `d=1`. The complete sweep
+has 247,020 primitive rows and zero counterexamples; the targeted suite has 61
+cases, 45 strict, and zero strict failures. These are computed finite evidence
+only. The first unsupported branch remains an open equivalent reformulation;
+the target, owner-transversal, exact pivot selector, and LRC remain open. No
+new Lean theorem follows. Earlier Browser/ChatGPT-control limitations remain
+narrow observations of the runtimes that reported them.
 
 ### Falsification and stop contract
 
@@ -695,8 +707,8 @@ an unrelated full cover search separately for every dimension and modulus.
 
 | Rank | Bridge | Distance to LRC | Current assessment |
 | ---: | --- | --- | --- |
-| 1 | B: top-two large-ratio exclusion | One thin ratio-branch lemma before the downstream owner-transversal | `SOL-P64-PRO-B-001` is active after Prompt66 stopped open; it is the closest Bridge-B thin API and promotes nothing at launch |
-| 2 | C2: prime-forcing product induction | One uniform supply theorem plus induction and an external product-bound dependency | Primary theorem/product logic is accepted but unformalized; local forcing may remain LRC-hard and overlaps prior Prompt60 work |
+| 1 | C2: prime-forcing product induction | One uniform supply theorem plus induction and an external product-bound dependency | Next distinct unrestricted contract; primary theorem/product logic is accepted but unformalized, and local forcing may remain LRC-hard |
+| 2 | B: unrestricted all-pivot packing | One stronger modular selection lemma, then existing capacity and pivot reductions | `PACK-09` remains open after Prompt66 STOP/OPEN; Prompt64's separate top-two ratio route is completed/frozen |
 | 3 | C1: deletion-pivot lifting | STOP / OPEN | Sound local ReverseGrid arithmetic survives, but the first-blocker transfer verifier route is frozen under the Prompt65 restart rule |
 | 4 | A: height compression | Frozen at the missing replacement-eligibility existential | `STOP` after Response 61: sound signed-divisor transport exists on paper, but the exact route has no supported descent operation and its finite artifact is nonreproducible |
 
@@ -725,9 +737,11 @@ proof, or budget stop condition is reached.
 | 2026-08-03 | `OPS-SOL-HIGH-PRO-ROUTING-059` synchronizes ownership and lifecycle | verified operational documentation | Records sole Sol High ownership, Prompt64/65 parking, Prompt66 active state, and adapter replay without changing research results |
 | 2026-08-03 | Prompt66 recovery and qualified audits | STOP/OPEN; qualified audit/recovery acceptance | Preserves exact recovery provenance, rejects two provenance wordings, promotes no claimed finite evidence, and starts an independent strict certificate replay |
 | 2026-08-03 | `/root` launches `SOL-P64-PRO-B-001` at 15:24:40 CDT | active research cell | Selects `TOP-TWO-LARGE-RATIO-EXCLUSION` as the closest Bridge-B thin API after Prompt66 STOP/OPEN; launch promotes no result |
+| 2026-08-03 | P66 correction 080 accepted by review 084 and integrated in `2f6b3f5` | verified operational correction | Resolves documentation lifecycle/accounting only; P66 remains finite evidence and PACK-09/LRC remain open |
+| 2026-08-03 | Prompt64 package `1292220` accepted by reviews 086/087 and integrated in `ca8f4c5` | qualified proved-math plus computed finite evidence | Records the corrected manuscript scope and finite sweeps, freezes the route at STOP/OPEN, and promotes no target or Lean theorem |
 | 2026-08-03 | `LUNA-P66-CERT-REPLAY-069` independently replays all 4,149 modular instances; `VER-LUNA-P66-REPLAY-SUPERVISE-070` ACCEPTs | computed finite evidence, independently replayed | Confirms 3,714 witness rows, 435 fixed-pivot failures (421 rational-dual and 14 branch-tree), 380 exact-optimum promotions, 55 unsupported supplied flags, 472 tuple bundles, zero tuple-level all-pivot hits, and rejects only the two named uniform criteria; PACK-09, the exact pivot selector, and unrestricted LRC remain open |
 | 2026-08-03 | `LUNA-P66-REPLAY-DOCSYNC-076` stops without changes, tests, or a commit | rejected/failed runtime delegation | The workspace-write sandbox treated the WSL UNC worktree as read-only; this is a narrow runtime failure record, not evidence about Luna or other runtimes |
-| 2026-08-03 | `LUNA-P66-REPLAY-DOCSYNC-077` attempts public status synchronization | rejected; corrections required | Read-only review 078 found five documentation/release-audit blockers; correction 080 remains in review and is not yet accepted operational documentation |
+| 2026-08-03 | `LUNA-P66-REPLAY-DOCSYNC-077` attempts public status synchronization | rejected; corrected later | Read-only review 078 found five documentation/release-audit blockers; correction 080 later passed review 084 and was integrated in `2f6b3f5` |
 | 2026-08-02 | Entered FULL-PROOF PRIORITY MODE; fixed A/B/C contracts and budgets | research policy | Replaces coefficient-by-coefficient optimization with three explicit unrestricted bridges |
 | 2026-08-02 | Response 57 fixed-shift obstruction: no finite fixed J1 shift family is uniformly row-nonempty | proved-math, independent finite checks | Does not shorten unrestricted path; supports freezing bounded translation variants |
 | 2026-08-02 | Submitted Sol Pro Prompt 58 on A/B/C with adversarial contracts | research in progress | Strategy generation only; no theorem yet |

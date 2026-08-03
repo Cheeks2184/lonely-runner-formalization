@@ -311,10 +311,28 @@ The optional full high-dimensional Gamma sweep is:
 GAMMA_DEPENDENCY_FULL=1 bash scripts/audit_gamma_dependency_sweep.sh
 ```
 
+The integrated Prompt64 finite evidence can be replayed directly from its
+canonical recovered sources:
+
+```bash
+g++ -O3 -std=c++20 -Wall -Wextra -pedantic \
+  research/sol-pro/artifacts/prompt64/p64_top_two_sweep_v1.cpp \
+  -o /tmp/p64_top_two_sweep_v1
+/tmp/p64_top_two_sweep_v1
+python3 research/sol-pro/artifacts/prompt64/p64_targeted_stress_v1.py
+rm -f /tmp/p64_top_two_sweep_v1
+```
+
 GitHub Actions runs a cached Lean build, the trust audit, and the complete
 deterministic Python regression suite. The authoritative local standard remains
 a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
+
+The current authoritative integrated research checkpoint is
+`ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70`. The last authoritative clean
+full-project Lean/trust/regression replay remains the supplied-packing adapter
+checkpoint described in `STATUS.md`; the later research merges are
+documentation, recovered artifacts, and independent finite verifiers.
 
 ## Current research frontier
 
@@ -323,8 +341,11 @@ bottleneck remains the Lean-verified finite pivot-certificate proposition:
 for every positive injective integer tuple, some pivot candidate must escape
 all strict modular bad sets. Prompt66's
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING` turn completed at STOP/OPEN, leaving
-that packing lemma open. The active closest Bridge-B thin API is Prompt64's
-`TOP-TWO-LARGE-RATIO-EXCLUSION`. DPLP remains an open lower-ranked route:
+that packing lemma open. Prompt64's `TOP-TWO-LARGE-RATIO-EXCLUSION` also
+completed/recovered at STOP/OPEN and its exact route is frozen. No Sol Pro cell
+is active. The next distinct unrestricted contract is C2 prime-forcing product
+induction; Bridge B packing remains open, while C1 and A remain frozen. DPLP
+remains open:
 together with lower-dimensional LRC, the verified coefficient-three height
 theorem, and the direct `q=N` branch, it would prove unrestricted
 positive-integer LRC. An exact finite audit found no DPLP failure in 243,973
@@ -406,12 +427,25 @@ lemma `PACK-09`, the exact pivot selector, and unrestricted LRC remain open.
 The two rejected uniform criteria are frozen as a research milestone, not a
 formalization target.
 
-After that stop decision, `/root` launched the exact Prompt64
-`TOP-TWO-LARGE-RATIO-EXCLUSION` contract in the original Sol High desktop
-session. It is the active closest Bridge-B thin API; launch alone supplies no
-proof, computation, or theorem. Prompt64 remains active under the sole
-top-level Sol High browser ownership; this replay synchronization does not
-alter that lifecycle.
+Prompt64's exact response and three canonical attachments are integrated under
+merge `ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70` from recovery commit
+`12922204bdf1ea1c0271767a461d9324a6b40a4f`, after ACCEPT reviews
+`FORM-P64-PACKAGE-REVIEW-086` and `VER-P64-PACKAGE-REVIEW-087`. The normalized
+response is 41,788 bytes with SHA-256
+`f273ee340066c42dc4f3cb8224e35b4df028ebdd47b4dda1bb4879f515f5698d`.
+The complete sweep covers 247,020 primitive rows, skips 5,597 nonprimitive
+rows, checks 98,271,563 candidates in each implementation, and finds zero
+two-top counterexamples. The targeted replay covers 61 cases, 45 strict, with
+zero strict failures. These are computed finite evidence only.
+
+`FORM-P64-RESPONSE-MATH-AUDIT-081` accepts the contrapositive equivalence,
+scaling, reindexing, `n=2`, `kB±d` formulas, and conditional `1/(m+2)`
+reduction as `proved-math` only at exact corrected scope.
+`FORM-P64-SCALING-EDGE-083` replaces the response's literal false `r<M<dM`
+edge at `d=1` with `r<M<=dM`; canonical response bytes remain unchanged. The
+first unsupported branch is an open equivalent reformulation. The target,
+owner-transversal, exact pivot selector, and unrestricted LRC remain open; no
+new Lean theorem is promoted. See [the Response64 audit](docs/response64-audit.md).
 
 The fresh top-level Luna/xhigh formalization route had persisted runtime
 metadata matching the requested model, effort, and working directory, but its

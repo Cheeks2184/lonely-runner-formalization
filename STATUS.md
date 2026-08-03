@@ -228,14 +228,13 @@ restrictions do not force such a pivot.
 Research is now in **FULL-PROOF PRIORITY MODE**. Tracked unrestricted branches
 and their current dispositions, in priority order, are:
 
-1. B: prove or refute the unrestricted all-pivot modular whole-block packing
-   lemma. The exact pivot-certificate conjecture is already a tautological
-   Lean-equivalent bridge; the new content must be the stronger
-   capacity-respecting whole-fiber selection at some pivot;
-2. C2: for every `n>=3`, prove a uniform supply of distinct prime-forcing
+1. C2: for every `n>=3`, prove a uniform supply of distinct prime-forcing
    moduli, with no prime powers, whose product exceeds the published
    minimal-counterexample product bound; this route retains an external
    unformalized product-bound dependency;
+2. B: `PACK-09`, the unrestricted all-pivot modular whole-block packing
+   lemma, remains open. Prompt64's distinct top-two large-ratio route is
+   completed/frozen at STOP/OPEN;
 3. C1: **STOP / OPEN** at the first-blocker/maximizer transfer. Verifier
    implementation remains frozen under the Prompt65 restart rule;
 4. A: keep the least-primitive-counterexample height route frozen after
@@ -405,6 +404,39 @@ Prompt65 stop rule and was not launched. Earlier browser limitations are
 narrow observations of the exact worker runtimes that reported them, not
 top-level blockers.
 
+Prompt64 is now completed/recovered at **STOP/OPEN**, not active. Its exact
+package commit `12922204bdf1ea1c0271767a461d9324a6b40a4f` was accepted by
+`FORM-P64-PACKAGE-REVIEW-086` and `VER-P64-PACKAGE-REVIEW-087` and integrated
+by `/root` in merge `ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70`. The normalized
+response has 41,788 UTF-8 bytes, 1,367 LF separators with trailing LF, and
+SHA-256 `f273ee340066c42dc4f3cb8224e35b4df028ebdd47b4dda1bb4879f515f5698d`.
+It is the exact normalization of the 43,155-byte raw clipboard with 1,367 CRLF
+separators, trailing CRLF, 1,368 split slots including terminal empty, and
+SHA-256 `2fdc753554dab9221a4ee38031ecea71ea699039f5f0998d2d9d1bd542baef9b`.
+Exactly three canonical attachments are recovered: C++ 10,492 bytes / SHA-256
+`9c8bdb908bd37c9a9a13a20f023c50b3121def34ffc5c7dfbe9e1f20038e7b37`,
+Python 10,787 /
+`6b42c80fe54bda78bd56aabc0c340e22b8cf21c574a94d6279a4fab82e46557a`,
+and manifest 2,961 /
+`d839bcc52ce003aba795aad09e619158dc5b98feb43b76074d606320a56aec03`.
+Original binary/output/timing files were not recovered, so their response-
+supplied hashes are not independently byte-verified.
+
+`FORM-P64-RESPONSE-MATH-AUDIT-081` gives qualified `proved-math` ACCEPT for
+the contrapositive equivalence, scaling, reindexing, `n=2`, `kB±d` formulas,
+and the conditional `1/(m+2)` reduction. `FORM-P64-SCALING-EDGE-083` requires
+the corrected scaling edge `r<M<=dM`, not the response's literal false
+`r<M<dM` at `d=1`; canonical response bytes are unchanged.
+`VER-P64-COMPUTE-REPLAY-082` accepts computed finite evidence: 247,020
+primitive rows, 5,597 skipped rows, 98,271,563 candidates in each
+implementation, 6,923,288 placements, 494,040 agreements, A/B/both counts
+246,281/247,020/246,281, and zero counterexamples. The targeted replay has
+61 cases, 45 strict, 148,530 candidates per implementation, 122 agreements,
+zero strict failures, 24 scaling checks, and 18 reindexing checks. No finite
+domain proves the exact target. `TOP-TWO-LARGE-RATIO-EXCLUSION`, the downstream
+owner-transversal, exact pivot selector, and unrestricted LRC remain open; no
+new Lean theorem is promoted. The route is frozen under its stop contract.
+
 `SOL-P66-PRO-B-001`, `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, completed and
 was recovered by `/root` around 2026-08-03 15:05 CDT. `/root` launched it in a
 genuinely new signed-in ChatGPT conversation around 2026-08-03 13:59 CDT.
@@ -469,9 +501,14 @@ all-pivot packing lemma `PACK-09`, the exact pivot selector, and unrestricted
 LRC remain open. Freeze only the two rejected uniform criteria as a research
 milestone, not a formalization target.
 
-Prompt64 remains active under the sole top-level Sol High browser ownership;
-this exact tracked documentation consistency update does not alter its
-lifecycle.
+Prompt66 correction `OPS-P66-REPLAY-DOCSYNC-CORRECT-080` was independently
+ACCEPTED by `OPS-P66-REPLAY-DOCSYNC-REVIEW-084` and integrated in merge
+`2f6b3f5f2faea5966d1ecb6f9108b4fb5e6a1d2e`. This changes documentation
+lifecycle only: its replay remains computed finite evidence, and `PACK-09`,
+the exact pivot selector, and unrestricted LRC remain open.
+
+No Sol Pro cell is active. Prompt65 remains prepared/parked/frozen under the
+sole Sol High desktop owner and must not be launched.
 
 The earlier `LUNA-PACKING-SEARCH-RECOVERY-060` failed without a commit,
 replay, report, or manifest. Its 6,527 partial lines are non-evidentiary and
@@ -487,8 +524,11 @@ packing existence, `PACK-09`, and unrestricted LRC remain open.
 
 ## Latest verification
 
-Authoritative supplied-packing adapter checkpoint:
-`fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`.
+Current authoritative integrated research checkpoint:
+`ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70`.
+
+The last authoritative clean full-project source replay remains supplied-
+packing adapter checkpoint `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`.
 
 Its clean ext4 replay restored 8,638 cache artifacts (143.4 seconds shell;
 53.179 seconds in the decompression report), passed full `lake build` in
