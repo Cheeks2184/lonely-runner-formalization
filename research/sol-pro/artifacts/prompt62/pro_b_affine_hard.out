@@ -1,0 +1,11 @@
+version=PROB-62-v1.0.0
+N=7 A=98 B=187 L=128282
+shifts=(128273, 80, 71, 151, 128210, 150, 25, 1156, 114, 87, 149, 2946, 24, 128252)
+per_shift=(h,all_pairs,robust_pairs)=((128273, 6, 5), (80, 6, 5), (71, 6, 5), (151, 6, 4), (128210, 6, 5), (150, 6, 4), (25, 6, 5), (1156, 6, 4), (114, 6, 4), (87, 6, 5), (149, 6, 4), (2946, 6, 4), (24, 6, 5), (128252, 6, 5))
+h42698_robust_pairs=((36, 942), (134, 1129), (428, 381), (526, 568))
+constraints=64
+four_sets_checked=3464840
+all_four_sets_fail_to_hit_both_endpoints_of_every_constraint=YES
+five_set_witness=(7, 63, 70, 77, 84)
+affine_transversal_number=5
+constraint_sha256=6b9c45fcd1abe2e0eb5c157b243ceb4b3276211e5df824e0be85e9a791bd4246
