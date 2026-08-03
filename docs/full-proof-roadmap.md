@@ -305,10 +305,30 @@ but the operational record promotes neither its claimed finite evidence nor
 any theorem. The launch-commit wording and missing-in-ZIP SHA-link claim are
 rejected; recovery provenance is mechanically accepted with path/packaging
 corrections. Independent strict certificate replay
-`LUNA-P66-CERT-REPLAY-069` remains active under read-only Verification Lead
-supervision, with no result yet. The all-pivot packing lemma and unrestricted
-LRC remain open. Freeze the response's two rejected uniform criteria as a
-milestone, not a formalization target.
+`LUNA-P66-CERT-REPLAY-069` is accepted at its exact finite scope:
+implementation commit `5cf8abd04b40b26183eb3839d3d7a7f8d68a82ab` was
+independently ACCEPTED by `VER-LUNA-P66-REPLAY-SUPERVISE-070` and integrated by
+`/root` in merge `fc2d023e9df1c554cc67fadedece1325e72694b1`. The verifier checks
+all `4,149` modular instances: `3,714` witness rows and `435` certified
+fixed-pivot failures, split `421` rational-dual and `14` branch-tree failures,
+across `472` tuple bundles, with zero tuple-level all-pivot hits. Exact-optimum
+promotion is limited to `380` cases; the `55` supplied `exact_optimum` flags
+whose feasible lower and certified upper bounds do not coincide are explicitly
+not promoted.
+
+For `F=(8,15,35,40,48,56,75,132,147)`, pivot `48` has `R=432`, `S=706`,
+strict required credit `>274`, feasible credit `262`, rational upper bound
+`1314/5`, and integer optimum `262`. This is fixed-pivot evidence only. The
+radial-descent and signed-phase-cell uniform criteria are refuted as sufficient
+conditions on all nine pivots of `F`; only those criteria are rejected. The
+evidence label is **computed finite evidence, independently replayed**. Unit
+tests `5/5` pass. Verification Lead full replay: `PASS` in `13.59s`; `/root`
+independent full replay: `PASS` in `18.516s`, with deterministic semantic
+outputs differing only in runtime and consequent report/manifest hashes. No
+`proved-math` or `proved-lean` promotion follows. The main
+all-pivot packing lemma `PACK-09`, the exact pivot selector, and unrestricted
+LRC remain open. Freeze only the two rejected uniform criteria as a milestone,
+not a formalization target.
 
 Response 62 audit update: the 8,108-row exact sweep and the hard
 `(N,A,B)=(7,98,187)` affine transversal number `5` are verified computed
@@ -348,10 +368,11 @@ agreement, and incorrect structured-CRT provenance stopped the route. No
 counterexample, `NO-COUNTEREXAMPLE` conclusion, theorem, or finite-evidence
 promotion resulted. `TOP-TWO-LARGE-RATIO-EXCLUSION` and the downstream
 owner-transversal remain open; no larger-bound continuation is recommended.
-Prompt64 is active under the sole Sol High desktop owner after `/root` launched
-it at 2026-08-03 15:24:40 CDT. Earlier Browser/ChatGPT-control limitations are
-narrow observations of the exact worker runtimes that reported them, not a
-top-level desktop blocker.
+Prompt64 remains active under the sole top-level Sol High browser ownership
+after `/root` launched it at 2026-08-03 15:24:40 CDT. This replay
+synchronization does not alter that lifecycle. Earlier Browser/ChatGPT-control
+limitations are narrow observations of the exact worker runtimes that reported
+them, not a top-level desktop blocker.
 
 ### Falsification and stop contract
 
@@ -704,6 +725,9 @@ proof, or budget stop condition is reached.
 | 2026-08-03 | `OPS-SOL-HIGH-PRO-ROUTING-059` synchronizes ownership and lifecycle | verified operational documentation | Records sole Sol High ownership, Prompt64/65 parking, Prompt66 active state, and adapter replay without changing research results |
 | 2026-08-03 | Prompt66 recovery and qualified audits | STOP/OPEN; qualified audit/recovery acceptance | Preserves exact recovery provenance, rejects two provenance wordings, promotes no claimed finite evidence, and starts an independent strict certificate replay |
 | 2026-08-03 | `/root` launches `SOL-P64-PRO-B-001` at 15:24:40 CDT | active research cell | Selects `TOP-TWO-LARGE-RATIO-EXCLUSION` as the closest Bridge-B thin API after Prompt66 STOP/OPEN; launch promotes no result |
+| 2026-08-03 | `LUNA-P66-CERT-REPLAY-069` independently replays all 4,149 modular instances; `VER-LUNA-P66-REPLAY-SUPERVISE-070` ACCEPTs | computed finite evidence, independently replayed | Confirms 3,714 witness rows, 435 fixed-pivot failures (421 rational-dual and 14 branch-tree), 380 exact-optimum promotions, 55 unsupported supplied flags, 472 tuple bundles, zero tuple-level all-pivot hits, and rejects only the two named uniform criteria; PACK-09, the exact pivot selector, and unrestricted LRC remain open |
+| 2026-08-03 | `LUNA-P66-REPLAY-DOCSYNC-076` stops without changes, tests, or a commit | rejected/failed runtime delegation | The workspace-write sandbox treated the WSL UNC worktree as read-only; this is a narrow runtime failure record, not evidence about Luna or other runtimes |
+| 2026-08-03 | `LUNA-P66-REPLAY-DOCSYNC-077` attempts public status synchronization | rejected; corrections required | Read-only review 078 found five documentation/release-audit blockers; correction 080 remains in review and is not yet accepted operational documentation |
 | 2026-08-02 | Entered FULL-PROOF PRIORITY MODE; fixed A/B/C contracts and budgets | research policy | Replaces coefficient-by-coefficient optimization with three explicit unrestricted bridges |
 | 2026-08-02 | Response 57 fixed-shift obstruction: no finite fixed J1 shift family is uniformly row-nonempty | proved-math, independent finite checks | Does not shorten unrestricted path; supports freezing bounded translation variants |
 | 2026-08-02 | Submitted Sol Pro Prompt 58 on A/B/C with adversarial contracts | research in progress | Strategy generation only; no theorem yet |

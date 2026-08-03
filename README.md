@@ -381,15 +381,37 @@ self-disposition **STOP/OPEN**. The recovery preserves the exact clipboard,
 21-entry safe ZIP, separate SHA list, and newline reconciliation. Independent
 audits accept the mathematics/computation only at qualified scope and the
 recovery mechanically with path/packaging corrections; no response claim or
-finite evidence is promoted. An independent Luna strict certificate replay is
-active, so the packing lemma and unrestricted LRC remain open. The two rejected
-uniform criteria are frozen as a research milestone, not a formalization
-target.
+finite evidence is promoted. The Luna implementation commit
+`5cf8abd04b40b26183eb3839d3d7a7f8d68a82ab` was independently ACCEPTED by
+`VER-LUNA-P66-REPLAY-SUPERVISE-070` and integrated by `/root` in merge
+`fc2d023e9df1c554cc67fadedece1325e72694b1`. The independent verifier checks
+all `4,149` modular instances: `3,714` witness rows and `435` certified
+fixed-pivot failures, split `421` rational-dual and `14` branch-tree failures;
+there are `472` tuple bundles and zero tuple-level all-pivot hits. Exact-optimum
+promotion is limited to `380` cases. The `55` supplied `exact_optimum` flags
+whose feasible lower and certified upper bounds do not coincide are explicitly
+not promoted.
+
+For `F=(8,15,35,40,48,56,75,132,147)`, pivot `48` has `R=432`, `S=706`,
+strict required credit `>274`, feasible credit `262`, rational upper bound
+`1314/5`, and integer optimum `262`. This is fixed-pivot evidence only. The
+radial-descent and signed-phase-cell uniform criteria are refuted as sufficient
+conditions on all nine pivots of `F`; only those criteria are rejected. The
+evidence label is **computed finite evidence, independently replayed**. Unit
+tests `5/5` pass. Verification Lead full replay: `PASS` in `13.59s`; `/root`
+independent full replay: `PASS` in `18.516s`; deterministic semantic outputs
+differ only in runtime and the consequent report/manifest hashes. No
+`proved-math` or `proved-lean` promotion follows. The main all-pivot packing
+lemma `PACK-09`, the exact pivot selector, and unrestricted LRC remain open.
+The two rejected uniform criteria are frozen as a research milestone, not a
+formalization target.
 
 After that stop decision, `/root` launched the exact Prompt64
 `TOP-TWO-LARGE-RATIO-EXCLUSION` contract in the original Sol High desktop
 session. It is the active closest Bridge-B thin API; launch alone supplies no
-proof, computation, or theorem.
+proof, computation, or theorem. Prompt64 remains active under the sole
+top-level Sol High browser ownership; this replay synchronization does not
+alter that lifecycle.
 
 The fresh top-level Luna/xhigh formalization route had persisted runtime
 metadata matching the requested model, effort, and working directory, but its
