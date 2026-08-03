@@ -273,7 +273,7 @@ weaker special class as closing the audited project-level edge.
 
 ## Lifecycle state
 
-This prompt is **active** under sole owner
+This prompt is **completed/recovered at STOP/OPEN** under sole owner
 `GPT-5.6 Sol High top-level desktop orchestrator`, supervising authority
 `/root`, and launch runtime `original browser-capable desktop Codex session`.
 After Prompt66 completed/recovered at STOP/OPEN, `/root` selected
@@ -284,5 +284,14 @@ true. Tracked prompt SHA-256 is
 `8d76932982c27de5477cead9b081520651f757aae75e14f9e1f4d2826475d20b`;
 exact UI payload/readback SHA-256 is
 `cb7adeaa3b7ad1a2aea3c63b91e86a180b83e6ef8343cc5432639e504d9d8555`.
-No URL or session ID is recorded. Launch records no response, computation,
-proof, theorem promotion, or finite evidence.
+No URL or session ID is recorded. The normalized recovered response has
+41,788 bytes, 1,367 LF separators with trailing LF, and SHA-256
+`f273ee340066c42dc4f3cb8224e35b4df028ebdd47b4dda1bb4879f515f5698d`.
+Three canonical attachments are recovered and independently audited.
+`FORM-P64-RESPONSE-MATH-AUDIT-081` gives qualified manuscript ACCEPT;
+`FORM-P64-SCALING-EDGE-083` corrects the response's literal `r<M<dM` to
+`r<M<=dM`; and `VER-P64-COMPUTE-REPLAY-082` accepts the declared sweeps only
+as computed finite evidence. The response remains canonical and unchanged.
+The target, owner-transversal, exact pivot selector, and unrestricted LRC
+remain open, with no new Lean theorem. This route is frozen under its stop
+contract.

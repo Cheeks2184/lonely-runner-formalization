@@ -71,3 +71,35 @@ promoted.
 Prompt 63 is complete and recovered with status **UNVERIFIED**. No Sol Pro
 cell remains active. Only `/root` may accept an independent audit or promote
 any mathematical status.
+
+## OPS-P64-RECOVERY-PACKAGE-085 — Prompt 64 recovery package
+
+- **Recovery base:** `fc2d023e9df1c554cc67fadedece1325e72694b1`
+- **Recovery branch:** `research/p64-recovery-079`
+- **Normalized response:** `research/sol-pro/responses/response64.md`
+- **Normalized response SHA-256:** `f273ee340066c42dc4f3cb8224e35b4df028ebdd47b4dda1bb4879f515f5698d`
+- **Normalized response shape:** 41,788 UTF-8 bytes; 1,367 LF separators;
+  terminal LF present
+- **Raw clipboard capture:** 43,155 UTF-8 bytes; 1,367 CRLF separators;
+  terminal CRLF present; 1,368 split slots including terminal empty; SHA-256
+  `2fdc753554dab9221a4ee38031ecea71ea699039f5f0998d2d9d1bd542baef9b`
+- **Recovered attachments:** exactly three canonical files under
+  `research/sol-pro/artifacts/prompt64/`; hashes and sizes are recorded in the
+  package README and `docs/response64-audit.md`
+
+The original solver binary, output, and timing files were not recovered, so
+their response/manifest hashes remain response-supplied rather than
+independently byte-verified. The manifest's `/mnt/data` paths are generic and
+non-identifying; response sandbox links are inert historical references.
+
+Independent reviews accept the contrapositive equivalence, scaling and
+reindexing arguments, `n=2` branch, residue-block formulas, and conditional
+`1/(m+2)` reduction only at their exact stated scopes. The scaling claim uses
+the corrected edge `r<M<=dM`, not the response's literal false `r<M<dM` at
+`d=1`. Independent computation replay accepts the declared sweep and targeted
+stress results as computed finite evidence only.
+
+Prompt64 is complete/recovered at **STOP/OPEN**. The exact target, downstream
+owner-transversal, exact pivot selector, and unrestricted Lonely Runner remain
+open. No new Lean theorem is promoted, and the route is frozen under its stop
+contract.
