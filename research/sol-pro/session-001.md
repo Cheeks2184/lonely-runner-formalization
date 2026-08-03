@@ -3180,9 +3180,11 @@ recovered or reproduced. Recovery preserves evidence; it does not accept the
 response's mathematical, computational, formal, or ranking claims.
 
 The independent `VL-R59-AUDIT-001` review completed from fixture
-`64319f1c4f46e1ace1d152cef6b65c6331f60ce5`. Its authoritative top-level CLI
-thread is `019fc66f-818b-7790-b71e-a5ca2780e72b`, with Luna, xhigh, and
-read-only routing metadata. The review accepts D1, the D2 and D3 lower bounds,
+`64319f1c4f46e1ace1d152cef6b65c6331f60ce5`. Authoritative top-level CLI
+metadata verified Luna, xhigh, and read-only routing; the public record retains
+only session-id SHA-256
+`2a55f9f331b2ea97de309d51df50d2f3c030c660e10793c374e37dc826902dd8`, not
+the raw session identifier. The review accepts D1, the D2 and D3 lower bounds,
 D4, D5, repaired D6, P1, and conditional P2 at their stated strengths; it
 rejects both proposed uniform low-order criteria and records exact
 counterexamples. `docs/response59-audit.md` is the controlling audit.
