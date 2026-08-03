@@ -152,9 +152,9 @@ level. Cite the repository boundary exactly:
   Lean-formalized as the desired modular existence theorem.
 - `PACK-08` is `proved-math`: exempt-owner coloring characterizes the packing
   optimum. It does not imply pivot noncoverage.
-- `COMP-10` is `proved-math` finite evidence: exact or replayed feasible
-  packing witnesses cover the fixed eleven-tuple stress collection at some
-  pivot. It has no unbounded consequence.
+- The `COMP-10` verifier/certificate-accounting argument is `proved-math` at
+  its exact hypotheses. The eleven fixed-instance packing outcomes are only
+  `computed finite evidence`; they have no unbounded consequence.
 
 A proof must instantiate every finite type, token, block, point-use capacity,
 and strict credit inequality needed by `PART-45`; it may not cite the status
@@ -180,27 +180,64 @@ labels as though they proved the new lemma.
    anchor-star, dispersion/range-sum, top-cycle, and CHAIN3 uniform criteria
    all have exact non-LRC counterexamples. Repackaging one is not a new lemma.
 
-## Mandatory falsification suites
+## Frozen mandatory falsification domain
 
-Every proposed modular sufficient condition must be evaluated exactly on all
-of the following before it receives a proof label:
+The acceptance domain is finite and completely ordered. Do not add an
+implicit tracked family, primitive box, random sample, or Prompt64 scan.
 
-- the fixed packing tuples
-  `F=(8,15,35,40,48,56,75,132,147)` and
-  `G=(15,21,40,48,56,105,126,280,1200)`;
-- the nine additional `COMP-10` cases: `RF`, `GCD1`, `GCD2`, `hardA`,
-  `hardB`, `small=(1,2,3,5)`, `D`, `C`, and `E`;
-- all tracked UNIF counterexamples and families: two-anchor, pair-energy,
-  Fourier, OPT-ADD, ranked-fiber, GCD-clock, relocation, three-anchor,
-  anchor-star, dispersion-star, first/second moments, range-sum,
-  TOP-CYCLE, and CHAIN3;
-- consecutive-speed families and the tracked CRT, collision-heavy,
-  high-gcd, affine-fiber, saturated, deletion, and large-gap mutations;
-- the abstract nonintegral triangle and every exact fixed-pivot failure above.
+First evaluate the abstract nonintegral triangle as preflight case `0`. It is
+a method-sanity obstruction, not by itself a lemma-refutation hit. Then use
+the following eleven positive injective base tuples, in exactly this order:
+
+```text
+F     = (8,15,35,40,48,56,75,132,147)
+G     = (15,21,40,48,56,105,126,280,1200)
+RF    = (2,3,7,9,10,12,15,16,19)
+GCD1  = (8,15,35,40,48,56,63,75,78)
+GCD2  = (6,8,15,21,28,35,40,48,75)
+hardA = (1,2,5,7,9,11,12,13)
+hardB = (1,5,7,8,9,11,13,15)
+small = (1,2,3,5)
+D     = (10,37,45,51,54,56,61,71,91)
+C     = (8,15,35,40,48,56,68,75,78)
+E     = (5,28,35,40,68,88,108,148,165)
+```
+
+The displayed literals are the authoritative audit input; do not reload them
+from a mutable repository source at execution time. Their provenance is the
+fixed `F`, `G`, and `STRESS_CASES` collection in
+`scripts/audit_whole_block_packing.py` at the recorded launch commit.
+
+For each base tuple, first test every pivot in increasing speed order. This
+is `92` fixed pivot instances. Next construct mutations in base-tuple order,
+then original zero-based coordinate-index order `0,...,m-1`, then delta order
+`(-3,-2,-1,+1,+2,+3)`: replace that coordinate by its old value plus the
+delta, discard a construction if the result is nonpositive or noninjective,
+and otherwise sort the resulting tuple increasingly. Construction
+descriptors are not deduplicated even if two descriptors yield the same
+sorted tuple. Test every pivot of each retained mutation in increasing speed
+order before advancing to the next descriptor. This yields exactly `461`
+retained mutation tuples and `4,057` mutation pivot instances: respectively
+`54/486`, `54/486`, `33/297`, `52/468`, `52/468`, `25/200`, `27/216`,
+`8/32`, `50/450`, `52/468`, and `54/486` mutation-tuples/pivot-instances in
+the displayed base order. Thus the frozen audit contains `4,149` modular
+packing instances and `4,150` total cases including preflight case `0`, below
+the `10,000` cap.
 
 Use exact integer/rational arithmetic, preserve every tie, and compare any
-optimized implementation with a structurally separate literal replay. A
-finite success is only computed finite evidence.
+optimized implementation with a structurally separate literal replay. Record
+the SHA-256 hashes of this prompt, every executed solver/replay source, and
+the emitted transcript. A finite success is only `computed finite evidence`.
+
+For a proposed uniform sufficient sublemma, process this order sequentially
+and stop at its first failing case. The required transcript then runs only
+through that early-stop case; do not execute or claim the remainder. A failed
+single pivot refutes only a fixed-pivot or local subcriterion. A
+lemma-refutation hit requires exact failure at every pivot of one tuple, so
+finish that tuple's complete pivot bundle before making that claim. If all
+`4,150` cases are exhausted, report the first obstruction in the declared
+order. Say "smallest" only when an explicitly declared total order and its
+entire finite domain were exhausted.
 
 ### Exact hit meaning
 
@@ -232,11 +269,10 @@ finite success is only computed finite evidence.
 Maximum budget:
 
 - exactly one major Sol Pro turn;
-- at most 10,000 deliberately constructed packing instances, with the domain,
-  order, source, output, and hashes declared; this may not be a primitive box,
-  Prompt64 continuation, or full-domain scan;
+- only the frozen `4,150`-case audit above (`4,149` modular packing instances
+  plus one abstract preflight), with declared sources, output, and hashes;
 - at most one Lean prototype, and only after a non-tautological mathematical
-  lemma survives every mandatory falsification suite.
+  lemma survives the entire frozen mandatory domain.
 
 Stop immediately if:
 
@@ -249,8 +285,9 @@ Stop immediately if:
 5. no implication strictly narrower than the stated packing lemma survives
    the maximum budget.
 
-On stop, report the smallest exact obstruction and leave unrestricted pivot
-coverage and LRC open.
+On stop, report the first exact obstruction in the declared order and leave
+unrestricted pivot coverage and LRC open. Report a smallest obstruction only
+after exhausting an explicitly ordered finite comparison domain.
 
 ## Required output
 
@@ -262,7 +299,8 @@ Return:
    relaxations;
 4. complete proofs of every new `proved-math` claim;
 5. exact certificates for every rejected criterion and any hit;
-6. the full mandatory-suite and constructed-instance transcript within cap;
+6. the exact frozen-domain transcript through the first early-stop case, or
+   through all `4,150` cases if no earlier stop occurs;
 7. one first unsupported implication after the turn;
 8. at most one proposed Lean declaration, only if the mathematics survives;
 9. an explicit stop/continue decision;

@@ -232,9 +232,10 @@ and their current dispositions, in priority order, are:
    lemma. The exact pivot-certificate conjecture is already a tautological
    Lean-equivalent bridge; the new content must be the stronger
    capacity-respecting whole-fiber selection at some pivot;
-2. C2: prove a uniform supply of prime-forcing moduli whose product exceeds
-   the published minimal-counterexample product bound; this route retains an
-   external unformalized product-bound dependency;
+2. C2: for every `n>=3`, prove a uniform supply of distinct prime-forcing
+   moduli, with no prime powers, whose product exceeds the published
+   minimal-counterexample product bound; this route retains an external
+   unformalized product-bound dependency;
 3. C1: **STOP / OPEN** at the first-blocker/maximizer transfer. Verifier
    implementation remains frozen under the Prompt65 restart rule;
 4. A: keep the least-primitive-counterexample height route frozen after
@@ -368,17 +369,22 @@ unrestricted LRC, then estimated success, then publishability.
 target, so it cannot itself be relabeled as a new bridge. The sole new lemma is
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, whose exact modular token/block,
 capacity, and strict-credit hypotheses must instantiate the existing
-`PART-45` capacity theorem. `PART-46`, `PACK-08`, and `COMP-10` supply only
-proved-math structure and fixed finite evidence at their recorded scopes.
+`PART-45` capacity theorem. `PART-46` and `PACK-08` supply only proved-math
+structure at their recorded scopes. `COMP-10`'s verifier/accounting argument
+is proved-math at its exact hypotheses, while its eleven fixed-instance
+outcomes are computed finite evidence only.
 Top-two remains the smallest thin-API alternative, not a simultaneous cell.
 
 `VER-C2-DEPENDENCY-038` accepts the exact indexing and hypotheses of the
 published Malikiosis--Santos--Schymura Theorem A and its strict product
 corollary, including the sufficient integer comparison
 `n^n*Q >= binom(n+1,2)^(n(n-1))`. This dependency remains external and
-unformalized. The recorded `n=3` prime counts and `PrimeForcing(3,5)` rejection
-are finite evidence only; `UniformPrimeForcingSupply` and the required Lean
-wrappers remain open. See
+unformalized. The audit independently reproduced the `n=3` prime slice in
+memory: `p=5` has exactly `2,048` premise tuples, `192` failures, and first
+failure `(1,3,4)` in its declared order. These and the zero-failure rows are
+computed finite evidence only; the complete Response60 artifact remains
+nonreproducible. `UniformPrimeForcingSupply` for every `n>=3`, using distinct
+primes only, and the required Lean wrappers remain open. See
 [the C2 dependency audit](docs/c2-prime-forcing-dependency-audit.md).
 
 `SOL-P64-PRO-B-001` remains waiting: the Prompt64 contract is integrated as a
@@ -388,7 +394,12 @@ runtime. `SOL-P65-PRO-C-001`, `FIRST-BLOCKER-MAXIMIZER-TRANSFER`, is likewise
 waiting/frozen under the Prompt65 stop rule. `SOL-P66-PRO-B-001`,
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, is the selected next unrestricted
 cell, but it is also waiting because external signed-in ChatGPT Sol Pro control
-is unavailable. Its tracked Prompt66 package promotes no result.
+is unavailable. `VER-P66-C2-DOCS-042` rejected the original documentation
+package at contract scope; `OPS-P66-CORRECT-043` corrects it and is in review.
+The corrected Prompt66 SHA-256 is
+`0f371561df147457c045ccd8fc91ef7689dd366548373afe05e8d4b2a7864499`.
+Its frozen audit has `4,149` modular instances plus one abstract preflight and
+an early-stop transcript rule. The tracked package promotes no result.
 
 The formal source checkpoint is now
 `586b4858cd1b1c513566f3b33d7b5141640e7865`; merged main

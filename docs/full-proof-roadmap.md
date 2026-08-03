@@ -202,6 +202,14 @@ selection must satisfy the subtraction-free strict inequality
 `|R_j|+credit>sum_(i!=j)|B_i^j|`. Full definitions and boundaries are frozen in
 `research/sol-pro/prompts/prompt66.md`.
 
+`VER-P66-C2-DOCS-042` rejected the original documentation package at contract
+scope. The `OPS-P66-CORRECT-043` correction is in review with Prompt66
+SHA-256
+`0f371561df147457c045ccd8fc91ef7689dd366548373afe05e8d4b2a7864499`.
+Its mandatory audit is exactly 4,149 ordered modular pivot instances plus one
+abstract preflight, and its transcript ends at the first declared-order stop
+case unless the complete finite domain is exhausted. No result is promoted.
+
 The smallest thin-API alternative remains `TOP-TWO-PIVOT`:
 
 ```text
@@ -537,9 +545,9 @@ divisible by `p`, there is `0<=r<N*p` with
 p <= rho_(N*p)(r*v_i)  for every i.
 ```
 
-The target `UniformPrimeForcingSupply` is: for every unsolved `n`, there is a
-finite set of distinct primes `P_n` satisfying `PrimeForcing(n,p)` whose
-product is at least the published minimal-counterexample product bound
+The target `UniformPrimeForcingSupply` is: for every `n>=3`, there is a finite
+set of distinct primes `P_n` satisfying `PrimeForcing(n,p)` whose product is at
+least the published minimal-counterexample product bound
 
 ```text
 B_n = (binom(n+1,2)^(n-1) / n)^n.
@@ -588,7 +596,9 @@ unformalized mathematics, not `proved-lean`.
 ### Existing support and evidence against
 
 - Rosenfeld's primary nine-runner paper proves the local forcing implication
-  and combines finitely verified prime powers with the product bound.
+  and combines finitely verified divisibility information with the product
+  bound. This repository's C2 contract admits only distinct forced primes, not
+  prime powers.
 - Trakulthongchai's peer-reviewed work extends the known result through ten
   total runners. A separate 2026 preprint claims eleven through thirteen; the
   repository does not treat those preprint computations as independently
@@ -598,17 +608,18 @@ unformalized mathematics, not `proved-lean`.
   eventual-validity, or computable all-dimension supply theorem.
 - The local forcing property is itself a growing finite cover statement and
   may encode nearly the original difficulty.
-- The Response60 artifact reports `n=3` premise counts `64`, `256`, `6,912`,
-  `32,000`, and `55,296` for primes `2,3,7,11,13`, with no reported failure,
-  while `(N,p,v)=(4,5,(1,3,4) mod 20)` rejects `PrimeForcing(3,5)`. These are
-  finite evidence only; the whole artifact was not reproducible.
+- `VER-C2-DEPENDENCY-038` independently reproduced the `n=3` distinct-prime
+  slice in memory: primes `2,3,7,11,13` have respectively `64`, `256`,
+  `6,912`, `32,000`, and `55,296` premise tuples with zero failures. For
+  `p=5`, exactly `2,048` premise tuples have `192` failures, first
+  `(1,3,4)` in the declared order. These outcomes are computed finite evidence
+  only; the complete Response60 artifact remains nonreproducible.
 
 ### Single unresolved lemma
 
-`UNIFORM-PRIME-FORCING-SUPPLY`: prove enough prime or prime-power forcing
-statements uniformly in `n` to exceed the exact product bound, without
-performing an unrelated full cover search separately for every dimension and
-modulus.
+`UNIFORM-PRIME-FORCING-SUPPLY`: for every `n>=3`, prove enough distinct-prime
+forcing statements to exceed the exact product bound, without prime powers or
+an unrelated full cover search separately for every dimension and modulus.
 
 ### Falsification and stop contract
 
@@ -641,7 +652,9 @@ proof, or budget stop condition is reached.
 | 2026-08-03 | `OPS-FULL-REASSESS-037` ranks B before C2; C1 remains STOP/OPEN and A frozen | research recommendation | Selects one direct all-pivot contract without reopening Prompt64/65 or promoting a result |
 | 2026-08-03 | `VER-C2-DEPENDENCY-038` accepts exact MSS indexing/product logic | external unformalized mathematics | Keeps C2 open but second; records missing Lean wrappers and finite-only prime evidence |
 | 2026-08-03 | `FORM-B-UNIFORM-039` isolates modular whole-block existence as the sole new lemma | specification-only/open | Prevents tautological relabeling of the existing pivot equivalence and preserves top-two only as an alternative |
-| 2026-08-03 | `OPS-P66-CONTRACT-040` packages `SOL-P66-PRO-B-001` | queued contract only | One capped unrestricted research cell is waiting for external control; no result is promoted |
+| 2026-08-03 | `OPS-P66-CONTRACT-040` packages `SOL-P66-PRO-B-001` | rejected documentation contract | `VER-P66-C2-DOCS-042` found range, evidence-label, prime-supply, and finite-domain/transcript defects; no mathematical claim is rejected or promoted |
+| 2026-08-03 | `VER-P66-C2-DOCS-042` reviews Prompt66/C2 documentation | verified negative audit | Requires an exact all-`n>=3` distinct-prime C2 contract and a decidable Prompt66 finite audit |
+| 2026-08-03 | `OPS-P66-CORRECT-043` corrects the Prompt66/C2 package | review | Freezes 4,150 ordered cases, early-stop transcript semantics, corrected finite-evidence labels, and synchronized SHA/status records; no result is promoted |
 | 2026-08-02 | Entered FULL-PROOF PRIORITY MODE; fixed A/B/C contracts and budgets | research policy | Replaces coefficient-by-coefficient optimization with three explicit unrestricted bridges |
 | 2026-08-02 | Response 57 fixed-shift obstruction: no finite fixed J1 shift family is uniformly row-nonempty | proved-math, independent finite checks | Does not shorten unrestricted path; supports freezing bounded translation variants |
 | 2026-08-02 | Submitted Sol Pro Prompt 58 on A/B/C with adversarial contracts | research in progress | Strategy generation only; no theorem yet |

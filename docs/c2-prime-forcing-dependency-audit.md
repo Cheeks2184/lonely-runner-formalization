@@ -105,19 +105,24 @@ p <= rho_(N*p)(r*v_i)
 for every coordinate. Repeated residues are mandatory; distinct integer
 speeds can collide after reduction.
 
-The Response60 artifact reports the following deterministic `n=3` counts:
+`VER-C2-DEPENDENCY-038` independently reproduced the tracked `n=3` prime
+slice below with an in-memory exact enumerator. This reproduction does not
+repair the complete Response60 artifact, whose whole-output replay remains
+nonreproducible.
 
-| Prime `p` | Premise-satisfying residue tuples | Reported failure |
-| ---: | ---: | --- |
-| 2 | 64 | none |
-| 3 | 256 | none |
-| 7 | 6,912 | none |
-| 11 | 32,000 | none |
-| 13 | 55,296 | none |
+| Prime `p` | Premise-satisfying residue tuples | Exact failures |
+| ---: | ---: | ---: |
+| 2 | 64 | 0 |
+| 3 | 256 | 0 |
+| 5 | 2,048 | 192 |
+| 7 | 6,912 | 0 |
+| 11 | 32,000 | 0 |
+| 13 | 55,296 | 0 |
 
-The reported supply `{2,3,7,11,13}` has product `6006`, exceeding the exact
-dimension-three product threshold `1728`. These rows remain **computed finite
-evidence only**; the mandatory whole-artifact replay was nonreproducible.
+The reproduced distinct-prime supply `{2,3,7,11,13}` has product `6006`,
+exceeding the exact dimension-three product threshold `1728`. These rows
+remain **computed finite evidence only**; the mandatory complete Response60
+artifact remains nonreproducible.
 
 `PrimeForcing(3,5)` is rejected by
 
@@ -126,16 +131,16 @@ N=4, p=5, v=(1,3,4) mod 20.
 ```
 
 All deletion-gcd and nondivisibility premises hold, but the strict bad sets
-cover every residue. It was the first reported failure after 348 cumulative
-premise-satisfying tuples in the ordered `p=2,3,5` search. This is exact finite
-negative evidence against that prime, not a rejection of uniform supply from
+cover every residue. Among exactly `2,048` premise-satisfying tuples for
+`p=5`, exactly `192` fail; `(1,3,4)` is the first failure in the enumerator's
+declared lexicographic tuple order. This is **computed finite negative
+evidence only** against that prime, not a rejection of uniform supply from
 other primes.
 
 ## Open dependency and missing Lean wrappers
 
-`UniformPrimeForcingSupply` asks, for every induction dimension still open,
-for finitely many distinct primes satisfying `PrimeForcing(n,p)` whose product
-meets
+`UniformPrimeForcingSupply` asks, for every `n>=3`, for finitely many distinct
+primes satisfying `PrimeForcing(n,p)` whose product meets
 
 ```text
 n^n * Q >= binom(n+1,2)^(n(n-1)).
@@ -144,6 +149,9 @@ n^n * Q >= binom(n+1,2)^(n(n-1)).
 No dimension-uniform construction, density theorem, or eventual-prime
 criterion is known. The local forcing property is itself a growing finite
 cover problem and may retain most of the original difficulty.
+
+Only distinct primes are admissible in this route contract. Prime powers are
+not part of the supply and cannot be used to increase `Q`.
 
 The Lean project is missing wrappers for:
 

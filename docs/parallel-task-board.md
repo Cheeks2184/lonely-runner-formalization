@@ -29,15 +29,15 @@ mathematical claim.
   mode is recorded from the honored runtime session, not merely the requested
   task mode.
 
-Status values are `planned`, `queued`, `active`, `running`, `waiting`,
-`blocked`, `rejected`, `review`, `verified`, and `integrated`.
+Status values are `planned`, `prepared`, `queued`, `active`, `running`,
+`waiting`, `blocked`, `rejected`, `review`, `verified`, and `integrated`.
 
 ## Current metrics
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 18 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, and `FORM-B-UNIFORM-039` are each accepted only at their exact recommendation, external-dependency-audit, or specification scope. |
-| Accepted negative audits | 10 | The prior eight plus the Prompt65 code audit and repair review are valid negative results; rejected verifier output is not counted as computed evidence. |
+| Accepted audit deliverables | 20 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, `VER-P66-C2-DOCS-042`, and completed read-only `FORM-PACKING-ADAPTER-SPEC-044` are accepted only at their exact recommendation, external-dependency-audit, specification, or negative-documentation-review scope. |
+| Accepted negative audits | 11 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, and `VER-P66-C2-DOCS-042` are valid negative results; rejected verifier output and queued work are not counted as computed evidence. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
 | Accepted implementations | 0 unrestricted; 3 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, and exact ReverseGrid arithmetic are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 4 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), board/Prompts60--63 package (`263a1cb`), and ReverseGrid formal source (`586b485`, merged by `99a78c1`) are on main. |
@@ -45,7 +45,8 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited; Prompt64 is waiting, Prompt65 is waiting/frozen, and Prompt66 cannot launch without external control. |
 | Queued Sol Pro cells | 1 | `SOL-P66-PRO-B-001` is the selected next unrestricted cell and is waiting for callable signed-in ChatGPT Sol Pro control. |
 | Active Sol Medium leads | 0 running / 3 roles | Verification, Formalization, and Research Operations have completed their current reviewed tranches. |
-| Active Luna workers | 0 / 6 | The ReverseGrid worker had genuine fresh top-level Luna/xhigh runtime metadata but exited without a report or commit; the Formalization Lead independently completed and reviewed the theorem. Historical Response63 routing failures retain their recorded scope. |
+| Active Luna workers | 1 / 6 | `LUNA-PACKING-ADAPTER-046` is active in an isolated worktree with confirmed fresh top-level Luna/xhigh metadata. Historical Response63 routing failures and the completed no-report ReverseGrid launch retain their recorded scope. |
+| Queued Luna workers | 1 | `VER-PACKING-SEARCH-045` is contracted but has not launched and supplies no computation or claim. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 6 | The prior five failures plus the ReverseGrid worker that exited without a report or commit are counted. The completed Response63 input-missing route remains unusable but is not counted as a failed launch. |
 | Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
@@ -53,7 +54,7 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
 | Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
-| Integration backlog | 1 contract/documentation group | Prompt66 and the C2 dependency audit await PI review; Prompt64/P65 retain their separate stopped or waiting records. |
+| Integration backlog | 1 contract/documentation group | The corrected Prompt66/C2 package under `OPS-P66-CORRECT-043` awaits PI review; Prompt64/P65 retain their separate stopped or waiting records. |
 | Wait time | External control waiting | Browser/ChatGPT-control is not callable in the current runtime; Prompt64, Prompt65, and Prompt66 have no submitted external response. |
 
 Metrics are updated only from a worker result accepted by the supervising
@@ -791,7 +792,11 @@ as an accepted implementation or mathematical proof.
   `UniformPrimeForcingSupply` remains open.
 - **Final disposition / promotion authority:** Exact external theorem and
   `n^n*Q>=binom(n+1,2)^(n(n-1))` comparison accepted as unformalized
-  mathematics. The `n=3` counts and `p=5` rejection are finite evidence only.
+  mathematics. The independently reproduced `n=3` slice is computed finite
+  evidence only: at `p=5`, exactly `2,048` premise tuples give `192` failures,
+  first `(1,3,4)` in the declared order. The complete Response60 artifact
+  remains nonreproducible, and the open supply contract requires distinct
+  primes only for every `n>=3`.
 
 ### FORM-B-UNIFORM-039 — all-pivot packing specification
 
@@ -824,7 +829,7 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, and
   `FORM-B-UNIFORM-039`
 - **Branch:** `research/ops-p66-contract-040`
-- **Status:** `review`
+- **Status:** `rejected` (documentation contract; superseded by correction)
 - **Exact deliverable:** Package the sole stronger all-pivot modular packing
   lemma, C2 dependency audit, route ranking, falsification suites, and stop cap.
 - **Allowed files:** `research/sol-pro/prompts/prompt66.md`,
@@ -833,8 +838,148 @@ as an accepted implementation or mathematical proof.
 - **Acceptance command:** Verify exact base and allowed-file diff; run
   `git diff --check` and an added-line privacy/secret scan; commit once.
 - **Blocker:** PI review/merge and unavailable external Browser/ChatGPT control.
-- **Final disposition / promotion authority:** Contract/documentation artifact
-  only. It promotes no computation, theorem, Lean result, or unrestricted claim.
+- **Final disposition / promotion authority:** `VER-P66-C2-DOCS-042` rejected
+  this original documentation contract and assigned a correction. It promotes
+  no computation, theorem, Lean result, or unrestricted claim.
+
+### VER-P66-C2-DOCS-042 — Prompt66/C2 documentation review
+
+- **ID:** `VER-P66-C2-DOCS-042`
+- **Lane:** verification / contract and evidence-label review
+- **Owner / supervising lead:** Verification Lead
+- **Base:** `8511903c966587b212cb99fa357ad75c62c25460`
+- **Dependencies:** `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, and
+  `OPS-P66-CONTRACT-040`
+- **Branch / worktree:** read-only review; private path omitted
+- **Status:** `verified` (negative documentation audit)
+- **Exact deliverable:** Decide whether the C2 range and supply, finite
+  evidence provenance, Prompt66 acceptance domain, transcript stop rule, and
+  evidence labels are decidable and mutually consistent.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Cross-check all six package files, independently
+  recompute the Prompt66 SHA-256, and reject any implicit dimension range,
+  prime-power supply, unbounded suite, or conflicting transcript requirement.
+- **Blocker:** The reviewed package used an ambiguous C2 dimension range,
+  blurred theorem and finite-evidence labels, did not record the independently
+  reproduced `p=5` totals, and combined immediate stop with a full-suite
+  transcript requirement.
+- **Final disposition / promotion authority:** Accepted negative documentation
+  audit only. It rejects the package contract, not C2, the packing lemma, or
+  any unrestricted theorem target.
+
+### OPS-P66-CORRECT-043 — Prompt66/C2 contract correction
+
+- **ID:** `OPS-P66-CORRECT-043`
+- **Lane:** research operations / corrective documentation
+- **Owner / supervising lead:** Research-Operations Lead
+- **Base:** `8511903c966587b212cb99fa357ad75c62c25460`
+- **Dependencies:** `VER-P66-C2-DOCS-042`
+- **Branch:** `research/ops-p66-contract-040`
+- **Status:** `review`
+- **Exact deliverable:** Correct C2 to every `n>=3` with distinct primes only;
+  record the independently reproduced `n=3` evidence; freeze Prompt66's exact
+  ordered finite audit and early-stop transcript; synchronize hashes, labels,
+  metrics, and task dispositions.
+- **Allowed files:** `STATUS.md`, `docs/full-proof-roadmap.md`,
+  `docs/parallel-task-board.md`, `docs/proof-obligations.md`,
+  `docs/c2-prime-forcing-dependency-audit.md`, and
+  `research/sol-pro/prompts/prompt66.md`
+- **Acceptance command:** Require parent `8511903c966587b212cb99fa357ad75c62c25460`,
+  exact allowed-file diff, unique task IDs, Prompt66 SHA-256
+  `0f371561df147457c045ccd8fc91ef7689dd366548373afe05e8d4b2a7864499`,
+  `git diff --check`, added-line privacy/secret scan, one new commit, and a
+  clean worktree.
+- **Blocker:** PI review/merge only; external signed-in Sol Pro control remains
+  unavailable.
+- **Final disposition / promotion authority:** Corrective documentation under
+  review. It promotes no computation, proof, Lean result, or unrestricted
+  claim.
+
+### FORM-PACKING-ADAPTER-SPEC-044 — pivot packing adapter specification
+
+- **ID:** `FORM-PACKING-ADAPTER-SPEC-044`
+- **Lane:** formalization / B specification
+- **Owner / supervising lead:** Formalization Lead
+- **Base:** `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`
+- **Dependencies:** `PART-45`, `FORM-B-UNIFORM-039`, and `PACK-09`
+- **Branch / worktree:** read-only specification; private path omitted
+- **Status:** `verified` (completed read-only specification)
+- **Exact deliverable:** Freeze the type boundary for a generic
+  overlap-capacity-to-uncovered-point corollary and a canonical pivot-subtype
+  adapter, without assuming or encoding existence of a threshold-beating
+  modular selection.
+- **Allowed files:** none; read-only specification
+- **Acceptance command:** Check the proposed declarations against
+  `LonelyRunner/OverlapCapacity.lean`, the canonical pivot definitions, and the
+  existing axiom-audit import surface; reject any hidden packing-existence
+  premise or result promotion.
+- **Blocker:** None at specification scope. Implementation and proof review are
+  separate tasks.
+- **Final disposition / promotion authority:** Completed specification only.
+  It supplies no Lean theorem, modular selection, finite evidence, or
+  unrestricted result.
+
+### LUNA-PACKING-ADAPTER-046 — generic capacity and pivot adapter
+
+- **ID:** `LUNA-PACKING-ADAPTER-046`
+- **Lane:** formalization / B
+- **Owner / supervising lead:** Luna xhigh (fresh top-level CLI) /
+  Formalization Lead
+- **Base:** `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`
+- **Dependencies:** completed `FORM-PACKING-ADAPTER-SPEC-044`
+- **Branch:** `formal/luna-packing-adapter-046`
+- **Worktree:** isolated; private local path omitted
+- **Persisted launch metadata:** exec thread
+  `019fc8aa-79ef-7bb0-8297-035f10fda30b`; model `gpt-5.6-luna`; effort
+  `xhigh`; base `f9afa7e`
+- **Status:** `active`
+- **Exact deliverable:** Prove a generic overlap-capacity uncovered-point
+  corollary and connect it through a canonical pivot-subtype adapter. Do not
+  claim or assume existence of the capacity-respecting threshold-beating
+  selection required by `PACK-09`.
+- **Allowed files:** `LonelyRunner/OverlapCapacity.lean`, new
+  `LonelyRunner/PivotPackingAdapter.lean`, `LonelyRunner/AxiomAudit.lean`, and
+  `LonelyRunner.lean`; source only, with no documentation status edits
+- **Acceptance command:** Compile the targeted modules, run
+  `lake build LonelyRunner`, check axiom probes expose standard foundations
+  only, and scan the allowed source diff for `sorry`, `admit`, and new axioms.
+- **Blocker:** None at launch; implementation and lead review remain pending.
+- **Final disposition / promotion authority:** Active source-only task. Only
+  lead review may accept the implementation or update documentation; no
+  selection-existence or unrestricted claim is authorized.
+
+### VER-PACKING-SEARCH-045 — independent bounded packing search
+
+- **ID:** `VER-PACKING-SEARCH-045`
+- **Lane:** verification / B
+- **Owner / supervising lead:** Luna xhigh (fresh top-level CLI; pending launch)
+  / Verification Lead
+- **Base:** `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`
+- **Dependencies:** `PACK-09` definitions and the corrected Prompt66 strict
+  boundary; no dependency on `scripts/audit_whole_block_packing.py`
+- **Intended branch:** `verify/luna-packing-search-045`
+- **Status:** `queued`
+- **Exact deliverable:** Build a structurally independent literal exact
+  all-pivot whole-block optimizer and run every primitive increasing tuple
+  with `2<=n<=5` and maximum speed `<=12`: `45+196+479+786=1,506` tuples and
+  `6,524` pivot rows. Then replay the eleven fixed Prompt66 stress tuples as
+  `92` additional named pivot rows. Enumerate by increasing `n`, tuple
+  lexicographic order, and increasing pivot speed, followed by the eleven
+  stresses in Prompt66 order and increasing pivot speed. Preserve strict
+  badness and strict credit boundaries exactly.
+- **Expected files:** a new isolated optimizer, literal replay, tests, manifest,
+  and hashed result report under paths declared before launch; no import or
+  copied implementation from `scripts/audit_whole_block_packing.py`
+- **Acceptance command:** Launch only through a fresh top-level Luna/xhigh CLI;
+  record toolchain and source/output hashes; verify the exact `1,506` tuple,
+  `6,524` bounded-row, and `92` stress-row counts; run literal/optimized
+  agreement and `git diff --check` before review.
+- **Blocker:** Pending launch. Stop on the first exact all-pivot packing-lemma
+  refutation or before any resource escalation; request new authority for an
+  expanded domain or budget.
+- **Final disposition / promotion authority:** Queued contract only. No run,
+  computation, counterexample, finite evidence, proof, or status promotion is
+  recorded.
 
 ### SOL-P66-PRO-B-001 — ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING
 
@@ -854,13 +999,15 @@ as an accepted implementation or mathematical proof.
 - **Allowed files:** none during the external turn; recovery requires a
   separately authorized task
 - **Acceptance command:** Verify Prompt66 file SHA-256
-  `99c322dd38943550eabbe29bd7e6fe50c5493912dd3428d282969b19be78799f`,
-  then require full quantified definitions, implication chain, mandatory
-  stress replay, exact certificates, first unsupported implication, and
+  `0f371561df147457c045ccd8fc91ef7689dd366548373afe05e8d4b2a7864499`,
+  after `OPS-P66-CORRECT-043` is accepted, then require full quantified
+  definitions, implication chain, the frozen ordered audit through its first
+  stop case, exact certificates, first unsupported implication, and
   stop/continue decision.
 - **Blocker:** Browser/ChatGPT-control is unavailable. Maximum budget is one
-  Sol Pro turn, at most 10,000 constructed packing instances, and at most one
-  Lean prototype only after the mathematics survives falsification.
+  Sol Pro turn, exactly the frozen `4,149` modular instances plus one abstract
+  preflight unless an early stop occurs, and at most one Lean prototype only
+  after the mathematics survives the entire falsification domain.
 - **Final disposition / promotion authority:** Waiting contract only. A
   packing failure rejects only the sufficient strengthening; a finite packing
   witness proves only its instance. No result is promoted without review.
