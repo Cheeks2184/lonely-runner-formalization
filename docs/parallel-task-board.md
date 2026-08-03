@@ -36,14 +36,14 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 21 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, `VER-P66-C2-DOCS-042`, completed read-only `FORM-PACKING-ADAPTER-SPEC-044`, and `FORM-P66-REREVIEW-047` are accepted only at their exact recommendation, external-dependency-audit, specification, or negative-documentation-review scope. |
-| Accepted negative audits | 12 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, `VER-P66-C2-DOCS-042`, and `FORM-P66-REREVIEW-047` are valid negative results; rejected verifier output and queued work are not counted as computed evidence. |
+| Accepted audit deliverables | 23 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, `VER-P66-C2-DOCS-042`, completed read-only `FORM-PACKING-ADAPTER-SPEC-044`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, and `VER-P66-FINAL-REVIEW-051` are accepted only at their exact recommendation, external-dependency-audit, specification, or negative-documentation-review scope. |
+| Accepted negative audits | 14 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, `VER-P66-C2-DOCS-042`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, and `VER-P66-FINAL-REVIEW-051` are valid negative results; rejected verifier output, corrective work under review, and queued work are not counted as computed evidence. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
 | Accepted implementations | 0 unrestricted; 3 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, and exact ReverseGrid arithmetic are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 4 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), board/Prompts60--63 package (`263a1cb`), and ReverseGrid formal source (`586b485`, merged by `99a78c1`) are on main. |
 | Authoritative source replay | integrated / verified warm-cache | Formal source checkpoint `586b485` passed module/root direct compiles, 3,001-job target and 3,590-job root builds, and standard-foundation axiom probes in an isolated warm-cache worktree. Main `99a78c1` has the same Lean tree. The latest full detached clean replay remains the older `263a1cb` record. |
 | Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited; Prompt64 is waiting, Prompt65 is waiting/frozen, and Prompt66 cannot launch without external control. |
-| Waiting Sol Pro cells | 1 | `SOL-P66-PRO-B-001` is the selected next unrestricted cell and is waiting for callable signed-in ChatGPT Sol Pro control. |
+| Waiting Sol Pro cells | 3 | All three literal `waiting` rows are counted: `SOL-P66-PRO-B-001` is the one selected next unrestricted cell; `SOL-P64-PRO-B-001` is parked, and `SOL-P65-PRO-C-001` is parked/frozen. All await callable signed-in ChatGPT Sol Pro control. |
 | Active Sol Medium leads | 0 running / 3 roles | Verification, Formalization, and Research Operations have completed their current reviewed tranches. |
 | Active Luna workers | 1 / 6 | `LUNA-PACKING-ADAPTER-046` is active in an isolated worktree with confirmed fresh top-level Luna/xhigh metadata. Historical Response63 routing failures and the completed no-report ReverseGrid launch retain their recorded scope. |
 | Queued Luna workers | 1 | `VER-PACKING-SEARCH-045` is contracted but has not launched and supplies no computation or claim. |
@@ -54,8 +54,8 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
 | Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
-| Integration backlog | 1 contract/documentation group | The finite-type-corrected Prompt66 package under `OPS-P66-FINITETYPE-CORRECT-049` awaits PI review; Prompt64/P65 retain their separate stopped or waiting records. |
-| Wait time | External control waiting | Browser/ChatGPT-control is not callable in the current runtime; Prompt64, Prompt65, and Prompt66 have no submitted external response. |
+| Integration backlog | 1 contract/documentation group | `OPS-P66-METRICS-CORRECT-053` is under review after the two final negative audits; Prompt64/P65 retain their separate stopped or waiting records. |
+| Wait time | 3 external-control waits | Browser/ChatGPT-control is not callable in the current runtime; the one selected Prompt66 cell and the two parked/frozen Prompt64/Prompt65 cells have no submitted external response. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -886,7 +886,7 @@ as an accepted implementation or mathematical proof.
   `research/sol-pro/prompts/prompt66.md`
 - **Acceptance command:** Require parent `8511903c966587b212cb99fa357ad75c62c25460`,
   exact allowed-file diff, unique task IDs, Prompt66 SHA-256
-  `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`,
+  `0f371561df147457c045ccd8fc91ef7689dd366548373afe05e8d4b2a7864499`,
   `git diff --check`, added-line privacy/secret scan, one new commit, and a
   clean worktree.
 - **Blocker:** `FORM-P66-REREVIEW-047` found that the attained target and
@@ -948,6 +948,78 @@ as an accepted implementation or mathematical proof.
 - **Final disposition / promotion authority:** Corrective documentation under
   review. It changes no mathematical target and promotes no computation,
   finite evidence, proof, Lean result, or unrestricted claim.
+
+### FORM-P66-FINAL-REVIEW-050 — Prompt66 final formal review
+
+- **ID:** `FORM-P66-FINAL-REVIEW-050`
+- **Lane:** formalization / final documentation review
+- **Owner / supervising lead:** Formalization Lead
+- **Base:** `68d3ed5fbd1296183f4b011db98e2cbea3be3007`
+- **Dependencies:** `OPS-P66-FINITETYPE-CORRECT-049`
+- **Branch / worktree:** read-only review; private path omitted
+- **Status:** `verified` (negative documentation audit)
+- **Exact deliverable:** Check that the corrected Prompt66 package preserves
+  exact theorem/evidence labels and keeps historical and current prompt hashes
+  attached to the revisions that actually produced them.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Compare the roadmap evidence labels with the exact
+  COMP-10 hypotheses and outcomes, and recompute Prompt66 SHA-256 directly
+  from both the `644fd97` Git object and the reviewed branch tip.
+- **Blocker:** The roadmap promoted the eleven fixed outcomes to `proved-math`,
+  and the historical `OPS-P66-CORRECT-043` record used the later Prompt66 hash.
+- **Final disposition / promotion authority:** Accepted negative documentation
+  audit only. It requires label and provenance corrections and promotes no
+  computation, finite evidence, proof, Lean result, or unrestricted claim.
+
+### VER-P66-FINAL-REVIEW-051 — Prompt66 final verifier review
+
+- **ID:** `VER-P66-FINAL-REVIEW-051`
+- **Lane:** verification / final documentation review
+- **Owner / supervising lead:** Verification Lead
+- **Base:** `68d3ed5fbd1296183f4b011db98e2cbea3be3007`
+- **Dependencies:** `OPS-P66-FINITETYPE-CORRECT-049`
+- **Branch / worktree:** read-only review; private path omitted
+- **Status:** `verified` (negative documentation audit)
+- **Exact deliverable:** Reconcile the Sol Pro waiting metric with every
+  literal waiting task row and verify final-review task and audit counts.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Count literal waiting rows for Prompt64, Prompt65,
+  and Prompt66; check wait-time prose, unique task IDs, and exact accepted-audit
+  and accepted-negative-audit arithmetic.
+- **Blocker:** The metric reported one waiting Sol Pro cell while three literal
+  rows were waiting, and the two final negative audits were not yet recorded
+  in the accepted-audit metrics.
+- **Final disposition / promotion authority:** Accepted negative documentation
+  audit only. It requires accounting synchronization and promotes no
+  computation, finite evidence, proof, Lean result, or unrestricted claim.
+
+### OPS-P66-METRICS-CORRECT-053 — Prompt66 final-review correction
+
+- **ID:** `OPS-P66-METRICS-CORRECT-053`
+- **Lane:** research operations / corrective documentation
+- **Owner / supervising lead:** Research-Operations Lead
+- **Base:** `68d3ed5fbd1296183f4b011db98e2cbea3be3007`
+- **Dependencies:** `FORM-P66-FINAL-REVIEW-050`,
+  `VER-P66-FINAL-REVIEW-051`
+- **Branch:** `research/ops-p66-contract-040`
+- **Status:** `review`
+- **Exact deliverable:** Count all three waiting Sol Pro rows while identifying
+  the one selected and two parked/frozen cells; restore the historical
+  Prompt66 hash; distinguish COMP-10's exact verifier/accounting proof from
+  its eleven computed outcomes; and synchronize both accepted-audit metrics.
+- **Allowed files:** `docs/parallel-task-board.md`,
+  `docs/full-proof-roadmap.md`, `STATUS.md`, and
+  `docs/proof-obligations.md` only for review-disposition synchronization
+- **Acceptance command:** Recompute historical/current Prompt66 hashes from Git
+  objects; count exact waiting rows; search evidence labels and unique task IDs;
+  check accepted-audit arithmetic; run `git diff --check` against parent and
+  original base; enforce the allowed-file set; scan added lines for private
+  paths or secrets; require one new commit and a clean worktree.
+- **Blocker:** PI review/merge only; external signed-in Sol Pro control remains
+  unavailable.
+- **Final disposition / promotion authority:** Corrective documentation under
+  review. It changes no theorem contract and promotes no computation, finite
+  evidence, proof, Lean result, or unrestricted claim.
 
 ### FORM-PACKING-ADAPTER-SPEC-044 — pivot packing adapter specification
 

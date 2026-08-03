@@ -397,8 +397,12 @@ cell, but it is also waiting because external signed-in ChatGPT Sol Pro control
 is unavailable. `VER-P66-C2-DOCS-042` rejected the original documentation
 package at contract scope, and `FORM-P66-REREVIEW-047` verified that the first
 correction still left the token target and partial choice noncanonical for a
-finite formal type. `OPS-P66-FINITETYPE-CORRECT-049` is the replacement
-correction under review; it changes no mathematical target or result status.
+finite formal type. `OPS-P66-FINITETYPE-CORRECT-049` supplied the replacement
+finite types, but verified negative audits `FORM-P66-FINAL-REVIEW-050` and
+`VER-P66-FINAL-REVIEW-051` found evidence-label, historical-hash, and
+metric/accounting defects in its documentation. `OPS-P66-METRICS-CORRECT-053`
+is the correction under review; it changes no mathematical target or result
+status.
 The corrected Prompt66 SHA-256 is
 `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`.
 Its frozen audit has `4,149` modular instances plus one abstract preflight and

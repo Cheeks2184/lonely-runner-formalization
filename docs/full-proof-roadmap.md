@@ -213,7 +213,11 @@ Prompt66 SHA-256
 `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`.
 Its mandatory audit is exactly 4,149 ordered modular pivot instances plus one
 abstract preflight, and its transcript ends at the first declared-order stop
-case unless the complete finite domain is exhausted. No result is promoted.
+case unless the complete finite domain is exhausted. The verified negative
+audits `FORM-P66-FINAL-REVIEW-050` and `VER-P66-FINAL-REVIEW-051` found only
+evidence-label, hash-provenance, and metric/accounting defects in that package.
+`OPS-P66-METRICS-CORRECT-053` is the corrective documentation under review;
+it changes no theorem contract or result status. No result is promoted.
 
 The smallest thin-API alternative remains `TOP-TWO-PIVOT`:
 
@@ -255,8 +259,9 @@ ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING
   existence of a modular threshold-beating selection.
 - `PART-46` and `PACK-08` are `proved-math`: they characterize the integer
   packing and its exempt-owner coloring but do not prove pivot noncoverage.
-- `COMP-10` is fixed finite `proved-math` evidence: all eleven named stress
-  tuples have a strict packing pivot, with no unbounded consequence.
+- `COMP-10`'s verifier/accounting proof is `proved-math` at its exact
+  hypotheses. Its eleven named stress-tuple outcomes are computed finite
+  evidence only, with no unbounded consequence.
 
 ### Evidence against naive forms
 
@@ -661,7 +666,10 @@ proof, or budget stop condition is reached.
 | 2026-08-03 | `VER-P66-C2-DOCS-042` reviews Prompt66/C2 documentation | verified negative audit | Requires an exact all-`n>=3` distinct-prime C2 contract and a decidable Prompt66 finite audit |
 | 2026-08-03 | `OPS-P66-CORRECT-043` corrects the Prompt66/C2 package | rejected documentation correction | `FORM-P66-REREVIEW-047` found that the target-residue and partial-choice domains were not yet canonical finite formal types; no mathematical claim is rejected or promoted |
 | 2026-08-03 | `FORM-P66-REREVIEW-047` rereviews the Prompt66 correction | verified negative audit | Requires canonical finite attained targets, tokens, eligible parents, and an explicit dependent optional choice while preserving the exact lemma |
-| 2026-08-03 | `OPS-P66-FINITETYPE-CORRECT-049` corrects Prompt66 finite types | review | Makes tokens and selected-block sums Fintype-compatible, synchronizes the prompt hash and waiting metric, and promotes no result |
+| 2026-08-03 | `OPS-P66-FINITETYPE-CORRECT-049` corrects Prompt66 finite types | reviewed; corrections required | Makes tokens and selected-block sums Fintype-compatible, but the final reviews found evidence-label, historical-hash, and metric/accounting defects; no result is promoted |
+| 2026-08-03 | `FORM-P66-FINAL-REVIEW-050` reviews evidence labels and hash provenance | verified negative audit | Preserves the COMP-10 verifier/accounting proof at exact hypotheses while requiring the eleven outcomes to remain computed finite evidence and the historical hash to match its Git object |
+| 2026-08-03 | `VER-P66-FINAL-REVIEW-051` reviews waiting and audit accounting | verified negative audit | Requires all three literal waiting rows and both final negative audits to be counted exactly |
+| 2026-08-03 | `OPS-P66-METRICS-CORRECT-053` corrects final-review documentation | review | Synchronizes labels, hashes, waiting rows, and audit metrics without changing a theorem contract or promoting a result |
 | 2026-08-02 | Entered FULL-PROOF PRIORITY MODE; fixed A/B/C contracts and budgets | research policy | Replaces coefficient-by-coefficient optimization with three explicit unrestricted bridges |
 | 2026-08-02 | Response 57 fixed-shift obstruction: no finite fixed J1 shift family is uniformly row-nonempty | proved-math, independent finite checks | Does not shorten unrestricted path; supports freezing bounded translation variants |
 | 2026-08-02 | Submitted Sol Pro Prompt 58 on A/B/C with adversarial contracts | research in progress | Strategy generation only; no theorem yet |
