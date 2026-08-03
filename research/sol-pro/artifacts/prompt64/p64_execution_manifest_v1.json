@@ -1,0 +1,65 @@
+{
+  "cell": "Prompt 64 PRO-B exact large-ratio top-two implication",
+  "status": "STOP/OPEN",
+  "target": "TOP-TWO-LARGE-RATIO-EXCLUSION",
+  "environment": {
+    "python": "3.13.5",
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+    "cpp_standard": "c++20"
+  },
+  "complete_primitive_sweep": {
+    "domain": "positive strictly increasing primitive tuples; 2 <= n <= 8; B <= 64; N=n+1; N*A < 2*B",
+    "order": "n ascending, then B ascending, then A ascending, then lower tuple lexicographic",
+    "compile_command": "g++ -O3 -std=c++20 -Wall -Wextra -pedantic /mnt/data/p64_top_two_sweep_v1.cpp -o /mnt/data/p64_top_two_sweep_v1",
+    "run_command": "/usr/bin/time -f 'wall_seconds=%e\\nmax_rss_kb=%M\\nexit_status=%x' -o /mnt/data/p64_top_two_sweep_v1.time /mnt/data/p64_top_two_sweep_v1 > /mnt/data/p64_top_two_sweep_v1.out",
+    "primitive_rows": 247020,
+    "nonprimitive_rows_skipped": 5597,
+    "literal_candidates": 98271563,
+    "optimized_candidates": 98271563,
+    "top_index_placement_checks": 6923288,
+    "full_mask_agreements": 494040,
+    "A_certificate_rows": 246281,
+    "B_certificate_rows": 247020,
+    "both_certificate_rows": 246281,
+    "two_top_counterexamples": 0,
+    "runtime_internal_seconds": 2.37701,
+    "wall_seconds": 2.38,
+    "max_rss_kb": 3860,
+    "exit_status": 0,
+    "sha256": {
+      "source": "9c8bdb908bd37c9a9a13a20f023c50b3121def34ffc5c7dfbe9e1f20038e7b37",
+      "binary": "8ec4abed163943139409620bbed999cbede3a030219907fb710b6e313b346769",
+      "output": "2122d5631feac7dbac8bdf93c966819eb973cb4dc7c83eb931750a3625d322e6",
+      "timing": "45e73fa3180aa1fd13127a0484f7fd09a6cff954df99c48f9e5b7c2e8efa66b3"
+    }
+  },
+  "targeted_stress_replay": {
+    "domain": "61 fixed named cases: originals, deterministic strict-boundary mutations, equality cases, consecutive N=4..20, and three deletion mutations",
+    "order": "listed order in source",
+    "run_command": "/usr/bin/time -f 'wall_seconds=%e\\nmax_rss_kb=%M\\nexit_status=%x' -o /mnt/data/p64_targeted_stress_v1.time python3 /mnt/data/p64_targeted_stress_v1.py > /mnt/data/p64_targeted_stress_v1.out",
+    "cases": 61,
+    "strict_cases": 45,
+    "literal_candidates": 148530,
+    "recurrence_candidates": 148530,
+    "full_grid_agreements": 122,
+    "strict_two_top_counterexamples": 0,
+    "scaling_checks": 24,
+    "reindex_checks": 18,
+    "runtime_internal_seconds": 0.230685,
+    "wall_seconds": 0.76,
+    "max_rss_kb": 111636,
+    "exit_status": 0,
+    "sha256": {
+      "source": "6b42c80fe54bda78bd56aabc0c340e22b8cf21c574a94d6279a4fab82e46557a",
+      "output": "07d2a31677fb9e3d8276e572febcb2985a2789ed733461843e22cc1d4ac7914f",
+      "timing": "b8029a60dfefe0037718b9e93eeaf28b2f24e125eb1a7f8784c834bd76cde32a"
+    }
+  },
+  "classification": {
+    "complete_sweep": "computed finite evidence",
+    "targeted_stress": "computed finite evidence",
+    "target_theorem": "open",
+    "owner_transversal": "open",
+    "unrestricted_lrc": "open"
+  }
+}
