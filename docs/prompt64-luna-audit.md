@@ -124,11 +124,11 @@ The result labels are preserved strictly:
 - no theorem, finite-evidence, Lean, axiom, or unrestricted-LRC status is
   promoted by this record.
 
-## Next unrestricted cell
+## Current lifecycle disposition
 
-The next cell is `SOL-P65-PRO-C-001`, packaged in
-`research/sol-pro/prompts/prompt65.md`, for
-`FIRST-BLOCKER-MAXIMIZER-TRANSFER`. It depends on verified ReverseGrid
-integration and this Prompt64 stop record. Browser/ChatGPT-control is not
-callable in the current runtime, so external execution is waiting. The
-Prompt65 package is integrated only after PI merges this documentation pass.
+Prompt64 is prepared/parked and Prompt65 is prepared/parked/frozen; neither
+was launched at the current checkpoint. Both remain solely owned by the Sol
+High top-level desktop orchestrator under `/root`. Earlier browser-control
+limitations in this audit describe only the exact Luna worker runtime and are
+not top-level desktop blockers. Prompt66 is the active first-ranked cell. No
+response or result is inferred from these operational states.

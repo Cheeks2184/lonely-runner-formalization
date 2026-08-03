@@ -387,46 +387,60 @@ nonreproducible. `UniformPrimeForcingSupply` for every `n>=3`, using distinct
 primes only, and the required Lean wrappers remain open. See
 [the C2 dependency audit](docs/c2-prime-forcing-dependency-audit.md).
 
-`SOL-P64-PRO-B-001` remains waiting: the Prompt64 contract is integrated as a
-documentary package, but the required signed-in ChatGPT Sol Pro conversation
-has never run and Browser/ChatGPT-control is not callable in the current
-runtime. `SOL-P65-PRO-C-001`, `FIRST-BLOCKER-MAXIMIZER-TRANSFER`, is likewise
-waiting/frozen under the Prompt65 stop rule. `SOL-P66-PRO-B-001`,
-`ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, is the selected next unrestricted
-cell, but it is also waiting because external signed-in ChatGPT Sol Pro control
-is unavailable. `VER-P66-C2-DOCS-042` rejected the original documentation
-package at contract scope, and `FORM-P66-REREVIEW-047` verified that the first
-correction still left the token target and partial choice noncanonical for a
-finite formal type. `OPS-P66-FINITETYPE-CORRECT-049` supplied the replacement
+Every Sol Pro cell is owned solely by the
+`GPT-5.6 Sol High top-level desktop orchestrator`, supervised by `/root`, and
+launched from the `original browser-capable desktop Codex session`. Sol
+Medium, Luna, CLI, and nested roles are prompt-preparation or downstream-audit
+roles only. `SOL-P64-PRO-B-001` is prepared/parked and was not launched at
+this checkpoint. `SOL-P65-PRO-C-001`,
+`FIRST-BLOCKER-MAXIMIZER-TRANSFER`, is prepared/parked/frozen under the
+Prompt65 stop rule and was not launched. Earlier browser limitations are
+narrow observations of the exact worker runtimes that reported them, not
+top-level blockers.
+
+`SOL-P66-PRO-B-001`, `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, is the
+first-ranked unrestricted cell and is active. `/root` launched it in a
+genuinely new signed-in ChatGPT conversation around 2026-08-03 13:59 CDT.
+Direct top-level UI Automation readback verified Chat selected (`Work` false),
+`GPT-5.6 Sol` selected, `Pro` selected, and active `Stop answering`. The exact
+UI-readback launch-payload SHA-256 is
+`3f4e4acbc21e0fd97c5a4ca318c519c0db89ad5b358450cffdbdf80f238da9e5`.
+No URL or conversation/session identifier is recorded. This is launch state,
+not response recovery or a result. `VER-P66-C2-DOCS-042` rejected the original
+documentation package at contract scope, and `FORM-P66-REREVIEW-047` verified
+that the first correction still left the token target and partial choice
+noncanonical for a finite formal type. `OPS-P66-FINITETYPE-CORRECT-049`
+supplied the replacement
 finite types, but verified negative audits `FORM-P66-FINAL-REVIEW-050` and
 `VER-P66-FINAL-REVIEW-051` found evidence-label, historical-hash, and
 metric/accounting defects in its documentation. `OPS-P66-METRICS-CORRECT-053`
 is now verified at operational/documentation scope after ACCEPT reviews
 `FORM-P66-POSTFIX-REVIEW-054` and `VER-P66-POSTFIX-REVIEW-055`. The correction
 and both reviews change no mathematical target or result status.
-The corrected Prompt66 SHA-256 is
+The launched prepared Prompt66 historical SHA-256 is
 `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`.
 Its frozen audit has `4,149` modular instances plus one abstract preflight and
 an early-stop transcript rule. The tracked package promotes no result.
 
-The formal source checkpoint is now
-`586b4858cd1b1c513566f3b33d7b5141640e7865`; merged main
-`99a78c15ad0a55e96cffbc5dadf4f3afd99cfa1c` has the same formal source tree.
-This promotes only the exact ReverseGrid arithmetic from `proved-math` to
-`proved-lean`. It promotes no finite evidence and changes no unrestricted
-open claim.
+The authoritative supplied-packing adapter checkpoint is merge
+`fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`, with documentation parent
+`3c7aa6914eb191e030ebf7f6121deb8dcc421b6c` and original Luna worker parent
+`699b0aff00a3cc3dac3ca0b4d7dcdbafa0830151`. It promotes only
+`exists_avoiding_of_overlapCapacity` and
+`exists_pivot_certificate_of_overlapPacking` to `proved-lean`. Uniform
+packing existence, `PACK-09`, and unrestricted LRC remain open.
 
 ## Latest verification
 
-Authoritative formal source checkpoint:
-`586b4858cd1b1c513566f3b33d7b5141640e7865`.
+Authoritative supplied-packing adapter checkpoint:
+`fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`.
 
-Merged main commit `99a78c15ad0a55e96cffbc5dadf4f3afd99cfa1c`
-contains the same Lean source tree. Verification of the new module was
-performed in an isolated native-WSL warm-cache worktree, not a fresh clean
-checkout. The detached tracked-clean `263a1cb` replay remains the latest
-complete clean-checkout verification of the older source tree. Resolve the
-exact snapshot commit with `git rev-parse HEAD`.
+Its clean ext4 replay restored 8,638 cache artifacts (143.4 seconds shell;
+53.179 seconds in the decompression report), passed full `lake build` in
+297.2 seconds, passed `python3 scripts/audit_lean_trust.py` with 302 theorem
+reports using only permitted standard foundations, and passed
+`python3 -m unittest discover -s tests -v` with all 160 tests in 378.409
+seconds. No source or test change is part of this documentation pass.
 
 Pinned environment:
 

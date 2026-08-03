@@ -363,5 +363,10 @@ Return, in this order:
     a separate statement that owner-transversal, corrected DPLP, and
     unrestricted LRC remain open unless independently closed.
 
-This file is queued research packaging only. It records no Sol Pro response,
+## Lifecycle state
+
+This prompt is **prepared, parked, and frozen** under sole owner
+`GPT-5.6 Sol High top-level desktop orchestrator`, supervising authority
+`/root`, and launch runtime `original browser-capable desktop Codex session`.
+It was not launched at this checkpoint. It records no Sol Pro response,
 computation, proof, theorem promotion, or finite-evidence conclusion.

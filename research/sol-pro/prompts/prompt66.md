@@ -347,8 +347,21 @@ Return:
 10. no theorem, counterexample, finite-evidence, Lean, axiom, or unrestricted
     status promotion without independent review.
 
-## Execution blocker
+## Top-level launch authorization and state
 
-This cell is **waiting**. Browser/ChatGPT-control is unavailable in the current
-runtime, so the required external signed-in Sol Pro conversation cannot yet be
-launched. The tracked prompt is queued packaging only.
+Sole owner: `GPT-5.6 Sol High top-level desktop orchestrator`. Supervising
+authority: `/root`. Launch runtime: `original browser-capable desktop Codex
+session`.
+
+`/root` launched this prepared cell in a genuinely new signed-in ChatGPT
+conversation around 2026-08-03 13:59 CDT, after invoking New chat from the
+active signed-in tab. Direct top-level UI Automation readback verified Chat
+mode selected (`Work` false), `GPT-5.6 Sol` selected, `Pro` selected, and an
+active `Stop answering` control. The launched prepared prompt's historical
+SHA-256 is
+`b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`; the
+exact UI-readback launch-payload SHA-256 is
+`3f4e4acbc21e0fd97c5a4ca318c519c0db89ad5b358450cffdbdf80f238da9e5`.
+No URL or conversation/session identifier is recorded. The cell is
+**active**. Launch alone records no response recovery, computation, finite
+evidence, proof, theorem, or unrestricted-result promotion.

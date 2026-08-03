@@ -99,10 +99,11 @@ at least one of the following occurs:
 3. an independently reviewed new contract resolves the implementation and
    evidence defects above.
 
-`SOL-P65-PRO-C-001` remains waiting for the required external signed-in
-ChatGPT Sol Pro execution. Browser/ChatGPT control is unavailable in the
-current runtime. The tracked prompt is a contract only; waiting does not
-promote or reopen the verifier work.
+`SOL-P65-PRO-C-001` remains prepared/parked/frozen and was not launched at
+this checkpoint. Its sole owner is the Sol High top-level desktop orchestrator
+under `/root`. Earlier browser-control limitations describe only the exact
+worker runtime and are not a top-level desktop blocker. The tracked prompt is
+a contract only; parking does not promote or reopen the verifier work.
 
 Recommended evidence label:
 **reviewed preflight/negative implementation audit; C1 STOP / OPEN; no

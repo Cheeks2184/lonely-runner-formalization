@@ -169,7 +169,8 @@ Existing local prime-forcing arithmetic does not fill these external wrappers.
 
 Keep C2 open but second. Route B is first by distance to unrestricted LRC,
 then by estimated success, then by publishability. Do not launch a duplicate
-prime-forcing Sol Pro cell while `SOL-P66-PRO-B-001` is the selected next cell.
+prime-forcing Sol Pro cell while `SOL-P66-PRO-B-001` is the active first-ranked
+Sol High desktop cell.
 Reassess C2 only after the B cell stops or a genuinely uniform prime-supply
 lemma, rather than another dimension-by-dimension enumeration, becomes
 available.

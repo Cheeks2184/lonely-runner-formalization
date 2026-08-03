@@ -221,6 +221,12 @@ after ACCEPT reviews `FORM-P66-POSTFIX-REVIEW-054` and
 `VER-P66-POSTFIX-REVIEW-055`. The correction and both reviews change no
 theorem contract or result status. No result is promoted.
 
+The supplied packing adapter merge `fadc65d` is verified `proved-lean` only
+for `exists_avoiding_of_overlapCapacity` and
+`exists_pivot_certificate_of_overlapPacking`. These theorems consume explicit
+capacity/packing hypotheses and do not prove uniform packing existence,
+`PACK-09`, pivot noncoverage, or unrestricted LRC.
+
 The smallest thin-API alternative remains `TOP-TWO-PIVOT`:
 
 ```text
@@ -328,8 +334,10 @@ agreement, and incorrect structured-CRT provenance stopped the route. No
 counterexample, `NO-COUNTEREXAMPLE` conclusion, theorem, or finite-evidence
 promotion resulted. `TOP-TWO-LARGE-RATIO-EXCLUSION` and the downstream
 owner-transversal remain open; no larger-bound continuation is recommended.
-The required signed-in ChatGPT Sol Pro Prompt64 conversation has never run,
-and Browser/ChatGPT-control is not callable in the current runtime.
+Prompt64 is prepared/parked under the Sol High desktop owner and was not
+launched at this checkpoint. Earlier Browser/ChatGPT-control limitations are
+narrow observations of the exact worker runtimes that reported them, not a
+top-level desktop blocker.
 
 ### Falsification and stop contract
 
@@ -344,7 +352,9 @@ and Browser/ChatGPT-control is not callable in the current runtime.
   packing instances, and at most one Lean prototype only after the mathematics
   survives**. Stop on a lemma counterexample, generic-integrality dependency,
   duplication, tautological cover restatement, or failure to narrow the lemma.
-- Browser/ChatGPT-control is unavailable, so `SOL-P66-PRO-B-001` is waiting.
+- `SOL-P66-PRO-B-001` is active in the genuinely new signed-in ChatGPT
+  conversation launched by `/root` through the Sol High desktop lifecycle.
+  Launch promotes no response or result.
 
 ## Bridge C contract: deletion-pivot lifting induction
 
@@ -515,9 +525,10 @@ N*a_h crossing -> M_h -> active n*a_j -> successor edge -> Delta<=tau.
 C1 remains **STOP / OPEN**. Freeze further verifier implementation unless a
 real nonvacuous exact case is first supplied, a direct mathematical proof or
 refutation changes the target, or an independently reviewed new contract
-authorizes a new attempt. `SOL-P65-PRO-C-001` remains waiting because callable
-Browser/ChatGPT control for the required external signed-in Sol Pro cell is
-unavailable. The tracked Prompt65 package is only its exact contract.
+authorizes a new attempt. `SOL-P65-PRO-C-001` remains prepared/parked/frozen
+and was not launched at this checkpoint. The tracked Prompt65 package is only
+its exact contract; earlier worker-runtime browser limitations are not a
+top-level desktop blocker.
 
 Equivalently, for each pivot candidate let `S_j(r)` be the nonpivot
 coordinates in the strict deletion-bad set. A deletion certificate has
@@ -649,7 +660,7 @@ an unrelated full cover search separately for every dimension and modulus.
 
 | Rank | Bridge | Distance to LRC | Current assessment |
 | ---: | --- | --- | --- |
-| 1 | B: unrestricted all-pivot packing | One stronger modular selection lemma, then existing capacity and pivot reductions | `SOL-P66-PRO-B-001` is the selected next cell; abstract integrality is false, but exact modular structure and all eleven fixed stresses support one bounded turn |
+| 1 | B: unrestricted all-pivot packing | One stronger modular selection lemma, then existing capacity and pivot reductions | `SOL-P66-PRO-B-001` is active in one Sol High desktop turn; abstract integrality is false, but exact modular structure and all eleven fixed stresses support the bounded turn |
 | 2 | C2: prime-forcing product induction | One uniform supply theorem plus induction and an external product-bound dependency | Primary theorem/product logic is accepted but unformalized; local forcing may remain LRC-hard and overlaps prior Prompt60 work |
 | 3 | C1: deletion-pivot lifting | STOP / OPEN | Sound local ReverseGrid arithmetic survives, but the first-blocker transfer verifier route is frozen under the Prompt65 restart rule |
 | 4 | A: height compression | Frozen at the missing replacement-eligibility existential | `STOP` after Response 61: sound signed-divisor transport exists on paper, but the exact route has no supported descent operation and its finite artifact is nonreproducible |
@@ -674,6 +685,9 @@ proof, or budget stop condition is reached.
 | 2026-08-03 | `OPS-P66-METRICS-CORRECT-053` corrects final-review documentation | verified operational/documentation correction | Synchronizes labels, hashes, waiting rows, and audit metrics without changing a theorem contract or promoting a result |
 | 2026-08-03 | `FORM-P66-POSTFIX-REVIEW-054` reviews the corrected formal/evidence documentation | verified ACCEPT review | Accepts the correction at documentation scope only; preserves every theorem contract, evidence label, Prompt66 hash, and result status |
 | 2026-08-03 | `VER-P66-POSTFIX-REVIEW-055` reviews the corrected operational accounting | verified ACCEPT review | Accepts the three-row waiting accounting and audit metrics at operations scope only; promotes no computation, finite evidence, or result |
+| 2026-08-03 | Supplied packing adapter merged at `fadc65d` | proved-lean adapters | Promotes only `exists_avoiding_of_overlapCapacity` and `exists_pivot_certificate_of_overlapPacking`; uniform packing existence and `PACK-09` remain open |
+| 2026-08-03 | `/root` launches `SOL-P66-PRO-B-001` through the Sol High desktop lifecycle | active research cell | Records verified UI launch state only; no response recovery, evidence, proof, or result promotion |
+| 2026-08-03 | `OPS-SOL-HIGH-PRO-ROUTING-059` synchronizes ownership and lifecycle | verified operational documentation | Records sole Sol High ownership, Prompt64/65 parking, Prompt66 active state, and adapter replay without changing research results |
 | 2026-08-02 | Entered FULL-PROOF PRIORITY MODE; fixed A/B/C contracts and budgets | research policy | Replaces coefficient-by-coefficient optimization with three explicit unrestricted bridges |
 | 2026-08-02 | Response 57 fixed-shift obstruction: no finite fixed J1 shift family is uniformly row-nonempty | proved-math, independent finite checks | Does not shorten unrestricted path; supports freezing bounded translation variants |
 | 2026-08-02 | Submitted Sol Pro Prompt 58 on A/B/C with adversarial contracts | research in progress | Strategy generation only; no theorem yet |

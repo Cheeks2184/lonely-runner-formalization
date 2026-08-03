@@ -1,11 +1,9 @@
 # Parallel task board
 
-This file is the authoritative coordination record for the public/base
-snapshot at commit `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`. The formal
-source checkpoint remains `586b4858cd1b1c513566f3b33d7b5141640e7865`, as
-recorded below. Historical worker rows retain their actual fixture bases. The
-board records task routing and integration readiness; it does not promote any
-mathematical claim.
+This file is the authoritative coordination record based on supplied-packing
+adapter checkpoint `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`. Historical
+worker rows retain their actual fixture bases. The board records task routing
+and integration readiness; it does not promote any mathematical claim.
 
 ## Operating rules
 
@@ -22,6 +20,15 @@ mathematical claim.
 - Workers must stay within their allowed-file cells. Overlap requires an
   explicit handoff from the supervising lead.
 - Runtime routing evidence and repository evidence are labeled separately.
+- Every Sol Pro cell is owned solely by the
+  `GPT-5.6 Sol High top-level desktop orchestrator`, supervised by `/root`, and
+  launched only from the `original browser-capable desktop Codex session`.
+  Sol Medium, Luna, CLI, and nested roles may prepare prompts or perform
+  downstream audits; they are never browser operators or Sol Pro cells.
+- Sol Pro work uses six distinct lifecycle stages: **prompt preparation**;
+  **Sol High desktop launch**; **active Sol Pro research**; **response
+  recovery**; **independent audit**; and **integration**. A later stage must
+  not be inferred from an earlier one.
 - Inherited workers must not be called “Luna.” Luna labels apply only where
   top-level CLI route/model metadata has been runtime-verified below.
 - Authoritative route metadata comes from the top-level CLI session/thread
@@ -38,14 +45,15 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 | --- | ---: | --- |
 | Accepted audit deliverables | 25 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, `VER-P66-C2-DOCS-042`, completed read-only `FORM-PACKING-ADAPTER-SPEC-044`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, `VER-P66-FINAL-REVIEW-051`, `FORM-P66-POSTFIX-REVIEW-054`, and `VER-P66-POSTFIX-REVIEW-055` are accepted only at their exact recommendation, external-dependency-audit, specification, negative-documentation-review, or ACCEPT-review scope. |
 | Accepted negative audits | 14 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, `VER-P66-C2-DOCS-042`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, and `VER-P66-FINAL-REVIEW-051` are valid negative results; the two postfix ACCEPT reviews are nonnegative audits, and rejected verifier output and queued work are not counted as computed evidence. |
+| Accepted operational documentation tasks | 1 | `OPS-SOL-HIGH-PRO-ROUTING-059` is accepted only for reviewed ownership, lifecycle, launch-state, and adapter-checkpoint synchronization; it supplies no research response or result. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
-| Accepted implementations | 0 unrestricted; 3 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, and exact ReverseGrid arithmetic are integrated; none proves an open bridge. |
-| Integrated deliverable groups | 4 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), board/Prompts60--63 package (`263a1cb`), and ReverseGrid formal source (`586b485`, merged by `99a78c1`) are on main. |
-| Authoritative source replay | integrated / verified warm-cache | Formal source checkpoint `586b485` passed module/root direct compiles, 3,001-job target and 3,590-job root builds, and standard-foundation axiom probes in an isolated warm-cache worktree. Main `99a78c1` has the same Lean tree. The latest full detached clean replay remains the older `263a1cb` record. |
-| Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited; Prompt64 is waiting, Prompt65 is waiting/frozen, and Prompt66 cannot launch without external control. |
-| Waiting Sol Pro cells | 3 | All three literal `waiting` rows are counted: `SOL-P66-PRO-B-001` is the one selected next unrestricted cell; `SOL-P64-PRO-B-001` is parked, and `SOL-P65-PRO-C-001` is parked/frozen. All await callable signed-in ChatGPT Sol Pro control. |
+| Accepted implementations | 0 unrestricted; 4 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, exact ReverseGrid arithmetic, and supplied packing adapter are integrated; none proves an open bridge. |
+| Integrated deliverable groups | 5 | The prior four groups plus supplied packing adapter merge `fadc65d` are integrated. The adapter promotes only `exists_avoiding_of_overlapCapacity` and `exists_pivot_certificate_of_overlapPacking` to `proved-lean`. |
+| Authoritative source replay | integrated / verified clean ext4 | Merge `fadc65d` passed cache retrieval (8,638 artifacts), full `lake build`, a 302-report standard-foundation trust audit, and all 160 Python tests in a clean ext4 replay. |
+| Active Sol Pro cells | 1 / 4 | `SOL-P66-PRO-B-001` is active in a genuinely new signed-in ChatGPT conversation launched by `/root` through the Sol High desktop lifecycle; Prompt60--63 retain their completed dispositions. |
+| Prepared / parked Sol Pro cells | 2 | `SOL-P64-PRO-B-001` is prepared/parked and `SOL-P65-PRO-C-001` is prepared/parked/frozen. Neither was launched at this checkpoint. |
 | Active Sol Medium leads | 0 running / 3 roles | Verification, Formalization, and Research Operations have completed their current reviewed tranches. |
-| Active Luna workers | 1 / 6 | `LUNA-PACKING-ADAPTER-046` is active in an isolated worktree with confirmed fresh top-level Luna/xhigh metadata. Historical Response63 routing failures and the completed no-report ReverseGrid launch retain their recorded scope. |
+| Active Luna workers | 0 / 6 | `LUNA-PACKING-ADAPTER-046` completed and was integrated through reviewed merge `fadc65d`; historical Response63 routing failures retain their recorded scope. |
 | Queued Luna workers | 1 | `VER-PACKING-SEARCH-045` is contracted but has not launched and supplies no computation or claim. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 6 | The prior five failures plus the ReverseGrid worker that exited without a report or commit are counted. The completed Response63 input-missing route remains unusable but is not counted as a failed launch. |
@@ -54,8 +62,8 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
 | Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
-| Integration backlog | 0 contract/documentation groups | `OPS-P66-METRICS-CORRECT-053` is verified at operational/documentation scope after both postfix ACCEPT reviews; Prompt64/P65 retain their separate stopped or waiting records. |
-| Wait time | 3 external-control waits | Browser/ChatGPT-control is not callable in the current runtime; the one selected Prompt66 cell and the two parked/frozen Prompt64/Prompt65 cells have no submitted external response. |
+| Integration backlog | 0 contract/documentation groups | `OPS-P66-METRICS-CORRECT-053` is verified at operational/documentation scope after both postfix ACCEPT reviews; Prompt64/P65 retain their separate stopped or parked/frozen records. |
+| Wait time | 0 external-control waits | Prompt64/65 are deliberately parked rather than blocked on top-level browser control; Prompt66 has launched and is active. No response recovery is claimed. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -276,7 +284,9 @@ as an accepted implementation or mathematical proof.
 
 - **ID:** `SOL-P61-PRO-A-001`
 - **Lane:** Sol Pro / PRO-A height compression
-- **Owner / supervising lead:** unassigned new-chat worker / `/root`
+- **Owner / supervising authority:** `GPT-5.6 Sol High top-level desktop
+  orchestrator` / `/root`
+- **Launch runtime:** `original browser-capable desktop Codex session`
 - **Base:** prompt artifact integrated on main through
   `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`
 - **Dependencies:** verified bounded-height endpoint and corrected current
@@ -360,7 +370,9 @@ as an accepted implementation or mathematical proof.
 
 - **ID:** `SOL-P62-PRO-B-001`
 - **Lane:** Sol Pro / PRO-B pivot coverage
-- **Owner / supervising lead:** unassigned new-chat worker / `/root`
+- **Owner / supervising authority:** `GPT-5.6 Sol High top-level desktop
+  orchestrator` / `/root`
+- **Launch runtime:** `original browser-capable desktop Codex session`
 - **Base:** prompt artifact integrated on main through
   `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`
 - **Dependencies:** verified pivot-certificate equivalence, exact CRT counts,
@@ -506,16 +518,18 @@ as an accepted implementation or mathematical proof.
   positive-integer result, or unrestricted LRC promotion. Only `/root` may
   authorize launch or promotion.
 
-### SOL-P64-PRO-B-001 — waiting external Prompt64 execution
+### SOL-P64-PRO-B-001 — prepared/parked Prompt64 execution
 
 - **ID:** `SOL-P64-PRO-B-001`
 - **Lane:** Sol Pro / PRO-B top-two execution
-- **Owner / supervising lead:** unassigned new-chat worker / Research-Operations Lead / `/root`
+- **Owner / supervising authority:** `GPT-5.6 Sol High top-level desktop
+  orchestrator` / `/root`
+- **Launch runtime:** `original browser-capable desktop Codex session`
 - **Base:** `51de33bad6ba251747cd5c37db8e6425e3cb6425`
 - **Dependencies:** integrated `OPS-P64-CONTRACT-018`; no Prompt64 response has
   been accepted
-- **Branch:** none; required signed-in ChatGPT Sol Pro conversation
-- **Status:** `waiting`
+- **Branch:** none; prepared prompt package only
+- **Status:** `prepared` (parked; not launched)
 - **Exact deliverable:** Execute the exact Prompt64 contract in the required
   signed-in ChatGPT Sol Pro conversation and return the contracted status,
   proof/refutation, falsification, and stop decision.
@@ -523,10 +537,10 @@ as an accepted implementation or mathematical proof.
   separately assigned task
 - **Acceptance command:** Verify the required signed-in Sol Pro conversation
   and preserve the exact Prompt64 contract before any response is reviewed.
-- **Blocker:** Browser/ChatGPT-control is not callable in the current runtime.
-  The integrated Prompt64 contract therefore has no submitted Sol Pro
-  execution or response.
-- **Final disposition / promotion authority:** Waiting external execution.
+- **Blocker:** Deliberately parked by `/root`; no launch occurred at this
+  checkpoint. Earlier browser limitations describe only the exact worker
+  runtimes that reported them, not the top-level Sol High desktop runtime.
+- **Final disposition / promotion authority:** Prepared/parked prompt only.
   The contract and its execution state are separate; no theorem or finite
   evidence is promoted. Only `/root` may authorize launch and review.
 
@@ -767,8 +781,8 @@ as an accepted implementation or mathematical proof.
 - **Allowed files:** none; read-only reassessment
 - **Acceptance command:** Inventory Prompt60--65 duplication and preserve every
   stop/frozen boundary without promoting a result.
-- **Blocker:** Browser/ChatGPT-control prevents external execution, not route
-  analysis.
+- **Blocker:** At that reassessment, the exact worker runtime lacked browser
+  control; this was not a top-level Sol High desktop blocker.
 - **Final disposition / promotion authority:** B ranks first, C2 second, C1
   remains STOP/OPEN, and A remains frozen. The single recommendation is the
   all-pivot modular whole-block packing contract. No status promotion follows.
@@ -837,7 +851,8 @@ as an accepted implementation or mathematical proof.
   `docs/full-proof-roadmap.md`, `docs/proof-obligations.md`, and this board
 - **Acceptance command:** Verify exact base and allowed-file diff; run
   `git diff --check` and an added-line privacy/secret scan; commit once.
-- **Blocker:** PI review/merge and unavailable external Browser/ChatGPT control.
+- **Blocker:** Historical PI review/merge and worker-runtime browser limitation;
+  the latter was not a top-level Sol High desktop blocker.
 - **Final disposition / promotion authority:** `VER-P66-C2-DOCS-042` rejected
   this original documentation contract and assigned a correction. It promotes
   no computation, theorem, Lean result, or unrestricted claim.
@@ -943,8 +958,8 @@ as an accepted implementation or mathematical proof.
   `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`,
   target/type consistency searches, `git diff --check`, added-line
   privacy/secret scan, exactly one new commit, and a clean worktree.
-- **Blocker:** PI review/merge only; external signed-in Sol Pro control remains
-  unavailable.
+- **Blocker:** Historical PI review/merge only. The worker-runtime control
+  limitation was not a top-level Sol High desktop blocker.
 - **Final disposition / promotion authority:** Corrective documentation under
   review. It changes no mathematical target and promotes no computation,
   finite evidence, proof, Lean result, or unrestricted claim.
@@ -1015,8 +1030,7 @@ as an accepted implementation or mathematical proof.
   check accepted-audit arithmetic; run `git diff --check` against parent and
   original base; enforce the allowed-file set; scan added lines for private
   paths or secrets; require one new commit and a clean worktree.
-- **Blocker:** None at operational/documentation scope; external signed-in Sol
-  Pro control remains unavailable.
+- **Blocker:** None at operational/documentation scope.
 - **Final disposition / promotion authority:** Verified corrective
   documentation after `FORM-P66-POSTFIX-REVIEW-054` and
   `VER-P66-POSTFIX-REVIEW-055` both returned ACCEPT. It changes no theorem
@@ -1098,10 +1112,10 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** completed `FORM-PACKING-ADAPTER-SPEC-044`
 - **Branch:** `formal/luna-packing-adapter-046`
 - **Worktree:** isolated; private local path omitted
-- **Persisted launch metadata:** exec thread
-  `019fc8aa-79ef-7bb0-8297-035f10fda30b`; model `gpt-5.6-luna`; effort
-  `xhigh`; base `f9afa7e`
-- **Status:** `active`
+- **Persisted launch metadata:** confirmed top-level CLI model
+  `gpt-5.6-luna`, effort `xhigh`, base `f9afa7e`; private runtime identifier
+  omitted
+- **Status:** `integrated` (reviewed supplied-packing adapter)
 - **Exact deliverable:** Prove a generic overlap-capacity uncovered-point
   corollary and connect it through a canonical pivot-subtype adapter. Do not
   claim or assume existence of the capacity-respecting threshold-beating
@@ -1112,10 +1126,15 @@ as an accepted implementation or mathematical proof.
 - **Acceptance command:** Compile the targeted modules, run
   `lake build LonelyRunner`, check axiom probes expose standard foundations
   only, and scan the allowed source diff for `sorry`, `admit`, and new axioms.
-- **Blocker:** None at launch; implementation and lead review remain pending.
-- **Final disposition / promotion authority:** Active source-only task. Only
-  lead review may accept the implementation or update documentation; no
-  selection-existence or unrestricted claim is authorized.
+- **Blocker:** None at adapter scope. Uniform packing existence remains open.
+- **Final disposition / promotion authority:** Original worker commit
+  `699b0af` was reviewed and merged as second parent of `fadc65d`. Clean ext4
+  replay passed cache retrieval (8,638 artifacts; 143.4s shell and 53.179s
+  decompression report), full `lake build` (297.2s), the trust audit (302
+  theorem reports; permitted standard foundations only), and all 160 tests
+  (378.409s). Only `exists_avoiding_of_overlapCapacity` and
+  `exists_pivot_certificate_of_overlapPacking` are promoted to `proved-lean`;
+  `PACK-09`, uniform packing existence, and unrestricted LRC remain open.
 
 ### VER-PACKING-SEARCH-045 — independent bounded packing search
 
@@ -1154,45 +1173,56 @@ as an accepted implementation or mathematical proof.
 
 - **ID:** `SOL-P66-PRO-B-001`
 - **Lane:** Sol Pro / PRO-B unrestricted all-pivot packing
-- **Owner / supervising lead:** unassigned external worker / Research-Operations Lead
-- **Base:** Prompt66 contract packaged from
-  `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`; exact launch base must be
-  recorded when control becomes available
+- **Owner / supervising authority:** `GPT-5.6 Sol High top-level desktop
+  orchestrator` / `/root`
+- **Launch runtime:** `original browser-capable desktop Codex session`
+- **Base:** prepared Prompt66 contract from
+  `3c7aa6914eb191e030ebf7f6121deb8dcc421b6c`; adapter checkpoint
+  `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`
 - **Dependencies:** exact pivot-certificate equivalence, `PART-45`, `PART-46`,
   `PACK-08`, `COMP-10`, and accepted specification `FORM-B-UNIFORM-039`
-- **Branch:** none during the external signed-in Sol Pro conversation
-- **Status:** `waiting` (selected next cell)
+- **Branch:** none during the signed-in Sol Pro conversation
+- **Status:** `active` (first-ranked unrestricted cell)
 - **Exact deliverable:** Prove or refute the sole stronger modular lemma: some
   pivot admits at most one whole block per token, point use `<=mu(r)-1`, and
   the subtraction-free strict inequality `|R_j|+credit>sum_i|B_i|`.
 - **Allowed files:** none during the external turn; recovery requires a
   separately authorized task
-- **Acceptance command:** Verify Prompt66 file SHA-256
+- **Acceptance command:** Verify launched prepared Prompt66 historical SHA-256
   `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`,
   after `OPS-P66-FINITETYPE-CORRECT-049` is accepted, then require full quantified
   definitions, implication chain, the frozen ordered audit through its first
   stop case, exact certificates, first unsupported implication, and
   stop/continue decision.
-- **Blocker:** Browser/ChatGPT-control is unavailable. Maximum budget is one
-  Sol Pro turn, exactly the frozen `4,149` modular instances plus one abstract
-  preflight unless an early stop occurs, and at most one Lean prototype only
-  after the mathematics survives the entire falsification domain.
-- **Final disposition / promotion authority:** Waiting contract only. A
+- **Blocker:** None at launch. `/root` launched a genuinely new signed-in
+  ChatGPT conversation around 2026-08-03 13:59 CDT from the original
+  browser-capable desktop Codex session. Direct UI Automation readback showed
+  Chat selected (`Work` false), `GPT-5.6 Sol` selected, `Pro` selected, and
+  active `Stop answering`. Launch-payload SHA-256 is
+  `3f4e4acbc21e0fd97c5a4ca318c519c0db89ad5b358450cffdbdf80f238da9e5`.
+  No URL or conversation/session identifier is recorded. Maximum budget
+  remains one Sol Pro turn, exactly the frozen `4,149` modular instances plus
+  one abstract preflight unless an early stop occurs, and at most one Lean
+  prototype only after the mathematics survives the entire falsification
+  domain.
+- **Final disposition / promotion authority:** Active research cell only. A
   packing failure rejects only the sufficient strengthening; a finite packing
-  witness proves only its instance. No result is promoted without review.
+  witness proves only its instance. Launch supplies no response, recovery,
+  finite evidence, proof, or result promotion.
 
 ### SOL-P65-PRO-C-001 — FIRST-BLOCKER-MAXIMIZER-TRANSFER
 
 - **ID:** `SOL-P65-PRO-C-001`
 - **Lane:** Sol Pro / PRO-C first-blocker descent
-- **Owner / supervising lead:** unassigned new-chat worker / Research-Operations Lead / `/root`
+- **Owner / supervising authority:** `GPT-5.6 Sol High top-level desktop
+  orchestrator` / `/root`
+- **Launch runtime:** `original browser-capable desktop Codex session`
 - **Base:** tracked Prompt65 contract present at
-  `80e8cee4bb31bf99733c2687e4674bfdafe03889`; exact launch base must still be
-  recorded when external execution becomes available
+  `80e8cee4bb31bf99733c2687e4674bfdafe03889`; prepared package only
 - **Dependencies:** verified integration of ReverseGrid C1 through formal
   checkpoint `586b485`; Prompt64 and Prompt65 stop records
-- **Branch:** none; new unrestricted signed-in ChatGPT Sol Pro conversation
-- **Status:** `waiting` (frozen; not the active next cell)
+- **Branch:** none; prepared prompt package only
+- **Status:** `prepared` (parked/frozen; not launched)
 - **Exact deliverable:** Execute `FIRST-BLOCKER-MAXIMIZER-TRANSFER` exactly as
   packaged in `research/sol-pro/prompts/prompt65.md`, preserving the explicit
   maximizer, first-blocker, orientation, and `N*a_h` to `n*a_j` grid-conversion
@@ -1203,10 +1233,12 @@ as an accepted implementation or mathematical proof.
   require the contracted status table, two attacks, complete proofs,
   falsification certificates, hashes/commands, one unsupported implication,
   annotated chain, and stop decision.
-- **Blocker:** Browser/ChatGPT-control is not callable in the current runtime,
-  so external execution is waiting. The tracked package is a contract only;
-  verifier implementation remains frozen under the Prompt65 stop rule.
-- **Final disposition / promotion authority:** Waiting/frozen under the
+- **Blocker:** Deliberately parked/frozen by `/root`; no launch occurred at
+  this checkpoint. Earlier browser limitations describe only the exact worker
+  runtimes that reported them, not the top-level Sol High desktop runtime.
+  The tracked package is a contract only; verifier implementation remains
+  frozen under the Prompt65 stop rule.
+- **Final disposition / promotion authority:** Prepared/parked/frozen under the
   Prompt65 stop rule. It is not simultaneous with Prompt66. No response,
   proof, finite evidence, or theorem promotion exists.
 
@@ -1214,7 +1246,9 @@ as an accepted implementation or mathematical proof.
 
 - **ID:** `SOL-P63-PRO-C-001`
 - **Lane:** Sol Pro / PRO-C deletion and induction
-- **Owner / supervising lead:** unassigned new-chat worker / `/root`
+- **Owner / supervising authority:** `GPT-5.6 Sol High top-level desktop
+  orchestrator` / `/root`
+- **Launch runtime:** `original browser-capable desktop Codex session`
 - **Base:** prompt artifact integrated on main through
   `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`
 - **Dependencies:** corrected DPLP contract/conditional wrapper integrated on
@@ -1546,13 +1580,39 @@ as an accepted implementation or mathematical proof.
   and the explicit `n>=2` correction. This integration does not promote DPLP,
   induction, positive-integer LRC, or unrestricted LRC.
 
+### OPS-SOL-HIGH-PRO-ROUTING-059 — Sol High routing and adapter synchronization
+
+- **ID:** `OPS-SOL-HIGH-PRO-ROUTING-059`
+- **Lane:** research operations / documentation
+- **Owner / supervising authority:** Research Operations Lead / `/root`
+- **Base:** `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`
+- **Dependencies:** reviewed adapter merge/replay and direct top-level Prompt66
+  UI Automation readback
+- **Branch:** `docs/sol-high-pro-routing-059`
+- **Status:** `verified` (operational documentation)
+- **Exact deliverable:** Correct Sol Pro ownership and six-stage lifecycle,
+  record Prompt64/65 as prepared/parked and Prompt66 as actively launched, and
+  synchronize the supplied packing adapter checkpoint without promoting a
+  research response or unrestricted result.
+- **Allowed files:** public documentation and Prompt64--66 operational footers
+  only; no Lean, source, test, or certificate changes
+- **Acceptance command:** Confirm exact parent `fadc65d`; verify every Sol Pro
+  row has the sole Sol High owner, `/root` authority, and desktop launch
+  runtime; check lifecycle/status/metrics, prompt and launch hashes, allowed
+  files, unique task IDs, `git diff --check`, added-line privacy/secret scan,
+  exactly one commit, and a clean worktree.
+- **Blocker:** None at documentation scope.
+- **Final disposition / promotion authority:** Accepted operational task only.
+  It records launch state and the independently verified supplied adapters; it
+  claims no response recovery, computation, finite evidence, packing-existence
+  theorem, `PACK-09`, or unrestricted LRC result.
+
 ## Integration order
 
-1. Treat `586b4858cd1b1c513566f3b33d7b5141640e7865` as the authoritative
-   formal source checkpoint and `99a78c1` as the merged main with the same
-   Lean tree. Preserve `VER-CHECKPOINT-263A1CB-003` as the latest full
-   detached clean-checkout replay of the older source, and describe the new
-   checkpoint verification as isolated warm-cache worktree evidence.
+1. Treat `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b` as the authoritative
+   supplied-packing adapter checkpoint. Its clean ext4 replay passed cache
+   retrieval, full `lake build`, the 302-report trust audit, and all 160 tests.
+   Preserve older checkpoint records at their historical scope.
 2. Preserve the accepted negative `VL-AUDIT-001`, `FL-AUDIT-001`, and
    `VL-LUNA-DPLP-001` results at their historical scope.
 3. Preserve the integrated corrected DPLP contract and conditional wrapper
@@ -1576,11 +1636,11 @@ as an accepted implementation or mathematical proof.
 9. Preserve `VER-P64-FALSIFY-022` and `VER-P64-REPAIR-023` as incomplete,
    rejected-as-evidence records. Do not promote the repaired domain, the
    prefix, the A/B counts, or the historical pre-defect hash.
-10. Keep Prompt64 waiting and Prompt65 waiting/frozen. Do not restart Prompt64
+10. Keep Prompt64 prepared/parked and Prompt65 prepared/parked/frozen. Do not restart Prompt64
     bounded scans or Prompt65 verifier implementation. Preserve C1 **STOP /
     OPEN** and the exact `N*a_h crossing -> M_h -> active n*a_j -> successor
     edge -> Delta<=tau` gap.
-11. Select `SOL-P66-PRO-B-001` as the one next unrestricted cell. Its sole new
+11. Keep `SOL-P66-PRO-B-001` active as the first-ranked unrestricted cell. Its sole new
     lemma is the stronger all-pivot modular whole-block selection; the exact
     pivot-certificate conjecture is not itself new progress. Keep C2 second
     with its external unformalized dependency, C1 STOP/OPEN, and A frozen.

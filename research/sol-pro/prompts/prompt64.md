@@ -271,5 +271,10 @@ Return, in this order:
 Do not silently strengthen hypotheses, assume the target, or present a
 weaker special class as closing the audited project-level edge.
 
-This prompt is queued packaging only. Its contents do not record submission,
-a Sol Pro response, computation, proof, or theorem promotion.
+## Lifecycle state
+
+This prompt is **prepared and parked** under sole owner
+`GPT-5.6 Sol High top-level desktop orchestrator`, supervising authority
+`/root`, and launch runtime `original browser-capable desktop Codex session`.
+It was not launched at this checkpoint. Its contents record no Sol Pro
+response, computation, proof, theorem promotion, or finite evidence.

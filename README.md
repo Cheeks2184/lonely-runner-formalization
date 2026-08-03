@@ -321,12 +321,21 @@ tool versions are in [STATUS.md](STATUS.md).
 Research is in **FULL-PROOF PRIORITY MODE**. The exact unrestricted
 bottleneck remains the Lean-verified finite pivot-certificate proposition:
 for every positive injective integer tuple, some pivot candidate must escape
-all strict modular bad sets. The current first-ranked bridge is the
-conjectural deletion-pivot lifting principle (DPLP). Together with
-lower-dimensional LRC, the verified coefficient-three height theorem, and
-the direct `q=N` branch, DPLP would prove unrestricted positive-integer LRC.
-An exact finite audit found no DPLP failure in 243,973 premise-satisfying
-tuples, but this is **computed finite evidence only**.
+all strict modular bad sets. The current first-ranked bridge is Bridge B's
+`ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, packaged as Prompt66 and active in
+one Sol High desktop research turn. DPLP remains an open lower-ranked route:
+together with lower-dimensional LRC, the verified coefficient-three height
+theorem, and the direct `q=N` branch, it would prove unrestricted
+positive-integer LRC. An exact finite audit found no DPLP failure in 243,973
+premise-satisfying tuples, but this is **computed finite evidence only**.
+
+The supplied packing adapter at checkpoint `fadc65d` is independently
+replayed and `proved-lean` only for
+`exists_avoiding_of_overlapCapacity` and
+`exists_pivot_certificate_of_overlapPacking`. These adapters consume explicit
+capacity/packing hypotheses; they do not prove uniform packing existence,
+`PACK-09`, pivot noncoverage, or unrestricted LRC. Prompt preparation and
+desktop launch likewise promote no research result.
 
 The separate Response 59 finite claim audit is reproducible with
 `python3 scripts/audit_response59_claims.py`. Its deterministic output is
