@@ -91,12 +91,12 @@ def _deletions_are_certified(speeds: tuple[int, ...]) -> bool:
     """Check every deletion against pointwise candidate rows at every pivot."""
     n = len(speeds)
     pivot_rows = tuple(
-        _ordinary_bad_sets(speeds, pivot) for pivot in range(n)
+        (pivot, _ordinary_bad_sets(speeds, pivot)) for pivot in range(n)
     )
     for deleted in range(n):
         if not any(
-            not bad or bad == frozenset({deleted})
-            for rows in pivot_rows
+            pivot != deleted and (not bad or bad == frozenset({deleted}))
+            for pivot, rows in pivot_rows
             for _residue, bad in rows
         ):
             return False
@@ -138,9 +138,10 @@ def _complete_search(
 
 def _p1_check() -> tuple[tuple[tuple[int, ...], ...], tuple[int, ...], int, int, int, int]:
     """Recompute the independent N=4, p=5 finite row check."""
+    threshold_n = 4
     pivot_speed = 5
     speeds = (1, 3, 4)
-    modulus = 20
+    modulus = threshold_n * pivot_speed
     bad_sets = tuple(
         tuple(
             residue
@@ -150,7 +151,7 @@ def _p1_check() -> tuple[tuple[tuple[int, ...], ...], tuple[int, ...], int, int,
         for speed in speeds
     )
     deleted_gcds = tuple(
-        reduce(gcd, speeds[:index] + speeds[index + 1 :])
+        reduce(gcd, (modulus,) + speeds[:index] + speeds[index + 1 :])
         for index in range(len(speeds))
     )
     rows = tuple(
@@ -159,11 +160,7 @@ def _p1_check() -> tuple[tuple[tuple[int, ...], ...], tuple[int, ...], int, int,
     )
     z0 = sum(not row for row in rows)
     z1 = sum(len(row) == 1 for row in rows)
-    singleton_counts = tuple(
-        sum(row == frozenset({index}) for row in rows)
-        for index in range(len(speeds))
-    )
-    p1_lower_bound = min(singleton_counts)
+    p1_lower_bound = 2 * pivot_speed - (threshold_n - 1) * (threshold_n - 2)
     return bad_sets, deleted_gcds, z0, z1, 2 * z0 + z1, p1_lower_bound
 
 

@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "audit_response59_claims.py"
 CERTIFICATE = ROOT / "certificates" / "response59_claims_expected.txt"
-EXPECTED_SCRIPT_SHA256 = "a5a714961c9b93bf99fdaec5ebd0de80f5f9cc08708bd48b342241d31c28c9b9"
+EXPECTED_SCRIPT_SHA256 = "a5116f7d8b8d89793e62c519e8534f9aa4f222078735b4a28ce88c836645659f"
 
 
 class Response59ClaimsTest(unittest.TestCase):
@@ -22,9 +22,8 @@ class Response59ClaimsTest(unittest.TestCase):
             cwd=ROOT,
             capture_output=True,
             text=True,
-            check=False,
+            check=True,
         )
-        self.assertEqual(completed.returncode, 0, completed.stderr)
         self.assertEqual(completed.stderr, "")
         self.assertEqual(completed.stdout, CERTIFICATE.read_text(encoding="utf-8"))
 
