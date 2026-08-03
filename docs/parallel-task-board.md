@@ -1,8 +1,9 @@
 # Parallel task board
 
-This file is the authoritative coordination record for proof-research work
-based on commit `88c88789f5a503ad24adf54949fb330e88a70f35`. It records task routing and
-integration readiness; it does not promote any mathematical claim.
+This file is the authoritative coordination record for proof-research work at
+main commit `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. Historical worker rows retain
+their actual fixture bases. The board records task routing and integration
+readiness; it does not promote any mathematical claim.
 
 ## Operating rules
 
@@ -14,6 +15,8 @@ integration readiness; it does not promote any mathematical claim.
 - Only the supervising top-level lead `/root` may promote a deliverable to
   `verified`, integrate it, merge it, or change a mathematical status label.
 - A rejected audit is useful evidence but is not an accepted implementation.
+- A stalled or failed delegation is an operational metric, not mathematical,
+  computational, formal, or routing evidence.
 - Workers must stay within their allowed-file cells. Overlap requires an
   explicit handoff from the supervising lead.
 - Runtime routing evidence and repository evidence are labeled separately.
@@ -31,19 +34,20 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 5 | `RO-AUDIT-001`, `LUNA-ROUTE-001`, `VL-AUDIT-001`, `FL-AUDIT-001`, and `VL-LUNA-DPLP-001` were accepted as audit evidence. |
+| Accepted audit deliverables | 6 | The prior five accepted audits plus completed `VL-R59-AUDIT-001` are accepted at their exact dispositions. |
 | Accepted negative audits | 4 | The Luna routing audit and three DPLP contract audits returned valid negative results. |
 | Accepted recovery deliverables | 1 | `SOL-R59-RECOVER-001` recovered and normalized Response59 without promoting its claims. |
-| Accepted implementations | 0 unrestricted; 1 conditional formal artifact | The corrected DPLP contract/wrapper is reviewed in isolation and pending main integration; it proves neither DPLP nor induction. |
+| Accepted implementations | 0 unrestricted; 2 supporting artifacts | The corrected conditional DPLP contract/wrapper and Response59 regression verifier are integrated; neither proves an open bridge. |
+| Integrated deliverable groups | 3 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), and board/Prompts60--63 package (`263a1cb`) are on main. |
 | Active Sol Pro cells | 4 / 4 | Prompt60 PRO-E, Prompt61 PRO-A, Prompt62 PRO-B, and Prompt63 PRO-C are running in four genuinely separate conversations. |
 | Queued Sol Pro cells | 0 | No additional Sol Pro cell may start until an active slot is released. |
-| Active Sol Medium leads | 3 / 3 | Research Operations, Verification, and Formalization are the initial lead lanes. |
-| Active Luna workers | 1 / 6 | The independent Response59 verification audit is active; the formal Luna artifact has completed review. |
-| Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the active clean-room Response59 audit to reduce correlated error. |
-| Failed delegations | 2 | The nested Luna spawn was rejected; the first formal workspace-write launch was downgraded to read-only and terminated. |
-| Merge conflicts | 0 | No task on this board has been merged. |
-| Integration backlog | 3 | Main integration of the corrected formal contract, DPLP selector/correlation work, and the pending-tranche integration decision remain unresolved. |
-| Wait time | Not recorded | Prompt60--63, the independent Response59 audit, and formal-contract integration are pending, but trustworthy start timestamps are not present in this repository snapshot. Do not invent elapsed time. |
+| Active Sol Medium leads | 2 running / 3 roles | Verification is running the authoritative replay and Research Operations is completing this sync; Formalization is interrupted after its stall. |
+| Active Luna workers | 0 / 6 | The recorded DPLP formal and Response59 verification Luna tasks are complete. |
+| Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
+| Failed delegations | 3 | Nested Luna spawn rejection, the downgraded first formal write launch, and one Formalization Lead stall are counted; none is evidence for or against a claim. |
+| Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
+| Integration backlog | 0 ready artifacts | The DPLP selector/correlation remains open research, not an integration-ready deliverable. |
+| Wait time | Not recorded | Prompt60--63 remain active, but trustworthy start timestamps are not present in this repository snapshot. Do not invent elapsed time. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -161,12 +165,12 @@ as an accepted implementation or mathematical proof.
   206 line feeds, SHA-256
   `0ff913739a2a7d0f6c9270f64bcb65e0e15267e73b7c16ab49f9a260165c476f`;
   confirm the live `Stop answering` control.
-- **Blocker:** Research generation is complete, but the independent Response59
-  audit remains active. Completion of a Sol turn does not verify its claims.
+- **Blocker:** none for generation or recovery; independent audit is complete.
+  Completion of a Sol turn did not itself verify its claims.
 - **Final disposition / promotion authority:** Submission and completion
   evidence accepted; the response was handed to `SOL-R59-RECOVER-001` and
-  `VL-R59-AUDIT-001`. No returned theorem is promoted without independent
-  mathematical, computational, and Lean verification as applicable.
+  completed `VL-R59-AUDIT-001`. Only the exact audited disposition is
+  accepted; no open theorem is promoted.
 
 ### SOL-R59-RECOVER-001 — Response59 recovery
 
@@ -190,8 +194,7 @@ as an accepted implementation or mathematical proof.
 - **Blocker:** The claimed expected-output attachment was unavailable. It must
   not be described as recovered or reproduced.
 - **Final disposition / promotion authority:** Recovery accepted by `/root`;
-  response claims remain unverified and are assigned to
-  `VL-R59-AUDIT-001`.
+  response claims receive only the completed `VL-R59-AUDIT-001` disposition.
 
 ### VL-R59-AUDIT-001 — independent Response59 audit
 
@@ -203,26 +206,41 @@ as an accepted implementation or mathematical proof.
   `64319f1c4f46e1ace1d152cef6b65c6331f60ce5`
 - **Dependencies:** `SOL-R59-RECOVER-001`, `LUNA-ROUTE-001`
 - **Branch:** `verify/response59-audit-001`
-- **Status:** `active`
+- **Status:** `integrated`
 - **Exact deliverable:** Independently audit Response59's D1--D6, P1/P2,
   counterexamples, attachment claims, formal-status statements, and first-gap
   conclusions without promoting recovered prose.
-- **Allowed files:** none; read-only verification fixture
+- **Allowed files:** worker audit was read-only; lead-owned regression files
+  are `scripts/audit_response59_claims.py`,
+  `certificates/response59_claims_expected.txt`, and
+  `tests/test_response59_claims.py`
 - **Acceptance command:** Verify the fixture base and authoritative top-level
-  CLI thread `019fc66f-818b-7790-b71e-a5ca2780e72b`, then run the
-  task-prescribed clean-room checks and return exact evidence.
-- **Blocker:** The independent Luna/xhigh/read-only audit is active. Its final
-  result has not returned and must not be inferred.
-- **Final disposition / promotion authority:** Pending Verification Lead and
-  `/root` review. Thread metadata verifies routing only, not any Response59
-  mathematical or computational claim.
+  CLI session metadata locally; publish only session-id SHA-256
+  `2a55f9f331b2ea97de309d51df50d2f3c030c660e10793c374e37dc826902dd8`.
+  Run `python3 -m unittest tests.test_response59_claims -v`; require source
+  SHA-256 `a5116f7d8b8d89793e62c519e8534f9aa4f222078735b4a28ce88c836645659f`
+  and expected-output SHA-256
+  `6f3bf3d3fa95a8b9d5c4c6228ca280c865b6eb8936f93327e9de8890ad70f2d9`.
+- **Blocker:** none; the claimed original expected-output attachment remains
+  unavailable and is still not reproduced evidence.
+- **Final disposition / promotion authority:** Audit complete with the exact
+  disposition in `docs/response59-audit.md`: D1--D5 and repaired D6 are
+  accepted proved-math at their hypotheses; both uniform low-order DPLP
+  criteria are rejected; P1 and conditional P2 are accepted at exact strength;
+  DPLP, cycle synchronization, uniform prime supply, and unrestricted LRC
+  remain open. Worker commit `195d70d8c5f0e4fdae12a52240e422c99da04f6e`,
+  lead correction `9858ceabfdb73474f1dea13a2905975ed9425e3b`, and
+  merge `6ffe96a3067a1793e72844891134810be33d980d` are integrated on main. Raw
+  session metadata was verified locally and remains excluded from this public
+  artifact; Luna/xhigh/read-only routing claims are retained from that check.
 
 ### SOL-P60-PRO-E-001 — independent Prompt60 review
 
 - **ID:** `SOL-P60-PRO-E-001`
 - **Lane:** external research / PRO-E deliberate replication
 - **Owner / supervising lead:** `/root`
-- **Base:** Prompt60 file commit
+- **Base:** prompt artifact integrated on main through
+  `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`; original Prompt60 file commit
   `241472cd655e818b5e1bdfa546daadf5b783aed2`
 - **Dependencies:** `SOL-R59-RECOVER-001`, Prompt60 package audit
 - **Branch:** none; genuinely new external ChatGPT conversation
@@ -249,12 +267,12 @@ as an accepted implementation or mathematical proof.
 - **ID:** `SOL-P61-PRO-A-001`
 - **Lane:** Sol Pro / PRO-A height compression
 - **Owner / supervising lead:** unassigned new-chat worker / `/root`
-- **Base:** prompt-package base
-  `fcf082781091f8e59ca43d498a4c37f8723ec599`
+- **Base:** prompt artifact integrated on main through
+  `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`
 - **Dependencies:** verified bounded-height endpoint and corrected current
   status ledger
 - **Branch:** none; genuinely new external ChatGPT conversation, with the
-  prompt artifact sourced from `ops/parallel-task-board-001`
+  prompt artifact tracked on main
 - **Status:** `active`
 - **Exact deliverable:** Attack only
   `MinimalCounterexampleHeightCompression` by replacement/descent operations
@@ -279,12 +297,12 @@ as an accepted implementation or mathematical proof.
 - **ID:** `SOL-P62-PRO-B-001`
 - **Lane:** Sol Pro / PRO-B pivot coverage
 - **Owner / supervising lead:** unassigned new-chat worker / `/root`
-- **Base:** prompt-package base
-  `fcf082781091f8e59ca43d498a4c37f8723ec599`
+- **Base:** prompt artifact integrated on main through
+  `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`
 - **Dependencies:** verified pivot-certificate equivalence, exact CRT counts,
   and corrected current status ledger
 - **Branch:** none; genuinely new external ChatGPT conversation, with the
-  prompt artifact sourced from `ops/parallel-task-board-001`
+  prompt artifact tracked on main
 - **Status:** `active`
 - **Exact deliverable:** Attack only unrestricted all-pivot coverage,
   TOP-TWO-PIVOT, and `TOP-TWO-INTEGRAL-TRANSVERSAL` through integral
@@ -310,13 +328,13 @@ as an accepted implementation or mathematical proof.
 - **ID:** `SOL-P63-PRO-C-001`
 - **Lane:** Sol Pro / PRO-C deletion and induction
 - **Owner / supervising lead:** unassigned new-chat worker / `/root`
-- **Base:** prompt-package base
-  `fcf082781091f8e59ca43d498a4c37f8723ec599`
-- **Dependencies:** reviewed isolated corrected DPLP contract/conditional
-  wrapper pending main integration; selected-certificate lift is proved-Lean;
-  D4/D5 and repaired D6 are independently accepted proved-math
+- **Base:** prompt artifact integrated on main through
+  `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`
+- **Dependencies:** corrected DPLP contract/conditional wrapper integrated on
+  main; selected-certificate lift is proved-Lean; D4/D5 and repaired D6 are
+  independently accepted proved-math
 - **Branch:** none; genuinely new external ChatGPT conversation, with the
-  prompt artifact sourced from `ops/parallel-task-board-001`
+  prompt artifact tracked on main
 - **Status:** `active`
 - **Exact deliverable:** Attack only corrected deletion-certificate
   correlation, reverse witness lifting, descent, and induction, with the full
@@ -342,12 +360,11 @@ as an accepted implementation or mathematical proof.
 - **ID:** `DPLP-REPAIR-001`
 - **Lane:** proof-contract repair
 - **Owner / supervising lead:** unassigned / `/root`
-- **Base:** a fresh branch from
-  `88c88789f5a503ad24adf54949fb330e88a70f35`, with only explicitly selected
-  pending-tranche inputs
+- **Base:** a future fresh branch from current main, with only explicitly
+  selected selector/correlation inputs
 - **Dependencies:** accepted negative results from `VL-AUDIT-001`,
-  `FL-AUDIT-001`, and `VL-LUNA-DPLP-001`; reviewed corrected conditional
-  artifact from `FL-LUNA-DPLP-001`
+  `FL-AUDIT-001`, and `VL-LUNA-DPLP-001`; corrected conditional artifact from
+  `FL-LUNA-DPLP-001` integrated on main
 - **Branch:** to be allocated by `/root`; one isolated worktree
 - **Status:** `queued`
 - **Exact deliverable:** Build selector/correlation work on the corrected
@@ -356,8 +373,9 @@ as an accepted implementation or mathematical proof.
 - **Allowed files:** must be declared by `/root` before launch; no overlap with
   the active Prompt60 turn or this board
 - **Acceptance command:** `git diff --check && lake env lean LonelyRunner/DeletionPivotLifting.lean && lake build && lake env lean LonelyRunner/AxiomAudit.lean`
-- **Blocker:** The corrected formal artifact remains outside main, and an
-  exact selector/correlation file-cell assignment is pending.
+- **Blocker:** The formal contract is integrated, but the selector/correlation
+  theorem remains open and has no integration-ready artifact. PRO-C owns the
+  active research cell.
 - **Final disposition / promotion authority:** Queued. It requires a fresh
   Verification Lead audit; `/root` alone may promote or integrate it.
 
@@ -397,7 +415,7 @@ as an accepted implementation or mathematical proof.
   `cd908c8ea148f2e46e19d1e8754497e729bd2716`
 - **Dependencies:** `LUNA-ROUTE-001`, `FL-AUDIT-001`
 - **Branch:** `formal/luna-dplp-contract-001`
-- **Status:** `verified`
+- **Status:** `integrated`
 - **Exact deliverable:** Independently audit or repair the formal DPLP fixture
   under the exact task contract while preserving the sound-lift/open-selector
   boundary. The session is Luna with xhigh reasoning.
@@ -409,50 +427,75 @@ as an accepted implementation or mathematical proof.
 - **Blocker:** The first workspace-write launch was downgraded to read-only
   and terminated. A fresh `danger-full-access` top-level CLI session was
   runtime-honored and isolated and produced commit
-  `e5a353397008e0d2fcbbb6213972b952055c4dbf`. Review accepts its corrected
-  DPLP contract and conditional wrapper; main integration remains pending.
+  `e5a353397008e0d2fcbbb6213972b952055c4dbf`. Lead review added the explicit
+  `n>=2` quantifier correction before main integration.
 - **Final disposition / promotion authority:** Reviewed conditional formal
-  artifact accepted by the Formalization Lead. It records the structural
+  artifact integrated on main through
+  `b3811153846664c38cd55f0d784ae3edde30df7f`. It records all structural
   premises and consumes the DPLP selector but proves neither DPLP nor
-  induction. `/root` alone may integrate it into main.
+  induction; those claims remain open.
 
-### PRO-E-INTEGRATE-001 — pending-tranche integration decision
+### OPS-PACKAGE-INTEGRATE-001 — task-board and prompt package integration
+
+- **ID:** `OPS-PACKAGE-INTEGRATE-001`
+- **Lane:** research operations integration
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** reviewed ops package ending at
+  `cf2461e0409037d76540bc73e49f0be026645608`
+- **Dependencies:** Prompt60--63 package audits, corrected Prompt62/63
+  baselines, submission-state synchronization
+- **Branch:** integrated into main
+- **Status:** `integrated`
+- **Exact deliverable:** Integrate the authoritative task board, Prompt60--63
+  artifacts, and session synchronization without changing open-claim status.
+- **Allowed files:** `docs/parallel-task-board.md`, Prompt60--63 files, and
+  `research/sol-pro/session-001.md`
+- **Acceptance command:** Verify main contains package commit
+  `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`; run `git diff --check` and the
+  targeted secret/local-path scan.
+- **Blocker:** none
+- **Final disposition / promotion authority:** Package integrated through
+  `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. This operational integration
+  does not accept a Prompt60--63 result or promote any open theorem.
+
+### PRO-E-INTEGRATE-001 — supporting-tranche integration
 
 - **ID:** `PRO-E-INTEGRATE-001`
 - **Lane:** integration
 - **Owner / supervising lead:** `/root`
-- **Base:** `88c88789f5a503ad24adf54949fb330e88a70f35`
-- **Dependencies:** accepted `FL-AUDIT-001`, repaired and accepted
-  `DPLP-REPAIR-001`, synchronized Prompt59 submission record, final whole-tree
-  verification
-- **Branch:** integration branch to be selected by `/root`
-- **Status:** `blocked`
-- **Exact deliverable:** Decide whether the corrected, independently verified
-  pending tranche is coherent and ready for integration without status
-  overstatement or unrelated changes.
-- **Allowed files:** only the repaired tranche explicitly approved by `/root`
+- **Base:** supporting tranche integrated through
+  `b3811153846664c38cd55f0d784ae3edde30df7f`
+- **Dependencies:** accepted formal and verification audits, corrected DPLP
+  contract with explicit `n>=2`, synchronized Response59 record, final
+  whole-tree verification
+- **Branch:** integrated into main
+- **Status:** `integrated`
+- **Exact deliverable:** Integrate the corrected, independently reviewed
+  supporting tranche without status overstatement or unrelated changes.
+- **Allowed files:** only the supporting tranche explicitly approved by
+  `/root`
 - **Acceptance command:** `git status --short && git diff --check && lake build && python3 -m unittest discover -s tests -v`
-- **Blocker:** The accepted `VL-AUDIT-001` audit rejected the current tranche
-  contract; repair and fresh verification have not occurred.
-- **Final disposition / promotion authority:** Blocked. Only `/root` may
-  integrate or merge after every dependency is accepted.
+- **Blocker:** none for the reviewed supporting tranche; the DPLP selector is
+  a separate open research obligation, not a hidden integration blocker.
+- **Final disposition / promotion authority:** Supporting tranche integrated
+  on main through `b3811153846664c38cd55f0d784ae3edde30df7f` after lead review
+  and the explicit `n>=2` correction. This integration does not promote DPLP,
+  induction, positive-integer LRC, or unrestricted LRC.
 
 ## Integration order
 
 1. Preserve the accepted negative `VL-AUDIT-001`, `FL-AUDIT-001`, and
-   `VL-LUNA-DPLP-001` results; their audited tranche remains rejected and
-   blocked.
-2. Preserve the reviewed `FL-LUNA-DPLP-001` conditional artifact without
-   promoting DPLP, and wait for the active `VL-R59-AUDIT-001` result.
-3. Specify and execute `DPLP-REPAIR-001` in an isolated branch using only
-   accepted findings.
-4. Re-run a fresh verification audit; an accepted negative audit cannot be
-   silently converted into implementation acceptance.
-5. Keep recovered Response59 separate from its active independent audit, and
-   keep the active Prompt60 PRO-E turn separate from both. Do not claim a
-   Response60 result before one exists and is recovered.
-6. Re-evaluate `PRO-E-INTEGRATE-001` only after all gates are explicit.
-7. Launch any additional Luna/xhigh work only through the verified top-level
+   `VL-LUNA-DPLP-001` results at their historical scope.
+2. Preserve the integrated corrected DPLP contract and conditional wrapper
+   without promoting the open selector or induction.
+3. Preserve the completed Response59 disposition in
+   `docs/response59-audit.md`; the regression verifier is finite evidence,
+   not a uniform proof.
+4. Keep Prompt60--63 active until authoritative completion evidence arrives;
+   no fifth Sol Pro cell may start at the current 4/4 cap.
+5. Allocate future `DPLP-REPAIR-001` work only to the open selector/correlation
+   theorem; the formal contract itself is no longer an integration blocker.
+6. Launch any additional Luna/xhigh work only through the verified top-level
    CLI route; external CLI processes are not nested agents, and nested Luna
    delegation must not be retried.
 
