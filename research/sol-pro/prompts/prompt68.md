@@ -332,10 +332,11 @@ Return exactly one disposition:
   unrestricted quantifiers, or it is decisively refuted and a strictly
   narrower replacement is itself completely proved with the full implication
   chain.
-- `PIVOT` if a genuinely stronger prime-independent structural intermediate
-  is proved but cofiniteness remains open, or a decisive fixed-`n`
-  infinite-prime counterexample forces a materially different unrestricted
-  formulation.
+- `PIVOT` only if a precise prime-independent structural partial theorem is
+  proved that does not itself imply cofiniteness but materially narrows the
+  remaining gap, or a decisive fixed-`n` infinite-prime counterexample forces
+  a materially different unrestricted formulation. Any proved stronger
+  sufficient theorem implying cofiniteness receives `BRIDGE`.
 - `STOP` if both attacks retain prime-dependent enumeration, assume
   cofiniteness under another name, or fail to control a fixed-`n` infinite
   family.
