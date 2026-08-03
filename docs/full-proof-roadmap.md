@@ -259,6 +259,27 @@ implementation until those premises and the missing inequality are proved.
 The queued Prompt 64 contract does not supply that proof and does not promote
 the downstream transversal.
 
+Prompt64's Luna verification attempt is recorded as **INCOMPLETE** in
+`docs/prompt64-luna-audit.md`. `VER-P64-FALSIFY-022` omitted mandatory `(2,3)`
+equality and `(1,2,8)` strict fixtures; the PI stopped the scans and rejected
+partial outputs. `VER-P64-REPAIR-023` regenerated 24,708 rows with primary
+strict/equality counts `20,764`/`1,366`, total `23,301` strict, `1,367`
+equality controls, and 40 residual rows. The 40 residual rows are
+provenance/control rows, not strict theorem instances. Both named fixtures
+occurred exactly once. Its pre-defect `domain.tsv` hash was
+`16c9d13fe367edfaceb746224f6b53fa9ce92317013e14eb6190b67c46ca2a11`, which
+is not accepted or frozen-final evidence. Both implementations found A-grid
+safe count `0` and B-grid safe count `6`, first safe B numerator `9`; exact
+byte-identical shards covered only a contiguous prefix through input row
+19,750. Branch-blind strict semantics, non-atomic optimized completion, the
+third verifier's equality calibration, absent reindexing, missing scaling
+agreement, and incorrect structured-CRT provenance stopped the route. No
+counterexample, `NO-COUNTEREXAMPLE` conclusion, theorem, or finite-evidence
+promotion resulted. `TOP-TWO-LARGE-RATIO-EXCLUSION` and the downstream
+owner-transversal remain open; no larger-bound continuation is recommended.
+The required signed-in ChatGPT Sol Pro Prompt64 conversation has never run,
+and Browser/ChatGPT-control is not callable in the current runtime.
+
 ### Falsification and stop contract
 
 - Search top-two exactly on every new primitive box and on structured CRT,
@@ -403,6 +424,11 @@ No declaration derives the deep premise at a first blocker or proves Delta
 decreases. That transition, the DPLP selector, and unrestricted LRC therefore
 remain conjectural/open.
 
+The next unrestricted C1 cell is `SOL-P65-PRO-C-001`,
+`FIRST-BLOCKER-MAXIMIZER-TRANSFER`; its package depends on verified ReverseGrid
+integration and this Prompt64 stop record, and is integrated only after PI
+merge.
+
 Equivalently, for each pivot candidate let `S_j(r)` be the nonpivot
 coordinates in the strict deletion-bad set. A deletion certificate has
 `S_j(r) subset {k}`. An empty set lifts immediately; a singleton lifts exactly
@@ -507,8 +533,8 @@ modulus.
 | Rank | Bridge | Distance to LRC | Current assessment |
 | ---: | --- | --- | --- |
 | 1 | C1: deletion-pivot lifting | One modular correlation theorem | Sound lift is Lean-verified; exact shell counts and strong targeted survival narrow the gap to singleton overlap |
-| 2 | C2: prime-forcing product induction | One uniform supply theorem plus an external product-bound dependency | Directly extends recent successful finite-dimensional work, but the local cover may remain LRC-hard |
-| 3 | B: top-two/uniform pivot | One arithmetic theorem | Large mature finite evidence and exact formal target; several relaxations already refuted |
+| 2 | B: top-two/uniform pivot | One arithmetic theorem | Prompt64's exact large-ratio route is frozen at an incomplete verification stop; the theorem remains open and several relaxations are already refuted |
+| 3 | C2: prime-forcing product induction | One uniform supply theorem plus an external product-bound dependency | Directly extends recent successful finite-dimensional work, but the local cover may remain LRC-hard |
 | 4 | A: height compression | Frozen at the missing replacement-eligibility existential | `STOP` after Response 61: sound signed-divisor transport exists on paper, but the exact route has no supported descent operation and its finite artifact is nonreproducible |
 
 The ranking is provisional and must change when an exact counterexample,

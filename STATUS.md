@@ -1,6 +1,6 @@
 # Project status
 
-Status date: 2026-08-02. Authoritative branch: `main`.
+Status date: 2026-08-03. Authoritative branch: `main`.
 
 Unrestricted Lonely Runner Conjecture: **open**. This repository contains no
 claim that it has been proved or disproved.
@@ -228,19 +228,19 @@ restrictions do not force such a pivot.
 Research is now in **FULL-PROOF PRIORITY MODE**. Tracked unrestricted branches
 and their current dispositions, in priority order, are:
 
-1. prove or refute the corrected deletion-pivot lifting principle (DPLP),
-   whose exact induction chain uses lower-dimensional pivot certificates,
-   the verified coefficient-three endpoint, and the direct `q=N` branch;
-2. prove a uniform supply of prime-forcing moduli whose product exceeds the
-   published minimal-counterexample product bound; this route is backed by
-   recent finite-dimensional proofs but retains an external unformalized
-   product-bound dependency;
-3. prove or refute the unrestricted top-two pivot property, then fall back to
-   the exact all-pivot certificate; the immediate target is an integral
+1. C1: prove or refute the first-blocker/maximizer transfer toward corrected
+   DPLP, using the verified ReverseGrid arithmetic, lower-dimensional pivot
+   certificates, the coefficient-three endpoint, and the direct `q=N` branch;
+2. B: prove or refute the unrestricted top-two pivot property, then fall back
+   to the exact all-pivot certificate; its immediate target is an integral
    affine-fiber/transversal theorem, not the rejected fractional dual;
-4. keep the least-primitive-counterexample height route frozen after Response
-   61; restart it only with a genuinely new replacement operation or a proof
-   of signed-divisor eligibility, not more iterations of the stopped descent.
+3. C2: prove a uniform supply of prime-forcing moduli whose product exceeds
+   the published minimal-counterexample product bound; this route retains an
+   external unformalized product-bound dependency;
+4. A: keep the least-primitive-counterexample height route frozen after
+   Response 61; restart it only with a genuinely new replacement operation or
+   a proof of signed-divisor eligibility, not more iterations of the stopped
+   descent.
 
 Each branch has an exact theorem contract, implication chain, falsification
 suite, budget, and abandonment criterion in
@@ -311,6 +311,34 @@ obstruction is verified, while strict smaller-Delta first-blocker descent and
 the DPLP selector remain conjectural/open. No cold-cache kernel replay
 occurred for the new module. See
 [the Response 63 audit](docs/response63-audit.md).
+
+`VER-P64-FALSIFY-022` and `VER-P64-REPAIR-023` record an **INCOMPLETE** Luna
+verification attempt at public/base commit
+`51de33bad6ba251747cd5c37db8e6425e3cb6425`. The initial generated domain
+omitted mandatory `(2,3)` equality and `(1,2,8)` strict fixtures, so the PI
+stopped the scans and rejected partial outputs. The repair regenerated 24,708
+rows with primary strict/equality counts `20,764`/`1,366`, total
+strict/equality counts `23,301`/`1,367`, and 40 residual provenance/control
+rows; `23,301 + 1,367 + 40 = 24,708`. The residual rows are not strict
+theorem instances. Both named fixtures occurred exactly once.
+The pre-defect `domain.tsv` hash was
+`16c9d13fe367edfaceb746224f6b53fa9ce92317013e14eb6190b67c46ca2a11`; it is
+not accepted or frozen-final evidence. Both implementations found A-grid safe
+count `0` and B-grid safe count `6`, with first B-grid safe numerator `9`.
+Byte-identical shards covered only a contiguous prefix through input row
+19,750. Branch-blind strict-only semantics, non-atomic optimized completion,
+the third verifier's equality calibration, absent reindexing, missing
+independent scaling agreement, and incorrect structured-CRT provenance were
+unresolved at stop. No counterexample, `NO-COUNTEREXAMPLE` conclusion, finite
+evidence, theorem, Lean result, or axiom result is promoted. See
+[the Prompt64 Luna audit](docs/prompt64-luna-audit.md).
+
+`SOL-P64-PRO-B-001` remains waiting: the Prompt64 contract is integrated as a
+documentary package, but the required signed-in ChatGPT Sol Pro conversation
+has never run and Browser/ChatGPT-control is not callable in the current
+runtime. The next unrestricted cell is queued as
+`SOL-P65-PRO-C-001`, `FIRST-BLOCKER-MAXIMIZER-TRANSFER`; its Prompt65 package
+is integrated only after PI merge.
 
 The formal source checkpoint is now
 `586b4858cd1b1c513566f3b33d7b5141640e7865`; merged main

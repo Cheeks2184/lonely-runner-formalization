@@ -1,12 +1,11 @@
 # Parallel task board
 
-This file is the authoritative coordination record for the repository snapshot
-based on main commit `4b6ee54a1c64e847c505b632a46c326616678d1c`.
-The last source-changing checkpoint is
-`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`; later commits through the snapshot
-add documentation, operations records, or research artifacts only. Historical
-worker rows retain their actual fixture bases. The board records task routing
-and integration readiness; it does not promote any mathematical claim.
+This file is the authoritative coordination record for the public/base
+snapshot at commit `51de33bad6ba251747cd5c37db8e6425e3cb6425`. The formal
+source checkpoint remains `586b4858cd1b1c513566f3b33d7b5141640e7865`, as
+recorded below. Historical worker rows retain their actual fixture bases. The
+board records task routing and integration readiness; it does not promote any
+mathematical claim.
 
 ## Operating rules
 
@@ -43,15 +42,15 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | Accepted implementations | 0 unrestricted; 3 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, and exact ReverseGrid arithmetic are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 4 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), board/Prompts60--63 package (`263a1cb`), and ReverseGrid formal source (`586b485`, merged by `99a78c1`) are on main. |
 | Authoritative source replay | integrated / verified warm-cache | Formal source checkpoint `586b485` passed module/root direct compiles, 3,001-job target and 3,590-job root builds, and standard-foundation axiom probes in an isolated warm-cache worktree. Main `99a78c1` has the same Lean tree. The latest full detached clean replay remains the older `263a1cb` record. |
-| Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited by the lead. |
-| Queued Sol Pro cells | 0 | All four slots are free, but no additional cell is queued in this snapshot. |
+| Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited by the lead; Prompt64 external execution is waiting. |
+| Queued Sol Pro cells | 1 | `SOL-P65-PRO-C-001` is queued as the next unrestricted C1 cell; external execution is waiting for callable signed-in ChatGPT Sol Pro control. |
 | Active Sol Medium leads | 0 running / 3 roles | Verification, Formalization, and Research Operations have completed their current reviewed tranches. |
 | Active Luna workers | 0 / 6 | The ReverseGrid worker had genuine fresh top-level Luna/xhigh runtime metadata but exited without a report or commit; the Formalization Lead independently completed and reviewed the theorem. Historical Response63 routing failures retain their recorded scope. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 6 | The prior five failures plus the ReverseGrid worker that exited without a report or commit are counted. The completed Response63 input-missing route remains unusable but is not counted as a failed launch. |
 | Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
-| Integration backlog | 1 reviewed documentation group | ReverseGrid documentation synchronization awaits root integration; the reviewed theorem source is already merged on main. |
-| Wait time | None active | No Sol Pro turn remains active in this snapshot. |
+| Integration backlog | 1 documentation/prompt group | Prompt64 stop record and Prompt65 package await PI merge; the reviewed ReverseGrid theorem source is already at formal checkpoint `586b485`. |
+| Wait time | External control waiting | Browser/ChatGPT-control is not callable in the current runtime; Prompt64 Sol Pro execution and the queued Prompt65 cell have no submitted response. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -363,7 +362,7 @@ as an accepted implementation or mathematical proof.
   and corrected current status ledger
 - **Branch:** none; genuinely new external ChatGPT conversation, with the
   prompt artifact tracked on main
-- **Status:** `review`
+- **Status:** `verified`
 - **Exact deliverable:** Attack only unrestricted all-pivot coverage,
   TOP-TWO-PIVOT, and `TOP-TWO-INTEGRAL-TRANSVERSAL` through integral
   CRT/Fourier/transversal methods. Do not enter height descent or deletion
@@ -378,13 +377,14 @@ as an accepted implementation or mathematical proof.
   `687a774640d4b56b402a2ca2bb8a3c7b84c64b67a04dd5388ad9ee3bb39b875c`;
   confirm the post-send Copy message is exact after CRLF-to-LF normalization
   and confirm live `Stop answering`.
-- **Blocker:** Response62 and its supplied reproducibility bundle are recovered,
-  but no independent replay or mathematical audit has been accepted.
+- **Blocker:** No blocker remains for the completed external turn; the
+  owner-aware residual bridge and unrestricted theorem remain open research.
 - **Final disposition / promotion authority:** Prompt62 is complete and
-  recovered by `OPS-P62-RECOVER-009` with status **UNVERIFIED**. Every finite
-  computation remains unverified evidence, response self-labels are not
-  accepted, and `RESIDUAL-2N-SHIFT-OWNER-TRANSVERSAL` remains conjectural.
-  Only `/root` may accept an independent audit or promote a claim.
+  independently audited by `VER-R62-AUDIT-010`. The disposition is **verified,
+  mixed/negative audit boundary**: finite replay and exact local lemmas are
+  accepted only at their stated scope, uniform scalar criteria are rejected,
+  and `RESIDUAL-2N-SHIFT-OWNER-TRANSVERSAL` remains conjectural/open. Only
+  `/root` may promote a claim.
 
 ### OPS-P62-RECOVER-009 — Response 62 recovery
 
@@ -395,7 +395,7 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** completed `SOL-P62-PRO-B-001` external turn and supplied
   response/bundle recovery material
 - **Branch:** `research/ops-p62-recover-009`
-- **Status:** `review`
+- **Status:** `integrated`
 - **Exact deliverable:** Recover exact normalized Response62 and every safe
   text/source/certificate member of its supplied bundle, record exact
   provenance, and preserve the independent-audit boundary.
@@ -408,12 +408,12 @@ as an accepted implementation or mathematical proof.
   `5676307f590cf37a9545a3d324abbe988779dad3d668acafbe0e6079bf146e36`;
   validate safe archive paths, `SHA256SUMS`, text-only scope, privacy, and
   `git diff --check` without replaying computations as part of recovery.
-- **Blocker:** Independent artifact replay and claim-by-claim mathematical
-  audit remain pending.
-- **Final disposition / promotion authority:** Recovery is ready for `/root`
-  review. All computations are unverified finite evidence and the sole bridge
-  `RESIDUAL-2N-SHIFT-OWNER-TRANSVERSAL` remains conjectural; no response
-  self-label or unrestricted theorem is promoted.
+- **Blocker:** None for recovery; the separate verified audit retains the
+  mixed/negative boundary and does not close the residual bridge.
+- **Final disposition / promotion authority:** Recovery is integrated in the
+  operations record. `VER-R62-AUDIT-010` supplies the separate verified,
+  mixed/negative audit boundary; no response self-label, finite result, or
+  unrestricted theorem is promoted.
 
 ### VER-R62-AUDIT-010 — Response 62 verification
 
@@ -476,7 +476,7 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** accepted `VER-R62-AUDIT-010` and
   `FORM-R62-RESIDUAL-SPEC-012` dispositions
 - **Branch:** `research/ops-p64-contract-018`
-- **Status:** `review`
+- **Status:** `integrated`
 - **Exact deliverable:** Draft Prompt 64 around the exact first missing edge,
   equivalently `N*A<2*B ->` a canonical certificate at one of the two
   numerical top pivots, with complete hypotheses, unrestricted/branch scope,
@@ -489,12 +489,128 @@ as an accepted implementation or mathematical proof.
   `RESIDUAL-2N-SHIFT-OWNER-TRANSVERSAL` as a separate downstream open lemma,
   binds equality to the residual side, and states that queued packaging is not
   a proof, submission, computation, or theorem promotion.
-- **Blocker:** Root review and a separately authorized external Sol Pro launch.
-  The missing inequality and downstream owner-transversal remain open.
-- **Final disposition / promotion authority:** Contract is ready for review
-  only. No Prompt 64 turn has been submitted, no finite evidence has been
-  generated, and no top-two, residual, positive-integer, or unrestricted LRC
-  claim is promoted. Only `/root` may approve integration or launch.
+- **Blocker:** None for the integrated contract. External execution is tracked
+  separately by `SOL-P64-PRO-B-001`; the missing inequality and downstream
+  owner-transversal remain open research.
+- **Final disposition / promotion authority:** Main integrated the Prompt64
+  contract by merge commit `c7639215fba9b6e4217abb6d849915caa6a024f6`,
+  merging source commit `2108f5da55c4696841fd935794f07a754126e6b6`.
+  The contract remains distinct from execution: no required signed-in
+  ChatGPT Sol Pro Prompt64 conversation has run, and this package records no
+  response, theorem, finite evidence, top-two result, residual result,
+  positive-integer result, or unrestricted LRC promotion. Only `/root` may
+  authorize launch or promotion.
+
+### SOL-P64-PRO-B-001 — waiting external Prompt64 execution
+
+- **ID:** `SOL-P64-PRO-B-001`
+- **Lane:** Sol Pro / PRO-B top-two execution
+- **Owner / supervising lead:** unassigned new-chat worker / Research-Operations Lead / `/root`
+- **Base:** `51de33bad6ba251747cd5c37db8e6425e3cb6425`
+- **Dependencies:** integrated `OPS-P64-CONTRACT-018`; no Prompt64 response has
+  been accepted
+- **Branch:** none; required signed-in ChatGPT Sol Pro conversation
+- **Status:** `waiting`
+- **Exact deliverable:** Execute the exact Prompt64 contract in the required
+  signed-in ChatGPT Sol Pro conversation and return the contracted status,
+  proof/refutation, falsification, and stop decision.
+- **Allowed files:** none during the external turn; any recovery requires a
+  separately assigned task
+- **Acceptance command:** Verify the required signed-in Sol Pro conversation
+  and preserve the exact Prompt64 contract before any response is reviewed.
+- **Blocker:** Browser/ChatGPT-control is not callable in the current runtime.
+  The integrated Prompt64 contract therefore has no submitted Sol Pro
+  execution or response.
+- **Final disposition / promotion authority:** Waiting external execution.
+  The contract and its execution state are separate; no theorem or finite
+  evidence is promoted. Only `/root` may authorize launch and review.
+
+### VER-P64-FALSIFY-022 — incomplete Prompt64 falsification attempt
+
+- **ID:** `VER-P64-FALSIFY-022`
+- **Lane:** Luna verification / Prompt64 falsification
+- **Owner / supervising lead:** fresh top-level Luna/xhigh verification worker / Verification Lead / `/root`
+- **Base:** `51de33bad6ba251747cd5c37db8e6425e3cb6425`
+- **Dependencies:** integrated Prompt64 contract and PI stop decision
+- **Branch / worktree:** detached read-only verification fixture; private local path omitted from public record
+- **Status:** `rejected` (incomplete; rejected as evidence)
+- **Exact deliverable:** Verify the Prompt64 strict large-ratio falsification
+  domain with the mandatory fixtures, literal/optimized agreement, and exact
+  stop contract, without promoting a theorem or finite result.
+- **Repository allowed files:** none; repository read-only
+- **Allowed outputs:** only the assigned temporary scratch directory outside
+  the repository
+- **Acceptance command:** Inspect the assigned scratch outputs and the exact
+  audit record; no repository write or partial scanner output is an acceptance
+  artifact.
+- **Blocker:** The generated domain omitted mandatory named fixtures `(2,3)`
+  equality and `(1,2,8)` strict. The PI stopped the scans, and all partial
+  outputs were rejected.
+- **Final disposition / promotion authority:** **INCOMPLETE / REJECTED AS
+  EVIDENCE.** No counterexample, no `NO-COUNTEREXAMPLE` conclusion, and no
+  theorem or finite-evidence promotion resulted.
+
+### VER-P64-REPAIR-023 — incomplete Prompt64 repair attempt
+
+- **ID:** `VER-P64-REPAIR-023`
+- **Lane:** Luna verification / Prompt64 repair and provenance audit
+- **Owner / supervising lead:** fresh top-level Luna/xhigh verification worker / Verification Lead / `/root`
+- **Base:** `51de33bad6ba251747cd5c37db8e6425e3cb6425`
+- **Dependencies:** `VER-P64-FALSIFY-022`; PI stopped the turn before frozen
+  coverage completed
+- **Branch / worktree:** detached read-only verification fixture; private local path omitted from public record
+- **Status:** `rejected` (incomplete; rejected as evidence)
+- **Exact deliverable:** Record the repaired 24,708-row domain, comprising
+  23,301 strict rows, 1,367 equality controls, and 40 residual
+  provenance/control rows that are not strict theorem instances; record both
+  scanner implementations, shard coverage, named fixtures, provenance, and
+  exact verifier defects at the stop boundary.
+- **Repository allowed files:** none; repository read-only
+- **Allowed outputs:** only the assigned temporary scratch directory outside
+  the repository
+- **Acceptance command:** Inspect the assigned scratch outputs and the complete
+  audit record; the pre-defect domain hash is historical provenance only and
+  no repository write is accepted.
+- **Blocker:** Full frozen coverage did not complete. Strict-only semantics
+  were branch-blind; optimized completion was non-atomic; the third verifier
+  retained an equality-calibration defect; genuine reindexing and independent
+  optimized/verifier scaling agreement were absent; and structured-CRT
+  provenance recorded the post-normalization q-multiple condition over the
+  entire tuple instead of only designated lower/source coordinates.
+- **Final disposition / promotion authority:** **INCOMPLETE / REJECTED AS
+  EVIDENCE.** The domain and hash
+  `16c9d13fe367edfaceb746224f6b53fa9ce92317013e14eb6190b67c46ca2a11` are not
+  accepted or frozen-final. No counterexample, finite conclusion, theorem,
+  or Lean/axiom result is promoted.
+
+### SOL-P65-PRO-C-001 — FIRST-BLOCKER-MAXIMIZER-TRANSFER
+
+- **ID:** `SOL-P65-PRO-C-001`
+- **Lane:** Sol Pro / PRO-C first-blocker descent
+- **Owner / supervising lead:** unassigned new-chat worker / Research-Operations Lead / `/root`
+- **Base:** future PI-merged main descendant containing
+  `research/sol-pro/prompts/prompt65.md`; exact SHA must be recorded at launch
+- **Dependencies:** verified integration of ReverseGrid C1 through formal
+  checkpoint `586b485`; `VER-P64-REPAIR-023` incomplete stop record; PI merge
+  of the Prompt65 package
+- **Branch:** none; new unrestricted signed-in ChatGPT Sol Pro conversation
+- **Status:** `queued` (execution waiting)
+- **Exact deliverable:** Execute `FIRST-BLOCKER-MAXIMIZER-TRANSFER` exactly as
+  packaged in `research/sol-pro/prompts/prompt65.md`, preserving the explicit
+  maximizer, first-blocker, orientation, and `N*a_h` to `n*a_j` grid-conversion
+  gap.
+- **Allowed files:** none during the external turn; recovery requires a
+  separately assigned task
+- **Acceptance command:** Verify the exact prompt package after PI merge and
+  require the contracted status table, two attacks, complete proofs,
+  falsification certificates, hashes/commands, one unsupported implication,
+  annotated chain, and stop decision.
+- **Blocker:** Browser/ChatGPT-control is not callable in the current runtime,
+  so execution is waiting. The prompt package itself is not integrated until
+  PI merges this documentation commit.
+- **Final disposition / promotion authority:** Queued/waiting as the next
+  unrestricted C1 cell. No response, proof, finite evidence, or theorem
+  promotion exists yet; only `/root` may launch or promote.
 
 ### SOL-P63-PRO-C-001 — deletion-induction contract
 
@@ -508,7 +624,7 @@ as an accepted implementation or mathematical proof.
   independently accepted proved-math
 - **Branch:** none; genuinely new external ChatGPT conversation, with the
   prompt artifact tracked on main
-- **Status:** `review`
+- **Status:** `verified`
 - **Exact deliverable:** Attack only corrected deletion-certificate
   correlation, reverse witness lifting, descent, and induction, with the full
   D6 no-full-witness and nonempty-`K_k` hypotheses. Do not enter height-only
@@ -523,15 +639,15 @@ as an accepted implementation or mathematical proof.
   `8a6714a63d55d155f06cdc433b4b3e19fff100a4a30640fa6a79fa11b3a3ddd7`;
   confirm exact composer readback, exact normalized post-send copy, and live
   `Stop answering`.
-- **Blocker:** Response63 and 19 safe supplied bundle members are recovered,
-  but no independent replay or mathematical audit has been accepted. Two
-  redundant generated core outputs are intentionally omitted with exact
-  expected sizes, hashes, and reproduction provenance recorded.
+- **Blocker:** The two redundant generated core outputs remain intentionally
+  omitted and quarantined; the independent audit accepts only its exact
+  conditional/open-descent boundary.
 - **Final disposition / promotion authority:** Prompt63 is complete and
-  recovered by `OPS-P63-RECOVER-011` with status **UNVERIFIED**. Every finite
-  computation remains unverified evidence; response self-labels and its
-  pseudo-Lean declaration are not accepted. `MINIMUM-ESCAPE-FIRST-BLOCKER-DESCENT`
-  and corrected DPLP remain conjectural/open. Only `/root` may promote a claim.
+  recovered by `OPS-P63-RECOVER-011`; its disposition is **verified,
+  conditional/open-descent** at the audited boundary. A1, B1--B5, and C1 are
+  accepted only at their exact hypotheses; the finite census is computed
+  evidence only; `MINIMUM-ESCAPE-FIRST-BLOCKER-DESCENT` and corrected DPLP
+  remain conjectural/open. Only `/root` may promote a claim.
 
 ### OPS-P63-RECOVER-011 — Response 63 recovery
 
@@ -542,7 +658,7 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** completed `SOL-P63-PRO-C-001` external turn and supplied
   response/bundle recovery material
 - **Branch:** `research/ops-p63-recover-011`
-- **Status:** `review`
+- **Status:** `integrated`
 - **Exact deliverable:** Recover exact normalized Response63 and safe
   public-release text/source/certificate bundle members, record exact
   provenance and omissions, and preserve the independent-audit boundary.
@@ -555,13 +671,12 @@ as an accepted implementation or mathematical proof.
   `5832a26d51410dd661c545be4490e39dadc445a65fc80590917dc4e1474a0f8b`;
   byte-compare all 19 preserved members, validate safe text-only scope and
   privacy, and document any exact-byte whitespace whitelist.
-- **Blocker:** Independent replay and claim-by-claim mathematical audit remain
-  pending. The two omitted core TSVs must be regenerated for whole-output
-  comparison.
-- **Final disposition / promotion authority:** Recovery is ready for `/root`
-  review. All computations remain unverified finite evidence;
-  `MINIMUM-ESCAPE-FIRST-BLOCKER-DESCENT` and corrected DPLP remain
-  conjectural/open, and no response self-label or pseudo-Lean claim is promoted.
+- **Blocker:** The two omitted core TSVs remain outside accepted evidence; the
+  conditional/open-descent audit boundary does not require their promotion.
+- **Final disposition / promotion authority:** Recovery is integrated in the
+  operations record. The separate `VER-R63-AUDIT-013` disposition is
+  conditional/open-descent; the two omitted core TSVs and all response
+  self-labels remain outside accepted evidence.
 
 ### VER-R63-AUDIT-013 — Response 63 verification
 
@@ -656,7 +771,7 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** accepted `FORM-LUNA-R63-REVERSEGRID-016` result and merged
   formal source tree
 - **Branch:** `docs/ops-rgrid-sync-020`
-- **Status:** `review`
+- **Status:** `integrated`
 - **Exact deliverable:** Synchronize public status, roadmap, board, build log,
   and manuscript to the exact typed declarations and verification boundary;
   remove stale claims that C1 lacks a declaration or that all later commits
@@ -667,11 +782,14 @@ as an accepted implementation or mathematical proof.
 - **Acceptance command:** Verify exact base and ancestry; map every manuscript
   claim to a declaration; require `git diff --check`; confirm the formal
   checkpoint and warm-cache qualification; inspect the final commit diff.
-- **Blocker:** Root review and integration only. The open descent, selector,
-  and unrestricted theorem are research blockers, not documentation blockers.
-- **Final disposition / promotion authority:** Documentation is ready for
-  review only. This task may synchronize C1 to `proved-lean`; it may not
-  promote C2 beyond its encoded deep premise or promote DPLP or LRC.
+- **Blocker:** None for the synchronized documentation; the open descent,
+  selector, and unrestricted theorem are research blockers, not documentation
+  blockers.
+- **Final disposition / promotion authority:** Documentation synchronization
+  is integrated. C1 is `proved-lean` only under the explicit
+  `ReverseGridData` hypotheses at formal checkpoint `586b485`; no declaration
+  proves the deep premise at a first blocker, strict smaller-Delta descent,
+  corrected DPLP, or unrestricted LRC.
 
 ### DPLP-REPAIR-001 — contract repair
 
@@ -857,6 +975,12 @@ as an accepted implementation or mathematical proof.
 8. Launch any unrelated future Luna/xhigh work only through the verified
    top-level CLI route. Do not retry Response63: its input-missing turn is
    invalid and both corrected launches failed before a turn.
+9. Preserve `VER-P64-FALSIFY-022` and `VER-P64-REPAIR-023` as incomplete,
+   rejected-as-evidence records. Do not promote the repaired domain, the
+   prefix, the A/B counts, or the historical pre-defect hash.
+10. Queue `SOL-P65-PRO-C-001` only after PI merges the Prompt65 package; its
+    target is the C1 first-blocker/maximizer transfer, with the exact
+    `N*a_h` to `n*a_j` conversion gap left explicit.
 
 ## Manual field-audit checklist
 
