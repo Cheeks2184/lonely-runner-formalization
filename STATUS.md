@@ -228,9 +228,10 @@ restrictions do not force such a pivot.
 Research is now in **FULL-PROOF PRIORITY MODE**. Tracked unrestricted branches
 and their current dispositions, in priority order, are:
 
-1. C1: prove or refute the first-blocker/maximizer transfer toward corrected
-   DPLP, using the verified ReverseGrid arithmetic, lower-dimensional pivot
-   certificates, the coefficient-three endpoint, and the direct `q=N` branch;
+1. C1: **STOP / OPEN** at the first-blocker/maximizer transfer toward corrected
+   DPLP. Further verifier implementation is frozen unless a real nonvacuous
+   exact case, a direct mathematical proof or refutation, or an independently
+   reviewed new contract first becomes available;
 2. B: prove or refute the unrestricted top-two pivot property, then fall back
    to the exact all-pivot certificate; its immediate target is an integral
    affine-fiber/transversal theorem, not the rejected fractional dual;
@@ -333,12 +334,40 @@ unresolved at stop. No counterexample, `NO-COUNTEREXAMPLE` conclusion, finite
 evidence, theorem, Lean result, or axiom result is promoted. See
 [the Prompt64 Luna audit](docs/prompt64-luna-audit.md).
 
+The Prompt65 preflight and verifier sprint is now closed at **STOP / OPEN**.
+`FORM-P65-SPEC-028` is specification-only/open, and
+`VER-P65-PREFLIGHT-027` is only a conditionally ready execution contract.
+`VER-P65-FALSIFY-028` was rejected after the lead found pass/hit inversion and
+tied-global-minimum masking; its old process was stopped. The broader
+`VER-P65-CODE-AUDIT-030` source audit and `VER-P65-REPAIR-REVIEW-032` rejected
+the attempted verifier architecture and repair. In particular, the C++ path
+was micro-only rather than an independent full transfer/reindex verifier;
+component diagnostics, strict edge validation, vacuity, counters, manifest
+binding, output freshness, unit coverage, and frozen full-driver behavior were
+not all correct. `VER-P65-REPAIR-033` then stopped because its deterministic
+capped first-500 operational search twice reported no actual interior-`tau`
+transfer microcase. That output is **unverified operational output**, not
+computed evidence: no independent verifier or frozen compliant source existed.
+No complete 1,397-row scan was accepted or completed, and no theorem,
+counterexample, Lean/axiom result, or finite-evidence promotion follows. See
+[the Prompt65 preflight audit](docs/prompt65-preflight-audit.md).
+
+The current Lean API has no declarations for `K_k`, `M_k`, complete oriented
+active-edge enumeration, the realization predicate, or the
+`Delta`/`gamma`/first-blocker structures. `ReverseGrid.lean` supplies only the
+local arithmetic under explicit `ReverseGridData` hypotheses. The exact
+unsupported chain remains
+
+```text
+N*a_h crossing -> M_h -> active n*a_j -> successor edge -> Delta<=tau.
+```
+
 `SOL-P64-PRO-B-001` remains waiting: the Prompt64 contract is integrated as a
 documentary package, but the required signed-in ChatGPT Sol Pro conversation
 has never run and Browser/ChatGPT-control is not callable in the current
-runtime. The next unrestricted cell is queued as
-`SOL-P65-PRO-C-001`, `FIRST-BLOCKER-MAXIMIZER-TRANSFER`; its Prompt65 package
-is integrated only after PI merge.
+runtime. `SOL-P65-PRO-C-001`, `FIRST-BLOCKER-MAXIMIZER-TRANSFER`, is likewise
+waiting for external signed-in ChatGPT Sol Pro control. Its tracked Prompt65
+package is a contract only and does not reopen verifier implementation.
 
 The formal source checkpoint is now
 `586b4858cd1b1c513566f3b33d7b5141640e7865`; merged main

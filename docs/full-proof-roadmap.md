@@ -424,10 +424,48 @@ No declaration derives the deep premise at a first blocker or proves Delta
 decreases. That transition, the DPLP selector, and unrestricted LRC therefore
 remain conjectural/open.
 
-The next unrestricted C1 cell is `SOL-P65-PRO-C-001`,
-`FIRST-BLOCKER-MAXIMIZER-TRANSFER`; its package depends on verified ReverseGrid
-integration and this Prompt64 stop record, and is integrated only after PI
-merge.
+### Prompt65 preflight disposition: STOP / OPEN
+
+`FORM-P65-SPEC-028` leaves the target **SPEC-ONLY / OPEN**.
+`VER-P65-PREFLIGHT-027` is a conditionally ready verifier contract, not an
+implementation or result. `VER-P65-FALSIFY-028` is rejected because it inverted
+pass/hit meaning and allowed one successful tied global minimum to mask another
+minimum's failure; the obsolete process was stopped. `VER-P65-CODE-AUDIT-030`
+then recorded the broader source defects rather than accepting the artifact.
+
+`VER-P65-REPAIR-030` is rejected by `VER-P65-REPAIR-REVIEW-032`: the C++ path
+was a micro-only summary rather than an independent transfer/reindex verifier,
+and the package still had defects in fatal component diagnostics, complete
+edge validation, vacuity, counters, manifest binding, stale-test prevention,
+the executable unit matrix, and frozen full-run drivers. The final-sprint
+`VER-P65-REPAIR-033` stopped after its deterministic capped first-500 search
+twice reported no actual interior-`tau` transfer case. Because there was no
+independent verifier or frozen compliant source, this is unverified
+operational output rather than computed evidence. It is not a finite
+mathematical conclusion about the capped domain.
+
+No complete 1,397-row scan was accepted or completed. Nothing in these tasks
+promotes a theorem, counterexample, Lean result, axiom result, or finite
+evidence. The fixture base was checked clean, and the top-level verifier routes
+were authoritatively Luna/xhigh; no private runtime locator is part of the
+public record.
+
+The current Lean API does not define `K_k`, `M_k`, the complete set of oriented
+active edges, the realization predicate, or the `Delta`, `gamma`, and
+first-blocker structures needed by Prompt65. `ReverseGrid.lean` proves local
+arithmetic only under explicit `ReverseGridData`. Thus the exact unsupported
+chain remains
+
+```text
+N*a_h crossing -> M_h -> active n*a_j -> successor edge -> Delta<=tau.
+```
+
+C1 remains **STOP / OPEN**. Freeze further verifier implementation unless a
+real nonvacuous exact case is first supplied, a direct mathematical proof or
+refutation changes the target, or an independently reviewed new contract
+authorizes a new attempt. `SOL-P65-PRO-C-001` remains waiting because callable
+Browser/ChatGPT control for the required external signed-in Sol Pro cell is
+unavailable. The tracked Prompt65 package is only its exact contract.
 
 Equivalently, for each pivot candidate let `S_j(r)` be the nonpivot
 coordinates in the strict deletion-bad set. A deletion certificate has
@@ -446,6 +484,9 @@ alone do not control singleton multiplicity.
   the smallest raw-lift failure; do not spend the budget on another broad box.
 - Reject every proof which averages over a certificate selected independently
   for each deletion without controlling the selector distribution.
+- Do not launch another Prompt65 verifier implementation under the rejected
+  contracts. Reopen only on a real nonvacuous exact case, a direct proof or
+  refutation, or an independently reviewed replacement contract.
 - The first reassessment budget is **one major Sol Pro turn, the completed
   deterministic sweep above, one targeted adversarial construction search,
   and one Lean prototype of the sound implication**. Lower the route's rank if

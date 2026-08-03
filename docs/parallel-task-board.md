@@ -1,7 +1,7 @@
 # Parallel task board
 
 This file is the authoritative coordination record for the public/base
-snapshot at commit `51de33bad6ba251747cd5c37db8e6425e3cb6425`. The formal
+snapshot at commit `80e8cee4bb31bf99733c2687e4674bfdafe03889`. The formal
 source checkpoint remains `586b4858cd1b1c513566f3b33d7b5141640e7865`, as
 recorded below. Historical worker rows retain their actual fixture bases. The
 board records task routing and integration readiness; it does not promote any
@@ -36,21 +36,24 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 11 | The prior ten accepted audits plus the lead disposition for `VER-R63-AUDIT-013` are accepted at exact conditional scope; no Luna endorsement is counted. |
-| Accepted negative audits | 8 | The prior six negative audits plus Response62's failed project-level branch audit and failed residual assembly are valid negative results. |
+| Accepted audit deliverables | 15 | The prior eleven plus `FORM-P65-SPEC-028`, `VER-P65-PREFLIGHT-027`, `VER-P65-CODE-AUDIT-030`, and `VER-P65-REPAIR-REVIEW-032` are each accepted only at their exact specification, contract, or negative-audit scope. |
+| Accepted negative audits | 10 | The prior eight plus the Prompt65 code audit and repair review are valid negative results; rejected verifier output is not counted as computed evidence. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
 | Accepted implementations | 0 unrestricted; 3 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, and exact ReverseGrid arithmetic are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 4 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), board/Prompts60--63 package (`263a1cb`), and ReverseGrid formal source (`586b485`, merged by `99a78c1`) are on main. |
 | Authoritative source replay | integrated / verified warm-cache | Formal source checkpoint `586b485` passed module/root direct compiles, 3,001-job target and 3,590-job root builds, and standard-foundation axiom probes in an isolated warm-cache worktree. Main `99a78c1` has the same Lean tree. The latest full detached clean replay remains the older `263a1cb` record. |
-| Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited by the lead; Prompt64 external execution is waiting. |
-| Queued Sol Pro cells | 1 | `SOL-P65-PRO-C-001` is queued as the next unrestricted C1 cell; external execution is waiting for callable signed-in ChatGPT Sol Pro control. |
+| Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited by the lead; Prompt64 and Prompt65 external executions are waiting. |
+| Queued Sol Pro cells | 1 | `SOL-P65-PRO-C-001` is waiting for callable signed-in ChatGPT Sol Pro control; the tracked prompt is only a contract. |
 | Active Sol Medium leads | 0 running / 3 roles | Verification, Formalization, and Research Operations have completed their current reviewed tranches. |
 | Active Luna workers | 0 / 6 | The ReverseGrid worker had genuine fresh top-level Luna/xhigh runtime metadata but exited without a report or commit; the Formalization Lead independently completed and reviewed the theorem. Historical Response63 routing failures retain their recorded scope. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 6 | The prior five failures plus the ReverseGrid worker that exited without a report or commit are counted. The completed Response63 input-missing route remains unusable but is not counted as a failed launch. |
 | Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
-| Integration backlog | 1 documentation/prompt group | Prompt64 stop record and Prompt65 package await PI merge; the reviewed ReverseGrid theorem source is already at formal checkpoint `586b485`. |
-| Wait time | External control waiting | Browser/ChatGPT-control is not callable in the current runtime; Prompt64 Sol Pro execution and the queued Prompt65 cell have no submitted response. |
+| Prompt65 contracts/specifications | 2 reviewed / 0 promoted | `VER-P65-PREFLIGHT-027` is conditional-ready only and `FORM-P65-SPEC-028` is SPEC-ONLY/OPEN. |
+| Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
+| Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
+| Integration backlog | 1 documentation group | The Prompt65 preflight stop audit awaits PI review; the Prompt65 prompt package and reviewed ReverseGrid source are already tracked. |
+| Wait time | External control waiting | Browser/ChatGPT-control is not callable in the current runtime; Prompt64 and Prompt65 Sol Pro cells have no submitted response. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -583,16 +586,181 @@ as an accepted implementation or mathematical proof.
   accepted or frozen-final. No counterexample, finite conclusion, theorem,
   or Lean/axiom result is promoted.
 
+### VER-P65-PREFLIGHT-027 — Prompt65 verifier preflight
+
+- **ID:** `VER-P65-PREFLIGHT-027`
+- **Lane:** verification / Prompt65 contract preflight
+- **Owner / supervising lead:** Verification Lead
+- **Base:** `80e8cee4bb31bf99733c2687e4674bfdafe03889`
+- **Dependencies:** tracked Prompt65 contract and accepted Response63 boundary
+- **Branch / worktree:** read-only fixture; private local path omitted
+- **Status:** `verified` (conditional-ready contract only)
+- **Exact deliverable:** Specify a faithful, independently checkable execution
+  contract for the first-blocker transfer without weakening its quantifiers.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Review the exact source contract, fixture base, and
+  stop conditions; do not infer implementation readiness from prose.
+- **Blocker:** The contract supplied no verifier, computation, or theorem.
+- **Final disposition / promotion authority:** **CONDITIONAL-READY CONTRACT
+  ONLY.** It authorizes no evidence or mathematical promotion.
+
+### FORM-P65-SPEC-028 — Prompt65 formal specification audit
+
+- **ID:** `FORM-P65-SPEC-028`
+- **Lane:** formal specification / C1 transfer
+- **Owner / supervising lead:** Formalization Lead
+- **Base:** `80e8cee4bb31bf99733c2687e4674bfdafe03889`
+- **Dependencies:** `VER-P65-PREFLIGHT-027` and `ReverseGrid.lean`
+- **Branch / worktree:** read-only fixture; private local path omitted
+- **Status:** `verified` (specification-only)
+- **Exact deliverable:** Locate the precise declaration boundary for
+  first-blocker/maximizer transfer and preserve every intermediate object.
+- **Allowed files:** none; read-only specification audit
+- **Acceptance command:** Trace the tracked Lean API and exact Prompt65 chain.
+- **Blocker:** The API lacks `K_k`, `M_k`, complete oriented active edges, a
+  realization predicate, and `Delta`/`gamma`/first-blocker structures;
+  `ReverseGrid` supplies local arithmetic only.
+- **Final disposition / promotion authority:** **SPEC-ONLY / OPEN.** The exact
+  unsupported chain is `N*a_h crossing -> M_h -> active n*a_j -> successor
+  edge -> Delta<=tau`.
+
+### VER-P65-FALSIFY-028 — rejected Prompt65 falsifier
+
+- **ID:** `VER-P65-FALSIFY-028`
+- **Lane:** Luna verification / Prompt65 falsification
+- **Owner / supervising lead:** fresh top-level Luna/xhigh worker / Verification Lead
+- **Base:** `80e8cee4bb31bf99733c2687e4674bfdafe03889`
+- **Dependencies:** Prompt65 preflight/specification reviews
+- **Branch / worktree:** read-only fixture; private local path omitted
+- **Status:** `rejected`
+- **Exact deliverable:** Implement the exact tied-global-minimum transfer scan
+  with independent checking and no full-domain promotion.
+- **Allowed files:** no repository writes; temporary outputs only
+- **Acceptance command:** Audit pass/hit truth conditions and every tied global
+  minimum before considering output.
+- **Blocker:** Failure was encoded with the wrong sign, and one passing tied
+  minimum could mask another minimum's failure. The obsolete process was
+  stopped.
+- **Final disposition / promotion authority:** **REJECTED.** Partial output is
+  not evidence; no theorem, counterexample, or finite result is promoted.
+
+### VER-P65-CODE-AUDIT-030 — Prompt65 source audit
+
+- **ID:** `VER-P65-CODE-AUDIT-030`
+- **Lane:** verification / adversarial source review
+- **Owner / supervising lead:** Verification Lead
+- **Base:** `80e8cee4bb31bf99733c2687e4674bfdafe03889`
+- **Dependencies:** rejected `VER-P65-FALSIFY-028` source
+- **Branch / worktree:** read-only audit; private local path omitted
+- **Status:** `verified` (negative audit)
+- **Exact deliverable:** Identify all source-level correctness and evidence
+  defects beyond the initially observed status inversion.
+- **Allowed files:** none; read-only source audit
+- **Acceptance command:** Trace diagnostics, validation, transfer aggregation,
+  vacuity, counters, independent implementation, drivers, and binding.
+- **Blocker:** Component failures were not uniformly fatal; strict edge
+  validation was incomplete; vacuity/counters were untruthful; the C++ path
+  lacked independent full transfer/reindex logic; and artifact/driver binding
+  could not establish a current frozen result.
+- **Final disposition / promotion authority:** Accepted negative audit only.
+  It rejects the implementation, not the theorem target.
+
+### VER-P65-REPAIR-030 — rejected Prompt65 repair
+
+- **ID:** `VER-P65-REPAIR-030`
+- **Lane:** Luna verification / Prompt65 source repair
+- **Owner / supervising lead:** fresh top-level Luna/xhigh worker / Verification Lead
+- **Base:** `80e8cee4bb31bf99733c2687e4674bfdafe03889`
+- **Dependencies:** `VER-P65-CODE-AUDIT-030`
+- **Branch / worktree:** read-only fixture with temporary repair outputs;
+  private local path omitted
+- **Status:** `rejected`
+- **Exact deliverable:** Correct transfer semantics and supply independent
+  Python/C++ verification, reindex parity, complete tests, and frozen drivers.
+- **Allowed files:** no repository writes; temporary outputs only
+- **Acceptance command:** Independent review under
+  `VER-P65-REPAIR-REVIEW-032`; no partial output is accepted.
+- **Blocker:** Python status inversion and tied-minimum aggregation were
+  corrected, but the complete independent-verifier and evidence contract was
+  not met.
+- **Final disposition / promotion authority:** **REJECTED.** Repair source and
+  hashes, if retained, are provenance only.
+
+### VER-P65-REPAIR-REVIEW-032 — Prompt65 repair rejection
+
+- **ID:** `VER-P65-REPAIR-REVIEW-032`
+- **Lane:** verification / independent repair review
+- **Owner / supervising lead:** Verification Lead
+- **Base:** `80e8cee4bb31bf99733c2687e4674bfdafe03889`
+- **Dependencies:** `VER-P65-REPAIR-030`
+- **Branch / worktree:** read-only review; private local path omitted
+- **Status:** `verified` (negative audit)
+- **Exact deliverable:** Decide whether the repair satisfies the full
+  Prompt65 source, independence, test, freshness, and publication contract.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Inspect actual C++ control flow, transfer/reindex
+  coverage, final source timestamps, tests, manifests, and driver behavior.
+- **Blocker:** C++ was micro-only/non-independent; component diagnostics,
+  validator coverage, vacuity, counters, manifest binding, stale-test
+  prevention, unit coverage, and frozen full-run drivers remained defective.
+- **Final disposition / promotion authority:** **REJECTED.** Matching
+  micro-output did not exercise a transfer row and establishes no theorem or
+  accepted finite evidence.
+
+### VER-P65-REPAIR-033 — final Prompt65 repair sprint
+
+- **ID:** `VER-P65-REPAIR-033`
+- **Lane:** Luna verification / final Prompt65 repair sprint
+- **Owner / supervising lead:** fresh top-level Luna/xhigh worker / Verification Lead
+- **Base:** `80e8cee4bb31bf99733c2687e4674bfdafe03889`
+- **Dependencies:** both prior Prompt65 rejection records
+- **Branch / worktree:** read-only fixture with temporary repair outputs;
+  private local path omitted
+- **Status:** `rejected` (mandatory stop)
+- **Exact deliverable:** Supply the complete independent verifier and first
+  byte-match at least one real interior-`tau` transfer/reindex case found in
+  the deterministic capped first-500 microdomain.
+- **Allowed files:** no repository writes; temporary outputs only
+- **Acceptance command:** Stop without enlarging the cap if no actual case is
+  found; require independent frozen Python/C++ agreement before evidence.
+- **Blocker:** The capped operational search twice reported no actual
+  interior-`tau` transfer case, triggering the contract's mandatory stop.
+- **Final disposition / promotion authority:** **STOP / REJECT.** The report is
+  unverified operational output, not computed evidence, because no independent
+  verifier or frozen compliant source existed. No complete 1,397-row scan was
+  accepted or completed.
+
+### OPS-P65-STOP-035 — Prompt65 preflight stop synchronization
+
+- **ID:** `OPS-P65-STOP-035`
+- **Lane:** research operations / documentation synchronization
+- **Owner / supervising lead:** Research-Operations Lead
+- **Base:** `80e8cee4bb31bf99733c2687e4674bfdafe03889`
+- **Dependencies:** reviewed dispositions through `VER-P65-REPAIR-033`
+- **Branch:** `docs/p65-preflight-stop-035`
+- **Status:** `review`
+- **Exact deliverable:** Synchronize the Prompt65 stop boundary, exact task
+  dispositions, Lean API gap, evidence labels, and restart rule.
+- **Allowed files:** `STATUS.md`, `docs/full-proof-roadmap.md`,
+  `docs/parallel-task-board.md`, `docs/proof-obligations.md`, and
+  `docs/prompt65-preflight-audit.md`
+- **Acceptance command:** `git diff --check`, added-line privacy/secret scan,
+  allowed-file check, and one documentation commit.
+- **Blocker:** PI review/merge only; no mathematical or implementation work is
+  authorized by this documentation task.
+- **Final disposition / promotion authority:** Documentation review artifact.
+  It promotes no computation, formal result, or unrestricted claim.
+
 ### SOL-P65-PRO-C-001 — FIRST-BLOCKER-MAXIMIZER-TRANSFER
 
 - **ID:** `SOL-P65-PRO-C-001`
 - **Lane:** Sol Pro / PRO-C first-blocker descent
 - **Owner / supervising lead:** unassigned new-chat worker / Research-Operations Lead / `/root`
-- **Base:** future PI-merged main descendant containing
-  `research/sol-pro/prompts/prompt65.md`; exact SHA must be recorded at launch
+- **Base:** tracked Prompt65 contract present at
+  `80e8cee4bb31bf99733c2687e4674bfdafe03889`; exact launch base must still be
+  recorded when external execution becomes available
 - **Dependencies:** verified integration of ReverseGrid C1 through formal
-  checkpoint `586b485`; `VER-P64-REPAIR-023` incomplete stop record; PI merge
-  of the Prompt65 package
+  checkpoint `586b485`; Prompt64 and Prompt65 stop records
 - **Branch:** none; new unrestricted signed-in ChatGPT Sol Pro conversation
 - **Status:** `queued` (execution waiting)
 - **Exact deliverable:** Execute `FIRST-BLOCKER-MAXIMIZER-TRANSFER` exactly as
@@ -601,13 +769,13 @@ as an accepted implementation or mathematical proof.
   gap.
 - **Allowed files:** none during the external turn; recovery requires a
   separately assigned task
-- **Acceptance command:** Verify the exact prompt package after PI merge and
+- **Acceptance command:** Verify the exact tracked prompt package at launch and
   require the contracted status table, two attacks, complete proofs,
   falsification certificates, hashes/commands, one unsupported implication,
   annotated chain, and stop decision.
 - **Blocker:** Browser/ChatGPT-control is not callable in the current runtime,
-  so execution is waiting. The prompt package itself is not integrated until
-  PI merges this documentation commit.
+  so external execution is waiting. The tracked package is a contract only;
+  verifier implementation remains frozen under the Prompt65 stop rule.
 - **Final disposition / promotion authority:** Queued/waiting as the next
   unrestricted C1 cell. No response, proof, finite evidence, or theorem
   promotion exists yet; only `/root` may launch or promote.
@@ -978,9 +1146,13 @@ as an accepted implementation or mathematical proof.
 9. Preserve `VER-P64-FALSIFY-022` and `VER-P64-REPAIR-023` as incomplete,
    rejected-as-evidence records. Do not promote the repaired domain, the
    prefix, the A/B counts, or the historical pre-defect hash.
-10. Queue `SOL-P65-PRO-C-001` only after PI merges the Prompt65 package; its
-    target is the C1 first-blocker/maximizer transfer, with the exact
-    `N*a_h` to `n*a_j` conversion gap left explicit.
+10. Keep `SOL-P65-PRO-C-001` waiting for callable signed-in ChatGPT Sol Pro
+    control. The tracked Prompt65 package is only a contract. Keep C1
+    **STOP / OPEN** and freeze further verifier implementation unless a real
+    nonvacuous exact case, a direct mathematical proof/refutation, or an
+    independently reviewed new contract arises. Preserve the exact
+    `N*a_h crossing -> M_h -> active n*a_j -> successor edge -> Delta<=tau`
+    gap.
 
 ## Manual field-audit checklist
 
