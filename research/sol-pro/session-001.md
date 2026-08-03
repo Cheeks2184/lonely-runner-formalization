@@ -2984,3 +2984,80 @@ Windows UI Automation independently showed the `Pro` and `GPT-5.6 Sol`
 radios selected. The composer read-back matched these exact metrics before a
 physical submission click, and the live `Stop answering` control confirmed
 that the research turn was running.
+
+## Prompt 55 parallel audit: DIAGONAL-HALL refuted
+
+While Prompt 55 remained live, an independent exact search rejected one of
+its requested targets. At `(N,t)=(36,16)`, all seven actual generic candidates
+have at least one edge from the union of the three feasible reversal totals,
+but `{20,22,24}` has only `{41,43}` as its diagonal neighborhood. The full
+Gamma graph is Hall-good by the explicit SDR
+`20->41,21->40,22->45,23->39,24->43,25->38,26->37`. Thus this is a failure of
+`DIAGONAL-HALL`, not coefficient two or LRC. A source-hashed expected-output
+certificate was added as `scripts/audit_gamma_diagonal_obstruction.py`; the
+first dedicated regression test passed under Python 3.14.4.
+
+The same audit enumerated all 56 saturating matchings of the `(20,10)` Gamma
+graph. Its only nonempty tight subsets are `{12,14}` and `{12,14,15}`, and the
+maximal set of vertices not reaching an unmatched neighbor is always
+`{12,14,15}`. Hence internal rematching cannot open a genuinely tight block;
+any repaired augmentation theorem must contract it or introduce edges outside
+its current neighborhood. These facts will be returned to Sol Pro as exact
+objections after the live response completes.
+
+## Response 55 recovered and independently audited
+
+The exact copied response has 23,629 characters, 23,762 UTF-8 bytes, 1,126
+line feeds, a final line feed, and SHA-256
+`51b41a34e7f17025ee1e0fa03ccde2f9cb0f0cd9d64ca039a04fd2a256b5952a`.
+It independently rejected the feasible-total diagonal relation at the first
+possible rectangle row `(32,16)`, where four diagonal rows are empty. Its
+4,733-byte verifier and 687-byte expected output are preserved exactly with
+SHA-256 values `c640d591c6e15b6b53dc91adc629e73ff244e1c273a4b08aa9423efcf5663f8e`
+and `8ff94b024f96bc3c255d678751d1234927827ec2038688cbd89835b7615be43a`;
+local replay matches the expected output. The independent `(36,16)` result is
+strictly stronger for collision analysis because none of its diagonal rows is
+empty.
+
+Three exact Lean attachments were recovered. `PartialMatchingDichotomy.lean`
+(3,543 bytes, SHA-256 `ffe1cd407e214c499680a36e64e7f018f10f85ac8d729a51c3123d965e2b3c2f`)
+and `TightBlockRematching.lean` (2,831 bytes, SHA-256
+`07c46c6a0bc8216b55e71d08a73035ac56ca62797cd4611782db967bc0374d6e`)
+compile with harmless linter warnings. `CoefficientTwoFeasibleStarts.lean`
+(5,664 bytes, SHA-256 `28a555c98bf226d815a82123bc0eec8c260ba003f16956de97a27c0f92cd9cb3`)
+fails at four redundant `dsimp` commands. Removing only those commands gives
+the tracked compiling feasible-start module. The tracked partial-matching
+module removes one unused hypothesis and warning noise without strengthening
+the conclusion.
+
+The graph contraction results G1--G4, total-layer decomposition H1, strip
+lemmas I1--I3, and conditional two-translation class J1 survive independent
+mathematical audit at their exact strengths. A stronger independently written
+`MatchingContraction.lean` module formalizes the complete non-reaching block
+and strict residual. Integrated build and standard-axiom audit passed before
+the formal commit; a fresh no-local checkout replay was then started.
+
+The surviving named gaps are `GAMMA-ATOMIC-EXCLUSION`, a controlled family of
+non-diagonal total layers, and `CUT-OR-STRIP-OVERLOAD`. Exact Gamma Hall,
+coefficient two in every dimension, top-two, and unrestricted Lonely Runner
+remain open. Full details are in `docs/response55-audit.md`.
+
+## Prompt 56 submitted: atomic contraction and controlled total layers
+
+Prompt 56 returns the exact Response 55 compiler audit, the stronger
+all-rows-nonempty `(36,16)` diagonal collision, the independently verified
+matching-contraction module, and the reproduced radius-eight obstruction at
+`(841,420)`. It directs Sol Pro toward atomic contracted-core exclusion,
+candidate-dependent non-diagonal total layers, synchronized strip/cut
+capacity, and extension of the conditional two-translation class. It requests
+Lean only for complete additions not already formalized.
+
+The tracked prompt has 9,546 characters, 9,556 UTF-8 bytes, 189 line feeds, a
+final line feed, and SHA-256
+`4456ddbe4a18d3666ec2ca2dd79797a1bd6776290b3b978b91491ed87ab7c74e`.
+After removing only the final newline, the exact composer value has 9,545
+characters, 9,555 UTF-8 bytes, 188 line feeds, and SHA-256
+`8c016e3f18e57a129a1fb582c685fe0b5db0832841269b1ffc4b64ceb91d2992`.
+The composer read-back matched exactly. Windows UI Automation showed both the
+`Pro` radio and the `GPT-5.6 Sol` submenu radio selected before submission;
+the live `Stop answering` control confirmed that the turn was running.

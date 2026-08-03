@@ -333,6 +333,26 @@ not refute the sound pointwise minorant, the full Chebyshev score, or LRC:
 the last three full scores are positive, and `t=7/30` is a direct witness.
 See `docs/quadratic-chebyshev-failure.md`.
 
+## 2026-08-02: all feasible reversal diagonals need not satisfy Hall
+
+The full interval of feasible crossed-rectangle starts does not supply a Hall
+relation merely by taking every reversal edge `d=Q_s-c`. The first exact
+nonempty-row collision occurs at `(N,t)=(36,16)`. Its starts are
+`{11,12,13}`, its totals are `{63,64,65}`, and all seven actual candidate rows
+are nonempty, but
+
+```text
+Gamma_diagonal({20,22,24})={41,43}.
+```
+
+The full Gamma graph is Hall-good, with explicit SDR
+`20->41,21->40,22->45,23->39,24->43,25->38,26->37`. Therefore this is not a
+coefficient-two or LRC counterexample. It proves that any variable-total
+reversal proof must augment with non-diagonal Gamma edges; shared-prime
+blocking and collisions cannot be dismissed row by row. The exact verifier
+and expected output are `scripts/audit_gamma_diagonal_obstruction.py` and
+`certificates/gamma_diagonal_obstruction_expected.txt`.
+
 One tempting summary of the logarithmic-height argument is also false: the
 growth condition does not force the denominator interval length `L` to satisfy
 `L>=c`. The exact case `N=21,t=1,c=11` has `L=9<c`. The valid conclusion is

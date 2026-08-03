@@ -167,6 +167,17 @@ This equivalence does not prove either side.
   on every nonempty subset is equivalent to reachability of an
   unmatched-neighbor vertex from every left vertex. The theorem accepts a
   supplied saturating matching; it does not construct one arithmetically.
+- **Lean-verified feasible starts, rematching dichotomy, and contraction:**
+  `CoefficientTwoFeasibleStarts.lean` proves the exact natural-number interval
+  of starts satisfying rectangle coverage, right inclusion, and both exact
+  Gamma sum bands under `16 <= t`, `2*t <= N`, and nonemptiness of the generic
+  band. `PartialMatchingDichotomy.lean` shows that after insertion the enlarged
+  left set either has a saturating matching, possibly after rematching all old
+  vertices, or has an exact deficiency-one subset; insertion may be a no-op.
+  Given a saturating
+  matching, `MatchingContraction.lean` proves its complete non-reaching region
+  tight and its induced residual strict-Hall. These are structural reductions,
+  not a construction of the missing Gamma matching.
 - **Audited mathematics plus finite evidence:** coefficient-two no-witness
   assumptions force every coprime complementary extra in `Gamma(c)` to be
   occupied. Exact degree bounds and a complete bounded classification reduce
@@ -204,11 +215,11 @@ Active research branches are:
 
 1. close the finite-to-uniform gap in the coefficient-two Gamma selector;
    asymptotically the active generic branch follows from coprime interval
-   matchings, while a new exact failure would have to be a connected
-   deficiency-one critical incidence core with `N>=20`; the explicit current
-   subproblems are augmenting reachability with tight-block contraction,
-   Hall for the family of feasible reversal totals, and endpoint
-   prime-support overload;
+    matchings, while a new exact failure would have to be a connected
+    deficiency-one critical incidence core with `N>=20`; the explicit current
+    subproblems are augmenting reachability with tight-block contraction,
+    exploiting Gamma edges outside the now-refuted family of feasible
+    reversal diagonals, and endpoint prime-support overload;
 2. prove the corrected disjunction between one-sided robust cover numbers and
    nonempty multi-shift transversals; unconditional paired existence is
    refuted by an empty-grid row;
@@ -221,7 +232,7 @@ Active research branches are:
 ## Latest verification
 
 Last clean Lean source checkpoint:
-`e88207b6f2c9b83cd0b6a7d232f447b9087435d0`.
+`4911ed7f962b86e7337b90dd24ffb0fd897d0b08`.
 
 Pinned environment:
 
@@ -234,24 +245,22 @@ Pinned environment:
 Clean no-local-clone ext4 verification at that source checkpoint:
 
 ```text
-Pinned cache restoration: real 94.01
-Build completed successfully (3062 targets): real 208.20
-Trust audit: 276 theorem reports; only propext, Classical.choice, Quot.sound
-Trust audit: real 6.51
+Pinned cache restoration: real 135.25
+Build completed successfully (3585 jobs): real 209.91
+Trust audit: 281 theorem reports; only propext, Classical.choice, Quot.sound
+Trust audit: real 6.67
 ```
 
 The checkout was cloned with `git clone --no-local`, its HEAD exactly matched
 the checkpoint, and its tracked tree remained clean before and after all
 commands. `LEAN_NUM_THREADS=2` constrained the replay to two Lean workers on
-the 8 GB WSL instance. The target count is Lake's current integrated build
-plan after cache restoration; the earlier source checkpoint's clean replay
-reported 3,580 jobs under the prior cache state.
+the 8 GB WSL instance.
 
-Separately, the staged authoritative working tree, which adds the 154th Gamma
-dependency-sweep test without changing the Lean source commit, passed:
+Separately, the authoritative working tree adds the source-hashed diagonal
+obstruction test and passed the expanded suite:
 
 ```text
-Ran 154 tests in 327.399s
+Ran 155 tests in 328.879s
 OK
 ```
 

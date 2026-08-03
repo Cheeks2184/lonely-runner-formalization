@@ -572,6 +572,9 @@ a vertex. This gives a linear audit after constructing a matching, but it is
 not yet a uniform arithmetic construction. A completed descending matching
 already has a tight dependency block at `(N,t)=(20,10)`, despite the full
 Gamma graph being matchable. Current work therefore attacks augmenting paths
-with tight-block contraction, the full interval of feasible reversal totals,
-and endpoint prime-support overload. The exact gaps are `GAMMA-AUGMENT`,
-`DIAGONAL-HALL`, and `ENDPOINT-OVERLOAD`; see `docs/response54-audit.md`.
+with tight-block contraction, additional non-diagonal edges beyond the
+feasible reversal totals, and endpoint prime-support overload. The bare
+`DIAGONAL-HALL` statement is false at `(N,t)=(36,16)`: every diagonal row is
+nonempty, yet `{20,22,24}` has only `{41,43}` as neighbors, while the full
+Gamma graph has an explicit SDR. The exact surviving gaps are
+`GAMMA-AUGMENT` and `ENDPOINT-OVERLOAD`; see `docs/response54-audit.md`.

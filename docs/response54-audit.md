@@ -152,7 +152,10 @@ reversal total, private neighbor, or two-hole witness from every such path.
 ## Remaining gap
 
 The new graph theorem makes a fixed matching audit efficient but does not
-construct the missing uniform arithmetic matching. `GAMMA-AUGMENT`,
-`DIAGONAL-HALL`, and `ENDPOINT-OVERLOAD` are explicit open statements. No
-result in Response 54 proves exact Gamma Hall, coefficient two for every
-dimension, top-two, or unrestricted LRC.
+construct the missing uniform arithmetic matching. Subsequent exact search
+refuted `DIAGONAL-HALL` at `(N,t)=(36,16)`: all seven actual candidates have a
+feasible reversal-diagonal neighbor, but `{20,22,24}` has neighborhood
+`{41,43}`. The full Gamma graph has an explicit SDR, so non-diagonal Gamma
+edges are essential. `GAMMA-AUGMENT` and `ENDPOINT-OVERLOAD` remain open. No
+result in Response 54 or this counterexample proves exact Gamma Hall,
+coefficient two for every dimension, top-two, or unrestricted LRC.

@@ -397,3 +397,35 @@ even majority and cannot be coprime-matched. Candidate pruning removes `8`
 and `9`, leaving `{10,11,12}`, which does match. Exact finite control of this
 pruning, or a direct triangular coprime-pair theorem for the critical cores,
 is the remaining task.
+
+## Refuted union of feasible reversal diagonals
+
+Using every feasible rectangle start does not by itself repair the fixed-total
+reversal construction. At `(N,t)=(36,16)`, one has `ell=8`, feasible starts
+`{11,12,13}`, reversal totals `{63,64,65}`, and actual candidates
+`{20,21,22,23,24,25,26}`. Retaining `d=Q-c` exactly when `gcd(c,Q)=1` gives
+
+```text
+20:{43}       21:{43,44}    22:{41,43}    23:{40,41,42}
+24:{41}       25:{38,39}    26:{37}.
+```
+
+Every row is nonempty, but `{20,22,24}` has only the two neighbors `{41,43}`.
+Thus the diagonal union violates Hall. The full Gamma graph is Hall-good; one
+explicit SDR is
+
+```text
+20->41, 21->40, 22->45, 23->39, 24->43, 25->38, 26->37.
+```
+
+Every displayed pair has `52<c+d<=72` and is coprime. Exhaustion of the exact
+domain beginning at the minimal possible `N=32` shows `(36,16)` is the first
+lexicographic diagonal failure in which every candidate row is nonempty.
+Reproduce the source-hashed certificate with
+
+```bash
+python3 scripts/audit_gamma_diagonal_obstruction.py
+```
+
+This rejects `DIAGONAL-HALL`, not Gamma Hall: any surviving reversal strategy
+must use additional non-diagonal Gamma edges or an augmentation principle.

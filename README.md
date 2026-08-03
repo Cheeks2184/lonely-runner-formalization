@@ -100,6 +100,26 @@ Strict Hall for every nonempty subset is equivalent to every left vertex
 reaching such a vertex. This makes fixed finite audits efficient, but it does
 not construct the missing uniform arithmetic matching.
 
+Three further modules formalize the surviving Response 55 structure.
+`CoefficientTwoFeasibleStarts.lean` proves the exact interval of every
+rectangle start satisfying coverage and the strict/closed Gamma bands, under
+`16 <= t`, `2*t <= N`, and nonemptiness of the generic band.
+`PartialMatchingDichotomy.lean` proves that after a left vertex is inserted,
+the enlarged left set either admits a saturating matching, possibly after
+rematching the old set, or exposes an exact deficiency-one subset. If the
+vertex was already present, the enlarged set is unchanged.
+`MatchingContraction.lean` proves that the full non-reaching region is tight
+and that deleting it and its matched image leaves a strict-Hall residual.
+All are finite structural theorems; none constructs the original Gamma
+matching or proves the all-dimension selector.
+
+The proposed union of all feasible reversal diagonals is now **rejected**, not
+open: at `(N,t)=(36,16)` every candidate has a diagonal neighbor, but
+`{20,22,24}` has only `{41,43}`. The full Gamma graph is nevertheless
+Hall-good by an explicit SDR, so this refutes only `DIAGONAL-HALL`, not the
+coefficient-two selector or LRC. The exact certificate is reproducible with
+`python3 scripts/audit_gamma_diagonal_obstruction.py`.
+
 The strongest additional computer-assisted manuscript theorem covers maximum
 speed `n+5`. Its 134,568-case finite core and uniform arithmetic proof have
 been independently audited, but the combined theorem is not yet one Lean
@@ -165,6 +185,9 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 - [gamma-dependency-sweep.md](docs/gamma-dependency-sweep.md): hardened finite
   matching grids, the separate `N=20000` reachability audit, exact domains,
   hashes, and interpretation.
+- [response55-audit.md](docs/response55-audit.md): exact diagonal
+  counterexamples, tight-block contraction, compiler results, and surviving
+  arithmetic gaps.
 - [computation.md](docs/computation.md): computational scope and interpretation.
 - [publication-audit.md](docs/publication-audit.md): public-release privacy,
   secret-scanning, and redistribution audit.
@@ -179,9 +202,9 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
 The current clean Lean source checkpoint is
-`e88207b6f2c9b83cd0b6a7d232f447b9087435d0`; see
+`4911ed7f962b86e7337b90dd24ffb0fd897d0b08`; see
 [STATUS.md](STATUS.md) for its exact build and trust results and the separate
-staged-working-tree test result.
+working-tree test result.
 
 Install [Elan](https://github.com/leanprover/elan), clone the repository, and
 run from its root:

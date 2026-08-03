@@ -1,0 +1,12 @@
+python_version=3.13.5
+search_rows_checked=1
+first_diagonal_failure=(N,t)=(32,16)
+rectangle=(q,ell,a,b,s_min,s_max)=(4,8,13,24,9,9)
+candidate_set=(14, 16, 17, 18, 19, 20, 21, 22, 23, 24)
+feasible_totals=(57,)
+diagonal_neighborhoods=((14, (43,)), (16, (41,)), (17, (40,)), (18, ()), (19, ()), (20, (37,)), (21, ()), (22, (35,)), (23, (34,)), (24, ()))
+diagonal_matching_size=6/10 matching=((14, 43), (16, 41), (17, 40), (20, 37), (22, 35), (23, 34))
+empty_diagonal_rows=(18, 19, 21, 24)
+full_gamma_matching_size=10/10
+full_gamma_matching=((14, 43), (16, 41), (17, 38), (18, 37), (19, 36), (20, 33), (21, 40), (22, 39), (23, 34), (24, 35))
+diagonal_hall_rejected_but_gamma_hall_passes=PASS

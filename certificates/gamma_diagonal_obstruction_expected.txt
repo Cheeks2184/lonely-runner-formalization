@@ -1,0 +1,12 @@
+N=36 t=16 H=52 ell=8
+candidates=(20, 21, 22, 23, 24, 25, 26)
+feasible_starts=(11, 12, 13)
+reversal_totals=(63, 64, 65)
+diagonal_neighbors={20: (43,), 21: (43, 44), 22: (41, 43), 23: (40, 41, 42), 24: (41,), 25: (38, 39), 26: (37,)}
+deficient_subset=(20,22,24)
+deficient_neighborhood=(41,43)
+all_diagonal_rows_nonempty=True
+first_lex_nonempty_row_failure=(36,16)
+full_gamma_explicit_sdr={20: 41, 21: 40, 22: 45, 23: 39, 24: 43, 25: 38, 26: 37}
+DIAGONAL_HALL_REFUTED=True
+FULL_GAMMA_HALL_GOOD=True

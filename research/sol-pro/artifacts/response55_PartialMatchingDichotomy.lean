@@ -15,20 +15,18 @@ noncomputable def choices (adj : L → R → Prop) [DecidableRel adj]
     (x : L) : Finset R :=
   Finset.univ.filter fun y => adj x y
 
-omit [Fintype L] [DecidableEq L] [DecidableEq R] in
 @[simp] theorem mem_choices (adj : L → R → Prop) [DecidableRel adj]
     (x : L) (y : R) :
     y ∈ choices adj x ↔ adj x y := by
   simp [choices]
 
-/-- Given a partial matching on `P`, the enlarged subtype `insert x P` either
-admits some saturating matching (which may rematch every vertex of `P`) or has
-a nonempty left subset with exact deficiency one. The theorem does not require
-`x \notin P`, so insertion may be a no-op. The disjunction makes no claim that
-the two existential properties are mutually exclusive in the ambient graph. -/
+/-- A partial matching on `P`, when one new left vertex `x` is added, either
+extends to all of `insert x P` or there is a nonempty left subset with exact
+deficiency one.  The disjunction makes no claim that the two existential
+properties are mutually exclusive in the ambient graph. -/
 theorem extension_or_deficiency_one
     (adj : L → R → Prop) [DecidableRel adj]
-    (P : Finset L) (x : L)
+    (P : Finset L) (x : L) (hx : x ∉ P)
     (mate : L → R)
     (hinj : Set.InjOn mate (↑P : Set L))
     (hmatch : ∀ z ∈ P, adj z (mate z)) :

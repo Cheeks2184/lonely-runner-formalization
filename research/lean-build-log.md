@@ -1387,3 +1387,58 @@ it discarded the pinned compiled mathlib cache and began recompiling mathlib
 itself from source, which is not the documented clean-checkout procedure. It
 was stopped without changing tracked source; the cache was then restored and
 the complete procedure above succeeded.
+
+## 2026-08-02: feasible starts and matching contraction
+
+Response 55 supplied three compiler-targeted Lean attachments. Exact replay
+against Lean/mathlib 4.32.1 gave:
+
+- `PartialMatchingDichotomy.lean`: compiled, with one unused-section and one
+  unused-hypothesis warning;
+- `TightBlockRematching.lean`: compiled, with one unused-section warning;
+- `CoefficientTwoFeasibleStarts.lean`: failed at lines 98, 107, 141, and 146
+  because four `dsimp` commands made no progress.
+
+The exact attachment hashes and sources are preserved under
+`research/sol-pro/artifacts/`. Removing only those four no-op commands repaired
+the feasible-start theorem. The tracked partial-matching module removes the
+unused `hx` hypothesis and linter noise without strengthening its conclusion.
+An independently developed `MatchingContraction.lean` module proves the
+complete non-reaching set tight and its induced residual strict-Hall.
+
+An integrated ext4 build of the three new modules and root imports succeeded
+before commit. The formal source was then committed as
+`4911ed7f962b86e7337b90dd24ffb0fd897d0b08` and cloned with `git clone
+--no-local` into a new native-WSL checkout. The checkout exactly matched that
+commit and was clean before verification. The authoritative replay reported:
+
+```text
+Pinned cache restoration: real 135.25
+Build completed successfully (3585 jobs).
+real 209.91
+Trust audit accepted 281 theorem reports.
+real 6.67
+CLEAN_FORMAL_HEAD=4911ed7f962b86e7337b90dd24ffb0fd897d0b08
+CLEAN_FORMAL_TREE_CLEAN
+```
+
+The five new root probes cover the feasible-start equivalence, partial
+matching dichotomy, and the three contraction conclusions; the two
+fixed-matching dependency probes remain in the audit. Every audited report
+used only `propext`, `Classical.choice`, and `Quot.sound`. These theorems
+formalize structural matching reductions and exact rectangle geometry; they do not construct the
+missing uniform Gamma matching.
+
+The expanded authoritative working-tree regression and certificate suite then
+reported:
+
+```text
+Ran 155 tests in 328.879s
+OK
+real 331.70
+```
+
+The new test verifies the SHA-256 of the independent `(36,16)` diagonal-Hall
+counterexample source and compares its complete deterministic output to the
+tracked expected file. It is a refutation of one sufficient relation, not a
+Gamma-Hall or LRC counterexample.

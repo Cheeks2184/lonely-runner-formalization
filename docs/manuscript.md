@@ -2473,6 +2473,8 @@ a=floor(3*(N-t)/4)+1,
 b=floor((N+t)/2).
 ```
 
+Assume `16<=t`, `2*t<=N`, and `a<=b`, so the generic band is nonempty.
+
 For an arbitrary natural start `s`, the union of the two adjacent left
 rectangles is `[s,s+2*ell-1]`. It covers `[a,b]` exactly when
 `s<=a` and `b<s+2*ell`. The minimum crossed sum is
@@ -2507,16 +2509,107 @@ subtraction guarded by rectangle membership; and
 `rectangleReversal_gives_sdr` combines coverage, injectivity, exact extra
 bounds, and the strict/closed band theorem.
 
-The full feasible-start interval above is audited manuscript mathematics;
-only the least-start fixed-total theorem is presently Lean-verified. Combining
-several totals is not automatic because
+`CoefficientTwoFeasibleStarts.rectangleStartFeasible_iff` Lean-verifies the
+full feasible-start interval under the three hypotheses above. The
+arbitrary-start reversal-to-SDR implication remains audited manuscript
+mathematics; only the least-start fixed-total version is presently
+Lean-verified in `CoefficientTwoReversal.lean`. Combining several totals is
+not automatic because
 
 ```text
 Q-c=Q'-c' iff c'-c=Q'-Q.
 ```
 
-The resulting `DIAGONAL-HALL` statement remains open. Likewise, endpoint
-coprime-free strips satisfy exact prime-cover union bounds, but no theorem yet
-forces one strip to exceed its available prime cover. These are the current
-variable-total and endpoint-synchronization obstructions, not completion
-claims.
+The resulting `DIAGONAL-HALL` statement is an exact testable obligation; the
+next section rejects it. Endpoint coprime-free strips satisfy exact prime-cover
+union bounds, but no theorem yet forces one strip to exceed its available
+prime cover. This is an endpoint-synchronization obstruction, not a completion
+claim.
+
+## 53. Exact obstruction to diagonal Hall
+
+The `DIAGONAL-HALL` statement is false. Take `N=36`, `t=16`, so `H=52` and
+`ell=8`. The complete feasible-start interval is `{11,12,13}`, giving totals
+`{63,64,65}`. The exact actual generic candidate set is
+`C={20,21,22,23,24,25,26}`. For each `c`, retain `Q-c` precisely when
+`gcd(c,Q)=1`. The resulting rows are
+
+```text
+20:{43}       21:{43,44}    22:{41,43}    23:{40,41,42}
+24:{41}       25:{38,39}    26:{37}.
+```
+
+Although every row is nonempty, the subset `{20,22,24}` has neighborhood
+`{41,43}`. Hall's inequality fails because `2<3`. This is a genuine collision
+obstruction, not merely an individually blocked row.
+
+It is not a Gamma-Hall counterexample. The full exact Gamma graph admits
+
+```text
+20->41, 21->40, 22->45, 23->39, 24->43, 25->38, 26->37.
+```
+
+The images are distinct; direct calculation gives `52<c+d<=72` and
+`gcd(c,d)=1` in every row. Hence the missing edges are precisely useful
+non-diagonal Gamma edges. Exact enumeration from the minimal parameter
+`N=32` through this row proves that `(36,16)` is the first lexicographic
+failure with every diagonal row nonempty. The public expected-output test also
+checks the script hash. Therefore feasible reversal totals remain useful
+conditional matchings, but their bare union cannot be the uniform selector.
+
+## 54. Canonical contraction of a fixed matching
+
+Continue with a finite bipartite relation `E` and an injective matching `M`
+which saturates every left vertex. Let `U` consist of exactly those left
+vertices from which no dependency path reaches a vertex seeing a globally
+unmatched right vertex.
+
+If `x` belongs to `U` and `x` has a dependency edge to `y`, then any path from
+`y` to a marked vertex would extend to one from `x`; hence `y` also belongs to
+`U`. A member of `U` cannot itself be marked because the reflexive path would
+witness reachability. Thus `U` is successor-closed and mark-free. By
+`tight_iff_successorClosed_and_avoidsBad`,
+
+```text
+|N(U)|=|U|.
+```
+
+This is `nonReachingSet_tight` in `MatchingContraction.lean`.
+
+Delete `U` on the left and the matched image `M(U)` on the right. Injectivity
+ensures that restricting `M` gives a well-defined injective matching of every
+residual left vertex. A globally unmatched right vertex cannot lie in `M(U)`
+and remains unmatched by the residual matching. Moreover, every dependency
+path ending at a vertex which reaches a global mark stays outside `U`:
+otherwise its suffix would contradict membership in `U`. The path therefore
+lifts to the residual subtype and ends at a residual marked vertex.
+
+Consequently every residual left vertex reaches a residual mark. Applying the
+already verified fixed-matching equivalence gives
+
+```text
+for every nonempty residual A, |A|<|N_residual(A)|.
+```
+
+Lean proves the path lifting as
+`residual_reflTransGen_of_reflTransGen_reaches_bad`, the reachability statement
+as `residual_every_vertex_reaches_bad`, and the final expansion as
+`residual_strictHall`. Their axiom probes report only `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+This is a canonical decomposition of a graph for which a saturating matching
+is already known. It cannot prove Gamma Hall by itself: a hypothetical
+deficient Gamma graph supplies no saturating matching to begin with, and
+contracting a tight block destroys the clean sliding-interval form. The exact
+remaining arithmetic question is whether an atomically critical contracted
+Gamma core can exist.
+
+The companion `PartialMatchingDichotomy.lean` formalizes the exact local
+alternative used when building a matching. After a left vertex is inserted,
+either the enlarged left subtype admits some saturating matching, possibly
+after rematching every old vertex, or finite Hall produces a nonempty subset
+with deficiency at least one. Deleting the inserted vertex from that subset
+and using the old matching bounds the deficit by one, so the neighborhood size
+is exactly `|T|-1`. The theorem does not assume that the vertex was absent, so
+insertion can leave the subtype unchanged. This exposes a critical block but
+does not prove that Gamma arithmetic can augment through it.
