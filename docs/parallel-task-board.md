@@ -43,15 +43,15 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 29 | The prior 27 plus independent ACCEPT review `VER-LUNA-P66-REPLAY-SUPERVISE-070` and verified negative read-only review `OPS-P66-REPLAY-DOCSYNC-REVIEW-078` are accepted only at their exact scopes. The independently replayed computation is promoted only as computed finite evidence; no response self-label, theorem, packing claim, or unrestricted result is promoted. |
-| Accepted negative audits | 15 | The prior 14 plus `OPS-P66-REPLAY-DOCSYNC-REVIEW-078` are valid negative results; 078 rejected only the documentation sync until five exact corrections are made. Rejected verifier output and unsupported supplied flags are not counted as promoted evidence. |
-| Accepted operational documentation tasks | 3 | `OPS-SOL-HIGH-PRO-ROUTING-059`, `OPS-SOL-HIGH-PRO-ROUTING-CORRECT-062`, and `OPS-P66-P64-LIFECYCLE-SYNC-071` are accepted only at their reviewed operational scopes. Task 077 requires correction and task 080 remains in review, so neither is counted. |
-| Accepted recovery deliverables | 4 | Response59, Response62, Response63, and Prompt66 recovery deliverables are recorded without promoting claims. Prompt66 recovery preserves the exact clipboard, safe ZIP members, and separate SHA list, subject to the recorded path/packaging corrections. |
-| Accepted implementations | 0 unrestricted; 5 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, exact ReverseGrid arithmetic, supplied packing adapter, and independent Prompt66 replay verifier are integrated; none proves an open bridge. |
-| Integrated deliverable groups | 6 | The prior five groups plus the independently reviewed Prompt66 replay package integrated by `/root` in merge `fc2d023e9df1c554cc67fadedece1325e72694b` are integrated. The adapter still promotes only `exists_avoiding_of_overlapCapacity` and `exists_pivot_certificate_of_overlapPacking` to `proved-lean`. |
+| Accepted audit deliverables | 35 | The prior 29 plus `FORM-P64-RESPONSE-MATH-AUDIT-081`, `VER-P64-COMPUTE-REPLAY-082`, `FORM-P64-SCALING-EDGE-083`, `OPS-P66-REPLAY-DOCSYNC-REVIEW-084`, `FORM-P64-PACKAGE-REVIEW-086`, and `VER-P64-PACKAGE-REVIEW-087` are accepted only at their exact qualified mathematics, computed-evidence, correction, or package-review scopes. |
+| Accepted negative audits | 16 | The prior 15 plus `FORM-P64-SCALING-EDGE-083` are valid negative results at exact scope: 083 rejects only the literal strict scaling edge and accepts the manuscript result after `r<M<=dM` correction. |
+| Accepted operational documentation tasks | 4 | The prior three plus corrected Prompt66 replay synchronization `OPS-P66-REPLAY-DOCSYNC-CORRECT-080`, accepted by review 084 and integrated in merge `2f6b3f5f2faea5966d1ecb6f9108b4fb5e6a1d2e`, are accepted. Task 088 remains in review and is not counted. |
+| Accepted recovery deliverables | 5 | Response59, Response62, Response63, Prompt66, and Prompt64 recovery packages are integrated without promotion by response self-label. Prompt64 preserves one normalized response and exactly three canonical attachments. |
+| Accepted implementations | 0 unrestricted; 7 supporting artifacts | The prior five plus the recovered/replayed Prompt64 C++ sweep and Python targeted-stress implementations are integrated; none proves an open bridge. |
+| Integrated deliverable groups | 8 | The prior six plus corrected Prompt66 documentation merge `2f6b3f5f2faea5966d1ecb6f9108b4fb5e6a1d2e` and accepted Prompt64 recovery-package merge `ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70` are integrated. |
 | Authoritative source replay | integrated / verified clean ext4 | Merge `fadc65d` passed cache retrieval (8,638 artifacts), full `lake build`, a 302-report standard-foundation trust audit, and all 160 Python tests in a clean ext4 replay. |
-| Active Sol Pro cells | 1 / 4 | `SOL-P64-PRO-B-001` is active in the original signed-in desktop conversation launched by `/root`; Prompt66 is completed/recovered at STOP/OPEN and Prompt65 remains parked/frozen. |
-| Prepared / parked Sol Pro cells | 1 | `SOL-P65-PRO-C-001` is prepared/parked/frozen. Prompt64 is active, not parked; Prompt66 is completed/recovered. |
+| Active Sol Pro cells | 0 / 4 | Prompt64 and Prompt66 are completed/recovered at STOP/OPEN. Prompt65 remains prepared/parked/frozen and must not be launched. |
+| Prepared / parked Sol Pro cells | 1 | `SOL-P65-PRO-C-001` is prepared/parked/frozen and must not be launched. Prompt64's exact top-two ratio route is completed/frozen. |
 | Active Sol Medium leads | 0 running / 3 roles | The Verification Lead has completed and accepted read-only supervision of `LUNA-P66-CERT-REPLAY-069`; Formalization and Research Operations have completed their reviewed audit/synchronization tranches. |
 | Active Luna workers | 0 / 6 | `LUNA-P66-CERT-REPLAY-069` completed its independent strict replay and is no longer active. Its exact finite evidence is accepted only at the reviewed scope; it supplies no theorem or unrestricted result. |
 | Queued Luna workers | 0 | The failed packing-search attempts are closed; the independent Prompt66 certificate replay is completed, not queued. |
@@ -61,9 +61,9 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 | Prompt65 contracts/specifications | 2 reviewed / 0 promoted | `VER-P65-PREFLIGHT-027` is conditional-ready only and `FORM-P65-SPEC-028` is SPEC-ONLY/OPEN. |
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
-| Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
-| Integration backlog | 1 corrected documentation group pending review | The Prompt66 replay implementation is integrated by `/root` merge `fc2d023e9df1c554cc67fadedece1325e72694b1`; the corrected 077/080 documentation group remains pending independent and root acceptance. The response's STOP/OPEN self-disposition remains distinct, and only independently replayed finite evidence is recorded. |
-| Wait time | 0 external-control waits | Prompt64 is active, Prompt65 is deliberately parked/frozen, Prompt66 is recovered, and its independent Luna replay is completed. |
+| Unrestricted route reassessment | C2 first; B packing open; P64/C1/A frozen | The next distinct unrestricted contract is C2 prime-forcing product induction. `PACK-09` remains open, while Prompt64's ratio route and C1/A are frozen. |
+| Integration backlog | 1 global-status group pending review | P66 correction 080 and the P64 package are integrated; only `OPS-P64-GLOBAL-STATUS-SYNC-088` remains pending independent and root acceptance. |
+| Wait time | 0 external-control waits | No Sol Pro cell is active. Prompt65 is deliberately parked/frozen and must not be launched. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -522,7 +522,7 @@ as an accepted implementation or mathematical proof.
   positive-integer result, or unrestricted LRC promotion. Only `/root` may
   authorize launch or promotion.
 
-### SOL-P64-PRO-B-001 — active Prompt64 execution
+### SOL-P64-PRO-B-001 — completed Prompt64 execution
 
 - **ID:** `SOL-P64-PRO-B-001`
 - **Lane:** Sol Pro / PRO-B top-two execution
@@ -533,7 +533,7 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** integrated `OPS-P64-CONTRACT-018`; Prompt66 STOP/OPEN
   recovery and audits identify this as the closest Bridge-B thin API
 - **Branch:** none during the signed-in Sol Pro conversation
-- **Status:** `active`
+- **Status:** `verified` (completed/recovered; STOP/OPEN)
 - **Exact deliverable:** Execute the exact Prompt64 contract in the required
   signed-in ChatGPT Sol Pro conversation and return the contracted status,
   proof/refutation, falsification, and stop decision.
@@ -545,13 +545,16 @@ as an accepted implementation or mathematical proof.
   original desktop session at 2026-08-03 15:24:40 CDT. Direct UI readback
   showed Chat true, Work false, `GPT-5.6 Sol` true, `Pro` true, and `Stop
   answering` true. No URL or session ID is recorded.
-- **Final disposition / promotion authority:** Active research cell only.
+- **Final disposition / promotion authority:** Completed/recovered at
+  STOP/OPEN; the exact route is frozen under its stop contract.
   Tracked Prompt64 SHA-256 is
   `8d76932982c27de5477cead9b081520651f757aae75e14f9e1f4d2826475d20b`;
   exact UI payload/readback SHA-256 is
   `cb7adeaa3b7ad1a2aea3c63b91e86a180b83e6ef8343cc5432639e504d9d8555`.
-  Launch promotes no theorem or finite evidence. Only `/root` may review or
-  promote a result.
+  Package commit `12922204bdf1ea1c0271767a461d9324a6b40a4f` is integrated by
+  `/root` in merge `ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70` after ACCEPT reviews
+  086 and 087. Computation is finite evidence only; the target,
+  owner-transversal, exact pivot selector, and unrestricted LRC remain open.
 
 ### VER-P64-FALSIFY-022 — incomplete Prompt64 falsification attempt
 
@@ -1932,7 +1935,7 @@ as an accepted implementation or mathematical proof.
   `OPS-P66-REPLAY-DOCSYNC-REVIEW-078`
 - **Branch / worktree:** `ops/p66-replay-sync-recovery-077` in its isolated
   worktree
-- **Status:** `review` (pending independent and root acceptance)
+- **Status:** `integrated` (accepted by review 084)
 - **Exact deliverable:** Correct the five documentation defects without
   changing mathematical counts, source, tests, artifacts, or result status.
 - **Allowed files:** `README.md`, `STATUS.md`, `docs/full-proof-roadmap.md`,
@@ -1941,11 +1944,187 @@ as an accepted implementation or mathematical proof.
   commit, exact allowed scope, five passing unit tests, diff-check, unique task
   IDs, added-line privacy/path scan, and a standalone-clone public-release
   audit with nonzero scanned history.
-- **Blocker:** Pending independent review and `/root` acceptance.
-- **Final disposition / promotion authority:** Review-ready correction only;
-  not self-promoted and not counted as accepted operational documentation. It
-  promotes no theorem, packing claim, `PACK-09`, exact pivot selector, or
+- **Blocker:** None after independent ACCEPT review 084.
+- **Final disposition / promotion authority:** Accepted correction integrated
+  by `/root` in merge `2f6b3f5f2faea5966d1ecb6f9108b4fb5e6a1d2e` after review 084.
+  It promotes no theorem, packing claim, `PACK-09`, exact pivot selector, or
   unrestricted LRC.
+
+### FORM-P64-RESPONSE-MATH-AUDIT-081 — Prompt64 mathematics audit
+
+- **ID:** `FORM-P64-RESPONSE-MATH-AUDIT-081`
+- **Lane:** formalization / manuscript mathematics
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base:** `fc2d023e9df1c554cc67fadedece1325e72694b1`
+- **Dependencies:** recovered Prompt64 response and exact prompt contract
+- **Branch / worktree:** read-only review of `research/p64-recovery-079` in
+  its isolated worktree
+- **Status:** `verified` (qualified ACCEPT)
+- **Exact deliverable:** Audit the contrapositive equivalence, scaling,
+  reindexing, `n=2`, `kB±d` formulas, conditional `1/(m+2)` reduction, and
+  first unsupported branch.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Check every quantifier, natural-order conversion,
+  residue formula, scaling edge, reindexing, and implication boundary.
+- **Blocker:** Scaling is accepted only with the correction recorded by 083.
+- **Final disposition / promotion authority:** Qualified `proved-math` ACCEPT
+  at corrected scope. The first unsupported branch is open/equivalent
+  reformulation; the exact target and unrestricted consequences remain open.
+
+### VER-P64-COMPUTE-REPLAY-082 — Prompt64 computation replay
+
+- **ID:** `VER-P64-COMPUTE-REPLAY-082`
+- **Lane:** verification / finite computation
+- **Owner / supervising lead:** Verification Lead / `/root`
+- **Base:** `fc2d023e9df1c554cc67fadedece1325e72694b1`
+- **Dependencies:** exact recovered C++/Python/manifest attachments
+- **Branch / worktree:** read-only replay of `research/p64-recovery-079` in
+  its isolated worktree
+- **Status:** `verified` (ACCEPT computed finite evidence)
+- **Exact deliverable:** Independently replay the complete primitive sweep and
+  targeted stress suite, including independent enumeration, sanitizers, and
+  semantic-output parsing.
+- **Allowed files:** none; read-only replay
+- **Acceptance command:** Require 247,020 primitive rows, 5,597 skips,
+  98,271,563 candidates per implementation, 6,923,288 placements, 494,040
+  agreements, A/B/both 246,281/247,020/246,281, and zero counterexamples;
+  require targeted 61/45, 148,530 per implementation, 122 agreements, zero
+  strict failures, 24 scaling, and 18 reindexing checks.
+- **Blocker:** None at finite-evidence scope.
+- **Final disposition / promotion authority:** ACCEPT computed finite evidence
+  only. No bounded search proves the target, pivot selector, or LRC.
+
+### FORM-P64-SCALING-EDGE-083 — Prompt64 scaling-edge correction
+
+- **ID:** `FORM-P64-SCALING-EDGE-083`
+- **Lane:** formalization / manuscript edge audit
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base:** `fc2d023e9df1c554cc67fadedece1325e72694b1`
+- **Dependencies:** task 081 and canonical recovered response
+- **Branch / worktree:** read-only review; canonical response unchanged
+- **Status:** `verified` (required correction)
+- **Exact deliverable:** Resolve the response's literal scaling inequality at
+  `d=1` without altering recovered bytes.
+- **Allowed files:** none; read-only audit
+- **Acceptance command:** Reject literal `r<M<dM` at `d=1` and verify the
+  accepted edge is exactly `r<M<=dM`.
+- **Blocker:** None after the audit memo records the correction.
+- **Final disposition / promotion authority:** The strict literal is rejected;
+  the manuscript `proved-math` scaling claim is accepted only with
+  `r<M<=dM`. No Lean or target promotion follows.
+
+### OPS-P66-REPLAY-DOCSYNC-REVIEW-084 — Prompt66 correction review
+
+- **ID:** `OPS-P66-REPLAY-DOCSYNC-REVIEW-084`
+- **Lane:** research operations / independent documentation review
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base / reviewed commit:**
+  `d88ccca9d9b08a2b536db55757dbff46dcc242db`
+- **Dependencies:** correction 080 and negative review 078
+- **Branch / worktree:** read-only review; local path omitted
+- **Status:** `verified` (ACCEPT)
+- **Exact deliverable:** Confirm all five 078 blockers were corrected and the
+  standalone history scan was meaningful.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Verify counts, lifecycle, scope, 70/70 IDs, tests,
+  privacy, and nonzero history/current-tree secret scans.
+- **Blocker:** None.
+- **Final disposition / promotion authority:** ACCEPTED correction 080;
+  `/root` integrated it in merge
+  `2f6b3f5f2faea5966d1ecb6f9108b4fb5e6a1d2e`. P66 remains computed finite
+  evidence only; `PACK-09`, pivot selector, and LRC remain open.
+
+### OPS-P64-RECOVERY-PACKAGE-085 — Prompt64 recovery package
+
+- **ID:** `OPS-P64-RECOVERY-PACKAGE-085`
+- **Lane:** research operations / response and artifact recovery
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `fc2d023e9df1c554cc67fadedece1325e72694b1`
+- **Dependencies:** tasks 081--083 and recovered Prompt64 material
+- **Branch / worktree:** `research/p64-recovery-079` in its isolated worktree
+- **Status:** `integrated`
+- **Exact deliverable:** Preserve the normalized canonical response, exactly
+  three recovered attachments, package README, audit memo, and Prompt64
+  lifecycle records without changing canonical bytes.
+- **Allowed files:** `docs/response64-audit.md`, Prompt64 response, three
+  canonical attachments and package README, Prompt64 prompt/launch records,
+  and `research/sol-pro/session-log.md`
+- **Acceptance command:** Require response SHA-256
+  `f273ee340066c42dc4f3cb8224e35b4df028ebdd47b4dda1bb4879f515f5698d`,
+  raw clipboard SHA-256
+  `2fdc753554dab9221a4ee38031ecea71ea699039f5f0998d2d9d1bd542baef9b`,
+  and attachment SHA-256 values `9c8bdb908bd37c9a9a13a20f023c50b3121def34ffc5c7dfbe9e1f20038e7b37`,
+  `6b42c80fe54bda78bd56aabc0c340e22b8cf21c574a94d6279a4fab82e46557a`,
+  and `d839bcc52ce003aba795aad09e619158dc5b98feb43b76074d606320a56aec03`;
+  require semantic replay, sanitizers, diff-check, privacy scans, exact scope,
+  one commit, and clean worktree.
+- **Blocker:** None after reviews 086 and 087.
+- **Final disposition / promotion authority:** Package commit
+  `12922204bdf1ea1c0271767a461d9324a6b40a4f` was ACCEPTED by 086/087 and
+  integrated by `/root` in merge
+  `ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70`. No target or Lean promotion.
+
+### FORM-P64-PACKAGE-REVIEW-086 — Prompt64 formal package review
+
+- **ID:** `FORM-P64-PACKAGE-REVIEW-086`
+- **Lane:** formalization / read-only package review
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base / reviewed commit:**
+  `12922204bdf1ea1c0271767a461d9324a6b40a4f`
+- **Dependencies:** tasks 081, 083, and 085
+- **Branch / worktree:** read-only review; local path omitted
+- **Status:** `verified` (ACCEPT)
+- **Exact deliverable:** Verify canonical-byte preservation, corrected
+  manuscript labels, open-claim boundaries, and no Lean promotion.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Compare response/artifact hashes and audit every
+  accepted/rejected/open label against tasks 081 and 083.
+- **Blocker:** None.
+- **Final disposition / promotion authority:** ACCEPT package at formal audit
+  scope only; target, owner-transversal, pivot selector, and LRC remain open.
+
+### VER-P64-PACKAGE-REVIEW-087 — Prompt64 verifier package review
+
+- **ID:** `VER-P64-PACKAGE-REVIEW-087`
+- **Lane:** verification / read-only package review
+- **Owner / supervising lead:** Verification Lead / `/root`
+- **Base / reviewed commit:**
+  `12922204bdf1ea1c0271767a461d9324a6b40a4f`
+- **Dependencies:** tasks 082 and 085
+- **Branch / worktree:** read-only review; local path omitted
+- **Status:** `verified` (ACCEPT)
+- **Exact deliverable:** Verify exact recovered hashes, compile/replay results,
+  missing-output caveats, scope, and public-release safety.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Recheck all sweep/targeted counts, sanitizer/parser
+  outcomes, source hashes, privacy scan, and clean package scope.
+- **Blocker:** None.
+- **Final disposition / promotion authority:** ACCEPT package at computed
+  finite-evidence/recovery scope only; no theorem or unrestricted promotion.
+
+### OPS-P64-GLOBAL-STATUS-SYNC-088 — integrated milestone status sync
+
+- **ID:** `OPS-P64-GLOBAL-STATUS-SYNC-088`
+- **Lane:** research operations / global public status
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `ca8f4c55b3baa7ea29e1e595ce1bb564904ecf70`
+- **Dependencies:** integrated P66 correction and accepted/integrated Prompt64
+  package through tasks 080--087
+- **Branch / worktree:** `ops/p64-global-status-sync-088` in its isolated
+  worktree
+- **Status:** `review` (pending independent and root acceptance)
+- **Exact deliverable:** Synchronize the five global status files, close the
+  Prompt64 active lifecycle, and re-rank C2 first without changing results.
+- **Allowed files:** `README.md`, `STATUS.md`, `docs/full-proof-roadmap.md`,
+  `docs/proof-obligations.md`, and `docs/parallel-task-board.md`
+- **Acceptance command:** Require exact base, one commit, five-file scope,
+  Prompt66 five tests, fresh Prompt64 semantic replays, diff-check, unique IDs,
+  public path/privacy scans, and a standalone pinned history scan with nonzero
+  commits and bytes.
+- **Blocker:** Pending independent review and `/root` acceptance.
+- **Final disposition / promotion authority:** Review-ready only; task 088 is
+  excluded from accepted operational metrics. No result or lifecycle is
+  self-promoted by this row.
 
 ## Integration order
 
@@ -1976,10 +2155,12 @@ as an accepted implementation or mathematical proof.
 9. Preserve `VER-P64-FALSIFY-022` and `VER-P64-REPAIR-023` as incomplete,
    rejected-as-evidence records. Do not promote the repaired domain, the
    prefix, the A/B counts, or the historical pre-defect hash.
-10. Keep Prompt64 active and Prompt65 prepared/parked/frozen. Do not restart
-    the rejected Prompt64 bounded scans or Prompt65 verifier implementation. Preserve C1 **STOP /
-    OPEN** and the exact `N*a_h crossing -> M_h -> active n*a_j -> successor
-    edge -> Delta<=tau` gap.
+10. Preserve Prompt64 as completed/recovered STOP/OPEN and freeze its exact
+    top-two ratio route. Keep Prompt65 prepared/parked/frozen and do not launch
+    it. Do not restart the rejected Prompt64 bounded scans or Prompt65 verifier
+    implementation. Preserve C1 **STOP / OPEN** and the exact
+    `N*a_h crossing -> M_h -> active n*a_j -> successor edge -> Delta<=tau`
+    gap.
 11. Preserve `SOL-P66-PRO-B-001` as completed/recovered at STOP/OPEN. Its
     packing lemma and unrestricted LRC remain open; freeze only the two
     rejected uniform criteria as a milestone, not a formalization target.
@@ -1987,11 +2168,14 @@ as an accepted implementation or mathematical proof.
     `VER-LUNA-P66-REPLAY-SUPERVISE-070` as verified after the independent
     replays and review; their result is computed finite evidence,
     independently replayed, not a theorem or unrestricted promotion. Record
-    076 as a narrow failed runtime delegation, 077 as rejected pending
-    corrections, review 078 as a verified negative audit, and correction 080
-    as review-only pending independent and root acceptance. Prompt64's
-    `TOP-TWO-LARGE-RATIO-EXCLUSION` remains active under the sole top-level
-    Sol High browser owner.
+    076 as a narrow failed runtime delegation, 077 as rejected, review 078 as
+    a verified negative audit, correction 080 as accepted/integrated after
+    review 084, and merge `2f6b3f5`. Preserve the Prompt64 package as
+    accepted/integrated under merge `ca8f4c5` after reviews 086/087.
+12. Rank C2 prime-forcing product induction first for the next distinct
+    unrestricted contract. Keep Bridge B's exact packing lemma `PACK-09` open,
+    freeze Prompt64's top-two ratio route, and keep C1 and A frozen. Task 088
+    remains review-only until independent and root acceptance.
 
 ## Manual field-audit checklist
 
