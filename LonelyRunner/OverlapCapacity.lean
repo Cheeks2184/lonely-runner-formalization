@@ -199,6 +199,34 @@ theorem card_biUnion_add_sum_card_blocks_le_sum_card_bad
     ← sum_card_bad_eq_sum_incidenceMultiplicity bad] at hsum
   exact hsum
 
+/-! The additive form above is the form used by adapters: the total bad-set
+cardinality must pay both for the covered ambient points and for the supplied
+overlap blocks. -/
+
+/-- A supplied overlap packing leaves a point outside every bad set whenever
+its subtraction-free total threshold is strict. -/
+theorem exists_avoiding_of_overlapCapacity
+    (bad : I -> Finset R) (blocks : E -> Finset R)
+    (hcapacity : forall point : R,
+      overlapPointUse blocks point <= incidenceMultiplicity bad point - 1)
+    (hstrict : Finset.univ.sum (fun i : I => (bad i).card) <
+      Fintype.card R + Finset.univ.sum (fun e : E => (blocks e).card)) :
+    exists point : R, forall i, point ∉ bad i := by
+  classical
+  have hbound :=
+    card_biUnion_add_sum_card_blocks_le_sum_card_bad bad blocks hcapacity
+  by_contra havoid
+  have huniv_subset : (Finset.univ : Finset R) ⊆ Finset.univ.biUnion bad := by
+    intro point hpoint
+    by_contra hnot
+    apply havoid
+    refine ⟨point, ?_⟩
+    intro i hbad
+    exact hnot (Finset.mem_biUnion.mpr ⟨i, Finset.mem_univ _, hbad⟩)
+  have hcard : Fintype.card R ≤ (Finset.univ.biUnion bad).card := by
+    simpa using Finset.card_le_card huniv_subset
+  omega
+
 /-- Requested truncated-subtraction form of the capacity theorem. -/
 theorem card_biUnion_le_sum_card_bad_sub_sum_card_blocks
     (bad : I -> Finset R) (blocks : E -> Finset R)
