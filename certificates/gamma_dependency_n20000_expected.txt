@@ -1,0 +1,14 @@
+mode=n20000-analysis
+candidate_rows=5001
+edges=22800241
+greedy_matching=1
+strict_hall=1
+contiguous_intervals=12507501
+minimum_contiguous_slack=1145
+minimum_first_index=4910
+minimum_last_index=4910
+minimum_union_size=1146
+minimum_first_candidate=14910
+minimum_last_candidate=14910
+expected_counts_match=1
+status=PASS

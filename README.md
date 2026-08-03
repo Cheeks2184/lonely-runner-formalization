@@ -84,6 +84,22 @@ declaration does not itself require the lower family to be distinct or below
 those two speeds; a literal sorted top-two application must supply those outer
 family facts separately.
 
+`CoefficientTwoRectangle.lean` and `CoefficientTwoReversal.lean` verify the
+elementary crossed-rectangle core of the coefficient-two Gamma strategy. For
+`t>=16` and `2*t<=N`, the first module covers every generic candidate by two
+left rectangles, preserves the strict lower and closed upper Gamma sum bands,
+and splices two supplied coprime injections into an SDR. The second proves the
+fixed least-start reversal map is such an SDR when every actual candidate is
+coprime to its reversal total. These hypotheses are conditional: Lean does
+not assume Pomerance's theorem or prove the coprimality premise uniformly.
+
+`MatchingDependency.lean` proves an exact finite graph theorem: relative to
+any fixed left-saturating matching, a subset is Hall-tight exactly when it is
+successor-closed and contains no vertex seeing an unmatched right neighbor.
+Strict Hall for every nonempty subset is equivalent to every left vertex
+reaching such a vertex. This makes fixed finite audits efficient, but it does
+not construct the missing uniform arithmetic matching.
+
 The strongest additional computer-assisted manuscript theorem covers maximum
 speed `n+5`. Its 134,568-case finite core and uniform arithmetic proof have
 been independently audited, but the combined theorem is not yet one Lean
@@ -135,12 +151,20 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
   coefficient-two frontier.
 - [response52-audit.md](docs/response52-audit.md): critical Gamma cores, the
   verified common-grid class, and the asymptotic coefficient-two theorem.
+- [response53-audit.md](docs/response53-audit.md): formal rectangle bridge,
+  effective-cutoff audit, and the rejected strict energy target.
+- [response54-audit.md](docs/response54-audit.md): fixed-matching
+  reachability, reversal totals, exact compiler objections, and remaining
+  arithmetic gaps.
 - [affine-transversal-frontier.md](docs/affine-transversal-frontier.md): the
   Lean-formalized abstract bridge, empty-grid counterexample, and corrected
   disjunctive frontier.
 - [coefficient-two-gamma.md](docs/coefficient-two-gamma.md): complementary
   coprime forcing, exact Hall bottleneck, finite repairs, and reproducible
   evidence.
+- [gamma-dependency-sweep.md](docs/gamma-dependency-sweep.md): hardened finite
+  matching grids, the separate `N=20000` reachability audit, exact domains,
+  hashes, and interpretation.
 - [computation.md](docs/computation.md): computational scope and interpretation.
 - [publication-audit.md](docs/publication-audit.md): public-release privacy,
   secret-scanning, and redistribution audit.
@@ -155,8 +179,9 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
 The current clean Lean source checkpoint is
-`2158089e3135db42feb1ec6fe8cc79d31c0ef7cd`; see
-[STATUS.md](STATUS.md) for its exact build, trust, and test results.
+`e88207b6f2c9b83cd0b6a7d232f447b9087435d0`; see
+[STATUS.md](STATUS.md) for its exact build and trust results and the separate
+staged-working-tree test result.
 
 Install [Elan](https://github.com/leanprover/elan), clone the repository, and
 run from its root:
@@ -184,6 +209,7 @@ bash scripts/audit_response46.sh
 bash scripts/audit_response47.sh
 bash scripts/audit_response50.sh
 bash scripts/audit_coefficient_two_gamma.sh
+bash scripts/audit_gamma_dependency_sweep.sh
 bash scripts/audit_top_two_pivot_search.sh
 bash scripts/audit_top_two_fractional_dual.sh
 bash scripts/audit_top_two_fractional_obstruction.sh
@@ -195,6 +221,12 @@ The optional several-minute lower-dimensional calibration is:
 
 ```bash
 bash scripts/audit_quadratic_chebyshev_calibration.sh
+```
+
+The optional full high-dimensional Gamma sweep is:
+
+```bash
+GAMMA_DEPENDENCY_FULL=1 bash scripts/audit_gamma_dependency_sweep.sh
 ```
 
 GitHub Actions runs a cached Lean build, the trust audit, and the complete

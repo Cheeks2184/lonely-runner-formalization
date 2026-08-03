@@ -1295,3 +1295,95 @@ hypotheses for arbitrary top speeds, unrestricted top-two, or unrestricted
 Lonely Runner. The later computational-only commit `4cf1199` expands the
 Gamma empty/singleton classification; its deterministic audit passed in 8.50
 seconds without changing Lean source.
+
+## 2026-08-02: clean conditional rectangle checkpoint
+
+Source commit `17111ff71756b2097a2c900a58f561b2088bd22c` was cloned with
+`git clone --no-local` into a new native-WSL ext4 checkout. The checkout was
+clean and its HEAD exactly matched that commit before verification. The first
+attempt exposed that the historical `-Kjobs=2` spelling did not constrain
+Lake on this machine and was terminated without being used as evidence. A
+second fresh clone set the Lean runtime control explicitly:
+
+```text
+export LEAN_NUM_THREADS=2
+lake exe cache get
+lake build
+```
+
+Restoring the pinned cache, including cloning dependencies and building the
+cache client in the fresh clone, took 708.92 seconds. The subsequent project
+build completed successfully:
+
+```text
+Build completed successfully (3580 jobs).
+real 336.70
+```
+
+The expanded trust audit accepted 270 theorem reports:
+
+```text
+Trust audit accepted 270 theorem reports.
+real 7.31
+```
+
+Every reported axiom was one of `propext`, `Classical.choice`, and
+`Quot.sound`. The seven new probes cover generic rectangle coverage,
+right-block disjointness and inclusion, both strict/closed crossed bands, and
+the final conditional coprime-injection splice.
+
+The complete unchanged regression/certificate suite then reported:
+
+```text
+Ran 153 tests in 363.482s
+OK
+real 364.33
+```
+
+The checkout's HEAD and tracked status remained exact and clean after all
+commands. This checkpoint proves only the elementary rectangle geometry and
+conditional splice. It does not declare Pomerance's theorem and does not
+prove that the required coprime injections exist uniformly.
+
+## 2026-08-02: clean dependency and fixed-reversal checkpoint
+
+The same originally no-local-cloned native-WSL checkout fetched and checked
+out exact source commit
+`e88207b6f2c9b83cd0b6a7d232f447b9087435d0`. Its tracked tree was clean before
+and after verification. Restoring the pinned mathlib cache after an
+intentionally over-strict source-rebuild experiment took 94.01 seconds. The
+authoritative documented replay then reported:
+
+```text
+Build completed successfully (3062 targets).
+real 208.20
+Trust audit accepted 276 theorem reports.
+real 6.51
+CLEAN_FORMAL_HEAD=e88207b6f2c9b83cd0b6a7d232f447b9087435d0
+CLEAN_FORMAL_TREE_CLEAN
+```
+
+Every audited report again used only `propext`, `Classical.choice`, and
+`Quot.sound`. The new probes cover the exact tight-subset characterization,
+strict-Hall reachability equivalence, four rectangle/reversal declarations,
+and the final fixed-total conditional SDR theorem. The formal result assumes
+coprimality of every actual generic candidate with the fixed least-start
+reversal total; it does not prove that condition uniformly.
+
+The expanded regression and reproducibility suite, including the new medium
+Gamma dependency sweep, then passed from the authoritative working tree:
+
+```text
+Ran 154 tests in 327.399s
+OK
+real 330.62
+```
+
+The Gamma sweep is deterministic finite evidence and is not used as an axiom,
+certificate import, or proof of the all-dimension selector.
+
+The abandoned `lake clean` experiment was not used as verification evidence:
+it discarded the pinned compiled mathlib cache and began recompiling mathlib
+itself from source, which is not the documented clean-checkout procedure. It
+was stopped without changing tracked source; the cache was then restored and
+the complete procedure above succeeded.

@@ -154,6 +154,19 @@ This equivalence does not prove either side.
   premise is sufficient, not uniform. Its hypotheses do not encode that the
   lower family is distinct or numerically below those pivots, so those facts
   remain external in a literal sorted top-two instantiation.
+- **Lean-verified Gamma rectangle classes:**
+  `CoefficientTwoRectangle.lean` proves generic-band coverage, disjoint extra
+  rectangles, both exact strict/closed crossed sum bands, and the conditional
+  splice of two supplied coprime injections. `CoefficientTwoReversal.lean`
+  proves that the fixed least-start reversal is an SDR when every actual
+  generic candidate is coprime to its reversal total. Neither theorem assumes
+  Pomerance or proves its arithmetic premise uniformly.
+- **Lean-verified fixed-matching Hall criterion:**
+  `MatchingDependency.lean` characterizes tight subsets as
+  successor-closed, unmatched-neighbor-free sets and proves that strict Hall
+  on every nonempty subset is equivalent to reachability of an
+  unmatched-neighbor vertex from every left vertex. The theorem accepts a
+  supplied saturating matching; it does not construct one arithmetically.
 - **Audited mathematics plus finite evidence:** coefficient-two no-witness
   assumptions force every coprime complementary extra in `Gamma(c)` to be
   occupied. Exact degree bounds and a complete bounded classification reduce
@@ -162,7 +175,10 @@ This equivalence does not prove either side.
   Pomerance's primary coprime-interval theorem plus an exact rectangle
   decomposition proves the active generic selector for all sufficiently
   large `N`, but with an existential cutoff. Exact tests through `N=300`
-  leave four repaired small pairs. The exact all-`N` selector remains open.
+  leave four repaired small pairs. Hardened fixed-grid computations also find
+  no matching failure on every endpoint graph with `1001<=N<=20000` and sparse
+  active grids through `N<100000`; these are finite evidence only. The exact
+  all-`N` selector remains open.
   See [the Gamma audit](docs/coefficient-two-gamma.md).
 - **Refuted strategy:** the proposed global fractional two-grid dual
   invariant fails exactly at top speeds `(98,187)` for `N=7`. A feasible
@@ -189,7 +205,10 @@ Active research branches are:
 1. close the finite-to-uniform gap in the coefficient-two Gamma selector;
    asymptotically the active generic branch follows from coprime interval
    matchings, while a new exact failure would have to be a connected
-   deficiency-one critical incidence core with `N>=20`;
+   deficiency-one critical incidence core with `N>=20`; the explicit current
+   subproblems are augmenting reachability with tight-block contraction,
+   Hall for the family of feasible reversal totals, and endpoint
+   prime-support overload;
 2. prove the corrected disjunction between one-sided robust cover numbers and
    nonempty multi-shift transversals; unconditional paired existence is
    refuted by an empty-grid row;
@@ -202,7 +221,7 @@ Active research branches are:
 ## Latest verification
 
 Last clean Lean source checkpoint:
-`2158089e3135db42feb1ec6fe8cc79d31c0ef7cd`.
+`e88207b6f2c9b83cd0b6a7d232f447b9087435d0`.
 
 Pinned environment:
 
@@ -215,9 +234,24 @@ Pinned environment:
 Clean no-local-clone ext4 verification at that source checkpoint:
 
 ```text
-Build completed successfully (3579 jobs) in 308.87 seconds.
-Trust audit: 263 theorem reports; only propext, Classical.choice, Quot.sound
-Ran 153 tests in 589.824s
+Pinned cache restoration: real 94.01
+Build completed successfully (3062 targets): real 208.20
+Trust audit: 276 theorem reports; only propext, Classical.choice, Quot.sound
+Trust audit: real 6.51
+```
+
+The checkout was cloned with `git clone --no-local`, its HEAD exactly matched
+the checkpoint, and its tracked tree remained clean before and after all
+commands. `LEAN_NUM_THREADS=2` constrained the replay to two Lean workers on
+the 8 GB WSL instance. The target count is Lake's current integrated build
+plan after cache restoration; the earlier source checkpoint's clean replay
+reported 3,580 jobs under the prior cache state.
+
+Separately, the staged authoritative working tree, which adds the 154th Gamma
+dependency-sweep test without changing the Lean source commit, passed:
+
+```text
+Ran 154 tests in 327.399s
 OK
 ```
 
@@ -249,12 +283,13 @@ Public run 30768884839 passed both jobs at commit `4b31c22`, including the
 fastest-interval theorem, Response 50 artifact replay, trust audit, and all
 153 tests.
 
-The local `2158089` checkpoint additionally contains the Lean-verified
-common-grid exact bad-count top-two class. The later `4cf1199` computational
-checkpoint expands the guarded coefficient-two Gamma audit. Public workflow
-run 30771993686 passed both the Lean/trust job and the complete certificate
-job at the preceding release commit `3b9d591`; the newer checkpoint is pending
-publication and hosted replay.
+Public workflow run 30774426834 passed both jobs at release commit
+`5d4ca24064ff563a5c79f1692fe67741d5398990`: the Lean build and trust audit,
+and the complete exact certificate suite, are green. The local `e88207b`
+checkpoint adds the conditional rectangle splice, matching-dependency
+equivalences, and fixed-reversal theorem and has the exact clean replay
+recorded above. The expanded Gamma dependency sweep is finite evidence and
+does not alter the formal theorem boundary.
 
 The verified source plus the current research record includes the
 unconditional Kanold interval, `17*t<=3*N`,
@@ -263,16 +298,11 @@ both fastest-pivot restrictions; the saturated and abstract transversal
 top-two modules; the Response 45--51 audits and Prompt 52 record; the top-two
 searches; the Gamma evidence; and both the fixed fractional dual and its exact
 global obstruction.
-The source was cloned with `git clone --no-local` into a fresh ext4 checkout;
-the checkout was clean and its HEAD matched the checkpoint above before any
-build or test ran.
-
-The current replay fetched the pinned cache and ran with
-`lake -Kjobs=2 build`; all 3,577 jobs completed in 264.41 seconds. The trust
-audit then accepted 256 reports, and the unchanged full regression/certificate
-suite ran 153 tests in 415.166 seconds. The checkout remained untouched and
-clean throughout. The separately added Response 50 artifact plus independent
-audit passed in 12.43 seconds with maximum RSS 19,252 KB.
+The verified research record now also includes the Response 52--54 audits,
+the compiled conditional rectangle and fixed-reversal modules, the exact
+matching-dependency theorem, the rejected strict energy target, and the
+hardened finite Gamma dependency sweeps. None changes the unrestricted-open
+status.
 
 Every explicit axiom probe reports only subsets of `propext`,
 `Classical.choice`, and `Quot.sound`. See

@@ -16,15 +16,15 @@ docker run --rm -v "$PWD:/repo" \
   detect --source /repo --redact --no-banner
 ```
 
-Result: 208 commits and approximately 2.43 MB were scanned; no leaks were
+Result: 211 commits and approximately 2.50 MB were scanned; no leaks were
 found.
 
 The exact staged public delta was also passed to Gitleaks through standard
-input so newly added, not-yet-committed files were covered. It scanned 58.20
-KB before this final audit-note update and found no leak; the final staged
-delta, approximately 60.5 KB, was rescanned and also passed. Together, the
-history scan and staged
-scan cover the resulting preserved public history without rewriting it.
+input so newly added, not-yet-committed files were covered. It scanned 117.15
+KB before this audit-note update and found no leak. Together, the history scan,
+manual current-tree scan, and staged scan cover the resulting preserved public
+history without rewriting it. The final staged delta is rescanned after this
+note is staged and passed without a finding.
 
 ## Independent manual audit
 
@@ -48,7 +48,7 @@ Nine non-secret local checkout paths in the build log were replaced by the
 public placeholder `<clean-ext4-checkout>` in the release tree. Ignored local
 state consists of Lake and Python caches.
 
-At the latest checkpoint there are 322 tracked-or-staged public files and no
+At the latest checkpoint there are 340 tracked-or-staged public files and no
 untracked public file. The only generic risky-name match is the deliberately
 published mathematical transcript `research/sol-pro/session-001.md`; manual
 inspection found no browser or authentication session data in it. The targeted

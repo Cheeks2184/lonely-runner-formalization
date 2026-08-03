@@ -602,3 +602,36 @@ e^2=(m-1)*(e+2*p)=81.
 This is not a selector counterexample: the union is `{15,16,17,19}`, of size
 four, and the full set is Hall-good. It rejects only `ENERGY-EXCLUSION` and
 shows that a successful energy argument needs genuinely new arithmetic input.
+
+## 2026-08-02: one completed descending Gamma matching need not have strict reachability
+
+The fixed-matching dependency theorem says that strict Hall is equivalent to
+every left vertex reaching an unmatched-neighbor vertex for that fixed
+matching. It is tempting to expect the descending least-neighbor matching to
+have this property automatically. At `(N,t)=(20,10)`, the exact candidate
+rows are
+
+```text
+10:{21,23,27,29},
+11:{21,23,24,25,26,27,28,29},
+12:{23,25},
+13:{21,22,23,24,25,27},
+14:{23,25},
+15:{22,23}.
+```
+
+The descending matching
+
+```text
+15->22, 14->23, 13->21, 12->25, 11->24, 10->27
+```
+
+leaves `{12,14}` successor-closed and free of vertices seeing an unmatched
+right neighbor; its neighborhood is exactly `{23,25}`. Thus `12` and `14`
+do not reach a marked vertex. Independent direct reconstruction reproduces
+every row and dependency edge.
+
+This is not a Gamma Hall counterexample: the displayed map already saturates
+the full candidate set. It refutes only the claim that one canonical completed
+matching must itself certify strict Hall. A surviving augmentation proof must
+contract or rematch tight dependency blocks.

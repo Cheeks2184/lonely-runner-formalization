@@ -557,7 +557,21 @@ singleton neighborhood above `N=19`; hence a new failure must be a connected
 deficiency-one critical core with both incidence degrees at least two.
 
 Pomerance's primary coprime-interval theorem also closes the generic active
-range `2*t<=N<3*t` for all sufficiently large `N`, via an exact one/two-block
-rectangle decomposition and parity shifts. The cutoff is existential and the
-remaining exact finite/uniform bridge is not formalized. See
+range `2*t<=N<3*t` for all sufficiently large `N`, via two crossed even
+rectangles of common length `2*floor(t/4)` and disjoint right images. The
+cutoff is existential. The elementary rectangle coverage, strict/closed sum
+bands, conditional coprime-injection splice, and fixed least-start reversal
+class are now Lean-verified; Pomerance's analytic matching theorem is not
+formalized or assumed in Lean. See
 `docs/coefficient-two-gamma.md`.
+
+For any fixed saturating matching, Lean now proves that tight left subsets are
+exactly successor-closed subsets avoiding every vertex with an unmatched
+right neighbor. Strict Hall is equivalent to every left vertex reaching such
+a vertex. This gives a linear audit after constructing a matching, but it is
+not yet a uniform arithmetic construction. A completed descending matching
+already has a tight dependency block at `(N,t)=(20,10)`, despite the full
+Gamma graph being matchable. Current work therefore attacks augmenting paths
+with tight-block contraction, the full interval of feasible reversal totals,
+and endpoint prime-support overload. The exact gaps are `GAMMA-AUGMENT`,
+`DIAGONAL-HALL`, and `ENDPOINT-OVERLOAD`; see `docs/response54-audit.md`.

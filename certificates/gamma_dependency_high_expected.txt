@@ -1,0 +1,9 @@
+mode=high-grid
+parameter_cases=887
+nonempty_graphs=887
+empty_graphs=0
+candidate_rows=7114873
+greedy_fallbacks=0
+matching_failures=0
+expected_counts_match=1
+status=PASS

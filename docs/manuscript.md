@@ -2380,3 +2380,143 @@ published constant and ambient threshold used here are not explicit, and the
 rectangle reduction is manuscript mathematics rather than Lean code. The
 exact all-`N` selector, coefficient-two height theorem, and unrestricted LRC
 remain open.
+
+## 50. Formal crossed-rectangle splice
+
+The elementary part of the preceding asymptotic reduction is now
+kernel-checked. `CoefficientTwoRectangle.lean` defines `gammaNeighborhood`
+with the exact four conditions
+
+```text
+N < d <= N+t,
+N+t < c+d <= 2*N,
+Coprime c d.
+```
+
+It also defines `rectangleC0`, `rectangleC1`, `rectangleD0`, and
+`rectangleD1` using half-open finite intervals. The formal generic-band
+predicate records the two cleared denominator inequalities used above.
+`mem_rectangleC0_union_C1_of_generic` proves that every generic candidate is
+in the union of the left rectangles. `rectangleD0_disjoint_D1` and the two
+subset theorems prove that the right blocks are disjoint extras.
+`rectangleC0_D1_band` and `rectangleC1_D0_band` preserve the strict lower and
+closed upper sum boundaries.
+
+Finally, `rectangle_coprime_injections_give_sdr` accepts explicit functions
+from the two left rectangles into their crossed right rectangles, together
+with injection and coprimality hypotheses. It selects the first function on
+`C0` and the second on `C1`. Same-block collisions are excluded by the
+supplied injections; crossed collisions are excluded by disjointness of
+`D1,D0`. The band lemmas and coprimality hypotheses put every image in the
+exact Gamma neighborhood. Thus the combined map is an SDR on every actual
+generic subset.
+
+The theorem deliberately stops there. It neither states nor imports
+Pomerance's analytic matching theorem, and it does not assert that the two
+coprime injections exist for arbitrary parameters. The unmodified Sol Pro
+attachment failed Lean at five redundant `dsimp` calls. The tracked source
+removes only those calls and renames one unused private hypothesis; its seven
+direct axiom probes report only Lean's standard foundations. See
+`docs/response53-audit.md` for the exact compiler record.
+
+## 51. Matching dependencies and the remaining arithmetic step
+
+Let `L,R` be finite sets, let `E(x,r)` be a decidable bipartite relation, and
+fix an injective map `M:L->R` satisfying `E(x,M(x))`. For `A subset L`, write
+`N(A)` for its right neighborhood. Direct `x` to `y` when `E(x,M(y))`, and
+call `x` marked when it sees a right vertex outside the global image of `M`.
+
+The matched image `M(A)` is always contained in `N(A)` and has cardinality
+`|A|`. If `|N(A)|=|A|`, these two finite sets are equal. Hence every matched
+neighbor seen from `A` is matched to another member of `A`, so `A` is
+successor-closed, and no member of `A` sees an unmatched vertex. Conversely,
+if `A` is successor-closed and avoids marked vertices, every neighbor of `A`
+is matched to a member of `A`. Therefore `N(A)=M(A)` and `A` is tight.
+
+This is `tight_iff_successorClosed_and_avoidsBad` in
+`MatchingDependency.lean`. It includes `A=empty`, which is correctly tight.
+The strict theorem quantifies only over nonempty subsets.
+
+For any `x`, let `Reach(x)` be the vertices reachable by the reflexive-
+transitive closure of the dependency relation. If `x` reaches no marked
+vertex, `Reach(x)` is nonempty, successor-closed, and mark-free, hence tight.
+Conversely, if a nonempty tight set contains `x`, successor closure keeps
+every dependency path from `x` inside the set, so such a path cannot end at a
+marked vertex. Thus
+
+```text
+every nonempty A has |A|<|N(A)|
+iff
+every x reaches a marked vertex.
+```
+
+Lean proves this as `strictHall_iff_every_vertex_reaches_bad`, with direct
+axiom reports limited to `propext`, `Classical.choice`, and `Quot.sound`.
+
+The criterion makes a fixed finite strict-Hall audit linear after a matching
+and adjacency lists are known. The public hardened sweep constructs and
+validates matchings on three exact finite grids; its separate
+`N=20000, t=10000` mode applies the reachability criterion and finds no strict
+Hall failure. This does not close the conjecture: completing this particular
+dependency route uniformly would still need a canonical arithmetic matching,
+or a bounded explicit family of matchings, for which reachability can be
+proved from the sliding interval and coprimality structure. Finite results and
+exact replay commands are in `docs/gamma-dependency-sweep.md`.
+
+## 52. Feasible starts and a Lean-verified fixed reversal
+
+Keep `q=floor(t/4)`, `ell=2q`, and let the exact generic band be `[a,b]`,
+where
+
+```text
+a=floor(3*(N-t)/4)+1,
+b=floor((N+t)/2).
+```
+
+For an arbitrary natural start `s`, the union of the two adjacent left
+rectangles is `[s,s+2*ell-1]`. It covers `[a,b]` exactly when
+`s<=a` and `b<s+2*ell`. The minimum crossed sum is
+`N+s+ell+1`, so the strict lower Gamma boundary is exactly
+`t<=s+ell`. The maximum crossed sum is `N+s+3*ell-1`, so the closed upper
+boundary is exactly `s+3*ell<=N+1`. Finally, the right blocks lie below the
+height ceiling exactly when `2*ell<=t`.
+
+Consequently the complete interval of feasible starts is
+
+```text
+max(t-ell,b+1-2*ell) <= s <= min(a,N+1-3*ell).
+```
+
+The division bounds and `2*t<=N` imply the natural-subtraction guards. The
+start `rectangleA0` used by the formal rectangle module is the left endpoint
+of this interval.
+
+For any feasible start, set `Q_s=N+s+2*ell`. Subtraction from `Q_s` reverses
+`C0(s)` onto `D1` and `C1(s)` onto `D0`, and
+
+```text
+gcd(c,Q_s-c)=gcd(c,Q_s).
+```
+
+Thus a total coprime to every actual candidate gives an injective Gamma SDR.
+The unchanged Sol Pro attachment for the least feasible start compiles as
+`CoefficientTwoReversal.lean`. `rectangleReversal_C0_mem_D1` and
+`rectangleReversal_C1_mem_D0` verify the images;
+`coprime_rectangleReversal` verifies the gcd identity with natural
+subtraction guarded by rectangle membership; and
+`rectangleReversal_gives_sdr` combines coverage, injectivity, exact extra
+bounds, and the strict/closed band theorem.
+
+The full feasible-start interval above is audited manuscript mathematics;
+only the least-start fixed-total theorem is presently Lean-verified. Combining
+several totals is not automatic because
+
+```text
+Q-c=Q'-c' iff c'-c=Q'-Q.
+```
+
+The resulting `DIAGONAL-HALL` statement remains open. Likewise, endpoint
+coprime-free strips satisfy exact prime-cover union bounds, but no theorem yet
+forces one strip to exceed its available prime cover. These are the current
+variable-total and endpoint-synchronization obstructions, not completion
+claims.

@@ -2875,3 +2875,112 @@ candidate guards, automatic exclusions, neighborhoods, all proper Hall cuts,
 and the equality. This exact objection will be returned in the next Sol Pro
 turn; the already submitted Prompt 53 archive remains unchanged so its
 recorded composer hash stays valid.
+
+## Response 53 recovered and independently audited
+
+The recovered response has 20,750 raw PowerShell characters, 20,788 UTF-8
+bytes, and SHA-256
+`f15009c2ec0dc5d8cb69c78bc373ca513d54185a08451daac872930b2110a7a6`.
+Its LF-normalized form has 19,760 characters, 19,798 UTF-8 bytes, 990 line
+feeds, a final line feed, and SHA-256
+`c39e5860fe4d7c7d6eef51aa424a6fd273038cea8dd5226db416f0852c74fd44`.
+
+The supplied `GammaRectangleCore.lean` attachment has 9,960 bytes and
+SHA-256
+`9f11e2a46ef58dd3275d818b925af1161cb4bed2a79c455f20e9e34d26ca46fe`.
+Its exact source is preserved under `research/sol-pro/artifacts/`. It did not
+compile against the pinned Lean/mathlib environment: five redundant `dsimp`
+calls failed with `dsimp made no progress`, and one private hypothesis was
+unused. Removing only those five calls and renaming the unused hypothesis
+produced the tracked `CoefficientTwoRectangle.lean` module. Seven direct
+axiom probes report only `propext`, `Classical.choice`, and `Quot.sound`.
+
+Independent mathematical audit accepted the elementary rectangle and splice
+proof, the explicit cutoff conditional on supplied Pomerance constants, the
+special reversal-total class, and the C1--C5 core identities at their exact
+quantified strengths. It rejected the stale `ENERGY-EXCLUSION` label using
+the exact equality row above. The full classification is in
+`docs/response53-audit.md`. Exact Gamma Hall, coefficient two in every
+dimension, top-two, and unrestricted Lonely Runner remain open.
+
+## Prompt 54 submitted: dependency reachability and variable totals
+
+Prompt 54 returns the complete Response 53 audit, the exact compiler errors
+and corrected tracked module, the rejected energy target, stronger
+critical-core consequences, and the fixed-matching dependency-digraph
+equivalence. It requests three materially different attacks: canonical
+matching reachability, variable reversal totals, and synchronized
+prime-support/moment control. It asks for Lean declarations only for complete
+surviving lemmas and explicitly forbids disguising the missing selector or an
+analytic theorem as an axiom.
+
+After removing only the archived file's terminal newline, the exact composer
+value has 8,056 characters, 8,064 UTF-8 bytes, 178 line feeds, and SHA-256
+`fbea371dddaa09182fec59078e958e635c63bd158b8516d52b1613ebd69cf85a`.
+Windows UI Automation exposed the `GPT-5.6 Sol` submenu radio as selected and
+the `Pro` mode radio as selected. A newly acquired composer read-back matched
+the tracked prompt byte-for-byte before submission, and the live
+`Stop answering` control confirmed that the turn was running. No claim in
+Response 54 will be accepted without independent mathematical,
+computational, and Lean audit as applicable.
+
+## Response 54 recovered and independently audited
+
+The recovered response has 24,549 raw PowerShell characters, 24,615 UTF-8
+bytes, and SHA-256
+`d005a9359849dab9dc519a617999b2924f191c9ee3a1c6f3eb5f2aacfa5e1290`.
+Its LF-normalized form has 23,590 characters, 23,656 UTF-8 bytes, 959 line
+feeds, a final line feed, and SHA-256
+`f705be255c8485ca3bbf6f0954c2932dd86405d6ed9d0861b6473c19172c2bb1`.
+
+The `HallDependency.lean` attachment has 6,653 bytes and SHA-256
+`267a5fbec1898ac53d49c4e86f9a4b0f776abc91a76224845256930abdd21722`.
+It fails the pinned compiler at lines 45 and 53 because `DecidableEq R` is
+missing and at line 142 because `push Not` makes no progress. The exact source
+is preserved as a failed artifact. A separately developed
+`MatchingDependency.lean` implementation proves the same tight-set and
+strict-Hall reachability equivalences, compiles without warnings, and uses
+only standard axioms.
+
+The `GammaRectangleReversal.lean` attachment has 5,572 bytes and SHA-256
+`425bf751229bd0ae52412f95ad0a1316c82f4d0cd8341e3d64fbdec7de72e189`.
+It compiles unchanged and is tracked as `CoefficientTwoReversal.lean`. Its
+final theorem assumes that every actual generic candidate is coprime to the
+one fixed least-start reversal total; it does not prove that premise
+uniformly.
+
+Independent mathematical audit accepted the fixed-matching equivalence,
+reachability corollary, full feasible-start interval, fixed-total reversal,
+endpoint prime-cover bounds, and alternating-chain theorem at their exact
+strength. The partial-matching result is a reachability dichotomy, but its
+“exactly one” wording does not prove mutual exclusivity of the two existential
+outcomes. Direct computation reproduces the `(20,10)` tight dependency block
+`{12,14}` and shows why one completed greedy matching need not have strict
+reachability. The full audit is in `docs/response54-audit.md`.
+
+The exact open statements returned by this turn are `GAMMA-AUGMENT`,
+`DIAGONAL-HALL`, and `ENDPOINT-OVERLOAD`. None is promoted to a theorem.
+Exact Gamma Hall, coefficient two in every dimension, top-two, and
+unrestricted Lonely Runner remain open.
+
+## Prompt 55 submitted: contract tight blocks or prove diagonal Hall
+
+Prompt 55 returns the complete Response 54 audit, including the independent
+Lean implementation, the exact failures in Sol Pro's Hall attachment, the
+formal fixed-reversal theorem, the `(20,10)` tight dependency block, and the
+finite sweep evidence through `N = 20000`. It directs three materially
+different fronts: contract or augment exact tight blocks, prove a Hall theorem
+for the family of variable reversal totals, and synchronize endpoint strips
+with prime support. It requires every proposed monotonicity step to survive
+the known small obstructions and forbids inferring a theorem from the finite
+sweep.
+
+The tracked prompt has 8,719 characters, 8,741 UTF-8 bytes, and SHA-256
+`a01581b6420330e3bb7a08bc9e631a6d685e429e98ec4c902dad6ea68541df85`.
+After removing only its final newline, the exact composer value has 8,718
+characters, 8,740 UTF-8 bytes, 181 line feeds, and SHA-256
+`9fdaa1831779bd1acd559e78a4a23e7dcf87826d2fd20b6d4ce0e876de7751df`.
+Windows UI Automation independently showed the `Pro` and `GPT-5.6 Sol`
+radios selected. The composer read-back matched these exact metrics before a
+physical submission click, and the live `Stop answering` control confirmed
+that the research turn was running.

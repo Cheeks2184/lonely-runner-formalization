@@ -221,6 +221,28 @@ configuration is divisible by that missing height. Thus these four parameter
 pairs are repairs to the proposed selector theorem, not exceptions to the
 coefficient-two target.
 
+## Fixed-matching dependency criterion
+
+Fix any matching `M` saturating a finite left set. Direct a left vertex `x`
+to `y` whenever `x` sees the right vertex matched to `y`, and mark `x` if it
+sees an unmatched right vertex. Then a nonempty left set `A` is Hall-tight,
+`|Gamma(A)|=|A|`, exactly when `A` is successor-closed and contains no marked
+vertex. Therefore every nonempty left set has strict Hall precisely when every
+left vertex reaches a marked vertex.
+
+The proof is elementary but exact. If `A` is tight, every neighbor is matched
+to a unique member of `A`; this gives closure and excludes unmatched
+neighbors. Conversely, closure and the absence of unmatched neighbors make
+the matched image of `A` equal its whole neighborhood. The reachability
+corollary follows by taking the set of vertices reachable from any vertex that
+cannot reach a mark.
+
+This criterion converts an exponential Hall-subset audit into one reverse
+reachability computation after a matching has been found. It does not produce
+the required arithmetic matching or prove uniform reachability. The exact
+finite implementation and its independently audited domains are documented in
+`docs/gamma-dependency-sweep.md`.
+
 ## Reproducible evidence
 
 The deterministic verifier checks every `4<=N<=300` and
@@ -247,6 +269,25 @@ ea0f5e2ca58259e6a644323abe1a8743392b8178ae57a27366edabed602a57ca.
 The expanded public replay under Python 3.14.4 completed in 8.50 seconds. It
 now also prints the bounded singleton/empty-neighborhood classification. This
 finite range cannot promote the selector conjecture.
+
+An independent C++ implementation also constructs exact matchings on four
+fixed high-dimensional domains. It finds no matching failure on 19,000
+endpoint graphs `t=floor(N/2)` for every `1001<=N<=20000`, and none on two
+deterministic active grids through `N<100000`. At `(N,t)=(20000,10000)`, it
+checks 5,001 candidate rows, 22,800,241 edges, strict Hall through the
+dependency criterion, and all 12,507,501 contiguous left intervals; the
+minimum contiguous slack is 1,145. These are finite computations only. Run
+the public medium replay with
+
+```bash
+bash scripts/audit_gamma_dependency_sweep.sh
+```
+
+and the complete local replay with
+
+```bash
+GAMMA_DEPENDENCY_FULL=1 bash scripts/audit_gamma_dependency_sweep.sh
+```
 
 ## Refuted simpler charges
 
