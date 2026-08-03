@@ -467,6 +467,35 @@ as an accepted implementation or mathematical proof.
   `docs/response62-audit.md`. No Luna implementation begins until a faithful
   theorem contract supplies the missing inequality and all premises.
 
+### OPS-P64-CONTRACT-018 — Prompt 64 large-ratio contract
+
+- **ID:** `OPS-P64-CONTRACT-018`
+- **Lane:** research operations / Sol Pro contract
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `866b7184655d62987314e753d62a771a1f44fa94`
+- **Dependencies:** accepted `VER-R62-AUDIT-010` and
+  `FORM-R62-RESIDUAL-SPEC-012` dispositions
+- **Branch:** `research/ops-p64-contract-018`
+- **Status:** `review`
+- **Exact deliverable:** Draft Prompt 64 around the exact first missing edge,
+  equivalently `N*A<2*B ->` a canonical certificate at one of the two
+  numerical top pivots, with complete hypotheses, unrestricted/branch scope,
+  downstream implication chain, falsification and stop contracts, and no
+  hidden residual assumption.
+- **Allowed files:** `research/sol-pro/prompts/prompt64.md`,
+  `docs/full-proof-roadmap.md`, `docs/proof-obligations.md`, and this board
+- **Acceptance command:** Verify the worktree base; inspect the complete diff;
+  require `git diff --check`; confirm the prompt treats
+  `RESIDUAL-2N-SHIFT-OWNER-TRANSVERSAL` as a separate downstream open lemma,
+  binds equality to the residual side, and states that queued packaging is not
+  a proof, submission, computation, or theorem promotion.
+- **Blocker:** Root review and a separately authorized external Sol Pro launch.
+  The missing inequality and downstream owner-transversal remain open.
+- **Final disposition / promotion authority:** Contract is ready for review
+  only. No Prompt 64 turn has been submitted, no finite evidence has been
+  generated, and no top-two, residual, positive-integer, or unrestricted LRC
+  claim is promoted. Only `/root` may approve integration or launch.
+
 ### SOL-P63-PRO-C-001 — deletion-induction contract
 
 - **ID:** `SOL-P63-PRO-C-001`
