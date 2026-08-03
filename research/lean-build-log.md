@@ -1489,3 +1489,61 @@ Ran 156 tests in 377.203s
 OK
 real 380.41
 ```
+
+## 2026-08-03: Response 63 reverse-grid formal checkpoint
+
+A fresh top-level formalization route persisted runtime metadata matching
+`gpt-5.6-luna`, `xhigh` reasoning, and the requested working directory. The
+worker then exited without a report or commit, so it supplies no theorem
+review or claim endorsement. The Formalization Lead independently inspected
+the audited Response 63 C1 target, made one routine proof repair during
+compilation, reviewed the resulting declarations, and committed the formal
+source as
+`586b4858cd1b1c513566f3b33d7b5141640e7865`.
+
+`LonelyRunner/ReverseGrid.lean` introduces the typed `ReverseGridData`
+contract and proves:
+
+```text
+reverseGrid_exact_identity
+reverseGrid_deficit_pos
+reverseGrid_residue_lt
+reverseGrid_residue_modEq
+reverseGrid_phase_mod_one
+signedCyclicResidueDistance_ofNat
+signedCyclicResidueDistance_congr
+signedCyclicResidueDistance_neg
+reverseGrid_deleted_boundary
+reverseGrid_pivot_modEq
+reverseGrid_pivot_distance
+```
+
+The structure retains `N=n+1`, positivity, `s=1 or s=-1`, both integer source
+equations, and the deep inequality `N*d<n*p` as explicit hypotheses. The
+signed distance adapter avoids natural-subtraction truncation. The final
+theorem transports the pivot distance exactly; it does not construct the
+source data, prove that a first blocker satisfies the deep inequality, or
+prove strict smaller-Delta descent.
+
+Verification in the isolated native-WSL worktree reported:
+
+```text
+Direct compile LonelyRunner/ReverseGrid.lean: PASS
+ReverseGrid target build: 3,001 jobs; PASS
+Root build: 3,590 jobs; PASS
+Direct compile LonelyRunner.lean: PASS
+Direct compile LonelyRunner/AxiomAudit.lean: PASS
+```
+
+The eleven new direct axiom probes report only the permitted standard
+foundations (`propext`, `Classical.choice`, and `Quot.sound`, or a subset).
+The worktree used the existing pinned warm cache. It was isolated but was not
+a fresh detached clean checkout, so this record does not replace the older
+clean-checkout timings with invented cold-cache timings.
+
+Root merged the formal commit as
+`99a78c15ad0a55e96cffbc5dadf4f3afd99cfa1c`. That merge has the same Lean
+source tree as `586b485`; its other parent contributes documentation and
+research records. This checkpoint promotes only the exact C1 arithmetic to
+`proved-lean`. C2's deep-premise supply, strict smaller-Delta first-blocker
+descent, corrected DPLP selector, and unrestricted LRC remain open.

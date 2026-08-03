@@ -391,13 +391,17 @@ restating that one certificate lifts is not progress.
 Response 63 audit update: an independent lead replay verifies 4,694 finite
 records, including 4,296 corrected-DPLP-premise cases with zero failures and
 36 zero-good cases whose minimum-escape selector succeeds finitely. A1,
-B1--B5, and the exact reverse-grid identity C1 are reusable `proved-math`.
-C2 applies only in the deep subcase `N*d<n*p`. The finite census does not test
-the proposed strict smaller-Delta first-blocker transition because each
+B1--B5 remain reusable `proved-math`. `ReverseGrid.lean` now makes C1's exact
+rational signed identity, residue normalization, boundary equality, pivot
+congruence, and final cyclic-distance transport `proved-lean` under explicit
+`ReverseGridData` hypotheses. Those hypotheses include `N=n+1`, `s=+/-1`,
+the source equations, positivity, and the deep inequality `N*d<n*p`. C2 thus
+still applies only in that encoded deep subcase. The finite census does not
+test the proposed strict smaller-Delta first-blocker transition because each
 minimizing reverse endpoint in the zero-good rows was already a full witness.
-That transition is therefore the surviving local target but remains
-conjectural/open. Formalize C1 with a real typed declaration before attempting
-the descent; the response's pseudo-Lean block is not an implementation.
+No declaration derives the deep premise at a first blocker or proves Delta
+decreases. That transition, the DPLP selector, and unrestricted LRC therefore
+remain conjectural/open.
 
 Equivalently, for each pivot candidate let `S_j(r)` be the nonpivot
 coordinates in the strict deletion-bad set. A deletion certificate has

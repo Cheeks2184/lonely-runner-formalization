@@ -40,17 +40,17 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | Accepted audit deliverables | 11 | The prior ten accepted audits plus the lead disposition for `VER-R63-AUDIT-013` are accepted at exact conditional scope; no Luna endorsement is counted. |
 | Accepted negative audits | 8 | The prior six negative audits plus Response62's failed project-level branch audit and failed residual assembly are valid negative results. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
-| Accepted implementations | 0 unrestricted; 2 supporting artifacts | The corrected conditional DPLP contract/wrapper and Response59 regression verifier are integrated; neither proves an open bridge. |
-| Integrated deliverable groups | 3 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), and board/Prompts60--63 package (`263a1cb`) are on main. |
-| Authoritative source replay | integrated / verified | `VER-CHECKPOINT-263A1CB-003` verified the detached tracked-clean ext4 replay of source checkpoint `263a1cb`; later snapshot commits are documentation/operations only. |
+| Accepted implementations | 0 unrestricted; 3 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, and exact ReverseGrid arithmetic are integrated; none proves an open bridge. |
+| Integrated deliverable groups | 4 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), board/Prompts60--63 package (`263a1cb`), and ReverseGrid formal source (`586b485`, merged by `99a78c1`) are on main. |
+| Authoritative source replay | integrated / verified warm-cache | Formal source checkpoint `586b485` passed module/root direct compiles, 3,001-job target and 3,590-job root builds, and standard-foundation axiom probes in an isolated warm-cache worktree. Main `99a78c1` has the same Lean tree. The latest full detached clean replay remains the older `263a1cb` record. |
 | Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited by the lead. |
 | Queued Sol Pro cells | 0 | All four slots are free, but no additional cell is queued in this snapshot. |
-| Active Sol Medium leads | 0 running / 3 roles | Verification and Research Operations are complete at this snapshot; Formalization remains interrupted after its stall. |
-| Active Luna workers | 0 / 6 | Response63 lead review is complete. The only completed fresh Luna/xhigh turn missed both inputs and is invalid for claim review; two corrected launches failed before a turn. |
+| Active Sol Medium leads | 0 running / 3 roles | Verification, Formalization, and Research Operations have completed their current reviewed tranches. |
+| Active Luna workers | 0 / 6 | The ReverseGrid worker had genuine fresh top-level Luna/xhigh runtime metadata but exited without a report or commit; the Formalization Lead independently completed and reviewed the theorem. Historical Response63 routing failures retain their recorded scope. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
-| Failed delegations | 5 | The prior three failures plus two corrected Response63 launches that ended before a turn (OS errors 3 and 2) are counted. The completed input-missing route is unusable but not counted as a failed launch. |
+| Failed delegations | 6 | The prior five failures plus the ReverseGrid worker that exited without a report or commit are counted. The completed Response63 input-missing route remains unusable but is not counted as a failed launch. |
 | Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
-| Integration backlog | 1 reviewed documentation group | Response63 conditional audit synchronization awaits root integration; no theorem implementation is ready. |
+| Integration backlog | 1 reviewed documentation group | ReverseGrid documentation synchronization awaits root integration; the reviewed theorem source is already merged on main. |
 | Wait time | None active | No Sol Pro turn remains active in this snapshot. |
 
 Metrics are updated only from a worker result accepted by the supervising
@@ -598,7 +598,7 @@ as an accepted implementation or mathematical proof.
 - **Base:** `4b6ee54a1c64e847c505b632a46c326616678d1c`
 - **Dependencies:** lead disposition for `VER-R63-AUDIT-013`
 - **Branch:** `research/ops-r63-audit-sync-015`
-- **Status:** `review`
+- **Status:** `integrated`
 - **Exact deliverable:** Integrate the lead-verified finite replay, corrected
   mathematical/formal dispositions, routing failures, packaging defects, and
   open-descent boundary without assigning Luna endorsement.
@@ -608,11 +608,70 @@ as an accepted implementation or mathematical proof.
   only if necessary
 - **Acceptance command:** Validate links, paths, archive/member/manifest
   hashes, exact census records, diff hygiene, scope, and privacy.
-- **Blocker:** Root review and integration only; the descent theorem remains
-  open research, not an implementation-ready artifact.
+- **Blocker:** None for the historical audit synchronization; the descent
+  theorem remains open research, not an implementation-ready artifact.
 - **Final disposition / promotion authority:** Documentation synchronization
-  ready for `/root`; only the lead-verified finite evidence and exact
-  `proved-math` lemmas are accepted.
+  integrated through `2cae09ca431529b343aefa6e6ff3c7131785d7b2` with only the
+  lead-verified finite evidence and exact `proved-math` lemmas accepted at
+  that point.
+
+### FORM-LUNA-R63-REVERSEGRID-016 — typed reverse-grid arithmetic
+
+- **ID:** `FORM-LUNA-R63-REVERSEGRID-016`
+- **Lane:** formalization / Response 63 reverse grid
+- **Owner / supervising lead:** Luna/xhigh worker / Formalization Lead and
+  `/root`
+- **Base:** `866b7184655d62987314e753d62a771a1f44fa94`
+- **Dependencies:** `VER-R63-AUDIT-013` and its corrected C1/C2 boundary
+- **Branch:** `formal/luna-r63-reversegrid-016`; merged into main by
+  `99a78c15ad0a55e96cffbc5dadf4f3afd99cfa1c`
+- **Status:** `integrated`
+- **Exact deliverable:** Give Response 63 C1 a repository-typed theorem layer:
+  exact rational signed identity, positive deep deficit, canonical residue
+  range/congruence/mod-one normalization, signed distance adapters,
+  deleted-boundary equality, pivot congruence, and final distance transport
+  under explicit `ReverseGridData` hypotheses.
+- **Allowed files:** `LonelyRunner/ReverseGrid.lean`, root import,
+  `LonelyRunner/AxiomAudit.lean`, and the exact proof-obligation row
+- **Acceptance command:** Direct-compile the new module; build its target and
+  the root target; direct-compile the root module and `AxiomAudit.lean`; inspect
+  every new axiom report and the source diff.
+- **Blocker:** The fresh top-level worker had persisted runtime metadata
+  matching `gpt-5.6-luna`, `xhigh`, and the requested working directory, but
+  exited without a report or commit. The Formalization Lead independently reviewed
+  the target, made one routine proof repair, and completed the accepted commit.
+- **Final disposition / promotion authority:** Accepted formal commit
+  `586b4858cd1b1c513566f3b33d7b5141640e7865`. C1 arithmetic is
+  `proved-lean` at the structure's exact hypotheses, including `N*d<n*p`.
+  No theorem supplies that deep premise at a first blocker, proves strict
+  smaller-Delta descent, proves the DPLP selector, or proves unrestricted LRC.
+  The terminated worker supplies no claim endorsement.
+
+### OPS-RGRID-SYNC-020 — ReverseGrid documentation synchronization
+
+- **ID:** `OPS-RGRID-SYNC-020`
+- **Lane:** research operations / formal-status synchronization
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `99a78c15ad0a55e96cffbc5dadf4f3afd99cfa1c`
+- **Dependencies:** accepted `FORM-LUNA-R63-REVERSEGRID-016` result and merged
+  formal source tree
+- **Branch:** `docs/ops-rgrid-sync-020`
+- **Status:** `review`
+- **Exact deliverable:** Synchronize public status, roadmap, board, build log,
+  and manuscript to the exact typed declarations and verification boundary;
+  remove stale claims that C1 lacks a declaration or that all later commits
+  are documentation-only.
+- **Allowed files:** `README.md`, `STATUS.md`, `docs/full-proof-roadmap.md`,
+  `docs/parallel-task-board.md`, `research/lean-build-log.md`, and
+  `docs/manuscript.md`
+- **Acceptance command:** Verify exact base and ancestry; map every manuscript
+  claim to a declaration; require `git diff --check`; confirm the formal
+  checkpoint and warm-cache qualification; inspect the final commit diff.
+- **Blocker:** Root review and integration only. The open descent, selector,
+  and unrestricted theorem are research blockers, not documentation blockers.
+- **Final disposition / promotion authority:** Documentation is ready for
+  review only. This task may synchronize C1 to `proved-lean`; it may not
+  promote C2 beyond its encoded deep premise or promote DPLP or LRC.
 
 ### DPLP-REPAIR-001 — contract repair
 
@@ -773,9 +832,11 @@ as an accepted implementation or mathematical proof.
 
 ## Integration order
 
-1. Preserve `VER-CHECKPOINT-263A1CB-003` as the authoritative verified source
-   replay until another source-changing commit receives a complete clean
-   replay.
+1. Treat `586b4858cd1b1c513566f3b33d7b5141640e7865` as the authoritative
+   formal source checkpoint and `99a78c1` as the merged main with the same
+   Lean tree. Preserve `VER-CHECKPOINT-263A1CB-003` as the latest full
+   detached clean-checkout replay of the older source, and describe the new
+   checkpoint verification as isolated warm-cache worktree evidence.
 2. Preserve the accepted negative `VL-AUDIT-001`, `FL-AUDIT-001`, and
    `VL-LUNA-DPLP-001` results at their historical scope.
 3. Preserve the integrated corrected DPLP contract and conditional wrapper
@@ -786,9 +847,11 @@ as an accepted implementation or mathematical proof.
 5. Preserve Prompt60/61 at their audited dispositions and Prompt62 at its
    verified mixed **FAIL** disposition; integrate `docs/response62-audit.md`
    without promoting finite evidence or the residual bridge.
-6. Integrate Prompt63 only at the lead's **CONDITIONAL ACCEPT** disposition:
-   finite evidence and exact paper lemmas are accepted at stated scope, with
-   no Luna endorsement, Lean promotion, or descent/DPLP selector proof.
+6. Preserve Prompt63 at the lead's **CONDITIONAL ACCEPT** audit disposition,
+   then apply the later independent formal result: C1's exact ReverseGrid
+   arithmetic is `proved-lean` under explicit hypotheses, while C2's deep
+   premise, strict descent, and the DPLP selector remain open. The terminated
+   Luna worker supplies no claim endorsement.
 7. Allocate future `DPLP-REPAIR-001` work only to the open selector/correlation
    theorem; the formal contract itself is no longer an integration blocker.
 8. Launch any unrelated future Luna/xhigh work only through the verified
