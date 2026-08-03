@@ -3267,3 +3267,37 @@ matched exactly.
 No PRO-A, PRO-B, or PRO-C result exists at this checkpoint. Submission and
 running-state evidence do not promote a theorem, a counterexample, DPLP,
 top-two, height compression, prime forcing, or unrestricted Lonely Runner.
+
+## Response 60 recovered; independent audit pending
+
+The PRO-E conversation completed after the UI reported 69 minutes 2 seconds.
+The copied response, normalized only from CRLF to LF, has 46,369 characters,
+46,428 UTF-8 bytes, 1,641 line feeds, a terminal line feed, and SHA-256
+`019d14ac41ebef9a6598db27ccd09e8bd3e2c6023935d487d84b71c88f331431`.
+One display-math line consisted solely of seven equals signs and therefore
+looked like a Git conflict marker. The tracked public response replaces only
+that line by a single equals sign; its SHA-256 is
+`22a63c9cfe9a1f61b6458ed2eb4b74c0f06e2d6a8c837c5ccb978aa9d60096a7`.
+
+All four advertised attachments were recovered through the signed-in browser:
+
+- `prompt60_cleanroom_audit.py`, SHA-256
+  `4de31ba9a75788312dc37f36187db2820668ad5d3c2e4cc9720a3e1f9ac4067b`;
+- `prompt60_cleanroom_audit.out`, SHA-256
+  `d950ff20dbbcf3aeb61d236657fb3b81ec07fc5c3ba2f06416ebf0270618f809`;
+- `prompt60_literal_tables.txt`, SHA-256
+  `d28b4f5477b98c9305399866fcc9d1a281b1b3c86b8a278252760740069dd69b`;
+- `prompt60_timing.txt`, SHA-256
+  `979d449577231903a30baf5c8fe60737ecd9f54891ab3bc526f5b35888e1b982`.
+
+The recovered literal-table attachment ended with two line feeds. The tracked
+public copy removes only the extra blank final line so `git diff --check`
+remains clean; its SHA-256 is
+`0c07e4ce13d27bbcf53759bc06b97c0b72f00313b374bc8171002e22b09cc22b`.
+
+Recovery is not acceptance. Response 60 reports local proofs, new finite
+enumerations, an `n=3` prime-forcing supply, a strengthened sign-class bound,
+and an active-cycle obstruction, but every such claim remains unverified until
+the Verification Lead completes a clean-room mathematical and computational
+audit. No Response 60 statement is promoted here, and unrestricted Lonely
+Runner remains open.
