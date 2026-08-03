@@ -13,9 +13,14 @@ open. This contract is not a proof, computation, launch record, response, or
 status promotion.
 
 Use `proved-lean`, `proved-math`, `computed finite evidence`, `conditional`,
-`conjectural`, `rejected`, and `open` strictly. Give every theorem, lemma,
-experiment, and dependency exactly one label. Do not promote a finite check,
-heuristic, literature statement, or proposed formalization.
+`conjectural`, `rejected`, `open`, `literature`, and
+`external-unformalized` strictly. The required classification `verified
+external dependency audit` is reserved for a verified audit of an external
+dependency; it does not convert that external theorem into repository-proved
+mathematics. Give every theorem, lemma, experiment, and dependency its exact
+applicable label or required literature/external classification. Do not
+promote a finite check, heuristic, literature statement, external dependency,
+or proposed formalization.
 
 ## Exact definitions and quantifiers
 
@@ -98,18 +103,38 @@ distinct-prime product assembly, positivity, or strict contradiction. Do not
 infer an integer inequality from the real shorthand
 `(C_n^(n-1)/n)^n`; use the exact integer formula above.
 
+The induction indexing is fixed. At step `n`, there are `n` positive moving
+speeds and, after adjoining the stationary runner, `N=n+1` total runners.
+Deleting one positive moving speed leaves `n-1` positive moving speeds and
+therefore `n` total runners, so the induction hypothesis is LRC for `n` total
+runners. The two smaller positive-moving-speed cases are separate bases:
+
+- `n=1` positive moving speed (`2` total runners) is `proved-lean` by
+  `BASE-01`, specifically `LonelyRunner.oneMovingRunner` in
+  `LonelyRunner/BaseCases.lean`.
+- `n=2` positive moving speeds (`3` total runners) is `proved-lean` by
+  `BASE-02`, specifically `twoMovingSpeeds_of_abs_le`, `twoMovingSpeeds`, and
+  `twoMovingRunners` in `LonelyRunner/SmallDimensions.lean`.
+
+The C2 statement starts at `n>=3`; it does not prove, subsume, or relabel these
+base cases. A complete induction must cite both bases before applying the C2
+step.
+
 The Malikiosis--Santos--Schymura product theorem, including its strict upper
-bound, is an **external and unformalized** dependency in this repository. It is
-not `proved-lean`. The accepted dependency audit confirms its indexing and
-strict product corollary, not a repository proof of MSS.
+bound, is `literature` and `external-unformalized` in this repository. It is
+not `proved-math` or `proved-lean` here. The verified external dependency audit
+confirms its indexing and strict product corollary, not a repository proof of
+MSS.
 
 ## Repository boundary and dependencies
 
 | Dependency | Exact usable status | Boundary |
 |---|---|---|
-| `VER-C2-DEPENDENCY-038` | `proved-math` dependency audit | Accepts MSS indexing, strict product logic, and the sufficient integer comparison; does not formalize MSS or prove uniform supply. |
-| MSS product upper bound | `open` here; external/unformalized | Primary-source theorem required by the bridge; no repository Lean theorem may be claimed. |
-| Primitive/induction wrapper | `open` for this assembled C2 route | MSS, primitive wrapper, subset-gcd sum, AM--GM corollary, forced-prime assembly, and final contradiction are absent from Lean. |
+| `VER-C2-DEPENDENCY-038` | `verified external dependency audit` | Accepts MSS indexing, strict product logic, and the sufficient integer comparison; it is not `proved-math`, does not formalize MSS, and does not prove uniform supply. |
+| MSS product upper bound | `literature`; `external-unformalized` | Primary-source theorem required by the bridge; no repository `proved-math` or `proved-lean` status may be claimed. |
+| Missing Lean wrapper / assembled C2 route | `open` | The primitive wrapper, subset-gcd sum, AM--GM corollary, forced-prime assembly, final contradiction, and Lean connection to the external MSS theorem remain missing. |
+| `BASE-01` | `proved-lean` | `LonelyRunner.oneMovingRunner` in `LonelyRunner/BaseCases.lean` proves the `n=1` positive-moving-speed base. |
+| `BASE-02` | `proved-lean` | `twoMovingSpeeds_of_abs_le`, `twoMovingSpeeds`, and `twoMovingRunners` in `LonelyRunner/SmallDimensions.lean` prove the `n=2` positive-moving-speed base. |
 | `PART-79` / Response60 audit | `proved-math` at stated hypotheses | Accepts local implication and exact product arithmetic; rejects several universal auxiliaries and leaves the supply open. |
 | `RED-01` positive-integer to unrestricted LRC reduction | `proved-lean` | Cite only at documented scope; it does not supply the new C2 lemma. |
 
@@ -134,6 +159,22 @@ These rows imply no density, eventual validity, theorem in another dimension,
 or all-dimension supply. The complete Response60 artifact remains
 nonreproducible. Never label these outcomes `proved-math` or interpolate
 between tested primes.
+
+The `n=3` threshold reconciliation is also `computed finite evidence` only:
+
+```text
+C_3 = binom(4,2) = 6,
+3^3 = 27,
+6^6 = 46,656,
+T_3 = min {T : Nat | 27*T >= 46,656} = 1,728,
+Q_3 = 2*3*7*11*13 = 6,006,
+27*6,006 = 162,162 >= 46,656.
+```
+
+This reconciles the five computed-success primes with the exact integer
+threshold in one fixed dimension. It does not promote any
+`PrimeForcing(3,p)` row to a theorem, prove a uniform prime supply, or change
+the status of unrestricted LRC.
 
 ## Two materially different required attacks
 
