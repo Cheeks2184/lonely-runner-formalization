@@ -333,6 +333,15 @@ compiler/host/timing-bound sweep and freezes the exact minimal-counterexample
 height-compression route. Neither audit promotes finite evidence or adds a
 Lean theorem.
 
+The [Response 62 audit](docs/response62-audit.md) independently replays the
+8,108-row sweep and the hard `(N,A,B)=(7,98,187)` transversal number `5` as
+computed finite evidence, while returning an overall **FAIL** for the proposed
+project-level residual chain. Local lemmas survive only as `proved-math` at
+their exact hypotheses; uniform scalar criteria are rejected. The first
+missing project edge is `2*B<=N*A`, and the owner-aware multi-shift
+transversal remains conjectural/open. No implementation or Lean theorem is
+authorized by that audit.
+
 The remaining active major routes are corrected deletion-pivot/prime forcing
 and an unrestricted top-two/all-pivot certificate. Their exact contracts,
 implication chains, falsification suites, budgets, and abandonment criteria

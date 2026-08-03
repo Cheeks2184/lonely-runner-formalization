@@ -265,7 +265,7 @@ wrapper preserves the exact selector quantifiers. This does not prove the
 selector. Exact `proved-math` deep-hole and shell cardinalities reduce the
 current arithmetic obstruction to overlap-sensitive singleton counting.
 
-## Response 60 and 61 verification audits
+## Response 60--62 verification audits
 
 `VER-R60-AUDIT-004` records `FAIL / nonreproducible` for Response 60's
 mandatory whole-output replay. Python `3.14.4` reproduces the deterministic
@@ -286,6 +286,18 @@ signature also leaves `N` independent after appending to `Fin (n+1)`, where
 contract fidelity requires `N=n+2`. The exact height-compression route is
 **STOPPED and frozen**. See [the Response 61 audit](docs/response61-audit.md).
 
+`VER-R62-AUDIT-010` replays Response 62's 8,108-row sweep and the hard
+`(N,A,B)=(7,98,187)` transversal number `5` as verified computed finite
+evidence. Its local lemmas are accepted only as `proved-math` at exact
+hypotheses, while every tested uniform scalar criterion is rejected.
+`FORM-R62-RESIDUAL-SPEC-012` finds no current project-level declaration chain
+for the response's combined residual: the first genuinely missing edge is
+`2*B<=N*A`. `B<n*A` and the terminal interval are routine only after their
+explicit lower-dimensional witness/reindexing and no-full-witness premises are
+bound. Overall disposition is **FAIL / mixed**; the owner-aware multi-shift
+bridge, top-two/all-pivot targets, corrected DPLP, and unrestricted LRC remain
+conjectural/open. See [the Response 62 audit](docs/response62-audit.md).
+
 These are documentation and research-artifact audits after source checkpoint
 `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. They add no source theorem,
 promote no finite evidence, and change no unrestricted open claim.
@@ -296,7 +308,7 @@ Last clean Lean source checkpoint:
 `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`.
 
 Every later commit through current base
-`d3b3f4966a4328b837e4df84eb138b48970a1a7e` adds documentation, operations
+`4c6c5c45b9a0c750c65bd6d5234784e1ada4e56f` adds documentation, operations
 records, or research artifacts only. The `263a1cb` detached replay is
 therefore the authoritative source verification for the current repository
 snapshot.
