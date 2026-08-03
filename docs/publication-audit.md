@@ -74,6 +74,19 @@ This is an accepted checkpoint, not coverage of later documentation changes.
 A final history, scoped-tree, staged-delta, and manual scan must run again
 after the Response62 audit synchronization commit and before push.
 
+## Response 63 audit synchronization
+
+The Response63 synchronization is documentation-only. It publishes one
+hashed runtime-routing fingerprint solely to explain why the completed turn
+is invalid for claim review; it publishes no raw session identifier. Manual
+review covers the new audit and every updated status/roadmap/board path for
+credential shapes, emails, UUIDs, and user-specific paths. The quarantined ZIP
+remains untracked; all 21 archive-member hashes, 13 manifest-declared hashes,
+and 19 public-tree member comparisons were checked independently.
+
+This entry does not replace the required final Gitleaks history,
+`research/sol-pro`, and staged-delta scans after the synchronization commit.
+
 ## Ongoing policy
 
 Before a coherent checkpoint is pushed, run:
