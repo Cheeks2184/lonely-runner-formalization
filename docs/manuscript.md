@@ -2771,3 +2771,95 @@ exactly `g` preimages per image. Subtracting the candidates `r=n*s` uses
 exact shell capacity. This is `proved-math`, not yet Lean-formalized. It does
 not count residues bad for exactly one coordinate, so the weighted
 shell-surplus inequality across different pivots remains open.
+
+## 57. Typed reverse-grid arithmetic
+
+The audited Response 63 reverse-grid calculation now has a kernel-checked
+integer/rational interface in `ReverseGrid.lean`. It formalizes the arithmetic
+transport used after a suitable oriented active blocker has already been
+selected; it does not select that blocker or prove a descent.
+
+`ReverseGridData` contains natural parameters
+
+```text
+n, N, p, ak, d, b
+```
+
+and signed integer parameters
+
+```text
+s, z, r, Q.
+```
+
+Its hypotheses are deliberately explicit:
+
+```text
+2 <= n,                 N = n+1,
+0 < p,                  0 < ak,
+s = 1 or s = -1,
+r = n*z+s,
+ak+d = n*b,
+z*ak+s*b = p*Q,
+N*d < n*p.
+```
+
+The last strict inequality is the corrected deep premise required by C2. It
+is data supplied to the formal layer, not a conclusion of a first-blocker
+argument. Define
+
+```text
+X = N*Q-s,
+modulus = N*ak,
+R = X.natMod(modulus).
+```
+
+The theorem `reverseGrid_exact_identity` proves the exact rational signed
+identity
+
+```text
+r/(n*p) - s*(n*p-N*d)/(N*n*p*ak) = X/(N*ak).
+```
+
+No natural subtraction occurs in this identity. The deep premise is converted
+to positivity of its rational correction numerator by
+`reverseGrid_deficit_pos`.
+
+The constructed residue is made canonical in three separate declarations:
+
+- `reverseGrid_residue_lt` proves `R<N*ak`;
+- `reverseGrid_residue_modEq` proves `X` and `R` congruent modulo `N*ak`;
+- `reverseGrid_phase_mod_one` writes `X/(N*ak)` as an integer plus
+  `R/(N*ak)`.
+
+Signed phases are connected to the project's natural cyclic distance by
+`signedCyclicResidueDistance_ofNat`,
+`signedCyclicResidueDistance_congr`, and
+`signedCyclicResidueDistance_neg`. These adapters preserve congruence and
+sign symmetry without interpreting a possibly negative integer as truncated
+natural subtraction.
+
+The endpoint and pivot consequences are then exact. The theorem
+`reverseGrid_deleted_boundary` proves
+
+```text
+rho_(N*ak)(R*ak) = ak,
+```
+
+so the deleted coordinate lies on the closed boundary. The theorem
+`reverseGrid_pivot_modEq` proves
+
+```text
+R*p = s*(N*b-p)  (mod N*ak)
+```
+
+as an integer congruence, and `reverseGrid_pivot_distance` removes the sign to
+identify the resulting cyclic distance with the signed cyclic distance of
+`N*b-p`. Together these declarations are the exact C1 arithmetic and are
+`proved-lean`; their direct axiom probes use only standard foundations.
+
+This formalization does not prove the proposed strict smaller-Delta
+first-blocker transition. In particular, it does not prove that a globally
+chosen first blocker supplies the source equations and `N*d<n*p`, that the
+transported residue is a full witness before encountering another blocker,
+or that the next blocker has strictly smaller Delta. Those implications, the
+corrected DPLP selector, and unrestricted Lonely Runner remain open.

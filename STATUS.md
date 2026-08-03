@@ -303,26 +303,33 @@ endorsed by a Luna claim review. The lead exactly reproduces all 21 archive
 hashes, all 13 manifest hashes, and the 4,694-record deterministic census:
 4,296 corrected-DPLP-premise records, zero finite failures, 36 zero-good
 records, and 36 minimum-escape selector cases with zero finite failures. A1,
-B1--B5, and reverse-grid identity C1 are `proved-math`; C2 requires the deep
-premise `N*d<n*p`. The `(1,2,6,8,10)` cycle obstruction is verified, while
-strict smaller-Delta first-blocker descent and the DPLP selector remain
-conjectural/open. The pseudo-Lean declaration is invalid as written, and no
-cold-cache kernel replay occurred. See
+B1--B5 remain `proved-math`. The audit's pseudo-Lean block remains invalid as
+written, but the independently developed `ReverseGrid.lean` now proves C1's
+exact typed arithmetic under explicit `ReverseGridData` hypotheses. C2 still
+requires the encoded deep premise `N*d<n*p`. The `(1,2,6,8,10)` cycle
+obstruction is verified, while strict smaller-Delta first-blocker descent and
+the DPLP selector remain conjectural/open. No cold-cache kernel replay
+occurred for the new module. See
 [the Response 63 audit](docs/response63-audit.md).
 
-These are documentation and research-artifact audits after source checkpoint
-`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. They add no source theorem,
-promote no finite evidence, and change no unrestricted open claim.
+The formal source checkpoint is now
+`586b4858cd1b1c513566f3b33d7b5141640e7865`; merged main
+`99a78c15ad0a55e96cffbc5dadf4f3afd99cfa1c` has the same formal source tree.
+This promotes only the exact ReverseGrid arithmetic from `proved-math` to
+`proved-lean`. It promotes no finite evidence and changes no unrestricted
+open claim.
 
 ## Latest verification
 
-Last clean Lean source checkpoint:
-`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`.
+Authoritative formal source checkpoint:
+`586b4858cd1b1c513566f3b33d7b5141640e7865`.
 
-Every later commit in the current published snapshot adds documentation,
-operations records, or research artifacts only. The `263a1cb` detached replay
-is therefore the authoritative source verification for this repository
-snapshot. Resolve the exact snapshot commit with `git rev-parse HEAD`.
+Merged main commit `99a78c15ad0a55e96cffbc5dadf4f3afd99cfa1c`
+contains the same Lean source tree. Verification of the new module was
+performed in an isolated native-WSL warm-cache worktree, not a fresh clean
+checkout. The detached tracked-clean `263a1cb` replay remains the latest
+complete clean-checkout verification of the older source tree. Resolve the
+exact snapshot commit with `git rev-parse HEAD`.
 
 Pinned environment:
 
@@ -331,10 +338,21 @@ Pinned environment:
 - Lake `5.0.0-src+f054605`;
 - mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`;
 - GCC and G++ `15.2.0`;
-- local authoritative replay: Ubuntu 26.04 under WSL2;
+- local verification environment: Ubuntu 26.04 under WSL2;
 - public CI: Ubuntu hosted runner and Python 3.14.
 
-Authoritative detached ext4 verification at that source checkpoint:
+ReverseGrid verification at formal checkpoint `586b485`:
+
+```text
+ReverseGrid module direct compile: PASS
+ReverseGrid target build: 3,001 jobs; PASS
+Root build: 3,590 jobs; PASS
+Root module direct compile: PASS
+AxiomAudit: PASS; new declarations use standard foundations only
+Environment: isolated native-WSL warm-cache worktree, not a fresh checkout
+```
+
+Historical detached ext4 verification at source checkpoint `263a1cb`:
 
 ```text
 Pinned cache restoration: 8,638 files; PASS; 884.08s

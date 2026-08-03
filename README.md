@@ -234,11 +234,15 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 
 The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
-The current clean Lean source checkpoint is
-`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`. Every later commit in this
-published snapshot adds documentation, operations records, or research
-artifacts only, so `263a1cb` remains the authoritative source replay. Resolve
-the exact repository snapshot containing this text with `git rev-parse HEAD`.
+The authoritative formal source checkpoint is
+`586b4858cd1b1c513566f3b33d7b5141640e7865`. Merged main commit
+`99a78c15ad0a55e96cffbc5dadf4f3afd99cfa1c` contains the same Lean source
+tree; its other parent contributes documentation and research records. The
+new ReverseGrid verification used an isolated native-WSL warm-cache worktree,
+not a fresh detached clean checkout. The earlier detached clean replay at
+`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa` remains the latest complete
+clean-checkout record for the older source tree. Resolve the exact repository
+snapshot containing this text with `git rev-parse HEAD`.
 See [STATUS.md](STATUS.md) for the exact environment, timings, warnings, and
 historical CI results.
 
@@ -252,13 +256,20 @@ python3 scripts/audit_lean_trust.py
 python3 -m unittest discover -s tests -v
 ```
 
-The authoritative detached ext4 replay was tracked-clean before and after all
-commands. It restored 8,638 cache files in 884.08 seconds, built 3,589 jobs in
-577.21 seconds, audited 289 theorem reports in 10.37 seconds, and passed all
-160 regression tests in 428.520 seconds (429.14 seconds wall time). The direct
-Response 59 and DPLP certificate comparisons also matched exactly in 0.75 and
-6.46 seconds, respectively. These checks verify the recorded source; they do
-not promote a theorem or change any open claim.
+At formal checkpoint `586b485`, direct compilation of
+`LonelyRunner/ReverseGrid.lean`, its 3,001-job target build, the 3,590-job root
+build, direct compilation of `LonelyRunner.lean`, and the expanded
+`AxiomAudit.lean` all passed. Every new declaration uses only the permitted
+standard foundations. This verifies the integrated ReverseGrid source in the
+recorded warm-cache worktree; it is not represented as a fresh clean replay.
+
+The earlier detached ext4 replay at `263a1cb` was tracked-clean
+before and after all commands. It restored 8,638 cache files in 884.08
+seconds, built 3,589 jobs in 577.21 seconds, audited 289 theorem reports in
+10.37 seconds, and passed all 160 regression tests in 428.520 seconds (429.14
+seconds wall time). The direct Response 59 and DPLP certificate comparisons
+also matched exactly in 0.75 and 6.46 seconds, respectively. Those checks
+remain historical verification of that older formal source tree.
 
 The trust audit runs `LonelyRunner/AxiomAudit.lean`, rejects placeholder or
 unsafe source constructs, and permits only Lean's standard `propext`,
@@ -344,12 +355,22 @@ authorized by that audit.
 
 The [Response 63 audit](docs/response63-audit.md) conditionally accepts an
 independent lead replay of the 4,694-record deletion/correlation census as
-computed finite evidence. A1, B1--B5, and the reverse-grid identity C1 are
-accepted as `proved-math`; C2 requires the explicit deep premise `N*d<n*p`.
-The strict smaller-Delta first-blocker descent and corrected DPLP selector
-remain conjectural/open. The attempted Luna review receives no endorsement
-because it missed both external inputs, and the response's pseudo-Lean block
-is not compilable or Lean-verified.
+computed finite evidence. Its historical disposition accepted A1, B1--B5,
+and C1 as `proved-math` and rejected the response's pseudo-Lean block.
+Subsequent independent formalization now makes the exact C1 reverse-grid
+arithmetic `proved-lean` in `ReverseGrid.lean`: rational signed identity,
+positive deep deficit, canonical residue range and congruence, mod-one phase,
+signed cyclic-distance adapters, deleted-boundary equality, pivot congruence,
+and final distance transport all compile under explicit `ReverseGridData`
+hypotheses. C2 still requires the encoded deep premise `N*d<n*p`; no theorem
+supplies it for a first blocker or proves strict smaller-Delta descent. The
+corrected DPLP selector and unrestricted LRC remain conjectural/open.
+
+The fresh top-level Luna/xhigh formalization route had persisted runtime
+metadata matching the requested model, effort, and working directory, but its
+worker exited without a report or commit. The Formalization Lead independently
+reviewed the target, made one routine proof repair, and committed the accepted
+source as `586b485`. The worker termination supplies no claim endorsement.
 
 The remaining active major routes are corrected deletion-pivot/prime forcing
 and an unrestricted top-two/all-pivot certificate. Their exact contracts,
