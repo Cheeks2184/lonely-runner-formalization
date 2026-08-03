@@ -137,3 +137,28 @@ operational facts only. The response self-disposition is **PIVOT** and is not
 accepted by this record. No finite interval, mathematical lemma, Lean
 declaration, C2 bridge, or unrestricted LRC result has been accepted or
 promoted.
+
+## SOL-P67-CITATION-CORRECTION-108
+
+- **Owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator in the
+  original signed-in browser; same Prompt67 conversation
+- **Submitted:** 2026-08-03 18:19:01 CDT
+- **Prompt shape/hash:** 1,699 UTF-8 bytes; SHA-256
+  `73d2ab01b2ad40e5d73273cb5b39b8ab9928d3f9108697e00a521ad9b9f8c46d`
+- **Completion:** UI readback `Worked for 4m 17s`
+- **Normalized memo:**
+  `research/sol-pro/responses/response67-correction.md`; 5,782 UTF-8 bytes;
+  88 LF separators; terminal LF; SHA-256
+  `f0e169b008076d5d176c8c50f5765c4773fe88cd5838810511a4166b70d946de`
+- **Raw clipboard:** 5,870 UTF-8 bytes; 88 CRLF separators; terminal CRLF;
+  SHA-256 `c8b106c72f3311eb74865f070ae9902d818416b9a77b95db32cf5d38675b693f`
+- **Attachments:** none
+- **Lifecycle:** completed/recovered; independent correction audit pending
+
+The follow-up answers only the exact citation objection from
+`FORM-P67-RESPONSE-MATH-AUDIT-103`. It retracts the two unaudited-paper claims,
+redirects the external product chain to MSS Theorem A and Rosenfeld's audited
+Theorem 1/Corollary 2/Lemmas 3--4, and expressly preserves every mathematical
+status and the **PIVOT** disposition. Recovery alone does not accept even that
+correction. `UniformPrimeForcingSupply`, both supply attacks, the assembled C2
+route, positive-integer unrestricted LRC, and unrestricted LRC remain open.
