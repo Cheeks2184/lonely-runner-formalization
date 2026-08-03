@@ -1746,7 +1746,8 @@ as an accepted implementation or mathematical proof.
 - **Base:** `136e9c6e0eeeb608bfe943762969bdc412745da0`
 - **Dependencies:** recovered Prompt66 archive and the two qualified audits
 - **Branch:** `verify/luna-p66-replay-069`
-- **Worktree:** `/home/joshu/code/lrc-luna-p66-replay-069`
+- **Worktree:** local isolated worktree (absolute path deliberately omitted
+  from public documentation)
 - **Status:** `active`
 - **Exact deliverable:** Independently and strictly replay the recovered
   Prompt66 certificates without trusting response self-labels or bundled
@@ -1770,8 +1771,9 @@ as an accepted implementation or mathematical proof.
 - **Owner / supervising lead:** Verification Lead / `/root`
 - **Base:** `136e9c6e0eeeb608bfe943762969bdc412745da0`
 - **Dependencies:** active `LUNA-P66-CERT-REPLAY-069`
-- **Branch / worktree:** read-only against `verify/luna-p66-replay-069` at
-  `/home/joshu/code/lrc-luna-p66-replay-069`; no separate branch/worktree
+- **Branch / worktree:** read-only against `verify/luna-p66-replay-069` in its
+  local isolated worktree (absolute path deliberately omitted from public
+  documentation); no separate branch/worktree
 - **Status:** `active`
 - **Exact deliverable:** Supervise exact scope and later review the independent
   strict replay; do not author or alter its four files.
@@ -1789,8 +1791,8 @@ as an accepted implementation or mathematical proof.
 - **Owner / supervising lead:** Research-Operations Lead / `/root`
 - **Base:** `136e9c6e0eeeb608bfe943762969bdc412745da0`
 - **Dependencies:** tasks 067--070, recovered Prompt66, and root Prompt64 launch
-- **Branch / worktree:** `research/p66-recovery-066` at
-  `/home/joshu/code/lrc-p66-recovery-066`
+- **Branch / worktree:** `research/p66-recovery-066` in its local isolated
+  worktree (absolute path deliberately omitted from public documentation)
 - **Status:** `verified` (operational documentation only)
 - **Exact deliverable:** Synchronize Prompt66 recovery/audit/replay lifecycle,
   failed packing-search recovery, and active Prompt64 launch across the
@@ -1809,6 +1811,31 @@ as an accepted implementation or mathematical proof.
 - **Final disposition / promotion authority:** Accepted operational sync only.
   It promotes no response claim, computation, certificate, theorem, `PACK-09`,
   or unrestricted result.
+
+### OPS-PUBLIC-PATH-CORRECT-073 — public worktree-path correction
+
+- **ID:** `OPS-PUBLIC-PATH-CORRECT-073`
+- **Lane:** research operations / public-release correction
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `9df7294fd9f20e426d87313922df52a016a15b89`
+- **Dependencies:** `OPS-P66-P64-LIFECYCLE-SYNC-071` and manual public-release
+  scan
+- **Branch / worktree:** `research/p66-recovery-066` in its local isolated
+  worktree (absolute path deliberately omitted from public documentation)
+- **Status:** `verified` (operational documentation correction)
+- **Exact deliverable:** Replace three newly added machine-specific absolute
+  worktree paths with exact logical branch identities and public-safe local
+  worktree descriptions while preserving task meaning.
+- **Allowed files:** `docs/parallel-task-board.md` only
+- **Acceptance command:** Require exact parent `9df7294`, one new commit, exact
+  one-file diff, unique task IDs, no Windows or Linux user-home absolute path,
+  network-share path, private URL/identifier, or secret in all added lines from
+  `136e9c6` through the new head, `git diff --check`, and only the expected
+  untracked Prompt66 recovery paths after commit.
+- **Blocker:** None at public-release correction scope.
+- **Final disposition / promotion authority:** Accepted public-path correction
+  only. It changes no lifecycle, response claim, computation, certificate,
+  theorem, `PACK-09`, or unrestricted result.
 
 ## Integration order
 
