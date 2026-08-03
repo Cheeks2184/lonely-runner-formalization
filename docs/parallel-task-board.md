@@ -43,27 +43,27 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 25 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, `VER-P66-C2-DOCS-042`, completed read-only `FORM-PACKING-ADAPTER-SPEC-044`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, `VER-P66-FINAL-REVIEW-051`, `FORM-P66-POSTFIX-REVIEW-054`, and `VER-P66-POSTFIX-REVIEW-055` are accepted only at their exact recommendation, external-dependency-audit, specification, negative-documentation-review, or ACCEPT-review scope. |
+| Accepted audit deliverables | 27 | The prior 25 plus qualified mathematical/computation audit `FORM-P66-RESPONSE-MATH-AUDIT-067` and mechanical recovery/provenance audit `OPS-P66-RECOVERY-PROVENANCE-068` are accepted only at their exact scopes. Neither promotes a response self-label, theorem, computation, or finite evidence. |
 | Accepted negative audits | 14 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, `VER-P66-C2-DOCS-042`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, and `VER-P66-FINAL-REVIEW-051` are valid negative results; the two postfix ACCEPT reviews are nonnegative audits, and rejected verifier output and queued work are not counted as computed evidence. |
-| Accepted operational documentation tasks | 2 | `OPS-SOL-HIGH-PRO-ROUTING-059` and corrective follow-up `OPS-SOL-HIGH-PRO-ROUTING-CORRECT-062` are accepted only for reviewed ownership, lifecycle, launch-state, routing-history, and adapter-checkpoint synchronization; neither supplies a research response or result. |
-| Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
+| Accepted operational documentation tasks | 3 | The prior two plus `OPS-P66-P64-LIFECYCLE-SYNC-071` are accepted only for reviewed ownership, lifecycle, launch-state, routing-history, and recovery/audit synchronization; none supplies a research response or result. |
+| Accepted recovery deliverables | 4 | Response59, Response62, Response63, and Prompt66 recovery deliverables are recorded without promoting claims. Prompt66 recovery preserves the exact clipboard, safe ZIP members, and separate SHA list, subject to the recorded path/packaging corrections. |
 | Accepted implementations | 0 unrestricted; 4 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, exact ReverseGrid arithmetic, and supplied packing adapter are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 5 | The prior four groups plus supplied packing adapter merge `fadc65d` are integrated. The adapter promotes only `exists_avoiding_of_overlapCapacity` and `exists_pivot_certificate_of_overlapPacking` to `proved-lean`. |
 | Authoritative source replay | integrated / verified clean ext4 | Merge `fadc65d` passed cache retrieval (8,638 artifacts), full `lake build`, a 302-report standard-foundation trust audit, and all 160 Python tests in a clean ext4 replay. |
-| Active Sol Pro cells | 1 / 4 | `SOL-P66-PRO-B-001` is active in a genuinely new signed-in ChatGPT conversation launched by `/root` through the Sol High desktop lifecycle; Prompt60--63 retain their completed dispositions. |
-| Prepared / parked Sol Pro cells | 2 | `SOL-P64-PRO-B-001` is prepared/parked and `SOL-P65-PRO-C-001` is prepared/parked/frozen. Neither was launched at this checkpoint. |
-| Active Sol Medium leads | 1 running / 3 roles | The Verification Lead supervises active `LUNA-PACKING-SEARCH-RECOVERY-060`; Formalization and Research Operations have completed their current reviewed tranches. Supervision does not review or accept the recovery output. |
-| Active Luna workers | 1 / 6 | `LUNA-PACKING-SEARCH-RECOVERY-060` is active through a fresh top-level `gpt-5.6-luna`/xhigh CLI route. It is not a browser operator or Sol Pro cell and currently supplies no accepted evidence or result. |
-| Queued Luna workers | 0 | The original packing search launched and timed out; its distinct recovery is active, not queued. |
+| Active Sol Pro cells | 1 / 4 | `SOL-P64-PRO-B-001` is active in the original signed-in desktop conversation launched by `/root`; Prompt66 is completed/recovered at STOP/OPEN and Prompt65 remains parked/frozen. |
+| Prepared / parked Sol Pro cells | 1 | `SOL-P65-PRO-C-001` is prepared/parked/frozen. Prompt64 is active, not parked; Prompt66 is completed/recovered. |
+| Active Sol Medium leads | 1 running / 3 roles | The Verification Lead read-only supervises active `LUNA-P66-CERT-REPLAY-069`; Formalization and Research Operations have completed their reviewed audit/synchronization tranches. Supervision is not acceptance of replay output. |
+| Active Luna workers | 1 / 6 | `LUNA-P66-CERT-REPLAY-069` is active through a fresh top-level `gpt-5.6-luna`/xhigh CLI route on exact base `136e9c6`. It supplies no result until independent strict replay and review finish. |
+| Queued Luna workers | 0 | The failed packing-search attempts are closed; the independent Prompt66 certificate replay is active, not queued. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
-| Failed delegations | 7 | The prior six plus the original fresh Luna/xhigh packing-search attempt, whose process hit the one-hour timeout with incomplete uncommitted artifacts and no accepted evidence or result. The completed Response63 input-missing route remains unusable but is not counted as a failed launch. |
+| Failed delegations | 8 | The prior seven plus `LUNA-PACKING-SEARCH-RECOVERY-060`, which failed without a commit, replay, report, or manifest. Its 6,527 partial lines are non-evidentiary. |
 | Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
 | Prompt65 contracts/specifications | 2 reviewed / 0 promoted | `VER-P65-PREFLIGHT-027` is conditional-ready only and `FORM-P65-SPEC-028` is SPEC-ONLY/OPEN. |
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
 | Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
-| Integration backlog | 0 review-ready groups | The active packing-search recovery is incomplete and unreviewed, so it is not integration-ready; Prompt64/P65 retain their separate stopped or parked/frozen records. |
-| Wait time | 0 external-control waits | Prompt64/65 are deliberately parked rather than blocked on top-level browser control; Prompt66 has launched and is active. No response recovery is claimed. |
+| Integration backlog | 1 pending Prompt66 audit group | Recovered Prompt66 is held pending independent strict certificate replay and Verification Lead review. The response's STOP/OPEN self-disposition and finite-evidence claims are not promoted. |
+| Wait time | 0 external-control waits | Prompt64 is active, Prompt65 is deliberately parked/frozen, Prompt66 is recovered, and its independent Luna replay is active. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -522,7 +522,7 @@ as an accepted implementation or mathematical proof.
   positive-integer result, or unrestricted LRC promotion. Only `/root` may
   authorize launch or promotion.
 
-### SOL-P64-PRO-B-001 — prepared/parked Prompt64 execution
+### SOL-P64-PRO-B-001 — active Prompt64 execution
 
 - **ID:** `SOL-P64-PRO-B-001`
 - **Lane:** Sol Pro / PRO-B top-two execution
@@ -530,10 +530,10 @@ as an accepted implementation or mathematical proof.
   orchestrator` / `/root`
 - **Launch runtime:** `original browser-capable desktop Codex session`
 - **Base:** `51de33bad6ba251747cd5c37db8e6425e3cb6425`
-- **Dependencies:** integrated `OPS-P64-CONTRACT-018`; no Prompt64 response has
-  been accepted
-- **Branch:** none; prepared prompt package only
-- **Status:** `prepared` (parked; not launched)
+- **Dependencies:** integrated `OPS-P64-CONTRACT-018`; Prompt66 STOP/OPEN
+  recovery and audits identify this as the closest Bridge-B thin API
+- **Branch:** none during the signed-in Sol Pro conversation
+- **Status:** `active`
 - **Exact deliverable:** Execute the exact Prompt64 contract in the required
   signed-in ChatGPT Sol Pro conversation and return the contracted status,
   proof/refutation, falsification, and stop decision.
@@ -541,12 +541,17 @@ as an accepted implementation or mathematical proof.
   separately assigned task
 - **Acceptance command:** Verify the required signed-in Sol Pro conversation
   and preserve the exact Prompt64 contract before any response is reviewed.
-- **Blocker:** Deliberately parked by `/root`; no launch occurred at this
-  checkpoint. Earlier browser limitations describe only the exact worker
-  runtimes that reported them, not the top-level Sol High desktop runtime.
-- **Final disposition / promotion authority:** Prepared/parked prompt only.
-  The contract and its execution state are separate; no theorem or finite
-  evidence is promoted. Only `/root` may authorize launch and review.
+- **Blocker:** None at launch. `/root` launched the exact tracked prompt in the
+  original desktop session at 2026-08-03 15:24:40 CDT. Direct UI readback
+  showed Chat true, Work false, `GPT-5.6 Sol` true, `Pro` true, and `Stop
+  answering` true. No URL or session ID is recorded.
+- **Final disposition / promotion authority:** Active research cell only.
+  Tracked Prompt64 SHA-256 is
+  `8d76932982c27de5477cead9b081520651f757aae75e14f9e1f4d2826475d20b`;
+  exact UI payload/readback SHA-256 is
+  `cb7adeaa3b7ad1a2aea3c63b91e86a180b83e6ef8343cc5432639e504d9d8555`.
+  Launch promotes no theorem or finite evidence. Only `/root` may review or
+  promote a result.
 
 ### VER-P64-FALSIFY-022 — incomplete Prompt64 falsification attempt
 
@@ -1186,7 +1191,7 @@ as an accepted implementation or mathematical proof.
   definitions and corrected Prompt66 strict boundary
 - **Branch:** `verify/luna-packing-search-045`
 - **Worktree:** isolated ext4 worktree; private local path omitted
-- **Status:** `active`
+- **Status:** `rejected` (failed recovery delegation)
 - **Exact deliverable:** Recover and complete the structurally independent
   literal exact all-pivot optimizer for all `1,506` primitive increasing
   tuples with `2<=n<=5` and maximum speed `<=12`, their `6,524` pivot rows,
@@ -1207,13 +1212,11 @@ as an accepted implementation or mathematical proof.
   literal/optimized agreement, complete fresh results/report/manifest,
   targeted-test success, toolchain and six-file hashes, exact allowed-file
   diff, and a clean worktree before independent Verification Lead review.
-- **Blocker:** Active recovery remains incomplete and unreviewed. Stop on the
-  first exact all-pivot packing-lemma refutation or before resource expansion.
-- **Final disposition / promotion authority:** Active Luna CLI recovery only.
-  Luna has no browser or Pro role and is not a Sol Pro cell. The Verification
-  Lead supervises the lane but has not reviewed or accepted any result. No current
-  computation, finite evidence, counterexample, proof, or theorem promotion is
-  recorded.
+- **Blocker:** The recovery failed without a commit, replay, report, or
+  manifest. Its 6,527 partial output lines are incomplete and non-evidentiary.
+- **Final disposition / promotion authority:** Failed delegation only. No
+  computation, finite evidence, counterexample, proof, packing result, or
+  theorem promotion is recorded.
 
 ### SOL-P66-PRO-B-001 — ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING
 
@@ -1228,7 +1231,7 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** exact pivot-certificate equivalence, `PART-45`, `PART-46`,
   `PACK-08`, `COMP-10`, and accepted specification `FORM-B-UNIFORM-039`
 - **Branch:** none during the signed-in Sol Pro conversation
-- **Status:** `active` (first-ranked unrestricted cell)
+- **Status:** `verified` (completed/recovered; response disposition STOP/OPEN)
 - **Exact deliverable:** Prove or refute the sole stronger modular lemma: some
   pivot admits at most one whole block per token, point use `<=mu(r)-1`, and
   the subtraction-free strict inequality `|R_j|+credit>sum_i|B_i|`.
@@ -1240,7 +1243,7 @@ as an accepted implementation or mathematical proof.
   definitions, implication chain, the frozen ordered audit through its first
   stop case, exact certificates, first unsupported implication, and
   stop/continue decision.
-- **Blocker:** None at launch. `/root` launched a genuinely new signed-in
+- **Blocker:** `/root` launched a genuinely new signed-in
   ChatGPT conversation around 2026-08-03 13:59 CDT from the original
   browser-capable desktop Codex session. Direct UI Automation readback showed
   Chat selected (`Work` false), `GPT-5.6 Sol` selected, `Pro` selected, and
@@ -1250,11 +1253,15 @@ as an accepted implementation or mathematical proof.
   remains one Sol Pro turn, exactly the frozen `4,149` modular instances plus
   one abstract preflight unless an early stop occurs, and at most one Lean
   prototype only after the mathematics survives the entire falsification
-  domain.
-- **Final disposition / promotion authority:** Active research cell only. A
-  packing failure rejects only the sufficient strengthening; a finite packing
-  witness proves only its instance. Launch supplies no response, recovery,
-  finite evidence, proof, or result promotion.
+  domain. Recovery completed around 2026-08-03 15:05 CDT, but independent
+  strict certificate replay remains active.
+- **Final disposition / promotion authority:** Completed/recovered at the
+  response's self-disposition **STOP/OPEN**. `FORM-P66-RESPONSE-MATH-AUDIT-067`
+  gives qualified mathematical/computation ACCEPT while rejecting the
+  launch-commit wording and missing-in-ZIP SHA-link claim;
+  `OPS-P66-RECOVERY-PROVENANCE-068` mechanically accepts recovery with
+  path/packaging corrections. No response claim, finite evidence, packing
+  theorem, `PACK-09`, or unrestricted result is promoted.
 
 ### SOL-P65-PRO-C-001 — FIRST-BLOCKER-MAXIMIZER-TRANSFER
 
@@ -1681,6 +1688,128 @@ as an accepted implementation or mathematical proof.
   only. It promotes no worker artifact, computation, finite evidence,
   counterexample, proof, packing theorem, `PACK-09`, or unrestricted result.
 
+### FORM-P66-RESPONSE-MATH-AUDIT-067 — Prompt66 response audit
+
+- **ID:** `FORM-P66-RESPONSE-MATH-AUDIT-067`
+- **Lane:** formalization / mathematical and computation audit
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base:** `136e9c6e0eeeb608bfe943762969bdc412745da0`
+- **Dependencies:** recovered Prompt66 clipboard and safe archive
+- **Branch / worktree:** read-only audit of the recovery worktree
+- **Status:** `verified` (qualified ACCEPT)
+- **Exact deliverable:** Audit the response's mathematics, frozen computation,
+  self-disposition, provenance assertions, and promotion boundary.
+- **Allowed files:** none; read-only audit
+- **Acceptance command:** Reconcile response/archive text, frozen certificates,
+  hashes, strict-boundary semantics, and every provenance claim.
+- **Blocker:** Independent strict certificate replay remains active.
+- **Final disposition / promotion authority:** Qualified mathematical and
+  computation ACCEPT at audit scope. The audit rejects the response's
+  launch-commit wording and its claim that the SHA-link list was in the ZIP.
+  The self-disposition remains STOP/OPEN; no finite evidence or claim is
+  operationally promoted.
+
+### OPS-P66-RECOVERY-PROVENANCE-068 — Prompt66 provenance audit
+
+- **ID:** `OPS-P66-RECOVERY-PROVENANCE-068`
+- **Lane:** research operations / recovery provenance
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `136e9c6e0eeeb608bfe943762969bdc412745da0`
+- **Dependencies:** completed root recovery and `FORM-P66-RESPONSE-MATH-AUDIT-067`
+- **Branch / worktree:** read-only audit of `research/p66-recovery-066` in the
+  isolated recovery worktree
+- **Status:** `verified` (mechanical ACCEPT with corrections)
+- **Exact deliverable:** Mechanically verify clipboard, ZIP, separate SHA list,
+  safe paths, exact bytes, and repository-state provenance.
+- **Allowed files:** none; read-only audit
+- **Acceptance command:** Require clipboard 7,269 UTF-8 bytes, 133 line slots,
+  SHA-256 `3c0b0e1845b498b8ba1bba3366a1482c772ca0a1a6236e0f25dca88ffd4189c9`;
+  ZIP 7,235,209 bytes, 21 safe entries, SHA-256
+  `4fc0f17d8feda472c6a20a7af7d2bdbdcb2f02ae82586d6d153ebcc2430fdea8`;
+  bytewise manifest agreement; and exact CRLF/LF reconciliation.
+- **Blocker:** None at mechanical recovery scope. The SHA list was recovered
+  separately and is not a ZIP member.
+- **Final disposition / promotion authority:** Mechanical recovery/provenance
+  ACCEPT with path and packaging corrections.
+  `8511903c966587b212cb99fa357ad75c62c25460` is the queued-contract/source
+  commit; `3c7aa6914eb191e030ebf7f6121deb8dcc421b6c` is the inspected operational
+  launch repository state. CRLF-to-LF normalization reconciles the exact
+  clipboard to the recovered response. No response claim or computation is
+  promoted.
+
+### LUNA-P66-CERT-REPLAY-069 — independent Prompt66 certificate replay
+
+- **ID:** `LUNA-P66-CERT-REPLAY-069`
+- **Lane:** Luna verification / Prompt66 strict replay
+- **Owner / supervising lead:** fresh top-level `gpt-5.6-luna`/xhigh CLI /
+  Verification Lead / `/root`
+- **Base:** `136e9c6e0eeeb608bfe943762969bdc412745da0`
+- **Dependencies:** recovered Prompt66 archive and the two qualified audits
+- **Branch:** `verify/luna-p66-replay-069`
+- **Worktree:** `/home/joshu/code/lrc-luna-p66-replay-069`
+- **Status:** `active`
+- **Exact deliverable:** Independently and strictly replay the recovered
+  Prompt66 certificates without trusting response self-labels or bundled
+  conclusions.
+- **Allowed files:** `scripts/replay_prompt66_certificates_069.py`,
+  `tests/test_replay_prompt66_certificates_069.py`,
+  `artifacts/prompt66-independent-audit/manifest.json`, and
+  `artifacts/prompt66-independent-audit/report.md`
+- **Acceptance command:** Require exact base, exact four-file diff, strict
+  certificate replay, deterministic tests, manifest/report reconciliation,
+  hashes, `git diff --check`, and an independently reviewable commit.
+- **Blocker:** Active; no replay result has been reported or accepted.
+- **Final disposition / promotion authority:** Luna supplies an independent
+  replay only. It cannot promote finite evidence, a packing claim, `PACK-09`,
+  or unrestricted LRC; Verification Lead and `/root` retain review authority.
+
+### VER-LUNA-P66-REPLAY-SUPERVISE-070 — Prompt66 replay supervision
+
+- **ID:** `VER-LUNA-P66-REPLAY-SUPERVISE-070`
+- **Lane:** verification / read-only supervision
+- **Owner / supervising lead:** Verification Lead / `/root`
+- **Base:** `136e9c6e0eeeb608bfe943762969bdc412745da0`
+- **Dependencies:** active `LUNA-P66-CERT-REPLAY-069`
+- **Branch / worktree:** read-only against `verify/luna-p66-replay-069` at
+  `/home/joshu/code/lrc-luna-p66-replay-069`; no separate branch/worktree
+- **Status:** `active`
+- **Exact deliverable:** Supervise exact scope and later review the independent
+  strict replay; do not author or alter its four files.
+- **Allowed files:** none; read-only
+- **Acceptance command:** Check base, scope, independence, four-file output,
+  deterministic replay/test results, hashes, and claim boundaries.
+- **Blocker:** Worker replay has no result yet.
+- **Final disposition / promotion authority:** Supervision only; no acceptance
+  or result is recorded until the worker finishes and review is reported.
+
+### OPS-P66-P64-LIFECYCLE-SYNC-071 — Prompt66 recovery and Prompt64 launch sync
+
+- **ID:** `OPS-P66-P64-LIFECYCLE-SYNC-071`
+- **Lane:** research operations / lifecycle documentation
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `136e9c6e0eeeb608bfe943762969bdc412745da0`
+- **Dependencies:** tasks 067--070, recovered Prompt66, and root Prompt64 launch
+- **Branch / worktree:** `research/p66-recovery-066` at
+  `/home/joshu/code/lrc-p66-recovery-066`
+- **Status:** `verified` (operational documentation only)
+- **Exact deliverable:** Synchronize Prompt66 recovery/audit/replay lifecycle,
+  failed packing-search recovery, and active Prompt64 launch across the
+  approved documentation and prompt provenance files.
+- **Allowed files:** `README.md`, `STATUS.md`, `docs/full-proof-roadmap.md`,
+  `docs/parallel-task-board.md`, `docs/proof-obligations.md`,
+  `research/sol-pro/prompts/prompt64.md`,
+  `research/sol-pro/prompts/prompt66.md`,
+  `research/sol-pro/launches/prompt64-2026-08-03.md`, and
+  `research/sol-pro/launches/prompt66-2026-08-03.md`
+- **Acceptance command:** Require exact parent `136e9c6`, one docs-only commit,
+  exact allowed diff, unique IDs, all required hashes and lifecycle facts,
+  `git diff --check`, privacy scan, and staged-scope verification while leaving
+  unrelated untracked recovered files untouched.
+- **Blocker:** None at documentation scope.
+- **Final disposition / promotion authority:** Accepted operational sync only.
+  It promotes no response claim, computation, certificate, theorem, `PACK-09`,
+  or unrestricted result.
+
 ## Integration order
 
 1. Treat `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b` as the authoritative
@@ -1710,14 +1839,16 @@ as an accepted implementation or mathematical proof.
 9. Preserve `VER-P64-FALSIFY-022` and `VER-P64-REPAIR-023` as incomplete,
    rejected-as-evidence records. Do not promote the repaired domain, the
    prefix, the A/B counts, or the historical pre-defect hash.
-10. Keep Prompt64 prepared/parked and Prompt65 prepared/parked/frozen. Do not restart Prompt64
-    bounded scans or Prompt65 verifier implementation. Preserve C1 **STOP /
+10. Keep Prompt64 active and Prompt65 prepared/parked/frozen. Do not restart
+    the rejected Prompt64 bounded scans or Prompt65 verifier implementation. Preserve C1 **STOP /
     OPEN** and the exact `N*a_h crossing -> M_h -> active n*a_j -> successor
     edge -> Delta<=tau` gap.
-11. Keep `SOL-P66-PRO-B-001` active as the first-ranked unrestricted cell. Its sole new
-    lemma is the stronger all-pivot modular whole-block selection; the exact
-    pivot-certificate conjecture is not itself new progress. Keep C2 second
-    with its external unformalized dependency, C1 STOP/OPEN, and A frozen.
+11. Preserve `SOL-P66-PRO-B-001` as completed/recovered at STOP/OPEN. Its
+    packing lemma and unrestricted LRC remain open; freeze the two rejected
+    uniform criteria as a milestone, not a formalization target. Hold all
+    claimed finite evidence pending `LUNA-P66-CERT-REPLAY-069` and read-only
+    supervision `VER-LUNA-P66-REPLAY-SUPERVISE-070`. Prompt64's
+    `TOP-TWO-LARGE-RATIO-EXCLUSION` is now the closest Bridge-B thin API.
 
 ## Manual field-audit checklist
 

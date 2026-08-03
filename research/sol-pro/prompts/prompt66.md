@@ -362,6 +362,17 @@ SHA-256 is
 `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`; the
 exact UI-readback launch-payload SHA-256 is
 `3f4e4acbc21e0fd97c5a4ca318c519c0db89ad5b358450cffdbdf80f238da9e5`.
-No URL or conversation/session identifier is recorded. The cell is
-**active**. Launch alone records no response recovery, computation, finite
-evidence, proof, theorem, or unrestricted-result promotion.
+No URL or conversation/session identifier is recorded. `/root` completed the
+recovery around 2026-08-03 15:05 CDT: clipboard 7,269 UTF-8 bytes / 133 line
+slots / SHA-256
+`3c0b0e1845b498b8ba1bba3366a1482c772ca0a1a6236e0f25dca88ffd4189c9`;
+ZIP 7,235,209 bytes / 21 safe entries / SHA-256
+`4fc0f17d8feda472c6a20a7af7d2bdbdcb2f02ae82586d6d153ebcc2430fdea8`;
+and a separately recovered SHA list. The response self-disposition is
+**STOP/OPEN**. Its claimed finite evidence is not operationally promoted.
+`FORM-P66-RESPONSE-MATH-AUDIT-067` gives qualified mathematical/computation
+ACCEPT but rejects the launch-commit wording and missing-in-ZIP SHA-link
+claim. `OPS-P66-RECOVERY-PROVENANCE-068` mechanically accepts recovery with
+path/packaging corrections. Independent strict certificate replay remains
+active under `LUNA-P66-CERT-REPLAY-069`; no theorem, computation, finite
+evidence, packing-existence result, or unrestricted-result promotion follows.

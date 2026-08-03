@@ -391,22 +391,38 @@ Every Sol Pro cell is owned solely by the
 `GPT-5.6 Sol High top-level desktop orchestrator`, supervised by `/root`, and
 launched from the `original browser-capable desktop Codex session`. Sol
 Medium, Luna, CLI, and nested roles are prompt-preparation or downstream-audit
-roles only. `SOL-P64-PRO-B-001` is prepared/parked and was not launched at
-this checkpoint. `SOL-P65-PRO-C-001`,
+roles only. After Prompt66 returned STOP/OPEN, `/root` selected
+`TOP-TWO-LARGE-RATIO-EXCLUSION` as the closest Bridge-B thin API and launched
+`SOL-P64-PRO-B-001` at 2026-08-03 15:24:40 CDT in the original desktop
+session. Direct UI readback showed Chat true, Work false, `GPT-5.6 Sol` true,
+`Pro` true, and `Stop answering` true. Launch-time tracked SHA-256 is
+`8d76932982c27de5477cead9b081520651f757aae75e14f9e1f4d2826475d20b`;
+exact UI payload/readback SHA-256 is
+`cb7adeaa3b7ad1a2aea3c63b91e86a180b83e6ef8343cc5432639e504d9d8555`.
+No URL or session ID is recorded. `SOL-P65-PRO-C-001`,
 `FIRST-BLOCKER-MAXIMIZER-TRANSFER`, is prepared/parked/frozen under the
 Prompt65 stop rule and was not launched. Earlier browser limitations are
 narrow observations of the exact worker runtimes that reported them, not
 top-level blockers.
 
-`SOL-P66-PRO-B-001`, `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, is the
-first-ranked unrestricted cell and is active. `/root` launched it in a
+`SOL-P66-PRO-B-001`, `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, completed and
+was recovered by `/root` around 2026-08-03 15:05 CDT. `/root` launched it in a
 genuinely new signed-in ChatGPT conversation around 2026-08-03 13:59 CDT.
 Direct top-level UI Automation readback verified Chat selected (`Work` false),
 `GPT-5.6 Sol` selected, `Pro` selected, and active `Stop answering`. The exact
 UI-readback launch-payload SHA-256 is
 `3f4e4acbc21e0fd97c5a4ca318c519c0db89ad5b358450cffdbdf80f238da9e5`.
-No URL or conversation/session identifier is recorded. This is launch state,
-not response recovery or a result. `VER-P66-C2-DOCS-042` rejected the original
+No URL or conversation/session identifier is recorded. The recovered
+clipboard is 7,269 UTF-8 bytes across 133 line slots with SHA-256
+`3c0b0e1845b498b8ba1bba3366a1482c772ca0a1a6236e0f25dca88ffd4189c9`.
+The supplied ZIP is 7,235,209 bytes with 21 safe entries and SHA-256
+`4fc0f17d8feda472c6a20a7af7d2bdbdcb2f02ae82586d6d153ebcc2430fdea8`;
+the SHA list was recovered separately, not from the ZIP. Exact newline
+CRLF-to-LF reconciliation makes the clipboard exact to the recovered response.
+`8511903c966587b212cb99fa357ad75c62c25460` is the queued-contract/source
+commit, while `3c7aa6914eb191e030ebf7f6121deb8dcc421b6c` is the inspected operational
+launch repository state.
+`VER-P66-C2-DOCS-042` rejected the original
 documentation package at contract scope, and `FORM-P66-REREVIEW-047` verified
 that the first correction still left the token target and partial choice
 noncanonical for a finite formal type. `OPS-P66-FINITETYPE-CORRECT-049`
@@ -420,7 +436,20 @@ and both reviews change no mathematical target or result status.
 The launched prepared Prompt66 historical SHA-256 is
 `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`.
 Its frozen audit has `4,149` modular instances plus one abstract preflight and
-an early-stop transcript rule. The tracked package promotes no result.
+an early-stop transcript rule. The response self-disposition is **STOP/OPEN**
+and it claims finite evidence, but the operational record promotes no claim.
+`FORM-P66-RESPONSE-MATH-AUDIT-067` gives qualified mathematical/computation
+ACCEPT while rejecting the launch-commit wording and missing-in-ZIP SHA-link
+claim. `OPS-P66-RECOVERY-PROVENANCE-068` mechanically accepts the recovery
+with path/packaging corrections. `LUNA-P66-CERT-REPLAY-069` is active on exact
+base `136e9c6`, independently and strictly replaying four deliverables under
+read-only `VER-LUNA-P66-REPLAY-SUPERVISE-070`; no replay result exists yet.
+The packing lemma and unrestricted LRC remain open. Freeze the two rejected
+uniform criteria as a milestone, not a formalization target.
+
+The earlier `LUNA-PACKING-SEARCH-RECOVERY-060` failed without a commit,
+replay, report, or manifest. Its 6,527 partial lines are non-evidentiary and
+increase the failed-delegation count by one.
 
 The authoritative supplied-packing adapter checkpoint is merge
 `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`, with documentation parent

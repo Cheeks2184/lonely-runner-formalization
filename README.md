@@ -321,9 +321,10 @@ tool versions are in [STATUS.md](STATUS.md).
 Research is in **FULL-PROOF PRIORITY MODE**. The exact unrestricted
 bottleneck remains the Lean-verified finite pivot-certificate proposition:
 for every positive injective integer tuple, some pivot candidate must escape
-all strict modular bad sets. The current first-ranked bridge is Bridge B's
-`ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, packaged as Prompt66 and active in
-one Sol High desktop research turn. DPLP remains an open lower-ranked route:
+all strict modular bad sets. Prompt66's
+`ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING` turn completed at STOP/OPEN, leaving
+that packing lemma open. The active closest Bridge-B thin API is Prompt64's
+`TOP-TWO-LARGE-RATIO-EXCLUSION`. DPLP remains an open lower-ranked route:
 together with lower-dimensional LRC, the verified coefficient-three height
 theorem, and the direct `q=N` branch, it would prove unrestricted
 positive-integer LRC. An exact finite audit found no DPLP failure in 243,973
@@ -374,6 +375,21 @@ and final distance transport all compile under explicit `ReverseGridData`
 hypotheses. C2 still requires the encoded deep premise `N*d<n*p`; no theorem
 supplies it for a first blocker or proves strict smaller-Delta descent. The
 corrected DPLP selector and unrestricted LRC remain conjectural/open.
+
+Prompt66's all-pivot whole-block-packing turn is completed/recovered at its
+self-disposition **STOP/OPEN**. The recovery preserves the exact clipboard,
+21-entry safe ZIP, separate SHA list, and newline reconciliation. Independent
+audits accept the mathematics/computation only at qualified scope and the
+recovery mechanically with path/packaging corrections; no response claim or
+finite evidence is promoted. An independent Luna strict certificate replay is
+active, so the packing lemma and unrestricted LRC remain open. The two rejected
+uniform criteria are frozen as a research milestone, not a formalization
+target.
+
+After that stop decision, `/root` launched the exact Prompt64
+`TOP-TWO-LARGE-RATIO-EXCLUSION` contract in the original Sol High desktop
+session. It is the active closest Bridge-B thin API; launch alone supplies no
+proof, computation, or theorem.
 
 The fresh top-level Luna/xhigh formalization route had persisted runtime
 metadata matching the requested model, effort, and working directory, but its

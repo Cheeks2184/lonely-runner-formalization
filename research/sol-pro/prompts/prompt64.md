@@ -273,8 +273,16 @@ weaker special class as closing the audited project-level edge.
 
 ## Lifecycle state
 
-This prompt is **prepared and parked** under sole owner
+This prompt is **active** under sole owner
 `GPT-5.6 Sol High top-level desktop orchestrator`, supervising authority
 `/root`, and launch runtime `original browser-capable desktop Codex session`.
-It was not launched at this checkpoint. Its contents record no Sol Pro
-response, computation, proof, theorem promotion, or finite evidence.
+After Prompt66 completed/recovered at STOP/OPEN, `/root` selected
+`TOP-TWO-LARGE-RATIO-EXCLUSION` as the closest Bridge-B thin API and launched
+this exact tracked prompt at 2026-08-03 15:24:40 CDT. Direct UI readback showed
+Chat true, Work false, `GPT-5.6 Sol` true, `Pro` true, and `Stop answering`
+true. Tracked prompt SHA-256 is
+`8d76932982c27de5477cead9b081520651f757aae75e14f9e1f4d2826475d20b`;
+exact UI payload/readback SHA-256 is
+`cb7adeaa3b7ad1a2aea3c63b91e86a180b83e6ef8343cc5432639e504d9d8555`.
+No URL or session ID is recorded. Launch records no response, computation,
+proof, theorem promotion, or finite evidence.
