@@ -195,17 +195,22 @@ some pivot whose exact whole modular fiber blocks admit a capacity-respecting
 selection with strict credit greater than the bad-incidence excess.
 
 For pivot `j`, `p=a_j`, `M=(n+1)*p`, canonical grid `R_j`, and strict nonpivot
-bad sets `B_i^j`, the selection chooses at most one block
-`Q((i,u),k)=F(i,u) intersect B_k^j` for each complete owner-target fiber
-`F(i,u)`. Each residue `r` may be used at most `mu_j(r)-1` times, and the
+bad sets `B_i^j`, each attained target is a canonical element of the finite
+image `U_i^j : Fin M`; tokens form the finite dependent owner-target type.
+The selection is an explicit dependent `Option` over each token's finite type
+of distinct nonpivot parents with nonempty block
+`Q_j((i,u),k)=F_j(i,u) intersect B_k^j`. Each residue `r` may be used at most
+`mu_j(r)-1` times, and only selected tokens contribute to use or credit. The
 selection must satisfy the subtraction-free strict inequality
 `|R_j|+credit>sum_(i!=j)|B_i^j|`. Full definitions and boundaries are frozen in
 `research/sol-pro/prompts/prompt66.md`.
 
 `VER-P66-C2-DOCS-042` rejected the original documentation package at contract
-scope. The `OPS-P66-CORRECT-043` correction is in review with Prompt66
-SHA-256
-`0f371561df147457c045ccd8fc91ef7689dd366548373afe05e8d4b2a7864499`.
+scope. `FORM-P66-REREVIEW-047` is a verified negative audit of the first
+correction: its attained targets and partial selection were not yet canonical
+finite formal objects. `OPS-P66-FINITETYPE-CORRECT-049` is under review with
+Prompt66 SHA-256
+`b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`.
 Its mandatory audit is exactly 4,149 ordered modular pivot instances plus one
 abstract preflight, and its transcript ends at the first declared-order stop
 case unless the complete finite domain is exhausted. No result is promoted.
@@ -654,7 +659,9 @@ proof, or budget stop condition is reached.
 | 2026-08-03 | `FORM-B-UNIFORM-039` isolates modular whole-block existence as the sole new lemma | specification-only/open | Prevents tautological relabeling of the existing pivot equivalence and preserves top-two only as an alternative |
 | 2026-08-03 | `OPS-P66-CONTRACT-040` packages `SOL-P66-PRO-B-001` | rejected documentation contract | `VER-P66-C2-DOCS-042` found range, evidence-label, prime-supply, and finite-domain/transcript defects; no mathematical claim is rejected or promoted |
 | 2026-08-03 | `VER-P66-C2-DOCS-042` reviews Prompt66/C2 documentation | verified negative audit | Requires an exact all-`n>=3` distinct-prime C2 contract and a decidable Prompt66 finite audit |
-| 2026-08-03 | `OPS-P66-CORRECT-043` corrects the Prompt66/C2 package | review | Freezes 4,150 ordered cases, early-stop transcript semantics, corrected finite-evidence labels, and synchronized SHA/status records; no result is promoted |
+| 2026-08-03 | `OPS-P66-CORRECT-043` corrects the Prompt66/C2 package | rejected documentation correction | `FORM-P66-REREVIEW-047` found that the target-residue and partial-choice domains were not yet canonical finite formal types; no mathematical claim is rejected or promoted |
+| 2026-08-03 | `FORM-P66-REREVIEW-047` rereviews the Prompt66 correction | verified negative audit | Requires canonical finite attained targets, tokens, eligible parents, and an explicit dependent optional choice while preserving the exact lemma |
+| 2026-08-03 | `OPS-P66-FINITETYPE-CORRECT-049` corrects Prompt66 finite types | review | Makes tokens and selected-block sums Fintype-compatible, synchronizes the prompt hash and waiting metric, and promotes no result |
 | 2026-08-02 | Entered FULL-PROOF PRIORITY MODE; fixed A/B/C contracts and budgets | research policy | Replaces coefficient-by-coefficient optimization with three explicit unrestricted bridges |
 | 2026-08-02 | Response 57 fixed-shift obstruction: no finite fixed J1 shift family is uniformly row-nonempty | proved-math, independent finite checks | Does not shorten unrestricted path; supports freezing bounded translation variants |
 | 2026-08-02 | Submitted Sol Pro Prompt 58 on A/B/C with adversarial contracts | research in progress | Strategy generation only; no theorem yet |

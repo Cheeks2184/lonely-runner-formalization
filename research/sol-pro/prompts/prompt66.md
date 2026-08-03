@@ -54,43 +54,79 @@ rho_M(x) = min(x mod M, M-(x mod M)).
 The canonical pivot grid is
 
 ```text
-R_j = {r : 0 <= r < M and N does not divide r}.
+R_j = {r : Fin M : N does not divide r.val}.
 ```
 
-It has exactly `n*p` residues. For each nonpivot owner `i!=j`, define its
-strict bad set
+Here `p>0`, so `M>0`, and every `r : R_j` carries its unique natural
+representative `r.val<M`. The grid has exactly `n*p` residues. For each
+nonpivot owner `i!=j`, define its finite strict bad subtype
 
 ```text
-B_i^j = {r in R_j : rho_M(r*a_i) < p}.
+B_i^j = {r : R_j : rho_M(r.val*a_i) < p}.
 ```
 
 The boundary is deliberate: badness is strict `<p`; safety is closed `>=p`.
 For `r in R_j`, the pivot coordinate is automatically safe, but any use of
 that fact must cite or prove the canonical pivot equivalence.
 
-For an owner `i!=j` and a target residue `u` attained on `B_i^j`, define the
-complete strict target fiber
+For each owner `i!=j`, first define the finite canonical attained-target type
 
 ```text
-F(i,u) = {r in R_j : r*a_i == u (mod M)}.
+U_i^j = image (r |-> (r.val*a_i) mod M as an element of Fin M) of B_i^j.
 ```
 
-Only nonempty fibers with `F(i,u) subset B_i^j` are tokens. For a distinct
-nonpivot parent `k!=i,j`, its selectable whole block is
+Thus an element of `U_i^j` is a unique canonical natural representative
+`u<M`, not an arbitrary integer congruent to an attained target. Define the
+finite token type
 
 ```text
-Q((i,u),k) = F(i,u) intersect B_k^j.
+T_j = {(i,u) : i : Fin n, i!=j, and u : U_i^j}.
 ```
 
-Empty intersections are not choices. A selection `chi` chooses at most one
-parent `k` for each token `(i,u)`. Put
+Equivalently, `T_j` is the finite dependent sum of `U_i^j` over the nonpivot
+owner subtype. For a token `e=(i,u)`, define the complete strict target fiber
+by equality of canonical remainders:
+
+```text
+F_j(i,u) = {r in R_j : (r.val*a_i) mod M = u.val}.
+```
+
+Every such fiber is nonempty because `u` lies in `U_i^j`, and
+`F_j(i,u) subset B_i^j` because strict badness depends only on that canonical
+remainder. No duplicate residue representative creates a second token. For a
+distinct nonpivot parent `k!=i,j`, its candidate whole block is
+
+```text
+Q_j((i,u),k) = F_j(i,u) intersect B_k^j.
+```
+
+Make eligibility finite and explicit:
+
+```text
+P_j(i,u) = {k : Fin n : k!=i, k!=j, and Q_j((i,u),k) is nonempty}.
+```
+
+A selection is the dependent partial choice
+
+```text
+chi : (e : T_j) -> Option (P_j(e)).
+```
+
+Here `None` means that the token is unselected, while `Some k` selects its
+entire nonempty block. This type selects at most one parent for each token and
+does not require parents chosen by different tokens to be distinct. Put
 
 ```text
 mu_j(r) = #{i!=j : r in B_i^j},
-use_chi(r) = #{tokens e : r in Q(e,chi(e))},
+use_chi(r) = #{e in T_j : there exists k, chi(e)=Some k
+                           and r in Q_j(e,k)},
 S_j = sum_(i!=j) |B_i^j|,
-credit(chi) = sum_(selected tokens e) |Q(e,chi(e))|.
+credit(chi) = sum_(e in T_j, k with chi(e)=Some k) |Q_j(e,k)|.
 ```
+
+Both the count and the credit range only over selected tokens; `None`
+contributes zero. All displayed domains (`Fin n`, `R_j`, `B_i^j`, `U_i^j`,
+`T_j`, and `P_j(e)`) are finite and hence are `Fintype`-compatible.
 
 The selection is capacity-respecting when
 
@@ -112,18 +148,22 @@ subtraction when `S_j<|R_j|`.
 The sole new lemma is fully quantified as follows:
 
 ```text
-For every n>=1 and every positive injective a : Fin n -> Nat,
-there exist a pivot j and a partial token-parent selection chi such that
-  (1) every selected parent is a nonpivot index distinct from the token
-      owner,
-  (2) chi selects at most one whole block per token,
-  (3) use_chi(r) <= mu_j(r)-1 for every canonical residue r, and
-  (4) |R_j|+credit(chi) > S_j.
+For every natural n with n>=1 and every a : Fin n -> Nat satisfying
+  (a) 0<a_i for every i, and
+  (b) a is injective,
+there exist j : Fin n and
+  chi : (e : T_j) -> Option (P_j(e))
+such that
+  (1) for every r : R_j, use_chi(r) <= mu_j(r)-1, and
+  (2) |R_j|+credit(chi) > S_j.
 ```
 
-Condition (1) means the parent index is distinct from the token's owner, not
-that different tokens must choose different parents. Do not silently impose a
-stronger injective-parent restriction.
+The dependent codomain `P_j(e)` supplies the former parent-validity condition:
+every selected block is nonempty and its parent is distinct from both `j` and
+the token owner. The `Option` value supplies the former at-most-one condition.
+Neither the statement nor the types require different tokens to choose
+different parents. Do not silently impose a stronger injective-parent
+restriction.
 
 ## Exact implication chain and current status
 

@@ -36,14 +36,14 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 20 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, `VER-P66-C2-DOCS-042`, and completed read-only `FORM-PACKING-ADAPTER-SPEC-044` are accepted only at their exact recommendation, external-dependency-audit, specification, or negative-documentation-review scope. |
-| Accepted negative audits | 11 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, and `VER-P66-C2-DOCS-042` are valid negative results; rejected verifier output and queued work are not counted as computed evidence. |
+| Accepted audit deliverables | 21 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, `VER-P66-C2-DOCS-042`, completed read-only `FORM-PACKING-ADAPTER-SPEC-044`, and `FORM-P66-REREVIEW-047` are accepted only at their exact recommendation, external-dependency-audit, specification, or negative-documentation-review scope. |
+| Accepted negative audits | 12 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, `VER-P66-C2-DOCS-042`, and `FORM-P66-REREVIEW-047` are valid negative results; rejected verifier output and queued work are not counted as computed evidence. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
 | Accepted implementations | 0 unrestricted; 3 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, and exact ReverseGrid arithmetic are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 4 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), board/Prompts60--63 package (`263a1cb`), and ReverseGrid formal source (`586b485`, merged by `99a78c1`) are on main. |
 | Authoritative source replay | integrated / verified warm-cache | Formal source checkpoint `586b485` passed module/root direct compiles, 3,001-job target and 3,590-job root builds, and standard-foundation axiom probes in an isolated warm-cache worktree. Main `99a78c1` has the same Lean tree. The latest full detached clean replay remains the older `263a1cb` record. |
 | Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered and conditionally audited; Prompt64 is waiting, Prompt65 is waiting/frozen, and Prompt66 cannot launch without external control. |
-| Queued Sol Pro cells | 1 | `SOL-P66-PRO-B-001` is the selected next unrestricted cell and is waiting for callable signed-in ChatGPT Sol Pro control. |
+| Waiting Sol Pro cells | 1 | `SOL-P66-PRO-B-001` is the selected next unrestricted cell and is waiting for callable signed-in ChatGPT Sol Pro control. |
 | Active Sol Medium leads | 0 running / 3 roles | Verification, Formalization, and Research Operations have completed their current reviewed tranches. |
 | Active Luna workers | 1 / 6 | `LUNA-PACKING-ADAPTER-046` is active in an isolated worktree with confirmed fresh top-level Luna/xhigh metadata. Historical Response63 routing failures and the completed no-report ReverseGrid launch retain their recorded scope. |
 | Queued Luna workers | 1 | `VER-PACKING-SEARCH-045` is contracted but has not launched and supplies no computation or claim. |
@@ -54,7 +54,7 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
 | Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
-| Integration backlog | 1 contract/documentation group | The corrected Prompt66/C2 package under `OPS-P66-CORRECT-043` awaits PI review; Prompt64/P65 retain their separate stopped or waiting records. |
+| Integration backlog | 1 contract/documentation group | The finite-type-corrected Prompt66 package under `OPS-P66-FINITETYPE-CORRECT-049` awaits PI review; Prompt64/P65 retain their separate stopped or waiting records. |
 | Wait time | External control waiting | Browser/ChatGPT-control is not callable in the current runtime; Prompt64, Prompt65, and Prompt66 have no submitted external response. |
 
 Metrics are updated only from a worker result accepted by the supervising
@@ -875,7 +875,7 @@ as an accepted implementation or mathematical proof.
 - **Base:** `8511903c966587b212cb99fa357ad75c62c25460`
 - **Dependencies:** `VER-P66-C2-DOCS-042`
 - **Branch:** `research/ops-p66-contract-040`
-- **Status:** `review`
+- **Status:** `rejected` (documentation correction; superseded)
 - **Exact deliverable:** Correct C2 to every `n>=3` with distinct primes only;
   record the independently reproduced `n=3` evidence; freeze Prompt66's exact
   ordered finite audit and early-stop transcript; synchronize hashes, labels,
@@ -886,14 +886,68 @@ as an accepted implementation or mathematical proof.
   `research/sol-pro/prompts/prompt66.md`
 - **Acceptance command:** Require parent `8511903c966587b212cb99fa357ad75c62c25460`,
   exact allowed-file diff, unique task IDs, Prompt66 SHA-256
-  `0f371561df147457c045ccd8fc91ef7689dd366548373afe05e8d4b2a7864499`,
+  `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`,
   `git diff --check`, added-line privacy/secret scan, one new commit, and a
   clean worktree.
+- **Blocker:** `FORM-P66-REREVIEW-047` found that the attained target and
+  partial-choice domains were not yet canonical finite formal objects.
+- **Final disposition / promotion authority:** Rejected documentation
+  correction, superseded by `OPS-P66-FINITETYPE-CORRECT-049`. It promotes no
+  computation, proof, Lean result, or unrestricted claim.
+
+### FORM-P66-REREVIEW-047 — Prompt66 finite-type rereview
+
+- **ID:** `FORM-P66-REREVIEW-047`
+- **Lane:** formalization / contract rereview
+- **Owner / supervising lead:** Formalization Lead
+- **Base:** `644fd979609b9e60b674234d3e9809d01c31f6cf`
+- **Dependencies:** `OPS-P66-CORRECT-043`, `FORM-PACKING-ADAPTER-SPEC-044`
+- **Branch / worktree:** read-only review; private path omitted
+- **Status:** `verified` (negative documentation audit)
+- **Exact deliverable:** Decide whether Prompt66's token targets, fibers,
+  eligible parents, partial selection, selected-token sums, and quantified
+  lemma form canonical finite objects suitable for a later Lean adapter.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Check target representatives for uniqueness, trace
+  every finite domain and dependent choice type, preserve strict boundaries
+  and stop semantics, and reject any hidden injective-parent strengthening.
+- **Blocker:** The first correction ranged over an informal attained residue
+  and implicit partial choice, so it did not yet provide a canonical finite
+  token `Fintype` or a dependent `Option` over finite eligible parents.
+- **Final disposition / promotion authority:** Accepted negative documentation
+  audit only. It rejects the correction contract, not the packing lemma, any
+  finite packing outcome, pivot noncoverage, or unrestricted LRC.
+
+### OPS-P66-FINITETYPE-CORRECT-049 — Prompt66 finite-type correction
+
+- **ID:** `OPS-P66-FINITETYPE-CORRECT-049`
+- **Lane:** research operations / corrective documentation
+- **Owner / supervising lead:** Research-Operations Lead
+- **Base:** `644fd979609b9e60b674234d3e9809d01c31f6cf` on the isolated branch whose
+  original task base is `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`
+- **Dependencies:** `FORM-P66-REREVIEW-047`
+- **Branch:** `research/ops-p66-contract-040`
+- **Status:** `review`
+- **Exact deliverable:** Define attained targets as canonical elements of the
+  finite image in `Fin M`, define finite owner-target tokens and finite
+  nonempty eligible-parent subtypes, make `chi` an explicit dependent
+  `Option`, range use and credit only over selected tokens, and synchronize
+  the Prompt66 hash, waiting metric, task dispositions, and status records.
+- **Allowed files:** `STATUS.md`, `docs/full-proof-roadmap.md`,
+  `docs/parallel-task-board.md`, `docs/proof-obligations.md`,
+  `docs/c2-prime-forcing-dependency-audit.md` only if a hash/status reference
+  exists, and `research/sol-pro/prompts/prompt66.md`
+- **Acceptance command:** Require parent
+  `644fd979609b9e60b674234d3e9809d01c31f6cf`, exact allowed-file diff, unique
+  task IDs, Prompt66 SHA-256
+  `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`,
+  target/type consistency searches, `git diff --check`, added-line
+  privacy/secret scan, exactly one new commit, and a clean worktree.
 - **Blocker:** PI review/merge only; external signed-in Sol Pro control remains
   unavailable.
 - **Final disposition / promotion authority:** Corrective documentation under
-  review. It promotes no computation, proof, Lean result, or unrestricted
-  claim.
+  review. It changes no mathematical target and promotes no computation,
+  finite evidence, proof, Lean result, or unrestricted claim.
 
 ### FORM-PACKING-ADAPTER-SPEC-044 — pivot packing adapter specification
 
@@ -999,8 +1053,8 @@ as an accepted implementation or mathematical proof.
 - **Allowed files:** none during the external turn; recovery requires a
   separately authorized task
 - **Acceptance command:** Verify Prompt66 file SHA-256
-  `0f371561df147457c045ccd8fc91ef7689dd366548373afe05e8d4b2a7864499`,
-  after `OPS-P66-CORRECT-043` is accepted, then require full quantified
+  `b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`,
+  after `OPS-P66-FINITETYPE-CORRECT-049` is accepted, then require full quantified
   definitions, implication chain, the frozen ordered audit through its first
   stop case, exact certificates, first unsupported implication, and
   stop/continue decision.

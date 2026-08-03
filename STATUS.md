@@ -395,9 +395,12 @@ waiting/frozen under the Prompt65 stop rule. `SOL-P66-PRO-B-001`,
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING`, is the selected next unrestricted
 cell, but it is also waiting because external signed-in ChatGPT Sol Pro control
 is unavailable. `VER-P66-C2-DOCS-042` rejected the original documentation
-package at contract scope; `OPS-P66-CORRECT-043` corrects it and is in review.
+package at contract scope, and `FORM-P66-REREVIEW-047` verified that the first
+correction still left the token target and partial choice noncanonical for a
+finite formal type. `OPS-P66-FINITETYPE-CORRECT-049` is the replacement
+correction under review; it changes no mathematical target or result status.
 The corrected Prompt66 SHA-256 is
-`0f371561df147457c045ccd8fc91ef7689dd366548373afe05e8d4b2a7864499`.
+`b492bf3c327217cba8357ddc949f10b04d6c885587709793e314211380f39fe6`.
 Its frozen audit has `4,149` modular instances plus one abstract preflight and
 an early-stop transcript rule. The tracked package promotes no result.
 
