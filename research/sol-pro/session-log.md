@@ -35,3 +35,39 @@ claim is promoted. The sole continuing bridge
 Prompt 62 is complete and recovered with status **UNVERIFIED**. Prompt 63
 remains active. Only `/root` may accept an independent audit or promote any
 mathematical status.
+
+## OPS-P63-RECOVER-011 — Prompt 63 recovery
+
+- **Recovery base:** `477fbffc709d0550c163e2812f26193a4ec38cff`
+- **Recovery branch:** `research/ops-p63-recover-011`
+- **Normalized response:** `research/sol-pro/responses/response63.md`
+- **Normalized response SHA-256:** `b3db11b42448d3b92d3d9522fdac89128a46ca7de32cca19b033ac202242e134`
+- **Normalized response shape:** 38,979 UTF-8 bytes; 1,094 LF line endings; 1,094 content lines; terminal LF present
+- **Original clipboard capture:** 40,019 characters; 40,073 UTF-8 bytes; 1,094 CR and 1,094 LF bytes; terminal LF present; SHA-256 `40005cc04ed3f1a4c44202646cea2f77e227b9769fffe397804730ce44c1b75c`
+- **Supplied bundle:** `pro_c_audit_bundle.zip`; 1,426,941 bytes; SHA-256 `5832a26d51410dd661c545be4490e39dadc445a65fc80590917dc4e1474a0f8b`
+- **Recovered artifact directory:** `research/sol-pro/artifacts/prompt63/`
+
+The quarantined ZIP contained 21 safe regular UTF-8/LF text, source, and
+certificate members totaling 4,803,686 uncompressed bytes. Thirteen of
+thirteen manifest-declared source/output hashes matched. Nineteen members are
+preserved byte-for-byte; the ZIP itself is not tracked.
+
+The two redundant generated core outputs are intentionally omitted under the
+public-release fallback after bounded sentinel reconstruction repeatedly hit a
+nested-command timeout. Each is 1,756,631 bytes with expected SHA-256
+`8eb8ad610e55c24170034cf634ea77fcd207cc5fc327efc9af155737beb6de2d`:
+`impl_a_core.tsv` is reproduced by `./impl_a.py`; `impl_b_core.tsv` is
+reproduced after compiling `impl_b.cpp` with the manifest command and running
+the resulting implementation against the artifact directory. Their partial
+sentinel files were deleted and are not part of this recovery.
+
+Recovery preserves the response exactly but does not accept its self-applied
+status labels or pseudo-Lean declaration. All computations and transcripts are
+**unverified finite evidence** pending independent replay.
+`MINIMUM-ESCAPE-FIRST-BLOCKER-DESCENT` and corrected DPLP remain
+**conjectural/open**; no induction or unrestricted Lonely Runner claim is
+promoted.
+
+Prompt 63 is complete and recovered with status **UNVERIFIED**. No Sol Pro
+cell remains active. Only `/root` may accept an independent audit or promote
+any mathematical status.
