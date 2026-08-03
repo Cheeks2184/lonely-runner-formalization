@@ -93,6 +93,13 @@ fixed least-start reversal map is such an SDR when every actual candidate is
 coprime to its reversal total. These hypotheses are conditional: Lean does
 not assume Pomerance's theorem or prove the coprimality premise uniformly.
 
+`CoefficientTwoArbitraryReversal.lean` strengthens the fixed-total result to
+every exact feasible start: if all actual candidates are coprime to
+`Q_s=N+s+2*ell`, the named map `c |-> Q_s-c` is an injective Gamma SDR.
+`GammaTwoTranslation.lean` independently verifies the conditional J1 map,
+under its branchwise gcd and cross-collision hypotheses. Neither theorem
+asserts that its coprimality hypotheses hold uniformly.
+
 `MatchingDependency.lean` proves an exact finite graph theorem: relative to
 any fixed left-saturating matching, a subset is Hall-tight exactly when it is
 successor-closed and contains no vertex seeing an unmatched right neighbor.
@@ -110,6 +117,9 @@ rematching the old set, or exposes an exact deficiency-one subset. If the
 vertex was already present, the enlarged set is unchanged.
 `MatchingContraction.lean` proves that the full non-reaching region is tight
 and that deleting it and its matched image leaves a strict-Hall residual.
+`CriticalCoreContraction.lean` proves that every co-singleton of a nontrivial
+critical deficiency-one set is tight, so unrestricted contraction to an
+"atomic" core always collapses to one left vertex and is not a proof route.
 All are finite structural theorems; none constructs the original Gamma
 matching or proves the all-dimension selector.
 
@@ -188,6 +198,8 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 - [response55-audit.md](docs/response55-audit.md): exact diagonal
   counterexamples, tight-block contraction, compiler results, and surviving
   arithmetic gaps.
+- [response56-audit.md](docs/response56-audit.md): atomic-collapse correction,
+  coatomic necessary conditions, two-total chains, and fixed-shift failures.
 - [computation.md](docs/computation.md): computational scope and interpretation.
 - [publication-audit.md](docs/publication-audit.md): public-release privacy,
   secret-scanning, and redistribution audit.
@@ -202,7 +214,7 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
 The current clean Lean source checkpoint is
-`4911ed7f962b86e7337b90dd24ffb0fd897d0b08`; see
+`8b2fcd4f2a65cec83eaf8e647834421b0970e4b1`; see
 [STATUS.md](STATUS.md) for its exact build and trust results and the separate
 working-tree test result.
 
@@ -233,6 +245,8 @@ bash scripts/audit_response47.sh
 bash scripts/audit_response50.sh
 bash scripts/audit_coefficient_two_gamma.sh
 bash scripts/audit_gamma_dependency_sweep.sh
+python3 scripts/audit_gamma_diagonal_obstruction.py
+python3 scripts/audit_gamma_translation_shifts.py
 bash scripts/audit_top_two_pivot_search.sh
 bash scripts/audit_top_two_fractional_dual.sh
 bash scripts/audit_top_two_fractional_obstruction.sh

@@ -88,9 +88,11 @@ hypotheses are only a sufficient class and are not known uniformly.
 `DIAGONAL-HALL` is rejected, not open. The response's replacement questions
 are exact but unproved:
 
-- `GAMMA-ATOMIC-EXCLUSION`: rule out an atomically critical contraction
-  residual using Gamma arithmetic even though contraction destroys the clean
-  interval form;
+- `GAMMA-ATOMIC-EXCLUSION` was the proposed next target, but the Response 56
+  audit rejects its unannotated form as vacuous: every nontrivial critical
+  deficiency-one core has tight co-singletons and contracts to one isolated
+  left vertex. The repaired open target is exclusion of a nonspanning,
+  puncture-annotated coatomic residual;
 - find an arithmetically controlled family of total layers using useful
   non-diagonal edges;
 - `CUT-OR-STRIP-OVERLOAD`: synchronize strip prime covers and cross-cut lcm

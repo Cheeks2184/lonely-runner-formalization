@@ -1442,3 +1442,50 @@ The new test verifies the SHA-256 of the independent `(36,16)` diagonal-Hall
 counterexample source and compares its complete deterministic output to the
 tracked expected file. It is a refutation of one sufficient relation, not a
 Gamma-Hall or LRC counterexample.
+
+## 2026-08-02: arbitrary reversal, J1, and atomic-collapse probes
+
+Three independently developed modules were checked against the pinned native
+WSL verification environment under Lean 4.32.1:
+
+```text
+CoefficientTwoArbitraryReversal.lean:
+  rectangleReversalAt_isSdr_of_feasible
+  rectangleReversalAt_isSdr_of_mem_startInterval
+CriticalCoreContraction.lean:
+  criticalCore_coSingleton_tight
+  atomicCriticalCore_card_eq_one
+GammaTwoTranslation.lean:
+  gammaTwoTranslation_isSdr
+```
+
+Every listed direct probe reports exactly `[propext, Classical.choice,
+Quot.sound]`. The first J1 reconstruction exposed three unresolved `omega`
+goals because the local generic-band hypothesis had not been unfolded. Adding
+`dsimp [inGenericGammaBand] at hcgen` discharged exactly those goals; the
+statement and assumptions were unchanged. No `sorry`, `admit`, custom axiom,
+placeholder, `unsafe`, or `native_decide` occurs in the compiling modules. An
+integrated clean full-project replay is required before publication.
+
+The formal-only source was committed as
+`8b2fcd4f2a65cec83eaf8e647834421b0970e4b1` and cloned with `git clone
+--no-local` into a new native-WSL checkout. The checkout exactly matched that
+commit and was clean before and after
+verification. The authoritative replay reported:
+
+```text
+Pinned cache restoration: real 182.26
+Build completed successfully (3588 jobs): real 199.72
+Trust audit accepted 286 theorem reports: real 7.94
+CLEAN_FORMAL_HEAD=8b2fcd4f2a65cec83eaf8e647834421b0970e4b1
+CLEAN_FORMAL_TREE_CLEAN
+```
+
+The expanded working-tree regression and certificate suite, including the
+new source-hashed translation-family audit, then reported:
+
+```text
+Ran 156 tests in 377.203s
+OK
+real 380.41
+```

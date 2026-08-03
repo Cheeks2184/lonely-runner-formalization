@@ -2510,11 +2510,12 @@ subtraction guarded by rectangle membership; and
 bounds, and the strict/closed band theorem.
 
 `CoefficientTwoFeasibleStarts.rectangleStartFeasible_iff` Lean-verifies the
-full feasible-start interval under the three hypotheses above. The
-arbitrary-start reversal-to-SDR implication remains audited manuscript
-mathematics; only the least-start fixed-total version is presently
-Lean-verified in `CoefficientTwoReversal.lean`. Combining several totals is
-not automatic because
+full feasible-start interval under the three hypotheses above.
+`CoefficientTwoArbitraryReversal.rectangleReversalAt_isSdr_of_feasible` now
+Lean-verifies the arbitrary-start reversal-to-SDR implication, and its
+interval corollary discharges feasibility through that exact interval. The
+result remains conditional on candidatewise coprimality to one fixed total.
+Combining several totals is not automatic because
 
 ```text
 Q-c=Q'-c' iff c'-c=Q'-Q.
@@ -2601,8 +2602,9 @@ This is a canonical decomposition of a graph for which a saturating matching
 is already known. It cannot prove Gamma Hall by itself: a hypothetical
 deficient Gamma graph supplies no saturating matching to begin with, and
 contracting a tight block destroys the clean sliding-interval form. The exact
-remaining arithmetic question is whether an atomically critical contracted
-Gamma core can exist.
+remaining arithmetic question cannot be phrased as exclusion of an
+unannotated atomic core: the next section shows that endpoint is always a
+trivial singleton.
 
 The companion `PartialMatchingDichotomy.lean` formalizes the exact local
 alternative used when building a matching. After a left vertex is inserted,
@@ -2613,3 +2615,49 @@ and using the old matching bounds the deficit by one, so the neighborhood size
 is exactly `|T|-1`. The theorem does not assume that the vertex was absent, so
 insertion can leave the subtype unchanged. This exposes a critical block but
 does not prove that Gamma arithmetic can augment through it.
+
+## 55. Atomic collapse, coatomic contraction, and total layers
+
+Let `A` be a nonempty critical deficiency-one left set: its full neighborhood
+has cardinality `|A|-1`, while every nonempty proper subset is Hall-good. If
+`|A|>=2` and `a in A`, then `A\{a}` has cardinality `|A|-1`; its neighborhood
+is contained in the full neighborhood and Hall gives the reverse cardinality
+bound. Hence every co-singleton is tight. Lean formalizes this as
+`criticalCore_coSingleton_tight` and derives
+`atomicCriticalCore_card_eq_one`. Thus unrestricted contraction until no
+proper tight block remains always loses all arithmetic information and ends
+at one isolated left vertex.
+
+A meaningful repair contracts only nonspanning tight blocks, equivalently
+tight blocks of size at most `|A|-2`. A contraction sequence retains one
+original certificate `(K,D)` with `D=N(K)`, `|D|=|K|`, and every residual row
+equal to its original row with the common puncture `D` removed. Terminals are
+not canonical: the critical graph with rows
+
+```text
+0:{0,1,2}, 1:{1,2}, 2:{1,2}, 3:{0}
+```
+
+has maximal nonspanning tight blocks leading to residuals of sizes three and
+two. No argument may assume an order-independent terminal size or interval
+shape. In a terminal with `m>=2`, every subset of size at most `m-2` has
+strict expansion, every co-singleton spans the residual right side, and an
+ordered cut count gives the necessary bound
+
+```text
+sum_d (maxNeighborIndex(d)-minNeighborIndex(d)) >= 3*m-5.
+```
+
+For two totals `Q0<Q1`, collisions decompose candidates into arithmetic
+chains of step `Delta=Q1-Q0`. Each chain is a path-slot graph, so Hall reduces
+exactly to its contiguous blocks. At `(36,16)`, totals 63 and 65 orient the
+chain `20,22,24` inward and leave only rights `{41,43}`. This explains why
+rowwise coprimality does not control Hall collisions. The reverse arithmetic
+estimate excluding every punctured coatomic Gamma core remains open.
+
+`GammaTwoTranslation.gammaTwoTranslation_isSdr` Lean-verifies the conditional
+two-branch J1 map. An independent finite audit rejects small fixed extensions:
+every fixed shift family of cardinality at most three fails one of the four
+active `N=20` instances, and the four size-four survivors there fail at
+`(21,9)`. These are restrictions on one translation scheme, not Gamma-Hall or
+LRC counterexamples.

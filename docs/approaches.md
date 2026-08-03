@@ -578,3 +578,21 @@ feasible reversal totals, and endpoint prime-support overload. The bare
 nonempty, yet `{20,22,24}` has only `{41,43}` as neighbors, while the full
 Gamma graph has an explicit SDR. The exact surviving gaps are
 `GAMMA-AUGMENT` and `ENDPOINT-OVERLOAD`; see `docs/response54-audit.md`.
+
+Response 56 corrects the contraction route. Unrestricted contraction to a
+core with no proper tight block is vacuous: every co-singleton of a nontrivial
+critical deficiency-one set is tight, so it contracts immediately to one
+isolated left vertex. The meaningful repair contracts only nonspanning tight
+blocks and retains the original common-puncture certificate `(K,D)`. Its
+terminals are noncanonical, and only necessary cut/span inequalities are
+known. The active arithmetic target is now `COATOMIC-GAMMA-EXCLUSION`, with
+the puncture data retained.
+
+Two-total layer unions admit an exact chain decomposition: for
+`Delta=Q1-Q0`, collisions lie in arithmetic `Delta`-chains and Hall is
+equivalent to contiguous-block inequalities on each chain. This explains the
+inward collision at `(36,16)` but does not select totals uniformly. The
+conditional J1 class and every arbitrary feasible single-total reversal are
+Lean-verified; fixed J1 shift families of size at most three already fail at
+`N=20`, so current work requires adaptive backward/reflection choices or a
+growing total family.

@@ -161,6 +161,10 @@ This equivalence does not prove either side.
   proves that the fixed least-start reversal is an SDR when every actual
   generic candidate is coprime to its reversal total. Neither theorem assumes
   Pomerance or proves its arithmetic premise uniformly.
+  `CoefficientTwoArbitraryReversal.lean` proves the same named-map SDR for
+  every exact feasible start under candidatewise coprimality to its total.
+  `GammaTwoTranslation.lean` proves the separate conditional J1 map under
+  branchwise gcd hypotheses and explicit exclusion of cross collisions.
 - **Lean-verified fixed-matching Hall criterion:**
   `MatchingDependency.lean` characterizes tight subsets as
   successor-closed, unmatched-neighbor-free sets and proves that strict Hall
@@ -178,6 +182,11 @@ This equivalence does not prove either side.
   matching, `MatchingContraction.lean` proves its complete non-reaching region
   tight and its induced residual strict-Hall. These are structural reductions,
   not a construction of the missing Gamma matching.
+- **Lean-verified atomic-collapse correction:**
+  `CriticalCoreContraction.lean` proves every co-singleton of a nontrivial
+  critical deficiency-one set tight and proves that a core with no nonempty
+  proper tight subset has exactly one left vertex. Unrestricted tight-block
+  contraction is therefore vacuous as an arithmetic exclusion strategy.
 - **Audited mathematics plus finite evidence:** coefficient-two no-witness
   assumptions force every coprime complementary extra in `Gamma(c)` to be
   occupied. Exact degree bounds and a complete bounded classification reduce
@@ -217,9 +226,10 @@ Active research branches are:
    asymptotically the active generic branch follows from coprime interval
     matchings, while a new exact failure would have to be a connected
     deficiency-one critical incidence core with `N>=20`; the explicit current
-    subproblems are augmenting reachability with tight-block contraction,
-    exploiting Gamma edges outside the now-refuted family of feasible
-    reversal diagonals, and endpoint prime-support overload;
+    subproblems are nonspanning tight-block contraction with its retained
+    puncture certificate, exploiting Gamma edges outside the now-refuted
+    feasible reversal diagonals, controlling collisions across total layers,
+    and endpoint prime-support overload;
 2. prove the corrected disjunction between one-sided robust cover numbers and
    nonempty multi-shift transversals; unconditional paired existence is
    refuted by an empty-grid row;
@@ -232,7 +242,7 @@ Active research branches are:
 ## Latest verification
 
 Last clean Lean source checkpoint:
-`4911ed7f962b86e7337b90dd24ffb0fd897d0b08`.
+`8b2fcd4f2a65cec83eaf8e647834421b0970e4b1`.
 
 Pinned environment:
 
@@ -245,10 +255,10 @@ Pinned environment:
 Clean no-local-clone ext4 verification at that source checkpoint:
 
 ```text
-Pinned cache restoration: real 135.25
-Build completed successfully (3585 jobs): real 209.91
-Trust audit: 281 theorem reports; only propext, Classical.choice, Quot.sound
-Trust audit: real 6.67
+Pinned cache restoration: real 182.26
+Build completed successfully (3588 jobs): real 199.72
+Trust audit: 286 theorem reports; only propext, Classical.choice, Quot.sound
+Trust audit: real 7.94
 ```
 
 The checkout was cloned with `git clone --no-local`, its HEAD exactly matched
@@ -256,13 +266,15 @@ the checkpoint, and its tracked tree remained clean before and after all
 commands. `LEAN_NUM_THREADS=2` constrained the replay to two Lean workers on
 the 8 GB WSL instance.
 
-Separately, the authoritative working tree adds the source-hashed diagonal
-obstruction test and passed the expanded suite:
+Separately, the authoritative working tree includes source-hashed diagonal
+and fixed-translation obstruction tests and passed the expanded suite:
 
 ```text
-Ran 155 tests in 328.879s
+Ran 156 tests in 377.203s
 OK
 ```
+
+The added test pins and exactly replays the fixed J1 shift-family audit.
 
 The expanded `audit_coefficient_two_gamma.sh` replay passed separately in
 8.50 seconds at computational source commit `4cf1199`; it checks the guarded

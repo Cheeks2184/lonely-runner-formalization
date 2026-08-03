@@ -655,3 +655,33 @@ This is not a Gamma Hall counterexample: the displayed map already saturates
 the full candidate set. It refutes only the claim that one canonical completed
 matching must itself certify strict Hall. A surviving augmentation proof must
 contract or rematch tight dependency blocks.
+
+## 2026-08-02: unannotated atomic contraction is vacuous
+
+Every critical deficiency-one set with at least two left vertices has every
+co-singleton tight. Contracting any one deletes the full right neighborhood
+and leaves one isolated left vertex. Lean proves this in
+`CriticalCoreContraction.lean`. Thus `GAMMA-ATOMIC-EXCLUSION`, when the
+contraction forgets deleted labels and neighborhoods, cannot retain arithmetic
+content. Nonspanning contraction with an explicit puncture certificate is the
+corrected open route.
+
+Even repaired terminals are not canonical. The critical rows
+`0:{0,1,2}`, `1:{1,2}`, `2:{1,2}`, `3:{0}` admit maximal nonspanning tight
+blocks producing terminals of different sizes. No potential may assume a
+unique terminal or an order-independent cardinality.
+
+## 2026-08-02: three fixed J1 shifts do not suffice
+
+At `(N,t)=(20,9)`, shifts `{-1,0,1}` leave the exact offset rows
+
+```text
+10:{1}, 11:{1,3}, 12:{3}, 13:{3,4,5}, 14:{5}.
+```
+
+The first three rows have only `{1,3}`. Full Gamma nevertheless has the SDR
+`10->27,11->21,12->23,13->22,14->25`. Exhausting every effective fixed shift
+family of size at most three shows none works across the four active `N=20`
+instances; the four size-four survivors all fail at `(21,9)`. This rejects
+only small fixed extensions of J1, not adaptive translation families or Gamma
+Hall.
