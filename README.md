@@ -263,6 +263,7 @@ bash scripts/audit_gamma_dependency_sweep.sh
 python3 scripts/audit_gamma_diagonal_obstruction.py
 python3 scripts/audit_gamma_translation_shifts.py
 python3 scripts/audit_deletion_pivot_lift.py
+python3 scripts/audit_response59_claims.py
 bash scripts/audit_top_two_pivot_search.sh
 bash scripts/audit_top_two_fractional_dual.sh
 bash scripts/audit_top_two_fractional_obstruction.sh
@@ -298,6 +299,13 @@ lower-dimensional LRC, the verified coefficient-three height theorem, and
 the direct `q=N` branch, DPLP would prove unrestricted positive-integer LRC.
 An exact finite audit found no DPLP failure in 243,973 premise-satisfying
 tuples, but this is **computed finite evidence only**.
+
+The separate Response 59 finite claim audit is reproducible with
+`python3 scripts/audit_response59_claims.py`. Its deterministic output is
+computed finite evidence only; it does not prove uniform DPLP, positive-
+integer LRC, unrestricted LRC, or uniform prime supply. See the
+[Response 59 audit](docs/response59-audit.md) for its exact dispositions and
+reproduction metadata.
 
 The other major routes are an unrestricted top-two/all-pivot certificate and
 minimal-counterexample height compression. Their exact contracts, implication
