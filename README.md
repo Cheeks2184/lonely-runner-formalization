@@ -330,11 +330,12 @@ a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
 
 The current authoritative integrated research checkpoint is
-`563a272a2bb6abb784c89d139a344842e4fce0fb`. The last authoritative clean
-full-project Lean/trust/regression replay remains the supplied-packing adapter
-checkpoint described in `STATUS.md`; the later research merges are
-documentation, recovered artifacts, independent finite verifiers, an audited
-Prompt67 contract, and public-release audit infrastructure.
+`563a272a2bb6abb784c89d139a344842e4fce0fb`. The latest authoritative clean
+full-project Lean/trust/regression replay is lifecycle checkpoint
+`fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`: 3,591 Lean jobs, 302 trust
+reports, and all 172 deterministic tests passed in a fresh native-WSL clone.
+See `STATUS.md` for timings and the distinction between the verified source
+tree, active Prompt67 research, and open conjectures.
 
 ## Current research frontier
 

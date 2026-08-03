@@ -1547,3 +1547,28 @@ source tree as `586b485`; its other parent contributes documentation and
 research records. This checkpoint promotes only the exact C1 arithmetic to
 `proved-lean`. C2's deep-premise supply, strict smaller-Delta first-blocker
 descent, corrected DPLP selector, and unrestricted LRC remain open.
+
+## 2026-08-03: Prompt67 lifecycle clean checkpoint
+
+A fresh native-WSL clone exactly matched
+`fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7` and was tracked-clean before and
+after every command. This checkpoint includes the audited Prompt67 contract,
+its root-controlled active-launch record, the independently corrected
+linked-worktree public-release audit, and no new Lean theorem.
+
+```text
+lake exe cache get: PASS; 8,638 artifacts; no downloads; 135.3s shell;
+  57.818s reported cache completion
+lake build: PASS; 3,591 jobs; 194.3s
+python3 scripts/audit_lean_trust.py: PASS; 302 reports; 7.4s
+python3 -m unittest discover -s tests -v: PASS; 172/172; 322.381s
+  (324.0s wall)
+scripts/audit_public_release.sh: PASS; 274 commits; manual scan PASS
+final tracked status: clean
+```
+
+Every trust report uses only `propext`, `Classical.choice`, and `Quot.sound`,
+or a subset. Nonfatal linter/style warnings are unchanged in scope. This replay
+verifies the repository state; it does not validate an active external Sol Pro
+response or promote `UniformPrimeForcingSupply`, the C2 induction bridge, the
+exact pivot selector, or unrestricted LRC.

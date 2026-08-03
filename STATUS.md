@@ -550,14 +550,20 @@ required after the final lifecycle documentation commit before the public
 checkpoint is pushed.
 
 The last authoritative clean full-project source replay remains supplied-
-packing adapter checkpoint `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`.
+packing adapter checkpoint `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b` only as
+a historical record. It is superseded by the fresh native-WSL clean replay at
+lifecycle checkpoint `fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`.
 
-Its clean ext4 replay restored 8,638 cache artifacts (143.4 seconds shell;
-53.179 seconds in the decompression report), passed full `lake build` in
-297.2 seconds, passed `python3 scripts/audit_lean_trust.py` with 302 theorem
-reports using only permitted standard foundations, and passed
-`python3 -m unittest discover -s tests -v` with all 160 tests in 378.409
-seconds. No source or test change is part of this documentation pass.
+The new clean clone exactly matched that commit and was tracked-clean before
+and after verification. It restored 8,638 cache artifacts with no downloads
+(`lake exe cache get`: 135.3 seconds shell; 57.818 seconds reported cache
+completion), passed `lake build` with 3,591 jobs in 194.3 seconds, passed
+`python3 scripts/audit_lean_trust.py` with 302 theorem reports in 7.4 seconds,
+and passed `python3 -m unittest discover -s tests -v` with all 172 tests in
+322.381 seconds (324.0 seconds wall time). The pinned release audit then
+scanned 274 commits and passed the manual tracked-file pattern scan. Only the
+usual nonfatal Lean linter/style warnings and the historical unused C++ helper
+warning appeared; there were no verification errors.
 
 Pinned environment:
 
