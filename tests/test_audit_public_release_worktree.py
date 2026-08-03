@@ -121,7 +121,7 @@ exit "${FAKE_DOCKER_STATUS:-0}"
         self.assertEqual(
             self._mount_values(docker_args),
             [
-                f"type=bind,src={ROOT},dst=/repo",
+                f"type=bind,src={ROOT},dst=/repo,readonly",
                 f"type=bind,src={normal_common},dst=/repo/.git,readonly",
             ],
         )
@@ -151,7 +151,7 @@ exit "${FAKE_DOCKER_STATUS:-0}"
         self.assertEqual(
             self._mount_values(docker_args),
             [
-                f"type=bind,src={ROOT},dst=/repo",
+                f"type=bind,src={ROOT},dst=/repo,readonly",
                 f"type=bind,src={common_dir},dst={common_dir},readonly",
             ],
         )
@@ -167,6 +167,63 @@ exit "${FAKE_DOCKER_STATUS:-0}"
         self.assertNotEqual(completed.returncode, 0)
         self.assertIn("authoritative history scan", completed.stderr)
         self.assertNotIn("0 commits scanned", completed.stdout + completed.stderr)
+
+    def test_contradictory_zero_then_positive_summaries_fail_closed(self) -> None:
+        common_dir = Path(self.temp_dir.name) / "contradictory common.git"
+        completed, _ = self._run_audit(
+            git_dir=common_dir / "worktrees" / "feature",
+            common_dir=common_dir,
+            gitleaks_output=(
+                "INF 0 commits scanned.\n"
+                "INF 7 commits scanned.\n"
+                "INF no leaks found"
+            ),
+        )
+
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertIn("parseable history summary", completed.stderr)
+        self.assertNotIn("0 commits scanned", completed.stdout + completed.stderr)
+        self.assertNotIn("7 commits scanned", completed.stdout + completed.stderr)
+
+    def test_multiple_positive_summaries_fail_closed(self) -> None:
+        common_dir = Path(self.temp_dir.name) / "multiple common.git"
+        completed, _ = self._run_audit(
+            git_dir=common_dir / "worktrees" / "feature",
+            common_dir=common_dir,
+            gitleaks_output=(
+                "INF 7 commits scanned.\n"
+                "INF 11 commits scanned.\n"
+                "INF no leaks found"
+            ),
+        )
+
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertIn("parseable history summary", completed.stderr)
+        self.assertNotIn("7 commits scanned", completed.stdout + completed.stderr)
+        self.assertNotIn("11 commits scanned", completed.stdout + completed.stderr)
+
+    def test_absent_commit_summary_fails_closed(self) -> None:
+        common_dir = Path(self.temp_dir.name) / "absent common.git"
+        completed, _ = self._run_audit(
+            git_dir=common_dir / "worktrees" / "feature",
+            common_dir=common_dir,
+            gitleaks_output="INF no leaks found",
+        )
+
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertIn("parseable history summary", completed.stderr)
+
+    def test_malformed_commit_summary_fails_closed(self) -> None:
+        common_dir = Path(self.temp_dir.name) / "malformed common.git"
+        completed, _ = self._run_audit(
+            git_dir=common_dir / "worktrees" / "feature",
+            common_dir=common_dir,
+            gitleaks_output="INF many commits scanned.\nINF no leaks found",
+        )
+
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertIn("parseable history summary", completed.stderr)
+        self.assertNotIn("many commits scanned", completed.stdout + completed.stderr)
 
 
 if __name__ == "__main__":

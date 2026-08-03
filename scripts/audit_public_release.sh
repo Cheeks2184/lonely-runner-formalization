@@ -26,14 +26,24 @@ resolve_git_path() {
   printf '%s\n' "$resolved"
 }
 
+normalize_gitleaks_output() {
+  local output_file="$1"
+
+  # Gitleaks may decorate terminal output with ANSI sequences. Strip only
+  # those formatting bytes for parsing; never print the captured output.
+  sed -E 's/\x1B\[[0-9;]*[[:alpha:]]//g; s/\r//g' "$output_file"
+}
+
 extract_commits_scanned() {
   local output_file="$1"
 
-  # Parse only the numeric summary. Never replay Gitleaks output, which could
+  # Parse only complete numeric summaries. The whitespace and punctuation
+  # boundaries prevent malformed values such as -1 or 1.5 from being accepted
+  # by matching a numeric substring. Never replay Gitleaks output, which could
   # contain matched content even when the image is asked to redact findings.
-  grep -Eio '[0-9]+[[:space:]]+commits?[[:space:]]+scanned' "$output_file" \
+  normalize_gitleaks_output "$output_file" \
+    | grep -Eio '(^|[[:space:]])[0-9]+[[:space:]]+commits?[[:space:]]+scanned($|[[:space:][:punct:]])' \
     | awk '{print $1}' \
-    | tail -n 1 \
     || true
 }
 
@@ -44,6 +54,8 @@ main() {
   local metadata_destination
   local gitleaks_status
   local commits_scanned
+  local -a commits_scanned_matches
+  local -a commits_scanned_markers
 
   repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
@@ -76,7 +88,7 @@ main() {
   trap 'rm -f "$gitleaks_output"' EXIT
 
   if docker run --rm \
-    --mount "type=bind,src=$repo_dir,dst=/repo" \
+    --mount "type=bind,src=$repo_dir,dst=/repo,readonly" \
     --mount "type=bind,src=$git_common_dir,dst=$metadata_destination,readonly" \
     "$gitleaks_image" \
     detect --source /repo --redact --no-banner \
@@ -86,7 +98,18 @@ main() {
     gitleaks_status=$?
   fi
 
-  commits_scanned="$(extract_commits_scanned "$gitleaks_output")"
+  mapfile -t commits_scanned_matches < <(extract_commits_scanned "$gitleaks_output")
+  mapfile -t commits_scanned_markers < <(
+    normalize_gitleaks_output "$gitleaks_output" \
+      | grep -Eio 'commits?[[:space:]]+scanned' \
+      || true
+  )
+  if ((${#commits_scanned_matches[@]} != 1 || ${#commits_scanned_markers[@]} != 1)); then
+    echo "Pinned Gitleaks did not produce exactly one parseable history summary; refusing release." >&2
+    exit 1
+  fi
+
+  commits_scanned="${commits_scanned_matches[0]}"
   if [[ ! "$commits_scanned" =~ ^[1-9][0-9]*$ ]]; then
     echo "Pinned Gitleaks did not complete an authoritative history scan; refusing release." >&2
     exit 1
