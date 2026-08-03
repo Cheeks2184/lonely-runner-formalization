@@ -195,3 +195,29 @@ This is **computed finite evidence only**. It does not prove DPLP, an
 induction theorem, positive-integer LRC, or unrestricted LRC. The single open
 mathematical step is a uniform correlation theorem across the family of
 deletion certificate sets.
+
+## Response 59 finite claim audit
+
+The direct replay command for the Response 59 finite claim verifier is:
+
+```bash
+python3 scripts/audit_response59_claims.py
+```
+
+The verifier source has SHA-256
+`a5116f7d8b8d89793e62c519e8534f9aa4f222078735b4a28ce88c836645659f`.
+Its canonical certificate
+`certificates/response59_claims_expected.txt` has SHA-256
+`6f3bf3d3fa95a8b9d5c4c6228ca280c865b6eb8936f93327e9de8890ad70f2d9`.
+The regression test `tests/test_response59_claims.py` has SHA-256
+`ba92c89838f3fe0bce61ab1f14356087e380ac8f55b75b366ecb8a0df2afaa19`.
+The verifier is deterministic and has no seed. Its
+`FINITE_COMPUTED_EVIDENCE_ONLY` certificate replays the exact finite vectors,
+shell-lift rows, P1 residue data, and bounded search outcomes summarized in
+the [Response 59 audit](response59-audit.md).
+
+The output is **computed finite evidence only**. The local `proved-math`
+labels in the audit apply only under their stated hypotheses; the uniform
+criteria and prime-supply claims retain their recorded rejected, open,
+stopped, or conjectural dispositions. This computation does not prove
+uniform DPLP, positive-integer LRC, or unrestricted LRC.

@@ -6,13 +6,32 @@ mathematical review and clean-room exact enumeration accept several local
 lemmas, reject both proposed uniform low-order criteria, and leave every
 unrestricted bridge open.
 
-The normalized response has SHA-256
+The normalized Response 59 artifact has SHA-256
 `03265212ef51006bd200efe8f37b0afeeb64a572f9e80c57fb57f1c17459e5f4`.
-Its recovered Python source has SHA-256
+Its recovered original attachment/source has SHA-256
 `406b64139de1f7be51e3f42c750feb2a7e095d58865e82d6bdd76ab76a264e30`.
-The claimed expected-output attachment was not recovered. Its reported hash
-and runtime are therefore unverified attachment metadata, not reproduced
-evidence.
+The original claimed expected-output attachment was not recovered, so its
+reported hash and runtime remain unverified attachment metadata.
+
+The repository verifier for this finite audit is
+`scripts/audit_response59_claims.py`. Run it directly from the repository
+root:
+
+```bash
+python3 scripts/audit_response59_claims.py
+```
+
+The verifier source has SHA-256
+`a5116f7d8b8d89793e62c519e8534f9aa4f222078735b4a28ce88c836645659f`.
+The canonical certificate `certificates/response59_claims_expected.txt` has
+SHA-256
+`6f3bf3d3fa95a8b9d5c4c6228ca280c865b6eb8936f93327e9de8890ad70f2d9`.
+The regression test `tests/test_response59_claims.py` has SHA-256
+`ba92c89838f3fe0bce61ab1f14356087e380ac8f55b75b366ecb8a0df2afaa19`.
+The verifier is deterministic and has no seed; its stdout is compared
+byte-for-byte with the canonical certificate by the regression test. This
+repository verifier and certificate are independent replacement evidence,
+not a recovery of the missing original expected-output attachment.
 
 ## Status corrections
 
