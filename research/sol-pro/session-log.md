@@ -104,7 +104,7 @@ owner-transversal, exact pivot selector, and unrestricted Lonely Runner remain
 open. No new Lean theorem is promoted, and the route is frozen under its stop
 contract.
 
-## SOL-P67-PRO-C2-099 — Prompt 67 active research
+## SOL-P67-PRO-C2-099 / SOL-P67-RESPONSE-RECOVERY-100
 
 - **Integrated prompt:** `research/sol-pro/prompts/prompt67.md`
 - **Prompt SHA-256:**
@@ -117,9 +117,23 @@ contract.
   `30fefd070ee0a5b091ba520ee779022b7df3f2d489083d63989a77e6d34370b6`
 - **Payload reconciliation:** exact tracked prompt after removal of its sole
   terminal LF
-- **Lifecycle:** active Sol Pro research; response recovery not yet started
+- **Completion:** UI readback `Worked for 46m 55s`; observed around
+  2026-08-03 18:04:14 CDT
+- **Normalized response:** `research/sol-pro/responses/response67.md`
+- **Normalized response SHA-256:**
+  `6b3cadb89c41c475a9ffca1e21c12181d08267488c6b3b0c25a125315d016a3f`
+- **Normalized response shape:** 45,457 UTF-8 bytes; 1,422 LF separators;
+  terminal LF present
+- **Raw clipboard:** 46,879 UTF-8 bytes; 1,422 CRLF separators; terminal CRLF;
+  SHA-256 `41dd50429db87779f3ab68f26ce2ace11b4079a846de3fa9a225cd1e987e2907`
+- **Recovered attachments:** four canonical downloads under
+  `research/sol-pro/artifacts/prompt67/`; one compressed 30-member bundle plus
+  three explicit files, with hashes in the package README
+- **Lifecycle:** completed/recovered; independent audits pending
 
 Prompt67 attacks `UniformPrimeForcingSupply`, the currently highest-ranked C2
-unrestricted bridge. Prompt preparation and launch are operational facts only.
-No response claim, finite interval, mathematical lemma, Lean declaration, C2
-bridge, or unrestricted LRC result has been accepted or promoted.
+unrestricted bridge. Prompt preparation, launch, completion, and recovery are
+operational facts only. The response self-disposition is **PIVOT** and is not
+accepted by this record. No finite interval, mathematical lemma, Lean
+declaration, C2 bridge, or unrestricted LRC result has been accepted or
+promoted.

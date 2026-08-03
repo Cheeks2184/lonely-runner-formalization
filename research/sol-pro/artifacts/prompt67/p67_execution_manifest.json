@@ -1,0 +1,462 @@
+{
+  "cell": "Prompt 67 UNIFORM-PRIME-FORCING-SUPPLY",
+  "classification": "computed finite evidence only; no theorem or unrestricted status promotion",
+  "collision_pattern_ordered_counts": {
+    "n3_p5": {
+      "1+1+1": {
+        "failure_total": 192,
+        "premise_total": 1680
+      },
+      "2+1": {
+        "failure_total": 0,
+        "premise_total": 360
+      },
+      "3": {
+        "failure_total": 0,
+        "premise_total": 8
+      }
+    },
+    "n4_p2": {
+      "1+1+1+1": {
+        "failure_total": 0,
+        "premise_total": 120
+      },
+      "2+1+1": {
+        "failure_total": 0,
+        "premise_total": 360
+      },
+      "2+2": {
+        "failure_total": 0,
+        "premise_total": 60
+      },
+      "3+1": {
+        "failure_total": 0,
+        "premise_total": 64
+      },
+      "4": {
+        "failure_total": 0,
+        "premise_total": 4
+      }
+    },
+    "n4_p3": {
+      "1+1+1+1": {
+        "failure_total": 0,
+        "premise_total": 5040
+      },
+      "2+1+1": {
+        "failure_total": 0,
+        "premise_total": 4128
+      },
+      "2+2": {
+        "failure_total": 0,
+        "premise_total": 264
+      },
+      "3+1": {
+        "failure_total": 0,
+        "premise_total": 288
+      },
+      "4": {
+        "failure_total": 0,
+        "premise_total": 8
+      }
+    },
+    "n4_p5": {
+      "1+1+1+1": {
+        "failure_total": 0,
+        "premise_total": 116280
+      },
+      "2+1+1": {
+        "failure_total": 0,
+        "premise_total": 41040
+      },
+      "2+2": {
+        "failure_total": 0,
+        "premise_total": 1140
+      },
+      "3+1": {
+        "failure_total": 0,
+        "premise_total": 1520
+      },
+      "4": {
+        "failure_total": 0,
+        "premise_total": 20
+      }
+    },
+    "n4_p7": {
+      "1+1+1+1": {
+        "failure_total": 13824,
+        "premise_total": 645840
+      },
+      "2+1+1": {
+        "failure_total": 0,
+        "premise_total": 136800
+      },
+      "2+2": {
+        "failure_total": 0,
+        "premise_total": 2520
+      },
+      "3+1": {
+        "failure_total": 0,
+        "premise_total": 2784
+      },
+      "4": {
+        "failure_total": 0,
+        "premise_total": 24
+      }
+    }
+  },
+  "cross_verifier": {
+    "all_failure_cover_streams_byte_identical": true,
+    "all_fields_match": true,
+    "all_outcome_maps_byte_identical": true,
+    "case_count": 5,
+    "literal_source": "p67_literal_v1.jsonl",
+    "orbit_source": "p67_orbit_bitset_v1.jsonl",
+    "rows": [
+      {
+        "failure_cover_byte_count": 5376,
+        "failure_cover_sha256": "483457e1547fd45f767a4170f74c08a08d93b88f078b823089ccb0a21a700f39",
+        "failure_covers_byte_identical": true,
+        "failure_total": 192,
+        "first_failure": [
+          1,
+          3,
+          4
+        ],
+        "matched_fields": [
+          "scope",
+          "n",
+          "N",
+          "p",
+          "M",
+          "tuple_total",
+          "premise_total",
+          "failure_total",
+          "success_total",
+          "first_failure",
+          "first_failure_cover_first_bad_index_by_r",
+          "first_failure_distance_rows",
+          "first_witness_histogram",
+          "first_witness_boundary_tuple_count",
+          "outcome_map_encoding",
+          "failure_cover_record_count",
+          "failure_cover_encoding",
+          "tuple_order",
+          "global_early_stop"
+        ],
+        "n": 3,
+        "outcome_map_byte_count": 8000,
+        "outcome_map_sha256": "cf48ec10efc22ff7c6670bc542622c5d34f33c7c8e63efc681f26d521b78dcf2",
+        "outcome_maps_byte_identical": true,
+        "p": 5,
+        "premise_total": 2048
+      },
+      {
+        "failure_cover_byte_count": 0,
+        "failure_cover_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "failure_covers_byte_identical": true,
+        "failure_total": 0,
+        "first_failure": null,
+        "matched_fields": [
+          "scope",
+          "n",
+          "N",
+          "p",
+          "M",
+          "tuple_total",
+          "premise_total",
+          "failure_total",
+          "success_total",
+          "first_failure",
+          "first_failure_cover_first_bad_index_by_r",
+          "first_failure_distance_rows",
+          "first_witness_histogram",
+          "first_witness_boundary_tuple_count",
+          "outcome_map_encoding",
+          "failure_cover_record_count",
+          "failure_cover_encoding",
+          "tuple_order",
+          "global_early_stop"
+        ],
+        "n": 4,
+        "outcome_map_byte_count": 10000,
+        "outcome_map_sha256": "a471a64c86fdd8353aa8bf7fcb05dfe3e6ac0950c14d8868c1174c3d3dfd39d6",
+        "outcome_maps_byte_identical": true,
+        "p": 2,
+        "premise_total": 608
+      },
+      {
+        "failure_cover_byte_count": 0,
+        "failure_cover_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "failure_covers_byte_identical": true,
+        "failure_total": 0,
+        "first_failure": null,
+        "matched_fields": [
+          "scope",
+          "n",
+          "N",
+          "p",
+          "M",
+          "tuple_total",
+          "premise_total",
+          "failure_total",
+          "success_total",
+          "first_failure",
+          "first_failure_cover_first_bad_index_by_r",
+          "first_failure_distance_rows",
+          "first_witness_histogram",
+          "first_witness_boundary_tuple_count",
+          "outcome_map_encoding",
+          "failure_cover_record_count",
+          "failure_cover_encoding",
+          "tuple_order",
+          "global_early_stop"
+        ],
+        "n": 4,
+        "outcome_map_byte_count": 50625,
+        "outcome_map_sha256": "21375085d6421a6f93053d21b66865a72872cbab751526fa06624d151807c6c1",
+        "outcome_maps_byte_identical": true,
+        "p": 3,
+        "premise_total": 9728
+      },
+      {
+        "failure_cover_byte_count": 0,
+        "failure_cover_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "failure_covers_byte_identical": true,
+        "failure_total": 0,
+        "first_failure": null,
+        "matched_fields": [
+          "scope",
+          "n",
+          "N",
+          "p",
+          "M",
+          "tuple_total",
+          "premise_total",
+          "failure_total",
+          "success_total",
+          "first_failure",
+          "first_failure_cover_first_bad_index_by_r",
+          "first_failure_distance_rows",
+          "first_witness_histogram",
+          "first_witness_boundary_tuple_count",
+          "outcome_map_encoding",
+          "failure_cover_record_count",
+          "failure_cover_encoding",
+          "tuple_order",
+          "global_early_stop"
+        ],
+        "n": 4,
+        "outcome_map_byte_count": 390625,
+        "outcome_map_sha256": "badd4dcfd949e209b7772b972ec33de44a41e27fdc9c2954e6dfcbffb37ec030",
+        "outcome_maps_byte_identical": true,
+        "p": 5,
+        "premise_total": 160000
+      },
+      {
+        "failure_cover_byte_count": 594432,
+        "failure_cover_sha256": "e39103f40fb55e5bc03e37e4ef73eecd8b4e70c2308091893e65e064eb842ba2",
+        "failure_covers_byte_identical": true,
+        "failure_total": 13824,
+        "first_failure": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "matched_fields": [
+          "scope",
+          "n",
+          "N",
+          "p",
+          "M",
+          "tuple_total",
+          "premise_total",
+          "failure_total",
+          "success_total",
+          "first_failure",
+          "first_failure_cover_first_bad_index_by_r",
+          "first_failure_distance_rows",
+          "first_witness_histogram",
+          "first_witness_boundary_tuple_count",
+          "outcome_map_encoding",
+          "failure_cover_record_count",
+          "failure_cover_encoding",
+          "tuple_order",
+          "global_early_stop"
+        ],
+        "n": 4,
+        "outcome_map_byte_count": 1500625,
+        "outcome_map_sha256": "76edf68d3b04e9d5e66a3b3ac7a1d8ab5da3ad34314ac28e1586568285f9b838",
+        "outcome_maps_byte_identical": true,
+        "p": 7,
+        "premise_total": 787968
+      }
+    ],
+    "verifier": "p67-cross-compare-v1"
+  },
+  "date_utc": "2026-08-03",
+  "declared_new_dimension": 4,
+  "declared_prime_interval": [
+    2,
+    7
+  ],
+  "enumeration_contract": {
+    "closed_safety": "rho >= p",
+    "early_stop": "only stop the witness scan at the first safe r for a fixed tuple; never stop tuple enumeration",
+    "failure_cover_stream": "for each failed tuple in lex order: uint64 little-endian ordinal followed by M first-bad-coordinate bytes",
+    "outcome_map": "one byte per full ordered tuple: 255 nonpremise, 254 failure, 0..M-1 first witness",
+    "premise_filter": "p does not divide any coordinate; for every deleted coordinate k, gcd((n+1)p, all survivors)=1",
+    "strict_badness": "rho < p",
+    "tuple_domain": "all ordered tuples in [0,(n+1)p)^n, repetitions allowed",
+    "tuple_order": "lexicographic, last coordinate fastest",
+    "witness_order": "r=0,1,...,(n+1)p-1"
+  },
+  "environment": {
+    "cpu": "AMD EPYC 9V74 80-Core Processor; 5 online vCPUs visible",
+    "gxx": "g++ (Debian 14.2.0-19) 14.2.0",
+    "kernel": "Linux 6.12.13 x86_64",
+    "python": "Python 3.13.5"
+  },
+  "files_sha256": {
+    "p67_cross_compare_v1.json": "c75f8a4f5c1b9aa000f7a0179b9984e5ba56178774a0b89a67d2fed08ad11d2d",
+    "p67_cross_compare_v1.py": "71a1ab9d7b28426383706efef8b5bc9f072cc075951d39b3dfe7b87e5bf65f42",
+    "p67_failure_covers_n3_p5_literal.bin": "483457e1547fd45f767a4170f74c08a08d93b88f078b823089ccb0a21a700f39",
+    "p67_failure_covers_n3_p5_orbit.bin": "483457e1547fd45f767a4170f74c08a08d93b88f078b823089ccb0a21a700f39",
+    "p67_failure_covers_n4_p2_literal.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "p67_failure_covers_n4_p2_orbit.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "p67_failure_covers_n4_p3_literal.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "p67_failure_covers_n4_p3_orbit.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "p67_failure_covers_n4_p5_literal.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "p67_failure_covers_n4_p5_orbit.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "p67_failure_covers_n4_p7_literal.bin": "e39103f40fb55e5bc03e37e4ef73eecd8b4e70c2308091893e65e064eb842ba2",
+    "p67_failure_covers_n4_p7_orbit.bin": "e39103f40fb55e5bc03e37e4ef73eecd8b4e70c2308091893e65e064eb842ba2",
+    "p67_literal_v1": "267aa17b5cc198ae5757a757420de92e69f7cc2b52a6b74c57c60b006431acdd",
+    "p67_literal_v1.cpp": "92cdbe0666f6fdcb17d4deebdfc102656af8bf97c8390670ae4af08f0cce4fe3",
+    "p67_literal_v1.jsonl": "ce2d6861d1a14a758e314f62c1294c45f2989b430cf7e74d18675f8d158478c1",
+    "p67_literal_v1.time": "e7b7ec382d316f6149b714dedc0e1798fc2964783372fe29d618554031ce13e8",
+    "p67_orbit_bitset_v1.jsonl": "657dbc0fcb1e51cc37addc12514bbc9854739ebf5c20c47100f0a82c6c4947f1",
+    "p67_orbit_bitset_v1.py": "8f8ba8e5b1178ed91788cf7a72ce485e7ebfa76e0819a4647b1fa80471b84332",
+    "p67_orbit_bitset_v1.time": "6bb0f30e8135996679e931327cd17e8e57c6dbc4110d091bc1e376b3976dcd5c",
+    "p67_outcomes_n3_p5_literal.bin": "cf48ec10efc22ff7c6670bc542622c5d34f33c7c8e63efc681f26d521b78dcf2",
+    "p67_outcomes_n3_p5_orbit.bin": "cf48ec10efc22ff7c6670bc542622c5d34f33c7c8e63efc681f26d521b78dcf2",
+    "p67_outcomes_n4_p2_literal.bin": "a471a64c86fdd8353aa8bf7fcb05dfe3e6ac0950c14d8868c1174c3d3dfd39d6",
+    "p67_outcomes_n4_p2_orbit.bin": "a471a64c86fdd8353aa8bf7fcb05dfe3e6ac0950c14d8868c1174c3d3dfd39d6",
+    "p67_outcomes_n4_p3_literal.bin": "21375085d6421a6f93053d21b66865a72872cbab751526fa06624d151807c6c1",
+    "p67_outcomes_n4_p3_orbit.bin": "21375085d6421a6f93053d21b66865a72872cbab751526fa06624d151807c6c1",
+    "p67_outcomes_n4_p5_literal.bin": "badd4dcfd949e209b7772b972ec33de44a41e27fdc9c2954e6dfcbffb37ec030",
+    "p67_outcomes_n4_p5_orbit.bin": "badd4dcfd949e209b7772b972ec33de44a41e27fdc9c2954e6dfcbffb37ec030",
+    "p67_outcomes_n4_p7_literal.bin": "76edf68d3b04e9d5e66a3b3ac7a1d8ab5da3ad34314ac28e1586568285f9b838",
+    "p67_outcomes_n4_p7_orbit.bin": "76edf68d3b04e9d5e66a3b3ac7a1d8ab5da3ad34314ac28e1586568285f9b838"
+  },
+  "mandatory_baseline": {
+    "n": 3,
+    "p": 5
+  },
+  "replay_commands": [
+    "g++ -O3 -std=c++20 -Wall -Wextra -pedantic p67_literal_v1.cpp -o p67_literal_v1",
+    "P67_CERT_DIR=. /usr/bin/time -f 'wall_seconds=%e\\nmax_rss_kb=%M\\nexit_status=%x' -o p67_literal_v1.time ./p67_literal_v1 > p67_literal_v1.jsonl",
+    "P67_CERT_DIR=. /usr/bin/time -f 'wall_seconds=%e\\nmax_rss_kb=%M\\nexit_status=%x' -o p67_orbit_bitset_v1.time python3 p67_orbit_bitset_v1.py > p67_orbit_bitset_v1.jsonl",
+    "python3 p67_cross_compare_v1.py > p67_cross_compare_v1.json",
+    "sha256sum p67_literal_v1.cpp p67_literal_v1 p67_literal_v1.jsonl p67_literal_v1.time p67_orbit_bitset_v1.py p67_orbit_bitset_v1.jsonl p67_orbit_bitset_v1.time p67_cross_compare_v1.py p67_cross_compare_v1.json p67_outcomes_*.bin p67_failure_covers_*.bin"
+  ],
+  "repository": {
+    "full_name": "Cheeks2184/lonely-runner-formalization",
+    "inspected_main_head": "e9f31fde0644298de4631d1a1d9c5afe83d5087f",
+    "note": "Verifier artifacts are turn-local and are not repository-integrated."
+  },
+  "results": [
+    {
+      "M": 20,
+      "N": 4,
+      "failure_total": 192,
+      "first_failure": [
+        1,
+        3,
+        4
+      ],
+      "n": 3,
+      "p": 5,
+      "premise_total": 2048,
+      "scope": "mandatory-baseline",
+      "success_total": 1856,
+      "tuple_total": 8000
+    },
+    {
+      "M": 10,
+      "N": 5,
+      "failure_total": 0,
+      "first_failure": null,
+      "n": 4,
+      "p": 2,
+      "premise_total": 608,
+      "scope": "new-interval-n4-[2,7]",
+      "success_total": 608,
+      "tuple_total": 10000
+    },
+    {
+      "M": 15,
+      "N": 5,
+      "failure_total": 0,
+      "first_failure": null,
+      "n": 4,
+      "p": 3,
+      "premise_total": 9728,
+      "scope": "new-interval-n4-[2,7]",
+      "success_total": 9728,
+      "tuple_total": 50625
+    },
+    {
+      "M": 25,
+      "N": 5,
+      "failure_total": 0,
+      "first_failure": null,
+      "n": 4,
+      "p": 5,
+      "premise_total": 160000,
+      "scope": "new-interval-n4-[2,7]",
+      "success_total": 160000,
+      "tuple_total": 390625
+    },
+    {
+      "M": 35,
+      "N": 5,
+      "failure_total": 13824,
+      "first_failure": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "n": 4,
+      "p": 7,
+      "premise_total": 787968,
+      "scope": "new-interval-n4-[2,7]",
+      "success_total": 774144,
+      "tuple_total": 1500625
+    }
+  ],
+  "runtime": {
+    "literal": {
+      "exit_status": 0,
+      "max_rss_kb": 6432,
+      "wall_seconds": 0.13
+    },
+    "orbit_bitset": {
+      "exit_status": 0,
+      "max_rss_kb": 114464,
+      "wall_seconds": 1.39
+    }
+  },
+  "tested_new_interval_primes_in_order": [
+    2,
+    3,
+    5,
+    7
+  ],
+  "verifier_independence": {
+    "cross_check": "all common summary fields match and all five full outcome maps are byte-identical",
+    "literal": "C++ direct ordered-tuple enumerator; direct rho scan for each r",
+    "optimized": "Python nondecreasing coordinate-permutation orbit representatives; exact orbit weights; precomputed strict-bad bitsets; independent expansion to ordered outcome maps"
+  }
+}
