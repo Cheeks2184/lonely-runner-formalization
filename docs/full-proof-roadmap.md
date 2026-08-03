@@ -216,8 +216,10 @@ abstract preflight, and its transcript ends at the first declared-order stop
 case unless the complete finite domain is exhausted. The verified negative
 audits `FORM-P66-FINAL-REVIEW-050` and `VER-P66-FINAL-REVIEW-051` found only
 evidence-label, hash-provenance, and metric/accounting defects in that package.
-`OPS-P66-METRICS-CORRECT-053` is the corrective documentation under review;
-it changes no theorem contract or result status. No result is promoted.
+`OPS-P66-METRICS-CORRECT-053` is verified at operational/documentation scope
+after ACCEPT reviews `FORM-P66-POSTFIX-REVIEW-054` and
+`VER-P66-POSTFIX-REVIEW-055`. The correction and both reviews change no
+theorem contract or result status. No result is promoted.
 
 The smallest thin-API alternative remains `TOP-TWO-PIVOT`:
 
@@ -669,7 +671,9 @@ proof, or budget stop condition is reached.
 | 2026-08-03 | `OPS-P66-FINITETYPE-CORRECT-049` corrects Prompt66 finite types | reviewed; corrections required | Makes tokens and selected-block sums Fintype-compatible, but the final reviews found evidence-label, historical-hash, and metric/accounting defects; no result is promoted |
 | 2026-08-03 | `FORM-P66-FINAL-REVIEW-050` reviews evidence labels and hash provenance | verified negative audit | Preserves the COMP-10 verifier/accounting proof at exact hypotheses while requiring the eleven outcomes to remain computed finite evidence and the historical hash to match its Git object |
 | 2026-08-03 | `VER-P66-FINAL-REVIEW-051` reviews waiting and audit accounting | verified negative audit | Requires all three literal waiting rows and both final negative audits to be counted exactly |
-| 2026-08-03 | `OPS-P66-METRICS-CORRECT-053` corrects final-review documentation | review | Synchronizes labels, hashes, waiting rows, and audit metrics without changing a theorem contract or promoting a result |
+| 2026-08-03 | `OPS-P66-METRICS-CORRECT-053` corrects final-review documentation | verified operational/documentation correction | Synchronizes labels, hashes, waiting rows, and audit metrics without changing a theorem contract or promoting a result |
+| 2026-08-03 | `FORM-P66-POSTFIX-REVIEW-054` reviews the corrected formal/evidence documentation | verified ACCEPT review | Accepts the correction at documentation scope only; preserves every theorem contract, evidence label, Prompt66 hash, and result status |
+| 2026-08-03 | `VER-P66-POSTFIX-REVIEW-055` reviews the corrected operational accounting | verified ACCEPT review | Accepts the three-row waiting accounting and audit metrics at operations scope only; promotes no computation, finite evidence, or result |
 | 2026-08-02 | Entered FULL-PROOF PRIORITY MODE; fixed A/B/C contracts and budgets | research policy | Replaces coefficient-by-coefficient optimization with three explicit unrestricted bridges |
 | 2026-08-02 | Response 57 fixed-shift obstruction: no finite fixed J1 shift family is uniformly row-nonempty | proved-math, independent finite checks | Does not shorten unrestricted path; supports freezing bounded translation variants |
 | 2026-08-02 | Submitted Sol Pro Prompt 58 on A/B/C with adversarial contracts | research in progress | Strategy generation only; no theorem yet |

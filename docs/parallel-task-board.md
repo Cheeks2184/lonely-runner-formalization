@@ -36,8 +36,8 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 23 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, `VER-P66-C2-DOCS-042`, completed read-only `FORM-PACKING-ADAPTER-SPEC-044`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, and `VER-P66-FINAL-REVIEW-051` are accepted only at their exact recommendation, external-dependency-audit, specification, or negative-documentation-review scope. |
-| Accepted negative audits | 14 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, `VER-P66-C2-DOCS-042`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, and `VER-P66-FINAL-REVIEW-051` are valid negative results; rejected verifier output, corrective work under review, and queued work are not counted as computed evidence. |
+| Accepted audit deliverables | 25 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, `VER-P66-C2-DOCS-042`, completed read-only `FORM-PACKING-ADAPTER-SPEC-044`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, `VER-P66-FINAL-REVIEW-051`, `FORM-P66-POSTFIX-REVIEW-054`, and `VER-P66-POSTFIX-REVIEW-055` are accepted only at their exact recommendation, external-dependency-audit, specification, negative-documentation-review, or ACCEPT-review scope. |
+| Accepted negative audits | 14 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, `VER-P66-C2-DOCS-042`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, and `VER-P66-FINAL-REVIEW-051` are valid negative results; the two postfix ACCEPT reviews are nonnegative audits, and rejected verifier output and queued work are not counted as computed evidence. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
 | Accepted implementations | 0 unrestricted; 3 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, and exact ReverseGrid arithmetic are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 4 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), board/Prompts60--63 package (`263a1cb`), and ReverseGrid formal source (`586b485`, merged by `99a78c1`) are on main. |
@@ -54,7 +54,7 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
 | Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
-| Integration backlog | 1 contract/documentation group | `OPS-P66-METRICS-CORRECT-053` is under review after the two final negative audits; Prompt64/P65 retain their separate stopped or waiting records. |
+| Integration backlog | 0 contract/documentation groups | `OPS-P66-METRICS-CORRECT-053` is verified at operational/documentation scope after both postfix ACCEPT reviews; Prompt64/P65 retain their separate stopped or waiting records. |
 | Wait time | 3 external-control waits | Browser/ChatGPT-control is not callable in the current runtime; the one selected Prompt66 cell and the two parked/frozen Prompt64/Prompt65 cells have no submitted external response. |
 
 Metrics are updated only from a worker result accepted by the supervising
@@ -1002,7 +1002,7 @@ as an accepted implementation or mathematical proof.
 - **Dependencies:** `FORM-P66-FINAL-REVIEW-050`,
   `VER-P66-FINAL-REVIEW-051`
 - **Branch:** `research/ops-p66-contract-040`
-- **Status:** `review`
+- **Status:** `verified` (operational/documentation correction)
 - **Exact deliverable:** Count all three waiting Sol Pro rows while identifying
   the one selected and two parked/frozen cells; restore the historical
   Prompt66 hash; distinguish COMP-10's exact verifier/accounting proof from
@@ -1015,11 +1015,54 @@ as an accepted implementation or mathematical proof.
   check accepted-audit arithmetic; run `git diff --check` against parent and
   original base; enforce the allowed-file set; scan added lines for private
   paths or secrets; require one new commit and a clean worktree.
-- **Blocker:** PI review/merge only; external signed-in Sol Pro control remains
-  unavailable.
-- **Final disposition / promotion authority:** Corrective documentation under
-  review. It changes no theorem contract and promotes no computation, finite
-  evidence, proof, Lean result, or unrestricted claim.
+- **Blocker:** None at operational/documentation scope; external signed-in Sol
+  Pro control remains unavailable.
+- **Final disposition / promotion authority:** Verified corrective
+  documentation after `FORM-P66-POSTFIX-REVIEW-054` and
+  `VER-P66-POSTFIX-REVIEW-055` both returned ACCEPT. It changes no theorem
+  contract and promotes no computation, finite evidence, proof, Lean result,
+  or unrestricted claim.
+
+### FORM-P66-POSTFIX-REVIEW-054 — Prompt66 postfix formal review
+
+- **ID:** `FORM-P66-POSTFIX-REVIEW-054`
+- **Lane:** formalization / postfix documentation review
+- **Owner / supervising lead:** Formalization Lead
+- **Base:** `dc4b0c9baa3a387f19a881828fff0010ddcb44f5`
+- **Dependencies:** `OPS-P66-METRICS-CORRECT-053`
+- **Branch / worktree:** read-only review; private path omitted
+- **Status:** `verified` (ACCEPT documentation review)
+- **Exact deliverable:** Verify that the postfix correction preserves the
+  Prompt66 formal contract, COMP-10 evidence labels, historical/current hash
+  provenance, and every mathematical disposition.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Review the exact `OPS-P66-METRICS-CORRECT-053` diff,
+  compare both Prompt66 hashes with their recorded revisions, and confirm that
+  no theorem, finite outcome, Lean result, or unrestricted claim is promoted.
+- **Blocker:** None at review scope.
+- **Final disposition / promotion authority:** ACCEPT at documentation scope
+  only. This is a nonnegative audit and promotes no mathematical, finite,
+  formal, or unrestricted result.
+
+### VER-P66-POSTFIX-REVIEW-055 — Prompt66 postfix verifier review
+
+- **ID:** `VER-P66-POSTFIX-REVIEW-055`
+- **Lane:** verification / postfix documentation review
+- **Owner / supervising lead:** Verification Lead
+- **Base:** `dc4b0c9baa3a387f19a881828fff0010ddcb44f5`
+- **Dependencies:** `OPS-P66-METRICS-CORRECT-053`
+- **Branch / worktree:** read-only review; private path omitted
+- **Status:** `verified` (ACCEPT documentation review)
+- **Exact deliverable:** Verify the corrected waiting-row, wait-time,
+  accepted-audit, accepted-negative-audit, disposition, and task-ID accounting.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Count the three literal waiting rows as one selected
+  and two parked/frozen cells, check accepted-audit arithmetic and unique task
+  IDs, and confirm that the correction changes no evidence or result status.
+- **Blocker:** None at review scope.
+- **Final disposition / promotion authority:** ACCEPT at operational
+  documentation scope only. This is a nonnegative audit and promotes no
+  computation, finite evidence, proof, Lean result, or unrestricted claim.
 
 ### FORM-PACKING-ADAPTER-SPEC-044 — pivot packing adapter specification
 
