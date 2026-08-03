@@ -43,9 +43,9 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 28 | The prior 27 plus independently replayed Prompt66 certificate audit `LUNA-P66-CERT-REPLAY-069`, accepted by `VER-LUNA-P66-REPLAY-SUPERVISE-070`, are accepted only at exact finite-evidence scope. No response self-label, theorem, computation, or unrestricted result is promoted. |
-| Accepted negative audits | 14 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, `VER-P66-C2-DOCS-042`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, and `VER-P66-FINAL-REVIEW-051` are valid negative results; the two postfix ACCEPT reviews are nonnegative audits, and rejected verifier output and queued work are not counted as computed evidence. |
-| Accepted operational documentation tasks | 4 | The prior three plus verified documentation sync `LUNA-P66-REPLAY-DOCSYNC-077` are accepted only for reviewed ownership, lifecycle, launch-state, routing-history, replay/audit, and public-status synchronization; none supplies a research response or result. |
+| Accepted audit deliverables | 29 | The prior 27 plus independent ACCEPT review `VER-LUNA-P66-REPLAY-SUPERVISE-070` and verified negative read-only review `OPS-P66-REPLAY-DOCSYNC-REVIEW-078` are accepted only at their exact scopes. The independently replayed computation is promoted only as computed finite evidence; no response self-label, theorem, packing claim, or unrestricted result is promoted. |
+| Accepted negative audits | 15 | The prior 14 plus `OPS-P66-REPLAY-DOCSYNC-REVIEW-078` are valid negative results; 078 rejected only the documentation sync until five exact corrections are made. Rejected verifier output and unsupported supplied flags are not counted as promoted evidence. |
+| Accepted operational documentation tasks | 3 | `OPS-SOL-HIGH-PRO-ROUTING-059`, `OPS-SOL-HIGH-PRO-ROUTING-CORRECT-062`, and `OPS-P66-P64-LIFECYCLE-SYNC-071` are accepted only at their reviewed operational scopes. Task 077 requires correction and task 080 remains in review, so neither is counted. |
 | Accepted recovery deliverables | 4 | Response59, Response62, Response63, and Prompt66 recovery deliverables are recorded without promoting claims. Prompt66 recovery preserves the exact clipboard, safe ZIP members, and separate SHA list, subject to the recorded path/packaging corrections. |
 | Accepted implementations | 0 unrestricted; 5 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, exact ReverseGrid arithmetic, supplied packing adapter, and independent Prompt66 replay verifier are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 6 | The prior five groups plus the independently reviewed Prompt66 replay package integrated by `/root` in merge `fc2d023e9df1c554cc67fadedece1325e72694b` are integrated. The adapter still promotes only `exists_avoiding_of_overlapCapacity` and `exists_pivot_certificate_of_overlapPacking` to `proved-lean`. |
@@ -62,7 +62,7 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
 | Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
-| Integration backlog | 0 pending groups | The Prompt66 replay audit group is integrated by `/root` merge `fc2d023e9df1c554cc67fadedece1325e72694b1` after independent acceptance by `VER-LUNA-P66-REPLAY-SUPERVISE-070`; no group is pending. The response's STOP/OPEN self-disposition remains distinct, and only independently replayed finite evidence is recorded. |
+| Integration backlog | 1 corrected documentation group pending review | The Prompt66 replay implementation is integrated by `/root` merge `fc2d023e9df1c554cc67fadedece1325e72694b1`; the corrected 077/080 documentation group remains pending independent and root acceptance. The response's STOP/OPEN self-disposition remains distinct, and only independently replayed finite evidence is recorded. |
 | Wait time | 0 external-control waits | Prompt64 is active, Prompt65 is deliberately parked/frozen, Prompt66 is recovered, and its independent Luna replay is completed. |
 
 Metrics are updated only from a worker result accepted by the supervising
@@ -1748,7 +1748,7 @@ as an accepted implementation or mathematical proof.
 - **Branch:** `verify/luna-p66-replay-069`
 - **Worktree:** local isolated worktree (absolute path deliberately omitted
   from public documentation)
-- **Status:** `accepted` (independently replayed finite evidence)
+- **Status:** `verified` (independently ACCEPTED finite replay)
 - **Exact deliverable:** Independently and strictly replay the recovered
   Prompt66 certificates without trusting response self-labels or bundled
   conclusions.
@@ -1872,13 +1872,14 @@ as an accepted implementation or mathematical proof.
 
 - **ID:** `LUNA-P66-REPLAY-DOCSYNC-077`
 - **Lane:** research operations / public status documentation
-- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Owner / supervising lead:** fresh top-level `gpt-5.6-luna`/xhigh CLI /
+  Research-Operations Lead / `/root`
 - **Base:** `fc2d023e9df1c554cc67fadedece1325e72694b1`
 - **Dependencies:** accepted `LUNA-P66-CERT-REPLAY-069`, verified
   `VER-LUNA-P66-REPLAY-SUPERVISE-070`, and rejected 076 runtime delegation
 - **Branch / worktree:** `ops/p66-replay-sync-recovery-077` in its isolated
   worktree
-- **Status:** `verified` (acceptance checks passed)
+- **Status:** `rejected` (corrections required by read-only review 078)
 - **Exact deliverable:** Synchronize public status documentation after the
   independently reviewed Prompt66 certificate verifier was integrated,
   without changing any theorem, evidence label, source, test, artifact,
@@ -1890,11 +1891,61 @@ as an accepted implementation or mathematical proof.
   targeted 5/5 unit tests, `git diff --check`, `bash scripts/audit_public_release.sh`,
   unique-task-ID and added-line privacy scans; commit only the five allowed
   documentation files and leave the worktree clean.
-- **Blocker:** None after all acceptance checks pass.
-- **Final disposition / promotion authority:** Verified documentation sync
-  only. It records computed finite evidence, independently replayed, and
-  preserves Prompt64 ownership and lifecycle; it promotes no theorem,
-  `PACK-09`, exact pivot selector, or unrestricted LRC.
+- **Blocker:** `OPS-P66-REPLAY-DOCSYNC-REVIEW-078` found contradictory metric
+  wording, premature self-acceptance and incomplete ownership, an undeclared
+  069 status, stale PACK-09 search lifecycle, and an ineffective linked-
+  worktree history scan.
+- **Final disposition / promotion authority:** Corrections required. The
+  documentation commit is not counted as accepted operational work. It
+  changes no theorem, `PACK-09`, exact pivot selector, or unrestricted LRC.
+
+### OPS-P66-REPLAY-DOCSYNC-REVIEW-078 — read-only Prompt66 docs-sync review
+
+- **ID:** `OPS-P66-REPLAY-DOCSYNC-REVIEW-078`
+- **Lane:** research operations / independent read-only review
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base / reviewed commit:**
+  `78a5d62681528a31c9ecb119ae0c74bc8e1c16b9`
+- **Dependencies:** tasks 069, 070, 076, and 077
+- **Branch / worktree:** read-only review of
+  `ops/p66-replay-sync-recovery-077` in its isolated worktree
+- **Status:** `verified` (negative review; corrections required)
+- **Exact deliverable:** Check all replay counts and boundaries, lifecycle and
+  accounting, five-file scope, tests, IDs, privacy, and public-release audit.
+- **Allowed files:** none; read-only review
+- **Acceptance command:** Require exact parent and five-file scope, verify all
+  manifest/report claims, rerun five tests, diff-check, unique IDs, privacy
+  scan, and a meaningful public-release audit.
+- **Blocker:** None at review scope.
+- **Final disposition / promotion authority:** REJECTED task 077 pending five
+  corrections: metric wording/accounting, 077 ownership and lifecycle, 069
+  declared status, PACK-09 search lifecycle, and a nonzero standalone history
+  scan. The review made no edits and promotes no result.
+
+### OPS-P66-REPLAY-DOCSYNC-CORRECT-080 — Prompt66 docs-sync correction
+
+- **ID:** `OPS-P66-REPLAY-DOCSYNC-CORRECT-080`
+- **Lane:** research operations / documentation correction
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** `78a5d62681528a31c9ecb119ae0c74bc8e1c16b9`
+- **Dependencies:** negative read-only review
+  `OPS-P66-REPLAY-DOCSYNC-REVIEW-078`
+- **Branch / worktree:** `ops/p66-replay-sync-recovery-077` in its isolated
+  worktree
+- **Status:** `review` (pending independent and root acceptance)
+- **Exact deliverable:** Correct the five documentation defects without
+  changing mathematical counts, source, tests, artifacts, or result status.
+- **Allowed files:** `README.md`, `STATUS.md`, `docs/full-proof-roadmap.md`,
+  `docs/proof-obligations.md`, and `docs/parallel-task-board.md`
+- **Acceptance command:** Require exact parent `78a5d62`, one correction
+  commit, exact allowed scope, five passing unit tests, diff-check, unique task
+  IDs, added-line privacy/path scan, and a standalone-clone public-release
+  audit with nonzero scanned history.
+- **Blocker:** Pending independent review and `/root` acceptance.
+- **Final disposition / promotion authority:** Review-ready correction only;
+  not self-promoted and not counted as accepted operational documentation. It
+  promotes no theorem, packing claim, `PACK-09`, exact pivot selector, or
+  unrestricted LRC.
 
 ## Integration order
 
@@ -1936,8 +1987,9 @@ as an accepted implementation or mathematical proof.
     `VER-LUNA-P66-REPLAY-SUPERVISE-070` as verified after the independent
     replays and review; their result is computed finite evidence,
     independently replayed, not a theorem or unrestricted promotion. Record
-    076 as a narrow failed runtime delegation and 077 as verified only after
-    its documentation acceptance checks pass. Prompt64's
+    076 as a narrow failed runtime delegation, 077 as rejected pending
+    corrections, review 078 as a verified negative audit, and correction 080
+    as review-only pending independent and root acceptance. Prompt64's
     `TOP-TWO-LARGE-RATIO-EXCLUSION` remains active under the sole top-level
     Sol High browser owner.
 
