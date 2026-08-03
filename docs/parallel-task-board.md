@@ -1,7 +1,7 @@
 # Parallel task board
 
 This file is the authoritative coordination record for the repository snapshot
-based on main commit `477fbffc709d0550c163e2812f26193a4ec38cff`.
+based on main commit `4c6c5c45b9a0c750c65bd6d5234784e1ada4e56f`.
 The last source-changing checkpoint is
 `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`; later commits through the snapshot
 add documentation, operations records, or research artifacts only. Historical
@@ -37,20 +37,20 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 8 | The prior six accepted audits plus `VER-R60-AUDIT-004` and `VER-R61-AUDIT-005` are accepted at their exact mixed dispositions. |
-| Accepted negative audits | 6 | The prior four negative audits plus the two mandatory Response 60/61 replay failures returned valid negative results. |
+| Accepted audit deliverables | 10 | The prior eight accepted audits plus `VER-R62-AUDIT-010` and `FORM-R62-RESIDUAL-SPEC-012` are accepted at their exact mixed/negative dispositions. |
+| Accepted negative audits | 8 | The prior six negative audits plus Response62's failed project-level branch audit and failed residual assembly are valid negative results. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
 | Accepted implementations | 0 unrestricted; 2 supporting artifacts | The corrected conditional DPLP contract/wrapper and Response59 regression verifier are integrated; neither proves an open bridge. |
 | Integrated deliverable groups | 3 | Corrected DPLP formal contract (`b381115`), Response59 regression (`6ffe96a`), and board/Prompts60--63 package (`263a1cb`) are on main. |
 | Authoritative source replay | integrated / verified | `VER-CHECKPOINT-263A1CB-003` verified the detached tracked-clean ext4 replay of source checkpoint `263a1cb`; later snapshot commits are documentation/operations only. |
-| Active Sol Pro cells | 0 / 4 | Prompt60/61 are complete and audited; Prompt62/63 are complete and recovered but unverified. |
+| Active Sol Pro cells | 0 / 4 | Prompt60--62 are complete and audited; Prompt63 is complete/recovered with its independent audit active. |
 | Queued Sol Pro cells | 0 | All four slots are free, but no additional cell is queued in this snapshot. |
 | Active Sol Medium leads | 0 running / 3 roles | Verification and Research Operations are complete at this snapshot; Formalization remains interrupted after its stall. |
-| Active Luna workers | 0 / 6 | The recorded DPLP, Response 59, Response 60, and Response 61 verification tasks are complete. |
+| Active Luna workers | 1 / 6 | Fresh Luna/xhigh task `VER-R63-AUDIT-013` is active read-only; all earlier recorded verification tasks are complete. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 3 | Nested Luna spawn rejection, the downgraded first formal write launch, and one Formalization Lead stall are counted; none is evidence for or against a claim. |
 | Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
-| Integration backlog | 0 ready artifacts | The DPLP selector/correlation remains open research, not an integration-ready deliverable. |
+| Integration backlog | 1 reviewed documentation group | Response62 audit/spec synchronization awaits root integration; no theorem implementation is ready. Response63 audit is still active. |
 | Wait time | None active | No Sol Pro turn remains active in this snapshot. |
 
 Metrics are updated only from a worker result accepted by the supervising
@@ -415,6 +415,58 @@ as an accepted implementation or mathematical proof.
   `RESIDUAL-2N-SHIFT-OWNER-TRANSVERSAL` remains conjectural; no response
   self-label or unrestricted theorem is promoted.
 
+### VER-R62-AUDIT-010 — Response 62 verification
+
+- **ID:** `VER-R62-AUDIT-010`
+- **Lane:** verification
+- **Owner / supervising lead:** fresh Luna/xhigh worker / Verification Lead
+  and `/root`
+- **Base:** `477fbffc709d0550c163e2812f26193a4ec38cff`
+- **Dependencies:** recovered Response62 and Prompt62 artifact bundle
+- **Branch:** read-only verification; synchronized by
+  `research/ops-r62-audit-sync-014`
+- **Status:** `verified`
+- **Exact deliverable:** Replay the declared finite evidence, inspect local
+  lemmas and scalar criteria, and classify the surviving multi-shift bridge.
+- **Allowed files:** worker audit was read-only; synchronization is limited to
+  the audit and coordination documents listed by `OPS-R62-AUDIT-SYNC-014`
+- **Acceptance command:** Validate `SHA256SUMS`, use corrected explicit-output
+  replay commands, compare literal/optimized output and the regenerated report,
+  and inspect every mathematical implication at its stated hypotheses.
+- **Blocker:** Overall branch **FAIL**: Response62's residual is not an
+  assembled project-level chain, and its owner-aware multi-shift bridge has no
+  uniform proof.
+- **Final disposition / promotion authority:** Mixed audit accepted. The
+  8,108-row sweep and hard `tau=5` replay are verified computed finite evidence;
+  local lemmas are `proved-math` at exact hypotheses; uniform scalar criteria
+  are rejected. Fingerprint
+  `7ca6b1c53c233b9f89de399fd264410d70a6346de1889e3d297fddb2f569f775`
+  records public-safe routing without a raw session ID. No Lean or unrestricted
+  claim is promoted.
+
+### FORM-R62-RESIDUAL-SPEC-012 — residual theorem-contract audit
+
+- **ID:** `FORM-R62-RESIDUAL-SPEC-012`
+- **Lane:** formal specification
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base:** `477fbffc709d0550c163e2812f26193a4ec38cff`
+- **Dependencies:** `VER-R62-AUDIT-010` and current tracked Lean declarations
+- **Branch:** read-only specification audit; synchronized by
+  `research/ops-r62-audit-sync-014`
+- **Status:** `verified`
+- **Exact deliverable:** Locate the first missing source-to-result edge in the
+  proposed Response62 residual and state the premises of neighboring steps.
+- **Allowed files:** read-only audit; documentation synchronization only
+- **Acceptance command:** Trace current declarations without accepting response
+  self-labels or drafting a pseudo-Lean implementation.
+- **Blocker:** The first genuinely missing edge is
+  `2 * speeds jB <= N * speeds jA`; no current declaration proves it.
+- **Final disposition / promotion authority:** Specification audit complete.
+  `B<n*A` and the terminal interval are routine only with the explicit
+  deleted-family witness/reindexing and no-full-witness premises recorded in
+  `docs/response62-audit.md`. No Luna implementation begins until a faithful
+  theorem contract supplies the missing inequality and all premises.
+
 ### SOL-P63-PRO-C-001 — deletion-induction contract
 
 - **ID:** `SOL-P63-PRO-C-001`
@@ -481,6 +533,24 @@ as an accepted implementation or mathematical proof.
   review. All computations remain unverified finite evidence;
   `MINIMUM-ESCAPE-FIRST-BLOCKER-DESCENT` and corrected DPLP remain
   conjectural/open, and no response self-label or pseudo-Lean claim is promoted.
+
+### VER-R63-AUDIT-013 — Response 63 verification
+
+- **ID:** `VER-R63-AUDIT-013`
+- **Lane:** Luna verification
+- **Owner / supervising lead:** fresh Luna/xhigh worker / Verification Lead
+  and `/root`
+- **Base:** `477fbffc709d0550c163e2812f26193a4ec38cff`
+- **Dependencies:** `OPS-P63-RECOVER-011`
+- **Branch:** read-only verification
+- **Status:** `active`
+- **Exact deliverable:** Independently replay and classify Response63 and its
+  preserved audit artifacts without accepting response self-labels.
+- **Allowed files:** none; read-only audit
+- **Acceptance command:** Pending the worker's exact replay report.
+- **Blocker:** Audit is active; no disposition exists yet.
+- **Final disposition / promotion authority:** Pending. Prompt63 remains
+  recovered but **UNVERIFIED** until `/root` accepts the independent audit.
 
 ### DPLP-REPAIR-001 — contract repair
 
@@ -652,12 +722,14 @@ as an accepted implementation or mathematical proof.
 4. Preserve the completed Response59 disposition in
    `docs/response59-audit.md`; the regression verifier is finite evidence,
    not a uniform proof.
-5. Preserve Prompt60/61 as completed at their audited dispositions; preserve
-   Prompt62/63 as complete/recovered but **UNVERIFIED** pending independent
-   replay. No Sol Pro cell is occupied at this snapshot.
-6. Allocate future `DPLP-REPAIR-001` work only to the open selector/correlation
+5. Preserve Prompt60/61 at their audited dispositions and Prompt62 at its
+   verified mixed **FAIL** disposition; integrate `docs/response62-audit.md`
+   without promoting finite evidence or the residual bridge.
+6. Preserve Prompt63 as complete/recovered but **UNVERIFIED** while
+   `VER-R63-AUDIT-013` is active. No Sol Pro cell is occupied.
+7. Allocate future `DPLP-REPAIR-001` work only to the open selector/correlation
    theorem; the formal contract itself is no longer an integration blocker.
-7. Launch any additional Luna/xhigh work only through the verified top-level
+8. Launch any additional Luna/xhigh work only through the verified top-level
    CLI route; external CLI processes are not nested agents, and nested Luna
    delegation must not be retried.
 

@@ -242,6 +242,18 @@ both robust top grids simultaneously.
 This must be an arithmetic integral statement. The rejected fractional dual
 cannot be reused as if it implied the integral claim.
 
+Response 62 audit update: the 8,108-row exact sweep and the hard
+`(N,A,B)=(7,98,187)` affine transversal number `5` are verified computed
+finite evidence, but all tested uniform scalar criteria fail. Its proposed
+combined residual is not an assembled project-level theorem. The first open
+edge is exactly `2*B<=N*A`. The weaker `B<n*A` step requires an explicit
+deleted-family witness and reindexing through `FastRunnerInsertion`; the
+terminal-interval step requires the no-full-witness premise plus positivity,
+top-two ordering, and `B<2q`. The surviving named target
+`RESIDUAL-2N-SHIFT-OWNER-TRANSVERSAL` remains conjectural/open and receives no
+implementation until those premises and the missing inequality are supplied
+in a theorem contract.
+
 ### Falsification and stop contract
 
 - Search top-two exactly on every new primitive box and on structured CRT,

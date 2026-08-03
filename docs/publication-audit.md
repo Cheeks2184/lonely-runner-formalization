@@ -59,6 +59,21 @@ limited to `.lake/`, `scratch/`, and Python bytecode caches; none is staged.
 
 The repository has no selected license. The README states this explicitly.
 
+## Pre-push scan checkpoint at `4c6c5c4`
+
+An accepted pre-push checkpoint used Gitleaks v8.30.1 to scan the preserved
+history through main commit `4c6c5c45b9a0c750c65bd6d5234784e1ada4e56f`:
+
+- 241 commits and approximately 6.92 MB of history: zero leaks;
+- approximately 4.34 MB under `research/sol-pro`: zero leaks;
+- a manual targeted scan of all 430 tracked files: zero private keys, API
+  tokens, AWS keys, connection strings, cookies, emails, Windows-user paths,
+  home paths, or UUIDs.
+
+This is an accepted checkpoint, not coverage of later documentation changes.
+A final history, scoped-tree, staged-delta, and manual scan must run again
+after the Response62 audit synchronization commit and before push.
+
 ## Ongoing policy
 
 Before a coherent checkpoint is pushed, run:
