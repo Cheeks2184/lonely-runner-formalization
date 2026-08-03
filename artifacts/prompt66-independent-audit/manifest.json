@@ -1,0 +1,196 @@
+{
+  "base_commit": "136e9c6e0eeeb608bfe943762969bdc412745da0",
+  "counts": {
+    "all_pivot_tuple_hits": 0,
+    "base_pivots": 92,
+    "base_tuples": 11,
+    "exact_integer_optima_independently_certified": 380,
+    "fixed_pivot_failures": 435,
+    "modular_instances": 4149,
+    "mutation_pivots": 4057,
+    "rational_branch_tree_failures": 14,
+    "rational_weak_dual_failures": 421,
+    "retained_mutation_descriptors": 461,
+    "strict_witness_pivots": 3714,
+    "supplied_exact_optimum_flags_not_supported": 55,
+    "total_cases": 4150,
+    "triangle_preflight": 1,
+    "tuple_bundles": 472
+  },
+  "criterion_audits": {
+    "radial_descent": "rejected on complete F pivot bundle",
+    "signed_phase_cells": "rejected on complete F pivot bundle"
+  },
+  "deterministic": true,
+  "evidence_status": {
+    "finite_result_label": "computed finite evidence",
+    "main_packing_lemma": "open",
+    "unrestricted_lrc": "open"
+  },
+  "first_fixed_pivot_obstruction": {
+    "R": 432,
+    "S": 706,
+    "classification": "fixed-pivot packing failure and literal noncoverage; not all-pivot packing, all-pivot-certificate, or LRC",
+    "integer_optimum": 262,
+    "pivot": 48,
+    "rational_upper_bound": "1314/5",
+    "required_credit": 274,
+    "tuple": "F",
+    "union": 392
+  },
+  "input": {
+    "bundle_conceptual_path": "research/sol-pro/artifacts/prompt66/SOL-P66-PRO-B-001-artifacts.zip",
+    "bytes": 7235209,
+    "prompt_raw_sha256": "fc4300e55e72d00a70fc25b63f9504b42923714e1e7f95bc81c22ee42b9d5d24",
+    "prompt_transform": "remove exactly one trailing LF; no other bytes changed",
+    "prompt_ui_readback_sha256": "3f4e4acbc21e0fd97c5a4ca318c519c0db89ad5b358450cffdbdf80f238da9e5",
+    "read_only": true,
+    "sha256": "4fc0f17d8feda472c6a20a7af7d2bdbdcb2f02ae82586d6d153ebcc2430fdea8",
+    "unpacked_conceptual_path": "research/sol-pro/artifacts/prompt66/unpacked"
+  },
+  "network_used": false,
+  "notes": [
+    "The verifier did not execute or import p66_solver.py, p66_replay.py, or any supplied computational source.",
+    "The verifier computed the final manifest SHA-256 after writing this JSON; it is emitted on stdout because a file cannot contain its own final SHA-256 without changing it."
+  ],
+  "randomness_used": false,
+  "runtime_seconds": 15.097709,
+  "source_hashes": {
+    "report": {
+      "bytes": 7421,
+      "path": "artifacts/prompt66-independent-audit/report.md",
+      "sha256": "e7f36c186b504b729c73382f5dec10b09ffc856c308a89931971b47944faafb8"
+    },
+    "tests": {
+      "bytes": 4355,
+      "path": "tests/test_replay_prompt66_certificates_069.py",
+      "sha256": "805a58b29e868b12f4011e2d134f65ffaa822b5353d37c7280f2625833f54ded"
+    },
+    "verifier": {
+      "bytes": 57060,
+      "path": "scripts/replay_prompt66_certificates_069.py",
+      "sha256": "2294a9764b4215a9e91c99f78fa70fe14fb25bc80fbfdba86bec75f8a0394fc0"
+    }
+  },
+  "task": "LUNA-P66-CERT-REPLAY-069",
+  "toolchain": {
+    "implementation": "cpython",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "python": "3.14.4",
+    "standard_library_only": true
+  },
+  "zip_audit": {
+    "entries": {
+      "SOL-P66-PRO-B-001-report.md": {
+        "bytes": 21463,
+        "sha256": "c82c9775663951824d3b1fcfb77fd6c2ac892c584ecd9132b9acca43b5a76cdb"
+      },
+      "attacks/p66_attack_radial_descent_certificates.jsonl": {
+        "bytes": 208048,
+        "sha256": "c9f706c13f676b578c41c1de17d97f124bdadb29af5433e361161337b911b75e"
+      },
+      "attacks/p66_attack_radial_descent_summary.json": {
+        "bytes": 1303,
+        "sha256": "607b4e4dae4899b34f753f6c18c2a472b1fabe429dd9859999874550729ad2b2"
+      },
+      "attacks/p66_attack_radial_descent_transcript.jsonl": {
+        "bytes": 2908,
+        "sha256": "e810e0e8511be0733f38cc075e1ee9660f12cf87c83e45121d5bdcc018c4b93b"
+      },
+      "attacks/p66_attack_signed_phase_cells_certificates.jsonl": {
+        "bytes": 156211,
+        "sha256": "9e51fb7727db023e1ccc94b3834464d694f9c2eeb79c37e9b917a9bfaf484f60"
+      },
+      "attacks/p66_attack_signed_phase_cells_summary.json": {
+        "bytes": 1303,
+        "sha256": "8ca1ee50aea3befd520d38eb84431614eb46be609d68098d3d6cc715ef2f1b77"
+      },
+      "attacks/p66_attack_signed_phase_cells_transcript.jsonl": {
+        "bytes": 2939,
+        "sha256": "9a51b9811dd5d2925a906d276d0d127c8fce4c339ce246f069a69ff81c3c0b01"
+      },
+      "attacks/p66_attacks_summary.json": {
+        "bytes": 3295,
+        "sha256": "af087931f9bcfada371bbae6032d6e75a827c7c4e60a5f76363ac12ca509cd04"
+      },
+      "p66_base_witness_digest.json": {
+        "bytes": 61839,
+        "sha256": "643422cd4264192f07d6d73b5e086c321507da2b4bc879181de28b26683ff508"
+      },
+      "p66_execution_manifest.json": {
+        "bytes": 9850,
+        "sha256": "a619f466ec9c6fb1dac941cb0faca9a8340c2f5cac322c56c3ff644c16c4dd7d"
+      },
+      "p66_first_obstructions.json": {
+        "bytes": 35544,
+        "sha256": "cedc59ffe243b4226a7463240c4fc0604c35dcd0567e4212aec09c9b10602772"
+      },
+      "p66_modular_attacks.py": {
+        "bytes": 8534,
+        "sha256": "f199b52980996fb20ed6ea546789bf7d700eda798578f582f8fa6bd9ed8c1b7f"
+      },
+      "p66_replay.py": {
+        "bytes": 15924,
+        "sha256": "55000919f97e9421ad91c2f83150aff47751b5f8f67aabd5bf403733ebc0b9eb"
+      },
+      "p66_replay_pre_schema_fix.py": {
+        "bytes": 15831,
+        "sha256": "8e9026dffeed74beedf050ea9bf2815330996dbc646b6ef1348fbc4bcd044986"
+      },
+      "p66_solver.py": {
+        "bytes": 41495,
+        "sha256": "d7390b0cbd3dff5b2bcb396647e474a08e050b6e2a77959c13e3423a1137dd5b"
+      },
+      "prompt66_user_contract.md": {
+        "bytes": 14759,
+        "sha256": "fc4300e55e72d00a70fc25b63f9504b42923714e1e7f95bc81c22ee42b9d5d24"
+      },
+      "run3/p66_certificates.jsonl": {
+        "bytes": 49696666,
+        "sha256": "7855a40758961d899d96068bd18dec4ecb85daa65e1e2f3cda449e46212398ab"
+      },
+      "run3/p66_replay_report.json": {
+        "bytes": 1131,
+        "sha256": "077e98fd299802ab3182d6ff142d810146f21526d864c12eea248571f4af122d"
+      },
+      "run3/p66_summary.json": {
+        "bytes": 875151,
+        "sha256": "ab452759adbb7a0df4ea1dc6b75a83e8c6bdadb3b21f908a843bd02bda4f5529"
+      },
+      "run3/p66_transcript.jsonl": {
+        "bytes": 2097125,
+        "sha256": "558d7dd69b7716659c74e1b8ae0c4a46800bd8726720c2118bd487b649ab60ab"
+      },
+      "run3/solver_progress.log": {
+        "bytes": 4285,
+        "sha256": "f4dfe9fed1cfeb77e04b5e1057fa7dc68e4c05da631da7e66034701703b9d040"
+      }
+    },
+    "entry_count": 21,
+    "exact_inventory_order": [
+      "SOL-P66-PRO-B-001-report.md",
+      "prompt66_user_contract.md",
+      "p66_execution_manifest.json",
+      "p66_first_obstructions.json",
+      "p66_base_witness_digest.json",
+      "p66_solver.py",
+      "p66_modular_attacks.py",
+      "p66_replay.py",
+      "p66_replay_pre_schema_fix.py",
+      "run3/p66_transcript.jsonl",
+      "run3/p66_certificates.jsonl",
+      "run3/p66_summary.json",
+      "run3/p66_replay_report.json",
+      "run3/solver_progress.log",
+      "attacks/p66_attack_radial_descent_transcript.jsonl",
+      "attacks/p66_attack_radial_descent_certificates.jsonl",
+      "attacks/p66_attack_radial_descent_summary.json",
+      "attacks/p66_attack_signed_phase_cells_transcript.jsonl",
+      "attacks/p66_attack_signed_phase_cells_certificates.jsonl",
+      "attacks/p66_attack_signed_phase_cells_summary.json",
+      "attacks/p66_attacks_summary.json"
+    ],
+    "execution_manifest_final_artifacts_rechecked": 18,
+    "safe_paths": true
+  }
+}
