@@ -21,7 +21,10 @@ import LonelyRunner.CoefficientFourHeight
 import LonelyRunner.CoefficientThreeHeight
 import LonelyRunner.CoefficientTwoRectangle
 import LonelyRunner.CoefficientTwoReversal
+import LonelyRunner.CoefficientTwoFeasibleStarts
+import LonelyRunner.PartialMatchingDichotomy
 import LonelyRunner.MatchingDependency
+import LonelyRunner.MatchingContraction
 import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts

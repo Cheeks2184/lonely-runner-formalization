@@ -69,8 +69,13 @@ project-specific axiom.
 #print axioms LonelyRunner.rectangleReversal_C1_mem_D0
 #print axioms LonelyRunner.coprime_rectangleReversal
 #print axioms LonelyRunner.rectangleReversal_gives_sdr
+#print axioms LonelyRunner.rectangleStartFeasible_iff
+#print axioms LonelyRunner.PartialMatching.extension_or_deficiency_one
 #print axioms LonelyRunner.tight_iff_successorClosed_and_avoidsBad
 #print axioms LonelyRunner.strictHall_iff_every_vertex_reaches_bad
+#print axioms LonelyRunner.nonReachingSet_tight
+#print axioms LonelyRunner.residual_every_vertex_reaches_bad
+#print axioms LonelyRunner.residual_strictHall
 #print axioms LonelyRunner.simultaneousCongruenceCompatible_iff_nonempty
 #print axioms LonelyRunner.card_simultaneousCongruenceResidues
 #print axioms LonelyRunner.tripleCongruenceCompatible_iff_nonempty
