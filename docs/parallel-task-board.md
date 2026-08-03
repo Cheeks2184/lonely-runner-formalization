@@ -45,24 +45,24 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 | --- | ---: | --- |
 | Accepted audit deliverables | 25 | The prior fifteen plus `OPS-FULL-REASSESS-037`, `VER-C2-DEPENDENCY-038`, `FORM-B-UNIFORM-039`, `VER-P66-C2-DOCS-042`, completed read-only `FORM-PACKING-ADAPTER-SPEC-044`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, `VER-P66-FINAL-REVIEW-051`, `FORM-P66-POSTFIX-REVIEW-054`, and `VER-P66-POSTFIX-REVIEW-055` are accepted only at their exact recommendation, external-dependency-audit, specification, negative-documentation-review, or ACCEPT-review scope. |
 | Accepted negative audits | 14 | The prior eight plus the Prompt65 code audit, Prompt65 repair review, `VER-P66-C2-DOCS-042`, `FORM-P66-REREVIEW-047`, `FORM-P66-FINAL-REVIEW-050`, and `VER-P66-FINAL-REVIEW-051` are valid negative results; the two postfix ACCEPT reviews are nonnegative audits, and rejected verifier output and queued work are not counted as computed evidence. |
-| Accepted operational documentation tasks | 1 | `OPS-SOL-HIGH-PRO-ROUTING-059` is accepted only for reviewed ownership, lifecycle, launch-state, and adapter-checkpoint synchronization; it supplies no research response or result. |
+| Accepted operational documentation tasks | 2 | `OPS-SOL-HIGH-PRO-ROUTING-059` and corrective follow-up `OPS-SOL-HIGH-PRO-ROUTING-CORRECT-062` are accepted only for reviewed ownership, lifecycle, launch-state, routing-history, and adapter-checkpoint synchronization; neither supplies a research response or result. |
 | Accepted recovery deliverables | 3 | Response59, Response62, and Response63 recovery deliverables are recorded without promoting claims; Prompt63 preserves 19 safe bundle members and records two omitted redundant generated outputs. |
 | Accepted implementations | 0 unrestricted; 4 supporting artifacts | The corrected conditional DPLP contract/wrapper, Response59 regression verifier, exact ReverseGrid arithmetic, and supplied packing adapter are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 5 | The prior four groups plus supplied packing adapter merge `fadc65d` are integrated. The adapter promotes only `exists_avoiding_of_overlapCapacity` and `exists_pivot_certificate_of_overlapPacking` to `proved-lean`. |
 | Authoritative source replay | integrated / verified clean ext4 | Merge `fadc65d` passed cache retrieval (8,638 artifacts), full `lake build`, a 302-report standard-foundation trust audit, and all 160 Python tests in a clean ext4 replay. |
 | Active Sol Pro cells | 1 / 4 | `SOL-P66-PRO-B-001` is active in a genuinely new signed-in ChatGPT conversation launched by `/root` through the Sol High desktop lifecycle; Prompt60--63 retain their completed dispositions. |
 | Prepared / parked Sol Pro cells | 2 | `SOL-P64-PRO-B-001` is prepared/parked and `SOL-P65-PRO-C-001` is prepared/parked/frozen. Neither was launched at this checkpoint. |
-| Active Sol Medium leads | 0 running / 3 roles | Verification, Formalization, and Research Operations have completed their current reviewed tranches. |
-| Active Luna workers | 0 / 6 | `LUNA-PACKING-ADAPTER-046` completed and was integrated through reviewed merge `fadc65d`; historical Response63 routing failures retain their recorded scope. |
-| Queued Luna workers | 1 | `VER-PACKING-SEARCH-045` is contracted but has not launched and supplies no computation or claim. |
+| Active Sol Medium leads | 1 running / 3 roles | The Verification Lead supervises active `LUNA-PACKING-SEARCH-RECOVERY-060`; Formalization and Research Operations have completed their current reviewed tranches. Supervision does not review or accept the recovery output. |
+| Active Luna workers | 1 / 6 | `LUNA-PACKING-SEARCH-RECOVERY-060` is active through a fresh top-level `gpt-5.6-luna`/xhigh CLI route. It is not a browser operator or Sol Pro cell and currently supplies no accepted evidence or result. |
+| Queued Luna workers | 0 | The original packing search launched and timed out; its distinct recovery is active, not queued. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
-| Failed delegations | 6 | The prior five failures plus the ReverseGrid worker that exited without a report or commit are counted. The completed Response63 input-missing route remains unusable but is not counted as a failed launch. |
+| Failed delegations | 7 | The prior six plus the original fresh Luna/xhigh packing-search attempt, whose process hit the one-hour timeout with incomplete uncommitted artifacts and no accepted evidence or result. The completed Response63 input-missing route remains unusable but is not counted as a failed launch. |
 | Merge conflicts | 2 resolved | Root resolved the Response59 artifact executable-bit add/add conflict and the session-log content conflict during the two root merges. |
 | Prompt65 contracts/specifications | 2 reviewed / 0 promoted | `VER-P65-PREFLIGHT-027` is conditional-ready only and `FORM-P65-SPEC-028` is SPEC-ONLY/OPEN. |
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
 | Unrestricted route reassessment | B first; C2 second; C1/A frozen | Distance to unrestricted LRC is primary, estimated success secondary, and publishability tertiary. No result status changes. |
-| Integration backlog | 0 contract/documentation groups | `OPS-P66-METRICS-CORRECT-053` is verified at operational/documentation scope after both postfix ACCEPT reviews; Prompt64/P65 retain their separate stopped or parked/frozen records. |
+| Integration backlog | 0 review-ready groups | The active packing-search recovery is incomplete and unreviewed, so it is not integration-ready; Prompt64/P65 retain their separate stopped or parked/frozen records. |
 | Wait time | 0 external-control waits | Prompt64/65 are deliberately parked rather than blocked on top-level browser control; Prompt66 has launched and is active. No response recovery is claimed. |
 
 Metrics are updated only from a worker result accepted by the supervising
@@ -165,7 +165,9 @@ as an accepted implementation or mathematical proof.
 
 - **ID:** `SOL-P59-001`
 - **Lane:** external research
-- **Owner / supervising lead:** `/root`
+- **Owner:** `GPT-5.6 Sol High top-level desktop orchestrator`
+- **Supervising authority:** `/root`
+- **Launch runtime:** `original browser-capable desktop Codex session`
 - **Base:** prompt composed from the pending DPLP/roadmap snapshot based on
   `88c88789f5a503ad24adf54949fb330e88a70f35`
 - **Dependencies:** Response58 audit and the stated DPLP evidence snapshot
@@ -254,7 +256,9 @@ as an accepted implementation or mathematical proof.
 
 - **ID:** `SOL-P60-PRO-E-001`
 - **Lane:** external research / PRO-E deliberate replication
-- **Owner / supervising lead:** `/root`
+- **Owner:** `GPT-5.6 Sol High top-level desktop orchestrator`
+- **Supervising authority:** `/root`
+- **Launch runtime:** `original browser-capable desktop Codex session`
 - **Base:** prompt artifact integrated on main through
   `263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa`; original Prompt60 file commit
   `241472cd655e818b5e1bdfa546daadf5b783aed2`
@@ -1140,13 +1144,13 @@ as an accepted implementation or mathematical proof.
 
 - **ID:** `VER-PACKING-SEARCH-045`
 - **Lane:** verification / B
-- **Owner / supervising lead:** Luna xhigh (fresh top-level CLI; pending launch)
-  / Verification Lead
+- **Owner / supervising lead:** original fresh top-level
+  `gpt-5.6-luna`/xhigh CLI attempt / Verification Lead
 - **Base:** `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`
 - **Dependencies:** `PACK-09` definitions and the corrected Prompt66 strict
   boundary; no dependency on `scripts/audit_whole_block_packing.py`
-- **Intended branch:** `verify/luna-packing-search-045`
-- **Status:** `queued`
+- **Branch / worktree:** `verify/luna-packing-search-045`; isolated worktree
+- **Status:** `blocked` (one-hour process timeout; incomplete)
 - **Exact deliverable:** Build a structurally independent literal exact
   all-pivot whole-block optimizer and run every primitive increasing tuple
   with `2<=n<=5` and maximum speed `<=12`: `45+196+479+786=1,506` tuples and
@@ -1155,18 +1159,60 @@ as an accepted implementation or mathematical proof.
   lexicographic order, and increasing pivot speed, followed by the eleven
   stresses in Prompt66 order and increasing pivot speed. Preserve strict
   badness and strict credit boundaries exactly.
-- **Expected files:** a new isolated optimizer, literal replay, tests, manifest,
-  and hashed result report under paths declared before launch; no import or
-  copied implementation from `scripts/audit_whole_block_packing.py`
-- **Acceptance command:** Launch only through a fresh top-level Luna/xhigh CLI;
-  record toolchain and source/output hashes; verify the exact `1,506` tuple,
-  `6,524` bounded-row, and `92` stress-row counts; run literal/optimized
-  agreement and `git diff --check` before review.
-- **Blocker:** Pending launch. Stop on the first exact all-pivot packing-lemma
-  refutation or before any resource escalation; request new authority for an
-  expanded domain or budget.
-- **Final disposition / promotion authority:** Queued contract only. No run,
-  computation, counterexample, finite evidence, proof, or status promotion is
+- **Allowed files:** `scripts/verify_all_pivot_packing_045.py`,
+  `scripts/replay_all_pivot_packing_045.py`,
+  `tests/test_verify_all_pivot_packing_045.py`,
+  `artifacts/ver-packing-search-045/results.jsonl`,
+  `artifacts/ver-packing-search-045/report.md`, and
+  `artifacts/ver-packing-search-045/manifest.json`
+- **Acceptance command:** Record toolchain and source/output hashes; verify the
+  exact `1,506` tuple, `6,524` bounded-row, and `92` stress-row counts; run
+  literal/optimized agreement, targeted tests, replay, and `git diff --check`
+  before review.
+- **Blocker:** The fresh Luna/xhigh process hit its one-hour timeout. It left
+  incomplete uncommitted artifacts and did not complete the acceptance suite.
+- **Final disposition / promotion authority:** Failed delegation only. The
+  incomplete files are not accepted computation, finite evidence,
+  counterexample, proof, or result and are not integration-ready.
+
+### LUNA-PACKING-SEARCH-RECOVERY-060 — bounded packing search recovery
+
+- **ID:** `LUNA-PACKING-SEARCH-RECOVERY-060`
+- **Lane:** verification / B recovery
+- **Owner / supervising lead:** fresh top-level `gpt-5.6-luna`/xhigh CLI /
+  Verification Lead
+- **Base:** `f9afa7e6ff98eccb252e29cd6f0de1aac3ac56ef`
+- **Dependencies:** timed-out `VER-PACKING-SEARCH-045`; unchanged `PACK-09`
+  definitions and corrected Prompt66 strict boundary
+- **Branch:** `verify/luna-packing-search-045`
+- **Worktree:** isolated ext4 worktree; private local path omitted
+- **Status:** `active`
+- **Exact deliverable:** Recover and complete the structurally independent
+  literal exact all-pivot optimizer for all `1,506` primitive increasing
+  tuples with `2<=n<=5` and maximum speed `<=12`, their `6,524` pivot rows,
+  and the eleven Prompt66 stresses with `92` named pivot rows. Preserve the
+  original deterministic order and strict badness/credit boundaries.
+- **Allowed files:** `scripts/verify_all_pivot_packing_045.py`,
+  `scripts/replay_all_pivot_packing_045.py`,
+  `tests/test_verify_all_pivot_packing_045.py`,
+  `artifacts/ver-packing-search-045/results.jsonl`,
+  `artifacts/ver-packing-search-045/report.md`, and
+  `artifacts/ver-packing-search-045/manifest.json`
+- **Required commands:**
+  `python3 scripts/verify_all_pivot_packing_045.py --output artifacts/ver-packing-search-045/results.jsonl`;
+  `python3 scripts/replay_all_pivot_packing_045.py --results artifacts/ver-packing-search-045/results.jsonl --report artifacts/ver-packing-search-045/report.md --manifest artifacts/ver-packing-search-045/manifest.json`;
+  `python3 -m unittest tests/test_verify_all_pivot_packing_045.py -v`;
+  `sha256sum` on all six allowed paths; and `git diff --check`.
+- **Acceptance command:** Require exact `1,506`/`6,524`/`92` counts,
+  literal/optimized agreement, complete fresh results/report/manifest,
+  targeted-test success, toolchain and six-file hashes, exact allowed-file
+  diff, and a clean worktree before independent Verification Lead review.
+- **Blocker:** Active recovery remains incomplete and unreviewed. Stop on the
+  first exact all-pivot packing-lemma refutation or before resource expansion.
+- **Final disposition / promotion authority:** Active Luna CLI recovery only.
+  Luna has no browser or Pro role and is not a Sol Pro cell. The Verification
+  Lead supervises the lane but has not reviewed or accepted any result. No current
+  computation, finite evidence, counterexample, proof, or theorem promotion is
   recorded.
 
 ### SOL-P66-PRO-B-001 — ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING
@@ -1606,6 +1652,34 @@ as an accepted implementation or mathematical proof.
   It records launch state and the independently verified supplied adapters; it
   claims no response recovery, computation, finite evidence, packing-existence
   theorem, `PACK-09`, or unrestricted LRC result.
+
+### OPS-SOL-HIGH-PRO-ROUTING-CORRECT-062 — routing correction
+
+- **ID:** `OPS-SOL-HIGH-PRO-ROUTING-CORRECT-062`
+- **Lane:** research operations / corrective documentation
+- **Owner / supervising authority:** Research Operations Lead / `/root`
+- **Base:** `9abfc9042a138894b33cfd63637bca7358ba735c`
+- **Dependencies:** `OPS-SOL-HIGH-PRO-ROUTING-059`, original timed-out packing
+  search attempt, and active recovery routing supplied by `/root`
+- **Branch:** `docs/sol-high-pro-routing-059`
+- **Status:** `verified` (operational documentation correction)
+- **Exact deliverable:** Add omitted Prompt59/60 Sol High ownership fields,
+  correct the original packing-search timeout history, record the distinct
+  active Luna/xhigh recovery and its six-path contract, reconcile current
+  routing metrics, and clarify that the Prompt66 launch-payload hash is
+  UI-readback-only provenance.
+- **Allowed files:** `docs/parallel-task-board.md` and
+  `research/sol-pro/launches/prompt66-2026-08-03.md` only
+- **Acceptance command:** Require exact parent `9abfc90`, one new commit, exact
+  two-file diff, unique task IDs, Prompt59/60 owner/authority/runtime fields,
+  timeout/recovery lifecycle and metric consistency, the exact six recovery
+  paths and `1,506`/`6,524`/`92` counts, `git diff --check`, added-line
+  privacy/secret scan, and a clean worktree.
+- **Blocker:** None at documentation-correction scope; active recovery remains
+  incomplete and unreviewed.
+- **Final disposition / promotion authority:** Accepted operational correction
+  only. It promotes no worker artifact, computation, finite evidence,
+  counterexample, proof, packing theorem, `PACK-09`, or unrestricted result.
 
 ## Integration order
 
