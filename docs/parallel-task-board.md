@@ -36,6 +36,7 @@ Status values are `planned`, `queued`, `active`, `running`, `waiting`,
 | Accepted recovery deliverables | 1 | `SOL-R59-RECOVER-001` recovered and normalized Response59 without promoting its claims. |
 | Accepted implementations | 0 | No pending proof or computation tranche has passed its implementation contract. |
 | Active Sol Pro cells | 1 / 4 | Prompt60 PRO-E is running in a genuinely new conversation; Prompt59 is complete. |
+| Queued Sol Pro cells | 3 | Prompt61 PRO-A, Prompt62 PRO-B, and Prompt63 PRO-C are packaged but not submitted. |
 | Active Sol Medium leads | 3 / 3 | Research Operations, Verification, and Formalization are the initial lead lanes. |
 | Active Luna workers | 1 / 6 | The independent Response59 verification audit is active; the formal Luna result is in lead review. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the active clean-room Response59 audit to reduce correlated error. |
@@ -242,6 +243,84 @@ as an accepted implementation or mathematical proof.
 - **Final disposition / promotion authority:** Submission evidence accepted;
   `/root` owns browser execution and eventual recovery. No result or claim is
   promoted.
+
+### SOL-P61-PRO-A-001 — height-compression contract
+
+- **ID:** `SOL-P61-PRO-A-001`
+- **Lane:** Sol Pro / PRO-A height compression
+- **Owner / supervising lead:** unassigned new-chat worker / `/root`
+- **Base:** prompt-package base
+  `fcf082781091f8e59ca43d498a4c37f8723ec599`
+- **Dependencies:** verified bounded-height endpoint and corrected current
+  status ledger
+- **Branch:** `ops/parallel-task-board-001`; future execution is a new
+  external ChatGPT conversation
+- **Status:** `queued`
+- **Exact deliverable:** Attack only
+  `MinimalCounterexampleHeightCompression` by replacement/descent operations
+  whose conclusion is the coefficient-three height bound. Do not enter direct
+  pivot coverage or deletion induction.
+- **Allowed files:** packaged artifact
+  `research/sol-pro/prompts/prompt61.md`; no files during external execution
+- **Acceptance command:** `sha256sum research/sol-pro/prompts/prompt61.md`
+  must return
+  `d337fc56508ef92c820371cc7e9d2b2091171283b884c982868b2c690931118b`;
+  run `git diff --check` and the targeted secret/local-path scan.
+- **Blocker:** `/root` has not allocated or submitted the new conversation.
+- **Final disposition / promotion authority:** Queued and unsubmitted. Only
+  `/root` may launch, recover, accept, or promote a result.
+
+### SOL-P62-PRO-B-001 — uniform-pivot contract
+
+- **ID:** `SOL-P62-PRO-B-001`
+- **Lane:** Sol Pro / PRO-B pivot coverage
+- **Owner / supervising lead:** unassigned new-chat worker / `/root`
+- **Base:** prompt-package base
+  `fcf082781091f8e59ca43d498a4c37f8723ec599`
+- **Dependencies:** verified pivot-certificate equivalence, exact CRT counts,
+  and corrected current status ledger
+- **Branch:** `ops/parallel-task-board-001`; future execution is a new
+  external ChatGPT conversation
+- **Status:** `queued`
+- **Exact deliverable:** Attack only unrestricted all-pivot coverage,
+  TOP-TWO-PIVOT, and `TOP-TWO-INTEGRAL-TRANSVERSAL` through integral
+  CRT/Fourier/transversal methods. Do not enter height descent or deletion
+  induction.
+- **Allowed files:** packaged artifact
+  `research/sol-pro/prompts/prompt62.md`; no files during external execution
+- **Acceptance command:** `sha256sum research/sol-pro/prompts/prompt62.md`
+  must return
+  `23dee02ec566f19ea99357d68c53c8dedfec223aec0eba55326d56b6c3b505ed`;
+  run `git diff --check` and the targeted secret/local-path scan.
+- **Blocker:** `/root` has not allocated or submitted the new conversation.
+- **Final disposition / promotion authority:** Queued and unsubmitted. Only
+  `/root` may launch, recover, accept, or promote a result.
+
+### SOL-P63-PRO-C-001 — deletion-induction contract
+
+- **ID:** `SOL-P63-PRO-C-001`
+- **Lane:** Sol Pro / PRO-C deletion and induction
+- **Owner / supervising lead:** unassigned new-chat worker / `/root`
+- **Base:** prompt-package base
+  `fcf082781091f8e59ca43d498a4c37f8723ec599`
+- **Dependencies:** corrected DPLP formal-status ledger; selected-certificate
+  lift only is proved-Lean; Response59 D4/D5 remain pending PRO-E
+- **Branch:** `ops/parallel-task-board-001`; future execution is a new
+  external ChatGPT conversation
+- **Status:** `queued`
+- **Exact deliverable:** Attack only corrected deletion-certificate
+  correlation, reverse witness lifting, descent, and induction, with the full
+  D6 no-full-witness and nonempty-`K_k` hypotheses. Do not enter height-only
+  descent or direct pivot/top-two coverage.
+- **Allowed files:** packaged artifact
+  `research/sol-pro/prompts/prompt63.md`; no files during external execution
+- **Acceptance command:** `sha256sum research/sol-pro/prompts/prompt63.md`
+  must return
+  `cd106157780d81129e7c177b832eac3107b00aa061bc46a3406ce58d2fcb9772`;
+  run `git diff --check` and the targeted secret/local-path scan.
+- **Blocker:** `/root` has not allocated or submitted the new conversation.
+- **Final disposition / promotion authority:** Queued and unsubmitted. Only
+  `/root` may launch, recover, accept, or promote a result.
 
 ### DPLP-REPAIR-001 — contract repair
 
