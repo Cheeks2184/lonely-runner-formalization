@@ -210,6 +210,11 @@ This equivalence does not prove either side.
   arithmetic or analytic premise.
 - **Refuted strategy:** files under the failed-approach and counterexample
   records reject only the named sufficient conditions, not LRC.
+- **Refuted strategy:** `RELOC-UNIF` is also closed negatively. The exact
+  all-pivot OPT-ADD counterexample has a global minimum additive order at or
+  above threshold at every pivot; a global minimum is automatically a
+  two-sided relocation-local minimum. The generic Lean descent and block
+  identity remain valid, but this arithmetic uniform premise is false.
 
 ## Exact open bottleneck
 
@@ -220,24 +225,45 @@ strict modular bad sets do not cover all candidates—or to refute that exact
 proposition. Current overlap, correlation, Chebyshev, descent, and residual
 restrictions do not force such a pivot.
 
-Active research branches are:
+Research is now in **FULL-PROOF PRIORITY MODE**. Active branches, in order,
+are:
 
-1. close the finite-to-uniform gap in the coefficient-two Gamma selector;
-   asymptotically the active generic branch follows from coprime interval
-    matchings, while a new exact failure would have to be a connected
-    deficiency-one critical incidence core with `N>=20`; the explicit current
-    subproblems are nonspanning tight-block contraction with its retained
-    puncture certificate, exploiting Gamma edges outside the now-refuted
-    feasible reversal diagonals, controlling collisions across total layers,
-    and endpoint prime-support overload;
-2. prove the corrected disjunction between one-sided robust cover numbers and
-   nonempty multi-shift transversals; unconditional paired existence is
-   refuted by an empty-grid row;
-3. control or refute the full Chebyshev/CRT pivot score, after rejection of
-   the quadratic shortcut;
-4. strengthen the least-counterexample residual class until its conditions
-   become incompatible;
-5. formalize surviving statements and adversarially test every bridge.
+1. prove or refute the corrected deletion-pivot lifting principle (DPLP),
+   whose exact induction chain uses lower-dimensional pivot certificates,
+   the verified coefficient-three endpoint, and the direct `q=N` branch;
+2. prove a uniform supply of prime-forcing moduli whose product exceeds the
+   published minimal-counterexample product bound; this route is backed by
+   recent finite-dimensional proofs but retains an external unformalized
+   product-bound dependency;
+3. prove or refute the unrestricted top-two pivot property, then fall back to
+   the exact all-pivot certificate; the immediate target is an integral
+   affine-fiber/transversal theorem, not the rejected fractional dual;
+4. force a least primitive counterexample into the already Lean-verified
+   coefficient-three height range by a well-founded maximum/sum/lexicographic
+   descent with an exact closed-boundary witness lift.
+
+Each branch has an exact theorem contract, implication chain, falsification
+suite, budget, and abandonment criterion in
+[the full-proof roadmap](docs/full-proof-roadmap.md). Coefficient two receives
+one final audit sprint and is otherwise frozen unless it yields an all-`N`
+selector, an effective cutoff plus complete finite verification, a genuine
+selector counterexample, or an unrestricted reusable lemma.
+
+DPLP is **conjectural**. A deterministic exact audit found no failure in
+243,973 premise-satisfying primitive tuples above the coefficient-three
+cutoff, but no uniform cross-deletion correlation theorem is known. Raw
+deletion lifting is false at `(1,3,4,7)`; that tuple lies in the separate
+direct `q=N` branch and is not an LRC counterexample. The earlier
+`RELOC-UNIF` branch is rejected: the existing all-pivot OPT-ADD example has a
+global, hence two-sided relocation-local, minimum above threshold at every
+pivot.
+
+The sound part of DPLP is now **Lean-verified** in
+`DeletionPivotLifting.lean`: a selected deletion certificate satisfying the
+exceptional-coordinate inequality yields the explicit full witness, and the
+wrapper preserves the exact selector quantifiers. This does not prove the
+selector. Exact `proved-math` deep-hole and shell cardinalities reduce the
+current arithmetic obstruction to overlap-sensitive singleton counting.
 
 ## Latest verification
 

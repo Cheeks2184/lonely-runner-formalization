@@ -148,3 +148,50 @@ proof.
 
 All of these are finite executable audits. The bounded-height proof outside
 the finite range is deductive, while the full conjecture remains open.
+
+## Deletion-pivot lifting audit
+
+The deterministic command
+
+```bash
+python3 scripts/audit_deletion_pivot_lift.py
+```
+
+tests the corrected deletion-pivot lifting principle (DPLP) with exact integer
+arithmetic. For an original tuple of `n` speeds, each deletion is tested at
+the lower threshold `1/n` on every surviving speed-valued pivot grid. A lower
+certificate lifts only when its exceptional deleted coordinate also satisfies
+the cross-multiplied closed `1/(n+1)` inequality. The script preserves the
+essential quantifier order: every deletion must have a lower certificate, but
+the conclusion may choose the deletion and the certificate that lift.
+
+The complete primitive increasing boxes are
+
+```text
+(n,max)=(3,60),(4,35),(5,25),(6,24),
+        (7,20),(8,18),(9,16),(10,16).
+```
+
+They contain 405,013 primitive tuples. Of the 402,517 tuples above the
+verified coefficient-three cutoff, 158,544 have no speed divisible by
+`N=n+1` and therefore take the direct time `1/N`. The remaining 243,973 meet
+DPLP's divisibility premise. Every deletion has a lower pivot certificate and
+at least one certificate lifts in every such tuple; the audit reports zero
+failures. The smallest failure of the deliberately stronger raw lifting
+statement is `(1,3,4,7)` at `N=5`; no speed is divisible by five, and time
+`1/5` directly witnesses that tuple.
+
+Reproducibility metadata:
+
+- Python `3.14.4`, deterministic enumeration, no random seed;
+- tracked source SHA-256
+  `a152a8ed58f8257d2ce5f46f00a89d25bc9c4c9f4bc60d7b738a131f812ace1f`;
+- expected stdout SHA-256
+  `c2f7de1da569d246fab40075ff74a43e797ff0ad9bd2d085c4fe7b0737f934f8`;
+- canonical output `certificates/deletion_pivot_lift_expected.txt`;
+- regression `tests/test_deletion_pivot_lift.py`.
+
+This is **computed finite evidence only**. It does not prove DPLP, an
+induction theorem, positive-integer LRC, or unrestricted LRC. The single open
+mathematical step is a uniform correlation theorem across the family of
+deletion certificate sets.

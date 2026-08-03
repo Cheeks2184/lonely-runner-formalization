@@ -3097,3 +3097,74 @@ characters, 7,989 UTF-8 bytes, 163 line feeds, and SHA-256
 `03c5923003864752101ba0d8c0894542dde1d29a0b3b09970f33c3578aa51e08`.
 The composer read-back matched exactly. The `Pro` effort and GPT-5.6 Sol model
 were selected, and the live `Stop answering` control confirmed submission.
+
+## Response 57 recovered and independently audited
+
+Response 57 completed after 29 minutes 35 seconds. The exact copied response
+has 22,623 characters, 22,631 UTF-8 bytes, 1,214 line feeds, and SHA-256
+`eb95c33bce663fee820aa3de217ee96e710ca17ad98a8903df190d0c345ae98f`.
+Its puncture/slack identities, residual nonspanning equivalence, coatomic
+`3*m-5` necessary span bound, total-layer chain decomposition, contiguous
+Hall criterion, capacity-greedy sufficient condition, and conditional
+low/middle/high map survive independent mathematical audit at their stated
+strength.
+
+Three exact audits prevent promotion. The low/middle/high map already has two
+empty rows at `(20,8)` despite full Gamma Hall. The capacity-greedy condition
+fails at `(20,9)` despite full Gamma Hall. Finally, for every fixed finite J1
+shift list, a factorial construction blocks all listed shifts while a farther
+negative shift works. None is a Gamma-selector or LRC counterexample. The
+response's Lean and Python attachments were explicitly unexecuted and are not
+used as evidence. Full details are in `docs/response57-audit.md`.
+
+Under FULL-PROOF PRIORITY MODE this closes the final bounded coefficient-two
+sprint. The branch is frozen unless it targets an all-`N` selector, an
+effective cutoff plus complete finite verification, a genuine exact-selector
+counterexample, or an unrestricted reusable lemma.
+
+## Prompt 58 submitted: unrestricted A/B/C bridges
+
+Prompt 58 switches the signed-in Sol Pro conversation to unrestricted Lonely
+Runner work. It supplies exact research contracts for minimal-counterexample
+height compression, the uniform pivot certificate, and deletion/descent. It
+returns the strongest verified dependencies and named counterexamples,
+requires multiple materially distinct strategies, and demands an explicit
+implication chain, a single unsupported lemma, falsification tests, and a stop
+condition for every promoted route.
+
+The tracked prompt has a final line feed. The exact submitted composer payload
+has 9,347 characters, 9,347 UTF-8 bytes, 196 line feeds, and SHA-256
+`63cc117f700992959960679485c6c155d95a87006e692509e4179f9c9cc01210`.
+Windows UI Automation read back an exact match before physical submission.
+The continuing conversation showed the `Pro` mode and GPT-5.6 Sol selection,
+and the live `Stop answering` control confirmed that the unrestricted
+research turn was running. No returned theorem will be accepted without an
+independent mathematical, computational, and Lean audit as applicable.
+
+## Response 58 recovered and independently audited
+
+Response 58 completed after 29 minutes 1 second. The exact copied response has
+28,319 characters, 28,431 UTF-8 bytes, 921 line feeds, and SHA-256
+`0a4fd013d20fae0e1f825aa925a42ad6797c14ab8ec9ef43fa304fee2ccf8d8f`.
+It generated height compression, pair-sum, top-two, and prime-forcing/product
+contracts and explicitly kept unrestricted LRC open.
+
+Independent audit accepts the signed-divisor transport, pair-sum symmetry,
+third-order Bonferroni inequality, its exact counterexample
+`(1,2,3,4,5,7)`, and the prime-forcing local-to-global implication at their
+stated mathematical strength. The prime-forcing route depends on the
+published Malikiosis--Santos--Schymura product bound, which is not yet
+formalized in this project.
+
+The response's known-dimension status was stale: peer-reviewed results reach
+ten total runners, while a separately labeled 2026 preprint claims eleven
+through thirteen. Its Python attachment and expected output were not recovered
+or replayed, so the reported 71,039 height, 511,796 pair-sum, and 75,887
+Bonferroni sweep counts are not repository evidence. Full details and primary
+links are in `docs/response58-audit.md`.
+
+Prime-forcing is added as an unrestricted contract, but Response 58 did not
+know the independently developed DPLP bridge. DPLP remains provisionally
+ranked first because its sound implication is now kernel-checked and its exact
+single-coordinate shell arithmetic is known; one dedicated Sol Pro
+adversarial turn is required before that ranking is retained.

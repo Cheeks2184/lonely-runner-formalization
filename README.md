@@ -123,6 +123,14 @@ critical deficiency-one set is tight, so unrestricted contraction to an
 All are finite structural theorems; none constructs the original Gamma
 matching or proves the all-dimension selector.
 
+`DeletionPivotLifting.lean` verifies a separate unrestricted induction
+bridge: a lower-dimensional deletion certificate plus the exact
+exceptional-coordinate inequality produces the explicit full witness time
+`r/(n*p)` at the closed `1/(n+1)` threshold. Its wrapper preserves the
+`forall deletion, exists certificate` quantifier order. The module does
+**not** prove that the required lifting certificate exists; DPLP remains
+conjectural.
+
 The proposed union of all feasible reversal diagonals is now **rejected**, not
 open: at `(N,t)=(36,16)` every candidate has a diagonal neighbor, but
 `{20,22,24}` has only `{41,43}`. The full Gamma graph is nevertheless
@@ -150,6 +158,8 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 ## Repository map
 
 - [STATUS.md](STATUS.md): concise authoritative status and open bottleneck.
+- [full-proof-roadmap.md](docs/full-proof-roadmap.md): unrestricted A/B/C
+  bridge contracts, dependencies, budgets, and abandonment criteria.
 - [LonelyRunner/](LonelyRunner/): Lean definitions, equivalences, lemmas, and
   verified partial theorems.
 - [proof-obligations.md](docs/proof-obligations.md): live obligation ledger.
@@ -200,6 +210,11 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
   arithmetic gaps.
 - [response56-audit.md](docs/response56-audit.md): atomic-collapse correction,
   coatomic necessary conditions, two-total chains, and fixed-shift failures.
+- [response57-audit.md](docs/response57-audit.md): puncture/slack identities,
+  exact chain criteria, and the final bounded coefficient-two audit.
+- [response58-audit.md](docs/response58-audit.md): unrestricted strategy
+  generation, literature correction, prime-forcing contract, and rejected
+  third-order criterion.
 - [computation.md](docs/computation.md): computational scope and interpretation.
 - [publication-audit.md](docs/publication-audit.md): public-release privacy,
   secret-scanning, and redistribution audit.
@@ -247,6 +262,7 @@ bash scripts/audit_coefficient_two_gamma.sh
 bash scripts/audit_gamma_dependency_sweep.sh
 python3 scripts/audit_gamma_diagonal_obstruction.py
 python3 scripts/audit_gamma_translation_shifts.py
+python3 scripts/audit_deletion_pivot_lift.py
 bash scripts/audit_top_two_pivot_search.sh
 bash scripts/audit_top_two_fractional_dual.sh
 bash scripts/audit_top_two_fractional_obstruction.sh
@@ -273,11 +289,23 @@ tool versions are in [STATUS.md](STATUS.md).
 
 ## Current research frontier
 
-The exact unresolved step is the uniform positive-integer pivot-certificate
-proposition: prove that some pivot candidate escapes all strict modular bad
-sets for every positive injective integer tuple, or refute that exact
-proposition. Current work attacks stronger explicit height bounds, the full
-Chebyshev/CRT score, and corrected least-dimension residual restrictions.
+Research is in **FULL-PROOF PRIORITY MODE**. The exact unrestricted
+bottleneck remains the Lean-verified finite pivot-certificate proposition:
+for every positive injective integer tuple, some pivot candidate must escape
+all strict modular bad sets. The current first-ranked bridge is the
+conjectural deletion-pivot lifting principle (DPLP). Together with
+lower-dimensional LRC, the verified coefficient-three height theorem, and
+the direct `q=N` branch, DPLP would prove unrestricted positive-integer LRC.
+An exact finite audit found no DPLP failure in 243,973 premise-satisfying
+tuples, but this is **computed finite evidence only**.
+
+The other major routes are an unrestricted top-two/all-pivot certificate and
+minimal-counterexample height compression. Their exact contracts, implication
+chains, falsification suites, budgets, and abandonment criteria are in the
+[full-proof roadmap](docs/full-proof-roadmap.md). The coefficient-two Gamma
+selector is frozen after its final bounded audit unless work targets an
+all-`N` proof, an effective cutoff with complete finite verification, a real
+selector counterexample, or an unrestricted reusable lemma.
 
 ## Public-release safety
 

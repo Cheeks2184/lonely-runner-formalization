@@ -1,6 +1,6 @@
 # Literature and known results
 
-Research cutoff: 2026-08-01. Results are labeled by publication status. A
+Research cutoff: 2026-08-02. Results are labeled by publication status. A
 preprint claim is not treated as an independently verified theorem here.
 
 ## Origins
@@ -31,6 +31,15 @@ in *Mathematics of Computation* (<https://doi.org/10.1090/mcom/4243>;
 preprint <https://arxiv.org/abs/2509.14111>), and
 Trakulthongchai's `N = 9,10` result appears in EJC 33(2), P2.46 (2026),
 <https://doi.org/10.37236/14972>.
+
+Rosenfeld independently proved `N=9` in
+<https://arxiv.org/abs/2512.01912>. The paper combines the published
+Malikiosis--Santos--Schymura minimal-counterexample product bound with finite
+modular lemmas forcing many pairwise-coprime prime powers to divide the speed
+product. Its local forcing statement retains every deletion-gcd condition and
+allows repeated residues after reduction modulo the chosen denominator. This
+is the primary-source basis for the prime-forcing contract in
+`docs/full-proof-roadmap.md`; no uniform all-dimension supply theorem is known.
 
 Sungkawichai--Trakulthongchai claim computer-assisted proofs through `N = 13`
 in a 2026 preprint, <https://arxiv.org/abs/2604.23906>. This repository treats

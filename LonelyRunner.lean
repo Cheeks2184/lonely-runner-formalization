@@ -28,6 +28,7 @@ import LonelyRunner.PartialMatchingDichotomy
 import LonelyRunner.MatchingDependency
 import LonelyRunner.MatchingContraction
 import LonelyRunner.CriticalCoreContraction
+import LonelyRunner.DeletionPivotLifting
 import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts

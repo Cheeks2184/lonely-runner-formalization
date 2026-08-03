@@ -9,7 +9,17 @@ from pathlib import Path
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
-from audit_relocation_descent import CLAIMS, audit_local_minima  # noqa: E402
+from audit_opt_add_counterexample import (  # noqa: E402
+    SPEEDS as OPT_ADD_COUNTEREXAMPLE_SPEEDS,
+    audit_all as audit_opt_add_counterexample,
+)
+from audit_relocation_descent import (  # noqa: E402
+    CLAIMS,
+    _tables,
+    audit_local_minima,
+    order_cost,
+    relocated,
+)
 from audit_three_anchor import (  # noqa: E402
     CLAIMS as ANCHOR_CLAIMS,
     REPAIRED_CLAIMS,
@@ -43,6 +53,44 @@ class Response26RelocationTests(unittest.TestCase):
                 self.assertIsNotNone(report.first_nonstrict_left_example)
                 _order, cost = report.first_nonstrict_left_example or ((), -1)
                 self.assertGreaterEqual(cost, report.universe_size)
+
+    def test_opt_add_counterexample_refutes_reloc_unif(self) -> None:
+        """A global optimum is automatically two-sided relocation-local."""
+
+        reports = audit_opt_add_counterexample()
+        for report in reports:
+            pivot = OPT_ADD_COUNTEREXAMPLE_SPEEDS.index(report.pivot)
+            _others, positions, costs = _tables(
+                OPT_ADD_COUNTEREXAMPLE_SPEEDS, pivot
+            )
+            order = tuple(
+                OPT_ADD_COUNTEREXAMPLE_SPEEDS.index(speed)
+                for speed in report.optimal_order
+            )
+            optimum = order_cost(order, positions, costs)
+            self.assertEqual(optimum, report.additive_optimum)
+            self.assertGreaterEqual(optimum, report.threshold)
+
+            relocation_deltas: list[int] = []
+            for source in range(len(order)):
+                for destination in range(len(order)):
+                    if source == destination:
+                        continue
+                    if destination < source:
+                        new_order = relocated(order, destination, source)
+                    else:
+                        moved = order[source]
+                        new_order = (
+                            *order[:source],
+                            *order[source + 1 : destination + 1],
+                            moved,
+                            *order[destination + 1 :],
+                        )
+                    relocation_deltas.append(
+                        order_cost(new_order, positions, costs) - optimum
+                    )
+
+            self.assertGreaterEqual(min(relocation_deltas), 0)
 
 
 class Response26AnchorTests(unittest.TestCase):

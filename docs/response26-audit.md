@@ -50,6 +50,43 @@ These finite computations support the listed examples only.  They do not
 prove that every tuple has a pivot whose two-sided relocation-local minima are
 strictly below the candidate-universe size.
 
+## 2026-08-02 correction: `RELOC-UNIF` is refuted
+
+The later clean-room `OPT-ADD-UNIF` counterexample closes the proposed
+relocation route negatively.  For
+
+```text
+G=(15,21,40,48,56,105,126,280,1200),
+```
+
+the exact unrestricted additive optimum is at least the strict threshold at
+all nine pivots; the optimum equals the threshold only at pivots `15` and
+`40`.  A globally minimum order is automatically a two-sided
+one-item-relocation local minimum, so every pivot has a nonstrict local
+minimum.  Therefore the proposed statement that some pivot makes every
+nonstrict order admit a strictly cheaper relocation is false.
+
+The new regression combines the clean-room exhaustive `8!`-order audit with
+the independently reconstructed relocation tables.  At the nine pivots the
+exact `(optimum,threshold)` pairs are
+
+```text
+(135,135), (220,189), (360,360), (464,432), (506,504),
+(947,945), (1196,1134), (2568,2520), (10824,10800).
+```
+
+Every reported optimum has minimum two-sided relocation delta `0`.  Reproduce
+the cross-check with
+
+```bash
+python3 -m unittest \
+  tests.test_response26_audit.Response26RelocationTests.test_opt_add_counterexample_refutes_reloc_unif -v
+```
+
+This refutes only the additive-cost `RELOC-UNIF` sufficient condition.  The
+same tuple has a direct lonely witness, so it is not a counterexample to the
+pivot-certificate conjecture or LRC.
+
 ## The malformed Response 26 three-anchor formula
 
 The response displayed a term of the form

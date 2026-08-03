@@ -355,16 +355,21 @@ nevertheless yields deterministic cost `643<675`.  This strengthens the
 rejection of the fixed expectation while leaving the optimized additive
 principle unchanged.
 
-One further state-dependent candidate uses two-sided one-item relocations of
+One further state-dependent candidate used two-sided one-item relocations of
 an order.  `prefixDependentCost_relocate` proves the exact block identity for
 any insertion cost depending only on the set of earlier entries, including
 formal cancellation of every suffix term.  The finite theorem
 `exists_cost_lt_of_decreasing_move` proves that if every order at or above the
 candidate bound has a strictly cheaper allowed neighbor, then some order is
-strictly below the bound.  Exact enumeration verifies this local-minimum
-property on the recorded hard tuples only.  The arithmetic statement
-`RELOC-UNIF` asserting an appropriate pivot for every tuple is open and is not
-an assumption of either Lean theorem.
+strictly below the bound.  The uniform arithmetic premise is false.  On the
+clean-room OPT-ADD counterexample
+`G=(15,21,40,48,56,105,126,280,1200)`, the exact global minimum additive cost
+is at least the candidate bound at every pivot.  Every global minimum is
+automatically a two-sided relocation-local minimum.  An independent
+regression evaluates the displayed optimal orders in the relocation tables
+and obtains minimum move delta zero in every row.  This rejects
+`RELOC-UNIF`, while both generic Lean theorems remain valid.  The tuple has a
+direct lonely witness, so it is not an LRC counterexample.
 
 Sol Pro's first three-anchor formula was malformed: it left the target set and
 the full anchor-fiber range undefined, so two advertised costs could not arise
@@ -2661,3 +2666,108 @@ every fixed shift family of cardinality at most three fails one of the four
 active `N=20` instances, and the four size-four survivors there fail at
 `(21,9)`. These are restrictions on one translation scheme, not Gamma-Hall or
 LRC counterexamples.
+
+## 56. Conditional deletion-pivot induction bridge
+
+This section records a new unrestricted implication chain, not a proof of its
+one arithmetic premise. Let the original tuple `a` have `n` positive distinct
+integer speeds and write `N=n+1`. For a positive pivot speed `p`, set
+`M=n*p` and
+
+```text
+rho_M(x)=min(x mod M, M-(x mod M)).
+```
+
+For a deleted index `k`, a deletion certificate consists of a surviving pivot
+speed `p` and an integer `0<=r<M` such that `n` does not divide `r` and
+
+```text
+rho_M(r*a_i) >= p                       for every i != k.
+```
+
+This is exactly the canonical speed-valued pivot certificate for the
+`(n-1)`-speed deletion at threshold `1/n`. At the rational time
+`tau=r/(n*p)`, each surviving coordinate therefore has circle distance at
+least `p/(n*p)=1/n`, hence at least `1/N`.
+
+The certificate lifts to the deleted coordinate precisely under the closed
+integer inequality
+
+```text
+N * rho_M(r*a_k) >= n*p.
+```
+
+Indeed division by the positive denominator `N*n*p` gives
+`rho_M(r*a_k)/(n*p) >= 1/N`. Thus one lifting deletion certificate is already
+a full closed `1/N` witness; no limiting or open-boundary argument is involved.
+
+The conjectural deletion-pivot lifting principle (DPLP) says that for a
+primitive tuple above the coefficient-three height cutoff, if some speed is
+divisible by `N` and every deletion has at least one certificate, then some
+deletion certificate satisfies this final inequality. Its implication to
+unrestricted positive-integer LRC is exact. Assume a least counterexample in
+moving dimension and divide by its common gcd. Put `t=floor(N/3)`.
+
+- If the maximum speed is at most `N+t`, then `t>0`, `3*t<=N`, and
+  `threeHeight_family_witness` gives the contradiction.
+- If no speed is divisible by `N`, time `1/N` is a witness: every nonzero
+  residue modulo `N` has cyclic distance at least one.
+- In the remaining case, lower-dimensional LRC and
+  `positiveIntegerConjecture_iff_pivotCertificateConjecture` give a deletion
+  certificate for every `k`. DPLP selects one that lifts, and the preceding
+  calculation contradicts the original tuple.
+
+The base dimensions are already verified separately. Consequently DPLP would
+prove `PositiveIntegerConjecture`, and
+`conjecture_iff_positiveIntegerConjecture` would then prove the standard real
+conjecture.
+
+The first unsupported statement is DPLP's cross-deletion correlation. A
+finite exact audit found no failure in 243,973 primitive premise-satisfying
+tuples, but this is `computed` evidence only. The stronger raw lifting claim is
+false at `(1,3,4,7)` for `N=5`; no speed there is divisible by five and the
+separate time `1/5` branch works. This counterexample fixes the premise but
+does not prove the corrected principle or LRC.
+
+`DeletionPivotLifting.lean` now maps the sound calculation exactly.
+`DeletionPivotCertificate` retains the surviving pivot, canonical candidate,
+and every surviving closed inequality.
+`DeletionPivotCertificate.ExceptionalGood` is the displayed exceptional
+cross-multiplication.
+`DeletionPivotCertificate.exists_full_witness_of_exceptionalGood` constructs
+the explicit time. `CorrectedDeletionPivotLiftingPrinciple` records the exact
+`n>=2`, positivity, injectivity, primitivity, strict-height, divisibility, and
+all-deletions contract, while
+`exists_full_witness_of_corrected_deletionPivotLiftingPrinciple` checks its
+selector order and derives the witness conditionally. These implications are
+`proved-lean`; the contract is an open proposition, and no declaration proves
+that DPLP holds.
+
+There is also an exact single-coordinate count useful for attacking the
+missing correlation. Put `m=n*p`, `g=gcd(a,m)`, and `h=gcd(a,p)`. Among
+canonical candidates, the strict deep-hole set
+
+```text
+N*rho_m(r*a) < m
+```
+
+has cardinality
+
+```text
+g*(1+2*floor((m-1)/(N*g)))
+  - h*(1+2*floor((p-1)/(N*h))).
+```
+
+The ordinary deletion-bad set `rho_m(r*a)<p` has cardinality
+
+```text
+g*(1+2*floor((p-1)/g))
+  - h*(1+2*floor((p-1)/(n*h))).
+```
+
+Multiplication by `a/g` permutes the quotient residues modulo `m/g`, with
+exactly `g` preimages per image. Subtracting the candidates `r=n*s` uses
+`rho_(n*p)(n*s*a)=n*rho_p(s*a)` and introduces `h`. Their difference is the
+exact shell capacity. This is `proved-math`, not yet Lean-formalized. It does
+not count residues bad for exactly one coordinate, so the weighted
+shell-surplus inequality across different pivots remains open.

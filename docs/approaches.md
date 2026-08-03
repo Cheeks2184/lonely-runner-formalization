@@ -145,6 +145,34 @@ are formalized in `LonelyRunner/DivisorInsertion.lean`; see
 
 ## Current priority
 
+The project is now in **FULL-PROOF PRIORITY MODE**. The authoritative ranking
+is the contract table in `docs/full-proof-roadmap.md`:
+
+1. deletion-pivot lifting (DPLP);
+2. integral top-two, then unrestricted all-pivot certificates;
+3. minimal-counterexample height compression.
+
+DPLP is the closest new induction bridge. For an original `n`-speed tuple and
+`N=n+1`, lower-dimensional LRC gives each deletion an exact pivot certificate
+at threshold `1/n`. DPLP asks whether, when some original speed is divisible
+by `N`, one may choose a deletion certificate whose deleted coordinate also
+satisfies the closed `1/N` inequality. If so, the same rational time witnesses
+the full tuple. The other two branches handle maximum at most
+`N+floor(N/3)` by the verified coefficient-three theorem and tuples with no
+`N`-divisible speed by the direct time `1/N`. This would close induction.
+
+The statement is conjectural. Exact finite enumeration finds zero failures in
+243,973 premise-satisfying tuples, but raw lifting is false at `(1,3,4,7)`
+outside the divisibility premise. The single missing step is a uniform
+cross-deletion correlation theorem; nonemptiness of the deletion certificate
+sets alone does not provide it. The earlier relocation-uniformity route is
+rejected because every global additive optimum is relocation-local, and the
+known all-pivot additive counterexample has no subthreshold global optimum.
+
+The coefficient-two Gamma material below is retained as an audited milestone,
+not a primary optimization program. Its continuation rule is recorded in the
+roadmap.
+
 Completed milestones are the canonical and stationary equivalences, the
 one-moving-runner base case, the quantitative fast-runner insertion theorem,
 and the exact fixed-tuple checker. The live priorities are now:
@@ -165,12 +193,15 @@ and the exact fixed-tuple checker. The live priorities are now:
 3. Attack the optimized additive ordering principle without a fixed-rate
    surrogate. Uniform random ordering and the GCD-rate exponential clock now
    both have exact all-pivot counterexamples, while favorable deterministic
-   orders survive on those tuples. Two-sided one-item relocation descent is
-   the current precise state-adaptive candidate: its finite descent and block-
-   cost identity are kernel-checked, and exact enumeration supports the hard
-   tuples, but `RELOC-UNIF` is open. A completion still needs arithmetic
-   control of every expensive local minimum, a sound stronger bounded-depth
-   credit, or a counterexample to the optimized principle itself.
+   orders survive on those tuples. Two-sided one-item relocation descent has
+   a kernel-checked finite descent and block-cost identity, but its uniform
+   arithmetic premise is now rejected. The later OPT-ADD counterexample `G`
+   has global minimum cost at least the strict threshold at every pivot; each
+   such global minimum is automatically two-sided relocation-local. A
+   regression cross-checks the clean-room exhaustive optima against the
+   independent relocation tables. Progress therefore requires a criterion
+   stronger than additive-order cost, not another local-search rule for that
+   same objective.
    A separate repaired front-loaded construction uses at most three fixed
    anchors and the Lean-checked two-level residual-subfiber credit. Exact
    tables cover the earlier hard tuples, but `3-ANCHOR-UNIF` is false:

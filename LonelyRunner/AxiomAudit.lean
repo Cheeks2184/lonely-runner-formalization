@@ -237,6 +237,9 @@ project-specific axiom.
 #print axioms LonelyRunner.three_short_interval_large_or_exception
 #print axioms LonelyRunner.three_witness_or_large_or_exception
 #print axioms LonelyRunner.threeHeight_family_witness
+#print axioms LonelyRunner.DeletionPivotCertificate.exists_full_witness_of_exceptionalGood
+#print axioms LonelyRunner.exists_full_witness_of_all_deletions_and_selector
+#print axioms LonelyRunner.exists_full_witness_of_corrected_deletionPivotLiftingPrinciple
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
 #print axioms LonelyRunner.card_pivotSafeResidues_le_mul
 #print axioms LonelyRunner.top_signed_forces_sum
