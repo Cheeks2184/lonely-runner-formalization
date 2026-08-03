@@ -335,7 +335,8 @@ full-project Lean/trust/regression replay is lifecycle checkpoint
 `fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`: 3,591 Lean jobs, 302 trust
 reports, and all 172 deterministic tests passed in a fresh native-WSL clone.
 See `STATUS.md` for timings and the distinction between the verified source
-tree, active Prompt67 research, and open conjectures.
+tree, recovered Prompt67 evidence, active downstream work, and open
+conjectures.
 
 ## Current research frontier
 
@@ -345,11 +346,24 @@ for every positive injective integer tuple, some pivot candidate must escape
 all strict modular bad sets. Prompt66's
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING` turn completed at STOP/OPEN, leaving
 that packing lemma open. Prompt64's `TOP-TWO-LARGE-RATIO-EXCLUSION` also
-completed/recovered at STOP/OPEN and its exact route is frozen. Prompt67,
-`UNIFORM-PRIME-FORCING-SUPPLY`, is active in a root-controlled GPT-5.6 Sol Pro
-conversation. Its audited contract and launch provenance promote no result;
-response recovery and independent audit have not yet occurred. C2
-prime-forcing product induction is therefore the active first-ranked route;
+completed/recovered at STOP/OPEN and its exact route is frozen. Prompt67's
+major `UNIFORM-PRIME-FORCING-SUPPLY` turn completed and its response plus four
+canonical downloads were recovered in commit `1294514`. Provenance reviews
+accepted the package, the mathematical audit gave a qualified ACCEPT only at
+its enumerated `proved-math` scopes, and computational preflight accepted five
+finite domains as **computed finite evidence only**. The response's **PIVOT**
+self-disposition is not a theorem. The original response citations `[1]` and
+`[2]` are corrected by commit `e514ef5`; audit 109 ACCEPTS WITH QUALIFICATIONS
+only as a **verified citation-correction record; external literature remains
+unformalized; no mathematical status promotion**. The audited external sources
+are the MSS DOI/arXiv `2411.06903v2` and Rosenfeld arXiv `2512.01912v1`.
+The attempted top-level Luna clean-room replay produced candidate commit
+`27876765`, but its remaining process was terminated when Narrow Verification
+Mode took effect. Because no Medium-inspected preflight preceded the full run,
+that commit is rejected operational output pending admission audit 112 and
+promotes no evidence. C2 prime-forcing product induction
+remains the open first-ranked route; `UniformPrimeForcingSupply`, both Prompt67
+attack lemmas, the assembled C2 bridge, and unrestricted LRC remain open.
 Bridge B packing remains open, while C1 and A remain frozen. DPLP remains open:
 together with lower-dimensional LRC, the verified coefficient-three height
 theorem, and the direct `q=N` branch, it would prove unrestricted

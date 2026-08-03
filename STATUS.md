@@ -507,19 +507,89 @@ ACCEPTED by `OPS-P66-REPLAY-DOCSYNC-REVIEW-084` and integrated in merge
 lifecycle only: its replay remains computed finite evidence, and `PACK-09`,
 the exact pivot selector, and unrestricted LRC remain open.
 
-Prompt67, `UNIFORM-PRIME-FORCING-SUPPLY`, is the sole active Sol Pro cell. It
-was launched directly by `/root` in a genuinely new signed-in ChatGPT
-conversation at 2026-08-03 17:17:19 CDT. Direct UI state verified Chat true,
-Work false, `GPT-5.6 Sol` true, Pro true, and active generation after
-submission. The tracked prompt SHA-256 is
-`ea60008204a79434724d8c6fe43b3dcabf576ecebee0c345ace827878d23001a`;
-the exact UI payload/readback SHA-256 is
-`30fefd070ee0a5b091ba520ee779022b7df3f2d489083d63989a77e6d34370b6`
-after the editor removed only the tracked terminal LF. No private URL or
-session identifier is recorded. Prompt preparation and launch are operational
-evidence only; response recovery and independent audit have not begun, and no
-C2 or LRC result is promoted. Prompt65 remains prepared/parked/frozen and must
-not be launched.
+Prompt67's lifecycle stages remain distinct. Preparation 092/095 passed review
+096; Sol High `/root` launched the audited prompt in a genuinely new Pro
+conversation at 2026-08-03 17:17:19 CDT; and the major Pro turn then completed.
+The response and four canonical downloads were recovered and packaged in
+commit `1294514a0a879b0237f8b9d0da30ee05e81f79f4`. `OPS-P67-RECOVERY-PACKAGE-100`
+and `FORM-P67-RECOVERY-PACKAGE-REVIEW-105` ACCEPT that package at recovery and
+provenance scope only. They do not validate its claims.
+
+`FORM-P67-RESPONSE-MATH-AUDIT-103` gives a **QUALIFIED ACCEPT** at these exact
+new `proved-math` scopes: small-prime forcing for every prime `p<=n+1`; strict
+product insufficiency of those small primes; exact `T_n` cross multiplication;
+the bad-cover equivalence; the local deletion-gcd characterization; the exact
+one-coordinate bad-set count; the factorial-interval prime-product bound; the
+Euclidean distinct-prime extraction conditional on a fixed obstruction
+integer; and the conditional implication chain through the external MSS
+theorem. No new Lean theorem was produced. Response citations `[1]` and `[2]`
+are **unaudited pending correction** and must not be used as accepted source
+attribution. The audited external sources are the Malikiosis--Santos--Schymura
+DOI/arXiv `2411.06903v2` and Rosenfeld arXiv `2512.01912v1`.
+
+`VER-P67-COMPUTE-PREFLIGHT-104` ACCEPTS exactly five finite domains as
+**computed finite evidence**: `(n,p)=(3,5)` has 8,000 tuples, 2,048 premise
+tuples, and 192 failures, first `(1,3,4)`; `(4,2)`, `(4,3)`, and `(4,5)` have
+respectively 10,000/608/0, 50,625/9,728/0, and 390,625/160,000/0
+tuple/premise/failure counts; `(4,7)` has 1,500,625 tuples, 787,968 premise
+tuples, and 13,824 failures, first `(1,3,4,5)`. These are not theorems.
+
+The response self-disposition **PIVOT** remains unverified and promotes no
+claim. `INTERVAL-PRIME-FORCING-SUPPLY`,
+`OBSTRUCTION-EXTRACTION-SUPPLY`, `UniformPrimeForcingSupply`, the assembled C2
+route, and unrestricted LRC remain **OPEN**. Sol High remains the sole owner of
+Pro work. A root-owned citation-correction follow-up was submitted in the same
+original Sol/Pro conversation at `2026-08-03T23:19:01.1509940Z`; its exact
+text is 1,699 UTF-8 bytes with SHA-256
+`73d2ab01b2ad40e5d73273cb5b39b8ab9928d3f9108697e00a521ad9b9f8c46d`.
+It completed with UI readback `Worked for 4m 17s` and was recovered without
+attachments in commit `e514ef5289fb073b390afbd9c31dcbbce18c34aa` on
+`research/p67-correction-recovery-108`: raw 5,870 UTF-8 bytes, 88 CRLF,
+terminal CRLF, SHA-256
+`c8b106c72f3311eb74865f070ae9902d818416b9a77b95db32cf5d38675b693f`;
+normalized 5,782 bytes, 5,712 characters, 88 LF, terminal LF, SHA-256
+`f0e169b008076d5d176c8c50f5765c4773fe88cd5838810511a4166b70d946de`.
+`VER-P67-CITATION-CORRECTION-AUDIT-109` now **ACCEPTS WITH
+QUALIFICATIONS** at this exact label: **verified citation-correction record;
+external literature remains unformalized; no mathematical status promotion**.
+The canonical normalized correction retains one trailing ASCII space on each
+of lines 37 and 61 for byte identity; this documented exception is not a
+license to normalize recovered bytes. Separately, fresh top-level task
+`LUNA-P67-CLEANROOM-REPLAY-105` launched at
+`2026-08-03T23:22:29.6429001Z` from `exec/fresh`; its 6,565-byte prompt has
+SHA-256 `57806bd37c53d8b2b936d85fd25c3d73b5a1f5b4cbbe4cfbb335a31e850872e5`,
+and effective metadata is `gpt-5.6-luna`, `xhigh`, cwd
+`/home/joshu/code/lrc-luna-p67-cleanroom-105`. Candidate commit
+`278767650bcfde9ff6c8b9e007b6cafd6a994e96` exists, but `/root` terminated the
+remaining process when Luna Narrow Verification Mode took effect. Because no
+Medium lead inspected and authorized a preflight before the full run, task105
+is **rejected operational output** under `MEDIUM-SPEC-REQUIRED`; it promotes no
+computed evidence. VER-112's interim rejection also finds a one-layer
+violation, stale board input, a validator that accepts cover bad-coordinate
+bytes `<M` instead of required `<n`, tracked-output writes from `--check`,
+nondeterministic environment/elapsed fields in canonical output, hardcoded
+rather than enforced command/network claims, and a clean-room argument proving
+only no execution/import rather than no source influence. Audit 112 remains
+active; salvage is `MEDIUM-SPEC-REQUIRED` and likely deferred under full-proof
+priority. It may not modify or silently accept the candidate branch.
+
+Luna Narrow Verification Mode admits only deterministic, fully specified
+verification as `LUNA-READY` after Medium preflight authorization. Ambiguous
+semantics are `MEDIUM-SPEC-REQUIRED`; novel uniform mathematics is
+`RESEARCH-UNRESOLVED`. Effectiveness is reviewed after ten admitted tasks using
+the task-board metrics; unavailable historical values remain unknown.
+
+Prompt68 preparation commit `47622e46` was rejected by
+`VER-P68-CONTRACT-REVIEW-110` before launch because its existential
+finite-signature target was equivalent to cofinite `PrimeForcing`. Correction
+111 is complete/prepared on commit
+`786ccfe8757b4a90f0400be3bb06a75df54405a5`, prompt SHA-256
+`d6abacb9a23fe02e75c3c9b739355e22b81c41c0cec2ad10f9574e5703abc4c4`.
+It honestly names `COFINITE-PRIME-FORCING` as the sole target and treats
+signatures only as proof devices. Its admission is `RESEARCH-UNRESOLVED`; it
+awaits independent rereview after audit 112, has not launched, and changes no
+theorem status. Prompt65 remains prepared/parked/frozen and must not be
+launched.
 
 The earlier `LUNA-PACKING-SEARCH-RECOVERY-060` failed without a commit,
 replay, report, or manifest. Its 6,527 partial lines are non-evidentiary and
