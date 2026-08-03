@@ -20,6 +20,8 @@ import LonelyRunner.CoefficientFiveHeight
 import LonelyRunner.CoefficientFourHeight
 import LonelyRunner.CoefficientThreeHeight
 import LonelyRunner.CoefficientTwoRectangle
+import LonelyRunner.CoefficientTwoReversal
+import LonelyRunner.MatchingDependency
 import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts
