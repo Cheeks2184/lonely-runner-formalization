@@ -53,16 +53,29 @@ contract, no theorem was attempted. Prompt92 completed, was recovered at
 computation remains unpromoted. Prompt91 received prelaunch REVISE / STOP on a
 mandatory fixture and was not launched. Prompt93 also stopped before launch;
 its branch-only replay specification remains `MEDIUM-SPEC-REQUIRED` after
-review294 returned REVISE. Prompt94 generation completed and awaits tracked
-recovery304 under provisional audit only; raw response and bundle remain
-ignored / quarantined, recovery304 is not integrated, and no response claim or
-recovery evidence is recorded. Prompt95 remains active. Prompt96's corrected
-synthesis contract was integrated at `17b1a2b`, accepted by review302, and
-launched by Sol High as active task303 at `9687dce`; launch promotes nothing
-and its exact P94/P95 synthesis target remains `OPEN`. Prompt88
-remains parked behind a `MEDIUM-SPEC-REQUIRED` route gate. These lifecycle
-transitions do not change the exact unrestricted bottleneck below, and the
-target of three active Pro cells is not currently met.
+review294 returned REVISE. Prompt94 is recovered at `5db949a`; independent
+audit `2334112` is `MIXED / OPEN`, keeps the archive quarantined, and leaves
+the global unit-deficit lemma open. Prompt95 is recovered through `2c81032`;
+audit `591b011` accepts qualified local capacity and slice facts only, while
+`PRIVATE-LIFT-COVERAGE`, redundancy, and LRC remain open. Prompt96 is recovered
+at `d3af3bc`; audit `2334112` accepts a family-specific `SEPARATION` which
+blocks misuse of the Prompt92 family but narrows no unrestricted edge.
+Prompt97 stopped before launch at `068de11` because its target was equivalent
+to the still-open unit-certificate premise.
+
+Prompt98 and Prompt99 are active on complementary maximum-covered-pivot
+branches. Prompt100 is active on the uniform two-lower-owner noncover theorem;
+success would give the `|F(a)|<=3` part of Prompt95, not the full bridge.
+Prompt101 is an independently reviewed launch-ready global route asking for a
+positive rational vector `x` with `A_F*x<x` for the normalized bad-incidence
+matrix on all covered pivots. If every pivot were covered, the minimum-weight
+row and the union bound would contradict that inequality. The weight-existence
+theorem itself is open. Three Pro cells are active, the fourth remains reserved,
+and no launch or preflight is mathematical evidence. Prompt88 remains parked
+behind a `MEDIUM-SPEC-REQUIRED` gate.
+
+These lifecycle transitions do not change the exact unrestricted bottleneck
+below.
 
 ## Exact unrestricted bottleneck
 

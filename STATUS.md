@@ -55,24 +55,38 @@ and provenance remains pending. Prompt93 is frozen at prelaunch STOP after
 review281 found its frozen `Psi` target false at `(1,3,4)`, but no
 artifact-grade accepted counterexample is integrated and it was not launched.
 Its branch-only replay candidate remains `MEDIUM-SPEC-REQUIRED` after
-review294 returned REVISE. Prompt94 generation has completed and awaits tracked
-recovery304 under provisional audit only. Its raw response and bundle remain
-ignored / quarantined, recovery304 is not integrated, and no response claim or
-recovery evidence is recorded. Prompt95 remains active. Prompt96's corrected
-contract SHA `adbcb321...f1d1` was integrated at `17b1a2b`, independently
-accepted by review302, and launched by Sol High as active task303 at
-`9687dce`; launch promotes nothing and its synthesis target remains `OPEN`.
-Prompt88 remains parked as
-`MEDIUM-SPEC-REQUIRED`. Three Medium lead lanes remain active; no Luna worker
-or `LUNA-READY` task is active. The target of three active Pro cells is not
-currently met.
+review294 returned REVISE. Prompt94 is recovered at `5db949a`; its independent
+mathematical audit is integrated at `2334112` with `MIXED / OPEN`
+disposition. The quarantined archive was not used, and its unit-deficit target
+remains open. Prompt95 is recovered through `2c81032`; audit `591b011`
+accepts only qualified local capacity, scaling, and slice calculations. Its
+three attachments remain quarantined, `PRIVATE-LIFT-COVERAGE` is open and
+insufficient by itself, and the maximum-covered-pivot theorem remains open.
+Prompt96 is recovered at `d3af3bc`; audit `2334112` accepts a family-specific
+`SEPARATION` only. It prevents misuse of the Prompt92 family but proves no
+unrestricted bridge. Prompt97 stopped before launch at `068de11` because its
+cycle target was an exact tautological reformulation of the open unit-certificate
+target.
+
+Prompt98 and Prompt99 are active Sol Pro cells on the complementary
+nondivisible and divisible maximum-covered-pivot branches, launched at
+`d5eae53` and `3df57af`. Prompt100 is a third active cell, launched at
+`40f166d` with corrected tab provenance at `5fd423e`; it attacks the uniform
+two-lower-owner noncover theorem and would prove only the `|F(a)|<=3`
+Prompt95 regime. Prompt101's independent global covered-pivot matrix contract
+is reviewed and launch-ready at `1c3cfe7`. A launch or prepared prompt is not
+a result, and every target above remains open while its turn runs.
+
+Prompt88 remains parked as `MEDIUM-SPEC-REQUIRED`. At least two Medium lead
+lanes remain active; no Luna worker or `LUNA-READY` task is active. The target
+of three active Pro cells is currently met without broadening Luna Narrow
+Verification Mode.
 
 No recovered Prompt76 scan, Prompt77 6,330-record scan, or Prompt78 computation
 has been promoted to computed finite evidence. Current validator queues are
-Level 1: 4, Level 2: 0, Level 3: 0. Prompt94 contributes one completed Pro cell
-awaiting recovery. This lifecycle synchronization is a Level 1 documentation
-checkpoint paired with a targeted Level 2 validator-source checkpoint; it
-triggers no full clean Lean replay.
+being reconciled from the machine-readable ledger. Level 3 remains empty.
+This lifecycle synchronization uses documentation, hash, privacy, ledger, and
+targeted validator checks only; it triggers no full clean Lean replay.
 
 ## Strongest verified theorem
 
