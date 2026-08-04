@@ -1,0 +1,392 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lonelyrunner.local/schemas/task-ledger.schema.json",
+  "title": "Lonely Runner rolling task ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "base_commit",
+    "promotion_registry_commit",
+    "lifecycle_stages",
+    "verification_levels",
+    "tasks",
+    "placeholders",
+    "expected_metrics"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "base_commit": {"$ref": "#/$defs/commit"},
+    "promotion_registry_commit": {"$ref": "#/$defs/commit"},
+    "lifecycle_stages": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "preparation"},
+        {"const": "contract_review"},
+        {"const": "launch_ready"},
+        {"const": "launched"},
+        {"const": "active_research"},
+        {"const": "response_recovery"},
+        {"const": "independent_audit"},
+        {"const": "correction"},
+        {"const": "integration"},
+        {"const": "publication"}
+      ],
+      "minItems": 10,
+      "maxItems": 10
+    },
+    "verification_levels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["1", "2", "3"],
+      "properties": {
+        "1": {"const": "provenance, scope, and contract-shape checks"},
+        "2": {"const": "targeted semantic checks and focused tests"},
+        "3": {"const": "authoritative fresh-clone publication checkpoints only"}
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/task"}
+    },
+    "placeholders": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/placeholder"}
+    },
+    "expected_metrics": {"$ref": "#/$defs/metrics"}
+  },
+  "$defs": {
+    "commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "nullableCommit": {
+      "oneOf": [
+        {"$ref": "#/$defs/commit"},
+        {"type": "null"}
+      ]
+    },
+    "taskId": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9-]*[0-9]$"
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["route", "model", "effort", "pro_cell"],
+      "properties": {
+        "route": {"type": "string", "minLength": 1},
+        "model": {"type": ["string", "null"]},
+        "effort": {
+          "type": ["string", "null"],
+          "enum": [null, "low", "medium", "high", "xhigh", "pro"]
+        },
+        "pro_cell": {"type": "boolean"},
+        "desktop_readback": {"$ref": "#/$defs/desktopReadback"}
+      }
+    },
+    "desktopReadback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["signed_in", "new_conversation", "chat_selected", "work_selected", "sol_selected", "pro_selected", "exact_prompt_readback", "generation_started", "tracked_prompt_bytes", "tracked_prompt_characters", "submitted_payload_bytes", "submitted_payload_characters", "tracked_terminal_lf", "submitted_terminal_lf"],
+      "properties": {
+        "signed_in": {"type": "boolean"},
+        "new_conversation": {"type": "boolean"},
+        "chat_selected": {"type": "boolean"},
+        "work_selected": {"type": ["boolean", "null"]},
+        "sol_selected": {"type": "boolean"},
+        "pro_selected": {"type": "boolean"},
+        "exact_prompt_readback": {"type": "boolean"},
+        "generation_started": {"type": "boolean"},
+        "tracked_prompt_bytes": {"type": ["integer", "null"], "minimum": 0},
+        "tracked_prompt_characters": {"type": ["integer", "null"], "minimum": 0},
+        "submitted_payload_bytes": {"type": ["integer", "null"], "minimum": 0},
+        "submitted_payload_characters": {"type": ["integer", "null"], "minimum": 0},
+        "tracked_terminal_lf": {"type": ["boolean", "null"]},
+        "submitted_terminal_lf": {"type": ["boolean", "null"]}
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "state"],
+      "properties": {
+        "level": {"type": ["integer", "null"], "minimum": 1, "maximum": 3},
+        "state": {
+          "enum": ["pending", "active", "complete", "not_required"]
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"state": {"const": "not_required"}}},
+          "then": {"properties": {"level": {"type": "null"}}},
+          "else": {"properties": {"level": {"type": "integer", "minimum": 1, "maximum": 3}}}
+        }
+      ]
+    },
+    "hash": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "algorithm", "value", "path"],
+      "properties": {
+        "kind": {
+          "enum": ["prompt", "artifact", "launch_payload", "report", "manifest"]
+        },
+        "algorithm": {"const": "sha256"},
+        "value": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "path": {"type": ["string", "null"]}
+      }
+    },
+    "timestamp": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event", "at", "source"],
+      "properties": {
+        "event": {"type": "string", "minLength": 1},
+        "at": {
+          "type": "string",
+          "pattern": "^20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?(?:Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        "source": {"type": "string", "minLength": 1}
+      }
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "parent_route",
+        "kind",
+        "owner",
+        "supervising_lead",
+        "runtime",
+        "base_commit",
+        "lifecycle_stage",
+        "dependencies",
+        "branch",
+        "worktree_id",
+        "status",
+        "operational_state",
+        "route_queue",
+        "current_route_marker",
+        "admission_class",
+        "verification",
+        "evidence_label",
+        "hashes",
+        "disposition",
+        "audit_outcome",
+        "review_ids",
+        "integration_commit",
+        "timestamps",
+        "source_refs"
+      ],
+      "properties": {
+        "id": {"$ref": "#/$defs/taskId"},
+        "parent_route": {"type": "string", "minLength": 1},
+        "kind": {
+          "enum": [
+            "pro_research",
+            "recovery",
+            "audit",
+            "verification_run",
+            "status_sync",
+            "prompt_preparation",
+            "integration"
+          ]
+        },
+        "owner": {"type": "string", "minLength": 1},
+        "supervising_lead": {"type": "string", "minLength": 1},
+        "runtime": {"$ref": "#/$defs/runtime"},
+        "base_commit": {"$ref": "#/$defs/nullableCommit"},
+        "lifecycle_stage": {
+          "enum": [
+            "preparation",
+            "contract_review",
+            "launch_ready",
+            "launched",
+            "active_research",
+            "response_recovery",
+            "independent_audit",
+            "correction",
+            "integration",
+            "publication"
+          ]
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/taskId"},
+          "uniqueItems": true
+        },
+        "branch": {"type": ["string", "null"]},
+        "worktree_id": {"type": ["string", "null"]},
+        "status": {
+          "enum": [
+            "planned",
+            "prepared",
+            "active",
+            "review",
+            "verified",
+            "rejected",
+            "integrated",
+            "completed",
+            "frozen",
+            "blocked"
+          ]
+        },
+        "operational_state": {
+          "enum": ["active", "prepared", "frozen", "terminal"]
+        },
+        "route_queue": {"enum": ["none", "launch_ready", "waiting", "parked"]},
+        "current_route_marker": {"type": "boolean"},
+        "admission_class": {
+          "enum": [
+            "LUNA-READY",
+            "MEDIUM-SPEC-REQUIRED",
+            "RESEARCH-UNRESOLVED",
+            "NOT-APPLICABLE"
+          ]
+        },
+        "verification": {"$ref": "#/$defs/verification"},
+        "evidence_label": {
+          "enum": [
+            "none",
+            "operational-only",
+            "contract-only",
+            "documentation-only",
+            "recovery-provenance",
+            "computed-finite-evidence",
+            "proved-math-qualified",
+            "literature-external-unformalized",
+            "rejected-operational-output",
+            "accepted-audit-deliverable",
+            "accepted-negative-audit"
+          ]
+        },
+        "hashes": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/hash"}
+        },
+        "disposition": {"type": ["string", "null"]},
+        "audit_outcome": {
+          "enum": ["not_applicable", "accepted", "accepted_negative", "rejected", "pending", "deferred"]
+        },
+        "review_ids": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/taskId"},
+          "uniqueItems": true
+        },
+        "integration_commit": {"$ref": "#/$defs/nullableCommit"},
+        "timestamps": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/timestamp"}
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "placeholder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["placeholder_id", "authoritative", "reason", "parent_route", "lifecycle_stage"],
+      "properties": {
+        "placeholder_id": {"type": "string", "minLength": 1},
+        "authoritative": {"const": false},
+        "reason": {"type": "string", "minLength": 1},
+        "parent_route": {"type": "string", "minLength": 1},
+        "lifecycle_stage": {"const": "publication"}
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["active_pro_cells", "route_queues", "audits", "verification_level_queues", "pipeline", "speed_metrics", "luna_narrow_effectiveness"],
+      "properties": {
+        "active_pro_cells": {"type": "integer", "minimum": 0},
+        "route_queues": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["launch_ready", "waiting", "parked"],
+          "properties": {
+            "launch_ready": {"type": "integer", "minimum": 0},
+            "waiting": {"type": "integer", "minimum": 0},
+            "parked": {"type": "integer", "minimum": 0}
+          }
+        },
+        "audits": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["total", "accepted", "accepted_negative", "rejected", "pending", "deferred"],
+          "properties": {
+            "total": {"type": "integer", "minimum": 0},
+            "accepted": {"type": "integer", "minimum": 0},
+            "accepted_negative": {"type": "integer", "minimum": 0},
+            "rejected": {"type": "integer", "minimum": 0},
+            "pending": {"type": "integer", "minimum": 0},
+            "deferred": {"type": "integer", "minimum": 0}
+          }
+        },
+        "verification_level_queues": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["1", "2", "3"],
+          "properties": {
+            "1": {"type": "integer", "minimum": 0},
+            "2": {"type": "integer", "minimum": 0},
+            "3": {"type": "integer", "minimum": 0}
+          }
+        },
+        "pipeline": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["active_medium_leads", "luna_ready_tasks", "active_luna_workers", "integration_backlog", "sol_high_review_backlog", "pro_cells_awaiting_recovery", "responses_under_audit", "launch_ready_contracts"],
+          "properties": {
+            "active_medium_leads": {"type": "integer", "minimum": 0},
+            "luna_ready_tasks": {"type": "integer", "minimum": 0},
+            "active_luna_workers": {"type": "integer", "minimum": 0},
+            "integration_backlog": {"type": "integer", "minimum": 0},
+            "sol_high_review_backlog": {"type": "integer", "minimum": 0},
+            "pro_cells_awaiting_recovery": {"type": "integer", "minimum": 0},
+            "responses_under_audit": {"type": "integer", "minimum": 0},
+            "launch_ready_contracts": {"type": "integer", "minimum": 0}
+          }
+        },
+        "speed_metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["dispatch_latency_seconds", "execution_duration_seconds", "review_latency_seconds", "recovery_latency_seconds", "integration_latency_seconds", "end_to_end_cycle_seconds", "throughput_tasks_per_hour"],
+          "properties": {
+            "dispatch_latency_seconds": {"type": ["number", "null"], "minimum": 0},
+            "execution_duration_seconds": {"type": ["number", "null"], "minimum": 0},
+            "review_latency_seconds": {"type": ["number", "null"], "minimum": 0},
+            "recovery_latency_seconds": {"type": ["number", "null"], "minimum": 0},
+            "integration_latency_seconds": {"type": ["number", "null"], "minimum": 0},
+            "end_to_end_cycle_seconds": {"type": ["number", "null"], "minimum": 0},
+            "throughput_tasks_per_hour": {"type": ["number", "null"], "minimum": 0}
+          }
+        },
+        "luna_narrow_effectiveness": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["launched", "admitted", "rejected", "preflight_runs", "full_runs", "accepted", "escalations", "repairs", "runtime_failures", "rejected_outputs", "review_cycles", "duplicates", "integration_time_seconds"],
+          "properties": {
+            "launched": {"type": ["integer", "null"], "minimum": 0},
+            "admitted": {"type": ["integer", "null"], "minimum": 0},
+            "rejected": {"type": ["integer", "null"], "minimum": 0},
+            "preflight_runs": {"type": ["integer", "null"], "minimum": 0},
+            "full_runs": {"type": ["integer", "null"], "minimum": 0},
+            "accepted": {"type": ["integer", "null"], "minimum": 0},
+            "escalations": {"type": ["integer", "null"], "minimum": 0},
+            "repairs": {"type": ["integer", "null"], "minimum": 0},
+            "runtime_failures": {"type": ["integer", "null"], "minimum": 0},
+            "rejected_outputs": {"type": ["integer", "null"], "minimum": 0},
+            "review_cycles": {"type": ["integer", "null"], "minimum": 0},
+            "duplicates": {"type": ["integer", "null"], "minimum": 0},
+            "integration_time_seconds": {"type": ["number", "null"], "minimum": 0}
+          }
+        }
+      }
+    }
+  }
+}
