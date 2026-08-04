@@ -1,0 +1,14 @@
+{
+  "implementation": "A-literal-canonical",
+  "source_sha256": "8eb381637769cf3981163c7c2be1438c696fc21300b7aba239095cdd113c6f35",
+  "compiler": "gcc 14.2.0",
+  "fixtures_passed": true,
+  "permutation_and_scale_checks": 1920,
+  "domain": {"N_min":4,"N_max":18,"p_min":1,"p_max":160},
+  "pair_cases": 10048800,
+  "owner_rows_built": 190800,
+  "literal_residue_predicate_checks": 225271200,
+  "deterministic_order": "N,p,b,c; least r by canonical bit order",
+  "common_domain_fnv1a64": "0e430dd2e7f1b766",
+  "first_failure": null
+}

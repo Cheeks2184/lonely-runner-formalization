@@ -1,0 +1,60 @@
+{
+  "task_id": "SOL-P100-PRO-TWO-LOWER-OWNER-NONCOVER-319",
+  "claim_scope": "bounded falsification and fixture audit only; not a universal proof",
+  "execution": {
+    "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+    "compile_flags": "-O3 -std=c11 -Wall -Wextra -Werror",
+    "platform": "Linux x86_64, kernel 6.12.13",
+    "implementation_a_exit_status": 0,
+    "implementation_b_exit_status": 0
+  },
+  "implementation_a": {
+    "name": "literal canonical enumeration with pointwise-built owner bitsets",
+    "source_file": "falsifier_a_literal.c",
+    "source_sha256": "8eb381637769cf3981163c7c2be1438c696fc21300b7aba239095cdd113c6f35",
+    "binary_sha256": "3a5c1c48e3512c40c5e5a62f15b18ad8ab695c3200186c6bd1458632044e3d9d",
+    "result_file": "falsifier_a_result.json",
+    "result_sha256": "514a267c3959bd49a3288201c281f2b976c7dedb5118c7d63548c7f7ec02a739",
+    "domain": {"N_min": 4, "N_max": 18, "p_min": 1, "p_max": 160},
+    "pair_cases": 10048800,
+    "first_failure": null,
+    "common_domain_fnv1a64": "0e430dd2e7f1b766"
+  },
+  "implementation_b": {
+    "name": "independent multiplication-congruence fiber constructor",
+    "source_file": "falsifier_b_fibers.c",
+    "source_sha256": "8d302770222002a4ab9ef17f64b18762dc836ecbe84102d5a3fe8f6f703376ab",
+    "binary_sha256": "66531ebc2dc66890d5476283f9b53d5171c313e82c8bdfbdfb57cee10ac61e8d",
+    "result_file": "falsifier_b_result.json",
+    "result_sha256": "76c08f87964ee3a89d13957faed86a29c05cb66b298266c69771173246d8ba8d",
+    "domain": {"N_min": 4, "N_max": 24, "p_min": 1, "p_max": 240},
+    "pair_cases": 47780880,
+    "first_failure": null,
+    "all_domain_fnv1a64": "55a9a8f24ef40789",
+    "common_domain_fnv1a64": "0e430dd2e7f1b766",
+    "common_domain_pointwise_checks": 225271200,
+    "common_domain_pointwise_mismatches": 0
+  },
+  "fixture_binding": {
+    "fixtures_passed_in_both": true,
+    "permutation_and_scale_checks_per_implementation": 1920,
+    "altered_expected_value_rejected_in_both": true,
+    "N3_controls_treated_as_out_of_target_controls": true,
+    "malformed_target_records_rejected": true
+  },
+  "cross_implementation_comparison": {
+    "common_domain": {"N_min": 4, "N_max": 18, "p_min": 1, "p_max": 160},
+    "common_pair_cases": 10048800,
+    "digest_a": "0e430dd2e7f1b766",
+    "digest_b": "0e430dd2e7f1b766",
+    "digests_match": true,
+    "fiber_bitsets_checked_pointwise_against_literal_predicate": true,
+    "pointwise_mismatches": 0
+  },
+  "commands": {
+    "compile_a": "gcc -O3 -std=c11 -Wall -Wextra -Werror -DSOURCE_SHA256=\\\"8eb381637769cf3981163c7c2be1438c696fc21300b7aba239095cdd113c6f35\\\" falsifier_a_literal.c -o falsifier_a_literal",
+    "run_a": "./falsifier_a_literal > falsifier_a_result.json",
+    "compile_b": "gcc -O3 -std=c11 -Wall -Wextra -Werror -DSOURCE_SHA256=\\\"8d302770222002a4ab9ef17f64b18762dc836ecbe84102d5a3fe8f6f703376ab\\\" falsifier_b_fibers.c -o falsifier_b_fibers",
+    "run_b": "./falsifier_b_fibers > falsifier_b_result.json"
+  }
+}
