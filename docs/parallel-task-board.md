@@ -2,7 +2,7 @@
 
 This file is the authoritative coordination record. The current lifecycle
 snapshot is based on main commit
-`fe01a9ee7a1d1f2268454f3cfd2786f41a01098a`; historical worker rows retain
+`243c122500191fb6713d5d697911b0b6935089d1`; historical worker rows retain
 their actual fixture bases. The board records task routing and integration
 readiness; it does not promote any mathematical claim.
 
@@ -12,10 +12,8 @@ This snapshot supersedes the historical current-state prose below. Its
 machine-readable source is `research/task-ledger.json`, bound to immutable PI
 promotion registry commit `fe4efb03063555f1f95175ed50a1c55bacbaa7a6`.
 Historical rows remain append-only evidence and are not silently reinterpreted.
-This frozen snapshot is lifecycle sync task306. Main subsequently advanced to
-`9687dce` through Prompt96 integration and launch; that post-base transition,
-and Prompt94 recovery, require a separate follow-up delta after this checkpoint
-is integrated rather than a silent rebase here.
+This current snapshot is lifecycle delta task308. Prompt94 recovery304 is not
+integrated and therefore contributes no recovery evidence or response claim.
 
 | Cell or lane | Lifecycle now | Exact boundary |
 | --- | --- | --- |
@@ -37,29 +35,29 @@ is integrated rather than a silent rebase here.
 | Prompt91 | prelaunch stopped; provenance pending | Independent review returned REVISE / STOP on a mandatory fixture, but no artifact-grade counterexample is integrated. It was not launched and carries no accepted evidence. |
 | Prompt92 | completed, recovered, exact aggregate bridge refuted | Recovery merge `2e5554c`; symbolic audit301 merged at `79c4549`. The six-label all-`E` family and exact `E_6=117` instance are `proved-math-qualified` and refute the identical Prompt87/92 aggregate-dyadic bridge. This is not Lean or computed finite evidence and does not decide LRC or the pivot equivalence. |
 | Prompt93 | prelaunch STOP; replay specification needs correction | Review281 found the frozen `Psi` target false at `(1,3,4)`, but no artifact-grade accepted counterexample is integrated. The branch-only replay candidate and review294 are `MEDIUM-SPEC-REQUIRED`; no Luna launch or evidence exists. |
-| Prompt94 | completed; awaiting Sol High recovery | Task291 was launched from the original desktop browser and generation has completed. No response claim is recorded before recovery; the unit-stratum target and unrestricted LRC remain `OPEN`. |
+| Prompt94 | completed; awaiting tracked recovery304 under provisional audit only | Task291 generation completed. Raw response and bundle remain ignored / quarantined, and recovery304 is not integrated. No response claim or recovery evidence is recorded; the unit-stratum target and unrestricted LRC remain `OPEN`. |
 | Prompt95 | active Pro research | Corrected contract task292 was integrated at `d75b9bc`; Sol High launched task297 at `e3055a1`. The max-covered-pivot target and unrestricted LRC remain `OPEN`; launch promotes nothing. |
-| Prompt96 reserved synthesis | prepared; independent review returned REVISE | Contract merge `3a993fc` is not launch-ready because it contradicts accepted audit301 provenance. Correction and another independent review are required; preparation is not research or evidence. |
+| Prompt96 reserved synthesis | active Pro research | Corrected prompt SHA `adbcb321...f1d1` was integrated at `17b1a2b`, review302 returned ACCEPT, and Sol High launched task303 at `9687dce`. Launch promotes nothing; the exact P94/P95 synthesis target and unrestricted LRC remain `OPEN`. |
 | P68 Task02 | frozen failed delegation | Luna/xhigh runtime routing was verified, but the task returned zero mandatory fixtures and no completed domain: `rejected-operational-output`. |
 | P68 Task03 | terminal rejected operational output | Fresh Luna/xhigh metadata routing passed, but the cache timed out before `0/6` semantic fixtures. No evidence exists; every successor is `MEDIUM-SPEC-REQUIRED`. |
 | Medium lanes | 3 active | Research Pipeline, Recovery/Verification, and Formalization/Specification leads are active downstream lanes. |
 | Luna lane | 0 active; 0 ready | Narrow Verification Mode remains in force. Prompt85 `-02` and Prompt93 replay are `MEDIUM-SPEC-REQUIRED`; neither has a runtime receipt, launch, worker, preflight, or evidence. |
-| Reserved Pro synthesis slot | blocked on contract correction | Prompt96 is prepared but under REVISE, not launch-ready. Only Prompt95 is active; Prompt94 awaits recovery, so the target of three active Pro cells is not met. |
+| Reserved Pro synthesis slot | occupied by Prompt96 | Prompt95 and Prompt96 are active. Prompt94 awaits nonintegrated recovery304, so the target of three active Pro cells is not met. |
 
 ### Validator-derived current metrics
 
 | Metric | Current value |
 | --- | ---: |
-| Active Pro cells | 1 |
+| Active Pro cells | 2 |
 | Pro cells awaiting recovery | 1 |
 | Responses under audit | 0 |
 | Launch-ready contracts | 0 |
 | Active Medium leads | 3 |
 | Luna-ready tasks / active Luna workers | 0 / 0 |
 | Integration backlog / Sol High review backlog | 0 / 0 |
-| Verification queues Level 1 / Level 2 / Level 3 | 5 / 0 / 0 |
+| Verification queues Level 1 / Level 2 / Level 3 | 4 / 0 / 0 |
 | Audits total / accepted / accepted-negative / pending / deferred | 40 / 28 / 8 / 0 / 4 |
-| Route queues launch-ready / waiting / parked | 0 / 2 / 1 |
+| Route queues launch-ready / waiting / parked | 0 / 1 / 1 |
 | Luna launched / admitted / rejected / rejected outputs | 5 / 3 / 5 / 3 |
 | Luna terminal runtime failures | 2 |
 

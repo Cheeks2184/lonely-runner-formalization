@@ -53,11 +53,13 @@ contract, no theorem was attempted. Prompt92 completed, was recovered at
 computation remains unpromoted. Prompt91 received prelaunch REVISE / STOP on a
 mandatory fixture and was not launched. Prompt93 also stopped before launch;
 its branch-only replay specification remains `MEDIUM-SPEC-REQUIRED` after
-review294 returned REVISE. Prompt94 generation completed and awaits Sol High
-recovery, with no response claim recorded. Prompt95 is the sole active Pro
-cell and its max-covered-pivot target remains `OPEN`. Prompt96 is prepared for
-reserved synthesis, but independent review returned REVISE because its
-provenance contradicts accepted audit301; it is not launch-ready. Prompt88
+review294 returned REVISE. Prompt94 generation completed and awaits tracked
+recovery304 under provisional audit only; raw response and bundle remain
+ignored / quarantined, recovery304 is not integrated, and no response claim or
+recovery evidence is recorded. Prompt95 remains active. Prompt96's corrected
+synthesis contract was integrated at `17b1a2b`, accepted by review302, and
+launched by Sol High as active task303 at `9687dce`; launch promotes nothing
+and its exact P94/P95 synthesis target remains `OPEN`. Prompt88
 remains parked behind a `MEDIUM-SPEC-REQUIRED` route gate. These lifecycle
 transitions do not change the exact unrestricted bottleneck below, and the
 target of three active Pro cells is not currently met.

@@ -32,10 +32,10 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 1)
-        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 2, "parked": 1})
+        self.assertEqual(metrics["active_pro_cells"], 2)
+        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 1})
         self.assertEqual(metrics["audits"], {"total": 40, "accepted": 28, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 4})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 5, "2": 0, "3": 0})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 4, "2": 0, "3": 0})
         self.assertEqual(metrics["pipeline"], {
             "active_medium_leads": 3,
             "luna_ready_tasks": 0,
@@ -106,7 +106,9 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         self.assertEqual(tasks["SOL-P93-CROSS-PIVOT-RECIPROCITY-CONTRACT-PREP-274"]["status"], "frozen")
         self.assertEqual(tasks["SOL-P93-CROSS-PIVOT-RECIPROCITY-CONTRACT-PREP-274"]["route_queue"], "none")
         self.assertEqual(tasks["SOL-P94-DIVISOR-LATTICE-CONTRACT-PREP-283"]["route_queue"], "none")
-        self.assertEqual(tasks["SOL-P96-ADVERSARIAL-SYNTHESIS-CONTRACT-PREP-299"]["route_queue"], "waiting")
+        self.assertEqual(tasks["SOL-P96-ADVERSARIAL-SYNTHESIS-CONTRACT-PREP-299"]["route_queue"], "none")
+        self.assertEqual(tasks["P96-INDEPENDENT-CONTRACT-REVIEW-302"]["status"], "completed")
+        self.assertEqual(tasks["SOL-P96-DESKTOP-LAUNCH-303"]["status"], "active")
         self.assertEqual(tasks["P85-LITERAL-REPLAY-02"]["admission_class"], "MEDIUM-SPEC-REQUIRED")
         self.assertEqual(tasks["P93-PSI-COUNTEREXAMPLE-REPLAY-01"]["admission_class"], "MEDIUM-SPEC-REQUIRED")
         self.assertEqual(tasks["P85-LITERAL-REPLAY-01"]["status"], "rejected")

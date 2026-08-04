@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "base_commit": "fe01a9ee7a1d1f2268454f3cfd2786f41a01098a",
+  "base_commit": "243c122500191fb6713d5d697911b0b6935089d1",
   "promotion_registry_commit": "fe4efb03063555f1f95175ed50a1c55bacbaa7a6",
   "lifecycle_stages": [
     "preparation",
@@ -6076,12 +6076,12 @@
         {"kind": "launch_payload", "algorithm": "sha256", "value": "a639ddf8a11bd17a9aff998988a3a48d10c9102b14adfeb43fbbf0f134e8c0e8", "path": null},
         {"kind": "launch_record", "algorithm": "sha256", "value": "baa90c569761e85700813f4e6f8cd832272b9afff0fe0f4ced510c2378d89466", "path": "research/sol-pro/launches/prompt94-2026-08-04.md"}
       ],
-      "disposition": "Prompt94 generation completed and is awaiting Sol High response recovery. No response claim, theorem, computation, counterexample, or status promotion is recorded here; its target and unrestricted LRC remain OPEN.",
+      "disposition": "Prompt94 generation completed and is awaiting tracked Sol High recovery under provisional audit only. Raw response and bundle remain ignored / quarantined, and recovery304 is not integrated. No response claim, theorem, computation, counterexample, or status promotion is recorded here; its target and unrestricted LRC remain OPEN.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T03:19:17.5802129-05:00", "source": "authoritative Prompt94 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt94-2026-08-04.md", "launch-record-commit:a819e68163503278d12d2c70e80fa2632c9f8fe4", "parent-authoritative:Prompt94-completed-awaiting-recovery"]
+      "source_refs": ["research/sol-pro/launches/prompt94-2026-08-04.md", "launch-record-commit:a819e68163503278d12d2c70e80fa2632c9f8fe4", "parent-authoritative:Prompt94-completed-awaiting-recovery304"]
     },
     {
       "id": "SOL-P95-PRO-MAX-COVERED-PIVOT-292",
@@ -6158,24 +6158,88 @@
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Medium contract preparation and independent review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
       "base_commit": "79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa",
-      "lifecycle_stage": "contract_review",
+      "lifecycle_stage": "launch_ready",
       "dependencies": ["P92-SYMBOLIC-COUNTERFAMILY-MATHEMATICAL-AUDIT-301", "SOL-P94-DESKTOP-LAUNCH-291", "SOL-P95-DESKTOP-LAUNCH-297"],
       "branch": "research/prompt96-adversarial-synthesis-contract",
       "worktree_id": "isolated:prompt96-adversarial-synthesis-contract",
-      "status": "review",
-      "operational_state": "prepared",
-      "route_queue": "waiting",
-      "current_route_marker": true,
+      "status": "completed",
+      "operational_state": "terminal",
+      "route_queue": "none",
+      "current_route_marker": false,
       "admission_class": "RESEARCH-UNRESOLVED",
-      "verification": {"level": 1, "state": "pending"},
+      "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "63dc63c2e2fee71dfd70dbdaf0277e1b01626bc39155cdf11027ba34f458ff36", "path": "research/sol-pro/prompts/prompt96.md"}],
-      "disposition": "Prepared reserved synthesis contract only. Independent review returned REVISE because the candidate contradicts accepted audit301 by treating the symbolic family as unverified and omitting its accepted audit provenance. Prompt96 is not launch-ready, active research, or a result; correction is separate from this lifecycle sync.",
+      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "adbcb3215f385df5e21d2f5f3c6a79ec2f775f309c189cd7c731b65fc9d6f1d1", "path": "research/sol-pro/prompts/prompt96.md"}],
+      "disposition": "The corrected Prompt96 synthesis contract incorporates accepted audit301 provenance, was integrated at 17b1a2b, received independent review302 ACCEPT, and was consumed by authoritative desktop launch303. Contract acceptance promotes no mathematical result.",
+      "audit_outcome": "not_applicable",
+      "review_ids": ["P96-INDEPENDENT-CONTRACT-REVIEW-302"],
+      "integration_commit": "17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4",
+      "timestamps": [],
+      "source_refs": ["initial-contract-merge:3a993fcaebfe4a0af8fe097613ba3a364079e9c7", "corrected-contract-merge:17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4", "audit-merge:79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa", "review:P96-INDEPENDENT-CONTRACT-REVIEW-302-ACCEPT"]
+    },
+    {
+      "id": "P96-INDEPENDENT-CONTRACT-REVIEW-302",
+      "parent_route": "Prompt96",
+      "kind": "status_sync",
+      "owner": "Sol Medium Recovery and Verification Lead",
+      "supervising_lead": "/root",
+      "runtime": {"route": "independent corrected-contract review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
+      "base_commit": "17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4",
+      "lifecycle_stage": "contract_review",
+      "dependencies": ["SOL-P96-ADVERSARIAL-SYNTHESIS-CONTRACT-PREP-299"],
+      "branch": null,
+      "worktree_id": "review:p96-independent-contract-review-302",
+      "status": "completed",
+      "operational_state": "terminal",
+      "route_queue": "none",
+      "current_route_marker": false,
+      "admission_class": "RESEARCH-UNRESOLVED",
+      "verification": {"level": 1, "state": "complete"},
+      "evidence_label": "contract-only",
+      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "adbcb3215f385df5e21d2f5f3c6a79ec2f775f309c189cd7c731b65fc9d6f1d1", "path": "research/sol-pro/prompts/prompt96.md"}],
+      "disposition": "Independent review302 accepted the corrected Prompt96 contract at exact launch scope. Review acceptance and prompt correction promote no mathematical result or finite evidence.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "3a993fcaebfe4a0af8fe097613ba3a364079e9c7",
+      "integration_commit": "17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4",
       "timestamps": [],
-      "source_refs": ["contract-merge:3a993fcaebfe4a0af8fe097613ba3a364079e9c7", "audit-merge:79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa", "review:P96-INDEPENDENT-CONTRACT-REVIEW-302-REVISE"]
+      "source_refs": ["corrected-contract-merge:17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4", "parent-authoritative:review302-ACCEPT"]
+    },
+    {
+      "id": "SOL-P96-DESKTOP-LAUNCH-303",
+      "parent_route": "Prompt96",
+      "kind": "pro_research",
+      "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
+      "supervising_lead": "/root",
+      "runtime": {
+        "route": "original browser-capable desktop Codex session",
+        "model": "gpt-5.6-sol",
+        "effort": "pro",
+        "pro_cell": true,
+        "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 30214, "tracked_prompt_characters": 30214, "submitted_payload_bytes": 30213, "submitted_payload_characters": 30213, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
+      },
+      "base_commit": "17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4",
+      "lifecycle_stage": "active_research",
+      "dependencies": ["P96-INDEPENDENT-CONTRACT-REVIEW-302"],
+      "branch": null,
+      "worktree_id": "external:prompt96-sol-pro-conversation",
+      "status": "active",
+      "operational_state": "active",
+      "route_queue": "none",
+      "current_route_marker": false,
+      "admission_class": "RESEARCH-UNRESOLVED",
+      "verification": {"level": null, "state": "not_required"},
+      "evidence_label": "operational-only",
+      "hashes": [
+        {"kind": "prompt", "algorithm": "sha256", "value": "adbcb3215f385df5e21d2f5f3c6a79ec2f775f309c189cd7c731b65fc9d6f1d1", "path": "research/sol-pro/prompts/prompt96.md"},
+        {"kind": "launch_payload", "algorithm": "sha256", "value": "cfe244b748c67d64e1d6c5e8a0710f1ed9ba97d44f7699a12d71ba625821fdab", "path": null},
+        {"kind": "launch_record", "algorithm": "sha256", "value": "833cafd9303a971bc6c9ea2be7f17797ab668cf6e9b17580177633e123147c3d", "path": "research/sol-pro/launches/prompt96-2026-08-04.md"}
+      ],
+      "disposition": "Active Sol Pro adversarial synthesis owned and launched only by Sol High from the original desktop browser. Launch creates no proof, computation, counterexample, transfer theorem, route disposition, or status promotion; Prompt96's P94/P95 synthesis target and unrestricted LRC remain OPEN.",
+      "audit_outcome": "not_applicable",
+      "review_ids": [],
+      "integration_commit": null,
+      "timestamps": [{"event": "launched", "at": "2026-08-04T04:28:22.7138135-05:00", "source": "authoritative Prompt96 launch record"}],
+      "source_refs": ["research/sol-pro/launches/prompt96-2026-08-04.md", "launch-record-commit:9687dce93c58555043988d859d44f28965b0461a"]
     },
     {
       "id": "P85-LITERAL-REPLAY-02",
@@ -6284,6 +6348,33 @@
       "integration_commit": null,
       "timestamps": [],
       "source_refs": ["snapshot-base:fe01a9ee7a1d1f2268454f3cfd2786f41a01098a", "post-base-main:9687dce"]
+    },
+    {
+      "id": "OPS-P94-P96-LIFECYCLE-DELTA-308",
+      "parent_route": "Continuous parallel research pipeline",
+      "kind": "status_sync",
+      "owner": "Sol Medium Research Pipeline Lead",
+      "supervising_lead": "/root",
+      "runtime": {"route": "isolated Level-1 lifecycle synchronization", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
+      "base_commit": "243c122500191fb6713d5d697911b0b6935089d1",
+      "lifecycle_stage": "integration",
+      "dependencies": ["SOL-P94-DESKTOP-LAUNCH-291", "SOL-P96-DESKTOP-LAUNCH-303", "OPS-ROLLING-LIFECYCLE-SYNC-306"],
+      "branch": "ops/prompt94-prompt96-lifecycle-308",
+      "worktree_id": "isolated:lrc-prompt94-prompt96-lifecycle-308",
+      "status": "completed",
+      "operational_state": "terminal",
+      "route_queue": "none",
+      "current_route_marker": false,
+      "admission_class": "NOT-APPLICABLE",
+      "verification": {"level": 1, "state": "complete"},
+      "evidence_label": "operational-only",
+      "hashes": [],
+      "disposition": "Records corrected Prompt96 contract review and active desktop launch303, and narrows Prompt94 to completed / awaiting nonintegrated recovery304 under provisional audit. It promotes no theorem, computation, response claim, or recovery evidence.",
+      "audit_outcome": "not_applicable",
+      "review_ids": [],
+      "integration_commit": null,
+      "timestamps": [],
+      "source_refs": ["snapshot-base:243c122500191fb6713d5d697911b0b6935089d1", "prompt96-launch-record-commit:9687dce93c58555043988d859d44f28965b0461a"]
     }
   ],
   "placeholders": [
@@ -6296,10 +6387,10 @@
     }
   ],
   "expected_metrics": {
-    "active_pro_cells": 1,
+    "active_pro_cells": 2,
     "route_queues": {
       "launch_ready": 0,
-      "waiting": 2,
+      "waiting": 1,
       "parked": 1
     },
     "audits": {
@@ -6311,7 +6402,7 @@
       "deferred": 4
     },
     "verification_level_queues": {
-      "1": 5,
+      "1": 4,
       "2": 0,
       "3": 0
     },

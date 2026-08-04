@@ -344,7 +344,7 @@ a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
 
 The lifecycle snapshot is based on authoritative main checkpoint
-`fe01a9ee7a1d1f2268454f3cfd2786f41a01098a` and immutable PI promotion
+`243c122500191fb6713d5d697911b0b6935089d1` and immutable PI promotion
 registry checkpoint `fe4efb03063555f1f95175ed50a1c55bacbaa7a6`. The latest authoritative clean
 full-project Lean/trust/regression replay is lifecycle checkpoint
 `fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`: 3,591 Lean jobs, 302 trust
@@ -358,8 +358,10 @@ conjectures.
 Research is in **FULL-PROOF PRIORITY MODE**. The exact unrestricted
 bottleneck remains the Lean-verified finite pivot-certificate proposition:
 for every positive injective integer tuple, some pivot candidate must escape
-all strict modular bad sets. Prompt95 is the sole active Pro cell; Prompt94
-generation completed and awaits Sol High recovery, with no response claim yet.
+all strict modular bad sets. Prompt95 and Prompt96 are the two active Pro
+cells. Prompt94 generation completed and awaits tracked recovery304 under
+provisional audit only; its raw response and bundle remain ignored /
+quarantined, and no response claim or recovery evidence is recorded.
 Prompt86 is completed/recovered at provisional `MIXED / PIVOT`, with five
 attachments `QUARANTINED / UNVERIFIED` and its selector `OPEN`. Prompt87 is
 completed/recovered/audited; Prompt92 audit301 supplies a
@@ -372,9 +374,10 @@ its payload remained a `REVIEW-REQUIRED` Medium contract and no theorem was
 attempted. Prompt91 stopped before launch on a mandatory-fixture review.
 Prompt92 completed and was recovered; its quarantined computation remains
 unpromoted. Prompt93 also stopped before launch, and its branch-only replay
-specification is `MEDIUM-SPEC-REQUIRED`. Prompt96 is prepared for the reserved
-synthesis slot but under REVISE, not launch-ready. The target of three active
-Pro cells is not currently met. Prompt85 replay `-01` failed closed before
+specification is `MEDIUM-SPEC-REQUIRED`. Prompt96's corrected synthesis
+contract was integrated at `17b1a2b`, independently accepted by review302, and
+launched by Sol High at `9687dce`; launch promotes nothing. The target of three
+active Pro cells is not currently met. Prompt85 replay `-01` failed closed before
 source or preflight; successor `-02` is integrated as a contract but remains
 `REVIEW-REQUIRED` / `MEDIUM-SPEC-REQUIRED`. No Luna task is active or ready.
 These lifecycle facts promote no unrestricted theorem or finite evidence.

@@ -55,19 +55,21 @@ and provenance remains pending. Prompt93 is frozen at prelaunch STOP after
 review281 found its frozen `Psi` target false at `(1,3,4)`, but no
 artifact-grade accepted counterexample is integrated and it was not launched.
 Its branch-only replay candidate remains `MEDIUM-SPEC-REQUIRED` after
-review294 returned REVISE. Prompt94 generation has completed and awaits Sol
-High recovery; no response claim is recorded yet. Prompt95 is the sole active
-Pro cell, launched by Sol High at `e3055a1`, with its exact target still
-`OPEN`. Prompt96 is prepared at `3a993fc` for the reserved synthesis slot, but
-independent review returned REVISE because its provenance contradicts
-audit301; it is not launch-ready. Prompt88 remains parked as
+review294 returned REVISE. Prompt94 generation has completed and awaits tracked
+recovery304 under provisional audit only. Its raw response and bundle remain
+ignored / quarantined, recovery304 is not integrated, and no response claim or
+recovery evidence is recorded. Prompt95 remains active. Prompt96's corrected
+contract SHA `adbcb321...f1d1` was integrated at `17b1a2b`, independently
+accepted by review302, and launched by Sol High as active task303 at
+`9687dce`; launch promotes nothing and its synthesis target remains `OPEN`.
+Prompt88 remains parked as
 `MEDIUM-SPEC-REQUIRED`. Three Medium lead lanes remain active; no Luna worker
 or `LUNA-READY` task is active. The target of three active Pro cells is not
 currently met.
 
 No recovered Prompt76 scan, Prompt77 6,330-record scan, or Prompt78 computation
 has been promoted to computed finite evidence. Current validator queues are
-Level 1: 5, Level 2: 0, Level 3: 0. Prompt94 contributes one completed Pro cell
+Level 1: 4, Level 2: 0, Level 3: 0. Prompt94 contributes one completed Pro cell
 awaiting recovery. This lifecycle synchronization is a Level 1 documentation
 checkpoint paired with a targeted Level 2 validator-source checkpoint; it
 triggers no full clean Lean replay.
