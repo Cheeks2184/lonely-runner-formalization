@@ -10,9 +10,13 @@ definitions task. It does not include the support theorem, Fourier analysis,
 the hyperplane corollary, a root-module import, or any claim about unrestricted
 Lonely Runner.
 
-Admission decision: **`LUNA-READY`**. This decision applies only to the exact
-contract below. Any change to its semantics returns the task to
-`MEDIUM-SPEC-REQUIRED`.
+Current admission decision: **`MEDIUM-SPEC-REQUIRED`**. The original contract
+commit `911e871f51bb09b7b8fb20c53891dda671c40e88` was rejected by independent
+review because its inventory, worktree-provenance, and contract-delivery gates
+were incomplete. This corrected contract may be promoted to `LUNA-READY` only
+after independent contract re-review accepts its exact correction tip and Sol
+High creates the mandatory immutable launch record specified below. Prompt or
+contract preparation alone is not admission.
 
 Base commit: `94442b430f4dbb9b66ec186e5655d556ee4e477e`
 
@@ -20,6 +24,8 @@ Branch/worktree:
 
 - worker branch: `formal/luna-p68-ba-def-01`
 - isolated worktree identifier: `isolated:luna-p68-ba-def-01`
+- public-safe repository-root sibling mapping:
+  `../lrc-luna-p68-ba-def-01`
 - the worktree must be created fresh at the exact base commit above;
 - the worker must not reuse or resume an existing Codex session or branch.
 
@@ -28,6 +34,140 @@ Worker runtime: a fresh top-level Codex session explicitly routed to
 be verified from authoritative runtime/session metadata. A nested child,
 inherited Sol route, substitute model, or natural-language identity claim does
 not satisfy this contract.
+
+### Exact worktree creation and live containment readback
+
+Sol High or its authorized operations helper must run the following from the
+authoritative repository root before the worker starts:
+
+```bash
+test ! -e ../lrc-luna-p68-ba-def-01
+test -z "$(git branch --list formal/luna-p68-ba-def-01)"
+git worktree add -b formal/luna-p68-ba-def-01 \
+  ../lrc-luna-p68-ba-def-01 \
+  94442b430f4dbb9b66ec186e5655d556ee4e477e
+```
+
+From the new worktree, the launcher and worker must both run this exact live
+readback. Resolved absolute paths are private runtime values: inspect them
+locally, but do not persist or publish them.
+
+```bash
+worker_root="$(realpath .)"
+common_git_dir="$(realpath "$(git rev-parse --git-common-dir)")"
+controller_root="$(dirname "$common_git_dir")"
+expected_worker_root="$(realpath "$controller_root/../lrc-luna-p68-ba-def-01")"
+test "$worker_root" = "$expected_worker_root"
+test "$(dirname "$worker_root")" = "$(dirname "$controller_root")"
+test "$(basename "$worker_root")" = "lrc-luna-p68-ba-def-01"
+test "$(git rev-parse HEAD)" = "94442b430f4dbb9b66ec186e5655d556ee4e477e"
+test "$(git branch --show-current)" = "formal/luna-p68-ba-def-01"
+git worktree list --porcelain | awk \
+  -v wt="$worker_root" \
+  -v head="94442b430f4dbb9b66ec186e5655d556ee4e477e" '
+    $1 == "worktree" {
+      in_target = ($0 == "worktree " wt)
+      if (in_target) seen = 1
+      next
+    }
+    in_target && $1 == "HEAD" {
+      head_ok = ($2 == head)
+      next
+    }
+    in_target && $1 == "branch" {
+      branch_ok = ($2 == "refs/heads/formal/luna-p68-ba-def-01")
+      next
+    }
+    END { exit !(seen && head_ok && branch_ok) }
+  '
+```
+
+The public report records only `isolated:luna-p68-ba-def-01`, the relative
+mapping `../lrc-luna-p68-ba-def-01`, and PASS/FAIL for these checks. It must not
+record the resolved private paths.
+
+### Immutable contract-delivery gate
+
+This correction commit cannot contain its own final commit SHA or its own file
+SHA-256. Therefore a separate Sol High launch record is mandatory before any
+worker session starts. Its exact tracked path is:
+
+```text
+research/luna/launches/p68-ba-def-01.md
+```
+
+The launch record must be committed separately and must contain these exact
+fields with final values:
+
+```text
+Task ID: P68-BA-DEF-01
+Worker base: 94442b430f4dbb9b66ec186e5655d556ee4e477e
+Contract commit: <40-hex correction tip containing this contract>
+Contract path: research/luna/contracts/p68-ba-def-01.md
+Contract SHA-256: <64-hex SHA-256 of the blob at Contract commit/Contract path>
+Worker branch: formal/luna-p68-ba-def-01
+Worktree mapping: ../lrc-luna-p68-ba-def-01
+Runtime target: gpt-5.6-luna/xhigh fresh top-level Codex session
+Sol High launch authority: approved
+```
+
+Sol High must supply the launch-record commit SHA as an external immutable
+input. The worker must not infer, edit, or choose any field. Before reading the
+implementation contract, it must run the following with
+`launch_record_commit` set to that supplied 40-hex SHA:
+
+```bash
+launch_record_path='research/luna/launches/p68-ba-def-01.md'
+contract_path='research/luna/contracts/p68-ba-def-01.md'
+test "${#launch_record_commit}" -eq 40
+case "$launch_record_commit" in *[!0-9a-f]*) exit 1 ;; esac
+git cat-file -e "${launch_record_commit}^{commit}"
+test "$(git rev-parse "${launch_record_commit}^{commit}")" = \
+  "$launch_record_commit"
+git cat-file -e "${launch_record_commit}:${launch_record_path}"
+git show "${launch_record_commit}:${launch_record_path}"
+```
+
+It must extract the exact `Contract commit` and `Contract SHA-256` values from
+that displayed record, reject duplicates through the single-value checks
+below, and then run:
+
+```bash
+record_text="$(git show "${launch_record_commit}:${launch_record_path}")"
+contract_commit="$(printf '%s\n' "$record_text" | \
+  sed -n 's/^Contract commit: //p')"
+contract_sha256="$(printf '%s\n' "$record_text" | \
+  sed -n 's/^Contract SHA-256: //p')"
+test "$(printf '%s\n' "$record_text" | sed -n 's/^Task ID: //p')" = \
+  'P68-BA-DEF-01'
+test "$(git show "${launch_record_commit}:${launch_record_path}" | \
+  sed -n 's/^Worker base: //p')" = \
+  '94442b430f4dbb9b66ec186e5655d556ee4e477e'
+test "$(git show "${launch_record_commit}:${launch_record_path}" | \
+  sed -n 's/^Contract path: //p')" = "$contract_path"
+test "$(git show "${launch_record_commit}:${launch_record_path}" | \
+  sed -n 's/^Worker branch: //p')" = 'formal/luna-p68-ba-def-01'
+test "$(git show "${launch_record_commit}:${launch_record_path}" | \
+  sed -n 's/^Worktree mapping: //p')" = '../lrc-luna-p68-ba-def-01'
+test "$(git show "${launch_record_commit}:${launch_record_path}" | \
+  sed -n 's/^Runtime target: //p')" = \
+  'gpt-5.6-luna/xhigh fresh top-level Codex session'
+test "$(git show "${launch_record_commit}:${launch_record_path}" | \
+  sed -n 's/^Sol High launch authority: //p')" = 'approved'
+test "${#contract_commit}" -eq 40
+case "$contract_commit" in *[!0-9a-f]*) exit 1 ;; esac
+test "${#contract_sha256}" -eq 64
+case "$contract_sha256" in *[!0-9a-f]*) exit 1 ;; esac
+test "$(git rev-parse "$contract_commit^{commit}")" = "$contract_commit"
+test "$(git show "$contract_commit:$contract_path" | sha256sum | \
+  cut -d' ' -f1)" = "$contract_sha256"
+```
+
+The extracted blob, not the worker base, is the immutable task contract. This
+does not merge, cherry-pick, or otherwise change the worker base. The worker
+must fail closed before implementation if the launch record is absent, any
+field is duplicated or empty, either SHA is malformed, the contract commit or
+path is unavailable, the hash differs, or Sol High approval is not exact.
 
 Access mode: Read access to tracked repository sources and pinned dependencies;
 write access only to the one allowed tracked file and the exact ignored
@@ -208,7 +348,7 @@ git status --short
 ```
 
 The initial status must be empty. After writing the module and temporary
-fixtures, run this preflight only:
+fixtures, do not stage or commit the module. Run this preflight only:
 
 ```bash
 lake env lean LonelyRunner/BoundedAnnihilator.lean
@@ -217,6 +357,8 @@ if lake env lean tmp/p68-ba-def-01/ExpectedFailureZeroModulus.lean >>tmp/p68-ba-
 if lake env lean tmp/p68-ba-def-01/ExpectedFailureWrongHeight.lean >>tmp/p68-ba-def-01/commands.log 2>&1; then exit 1; fi
 git diff --check
 git diff --name-only 94442b430f4dbb9b66ec186e5655d556ee4e477e --
+git ls-files --others --exclude-standard
+git status --porcelain=v1 --untracked-files=all
 ```
 
 Both negative diagnostics must be inspected before the supervisor gate. The
@@ -226,11 +368,21 @@ displayed equality because `9601 ≠ 9600`. A failure caused by an import,
 syntax, path, encoding, or unrelated elaboration error does not pass the
 fixture.
 
-The last command must list exactly
-`LonelyRunner/BoundedAnnihilator.lean`; ignored preflight files do not count as
-tracked changes. Return the preflight result to the supervising lead and stop.
-The worker must not run the full phase until that lead inspects all six fixture
-results and explicitly authorizes continuation.
+The frozen pre-commit inventory is:
+
+```text
+git diff --name-only: <empty>
+git ls-files --others --exclude-standard:
+LonelyRunner/BoundedAnnihilator.lean
+git status --porcelain=v1 --untracked-files=all:
+?? LonelyRunner/BoundedAnnihilator.lean
+```
+
+The ignored preflight and Lake-cache paths must not appear. Any staged status,
+extra tracked or untracked path, or missing module fails the preflight. Return
+the preflight result to the supervising lead and stop. The worker must not run
+the full phase until that lead inspects all six fixture results and this exact
+inventory, then explicitly authorizes continuation.
 
 After authorization, create the exact temporary axiom probe:
 
@@ -251,7 +403,12 @@ lake env lean tmp/p68-ba-def-01/AxiomProbe.lean
 if git grep -n -E 'sorry|admit|native_decide|unsafe|^[[:space:]]*(axiom|constant)[[:space:]]' -- LonelyRunner/BoundedAnnihilator.lean; then exit 1; fi
 git diff --check
 git diff --name-only 94442b430f4dbb9b66ec186e5655d556ee4e477e --
+git ls-files --others --exclude-standard
+git status --porcelain=v1 --untracked-files=all
 ```
+
+Before commit, the last two commands must again report the one untracked module
+and the exact `??` status above. No ignored scratch path may be staged.
 
 The worker may then commit the one tracked file with a descriptive formal
 implementation message, clean the exact temporary files as specified, and
@@ -262,10 +419,21 @@ git status --short
 git show --stat --oneline --decorate HEAD
 git diff --check 94442b430f4dbb9b66ec186e5655d556ee4e477e..HEAD
 git diff --name-only 94442b430f4dbb9b66ec186e5655d556ee4e477e..HEAD
+git ls-files --others --exclude-standard
+git status --porcelain=v1 --untracked-files=all
 ```
 
-The final status must be empty and the final name-only diff must contain only
-`LonelyRunner/BoundedAnnihilator.lean`.
+The frozen post-commit inventory is:
+
+```text
+git diff --name-only base..HEAD:
+LonelyRunner/BoundedAnnihilator.lean
+git ls-files --others --exclude-standard: <empty>
+git status --porcelain=v1 --untracked-files=all: <empty>
+```
+
+The worktree is review-ready only if this exact inventory holds after temporary
+cleanup.
 
 ## Expected worker return schema
 
@@ -276,6 +444,9 @@ inapplicable value:
 Task ID: P68-BA-DEF-01
 Effective model and effort metadata: <authoritative runtime record, not self-report>
 Base commit: 94442b430f4dbb9b66ec186e5655d556ee4e477e
+Launch-record commit/path: <exact external commit and research/luna/launches/p68-ba-def-01.md>
+Contract commit/path/SHA-256: <exact values verified from the launch record>
+Worktree mapping/readback: <../lrc-luna-p68-ba-def-01 and containment PASS/FAIL only>
 Branch/commit: <formal/luna-p68-ba-def-01 and exact commit SHA, or none>
 Files changed: <exact tracked paths>
 Commands run: <ordered commands and exit codes>
@@ -285,7 +456,7 @@ Domain completed: <all five ZMod 5 points and all six fixtures, or exact prefix>
 Counts: <5 success-domain points; 6 total fixtures; expected-failure count 2>
 First failure or certificate: <least failing fixture, or exact witness table>
 Hashes: <SHA-256 of the committed source and any retained report; none for deleted scratch>
-Independent comparison: pending VER-P68-BA-DEF-REVIEW-179
+Independent comparison: pending VER-P68-BA-DEF-IMPLEMENTATION-182
 Tests: <target compile, preflight, build, prohibited-token scan, diff checks>
 Axiom output: <verbatim output or not-authorized>
 Known limitations: definitions and four local lemmas only; no support/Fourier/LRC claim
@@ -299,7 +470,7 @@ The worker may recommend but may not accept an evidence label.
 ## Independent checker and acceptance criteria
 
 Independent checker: Sol Medium Verification Lead under review task
-`VER-P68-BA-DEF-REVIEW-179`, using a fresh read-only or isolated replay at the
+`VER-P68-BA-DEF-IMPLEMENTATION-182`, using a fresh read-only or isolated replay at the
 worker's exact candidate commit. The checker must inspect the complete diff,
 re-run all commands including both expected failures, compare the canonical
 witness table, verify the source SHA-256, inspect the axiom output, and confirm
@@ -308,8 +479,10 @@ Luna worker may not perform or claim this independent review.
 
 Acceptance requires all of the following:
 
-1. exact base, branch, and isolated worktree identity;
-2. only the allowed tracked module changed;
+1. exact immutable launch record, contract extraction/hash, base, branch,
+   public-safe sibling mapping, and isolated worktree containment readback;
+2. only the allowed tracked module changed, with exact pre-commit and
+   post-commit inventories;
 3. exact imports, namespace, four definitions, and four theorem signatures;
 4. all six fixtures completed in canonical order;
 5. the positive preflight compiles and both negative preflights fail;
@@ -320,7 +493,7 @@ Acceptance requires all of the following:
 9. axiom output contains no project-specific or untrusted axiom;
 10. deterministic source hash and command results are reported;
 11. the worktree is clean after its one-file commit and temporary cleanup; and
-12. independent review 179 accepts the exact commit.
+12. independent implementation review 182 accepts the exact commit.
 
 Evidence label on success: **`infrastructure-only`**. This implementation may
 support later formal work, but neither its compilation nor its arithmetic
