@@ -91,14 +91,27 @@ maximal-set pair-overlap supply is `refuted-exact`; see
 still active. A valid success would leave exactly the primitive divisible
 branch above as the remaining Prompt95 edge; while Prompt98 is open, both
 conjuncts remain open.
-Prompt100 remains active/unrecovered on the uniform two-lower-owner noncover
-theorem; success would give the `|F(a)|<=3` part of Prompt95, not the full
-bridge. Prompt101 is completed, recovered, and independently audited. Its
+Prompt100 is completed, recovered, and independently audited. Its exact strict
+two-lower-owner theorem for every `N>=4` is `proved-math-qualified`, as is the
+vacuous Prompt95 consequence for `|coveredPivots|<=3`; the exact `N>=3`
+extension is `refuted-exact`. This eliminates every minimal internal cover with
+at most two lower owners. The exact remaining arithmetic edge is a minimal
+internal complete cover with at least three lower owners, necessarily
+`|coveredPivots|>=4`. Lean formalization of the accepted theorem is pending.
+Task365 freezes the `N=4` owner-class sub-specification, but its eight rows and
+3,043 normalized pairs are audit support only. Complete class counts, the `G`
+base lift, and first-sheet scaling remain implementation or Medium-spec edges.
+Prompt101 is completed, recovered, and independently audited. Its
 positive subcritical-weight theorem is `refuted-exact` by `(1,5,25,125)` and
 by the uniform family `a_k=cN^k`; see
 `docs/response101-mathematical-audit.md`. The counterfamily stops that
-sufficient matrix route only. Two Pro cells are recorded active, no
-launch-ready contract exists, and no launch is mathematical evidence.
+sufficient matrix route only. Prompt98's correction, Prompt102, and Prompt103
+are the three active Pro cells; the fourth slot is reserved and no launch-ready
+contract exists. Prompt102 and Prompt103 launch provenance includes a
+noncontradictory 112-byte prefix before the complete intended contract, so
+response audit is mandatory. Prompt103's exact target uses non-squarefree as
+existence of a prime square divisor, irrespective of its nonstandard prose use
+of `squarefull`. No launch is mathematical evidence.
 Prompt88 remains parked behind a `MEDIUM-SPEC-REQUIRED` gate.
 
 These lifecycle transitions do not change the exact unrestricted bottleneck

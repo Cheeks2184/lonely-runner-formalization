@@ -617,3 +617,31 @@ root build, axiom audit, placeholder scan, and independent diff review pass.
 The theorem proves neither redundancy proposition and does not decide LRC.
 Explicit `Q`, minimal-cover, and private-set invariance are not separately
 formalized by this module.
+
+## Prompt100 audit and Prompt102/103 active launches (Tasks353--364)
+
+Prompt100 is completed and recovered. Independent Task355 accepts the exact
+strict two-lower-owner theorem for `N>=4` and its vacuous Prompt95 consequence
+when `|coveredPivots|<=3` as `proved-math-qualified`; it refutes only the exact
+`N>=3` extension. Task356 independently replays the response's two declared
+complete bounded domains as `computed finite evidence` at finite scope only.
+The declaration-level Task358 contract is frozen, but no Prompt100 theorem is
+yet `proved-lean`; a single fixed-fixture probe is `LUNA-READY` and no Luna
+model or worker is active.
+
+Sol High launched Prompt102 (task360) and Prompt103 (task361) in genuinely new
+signed-in ChatGPT conversations with Chat, GPT-5.6 Sol, and Pro selected. Exact
+readback confirms each actual payload contains the complete intended contract
+preceded by a noncontradictory 112-byte front-matter tail. Task364 recommends
+ACTIVE/PROCEED without automatic relaunch, subject to response audit. Its
+disposable 217,726-tuple check is audit support only, not computed finite
+evidence. Prompt103's exact non-squarefree predicate is existence of a prime
+square divisor; the prose term `squarefull` must not be interpreted as the
+narrower standard powerful-number property. Prompt98's correction remains the
+third active Pro cell. Launch and launch-semantics review promote no theorem.
+
+Task365 freezes the Prompt100 `N=4` owner-class data and signatures at source
+commit `c63d900` (integrated as `f073436`). It is documentation/formal
+specification only. Eight rows and 3,043 normalized pairs are audit support;
+complete class counts, the `G` base lift, and first-sheet scaling remain open
+implementation or Medium-specification edges.

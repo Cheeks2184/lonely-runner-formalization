@@ -32,13 +32,13 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 2)
+        self.assertEqual(metrics["active_pro_cells"], 3)
         self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 1})
-        self.assertEqual(metrics["audits"], {"total": 48, "accepted": 32, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 8})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 4, "2": 0, "3": 0})
+        self.assertEqual(metrics["audits"], {"total": 51, "accepted": 34, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 9})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 4, "2": 1, "3": 0})
         self.assertEqual(metrics["pipeline"], {
             "active_medium_leads": 3,
-            "luna_ready_tasks": 0,
+            "luna_ready_tasks": 1,
             "active_luna_workers": 0,
             "integration_backlog": 0,
             "sol_high_review_backlog": 0,
@@ -88,6 +88,13 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         self.assertEqual(tasks["SOL-P92-DESKTOP-LAUNCH-284"]["status"], "completed")
         self.assertEqual(tasks["SOL-P94-DESKTOP-LAUNCH-291"]["status"], "completed")
         self.assertEqual(tasks["SOL-P95-DESKTOP-LAUNCH-297"]["status"], "completed")
+        self.assertEqual(tasks["SOL-P100-DESKTOP-LAUNCH-325"]["status"], "completed")
+        self.assertEqual(tasks["FORM-P100-MATHEMATICAL-AUDIT-355"]["evidence_label"], "proved-math-qualified")
+        self.assertEqual(tasks["VER-P100-INDEPENDENT-REPLAY-356"]["evidence_label"], "computed-finite-evidence")
+        self.assertEqual(tasks["VER-P100-STRICT-FIXTURE-PROBE-358"]["admission_class"], "LUNA-READY")
+        self.assertIsNone(tasks["VER-P100-STRICT-FIXTURE-PROBE-358"]["runtime"]["model"])
+        self.assertEqual(tasks["SOL-P102-DESKTOP-LAUNCH-360"]["status"], "active")
+        self.assertEqual(tasks["SOL-P103-DESKTOP-LAUNCH-361"]["status"], "active")
         self.assertEqual(tasks["SOL-P95-DESKTOP-LAUNCH-297"]["operational_state"], "terminal")
         self.assertEqual(tasks["OPS-P90-RECOVERY-PACKAGE-289"]["evidence_label"], "rejected-operational-output")
         self.assertEqual(tasks["OPS-P92-RECOVERY-PACKAGE-298"]["evidence_label"], "recovery-provenance")
