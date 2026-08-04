@@ -1,0 +1,162 @@
+{
+  "G": [
+    0,
+    0,
+    126
+  ],
+  "K1_exact": {
+    "S24": [
+      3,
+      7,
+      10,
+      11,
+      13,
+      14,
+      17,
+      21
+    ],
+    "form": "-(1/24) V(S24)^* V(S24)",
+    "zeta": "exp(2*pi*i/24)"
+  },
+  "K2_exact": {
+    "S28": [
+      1,
+      5,
+      9,
+      10,
+      13,
+      14,
+      15,
+      18,
+      19,
+      23,
+      27
+    ],
+    "form": "-(1/28) V(S28)^* V(S28)",
+    "zeta": "exp(2*pi*i/28)"
+  },
+  "K3_exact": {
+    "form": "zero 6x6 matrix",
+    "nonzero_difference_range": [
+      -5,
+      5
+    ],
+    "periods": {
+      "B6": 112,
+      "B7": 96,
+      "R": 4
+    },
+    "repeat_counts": {
+      "B6": 6,
+      "B7": 7,
+      "R": 168
+    },
+    "zero_frequency_count_identity": "504-252-252=0"
+  },
+  "N": 4,
+  "algebraic_number_representation": "exact cyclotomic Gram sums V(S)^*V(S); no floating-point algebraic approximation",
+  "block_disposition": [
+    "negative-semidefinite",
+    "negative-semidefinite",
+    "zero"
+  ],
+  "exact_domain": {
+    "N": 4,
+    "modes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "n": 3,
+    "ordering": "pivots ascending; residues ascending",
+    "tuple": [
+      6,
+      7,
+      168
+    ]
+  },
+  "first_failure": {
+    "criterion": "every literal degree-six block is negative semidefinite",
+    "ordering_scope": "first member of the proved family (u,v,4uv) under u then v, with coprime 6 <= u < v",
+    "tuple": [
+      6,
+      7,
+      168
+    ]
+  },
+  "implementation": "CPython",
+  "interval_policy": "none; certificate uses exact integer membership, periodicity, counts, and geometric-sum divisibility",
+  "language": "3.13.5",
+  "literal_modes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "malformed_input_behavior": "any command-line argument -> stderr diagnostic and exit status 2",
+  "primitive_gcd": 1,
+  "rows": [
+    {
+      "B_sizes": {
+        "1": 8,
+        "2": 18
+      },
+      "G": 0,
+      "M": 24,
+      "R_size": 18,
+      "mu_distribution": {
+        "1": 10,
+        "2": 8
+      },
+      "pivot_index_zero_based": 0,
+      "pivot_speed": 6
+    },
+    {
+      "B_sizes": {
+        "0": 11,
+        "2": 21
+      },
+      "G": 0,
+      "M": 28,
+      "R_size": 21,
+      "mu_distribution": {
+        "1": 10,
+        "2": 11
+      },
+      "pivot_index_zero_based": 1,
+      "pivot_speed": 7
+    },
+    {
+      "B_sizes": {
+        "0": 252,
+        "1": 252
+      },
+      "G": 126,
+      "M": 672,
+      "R_size": 504,
+      "mu_distribution": {
+        "0": 126,
+        "1": 252,
+        "2": 126
+      },
+      "pivot_index_zero_based": 2,
+      "pivot_speed": 168
+    }
+  ],
+  "schema": "prompt77-counterexample-certificate-v1",
+  "script_version": "1.0.0",
+  "source_file": "prompt77_counterexample_verify.py",
+  "source_output_binding": "output embeds the SHA-256 of the exact verifier source",
+  "source_sha256": "6d48456ccfee6323371beb4f8c4a46b89de3e228fa12e1bd5c7784aa83f3971c",
+  "status": "verified-exact-integer-certificate",
+  "tuple": [
+    6,
+    7,
+    168
+  ]
+}

@@ -477,3 +477,38 @@ without accepting them. Reported bounded firstness, finite results, evidence
 labels, and the claimed rejection of the frozen private-deficit inequality
 remain unverified. No theorem, computation, counterexample, bridge, or LRC
 status is promoted by this package.
+
+## OPS-P77-RECOVERY-PACKAGE-201 - Prompt77 recovery package
+
+- **Recovery base:** `8c82bd24a73bd44354db2ae4529caf2e03577929`
+- **Recovery branch:** `research/p77-recovery-package-201`
+- **Launch owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator
+  (`/root`) in the original signed-in browser-capable desktop session
+- **Launch time:** `2026-08-03T21:46:33.9518423-05:00`
+- **Prompt SHA-256:**
+  `2be2073c6f476d3d0d570cc36ee8be3d4a16d100fb1fbc72180afb568b0a1527`
+- **Submitted payload SHA-256:**
+  `3ce793e7269be86e9505840e705717282103c8f6f0b51edc3a332bafd8bddaa0`
+- **Completion:** terminal UI readback `Worked for 36m 32s`; response captured
+  at `2026-08-03T22:50:28.8564119-05:00`
+- **Normalized response:** `research/sol-pro/responses/response77.md`; 26,012
+  UTF-8 bytes; 26,005 characters; 1,332 LF separators; no CR; terminal LF;
+  SHA-256
+  `c758c5e8759e2b61cb5fc15e4c056e85b9c3551480660006f349944ee72f8835`
+- **Raw clipboard:** 27,344 UTF-8 bytes; 27,337 characters; 1,332 CRLF
+  separators; no lone LF or lone CR; terminal CRLF; SHA-256
+  `61931350e89dc5757628d94d29e5cd1d42cbbaf0290d295e4fc168b697bfafa4`
+- **Attachments:** exactly five files under
+  `research/sol-pro/artifacts/prompt77/`; hashes, sizes, strict JSON/JSONL
+  parsing, summary bindings, source bindings, and JSONL counts/order were
+  independently checked and recorded in the package README
+- **Recovery note:** the large JSONL required direct browser saving; recovery
+  did not execute either Python file or regenerate any attachment
+- **Lifecycle:** completed/recovered; independent mathematical and
+  computational audits pending
+
+Recovery preserves without accepting the response's **STOP** self-disposition,
+its proposed family and first member `(6,7,168)`, the claimed block
+dispositions and `G=(0,0,126)`, and the claimed 6,330-tuple zero-failure scan.
+No theorem, counterexample, computed finite evidence, bridge, evidence label,
+or LRC status is promoted by this package.
