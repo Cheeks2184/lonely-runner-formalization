@@ -1,0 +1,62 @@
+{
+  "boundary_totals": {
+    "rho_equals_p_hits": 44,
+    "rho_equals_p_minus_1_hits": 73,
+    "total_candidates": 462,
+    "total_good": 8
+  },
+  "counterexample": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    11,
+    32
+  ],
+  "cross_agreement": {
+    "counterexample_permutations_each_implementation": 5040,
+    "counterexample_pivot_rows": 7,
+    "fixture_scores": 23,
+    "fresh_rerun_outputs_byte_identical": true,
+    "frozen_counts_and_minima": true,
+    "full_histograms_local_scores_good_residues_boundaries": true,
+    "mutation_prefix_rows": 26,
+    "scaling_fixture_factor_pairs": 46
+  },
+  "evidence_label": "computed exact counterexample; mathematical rejection of the universal lemma",
+  "frozen_domain_total": 6330,
+  "gcd": 1,
+  "global_score": "-5245398/1878415",
+  "implementations": {
+    "cpp": {
+      "arithmetic": "boost::multiprecision::cpp_int reduced rationals; unsigned __int128 modular products",
+      "binary": "p82_exact_cpp",
+      "binary_sha256": "596919341ca88c855f5a1f538451991172853e0705bddb5c2f74950f7b15b10b",
+      "build_command": "g++ -O3 -std=c++20 -Wall -Wextra -pedantic -DSOURCE_SHA256=\\\"<source-sha256>\\\" p82_exact_cpp.cpp -o p82_exact_cpp",
+      "candidate_enumeration": "r=block*N+s, 0<=block<p, 1<=s<N; two-sided strict test",
+      "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+      "language": "C++20",
+      "malformed_cli_exit": 64,
+      "output": "p82_exact_cpp.json",
+      "output_sha256": "eb6c17227f9c5c66d6922c342d286e932cdfbc31613068587bb7ac21d8e62266",
+      "run_command": "./p82_exact_cpp > p82_exact_cpp.json",
+      "source": "p82_exact_cpp.cpp",
+      "source_sha256": "5894f3f25bfb6ded7df3b66d7212c27d253e15592be97b612a00957a13f911b8"
+    },
+    "python": {
+      "arithmetic": "arbitrary-precision int + fractions.Fraction",
+      "candidate_enumeration": "literal r=0..M-1, exclude N-divisible",
+      "language": "CPython 3.13.5",
+      "malformed_cli_exit": 2,
+      "output": "p82_exact_python.json",
+      "output_sha256": "618cf7480c44f7d992b0a8fda0de493bfd70e8d276cfa278862e5d2517813225",
+      "run_command": "python3 p82_exact_python.py",
+      "source": "p82_exact_python.py",
+      "source_sha256": "cd5e428b2f1bdbb78385e438b244b919bd4b812c06026354a9c98cd83ab806c0"
+    }
+  },
+  "mutation_ordinal": 26,
+  "schema": "PIPE-P82-DUAL-EXACT-MANIFEST-v1",
+  "status": "exact-counterexample-cross-replayed"
+}
