@@ -32,10 +32,10 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 3)
-        self.assertEqual(metrics["route_queues"], {"launch_ready": 2, "waiting": 0, "parked": 0})
-        self.assertEqual(metrics["audits"], {"total": 16, "accepted": 10, "accepted_negative": 6, "rejected": 0, "pending": 0})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 0, "2": 0, "3": 0})
+        self.assertEqual(metrics["active_pro_cells"], 2)
+        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 2, "parked": 0})
+        self.assertEqual(metrics["audits"], {"total": 26, "accepted": 13, "accepted_negative": 7, "rejected": 0, "pending": 6})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 1, "2": 4, "3": 3})
 
     def test_desktop_pro_authority_and_readback_are_fail_closed(self):
         def unassign(ledger):
@@ -149,7 +149,7 @@ class TaskLedgerValidatorTests(unittest.TestCase):
 
     def test_queue_and_level_metrics_cannot_drift(self):
         def mutate_queue(ledger):
-            task = next(task for task in ledger["tasks"] if task["id"] == "VER-P74-CONTRACT-REVIEW-140")
+            task = next(task for task in ledger["tasks"] if task["id"] == "INFRA-ROLLING-LEDGER-CORRECTION-155")
             task["route_queue"] = "parked"
 
         self.assertHasError(self.errors_for(mutate_queue), "expected metrics mismatch")
