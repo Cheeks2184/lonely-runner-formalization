@@ -364,3 +364,41 @@ promote a theorem, counterexample, computation, or LRC status.
 
 The authoritative review is `docs/response74-mathematical-audit.md`. No Lean
 status is promoted by this manuscript-level audit.
+
+## OPS-P75-RECOVERY-PACKAGE-184 — Prompt75 recovery package
+
+- **Recovery base:** `94442b430f4dbb9b66ec186e5655d556ee4e477e`
+- **Recovery branch:** `research/p75-recovery-package-184`
+- **Launch owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator
+  (`/root`) in the original signed-in browser-capable desktop session
+- **Launch time:** 2026-08-03 20:26:50 -05:00
+  (2026-08-04T01:26:50.6638257Z)
+- **Selected UI state:** Chat; `GPT-5.6 Sol`; Pro; exact prompt readback
+- **Prompt SHA-256:**
+  `39e41e524fa3176f0ba504c165392e2f44d11d087356b25cbf51a859e4cb39b0`
+- **Submitted payload SHA-256:**
+  `02191a16956371c8c45537238cb63d46eafc271c0404efb6724dd59170f969e7`
+- **Completion:** terminal UI readback `Worked for 61m 28s`; observed at
+  2026-08-04T02:35:12.4203735Z
+- **Normalized response:** `research/sol-pro/responses/response75.md`; 56,305
+  UTF-8 bytes; 56,186 characters; 1,168 LF separators; no CR; terminal LF;
+  SHA-256
+  `4fa46783c1e67477d56fc79f04a6b249c995aa2a095578852c2396f872fdd156`
+- **Raw clipboard:** 57,473 UTF-8 bytes; 57,354 characters; 1,168 CRLF
+  separators; no lone LF or lone CR; terminal CRLF; SHA-256
+  `e7e1a71f2964a3736c9f71542dff51fcfbb6adbc2f49bf3bb9e86fecd477419d`
+- **Exact recovered attachment inventory:** none; the UI capture recorded
+  zero observed attachments, and the response does not claim that it supplied
+  an attachment with this answer
+- **Lifecycle:** completed/recovered; independent audits pending
+- **Frozen downstream audits:** `VER-P75-RECOVERY-PROVENANCE-185` and
+  `VERIFY-P75-MATHEMATICAL-AUDIT-186`
+
+Recovery preserves the response's Section 6 **STOP** self-disposition and
+top-level **MIXED** assessment without accepting either. The response records
+that immutable Response68--70 blobs were unavailable in its runtime, so
+provenance and line-specific statements remain conditional even where Prompt75
+supplied reconstructed claims. All mathematical, computational, formal, and
+status claims remain unaccepted pending the named audits. No theorem,
+computation, evidence label, pivot result, or LRC status is promoted by this
+package.
