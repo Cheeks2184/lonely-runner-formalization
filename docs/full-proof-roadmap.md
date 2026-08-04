@@ -691,9 +691,10 @@ unformalized mathematics, not `proved-lean`.
   arithmetic, bad-cover and deletion-gcd characterizations, one-coordinate
   count, factorial interval product, conditional Euclidean extraction, and
   conditional MSS-to-LRC implication chain as `proved-math`. The response's
-  citations `[1]` and `[2]` are unaudited pending correction; the audited
-  external sources are MSS DOI/arXiv `2411.06903v2` and Rosenfeld arXiv
-  `2512.01912v1`.
+  original citation caveat was historical to audit 103 and is resolved at
+  record scope by correction 108 and qualified audit 109. External literature
+  remains unformalized and no mathematical status was promoted. The audited
+  sources are MSS DOI/arXiv `2411.06903v2` and Rosenfeld arXiv `2512.01912v1`.
 - `VER-P67-COMPUTE-PREFLIGHT-104` ACCEPTS five complete finite domains as
   computed finite evidence: tuple/premise/failure counts are
   `8000/2048/192` at `(n,p)=(3,5)`, `10000/608/0` at `(4,2)`,
@@ -723,7 +724,7 @@ an unrelated full cover search separately for every dimension and modulus.
 
 | Rank | Bridge | Distance to LRC | Current assessment |
 | ---: | --- | --- | --- |
-| 1 | C2: prime-forcing product induction | One uniform supply theorem plus induction and an external product-bound dependency | Prompt67 self-disposes **PIVOT** toward obstruction extraction, but this is not a theorem. Citation correction 108 passed audit 109 with qualifications only as a verified correction record. Task105's Luna candidate is rejected operational output pending admission audit 112; both attack lemmas, uniform supply, C2 assembly, and LRC remain open |
+| 1 | C2: prime-forcing product induction | One uniform supply theorem plus induction and an external product-bound dependency | Prompt67 self-disposes **PIVOT** toward obstruction extraction, but this is not a theorem. Citation correction 108 passed audit 109 with qualifications only as a verified correction record. Final audit 112 rejects task105 as `MEDIUM-SPEC-REQUIRED`; salvage is abandoned/indefinitely deferred and VER-104 is the sole accepted finite evidence. Prompt68 is integrated/launch-ready but unlaunched; both attack lemmas, uniform supply, C2 assembly, and LRC remain open |
 | 2 | B: unrestricted all-pivot packing | One stronger modular selection lemma, then existing capacity and pivot reductions | `PACK-09` remains open after Prompt66 STOP/OPEN; Prompt64's separate top-two ratio route is completed/frozen |
 | 3 | C1: deletion-pivot lifting | STOP / OPEN | Sound local ReverseGrid arithmetic survives, but the first-blocker transfer verifier route is frozen under the Prompt65 restart rule |
 | 4 | A: height compression | Frozen at the missing replacement-eligibility existential | `STOP` after Response 61: sound signed-divisor transport exists on paper, but the exact route has no supported descent operation and its finite artifact is nonreproducible |
@@ -763,8 +764,9 @@ proof, or budget stop condition is reached.
 | 2026-08-03 | Prompt67 preparation 092/095 accepted by review 096 and integrated in `7c31df7` | audited research contract | Fixes exact C2 quantifiers, MSS classification, induction bases, threshold arithmetic, falsification, and stop rules; no result is promoted |
 | 2026-08-03 | `/root` launches Prompt67 at 17:17:19 CDT with Chat, GPT-5.6 Sol, and Pro selected | verified operational launch | At launch this opened the first-ranked C2 unrestricted turn; later completion, recovery, and audit stages are recorded separately, and launch itself promotes no result |
 | 2026-08-03 | Prompt67 major turn completes; response and four canonical downloads are recovered in `1294514` | verified recovery/provenance package after reviews 100/105 | Preserves the response's PIVOT self-disposition without accepting it or promoting a claim |
-| 2026-08-03 | `FORM-P67-RESPONSE-MATH-AUDIT-103` and `VER-P67-COMPUTE-PREFLIGHT-104` audit the recovered package | qualified proved-math plus computed finite evidence | Accepts only the enumerated mathematical scopes and five finite domains; response citations `[1]`/`[2]` remain unaudited pending correction |
-| 2026-08-03 | `/root` launches then recovers a citation correction in `e514ef5`; audit 109 accepts with qualifications; task105 produces candidate `27876765` | verified correction record; Luna candidate rejected operationally pending audit 112 | The correction fixes attribution only. Task105 lacked Medium preflight admission, so its candidate promotes no evidence; Sol High owns Pro and Luna remains downstream verification only |
+| 2026-08-03 | `FORM-P67-RESPONSE-MATH-AUDIT-103` and `VER-P67-COMPUTE-PREFLIGHT-104` audit the recovered package | qualified proved-math plus computed finite evidence | Accepts only the enumerated mathematical scopes and five finite domains; audit 103's historical citation caveat is later resolved at record scope by 108/109 |
+| 2026-08-03 | Citation correction `e514ef5` passes qualified audit 109; final audit 112 rejects task105 | verified correction record; `MEDIUM-SPEC-REQUIRED` rejected output | The correction fixes attribution only. Task105 salvage is abandoned/indefinitely deferred; VER-104 is sole accepted finite evidence |
+| 2026-08-03 | Prompt68 correction 115 passes review 117 and is integrated at `2d9b2bbbb33f0297888aac0024666e3a2c33e648` | launch-ready contract, unlaunched | Review 114 rejected the prior boundary; accepted prompt hash begins `fbc421`. No Pro launch or result promotion follows |
 | 2026-08-02 | Entered FULL-PROOF PRIORITY MODE; fixed A/B/C contracts and budgets | research policy | Replaces coefficient-by-coefficient optimization with three explicit unrestricted bridges |
 | 2026-08-02 | Response 57 fixed-shift obstruction: no finite fixed J1 shift family is uniformly row-nonempty | proved-math, independent finite checks | Does not shorten unrestricted path; supports freezing bounded translation variants |
 | 2026-08-02 | Submitted Sol Pro Prompt 58 on A/B/C with adversarial contracts | research in progress | Strategy generation only; no theorem yet |

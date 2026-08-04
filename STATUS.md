@@ -522,9 +522,10 @@ the bad-cover equivalence; the local deletion-gcd characterization; the exact
 one-coordinate bad-set count; the factorial-interval prime-product bound; the
 Euclidean distinct-prime extraction conditional on a fixed obstruction
 integer; and the conditional implication chain through the external MSS
-theorem. No new Lean theorem was produced. Response citations `[1]` and `[2]`
-are **unaudited pending correction** and must not be used as accepted source
-attribution. The audited external sources are the Malikiosis--Santos--Schymura
+  theorem. No new Lean theorem was produced. Audit 103's historical citation
+  caveat was resolved at record scope by correction 108 and qualified audit
+  109; external literature remains unformalized and no mathematical status was
+  promoted. The audited external sources are the Malikiosis--Santos--Schymura
 DOI/arXiv `2411.06903v2` and Rosenfeld arXiv `2512.01912v1`.
 
 `VER-P67-COMPUTE-PREFLIGHT-104` ACCEPTS exactly five finite domains as
@@ -558,8 +559,9 @@ license to normalize recovered bytes. Separately, fresh top-level task
 `LUNA-P67-CLEANROOM-REPLAY-105` launched at
 `2026-08-03T23:22:29.6429001Z` from `exec/fresh`; its 6,565-byte prompt has
 SHA-256 `57806bd37c53d8b2b936d85fd25c3d73b5a1f5b4cbbe4cfbb335a31e850872e5`,
-and effective metadata is `gpt-5.6-luna`, `xhigh`, cwd
-`/home/joshu/code/lrc-luna-p67-cleanroom-105`. Candidate commit
+and effective metadata is `gpt-5.6-luna`, `xhigh`, on branch
+`verify/luna-p67-cleanroom-replay-105` in an isolated local worktree (path
+omitted). Candidate commit
 `278767650bcfde9ff6c8b9e007b6cafd6a994e96` exists, but `/root` terminated the
 remaining process when Luna Narrow Verification Mode took effect. Because no
 Medium lead inspected and authorized a preflight before the full run, task105
@@ -569,9 +571,15 @@ violation, stale board input, a validator that accepts cover bad-coordinate
 bytes `<M` instead of required `<n`, tracked-output writes from `--check`,
 nondeterministic environment/elapsed fields in canonical output, hardcoded
 rather than enforced command/network claims, and a clean-room argument proving
-only no execution/import rather than no source influence. Audit 112 remains
-active; salvage is `MEDIUM-SPEC-REQUIRED` and likely deferred under full-proof
-priority. It may not modify or silently accept the candidate branch.
+only no execution/import rather than no source influence. Audit 112 is final:
+`MEDIUM-SPEC-REQUIRED`; salvage is abandoned or indefinitely deferred under
+full-proof priority. The four rejected candidate-file SHA-256 values are
+`2e7cc6b4f7e183192db8ae802857716ae0c3f21e053aa3ba36152264386c56bb`,
+`16f54e4202370a185bc8456e04f7cf9a3d8fb174b2285edfa552642701f751b2`,
+`33cb6c38eca9d2a3d8c1bf9667a206eecb5fe082ed3b605f956f8d45552a6812`, and
+`d3684addcf031513dc2ef2ed4a938023da2cc5dbcd132e73a55c9dc885d18338` for
+manifest, report, replay script, and tests respectively. VER-104 remains the
+sole accepted finite evidence; task105 may not be silently reused or accepted.
 
 Luna Narrow Verification Mode admits only deterministic, fully specified
 verification as `LUNA-READY` after Medium preflight authorization. Ambiguous
@@ -579,17 +587,16 @@ semantics are `MEDIUM-SPEC-REQUIRED`; novel uniform mathematics is
 `RESEARCH-UNRESOLVED`. Effectiveness is reviewed after ten admitted tasks using
 the task-board metrics; unavailable historical values remain unknown.
 
-Prompt68 preparation commit `47622e46` was rejected by
-`VER-P68-CONTRACT-REVIEW-110` before launch because its existential
-finite-signature target was equivalent to cofinite `PrimeForcing`. Correction
-111 is complete/prepared on commit
-`786ccfe8757b4a90f0400be3bb06a75df54405a5`, prompt SHA-256
-`d6abacb9a23fe02e75c3c9b739355e22b81c41c0cec2ad10f9574e5703abc4c4`.
-It honestly names `COFINITE-PRIME-FORCING` as the sole target and treats
-signatures only as proof devices. Its admission is `RESEARCH-UNRESOLVED`; it
-awaits independent rereview after audit 112, has not launched, and changes no
-theorem status. Prompt65 remains prepared/parked/frozen and must not be
-launched.
+Prompt68 preparation commit `47622e46` was rejected before launch. Review 114
+then rejected the first correction's disposition boundary; correction 115 at
+`cd3118b16b60d058ab35e8fd156433eed5fd3d85` produced prompt SHA-256
+`fbc4219585a67f4a6f2627bf8b0b4ff830b8967813f7258b9e8182197d398fe1`.
+Audit 117 ACCEPTED that contract as launch-ready, and `/root` integrated it in
+merge `2d9b2bbbb33f0297888aac0024666e3a2c33e648`. It honestly names
+`COFINITE-PRIME-FORCING` as the sole target and treats signatures only as proof
+devices. At this correction base the contract is launch-ready but unlaunched;
+there is no Pro cell and no theorem-status promotion. Prompt65 remains
+prepared/parked/frozen and must not be launched.
 
 The earlier `LUNA-PACKING-SEARCH-RECOVERY-060` failed without a commit,
 replay, report, or manifest. Its 6,527 partial lines are non-evidentiary and

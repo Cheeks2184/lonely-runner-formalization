@@ -25,10 +25,19 @@ and integration readiness; it does not promote any mathematical claim.
   launched only from the `original browser-capable desktop Codex session`.
   Sol Medium, Luna, CLI, and nested roles may prepare prompts or perform
   downstream audits; they are never browser operators or Sol Pro cells.
-- Sol Pro work uses six distinct lifecycle stages: **prompt preparation**;
-  **Sol High desktop launch**; **active Sol Pro research**; **response
-  recovery**; **independent audit**; and **integration**. A later stage must
-  not be inferred from an earlier one.
+- Continuous Parallel Research Pipeline Mode keeps ten distinct stages:
+  **contract discovery**, **prompt preparation**, **independent contract
+  review**, **correction**, **launch-ready acceptance**, **Sol High desktop
+  launch**, **active Sol Pro research**, **response recovery**, **independent
+  result audit**, and **integration/status synchronization**. A later stage
+  must not be inferred from an earlier one.
+- Queue work by risk: Level 1 is documentation, hashes, and deterministic
+  contract checks; Level 2 is bounded computation or formal replay; Level 3 is
+  novel unrestricted research and remains root-owned. At this commit Pro usage
+  is `0 / 4`, one Prompt68 contract is launch-ready, and the active Medium
+  pipeline is preparing Prompt69/Prompt70 contracts plus ledger task120. These
+  preparations use isolated local worktrees with paths omitted and authorize
+  no launch.
 - Inherited workers must not be called “Luna.” Luna labels apply only where
   top-level CLI route/model metadata has been runtime-verified below.
 - Authoritative route metadata comes from the top-level CLI session/thread
@@ -52,17 +61,17 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 
 | Metric | Value | Counting rule |
 | --- | ---: | --- |
-| Accepted audit deliverables | 45 | The prior 40 plus Prompt67 audits 103--105 and 109, and negative Prompt68 contract review 110, are accepted at their exact qualified-mathematical, computed-finite-evidence, provenance, citation-record, or contract-rejection scopes. None promotes an open theorem. |
-| Accepted negative audits | 19 | The prior 18 plus review 110, which rejects Prompt68's initial existential finite-signature target as equivalent to cofinite `PrimeForcing`. Correction 111 is active; no Pro launch or theorem-status change follows. |
+| Accepted audit deliverables | 49 | Pre-review baseline was 48 through task117; `/root` acceptance of sound negative review 116 adds one. Task121 remains review and is excluded. None promotes an open theorem. |
+| Accepted negative audits | 22 | Pre-review baseline was 21 through task117; `/root` acceptance of review 116 adds one rejected status-sync audit. Task121 is not counted. |
 | Accepted operational documentation tasks | 6 | The prior four plus status sync 088 and the corrected Prompt67 preparation group 092/095 are accepted after reviews 090 and 096. Prompt preparation is not Sol Pro execution or mathematical evidence. |
 | Accepted recovery deliverables | 7 | Response59, Response62, Response63, Prompt66, Prompt64, Prompt67, and Prompt67's citation-correction recovery are accepted at exact provenance/record scopes. Prompt67 preserves one normalized response plus four canonical downloads in `1294514`; correction `e514ef5` has no attachments and is accepted by audit 109 only as a verified citation-correction record. |
 | Accepted implementations | 0 unrestricted; 9 supporting artifacts | The prior seven plus the corrected public-release audit wrapper and its deterministic regression test are integrated; none proves an open bridge. |
 | Integrated deliverable groups | 12 | The prior eight plus status sync merge `321d29d`, audited Prompt67 contract merge `7c31df7`, corrected release-audit merge `563a272`, and root lifecycle record `fc004e5` are integrated. |
 | Authoritative source replay | verified clean native WSL | Checkpoint `fc004e5` passed cache retrieval (8,638 artifacts), a 3,591-job `lake build`, a 302-report standard-foundation trust audit, all 172 Python tests, a 274-commit release scan, and clean-tree checks in a fresh clone. |
-| Active Sol Pro cells | 0 / 4 | Prompt67's major turn and root-owned citation-correction follow-up both completed/recovered; audit 109 accepts the correction record with qualifications only. Sol High owns Pro; Prompt64 and Prompt66 remain completed/recovered at STOP/OPEN. |
+| Active Sol Pro cells | 0 / 4 | Prompt68 is integrated and launch-ready but unlaunched. Sol High alone owns Pro; Prompt64 and Prompt66 remain completed/recovered at STOP/OPEN. |
 | Prepared / parked Sol Pro cells | 1 | `SOL-P65-PRO-C-001` remains prepared/parked/frozen and must not be launched. Prompt67's major turn and correction follow-up are completed/recovered, not prepared or active. |
-| Active Sol Medium leads | 1 running / 3 roles | Verification task 112 is auditing task105 admission and candidate output. Prompt68 correction 111 is complete/prepared on `786ccfe` and awaits rereview; Prompt67 audits 103--105 and 109 are complete. |
-| Active Luna workers | 0 / 6 | `/root` terminated the remaining task105 process after Narrow Verification Mode took effect. Candidate commit `278767650bcfde9ff6c8b9e007b6cafd6a994e96` is rejected operational output pending admission audit 112; it promotes no evidence. |
+| Active Sol Medium leads | 3 preparation roles / 3 | Prompt69 task118, Prompt70 task119, and rolling ledger task120 have isolated worktrees at integrated base `2d9b2bb`; no launch or result is implied. |
+| Active Luna workers | 0 / 6 | Task105 is final rejected operational output under audit 112; salvage is abandoned or indefinitely deferred and no `LUNA-READY` task exists. |
 | Queued Luna workers | 0 | The failed packing-search attempts are closed; the independent Prompt66 certificate replay is completed, not queued. |
 | Duplicated work | 0 unplanned; 1 deliberate replication | Prompt60 PRO-E intentionally overlaps the completed clean-room Response59 audit to reduce correlated error. |
 | Failed delegations | 9 | The prior eight plus `LUNA-P66-REPLAY-DOCSYNC-076`, whose workspace-write sandbox treated the WSL UNC worktree as read-only and stopped without changes, tests, or a commit. This is a narrow failed runtime delegation record, not evidence about Luna or other runtimes. |
@@ -71,8 +80,12 @@ Status values are `planned`, `prepared`, `queued`, `active`, `running`,
 | Prompt65 verifier attempts | 0 accepted / 3 rejected or stopped | `VER-P65-FALSIFY-028`, `VER-P65-REPAIR-030`, and `VER-P65-REPAIR-033` produced no accepted implementation or evidence. |
 | Prompt65 complete scans | 0 accepted / 0 completed | No complete 1,397-row scan was accepted or completed. |
 | Unrestricted route reassessment | C2 PIVOT/open; B packing open; P64/C1/A frozen | Prompt67 recommends PIVOT to obstruction extraction, but both attack lemmas, uniform supply, C2 assembly, and LRC remain open. `PACK-09` remains open while Prompt64's ratio route and C1/A are frozen. |
-| Integration backlog | 1 active Prompt67 lifecycle/status group | Recovery and audits through qualified citation audit 109 are accepted at exact scopes and task 106 awaits review. Task105 candidate output remains rejected pending admission audit 112. |
-| Wait time | 1 active Medium audit; no idle orchestration wait | Luna-admission audit 112 is active. Prompt68 correction 111 is complete/prepared pending rereview; no Luna process or Sol Pro cell is active. |
+| Integration backlog | 0 accepted groups; 1 correction in review | Prompt68 integrated at `2d9b2bb`; task121 corrects rejected sync task106 and is excluded until accepted. |
+| Wait time | not yet measured | Define as elapsed time from launch-ready acceptance to actual Pro launch; Prompt68 is unlaunched, so no duration is asserted. |
+| Contract cycle time | not yet measured | Define as contract discovery through launch-ready acceptance; begin normalized measurement with the next completed contract. |
+| Research cycle time | not yet measured | Define as actual Pro launch through recovered response; no active Pro cell exists. |
+| Audit cycle time | not yet measured | Define as recovery through final independent audit disposition; historical values are not reconstructed. |
+| Integration latency | not yet measured | Define as accepted audit through root integration/status sync; historical values are not reconstructed. |
 
 Metrics are updated only from a worker result accepted by the supervising
 lead. A sound negative audit counts as an accepted audit deliverable, but not
@@ -90,12 +103,12 @@ review occurs after ten admitted tasks.
 | --- | ---: | --- |
 | Launched | 9 tracked Luna-labeled tasks | Exact `LUNA-*` row count through task105. |
 | `LUNA-READY` | 0 recorded | Admission label is new; nine historical/transition rows are not retroactively classified. |
-| Rejected admission | 1 | Task105's old full run is rejected; any salvage remains `MEDIUM-SPEC-REQUIRED` and likely deferred under full-proof priority. |
+| Rejected admission | 1 | Task105's old full run is rejected `MEDIUM-SPEC-REQUIRED`; salvage is abandoned or indefinitely deferred. |
 | Preflight pass / fail | 0 / 0 recorded; 1 missing | Task105 ran without the required Medium-inspected preflight; older rows lack phase data. |
 | Full runs | historical unknown; 1 policy-invalid candidate | Task105 produced candidate commit `27876765...` before policy enforcement. |
 | Accepted implementations | 2 | Adapter 046 and corrected public-audit implementation 093. |
-| Accepted audit deliverables | 2 | Runtime routing audit 001 and independent finite replay 069 at their reviewed scopes. |
-| Semantic-spec escalations | 1 | Task105 escalated to admission audit 112 and possible split preflight/full tasks. |
+| Accepted audit deliverables | 3 | Runtime routing audit 001, independent finite replay 069, and final admission audit 112 at their reviewed scopes. |
+| Semantic-spec escalations | 1 resolved/deferred | Audit 112 resolved task105 as `MEDIUM-SPEC-REQUIRED`; salvage is abandoned or indefinitely deferred. |
 | Routine repairs | 1 | Corrected public-audit implementation 093. |
 | Failed runtimes | 2 | Tasks 060 and 076. |
 | Rejected outputs | 3 | Tasks 077, 089, and policy-invalid candidate output 105; failed runtimes are counted separately. |
@@ -2420,15 +2433,15 @@ review occurs after ten admitted tasks.
 - **Base:** recovered response commit `1294514a0a879b0237f8b9d0da30ee05e81f79f4`
 - **Dependencies:** task 100
 - **Branch / worktree:** isolated read-only review worktrees
-- **Status:** `verified` tranche at tasks 103--105; attempted clean-room task105
-  is rejected operational output separately
+- **Status:** `verified` tranche at tasks 103--105; final audit 112 separately
+  rejects the attempted clean-room task105 output
 - **Exact deliverable:** Independently audit mathematics, computation,
   proposed Lean, dependencies, and exact evidence labels.
 - **Allowed files:** none during read-only review
 - **Acceptance command:** Mathematical audit 103, computational preflight 104,
   and provenance review 105 at their exact nonoverlapping scopes.
-- **Blocker:** None for the accepted 103--105 tranche. Admission audit 112 is
-  active for any future fresh Luna split tasks.
+- **Blocker:** None for the accepted 103--105 tranche. Audit 112 finalizes
+  `MEDIUM-SPEC-REQUIRED`; salvage is abandoned or indefinitely deferred.
 - **Final disposition / promotion authority:** Leads recommend disposition;
   `/root` alone promotes or rejects claims.
 
@@ -2440,14 +2453,14 @@ review occurs after ten admitted tasks.
 - **Base:** recovery commit `1294514a0a879b0237f8b9d0da30ee05e81f79f4`
 - **Dependencies:** tasks 100 and 101
 - **Branch / worktree:** main; root-only merge authority
-- **Status:** `planned`
+- **Status:** `integrated` at operational/status scope
 - **Exact deliverable:** Integrate only independently accepted response,
   artifacts, proofs, counterexamples, or stop records with exact labels.
 - **Allowed files:** determined from accepted recovery/audit scope
 - **Acceptance command:** Authoritative clean replay and public-release audit
   appropriate to the accepted changes.
-- **Blocker:** Citation correction, clean-room replay, and status-sync review
-  remain active/pending; none may be inferred complete.
+- **Blocker:** None for accepted correction/audit integration through Prompt68
+  merge `2d9b2bbbb33f0297888aac0024666e3a2c33e648`; open mathematics remains open.
 - **Final disposition / promotion authority:** No theorem or LRC status can be
   promoted from preparation, launch, recovery, or self-label alone.
 
@@ -2467,8 +2480,9 @@ review occurs after ten admitted tasks.
 - **Acceptance command:** Reconstruct definitions and proofs independently,
   check exact integer thresholds and induction indexing, and separate external
   attribution from mathematical validity.
-- **Blocker:** Response citations `[1]` and `[2]` remain unaudited pending the
-  separately recovered correction and audit 109.
+- **Blocker:** The citation caveat was historical to audit 103 and is resolved
+  at record scope by correction 108 and qualified audit 109; external
+  literature remains unformalized.
 - **Final disposition / promotion authority:** QUALIFIED ACCEPT only the exact
   PART-80 proved-math scopes. No Lean theorem, attack lemma, uniform supply,
   assembled C2 route, PIVOT disposition, or unrestricted result is accepted.
@@ -2488,8 +2502,8 @@ review occurs after ten admitted tasks.
 - **Allowed files:** none; read-only downstream audit
 - **Acceptance command:** Inspect both implementations and replay preflight for
   `(3,5)`, `(4,2)`, `(4,3)`, `(4,5)`, and `(4,7)` with exact hashes/counts.
-- **Blocker:** None at computed-finite-evidence scope; fresh Luna clean-room
-  replay 105 remains active and is not inferred complete.
+- **Blocker:** None at computed-finite-evidence scope. VER-104 remains the sole
+  accepted finite evidence after final audit 112 rejects task105.
 - **Final disposition / promotion authority:** ACCEPT exactly COMP-35 as
   computed finite evidence, never as a theorem or uniform claim.
 
@@ -2520,9 +2534,9 @@ review occurs after ten admitted tasks.
 - **Owner / supervising authority:** fresh top-level Luna worker / `/root`
 - **Base:** recovered Prompt67 package commit `1294514`
 - **Dependencies:** tasks 100 and 104
-- **Branch / worktree:** exact isolated cwd
-  `/home/joshu/code/lrc-luna-p67-cleanroom-105`
-- **Status:** `rejected` operational output pending admission audit 112
+- **Branch / worktree:** `verify/luna-p67-cleanroom-replay-105` in an isolated
+  local worktree (path omitted)
+- **Status:** `rejected` operational output; final audit 112
 - **Narrow-mode admission:** `MEDIUM-SPEC-REQUIRED`; no Medium lead inspected
   or authorized a preflight before the old full run
 - **Exact deliverable:** Independently reconstruct and replay the five finite
@@ -2541,11 +2555,15 @@ review occurs after ten admitted tasks.
   required `<n`; `--check` writes tracked outputs; canonical outputs contain
   nondeterministic environment/elapsed data; some command/network claims are
   hardcoded rather than enforced; and the clean-room argument proves only no
-  execution/import, not no source influence.
+  execution/import, not no source influence. Candidate-file SHA-256 values are
+  manifest `2e7cc6b4f7e183192db8ae802857716ae0c3f21e053aa3ba36152264386c56bb`,
+  report `16f54e4202370a185bc8456e04f7cf9a3d8fb174b2285edfa552642701f751b2`,
+  replay script `33cb6c38eca9d2a3d8c1bf9667a206eecb5fe082ed3b605f956f8d45552a6812`,
+  and tests `d3684addcf031513dc2ef2ed4a938023da2cc5dbcd132e73a55c9dc885d18338`.
 - **Final disposition / promotion authority:** Rejected operational output.
-  No computed-finite-evidence promotion follows. Audit 112 may specify fresh
-  split read-only preflight/full-replay tasks; it cannot accept this run by
-  inference. Luna is downstream audit only, never Sol Pro owner.
+  No computed-finite-evidence promotion follows. Audit 112 classifies salvage
+  `MEDIUM-SPEC-REQUIRED`, abandoned or indefinitely deferred. Luna is
+  downstream audit only, never Sol Pro owner.
 
 ### OPS-P67-CITATION-CORRECTION-RECOVERY-108 — correction recovery
 
@@ -2627,7 +2645,7 @@ review occurs after ten admitted tasks.
 - **Base:** rejected preparation commit `47622e46`
 - **Dependencies:** negative review 110
 - **Branch / worktree:** isolated correction task; local path omitted
-- **Status:** `review` (corrected/prepared; independent rereview pending)
+- **Status:** `rejected` after later review 114
 - **Narrow-mode admission:** `RESEARCH-UNRESOLVED`; signatures may be proof
   devices, but the uniform target is novel research and not a Luna task
 - **Exact deliverable:** Replace the equivalent existential-signature target
@@ -2638,7 +2656,8 @@ review occurs after ten admitted tasks.
   `786ccfe8757b4a90f0400be3bb06a75df54405a5`; prompt SHA-256
   `d6abacb9a23fe02e75c3c9b739355e22b81c41c0cec2ad10f9574e5703abc4c4`;
   independent rereview must confirm the honest target and no launch.
-- **Blocker:** Corrected prompt awaits independent rereview after audit 112.
+- **Blocker:** Review 114 found the disposition boundary still overstated
+  readiness; correction 115 supersedes this draft.
 - **Final disposition / promotion authority:** Prepared/rejected/revision-active
   only. The prompt acknowledges equivalence to finitely many bad primes. Sol
   High owns any future Pro launch, and no launch is authorized by preparation
@@ -2653,9 +2672,9 @@ review occurs after ten admitted tasks.
   `278767650bcfde9ff6c8b9e007b6cafd6a994e96`
 - **Dependencies:** policy transition and rejected operational task105 output
 - **Branch / worktree:** read-only candidate review; candidate branch unchanged
-- **Status:** `active`
-- **Narrow-mode admission:** deciding between `LUNA-READY` fresh split tasks
-  and `MEDIUM-SPEC-REQUIRED`; existing output is not admissible evidence
+- **Status:** `verified` (final negative admission audit)
+- **Narrow-mode admission:** `MEDIUM-SPEC-REQUIRED`; existing output is not
+  admissible evidence and no `LUNA-READY` promotion follows
 - **Exact deliverable:** Inspect task105 semantics, preflight boundaries,
   candidate scope, and whether fresh read-only preflight/full-replay tasks can
   be specified without novel research judgment.
@@ -2663,13 +2682,75 @@ review occurs after ten admitted tasks.
 - **Acceptance command:** Exact target/semantics checklist, preflight decision,
   candidate commit inspection, split-task recommendation, and no output reuse
   without explicit authorization.
-- **Blocker:** Interim audit confirms the old run is rejected operational
-  output for the exact defects recorded in task105. Salvage remains
-  `MEDIUM-SPEC-REQUIRED` and is likely deferred under full-proof priority;
-  final split-task admission disposition is still pending.
+- **Blocker:** Final audit confirms the old run is rejected for absent Medium
+  preflight authorization, a one-layer violation, stale board input, `<M`
+  rather than `<n` validation, tracked writes from `--check`, nondeterministic
+  canonical environment/elapsed fields, unenforced command/network claims,
+  and a clean-room argument that proves only no execution/import rather than
+  no source influence. Salvage is abandoned or indefinitely deferred.
 - **Final disposition / promotion authority:** Candidate task105 output remains
-  rejected operational output. Audit 112 may admit only future fresh tasks; it
-  cannot promote computation or modify the candidate branch.
+  rejected operational output. VER-104 is the sole accepted finite evidence;
+  audit 112 cannot promote computation or modify the candidate branch.
+
+### FORM-P68-DISPOSITION-REVIEW-114 — Prompt68 correction review
+
+- **ID:** `FORM-P68-DISPOSITION-REVIEW-114`
+- **Lane:** independent contract review
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base:** correction 111 commit `786ccfe8757b4a90f0400be3bb06a75df54405a5`
+- **Dependencies:** rejected initial review 110 and correction 111
+- **Branch / worktree:** read-only review; local path omitted
+- **Status:** `verified` (REJECTED)
+- **Exact deliverable:** Audit the cofinite target and disposition boundary.
+- **Allowed files:** none; read-only
+- **Acceptance command:** Exact target/equivalence, ownership, launch, and open-status checks.
+- **Blocker:** The disposition boundary still overstated readiness.
+- **Final disposition / promotion authority:** Sound negative review only; no launch or result promotion.
+
+### FORM-P68-DISPOSITION-CORRECTION-115 — Prompt68 final correction
+
+- **ID:** `FORM-P68-DISPOSITION-CORRECTION-115`
+- **Lane:** contract correction
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base:** rejected correction 111
+- **Dependencies:** review 114
+- **Branch / worktree:** `research/p68-obstruction-contract-107` in an isolated local worktree (path omitted)
+- **Status:** `integrated` after audit 117
+- **Exact deliverable:** Correct the disposition boundary while preserving `COFINITE-PRIME-FORCING` as the sole target.
+- **Allowed files:** Prompt68 contract preparation paths only
+- **Acceptance command:** Commit `cd3118b16b60d058ab35e8fd156433eed5fd3d85`; prompt SHA-256 `fbc4219585a67f4a6f2627bf8b0b4ff830b8967813f7258b9e8182197d398fe1`.
+- **Blocker:** None at contract scope after audit 117.
+- **Final disposition / promotion authority:** Launch-ready contract only; root-owned Sol High launch is separate.
+
+### VER-P68-LAUNCH-READINESS-AUDIT-117 — Prompt68 final audit
+
+- **ID:** `VER-P68-LAUNCH-READINESS-AUDIT-117`
+- **Lane:** independent launch-readiness audit
+- **Owner / supervising lead:** Verification Lead / `/root`
+- **Base:** correction 115 commit `cd3118b16b60d058ab35e8fd156433eed5fd3d85`
+- **Dependencies:** reviews 110/114 and correction 115
+- **Branch / worktree:** read-only review; local path omitted
+- **Status:** `verified` (ACCEPT; launch-ready)
+- **Exact deliverable:** Verify the sole target, prompt bytes, open labels, and lifecycle separation.
+- **Allowed files:** none; read-only
+- **Acceptance command:** Exact commit and prompt hash; confirm no launch and no status promotion.
+- **Blocker:** None at contract scope.
+- **Final disposition / promotion authority:** ACCEPT launch-ready contract, integrated by `/root` in `2d9b2bbbb33f0297888aac0024666e3a2c33e648`; still unlaunched at this correction base.
+
+### FORM-P67-STATUS-SYNC-REVIEW-116 — rejected task106 review
+
+- **ID:** `FORM-P67-STATUS-SYNC-REVIEW-116`
+- **Lane:** independent documentation review
+- **Owner / supervising lead:** Formalization Lead / `/root`
+- **Base:** task106 commit `b9162d35592dae7e5cbed8ec43d2fe962ed97b54`
+- **Dependencies:** status sync 106 and lifecycle facts through 117
+- **Branch / worktree:** read-only review; local path omitted
+- **Status:** `verified` (REJECTED)
+- **Exact deliverable:** Audit lifecycle, metrics, privacy, and Prompt68/task105 final states.
+- **Allowed files:** none; read-only
+- **Acceptance command:** Exact identifiers, arithmetic, path privacy, open labels, and no self-promotion.
+- **Blocker:** Task106 contained private paths, stale pending states, incomplete Prompt68 rows, and stale metrics.
+- **Final disposition / promotion authority:** Accepted negative audit only; correction task121 remains review and is excluded from metrics.
 
 ### OPS-P67-LIFECYCLE-STATUS-SYNC-106 — Prompt67 lifecycle/status sync
 
@@ -2678,20 +2759,35 @@ review occurs after ten admitted tasks.
 - **Owner / supervising lead:** Research-Operations Lead / `/root`
 - **Base:** `1294514a0a879b0237f8b9d0da30ee05e81f79f4`
 - **Dependencies:** tasks 100, 103--105, 108--112
-- **Branch / worktree:** `docs/p67-lifecycle-status-sync-106` at
-  `/home/joshu/code/lrc-p67-status-sync-106`
-- **Status:** `review`
+- **Branch / worktree:** `docs/p67-lifecycle-status-sync-106` in an isolated
+  local worktree (path omitted)
+- **Status:** `rejected` by review 116; superseded by correction 121
 - **Exact deliverable:** Synchronize Prompt67 preparation, launch, completion,
   recovery, accepted audit scopes, correction lifecycle, Narrow Verification
-  Mode, rejected task105 output, and active admission audit 112 without
+  Mode, rejected task105 output, and admission audit 112 without
   promoting an open claim.
 - **Allowed files:** minimal authoritative status documentation only
 - **Acceptance command:** One commit; exact base/scope; label and lifecycle
   consistency; unique task IDs; diff check; public scan; clean status.
-- **Blocker:** Pending independent review and final `/root` acceptance.
+- **Blocker:** Review 116 found privacy, lifecycle, row-completeness, and metric defects.
 - **Final disposition / promotion authority:** Review-ready documentation only;
   task 106 is excluded from accepted operational metrics and cannot complete
-  active admission audit 112 or Prompt68 rereview.
+  audit 112 or Prompt68 review.
+
+### OPS-P67-STATUS-SYNC-CORRECTION-121 — lifecycle/status correction
+
+- **ID:** `OPS-P67-STATUS-SYNC-CORRECTION-121`
+- **Lane:** Level 1 research operations / public status correction
+- **Owner / supervising lead:** Research-Operations Lead / `/root`
+- **Base:** rejected task106 commit `b9162d35592dae7e5cbed8ec43d2fe962ed97b54`
+- **Dependencies:** negative review 116 and accepted lifecycle facts through 117
+- **Branch / worktree:** `docs/p67-lifecycle-status-sync-106` in an isolated local worktree (path omitted)
+- **Status:** `review`
+- **Exact deliverable:** Correct privacy, citation history, task105/112 disposition, Prompt68 lifecycle, metrics, and continuous-pipeline policy in the five status documents.
+- **Allowed files:** `README.md`, `STATUS.md`, `docs/full-proof-roadmap.md`, `docs/parallel-task-board.md`, and `docs/proof-obligations.md`
+- **Acceptance command:** Exactly one correction commit; unique IDs; metric arithmetic; diff check; privacy and public-release audits; clean worktree.
+- **Blocker:** Pending independent `/root` acceptance.
+- **Final disposition / promotion authority:** Review-only correction excluded from metrics; it promotes no launch, evidence, theorem, or unrestricted result.
 
 ## Integration order
 
@@ -2745,12 +2841,15 @@ review occurs after ten admitted tasks.
     unverified PIVOT self-disposition. Preserve the distinct preparation,
     Sol High launch, major-turn completion, response recovery, accepted
     mathematical/computational/provenance scopes, citation-correction recovery,
-    qualified correction audit, rejected task105 operational output, active
-    admission audit 112, and future integration stages. Sol High alone owns
+    qualified correction audit, final negative admission audit 112, rejected
+    task105 operational output, Prompt68 reviews 110/114, correction 115, audit
+    117, and integration `2d9b2bbbb33f0297888aac0024666e3a2c33e648`.
+    Sol High alone owns
     Pro; Medium and Luna are downstream audit only. Keep both Prompt67 attack
     lemmas, Prompt68's cofinite target, uniform supply, C2 assembly, `PACK-09`,
-    and unrestricted LRC open; keep Prompt64/C1/A frozen. Prompt68 correction
-    111 is prepared/pending review and has not launched.
+    and unrestricted LRC open; keep Prompt64/C1/A frozen. Prompt68 is
+    launch-ready but unlaunched; preparation work on Prompt69/70 and ledger120
+    authorizes no browser action or mathematical promotion.
 
 ## Manual field-audit checklist
 

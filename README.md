@@ -359,9 +359,11 @@ unformalized; no mathematical status promotion**. The audited external sources
 are the MSS DOI/arXiv `2411.06903v2` and Rosenfeld arXiv `2512.01912v1`.
 The attempted top-level Luna clean-room replay produced candidate commit
 `27876765`, but its remaining process was terminated when Narrow Verification
-Mode took effect. Because no Medium-inspected preflight preceded the full run,
-that commit is rejected operational output pending admission audit 112 and
-promotes no evidence. C2 prime-forcing product induction
+Mode took effect. Final audit 112 classifies it `MEDIUM-SPEC-REQUIRED`: the
+output is rejected, salvage is abandoned or indefinitely deferred, and sole
+accepted finite evidence remains audit 104. Prompt68's corrected cofinite
+forcing contract passed review 117 and is integrated at `2d9b2bb`, but remains
+unlaunched and promotes no result. C2 prime-forcing product induction
 remains the open first-ranked route; `UniformPrimeForcingSupply`, both Prompt67
 attack lemmas, the assembled C2 bridge, and unrestricted LRC remain open.
 Bridge B packing remains open, while C1 and A remain frozen. DPLP remains open:
