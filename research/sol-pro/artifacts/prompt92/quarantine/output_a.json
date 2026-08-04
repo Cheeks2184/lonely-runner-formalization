@@ -1,0 +1,191 @@
+{
+  "case_order": [
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      3,
+      16
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "cases": [
+    {
+      "M": 8,
+      "deletion_gcd_premise": 256,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 3,
+      "product_nondivisible_premise": 64,
+      "q": 2,
+      "raw_tuples": 512
+    },
+    {
+      "M": 16,
+      "deletion_gcd_premise": 2048,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 3,
+      "product_nondivisible_premise": 1280,
+      "q": 4,
+      "raw_tuples": 4096
+    },
+    {
+      "M": 32,
+      "deletion_gcd_premise": 16384,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 3,
+      "product_nondivisible_premise": 13312,
+      "q": 8,
+      "raw_tuples": 32768
+    },
+    {
+      "M": 64,
+      "deletion_gcd_premise": 131072,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 3,
+      "product_nondivisible_premise": 118784,
+      "q": 16,
+      "raw_tuples": 262144
+    },
+    {
+      "M": 10,
+      "deletion_gcd_premise": 6688,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 4,
+      "product_nondivisible_premise": 608,
+      "q": 2,
+      "raw_tuples": 10000
+    },
+    {
+      "M": 20,
+      "deletion_gcd_premise": 107008,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 4,
+      "product_nondivisible_premise": 29184,
+      "q": 4,
+      "raw_tuples": 160000
+    },
+    {
+      "M": 40,
+      "deletion_gcd_premise": 1712128,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 4,
+      "product_nondivisible_premise": 856064,
+      "q": 8,
+      "raw_tuples": 2560000
+    }
+  ],
+  "completion_marker": "COMPLETE",
+  "domain": "labelled tuples in range(M)^n, lexicographic itertools.product order",
+  "first_failure_rule": "first tuple in declared case order and lexicographic tuple order",
+  "fixtures": {
+    "failed_deletion_fixture": {
+      "deletion_gcds": [
+        2,
+        1,
+        1
+      ],
+      "failed_labels": [
+        0
+      ]
+    },
+    "malformed_case_results": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "malformed_rejected": true,
+    "prompt84_q8": {
+      "aggregate_q_divisibility": true,
+      "deletion_gcds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "full_strict_cover": true,
+      "individual_q_divisibility": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "strengthened_conclusion_fails": true
+    },
+    "r0_included_and_bad_for_all_tested_owners": true,
+    "repeated_fixture": {
+      "coincident_labelled_sets_retained": [
+        [
+          0,
+          1,
+          7
+        ],
+        [
+          0,
+          1,
+          7
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "deletion_gcds": [
+        1,
+        1,
+        1
+      ],
+      "product_divisible": true
+    },
+    "strict_equality": {
+      "r1_strict_bad": true,
+      "r2_equality_safe": true,
+      "r6_reflected_equality_safe": true
+    },
+    "weak_bound_deliberate_disagreement": true,
+    "zero_fixture": {
+      "deletion_gcds": [
+        1,
+        1,
+        1
+      ],
+      "product_divisible": true
+    }
+  },
+  "implementation": "A",
+  "implementation_description": "literal deletion gcd for every label; natural product remainder; literal r/owner strict loops",
+  "language": "Python",
+  "python_version": "3.13.5",
+  "r_zero_included": true,
+  "source_sha256": "528b23b4e0dc2b5cbb447c6a947962edc6e00ce440037335243c036044a1924d",
+  "strict_test": "min((r*v)%M, M-((r*v)%M)) < q"
+}

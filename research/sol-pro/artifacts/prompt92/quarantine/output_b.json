@@ -1,0 +1,141 @@
+{
+  "case_order": [
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      3,
+      16
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "cases": [
+    {
+      "M": 8,
+      "deletion_gcd_premise": 256,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 3,
+      "product_nondivisible_premise": 64,
+      "q": 2,
+      "raw_tuples": 512
+    },
+    {
+      "M": 16,
+      "deletion_gcd_premise": 2048,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 3,
+      "product_nondivisible_premise": 1280,
+      "q": 4,
+      "raw_tuples": 4096
+    },
+    {
+      "M": 32,
+      "deletion_gcd_premise": 16384,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 3,
+      "product_nondivisible_premise": 13312,
+      "q": 8,
+      "raw_tuples": 32768
+    },
+    {
+      "M": 64,
+      "deletion_gcd_premise": 131072,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 3,
+      "product_nondivisible_premise": 118784,
+      "q": 16,
+      "raw_tuples": 262144
+    },
+    {
+      "M": 10,
+      "deletion_gcd_premise": 6688,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 4,
+      "product_nondivisible_premise": 608,
+      "q": 2,
+      "raw_tuples": 10000
+    },
+    {
+      "M": 20,
+      "deletion_gcd_premise": 107008,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 4,
+      "product_nondivisible_premise": 29184,
+      "q": 4,
+      "raw_tuples": 160000
+    },
+    {
+      "M": 40,
+      "deletion_gcd_premise": 1712128,
+      "full_cover_failures": 0,
+      "lexicographically_first_failure": null,
+      "n": 4,
+      "product_nondivisible_premise": 856064,
+      "q": 8,
+      "raw_tuples": 2560000
+    }
+  ],
+  "completion_marker": "COMPLETE",
+  "domain": "all labelled tuples, itertools.product lexicographic order",
+  "first_failure_rule": "first in case order, then tuple lexicographic order",
+  "fixtures": {
+    "deletion_fixture_label_status": [
+      false,
+      true,
+      true
+    ],
+    "deliberate_weak_endpoint_includes_equalities": true,
+    "equality_r2_and_r6_absent": true,
+    "malformed_rejected": true,
+    "prompt84_q8": {
+      "aggregate_divisible": true,
+      "full_cover": true,
+      "no_individual_multiple_of_q": true,
+      "primewise_premise": true
+    },
+    "r0_bit_present_for_zero_and_nonzero": true,
+    "repeated_masks_equal_but_label_slots_retained": true,
+    "repeated_primewise_premise": true,
+    "repeated_product_divisible": true,
+    "strict_bits_owner_1_M8": [
+      0,
+      1,
+      7
+    ],
+    "zero_primewise_premise": true,
+    "zero_product_divisible": true
+  },
+  "implementation": "B",
+  "implementation_description": "primewise all-deletion characterization; total truncated 2-adic valuation; independently built owner bitsets",
+  "language": "Python",
+  "python_version": "3.13.5",
+  "r_zero_included": true,
+  "source_sha256": "0262aedb8ef44712347ef6ff237c163f8acc038a44cf490e59de64bb8088890a",
+  "strict_test": "owner bit set only when cyclic representative is < q"
+}

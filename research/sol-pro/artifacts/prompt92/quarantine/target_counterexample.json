@@ -1,0 +1,138 @@
+{
+  "bruteforce_calibrations": {
+    "1024": true,
+    "128": true,
+    "16": true,
+    "256": true,
+    "32": true,
+    "512": true,
+    "64": true,
+    "8": true
+  },
+  "canonical_representatives": true,
+  "complete_cover_decision_table": [
+    "r even -> owner M/2, because r(M/2)=0 mod M",
+    "r odd and rho_M(r)<q -> owner 1",
+    "r odd and |r-M/2|<q -> owner M/2-1",
+    "remaining odd r; reflect r to x=min(r,M-r), so q<=x<=M/2-q",
+    "x == 1 mod 4 -> owner M/4-1, with rho=|M/4-x|<=3q/4<q",
+    "x == 3 mod 4 -> owner M/4+1, with rho=|M/4-x|<=3q/4<q"
+  ],
+  "completion_marker": "COMPLETE",
+  "coordinate_two_adic_valuations": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    116
+  ],
+  "deletion_gcds": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "first_missing_conclusion": "q_n does not divide the labelled product; its 2-adic valuation is E_n-1",
+  "five_distinct_set_private_residues": {
+    "1": {
+      "bad_vector": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "exactly_one_bad": true,
+      "r": 1
+    },
+    "a+1": {
+      "bad_vector": [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "exactly_one_bad": true,
+      "r": 166153499473114484112975882535043075
+    },
+    "a-1": {
+      "bad_vector": [
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "exactly_one_bad": true,
+      "r": 166153499473114484112975882535043073
+    },
+    "b": {
+      "bad_vector": [
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "exactly_one_bad": true,
+      "r": 166153499473114484112975882535043072
+    },
+    "b-1": {
+      "bad_vector": [
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "exactly_one_bad": true,
+      "r": 581537248155900694395415588872650751
+    }
+  },
+  "language": "Python",
+  "parameters": {
+    "A_n": 4640650289117164100520051333566036654601,
+    "C_n": 21,
+    "E_n": 117,
+    "M_n": 1163074496311801388790831177745301504,
+    "N": 7,
+    "T_n": 99465241107620972662038137293510731,
+    "n": 6,
+    "q_n": 166153499473114484112975882535043072,
+    "threshold_checks": {
+      "T_lt_two_to_E": true,
+      "n_power_n_times_T_ge_A": true,
+      "n_power_n_times_T_minus_1_lt_A": true,
+      "two_to_E_minus_1_le_T": true
+    },
+    "two_to_E_minus_1": 83076749736557242056487941267521536
+  },
+  "product_mod_q": 83076749736557242056487941267521536,
+  "product_two_adic_valuation": 116,
+  "python_version": "3.13.5",
+  "q_divides_product": false,
+  "q_exponent": 117,
+  "source_sha256": "7fcbda9eae67ec1ec2a7c67b74297569dd33fa36f5bc00c8665a15ec2a456c02",
+  "status": "EXACT_SYMBOLIC_TARGET_COUNTEREXAMPLE",
+  "strict_boundary_note": "q, M/2-q, M/2+q, and M-q are even because 8|q; all even boundary residues are covered by owner M/2. No <= substitution is used.",
+  "tuple": [
+    1,
+    1,
+    290768624077950347197707794436325375,
+    290768624077950347197707794436325377,
+    581537248155900694395415588872650751,
+    581537248155900694395415588872650752
+  ],
+  "tuple_formula": [
+    "1",
+    "1",
+    "M/4-1",
+    "M/4+1",
+    "M/2-1",
+    "M/2"
+  ]
+}

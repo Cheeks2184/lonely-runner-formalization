@@ -1,0 +1,37 @@
+P92 RECOVERY MANIFEST v1
+task_id: OPS-P92-RECOVERY-PACKAGE-298
+base_commit: e3055a1acdab1476320a1dc742767cd7e2451206
+launch_task: SOL-P92-DESKTOP-LAUNCH-284
+prompt_path: research/sol-pro/prompts/prompt92.md
+prompt_sha256: 654f8bc4de240642483cd83898c6cd272cf0eb3635ab9c08971bdc2d2ac2c3dd
+prompt_integrated_commit: 42dd00f405158e1fced416a1a69a475d1462784b
+raw_response_source: ignored tmp/p92-response.raw.b64 captured solely by Sol High
+raw_response_sha256: 3af0da9f6dba3f1a191d8944cddbfa12cdd4348ab6df3e276c8b7c55ae3560e3
+raw_response_bytes: 33917
+raw_response_characters: 33897
+raw_response_line_endings: 1241 CRLF; no lone LF or CR; terminal CRLF
+tracked_response_path: research/sol-pro/responses/response92.md
+tracked_response_sha256: b7299f87eabc0d4836ec15cb14fae5f2286389703ca28c5d20dd973d021ec8f6
+tracked_response_bytes: 32676
+tracked_response_characters: 32656
+tracked_response_line_endings: 1241 LF; no CR; terminal LF
+normalization: CRLF-to-LF only
+roundtrip: tracked LF restored to CRLF is byte-identical to decoded raw response
+attachment_origin: eight response-linked files recovered solely by Sol High
+attachment_policy: UNVERIFIED / QUARANTINED; DO NOT EXECUTE, IMPORT, EVALUATE, PARSE AS EVIDENCE, OPEN, EXTRACT, OR TREAT AS EVIDENCE
+artifact: research/sol-pro/artifacts/prompt92/quarantine/verifier_a.py | bytes=6218 | sha256=528b23b4e0dc2b5cbb447c6a947962edc6e00ce440037335243c036044a1924d
+artifact: research/sol-pro/artifacts/prompt92/quarantine/output_a.json | bytes=3884 | sha256=e09fa237362d388396ea8db4e430a912067c1fd79cffce979e64655344de6dbb
+artifact: research/sol-pro/artifacts/prompt92/quarantine/verifier_b.py | bytes=6927 | sha256=0262aedb8ef44712347ef6ff237c163f8acc038a44cf490e59de64bb8088890a
+artifact: research/sol-pro/artifacts/prompt92/quarantine/output_b.json | bytes=3269 | sha256=64d2c0dccb0a86cab7e97b151447a45056345de54310a80fef8304f2706d7129
+artifact: research/sol-pro/artifacts/prompt92/quarantine/target_counterexample.py | bytes=4013 | sha256=7fcbda9eae67ec1ec2a7c67b74297569dd33fa36f5bc00c8665a15ec2a456c02
+artifact: research/sol-pro/artifacts/prompt92/quarantine/target_counterexample.json | bytes=3189 | sha256=3c2aad8fb4d64ca1ba19d809fb5a16a4448cd9623884c47f019640715163ab10
+artifact: research/sol-pro/artifacts/prompt92/quarantine/manifest.json | bytes=970 | sha256=d8c71bcad7855dd8559d02367d40f0f8727cb4a624d71bd914f75893e25f23a7
+artifact: research/sol-pro/artifacts/prompt92/quarantine/p92_verifier_bundle.zip | bytes=11405 | sha256=e143a6ab77258caff1e84c639fd2de247b9b7ae7de646c159b736604ba8eea15
+supplied_manifest_comparison: inert-text six-file byte counts and SHA-256 values all match; manifest omits itself and ZIP
+excluded_placeholder: ignored zero-byte browser placeholder; not tracked and not part of bundle inventory
+response_self_disposition: STOP preserved as RESPONSE-AUTHORED / UNVERIFIED only
+recovery_execution: none
+archive_open_or_extraction: none
+json_evaluation: none
+lean_or_test_execution: none
+evidence_promotion: none

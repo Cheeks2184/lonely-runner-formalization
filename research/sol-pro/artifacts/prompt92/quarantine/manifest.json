@@ -1,0 +1,31 @@
+{
+  "completion_marker": "COMPLETE",
+  "domain_order": "as recorded in each output",
+  "files": {
+    "output_a.json": {
+      "bytes": 3884,
+      "sha256": "e09fa237362d388396ea8db4e430a912067c1fd79cffce979e64655344de6dbb"
+    },
+    "output_b.json": {
+      "bytes": 3269,
+      "sha256": "64d2c0dccb0a86cab7e97b151447a45056345de54310a80fef8304f2706d7129"
+    },
+    "target_counterexample.json": {
+      "bytes": 3189,
+      "sha256": "3c2aad8fb4d64ca1ba19d809fb5a16a4448cd9623884c47f019640715163ab10"
+    },
+    "target_counterexample.py": {
+      "bytes": 4013,
+      "sha256": "7fcbda9eae67ec1ec2a7c67b74297569dd33fa36f5bc00c8665a15ec2a456c02"
+    },
+    "verifier_a.py": {
+      "bytes": 6218,
+      "sha256": "528b23b4e0dc2b5cbb447c6a947962edc6e00ce440037335243c036044a1924d"
+    },
+    "verifier_b.py": {
+      "bytes": 6927,
+      "sha256": "0262aedb8ef44712347ef6ff237c163f8acc038a44cf490e59de64bb8088890a"
+    }
+  },
+  "language_runtime": "Python 3.13.5"
+}
