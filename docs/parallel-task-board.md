@@ -1,7 +1,7 @@
 # Parallel task board
 
 This file is the authoritative coordination record. The current lifecycle
-snapshot is based at `71659d6d03c321bc6c525db6fb9192b196d20786` and is bound to PI
+snapshot is based at `894a7eaea070a9935247dfb4fe4848bb21220300` and is bound to PI
 registry commit `318f073965cdbf580a200ab2f8d6d8fe1bb82ac6`; historical worker rows retain
 their actual fixture bases. The board records task routing and integration
 readiness; it does not promote any mathematical claim.
@@ -15,8 +15,9 @@ Historical rows remain append-only evidence and are not silently reinterpreted.
 This current snapshot incorporates Prompt99 recovery/audit tasks332--333,
 Prompt101 launch task339, Prompt99 formal integration task340, and primitive
 Prompt95 scope audit/formalization tasks341--342, Prompt101 audit task349,
-recovery task350, Prompt98 recovery/audit tasks351--352, and Tasks353--372
-through the Prompt100 audit and Prompt102/103 launch-semantics review. A lifecycle
+recovery task350, Prompt98 recovery/audit tasks351--352, and Tasks353--374
+through the Prompt100 audit, Prompt102/103 launch-semantics review, and
+Prompt104/105 contract preparation. A lifecycle
 transition never promotes a result without a matching immutable PI-registry
 decision or a separately replayed kernel check.
 
@@ -51,13 +52,15 @@ decision or a separately replayed kernel check.
 | Prompt101 | completed, recovered, independently audited STOP | Recovery350 preserves the response. Audit349 refutes the subcritical-weights theorem by `(1,5,25,125)` and an infinite power family. This is a bridge refutation, not an LRC counterexample. |
 | Prompt102 | active Sol Pro research; launch semantics audited | Sol High launch360 submitted the complete upper-half-pivot contract with exact readback. A documented noncontradictory 112-byte prefix requires response audit but does not itself require relaunch. Launch and Task364 audit support promote no theorem or finite evidence. |
 | Prompt103 | active Sol Pro research; launch semantics audited with terminology qualification | Sol High launch361 submitted the complete squarefree-gcd contract with exact readback and the same 112-byte prefix condition. The exact target uses non-squarefree = existence of a prime square divisor; the prose word `squarefull` must not be read in its narrower standard powerful-number sense. No theorem or finite evidence is promoted. |
+| Prompt104 | prepared launch candidate; not launched | Sol High owns `PIPE-P104-LAUNCH-CANDIDATE-374`, the proper-subset private-exchange expansion contract. Task374 completed preparation and Level-1 review only. The full-core obstruction remains open; no browser launch, active Pro cell, result, or evidence is inferred. |
+| Prompt105 | prepared launch candidate; not launched | Sol High owns `PIPE-P105-LAUNCH-CANDIDATE-374`, the four-gcd uncovered-mass contract with its explicit equivalence stop gate. Task374 completed preparation and Level-1 review only. The earlier product-weighted inequality remains a stopped regression; no browser launch, active Pro cell, result, or evidence is inferred. |
 | P68 Task02 | frozen failed delegation | Luna/xhigh runtime routing was verified, but the task returned zero mandatory fixtures and no completed domain: `rejected-operational-output`. |
 | P68 Task03 | terminal rejected operational output | Fresh Luna/xhigh metadata routing passed, but the cache timed out before `0/6` semantic fixtures. No evidence exists; every successor is `MEDIUM-SPEC-REQUIRED`. |
 | Medium lanes | 3 active | Research Pipeline, Recovery/Verification, and Formalization/Specification leads are active downstream lanes. |
 | Luna lane | 0 active; 1 ready | Narrow Verification Mode remains in force. Only the Task358 fixed-fixture probe is `LUNA-READY`; no Luna model or worker is active. Broader Prompt100 implementation rows retain their exact conditional or `MEDIUM-SPEC-REQUIRED` gates. |
-| Pro portfolio | 3 active; 1 reserved; 0 launch-ready | Prompt98's correction, Prompt102, and Prompt103 are active. Prompt100 and Prompt101 are completed/recovered/audited. The fourth Pro slot remains reserved. |
+| Pro portfolio | 3 active; 1 reserved; 2 prepared launch candidates | Prompt98's correction, Prompt102, and Prompt103 remain active. Prompt104 and Prompt105 await Sol High disposition at contract-preparation scope and do not occupy a Pro slot. The fourth Pro slot remains reserved. |
 
-### Tasks353--372 lifecycle register
+### Tasks353--374 lifecycle register
 
 | Task | Stage | Exact disposition |
 | --- | --- | --- |
@@ -85,6 +88,7 @@ decision or a separately replayed kernel check.
 | 370 | terminal accepted source checkpoint | Candidate wiring `9dd11dd`, main merge `8e1534b`; target module, 3,594-job root build, and direct root/AxiomAudit probes passed. |
 | 371 | terminal accepted provenance audit | GitHub run `30929728668` passed Lean/trust and 190/191 tests but lacked five base hashes. Corrective exact native clone at main `71659d6` passed 19/19 tests and reached 291 non-null refs / 130 commits with zero missing. Provenance only. |
 | 372 | active lifecycle synchronization | Append-only declaration-scoped promotion and checkpoint status sync; no additional theorem or computation. |
+| 374 | completed contract preparation | Prompt104 and Prompt105 are prepared launch candidates owned by Sol High. Their exact prompt payloads and review memo are hash-bound. No browser launch, Pro result, evidence promotion, or theorem follows. |
 
 ### Validator-derived current metrics
 
