@@ -177,4 +177,3 @@ either introduce one exact additional structural ingredient that survives all
 three small obstructions, or abandon these candidates and freeze a different
 unrestricted lemma. No theorem, counterexample to LRC, finite evidence, or
 research result is promoted by this memo.
-

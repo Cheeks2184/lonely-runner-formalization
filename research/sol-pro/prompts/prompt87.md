@@ -311,4 +311,3 @@ Stop on an incorrect deletion gcd, lost owner label, weak/strict endpoint
 swap, division by two before proving integrality, false parity at an equality
 endpoint, hidden use of the LRC conclusion, or any claim that a power-of-two
 counterfamily by itself refutes distinct-prime supply.
-
