@@ -3,6 +3,7 @@ owner: GPT-5.6 Sol High top-level desktop orchestrator
 supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline/Specification Lead - prompt preparation only
+task_id: PIPE-P70-RESPEC-123
 ---
 
 # Prompt 70: SIMULTANEOUS-FULL-COVER-COMMON-PRIME
