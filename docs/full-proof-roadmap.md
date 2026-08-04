@@ -6,7 +6,7 @@ bounded-height improvement. Results keep the repository-wide labels
 `proved-lean`, `proved-math`, `computed`, `conditional`, `conjectural`,
 `refuted`, and `open`.
 
-## Rolling route triage (Prompt76--88)
+## Rolling route triage (Prompt76--91)
 
 - Prompt76's global canonical private-deficit inequality is refuted at exact
   manuscript scope by `(1,4,5,6,7,11)`: demand `100`, capacity `98`.
@@ -27,13 +27,19 @@ its required inputs were not frozen. Prompt83 is an audited STOP. Prompt84
 rejects `PowerForcing(4,q)` at the qualified scope `q >= 8` and `4 | q`.
 Prompt85's audit completed with mixed/provisional STOP: generic mathematics
 and pivot grids are qualified, while width-two minima and the counterexample
-remain unverified. Task256 is preparing a literal-replay specification at
-Medium effort; it is neither an audit nor a Luna-ready execution.
+remain unverified. Task256's literal-replay specification is frozen at
+`2b0b537`, but independent admission review 260 returned three operational
+specification blockers. It remains `MEDIUM-SPEC-REQUIRED`; no Luna execution
+or evidence promotion is authorized.
 
-Prompt86 and Prompt87 are active independent Sol Pro synthesis routes.
+Prompt86, Prompt87, and Prompt89 are active independent Sol Pro routes.
 Prompt87 launched only after its corrected Task253 contract received review254
-ACCEPT. Prompt88 remains parked behind a `MEDIUM-SPEC-REQUIRED` independent
-route gate. These lifecycle transitions do not change the exact unrestricted
+ACCEPT. Prompt89's balanced-junction contract likewise passed independent
+review before its authoritative desktop launch; its bounded design preflight
+is contract preparation, not finite evidence. Prompt88 remains parked behind
+a `MEDIUM-SPEC-REQUIRED` independent route gate. Prompt90 and Prompt91 are
+distinct unrestricted waiting-contract preparations, not active Pro cells or
+results. These lifecycle transitions do not change the exact unrestricted
 bottleneck below.
 
 ## Exact unrestricted bottleneck

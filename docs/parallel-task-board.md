@@ -23,10 +23,12 @@ Historical rows remain append-only evidence and are not silently reinterpreted.
 | Prompt82 | completed, recovered, audited | Recovery merge `70d030e`; audit merge `22cef48`. The qualified counterexample rejects only the frozen score invariant; unrestricted LRC remains open. |
 | Prompt83 | completed, recovered, audited STOP | Recovery merge `908a912`; audit merge `176606e`. No implementation candidate or evidence promotion. |
 | Prompt84 | completed, recovered, audited | Audit `9774598`, merged at `3c51da2`: `proved-math-qualified` negative for every integer `q >= 8` with `4 | q`. Unrestricted LRC remains open. |
-| Prompt85 | completed, recovered, audited mixed/provisional STOP | Audit merge `cc58e9a`: generic mathematics and pivot grids are `proved-math-qualified`; width-two minima and the counterexample remain unverified. Literal-replay Task256 is active Medium specification preparation, not an audit or Luna-ready task. |
+| Prompt85 | completed, recovered, audited mixed/provisional STOP | Audit merge `cc58e9a`: generic mathematics and pivot grids are `proved-math-qualified`; width-two minima and the counterexample remain unverified. Task256's frozen literal-replay contract received review260 REVISE, recorded at `f18da47`, and remains `MEDIUM-SPEC-REQUIRED`. |
 | Prompt86 | active Pro research | Accepted contract merge `6d609e5`; desktop launch `481252e`. Launch promotes nothing. |
 | Prompt87 | active Pro research | Initial contract review returned REVISE; Task253 correction `1c40ae8` received review254 ACCEPT, merged at `0e29903`, and launched at record `47ef41a`. |
 | Prompt88 | parked; `MEDIUM-SPEC-REQUIRED` | Not launchable until a distinct independent route specification is frozen and reviewed. |
+| Prompt89 | active Pro research | Balanced-junction contract passed independent review, merged at `a4cd124`, and launched by Sol High at record `dbc5d83`. Launch promotes nothing. |
+| Prompt90 / Prompt91 | active Medium preparation; waiting | Two distinct unrestricted contracts are being prepared: minimal-cover classification/uncrossing and simultaneous-all-pivots Fourier/additive energy. Neither is launch-ready or a result. |
 | P68 Task02 | frozen failed delegation | Luna/xhigh runtime routing was verified, but the task returned zero mandatory fixtures and no completed domain: `rejected-operational-output`. |
 | P68 Task03 | terminal rejected operational output | Fresh Luna/xhigh metadata routing passed, but the cache timed out before `0/6` semantic fixtures. No evidence exists; every successor is `MEDIUM-SPEC-REQUIRED`. |
 | Medium lanes | 3 active | Research Pipeline, Recovery/Verification, and Formalization/Specification leads are active downstream lanes. |
@@ -36,16 +38,16 @@ Historical rows remain append-only evidence and are not silently reinterpreted.
 
 | Metric | Current value |
 | --- | ---: |
-| Active Pro cells | 2 |
+| Active Pro cells | 3 |
 | Pro cells awaiting recovery | 0 |
 | Responses under audit | 0 |
 | Launch-ready contracts | 0 |
 | Active Medium leads | 3 |
 | Luna-ready tasks / active Luna workers | 0 / 0 |
 | Integration backlog / Sol High review backlog | 0 / 0 |
-| Verification queues Level 1 / Level 2 / Level 3 | 2 / 0 / 0 |
+| Verification queues Level 1 / Level 2 / Level 3 | 4 / 0 / 0 |
 | Audits total / accepted / accepted-negative / pending / deferred | 39 / 27 / 8 / 0 / 4 |
-| Route queues launch-ready / waiting / parked | 0 / 1 / 1 |
+| Route queues launch-ready / waiting / parked | 0 / 3 / 1 |
 | Luna launched / admitted / rejected / rejected outputs | 4 / 2 / 4 / 3 |
 
 All requested speed metrics remain `null`: the historical ledger does not

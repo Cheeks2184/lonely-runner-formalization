@@ -344,7 +344,7 @@ a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
 
 The current authoritative integrated research checkpoint is
-`563a272a2bb6abb784c89d139a344842e4fce0fb`. The latest authoritative clean
+`a4cd1242a0a58c22b6407b95256bd96cadc428e8`. The latest authoritative clean
 full-project Lean/trust/regression replay is lifecycle checkpoint
 `fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`: 3,591 Lean jobs, 302 trust
 reports, and all 172 deterministic tests passed in a fresh native-WSL clone.
@@ -357,7 +357,14 @@ conjectures.
 Research is in **FULL-PROOF PRIORITY MODE**. The exact unrestricted
 bottleneck remains the Lean-verified finite pivot-certificate proposition:
 for every positive injective integer tuple, some pivot candidate must escape
-all strict modular bad sets. Prompt66's
+all strict modular bad sets. The rolling pipeline currently has three
+independent active Pro cells: Prompt86 (local-dimensional pivot
+multiplicity), Prompt87 (adversarial synthesis), and Prompt89
+(balanced-junction cover deficit). Prompt90 and Prompt91 are Medium-level
+waiting-contract preparations, not active Pro results. Prompt85's proposed
+literal replay remains `MEDIUM-SPEC-REQUIRED`; no Luna task is currently
+admitted. These lifecycle facts promote no theorem or finite evidence.
+Prompt66's
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING` turn completed at STOP/OPEN, leaving
 that packing lemma open. Prompt64's `TOP-TWO-LARGE-RATIO-EXCLUSION` also
 completed/recovered at STOP/OPEN and its exact route is frozen. Prompt67's

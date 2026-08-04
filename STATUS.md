@@ -23,21 +23,28 @@ audit proves the qualified negative `not PowerForcing(4,q)` for every integer
 `q >= 8` divisible by four; this does not decide unrestricted LRC. Prompt85's
 audit is completed at `cc58e9a` with mixed/provisional STOP: generic
 mathematics and pivot grids are qualified, but width-two minima and the
-counterexample remain unverified. Task256 is active Medium specification
-preparation for a literal replay; it is not an audit or `LUNA-READY` task.
+counterexample remain unverified. Task256 produced a frozen literal-replay
+contract at `2b0b537`; independent admission review 260 returned REVISE and
+is preserved at `f18da47`. Its mathematics and fixtures passed, but three
+execution/provenance gates require a fresh Medium correction. It remains
+`MEDIUM-SPEC-REQUIRED`, is not an audit result, and is not `LUNA-READY`.
 
-Prompt86 and Prompt87 are the two active Pro cells. Prompt87's initial review
-returned REVISE; the corrected contract received review254 ACCEPT and was
-launched from the original browser-capable desktop session. Prompt88 is parked
-as `MEDIUM-SPEC-REQUIRED` and is not launchable. Three Medium lead lanes are
-active; no Luna worker or `LUNA-READY` task is active. P68 Task03 terminated as
-rejected operational output after its cache timed out before `0/6` semantic
-fixtures; no evidence was produced and its successor gate remains
+Prompt86, Prompt87, and Prompt89 are three independent active Pro cells.
+Prompt87's initial review returned REVISE; the corrected contract received
+review254 ACCEPT and was launched from the original browser-capable desktop
+session. Prompt89's independently reviewed balanced-junction contract was
+launched from the same authoritative desktop runtime at `dbc5d83`; launch
+promotes no result. Prompt88 remains parked as `MEDIUM-SPEC-REQUIRED` and is
+not launchable. Prompt90 and Prompt91 are active Medium contract preparations
+for two independent waiting routes. Three Medium lead lanes are active; no
+Luna worker or `LUNA-READY` task is active. P68 Task03 terminated as rejected
+operational output after its cache timed out before `0/6` semantic fixtures;
+no evidence was produced and its successor gate remains
 `MEDIUM-SPEC-REQUIRED`.
 
 No recovered Prompt76 scan, Prompt77 6,330-record scan, or Prompt78 computation
 has been promoted to computed finite evidence. Current validator queues are
-Level 1: 2, Level 2: 0, Level 3: 0. This lifecycle synchronization is a Level
+Level 1: 4, Level 2: 0, Level 3: 0. This lifecycle synchronization is a Level
 1 checkpoint and triggers no full clean Lean replay.
 
 ## Strongest verified theorem
@@ -648,7 +655,7 @@ packing existence, `PACK-09`, and unrestricted LRC remain open.
 ## Latest verification
 
 Current authoritative integrated research checkpoint:
-`563a272a2bb6abb784c89d139a344842e4fce0fb`.
+`a4cd1242a0a58c22b6407b95256bd96cadc428e8`.
 
 The public-release audit wrapper now resolves and mounts the common Git
 metadata read-only in normal checkouts and linked worktrees, mounts the source
