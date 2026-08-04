@@ -1,0 +1,38 @@
+P94 RECOVERY MANIFEST v1
+task_id: OPS-P94-RECOVERY-PACKAGE-304
+base_commit: 9687dce93c58555043988d859d44f28965b0461a
+launch_task: SOL-P94-DESKTOP-LAUNCH-291
+prompt_path: research/sol-pro/prompts/prompt94.md
+prompt_sha256: dfb9d28e46091512864edb182524a60819d5ae0e34b4d1c4b9ba05f09e0e3ae8
+prompt_integrated_commit: eb143b4ed47cfc91807cf872de8eb48fd13c4089
+raw_response_source: ignored tmp/p94-response.raw.b64 captured solely by Sol High
+ignored_base64_capture_bytes: 53288
+ignored_base64_capture_sha256: 23d7db131f451559a135d726eed581154b1ec28fd3303c21416a3650a539cd2e
+raw_response_sha256: 5231192b29d4cbdce1c00bf6c7524fbec9eb769fe09ff91417cb248beccf8932
+raw_response_bytes: 39964
+raw_response_characters: 39947
+raw_response_line_endings: 1392 CRLF; no lone LF or CR; terminal CRLF
+tracked_response_path: research/sol-pro/responses/response94.md
+tracked_response_sha256: 08715c3b0baa64dd5b252121f670ada6fe1e64b151223133f5eae564e707ff41
+tracked_response_bytes: 38572
+tracked_response_characters: 38555
+tracked_response_line_endings: 1392 LF; no CR; terminal LF
+normalization: CRLF-to-LF only
+roundtrip: tracked LF restored to CRLF is byte-identical to decoded raw response
+attachment_origin: second exact-link browser recovery by Sol High after canceling a stale Save-As suggestion
+attachment_policy: UNVERIFIED / QUARANTINED; DO NOT EXECUTE, IMPORT, OPEN, LIST, PARSE, EXTRACT, OR TREAT AS EVIDENCE
+artifact: research/sol-pro/artifacts/prompt94/quarantine/p94_artifacts.tar.gz | bytes=86196 | sha256=5d2e16bc120fa84e8cb58319b903700cecf8cd1d431b19adf77f2712c22d49d2
+response_declared_bundle_sha256: 5d2e16bc120fa84e8cb58319b903700cecf8cd1d431b19adf77f2712c22d49d2
+bundle_hash_comparison: exact match at container level only
+canceled_attempt: stale suggested filename observed; download canceled; no artifact retained or tracked
+archive_member_listing: none
+archive_open_or_extraction: none
+archive_execution_or_import: none
+archive_content_parsing: none
+individual_member_identity_or_hash_audit: none
+response_self_disposition: OPEN preserved as RESPONSE-AUTHORED / UNVERIFIED only
+response_claimed_finite_domain: 12168 primitive tuples and 6000 structured mutations; UNVERIFIED / QUARANTINED
+recovery_execution: none
+lean_or_test_execution: none
+evidence_label: recovery-provenance only
+evidence_promotion: none
