@@ -95,12 +95,19 @@ Prompt100 is completed, recovered, and independently audited. Its exact strict
 two-lower-owner theorem for every `N>=4` is `proved-math-qualified`, as is the
 vacuous Prompt95 consequence for `|coveredPivots|<=3`; the exact `N>=3`
 extension is `refuted-exact`. This eliminates every minimal internal cover with
-at most two lower owners. The exact remaining arithmetic edge is a minimal
-internal complete cover with at least three lower owners, necessarily
-`|coveredPivots|>=4`. Lean formalization of the accepted theorem is pending.
+at most two lower owners. Task366 sharpens the exact remaining arithmetic edge:
+every internal complete cover `C` at a maximum covered pivot, without any
+minimality assumption, satisfies `N+1<3|C|`. Equivalently, redundancy is
+vacuously true when `3*(coveredPivots.card-1)<=N+1`. Thus the remaining
+bottleneck is an internal cover satisfying `3|C|>N+1`, not merely a generic
+three-owner cover. Lean formalization of these accepted mathematical statements
+is pending.
 Task365 freezes the `N=4` owner-class sub-specification, but its eight rows and
 3,043 normalized pairs are audit support only. Complete class counts, the `G`
 base lift, and first-sheet scaling remain implementation or Medium-spec edges.
+Task367's documentation-only formal contract is PI-reviewed and complete at
+branch commit `1ca1a97`; it promotes no Lean or mathematical result. Task368
+remains an active read-only review with no result recorded by this sync.
 Prompt101 is completed, recovered, and independently audited. Its
 positive subcritical-weight theorem is `refuted-exact` by `(1,5,25,125)` and
 by the uniform family `a_k=cN^k`; see

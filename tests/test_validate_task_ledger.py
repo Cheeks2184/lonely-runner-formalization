@@ -34,16 +34,16 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         self.assertEqual(metrics, self.ledger["expected_metrics"])
         self.assertEqual(metrics["active_pro_cells"], 3)
         self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 1})
-        self.assertEqual(metrics["audits"], {"total": 51, "accepted": 34, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 9})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 4, "2": 1, "3": 0})
+        self.assertEqual(metrics["audits"], {"total": 57, "accepted": 38, "accepted_negative": 8, "rejected": 0, "pending": 1, "deferred": 10})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 5, "2": 2, "3": 0})
         self.assertEqual(metrics["pipeline"], {
             "active_medium_leads": 3,
             "luna_ready_tasks": 1,
             "active_luna_workers": 0,
-            "integration_backlog": 0,
+            "integration_backlog": 1,
             "sol_high_review_backlog": 0,
             "pro_cells_awaiting_recovery": 0,
-            "responses_under_audit": 0,
+            "responses_under_audit": 1,
             "launch_ready_contracts": 0,
         })
         self.assertEqual(metrics["luna_narrow_effectiveness"]["runtime_failures"], 2)
@@ -95,6 +95,19 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         self.assertIsNone(tasks["VER-P100-STRICT-FIXTURE-PROBE-358"]["runtime"]["model"])
         self.assertEqual(tasks["SOL-P102-DESKTOP-LAUNCH-360"]["status"], "active")
         self.assertEqual(tasks["SOL-P103-DESKTOP-LAUNCH-361"]["status"], "active")
+        self.assertEqual(tasks["VER-P100-DENSITY-AUDIT-SUPPORT-366"]["evidence_label"], "operational-only")
+        self.assertEqual(
+            {tasks[task_id]["evidence_label"] for task_id in (
+                "FORM-P100-SINGLE-OWNER-BOUND-3661",
+                "FORM-P100-SPARSE-FAMILY-NONCOVER-3662",
+                "FORM-P100-INTERNAL-COVER-DENSITY-3663",
+                "FORM-P100-SPARSE-REDUNDANCY-3664",
+            )},
+            {"proved-math-qualified"},
+        )
+        self.assertEqual(tasks["FORM-P100-OWNER-COUNT-CONTRACT-367"]["status"], "completed")
+        self.assertEqual(tasks["VER-P100-NORMALIZED-COUNT-REVIEW-368"]["status"], "active")
+        self.assertEqual(tasks["OPS-P100-DENSITY-SYNC-369"]["status"], "active")
         self.assertEqual(tasks["SOL-P95-DESKTOP-LAUNCH-297"]["operational_state"], "terminal")
         self.assertEqual(tasks["OPS-P90-RECOVERY-PACKAGE-289"]["evidence_label"], "rejected-operational-output")
         self.assertEqual(tasks["OPS-P92-RECOVERY-PACKAGE-298"]["evidence_label"], "recovery-provenance")
