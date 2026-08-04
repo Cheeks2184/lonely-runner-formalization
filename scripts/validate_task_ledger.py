@@ -291,6 +291,18 @@ def validate_task(task: Mapping[str, Any], task_ids: set[str], errors: list[str]
     )
     if isinstance(runtime, dict) and runtime_keys.issubset(runtime) and set(runtime).issubset(allowed_runtime_keys):
         add_if(errors, runtime.get("effort") not in EFFORTS, f"{prefix}: invalid runtime effort")
+        if isinstance(verification, dict) and verification.get("level") == 3:
+            # Level 3 is intentionally scarce: targeted replay belongs at
+            # Level 2, while only authoritative fresh-clone publication gates
+            # may occupy the publication-checkpoint queue.
+            route = str(runtime.get("route") or "").lower()
+            add_if(
+                errors,
+                task["lifecycle_stage"] != "publication"
+                or "authoritative" not in route
+                or "fresh-clone" not in route,
+                f"{prefix}: Level 3 is reserved for authoritative fresh-clone publication checkpoints",
+            )
         readback = runtime.get("desktop_readback")
         if readback is not None:
             add_if(

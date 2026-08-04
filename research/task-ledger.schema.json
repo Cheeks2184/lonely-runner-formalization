@@ -40,7 +40,7 @@
       "properties": {
         "1": {"const": "provenance, scope, and contract-shape checks"},
         "2": {"const": "targeted semantic checks and focused tests"},
-        "3": {"const": "independent full replay or integration-grade verification"}
+        "3": {"const": "authoritative fresh-clone publication checkpoints only"}
       }
     },
     "tasks": {

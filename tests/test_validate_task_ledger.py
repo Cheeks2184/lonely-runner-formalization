@@ -32,10 +32,29 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 2)
+        self.assertEqual(metrics["active_pro_cells"], 1)
         self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 2, "parked": 0})
-        self.assertEqual(metrics["audits"], {"total": 26, "accepted": 13, "accepted_negative": 7, "rejected": 0, "pending": 6})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 1, "2": 4, "3": 3})
+        self.assertEqual(metrics["audits"], {"total": 31, "accepted": 16, "accepted_negative": 7, "rejected": 0, "pending": 8})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 4, "2": 7, "3": 0})
+
+    def test_level_three_is_reserved_for_authoritative_fresh_clone_publication(self):
+        artifact_ids = {
+            "VERIFY-P68-ARTIFACT-AUDIT-151",
+            "VERIFY-P69-ARTIFACT-AUDIT-152",
+            "VERIFY-P70-ARTIFACT-AUDIT-153",
+            "VERIFY-P72-ARTIFACT-AUDIT-169",
+        }
+        artifact_tasks = [task for task in self.ledger["tasks"] if task["id"] in artifact_ids]
+        self.assertEqual({task["verification"]["level"] for task in artifact_tasks}, {2})
+
+        def promote_targeted_replay(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "VERIFY-P68-ARTIFACT-AUDIT-151")
+            task["verification"]["level"] = 3
+
+        self.assertHasError(
+            self.errors_for(promote_targeted_replay),
+            "Level 3 is reserved for authoritative fresh-clone publication checkpoints",
+        )
 
     def test_desktop_pro_authority_and_readback_are_fail_closed(self):
         def unassign(ledger):
