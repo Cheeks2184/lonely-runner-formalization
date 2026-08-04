@@ -1,0 +1,41 @@
+SOL-P98 finite falsification manifest
+Date: 2026-08-04
+Compiler: g++ (Debian 14.2.0-19) 14.2.0
+Domain: n=2..7; H=30; all strictly increasing positive tuples 1 <= a_0 < ... < a_{n-1} <= 30
+Ordering: n increasing, tuple lexicographic, pivot labels increasing, canonical residues increasing, owner labels increasing
+
+Build and run A:
+  g++ -std=c++20 -O3 sol_p98_impl_a.cpp -o sol_p98_impl_a_checked
+  ./sol_p98_impl_a_checked sol_p98_records_a_checked.txt sol_p98_summary_a_checked.txt
+
+Build and run B:
+  g++ -std=c++20 -O3 sol_p98_impl_b.cpp -o sol_p98_impl_b
+  ./sol_p98_impl_b sol_p98_records_b.txt sol_p98_summary_b.txt
+
+Compare:
+  cmp sol_p98_records_a_checked.txt sol_p98_records_b.txt
+
+SHA-256:
+  f0c999dd846a6d49239abc2f2094b585bdb4ca065fbe4c979f73d2f41708f24c  sol_p98_impl_a.cpp
+  3998587e8239aa0bc4ac98922f855753820568ba8c7552308bfca84fb73a4f69  sol_p98_impl_b.cpp
+  ebca04f8f85f653d444fd2ffaa4aae59f4ad9e48f440a17bb25115652e6b1e66  sol_p98_records_a_checked.txt
+  ebca04f8f85f653d444fd2ffaa4aae59f4ad9e48f440a17bb25115652e6b1e66  sol_p98_records_b.txt
+  5e81c7e583d435145f7dc9ea1252e7546f847f69a125212ad8b8f33bf73ad2b0  sol_p98_summary_a_checked.txt
+  400ef29b92c427a1a01ea28abbbd7ece935376c5731bbf26f34d5cfd87bb9788  sol_p98_summary_b.txt
+
+Canonical record comparison: identical; first disagreement NONE.
+First theorem-domain failure: NONE.
+First malformed input: (1,1,2), repeated speed.
+Completion markers:
+  SOL_P98_IMPL_A_COMPLETE
+  SOL_P98_IMPL_B_COMPLETE
+
+Totals:
+  raw tuples 2,803,981
+  primitive tuples 2,786,618
+  F nonempty 587,648
+  branch tuples 586,979
+  primitive branch tuples 582,280
+  A internal subsets enumerated 657,558
+  A complete internal covers 0
+  B full-internal-union equalities 0

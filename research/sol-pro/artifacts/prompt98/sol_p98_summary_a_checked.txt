@@ -1,0 +1,17 @@
+PREFLIGHT_OK
+FIRST_MALFORMED_INPUT=(1,1,2):repeated_speed
+WRONG_JSTAR_CONTROL=claimed_7,actual_24:detected
+ALTERED_FIRST_UNCOVERED=claimed_3,actual_2:detected
+SYNTHETIC_PREMISE_RECORD=(1,3,13),claimed_F_nonempty:detected
+IMPLEMENTATION=A
+LANGUAGE=C++20
+DOMAIN=n=2..7,H=30,strictly_increasing_positive_tuples
+ORDER=n_then_lex;rows=pivot_label_increasing;residues=canonical_increasing;owners=increasing;subsets=cardinality_then_lex
+n=2 raw=435 primitive=277 F_nonempty=27 branch=22 branch_primitive=10 subsets=22 complete_internal=0 minimal_internal=0 private_sets=0
+n=3 raw=4060 primitive=3472 F_nonempty=422 branch=394 branch_primitive=319 subsets=405 complete_internal=0 minimal_internal=0 private_sets=0
+n=4 raw=27405 primitive=25819 F_nonempty=4737 branch=4364 branch_primitive=3936 subsets=4757 complete_internal=0 minimal_internal=0 private_sets=0
+n=5 raw=142506 primitive=139246 F_nonempty=27913 branch=27861 branch_primitive=27053 subsets=30432 complete_internal=0 minimal_internal=0 private_sets=0
+n=6 raw=593775 primitive=588559 F_nonempty=135843 branch=135661 branch_primitive=133775 subsets=155402 complete_internal=0 minimal_internal=0 private_sets=0
+n=7 raw=2035800 primitive=2029245 F_nonempty=418706 branch=418677 branch_primitive=417187 subsets=466540 complete_internal=0 minimal_internal=0 private_sets=0
+FIRST_THEOREM_DOMAIN_FAILURE=NONE
+COMPLETION_MARKER=SOL_P98_IMPL_A_COMPLETE
