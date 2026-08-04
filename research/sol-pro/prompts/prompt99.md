@@ -9,7 +9,7 @@ admission: REVIEW-REQUIRED
 prompt_encoding: ASCII
 prompt_line_endings: LF
 prompt_hash_scope: bytes from the line "# Prompt 99:" through EOF
-prompt_sha256: 8868db7aa9a90bd389a897af47de4b86d2518c8454dc4fb2d9930232abd0fe3c
+prompt_sha256: 164ba48076c1bced2f3e2fb76162a609a17475ff6a376b8deb886c5ad91eabdb
 ---
 
 # Prompt 99: MAX-COVERED-DIVISIBLE-PIVOT-REDUNDANCY
@@ -493,8 +493,9 @@ For `(1,3,4,5)`, `n=4`, `N=5`, pivot `p=3`, candidate `r=3` is safe against
 owner `1` by equality. This checks strictness even though that pivot is not the
 Prompt99 maximum fixture.
 
-For `(1,3,17)`, `n=3`, `N=4`, pivot `p=4`, modulus `16`, owners `1` and `17`
-induce coincident labelled bad sets and remain distinct labels.
+For `(1,4,17)`, `n=3`, `N=4`, pivot `p=4`, modulus `16`, owners `1` and `17`
+induce the coincident labelled bad sets `{1,2,3,13,14,15}` and remain distinct
+labels.
 
 For `(1,2,3)`, `N=4`, pivot `3`, candidates `3` and `9` are retained nonunits.
 Do not replace ordinary candidate rows by unit rows.
