@@ -1,0 +1,48 @@
+P79_EXACT_AUDIT_V1
+SOURCE_SHA256 c30bc95c943b7f97aa8d3ff33ff781e9d39b0934d840fd53f7dbeabc6096b7e9
+INTERPRETER CPython 3.13.5
+COMMAND python3 p79_falsification.py
+INPUT none; arguments_or_stdin_not_accepted; extra_argument_exit=64
+ARITHMETIC exact_integer_only; randomness=none; external_packages=none
+
+SMALL_PRIME_CHECKS witness_r=N strict_badness=(rho<p)
+SMALL n=3 p=2 p_divides_N=True candidates=4 min_rho=4 equality_count=0 SAFE=True
+SMALL n=3 p=3 p_divides_N=False candidates=8 min_rho=4 equality_count=0 SAFE=True
+SMALL n=4 p=2 p_divides_N=False candidates=5 min_rho=5 equality_count=0 SAFE=True
+SMALL n=4 p=3 p_divides_N=False candidates=10 min_rho=5 equality_count=0 SAFE=True
+SMALL n=4 p=5 p_divides_N=True candidates=20 min_rho=5 equality_count=10 SAFE=True
+DELETION_EDGE n=3 p=5 tuple=(1,2,4) p_nondivisible=True deletion_gcds=(2,1,1) admissible=False
+DELETION_EDGE n=4 p=7 tuple=(1,5,10,15) p_nondivisible=True deletion_gcds=(5,1,1,1) admissible=False
+EQUALITY_SAFE n=4 p=5 M=25 r=5 v=1 rho=5 bad=False safe=True
+
+FIXTURE n=3 p=5 N=4 M=20
+ORDER tuple_lexicographic; canonical_cover=(cardinality,increasing_owner_list); private_residue=increasing
+DOMAIN candidates=16 ordered_repeated_tuples=4096
+PREMISE tuples=2048
+FAILURES tuples=192 first=(1,3,4)
+REQUIRED fixture=(1,3,4) admissible=True deletion_gcds=(1,1,1) missing=()
+CANONICAL owners=(0,1,2) values=(1,3,4) bad_sizes=(9,9,12) cover_size_counts=[(3, 192)]
+PRIVATE least=(2,7,5) all=((2, 3, 17, 18), (7, 8, 12, 13), (5, 9, 10, 11, 15))
+PRIVATE_CENTERED_MATRIX matrix=((2, 6, 8), (7, 1, 8), (5, -5, 0)) determinant=0 first_nonzero_minor=(2, (0, 1), (0, 1), -40) minor_over_N=-10 p_divides_minor_over_N=True
+NONUNITS gcd_with_M=(1,1,4)
+REPEATED premise=368 failure=0 first_premise=(1,1,1)
+COINCIDENT_BAD_SET premise=704 failure=0 first_premise=(1,1,1)
+ANCHOR position=2 owner=2 unit_u=1 eps=(1,-1,1) c=(1,1,0) z=(1,2,4) H_fixture=4
+ZERO_DELTA first_tuple=(1,3,4) coeff_bound=4 coeff=(-2,-1,1) dot_z=0
+
+FIXTURE n=4 p=7 N=5 M=35
+ORDER tuple_lexicographic; canonical_cover=(cardinality,increasing_owner_list); private_residue=increasing
+DOMAIN candidates=30 ordered_repeated_tuples=810000
+PREMISE tuples=787968
+FAILURES tuples=13824 first=(1,3,4,5)
+REQUIRED fixture=(1,3,4,5) admissible=True deletion_gcds=(1,1,1,1) missing=()
+CANONICAL owners=(0,1,2,3) values=(1,3,4,5) bad_sizes=(13,13,13,15) cover_size_counts=[(4, 13824)]
+PRIVATE least=(3,11,9,7) all=((3, 4, 5, 30, 31, 32), (11, 12, 23, 24), (9, 16, 17, 18, 19, 26), (7, 14, 15, 20, 21, 28))
+PRIVATE_CENTERED_MATRIX matrix=((3, 9, 12, 15), (11, -2, 9, -15), (9, -8, 1, 10), (7, -14, -7, 0)) determinant=0 first_nonzero_minor=(2, (0, 1), (0, 1), -105) minor_over_N=-21 p_divides_minor_over_N=True
+NONUNITS gcd_with_M=(1,1,1,5)
+REPEATED premise=142128 failure=0 first_premise=(1,1,1,1)
+COINCIDENT_BAD_SET premise=268416 failure=0 first_premise=(1,1,1,1)
+ANCHOR position=3 owner=3 unit_u=1 eps=(1,1,-1,1) c=(1,3,1,0) z=(1,3,3,5) H_fixture=5
+ZERO_DELTA first_tuple=(1,3,4,5) coeff_bound=5 coeff=(-1,1,1,-1) dot_z=0
+
+DISPOSITION_SIGNAL ZERO_DELTA_ON_FIRST_LEX_FAILURE
