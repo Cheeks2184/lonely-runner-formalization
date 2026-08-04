@@ -19,7 +19,7 @@ open. Prompt preparation, launch, and bounded admission preflight are not
 mathematical evidence. The machine-readable lifecycle source is
 [`research/task-ledger.json`](research/task-ledger.json), bound to immutable
 PI decision registry commit
-`fed25fad9fabc73ed34f5ff6c2ba84e91d3e9577`.
+`b3b04b57fa2dc0c03589c2493ff71a7fa2b37cb9`.
 
 ## Verified results
 
@@ -352,7 +352,7 @@ a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
 
 The lifecycle snapshot is reconciled through immutable PI promotion registry
-checkpoint `fed25fad9fabc73ed34f5ff6c2ba84e91d3e9577`. The latest authoritative clean
+checkpoint `b3b04b57fa2dc0c03589c2493ff71a7fa2b37cb9`. The latest authoritative clean
 full-project Lean/trust/regression replay is lifecycle checkpoint
 `fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`: 3,591 Lean jobs, 302 trust
 reports, and all 172 deterministic tests passed in a fresh native-WSL clone.

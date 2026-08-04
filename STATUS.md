@@ -723,8 +723,10 @@ packing existence, `PACK-09`, and unrestricted LRC remain open.
 
 ## Latest verification
 
-Current authoritative integrated research checkpoint:
-`fed25fad9fabc73ed34f5ff6c2ba84e91d3e9577` before this status-sync commit.
+Current immutable PI-promotion registry checkpoint:
+`b3b04b57fa2dc0c03589c2493ff71a7fa2b37cb9` before this status-sync commit.
+The corresponding primitive Prompt95 source and documentation merge is
+`6993a43c85da3f9ea51971be37dded2cce2c4a64`.
 
 The public-release audit wrapper now resolves and mounts the common Git
 metadata read-only in normal checkouts and linked worktrees, mounts the source

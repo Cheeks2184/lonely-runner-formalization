@@ -2,7 +2,7 @@
 
 This file is the authoritative coordination record. The current lifecycle
 snapshot is based on main commit
-`fed25fad9fabc73ed34f5ff6c2ba84e91d3e9577`; historical worker rows retain
+`b3b04b57fa2dc0c03589c2493ff71a7fa2b37cb9`; historical worker rows retain
 their actual fixture bases. The board records task routing and integration
 readiness; it does not promote any mathematical claim.
 
@@ -10,10 +10,11 @@ readiness; it does not promote any mathematical claim.
 
 This snapshot supersedes the historical current-state prose below. Its
 machine-readable source is `research/task-ledger.json`, bound to immutable PI
-promotion registry commit `fed25fad9fabc73ed34f5ff6c2ba84e91d3e9577`.
+promotion registry commit `b3b04b57fa2dc0c03589c2493ff71a7fa2b37cb9`.
 Historical rows remain append-only evidence and are not silently reinterpreted.
 This current snapshot incorporates Prompt99 recovery/audit tasks332--333,
-Prompt101 launch task339, and Prompt99 formal integration task340. A lifecycle
+Prompt101 launch task339, Prompt99 formal integration task340, and primitive
+Prompt95 scope audit/formalization tasks341--342. A lifecycle
 transition never promotes a result without a matching immutable PI-registry
 decision or a separately replayed kernel check.
 
@@ -64,7 +65,7 @@ decision or a separately replayed kernel check.
 | Luna-ready tasks / active Luna workers | 0 / 0 |
 | Integration backlog / Sol High review backlog | 0 / 0 |
 | Verification queues Level 1 / Level 2 / Level 3 | 4 / 0 / 0 |
-| Audits total / accepted / accepted-negative / pending / deferred | 45 / 29 / 8 / 0 / 8 |
+| Audits total / accepted / accepted-negative / pending / deferred | 46 / 30 / 8 / 0 / 8 |
 | Route queues launch-ready / waiting / parked | 0 / 1 / 1 |
 | Luna launched / admitted / rejected / rejected outputs | 5 / 3 / 5 / 3 |
 | Luna terminal runtime failures | 2 |
