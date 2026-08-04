@@ -321,7 +321,11 @@ def derive_metrics(tasks: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
             "accepted": sum(task["status"] in {"verified", "integrated"} for task in luna_tasks),
             "escalations": None,
             "repairs": None,
-            "runtime_failures": None,
+            "runtime_failures": sum(
+                task["status"] == "rejected"
+                and task["operational_state"] == "terminal"
+                for task in luna_tasks
+            ),
             "rejected_outputs": sum(
                 task["evidence_label"] == "rejected-operational-output" for task in luna_tasks
             ),

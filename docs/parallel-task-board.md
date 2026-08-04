@@ -1,9 +1,10 @@
 # Parallel task board
 
-This file is the authoritative coordination record based on supplied-packing
-adapter checkpoint `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`. Historical
-worker rows retain their actual fixture bases. The board records task routing
-and integration readiness; it does not promote any mathematical claim.
+This file is the authoritative coordination record. The current lifecycle
+snapshot is based on main commit
+`db438f206b35d51d8b001ae5256c5a3022b8d0b7`; historical worker rows retain
+their actual fixture bases. The board records task routing and integration
+readiness; it does not promote any mathematical claim.
 
 ## Current rolling-pipeline snapshot
 
@@ -23,32 +24,38 @@ Historical rows remain append-only evidence and are not silently reinterpreted.
 | Prompt82 | completed, recovered, audited | Recovery merge `70d030e`; audit merge `22cef48`. The qualified counterexample rejects only the frozen score invariant; unrestricted LRC remains open. |
 | Prompt83 | completed, recovered, audited STOP | Recovery merge `908a912`; audit merge `176606e`. No implementation candidate or evidence promotion. |
 | Prompt84 | completed, recovered, audited | Audit `9774598`, merged at `3c51da2`: `proved-math-qualified` negative for every integer `q >= 8` with `4 | q`. Unrestricted LRC remains open. |
-| Prompt85 | completed, recovered, audited mixed/provisional STOP | Audit merge `cc58e9a`: generic mathematics and pivot grids are `proved-math-qualified`; width-two minima and the counterexample remain unverified. Task256's frozen literal-replay contract received review260 REVISE, recorded at `f18da47`, and remains `MEDIUM-SPEC-REQUIRED`. |
-| Prompt86 | active Pro research | Accepted contract merge `6d609e5`; desktop launch `481252e`. Launch promotes nothing. |
-| Prompt87 | active Pro research | Initial contract review returned REVISE; Task253 correction `1c40ae8` received review254 ACCEPT, merged at `0e29903`, and launched at record `47ef41a`. |
+| Prompt85 | completed, recovered, audited mixed/provisional STOP | Audit merge `cc58e9a`: generic mathematics and pivot grids are `proved-math-qualified`; width-two minima and the counterexample remain unverified. The corrected literal replay was `LUNA-READY` and launched, but failed closed at the runtime-metadata accessibility gate before source or preflight. It is rejected operational output only; the successor is `MEDIUM-SPEC-REQUIRED`. |
+| Prompt86 | completed and recovered; provisional MIXED / PIVOT | Recovery merge `faeb57f` preserves five attachments as `QUARANTINED / UNVERIFIED`. The selector remains `OPEN`; neither response computation nor mathematics is promoted. |
+| Prompt87 | completed, recovered, independently audited | Recovery merge `143f363`; audit merge `fba819e`. Provisional triage is `PROMISING`, but the aggregate lemma is wholly `OPEN` and no unrestricted result is promoted. |
 | Prompt88 | parked; `MEDIUM-SPEC-REQUIRED` | Not launchable until a distinct independent route specification is frozen and reviewed. |
-| Prompt89 | active Pro research | Balanced-junction contract passed independent review, merged at `a4cd124`, and launched by Sol High at record `dbc5d83`. Launch promotes nothing. |
-| Prompt90 / Prompt91 | active Medium preparation; waiting | Two distinct unrestricted contracts are being prepared: minimal-cover classification/uncrossing and simultaneous-all-pivots Fourier/additive energy. Neither is launch-ready or a result. |
+| Prompt89 | completed and recovered | Recovery merge `d389ec8` preserves four attachments as `UNVERIFIED / QUARANTINED`. Its self-`PIVOT` and all response computation remain unverified; no result is promoted. |
+| Prompt90 | active Pro research | Sol High launched task267 from the original desktop browser at record `b160d8c`. Launch promotes nothing. |
+| Prompt91 | prelaunch stopped; provenance pending | Independent review returned REVISE / STOP on a mandatory fixture, but no artifact-grade counterexample is integrated. It was not launched and carries no accepted evidence. |
+| Prompt92 | active Pro research | Both contract corrections were accepted and integrated at `42dd00f`; Sol High launched task284 from the original desktop browser at `db438f2`. The aggregate lemma remains `OPEN`; launch promotes nothing. |
+| Prompt93 | prelaunch STOP; frozen | Review281 found the frozen `Psi` target false at `(1,3,4)`, but no artifact-grade accepted counterexample is integrated. It was not launched and no evidence is promoted. |
+| Prompt94 | active Medium preparation; waiting | Task283 is preparing the next unrestricted divisor-lattice contract. It is not launch-ready, active Pro research, or a result. |
 | P68 Task02 | frozen failed delegation | Luna/xhigh runtime routing was verified, but the task returned zero mandatory fixtures and no completed domain: `rejected-operational-output`. |
 | P68 Task03 | terminal rejected operational output | Fresh Luna/xhigh metadata routing passed, but the cache timed out before `0/6` semantic fixtures. No evidence exists; every successor is `MEDIUM-SPEC-REQUIRED`. |
 | Medium lanes | 3 active | Research Pipeline, Recovery/Verification, and Formalization/Specification leads are active downstream lanes. |
-| Luna lane | 0 active; 0 ready | Narrow Verification Mode remains in force. |
+| Luna lane | 0 active; 0 ready | Narrow Verification Mode remains in force. Prompt85 replay `-01` is a failed delegation / rejected operational output, not mathematical evidence. |
+| Reserved Pro synthesis slot | free | No synthesis cell is active. With Prompt90 and Prompt92 active, the target of three active Pro cells is not currently met. |
 
 ### Validator-derived current metrics
 
 | Metric | Current value |
 | --- | ---: |
-| Active Pro cells | 3 |
+| Active Pro cells | 2 |
 | Pro cells awaiting recovery | 0 |
 | Responses under audit | 0 |
 | Launch-ready contracts | 0 |
 | Active Medium leads | 3 |
 | Luna-ready tasks / active Luna workers | 0 / 0 |
 | Integration backlog / Sol High review backlog | 0 / 0 |
-| Verification queues Level 1 / Level 2 / Level 3 | 4 / 0 / 0 |
+| Verification queues Level 1 / Level 2 / Level 3 | 5 / 0 / 0 |
 | Audits total / accepted / accepted-negative / pending / deferred | 39 / 27 / 8 / 0 / 4 |
-| Route queues launch-ready / waiting / parked | 0 / 3 / 1 |
-| Luna launched / admitted / rejected / rejected outputs | 4 / 2 / 4 / 3 |
+| Route queues launch-ready / waiting / parked | 0 / 2 / 1 |
+| Luna launched / admitted / rejected / rejected outputs | 5 / 3 / 5 / 3 |
+| Luna terminal runtime failures | 2 |
 
 All requested speed metrics remain `null`: the historical ledger does not
 contain a complete, consistently sourced timestamp series from which to derive

@@ -344,7 +344,7 @@ a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
 
 The current authoritative integrated research checkpoint is
-`a4cd1242a0a58c22b6407b95256bd96cadc428e8`. The latest authoritative clean
+`db438f206b35d51d8b001ae5256c5a3022b8d0b7`. The latest authoritative clean
 full-project Lean/trust/regression replay is lifecycle checkpoint
 `fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`: 3,591 Lean jobs, 302 trust
 reports, and all 172 deterministic tests passed in a fresh native-WSL clone.
@@ -357,13 +357,23 @@ conjectures.
 Research is in **FULL-PROOF PRIORITY MODE**. The exact unrestricted
 bottleneck remains the Lean-verified finite pivot-certificate proposition:
 for every positive injective integer tuple, some pivot candidate must escape
-all strict modular bad sets. The rolling pipeline currently has three
-independent active Pro cells: Prompt86 (local-dimensional pivot
-multiplicity), Prompt87 (adversarial synthesis), and Prompt89
-(balanced-junction cover deficit). Prompt90 and Prompt91 are Medium-level
-waiting-contract preparations, not active Pro results. Prompt85's proposed
-literal replay remains `MEDIUM-SPEC-REQUIRED`; no Luna task is currently
-admitted. These lifecycle facts promote no theorem or finite evidence.
+all strict modular bad sets. Prompt90 and Prompt92 are currently the two active Pro cells.
+Prompt86 is completed/recovered at provisional `MIXED / PIVOT`, with five
+attachments `QUARANTINED / UNVERIFIED` and its selector `OPEN`. Prompt87 is
+completed/recovered/audited at provisional `PROMISING`, while its aggregate
+lemma remains wholly `OPEN`. Prompt89 completed and its response plus four
+attachments are recovered at `d389ec8`; all response computation is
+unverified. Prompt91 stopped before launch on a mandatory-fixture review and
+has no integrated artifact-grade counterexample. Prompt92's corrected contract
+is integrated at `42dd00f`, but its aggregate lemma remains `OPEN`. Prompt93
+also stopped before launch: review281 found the frozen `Psi` target false at
+`(1,3,4)`, but no artifact-grade accepted counterexample is integrated.
+Prompt94 preparation283 is active. The target of three active Pro cells is not
+currently met. Prompt85's admitted literal
+replay failed closed at the runtime-metadata accessibility gate before source
+or preflight; it is rejected operational output and its successor is
+`MEDIUM-SPEC-REQUIRED`. No Luna task is currently active or ready. These
+lifecycle facts promote no theorem or finite evidence.
 Prompt66's
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING` turn completed at STOP/OPEN, leaving
 that packing lemma open. Prompt64's `TOP-TWO-LARGE-RATIO-EXCLUSION` also

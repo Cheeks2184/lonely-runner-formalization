@@ -27,24 +27,39 @@ counterexample remain unverified. Task256 produced a frozen literal-replay
 contract at `2b0b537`; independent admission review 260 returned REVISE and
 is preserved at `f18da47`. Its mathematics and fixtures passed, but three
 execution/provenance gates require a fresh Medium correction. It remains
-`MEDIUM-SPEC-REQUIRED`, is not an audit result, and is not `LUNA-READY`.
+`MEDIUM-SPEC-REQUIRED`, is not an audit result, and is not `LUNA-READY`. A
+corrected contract was subsequently admitted and launched as a fresh top-level
+Luna/xhigh run, but that run exited at the runtime-metadata accessibility gate
+before source work or preflight. It is a failed delegation / rejected
+operational output only; no evidence was produced.
 
-Prompt86, Prompt87, and Prompt89 are three independent active Pro cells.
-Prompt87's initial review returned REVISE; the corrected contract received
-review254 ACCEPT and was launched from the original browser-capable desktop
-session. Prompt89's independently reviewed balanced-junction contract was
-launched from the same authoritative desktop runtime at `dbc5d83`; launch
-promotes no result. Prompt88 remains parked as `MEDIUM-SPEC-REQUIRED` and is
-not launchable. Prompt90 and Prompt91 are active Medium contract preparations
-for two independent waiting routes. Three Medium lead lanes are active; no
-Luna worker or `LUNA-READY` task is active. P68 Task03 terminated as rejected
-operational output after its cache timed out before `0/6` semantic fixtures;
-no evidence was produced and its successor gate remains
-`MEDIUM-SPEC-REQUIRED`.
+Prompt86 completed and was recovered at `faeb57f` with provisional
+`MIXED / PIVOT` triage only. Its five attachments are
+`QUARANTINED / UNVERIFIED`, its selector remains `OPEN`, and nothing is
+promoted. Prompt87 completed, was recovered at `143f363`, and has an
+independent audit integrated at `fba819e`; `PROMISING` is research triage only
+and its aggregate lemma remains wholly `OPEN`. Prompt89 completed and its exact
+response and four attachments are recovered at `d389ec8`, while its self-label
+`PIVOT` and response computation remain unverified / quarantined.
+
+Prompt90 and Prompt92 are the two active Pro cells, both owned by Sol High and
+launched from the original desktop browser at records `b160d8c` and
+`db438f2`. Prompt92's aggregate lemma remains wholly `OPEN`. Prompt91 stopped before launch
+after REVISE / STOP review on a mandatory fixture, but no artifact-grade
+counterexample is integrated and provenance remains pending. Prompt92's
+corrections were accepted after review275 rejected one unsupported Prompt91
+status sentence; the corrected prompt is integrated at `42dd00f`. Prompt93 is
+frozen at prelaunch STOP after review281 found its frozen `Psi` target false
+at `(1,3,4)`, but no artifact-grade accepted counterexample is integrated and
+it was not launched. Prompt94 preparation283 is active and waiting. Prompt88
+remains parked as `MEDIUM-SPEC-REQUIRED`. Three Medium lead lanes remain
+active; no Luna worker or `LUNA-READY` task is active, and the reserved
+synthesis slot is free. The target of three active Pro cells is not currently
+met.
 
 No recovered Prompt76 scan, Prompt77 6,330-record scan, or Prompt78 computation
 has been promoted to computed finite evidence. Current validator queues are
-Level 1: 4, Level 2: 0, Level 3: 0. This lifecycle synchronization is a Level
+Level 1: 5, Level 2: 0, Level 3: 0. This lifecycle synchronization is a Level
 1 checkpoint and triggers no full clean Lean replay.
 
 ## Strongest verified theorem
@@ -655,7 +670,7 @@ packing existence, `PACK-09`, and unrestricted LRC remain open.
 ## Latest verification
 
 Current authoritative integrated research checkpoint:
-`a4cd1242a0a58c22b6407b95256bd96cadc428e8`.
+`db438f206b35d51d8b001ae5256c5a3022b8d0b7`.
 
 The public-release audit wrapper now resolves and mounts the common Git
 metadata read-only in normal checkouts and linked worktrees, mounts the source

@@ -30,17 +30,31 @@ and pivot grids are qualified, while width-two minima and the counterexample
 remain unverified. Task256's literal-replay specification is frozen at
 `2b0b537`, but independent admission review 260 returned three operational
 specification blockers. It remains `MEDIUM-SPEC-REQUIRED`; no Luna execution
-or evidence promotion is authorized.
+or evidence promotion was authorized at that stage. The subsequently corrected
+contract was admitted and launched, but the fresh top-level Luna/xhigh process
+stopped at the runtime-metadata accessibility gate before source work or
+preflight. That run is rejected operational output only; no evidence exists,
+and any successor again requires Medium specification.
 
-Prompt86, Prompt87, and Prompt89 are active independent Sol Pro routes.
-Prompt87 launched only after its corrected Task253 contract received review254
-ACCEPT. Prompt89's balanced-junction contract likewise passed independent
-review before its authoritative desktop launch; its bounded design preflight
-is contract preparation, not finite evidence. Prompt88 remains parked behind
-a `MEDIUM-SPEC-REQUIRED` independent route gate. Prompt90 and Prompt91 are
-distinct unrestricted waiting-contract preparations, not active Pro cells or
-results. These lifecycle transitions do not change the exact unrestricted
-bottleneck below.
+Prompt86 is completed and recovered with provisional `MIXED / PIVOT` triage;
+its selector is `OPEN` and five attachments remain
+`QUARANTINED / UNVERIFIED`. Prompt87 is completed, recovered, and independently
+audited with provisional `PROMISING` triage, while its aggregate dyadic lemma
+remains wholly `OPEN`. Prompt89 completed and its response plus four
+attachments are recovered at `d389ec8`; every response computation remains
+unverified / quarantined. None of these lifecycle facts promotes an
+unrestricted result.
+
+Prompt90 and Prompt92 are the two active Pro cells. Prompt92's corrected
+contract is integrated at `42dd00f`, but its aggregate lemma remains wholly
+`OPEN`. Prompt91 received prelaunch REVISE / STOP on a mandatory fixture, but
+has no integrated artifact-grade counterexample and was not launched.
+Prompt93 also stopped before launch: review281 found its frozen `Psi` target
+false at `(1,3,4)`, but no artifact-grade accepted counterexample is
+integrated. Prompt94 preparation283 is active. Prompt88 remains parked behind
+a `MEDIUM-SPEC-REQUIRED` route gate. These lifecycle transitions do not change
+the exact unrestricted bottleneck below, and the target of three active Pro
+cells is not currently met.
 
 ## Exact unrestricted bottleneck
 

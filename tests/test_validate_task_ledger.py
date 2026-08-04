@@ -32,10 +32,10 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 3)
-        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 3, "parked": 1})
+        self.assertEqual(metrics["active_pro_cells"], 2)
+        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 2, "parked": 1})
         self.assertEqual(metrics["audits"], {"total": 39, "accepted": 27, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 4})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 4, "2": 0, "3": 0})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 5, "2": 0, "3": 0})
         self.assertEqual(metrics["pipeline"], {
             "active_medium_leads": 3,
             "luna_ready_tasks": 0,
@@ -46,6 +46,10 @@ class TaskLedgerValidatorTests(unittest.TestCase):
             "responses_under_audit": 0,
             "launch_ready_contracts": 0,
         })
+        self.assertEqual(metrics["luna_narrow_effectiveness"]["runtime_failures"], 2)
+        self.assertEqual(metrics["luna_narrow_effectiveness"]["launched"], 5)
+        self.assertEqual(metrics["luna_narrow_effectiveness"]["admitted"], 3)
+        self.assertEqual(metrics["luna_narrow_effectiveness"]["rejected"], 5)
         self.assertTrue(all(value is None for value in metrics["speed_metrics"].values()))
 
     def test_rolling_prompt_and_luna_lifecycle_is_exact(self):
@@ -77,17 +81,27 @@ class TaskLedgerValidatorTests(unittest.TestCase):
             )},
             {"completed"},
         )
-        self.assertEqual(tasks["SOL-P86-DESKTOP-LAUNCH-242"]["status"], "active")
-        self.assertEqual(tasks["SOL-P87-DESKTOP-LAUNCH-255"]["status"], "active")
-        self.assertEqual(tasks["SOL-P89-DESKTOP-LAUNCH-259"]["status"], "active")
+        self.assertEqual(tasks["SOL-P86-DESKTOP-LAUNCH-242"]["status"], "completed")
+        self.assertEqual(tasks["SOL-P87-DESKTOP-LAUNCH-255"]["status"], "completed")
+        self.assertEqual(tasks["SOL-P89-DESKTOP-LAUNCH-259"]["status"], "completed")
+        self.assertEqual(tasks["SOL-P90-DESKTOP-LAUNCH-267"]["status"], "active")
+        self.assertEqual(tasks["SOL-P92-DESKTOP-LAUNCH-284"]["status"], "active")
         self.assertEqual(tasks["P85-MATHEMATICAL-AUDIT-251"]["status"], "completed")
         self.assertEqual(tasks["P85-LITERAL-REPLAY-MEDIUM-SPEC-256"]["status"], "review")
         self.assertEqual(tasks["P85-LITERAL-REPLAY-MEDIUM-SPEC-256"]["admission_class"], "MEDIUM-SPEC-REQUIRED")
         self.assertEqual(tasks["P85-LITERAL-REPLAY-INDEPENDENT-REVIEW-260"]["status"], "completed")
         self.assertEqual(tasks["P85-LITERAL-REPLAY-INDEPENDENT-REVIEW-260"]["admission_class"], "MEDIUM-SPEC-REQUIRED")
         self.assertEqual(tasks["P85-LITERAL-REPLAY-REVIEW-RECORD-263"]["status"], "completed")
-        self.assertEqual(tasks["SOL-P90-CONTRACT-PREP-261"]["route_queue"], "waiting")
-        self.assertEqual(tasks["SOL-P91-CONTRACT-PREP-262"]["route_queue"], "waiting")
+        self.assertEqual(tasks["SOL-P90-CONTRACT-PREP-261"]["route_queue"], "none")
+        self.assertEqual(tasks["SOL-P91-CONTRACT-PREP-262"]["status"], "frozen")
+        self.assertEqual(tasks["SOL-P91-CONTRACT-PREP-262"]["route_queue"], "none")
+        self.assertEqual(tasks["P92-NEUTRAL-P91-SEPARATION-CORRECTION-277"]["status"], "completed")
+        self.assertEqual(tasks["P92-NEUTRAL-P91-SEPARATION-CORRECTION-277"]["route_queue"], "none")
+        self.assertEqual(tasks["SOL-P93-CROSS-PIVOT-RECIPROCITY-CONTRACT-PREP-274"]["status"], "frozen")
+        self.assertEqual(tasks["SOL-P93-CROSS-PIVOT-RECIPROCITY-CONTRACT-PREP-274"]["route_queue"], "none")
+        self.assertEqual(tasks["SOL-P94-DIVISOR-LATTICE-CONTRACT-PREP-283"]["route_queue"], "waiting")
+        self.assertEqual(tasks["P85-LITERAL-REPLAY-01"]["status"], "rejected")
+        self.assertEqual(tasks["P85-LITERAL-REPLAY-01"]["admission_class"], "LUNA-READY")
         self.assertEqual(tasks["PIPE-P88-INDEPENDENT-ROUTE-SPEC-245"]["route_queue"], "parked")
         self.assertIn("INPUT-NOT-FROZEN", tasks["SOL-P81-DESKTOP-LAUNCH-213"]["disposition"])
         self.assertEqual(tasks["P68-BA-DEF-01"]["evidence_label"], "rejected-operational-output")
