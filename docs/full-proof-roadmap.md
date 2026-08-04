@@ -68,11 +68,24 @@ genuine: common scaling by `N=n+1` sends every tuple into the `N`-divisible
 domain while preserving the exact complete-cover redundancy structure. The
 equivalence between its universal restricted proposition and full Prompt95 is
 now `proved-lean` in `Prompt99Scaling.lean`. This does not prove either side.
-A future divisible/nondivisible split must first normalize common scaling,
-such as by a primitive-tuple condition, and then justify the new implication
-chain independently.
+`PrimitivePrompt95.lean` now performs that normalization in Lean. It divides a
+positive family by `Finset.univ.gcd`, proves the quotient primitive, and proves
+the exact corrected scope theorem
+
+```text
+full Prompt95
+  <-> primitive N-divisible maximum-pivot redundancy
+      AND unrestricted N-nondivisible maximum-pivot redundancy.
+```
+
+The second conjunct is Prompt98. The first conjunct is the honest corrected
+divisible branch; it is not collapsed by scaling because a positive common
+scaling of a primitive tuple is primitive only at scale one. This removes the
+normalization/scope ambiguity but proves neither conjunct.
 
 Prompt98 remains active/unrecovered on the nondivisible supporting branch.
+Its success would leave exactly the primitive divisible branch above as the
+remaining Prompt95 edge; while Prompt98 is open, both conjuncts remain open.
 Prompt100 remains active/unrecovered on the uniform two-lower-owner noncover
 theorem; success would give the `|F(a)|<=3` part of Prompt95, not the full
 bridge. Prompt101 is active/unrecovered after Sol High launch task339. It asks

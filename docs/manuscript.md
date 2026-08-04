@@ -2919,3 +2919,66 @@ prove invariance of the response's explicit safe set `Q`, inclusion-minimal
 covers, or private-residue sets. Those facts are unnecessary for the compiled
 coverwise redundancy equivalence and are not assigned `proved-lean` status
 here. Prompt95, the pivot existential, and unrestricted LRC remain open.
+
+## 59. Primitive normalization gives the honest Prompt95 branch split
+
+This section corresponds exactly to `LonelyRunner/PrimitivePrompt95.lean`.
+It corrects the scope of the Prompt98/Prompt99 decomposition; it proves no
+cover-redundancy proposition.
+
+For a positive labelled family `a : Fin n -> Nat`, with `n>0`, define
+
+```text
+g = gcd_i a(i),
+b(i) = a(i)/g.
+```
+
+The declarations `speedGCD`, `primitivePart`, `speedGCD_dvd`, and
+`speedGCD_pos` formalize the common divisor and its positivity. Since `g`
+divides every coordinate,
+
+```text
+a = scaleSpeeds g b.
+```
+
+The finite-gcd quotient theorem gives `gcd_i b(i)=1`.
+`primitiveSpeedFamily_iff_speedGCD_eq_one` identifies this with the existing
+divisor-based predicate `PrimitiveSpeedFamily`; therefore
+`exists_scaleSpeeds_primitive` supplies a positive primitive factorization of
+every positive nonempty family. Injectivity of `b` is not assumed to follow
+from division: in each downstream proof it follows by multiplying an equality
+`b(i)=b(k)` by the positive common factor and using injectivity of `a`.
+
+The common-scale theorems from Section 58 preserve labelled complete covers,
+covered pivots, maximum-covered-pivot labels, internal owner sets, and
+coverwise redundancy. Hence
+`primitiveMaxCovered_iff_unrestricted` proves
+
+```text
+primitive Prompt95 <-> unrestricted Prompt95.
+```
+
+Only after this normalization is divisibility split. The primitive proposition
+is the conjunction of its `N | b(j)` and `N does not divide b(j)` branches by
+`primitiveMaxCovered_split_iff`. The unrestricted nondivisible branch is
+equivalent to the primitive nondivisible branch: if `N` divided `b(j)`, it
+would divide `g*b(j)=a(j)`, so nondivisibility of `a(j)` descends to `b(j)`.
+This is `maxCoveredNondivisible_iff_primitiveNondivisible`.
+
+Combining the three equivalences yields the exact scope theorem
+
+```text
+maxCovered_iff_primitiveDivisible_and_nondivisible:
+
+  unrestricted Prompt95
+    <-> primitive divisible maximum-pivot redundancy
+        AND unrestricted nondivisible maximum-pivot redundancy.
+```
+
+The unrestricted nondivisible factor is precisely the frozen Prompt98 target.
+The primitive divisible factor is genuinely narrower: multiplying a primitive
+family by `t>1` makes `t` a nontrivial common divisor, so the scaling trick that
+collapsed Prompt99 cannot remain within this domain. Both factors are still
+open. Thus this theorem removes a normalization and implication-chain defect,
+but it does not prove Prompt95, the positive-integer pivot certificate, or
+unrestricted Lonely Runner.

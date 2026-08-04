@@ -12,7 +12,10 @@ active/unrecovered browser research cells under the top-level Sol High
 orchestrator. Prompt99 completed and exposed a semantic contract defect: its
 unnormalized divisible restriction is equivalent to full Prompt95 under common
 scaling. This equivalence is now Lean-verified, but neither redundancy theorem
-is proved. Prompt preparation, launch, and bounded admission preflight are not
+is proved. Gcd normalization is also Lean-verified: full Prompt95 is exactly
+equivalent to the conjunction of Prompt98's unrestricted nondivisible branch
+and the genuinely narrower **primitive** divisible branch. Both factors remain
+open. Prompt preparation, launch, and bounded admission preflight are not
 mathematical evidence. The machine-readable lifecycle source is
 [`research/task-ledger.json`](research/task-ledger.json), bound to immutable
 PI decision registry commit
@@ -41,6 +44,11 @@ Fully Lean-verified results include:
   `maxCoveredDivisible_iff_unrestricted`, which proves the universal
   `N`-divisible maximum-covered-pivot redundancy restriction equivalent to
   unrestricted Prompt95 redundancy without proving either proposition;
+- finite-family gcd normalization and
+  `maxCovered_iff_primitiveDivisible_and_nondivisible`, which proves that full
+  Prompt95 is equivalent to the primitive divisible branch together with the
+  unrestricted nondivisible branch, without proving any of those open
+  propositions;
 - the one- and two-moving-runner base cases;
 - several insertion, normalization, congruence, overlap, and structured-class
   theorems recorded in the [formal modules](LonelyRunner/);
