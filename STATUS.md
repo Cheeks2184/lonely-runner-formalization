@@ -109,11 +109,29 @@ consequence when `|coveredPivots|<=3` are `proved-math-qualified`; no internal
 complete cover exists in that regime. The exact `N>=3` extension is
 `refuted-exact`. Two bounded scans are independently replayed `computed finite
 evidence` only over `N=4..18, p=1..160` and `N=4..24, p=1..240`. Lean
-formalization and every case with at least three lower owners remain open.
+formalization remains open; Task366 below sharpens the unresolved owner regime.
 Task365 separately freezes the `N=4` owner-class data/signatures as
 documentation/formal specification only. Its eight rows and 3,043 normalized
 pairs are audit support, not computed finite evidence; complete class counts,
 the `G` base lift, and first-sheet scaling remain open implementation edges.
+
+Task366 sharpens the remaining arithmetic boundary at
+`proved-math-qualified` scope. For `N>=5`, `p>0`, and `0<d<p`,
+`(N+1)|B_d(N,p)| <= 3(N-1)p`, with equality exactly when `(N+1)` divides `p`
+and `d=N*(p/(N+1))`. A finite labelled family `C` whose speed map is injective
+on `C`, with all speeds strictly between `0` and `p`, cannot cover when
+`|C|>=2` and `3|C|<=N+1`. Consequently every internal complete cover at a
+maximum covered pivot satisfies `N+1<3|C|` without a minimality hypothesis,
+and redundancy is vacuously true when
+`3*(coveredPivots.card-1)<=N+1`. These statements are not yet Lean-verified.
+All Task366 scans are audit support only, not computed finite evidence.
+The exact remaining Prompt95 bottleneck is internal covers satisfying
+`3|C|>N+1`; Prompt95, the pivot certificate, and LRC remain open.
+
+Task367's documentation-only formal contract is PI-reviewed and completed at
+branch commit `1ca1a97`; it contains no Lean or evidence promotion. Task368 is
+an active read-only Level-2 review of Task363, and Task369 is an active Level-1
+registry/status sync. No result is inferred from either active task.
 Prompt101 completed and is recovered at `6964613`. Independent audit refutes
 `COVERED-PIVOT-SUBCRITICAL-WEIGHTS` on the primitive tuple
 `(1,5,25,125)` and verifies the uniform geometric power-family obstruction at
@@ -138,7 +156,7 @@ Verification Mode is unchanged.
 
 No recovered Prompt76 scan, Prompt77 6,330-record scan, or Prompt78 computation
 has been promoted to computed finite evidence. Current validator queues are
-Level 1 / Level 2 / Level 3 = `4 / 1 / 0`; Level 3 remains empty.
+Level 1 / Level 2 / Level 3 = `5 / 2 / 0`; Level 3 remains empty.
 This lifecycle synchronization uses documentation, hash, privacy, ledger, and
 targeted validator checks only; it triggers no full clean Lean replay.
 

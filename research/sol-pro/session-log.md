@@ -645,3 +645,27 @@ commit `c63d900` (integrated as `f073436`). It is documentation/formal
 specification only. Eight rows and 3,043 normalized pairs are audit support;
 complete class counts, the `G` base lift, and first-sheet scaling remain open
 implementation or Medium-specification edges.
+
+## Task366 owner-density audit and Tasks367--369 lifecycle
+
+Sol High accepts four Task366 statements at `proved-math-qualified` scope:
+
+- for naturals `N>=5`, `p>0`, and `0<d<p`,
+  `(N+1)|B_d(N,p)|<=3(N-1)p`, with equality iff `(N+1)` divides `p` and
+  `d=N*(p/(N+1))`;
+- a finite labelled owner family `C` whose speed map is injective on `C`, with
+  all speeds in `(0,p)`, `|C|>=2`, and `3|C|<=N+1`, cannot cover the strict
+  pivot row;
+- every internal complete cover `C` at a maximum covered pivot satisfies
+  `N+1<3|C|`, with no minimality hypothesis;
+- maximum-covered-pivot redundancy is vacuously true when
+  `3*(coveredPivots.card-1)<=N+1`.
+
+All Task366 scans are audit support only, not computed finite evidence. None of
+these statements is yet `proved-lean`; internal covers with `3|C|>N+1`,
+Prompt95, the pivot theorem, and LRC remain open. Task367's documentation-only
+formal contract is PI-reviewed and completed at branch commit `1ca1a97`; it
+supplies no Lean theorem or evidence promotion. Task368 remains an active
+independent read-only Level-2 review of Task363. Task369 is the active
+append-only registry and Level-1 lifecycle sync. No active-task result is
+inferred.

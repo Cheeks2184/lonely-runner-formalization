@@ -1,8 +1,8 @@
 # Parallel task board
 
 This file is the authoritative coordination record. The current lifecycle
-snapshot is based at `0605cdf1b2a6288aaa6cf3a0cedb5883ef5b410d` and is bound to PI
-registry commit `6b3be173214b83044ac885cd35c30d30fa263078`; historical worker rows retain
+snapshot is based at `f13e621b01ca71db7c1cb5fa9639ae1bf22046fc` and is bound to PI
+registry commit `4a211575ff96b8b4a3ae1c1a59ee685b4913a6a9`; historical worker rows retain
 their actual fixture bases. The board records task routing and integration
 readiness; it does not promote any mathematical claim.
 
@@ -10,12 +10,12 @@ readiness; it does not promote any mathematical claim.
 
 This snapshot supersedes the historical current-state prose below. Its
 machine-readable source is `research/task-ledger.json`, bound to immutable PI
-promotion registry commit `6b3be173214b83044ac885cd35c30d30fa263078`.
+promotion registry commit `4a211575ff96b8b4a3ae1c1a59ee685b4913a6a9`.
 Historical rows remain append-only evidence and are not silently reinterpreted.
 This current snapshot incorporates Prompt99 recovery/audit tasks332--333,
 Prompt101 launch task339, Prompt99 formal integration task340, and primitive
 Prompt95 scope audit/formalization tasks341--342, Prompt101 audit task349,
-recovery task350, Prompt98 recovery/audit tasks351--352, and Tasks353--365
+recovery task350, Prompt98 recovery/audit tasks351--352, and Tasks353--369
 through the Prompt100 audit and Prompt102/103 launch-semantics review. A lifecycle
 transition never promotes a result without a matching immutable PI-registry
 decision or a separately replayed kernel check.
@@ -47,7 +47,7 @@ decision or a separately replayed kernel check.
 | Prompt98 | original response recovered; correction active | Recovery351 preserves the response and five attachments. Audit352 rejects MBCP as an equivalent restatement and refutes the exact maximal-set pair-overlap supply. The finite bundle remains unpromoted; the branch and LRC stay open. |
 | Prompt99 | completed, recovered, audited `STOP`; scope collapse formalized | Task332 preserves the response; task333 independently proves at `proved-math-qualified` scope that the unnormalized `N`-divisible universal theorem is equivalent to full Prompt95. `LonelyRunner.maxCoveredDivisible_iff_unrestricted` is `proved-lean` for exactly this equivalence. Neither open proposition nor LRC is proved. Explicit `Q`, minimal-cover, and private-set invariance are not separately `proved-lean` by this module. |
 | Primitive Prompt95 normalization | reviewed and kernel-checked source checkpoint | `PrimitivePrompt95.lean` proves gcd normalization, primitive/full equivalence, the primitive divisible/nondivisible split, and `full Prompt95 <-> primitive-divisible AND unrestricted-nondivisible`; see the [independent audit](primitive-prompt95-scope-audit.md). The branch theorems, Prompt95, and LRC remain open. |
-| Prompt100 | completed, recovered, independently audited; Lean pending | `proved-math-qualified`: exact strict `TWO-LOWER-OWNER-NONCOVER` for `N>=4` and the vacuous Prompt95 consequence when `|coveredPivots|<=3`. The exact `N>=3` extension is `refuted-exact`. Two bounded scans are independently replayed `computed finite evidence` only at their declared domains. Lean formalization, Prompt95 for `|coveredPivots|>=4`, the pivot theorem, and LRC remain open. |
+| Prompt100 | completed, recovered, independently audited; Lean pending | Earlier audit accepts exact strict `TWO-LOWER-OWNER-NONCOVER` for `N>=4`. Task366 additionally gives four `proved-math-qualified` density consequences: the exact single-owner bound/equality, sparse labelled-family noncover, `N+1<3|C|` for every internal complete cover, and vacuous redundancy under `3*(coveredPivots.card-1)<=N+1`. All Task366 scans are audit support only. Lean formalization and internal covers satisfying `3|C|>N+1` remain open, as do Prompt95, the pivot theorem, and LRC. |
 | Prompt101 | completed, recovered, independently audited STOP | Recovery350 preserves the response. Audit349 refutes the subcritical-weights theorem by `(1,5,25,125)` and an infinite power family. This is a bridge refutation, not an LRC counterexample. |
 | Prompt102 | active Sol Pro research; launch semantics audited | Sol High launch360 submitted the complete upper-half-pivot contract with exact readback. A documented noncontradictory 112-byte prefix requires response audit but does not itself require relaunch. Launch and Task364 audit support promote no theorem or finite evidence. |
 | Prompt103 | active Sol Pro research; launch semantics audited with terminology qualification | Sol High launch361 submitted the complete squarefree-gcd contract with exact readback and the same 112-byte prefix condition. The exact target uses non-squarefree = existence of a prime square divisor; the prose word `squarefull` must not be read in its narrower standard powerful-number sense. No theorem or finite evidence is promoted. |
@@ -57,7 +57,7 @@ decision or a separately replayed kernel check.
 | Luna lane | 0 active; 1 ready | Narrow Verification Mode remains in force. Only the Task358 fixed-fixture probe is `LUNA-READY`; no Luna model or worker is active. Broader Prompt100 implementation rows retain their exact conditional or `MEDIUM-SPEC-REQUIRED` gates. |
 | Pro portfolio | 3 active; 1 reserved; 0 launch-ready | Prompt98's correction, Prompt102, and Prompt103 are active. Prompt100 and Prompt101 are completed/recovered/audited. The fourth Pro slot remains reserved. |
 
-### Tasks353--364 lifecycle register
+### Tasks353--369 lifecycle register
 
 | Task | Stage | Exact disposition |
 | --- | --- | --- |
@@ -73,6 +73,14 @@ decision or a separately replayed kernel check.
 | 362 | lifecycle/status sync | This Level-1 synchronization; no new theorem or computation. |
 | 364 | launch-semantics audit support | Recommends ACTIVE/PROCEED for both cells. Disposable checks over 217,726 tuples, 1,087,521 rows, and 85,170,843 slots are audit support only, not `computed finite evidence`; records Prompt103's non-squarefree terminology qualification. |
 | 365 | formal sub-specification | Freezes Prompt100's `N=4` owner-class data and signatures only. Eight table rows and 3,043 normalized pairs are audit support; complete class count, `G` base lift, and first-sheet scaling remain implementation or Medium-spec edges. |
+| 366 | independent mathematical audit support | Operational row only. Four exact subclaims are separately PI-accepted as `proved-math-qualified`; every disposable scan is audit support, not `computed finite evidence`. |
+| 3661 | single-owner bound/equality | For `N>=5`, `(N+1)|B_d(N,p)| <= 3(N-1)p`, with equality iff `(N+1)|p` and `d=N(p/(N+1))`, under `p>0` and `0<d<p`. Not Lean-verified. |
+| 3662 | sparse labelled-family noncover | For `N>=5`, a finite labelled family with speed map injective on `C`, all speeds in `(0,p)`, `|C|>=2`, and `3|C|<=N+1` cannot cover the strict pivot row. Not Lean-verified. |
+| 3663 | internal-cover density | Every internal complete cover `C` at a maximum covered pivot satisfies `N+1<3|C|`; minimality is not required. Not Lean-verified. |
+| 3664 | sparse redundancy | Maximum-covered-pivot redundancy is vacuously true when `3*(coveredPivots.card-1)<=N+1`. Not Lean-verified. |
+| 367 | completed Medium formal contract | PI-reviewed documentation-only `RESEARCH/FORMAL-SPEC` at branch commit `1ca1a97`; no Lean declaration, evidence, or theorem promotion. |
+| 368 | active independent review | Read-only Level-2 review of Task363; no review result or Lean promotion is inferred. |
+| 369 | active lifecycle synchronization | Append-only registry and Level-1 status sync; no Task367/368 result is inferred. |
 
 ### Validator-derived current metrics
 
@@ -80,13 +88,13 @@ decision or a separately replayed kernel check.
 | --- | ---: |
 | Active Pro cells | 3 |
 | Pro cells awaiting recovery | 0 |
-| Responses under audit | 0 |
+| Responses under audit | 1 |
 | Launch-ready contracts | 0 |
 | Active Medium leads | 3 |
 | Luna-ready tasks / active Luna workers | 1 / 0 |
-| Integration backlog / Sol High review backlog | 0 / 0 |
-| Verification queues Level 1 / Level 2 / Level 3 | 4 / 1 / 0 |
-| Audits total / accepted / accepted-negative / pending / deferred | 51 / 34 / 8 / 0 / 9 |
+| Integration backlog / Sol High review backlog | 1 / 0 |
+| Verification queues Level 1 / Level 2 / Level 3 | 5 / 2 / 0 |
+| Audits total / accepted / accepted-negative / pending / deferred | 57 / 38 / 8 / 1 / 10 |
 | Route queues launch-ready / waiting / parked | 0 / 1 / 1 |
 | Luna launched / admitted / rejected / rejected outputs | 5 / 3 / 5 / 3 |
 | Luna terminal runtime failures | 2 |

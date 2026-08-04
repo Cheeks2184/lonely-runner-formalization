@@ -9,10 +9,12 @@ the Lonely Runner Conjecture (LRC).
 
 Current repository-recorded pipeline: Prompt98's original response and five
 attachments are recovered while a same-chat correction remains active.
-Prompt100 is completed, recovered, and independently audited: its exact
-two-owner theorem for `N>=4` and the vacuous `|coveredPivots|<=3` consequence
-are `proved-math-qualified`, its exact `N>=3` extension is refuted, and its two
-bounded scans are finite evidence only. Lean formalization is pending.
+Prompt100 is completed, recovered, and independently audited. Its exact
+two-owner theorem and Task366 owner-density consequences are
+`proved-math-qualified`; in particular every internal complete cover must
+satisfy `N+1<3|C|`, so the denser regime is the exact remaining arithmetic
+bottleneck. All Task366 scans are audit support only, and Lean formalization is
+pending.
 Prompt102 and Prompt103 are active Sol High Pro cells; launch provenance is not
 theorem evidence. Prompt101 is completed, recovered, and independently audited.
 Prompt99 completed and exposed a semantic contract defect: its
@@ -25,7 +27,7 @@ open. Prompt preparation, launch, and bounded admission preflight are not
 mathematical evidence. The machine-readable lifecycle source is
 [`research/task-ledger.json`](research/task-ledger.json), bound to immutable
 PI decision registry commit
-`6b3be173214b83044ac885cd35c30d30fa263078`.
+`4a211575ff96b8b4a3ae1c1a59ee685b4913a6a9`.
 
 ## Verified results
 
@@ -384,15 +386,16 @@ bridge was rejected as equivalent to the frozen branch, and the maximal-set
 pair-overlap sufficient condition is refuted exactly by an in-domain
 primitive tuple. Its recovered finite bundle is replayed but not promoted
 pending a semantic audit. Prompt100 is qualified mathematically at the exact
-two-owner scope, with Lean work pending and all three-or-more-owner cases open.
+two-owner and Task366 density scopes. Lean work and internal covers satisfying
+`3|C|>N+1` remain open.
 Prompt102 and Prompt103 are active research launches only. Prompt101 is
 completed and its subcritical-weights theorem is `refuted-exact` by
 `(1,5,25,125)` and the audited geometric power family. These are bridge
 counterexamples, not LRC counterexamples. No active response, launch,
 quarantined attachment, or admission
 preflight promotes a theorem or finite evidence. Prompt85 replay `-02` and the
-Prompt93 replay remain `MEDIUM-SPEC-REQUIRED`; no Luna task is active or
-`LUNA-READY`.
+Prompt93 replay remain `MEDIUM-SPEC-REQUIRED`; no Luna worker is active. The
+single `LUNA-READY` item is Task358's unlaunched fixed-fixture probe.
 Prompt66's
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING` turn completed at STOP/OPEN, leaving
 that packing lemma open. Prompt64's `TOP-TWO-LARGE-RATIO-EXCLUSION` also
