@@ -32,10 +32,48 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 1)
-        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 3, "parked": 0})
-        self.assertEqual(metrics["audits"], {"total": 9, "accepted": 5, "accepted_negative": 4, "rejected": 0, "pending": 0})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 2, "2": 1, "3": 2})
+        self.assertEqual(metrics["active_pro_cells"], 3)
+        self.assertEqual(metrics["route_queues"], {"launch_ready": 2, "waiting": 0, "parked": 0})
+        self.assertEqual(metrics["audits"], {"total": 16, "accepted": 10, "accepted_negative": 6, "rejected": 0, "pending": 0})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 0, "2": 0, "3": 3})
+
+    def test_prompt69_and_prompt70_desktop_authority_is_fail_closed(self):
+        def unassign(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "PIPE-P69-RESPEC-128")
+            task["owner"] = "unassigned"
+
+        self.assertHasError(self.errors_for(unassign), "owner cannot be unassigned")
+
+        def wrong_runtime(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "SOL-P70-DESKTOP-LAUNCH-130")
+            task["runtime"]["route"] = "top-level CLI"
+
+        self.assertHasError(self.errors_for(wrong_runtime), "wrong Prompt69/70 launch runtime")
+
+        def missing_readback(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "SOL-P70-DESKTOP-LAUNCH-130")
+            del task["runtime"]["desktop_readback"]
+
+        self.assertHasError(self.errors_for(missing_readback), "desktop launch needs exact readback")
+
+        def conflated_orchestrator_effort(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "SOL-P70-DESKTOP-LAUNCH-130")
+            task["runtime"]["effort"] = "high"
+
+        self.assertHasError(self.errors_for(conflated_orchestrator_effort), "browser Pro cell effort must be pro")
+
+    def test_pipeline_preparation_preserves_route_owner_without_using_pro(self):
+        def wrong_owner(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "PIPE-P72-MODULAR-COVER-CIRCUIT-CONTRACT-135")
+            task["owner"] = "Sol Medium Research Pipeline Lead"
+
+        self.assertHasError(self.errors_for(wrong_owner), "wrong pipeline route owner")
+
+        def consumes_pro(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "PIPE-P72-MODULAR-COVER-CIRCUIT-CONTRACT-135")
+            task["runtime"]["pro_cell"] = True
+
+        self.assertHasError(self.errors_for(consumes_pro), "preparation cannot consume a Pro cell")
 
     def test_duplicate_task_id_fails_closed(self):
         errors = self.errors_for(lambda ledger: ledger["tasks"].append(copy.deepcopy(ledger["tasks"][0])))
@@ -75,12 +113,14 @@ class TaskLedgerValidatorTests(unittest.TestCase):
 
     def test_queue_and_level_metrics_cannot_drift(self):
         def mutate_queue(ledger):
-            ledger["tasks"][-1]["route_queue"] = "parked"
+            task = next(task for task in ledger["tasks"] if task["id"] == "VER-P74-CONTRACT-REVIEW-140")
+            task["route_queue"] = "parked"
 
         self.assertHasError(self.errors_for(mutate_queue), "expected metrics mismatch")
 
         def mutate_level(ledger):
-            ledger["tasks"][-1]["verification"]["level"] = 3
+            task = next(task for task in ledger["tasks"] if task["id"] == "SOL-P68-DESKTOP-LAUNCH-124")
+            task["verification"]["level"] = 2
 
         self.assertHasError(self.errors_for(mutate_level), "expected metrics mismatch")
 

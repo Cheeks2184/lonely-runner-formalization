@@ -77,9 +77,23 @@
         "model": {"type": ["string", "null"]},
         "effort": {
           "type": ["string", "null"],
-          "enum": [null, "low", "medium", "high", "xhigh"]
+          "enum": [null, "low", "medium", "high", "xhigh", "pro"]
         },
-        "pro_cell": {"type": "boolean"}
+        "pro_cell": {"type": "boolean"},
+        "desktop_readback": {"$ref": "#/$defs/desktopReadback"}
+      }
+    },
+    "desktopReadback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["signed_in", "new_conversation", "chat_selected", "sol_selected", "pro_selected", "exact_prompt_readback"],
+      "properties": {
+        "signed_in": {"type": "boolean"},
+        "new_conversation": {"type": "boolean"},
+        "chat_selected": {"type": "boolean"},
+        "sol_selected": {"type": "boolean"},
+        "pro_selected": {"type": "boolean"},
+        "exact_prompt_readback": {"type": "boolean"}
       }
     },
     "verification": {

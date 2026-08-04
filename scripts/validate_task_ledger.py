@@ -53,6 +53,13 @@ EVIDENCE_LABELS = {
 AUDIT_OUTCOMES = {"not_applicable", "accepted", "accepted_negative", "rejected", "pending"}
 QUEUE_STATES = {"none", "launch_ready", "waiting", "parked"}
 VERIFICATION_STATES = {"pending", "active", "complete", "not_required"}
+EFFORTS = {None, "low", "medium", "high", "xhigh", "pro"}
+DESKTOP_OWNER = "GPT-5.6 Sol High top-level desktop orchestrator"
+DESKTOP_RUNTIME = "original browser-capable desktop Codex session"
+DESKTOP_READBACK_KEYS = {
+    "signed_in", "new_conversation", "chat_selected", "sol_selected",
+    "pro_selected", "exact_prompt_readback",
+}
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 COMMIT_RE = re.compile(r"^[0-9a-f]{40}$")
 TASK_ID_RE = re.compile(r"^[A-Z][A-Z0-9-]*[0-9]$")
@@ -258,14 +265,54 @@ def validate_task(task: Mapping[str, Any], task_ids: set[str], errors: list[str]
 
     runtime = task["runtime"]
     runtime_keys = {"route", "model", "effort", "pro_cell"}
-    add_if(errors, not isinstance(runtime, dict) or set(runtime) != runtime_keys, f"{prefix}: malformed runtime record")
-    if isinstance(runtime, dict) and set(runtime) == runtime_keys:
+    allowed_runtime_keys = runtime_keys | {"desktop_readback"}
+    add_if(
+        errors,
+        not isinstance(runtime, dict)
+        or not runtime_keys.issubset(runtime)
+        or not set(runtime).issubset(allowed_runtime_keys),
+        f"{prefix}: malformed runtime record",
+    )
+    if isinstance(runtime, dict) and runtime_keys.issubset(runtime) and set(runtime).issubset(allowed_runtime_keys):
+        add_if(errors, runtime.get("effort") not in EFFORTS, f"{prefix}: invalid runtime effort")
+        readback = runtime.get("desktop_readback")
+        if readback is not None:
+            add_if(
+                errors,
+                not isinstance(readback, dict) or set(readback) != DESKTOP_READBACK_KEYS,
+                f"{prefix}: malformed desktop readback",
+            )
+            if isinstance(readback, dict) and set(readback) == DESKTOP_READBACK_KEYS:
+                add_if(errors, not all(value is True for value in readback.values()), f"{prefix}: desktop readback is not exact and affirmative")
         if runtime["pro_cell"] and task["status"] == "active":
             add_if(errors, not runtime["model"] or not runtime["effort"], f"{prefix}: active Pro cell needs model and effort")
             add_if(errors, not any(item.get("kind") == "prompt" for item in task["hashes"]), f"{prefix}: active Pro cell needs prompt hash")
             add_if(errors, not any(stamp.get("event") == "launched" for stamp in task["timestamps"]), f"{prefix}: active Pro cell needs launch timestamp")
+        if runtime["pro_cell"] and runtime.get("route") == DESKTOP_RUNTIME:
+            add_if(errors, runtime.get("effort") != "pro", f"{prefix}: browser Pro cell effort must be pro")
         if runtime.get("model") == "gpt-5.6-luna":
             add_if(errors, task["admission_class"] == "NOT-APPLICABLE", f"{prefix}: Luna task needs explicit Narrow admission class")
+
+    # Prompt69/70 are reserved for the original signed-in desktop Sol High
+    # orchestrator. Reviews retain their actual audit owner, but no route row
+    # may ever regress to an unassigned owner or a different supervisor.
+    if task["parent_route"] in {"Prompt69", "Prompt70"}:
+        add_if(errors, task["owner"] == "unassigned", f"{prefix}: Prompt69/70 owner cannot be unassigned")
+        add_if(errors, task["supervising_lead"] != "/root", f"{prefix}: Prompt69/70 supervising authority must be /root")
+        if task["kind"] in {"prompt_preparation", "pro_research"}:
+            add_if(errors, task["owner"] != DESKTOP_OWNER, f"{prefix}: wrong Prompt69/70 desktop owner")
+        if task["kind"] == "pro_research":
+            add_if(errors, not isinstance(runtime, dict) or runtime.get("route") != DESKTOP_RUNTIME, f"{prefix}: wrong Prompt69/70 launch runtime")
+            add_if(errors, not isinstance(runtime, dict) or runtime.get("desktop_readback") is None, f"{prefix}: Prompt69/70 desktop launch needs exact readback")
+    if task_id in {
+        "PIPE-P71-PRIVATE-POINT-ENERGY-CONTRACT-134",
+        "PIPE-P72-MODULAR-COVER-CIRCUIT-CONTRACT-135",
+        "PIPE-P73-MINIMAL-COUNTEREXAMPLE-NEW-OP-CONTRACT-137",
+        "PIPE-P74-GLOBAL-PSD-CHARACTER-CONTRACT-139",
+    }:
+        add_if(errors, task["owner"] != DESKTOP_OWNER, f"{prefix}: wrong pipeline route owner")
+        add_if(errors, task["supervising_lead"] != "Sol Medium Research Pipeline Lead", f"{prefix}: wrong pipeline supervising lead")
+        add_if(errors, not isinstance(runtime, dict) or runtime.get("pro_cell") is not False, f"{prefix}: preparation cannot consume a Pro cell")
 
     add_if(errors, task["status"] == "active" and task["operational_state"] != "active", f"{prefix}: active status/state mismatch")
     add_if(errors, task["status"] == "prepared" and task["operational_state"] != "prepared", f"{prefix}: prepared status/state mismatch")
