@@ -346,3 +346,21 @@ is promoted by this package.
 The authoritative audit is `docs/response74-provenance-audit.md`. Its
 `recovery-provenance-accepted` recommendation is operational only and does not
 promote a theorem, counterexample, computation, or LRC status.
+
+## VERIFY-P74-MATHEMATICAL-AUDIT-174 — signed-Gram counterexample
+
+- **Response audited:** `research/sol-pro/responses/response74.md` at
+  `967cabe9d0a94c2504e36e10473ef5eccef87adc`
+- **Disposition:** exact common-scaling family accepted as `proved-math`
+- **Rejected bridge:** `GLOBAL-DEGREE-2N-SIGNED-GRAM-GAP`
+- **Exact family:** `(c,2c,8c)` for every `c≥6`, with blocks
+  `(-1/4 I₆,-1/4 I₆,0)` and `G=(0,0,6c)`
+- **Surviving certificate:** pivot `8c`, residue `r=9`; hence neither pivot
+  existence nor LRC is refuted
+- **Finite evidence:** all displayed fixture counts and histograms independently
+  reproduced at exact finite scope; uncertified spectral diagnostics unpromoted
+- **Open boundary:** primitive-only/scale-invariant replacements and
+  unrestricted LRC remain open
+
+The authoritative review is `docs/response74-mathematical-audit.md`. No Lean
+status is promoted by this manuscript-level audit.
