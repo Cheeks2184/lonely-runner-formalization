@@ -64,6 +64,8 @@ project-specific axiom.
 #print axioms LonelyRunner.card_strictCyclicBall
 #print axioms LonelyRunner.card_mul_mod_strictCyclicBall
 #print axioms LonelyRunner.card_pivotBadResidues_exact
+#print axioms LonelyRunner.normalizedBadCount
+#print axioms LonelyRunner.card_pivotBadResidues_normalized
 #print axioms LonelyRunner.commonPivotBadCount_eq_card
 #print axioms LonelyRunner.exists_commonPivotCandidate_of_sum_badCount_lt
 #print axioms LonelyRunner.commonPivotCandidate_avoids_unitMultiple
