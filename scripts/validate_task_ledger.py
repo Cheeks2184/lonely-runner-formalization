@@ -23,6 +23,11 @@ from typing import Any, Iterable, Mapping, Sequence
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_LEDGER = ROOT / "research/task-ledger.json"
 DEFAULT_SCHEMA = ROOT / "research/task-ledger.schema.json"
+PROMOTION_REGISTRY_PATH = "research/promotion-decisions.json"
+# This allowlist is intentionally code-frozen. The validator reads the
+# immutable Git object, never the mutable worktree copy, so a task row cannot
+# fabricate PI authority by adding a free-form string or source reference.
+PROMOTION_REGISTRY_COMMIT = "b5ab2cf19327b4e0e0c42288416de2ec3f98e4b3"
 
 LIFECYCLE_STAGES = [
     "preparation",
@@ -50,7 +55,12 @@ EVIDENCE_LABELS = {
     "literature-external-unformalized", "rejected-operational-output",
     "accepted-audit-deliverable", "accepted-negative-audit",
 }
-AUDIT_OUTCOMES = {"not_applicable", "accepted", "accepted_negative", "rejected", "pending"}
+PROMOTED_EVIDENCE_LABELS = {
+    "recovery-provenance", "computed-finite-evidence", "proved-math-qualified",
+    "literature-external-unformalized", "rejected-operational-output",
+    "accepted-audit-deliverable", "accepted-negative-audit",
+}
+AUDIT_OUTCOMES = {"not_applicable", "accepted", "accepted_negative", "rejected", "pending", "deferred"}
 QUEUE_STATES = {"none", "launch_ready", "waiting", "parked"}
 VERIFICATION_STATES = {"pending", "active", "complete", "not_required"}
 EFFORTS = {None, "low", "medium", "high", "xhigh", "pro"}
@@ -144,6 +154,44 @@ def commit_exists(commit: str) -> bool:
     return process.returncode == 0
 
 
+@lru_cache(maxsize=None)
+def json_from_commit(commit: str, path: str) -> Any:
+    """Read strict JSON from an immutable repository object without writes."""
+
+    process = subprocess.run(
+        ["git", "-C", str(ROOT), "show", f"{commit}:{path}"],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if process.returncode != 0:
+        raise LedgerError(f"cannot read {path} at {commit}")
+
+    def unique_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+        result: dict[str, Any] = {}
+        for key, value in pairs:
+            if key in result:
+                raise LedgerError(f"{path}@{commit}: duplicate JSON key {key!r}")
+            result[key] = value
+        return result
+
+    try:
+        return json.loads(process.stdout.decode("utf-8"), object_pairs_hook=unique_object)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise LedgerError(f"{path}@{commit}: invalid JSON: {exc}") from exc
+
+
+def promotion_required(task: Mapping[str, Any]) -> bool:
+    return (
+        task["evidence_label"] in PROMOTED_EVIDENCE_LABELS
+        or task["audit_outcome"] in {"accepted", "accepted_negative", "rejected"}
+        or (
+            task["operational_state"] == "terminal"
+            and task["status"] in {"verified", "integrated"}
+        )
+    )
+
+
 def derive_metrics(tasks: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
     audits = Counter(task["audit_outcome"] for task in tasks if task["kind"] == "audit")
     route_queues = Counter(
@@ -155,6 +203,33 @@ def derive_metrics(tasks: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
         str(task["verification"]["level"])
         for task in tasks
         if task["verification"]["state"] in {"pending", "active"}
+    )
+    active_medium_leads = {
+        task["owner"]
+        for task in tasks
+        if task["operational_state"] == "active" and task["runtime"]["effort"] == "medium"
+    }
+    luna_tasks = [task for task in tasks if task["runtime"]["model"] == "gpt-5.6-luna"]
+    completed_pro_routes = {
+        task["parent_route"]
+        for task in tasks
+        if task["runtime"]["pro_cell"] and task["status"] == "completed"
+    }
+    recovered_routes = {
+        task["parent_route"]
+        for task in tasks
+        if task["kind"] == "recovery"
+        and task["operational_state"] == "terminal"
+        and task["status"] in {"verified", "integrated", "completed"}
+    }
+    audited_routes = {
+        task["parent_route"]
+        for task in tasks
+        if task["kind"] == "audit" and task["verification"]["state"] in {"pending", "active"}
+    }
+    launch_ready_contracts = sum(
+        task["current_route_marker"] and task["route_queue"] == "launch_ready"
+        for task in tasks
     )
     return {
         "active_pro_cells": sum(
@@ -171,11 +246,73 @@ def derive_metrics(tasks: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
             "accepted_negative": audits["accepted_negative"],
             "rejected": audits["rejected"],
             "pending": audits["pending"],
+            "deferred": audits["deferred"],
         },
         "verification_level_queues": {
             "1": level_queues["1"],
             "2": level_queues["2"],
             "3": level_queues["3"],
+        },
+        "pipeline": {
+            "active_medium_leads": len(active_medium_leads),
+            "luna_ready_tasks": sum(
+                task["admission_class"] == "LUNA-READY"
+                and task["operational_state"] in {"active", "prepared"}
+                for task in tasks
+            ),
+            "active_luna_workers": sum(
+                task["runtime"]["model"] == "gpt-5.6-luna"
+                and task["operational_state"] == "active"
+                for task in tasks
+            ),
+            "integration_backlog": sum(
+                task["lifecycle_stage"] == "integration"
+                and task["operational_state"] in {"active", "prepared"}
+                for task in tasks
+            ),
+            "sol_high_review_backlog": sum(
+                task["status"] == "review"
+                and task["operational_state"] == "prepared"
+                and (
+                    task["owner"] == DESKTOP_OWNER
+                    or (
+                        task["runtime"]["model"] == "gpt-5.6-sol"
+                        and task["runtime"]["effort"] == "high"
+                    )
+                )
+                for task in tasks
+            ),
+            "pro_cells_awaiting_recovery": len(completed_pro_routes - recovered_routes),
+            "responses_under_audit": len(recovered_routes & audited_routes),
+            "launch_ready_contracts": launch_ready_contracts,
+        },
+        # Historical rows lack a complete, consistently sourced event series.
+        # Unknown speed values remain null rather than being reverse-engineered.
+        "speed_metrics": {
+            "dispatch_latency_seconds": None,
+            "execution_duration_seconds": None,
+            "review_latency_seconds": None,
+            "recovery_latency_seconds": None,
+            "integration_latency_seconds": None,
+            "end_to_end_cycle_seconds": None,
+            "throughput_tasks_per_hour": None,
+        },
+        "luna_narrow_effectiveness": {
+            "launched": sum(task["status"] not in {"planned", "prepared"} for task in luna_tasks),
+            "admitted": sum(task["admission_class"] == "LUNA-READY" for task in luna_tasks),
+            "rejected": sum(task["status"] == "rejected" for task in luna_tasks),
+            "preflight_runs": None,
+            "full_runs": None,
+            "accepted": sum(task["status"] in {"verified", "integrated"} for task in luna_tasks),
+            "escalations": None,
+            "repairs": None,
+            "runtime_failures": None,
+            "rejected_outputs": sum(
+                task["evidence_label"] == "rejected-operational-output" for task in luna_tasks
+            ),
+            "review_cycles": None,
+            "duplicates": None,
+            "integration_time_seconds": None,
         },
     }
 
@@ -213,6 +350,90 @@ def validate_schema_contract(schema: Mapping[str, Any], errors: list[str]) -> No
     add_if(errors, schema.get("additionalProperties") is not False, "schema: root must fail closed on extra properties")
     definitions = schema.get("$defs")
     add_if(errors, not isinstance(definitions, dict), "schema: missing $defs")
+
+
+def validate_promotion_registry(
+    ledger: Mapping[str, Any], tasks: Sequence[Mapping[str, Any]], errors: list[str]
+) -> None:
+    """Bind every promotion to the immutable, root-authorized PI registry."""
+
+    registry_commit = ledger.get("promotion_registry_commit")
+    add_if(
+        errors,
+        registry_commit != PROMOTION_REGISTRY_COMMIT,
+        "ledger: promotion registry commit is not the frozen PI decision commit",
+    )
+    if registry_commit != PROMOTION_REGISTRY_COMMIT:
+        return
+    try:
+        registry = json_from_commit(registry_commit, PROMOTION_REGISTRY_PATH)
+    except LedgerError as exc:
+        errors.append(f"promotion registry: {exc}")
+        return
+    if not isinstance(registry, dict) or set(registry) != {"schema_version", "authority", "decisions"}:
+        errors.append("promotion registry: malformed root")
+        return
+    add_if(errors, registry["schema_version"] != "1.0.0", "promotion registry: wrong schema version")
+    add_if(errors, registry["authority"] != "/root", "promotion registry: authority must be /root")
+    decisions = registry["decisions"]
+    if not isinstance(decisions, list):
+        errors.append("promotion registry: decisions must be a list")
+        return
+    record_keys = {
+        "decision_id", "task_id", "authority", "status", "operational_state",
+        "evidence_label", "audit_outcome", "disposition_sha256",
+    }
+    decisions_by_task: dict[str, Mapping[str, Any]] = {}
+    for index, decision in enumerate(decisions):
+        prefix = f"promotion registry decision[{index}]"
+        if not isinstance(decision, dict) or set(decision) != record_keys:
+            errors.append(f"{prefix}: malformed record")
+            continue
+        task_id = decision["task_id"]
+        add_if(errors, task_id in decisions_by_task, f"{prefix}: duplicate task decision {task_id}")
+        add_if(errors, decision["decision_id"] != f"PI-{task_id}", f"{prefix}: decision ID is not task-bound")
+        add_if(errors, decision["authority"] != "/root", f"{prefix}: authority must be /root")
+        add_if(
+            errors,
+            not isinstance(decision["disposition_sha256"], str)
+            or SHA256_RE.fullmatch(decision["disposition_sha256"]) is None,
+            f"{prefix}: invalid disposition digest",
+        )
+        decisions_by_task[task_id] = decision
+
+    required_ids: set[str] = set()
+    for task in tasks:
+        if not promotion_required(task):
+            continue
+        task_id = task["id"]
+        required_ids.add(task_id)
+        decision = decisions_by_task.get(task_id)
+        if decision is None:
+            errors.append(f"task {task_id}: promotion lacks immutable /root decision")
+            continue
+        for field in ("status", "operational_state", "evidence_label", "audit_outcome"):
+            add_if(
+                errors,
+                decision[field] != task[field],
+                f"task {task_id}: promotion decision {field} mismatch",
+            )
+        disposition_digest = hashlib.sha256(task["disposition"].encode("utf-8")).hexdigest()
+        add_if(
+            errors,
+            decision["disposition_sha256"] != disposition_digest,
+            f"task {task_id}: PI disposition differs from immutable decision",
+        )
+        if (
+            task["evidence_label"] in PROMOTED_EVIDENCE_LABELS
+            or task["audit_outcome"] in {"accepted", "accepted_negative", "rejected"}
+        ):
+            add_if(
+                errors,
+                task["supervising_lead"] != "/root",
+                f"task {task_id}: promoted evidence requires /root supervision",
+            )
+    extra_ids = set(decisions_by_task) - required_ids
+    add_if(errors, bool(extra_ids), f"promotion registry: unbound decisions {sorted(extra_ids)}")
 
 
 def validate_task(task: Mapping[str, Any], task_ids: set[str], errors: list[str]) -> None:
@@ -425,7 +646,7 @@ def validate(ledger: Mapping[str, Any], schema: Mapping[str, Any]) -> tuple[list
     errors: list[str] = []
     validate_schema_contract(schema, errors)
     expected_root = {
-        "schema_version", "base_commit", "lifecycle_stages", "verification_levels",
+        "schema_version", "base_commit", "promotion_registry_commit", "lifecycle_stages", "verification_levels",
         "tasks", "placeholders", "expected_metrics",
     }
     add_if(errors, set(ledger) != expected_root, "ledger: fields differ from frozen root schema")
@@ -450,6 +671,8 @@ def validate(ledger: Mapping[str, Any], schema: Mapping[str, Any]) -> tuple[list
             errors.append(f"ledger: task[{index}] is not an object")
             continue
         validate_task(task, task_ids, errors)
+
+    validate_promotion_registry(ledger, tasks, errors)
 
     tasks_by_id = {task["id"]: task for task in tasks if isinstance(task, dict) and isinstance(task.get("id"), str)}
     cycle = find_cycle(tasks_by_id) if len(tasks_by_id) == len(tasks) else None

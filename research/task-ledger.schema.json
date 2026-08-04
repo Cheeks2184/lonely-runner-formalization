@@ -7,6 +7,7 @@
   "required": [
     "schema_version",
     "base_commit",
+    "promotion_registry_commit",
     "lifecycle_stages",
     "verification_levels",
     "tasks",
@@ -16,6 +17,7 @@
   "properties": {
     "schema_version": {"const": "1.0.0"},
     "base_commit": {"$ref": "#/$defs/commit"},
+    "promotion_registry_commit": {"$ref": "#/$defs/commit"},
     "lifecycle_stages": {
       "type": "array",
       "prefixItems": [
@@ -266,7 +268,7 @@
         },
         "disposition": {"type": ["string", "null"]},
         "audit_outcome": {
-          "enum": ["not_applicable", "accepted", "accepted_negative", "rejected", "pending"]
+          "enum": ["not_applicable", "accepted", "accepted_negative", "rejected", "pending", "deferred"]
         },
         "review_ids": {
           "type": "array",
@@ -299,7 +301,7 @@
     "metrics": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["active_pro_cells", "route_queues", "audits", "verification_level_queues"],
+      "required": ["active_pro_cells", "route_queues", "audits", "verification_level_queues", "pipeline", "speed_metrics", "luna_narrow_effectiveness"],
       "properties": {
         "active_pro_cells": {"type": "integer", "minimum": 0},
         "route_queues": {
@@ -315,13 +317,14 @@
         "audits": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["total", "accepted", "accepted_negative", "rejected", "pending"],
+          "required": ["total", "accepted", "accepted_negative", "rejected", "pending", "deferred"],
           "properties": {
             "total": {"type": "integer", "minimum": 0},
             "accepted": {"type": "integer", "minimum": 0},
             "accepted_negative": {"type": "integer", "minimum": 0},
             "rejected": {"type": "integer", "minimum": 0},
-            "pending": {"type": "integer", "minimum": 0}
+            "pending": {"type": "integer", "minimum": 0},
+            "deferred": {"type": "integer", "minimum": 0}
           }
         },
         "verification_level_queues": {
@@ -332,6 +335,55 @@
             "1": {"type": "integer", "minimum": 0},
             "2": {"type": "integer", "minimum": 0},
             "3": {"type": "integer", "minimum": 0}
+          }
+        },
+        "pipeline": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["active_medium_leads", "luna_ready_tasks", "active_luna_workers", "integration_backlog", "sol_high_review_backlog", "pro_cells_awaiting_recovery", "responses_under_audit", "launch_ready_contracts"],
+          "properties": {
+            "active_medium_leads": {"type": "integer", "minimum": 0},
+            "luna_ready_tasks": {"type": "integer", "minimum": 0},
+            "active_luna_workers": {"type": "integer", "minimum": 0},
+            "integration_backlog": {"type": "integer", "minimum": 0},
+            "sol_high_review_backlog": {"type": "integer", "minimum": 0},
+            "pro_cells_awaiting_recovery": {"type": "integer", "minimum": 0},
+            "responses_under_audit": {"type": "integer", "minimum": 0},
+            "launch_ready_contracts": {"type": "integer", "minimum": 0}
+          }
+        },
+        "speed_metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["dispatch_latency_seconds", "execution_duration_seconds", "review_latency_seconds", "recovery_latency_seconds", "integration_latency_seconds", "end_to_end_cycle_seconds", "throughput_tasks_per_hour"],
+          "properties": {
+            "dispatch_latency_seconds": {"type": ["number", "null"], "minimum": 0},
+            "execution_duration_seconds": {"type": ["number", "null"], "minimum": 0},
+            "review_latency_seconds": {"type": ["number", "null"], "minimum": 0},
+            "recovery_latency_seconds": {"type": ["number", "null"], "minimum": 0},
+            "integration_latency_seconds": {"type": ["number", "null"], "minimum": 0},
+            "end_to_end_cycle_seconds": {"type": ["number", "null"], "minimum": 0},
+            "throughput_tasks_per_hour": {"type": ["number", "null"], "minimum": 0}
+          }
+        },
+        "luna_narrow_effectiveness": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["launched", "admitted", "rejected", "preflight_runs", "full_runs", "accepted", "escalations", "repairs", "runtime_failures", "rejected_outputs", "review_cycles", "duplicates", "integration_time_seconds"],
+          "properties": {
+            "launched": {"type": ["integer", "null"], "minimum": 0},
+            "admitted": {"type": ["integer", "null"], "minimum": 0},
+            "rejected": {"type": ["integer", "null"], "minimum": 0},
+            "preflight_runs": {"type": ["integer", "null"], "minimum": 0},
+            "full_runs": {"type": ["integer", "null"], "minimum": 0},
+            "accepted": {"type": ["integer", "null"], "minimum": 0},
+            "escalations": {"type": ["integer", "null"], "minimum": 0},
+            "repairs": {"type": ["integer", "null"], "minimum": 0},
+            "runtime_failures": {"type": ["integer", "null"], "minimum": 0},
+            "rejected_outputs": {"type": ["integer", "null"], "minimum": 0},
+            "review_cycles": {"type": ["integer", "null"], "minimum": 0},
+            "duplicates": {"type": ["integer", "null"], "minimum": 0},
+            "integration_time_seconds": {"type": ["number", "null"], "minimum": 0}
           }
         }
       }

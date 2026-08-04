@@ -33,9 +33,20 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
         self.assertEqual(metrics["active_pro_cells"], 1)
-        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 2, "parked": 0})
-        self.assertEqual(metrics["audits"], {"total": 31, "accepted": 16, "accepted_negative": 7, "rejected": 0, "pending": 8})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 4, "2": 7, "3": 0})
+        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 0})
+        self.assertEqual(metrics["audits"], {"total": 32, "accepted": 20, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 4})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 0, "2": 1, "3": 0})
+        self.assertEqual(metrics["pipeline"], {
+            "active_medium_leads": 0,
+            "luna_ready_tasks": 0,
+            "active_luna_workers": 0,
+            "integration_backlog": 0,
+            "sol_high_review_backlog": 0,
+            "pro_cells_awaiting_recovery": 0,
+            "responses_under_audit": 0,
+            "launch_ready_contracts": 0,
+        })
+        self.assertTrue(all(value is None for value in metrics["speed_metrics"].values()))
 
     def test_level_three_is_reserved_for_authoritative_fresh_clone_publication(self):
         artifact_ids = {
@@ -45,15 +56,78 @@ class TaskLedgerValidatorTests(unittest.TestCase):
             "VERIFY-P72-ARTIFACT-AUDIT-169",
         }
         artifact_tasks = [task for task in self.ledger["tasks"] if task["id"] in artifact_ids]
-        self.assertEqual({task["verification"]["level"] for task in artifact_tasks}, {2})
+        self.assertEqual({task["status"] for task in artifact_tasks}, {"frozen"})
+        self.assertEqual({task["audit_outcome"] for task in artifact_tasks}, {"deferred"})
+        self.assertEqual(
+            {tuple(task["verification"].values()) for task in artifact_tasks},
+            {(None, "not_required")},
+        )
 
         def promote_targeted_replay(ledger):
             task = next(task for task in ledger["tasks"] if task["id"] == "VERIFY-P68-ARTIFACT-AUDIT-151")
-            task["verification"]["level"] = 3
+            task["verification"] = {"level": 3, "state": "active"}
 
         self.assertHasError(
             self.errors_for(promote_targeted_replay),
             "Level 3 is reserved for authoritative fresh-clone publication checkpoints",
+        )
+
+    def test_promotions_require_immutable_root_decisions(self):
+        def pending_prompt74_label_only(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "VERIFY-P74-MATHEMATICAL-AUDIT-174")
+            task["status"] = "prepared"
+            task["operational_state"] = "prepared"
+            task["verification"] = {"level": 2, "state": "pending"}
+            task["evidence_label"] = "proved-math-qualified"
+            task["audit_outcome"] = "pending"
+            task["integration_commit"] = None
+            ledger["expected_metrics"] = derive_metrics(ledger["tasks"])
+
+        errors = self.errors_for(pending_prompt74_label_only)
+        self.assertHasError(errors, "promotion decision status mismatch")
+        self.assertHasError(errors, "promotion decision evidence_label mismatch")
+
+        def change_proved_math_supervisor(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "FORM-P67-RESPONSE-MATH-AUDIT-103")
+            task["supervising_lead"] = "independent lead"
+
+        self.assertHasError(
+            self.errors_for(change_proved_math_supervisor),
+            "promoted evidence requires /root supervision",
+        )
+
+        def promote_whole_unlaunched_task(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "INFRA-PIPELINE-LEDGER-CORRECTION-177")
+            task["status"] = "integrated"
+            task["operational_state"] = "terminal"
+            task["route_queue"] = "none"
+            task["current_route_marker"] = False
+            task["verification"] = {"level": 2, "state": "complete"}
+            task["evidence_label"] = "accepted-audit-deliverable"
+            task["audit_outcome"] = "accepted"
+            task["integration_commit"] = ledger["base_commit"]
+            ledger["expected_metrics"] = derive_metrics(ledger["tasks"])
+
+        self.assertHasError(
+            self.errors_for(promote_whole_unlaunched_task),
+            "promotion lacks immutable /root decision",
+        )
+
+        def rewrite_pi_disposition(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "VERIFY-P74-MATHEMATICAL-AUDIT-174")
+            task["disposition"] = "A generator rewrote the PI disposition."
+
+        self.assertHasError(
+            self.errors_for(rewrite_pi_disposition),
+            "PI disposition differs from immutable decision",
+        )
+
+        def swap_registry(ledger):
+            ledger["promotion_registry_commit"] = ledger["base_commit"]
+
+        self.assertHasError(
+            self.errors_for(swap_registry),
+            "promotion registry commit is not the frozen PI decision commit",
         )
 
     def test_desktop_pro_authority_and_readback_are_fail_closed(self):
@@ -168,7 +242,7 @@ class TaskLedgerValidatorTests(unittest.TestCase):
 
     def test_queue_and_level_metrics_cannot_drift(self):
         def mutate_queue(ledger):
-            task = next(task for task in ledger["tasks"] if task["id"] == "INFRA-ROLLING-LEDGER-CORRECTION-155")
+            task = next(task for task in ledger["tasks"] if task["id"] == "INFRA-PIPELINE-LEDGER-CORRECTION-177")
             task["route_queue"] = "parked"
 
         self.assertHasError(self.errors_for(mutate_queue), "expected metrics mismatch")
@@ -177,6 +251,16 @@ class TaskLedgerValidatorTests(unittest.TestCase):
             ledger["expected_metrics"]["verification_level_queues"]["3"] = 1
 
         self.assertHasError(self.errors_for(mutate_level), "expected metrics mismatch")
+
+        def mutate_extended_metric(ledger):
+            ledger["expected_metrics"]["pipeline"]["active_luna_workers"] = 1
+
+        self.assertHasError(self.errors_for(mutate_extended_metric), "expected metrics mismatch")
+
+        def invent_speed(ledger):
+            ledger["expected_metrics"]["speed_metrics"]["review_latency_seconds"] = 1
+
+        self.assertHasError(self.errors_for(invent_speed), "expected metrics mismatch")
 
     def test_prompt_hash_mismatch_is_rejected(self):
         def mutate(ledger):
