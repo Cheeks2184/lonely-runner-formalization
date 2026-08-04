@@ -32,9 +32,9 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 2)
-        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 1})
-        self.assertEqual(metrics["audits"], {"total": 40, "accepted": 28, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 4})
+        self.assertEqual(metrics["active_pro_cells"], 3)
+        self.assertEqual(metrics["route_queues"], {"launch_ready": 1, "waiting": 1, "parked": 1})
+        self.assertEqual(metrics["audits"], {"total": 44, "accepted": 28, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 8})
         self.assertEqual(metrics["verification_level_queues"], {"1": 4, "2": 0, "3": 0})
         self.assertEqual(metrics["pipeline"], {
             "active_medium_leads": 3,
@@ -42,9 +42,9 @@ class TaskLedgerValidatorTests(unittest.TestCase):
             "active_luna_workers": 0,
             "integration_backlog": 0,
             "sol_high_review_backlog": 0,
-            "pro_cells_awaiting_recovery": 1,
+            "pro_cells_awaiting_recovery": 0,
             "responses_under_audit": 0,
-            "launch_ready_contracts": 0,
+            "launch_ready_contracts": 1,
         })
         self.assertEqual(metrics["luna_narrow_effectiveness"]["runtime_failures"], 2)
         self.assertEqual(metrics["luna_narrow_effectiveness"]["launched"], 5)
@@ -87,7 +87,8 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         self.assertEqual(tasks["SOL-P90-DESKTOP-LAUNCH-267"]["status"], "completed")
         self.assertEqual(tasks["SOL-P92-DESKTOP-LAUNCH-284"]["status"], "completed")
         self.assertEqual(tasks["SOL-P94-DESKTOP-LAUNCH-291"]["status"], "completed")
-        self.assertEqual(tasks["SOL-P95-DESKTOP-LAUNCH-297"]["status"], "active")
+        self.assertEqual(tasks["SOL-P95-DESKTOP-LAUNCH-297"]["status"], "completed")
+        self.assertEqual(tasks["SOL-P95-DESKTOP-LAUNCH-297"]["operational_state"], "terminal")
         self.assertEqual(tasks["OPS-P90-RECOVERY-PACKAGE-289"]["evidence_label"], "rejected-operational-output")
         self.assertEqual(tasks["OPS-P92-RECOVERY-PACKAGE-298"]["evidence_label"], "recovery-provenance")
         self.assertEqual(tasks["P92-SYMBOLIC-COUNTERFAMILY-MATHEMATICAL-AUDIT-301"]["evidence_label"], "proved-math-qualified")
@@ -108,7 +109,8 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         self.assertEqual(tasks["SOL-P94-DIVISOR-LATTICE-CONTRACT-PREP-283"]["route_queue"], "none")
         self.assertEqual(tasks["SOL-P96-ADVERSARIAL-SYNTHESIS-CONTRACT-PREP-299"]["route_queue"], "none")
         self.assertEqual(tasks["P96-INDEPENDENT-CONTRACT-REVIEW-302"]["status"], "completed")
-        self.assertEqual(tasks["SOL-P96-DESKTOP-LAUNCH-303"]["status"], "active")
+        self.assertEqual(tasks["SOL-P96-DESKTOP-LAUNCH-303"]["status"], "completed")
+        self.assertEqual(tasks["SOL-P96-DESKTOP-LAUNCH-303"]["operational_state"], "terminal")
         self.assertEqual(tasks["P85-LITERAL-REPLAY-02"]["admission_class"], "MEDIUM-SPEC-REQUIRED")
         self.assertEqual(tasks["P93-PSI-COUNTEREXAMPLE-REPLAY-01"]["admission_class"], "MEDIUM-SPEC-REQUIRED")
         self.assertEqual(tasks["P85-LITERAL-REPLAY-01"]["status"], "rejected")

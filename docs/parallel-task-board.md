@@ -2,7 +2,7 @@
 
 This file is the authoritative coordination record. The current lifecycle
 snapshot is based on main commit
-`243c122500191fb6713d5d697911b0b6935089d1`; historical worker rows retain
+`1c3cfe7746ab672184c5f77a9d6dbe708a50ff37`; historical worker rows retain
 their actual fixture bases. The board records task routing and integration
 readiness; it does not promote any mathematical claim.
 
@@ -12,8 +12,9 @@ This snapshot supersedes the historical current-state prose below. Its
 machine-readable source is `research/task-ledger.json`, bound to immutable PI
 promotion registry commit `fe4efb03063555f1f95175ed50a1c55bacbaa7a6`.
 Historical rows remain append-only evidence and are not silently reinterpreted.
-This current snapshot is lifecycle delta task308. Prompt94 recovery304 is not
-integrated and therefore contributes no recovery evidence or response claim.
+This current snapshot is lifecycle reconciliation task327. Recovery and audit
+rows added here are operational records only: no new audit recommendation is
+promoted without a matching immutable PI-registry decision.
 
 | Cell or lane | Lifecycle now | Exact boundary |
 | --- | --- | --- |
@@ -35,29 +36,34 @@ integrated and therefore contributes no recovery evidence or response claim.
 | Prompt91 | prelaunch stopped; provenance pending | Independent review returned REVISE / STOP on a mandatory fixture, but no artifact-grade counterexample is integrated. It was not launched and carries no accepted evidence. |
 | Prompt92 | completed, recovered, exact aggregate bridge refuted | Recovery merge `2e5554c`; symbolic audit301 merged at `79c4549`. The six-label all-`E` family and exact `E_6=117` instance are `proved-math-qualified` and refute the identical Prompt87/92 aggregate-dyadic bridge. This is not Lean or computed finite evidence and does not decide LRC or the pivot equivalence. |
 | Prompt93 | prelaunch STOP; replay specification needs correction | Review281 found the frozen `Psi` target false at `(1,3,4)`, but no artifact-grade accepted counterexample is integrated. The branch-only replay candidate and review294 are `MEDIUM-SPEC-REQUIRED`; no Luna launch or evidence exists. |
-| Prompt94 | completed; awaiting tracked recovery304 under provisional audit only | Task291 generation completed. Raw response and bundle remain ignored / quarantined, and recovery304 is not integrated. No response claim or recovery evidence is recorded; the unit-stratum target and unrestricted LRC remain `OPEN`. |
-| Prompt95 | active Pro research | Corrected contract task292 was integrated at `d75b9bc`; Sol High launched task297 at `e3055a1`. The max-covered-pivot target and unrestricted LRC remain `OPEN`; launch promotes nothing. |
-| Prompt96 reserved synthesis | active Pro research | Corrected prompt SHA `adbcb321...f1d1` was integrated at `17b1a2b`, review302 returned ACCEPT, and Sol High launched task303 at `9687dce`. Launch promotes nothing; the exact P94/P95 synthesis target and unrestricted LRC remain `OPEN`. |
+| Prompt94 | completed, recovered, audit recommendation `MIXED / OPEN` | Recovery304 is integrated at `5db949a`; audit311 is tracked at `2334112`. The archive and reported computations remain quarantined/unverified. Audit recommendations are deferred pending PI-registry action; the all-pivot unit-stratum target remains `OPEN`. |
+| Prompt95 | completed, recovered, audit recommendation `MIXED / OPEN` | Recovery310 is integrated through correction `2c81032`; audit321 is tracked at `591b011`. Supporting identities are recommendations only; the max-covered-pivot theorem and unrestricted LRC remain `OPEN`. |
+| Prompt96 reserved synthesis | completed, recovered, audit recommendation `ACCEPT SEPARATION` | Recovery314 is integrated at `d3af3bc`; audit312 is tracked at `2334112`. The symbolic all-`E` family has a `proved-math-qualified` recommendation only, not a promotion; Prompt94, Prompt95, and unrestricted LRC remain `OPEN`. |
+| Prompt97 | prelaunch `STOP / NOT LAUNCHABLE` | Audit313, integrated at `068de11`, finds the synchronized-cycle target tautologically equivalent to Prompt94's open unit-certificate target. This is a contract-design stop, not evidence against LRC. |
+| Prompt98 | active Sol Pro research | Task315 is the active `N`-nondivisible Prompt95 branch; launch provenance is task317 at `d5eae53`. It is supporting research and promotes nothing. |
+| Prompt99 | active Sol Pro research | Task316 is the active `N`-divisible Prompt95 branch; launch provenance is task318 at `3df57af`. Prompt98 is complementary but unproved. |
+| Prompt100 | active Sol Pro research; supporting route | Preparation319 and review322 classify the two-owner theorem as launch-ready support for Prompt95, not an independent third-cell route. Sol High launch325 is active at `40f166d`; launch promotes nothing. |
+| Prompt101 | launch-ready and queued; independent global route | Preparation323 and review326 were integrated through `1c3cfe7`. The covered-pivot subcritical-matrix theorem is a genuinely independent unrestricted contract, but preparation and queueing are not launch or evidence. |
 | P68 Task02 | frozen failed delegation | Luna/xhigh runtime routing was verified, but the task returned zero mandatory fixtures and no completed domain: `rejected-operational-output`. |
 | P68 Task03 | terminal rejected operational output | Fresh Luna/xhigh metadata routing passed, but the cache timed out before `0/6` semantic fixtures. No evidence exists; every successor is `MEDIUM-SPEC-REQUIRED`. |
 | Medium lanes | 3 active | Research Pipeline, Recovery/Verification, and Formalization/Specification leads are active downstream lanes. |
 | Luna lane | 0 active; 0 ready | Narrow Verification Mode remains in force. Prompt85 `-02` and Prompt93 replay are `MEDIUM-SPEC-REQUIRED`; neither has a runtime receipt, launch, worker, preflight, or evidence. |
-| Reserved Pro synthesis slot | occupied by Prompt96 | Prompt95 and Prompt96 are active. Prompt94 awaits nonintegrated recovery304, so the target of three active Pro cells is not met. |
+| Pro portfolio | 3 active; 1 launch-ready | Prompt98, Prompt99, and Prompt100 are active supporting Prompt95 subroutes. Prompt101 is the independent global contract queued for Sol High. The active-count target is met, but active-route diversity still awaits Prompt101 launch or another PI decision. |
 
 ### Validator-derived current metrics
 
 | Metric | Current value |
 | --- | ---: |
-| Active Pro cells | 2 |
-| Pro cells awaiting recovery | 1 |
+| Active Pro cells | 3 |
+| Pro cells awaiting recovery | 0 |
 | Responses under audit | 0 |
-| Launch-ready contracts | 0 |
+| Launch-ready contracts | 1 |
 | Active Medium leads | 3 |
 | Luna-ready tasks / active Luna workers | 0 / 0 |
 | Integration backlog / Sol High review backlog | 0 / 0 |
 | Verification queues Level 1 / Level 2 / Level 3 | 4 / 0 / 0 |
-| Audits total / accepted / accepted-negative / pending / deferred | 40 / 28 / 8 / 0 / 4 |
-| Route queues launch-ready / waiting / parked | 0 / 1 / 1 |
+| Audits total / accepted / accepted-negative / pending / deferred | 44 / 28 / 8 / 0 / 8 |
+| Route queues launch-ready / waiting / parked | 1 / 1 / 1 |
 | Luna launched / admitted / rejected / rejected outputs | 5 / 3 / 5 / 3 |
 | Luna terminal runtime failures | 2 |
 
