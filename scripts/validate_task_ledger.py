@@ -27,7 +27,7 @@ PROMOTION_REGISTRY_PATH = "research/promotion-decisions.json"
 # This allowlist is intentionally code-frozen. The validator reads the
 # immutable Git object, never the mutable worktree copy, so a task row cannot
 # fabricate PI authority by adding a free-form string or source reference.
-PROMOTION_REGISTRY_COMMIT = "260cfa6c7e64ac79b0347b9723001707fb3c3598"
+PROMOTION_REGISTRY_COMMIT = "4fcc1d5614852fc609fd5b6dbbace4b5f835b14b"
 
 LIFECYCLE_STAGES = [
     "preparation",
@@ -296,6 +296,14 @@ def derive_metrics(tasks: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
             "integration_latency_seconds": None,
             "end_to_end_cycle_seconds": None,
             "throughput_tasks_per_hour": None,
+            "mean_pro_completion_to_provisional_triage_seconds": None,
+            "mean_accepted_result_to_frozen_specification_seconds": None,
+            "mean_luna_ready_to_reviewed_output_seconds": None,
+            "three_active_pro_wall_time_percentage": None,
+            "pro_slot_idle_seconds_while_launch_ready": None,
+            "documentation_only_full_clean_replays": None,
+            "accepted_mathematical_deliverables_per_pro_turn": None,
+            "sol_high_integration_hours_per_accepted_deliverable": None,
         },
         "luna_narrow_effectiveness": {
             "launched": sum(task["status"] not in {"planned", "prepared"} for task in luna_tasks),

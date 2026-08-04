@@ -550,3 +550,36 @@ singleton blocker, the claimed bridge rejection, and the bounded search.
 Root's independent triage is separate and is not incorporated here. No theorem,
 bridge counterexample, computed finite evidence, Lean result, evidence label,
 or LRC status is promoted by this package.
+
+## OPS-ROLLING-PIPELINE-STATUS-SYNC-214
+
+Sol High accepted the Prompt76--78 recovery packages at
+`recovery-provenance` scope. Independent audits promote only these exact
+manuscript conclusions:
+
+- Prompt76: `(1,4,5,6,7,11)` refutes
+  `GLOBAL-CANONICAL-PRIVATE-DEFICIT-HALL` with demand `100` and capacity `98`.
+- Prompt77: the coprime family `(u,v,4uv)`, `6 <= u < v`, refutes
+  `PRIMITIVE-DEGREE-2N-SIGNED-GRAM-GAP`.
+- Prompt78: `(6,7,12,24,144)` refutes
+  `SPARSE-MINIMAL-COVER-OWNER-ESCAPE` and its canonical-cover weakening.
+
+All three tuples have exact pivot certificates. Unrestricted LRC and the exact
+pivot selector remain open. Prompt76's recovered scans, Prompt77's 6,330-row
+scan, and Prompt78's recovered computation were not independently executed or
+replayed and are not promoted.
+
+Current generation lifecycle from direct Sol High desktop readback:
+
+- Prompt79 completed after `40m 54s`; response recovery pending.
+- Prompt80 completed after `29m 33s`; response recovery pending.
+- Prompt81 completed after `4m 12s`; response recovery pending. Its captured
+  `INPUT-NOT-FROZEN` response is rejected operationally because required
+  unpushed inputs were inaccessible; it is not a mathematical result.
+- Prompt82 remains active Pro research.
+
+P68 Task02 used the verified fresh top-level Luna/xhigh route but returned zero
+mandatory fixtures and no completed domain, so it is preserved only as
+`rejected-operational-output`. Task03 remains `MEDIUM-SPEC-REQUIRED` and is not
+launchable. These lifecycle decisions are bound to immutable PI registry
+commit `4fcc1d5614852fc609fd5b6dbbace4b5f835b14b`.

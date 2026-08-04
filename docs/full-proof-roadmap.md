@@ -6,6 +6,28 @@ bounded-height improvement. Results keep the repository-wide labels
 `proved-lean`, `proved-math`, `computed`, `conditional`, `conjectural`,
 `refuted`, and `open`.
 
+## Rolling route triage (Prompt76--82)
+
+- Prompt76's global canonical private-deficit inequality is refuted at exact
+  manuscript scope by `(1,4,5,6,7,11)`: demand `100`, capacity `98`.
+- Prompt77's primitive degree-`2N` signed-Gram gap is refuted by the infinite
+  coprime family `(u,v,4uv)` for `6 <= u < v`.
+- Prompt78's sparse minimal-cover owner escape and canonical-cover weakening
+  are refuted by `(6,7,12,24,144)`.
+
+These are decisive stops for the named stronger bridges, not counterexamples
+to the exact pivot selector or LRC. Each displayed tuple has a pivot
+certificate. The response-supplied Prompt76 scans, Prompt77 6,330-record scan,
+and Prompt78 computation are not accepted finite evidence because they were
+not independently executed or replayed.
+
+The live unrestricted pipeline now has Prompt79--81 completed and awaiting
+recovery, with Prompt81 already classified operationally as
+`INPUT-NOT-FROZEN` due inaccessible unpushed inputs and therefore no
+mathematical result. Prompt82 is active on the global all-pivot saturated
+multiplicity-average route. Recovery and audit proceed without changing the
+exact unrestricted bottleneck below.
+
 ## Exact unrestricted bottleneck
 
 The kernel-checked integer statement is

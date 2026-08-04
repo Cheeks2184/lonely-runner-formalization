@@ -7,6 +7,20 @@ the Lonely Runner Conjecture (LRC).
 > `Conjecture` is a formal statement under investigation, not a completed
 > proof. See [STATUS.md](STATUS.md) for the current boundary of knowledge.
 
+Current research pipeline: Prompt76--78 are completed, recovered, and audited
+at exact bridge-rejection scope. Prompt79--81 are completed and awaiting
+recovery; Prompt81's captured response is an `INPUT-NOT-FROZEN` operational
+failure, not a mathematical result. Prompt82 remains active Sol Pro research.
+The accepted manuscript-level counterexamples reject only the frozen
+private-deficit, signed-Gram, and sparse-cover bridge statements; each tuple
+still has an exact pivot certificate, so none is an LRC counterexample.
+Prompt76's recovered scans, Prompt77's 6,330-record scan, and Prompt78's
+recovered computation remain unexecuted or independently unreplayed and are
+not computed finite evidence. The machine-readable lifecycle source is
+[`research/task-ledger.json`](research/task-ledger.json), whose PI decisions
+are frozen at registry commit
+`4fcc1d5614852fc609fd5b6dbbace4b5f835b14b`.
+
 ## Verified results
 
 The project uses the standard closed circular-distance threshold. For `n`

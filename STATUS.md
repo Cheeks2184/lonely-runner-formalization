@@ -5,6 +5,29 @@ Status date: 2026-08-03. Authoritative branch: `main`.
 Unrestricted Lonely Runner Conjecture: **open**. This repository contains no
 claim that it has been proved or disproved.
 
+## Rolling research status
+
+Prompt76, Prompt77, and Prompt78 are completed, recovered, and independently
+audited. Their exact `proved-math-qualified` dispositions refute respectively
+`GLOBAL-CANONICAL-PRIVATE-DEFICIT-HALL`,
+`PRIMITIVE-DEGREE-2N-SIGNED-GRAM-GAP`, and
+`SPARSE-MINIMAL-COVER-OWNER-ESCAPE` together with its canonical-cover
+weakening. These are bridge counterexamples only. Every displayed tuple has
+an exact pivot certificate; unrestricted LRC remains open.
+
+Prompt79, Prompt80, and reserved synthesis Prompt81 have completed and await
+recovery. Prompt81's captured response is `INPUT-NOT-FROZEN` and rejected as
+operational output because it could not access required unpushed inputs; it
+contains no accepted mathematical result. Prompt82 is the sole active Pro
+cell. Three Medium lead lanes are active; no Luna worker or `LUNA-READY` task
+is active. P68 Task02 is a verified Luna/xhigh route but rejected delegation
+with zero fixtures; Task03 remains `MEDIUM-SPEC-REQUIRED`.
+
+No recovered Prompt76 scan, Prompt77 6,330-record scan, or Prompt78 computation
+has been promoted to computed finite evidence. Current validator queues are
+Level 1: 1, Level 2: 1, Level 3: 0. This lifecycle synchronization is a Level
+1 checkpoint and triggers no full clean Lean replay.
+
 ## Strongest verified theorem
 
 The strongest fully Lean-verified bounded-height result is
