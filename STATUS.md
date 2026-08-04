@@ -123,15 +123,26 @@ on `C`, with all speeds strictly between `0` and `p`, cannot cover when
 `|C|>=2` and `3|C|<=N+1`. Consequently every internal complete cover at a
 maximum covered pivot satisfies `N+1<3|C|` without a minimality hypothesis,
 and redundancy is vacuously true when
-`3*(coveredPivots.card-1)<=N+1`. These statements are not yet Lean-verified.
-All Task366 scans are audit support only, not computed finite evidence.
+`3*(coveredPivots.card-1)<=N+1`. These density statements are not yet
+Lean-verified. The separate declarations `normalizedBadCount` and
+`card_pivotBadResidues_normalized` are `proved-lean` for exact one-set
+cardinality normalization only. They supply no two-owner union or overlap
+estimate and no noncover theorem. All Task366 scans are audit support only, not
+computed finite evidence.
 The exact remaining Prompt95 bottleneck is internal covers satisfying
 `3|C|>N+1`; Prompt95, the pivot certificate, and LRC remain open.
 
 Task367's documentation-only formal contract is PI-reviewed and completed at
-branch commit `1ca1a97`; it contains no Lean or evidence promotion. Task368 is
-an active read-only Level-2 review of Task363, and Task369 is an active Level-1
-registry/status sync. No result is inferred from either active task.
+branch commit `1ca1a97`; it contains no Lean or evidence promotion. Tasks368
+and 370 are terminal accepted reviews of Task363's exact two declarations.
+Task370's integrated checkpoint passed the target module, all 3,594
+`lake build LonelyRunner` jobs, and direct root/AxiomAudit probes. GitHub Actions
+run `30929728668` passed Lean/trust but failed overall at 190/191 tests because
+five historical base commits were unavailable in that checkout. Task371's
+corrective exact single-branch native clone of main `71659d6` passed the ledger
+validator and 19/19 tests in 4.267 seconds and reached all 291 non-null refs
+across 130 unique commits, with zero missing. This is provenance reachability,
+not theorem or computed finite evidence.
 Prompt101 completed and is recovered at `6964613`. Independent audit refutes
 `COVERED-PIVOT-SUBCRITICAL-WEIGHTS` on the primitive tuple
 `(1,5,25,125)` and verifies the uniform geometric power-family obstruction at

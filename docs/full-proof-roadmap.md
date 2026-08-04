@@ -101,13 +101,17 @@ minimality assumption, satisfies `N+1<3|C|`. Equivalently, redundancy is
 vacuously true when `3*(coveredPivots.card-1)<=N+1`. Thus the remaining
 bottleneck is an internal cover satisfying `3|C|>N+1`, not merely a generic
 three-owner cover. Lean formalization of these accepted mathematical statements
-is pending.
+is pending. Task363 separately proves only the exact one-set normalization
+`normalizedBadCount` / `card_pivotBadResidues_normalized`; it does not close any
+two-owner, density, noncover, Prompt95, pivot-certificate, or LRC edge.
 Task365 freezes the `N=4` owner-class sub-specification, but its eight rows and
 3,043 normalized pairs are audit support only. Complete class counts, the `G`
 base lift, and first-sheet scaling remain implementation or Medium-spec edges.
 Task367's documentation-only formal contract is PI-reviewed and complete at
-branch commit `1ca1a97`; it promotes no Lean or mathematical result. Task368
-remains an active read-only review with no result recorded by this sync.
+branch commit `1ca1a97`; it promotes no Lean or mathematical result. Tasks368
+and 370 are terminal accepted reviews/checkpoints for Task363's exact
+declaration scope. Task371 terminally accepts the corrective 291-reference
+history-reachability replay only; it supplies no mathematical evidence.
 Prompt101 is completed, recovered, and independently audited. Its
 positive subcritical-weight theorem is `refuted-exact` by `(1,5,25,125)` and
 by the uniform family `a_k=cN^k`; see

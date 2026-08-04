@@ -27,7 +27,7 @@ PROMOTION_REGISTRY_PATH = "research/promotion-decisions.json"
 # This allowlist is intentionally code-frozen. The validator reads the
 # immutable Git object, never the mutable worktree copy, so a task row cannot
 # fabricate PI authority by adding a free-form string or source reference.
-PROMOTION_REGISTRY_COMMIT = "4a211575ff96b8b4a3ae1c1a59ee685b4913a6a9"
+PROMOTION_REGISTRY_COMMIT = "318f073965cdbf580a200ab2f8d6d8fe1bb82ac6"
 
 LIFECYCLE_STAGES = [
     "preparation",
@@ -51,12 +51,12 @@ ADMISSION_CLASSES = {
 }
 EVIDENCE_LABELS = {
     "none", "operational-only", "contract-only", "documentation-only",
-    "recovery-provenance", "computed-finite-evidence", "proved-math-qualified",
+    "recovery-provenance", "computed-finite-evidence", "proved-math-qualified", "proved-lean",
     "literature-external-unformalized", "rejected-operational-output",
     "accepted-audit-deliverable", "accepted-negative-audit",
 }
 PROMOTED_EVIDENCE_LABELS = {
-    "recovery-provenance", "computed-finite-evidence", "proved-math-qualified",
+    "recovery-provenance", "computed-finite-evidence", "proved-math-qualified", "proved-lean",
     "literature-external-unformalized", "rejected-operational-output",
     "accepted-audit-deliverable", "accepted-negative-audit",
 }
