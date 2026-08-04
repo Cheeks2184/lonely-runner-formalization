@@ -390,8 +390,8 @@ status is promoted by this manuscript-level audit.
 - **Exact recovered attachment inventory:** none; the UI capture recorded
   zero observed attachments, and the response does not claim that it supplied
   an attachment with this answer
-- **Lifecycle:** completed/recovered; independent audits pending
-- **Frozen downstream audits:** `VER-P75-RECOVERY-PROVENANCE-185` and
+- **Lifecycle:** completed/recovered; independent audits complete
+- **Completed downstream audits:** `VER-P75-RECOVERY-PROVENANCE-185` and
   `VERIFY-P75-MATHEMATICAL-AUDIT-186`
 
 Recovery preserves the response's Section 6 **STOP** self-disposition and
@@ -422,3 +422,23 @@ package.
 The authoritative audit is `docs/response75-provenance-audit.md`. Its
 `recovery-provenance-accepted` recommendation is operational only and does not
 promote a theorem, computation, formal result, pivot claim, or LRC status.
+
+## VER-P75-MATH-AUDIT-186 — Prompt75 mathematical audit
+
+- **Response audited:** `research/sol-pro/responses/response75.md` at
+  `b40872423d9e6aac3610f058a859600126740365`
+- **Disposition:** mixed local mathematics; all global syntheses stopped
+- **Confirmed local scope:** A1--A4, B1--B6, common scaling, singleton
+  rigidity, and the corrected `n=2` compensation proof
+- **Correction:** the `n=2` good-count formula is valid, but the claimed single
+  full-modulus safe interval is false for source speed greater than one
+- **Equivalent targets:** collective bounded-hyperplane exclusion and the
+  simultaneous-cover common-prime theorem are each LRC-equivalent
+- **Open target:** multiowner compensation still lacks an owner-aware safe-slot
+  injection; no unrestricted bridge is proved
+- **Computation boundary:** broad Prompt68--70 scan totals remain unaccepted;
+  only the displayed small fixtures were independently recomputed
+
+The authoritative review is `docs/response75-mathematical-audit.md`. It does
+not promote Prompt75's **MIXED** or **STOP**, any finite scan, a Lean theorem,
+or unrestricted LRC.
