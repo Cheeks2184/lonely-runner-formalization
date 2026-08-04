@@ -1,0 +1,234 @@
+{
+  "first_failure": [
+    1,
+    3,
+    16
+  ],
+  "fixed_pivot_6_lifts": 0,
+  "fixed_pivot_6_rows": 16,
+  "fixtures": {
+    "(1, 2, 3, 10)": {
+      "canonical_lifts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "counts": [
+        18,
+        12,
+        16,
+        6
+      ],
+      "total_lift_counts": [
+        8,
+        6,
+        6,
+        6
+      ]
+    },
+    "(1, 2, 3, 60)": {
+      "canonical_lifts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "counts": [
+        48,
+        30,
+        48,
+        6
+      ],
+      "total_lift_counts": [
+        18,
+        0,
+        6,
+        0
+      ]
+    },
+    "(1, 2, 6, 8, 10)": {
+      "canonical_lifts": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "counts": [
+        8,
+        22,
+        16,
+        16,
+        26
+      ],
+      "total_lift_counts": [
+        8,
+        8,
+        8,
+        4,
+        4
+      ]
+    },
+    "(1, 3, 4, 7)": {
+      "canonical_lifts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "counts": [
+        8,
+        8,
+        11,
+        4
+      ],
+      "total_lift_counts": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "invocation": "python3 /mnt/data/prompt80_replay.py",
+  "main_output_sha256": "07db2f92bcd86e4d9ba4b8370b1b1c01055f44323f69136127725ff683262bef",
+  "main_prefix_counts": {
+    "above_cutoff": 30,
+    "all_deletions_nonempty": 8,
+    "hard_premise": 1,
+    "hard_with_strict_block": 0,
+    "hard_without_strict_block": 1,
+    "has_N_divisible": 8,
+    "primitive": 35,
+    "tuples_seen": 35
+  },
+  "main_source_sha256": "c680b9c3c621b0f6d14bb1d5eb0b93b0263d25db454dc29d51709eab576551ea",
+  "malformed_input_behavior": "any command-line argument -> stderr diagnostic and exit status 2",
+  "replay_source_file": "prompt80_replay.py",
+  "replay_source_sha256": "d5dfaf22f520ab9a97aece4980e9a03e125c02b5c53353ec73957399be8659ed",
+  "runtime": {
+    "arithmetic": "exact arbitrary-precision integers and fractions.Fraction",
+    "implementation": "CPython",
+    "language": "Python",
+    "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+    "version": "3.13.5"
+  },
+  "schema": "PIPE-P80-DIVISOR-BLOCK-REPLAY-v1",
+  "script_version": "PIPE-P80-INDEPENDENT-REPLAY-1.0.0",
+  "source_output_binding": "replay verifies the main output's embedded source hash and results digest",
+  "status": "independent-replay-passed",
+  "targeted_mutations": [
+    {
+      "base": [
+        1,
+        2,
+        3,
+        10
+      ],
+      "counts": {
+        "hard_premise": 24,
+        "hard_with_strict_block": 2,
+        "hard_without_strict_block": 22,
+        "mutations": 464,
+        "primitive": 464
+      },
+      "first_bad": [
+        1,
+        2,
+        3,
+        20
+      ],
+      "first_hard": [
+        1,
+        2,
+        3,
+        20
+      ]
+    },
+    {
+      "base": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "counts": {
+        "hard_premise": 23,
+        "hard_with_strict_block": 2,
+        "hard_without_strict_block": 21,
+        "mutations": 464,
+        "primitive": 464
+      },
+      "first_bad": [
+        1,
+        3,
+        4,
+        10
+      ],
+      "first_hard": [
+        1,
+        3,
+        4,
+        10
+      ]
+    },
+    {
+      "base": [
+        1,
+        2,
+        3,
+        60
+      ],
+      "counts": {
+        "hard_premise": 32,
+        "hard_with_strict_block": 12,
+        "hard_without_strict_block": 20,
+        "mutations": 464,
+        "primitive": 464
+      },
+      "first_bad": [
+        1,
+        2,
+        3,
+        20
+      ],
+      "first_hard": [
+        1,
+        2,
+        3,
+        20
+      ]
+    },
+    {
+      "base": [
+        1,
+        2,
+        6,
+        8,
+        10
+      ],
+      "counts": {
+        "hard_premise": 26,
+        "hard_with_strict_block": 25,
+        "hard_without_strict_block": 1,
+        "mutations": 575,
+        "primitive": 519
+      },
+      "first_bad": [
+        1,
+        6,
+        7,
+        8,
+        10
+      ],
+      "first_hard": [
+        1,
+        2,
+        4,
+        6,
+        10
+      ]
+    }
+  ]
+}
