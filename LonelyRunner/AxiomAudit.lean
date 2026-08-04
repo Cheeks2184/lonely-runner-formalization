@@ -313,3 +313,9 @@ project-specific axiom.
 #print axioms LonelyRunner.twoMovingSpeeds_of_abs_le
 #print axioms LonelyRunner.twoMovingSpeeds
 #print axioms LonelyRunner.twoMovingRunners
+#print axioms LonelyRunner.mem_pivotCandidates_scale_reduce_iff
+#print axioms LonelyRunner.mem_pivotBadResidues_scale_reduce_iff
+#print axioms LonelyRunner.pivotCompleteCover_scale_iff
+#print axioms LonelyRunner.coveredPivots_scale
+#print axioms LonelyRunner.internalCoverRedundantAt_scale_iff
+#print axioms LonelyRunner.maxCoveredDivisible_iff_unrestricted
