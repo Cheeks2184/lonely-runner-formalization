@@ -1,0 +1,554 @@
+{
+  "bounded_scan": {
+    "domain": {
+      "largest_speed_at_most": 12,
+      "n_values": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "positive": true,
+      "primitive": true,
+      "strictly_increasing": true
+    },
+    "early_stop": "global stop at first tuple with all pivot good-counts zero",
+    "first_all_pivot_full_tuple": null,
+    "ordering": "n ascending, then tuple lexicographic",
+    "scanned_primitive_tuples_by_n": {
+      "3": 196,
+      "4": 479,
+      "5": 786,
+      "6": 923
+    }
+  },
+  "mandatory_fixtures": {
+    "1": {
+      "good_counts": [
+        1
+      ],
+      "speeds": [
+        1
+      ]
+    },
+    "10": {
+      "N2_antipode_candidate_when_p_odd": true,
+      "N2_antipode_reflection_fixed": true,
+      "N2_antipode_safe": true,
+      "N_multiple_excluded": true,
+      "negative_representative_p_minus_1_bad": true,
+      "negative_representative_p_safe": true,
+      "permutation_relabels_counts": true,
+      "r_zero_excluded": true,
+      "rho_p_minus_1_bad": true,
+      "rho_p_safe": true
+    },
+    "2": {
+      "good_counts": [
+        0,
+        2
+      ],
+      "speeds": [
+        1,
+        3
+      ]
+    },
+    "3": {
+      "good_counts": [
+        2,
+        2,
+        2
+      ],
+      "speeds": [
+        1,
+        2,
+        3
+      ],
+      "strict_equality_safe": {
+        "bad_threshold": 3,
+        "is_bad": false,
+        "owner_speed": 1,
+        "pivot_speed": 3,
+        "residue": 3,
+        "rho": 3
+      }
+    },
+    "4": {
+      "good_counts": [
+        2,
+        2,
+        4
+      ],
+      "speeds": [
+        4,
+        5,
+        9
+      ]
+    },
+    "5": {
+      "good_counts": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "speeds": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    "6": {
+      "good_counts": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2
+      ],
+      "pivot_speed_5_good": [
+        6,
+        29
+      ],
+      "pivot_speed_7_good": [
+        8,
+        41
+      ],
+      "speeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    "7": {
+      "pivots": [
+        {
+          "fixed_candidate_is_good": true,
+          "good_count": 3,
+          "pivot_speed": 1,
+          "reflection_fixed_candidates": [
+            2
+          ]
+        },
+        {
+          "fixed_candidate_is_good": true,
+          "good_count": 3,
+          "pivot_speed": 3,
+          "reflection_fixed_candidates": [
+            6
+          ]
+        },
+        {
+          "fixed_candidate_is_good": true,
+          "good_count": 5,
+          "pivot_speed": 5,
+          "reflection_fixed_candidates": [
+            10
+          ]
+        }
+      ],
+      "speeds": [
+        1,
+        3,
+        5
+      ]
+    },
+    "8": {
+      "modulus": 12,
+      "owner_speed_13_bad": [
+        1,
+        2,
+        10,
+        11
+      ],
+      "owner_speed_1_bad": [
+        1,
+        2,
+        10,
+        11
+      ],
+      "owners_retained": 2,
+      "pivot_speed": 3,
+      "speeds": [
+        1,
+        3,
+        13
+      ]
+    },
+    "9": [
+      {
+        "base": [
+          1,
+          2,
+          3
+        ],
+        "base_good_counts": [
+          2,
+          2,
+          2
+        ],
+        "factor": 2,
+        "membership_preserved_under_reduction": true,
+        "scaled": [
+          2,
+          4,
+          6
+        ],
+        "scaled_good_counts": [
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "base_good_counts": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2
+        ],
+        "factor": 2,
+        "membership_preserved_under_reduction": true,
+        "scaled": [
+          2,
+          4,
+          6,
+          8,
+          10,
+          14
+        ],
+        "scaled_good_counts": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          4
+        ]
+      }
+    ]
+  },
+  "runtime": {
+    "implementation": "CPython",
+    "language": "Python",
+    "standard_library_only": true,
+    "version": "3.13.5"
+  },
+  "schema": "PIPE-P70-RESPEC-123/falsification-v1",
+  "supplemental": {
+    "all_but_one_family_samples": [
+      {
+        "N": 3,
+        "gcd_all": 1,
+        "good_counts": [
+          0,
+          2
+        ],
+        "last_pivot_explicit_good_residue": 4,
+        "n": 2,
+        "speeds": [
+          1,
+          3
+        ]
+      },
+      {
+        "N": 4,
+        "gcd_all": 1,
+        "good_counts": [
+          0,
+          0,
+          6
+        ],
+        "last_pivot_explicit_good_residue": 9,
+        "n": 3,
+        "speeds": [
+          1,
+          2,
+          8
+        ]
+      },
+      {
+        "N": 5,
+        "gcd_all": 1,
+        "good_counts": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "last_pivot_explicit_good_residue": 31,
+        "n": 4,
+        "speeds": [
+          1,
+          2,
+          3,
+          30
+        ]
+      },
+      {
+        "N": 6,
+        "gcd_all": 1,
+        "good_counts": [
+          0,
+          0,
+          0,
+          0,
+          50
+        ],
+        "last_pivot_explicit_good_residue": 73,
+        "n": 5,
+        "speeds": [
+          1,
+          2,
+          3,
+          4,
+          72
+        ]
+      },
+      {
+        "N": 7,
+        "gcd_all": 1,
+        "good_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          144
+        ],
+        "last_pivot_explicit_good_residue": 421,
+        "n": 6,
+        "speeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          420
+        ]
+      },
+      {
+        "N": 8,
+        "gcd_all": 1,
+        "good_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          294
+        ],
+        "last_pivot_explicit_good_residue": 481,
+        "n": 7,
+        "speeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          480
+        ]
+      },
+      {
+        "N": 9,
+        "gcd_all": 1,
+        "good_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1408
+        ],
+        "last_pivot_explicit_good_residue": 3781,
+        "n": 8,
+        "speeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          3780
+        ]
+      },
+      {
+        "N": 10,
+        "gcd_all": 1,
+        "good_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3726
+        ],
+        "last_pivot_explicit_good_residue": 8401,
+        "n": 9,
+        "speeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8400
+        ]
+      },
+      {
+        "N": 11,
+        "gcd_all": 1,
+        "good_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8000
+        ],
+        "last_pivot_explicit_good_residue": 27721,
+        "n": 10,
+        "speeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          27720
+        ]
+      }
+    ],
+    "full_pivot_with_only_unit_nonpivot_speeds": {
+      "all_nonpivot_gcds_with_modulus": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "bad_sets": {
+        "0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48
+        ],
+        "1": [
+          1,
+          2,
+          15,
+          16,
+          17,
+          18,
+          31,
+          32,
+          33,
+          34,
+          47,
+          48
+        ],
+        "2": [
+          1,
+          11,
+          12,
+          13,
+          23,
+          24,
+          25,
+          26,
+          36,
+          37,
+          38,
+          48
+        ],
+        "3": [
+          1,
+          9,
+          10,
+          11,
+          19,
+          20,
+          29,
+          30,
+          38,
+          39,
+          40,
+          48
+        ],
+        "5": [
+          3,
+          8,
+          11,
+          16,
+          19,
+          22,
+          27,
+          30,
+          33,
+          38,
+          41,
+          46
+        ]
+      },
+      "good_counts": [
+        0,
+        0,
+        2,
+        2,
+        0,
+        4
+      ],
+      "modulus": 49,
+      "pivot_speed": 7,
+      "speeds": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        18
+      ]
+    }
+  }
+}
