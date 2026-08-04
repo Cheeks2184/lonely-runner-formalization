@@ -1,0 +1,33 @@
+P90 RECOVERY MANIFEST v1
+task_id: OPS-P90-RECOVERY-PACKAGE-289
+base_commit: eb143b4ed47cfc91807cf872de8eb48fd13c4089
+capture_owner: GPT-5.6 Sol High top-level desktop orchestrator
+launch_runtime: original browser-capable desktop Codex session
+prompt_path: research/sol-pro/prompts/prompt90.md
+prompt_sha256: fa32686d52bac99073031c85530891a46f3aeac25c185b2432d3b8da05f21a4b
+submitted_prompt_frontmatter_role: Research Pipeline Medium Lead - unrestricted minimal-cover uncrossing contract only
+submitted_prompt_frontmatter_task_id: SOL-P90-CONTRACT-PREP-261
+submitted_prompt_frontmatter_admission: REVIEW-REQUIRED
+submitted_prompt_declared_state: prepared contract only; not a browser launch, active cell, response, proof, audit, computation, or evidence promotion
+raw_capture_source: ignored tmp/p90-response.raw.b64 captured solely by Sol High; source is not tracked
+raw_response_sha256: 60a5c212ece2beb9b3a498714d58d39f8cf01c282efb8ba2062e9b8a88c1c437
+raw_response_bytes: 13137
+raw_response_characters: 13115
+raw_response_line_endings: 294 CRLF; no lone LF or CR; terminal CRLF
+normalization: replace every CRLF with LF; no other byte or text change
+tracked_response_path: research/sol-pro/responses/response90.md
+tracked_response_sha256: b6c69b73405c7ffd468695b6130b33f9deb50f00e96174746904afda3372ea50
+tracked_response_bytes: 12843
+tracked_response_characters: 12821
+tracked_response_line_endings: 294 LF; no CR; terminal LF
+roundtrip_check: replacing tracked LF with CRLF reproduces exact raw bytes and raw SHA-256
+attachments: none
+sandbox_links: none
+markdown_download_links: none
+launch_disposition: failed research launch
+recovery_disposition: rejected operational output
+mathematical_execution: no theorem attempted, proved, or refuted
+diagnostic_computation: response-authored review-only claims; no recovered artifact; unverified; no evidence status
+recovery_execution: none
+evidence_promotion: none
+lrc_status_change: none; unrestricted LRC remains open
