@@ -1,0 +1,2564 @@
+{
+  "fixture_checks": {
+    "fixture_3_good_residues": true,
+    "fixture_4_false_single_owner_cycle": {
+      "full_circuit_at_6": [
+        1,
+        11,
+        12,
+        13
+      ],
+      "full_circuit_escapes_F": true,
+      "least_owner_edges": [
+        [
+          1,
+          6
+        ],
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    "fixture_5_sole_good_pivot_escape": true,
+    "fixture_6_reflection_pair": [
+      4,
+      5
+    ],
+    "fixture_7_strict_boundary": {
+      "rho_equal_p_is_safe": true,
+      "rho_p_minus_1_is_bad": true
+    },
+    "fixture_8_safe_half_time_fixed_points": {
+      "1": 2,
+      "3": 6,
+      "5": 10
+    },
+    "fixture_9_coincident_sets_distinct_labels": {
+      "common_bad_set": [
+        1,
+        2,
+        10,
+        11
+      ],
+      "owner_speeds": [
+        1,
+        13
+      ],
+      "pivot_speed": 3
+    }
+  },
+  "fixtures": [
+    {
+      "F_pivot_speeds": [
+        1
+      ],
+      "N": 4,
+      "first_closed_subset_pivot_speeds": null,
+      "n": 3,
+      "pivots": [
+        {
+          "G": 0,
+          "R_size": 3,
+          "bad_sets_by_owner_speed": {
+            "3": [],
+            "4": [
+              1,
+              2,
+              3
+            ]
+          },
+          "canonical_cover_speeds": [
+            4
+          ],
+          "centered_private_equations": {
+            "4": [
+              {
+                "e": 0,
+                "q": 1,
+                "r": 1
+              },
+              {
+                "e": 0,
+                "q": 2,
+                "r": 2
+              },
+              {
+                "e": 0,
+                "q": 3,
+                "r": 3
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 4,
+          "pivot_index": 0,
+          "pivot_speed": 1,
+          "private_points_by_owner_speed": {
+            "4": [
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "G": 2,
+          "R_size": 9,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              10,
+              11
+            ],
+            "4": [
+              3,
+              6,
+              9
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            5,
+            7
+          ],
+          "modulus": 12,
+          "pivot_index": 1,
+          "pivot_speed": 3,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 2,
+          "R_size": 12,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              13,
+              14,
+              15
+            ],
+            "3": [
+              1,
+              5,
+              6,
+              10,
+              11,
+              15
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            7,
+            9
+          ],
+          "modulus": 16,
+          "pivot_index": 2,
+          "pivot_speed": 4,
+          "private_points_by_owner_speed": null
+        }
+      ],
+      "speeds": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "F_pivot_speeds": [
+        1,
+        3
+      ],
+      "N": 5,
+      "first_closed_subset_pivot_speeds": null,
+      "n": 4,
+      "pivots": [
+        {
+          "G": 0,
+          "R_size": 4,
+          "bad_sets_by_owner_speed": {
+            "3": [],
+            "4": [],
+            "5": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "canonical_cover_speeds": [
+            5
+          ],
+          "centered_private_equations": {
+            "5": [
+              {
+                "e": 0,
+                "q": 1,
+                "r": 1
+              },
+              {
+                "e": 0,
+                "q": 2,
+                "r": 2
+              },
+              {
+                "e": 0,
+                "q": 3,
+                "r": 3
+              },
+              {
+                "e": 0,
+                "q": 4,
+                "r": 4
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 5,
+          "pivot_index": 0,
+          "pivot_speed": 1,
+          "private_points_by_owner_speed": {
+            "5": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "G": 0,
+          "R_size": 12,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              13,
+              14
+            ],
+            "4": [
+              4,
+              7,
+              8,
+              11
+            ],
+            "5": [
+              3,
+              6,
+              9,
+              12
+            ]
+          },
+          "canonical_cover_speeds": [
+            1,
+            4,
+            5
+          ],
+          "centered_private_equations": {
+            "1": [
+              {
+                "e": 1,
+                "q": 0,
+                "r": 1
+              },
+              {
+                "e": 2,
+                "q": 0,
+                "r": 2
+              },
+              {
+                "e": -2,
+                "q": 1,
+                "r": 13
+              },
+              {
+                "e": -1,
+                "q": 1,
+                "r": 14
+              }
+            ],
+            "4": [
+              {
+                "e": 1,
+                "q": 1,
+                "r": 4
+              },
+              {
+                "e": -2,
+                "q": 2,
+                "r": 7
+              },
+              {
+                "e": 2,
+                "q": 2,
+                "r": 8
+              },
+              {
+                "e": -1,
+                "q": 3,
+                "r": 11
+              }
+            ],
+            "5": [
+              {
+                "e": 0,
+                "q": 1,
+                "r": 3
+              },
+              {
+                "e": 0,
+                "q": 2,
+                "r": 6
+              },
+              {
+                "e": 0,
+                "q": 3,
+                "r": 9
+              },
+              {
+                "e": 0,
+                "q": 4,
+                "r": 12
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 15,
+          "pivot_index": 1,
+          "pivot_speed": 3,
+          "private_points_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              13,
+              14
+            ],
+            "4": [
+              4,
+              7,
+              8,
+              11
+            ],
+            "5": [
+              3,
+              6,
+              9,
+              12
+            ]
+          }
+        },
+        {
+          "G": 2,
+          "R_size": 16,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              17,
+              18,
+              19
+            ],
+            "3": [
+              1,
+              6,
+              7,
+              13,
+              14,
+              19
+            ],
+            "5": [
+              4,
+              8,
+              12,
+              16
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            9,
+            11
+          ],
+          "modulus": 20,
+          "pivot_index": 2,
+          "pivot_speed": 4,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 2,
+          "R_size": 20,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              4,
+              21,
+              22,
+              23,
+              24
+            ],
+            "3": [
+              1,
+              7,
+              8,
+              9,
+              16,
+              17,
+              18,
+              24
+            ],
+            "4": [
+              1,
+              6,
+              7,
+              12,
+              13,
+              18,
+              19,
+              24
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            11,
+            14
+          ],
+          "modulus": 25,
+          "pivot_index": 3,
+          "pivot_speed": 5,
+          "private_points_by_owner_speed": null
+        }
+      ],
+      "speeds": [
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "F_pivot_speeds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "N": 7,
+      "first_closed_subset_pivot_speeds": null,
+      "n": 6,
+      "pivots": [
+        {
+          "G": 0,
+          "R_size": 6,
+          "bad_sets_by_owner_speed": {
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "7": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "canonical_cover_speeds": [
+            7
+          ],
+          "centered_private_equations": {
+            "7": [
+              {
+                "e": 0,
+                "q": 1,
+                "r": 1
+              },
+              {
+                "e": 0,
+                "q": 2,
+                "r": 2
+              },
+              {
+                "e": 0,
+                "q": 3,
+                "r": 3
+              },
+              {
+                "e": 0,
+                "q": 4,
+                "r": 4
+              },
+              {
+                "e": 0,
+                "q": 5,
+                "r": 5
+              },
+              {
+                "e": 0,
+                "q": 6,
+                "r": 6
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 7,
+          "pivot_index": 0,
+          "pivot_speed": 1,
+          "private_points_by_owner_speed": {
+            "7": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        },
+        {
+          "G": 0,
+          "R_size": 12,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              13
+            ],
+            "3": [
+              5,
+              9
+            ],
+            "4": [],
+            "5": [
+              3,
+              11
+            ],
+            "7": [
+              2,
+              4,
+              6,
+              8,
+              10,
+              12
+            ]
+          },
+          "canonical_cover_speeds": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "centered_private_equations": {
+            "1": [
+              {
+                "e": 1,
+                "q": 0,
+                "r": 1
+              },
+              {
+                "e": -1,
+                "q": 1,
+                "r": 13
+              }
+            ],
+            "3": [
+              {
+                "e": 1,
+                "q": 1,
+                "r": 5
+              },
+              {
+                "e": -1,
+                "q": 2,
+                "r": 9
+              }
+            ],
+            "5": [
+              {
+                "e": 1,
+                "q": 1,
+                "r": 3
+              },
+              {
+                "e": -1,
+                "q": 4,
+                "r": 11
+              }
+            ],
+            "7": [
+              {
+                "e": 0,
+                "q": 1,
+                "r": 2
+              },
+              {
+                "e": 0,
+                "q": 2,
+                "r": 4
+              },
+              {
+                "e": 0,
+                "q": 3,
+                "r": 6
+              },
+              {
+                "e": 0,
+                "q": 4,
+                "r": 8
+              },
+              {
+                "e": 0,
+                "q": 5,
+                "r": 10
+              },
+              {
+                "e": 0,
+                "q": 6,
+                "r": 12
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 14,
+          "pivot_index": 1,
+          "pivot_speed": 2,
+          "private_points_by_owner_speed": {
+            "1": [
+              1,
+              13
+            ],
+            "3": [
+              5,
+              9
+            ],
+            "5": [
+              3,
+              11
+            ],
+            "7": [
+              2,
+              4,
+              6,
+              8,
+              10,
+              12
+            ]
+          }
+        },
+        {
+          "G": 0,
+          "R_size": 18,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              19,
+              20
+            ],
+            "2": [
+              1,
+              10,
+              11,
+              20
+            ],
+            "4": [
+              5,
+              10,
+              11,
+              16
+            ],
+            "5": [
+              4,
+              8,
+              13,
+              17
+            ],
+            "7": [
+              3,
+              6,
+              9,
+              12,
+              15,
+              18
+            ]
+          },
+          "canonical_cover_speeds": [
+            1,
+            4,
+            5,
+            7
+          ],
+          "centered_private_equations": {
+            "1": [
+              {
+                "e": 1,
+                "q": 0,
+                "r": 1
+              },
+              {
+                "e": 2,
+                "q": 0,
+                "r": 2
+              },
+              {
+                "e": -2,
+                "q": 1,
+                "r": 19
+              },
+              {
+                "e": -1,
+                "q": 1,
+                "r": 20
+              }
+            ],
+            "4": [
+              {
+                "e": -1,
+                "q": 1,
+                "r": 5
+              },
+              {
+                "e": -2,
+                "q": 2,
+                "r": 10
+              },
+              {
+                "e": 2,
+                "q": 2,
+                "r": 11
+              },
+              {
+                "e": 1,
+                "q": 3,
+                "r": 16
+              }
+            ],
+            "5": [
+              {
+                "e": -1,
+                "q": 1,
+                "r": 4
+              },
+              {
+                "e": -2,
+                "q": 2,
+                "r": 8
+              },
+              {
+                "e": 2,
+                "q": 3,
+                "r": 13
+              },
+              {
+                "e": 1,
+                "q": 4,
+                "r": 17
+              }
+            ],
+            "7": [
+              {
+                "e": 0,
+                "q": 1,
+                "r": 3
+              },
+              {
+                "e": 0,
+                "q": 2,
+                "r": 6
+              },
+              {
+                "e": 0,
+                "q": 3,
+                "r": 9
+              },
+              {
+                "e": 0,
+                "q": 4,
+                "r": 12
+              },
+              {
+                "e": 0,
+                "q": 5,
+                "r": 15
+              },
+              {
+                "e": 0,
+                "q": 6,
+                "r": 18
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 21,
+          "pivot_index": 2,
+          "pivot_speed": 3,
+          "private_points_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              19,
+              20
+            ],
+            "4": [
+              5,
+              10,
+              11,
+              16
+            ],
+            "5": [
+              4,
+              8,
+              13,
+              17
+            ],
+            "7": [
+              3,
+              6,
+              9,
+              12,
+              15,
+              18
+            ]
+          }
+        },
+        {
+          "G": 0,
+          "R_size": 24,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              25,
+              26,
+              27
+            ],
+            "2": [
+              1,
+              13,
+              15,
+              27
+            ],
+            "3": [
+              1,
+              9,
+              10,
+              18,
+              19,
+              27
+            ],
+            "5": [
+              5,
+              6,
+              11,
+              17,
+              22,
+              23
+            ],
+            "7": [
+              4,
+              8,
+              12,
+              16,
+              20,
+              24
+            ]
+          },
+          "canonical_cover_speeds": [
+            1,
+            2,
+            3,
+            5,
+            7
+          ],
+          "centered_private_equations": {
+            "1": [
+              {
+                "e": 2,
+                "q": 0,
+                "r": 2
+              },
+              {
+                "e": 3,
+                "q": 0,
+                "r": 3
+              },
+              {
+                "e": -3,
+                "q": 1,
+                "r": 25
+              },
+              {
+                "e": -2,
+                "q": 1,
+                "r": 26
+              }
+            ],
+            "2": [
+              {
+                "e": -2,
+                "q": 1,
+                "r": 13
+              },
+              {
+                "e": 2,
+                "q": 1,
+                "r": 15
+              }
+            ],
+            "3": [
+              {
+                "e": -1,
+                "q": 1,
+                "r": 9
+              },
+              {
+                "e": 2,
+                "q": 1,
+                "r": 10
+              },
+              {
+                "e": -2,
+                "q": 2,
+                "r": 18
+              },
+              {
+                "e": 1,
+                "q": 2,
+                "r": 19
+              }
+            ],
+            "5": [
+              {
+                "e": -3,
+                "q": 1,
+                "r": 5
+              },
+              {
+                "e": 2,
+                "q": 1,
+                "r": 6
+              },
+              {
+                "e": -1,
+                "q": 2,
+                "r": 11
+              },
+              {
+                "e": 1,
+                "q": 3,
+                "r": 17
+              },
+              {
+                "e": -2,
+                "q": 4,
+                "r": 22
+              },
+              {
+                "e": 3,
+                "q": 4,
+                "r": 23
+              }
+            ],
+            "7": [
+              {
+                "e": 0,
+                "q": 1,
+                "r": 4
+              },
+              {
+                "e": 0,
+                "q": 2,
+                "r": 8
+              },
+              {
+                "e": 0,
+                "q": 3,
+                "r": 12
+              },
+              {
+                "e": 0,
+                "q": 4,
+                "r": 16
+              },
+              {
+                "e": 0,
+                "q": 5,
+                "r": 20
+              },
+              {
+                "e": 0,
+                "q": 6,
+                "r": 24
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 28,
+          "pivot_index": 3,
+          "pivot_speed": 4,
+          "private_points_by_owner_speed": {
+            "1": [
+              2,
+              3,
+              25,
+              26
+            ],
+            "2": [
+              13,
+              15
+            ],
+            "3": [
+              9,
+              10,
+              18,
+              19
+            ],
+            "5": [
+              5,
+              6,
+              11,
+              17,
+              22,
+              23
+            ],
+            "7": [
+              4,
+              8,
+              12,
+              16,
+              20,
+              24
+            ]
+          }
+        },
+        {
+          "G": 2,
+          "R_size": 30,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              4,
+              31,
+              32,
+              33,
+              34
+            ],
+            "2": [
+              1,
+              2,
+              16,
+              17,
+              18,
+              19,
+              33,
+              34
+            ],
+            "3": [
+              1,
+              11,
+              12,
+              13,
+              22,
+              23,
+              24,
+              34
+            ],
+            "4": [
+              1,
+              8,
+              9,
+              17,
+              18,
+              26,
+              27,
+              34
+            ],
+            "7": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            6,
+            29
+          ],
+          "modulus": 35,
+          "pivot_index": 4,
+          "pivot_speed": 5,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 2,
+          "R_size": 42,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48
+            ],
+            "2": [
+              1,
+              2,
+              3,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              46,
+              47,
+              48
+            ],
+            "3": [
+              1,
+              2,
+              15,
+              16,
+              17,
+              18,
+              31,
+              32,
+              33,
+              34,
+              47,
+              48
+            ],
+            "4": [
+              1,
+              11,
+              12,
+              13,
+              23,
+              24,
+              25,
+              26,
+              36,
+              37,
+              38,
+              48
+            ],
+            "5": [
+              1,
+              9,
+              10,
+              11,
+              19,
+              20,
+              29,
+              30,
+              38,
+              39,
+              40,
+              48
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            8,
+            41
+          ],
+          "modulus": 49,
+          "pivot_index": 5,
+          "pivot_speed": 7,
+          "private_points_by_owner_speed": null
+        }
+      ],
+      "speeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "F_pivot_speeds": [
+        1,
+        6
+      ],
+      "N": 6,
+      "first_closed_subset_pivot_speeds": null,
+      "n": 5,
+      "pivots": [
+        {
+          "G": 0,
+          "R_size": 5,
+          "bad_sets_by_owner_speed": {
+            "11": [],
+            "12": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "13": [],
+            "6": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "canonical_cover_speeds": [
+            6
+          ],
+          "centered_private_equations": {
+            "6": [
+              {
+                "e": 0,
+                "q": 1,
+                "r": 1
+              },
+              {
+                "e": 0,
+                "q": 2,
+                "r": 2
+              },
+              {
+                "e": 0,
+                "q": 3,
+                "r": 3
+              },
+              {
+                "e": 0,
+                "q": 4,
+                "r": 4
+              },
+              {
+                "e": 0,
+                "q": 5,
+                "r": 5
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 6,
+          "pivot_index": 0,
+          "pivot_speed": 1,
+          "private_points_by_owner_speed": {
+            "6": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          }
+        },
+        {
+          "G": 0,
+          "R_size": 30,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              31,
+              32,
+              33,
+              34,
+              35
+            ],
+            "11": [
+              3,
+              7,
+              10,
+              13,
+              16,
+              20,
+              23,
+              26,
+              29,
+              33
+            ],
+            "12": [
+              3,
+              9,
+              15,
+              21,
+              27,
+              33
+            ],
+            "13": [
+              3,
+              8,
+              11,
+              14,
+              17,
+              19,
+              22,
+              25,
+              28,
+              33
+            ]
+          },
+          "canonical_cover_speeds": [
+            1,
+            11,
+            12,
+            13
+          ],
+          "centered_private_equations": {
+            "1": [
+              {
+                "e": 1,
+                "q": 0,
+                "r": 1
+              },
+              {
+                "e": 2,
+                "q": 0,
+                "r": 2
+              },
+              {
+                "e": 4,
+                "q": 0,
+                "r": 4
+              },
+              {
+                "e": 5,
+                "q": 0,
+                "r": 5
+              },
+              {
+                "e": -5,
+                "q": 1,
+                "r": 31
+              },
+              {
+                "e": -4,
+                "q": 1,
+                "r": 32
+              },
+              {
+                "e": -2,
+                "q": 1,
+                "r": 34
+              },
+              {
+                "e": -1,
+                "q": 1,
+                "r": 35
+              }
+            ],
+            "11": [
+              {
+                "e": 5,
+                "q": 2,
+                "r": 7
+              },
+              {
+                "e": 2,
+                "q": 3,
+                "r": 10
+              },
+              {
+                "e": -1,
+                "q": 4,
+                "r": 13
+              },
+              {
+                "e": -4,
+                "q": 5,
+                "r": 16
+              },
+              {
+                "e": 4,
+                "q": 6,
+                "r": 20
+              },
+              {
+                "e": 1,
+                "q": 7,
+                "r": 23
+              },
+              {
+                "e": -2,
+                "q": 8,
+                "r": 26
+              },
+              {
+                "e": -5,
+                "q": 9,
+                "r": 29
+              }
+            ],
+            "12": [
+              {
+                "e": 0,
+                "q": 3,
+                "r": 9
+              },
+              {
+                "e": 0,
+                "q": 5,
+                "r": 15
+              },
+              {
+                "e": 0,
+                "q": 7,
+                "r": 21
+              },
+              {
+                "e": 0,
+                "q": 9,
+                "r": 27
+              }
+            ],
+            "13": [
+              {
+                "e": -4,
+                "q": 3,
+                "r": 8
+              },
+              {
+                "e": -1,
+                "q": 4,
+                "r": 11
+              },
+              {
+                "e": 2,
+                "q": 5,
+                "r": 14
+              },
+              {
+                "e": 5,
+                "q": 6,
+                "r": 17
+              },
+              {
+                "e": -5,
+                "q": 7,
+                "r": 19
+              },
+              {
+                "e": -2,
+                "q": 8,
+                "r": 22
+              },
+              {
+                "e": 1,
+                "q": 9,
+                "r": 25
+              },
+              {
+                "e": 4,
+                "q": 10,
+                "r": 28
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 36,
+          "pivot_index": 1,
+          "pivot_speed": 6,
+          "private_points_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              4,
+              5,
+              31,
+              32,
+              34,
+              35
+            ],
+            "11": [
+              7,
+              10,
+              13,
+              16,
+              20,
+              23,
+              26,
+              29
+            ],
+            "12": [
+              9,
+              15,
+              21,
+              27
+            ],
+            "13": [
+              8,
+              11,
+              14,
+              17,
+              19,
+              22,
+              25,
+              28
+            ]
+          }
+        },
+        {
+          "G": 8,
+          "R_size": 55,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9,
+              10,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              63,
+              64,
+              65
+            ],
+            "12": [
+              5,
+              11,
+              16,
+              17,
+              22,
+              27,
+              28,
+              33,
+              38,
+              39,
+              44,
+              49,
+              50,
+              55,
+              61
+            ],
+            "13": [
+              5,
+              10,
+              15,
+              16,
+              20,
+              21,
+              25,
+              26,
+              31,
+              35,
+              40,
+              41,
+              45,
+              46,
+              50,
+              51,
+              56,
+              61
+            ],
+            "6": [
+              1,
+              10,
+              11,
+              21,
+              22,
+              23,
+              32,
+              33,
+              34,
+              43,
+              44,
+              45,
+              55,
+              56,
+              65
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            13,
+            14,
+            19,
+            29,
+            37,
+            47,
+            52,
+            53
+          ],
+          "modulus": 66,
+          "pivot_index": 2,
+          "pivot_speed": 11,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 8,
+          "R_size": 60,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9,
+              10,
+              11,
+              61,
+              62,
+              63,
+              64,
+              65,
+              67,
+              68,
+              69,
+              70,
+              71
+            ],
+            "11": [
+              1,
+              7,
+              13,
+              14,
+              19,
+              20,
+              26,
+              27,
+              32,
+              33,
+              39,
+              40,
+              45,
+              46,
+              52,
+              53,
+              58,
+              59,
+              65,
+              71
+            ],
+            "13": [
+              5,
+              11,
+              16,
+              17,
+              22,
+              23,
+              27,
+              28,
+              33,
+              34,
+              38,
+              39,
+              44,
+              45,
+              49,
+              50,
+              55,
+              56,
+              61,
+              67
+            ],
+            "6": [
+              1,
+              11,
+              13,
+              23,
+              25,
+              35,
+              37,
+              47,
+              49,
+              59,
+              61,
+              71
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            15,
+            21,
+            29,
+            31,
+            41,
+            43,
+            51,
+            57
+          ],
+          "modulus": 72,
+          "pivot_index": 3,
+          "pivot_speed": 12,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 10,
+          "R_size": 65,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9,
+              10,
+              11,
+              67,
+              68,
+              69,
+              70,
+              71,
+              73,
+              74,
+              75,
+              76,
+              77
+            ],
+            "11": [
+              1,
+              7,
+              8,
+              14,
+              15,
+              21,
+              22,
+              28,
+              29,
+              35,
+              43,
+              49,
+              50,
+              56,
+              57,
+              63,
+              64,
+              70,
+              71,
+              77
+            ],
+            "12": [
+              1,
+              7,
+              13,
+              14,
+              19,
+              20,
+              25,
+              26,
+              27,
+              32,
+              33,
+              38,
+              39,
+              40,
+              45,
+              46,
+              51,
+              52,
+              53,
+              58,
+              59,
+              64,
+              65,
+              71,
+              77
+            ],
+            "6": [
+              1,
+              2,
+              11,
+              13,
+              14,
+              15,
+              25,
+              26,
+              27,
+              28,
+              37,
+              38,
+              39,
+              40,
+              41,
+              50,
+              51,
+              52,
+              53,
+              63,
+              64,
+              65,
+              67,
+              76,
+              77
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            16,
+            17,
+            23,
+            31,
+            34,
+            44,
+            47,
+            55,
+            61,
+            62
+          ],
+          "modulus": 78,
+          "pivot_index": 4,
+          "pivot_speed": 13,
+          "private_points_by_owner_speed": null
+        }
+      ],
+      "speeds": [
+        1,
+        6,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "F_pivot_speeds": [
+        1,
+        2
+      ],
+      "N": 4,
+      "first_closed_subset_pivot_speeds": null,
+      "n": 3,
+      "pivots": [
+        {
+          "G": 0,
+          "R_size": 3,
+          "bad_sets_by_owner_speed": {
+            "2": [
+              2
+            ],
+            "8": [
+              1,
+              2,
+              3
+            ]
+          },
+          "canonical_cover_speeds": [
+            8
+          ],
+          "centered_private_equations": {
+            "8": [
+              {
+                "e": 0,
+                "q": 2,
+                "r": 1
+              },
+              {
+                "e": 0,
+                "q": 4,
+                "r": 2
+              },
+              {
+                "e": 0,
+                "q": 6,
+                "r": 3
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 4,
+          "pivot_index": 0,
+          "pivot_speed": 1,
+          "private_points_by_owner_speed": {
+            "8": [
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "G": 0,
+          "R_size": 6,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              7
+            ],
+            "8": [
+              1,
+              2,
+              3,
+              5,
+              6,
+              7
+            ]
+          },
+          "canonical_cover_speeds": [
+            8
+          ],
+          "centered_private_equations": {
+            "8": [
+              {
+                "e": 0,
+                "q": 1,
+                "r": 1
+              },
+              {
+                "e": 0,
+                "q": 2,
+                "r": 2
+              },
+              {
+                "e": 0,
+                "q": 3,
+                "r": 3
+              },
+              {
+                "e": 0,
+                "q": 5,
+                "r": 5
+              },
+              {
+                "e": 0,
+                "q": 6,
+                "r": 6
+              },
+              {
+                "e": 0,
+                "q": 7,
+                "r": 7
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 8,
+          "pivot_index": 1,
+          "pivot_speed": 2,
+          "private_points_by_owner_speed": {
+            "8": [
+              1,
+              2,
+              3,
+              5,
+              6,
+              7
+            ]
+          }
+        },
+        {
+          "G": 6,
+          "R_size": 24,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              5,
+              6,
+              7,
+              25,
+              26,
+              27,
+              29,
+              30,
+              31
+            ],
+            "2": [
+              1,
+              2,
+              3,
+              13,
+              14,
+              15,
+              17,
+              18,
+              19,
+              29,
+              30,
+              31
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            9,
+            10,
+            11,
+            21,
+            22,
+            23
+          ],
+          "modulus": 32,
+          "pivot_index": 2,
+          "pivot_speed": 8,
+          "private_points_by_owner_speed": null
+        }
+      ],
+      "speeds": [
+        1,
+        2,
+        8
+      ]
+    },
+    {
+      "F_pivot_speeds": [
+        1
+      ],
+      "N": 3,
+      "first_closed_subset_pivot_speeds": null,
+      "n": 2,
+      "pivots": [
+        {
+          "G": 0,
+          "R_size": 2,
+          "bad_sets_by_owner_speed": {
+            "3": [
+              1,
+              2
+            ]
+          },
+          "canonical_cover_speeds": [
+            3
+          ],
+          "centered_private_equations": {
+            "3": [
+              {
+                "e": 0,
+                "q": 1,
+                "r": 1
+              },
+              {
+                "e": 0,
+                "q": 2,
+                "r": 2
+              }
+            ]
+          },
+          "covers": true,
+          "good_residues": [],
+          "modulus": 3,
+          "pivot_index": 0,
+          "pivot_speed": 1,
+          "private_points_by_owner_speed": {
+            "3": [
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "G": 2,
+          "R_size": 6,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              7,
+              8
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            4,
+            5
+          ],
+          "modulus": 9,
+          "pivot_index": 1,
+          "pivot_speed": 3,
+          "private_points_by_owner_speed": null
+        }
+      ],
+      "speeds": [
+        1,
+        3
+      ]
+    },
+    {
+      "F_pivot_speeds": [],
+      "N": 4,
+      "first_closed_subset_pivot_speeds": null,
+      "n": 3,
+      "pivots": [
+        {
+          "G": 2,
+          "R_size": 3,
+          "bad_sets_by_owner_speed": {
+            "2": [
+              2
+            ],
+            "3": []
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            1,
+            3
+          ],
+          "modulus": 4,
+          "pivot_index": 0,
+          "pivot_speed": 1,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 2,
+          "R_size": 6,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              7
+            ],
+            "3": [
+              3,
+              5
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            2,
+            6
+          ],
+          "modulus": 8,
+          "pivot_index": 1,
+          "pivot_speed": 2,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 2,
+          "R_size": 9,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              10,
+              11
+            ],
+            "2": [
+              1,
+              5,
+              6,
+              7,
+              11
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            3,
+            9
+          ],
+          "modulus": 12,
+          "pivot_index": 2,
+          "pivot_speed": 3,
+          "private_points_by_owner_speed": null
+        }
+      ],
+      "speeds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "F_pivot_speeds": [],
+      "N": 4,
+      "first_closed_subset_pivot_speeds": null,
+      "n": 3,
+      "pivots": [
+        {
+          "G": 3,
+          "R_size": 3,
+          "bad_sets_by_owner_speed": {
+            "3": [],
+            "5": []
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            1,
+            2,
+            3
+          ],
+          "modulus": 4,
+          "pivot_index": 0,
+          "pivot_speed": 1,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 3,
+          "R_size": 9,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              10,
+              11
+            ],
+            "5": [
+              2,
+              5,
+              7,
+              10
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            3,
+            6,
+            9
+          ],
+          "modulus": 12,
+          "pivot_index": 1,
+          "pivot_speed": 3,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 5,
+          "R_size": 15,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              17,
+              18,
+              19
+            ],
+            "3": [
+              1,
+              6,
+              7,
+              13,
+              14,
+              19
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            5,
+            9,
+            10,
+            11,
+            15
+          ],
+          "modulus": 20,
+          "pivot_index": 2,
+          "pivot_speed": 5,
+          "private_points_by_owner_speed": null
+        }
+      ],
+      "speeds": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "F_pivot_speeds": [],
+      "N": 4,
+      "first_closed_subset_pivot_speeds": null,
+      "n": 3,
+      "pivots": [
+        {
+          "G": 3,
+          "R_size": 3,
+          "bad_sets_by_owner_speed": {
+            "13": [],
+            "3": []
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            1,
+            2,
+            3
+          ],
+          "modulus": 4,
+          "pivot_index": 0,
+          "pivot_speed": 1,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 5,
+          "R_size": 9,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              10,
+              11
+            ],
+            "13": [
+              1,
+              2,
+              10,
+              11
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            3,
+            5,
+            6,
+            7,
+            9
+          ],
+          "modulus": 12,
+          "pivot_index": 1,
+          "pivot_speed": 3,
+          "private_points_by_owner_speed": null
+        },
+        {
+          "G": 9,
+          "R_size": 39,
+          "bad_sets_by_owner_speed": {
+            "1": [
+              1,
+              2,
+              3,
+              5,
+              6,
+              7,
+              9,
+              10,
+              11,
+              41,
+              42,
+              43,
+              45,
+              46,
+              47,
+              49,
+              50,
+              51
+            ],
+            "3": [
+              1,
+              2,
+              3,
+              14,
+              15,
+              17,
+              18,
+              19,
+              21,
+              31,
+              33,
+              34,
+              35,
+              37,
+              38,
+              49,
+              50,
+              51
+            ]
+          },
+          "canonical_cover_speeds": null,
+          "centered_private_equations": null,
+          "covers": false,
+          "good_residues": [
+            13,
+            22,
+            23,
+            25,
+            26,
+            27,
+            29,
+            30,
+            39
+          ],
+          "modulus": 52,
+          "pivot_index": 2,
+          "pivot_speed": 13,
+          "private_points_by_owner_speed": null
+        }
+      ],
+      "speeds": [
+        1,
+        3,
+        13
+      ]
+    }
+  ],
+  "frozen_scan": {
+    "domain": {
+      "canonical_cover_order": "(|C|, increasing owner-speed list), lexicographic",
+      "early_stop": "first nonempty closed subset",
+      "largest_speed_at_most": 12,
+      "n": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "pivot_order": "natural index order (equal to speed order in scan domain)",
+      "speeds": "primitive strictly increasing positive integer tuples",
+      "subset_order": "cardinality, then lexicographic pivot-index list",
+      "tuple_order": "n, then lexicographic"
+    },
+    "examined_by_n": {
+      "2": 45,
+      "3": 196,
+      "4": 479,
+      "5": 786,
+      "6": 923
+    },
+    "first_closed_subset": null,
+    "result_status": "computed finite evidence",
+    "total_examined": 2429
+  },
+  "general_regressions": {
+    "common_scaling_pivot_checks": 64,
+    "naive_elimination_failures": {
+      "badness_does_not_transport": {
+        "eliminated_owner_speed": 1,
+        "original_modulus_check": {
+          "13*5_mod_15": 5,
+          "is_bad": false,
+          "rho": 5,
+          "strict_bad_threshold": 3
+        },
+        "private_r": 13,
+        "replacement_owner_speed": 5,
+        "source_equation": "13*1 = 1*15 - 2",
+        "source_pivot_speed": 3,
+        "speeds": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "target_equation": "1*5 = 1*5 + 0",
+        "target_pivot_speed": 1
+      },
+      "quotient_not_in_target_R": {
+        "N_divides_q": true,
+        "e": 1,
+        "eliminated_owner_speed": 1,
+        "private_r": 1,
+        "q": 0,
+        "source_pivot_speed": 3,
+        "speeds": [
+          1,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "nondividing_pair": {
+      "gcd_owner_modulus": 1,
+      "modulus": 15,
+      "owner_speed": 4,
+      "pivot_speed": 3,
+      "speeds": [
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    "nontrivial_gcd_pair": {
+      "gcd_owner_modulus": 12,
+      "modulus": 36,
+      "owner_speed": 12,
+      "pivot_speed": 6,
+      "speeds": [
+        1,
+        6,
+        11,
+        12,
+        13
+      ]
+    },
+    "permutations_of_fixtures_1_to_4_checked": 870,
+    "pivot_coordinate_safe_checks": 560,
+    "r_zero_and_N_multiples_excluded_checks": 693,
+    "reflection_invariance_checks": 560
+  },
+  "metadata": {
+    "implementation": "CPython",
+    "integer_arithmetic": "exact arbitrary-precision integers",
+    "language": "Python",
+    "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+    "python_version": "3.13.5",
+    "schema": {
+      "fixture_checks": "named regression assertions",
+      "fixtures": "full pivot records for the mandatory tuples",
+      "frozen_scan": "domain metadata, counts, and first failure certificate or null",
+      "general_regressions": "boundary, symmetry, permutation, scaling, gcd, and elimination assertions"
+    },
+    "script_argv": [
+      "/mnt/data/modular_cover_circuit_scan.py",
+      "--output",
+      "/mnt/data/modular_cover_circuit_scan.json"
+    ]
+  }
+}

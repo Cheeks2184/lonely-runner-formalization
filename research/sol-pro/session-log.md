@@ -257,3 +257,37 @@ response and its **PIVOT** self-disposition without accepting either. The
 common-prime lemma, claimed structural results, finite output, exact pivot
 selector, positive-integer LRC, and unrestricted LRC remain unverified or
 open. No theorem, computation, or evidence label is promoted by this package.
+
+## OPS-P72-RECOVERY-PACKAGE-164 — Prompt72 recovery package
+
+- **Recovery base:** `35f23f59157762f8978bbdbd93f05ae4001c1330`
+- **Recovery branch:** `research/p72-recovery-package-164`
+- **Launch owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator
+  (`/root`) in the original signed-in browser-capable desktop session
+- **Launch time:** 2026-08-03 19:55:05 -05:00
+  (2026-08-04T00:55:05.4293135Z)
+- **Selected UI state:** Chat; `GPT-5.6 Sol`; Pro; exact prompt readback
+- **Prompt SHA-256:**
+  `171ced8399d060c11817ff441b6cc9e0df5c3dd5b26db572f854b9a1947a8d7d`
+- **Submitted payload SHA-256:**
+  `c509b53e235eaef1a5d13af65087a104c886c414dcfa4593edca027f7fe407fc`
+- **Completion:** terminal UI readback `Worked for 29m 31s`; observed at
+  2026-08-04T01:32:30.4218431Z
+- **Normalized response:** `research/sol-pro/responses/response72.md`; 24,062
+  UTF-8 bytes; 24,052 characters; 707 LF separators; terminal LF; SHA-256
+  `1bd95673813274756e246ede8596099c554a31b57cdc9665e65bdabff2b7a0ec`
+- **Raw clipboard:** 24,769 UTF-8 bytes; 24,759 characters; 707 CRLF
+  separators; no lone LF or lone CR; terminal CRLF; SHA-256
+  `b9668dc0955a25fb640a0fa63052ec96f640eca4e0b79911a6ad67cf093475e6`
+- **Recovered attachments:** exactly two files under
+  `research/sol-pro/artifacts/prompt72/`; hashes and sizes are recorded in the
+  package README
+- **Lifecycle:** completed/recovered; independent audits pending
+
+Neither recovered attachment was executed. Recovery preserves the response's
+**STOP** self-disposition without accepting it. The claimed mathematical
+theorems, finite fixtures and 2,429-tuple scan, circuit-escape equivalence,
+and proposed route boundaries remain unverified pending independent audits.
+`MODULAR-COVER-CIRCUIT-ESCAPE`, the exact pivot selector, positive-integer LRC,
+and unrestricted LRC remain open. No theorem, computation, or evidence label
+is promoted by this package.
