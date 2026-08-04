@@ -402,3 +402,23 @@ supplied reconstructed claims. All mathematical, computational, formal, and
 status claims remain unaccepted pending the named audits. No theorem,
 computation, evidence label, pivot result, or LRC status is promoted by this
 package.
+
+## VER-P75-RECOVERY-PROVENANCE-185 — Prompt75 provenance audit
+
+- **Recovery commit audited:**
+  `3f3e126a097ab7a5b80697ebb634af0badbe1f37`
+- **Disposition:** accepted for recovery provenance only
+- **Inventory:** exact three-path recovery change confirmed
+- **Response:** strict Base64 replay and CRLF-to-LF-only normalization
+  reproduced byte-for-byte
+- **Launch linkage:** tracked prompt and terminal-LF-omitted UI payload hashes
+  independently reproduced
+- **Attachments:** none; ignored input and repository inventories agree
+- **Privacy/hygiene:** targeted scan clean; 13 immutable response trailing
+  spaces recorded as path-and-line-specific exceptions
+- **Mathematical boundary:** response **MIXED**, Section 6 **STOP**, reconstructed
+  proofs, finite computations, and every evidence label remain unaccepted
+
+The authoritative audit is `docs/response75-provenance-audit.md`. Its
+`recovery-provenance-accepted` recommendation is operational only and does not
+promote a theorem, computation, formal result, pivot claim, or LRC status.
