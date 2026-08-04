@@ -442,3 +442,38 @@ promote a theorem, computation, formal result, pivot claim, or LRC status.
 The authoritative review is `docs/response75-mathematical-audit.md`. It does
 not promote Prompt75's **MIXED** or **STOP**, any finite scan, a Lean theorem,
 or unrestricted LRC.
+
+## OPS-P76-RECOVERY-PACKAGE-197 - Prompt76 recovery package
+
+- **Recovery base:** `628d6edd971cdfffaeecf24c83362bf1462200cf`
+- **Recovery branch:** `research/p76-recovery-package-197`
+- **Launch owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator
+  (`/root`) in the original signed-in browser-capable desktop session
+- **Launch time:** `2026-08-03T21:43:05.5532034-05:00`
+- **Prompt SHA-256:**
+  `c86ea1ac96077169c37ff6f99caf618f9ee3eecdf55a5705da31dea1e44e5b79`
+- **Submitted payload SHA-256:**
+  `6896a689d58ecad64258603196f4cef4813446d56fff5674c504a80b8378b5f6`
+- **Completion:** terminal UI readback `Worked for 37m 47s`; response captured
+  at `2026-08-03T22:24:18.9992753-05:00`
+- **Normalized response:** `research/sol-pro/responses/response76.md`; 39,521
+  UTF-8 bytes; 39,515 characters; 1,581 LF separators; no CR; terminal LF;
+  SHA-256
+  `3566a99d3f00bfe481c2f99455e59de719e53e4477a4e4e6c5ccea2fe7c85d2d`
+- **Raw clipboard:** 41,102 UTF-8 bytes; 41,096 characters; 1,581 CRLF
+  separators; no lone LF or lone CR; terminal CRLF; SHA-256
+  `ce0fc0670081ffcf3e1e9ac6551992569d34cc383502634cb921ef83696f5e11`
+- **Attachments:** exactly five files under
+  `research/sol-pro/artifacts/prompt76/`; exact hashes and sizes are recorded
+  in the package README; neither Python file was executed
+- **Manifest:** exactly four `/mnt/data/<filename>` payload rows; every hash
+  independently matches the corresponding recovered source or JSON output
+- **Lifecycle:** completed/recovered; independent mathematical and artifact
+  audits pending
+
+Recovery preserves the response's **STOP** self-disposition and its claimed
+tuple `(1,4,5,6,7,11)` with private demand `100` and external capacity `98`
+without accepting them. Reported bounded firstness, finite results, evidence
+labels, and the claimed rejection of the frozen private-deficit inequality
+remain unverified. No theorem, computation, counterexample, bridge, or LRC
+status is promoted by this package.
