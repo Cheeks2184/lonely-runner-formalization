@@ -1,0 +1,121 @@
+# Response96 fail-closed recovery audit
+
+Task: `OPS-P96-RECOVERY-PACKAGE-314`
+
+Base: `068de11a61a6551256138110e2920af9cec89284`
+
+Recovered response: `research/sol-pro/responses/response96.md`, SHA-256
+`fe812c66937d5ad3b2db9504bd9df5601878af23753d524c9407258b19336d9f`.
+
+Raw decoded response: SHA-256
+`d9bce8c6cca6fd75da50393c49e301284060519970379fe112d6b5329197b8ed`.
+
+## Recovery disposition: `SEPARATION` preserved, no promotion
+
+Response96 self-disposes as `SEPARATION`. It reports an all-`E` analysis of a
+Prompt92-derived injective family and argues that the family is neither a
+Prompt94 counterexample nor a Prompt95 counterexample. This Level-1 package
+preserves those statements as **RESPONSE-AUTHORED / UNVERIFIED** only.
+
+The `SEPARATION` word is the response's own disposition. Recovery does not
+accept it as a project evidence label, theorem, counterexample, or route
+promotion. Prompt94, Prompt95, and unrestricted LRC remain `open`. The only
+accepted evidence label for this package is `recovery-provenance`.
+
+Task312's provisional independent acceptance remains a separate review event.
+It is not copied into this package and is not itself tracked evidence here.
+Recovery neither re-performs nor promotes that review.
+
+## Exact launch provenance
+
+- Launch task: `SOL-P96-DESKTOP-LAUNCH-303`.
+- Owner: GPT-5.6 Sol High top-level desktop orchestrator (`/root`).
+- Runtime: original browser-capable desktop Codex session.
+- Conversation: genuinely new signed-in ChatGPT conversation.
+- New-conversation observation: `2026-08-04T04:27:54.2634921-05:00`.
+- Launch observation: `2026-08-04T04:28:22.7138135-05:00`
+  (`2026-08-04T09:28:22.7138135Z`).
+- UI readback: Chat selected, Work not selected, `GPT-5.6 Sol` selected, Pro
+  effort selected, exact composer readback, and live generation control.
+- Prompt path: `research/sol-pro/prompts/prompt96.md`.
+- Prompt integration commit:
+  `17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4`.
+- Prompt Git blob: `0d0501617e9553b8e2c5dc89b8afeef0d6c3f9b7`.
+- Prompt SHA-256:
+  `adbcb3215f385df5e21d2f5f3c6a79ec2f775f309c189cd7c731b65fc9d6f1d1`.
+- Tracked prompt shape: 30,214 UTF-8 bytes and characters, 741 LF, terminal
+  LF present.
+- Submitted payload: exact tracked prompt with only the terminal LF removed;
+  30,213 UTF-8 bytes and characters, 740 LF, no terminal LF.
+- Submitted payload SHA-256:
+  `cfe244b748c67d64e1d6c5e8a0710f1ed9ba97d44f7699a12d71ba625821fdab`.
+- Launch record commit:
+  `9687dce93c58555043988d859d44f28965b0461a`.
+- Launch record SHA-256:
+  `833cafd9303a971bc6c9ea2be7f17797ab668cf6e9b17580177633e123147c3d`.
+
+No private session identifier, browser profile, account metadata, cookie,
+token, or authentication artifact is included.
+
+## Rapid claim table
+
+| Response96 claim | Recovery classification | Required next evidence |
+| --- | --- | --- |
+| Independent replication of the accepted Prompt92 counterfamily arithmetic | **RESPONSE-AUTHORED / UNVERIFIED** in this package | Independent symbolic comparison with accepted Audit301 at its exact scope |
+| The derived tuple `a_E` is positive and injective for every `E>=3` | **RESPONSE-AUTHORED / UNVERIFIED** | Exact inequality and indexing audit |
+| The `q`-pivot and speed-one pivot are fully covered and have zero unit deficit | **RESPONSE-AUTHORED / UNVERIFIED** | Independent modular cover and strict-boundary proof |
+| Four remaining pivots have explicit uncovered unit residues | **RESPONSE-AUTHORED / UNVERIFIED** | Independent gcd and distance-table audit for the common witness formula |
+| `OmegaUnit(a_E)>0`, so the family is not a Prompt94 counterexample | response-authored separation claim; **UNVERIFIED / NOT PROMOTED** | Complete all-`E` audit of every row witness and quantifier |
+| `F(a_E)={1,q}` and `j_star=q` | **RESPONSE-AUTHORED / UNVERIFIED** | Independent reconstruction of every ordinary pivot row |
+| No internal complete cover exists at `j_star` | response-authored separation claim; **UNVERIFIED / NOT PROMOTED** | Audit the only possible internal owner and its displayed safe residue |
+| The five-owner fixed-grid cover is inclusion-minimal | **RESPONSE-AUTHORED / UNVERIFIED** | Independent private-residue and omitted-owner audit |
+| Every-pivot positive-unit-deficit strengthening fails on the family | response-authored exact refutation proposal; **UNVERIFIED** | Independent verification that both named rows have zero deficit |
+| Prompt94 and Prompt95 unrestricted targets | `open`; response self-status preserved | Separate unrestricted proof or theorem-domain counterexample |
+| Unrestricted LRC | `open`; unaffected | Complete kernel-checked proof or independently verified disproof |
+
+Terms such as `proved-math-response`, `proved-math-qualified`, and
+`refuted-exact` inside Response96 retain their response or prior-audit scope.
+This recovery package does not assign or promote them.
+
+## No-attachment boundary
+
+No attachment, source file, result file, manifest, archive, or generated
+artifact was supplied with or generated by the Prompt96 response. No artifact
+directory is created for Prompt96. The response itself labels optional
+artifact work `not-run`.
+
+No Prompt92 quarantine file, archive, source, manifest, or result was opened,
+read, imported, parsed, executed, or used during this recovery.
+
+## Response normalization and public provenance
+
+Sol High supplied one ignored base64 capture. Its encoded form contains 39,428
+bytes and has SHA-256
+`06dc5440215cbbe5528628ca38501b551ba8a9c97023080adc1938e3756743af`.
+
+Strict UTF-8 decoding produced exactly 29,569 bytes and 29,561 characters with
+923 CRLF endings, no lone LF or CR, and a terminal CRLF. The tracked response
+changes CRLF to LF only and contains 28,646 bytes, 28,638 characters, 923 LF
+endings, no CR, and a terminal LF. Restoring CRLF reproduces the raw decoded
+bytes and SHA-256 exactly.
+
+The ignored capture, browser profile, private session identifiers, and
+authentication state are not tracked. The public record contains only task,
+launch, file-identity, lifecycle, and response-provenance facts.
+
+## Verification boundary and next action
+
+This is a Level-1 recovery package. It runs no Lean build, source program,
+artifact parser, deterministic test, or full repository replay. No task
+ledger, task board, status document, prompt, session log, source module, or
+global documentation is changed.
+
+Recommended next action: preserve Task312 separately under its own review
+provenance if Sol High accepts it, then freeze declaration-level symbolic
+audit obligations for the surviving all-`E` claims. No Luna task should infer
+semantics from this response or implement a theorem before a Sol Medium lead
+freezes exact definitions, hypotheses, and acceptance criteria.
+
+Level-1 checks are limited to response round-trip identity, exact launch
+provenance, no-attachment inventory, changed-text privacy and secret scanning,
+`git diff --check`, and repository-shape validation.
