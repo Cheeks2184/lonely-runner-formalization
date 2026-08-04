@@ -1,0 +1,42 @@
+{
+  "artifact_id": "P78-SPARSE-MINIMAL-COVER-FRESH-CPP20-v1",
+  "language": "C++20",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "source": {
+    "filename": "p78_sparse_minimal_cover_verifier.cpp",
+    "sha256": "45c664918d25ec5213836c9eca420df7616483f3c67fd4b67d8e014bb8f933f4"
+  },
+  "binary": {
+    "filename": "p78_sparse_minimal_cover_verifier",
+    "sha256": "b32ab0c511a9ebbd6d5416fc17e351710197d5d6e2c377ee3ce52370b3c4d8f7"
+  },
+  "output": {
+    "filename": "p78_sparse_minimal_cover_verifier_output.json",
+    "sha256": "e006eab7a6cff892127d6019bc4c1b3da80e418f480df4cc53b91b8b8194f7df",
+    "source_sha256_embedded": "45c664918d25ec5213836c9eca420df7616483f3c67fd4b67d8e014bb8f933f4",
+    "bounded_first_failure": null,
+    "unrestricted_counterexample": [6, 7, 12, 24, 144]
+  },
+  "build": {
+    "command": "g++ -O3 -std=c++20 -Wall -Wextra -pedantic -DSOURCE_SHA256=\\\"45c664918d25ec5213836c9eca420df7616483f3c67fd4b67d8e014bb8f933f4\\\" p78_sparse_minimal_cover_verifier.cpp -o p78_sparse_minimal_cover_verifier",
+    "exit_code": 0,
+    "stderr_filename": "p78_sparse_minimal_cover_verifier_build.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run": {
+    "command": "./p78_sparse_minimal_cover_verifier > p78_sparse_minimal_cover_verifier_output.json",
+    "exit_code": 0,
+    "arithmetic": "integer only; no floating point",
+    "declared_search_domain": "3 <= n <= 7; primitive strictly increasing positive tuples; maximum speed <= 24",
+    "ordering": "n ascending, tuple lexicographic, pivot index ascending, owner-subset bit mask ascending",
+    "set_serialization": "strictly increasing JSON integer arrays; owner labels serialized by index and speed",
+    "early_stop": "stop at first failing owner subset; null first_failure means full domain exhausted"
+  },
+  "malformed_input_test": {
+    "command": "./p78_sparse_minimal_cover_verifier unexpected",
+    "exit_code": 64,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "8c04a3f1f217f142244fd4d0efadee2ff056ed18673fec04fa1a944afebbe613",
+    "stderr": "malformed input: this deterministic verifier accepts no command-line arguments"
+  }
+}

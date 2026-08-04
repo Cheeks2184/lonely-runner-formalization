@@ -512,3 +512,41 @@ its proposed family and first member `(6,7,168)`, the claimed block
 dispositions and `G=(0,0,126)`, and the claimed 6,330-tuple zero-failure scan.
 No theorem, counterexample, computed finite evidence, bridge, evidence label,
 or LRC status is promoted by this package.
+
+## OPS-P78-RECOVERY-PACKAGE-207 - Prompt78 recovery package
+
+- **Recovery base:** `c16dc4e284c47c5ba1604d42d813a972da7693b4`
+- **Recovery branch:** `research/p78-recovery-package-207`
+- **Launch owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator
+  (`/root`) in the original signed-in browser-capable desktop session
+- **Launch time:** `2026-08-03T22:18:55.3171851-05:00`
+  (`2026-08-04T03:18:55.3171851Z`)
+- **Prompt SHA-256:**
+  `0ffb03bb998670392c5e08fb21d800abbae8729180d502f6981c7a7737980099`
+- **Submitted payload SHA-256:**
+  `975d2d6701305642a9dece70e09afc5285d25c3001001f89fac097c782128c52`
+- **Completion:** terminal UI readback `Worked for 39m 34s`; response captured
+  at `2026-08-03T23:19:18.7616335-05:00`
+- **Normalized response:** `research/sol-pro/responses/response78.md`; 22,215
+  UTF-8 bytes; 22,207 characters; 942 LF separators; no CR; terminal LF;
+  SHA-256
+  `96e3bc5d0c05fb2b04e8e2d9117a55bf86b1d96d608e92422553bf54ab0a2390`
+- **Raw clipboard:** 23,157 UTF-8 bytes; 23,149 characters; 942 CRLF
+  separators; no lone LF or lone CR; terminal CRLF; SHA-256
+  `d11f74e6ebabf7e5b60b11fe3a1455beb6aef47f1b1a73095b647b4cb654ffe8`
+- **Attachments:** exactly three files under
+  `research/sol-pro/artifacts/prompt78/`; response-authored hashes, strict JSON,
+  source/output bindings, and declared counterexample fields were checked at
+  static scope and recorded in the package README
+- **Execution boundary:** recovered C++ not compiled or executed; recovered
+  JSON output not regenerated; binary and build/run claims not independently
+  verified because no binary or logs were attached
+- **Lifecycle:** completed/recovered; independent mathematical and
+  computational audits pending
+
+Recovery preserves without accepting the response's **STOP** self-disposition,
+the tuple `(6,7,12,24,144)`, `G=[0,0,0,0,160]`, selected sparse cover and
+singleton blocker, the claimed bridge rejection, and the bounded search.
+Root's independent triage is separate and is not incorporated here. No theorem,
+bridge counterexample, computed finite evidence, Lean result, evidence label,
+or LRC status is promoted by this package.
