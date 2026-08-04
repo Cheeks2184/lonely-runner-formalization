@@ -85,6 +85,7 @@ import LonelyRunner.BHKCollisionToWitness
 import LonelyRunner.BHKRealReduction
 import LonelyRunner.SmallDimensions
 import LonelyRunner.Prompt99Scaling
+import LonelyRunner.PrimitivePrompt95
 
 /-!
 Root import for the formal Lonely Runner development.
