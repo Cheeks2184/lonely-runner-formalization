@@ -24,9 +24,11 @@ this file, recover the response, and decide status. Sol Medium prepared the
 contract. Luna may later replay one frozen calculation; Luna may not perform
 the synthesis or operate the browser.
 
-Use one major turn. Re-derive every displayed identity. Treat the Prompt84
-capture as an unverified external response, not as accepted mathematics.
-Return `STOP` at the first false premise or hidden equivalence to LRC.
+Use one major turn. Re-derive every displayed identity adversarially. Prompt84
+now has an accepted independent audit at the qualified manuscript scope stated
+below, but that audit is provenance for this replication target, not a premise
+from which you may infer the result. Return `STOP` at the first false premise
+or hidden equivalence to LRC.
 
 ## Evidence boundary and immutable input
 
@@ -47,16 +49,30 @@ Unrestricted Lonely Runner remains open. Use only these accepted scopes:
 - `open`: `OBSTRUCTION-EXTRACTION-DISTINCT-PRIME-SUPPLY`,
   `UniformPrimeForcingSupply`, C2 assembly, and unrestricted LRC.
 
-Prompt84 completed with a response-authored `STOP` candidate. Its immutable
-raw clipboard capture has SHA-256
+Prompt84 completed and was recovered. Its immutable raw clipboard capture has
+SHA-256
 
 ```text
 1b22792c0b50dc3c98853c33bbeea4d4d93088274329bd3eeb2b64bc7dd5e2e6
 ```
 
 and reported 39,617 UTF-8 bytes, 39,609 characters, 1,509 CRLF separators,
-a terminal CRLF, and no `sandbox:/...` reference. The response is not yet a
-recovered or audited repository result. Do not cite its self-label as proof.
+a terminal CRLF, and no `sandbox:/...` reference. The tracked LF-normalized
+response has SHA-256
+
+```text
+8791ce6cd5d78d6a461d5e333e39f819879629b9d3a5b85aeddaab222a23d9d6
+```
+
+Prompt84's independent mathematical audit is
+`docs/response84-mathematical-audit.md` at commit
+`9774598704ec95d7f18dca0819ee6c12fec8dcf6`, merged on main at
+`3c51da2752e6d731cc00da5fbbb9f401596cb196`. It accepts `STOP` and the
+counterfamily at `proved-math-qualified` scope, strengthened from dyadic
+powers to every integer `q>=8` with `4|q`. It accepts no response-authored
+scan or count as computed finite evidence. Independently rederive the theorem
+and its consequences; do not cite the audit verdict as the proof requested by
+this adversarial turn.
 
 ## Exact forcing definitions
 
@@ -97,8 +113,8 @@ distinct primes.
 Independently prove or refute every quantifier of:
 
 ```text
-DYADIC-POWERFORCING-COUNTERFAMILY:
-For every E>=3, let q=2^E, N=5, M=5*q, and
+FOUR-DIVISIBLE-POWERFORCING-COUNTERFAMILY:
+For every integer q>=8 with 4|q, let N=5, M=5*q, and
 
   v_0 = 1,
   v_1 = 4,
@@ -111,10 +127,13 @@ q divides no v_i, and
   for every 0<=r<M, there exists i<4 with rho_M(r*v_i)<q.
 
 Consequently not PowerForcing(4,q).
+
+In particular, for every E>=3, taking q=2^E gives the dyadic corollary.
 ```
 
 Do not replace the common deletion gcd by pairwise coprimality. Do not infer
-the cover from a finite scan. The theorem is symbolic for every `E>=3`.
+the cover from a finite scan. The theorem is symbolic for every integer
+`q>=8` divisible by four; the power-of-two statement is only a corollary.
 
 ## Complete candidate proof data to re-derive
 
@@ -123,7 +142,7 @@ candidate proof data, not an accepted proof.
 
 ### Domain and nondivisibility
 
-Because `E>=3`, `q` is divisible by `8`, `M` is even, and
+Because `q>=8` and `4|q`, both `q` and `q/2` are even, `M` is even, and
 
 ```text
 0 < 1 < 4 < M/2-1 < M/2 < M.
@@ -145,13 +164,12 @@ equal to one. If `v_0` is deleted, then
 ```text
 gcd(M,v_1,v_2,v_3)
   divides gcd(4,M/2-1)
-  = gcd(4,5*2^(E-1)-1)
-  = gcd(4,-1)
+  = gcd(4,5*(q/2)-1)
   = 1,
 ```
 
-because `E-1>=2`. Therefore all four separately quantified deletion gcds
-are one.
+because `q/2` is even, so `5*(q/2)-1` is odd and therefore coprime to `4`.
+Thus all four separately quantified deletion gcds are one.
 
 ### Full strict cover
 
@@ -201,7 +219,7 @@ On the reflected second interval, using `x' = M-x`, it shows
 rho_M(4*x) >= q  iff  x=7q/2 or x=4q.
 ```
 
-All four endpoints are even integers because `q` is divisible by `4`.
+All four endpoints are even integers because `q/2` is even.
 They cannot equal the odd residue `r`. Thus one of `v_0,v_1,v_2` is strictly
 bad for every odd `r`; `v_3` is strictly bad for every even `r`. The union of
 the four labelled strict bad sets is all of `Z/MZ`.
@@ -215,26 +233,30 @@ has distance zero there.
 
 If the theorem survives, decide each statement separately.
 
-1. `DYADIC-VALUATION-FORCING` from Prompt84 is false, because its universal
+1. `PowerForcing(4,q)` is false for every `q>=8` divisible by four. The dyadic
+   response claim is a strict corollary, not the theorem's maximal scope.
+2. `DYADIC-VALUATION-FORCING` from Prompt84 is false, because its universal
    quantifier includes `n=4` and its exact target is `q_4=2^32`, which belongs
    to this family.
-2. Any theorem asserting `PowerForcing(4,2^E)` for every sufficiently large
-   `E`, under only the frozen deletion-gcd and whole-power nondivisibility
+3. Any theorem asserting `PowerForcing(4,2^E)` for every sufficiently large
+   `E`, or `PowerForcing(4,q)` for every sufficiently large multiple of four,
+   under only the frozen deletion-gcd and whole-modulus nondivisibility
    premises, is false.
-3. The one-large-dyadic-divisor replacement for C2 is stopped. A fixed-grid
+4. The one-large-dyadic-divisor replacement for C2 is stopped. A fixed-grid
    contrapositive cannot force `2^E` into the speed product from these premises.
-4. Do **not** claim that `PowerForcing(4,4) -> PowerForcing(4,8)` is refuted
+5. Do **not** claim that `PowerForcing(4,4) -> PowerForcing(4,8)` is refuted
    unless the antecedent is independently proved. A zero-failure scan at
    `q=4` is not a theorem.
-5. The distinct-prime C2 route survives logically. The counterfamily uses the
-   half-modulus for powers of two; it neither constructs an odd bad prime nor
+6. Odd prime powers, including odd primes, are outside this theorem because
+   `4` does not divide them. The distinct-prime C2 route therefore survives
+   logically: the counterfamily neither constructs an odd bad prime nor
    disproves `PrimeForcing(n,p)` for any new prime. It does not refute a finite
    set of distinct good primes with a sufficiently large product.
-6. Prompt79's open prime-independent obstruction supply also survives. Its
-   inputs are failures at varying prime moduli `N*p`; this one-prime-power
+7. Prompt79's open prime-independent obstruction supply also survives. Its
+   inputs are failures at varying prime moduli `N*p`; this multiple-of-four
    family supplies neither infinitely many bad primes nor a bounded
    prime-independent obstruction integer.
-7. Determine whether any candidate repair adds only a separately proved
+8. Determine whether any candidate repair adds only a separately proved
    structural premise, or instead says that `v` is the reduction of a
    hypothetical LRC counterexample and then uses counterexamplehood to exclude
    the family. The latter is circular when its conclusion is the missing LRC
@@ -266,15 +288,32 @@ ideas.
 1. Recheck `E=3`, `q=8`, `M=40`, `v=(1,4,19,20)` literally over all
    `r=0,...,39`, including the four safe equality endpoints.
 2. Exhibit every deletion gcd for that tuple separately.
-3. Check common unit scaling and coordinate permutation preserve failure, but
+3. Verify the following **ordinary pivot certificate** for the same positive
+   speeds, separately from the failed fixed `M=40` grid:
+
+   ```text
+   pivot speed p=19,
+   pivot modulus N*p=5*19=95,
+   numerator r=31,
+   candidate exclusion 5 does not divide 31,
+   distances for speeds (1,4,19,20): (31,29,19,45) >= 19.
+   ```
+
+   Recompute `rho_95(31*a_i)` coordinate by coordinate, retain equality at
+   the pivot coordinate, and check that at time `t=31/95` every normalized
+   circle distance is at least `19/95=1/5`. Conclude only that
+   `(1,4,19,20)` is not an LRC counterexample. This does not repair
+   `PowerForcing(4,8)`.
+4. Check common unit scaling and coordinate permutation preserve failure, but
    do not infer a larger theorem from those symmetries.
-4. Explain why `q=4` is outside the family theorem: premise (ii) fails at
+5. Explain why `q=4` is outside the family theorem: premise (ii) fails at
    coordinate `4`.
-5. Explain why odd prime moduli do not admit the half-modulus parity argument.
-6. Test any salvage lemma against the exact family, Prompt67's known failures
+6. Explain why odd prime powers are outside the strengthened theorem and why
+   odd prime moduli do not admit this half-modulus parity argument.
+7. Test any salvage lemma against the exact family, Prompt67's known failures
    `(n,p)=(3,5)` and `(4,7)`, Prompt79's prime-dependent determinant defect,
    repeated residues, nonunits, equality `rho=q`, and noncoprime `N,q`.
-7. Reject any use of a response-authored scan as theorem evidence.
+8. Reject any use of a response-authored scan as theorem evidence.
 
 ## Required response format
 
@@ -283,8 +322,9 @@ Return exactly these sections.
 1. **Disposition** — `STOP`, or exceptionally `PIVOT`; never `PROVE LRC`.
 2. **Independent counterfamily proof** — every quantifier, gcd, interval,
    parity, reflection, and strict endpoint.
-3. **Literal q=8 audit** — complete residue-owner table or transparent exact
-   compression with first-owner convention.
+3. **Literal q=8 and ordinary-pivot audit** — complete fixed-grid
+   residue-owner table or transparent exact compression, followed by the
+   independent modulus-95 pivot calculation.
 4. **Prompt84 impact table** — killed, surviving, conditional, and untouched
    statements at exact scope.
 5. **Prompt67/Prompt79/C2 synthesis** — complete logical dependency graph,
