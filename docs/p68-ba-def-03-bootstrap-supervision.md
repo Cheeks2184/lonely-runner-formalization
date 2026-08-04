@@ -1,6 +1,7 @@
 # P68-BA-DEF-03 bootstrap supervision audit
 
 Specification task: `SPEC-P68-BA-DEF-03-BOOTSTRAP-210`
+Correction task: `SPEC-P68-BA-DEF-03-CORRECTION-222`
 
 Admission: **`MEDIUM-SPEC-REQUIRED` pending independent contract review**
 
@@ -34,7 +35,15 @@ process remained afterward.
 ## Frozen Task03 correction
 
 Task03 adds only the narrow dependency bootstrap and fail-closed process
-bounds. It retains the Task02 theorem signatures, strict/closed semantics,
+bounds. Independent review 211 found two operational specification defects:
+retained `commands.log` could receive unsanitized negative-fixture diagnostics,
+and the cache and targeted dependency build lacked explicit Linux-native
+timeouts. The correction uses mode-`600` ephemeral diagnostic files with an
+exit trap, retains only two exact allowlisted cause summaries, fails closed if
+the cause or cleanup cannot be verified, and gives both bootstrap commands
+ten-minute fail-closed bounds within the unchanged 55-minute total budget.
+
+It retains the Task02 theorem signatures, strict/closed semantics,
 canonical ordering, six fixtures, exact runtime metadata probe, immutable
 contract delivery gate, allowed files, evidence ceiling, and worker report
 schema. Sanitized preflight artifacts must remain available through the
@@ -46,10 +55,13 @@ succeeded, so a broader build is unnecessary for this admission repair.
 
 ## Required independent review
 
-Requested review ID: `VER-P68-BA-DEF03-CONTRACT-211`.
+Requested fresh review ID: `VER-P68-BA-DEF03-CONTRACT-223`.
 
-The reviewer must compare Task03 with Task02, confirm that none of the six
-fixture semantics or four declaration signatures changed, replay the
-bootstrap commands in a fresh exact-base worktree, audit the retention and
-timeout rules, and return either `LUNA-READY` or a precise specification
-defect. No Luna session may launch from the draft record.
+The reviewer must compare the correction with commit
+`39b6129238d41875e1a308ef67b6ab3c9995037f`, confirm that only review-211's two
+operational defects changed, audit the allowlisted diagnostic retention and
+bootstrap timeout handling, and confirm that the six fixture semantics and
+four declaration signatures remain unchanged. This Level-1 correction does
+not rerun the already recorded bootstrap. The reviewer must return either
+`LUNA-READY` or a precise specification defect. No Luna session may launch
+from the draft record.

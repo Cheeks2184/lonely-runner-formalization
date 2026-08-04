@@ -2,6 +2,7 @@
 
 Task ID: `P68-BA-DEF-03`
 Specification task: `SPEC-P68-BA-DEF-03-BOOTSTRAP-210`
+Correction task: `SPEC-P68-BA-DEF-03-CORRECTION-222`
 
 Supervising Sol Medium lead: Formalization/Specification Lead
 
@@ -604,16 +605,22 @@ tmp/p68-ba-def-03/ExpectedFailureZeroModulus.lean
 tmp/p68-ba-def-03/ExpectedFailureWrongHeight.lean
 tmp/p68-ba-def-03/AxiomProbe.lean
 tmp/p68-ba-def-03/commands.log
+tmp/p68-ba-def-03/ExpectedFailureZeroModulus.raw
+tmp/p68-ba-def-03/ExpectedFailureWrongHeight.raw
 ```
 
 Lake may write its normal ignored cache beneath `.lake/`. No other scratch,
 certificate, generated source, or output path is allowed. None of these paths
-may be committed. The six named, sanitized temporary files must be retained
+may be committed. The first six named, sanitized temporary files must be retained
 unchanged through the supervising lead's preflight decision whether the
-preflight passes or fails. Raw runtime metadata, private paths, session
-identifiers, and unsanitized error payloads must never be copied into them.
-After the supervisor records the decision, remove the six named temporary
-files with `rm -f --` and then remove the now-empty task directory with
+preflight passes or fails. The two `.raw` diagnostic files are ephemeral,
+mode-`600` scratch only: they must be removed immediately after mechanical
+cause inspection, and the exit trap below must remove them on every ordinary
+exit or signal. They may never be retained, copied, committed, reported, or
+displayed. Raw runtime metadata, private paths, session identifiers,
+credentials, and unsanitized error payloads must never be copied into any
+retained file. After the supervisor records the decision, remove the first six
+named temporary files with `rm -f --` and then remove the now-empty task directory with
 `rmdir -- tmp/p68-ba-def-03`. An ignored `.lake/` cache may remain locally but
 must not be committed or included in an artifact bundle.
 
@@ -632,8 +639,27 @@ fixtures, do not stage or commit the module. First restore the pinned mathlib
 cache and build only the two frozen project dependency modules:
 
 ```bash
-lake exe cache get
-lake build LonelyRunner.Formulations LonelyRunner.PivotResidues
+set +e
+timeout --signal=TERM --kill-after=15s 600s lake exe cache get
+cache_rc=$?
+set -e
+case "$cache_rc" in
+  0) ;;
+  124|137|143) exit 1 ;;
+  *) exit 1 ;;
+esac
+
+set +e
+timeout --signal=TERM --kill-after=15s 600s \
+  lake build LonelyRunner.Formulations LonelyRunner.PivotResidues
+targeted_build_rc=$?
+set -e
+case "$targeted_build_rc" in
+  0) ;;
+  124|137|143) exit 1 ;;
+  *) exit 1 ;;
+esac
+
 test -f .lake/build/lib/lean/LonelyRunner/Formulations.olean
 test -f .lake/build/lib/lean/LonelyRunner/PivotResidues.olean
 sha256sum \
@@ -651,7 +677,10 @@ respectively. Those hashes are provenance observations, not portable
 acceptance constants: a worker must report its own hashes and must not fail
 solely because a trusted toolchain rebuild produces different bytes.
 
-Do not substitute `lake build`, a root build, or a full clean replay. If cache
+These are Linux-native fail-closed bounds. Each command has a ten-minute
+ceiling inside the overall 55-minute task budget; exit `124`, forced-kill exit
+`137`, termination exit `143`, any other nonzero exit, or missing exit status
+is a bootstrap failure. Do not substitute `lake build`, a root build, or a full clean replay. If cache
 restoration, either targeted module, or either required file check fails, stop
 and escalate before creating or compiling the assigned module. A bootstrap
 timeout or interrupted command is `rejected operational output`, not evidence.
@@ -662,15 +691,70 @@ in-WSL fail-closed timeout so termination also reaches the Lean subprocess:
 ```bash
 timeout --signal=TERM --kill-after=15s 600s lake env lean LonelyRunner/BoundedAnnihilator.lean
 timeout --signal=TERM --kill-after=15s 600s lake env lean tmp/p68-ba-def-03/Preflight.lean
-if timeout --signal=TERM --kill-after=15s 600s lake env lean tmp/p68-ba-def-03/ExpectedFailureZeroModulus.lean >>tmp/p68-ba-def-03/commands.log 2>&1; then exit 1; fi
-if timeout --signal=TERM --kill-after=15s 600s lake env lean tmp/p68-ba-def-03/ExpectedFailureWrongHeight.lean >>tmp/p68-ba-def-03/commands.log 2>&1; then exit 1; fi
+
+umask 077
+raw_zero='tmp/p68-ba-def-03/ExpectedFailureZeroModulus.raw'
+raw_height='tmp/p68-ba-def-03/ExpectedFailureWrongHeight.raw'
+safe_log='tmp/p68-ba-def-03/commands.log'
+trap 'rm -f -- "$raw_zero" "$raw_height"' EXIT HUP INT TERM
+: >"$safe_log"
+
+set +e
+timeout --signal=TERM --kill-after=15s 600s lake env lean \
+  tmp/p68-ba-def-03/ExpectedFailureZeroModulus.lean >"$raw_zero" 2>&1
+zero_rc=$?
+set -e
+case "$zero_rc" in
+  0|124|137|143) exit 1 ;;
+esac
+test -s "$raw_zero"
+LC_ALL=C grep -F 'ExpectedFailureZeroModulus.lean' "$raw_zero" >/dev/null
+LC_ALL=C grep -F 'failed to synthesize' "$raw_zero" >/dev/null
+LC_ALL=C grep -F 'NeZero 0' "$raw_zero" >/dev/null
+printf '%s\n' 'fixture=5 result=expected-failure cause=missing-NeZero-0' \
+  >>"$safe_log"
+rm -f -- "$raw_zero"
+
+set +e
+timeout --signal=TERM --kill-after=15s 600s lake env lean \
+  tmp/p68-ba-def-03/ExpectedFailureWrongHeight.lean >"$raw_height" 2>&1
+height_rc=$?
+set -e
+case "$height_rc" in
+  0|124|137|143) exit 1 ;;
+esac
+test -s "$raw_height"
+LC_ALL=C grep -F 'ExpectedFailureWrongHeight.lean' "$raw_height" >/dev/null
+LC_ALL=C grep -F 'Tactic `decide` proved that the proposition' "$raw_height" >/dev/null
+LC_ALL=C grep -F 'boundedAnnihilatorHeight 3 = 9600' "$raw_height" >/dev/null
+printf '%s\n' 'fixture=6 result=expected-failure cause=false-height-9600' \
+  >>"$safe_log"
+rm -f -- "$raw_height"
+
+test ! -e "$raw_zero"
+test ! -e "$raw_height"
+test "$(cat "$safe_log")" = "$(printf '%s\n%s' \
+  'fixture=5 result=expected-failure cause=missing-NeZero-0' \
+  'fixture=6 result=expected-failure cause=false-height-9600')"
 git diff --check
 git diff --name-only c05cd83743e6290598077006b380da5d80a1c122 --
 git ls-files --others --exclude-standard
 git status --porcelain=v1 --untracked-files=all
 ```
 
-Both negative diagnostics must be inspected before the supervisor gate. The
+Raw stdout/stderr is never appended to the retained `commands.log`. The exact
+allowlisted `printf` lines above are the complete deterministic sanitization:
+they preserve only fixture number, expected-failure result, and fixed cause,
+so no path, session identifier, credential, or arbitrary diagnostic text can
+survive. Before emitting a line, the worker must mechanically inspect the
+mode-`600` ephemeral diagnostic for the exact source name, Lean failure class,
+and cause token. A hard runtime kill that prevents the trap makes the output
+non-retainable: the supervising lead must remove both controlled raw paths and
+reject the delegation before preserving any task artifact.
+Failure to verify either token, remove both raw files, reproduce the exact
+two-line log, or keep the log free of all non-allowlisted text fails closed.
+
+Both negative causes must be inspected before the supervisor gate. The
 zero-modulus diagnostic must fail at the displayed `#check` because Lean
 cannot synthesize `NeZero 0`; the wrong-height diagnostic must fail at the
 displayed equality because `9601 ≠ 9600`. A failure caused by an import,
