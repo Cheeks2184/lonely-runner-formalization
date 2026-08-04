@@ -57,8 +57,19 @@ EFFORTS = {None, "low", "medium", "high", "xhigh", "pro"}
 DESKTOP_OWNER = "GPT-5.6 Sol High top-level desktop orchestrator"
 DESKTOP_RUNTIME = "original browser-capable desktop Codex session"
 DESKTOP_READBACK_KEYS = {
+    "signed_in", "new_conversation", "chat_selected", "work_selected",
+    "sol_selected", "pro_selected", "exact_prompt_readback",
+    "generation_started", "tracked_prompt_bytes", "tracked_prompt_characters",
+    "submitted_payload_bytes", "submitted_payload_characters",
+    "tracked_terminal_lf", "submitted_terminal_lf",
+}
+DESKTOP_AFFIRMATIVE_KEYS = {
     "signed_in", "new_conversation", "chat_selected", "sol_selected",
-    "pro_selected", "exact_prompt_readback",
+    "pro_selected", "exact_prompt_readback", "generation_started",
+}
+DESKTOP_COUNT_KEYS = {
+    "tracked_prompt_bytes", "tracked_prompt_characters",
+    "submitted_payload_bytes", "submitted_payload_characters",
 }
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 COMMIT_RE = re.compile(r"^[0-9a-f]{40}$")
@@ -260,8 +271,13 @@ def validate_task(task: Mapping[str, Any], task_ids: set[str], errors: list[str]
     verification = task["verification"]
     add_if(errors, not isinstance(verification, dict) or set(verification) != {"level", "state"}, f"{prefix}: malformed verification record")
     if isinstance(verification, dict):
-        add_if(errors, verification.get("level") not in {1, 2, 3}, f"{prefix}: invalid verification level")
-        add_if(errors, verification.get("state") not in VERIFICATION_STATES, f"{prefix}: invalid verification state")
+        state = verification.get("state")
+        level = verification.get("level")
+        add_if(errors, state not in VERIFICATION_STATES, f"{prefix}: invalid verification state")
+        if state == "not_required":
+            add_if(errors, level is not None, f"{prefix}: not-required verification must not have a level")
+        else:
+            add_if(errors, level not in {1, 2, 3}, f"{prefix}: invalid verification level")
 
     runtime = task["runtime"]
     runtime_keys = {"route", "model", "effort", "pro_cell"}
@@ -283,7 +299,19 @@ def validate_task(task: Mapping[str, Any], task_ids: set[str], errors: list[str]
                 f"{prefix}: malformed desktop readback",
             )
             if isinstance(readback, dict) and set(readback) == DESKTOP_READBACK_KEYS:
-                add_if(errors, not all(value is True for value in readback.values()), f"{prefix}: desktop readback is not exact and affirmative")
+                add_if(
+                    errors,
+                    not all(readback[key] is True for key in DESKTOP_AFFIRMATIVE_KEYS),
+                    f"{prefix}: desktop readback is not exact and affirmative",
+                )
+                add_if(errors, readback["work_selected"] is True, f"{prefix}: desktop readback cannot select Work and Chat")
+                for key in DESKTOP_COUNT_KEYS:
+                    value = readback[key]
+                    add_if(
+                        errors,
+                        value is not None and (type(value) is not int or value < 0),
+                        f"{prefix}: invalid desktop readback count {key}",
+                    )
         if runtime["pro_cell"] and task["status"] == "active":
             add_if(errors, not runtime["model"] or not runtime["effort"], f"{prefix}: active Pro cell needs model and effort")
             add_if(errors, not any(item.get("kind") == "prompt" for item in task["hashes"]), f"{prefix}: active Pro cell needs prompt hash")
@@ -292,6 +320,21 @@ def validate_task(task: Mapping[str, Any], task_ids: set[str], errors: list[str]
             add_if(errors, runtime.get("effort") != "pro", f"{prefix}: browser Pro cell effort must be pro")
         if runtime.get("model") == "gpt-5.6-luna":
             add_if(errors, task["admission_class"] == "NOT-APPLICABLE", f"{prefix}: Luna task needs explicit Narrow admission class")
+
+    # Desktop Pro launch provenance is universal, including completed cells.
+    # Route-specific checks would silently admit older Prompt67/68 records.
+    if isinstance(runtime, dict) and runtime.get("pro_cell") and runtime.get("route") == DESKTOP_RUNTIME:
+        add_if(errors, task["owner"] != DESKTOP_OWNER, f"{prefix}: wrong browser Pro cell owner")
+        add_if(errors, runtime.get("model") != "gpt-5.6-sol", f"{prefix}: wrong browser Pro cell model")
+        add_if(errors, runtime.get("desktop_readback") is None, f"{prefix}: browser Pro cell needs exact desktop readback")
+        add_if(errors, not any(item.get("kind") == "prompt" for item in task["hashes"]), f"{prefix}: browser Pro cell needs prompt hash")
+        add_if(errors, not any(item.get("kind") == "launch_payload" for item in task["hashes"]), f"{prefix}: browser Pro cell needs launch-payload hash")
+        add_if(errors, not any(stamp.get("event") == "launched" for stamp in task["timestamps"]), f"{prefix}: browser Pro cell needs launch timestamp")
+        add_if(
+            errors,
+            verification != {"level": None, "state": "not_required"},
+            f"{prefix}: browser Pro cell verification must be not_required without a level",
+        )
 
     # Prompt69/70 are reserved for the original signed-in desktop Sol High
     # orchestrator. Reviews retain their actual audit owner, but no route row
@@ -303,7 +346,6 @@ def validate_task(task: Mapping[str, Any], task_ids: set[str], errors: list[str]
             add_if(errors, task["owner"] != DESKTOP_OWNER, f"{prefix}: wrong Prompt69/70 desktop owner")
         if task["kind"] == "pro_research":
             add_if(errors, not isinstance(runtime, dict) or runtime.get("route") != DESKTOP_RUNTIME, f"{prefix}: wrong Prompt69/70 launch runtime")
-            add_if(errors, not isinstance(runtime, dict) or runtime.get("desktop_readback") is None, f"{prefix}: Prompt69/70 desktop launch needs exact readback")
     if task_id in {
         "PIPE-P71-PRIVATE-POINT-ENERGY-CONTRACT-134",
         "PIPE-P72-MODULAR-COVER-CIRCUIT-CONTRACT-135",

@@ -25,7 +25,28 @@
       "kind": "pro_research",
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "/root",
-      "runtime": {"route": "original browser-capable desktop Codex session", "model": "gpt-5.6-sol", "effort": "pro", "pro_cell": true},
+      "runtime": {
+        "route": "original browser-capable desktop Codex session",
+        "model": "gpt-5.6-sol",
+        "effort": "pro",
+        "pro_cell": true,
+        "desktop_readback": {
+          "signed_in": true,
+          "new_conversation": true,
+          "chat_selected": true,
+          "work_selected": false,
+          "sol_selected": true,
+          "pro_selected": true,
+          "exact_prompt_readback": true,
+          "generation_started": true,
+          "tracked_prompt_bytes": 14800,
+          "tracked_prompt_characters": 14796,
+          "submitted_payload_bytes": 14799,
+          "submitted_payload_characters": 14795,
+          "tracked_terminal_lf": true,
+          "submitted_terminal_lf": false
+        }
+      },
       "base_commit": "7c31df78d168014604b5cc83124d067547e9d75b",
       "lifecycle_stage": "active_research",
       "dependencies": [],
@@ -36,10 +57,11 @@
       "route_queue": "none",
       "current_route_marker": false,
       "admission_class": "RESEARCH-UNRESOLVED",
-      "verification": {"level": 3, "state": "complete"},
+      "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "ea60008204a79434724d8c6fe43b3dcabf576ecebee0c345ace827878d23001a", "path": "research/sol-pro/prompts/prompt67.md"}
+        {"kind": "prompt", "algorithm": "sha256", "value": "ea60008204a79434724d8c6fe43b3dcabf576ecebee0c345ace827878d23001a", "path": "research/sol-pro/prompts/prompt67.md"},
+        {"kind": "launch_payload", "algorithm": "sha256", "value": "30fefd070ee0a5b091ba520ee779022b7df3f2d489083d63989a77e6d34370b6", "path": null}
       ],
       "disposition": "Recovered response self-disposition PIVOT; no theorem or open-claim promotion.",
       "audit_outcome": "not_applicable",
@@ -48,7 +70,7 @@
       "timestamps": [
         {"event": "launched", "at": "2026-08-03T17:17:19-05:00", "source": "tracked Prompt67 launch record"}
       ],
-      "source_refs": ["docs/parallel-task-board.md@8297482afb78485511b5959364084be3b958a3e8", "merge:118a981ab2c8c6f1da6208f84f5cbefd82021b18"]
+      "source_refs": ["research/sol-pro/launches/prompt67-2026-08-03.md", "docs/parallel-task-board.md@8297482afb78485511b5959364084be3b958a3e8", "merge:118a981ab2c8c6f1da6208f84f5cbefd82021b18"]
     },
     {
       "id": "OPS-P67-RECOVERY-PACKAGE-100",
@@ -547,7 +569,28 @@
       "kind": "pro_research",
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "/root",
-      "runtime": {"route": "original browser-capable desktop Codex session", "model": "gpt-5.6-sol", "effort": "pro", "pro_cell": true},
+      "runtime": {
+        "route": "original browser-capable desktop Codex session",
+        "model": "gpt-5.6-sol",
+        "effort": "pro",
+        "pro_cell": true,
+        "desktop_readback": {
+          "signed_in": true,
+          "new_conversation": true,
+          "chat_selected": true,
+          "work_selected": null,
+          "sol_selected": true,
+          "pro_selected": true,
+          "exact_prompt_readback": true,
+          "generation_started": true,
+          "tracked_prompt_bytes": 15752,
+          "tracked_prompt_characters": 15734,
+          "submitted_payload_bytes": 15751,
+          "submitted_payload_characters": 15733,
+          "tracked_terminal_lf": true,
+          "submitted_terminal_lf": false
+        }
+      },
       "base_commit": "2d9b2bbbb33f0297888aac0024666e3a2c33e648",
       "lifecycle_stage": "active_research",
       "dependencies": ["VER-P68-FINAL-HASH-SCOPE-117"],
@@ -558,7 +601,7 @@
       "route_queue": "none",
       "current_route_marker": false,
       "admission_class": "RESEARCH-UNRESOLVED",
-      "verification": {"level": 3, "state": "active"},
+      "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
         {"kind": "prompt", "algorithm": "sha256", "value": "fbc4219585a67f4a6f2627bf8b0b4ff830b8967813f7258b9e8182197d398fe1", "path": "research/sol-pro/prompts/prompt68.md"},
@@ -571,7 +614,7 @@
       "timestamps": [
         {"event": "launched", "at": "2026-08-04T00:02:05.7748010Z", "source": "direct /root UI selected-state and payload readback"}
       ],
-      "source_refs": ["parent-authoritative:SOL-P68-DESKTOP-LAUNCH-124"]
+      "source_refs": ["parent-authoritative:SOL-P68-DESKTOP-LAUNCH-124", "research/sol-pro/launches/prompt68-2026-08-03.md@23ca5b89b13ae879c546598d7b56888a92fc39f2", "commit:23ca5b89b13ae879c546598d7b56888a92fc39f2"]
     },
     {
       "id": "P69-GLOBAL-ALL-PIVOT-118",
@@ -701,7 +744,22 @@
         "model": "gpt-5.6-sol",
         "effort": "pro",
         "pro_cell": true,
-        "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true}
+        "desktop_readback": {
+          "signed_in": true,
+          "new_conversation": true,
+          "chat_selected": true,
+          "work_selected": null,
+          "sol_selected": true,
+          "pro_selected": true,
+          "exact_prompt_readback": true,
+          "generation_started": true,
+          "tracked_prompt_bytes": 14787,
+          "tracked_prompt_characters": 14767,
+          "submitted_payload_bytes": 14786,
+          "submitted_payload_characters": 14766,
+          "tracked_terminal_lf": true,
+          "submitted_terminal_lf": false
+        }
       },
       "base_commit": "d128378fe7ad3611950f881839182b45dbc0e879",
       "lifecycle_stage": "active_research",
@@ -713,7 +771,7 @@
       "route_queue": "none",
       "current_route_marker": false,
       "admission_class": "RESEARCH-UNRESOLVED",
-      "verification": {"level": 3, "state": "active"},
+      "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
         {"kind": "prompt", "algorithm": "sha256", "value": "507af1432ed7c04e6da7e0585081748fb746ae1543834b85031d8aa5a3fd074e", "path": null},
@@ -856,7 +914,22 @@
         "model": "gpt-5.6-sol",
         "effort": "pro",
         "pro_cell": true,
-        "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true}
+        "desktop_readback": {
+          "signed_in": true,
+          "new_conversation": true,
+          "chat_selected": true,
+          "work_selected": null,
+          "sol_selected": true,
+          "pro_selected": true,
+          "exact_prompt_readback": true,
+          "generation_started": true,
+          "tracked_prompt_bytes": 14606,
+          "tracked_prompt_characters": 14586,
+          "submitted_payload_bytes": null,
+          "submitted_payload_characters": null,
+          "tracked_terminal_lf": true,
+          "submitted_terminal_lf": null
+        }
       },
       "base_commit": "03b82dd9fbb9d5ad4c34f99997f592d3ffe264e2",
       "lifecycle_stage": "active_research",
@@ -868,7 +941,7 @@
       "route_queue": "none",
       "current_route_marker": false,
       "admission_class": "RESEARCH-UNRESOLVED",
-      "verification": {"level": 3, "state": "active"},
+      "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
         {"kind": "prompt", "algorithm": "sha256", "value": "91f9d2c699fda7622c8b1948ed039f4e017b055cc1509cf005504389060e91ab", "path": null},
@@ -1073,6 +1146,6 @@
     "active_pro_cells": 3,
     "route_queues": {"launch_ready": 2, "waiting": 0, "parked": 0},
     "audits": {"total": 16, "accepted": 10, "accepted_negative": 6, "rejected": 0, "pending": 0},
-    "verification_level_queues": {"1": 0, "2": 0, "3": 3}
+    "verification_level_queues": {"1": 0, "2": 0, "3": 0}
   }
 }

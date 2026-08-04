@@ -35,9 +35,9 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         self.assertEqual(metrics["active_pro_cells"], 3)
         self.assertEqual(metrics["route_queues"], {"launch_ready": 2, "waiting": 0, "parked": 0})
         self.assertEqual(metrics["audits"], {"total": 16, "accepted": 10, "accepted_negative": 6, "rejected": 0, "pending": 0})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 0, "2": 0, "3": 3})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 0, "2": 0, "3": 0})
 
-    def test_prompt69_and_prompt70_desktop_authority_is_fail_closed(self):
+    def test_desktop_pro_authority_and_readback_are_fail_closed(self):
         def unassign(ledger):
             task = next(task for task in ledger["tasks"] if task["id"] == "PIPE-P69-RESPEC-128")
             task["owner"] = "unassigned"
@@ -50,17 +50,53 @@ class TaskLedgerValidatorTests(unittest.TestCase):
 
         self.assertHasError(self.errors_for(wrong_runtime), "wrong Prompt69/70 launch runtime")
 
-        def missing_readback(ledger):
-            task = next(task for task in ledger["tasks"] if task["id"] == "SOL-P70-DESKTOP-LAUNCH-130")
-            del task["runtime"]["desktop_readback"]
+        for task_id in ("SOL-P67-PRO-C2-099", "SOL-P68-DESKTOP-LAUNCH-124"):
+            with self.subTest(missing_readback=task_id):
+                def missing_readback(ledger, target=task_id):
+                    task = next(task for task in ledger["tasks"] if task["id"] == target)
+                    del task["runtime"]["desktop_readback"]
 
-        self.assertHasError(self.errors_for(missing_readback), "desktop launch needs exact readback")
+                self.assertHasError(self.errors_for(missing_readback), "browser Pro cell needs exact desktop readback")
+
+        def missing_payload_hash(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "SOL-P67-PRO-C2-099")
+            task["hashes"] = [item for item in task["hashes"] if item["kind"] != "launch_payload"]
+
+        self.assertHasError(self.errors_for(missing_payload_hash), "browser Pro cell needs launch-payload hash")
 
         def conflated_orchestrator_effort(ledger):
             task = next(task for task in ledger["tasks"] if task["id"] == "SOL-P70-DESKTOP-LAUNCH-130")
             task["runtime"]["effort"] = "high"
 
         self.assertHasError(self.errors_for(conflated_orchestrator_effort), "browser Pro cell effort must be pro")
+
+    def test_browser_pro_generation_never_enters_verification_queues(self):
+        pro_tasks = [task for task in self.ledger["tasks"] if task["runtime"]["pro_cell"]]
+        self.assertGreaterEqual(len(pro_tasks), 4)
+        for task in pro_tasks:
+            self.assertEqual(task["verification"], {"level": None, "state": "not_required"})
+
+        def misclassify(ledger):
+            task = next(task for task in ledger["tasks"] if task["id"] == "SOL-P68-DESKTOP-LAUNCH-124")
+            task["verification"] = {"level": 3, "state": "active"}
+
+        errors = self.errors_for(misclassify)
+        self.assertHasError(errors, "browser Pro cell verification must be not_required without a level")
+        self.assertHasError(errors, "expected metrics mismatch")
+
+    def test_prompt67_launch_shape_and_payload_are_exact(self):
+        task = next(task for task in self.ledger["tasks"] if task["id"] == "SOL-P67-PRO-C2-099")
+        readback = task["runtime"]["desktop_readback"]
+        self.assertEqual(
+            (readback["tracked_prompt_bytes"], readback["tracked_prompt_characters"]),
+            (14800, 14796),
+        )
+        self.assertEqual(
+            (readback["submitted_payload_bytes"], readback["submitted_payload_characters"]),
+            (14799, 14795),
+        )
+        payload = next(item for item in task["hashes"] if item["kind"] == "launch_payload")
+        self.assertEqual(payload["value"], "30fefd070ee0a5b091ba520ee779022b7df3f2d489083d63989a77e6d34370b6")
 
     def test_pipeline_preparation_preserves_route_owner_without_using_pro(self):
         def wrong_owner(ledger):
@@ -119,8 +155,7 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         self.assertHasError(self.errors_for(mutate_queue), "expected metrics mismatch")
 
         def mutate_level(ledger):
-            task = next(task for task in ledger["tasks"] if task["id"] == "SOL-P68-DESKTOP-LAUNCH-124")
-            task["verification"]["level"] = 2
+            ledger["expected_metrics"]["verification_level_queues"]["3"] = 1
 
         self.assertHasError(self.errors_for(mutate_level), "expected metrics mismatch")
 

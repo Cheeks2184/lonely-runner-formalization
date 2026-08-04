@@ -86,14 +86,22 @@
     "desktopReadback": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["signed_in", "new_conversation", "chat_selected", "sol_selected", "pro_selected", "exact_prompt_readback"],
+      "required": ["signed_in", "new_conversation", "chat_selected", "work_selected", "sol_selected", "pro_selected", "exact_prompt_readback", "generation_started", "tracked_prompt_bytes", "tracked_prompt_characters", "submitted_payload_bytes", "submitted_payload_characters", "tracked_terminal_lf", "submitted_terminal_lf"],
       "properties": {
         "signed_in": {"type": "boolean"},
         "new_conversation": {"type": "boolean"},
         "chat_selected": {"type": "boolean"},
+        "work_selected": {"type": ["boolean", "null"]},
         "sol_selected": {"type": "boolean"},
         "pro_selected": {"type": "boolean"},
-        "exact_prompt_readback": {"type": "boolean"}
+        "exact_prompt_readback": {"type": "boolean"},
+        "generation_started": {"type": "boolean"},
+        "tracked_prompt_bytes": {"type": ["integer", "null"], "minimum": 0},
+        "tracked_prompt_characters": {"type": ["integer", "null"], "minimum": 0},
+        "submitted_payload_bytes": {"type": ["integer", "null"], "minimum": 0},
+        "submitted_payload_characters": {"type": ["integer", "null"], "minimum": 0},
+        "tracked_terminal_lf": {"type": ["boolean", "null"]},
+        "submitted_terminal_lf": {"type": ["boolean", "null"]}
       }
     },
     "verification": {
@@ -101,11 +109,18 @@
       "additionalProperties": false,
       "required": ["level", "state"],
       "properties": {
-        "level": {"type": "integer", "minimum": 1, "maximum": 3},
+        "level": {"type": ["integer", "null"], "minimum": 1, "maximum": 3},
         "state": {
           "enum": ["pending", "active", "complete", "not_required"]
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"state": {"const": "not_required"}}},
+          "then": {"properties": {"level": {"type": "null"}}},
+          "else": {"properties": {"level": {"type": "integer", "minimum": 1, "maximum": 3}}}
+        }
+      ]
     },
     "hash": {
       "type": "object",
