@@ -283,6 +283,10 @@ open. No theorem, computation, or evidence label is promoted by this package.
   `research/sol-pro/artifacts/prompt72/`; hashes and sizes are recorded in the
   package README
 - **Lifecycle:** completed/recovered; independent audits pending
+- **Frozen downstream audits:** `VER-P72-RECOVERY-PROVENANCE-167`,
+  `VERIFY-P72-MATHEMATICAL-AUDIT-168`, and
+  `VERIFY-P72-ARTIFACT-AUDIT-169`; the artifact audit remains
+  `MEDIUM-SPEC-REQUIRED` until its exact contract is frozen
 
 Neither recovered attachment was executed. Recovery preserves the response's
 **STOP** self-disposition without accepting it. The claimed mathematical

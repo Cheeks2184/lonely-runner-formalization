@@ -55,3 +55,13 @@ Every claimed mathematical theorem and finite result remains unverified
 pending independent audits. `MODULAR-COVER-CIRCUIT-ESCAPE`, the exact pivot
 selector, positive-integer LRC, and unrestricted LRC remain open. This package
 adds no Lean theorem and promotes no mathematical or computational claim.
+
+The frozen downstream audit identifiers are:
+
+- `VER-P72-RECOVERY-PROVENANCE-167`;
+- `VERIFY-P72-MATHEMATICAL-AUDIT-168`; and
+- `VERIFY-P72-ARTIFACT-AUDIT-169`.
+
+The artifact audit remains `MEDIUM-SPEC-REQUIRED` until its exact replay and
+semantic-audit contract is frozen. Prompt68's separately assigned artifact
+audit identifier is not reused by this package.
