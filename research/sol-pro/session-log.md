@@ -222,3 +222,38 @@ Prompt69's response self-disposes **STOP**. Recovery does not accept that
 disposition, its conditional claims, the attachment's finite results, or any
 proposed route boundary. `CROSS-PIVOT-WEIGHTED-DEFICIT-COMPENSATION`, the exact
 pivot selector, and unrestricted LRC remain open.
+
+## OPS-P70-RECOVERY-PACKAGE-144 — Prompt70 recovery package
+
+- **Recovery base:** `6d1a06047718570d3038b8e069b493be4bf3023c`
+- **Recovery branch:** `research/p70-recovery-144`
+- **Launch owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator
+  (`/root`) in the original signed-in browser-capable desktop session
+- **Launch time:** 2026-08-03 19:19:32 -05:00
+  (2026-08-04T00:19:32.3160755Z)
+- **Selected UI state:** Chat; `GPT-5.6 Sol`; Pro; exact prompt readback
+- **Prompt SHA-256:**
+  `91f9d2c699fda7622c8b1948ed039f4e017b055cc1509cf005504389060e91ab`
+- **Submitted payload SHA-256:**
+  `1059c3b8ef537ad9f483d1d3604e7f804d6f8e0e7cf3c5cc83bb1e8913f4e43e`
+- **Completion:** terminal UI readback `Worked for 32m 48s`; `Copy response`
+  present; no `Stop answering`; observed 2026-08-03 20:02:11 -05:00
+  (2026-08-04T01:02:11.4131300Z)
+- **Normalized response:** `research/sol-pro/responses/response70.md`
+- **Normalized response SHA-256:**
+  `d8ec6af6c38fa49b938778b8114567bad8eb04a34738da25740a525d35cfadd9`
+- **Normalized response shape:** 26,925 UTF-8 bytes; 26,890 characters;
+  900 LF separators; terminal LF present
+- **Raw clipboard:** 27,825 UTF-8 bytes; 27,790 characters; 900 CRLF
+  separators; no lone LF or lone CR; terminal CRLF; SHA-256
+  `3a9da90c20cae9af44e0b4bc1a815972aa99955078106cdc7825537de499a090`
+- **Recovered attachments:** exactly two files under
+  `research/sol-pro/artifacts/prompt70/`; hashes and sizes are recorded in the
+  package README
+- **Lifecycle:** completed/recovered; independent audits pending
+
+Neither attachment was executed during recovery. Recovery preserves the
+response and its **PIVOT** self-disposition without accepting either. The
+common-prime lemma, claimed structural results, finite output, exact pivot
+selector, positive-integer LRC, and unrestricted LRC remain unverified or
+open. No theorem, computation, or evidence label is promoted by this package.
