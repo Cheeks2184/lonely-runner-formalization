@@ -7,16 +7,16 @@ the Lonely Runner Conjecture (LRC).
 > `Conjecture` is a formal statement under investigation, not a completed
 > proof. See [STATUS.md](STATUS.md) for the current boundary of knowledge.
 
-Current research pipeline: three independent browser conversations are active
-under the top-level Sol High orchestrator. Prompt98 and Prompt99 attack the
-complementary nondivisible and divisible maximum-covered-pivot branches;
-Prompt100 attacks the uniform two-lower-owner noncover theorem. Prompt101's
-global covered-pivot matrix contract is independently reviewed and
-launch-ready. Prompt preparation, launch, and bounded admission preflight are
-not mathematical evidence. The machine-readable lifecycle source is
+Current repository-recorded pipeline: Prompt98, Prompt100, and Prompt101 are
+active/unrecovered browser research cells under the top-level Sol High
+orchestrator. Prompt99 completed and exposed a semantic contract defect: its
+unnormalized divisible restriction is equivalent to full Prompt95 under common
+scaling. This equivalence is now Lean-verified, but neither redundancy theorem
+is proved. Prompt preparation, launch, and bounded admission preflight are not
+mathematical evidence. The machine-readable lifecycle source is
 [`research/task-ledger.json`](research/task-ledger.json), bound to immutable
 PI decision registry commit
-`db21aa55acfe18e6a0a8967449dc19a28a5fe487`.
+`fed25fad9fabc73ed34f5ff6c2ba84e91d3e9577`.
 
 ## Verified results
 
@@ -36,6 +36,11 @@ Fully Lean-verified results include:
   `conjecture_iff_positiveIntegerConjecture`;
 - equivalence of the positive-integer conjecture with the exact finite
   pivot-certificate proposition;
+- common-scaling invariance of the exact labelled strict complete-cover
+  structure and
+  `maxCoveredDivisible_iff_unrestricted`, which proves the universal
+  `N`-divisible maximum-covered-pivot redundancy restriction equivalent to
+  unrestricted Prompt95 redundancy without proving either proposition;
 - the one- and two-moving-runner base cases;
 - several insertion, normalization, congruence, overlap, and structured-class
   theorems recorded in the [formal modules](LonelyRunner/);
@@ -245,15 +250,13 @@ Chebyshev shortcut, not the full Chebyshev score and not LRC.
 
 The repository pins Lean and mathlib to `v4.32.1`. The committed Lake manifest
 pins mathlib commit `520045ab14e26149ee970e2e617ca04b09bde5d6`.
-The authoritative formal source checkpoint is
-`586b4858cd1b1c513566f3b33d7b5141640e7865`. Merged main commit
-`99a78c15ad0a55e96cffbc5dadf4f3afd99cfa1c` contains the same Lean source
-tree; its other parent contributes documentation and research records. The
-new ReverseGrid verification used an isolated native-WSL warm-cache worktree,
-not a fresh detached clean checkout. The earlier detached clean replay at
-`263a1cb8b68d8ea1d8b6333cd1e72f258b01bafa` remains the latest complete
-clean-checkout record for the older source tree. Resolve the exact repository
-snapshot containing this text with `git rev-parse HEAD`.
+The latest formal-source merge before this documentation sync is
+`52e0770ec07663f19be01bce580a8e5f10eee05a`; its isolated source commit is
+`fefd05b`. Targeted compilation, the 3,592-job root build, axiom probes, and an
+independent formal diff review passed. The latest authoritative full fresh-
+clone Lean/trust/regression replay remains lifecycle checkpoint `fc004e5` for
+the preceding source tree. Resolve the exact repository snapshot containing
+this text with `git rev-parse HEAD`.
 See [STATUS.md](STATUS.md) for the exact environment, timings, warnings, and
 historical CI results.
 
@@ -340,9 +343,8 @@ deterministic Python regression suite. The authoritative local standard remains
 a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
 
-The lifecycle snapshot is being reconciled from authoritative main through
-`e3e38bd` and immutable PI promotion
-registry checkpoint `db21aa55acfe18e6a0a8967449dc19a28a5fe487`. The latest authoritative clean
+The lifecycle snapshot is reconciled through immutable PI promotion registry
+checkpoint `fed25fad9fabc73ed34f5ff6c2ba84e91d3e9577`. The latest authoritative clean
 full-project Lean/trust/regression replay is lifecycle checkpoint
 `fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`: 3,591 Lean jobs, 302 trust
 reports, and all 172 deterministic tests passed in a fresh native-WSL clone.
@@ -361,9 +363,11 @@ Prompt94--96 are recovered and independently audited. Prompt94 remains
 `MIXED / OPEN`; Prompt95 contributes qualified local capacity and slice facts
 but no redundancy/descent theorem; Prompt96 is a family-specific
 `SEPARATION`. Prompt97 stopped before launch because its target was a
-tautological reformulation of an open unit-certificate premise. Prompt98,
-Prompt99, and Prompt100 are active; Prompt101 is queued as the next global
-route. No active response, launch, quarantined attachment, or admission
+tautological reformulation of an open unit-certificate premise. Prompt99 is
+completed/recovered and its branch separation is stopped by the new
+Lean-verified scope equivalence. Prompt98 and Prompt100 remain
+active/unrecovered supporting routes; Prompt101 is active/unrecovered on the
+independent global weights route. No active response, launch, quarantined attachment, or admission
 preflight promotes a theorem or finite evidence. Prompt85 replay `-02` and the
 Prompt93 replay remain `MEDIUM-SPEC-REQUIRED`; no Luna task is active or
 `LUNA-READY`.

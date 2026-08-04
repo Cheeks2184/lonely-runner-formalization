@@ -2,7 +2,7 @@
 
 This file is the authoritative coordination record. The current lifecycle
 snapshot is based on main commit
-`fbda0f00ef593c9c6e9ccdfff4e4419678c836cf`; historical worker rows retain
+`fed25fad9fabc73ed34f5ff6c2ba84e91d3e9577`; historical worker rows retain
 their actual fixture bases. The board records task routing and integration
 readiness; it does not promote any mathematical claim.
 
@@ -10,11 +10,12 @@ readiness; it does not promote any mathematical claim.
 
 This snapshot supersedes the historical current-state prose below. Its
 machine-readable source is `research/task-ledger.json`, bound to immutable PI
-promotion registry commit `db21aa55acfe18e6a0a8967449dc19a28a5fe487`.
+promotion registry commit `fed25fad9fabc73ed34f5ff6c2ba84e91d3e9577`.
 Historical rows remain append-only evidence and are not silently reinterpreted.
-This current snapshot is lifecycle reconciliation task327. Recovery and audit
-rows added here are operational records only: no new audit recommendation is
-promoted without a matching immutable PI-registry decision.
+This current snapshot incorporates Prompt99 recovery/audit tasks332--333,
+Prompt101 launch task339, and Prompt99 formal integration task340. A lifecycle
+transition never promotes a result without a matching immutable PI-registry
+decision or a separately replayed kernel check.
 
 | Cell or lane | Lifecycle now | Exact boundary |
 | --- | --- | --- |
@@ -41,14 +42,14 @@ promoted without a matching immutable PI-registry decision.
 | Prompt96 reserved synthesis | completed, recovered, audit recommendation `ACCEPT SEPARATION` | Recovery314 is integrated at `d257b95`; audit312 is tracked at `f190022`. The symbolic all-`E` family has a `proved-math-qualified` recommendation only, not a promotion; Prompt94, Prompt95, and unrestricted LRC remain `OPEN`. |
 | Prompt97 | prelaunch `STOP / NOT LAUNCHABLE` | Audit313, integrated at `97776e8`, finds the synchronized-cycle target tautologically equivalent to Prompt94's open unit-certificate target. This is a contract-design stop, not evidence against LRC. |
 | Prompt98 | active Sol Pro research | Task315 is the active `N`-nondivisible Prompt95 branch; launch provenance is task317 at `64d5a6a`. It is supporting research and promotes nothing. |
-| Prompt99 | active Sol Pro research | Task316 is the active `N`-divisible Prompt95 branch; launch provenance is task318 at `4fec7c4`. Prompt98 is complementary but unproved. |
+| Prompt99 | completed, recovered, audited `STOP`; scope collapse formalized | Task332 preserves the response; task333 independently proves at `proved-math-qualified` scope that the unnormalized `N`-divisible universal theorem is equivalent to full Prompt95. `LonelyRunner.maxCoveredDivisible_iff_unrestricted` is `proved-lean` for exactly this equivalence. Neither open proposition nor LRC is proved. Explicit `Q`, minimal-cover, and private-set invariance are not separately `proved-lean` by this module. |
 | Prompt100 | active Sol Pro research; supporting route | Preparation319 and review322 classify the two-owner theorem as launch-ready support for Prompt95, not an independent third-cell route. Sol High launch325 is active at `a661fe1`; launch promotes nothing. |
-| Prompt101 | launch-ready and queued; independent global route | Preparation323 and review326 were integrated through `fbda0f0`. The covered-pivot subcritical-matrix theorem is a genuinely independent unrestricted contract, but preparation and queueing are not launch or evidence. |
+| Prompt101 | active Sol Pro research; independent global route | Preparation323 and review326 were consumed by Sol High desktop launch task339 at `b0cf154`. The covered-pivot subcritical-weights theorem remains open; launch is not evidence. |
 | P68 Task02 | frozen failed delegation | Luna/xhigh runtime routing was verified, but the task returned zero mandatory fixtures and no completed domain: `rejected-operational-output`. |
 | P68 Task03 | terminal rejected operational output | Fresh Luna/xhigh metadata routing passed, but the cache timed out before `0/6` semantic fixtures. No evidence exists; every successor is `MEDIUM-SPEC-REQUIRED`. |
 | Medium lanes | 3 active | Research Pipeline, Recovery/Verification, and Formalization/Specification leads are active downstream lanes. |
 | Luna lane | 0 active; 0 ready | Narrow Verification Mode remains in force. Prompt85 `-02` and Prompt93 replay are `MEDIUM-SPEC-REQUIRED`; neither has a runtime receipt, launch, worker, preflight, or evidence. |
-| Pro portfolio | 3 active; 1 launch-ready | Prompt98, Prompt99, and Prompt100 are active supporting Prompt95 subroutes. Prompt101 is the independent global contract queued for Sol High. The active-count target is met, but active-route diversity still awaits Prompt101 launch or another PI decision. |
+| Pro portfolio | 3 active; 0 launch-ready | Prompt98 and Prompt100 remain active/unrecovered supporting Prompt95 routes; Prompt101 is the active independent global route. Prompt99 is completed, recovered, and audited. Repository records do not establish later browser terminal state for the three unrecovered cells. |
 
 ### Validator-derived current metrics
 
@@ -57,13 +58,13 @@ promoted without a matching immutable PI-registry decision.
 | Active Pro cells | 3 |
 | Pro cells awaiting recovery | 0 |
 | Responses under audit | 0 |
-| Launch-ready contracts | 1 |
+| Launch-ready contracts | 0 |
 | Active Medium leads | 3 |
 | Luna-ready tasks / active Luna workers | 0 / 0 |
 | Integration backlog / Sol High review backlog | 0 / 0 |
 | Verification queues Level 1 / Level 2 / Level 3 | 4 / 0 / 0 |
-| Audits total / accepted / accepted-negative / pending / deferred | 44 / 28 / 8 / 0 / 8 |
-| Route queues launch-ready / waiting / parked | 1 / 1 / 1 |
+| Audits total / accepted / accepted-negative / pending / deferred | 45 / 29 / 8 / 0 / 8 |
+| Route queues launch-ready / waiting / parked | 0 / 1 / 1 |
 | Luna launched / admitted / rejected / rejected outputs | 5 / 3 / 5 / 3 |
 | Luna terminal runtime failures | 2 |
 

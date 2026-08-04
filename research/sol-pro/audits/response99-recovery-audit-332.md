@@ -103,4 +103,3 @@ match.
 This is a Level-1 recovery package. It runs no Lean build, response-supplied
 program, certificate replay, or full repository verification. Mathematical
 audit task333 and any source formalization are separate review stages.
-

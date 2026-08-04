@@ -68,19 +68,29 @@ unrestricted bridge. Prompt97 stopped before launch at `97776e8` because its
 cycle target was an exact tautological reformulation of the open unit-certificate
 target.
 
-Prompt98 and Prompt99 are active Sol Pro cells on the complementary
-nondivisible and divisible maximum-covered-pivot branches, launched at
-`64d5a6a` and `4fec7c4`. Prompt100 is a third active cell, launched at
-`a661fe1` with corrected tab provenance at `d25e4e6`; it attacks the uniform
-two-lower-owner noncover theorem and would prove only the `|F(a)|<=3`
-Prompt95 regime. Prompt101's independent global covered-pivot matrix contract
-is reviewed and launch-ready at `fbda0f0`. A launch or prepared prompt is not
-a result, and every target above remains open while its turn runs.
+Prompt99 is completed, recovered, and independently audited `STOP` for a
+semantic contract defect, not a theorem-domain counterexample. Common positive
+scaling makes its unnormalized `N`-divisible universal restriction equivalent
+to full Prompt95 redundancy. This exact scope equivalence is now
+`proved-lean` as `LonelyRunner.maxCoveredDivisible_iff_unrestricted`; neither
+side of the equivalence is proved. The module separately kernel-checks
+candidate, strict-bad-set, complete-cover, covered-pivot, maximum, internality,
+and redundancy invariance. It does not separately formalize explicit `Q`,
+minimal-cover, or private-set invariance.
+
+Prompt98 remains active/unrecovered on the nondivisible supporting branch.
+Prompt100 remains active/unrecovered at `a661fe1` on the uniform two-lower-owner
+noncover theorem, which would prove only the `|F(a)|<=3` Prompt95 regime.
+Prompt101 was launched by Sol High in a genuinely new Sol/Pro conversation at
+`b0cf154` and is active/unrecovered on the independent global covered-pivot
+subcritical-weights route. Repository records do not establish any later
+browser terminal state. A launch is not a result; all three research targets,
+Prompt95, and unrestricted LRC remain open.
 
 Prompt88 remains parked as `MEDIUM-SPEC-REQUIRED`. At least two Medium lead
-lanes remain active; no Luna worker or `LUNA-READY` task is active. The target
-of three active Pro cells is currently met without broadening Luna Narrow
-Verification Mode.
+lanes remain active; no Luna worker or `LUNA-READY` task is active. The three
+repository-recorded active/unrecovered Pro cells are Prompt98, Prompt100, and
+Prompt101, without broadening Luna Narrow Verification Mode.
 
 No recovered Prompt76 scan, Prompt77 6,330-record scan, or Prompt78 computation
 has been promoted to computed finite evidence. Current validator queues are
@@ -697,7 +707,7 @@ packing existence, `PACK-09`, and unrestricted LRC remain open.
 ## Latest verification
 
 Current authoritative integrated research checkpoint:
-`a7709c278bc381ce6ed55e18f61a1e1f973460c7`.
+`fed25fad9fabc73ed34f5ff6c2ba84e91d3e9577` before this status-sync commit.
 
 The public-release audit wrapper now resolves and mounts the common Git
 metadata read-only in normal checkouts and linked worktrees, mounts the source
@@ -706,9 +716,18 @@ exactly one parseable positive history summary. Seven deterministic regression
 tests pass. Independent review reproduced a 273-commit linked-worktree scan
 and a 262-commit fresh-normal-clone scan, both with the manual tracked-file
 pattern scan passing. This is release infrastructure, not mathematical
-evidence. A new authoritative full Lean/trust/regression replay is still
-required after the final lifecycle documentation commit before the public
-checkpoint is pushed.
+evidence. The latest public mirror before this checkpoint is `4fa5e8a`; the
+present Prompt99 source milestone receives Level-2 targeted Lean, root-import,
+axiom, ledger, regression, privacy, and release checks before publication.
+Level 3 remains batched for the next meaningful authoritative release rather
+than being triggered by lifecycle documentation alone.
+
+Public run `30905413735` at `4fa5e8a` passed the Lean build and trust audit but
+failed two ledger regression assertions because the certificate job's default
+shallow checkout omitted every historical commit that the fail-closed
+validator must resolve. This checkpoint sets `fetch-depth: 0` for that job.
+Local full-history ledger tests pass; the CI repair remains pending public
+replay until this commit is pushed.
 
 The last authoritative clean full-project source replay remains supplied-
 packing adapter checkpoint `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b` only as

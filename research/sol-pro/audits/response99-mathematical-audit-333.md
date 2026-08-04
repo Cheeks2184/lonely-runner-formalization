@@ -114,4 +114,3 @@ A genuinely narrower successor would need a normalization not destroyed by
 common scaling—for example a primitive tuple condition—followed by a fresh
 proof that the normalized branch decomposition is exhaustive and useful. No
 such successor theorem is claimed here.
-

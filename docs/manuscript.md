@@ -2863,3 +2863,59 @@ chosen first blocker supplies the source equations and `N*d<n*p`, that the
 transported residue is a full witness before encountering another blocker,
 or that the next blocker has strictly smaller Delta. Those implications, the
 corrected DPLP selector, and unrestricted Lonely Runner remain open.
+
+## 58. Common scaling collapses the unnormalized divisible-pivot branch
+
+This section corresponds exactly to `LonelyRunner/Prompt99Scaling.lean`.
+It records a structural theorem, not a proof of maximum-covered-pivot
+redundancy.
+
+Fix a positive integer `N`, positive labelled speeds `a`, a pivot label `j`,
+and an owner label `i`. The canonical pivot candidates are the naturals
+`r<N*a(j)` not divisible by `N`; owner `i` is strictly bad at `r` when
+
+```text
+rho_(N*a(j))(r*a(i)) < a(j).
+```
+
+For a positive scale factor `t`, scale every speed to `t*a(i)`. A candidate
+`r'` in the scaled row reduces to `r=r' mod (N*a(j))`. Since the old modulus
+is divisible by `N`, `r'` is excluded as an `N`-multiple exactly when `r` is.
+The circular distance identity is
+
+```text
+rho_(N*t*a(j))(r'*t*a(i))
+  = t * rho_(N*a(j))((r' mod (N*a(j)))*a(i)).
+```
+
+Because `t>0`, strict badness is equivalent on the two sides; equality stays
+safe. These statements are
+`mem_pivotCandidates_scale_reduce_iff`,
+`cyclicResidueDistance_scale_all_reduce`, and
+`mem_pivotBadResidues_scale_reduce_iff`.
+
+`PivotCompleteCover` retains owner labels and requires the owner set to omit
+the pivot. `pivotCompleteCover_scale_iff` proves that every fixed labelled
+owner set covers the scaled row exactly when it covers the original row.
+Consequently `coveredPivots_scale` preserves the set of covered pivot labels.
+Positive scaling also preserves injectivity and reflects speed order, so
+`isMaximumCoveredPivot_scale_iff` preserves every label satisfying the
+maximum-covered-pivot predicate. The internal-owner and redundancy predicates
+are preserved by `isInternalOwnerSet_scale_iff` and
+`internalCoverRedundantAt_scale_iff`.
+
+The module defines two independent universal propositions. The unrestricted
+one asserts internal-cover redundancy for every maximum covered pivot of every
+positive injective `n`-tuple, with `N=n+1`. The restricted one adds
+`N | a(j)`. In the forward direction of
+`maxCoveredDivisible_iff_unrestricted`, scale an arbitrary tuple by `N`; the
+chosen maximum covered speed is then divisible by `N`, apply the restricted
+proposition, and transport redundancy back. The reverse direction is simple
+restriction. Thus the two propositions are equivalent, but the equivalence
+proves neither.
+
+The exact formal boundary matters. This module does not separately define or
+prove invariance of the response's explicit safe set `Q`, inclusion-minimal
+covers, or private-residue sets. Those facts are unnecessary for the compiled
+coverwise redundancy equivalence and are not assigned `proved-lean` status
+here. Prompt95, the pivot existential, and unrestricted LRC remain open.

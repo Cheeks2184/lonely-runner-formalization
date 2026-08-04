@@ -583,3 +583,37 @@ mandatory fixtures and no completed domain, so it is preserved only as
 `rejected-operational-output`. Task03 remains `MEDIUM-SPEC-REQUIRED` and is not
 launchable. These lifecycle decisions are bound to immutable PI registry
 commit `9258be8385313da2c03383e9f12024cafa4af951`.
+
+## Prompt98--101 rolling launch and recovery update
+
+Sol High launched each cell from a genuinely new signed-in ChatGPT
+conversation with Chat selected, Work not selected, GPT-5.6 Sol selected, Pro
+effort selected, exact composer readback, and visible generation start:
+
+- Prompt98: task317, launch record commit `64d5a6a`, active/unrecovered.
+- Prompt99: task318, launch record commit `4fec7c4`; now completed and
+  recovered by task332.
+- Prompt100: task325, launch record commit `a661fe1`, active/unrecovered. The
+  corrected tab-provenance record is at `d25e4e6`.
+- Prompt101: task339, launch record commit `b0cf154`, active/unrecovered.
+
+The repository cannot establish later browser terminal state for Prompt98,
+Prompt100, or Prompt101. These lifecycle labels are therefore deliberately
+limited to the last authoritative recorded state. Launch is not evidence.
+
+Prompt99's normalized response is
+`research/sol-pro/responses/response99.md`, SHA-256
+`8268a54a7b5788f11ab9c7203061b73266bacfc2b5abd72342894bc9241cab88`.
+Task332 verifies normalization and provenance only. Task333 independently
+accepts at `proved-math-qualified` scope that common positive scaling preserves
+the exact labelled strict complete-cover structure and that the universal
+`N`-divisible maximum-covered-pivot redundancy proposition is equivalent to
+full Prompt95 redundancy. The response's finite replay and attachment remain
+quarantined and unpromoted.
+
+Task340 formalizes the exact scope equivalence as
+`LonelyRunner.maxCoveredDivisible_iff_unrestricted`. Targeted module compile,
+root build, axiom audit, placeholder scan, and independent diff review pass.
+The theorem proves neither redundancy proposition and does not decide LRC.
+Explicit `Q`, minimal-cover, and private-set invariance are not separately
+formalized by this module.

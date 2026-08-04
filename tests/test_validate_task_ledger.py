@@ -33,8 +33,8 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
         self.assertEqual(metrics["active_pro_cells"], 3)
-        self.assertEqual(metrics["route_queues"], {"launch_ready": 1, "waiting": 1, "parked": 1})
-        self.assertEqual(metrics["audits"], {"total": 44, "accepted": 28, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 8})
+        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 1})
+        self.assertEqual(metrics["audits"], {"total": 45, "accepted": 29, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 8})
         self.assertEqual(metrics["verification_level_queues"], {"1": 4, "2": 0, "3": 0})
         self.assertEqual(metrics["pipeline"], {
             "active_medium_leads": 3,
@@ -44,7 +44,7 @@ class TaskLedgerValidatorTests(unittest.TestCase):
             "sol_high_review_backlog": 0,
             "pro_cells_awaiting_recovery": 0,
             "responses_under_audit": 0,
-            "launch_ready_contracts": 1,
+            "launch_ready_contracts": 0,
         })
         self.assertEqual(metrics["luna_narrow_effectiveness"]["runtime_failures"], 2)
         self.assertEqual(metrics["luna_narrow_effectiveness"]["launched"], 5)
@@ -200,7 +200,7 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         )
 
         def swap_registry(ledger):
-            ledger["promotion_registry_commit"] = ledger["base_commit"]
+            ledger["promotion_registry_commit"] = "db21aa55acfe18e6a0a8967449dc19a28a5fe487"
 
         self.assertHasError(
             self.errors_for(swap_registry),

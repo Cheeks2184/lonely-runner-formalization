@@ -63,16 +63,25 @@ blocks misuse of the Prompt92 family but narrows no unrestricted edge.
 Prompt97 stopped before launch at `97776e8` because its target was equivalent
 to the still-open unit-certificate premise.
 
-Prompt98 and Prompt99 are active on complementary maximum-covered-pivot
-branches. Prompt100 is active on the uniform two-lower-owner noncover theorem;
-success would give the `|F(a)|<=3` part of Prompt95, not the full bridge.
-Prompt101 is an independently reviewed launch-ready global route asking for a
-positive rational vector `x` with `A_F*x<x` for the normalized bad-incidence
-matrix on all covered pivots. If every pivot were covered, the minimum-weight
-row and the union bound would contradict that inequality. The weight-existence
-theorem itself is open. Three Pro cells are active, the fourth remains reserved,
-and no launch or preflight is mathematical evidence. Prompt88 remains parked
-behind a `MEDIUM-SPEC-REQUIRED` gate.
+Prompt99 is completed and audited `STOP` because its branch split was not
+genuine: common scaling by `N=n+1` sends every tuple into the `N`-divisible
+domain while preserving the exact complete-cover redundancy structure. The
+equivalence between its universal restricted proposition and full Prompt95 is
+now `proved-lean` in `Prompt99Scaling.lean`. This does not prove either side.
+A future divisible/nondivisible split must first normalize common scaling,
+such as by a primitive-tuple condition, and then justify the new implication
+chain independently.
+
+Prompt98 remains active/unrecovered on the nondivisible supporting branch.
+Prompt100 remains active/unrecovered on the uniform two-lower-owner noncover
+theorem; success would give the `|F(a)|<=3` part of Prompt95, not the full
+bridge. Prompt101 is active/unrecovered after Sol High launch task339. It asks
+for a positive rational vector `x` with `A_F*x<x` for the normalized
+bad-incidence matrix on all covered pivots. If every pivot were covered, the
+minimum-weight row and the union bound would contradict that inequality. The
+weight-existence theorem itself remains open. Three Pro cells are recorded
+active, no launch-ready contract exists, and no launch is mathematical
+evidence. Prompt88 remains parked behind a `MEDIUM-SPEC-REQUIRED` gate.
 
 These lifecycle transitions do not change the exact unrestricted bottleneck
 below.
