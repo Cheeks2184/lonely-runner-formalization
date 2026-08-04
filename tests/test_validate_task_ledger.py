@@ -32,17 +32,17 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 3)
+        self.assertEqual(metrics["active_pro_cells"], 1)
         self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 0})
-        self.assertEqual(metrics["audits"], {"total": 34, "accepted": 22, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 4})
+        self.assertEqual(metrics["audits"], {"total": 39, "accepted": 27, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 4})
         self.assertEqual(metrics["verification_level_queues"], {"1": 1, "2": 1, "3": 0})
         self.assertEqual(metrics["pipeline"], {
-            "active_medium_leads": 0,
+            "active_medium_leads": 3,
             "luna_ready_tasks": 0,
             "active_luna_workers": 0,
             "integration_backlog": 0,
             "sol_high_review_backlog": 0,
-            "pro_cells_awaiting_recovery": 0,
+            "pro_cells_awaiting_recovery": 3,
             "responses_under_audit": 0,
             "launch_ready_contracts": 0,
         })
@@ -58,11 +58,23 @@ class TaskLedgerValidatorTests(unittest.TestCase):
                 "SOL-P77-DESKTOP-LAUNCH-188",
                 "SOL-P78-DESKTOP-LAUNCH-194",
             )},
-            {"active"},
+            {"completed"},
         )
+        self.assertEqual(
+            {tasks[task_id]["status"] for task_id in (
+                "SOL-P79-DESKTOP-LAUNCH-202",
+                "SOL-P80-DESKTOP-LAUNCH-203",
+                "SOL-P81-DESKTOP-LAUNCH-213",
+            )},
+            {"completed"},
+        )
+        self.assertEqual(tasks["SOL-P82-DESKTOP-LAUNCH-211"]["status"], "active")
+        self.assertIn("INPUT-NOT-FROZEN", tasks["SOL-P81-DESKTOP-LAUNCH-213"]["disposition"])
         self.assertEqual(tasks["P68-BA-DEF-01"]["evidence_label"], "rejected-operational-output")
         self.assertEqual(tasks["P68-BA-DEF-01"]["admission_class"], "LUNA-READY")
-        self.assertEqual(tasks["P68-BA-DEF-02"]["admission_class"], "MEDIUM-SPEC-REQUIRED")
+        self.assertEqual(tasks["P68-BA-DEF-02"]["evidence_label"], "rejected-operational-output")
+        self.assertEqual(tasks["P68-BA-DEF-02"]["admission_class"], "LUNA-READY")
+        self.assertEqual(tasks["P68-BA-DEF-03"]["admission_class"], "MEDIUM-SPEC-REQUIRED")
         self.assertEqual(tasks["PIPE-P78-RELATION-CIRCUIT-CONTRACT-189"]["evidence_label"], "contract-only")
         self.assertNotEqual(tasks["PIPE-P78-RELATION-CIRCUIT-CONTRACT-189"]["evidence_label"], "computed-finite-evidence")
 

@@ -5,6 +5,51 @@ adapter checkpoint `fadc65ded69d3b2d0e80d66663d4f5ed3fb8076b`. Historical
 worker rows retain their actual fixture bases. The board records task routing
 and integration readiness; it does not promote any mathematical claim.
 
+## Current rolling-pipeline snapshot
+
+This snapshot supersedes the historical current-state prose below. Its
+machine-readable source is `research/task-ledger.json`, bound to immutable PI
+promotion registry commit `4fcc1d5614852fc609fd5b6dbbace4b5f835b14b`.
+Historical rows remain append-only evidence and are not silently reinterpreted.
+
+| Cell or lane | Lifecycle now | Exact boundary |
+| --- | --- | --- |
+| Prompt76 | completed, recovered, audited | `proved-math-qualified`: `(1,4,5,6,7,11)` refutes only `GLOBAL-CANONICAL-PRIVATE-DEFICIT-HALL` and consequences implying it. Both recovered scans are unexecuted and unpromoted. |
+| Prompt77 | completed, recovered, audited | `proved-math-qualified`: the coprime family `(u,v,4uv)`, `6 <= u < v`, refutes only `PRIMITIVE-DEGREE-2N-SIGNED-GRAM-GAP`. The 6,330-record scan is unpromoted. |
+| Prompt78 | completed, recovered, audited | `proved-math-qualified`: `(6,7,12,24,144)` refutes only `SPARSE-MINIMAL-COVER-OWNER-ESCAPE` and its canonical-cover weakening. Recovered computation is unexecuted and unpromoted. |
+| Prompt79 | completed; awaiting recovery | Terminal UI readback was `Worked for 40m 54s`. No response claim or evidence is inferred. |
+| Prompt80 | completed; awaiting recovery | Terminal UI readback was `Worked for 29m 33s`. No response claim or evidence is inferred. |
+| Prompt81 reserved synthesis | completed; awaiting recovery | Terminal UI readback was `Worked for 4m 12s`. Captured response is `INPUT-NOT-FROZEN` and rejected operationally because required unpushed inputs were inaccessible; this is no mathematical result. Corrected contract review and desktop launch remain exact lifecycle facts. |
+| Prompt82 | active Pro research | Contract integrated and launched by Sol High from the original browser-capable desktop session. Launch promotes nothing. |
+| P68 Task02 | frozen failed delegation | Luna/xhigh runtime routing was verified, but the task returned zero mandatory fixtures and no completed domain: `rejected-operational-output`. |
+| P68 Task03 | `MEDIUM-SPEC-REQUIRED` | No frozen specification or Luna admission exists. |
+| Medium lanes | 3 active | Research Pipeline, Recovery/Verification, and Formalization/Specification leads are active downstream lanes. |
+| Luna lane | 0 active; 0 ready | Narrow Verification Mode remains in force. |
+
+### Validator-derived current metrics
+
+| Metric | Current value |
+| --- | ---: |
+| Active Pro cells | 1 |
+| Pro cells awaiting recovery | 3 |
+| Responses under audit | 0 |
+| Launch-ready contracts | 0 |
+| Active Medium leads | 3 |
+| Luna-ready tasks / active Luna workers | 0 / 0 |
+| Integration backlog / Sol High review backlog | 0 / 0 |
+| Verification queues Level 1 / Level 2 / Level 3 | 1 / 1 / 0 |
+| Audits total / accepted / accepted-negative / deferred | 39 / 27 / 8 / 4 |
+| Luna launched / admitted / rejected / rejected outputs | 3 / 2 / 3 / 3 |
+
+All requested speed metrics remain `null`: the historical ledger does not
+contain a complete, consistently sourced timestamp series from which to derive
+means, three-cell wall-time coverage, slot idle time, or Sol High review hours.
+The number of documentation-only full clean replays is likewise unknown rather
+than reconstructed. No Level 3 replay is queued for this Level 1 status sync.
+
+The detailed metrics and worker register below are historical records. Where
+they describe a past "current" state, this snapshot controls.
+
 ## Operating rules
 
 - Initial lane maxima are 4 active Sol Pro cells, 3 Sol Medium leads, and 6
@@ -31,13 +76,11 @@ and integration readiness; it does not promote any mathematical claim.
   launch**, **active Sol Pro research**, **response recovery**, **independent
   result audit**, and **integration/status synchronization**. A later stage
   must not be inferred from an earlier one.
-- Queue work by risk: Level 1 is documentation, hashes, and deterministic
-  contract checks; Level 2 is bounded computation or formal replay; Level 3 is
-  novel unrestricted research and remains root-owned. At this commit Pro usage
-  is `0 / 4`, one Prompt68 contract is launch-ready, and the active Medium
-  pipeline is preparing Prompt69/Prompt70 contracts plus ledger task120. These
-  preparations use isolated local worktrees with paths omitted and authorize
-  no launch.
+- Queue verification by checkpoint: Level 1 is documentation, hashes, privacy,
+  and deterministic contract checks; Level 2 is targeted source compilation,
+  regression, certificate replay, and axiom checks; Level 3 is reserved for
+  authoritative fresh-clone publication checkpoints. Pro research lifecycle
+  is counted separately from these verification queues.
 - Inherited workers must not be called “Luna.” Luna labels apply only where
   top-level CLI route/model metadata has been runtime-verified below.
 - Authoritative route metadata comes from the top-level CLI session/thread

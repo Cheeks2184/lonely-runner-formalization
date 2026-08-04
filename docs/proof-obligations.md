@@ -5,6 +5,15 @@ Statuses: `proved-lean`, `proved-math`, `literature`, `open`, `rejected`, and
 
 | ID | Obligation | Status | Evidence / next action |
 |---|---|---|---|
+| PIPE-76 | Decide `GLOBAL-CANONICAL-PRIVATE-DEFICIT-HALL`. | rejected | `proved-math-qualified`: `(1,4,5,6,7,11)` has private demand `100` and external capacity `98`. This stops only the frozen bridge; the tuple has a pivot certificate. Recovered scans remain unexecuted and unpromoted. |
+| PIPE-77 | Decide `PRIMITIVE-DEGREE-2N-SIGNED-GRAM-GAP`. | rejected | `proved-math-qualified`: for coprime `6 <= u < v`, `(u,v,4uv)` has the frozen six-mode blocks nonpositive. This stops only the signed-Gram bridge. The 6,330-record scan is not computed finite evidence. |
+| PIPE-78 | Decide `SPARSE-MINIMAL-COVER-OWNER-ESCAPE`. | rejected | `proved-math-qualified`: `(6,7,12,24,144)` refutes the exact theorem and canonical-cover weakening. Recovered computation is unexecuted and unpromoted; the tuple has a pivot certificate. |
+| PIPE-79 | Recover and audit Prompt79 obstruction-extraction output. | open | Pro generation completed after `40m 54s`; response recovery is pending. Completion alone promotes nothing. |
+| PIPE-80 | Recover and audit Prompt80 divisor-block output. | open | Pro generation completed after `29m 33s`; response recovery is pending. Completion alone promotes nothing. |
+| PIPE-81 | Recover the reserved adversarial synthesis response. | rejected | The captured response is `INPUT-NOT-FROZEN` because required unpushed inputs were inaccessible. This is rejected operational output with no mathematical result; package recovery remains pending. |
+| PIPE-82 | Decide `GLOBAL-ALL-PIVOT-SATURATED-MULTIPLICITY-AVERAGE`. | open | Prompt82 is active Sol Pro research. Contract preparation and launch are not evidence. |
+| P68-BA-DEF-02 | Execute the frozen Luna bounded-annihilator verifier contract. | rejected | Runtime routing was verified as fresh top-level Luna/xhigh, but zero mandatory fixtures and no completed domain were returned. `rejected-operational-output`; no computation or theorem. |
+| P68-BA-DEF-03 | Produce a corrected bounded-annihilator execution specification. | open | `MEDIUM-SPEC-REQUIRED`; do not launch Luna until semantics, fixtures, checker, and acceptance commands are frozen. |
 | STMT-01 | Define circle distance and the closed lonely boundary. | proved-lean | `UnitCircle`, `circleDistance`, and `LonelyAt` use mathlib's quotient metric and `≤` against the distance. |
 | STMT-01A | Complete the reusable circle-distance range, symmetry, and periodicity library. | open | `circleNorm_add_int` and the one-Lipschitz estimate now support insertion; explicit range and general symmetry/translation lemmas remain useful for later analytic work. |
 | STMT-02 | Encode the canonical `forall runner, exists time` statement for injective real speeds. | proved-lean | `LonelyRunner.Conjecture`; unrestricted real time, total-runner denominator `N`, and closed boundary. The nonnegative-time and relative-velocity equivalences also compile. |
