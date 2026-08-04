@@ -6,7 +6,7 @@ bounded-height improvement. Results keep the repository-wide labels
 `proved-lean`, `proved-math`, `computed`, `conditional`, `conjectural`,
 `refuted`, and `open`.
 
-## Rolling route triage (Prompt76--91)
+## Rolling route triage (Prompt76--96)
 
 - Prompt76's global canonical private-deficit inequality is refuted at exact
   manuscript scope by `(1,4,5,6,7,11)`: demand `100`, capacity `98`.
@@ -27,34 +27,40 @@ its required inputs were not frozen. Prompt83 is an audited STOP. Prompt84
 rejects `PowerForcing(4,q)` at the qualified scope `q >= 8` and `4 | q`.
 Prompt85's audit completed with mixed/provisional STOP: generic mathematics
 and pivot grids are qualified, while width-two minima and the counterexample
-remain unverified. Task256's literal-replay specification is frozen at
-`2b0b537`, but independent admission review 260 returned three operational
-specification blockers. It remains `MEDIUM-SPEC-REQUIRED`; no Luna execution
-or evidence promotion was authorized at that stage. The subsequently corrected
-contract was admitted and launched, but the fresh top-level Luna/xhigh process
-stopped at the runtime-metadata accessibility gate before source work or
-preflight. That run is rejected operational output only; no evidence exists,
-and any successor again requires Medium specification.
+remain unverified. Task256 and replay `-01` are closed after the fresh
+top-level Luna/xhigh process stopped at the runtime-metadata accessibility
+gate before source work or preflight. That run is rejected operational output
+only. Successor contract `P85-LITERAL-REPLAY-02` is integrated through
+`fe01a9e` but remains `REVIEW-REQUIRED` / `MEDIUM-SPEC-REQUIRED`; it creates no
+runtime receipt, launch, implementation, or evidence.
 
 Prompt86 is completed and recovered with provisional `MIXED / PIVOT` triage;
 its selector is `OPEN` and five attachments remain
 `QUARANTINED / UNVERIFIED`. Prompt87 is completed, recovered, and independently
-audited with provisional `PROMISING` triage, while its aggregate dyadic lemma
-remains wholly `OPEN`. Prompt89 completed and its response plus four
+audited. Prompt92 audit301, merged at `79c4549`, proves a symbolic all-`E`
+counterfamily at `proved-math-qualified` scope and refutes the identical
+Prompt87/Prompt92 aggregate-dyadic bridge. This kills only that auxiliary
+arrow; it is not Lean or computed finite evidence and does not decide LRC or
+the exact pivot equivalence. Prompt89 completed and its response plus four
 attachments are recovered at `d389ec8`; every response computation remains
 unverified / quarantined. None of these lifecycle facts promotes an
 unrestricted result.
 
-Prompt90 and Prompt92 are the two active Pro cells. Prompt92's corrected
-contract is integrated at `42dd00f`, but its aggregate lemma remains wholly
-`OPEN`. Prompt91 received prelaunch REVISE / STOP on a mandatory fixture, but
-has no integrated artifact-grade counterexample and was not launched.
-Prompt93 also stopped before launch: review281 found its frozen `Psi` target
-false at `(1,3,4)`, but no artifact-grade accepted counterexample is
-integrated. Prompt94 preparation283 is active. Prompt88 remains parked behind
-a `MEDIUM-SPEC-REQUIRED` route gate. These lifecycle transitions do not change
-the exact unrestricted bottleneck below, and the target of three active Pro
-cells is not currently met.
+Prompt90 is a failed research launch / rejected operational output at recovery
+merge `33a690d`; because its payload remained a `REVIEW-REQUIRED` Medium
+contract, no theorem was attempted. Prompt92 completed, was recovered at
+`2e5554c`, and has the exact qualified negative above; its quarantined
+computation remains unpromoted. Prompt91 received prelaunch REVISE / STOP on a
+mandatory fixture and was not launched. Prompt93 also stopped before launch;
+its branch-only replay specification remains `MEDIUM-SPEC-REQUIRED` after
+review294 returned REVISE. Prompt94 generation completed and awaits Sol High
+recovery, with no response claim recorded. Prompt95 is the sole active Pro
+cell and its max-covered-pivot target remains `OPEN`. Prompt96 is prepared for
+reserved synthesis, but independent review returned REVISE because its
+provenance contradicts accepted audit301; it is not launch-ready. Prompt88
+remains parked behind a `MEDIUM-SPEC-REQUIRED` route gate. These lifecycle
+transitions do not change the exact unrestricted bottleneck below, and the
+target of three active Pro cells is not currently met.
 
 ## Exact unrestricted bottleneck
 

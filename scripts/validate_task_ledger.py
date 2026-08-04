@@ -27,7 +27,7 @@ PROMOTION_REGISTRY_PATH = "research/promotion-decisions.json"
 # This allowlist is intentionally code-frozen. The validator reads the
 # immutable Git object, never the mutable worktree copy, so a task row cannot
 # fabricate PI authority by adding a free-form string or source reference.
-PROMOTION_REGISTRY_COMMIT = "4fcc1d5614852fc609fd5b6dbbace4b5f835b14b"
+PROMOTION_REGISTRY_COMMIT = "fe4efb03063555f1f95175ed50a1c55bacbaa7a6"
 
 LIFECYCLE_STAGES = [
     "preparation",

@@ -343,8 +343,9 @@ deterministic Python regression suite. The authoritative local standard remains
 a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
 
-The current authoritative integrated research checkpoint is
-`db438f206b35d51d8b001ae5256c5a3022b8d0b7`. The latest authoritative clean
+The lifecycle snapshot is based on authoritative main checkpoint
+`fe01a9ee7a1d1f2268454f3cfd2786f41a01098a` and immutable PI promotion
+registry checkpoint `fe4efb03063555f1f95175ed50a1c55bacbaa7a6`. The latest authoritative clean
 full-project Lean/trust/regression replay is lifecycle checkpoint
 `fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`: 3,591 Lean jobs, 302 trust
 reports, and all 172 deterministic tests passed in a fresh native-WSL clone.
@@ -357,23 +358,26 @@ conjectures.
 Research is in **FULL-PROOF PRIORITY MODE**. The exact unrestricted
 bottleneck remains the Lean-verified finite pivot-certificate proposition:
 for every positive injective integer tuple, some pivot candidate must escape
-all strict modular bad sets. Prompt90 and Prompt92 are currently the two active Pro cells.
+all strict modular bad sets. Prompt95 is the sole active Pro cell; Prompt94
+generation completed and awaits Sol High recovery, with no response claim yet.
 Prompt86 is completed/recovered at provisional `MIXED / PIVOT`, with five
 attachments `QUARANTINED / UNVERIFIED` and its selector `OPEN`. Prompt87 is
-completed/recovered/audited at provisional `PROMISING`, while its aggregate
-lemma remains wholly `OPEN`. Prompt89 completed and its response plus four
+completed/recovered/audited; Prompt92 audit301 supplies a
+`proved-math-qualified` symbolic counterfamily refuting the identical
+Prompt87/Prompt92 aggregate-dyadic bridge. This stops only that auxiliary
+bridge and does not decide LRC or the pivot equivalence. Prompt89 completed and its response plus four
 attachments are recovered at `d389ec8`; all response computation is
-unverified. Prompt91 stopped before launch on a mandatory-fixture review and
-has no integrated artifact-grade counterexample. Prompt92's corrected contract
-is integrated at `42dd00f`, but its aggregate lemma remains `OPEN`. Prompt93
-also stopped before launch: review281 found the frozen `Psi` target false at
-`(1,3,4)`, but no artifact-grade accepted counterexample is integrated.
-Prompt94 preparation283 is active. The target of three active Pro cells is not
-currently met. Prompt85's admitted literal
-replay failed closed at the runtime-metadata accessibility gate before source
-or preflight; it is rejected operational output and its successor is
-`MEDIUM-SPEC-REQUIRED`. No Luna task is currently active or ready. These
-lifecycle facts promote no theorem or finite evidence.
+unverified. Prompt90 is a failed research launch / rejected operational output:
+its payload remained a `REVIEW-REQUIRED` Medium contract and no theorem was
+attempted. Prompt91 stopped before launch on a mandatory-fixture review.
+Prompt92 completed and was recovered; its quarantined computation remains
+unpromoted. Prompt93 also stopped before launch, and its branch-only replay
+specification is `MEDIUM-SPEC-REQUIRED`. Prompt96 is prepared for the reserved
+synthesis slot but under REVISE, not launch-ready. The target of three active
+Pro cells is not currently met. Prompt85 replay `-01` failed closed before
+source or preflight; successor `-02` is integrated as a contract but remains
+`REVIEW-REQUIRED` / `MEDIUM-SPEC-REQUIRED`. No Luna task is active or ready.
+These lifecycle facts promote no unrestricted theorem or finite evidence.
 Prompt66's
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING` turn completed at STOP/OPEN, leaving
 that packing lemma open. Prompt64's `TOP-TWO-LARGE-RATIO-EXCLUSION` also
