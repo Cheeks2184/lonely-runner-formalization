@@ -1,0 +1,24 @@
+P89 RECOVERY MANIFEST v1
+task_id: OPS-P89-RECOVERY-PACKAGE-276
+base_commit: faeb57fb41a2cf3486a9717368f8ac5b544ceb23
+launch_task: SOL-P89-DESKTOP-LAUNCH-259
+prompt_path: research/sol-pro/prompts/prompt89.md
+prompt_sha256: acd509f2ac8e471d56f0564b133a98b5d91e2652ebb7892bd3cb5a2990c1cf74
+raw_response_sha256: 897a500651162e066e2aabd3b1be005372f6cd17404d933a3d1c570a132709de
+raw_response_bytes: 36943
+raw_response_characters: 36907
+raw_response_line_endings: 1372 CRLF; no lone LF or CR; terminal CRLF
+tracked_response_path: research/sol-pro/responses/response89.md
+tracked_response_sha256: 2c4e7985a7d2c0622a487ccbfad98215ae3121d24ba3bdc0f8780c27d448c7b9
+tracked_response_bytes: 35571
+tracked_response_characters: 35535
+tracked_response_line_endings: 1372 LF; no CR; terminal LF
+attachment_origin: four response-linked sandbox attachments recovered by basename
+attachment_policy: UNTRUSTED QUARANTINE; DO NOT EXECUTE, IMPORT, EVALUATE, PARSE AS EVIDENCE, OR TREAT AS EVIDENCE
+artifact: research/sol-pro/artifacts/prompt89/quarantine/balanced_junction_verify.py | bytes=35973 | sha256=661934cfdc952c4b7c602fe6a7e14e3f79dba85676a2a55cf89b7e8283949473
+artifact: research/sol-pro/artifacts/prompt89/quarantine/balanced_junction_verification_report.json | bytes=97497 | sha256=79b62b56c923e35de9535f83daa0bda5494da0d1f4aca26e418a0fa1ff0d4fb4
+artifact: research/sol-pro/artifacts/prompt89/quarantine/balanced_junction_D_pre_all_pivots.csv | bytes=244503 | sha256=a0e7b925967226eb5893a551924eb090f506226304e21e06f0fc21f83d9d2659
+artifact: research/sol-pro/artifacts/prompt89/quarantine/balanced_junction_sha256.txt | bytes=308 | sha256=98d908407e49e831c016c9b477a11108c557a24d6c541958faf4748f0df2d701
+checksum_comparison: supplied checksum text lists the first three artifact hashes; all match
+recovery_execution: none
+evidence_promotion: none
