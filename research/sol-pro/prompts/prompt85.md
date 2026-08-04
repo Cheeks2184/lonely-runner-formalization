@@ -36,8 +36,11 @@ rho_M(x) = min(x mod M, M-(x mod M)),
 R_j = {r in {0,...,M_j-1} : N does not divide r},
 O_j = {i : Fin n | i != j},
 B_i^j = {r in R_j : rho_(M_j)(r*a_i) < p_j}  for i in O_j,
-Q_j = R_j \ union_(i in O_j) B_i^j.
+Q_j = R_j \ union_(i in O_j) B_i^j,
+G_j : Nat := |Q_j|.
 ```
+
+Thus, definitionally, `G_j=|R_j \ union_(i in O_j) B_i^j|`.
 
 Badness is strict `<p_j`; equality is safe. Keep both cyclic sides,
 antipodes, reflection fixed points, excluded `N`-multiples, nonunits, gcd
@@ -324,7 +327,7 @@ G_j,
 number of normalized constructions,
 min_D J_j(D),
 the lexicographically least minimizing construction,
-and one least uncovered numerator when G_j>0.
+and one least uncovered numerator if and only if G_j>0 (otherwise `none`).
 ```
 
 Retain injective speeds whose distinct owners induce coincident bad sets or
