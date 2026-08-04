@@ -82,6 +82,29 @@ multiplicity. A pivot certificate is a pair `(j,r)` with `r in R_j` and
 `r` in no `B_i^j`. `FullCover_j(a)` means the owner bad sets cover all of
 `R_j`. Do not replace these definitions by an asymptotic or continuous model.
 
+These pivot-certificate definitions govern Audits B and C and the final LRC
+implications. Response68 Audit A begins in a different finite problem. There,
+for `n >= 3`, `N=n+1`, prime `p`, and `M=N*p`, an admissible tuple is
+
+```text
+v in (Z/MZ)^n,
+p does not divide v_i for every i,
+gcd(M, {v_i : i != k}) = 1 for every deletion k,
+```
+
+with repetitions allowed, and
+
+```text
+B_i(v) = {r in Z/MZ : rho_M(r*v_i) < p}.
+```
+
+`PrimeForcing(n,p)` asserts that these bad sets do not cover the whole group
+`Z/MZ`. There is no candidate subset `R_j` and no exclusion of `N`-multiples
+in this definition. Do not transfer a restriction from one setting to the
+other. In particular, a PrimeForcing failure tuple is a modular tuple `v`
+depending on `p`; it is not definitionally a positive injective integer speed
+tuple `a` or a pivot cover at one of its coordinates.
+
 ## Audit A: Response68 local arithmetic and Fourier claims
 
 Independently reconstruct and audit the following statements. Do not cite the
@@ -95,7 +118,7 @@ Response68 lines 321--345 use
 rho_(N*p)(p*x) = p*rho_N(x)
 ```
 
-and the candidate `r=p` to claim that every relevant modular obstruction has
+and the group residue `r=p` to claim that every PrimeForcing failure tuple has
 an `N`-divisible coordinate. Lines 349--357 claim that the deletion condition
 strengthens this to
 
@@ -104,26 +127,42 @@ strengthens this to
 ```
 
 State the complete theorem with every domain condition: the meaning of
-`admissible`, the prime and dimension ranges, whether coordinates are nonzero
-modulo `p`, distinctness requirements, the exact deletion hypothesis, and
-whether the conclusion concerns a fixed positive-integer counterexample or a
-prime-dependent modular tuple. Verify the identity, candidate membership, and
-both bounds. Pay special attention to `n=2`, to the candidate condition
-`N does not divide p`, and to any silent use of `p>N` or `gcd(p,N)=1`.
+`admissible`, the prime and dimension ranges, nonzeroness modulo `p`, the fact
+that repetitions are allowed, and the exact deletion hypothesis. Verify the
+identity, that `r=p` is a valid residue of the full group `Z/(Np)Z` for every
+prime `p` (including when `N` divides `p`), and both bounds. Explicitly forbid
+using the pivot condition `r in R_j` or testing `N` does not divide `r` here.
+The conclusion concerns a prime-dependent modular failure tuple, not yet a
+fixed positive-integer counterexample. Pay special attention to `n=2` and to
+any silent use of `p>N` or `gcd(p,N)=1`; Response68 says this conclusion does
+not require `p>N`.
 
 ### A2. CRT-capacity formula
 
-Response68 lines 361--452 assume `p>N` and `gcd(p,N)=1`, define
-`b_i=v_i mod p`, `c_i=b_i^{-1}v_i mod N`, and
-`d_i=gcd(N,c_i)=gcd(N,v_i)`, and assert an exact fiber formula and column
-capacity. Re-derive the claimed set equality and cardinality from CRT.
+Response68 lines 361--452 begin a separate `p>N` case, infer
+`gcd(p,N)=1`, and define exactly
+
+```text
+b_i = v_i mod p in (Z/pZ)^x,
+c_i = v_i mod N,
+d_i = gcd(N,c_i),
+```
+
+where the gcd must be interpreted using a canonical integer representative of
+`c_i` (equivalently it is invariant under changing that representative by a
+multiple of `N`). It does **not** define `c_i=b_i^{-1}v_i mod N`; that
+expression improperly mixes the two CRT factors and must not be introduced.
+Re-derive the claimed set equality and cardinality using only the exact
+definitions above.
 
 List explicitly:
 
 - the domains of `x`, `y`, and every residue representative;
 - why `b_i` is invertible;
-- whether `c_i` is well-defined independently of representative;
-- why `gcd(N,c_i)=gcd(N,v_i)`;
+- the canonical-representative convention for `c_i` and why `gcd(N,c_i)` is
+  representative-independent;
+- why this equals `gcd(N,v_i)` for an integer representative of the original
+  residue, without multiplying by `b_i^{-1}`;
 - strict versus closed endpoint behavior in each lifted fiber;
 - whether the allegedly disjoint pieces are actually disjoint for all allowed
   `N,p,d_i`;
@@ -184,6 +223,13 @@ the passage from congruence modulo arbitrarily large primes to equality in
 `Z`. State all requirements on the prime set. Determine whether positivity
 forces `c` to have both positive and negative coefficients and whether zero
 coordinates in `c` are allowed.
+
+Reconstruct this corollary by sampling the fixed integer counterexample at
+times `x/p` and applying A3 to `b_i=a_i mod p` for primes larger than every
+speed. Do not assert that the fixed speed tuple is an A1/A2 admissible
+PrimeForcing tuple, and do not identify its sampled obstruction with a pivot
+`FullCover_j`. If any deletion-gcd or PrimeForcing hypothesis is used, name and
+justify it; the displayed argument in Response68 purports not to require one.
 
 Then enforce Response68's own fatal boundary at lines 734--752: one bounded
 relation is only necessary. A hyperplane exists over every finite field; one
