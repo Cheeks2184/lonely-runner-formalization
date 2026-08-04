@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "base_commit": "fbda0f00ef593c9c6e9ccdfff4e4419678c836cf",
-  "promotion_registry_commit": "fe4efb03063555f1f95175ed50a1c55bacbaa7a6",
+  "promotion_registry_commit": "db21aa55acfe18e6a0a8967449dc19a28a5fe487",
   "lifecycle_stages": [
     "preparation",
     "contract_review",
@@ -321,11 +321,11 @@
         {
           "event": "candidate_committed",
           "at": "2026-08-03T18:38:53-05:00",
-          "source": "Git commit 278767650bcfde9ff6c8b9e007b6cafd6a994e96"
+          "source": "Historical local worker commit 278767650bcfde9ff6c8b9e007b6cafd6a994e96 (not published as a reachable public ref)"
         }
       ],
       "source_refs": [
-        "commit:278767650bcfde9ff6c8b9e007b6cafd6a994e96",
+        "historical-local-worker-commit:278767650bcfde9ff6c8b9e007b6cafd6a994e96",
         "VER-LUNA-NARROW-ADMISSION-AUDIT-112"
       ]
     },
@@ -435,7 +435,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "278767650bcfde9ff6c8b9e007b6cafd6a994e96",
+      "base_commit": "1294514a0a879b0237f8b9d0da30ee05e81f79f4",
       "lifecycle_stage": "independent_audit",
       "dependencies": [
         "LUNA-P67-CLEANROOM-REPLAY-105"
@@ -2924,7 +2924,7 @@
         {
           "event": "candidate_committed",
           "at": "2026-08-03T20:42:21-05:00",
-          "source": "Git commit 79c7d8937d88ef8c26e11ea5d36f3dc0adafd585"
+          "source": "Git commit dc644fd6828a47400e0456663ccb0d1d5c60876e"
         },
         {
           "event": "candidate_corrected",
@@ -2933,7 +2933,7 @@
         }
       ],
       "source_refs": [
-        "source-commit:79c7d8937d88ef8c26e11ea5d36f3dc0adafd585",
+        "source-commit:dc644fd6828a47400e0456663ccb0d1d5c60876e",
         "integration-commit:dc644fd6828a47400e0456663ccb0d1d5c60876e",
         "correction-integration:1e91cfa27f8b92f6f459557543848be47dfa98b8"
       ]
@@ -3002,7 +3002,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "79c7d8937d88ef8c26e11ea5d36f3dc0adafd585",
+      "base_commit": "dc644fd6828a47400e0456663ccb0d1d5c60876e",
       "lifecycle_stage": "independent_audit",
       "dependencies": [
         "OPS-P72-RECOVERY-PACKAGE-164",
@@ -3049,7 +3049,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "79c7d8937d88ef8c26e11ea5d36f3dc0adafd585",
+      "base_commit": "dc644fd6828a47400e0456663ccb0d1d5c60876e",
       "lifecycle_stage": "independent_audit",
       "dependencies": [
         "OPS-P72-RECOVERY-PACKAGE-164"
@@ -3096,7 +3096,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "79c7d8937d88ef8c26e11ea5d36f3dc0adafd585",
+      "base_commit": "dc644fd6828a47400e0456663ccb0d1d5c60876e",
       "lifecycle_stage": "independent_audit",
       "dependencies": [
         "OPS-P72-RECOVERY-PACKAGE-164",
@@ -3136,7 +3136,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "79c7d8937d88ef8c26e11ea5d36f3dc0adafd585",
+      "base_commit": "dc644fd6828a47400e0456663ccb0d1d5c60876e",
       "lifecycle_stage": "correction",
       "dependencies": [
         "OPS-P72-RECOVERY-PACKAGE-164"
@@ -3458,7 +3458,7 @@
         }
       ],
       "source_refs": [
-        "source-commit:3f3e126a097ab7a5b80697ebb634af0badbe1f37",
+        "source-commit:b40872423d9e6aac3610f058a859600126740365",
         "integration-commit:b40872423d9e6aac3610f058a859600126740365"
       ]
     },
@@ -3474,7 +3474,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "3f3e126a097ab7a5b80697ebb634af0badbe1f37",
+      "base_commit": "b40872423d9e6aac3610f058a859600126740365",
       "lifecycle_stage": "independent_audit",
       "dependencies": [
         "OPS-P75-RECOVERY-PACKAGE-184"
@@ -3504,7 +3504,7 @@
         }
       ],
       "source_refs": [
-        "reviewed-commit:3f3e126a097ab7a5b80697ebb634af0badbe1f37",
+        "reviewed-commit:b40872423d9e6aac3610f058a859600126740365",
         "docs/response75-provenance-audit.md@1bfe7fe27e01478cac8921a895882d1fedf6df61"
       ]
     },
@@ -3602,7 +3602,7 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "c86ea1ac96077169c37ff6f99caf618f9ee3eecdf55a5705da31dea1e44e5b79",
+          "value": "37b1fdb98863f7b4602cfa21424c9d4a40e63ff55f173280fa8ade15726faa50",
           "path": "research/sol-pro/prompts/prompt76.md"
         },
         {
@@ -3677,7 +3677,7 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "2be2073c6f476d3d0d570cc36ee8be3d4a16d100fb1fbc72180afb568b0a1527",
+          "value": "ace7711b1eb2426a9006a7d13e743d10c02d81e27c5a0098b0e1b13e5af45af9",
           "path": "research/sol-pro/prompts/prompt77.md"
         },
         {
@@ -5768,7 +5768,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent prelaunch contract review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "2221a168f07f1dc664d73c1f39ea4670b5ec6349",
+      "base_commit": "4f7e8ee109f2d1de8baae2ad06cbd077f889eee3",
       "lifecycle_stage": "contract_review",
       "dependencies": ["SOL-P92-AGGREGATE-DYADIC-CONTRACT-PREP-271"],
       "branch": null,
@@ -5786,7 +5786,7 @@
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["candidate-commit:2221a168f07f1dc664d73c1f39ea4670b5ec6349"]
+      "source_refs": ["candidate-commit:4f7e8ee109f2d1de8baae2ad06cbd077f889eee3"]
     },
     {
       "id": "P92-NEUTRAL-P91-SEPARATION-CORRECTION-277",
@@ -5795,7 +5795,7 @@
       "owner": "Sol Medium Research Pipeline Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Medium correction", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "2221a168f07f1dc664d73c1f39ea4670b5ec6349",
+      "base_commit": "4f7e8ee109f2d1de8baae2ad06cbd077f889eee3",
       "lifecycle_stage": "correction",
       "dependencies": ["P92-INDEPENDENT-CONTRACT-REVIEW-275"],
       "branch": "spec/p92-neutral-p91-separation-277",
@@ -5840,7 +5840,7 @@
       "review_ids": ["P93-INDEPENDENT-CONTRACT-REVIEW-281"],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["preparation-commit:63472619a6124d658f5cebecfa9bb4802ede1f13"]
+      "source_refs": ["historical-local-preparation-commit:63472619a6124d658f5cebecfa9bb4802ede1f13"]
     },
     {
       "id": "P93-INDEPENDENT-CONTRACT-REVIEW-281",
@@ -5849,7 +5849,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent prelaunch contract review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "63472619a6124d658f5cebecfa9bb4802ede1f13",
+      "base_commit": "98f4655e314a97c0d5158d6b3ebe0e8a16259132",
       "lifecycle_stage": "contract_review",
       "dependencies": ["SOL-P93-CROSS-PIVOT-RECIPROCITY-CONTRACT-PREP-274"],
       "branch": null,
@@ -5867,7 +5867,7 @@
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["candidate-commit:63472619a6124d658f5cebecfa9bb4802ede1f13"]
+      "source_refs": ["historical-local-candidate-commit:63472619a6124d658f5cebecfa9bb4802ede1f13"]
     },
     {
       "id": "P92-CORRECTION-REVIEW-282",
@@ -6318,9 +6318,9 @@
       "disposition": "Sole-file immutable PI checkpoint authorizes the exact Prompt90 recovery, Prompt92 recovery, and Prompt92 mathematical-audit labels. This operational record does not itself promote an additional theorem or computation.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "fe4efb03063555f1f95175ed50a1c55bacbaa7a6",
+      "integration_commit": "db21aa55acfe18e6a0a8967449dc19a28a5fe487",
       "timestamps": [],
-      "source_refs": ["promotion-registry-commit:fe4efb03063555f1f95175ed50a1c55bacbaa7a6"]
+      "source_refs": ["promotion-registry-commit:db21aa55acfe18e6a0a8967449dc19a28a5fe487"]
     },
     {
       "id": "OPS-ROLLING-LIFECYCLE-SYNC-306",
@@ -6329,7 +6329,7 @@
       "owner": "Sol Medium Research Pipeline Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Level-1 documentation and Level-2 validator checkpoint", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "fe4efb03063555f1f95175ed50a1c55bacbaa7a6",
+      "base_commit": "db21aa55acfe18e6a0a8967449dc19a28a5fe487",
       "lifecycle_stage": "integration",
       "dependencies": ["OPS-P90-P92-PROMOTION-CHECKPOINT-305"],
       "branch": "ops/pipeline-lifecycle-sync-302",

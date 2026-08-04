@@ -4,7 +4,7 @@
 
 **ACCEPT** the Prompt72 recovery package at corrected tip
 `ea9f129851c2dc1b424abe15cea2fefc496eb895`, with recovery parent
-`79c7d8937d88ef8c26e11ea5d36f3dc0adafd585`, for byte preservation,
+`dc644fd6828a47400e0456663ccb0d1d5c60876e`, for byte preservation,
 inventory, lifecycle documentation, and public-safety scope only.
 
 This acceptance does **not** accept the response's self-disposition, execute or

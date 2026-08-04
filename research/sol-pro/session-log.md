@@ -406,7 +406,7 @@ package.
 ## VER-P75-RECOVERY-PROVENANCE-185 — Prompt75 provenance audit
 
 - **Recovery commit audited:**
-  `3f3e126a097ab7a5b80697ebb634af0badbe1f37`
+  `b40872423d9e6aac3610f058a859600126740365`
 - **Disposition:** accepted for recovery provenance only
 - **Inventory:** exact three-path recovery change confirmed
 - **Response:** strict Base64 replay and CRLF-to-LF-only normalization

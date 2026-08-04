@@ -10,7 +10,7 @@ readiness; it does not promote any mathematical claim.
 
 This snapshot supersedes the historical current-state prose below. Its
 machine-readable source is `research/task-ledger.json`, bound to immutable PI
-promotion registry commit `fe4efb03063555f1f95175ed50a1c55bacbaa7a6`.
+promotion registry commit `db21aa55acfe18e6a0a8967449dc19a28a5fe487`.
 Historical rows remain append-only evidence and are not silently reinterpreted.
 This current snapshot is lifecycle reconciliation task327. Recovery and audit
 rows added here are operational records only: no new audit recommendation is
@@ -2616,8 +2616,9 @@ review occurs after ten admitted tasks.
   bytes; SHA-256
   `57806bd37c53d8b2b936d85fd25c3d73b5a1f5b4cbbe4cfbb335a31e850872e5`;
   source `exec/fresh`; effective metadata `gpt-5.6-luna`, `xhigh`, exact cwd.
-  Candidate commit `278767650bcfde9ff6c8b9e007b6cafd6a994e96` exists,
-  but `/root` terminated the remaining process after the new policy began.
+  Historical local candidate commit
+  `278767650bcfde9ff6c8b9e007b6cafd6a994e96` was not published as a reachable
+  public ref; `/root` terminated the remaining process after the new policy began.
 - **Blocker:** VER-112 interim confirms rejection: mandatory Medium preflight
   authorization and the one-layer rule were violated; the board input was
   stale; the validator accepts cover bad-coordinate bytes `<M` instead of the
@@ -2737,8 +2738,9 @@ review occurs after ten admitted tasks.
 - **ID:** `VER-LUNA-NARROW-ADMISSION-AUDIT-112`
 - **Lane:** Medium-led Luna Narrow Verification Mode admission audit
 - **Owner / supervising lead:** Verification Lead / `/root`
-- **Base / candidate commit:**
-  `278767650bcfde9ff6c8b9e007b6cafd6a994e96`
+- **Public base / historical local candidate:**
+  `1294514a0a879b0237f8b9d0da30ee05e81f79f4` /
+  `278767650bcfde9ff6c8b9e007b6cafd6a994e96` (not a reachable public ref)
 - **Dependencies:** policy transition and rejected operational task105 output
 - **Branch / worktree:** read-only candidate review; candidate branch unchanged
 - **Status:** `verified` (final negative admission audit)

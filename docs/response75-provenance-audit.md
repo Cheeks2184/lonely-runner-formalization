@@ -4,7 +4,7 @@ Task: `VER-P75-RECOVERY-PROVENANCE-185`
 
 Audit base: `94442b430f4dbb9b66ec186e5655d556ee4e477e`
 
-Recovery commit: `3f3e126a097ab7a5b80697ebb634af0badbe1f37`
+Recovery commit: `b40872423d9e6aac3610f058a859600126740365`
 
 Audited branch: `research/p75-recovery-package-184`
 

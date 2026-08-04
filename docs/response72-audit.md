@@ -3,7 +3,7 @@
 ## Scope and disposition
 
 This document independently audits canonical Response72 at recovery commit
-`79c7d8937d88ef8c26e11ea5d36f3dc0adafd585`, whose exact response blob has
+`dc644fd6828a47400e0456663ccb0d1d5c60876e`, whose exact response blob has
 SHA-256 `1bd95673813274756e246ede8596099c554a31b57cdc9665e65bdabff2b7a0ec`.
 The recovered attachments are not opened or executed. Their future replay
 remains `MEDIUM-SPEC-REQUIRED` under artifact audit 169.

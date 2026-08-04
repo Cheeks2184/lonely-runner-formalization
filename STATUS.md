@@ -644,8 +644,9 @@ license to normalize recovered bytes. Separately, fresh top-level task
 SHA-256 `57806bd37c53d8b2b936d85fd25c3d73b5a1f5b4cbbe4cfbb335a31e850872e5`,
 and effective metadata is `gpt-5.6-luna`, `xhigh`, on branch
 `verify/luna-p67-cleanroom-replay-105` in an isolated local worktree (path
-omitted). Candidate commit
-`278767650bcfde9ff6c8b9e007b6cafd6a994e96` exists, but `/root` terminated the
+omitted). Historical local candidate commit
+`278767650bcfde9ff6c8b9e007b6cafd6a994e96` was not published as a reachable
+public ref; `/root` terminated the
 remaining process when Luna Narrow Verification Mode took effect. Because no
 Medium lead inspected and authorized a preflight before the full run, task105
 is **rejected operational output** under `MEDIUM-SPEC-REQUIRED`; it promotes no
