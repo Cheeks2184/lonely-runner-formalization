@@ -32,10 +32,10 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 1)
+        self.assertEqual(metrics["active_pro_cells"], 3)
         self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 0})
-        self.assertEqual(metrics["audits"], {"total": 32, "accepted": 20, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 4})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 0, "2": 1, "3": 0})
+        self.assertEqual(metrics["audits"], {"total": 34, "accepted": 22, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 4})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 1, "2": 1, "3": 0})
         self.assertEqual(metrics["pipeline"], {
             "active_medium_leads": 0,
             "luna_ready_tasks": 0,
@@ -47,6 +47,24 @@ class TaskLedgerValidatorTests(unittest.TestCase):
             "launch_ready_contracts": 0,
         })
         self.assertTrue(all(value is None for value in metrics["speed_metrics"].values()))
+
+    def test_rolling_prompt_and_luna_lifecycle_is_exact(self):
+        tasks = {task["id"]: task for task in self.ledger["tasks"]}
+        self.assertEqual(tasks["SOL-P67-PRO-C2-099"]["status"], "completed")
+        self.assertEqual(tasks["SOL-P75-DESKTOP-LAUNCH-162"]["status"], "completed")
+        self.assertEqual(
+            {tasks[task_id]["status"] for task_id in (
+                "SOL-P76-DESKTOP-LAUNCH-187",
+                "SOL-P77-DESKTOP-LAUNCH-188",
+                "SOL-P78-DESKTOP-LAUNCH-194",
+            )},
+            {"active"},
+        )
+        self.assertEqual(tasks["P68-BA-DEF-01"]["evidence_label"], "rejected-operational-output")
+        self.assertEqual(tasks["P68-BA-DEF-01"]["admission_class"], "LUNA-READY")
+        self.assertEqual(tasks["P68-BA-DEF-02"]["admission_class"], "MEDIUM-SPEC-REQUIRED")
+        self.assertEqual(tasks["PIPE-P78-RELATION-CIRCUIT-CONTRACT-189"]["evidence_label"], "contract-only")
+        self.assertNotEqual(tasks["PIPE-P78-RELATION-CIRCUIT-CONTRACT-189"]["evidence_label"], "computed-finite-evidence")
 
     def test_level_three_is_reserved_for_authoritative_fresh_clone_publication(self):
         artifact_ids = {
