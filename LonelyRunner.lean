@@ -33,6 +33,7 @@ import LonelyRunner.DeletionPivotLifting
 import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts
+import LonelyRunner.Prompt100TwoOwnerCounts
 import LonelyRunner.CommonPivotBadCount
 import LonelyRunner.SimultaneousCongruence
 import LonelyRunner.TripleCongruence
