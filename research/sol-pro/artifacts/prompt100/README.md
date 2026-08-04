@@ -4,12 +4,13 @@ This directory preserves the five attachments recovered from the completed
 Prompt100 ChatGPT conversation. The response is tracked at
 [`../../responses/response100.md`](../../responses/response100.md).
 
-Recovery is an operational provenance result only. The response labels its
-outcome `PROVE`, but neither that proof nor any supplied computation is
-promoted here. Independent mathematical audit, semantic review of both
-implementations, and fresh replay remain required. Prompt100's universal
-two-owner theorem, its claimed Prompt95 consequence, Prompt95 itself, the
-pivot theorem, and unrestricted Lonely Runner retain their prior status.
+Recovery alone was an operational provenance result. Subsequent independent
+review accepted the exact two-owner theorem and its vacuous
+`|coveredPivots|<=3` Prompt95 consequence as `proved-math-qualified`, and
+independently replayed both finite scans at their exact declared domains. See
+the [mathematical and computational audit](../../audits/response100-mathematical-audit-355.md).
+Unrestricted Prompt95, the pivot theorem, and unrestricted Lonely Runner
+remain `open`.
 
 ## Recovered bytes
 
@@ -53,15 +54,42 @@ gcc -O3 -std=c11 -Wall -Wextra -Werror \
 ```
 
 The recovered manifest also records hashes for the original binaries, but
-binaries are not tracked in this package. A fresh replay must bind the exact
-compiler version, recompute source and output hashes, check every mandatory
-fixture and malformed control, compare the common-domain digests, and inspect
-the full declared completion state before any finite-evidence promotion.
+binaries are not tracked in this package.
+
+## Independent replay
+
+Both sources were rebuilt with Ubuntu GCC 15.2.0 using the commands above.
+Every mandatory fixture and malformed control passed.
+
+Implementation A completed `N=4..18`, `p=1..160`: 10,048,800 owner pairs,
+190,800 owner rows, and 225,271,200 literal residue-predicate checks, with
+common-domain digest `0e430dd2e7f1b766` and no failure.
+
+Implementation B completed `N=4..24`, `p=1..240`: 47,780,880 owner pairs,
+602,280 owner rows, and 225,271,200 common-domain pointwise comparisons with
+zero mismatches. Its all-domain digest is `55a9a8f24ef40789`; its common-domain
+digest is `0e430dd2e7f1b766`; no failure was found.
+
+Fresh GCC 15.2 hashes:
+
+| Output | SHA-256 |
+| --- | --- |
+| A binary | `a2e2b7590613fc655f2346121756cfd7f3d32643b5cea0c7e95740059d4a53e1` |
+| B binary | `badfbadd063c5873f1b661f481fd1de1d7c798dd6ca2ba17761c56fd362785c6` |
+| A result JSON | `f1dcf20517c172095ca5eaebee89129c01e2cf1aed2c6d3b4b2a25e7932eff98` |
+| B result JSON | `3856aa71f19c154de118e50c4d440fefdaaa3bb835d406b8ce867f97ddaa95b5` |
+
+The fresh JSON differs from the supplied GCC 14.2 JSON only in the compiler
+field; all other parsed fields match exactly. The fresh binary hashes are not
+expected to match the manifest's GCC 14.2 binaries.
 
 ## Fail-closed status
 
-- Response-authored claim: `PROVE`, not independently accepted.
-- Recovered result JSON and manifest: unverified external artifacts.
-- Independent replay: not run in this recovery task.
-- Mathematical proof audit: not run in this recovery task.
-- Evidence promotion: none.
+- Exact `TWO-LOWER-OWNER-NONCOVER`: `proved-math-qualified`.
+- Prompt95 restricted to `|coveredPivots|<=3`: `proved-math-qualified`,
+  vacuous because no internal complete cover exists.
+- Proposed `N>=3` arithmetic extension: `refuted-exact` only.
+- Two retained bounded scans: independently replayed
+  `computed finite evidence` at the exact domains above.
+- Lean formalization of the theorem: not yet provided.
+- Unrestricted Prompt95, the pivot theorem, and LRC: `open`.
