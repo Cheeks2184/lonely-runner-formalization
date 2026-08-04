@@ -103,8 +103,17 @@ condition; the generic multiplicity inequality survives. The response's
 finite bundle was replayed independently but remains unpromoted pending a
 Medium semantic audit. A same-chat correction remains active, so Prompt98's
 nondivisible theorem is still open.
-Prompt100 remains active/unrecovered at `a661fe1` on the uniform two-lower-owner
-noncover theorem, which would prove only the `|F(a)|<=3` Prompt95 regime.
+Prompt100 is completed, recovered, and independently audited. The exact strict
+two-lower-owner noncover theorem for every `N>=4` and its vacuous Prompt95
+consequence when `|coveredPivots|<=3` are `proved-math-qualified`; no internal
+complete cover exists in that regime. The exact `N>=3` extension is
+`refuted-exact`. Two bounded scans are independently replayed `computed finite
+evidence` only over `N=4..18, p=1..160` and `N=4..24, p=1..240`. Lean
+formalization and every case with at least three lower owners remain open.
+Task365 separately freezes the `N=4` owner-class data/signatures as
+documentation/formal specification only. Its eight rows and 3,043 normalized
+pairs are audit support, not computed finite evidence; complete class counts,
+the `G` base lift, and first-sheet scaling remain open implementation edges.
 Prompt101 completed and is recovered at `6964613`. Independent audit refutes
 `COVERED-PIVOT-SUBCRITICAL-WEIGHTS` on the primitive tuple
 `(1,5,25,125)` and verifies the uniform geometric power-family obstruction at
@@ -112,14 +121,24 @@ Prompt101 completed and is recovered at `6964613`. Independent audit refutes
 unbound evidence. This stops only that sufficient theorem; it is not an LRC
 counterexample.
 
-Prompt88 remains parked as `MEDIUM-SPEC-REQUIRED`. At least two Medium lead
-lanes remain active; no Luna worker or `LUNA-READY` task is active. The three
-repository-recorded active Pro cells are Prompt98's correction and Prompt100;
-Prompt101 is terminal. Luna Narrow Verification Mode is unchanged.
+Prompt102 and Prompt103 are active Sol High Pro cells on distinct unrestricted
+pivot routes. Each launch read back the complete intended contract plus a
+documented noncontradictory 112-byte prefix. Task364 recommends
+ACTIVE/PROCEED; response audits must still check the prefix. Its disposable
+217,726-tuple check is audit support only, not computed finite evidence.
+Prompt103 uses the exact predicate non-squarefree = existence of a prime square
+divisor; its prose word `squarefull` is not the narrower standard
+powerful-number definition.
+
+Prompt88 remains parked as `MEDIUM-SPEC-REQUIRED`. Three Medium lead lanes remain
+active. The single `LUNA-READY` item is Task358's frozen fixture probe, but no
+Luna model or worker is active. The three active Pro cells are Prompt98's
+correction, Prompt102, and Prompt103; the fourth slot is reserved. Luna Narrow
+Verification Mode is unchanged.
 
 No recovered Prompt76 scan, Prompt77 6,330-record scan, or Prompt78 computation
 has been promoted to computed finite evidence. Current validator queues are
-being reconciled from the machine-readable ledger. Level 3 remains empty.
+Level 1 / Level 2 / Level 3 = `4 / 1 / 0`; Level 3 remains empty.
 This lifecycle synchronization uses documentation, hash, privacy, ledger, and
 targeted validator checks only; it triggers no full clean Lean replay.
 

@@ -8,9 +8,14 @@ the Lonely Runner Conjecture (LRC).
 > proof. See [STATUS.md](STATUS.md) for the current boundary of knowledge.
 
 Current repository-recorded pipeline: Prompt98's original response and five
-attachments are recovered while a same-chat correction remains active;
-Prompt100 remains active/unrecovered; Prompt101 is completed, recovered, and
-independently audited. Prompt99 completed and exposed a semantic contract defect: its
+attachments are recovered while a same-chat correction remains active.
+Prompt100 is completed, recovered, and independently audited: its exact
+two-owner theorem for `N>=4` and the vacuous `|coveredPivots|<=3` consequence
+are `proved-math-qualified`, its exact `N>=3` extension is refuted, and its two
+bounded scans are finite evidence only. Lean formalization is pending.
+Prompt102 and Prompt103 are active Sol High Pro cells; launch provenance is not
+theorem evidence. Prompt101 is completed, recovered, and independently audited.
+Prompt99 completed and exposed a semantic contract defect: its
 unnormalized divisible restriction is equivalent to full Prompt95 under common
 scaling. This equivalence is now Lean-verified, but neither redundancy theorem
 is proved. Gcd normalization is also Lean-verified: full Prompt95 is exactly
@@ -20,7 +25,7 @@ open. Prompt preparation, launch, and bounded admission preflight are not
 mathematical evidence. The machine-readable lifecycle source is
 [`research/task-ledger.json`](research/task-ledger.json), bound to immutable
 PI decision registry commit
-`fb4c2a047717afbdc93b085f052cd25845297f57`.
+`6b3be173214b83044ac885cd35c30d30fa263078`.
 
 ## Verified results
 
@@ -378,7 +383,9 @@ Lean-verified scope equivalence. Prompt98 remains open: its proposed MBCP
 bridge was rejected as equivalent to the frozen branch, and the maximal-set
 pair-overlap sufficient condition is refuted exactly by an in-domain
 primitive tuple. Its recovered finite bundle is replayed but not promoted
-pending a semantic audit. Prompt100 remains active/unrecovered. Prompt101 is
+pending a semantic audit. Prompt100 is qualified mathematically at the exact
+two-owner scope, with Lean work pending and all three-or-more-owner cases open.
+Prompt102 and Prompt103 are active research launches only. Prompt101 is
 completed and its subcritical-weights theorem is `refuted-exact` by
 `(1,5,25,125)` and the audited geometric power family. These are bridge
 counterexamples, not LRC counterexamples. No active response, launch,

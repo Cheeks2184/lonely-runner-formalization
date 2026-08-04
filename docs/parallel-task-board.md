@@ -1,8 +1,8 @@
 # Parallel task board
 
 This file is the authoritative coordination record. The current lifecycle
-snapshot includes recovery commits `f698998` and `6964613` and is bound to PI
-registry commit `fb4c2a047717afbdc93b085f052cd25845297f57`; historical worker rows retain
+snapshot is based at `0605cdf1b2a6288aaa6cf3a0cedb5883ef5b410d` and is bound to PI
+registry commit `6b3be173214b83044ac885cd35c30d30fa263078`; historical worker rows retain
 their actual fixture bases. The board records task routing and integration
 readiness; it does not promote any mathematical claim.
 
@@ -10,12 +10,13 @@ readiness; it does not promote any mathematical claim.
 
 This snapshot supersedes the historical current-state prose below. Its
 machine-readable source is `research/task-ledger.json`, bound to immutable PI
-promotion registry commit `fb4c2a047717afbdc93b085f052cd25845297f57`.
+promotion registry commit `6b3be173214b83044ac885cd35c30d30fa263078`.
 Historical rows remain append-only evidence and are not silently reinterpreted.
 This current snapshot incorporates Prompt99 recovery/audit tasks332--333,
 Prompt101 launch task339, Prompt99 formal integration task340, and primitive
 Prompt95 scope audit/formalization tasks341--342, Prompt101 audit task349,
-recovery task350, and Prompt98 recovery/audit tasks351--352. A lifecycle
+recovery task350, Prompt98 recovery/audit tasks351--352, and Tasks353--365
+through the Prompt100 audit and Prompt102/103 launch-semantics review. A lifecycle
 transition never promotes a result without a matching immutable PI-registry
 decision or a separately replayed kernel check.
 
@@ -46,27 +47,46 @@ decision or a separately replayed kernel check.
 | Prompt98 | original response recovered; correction active | Recovery351 preserves the response and five attachments. Audit352 rejects MBCP as an equivalent restatement and refutes the exact maximal-set pair-overlap supply. The finite bundle remains unpromoted; the branch and LRC stay open. |
 | Prompt99 | completed, recovered, audited `STOP`; scope collapse formalized | Task332 preserves the response; task333 independently proves at `proved-math-qualified` scope that the unnormalized `N`-divisible universal theorem is equivalent to full Prompt95. `LonelyRunner.maxCoveredDivisible_iff_unrestricted` is `proved-lean` for exactly this equivalence. Neither open proposition nor LRC is proved. Explicit `Q`, minimal-cover, and private-set invariance are not separately `proved-lean` by this module. |
 | Primitive Prompt95 normalization | reviewed and kernel-checked source checkpoint | `PrimitivePrompt95.lean` proves gcd normalization, primitive/full equivalence, the primitive divisible/nondivisible split, and `full Prompt95 <-> primitive-divisible AND unrestricted-nondivisible`; see the [independent audit](primitive-prompt95-scope-audit.md). The branch theorems, Prompt95, and LRC remain open. |
-| Prompt100 | active Sol Pro research; supporting route | Preparation319 and review322 classify the two-owner theorem as launch-ready support for Prompt95, not an independent third-cell route. Sol High launch325 is active at `a661fe1`; launch promotes nothing. |
+| Prompt100 | completed, recovered, independently audited; Lean pending | `proved-math-qualified`: exact strict `TWO-LOWER-OWNER-NONCOVER` for `N>=4` and the vacuous Prompt95 consequence when `|coveredPivots|<=3`. The exact `N>=3` extension is `refuted-exact`. Two bounded scans are independently replayed `computed finite evidence` only at their declared domains. Lean formalization, Prompt95 for `|coveredPivots|>=4`, the pivot theorem, and LRC remain open. |
 | Prompt101 | completed, recovered, independently audited STOP | Recovery350 preserves the response. Audit349 refutes the subcritical-weights theorem by `(1,5,25,125)` and an infinite power family. This is a bridge refutation, not an LRC counterexample. |
+| Prompt102 | active Sol Pro research; launch semantics audited | Sol High launch360 submitted the complete upper-half-pivot contract with exact readback. A documented noncontradictory 112-byte prefix requires response audit but does not itself require relaunch. Launch and Task364 audit support promote no theorem or finite evidence. |
+| Prompt103 | active Sol Pro research; launch semantics audited with terminology qualification | Sol High launch361 submitted the complete squarefree-gcd contract with exact readback and the same 112-byte prefix condition. The exact target uses non-squarefree = existence of a prime square divisor; the prose word `squarefull` must not be read in its narrower standard powerful-number sense. No theorem or finite evidence is promoted. |
 | P68 Task02 | frozen failed delegation | Luna/xhigh runtime routing was verified, but the task returned zero mandatory fixtures and no completed domain: `rejected-operational-output`. |
 | P68 Task03 | terminal rejected operational output | Fresh Luna/xhigh metadata routing passed, but the cache timed out before `0/6` semantic fixtures. No evidence exists; every successor is `MEDIUM-SPEC-REQUIRED`. |
 | Medium lanes | 3 active | Research Pipeline, Recovery/Verification, and Formalization/Specification leads are active downstream lanes. |
-| Luna lane | 0 active; 0 ready | Narrow Verification Mode remains in force. Prompt85 `-02` and Prompt93 replay are `MEDIUM-SPEC-REQUIRED`; neither has a runtime receipt, launch, worker, preflight, or evidence. |
-| Pro portfolio | 2 active; 0 launch-ready | Prompt98's correction and Prompt100 are active. Prompt101 is completed/recovered/audited; Prompt99 is completed/recovered/audited. |
+| Luna lane | 0 active; 1 ready | Narrow Verification Mode remains in force. Only the Task358 fixed-fixture probe is `LUNA-READY`; no Luna model or worker is active. Broader Prompt100 implementation rows retain their exact conditional or `MEDIUM-SPEC-REQUIRED` gates. |
+| Pro portfolio | 3 active; 1 reserved; 0 launch-ready | Prompt98's correction, Prompt102, and Prompt103 are active. Prompt100 and Prompt101 are completed/recovered/audited. The fourth Pro slot remains reserved. |
+
+### Tasks353--364 lifecycle register
+
+| Task | Stage | Exact disposition |
+| --- | --- | --- |
+| 353 | contract discovery | Selected two distinct unrestricted routes; no prompt, launch, or evidence inferred. |
+| 354 | response recovery | Prompt100 response plus five attachments recovered and hash-bound; recovery alone promotes nothing. |
+| 355 | independent mathematical audit | Accepts the exact `N>=4` two-owner theorem and vacuous `|coveredPivots|<=3` consequence as `proved-math-qualified`; refutes only the exact `N>=3` extension. |
+| 356 | independent replay | Accepts only the two declared complete domains as `computed finite evidence`. |
+| 357 | prompt preparation | Prompt102 and Prompt103 contracts prepared and reviewed; preparation is not launch. |
+| 358 | formal specification | Exact Lean signatures and gates frozen; one fixture probe is `LUNA-READY`, broader work remains conditionally gated or `MEDIUM-SPEC-REQUIRED`. |
+| 359 | audit packaging | Prompt100 audit/specification package synchronized; no independent promotion. |
+| 360 | Sol High desktop launch | Prompt102 active; complete intended body plus documented 112-byte prefix read back exactly. |
+| 361 | Sol High desktop launch | Prompt103 active under the same launch-provenance boundary. |
+| 362 | lifecycle/status sync | This Level-1 synchronization; no new theorem or computation. |
+| 364 | launch-semantics audit support | Recommends ACTIVE/PROCEED for both cells. Disposable checks over 217,726 tuples, 1,087,521 rows, and 85,170,843 slots are audit support only, not `computed finite evidence`; records Prompt103's non-squarefree terminology qualification. |
+| 365 | formal sub-specification | Freezes Prompt100's `N=4` owner-class data and signatures only. Eight table rows and 3,043 normalized pairs are audit support; complete class count, `G` base lift, and first-sheet scaling remain implementation or Medium-spec edges. |
 
 ### Validator-derived current metrics
 
 | Metric | Current value |
 | --- | ---: |
-| Active Pro cells | 2 |
+| Active Pro cells | 3 |
 | Pro cells awaiting recovery | 0 |
 | Responses under audit | 0 |
 | Launch-ready contracts | 0 |
 | Active Medium leads | 3 |
-| Luna-ready tasks / active Luna workers | 0 / 0 |
+| Luna-ready tasks / active Luna workers | 1 / 0 |
 | Integration backlog / Sol High review backlog | 0 / 0 |
-| Verification queues Level 1 / Level 2 / Level 3 | 4 / 0 / 0 |
-| Audits total / accepted / accepted-negative / pending / deferred | 48 / 32 / 8 / 0 / 8 |
+| Verification queues Level 1 / Level 2 / Level 3 | 4 / 1 / 0 |
+| Audits total / accepted / accepted-negative / pending / deferred | 51 / 34 / 8 / 0 / 9 |
 | Route queues launch-ready / waiting / parked | 0 / 1 / 1 |
 | Luna launched / admitted / rejected / rejected outputs | 5 / 3 / 5 / 3 |
 | Luna terminal runtime failures | 2 |
