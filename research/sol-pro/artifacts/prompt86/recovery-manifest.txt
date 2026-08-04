@@ -1,0 +1,24 @@
+P86 RECOVERY MANIFEST v1
+task_id: OPS-P86-RECOVERY-PACKAGE-272
+base_commit: fba819e219e33b3b9a9b9c19adcec94c0065b822
+launch_task: SOL-P86-DESKTOP-LAUNCH-242
+prompt_path: research/sol-pro/prompts/prompt86.md
+prompt_sha256: 49135b31319081b732a26fa24ec6154c63c3e2543e6995637d2e2e0b11cc7f77
+raw_response_sha256: 932681932ef64767f0c51d00740158474459c1cba59cba95dd79d4fdedb9810d
+raw_response_bytes: 40509
+raw_response_characters: 40483
+raw_response_line_endings: 1569 CRLF; no lone LF or CR; terminal CRLF
+tracked_response_path: research/sol-pro/responses/response86.md
+tracked_response_sha256: 4b977eed0879be8508f1354daaf7db914c254c229e507af3b1b25f8cc52449fa
+tracked_response_bytes: 38940
+tracked_response_characters: 38914
+tracked_response_line_endings: 1569 LF; no CR; terminal LF
+attachment_origin: five response-linked sandbox attachments recovered by basename
+attachment_policy: UNTRUSTED QUARANTINE; DO NOT EXECUTE, IMPORT, EVALUATE, OR TREAT AS EVIDENCE
+artifact: research/sol-pro/artifacts/prompt86/quarantine/p86_literal.py | bytes=19776 | sha256=767e28f4db406bf554d8b8cf4f86e8b33f54e3bbc8f0b0a8a985ef34440d0076
+artifact: research/sol-pro/artifacts/prompt86/quarantine/p86_literal.json | bytes=295852 | sha256=20845b7f4d7586be2326033f9ee76163978ee6041ccfaa9917e0d666ab91bd70
+artifact: research/sol-pro/artifacts/prompt86/quarantine/p86_optimized.py | bytes=9588 | sha256=1bf06a3f6c71c3ba71a8c78ab5b2d1af5d76429b405216dd698a351e2dd4b368
+artifact: research/sol-pro/artifacts/prompt86/quarantine/p86_optimized.json | bytes=2824 | sha256=672bd5045c45a47ea8f8426dde219044242e915385f5d47b30c4a6e5e5eb50ed
+artifact: research/sol-pro/artifacts/prompt86/quarantine/p86_manifest.txt | bytes=393 | sha256=ba09b0fde27ac33485351aa599d7b8cb9cbf18b531e5fbdc4361bb4011679968
+recovery_execution: none
+evidence_promotion: none

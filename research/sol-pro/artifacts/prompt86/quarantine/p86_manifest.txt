@@ -1,0 +1,5 @@
+PIPE-P86 exact checker artifacts
+literal source SHA-256: 767e28f4db406bf554d8b8cf4f86e8b33f54e3bbc8f0b0a8a985ef34440d0076
+literal output SHA-256: 20845b7f4d7586be2326033f9ee76163978ee6041ccfaa9917e0d666ab91bd70
+optimized source SHA-256: 1bf06a3f6c71c3ba71a8c78ab5b2d1af5d76429b405216dd698a351e2dd4b368
+optimized output SHA-256: 672bd5045c45a47ea8f8426dde219044242e915385f5d47b30c4a6e5e5eb50ed
