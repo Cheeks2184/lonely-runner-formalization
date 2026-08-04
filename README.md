@@ -7,19 +7,16 @@ the Lonely Runner Conjecture (LRC).
 > `Conjecture` is a formal statement under investigation, not a completed
 > proof. See [STATUS.md](STATUS.md) for the current boundary of knowledge.
 
-Current research pipeline: Prompt76--78 are completed, recovered, and audited
-at exact bridge-rejection scope. Prompt79--81 are completed and awaiting
-recovery; Prompt81's captured response is an `INPUT-NOT-FROZEN` operational
-failure, not a mathematical result. Prompt82 remains active Sol Pro research.
-The accepted manuscript-level counterexamples reject only the frozen
-private-deficit, signed-Gram, and sparse-cover bridge statements; each tuple
-still has an exact pivot certificate, so none is an LRC counterexample.
-Prompt76's recovered scans, Prompt77's 6,330-record scan, and Prompt78's
-recovered computation remain unexecuted or independently unreplayed and are
-not computed finite evidence. The machine-readable lifecycle source is
-[`research/task-ledger.json`](research/task-ledger.json), whose PI decisions
-are frozen at registry commit
-`4fcc1d5614852fc609fd5b6dbbace4b5f835b14b`.
+Current research pipeline: three independent browser conversations are active
+under the top-level Sol High orchestrator. Prompt98 and Prompt99 attack the
+complementary nondivisible and divisible maximum-covered-pivot branches;
+Prompt100 attacks the uniform two-lower-owner noncover theorem. Prompt101's
+global covered-pivot matrix contract is independently reviewed and
+launch-ready. Prompt preparation, launch, and bounded admission preflight are
+not mathematical evidence. The machine-readable lifecycle source is
+[`research/task-ledger.json`](research/task-ledger.json), bound to immutable
+PI decision registry commit
+`fe4efb03063555f1f95175ed50a1c55bacbaa7a6`.
 
 ## Verified results
 
@@ -343,8 +340,8 @@ deterministic Python regression suite. The authoritative local standard remains
 a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
 
-The lifecycle snapshot is based on authoritative main checkpoint
-`243c122500191fb6713d5d697911b0b6935089d1` and immutable PI promotion
+The lifecycle snapshot is being reconciled from authoritative main through
+`4b3f063` and immutable PI promotion
 registry checkpoint `fe4efb03063555f1f95175ed50a1c55bacbaa7a6`. The latest authoritative clean
 full-project Lean/trust/regression replay is lifecycle checkpoint
 `fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`: 3,591 Lean jobs, 302 trust
@@ -358,29 +355,18 @@ conjectures.
 Research is in **FULL-PROOF PRIORITY MODE**. The exact unrestricted
 bottleneck remains the Lean-verified finite pivot-certificate proposition:
 for every positive injective integer tuple, some pivot candidate must escape
-all strict modular bad sets. Prompt95 and Prompt96 are the two active Pro
-cells. Prompt94 generation completed and awaits tracked recovery304 under
-provisional audit only; its raw response and bundle remain ignored /
-quarantined, and no response claim or recovery evidence is recorded.
-Prompt86 is completed/recovered at provisional `MIXED / PIVOT`, with five
-attachments `QUARANTINED / UNVERIFIED` and its selector `OPEN`. Prompt87 is
-completed/recovered/audited; Prompt92 audit301 supplies a
-`proved-math-qualified` symbolic counterfamily refuting the identical
-Prompt87/Prompt92 aggregate-dyadic bridge. This stops only that auxiliary
-bridge and does not decide LRC or the pivot equivalence. Prompt89 completed and its response plus four
-attachments are recovered at `d389ec8`; all response computation is
-unverified. Prompt90 is a failed research launch / rejected operational output:
-its payload remained a `REVIEW-REQUIRED` Medium contract and no theorem was
-attempted. Prompt91 stopped before launch on a mandatory-fixture review.
-Prompt92 completed and was recovered; its quarantined computation remains
-unpromoted. Prompt93 also stopped before launch, and its branch-only replay
-specification is `MEDIUM-SPEC-REQUIRED`. Prompt96's corrected synthesis
-contract was integrated at `17b1a2b`, independently accepted by review302, and
-launched by Sol High at `9687dce`; launch promotes nothing. The target of three
-active Pro cells is not currently met. Prompt85 replay `-01` failed closed before
-source or preflight; successor `-02` is integrated as a contract but remains
-`REVIEW-REQUIRED` / `MEDIUM-SPEC-REQUIRED`. No Luna task is active or ready.
-These lifecycle facts promote no unrestricted theorem or finite evidence.
+all strict modular bad sets.
+
+Prompt94--96 are recovered and independently audited. Prompt94 remains
+`MIXED / OPEN`; Prompt95 contributes qualified local capacity and slice facts
+but no redundancy/descent theorem; Prompt96 is a family-specific
+`SEPARATION`. Prompt97 stopped before launch because its target was a
+tautological reformulation of an open unit-certificate premise. Prompt98,
+Prompt99, and Prompt100 are active; Prompt101 is queued as the next global
+route. No active response, launch, quarantined attachment, or admission
+preflight promotes a theorem or finite evidence. Prompt85 replay `-02` and the
+Prompt93 replay remain `MEDIUM-SPEC-REQUIRED`; no Luna task is active or
+`LUNA-READY`.
 Prompt66's
 `ALL-PIVOT-MODULAR-WHOLE-BLOCK-PACKING` turn completed at STOP/OPEN, leaving
 that packing lemma open. Prompt64's `TOP-TWO-LARGE-RATIO-EXCLUSION` also
