@@ -31,9 +31,11 @@ complete route to unrestricted LRC remains conditional on both:
 2. the external, presently unformalized MSS/Rosenfeld product criterion.
 
 The finite computations are **computed-unreviewed**, not accepted computed
-finite evidence in this audit: the response links transient attachments, but
-the recovery commit does not contain the declared source/output bundle and
-this task expressly did not execute attachments.
+finite evidence in this audit. The recovery commit immutably contains the
+declared source/output bundle under `research/sol-pro/artifacts/prompt68/`, and
+its recovery provenance and declared SHA-256 hashes are accepted. This
+mathematical audit did not execute, independently replay, or semantically
+audit those artifacts; that work remains assigned to artifact audit 151.
 
 ## Claim table
 
@@ -57,7 +59,7 @@ this task expressly did not execute attachments.
 | Product assembly | `proved-math` (conditional lemma) | Sound for distinct supplied primes dividing the positive speed product. |
 | MSS/Rosenfeld strict product upper bound | `literature`, `external-unformalized` | The cited primary statements support the indexing and strict bound used, but no repository Lean declaration supplies this edge. |
 | Full cofinite-to-real-LRC chain | `conditional` | Sound as a mathematical implication with the two dependencies listed above. |
-| Two displayed full-cover fixtures and eight-prime sweep | `computed-unreviewed` | Plausible and internally specified, but not independently replayed from a recovered immutable bundle in this audit. |
+| Two displayed full-cover fixtures and eight-prime sweep | `computed-unreviewed` | Canonically and immutably recovered with provenance-accepted hashes, but not executed, independently replayed, or semantically audited here; acceptance remains pending artifact audit 151. |
 | `COFINITE-PRIME-FORCING` | `open` | Neither Attack A nor Attack B proves it. |
 | Unrestricted LRC | `open` | No promotion. |
 
@@ -320,11 +322,20 @@ Evidence label on a successful placeholder-free Lean implementation would be
 
 The response declares deterministic fixtures, a finite `n=3` sweep, source
 and output hashes, and sensible strict/equality/enumeration conventions. The
-linked artifacts use transient `sandbox:/mnt/data/...` paths and are absent
-from the inspected recovery commit. Consequently this audit neither validates
-the stated hashes nor promotes the counts. They remain
-`computed-unreviewed`. This has no effect on the accepted symbolic proofs and
-no finite sweep would imply cofiniteness in any event.
+historical `sandbox:/mnt/data/...` links are inert, but the recovery commit
+immutably preserves the canonical files at
+`research/sol-pro/artifacts/prompt68/cofinite_prime_forcing_verifier.py` and
+`research/sol-pro/artifacts/prompt68/cofinite_prime_forcing_verifier_output.json`.
+Their recovery manifest records SHA-256
+`ffcadeab525c63faee8548389b8460c1730ee7ea51039ba8dcb1463d16ef9004`
+and `b85677d9487220a2b7f0c5438dcb021372a30b6e75761f8fc972b8b7001375f9`,
+respectively, and records that the JSON's source binding matches the recovered
+Python bytes. This provenance is accepted. It is distinct from computational
+acceptance: this mathematical audit did not execute, independently replay, or
+semantically audit either artifact. The counts therefore remain
+`computed-unreviewed` here pending artifact audit 151. This has no effect on
+the accepted symbolic proofs, and no finite sweep would imply cofiniteness in
+any event.
 
 ## Final evidence boundary
 
