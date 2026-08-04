@@ -5,7 +5,9 @@ launch_runtime: original browser-capable desktop Codex session
 role: GPT-5.6 Sol / Pro mathematical research agent
 task_id: SOL-P100-PRO-TWO-LOWER-OWNER-NONCOVER-319
 base_commit: d5eae533c0a97ef8240e604adc704b207ca881c6
-admission: REVIEW-REQUIRED
+admission: LAUNCH-READY
+review_id: P100-INDEPENDENT-CONTRACT-REVIEW-322
+route_classification: P95 supporting contract; not an independent third Pro cell
 prompt_encoding: ASCII
 prompt_line_endings: LF
 prompt_hash_scope: bytes from the line "# Prompt 100:" through EOF
