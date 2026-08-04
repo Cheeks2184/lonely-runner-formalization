@@ -665,7 +665,25 @@ All Task366 scans are audit support only, not computed finite evidence. None of
 these statements is yet `proved-lean`; internal covers with `3|C|>N+1`,
 Prompt95, the pivot theorem, and LRC remain open. Task367's documentation-only
 formal contract is PI-reviewed and completed at branch commit `1ca1a97`; it
-supplies no Lean theorem or evidence promotion. Task368 remains an active
-independent read-only Level-2 review of Task363. Task369 is the active
-append-only registry and Level-1 lifecycle sync. No active-task result is
-inferred.
+supplies no Lean theorem or evidence promotion. Task369 completed its
+append-only registry and Level-1 lifecycle sync.
+
+## Prompt100 normalized one-set count checkpoint (Tasks363, 368, 370--372)
+
+Sol High accepts `normalizedBadCount` and
+`card_pivotBadResidues_normalized` as `proved-lean` at exact declaration scope
+from candidate `6727d8e`. The result normalizes the cardinality of one strict
+`pivotBadResidues` set only. It proves no two-owner union or overlap estimate,
+noncover theorem, Prompt95 bridge, pivot-certificate theorem, or LRC statement.
+The definition has no axioms; the theorem reports only `propext`,
+`Classical.choice`, and `Quot.sound`.
+
+Task368 is a terminal accepted read-only review. Task370 is a terminal accepted
+integrated checkpoint: the exact two-file/three-line wiring passed the target
+module, all 3,594 `lake build LonelyRunner` jobs, and direct root/AxiomAudit
+probes. GitHub Actions run `30929728668` passed Lean/trust and 190 of 191 tests,
+but failed because five ledger base hashes were unavailable. Task371's
+corrective exact single-branch native clone of main `71659d6` passed the ledger
+validator and 19/19 tests in 4.267 seconds; all 291 non-null refs across 130
+unique commits were reachable, with zero missing. That replay is provenance
+reachability only, not mathematical, Lean-theorem, or computed finite evidence.

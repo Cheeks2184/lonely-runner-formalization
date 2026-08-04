@@ -14,7 +14,10 @@ two-owner theorem and Task366 owner-density consequences are
 `proved-math-qualified`; in particular every internal complete cover must
 satisfy `N+1<3|C|`, so the denser regime is the exact remaining arithmetic
 bottleneck. All Task366 scans are audit support only, and Lean formalization is
-pending.
+pending for the two-owner and density theorems. Separately,
+`normalizedBadCount` and `card_pivotBadResidues_normalized` are `proved-lean`
+at their exact declarations: they normalize the cardinality of one strict bad
+set and prove no two-owner union, overlap, or noncover result.
 Prompt102 and Prompt103 are active Sol High Pro cells; launch provenance is not
 theorem evidence. Prompt101 is completed, recovered, and independently audited.
 Prompt99 completed and exposed a semantic contract defect: its
@@ -27,7 +30,7 @@ open. Prompt preparation, launch, and bounded admission preflight are not
 mathematical evidence. The machine-readable lifecycle source is
 [`research/task-ledger.json`](research/task-ledger.json), bound to immutable
 PI decision registry commit
-`4a211575ff96b8b4a3ae1c1a59ee685b4913a6a9`.
+`318f073965cdbf580a200ab2f8d6d8fe1bb82ac6`.
 
 ## Verified results
 
@@ -57,6 +60,10 @@ Fully Lean-verified results include:
   Prompt95 is equivalent to the primitive divisible branch together with the
   unrestricted nondivisible branch, without proving any of those open
   propositions;
+- `normalizedBadCount` and `card_pivotBadResidues_normalized`, giving the exact
+  normalized cardinality of one `pivotBadResidues` set; the latter uses only
+  `propext`, `Classical.choice`, and `Quot.sound`, while the definition has no
+  axioms;
 - the one- and two-moving-runner base cases;
 - several insertion, normalization, congruence, overlap, and structured-class
   theorems recorded in the [formal modules](LonelyRunner/);
@@ -386,7 +393,8 @@ bridge was rejected as equivalent to the frozen branch, and the maximal-set
 pair-overlap sufficient condition is refuted exactly by an in-domain
 primitive tuple. Its recovered finite bundle is replayed but not promoted
 pending a semantic audit. Prompt100 is qualified mathematically at the exact
-two-owner and Task366 density scopes. Lean work and internal covers satisfying
+two-owner and Task366 density scopes. Only the one-set cardinality normalization
+is now `proved-lean`; the two-owner Lean theorem and internal covers satisfying
 `3|C|>N+1` remain open.
 Prompt102 and Prompt103 are active research launches only. Prompt101 is
 completed and its subcritical-weights theorem is `refuted-exact` by

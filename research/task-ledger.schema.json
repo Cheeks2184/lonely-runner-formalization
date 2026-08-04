@@ -256,6 +256,7 @@
             "recovery-provenance",
             "computed-finite-evidence",
             "proved-math-qualified",
+            "proved-lean",
             "literature-external-unformalized",
             "rejected-operational-output",
             "accepted-audit-deliverable",
