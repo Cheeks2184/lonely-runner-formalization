@@ -3,8 +3,8 @@ owner: GPT-5.6 Sol High top-level desktop orchestrator
 supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Lead - prompt preparation only
-task_id: PIPE-P76-GLOBAL-PRIVATE-DEFICIT-CONTRACT-176
-base_commit: 5b426830263ba49674a7178ff371877200f123bc
+task_id: PIPE-P76-GLOBAL-PRIVATE-DEFICIT-CONTRACT-180
+base_commit: 94442b430f4dbb9b66ec186e5655d556ee4e477e
 admission: LAUNCH-READY
 ---
 
@@ -31,11 +31,11 @@ Use the following immutable inputs only at their audited scopes.
 
 | Input | Immutable provenance | Permitted status in this turn |
 | --- | --- | --- |
-| Response68 | recovered response `23ca5b89b13ae879c546598d7b56888a92fc39f2`; mathematical audit `0853d213964ee847101ef3da98318f86dfb4c1b2` | The bounded annihilator and rational-hyperplane theorem are accepted `proved-math` necessary conditions. Cofinite prime forcing remains `open`; artifacts are outside this contract. |
+| Response68 | recovered response `23ca5b89b13ae879c546598d7b56888a92fc39f2`; corrected audit tip `fb3db2e6e95bfb3e323d183000744643e420dbfa`; integrated audit `35f23f59157762f8978bbdbd93f05ae4001c1330` | With corrected `H_n=2n*5^(n-1)*4^n+1`, the bounded annihilator and rational-hyperplane necessary theorem are `proved-math`. Cofinite prime forcing remains `open`; recovered computations are outside this contract. |
 | Response69 | recovered response `ed08c419d83b9f46daf7d30894c4b578098544f0`; mathematical audit `b98b249e545f9f24767a53f071aeed091062f622` | Cover/boundary/scaling/one-owner and `n=2` claims are audited `proved-math`. Nearest-boundary transport is `rejected`; the per-row weighted compensation lemma remains `open`; its finite output is not assumed. |
 | Response70 | recovered response `7ca41ed3b537d6270ad07de52fdaf44e80b73f7d`; mathematical audit `d44a5d4508ded714296ec64b1619446355d5388a` | Coarse divisibility, singleton rigidity, strict-growth, and all-but-one family are audited `proved-math`. Private-point-to-gcd and nonunit-owner propagation are `rejected`. The common-prime target is equivalent to LRC and stopped as a bridge. |
-| Response72 | recovered response `79c7d8937d88ef8c26e11ea5d36f3dc0adafd585`; unintegrated mathematical audit `1dd48d3f5026aec4e36fc6ef210be89564077d98` | **Provisional/external-unintegrated only.** Canonical-cover and boundary-grid arguments must be reconstructed here before use. Circuit escape is reported equivalent to LRC and may not be assumed. |
-| Response74 | recovered response `967cabe9d0a94c2504e36e10473ef5eccef87adc`; provenance audit `1397c7ea75ccac75dce2067397881ec21123444e` | Recovery provenance only. Its spectral claims are unverified and irrelevant to this combinatorial target. |
+| Response72 | recovered response `79c7d8937d88ef8c26e11ea5d36f3dc0adafd585`; integrated audit `db0e33091f93311fd95143a0160e7afd60f9e3e8` | Canonical covers, the boundary-grid lemma, and the minimal-dimension no-nonempty-proper-closed-subset theorem are `proved-math`. Circuit escape is equivalent to LRC and stopped as a narrower bridge. Artifacts were not executed and remain unaccepted. |
+| Response74 | recovered response `967cabe9d0a94c2504e36e10473ef5eccef87adc`; integrated audit `94442b430f4dbb9b66ec186e5655d556ee4e477e` | The common-scaling identity and exact family `(c,2c,8c)`, `c>=6`, are `proved-math`; the arbitrary signed-Gram bridge is `rejected`; a primitive or scale-invariant replacement remains `open`. These spectral results are not inputs here. |
 
 Do not use any Prompt75 output. Do not execute any recovered attachment. Use
 `proved-lean`, `proved-math`, `computed finite evidence`, `conditional`,
@@ -261,8 +261,9 @@ operations. An uncrossing step must prove one of:
 Every replacement must remain at its declared pivot modulus, preserve
 strict/closed boundaries, retain diagonal exclusions, and cover all formerly
 private points. Generic set-cover submodularity is insufficient; the
-two-label closed abstract countermodel from provisional Response72 must be
-reconstructed and excluded by a genuinely arithmetic hypothesis.
+two-label closed abstract countermodel from audited Response72 must be
+excluded by a genuinely arithmetic hypothesis; its recovered artifact remains
+unexecuted.
 
 ## Mandatory counterexamples and falsification suite
 
@@ -311,7 +312,7 @@ Return exactly these sections.
 3. **Frozen definitions** — every finite type, representative, order, and
    boundary.
 4. **Anti-tautology audit** — compare the lemma with pivot equivalence,
-   Response69 compensation, and provisional Response72 circuit escape.
+   Response69 compensation, and audited Response72 circuit escape.
 5. **Exact falsification** — mandatory fixtures, symbolic family, bounded
    domain, ordering, and first failure.
 6. **Attack A** — complete Hall relation/injection or first unsupported arrow.

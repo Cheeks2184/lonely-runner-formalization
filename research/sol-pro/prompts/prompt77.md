@@ -3,8 +3,8 @@ owner: GPT-5.6 Sol High top-level desktop orchestrator
 supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Lead - prompt preparation only
-task_id: PIPE-P77-PRIMITIVE-SIGNED-GRAM-CONTRACT-176
-base_commit: 5b426830263ba49674a7178ff371877200f123bc
+task_id: PIPE-P77-PRIMITIVE-SIGNED-GRAM-CONTRACT-180
+base_commit: 94442b430f4dbb9b66ec186e5655d556ee4e477e
 admission: LAUNCH-READY
 ---
 
@@ -29,11 +29,11 @@ Use these immutable inputs only at their audited scopes.
 
 | Input | Immutable provenance | Permitted status in this turn |
 | --- | --- | --- |
-| Response68 | response `23ca5b89b13ae879c546598d7b56888a92fc39f2`; audit `0853d213964ee847101ef3da98318f86dfb4c1b2` | Bounded annihilator and rational-hyperplane necessary conditions are `proved-math`; cofinite prime forcing remains `open`. |
+| Response68 | response `23ca5b89b13ae879c546598d7b56888a92fc39f2`; corrected audit tip `fb3db2e6e95bfb3e323d183000744643e420dbfa`; integrated audit `35f23f59157762f8978bbdbd93f05ae4001c1330` | With corrected `H_n=2n*5^(n-1)*4^n+1`, bounded annihilator and rational-hyperplane necessary conditions are `proved-math`; cofinite prime forcing remains `open`. |
 | Response69 | response `ed08c419d83b9f46daf7d30894c4b578098544f0`; audit `b98b249e545f9f24767a53f071aeed091062f622` | Cover/boundary/scaling/one-owner and `n=2` claims are `proved-math`; nearest-boundary transport is `rejected`; per-row compensation remains `open`. |
 | Response70 | response `7ca41ed3b537d6270ad07de52fdaf44e80b73f7d`; audit `d44a5d4508ded714296ec64b1619446355d5388a` | Coarse divisibility, singleton rigidity, strict-growth, and all-but-one family are `proved-math`; private-to-gcd claims are `rejected`; common-prime is equivalent to LRC. |
-| Response72 | response `79c7d8937d88ef8c26e11ea5d36f3dc0adafd585`; unintegrated audit `1dd48d3f5026aec4e36fc6ef210be89564077d98` | **Provisional/external-unintegrated only.** Circuit claims are outside this target and may not be assumed. |
-| Response74 | response `967cabe9d0a94c2504e36e10473ef5eccef87adc`; provenance audit `1397c7ea75ccac75dce2067397881ec21123444e` | Recovery provenance only; no integrated math audit. Its unnormalized bridge and reported scaling counterexample must be independently reconstructed. The primitive-only variant remains `open`. |
+| Response72 | response `79c7d8937d88ef8c26e11ea5d36f3dc0adafd585`; integrated audit `db0e33091f93311fd95143a0160e7afd60f9e3e8` | Canonical circuits, the boundary-grid theorem, and the minimal-dimension no-nonempty-proper-closed-subset theorem are `proved-math`; circuit escape is equivalent to LRC and stopped. Artifacts were not executed and remain unaccepted. These results are outside this target. |
+| Response74 | response `967cabe9d0a94c2504e36e10473ef5eccef87adc`; integrated audit `94442b430f4dbb9b66ec186e5655d556ee4e477e` | The common-scaling identity and exact family `(c,2c,8c)`, `c>=6`, are `proved-math`; the arbitrary signed-Gram bridge is `rejected`; a primitive-only or scale-invariant replacement remains `open`. |
 
 Do not use Prompt75 output or execute recovered attachments. Use
 `proved-lean`, `proved-math`, `computed finite evidence`, `conditional`,
@@ -132,9 +132,11 @@ cover multiplicities, not the definition of an uncovered residue. If the only
 proof constructs `Z` from a known `Q_j` residue, uses all `M_j` modes, or
 rewrites the lemma as certificate existence, return `STOP`.
 
-The primitive hypothesis is the only permitted change from Prompt74. Prove it
-rules out the exact mechanism of any reconstructed common-scaling
-counterexample; do not infer that it proves the gap. A primitive exact
+The primitive hypothesis is the only permitted change from Prompt74. Use the
+accepted common-scaling theorem at its exact scope, independently rederive why
+its nonprimitive family does not decide the primitive target, and identify
+which part of the scaling-fiber mechanism disappears or survives after gcd
+normalization. Do not infer that primitivity proves the gap. A primitive exact
 counterexample stops this bridge but does not refute LRC.
 
 ## Complete implication chain
@@ -192,14 +194,17 @@ independent block optimization, arbitrary eigenvalue-dependent weights, or an
 expression expanding to `1_Qj` is not progress. Finish at the gap or identify
 the first fatal cancellation arrow.
 
-## Mandatory reconstruction and falsification
+## Mandatory accepted-result rederivation and falsification
 
-Recompute all definitions without executing attachments.
+Do not execute recovered attachments. The Response74 common-scaling theorem
+and exact family are accepted `proved-math` and need not be re-audited as new
+claims. Nevertheless, rederive their definitions and the primitive distinction
+inside this memo so the proposed replacement is independently intelligible.
 
-1. Reconstruct the provisional report for
-   `(6,12,48)=6*(1,2,8)`: `G=(0,0,36)` and claimed exact blocks
-   `K_1=-I/4`, `K_2=-I/4`, `K_3=0`. Verify or refute each entry and explain why
-   this does not decide the primitive target.
+1. Starting from the accepted scaling theorem, rederive for
+   `(6,12,48)=6*(1,2,8)` that `G=(0,0,36)` and
+   `K_1=-I/4`, `K_2=-I/4`, `K_3=0`. Explain exactly why the theorem does not
+   decide the primitive target and do not relabel the accepted result as new.
 2. `(1,2,8)`: `G=(0,0,6)`. Compute every exact block.
 3. `(1,2,3,4,5,7)`: `G=(0,0,0,0,2,2)`; test negative overlaps.
 4. `(1,6,11,12,13)`: `G=(0,0,8,8,10)`; two rows are covered.
@@ -232,7 +237,7 @@ Return exactly:
 1. **Disposition** — `BRIDGE`, `PIVOT`, or `STOP`.
 2. **Status table** — one exact evidence label per claim and dependency.
 3. **Frozen target** — normalization, types, matrices, and boundary.
-4. **Prompt74 reconstruction** — exact scaling audit and primitive distinction.
+4. **Prompt74 accepted theorem** — exact rederivation and primitive distinction.
 5. **Anti-tautology audit** — first genuinely new spectral inequality.
 6. **Exact falsification** — fixtures, bounded domain, and first exact failure.
 7. **Attack A** — exact Hermitian proof or first fatal arrow.
@@ -248,7 +253,7 @@ never `PIVOT`.
 
 ## One-turn budget and STOP rules
 
-Use one major Sol Pro turn: first third exact reconstruction/falsification,
+Use one major Sol Pro turn: first third exact rederivation/falsification,
 second primitive Hermitian separation, final third simultaneous energy.
 
 Return `STOP` if a primitive exact tuple makes every block negative
