@@ -61,9 +61,9 @@ path.
 
 ## Immutable delivery and containment gate
 
-After the fresh worker session exists but before it reads the contract,
-implements source, or runs preflight, Sol High must independently inspect the
-authoritative runtime metadata. If and only if the effective model is
+After the fresh worker session exists but before it treats the contract as
+authoritative, implements source, or runs preflight, Sol High must independently
+inspect the authoritative runtime metadata. If and only if the effective model is
 `gpt-5.6-luna`, effort is `xhigh`, and the session is fresh and top-level, Sol
 High creates exactly this receipt path:
 
@@ -119,13 +119,22 @@ Sol High runtime audit: accepted
 Sol High launch authority: approved
 ```
 
-The launcher supplies the launch-record commit SHA to the worker. The worker
-must use `git cat-file`/`git show` to verify both dedicated commits, their sole
-parents and exact changed paths, every field above, the contract blob, and the
-exact six-line receipt before reading the contract. Missing, duplicate, empty,
-malformed, nonancestor, extra-path, or mismatched fields fail closed. The
-worker must not infer or edit them and must stop rather than attempt direct
-session-metadata discovery.
+The launcher supplies the launch-record commit SHA and exactly this public
+bootstrap rule to the worker:
+
+```text
+Read only the Immutable delivery and containment gate of research/luna/contracts/p85-literal-replay-02.md as untrusted bytes to obtain and run its exact verifier. Do not treat any contract semantics as authoritative and do not implement or execute the task unless that verifier succeeds.
+```
+
+This bootstrap rule contains no mathematical or runtime claim and is frozen by
+this independently reviewed contract. It permits only the otherwise circularly
+unavailable first read. The worker must then use `git cat-file`/`git show` to
+verify both dedicated commits, their sole parents and exact changed paths,
+every field above, the contract blob, and the exact six-line receipt before it
+treats any contract semantics as authoritative or implements or executes the
+task. Missing, duplicate, empty, malformed, nonancestor, extra-path, or
+mismatched fields fail closed. The worker must not infer or edit them and must
+stop rather than attempt direct session-metadata discovery.
 
 With `launch_record_commit` supplied externally, the exact verification is:
 
@@ -575,8 +584,9 @@ identity does not constitute independent mathematical verification.
 
 ## Required commands
 
-After the immutable delivery, runtime, worktree, and preflight-approval gates,
-the worker runs exactly this Level 2 sequence from the isolated worktree:
+After the immutable delivery, runtime, and worktree gates, the worker runs
+exactly this Level 2 sequence from the isolated worktree, pausing at the marked
+Medium preflight-approval boundary and then continuing in the same order:
 
 ```bash
 set -euo pipefail
@@ -587,6 +597,15 @@ mkdir -p research/luna/artifacts/p85-literal-replay-02 \
   tmp/p85-literal-replay-02
 
 source_path='scripts/replay_prompt85_literal.py'
+preflight_path='research/luna/artifacts/p85-literal-replay-02/preflight.json'
+preflight_partial="${preflight_path}.partial"
+full_path='research/luna/artifacts/p85-literal-replay-02/full.json'
+full_partial="${full_path}.partial"
+second_full_path='tmp/p85-literal-replay-02/full-second.json'
+second_full_partial="${second_full_path}.partial"
+manifest_path='research/luna/artifacts/p85-literal-replay-02/manifest.json'
+manifest_partial="${manifest_path}.partial"
+reset_paths=("$source_path" "$preflight_path" "$full_path" "$manifest_path")
 source_sha256="$(sha256sum "$source_path" | cut -d' ' -f1)"
 test "${#source_sha256}" -eq 64
 case "$source_sha256" in *[!0-9a-f]*) exit 1 ;; esac
@@ -595,16 +614,32 @@ assert_source_unchanged () {
     "$source_sha256"
 }
 
+phase_cleanup=()
+abort_phase () {
+  trap - ERR INT TERM
+  git reset --quiet HEAD -- "${reset_paths[@]}" || true
+  rm -f -- "${phase_cleanup[@]}"
+  exit 1
+}
+
+# A failed or interrupted preflight leaves neither a partial file nor an old
+# retained preflight that could be mistaken for the current approval basis.
+phase_cleanup=("$preflight_path" "$preflight_partial")
+trap abort_phase ERR INT TERM
+rm -f -- "$preflight_path" "$preflight_partial"
 timeout 300s /usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --preflight \
   --source-sha256 "$source_sha256" \
-  --output research/luna/artifacts/p85-literal-replay-02/preflight.json
+  --output "$preflight_partial"
 assert_source_unchanged
 /usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --verify-preflight \
-  research/luna/artifacts/p85-literal-replay-02/preflight.json \
+  "$preflight_partial" \
   --source-sha256 "$source_sha256"
-sha256sum research/luna/artifacts/p85-literal-replay-02/preflight.json
+mv -f -- "$preflight_partial" "$preflight_path"
+trap - ERR INT TERM
+phase_cleanup=()
+sha256sum "$preflight_path"
 
 # Stop here until the supervising Medium lead supplies and the worker verifies
 # medium-preflight-approved.txt exactly as specified above.
@@ -624,40 +659,59 @@ approved_preflight_sha="$(sed -n 's/^Preflight SHA-256: //p' "$approval")"
 test "${#approved_preflight_sha}" -eq 64
 case "$approved_preflight_sha" in *[!0-9a-f]*) exit 1 ;; esac
 test "$approved_preflight_sha" = \
-  "$(sha256sum research/luna/artifacts/p85-literal-replay-02/preflight.json | cut -d' ' -f1)"
+  "$(sha256sum "$preflight_path" | cut -d' ' -f1)"
 test "$(sed -n 's/^Decision: //p' "$approval" | wc -l)" -eq 1
 test "$(sed -n 's/^Decision: //p' "$approval")" = \
   'APPROVED FOR FULL RUN'
 assert_source_unchanged
 
+# From valid approval onward, every retained or ignored full/manifest output is
+# either atomically installed from a verified same-directory partial file or
+# removed on any failure, interruption, timeout, or later precommit rejection.
+phase_cleanup=(
+  "$preflight_path"
+  "$full_path" "$full_partial"
+  "$second_full_path" "$second_full_partial"
+  "$manifest_path" "$manifest_partial"
+)
+trap abort_phase ERR INT TERM
+rm -f -- "$full_path" "$full_partial" \
+  "$second_full_path" "$second_full_partial" \
+  "$manifest_path" "$manifest_partial"
 timeout 1500s /usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --full \
   --source-sha256 "$source_sha256" \
-  --output research/luna/artifacts/p85-literal-replay-02/full.json
+  --output "$full_partial"
 assert_source_unchanged
+mv -f -- "$full_partial" "$full_path"
 timeout 1500s /usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --full \
   --source-sha256 "$source_sha256" \
-  --output tmp/p85-literal-replay-02/full-second.json
+  --output "$second_full_partial"
 assert_source_unchanged
-cmp research/luna/artifacts/p85-literal-replay-02/full.json \
-  tmp/p85-literal-replay-02/full-second.json
+mv -f -- "$second_full_partial" "$second_full_path"
+cmp "$full_path" "$second_full_path"
 
 assert_source_unchanged
 /usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --write-manifest \
-  --preflight-path research/luna/artifacts/p85-literal-replay-02/preflight.json \
-  --full-path research/luna/artifacts/p85-literal-replay-02/full.json \
-  --second-full-path tmp/p85-literal-replay-02/full-second.json \
+  --preflight-path "$preflight_path" \
+  --full-path "$full_path" \
+  --second-full-path "$second_full_path" \
   --source-sha256 "$source_sha256" \
   --contract-commit "$contract_commit" \
   --contract-sha256 "$contract_sha256" \
-  --output research/luna/artifacts/p85-literal-replay-02/manifest.json
+  --output "$manifest_partial"
 assert_source_unchanged
 /usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --verify-manifest \
-  research/luna/artifacts/p85-literal-replay-02/manifest.json \
-  --second-full-path tmp/p85-literal-replay-02/full-second.json
+  "$manifest_partial" \
+  --second-full-path "$second_full_path"
+mv -f -- "$manifest_partial" "$manifest_path"
+/usr/bin/python3.14 scripts/replay_prompt85_literal.py \
+  --verify-manifest \
+  "$manifest_path" \
+  --second-full-path "$second_full_path"
 assert_source_unchanged
 
 PYTHONPYCACHEPREFIX=tmp/p85-literal-replay-02/pycache \
@@ -665,23 +719,10 @@ PYTHONPYCACHEPREFIX=tmp/p85-literal-replay-02/pycache \
 assert_source_unchanged
 scan_paths=(
   scripts/replay_prompt85_literal.py
-  research/luna/artifacts/p85-literal-replay-02/preflight.json
-  research/luna/artifacts/p85-literal-replay-02/full.json
-  research/luna/artifacts/p85-literal-replay-02/manifest.json
+  "$preflight_path"
+  "$full_path"
+  "$manifest_path"
 )
-
-# From this point, any failed validation restores an empty index, removes all
-# retained COMPLETE-bearing outputs, leaves the source and ignored logs for
-# inspection, and creates no commit.
-cleanup_failed_validation () {
-  git reset --quiet HEAD -- "${scan_paths[@]}" || true
-  rm -f -- \
-    research/luna/artifacts/p85-literal-replay-02/preflight.json \
-    research/luna/artifacts/p85-literal-replay-02/full.json \
-    research/luna/artifacts/p85-literal-replay-02/manifest.json \
-    tmp/p85-literal-replay-02/full-second.json
-}
-trap cleanup_failed_validation ERR
 
 actual_changed="$(git status --porcelain=v1 --untracked-files=all | \
   sed 's/^...//' | sort)"
@@ -709,7 +750,8 @@ test "$staged_changed" = "$expected_changed"
 assert_source_unchanged
 git -c commit.gpgSign=false commit --no-verify \
   -m 'verification: replay Prompt85 literal constructions'
-trap - ERR
+trap - ERR INT TERM
+phase_cleanup=()
 
 bundle_commit="$(git rev-parse HEAD)"
 test "${#bundle_commit}" -eq 40
