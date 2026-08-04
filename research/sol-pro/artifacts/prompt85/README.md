@@ -40,3 +40,9 @@ Conjecture remains open.
 A targeted credential, private-key, browser-session, personal-email, and
 private-machine-path scan of the normalized response and this memo found no
 sensitive data. There are no response-era sandbox links to classify.
+
+`git diff --check` flags exactly three immutable response lines—normalized
+response lines 665, 877, and 1277—whose complete content is seven `=`
+characters. They are original mathematical equation separators bound by the
+response hash, not Git merge markers. Changing them would violate exact
+recovery. All other changed paths and scoped checks pass.
