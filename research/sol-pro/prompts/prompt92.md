@@ -430,9 +430,9 @@ Audit all of the following.
 7. Prompt89 studies balanced junction bounds on pivot bad sets. Prompt90
    studies minimal covers of the fastest covered pivot. Neither supplies this
    fixed-grid product divisibility.
-8. Prompt91's simultaneous Fejer invariant is rejected by the exact tuple
-   `(15,21,40,48,56,105,126,280,1200)`. This contract has no common-clock
-   convolution, kernel, Fourier score, or dependency on that killed target.
+8. Prompt91 is a prepared, prelaunch common-clock Fejer/Fourier invariant
+   route. This contract uses no common-clock convolution, kernel, Fourier
+   score, or dependency on that separate route.
 9. Known prime failures prohibit changing the target from dyadic `q_n` to
    every prime or every modulus. Distinct-prime supply remains a separate open
    route.
