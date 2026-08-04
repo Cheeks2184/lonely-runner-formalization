@@ -1,10 +1,10 @@
 P92 RECOVERY MANIFEST v1
 task_id: OPS-P92-RECOVERY-PACKAGE-298
-base_commit: e3055a1acdab1476320a1dc742767cd7e2451206
+base_commit: 5eea554e788aab23dd4db75f580498efcece9742
 launch_task: SOL-P92-DESKTOP-LAUNCH-284
 prompt_path: research/sol-pro/prompts/prompt92.md
 prompt_sha256: 654f8bc4de240642483cd83898c6cd272cf0eb3635ab9c08971bdc2d2ac2c3dd
-prompt_integrated_commit: 42dd00f405158e1fced416a1a69a475d1462784b
+prompt_integrated_commit: 14cf36c46eab2b9a0ef30460624e6f02cbc32091
 raw_response_source: ignored tmp/p92-response.raw.b64 captured solely by Sol High
 raw_response_sha256: 3af0da9f6dba3f1a191d8944cddbfa12cdd4348ab6df3e276c8b7c55ae3560e3
 raw_response_bytes: 33917

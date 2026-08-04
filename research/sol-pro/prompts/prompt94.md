@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - divisor-lattice contract only
 task_id: SOL-P94-DIVISOR-LATTICE-CONTRACT-PREP-283
-base_commit: d389ec8be54d63753719d603147c591ab37a3984
+base_commit: 24a8f227db16309c6e8cfc842eba1cf163990166
 admission: REVIEW-REQUIRED
 ---
 

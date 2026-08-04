@@ -341,7 +341,7 @@ a clean ext4 checkout with the commands above; latest recorded results and
 tool versions are in [STATUS.md](STATUS.md).
 
 The lifecycle snapshot is being reconciled from authoritative main through
-`4b3f063` and immutable PI promotion
+`e3e38bd` and immutable PI promotion
 registry checkpoint `fe4efb03063555f1f95175ed50a1c55bacbaa7a6`. The latest authoritative clean
 full-project Lean/trust/regression replay is lifecycle checkpoint
 `fc004e5bddc06e2b7b035cc9cce20a675bbbc2f7`: 3,591 Lean jobs, 302 trust

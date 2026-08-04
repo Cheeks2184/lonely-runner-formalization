@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - unrestricted balanced-junction contract only
 task_id: PIPE-P89-BALANCED-JUNCTION-CONTRACT-257
-base_commit: cc58e9affd445af9cb5f77911c8ab823916bbeae
+base_commit: e0560c5cc9076e5ce3b58f968edc8037eee8c4d3
 admission: REVIEW-REQUIRED
 ---
 

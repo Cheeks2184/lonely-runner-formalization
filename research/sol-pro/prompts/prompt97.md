@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: stopped research-contract provenance record
 task_id: SOL-P97-PRO-CANONICAL-PRIVATE-CYCLE-SYNCHRONIZATION-307
-base_commit: 17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4
+base_commit: bf11c644c80cc1f4411a1d2bb311c26e7040a8eb
 admission: STOP / NOT LAUNCHABLE
 stop_audit_task: OPS-P97-CONTRACT-STOP-AUDIT-313
 candidate_commit: efb8c60aac77c0bcb79e3bd0f0b7d78382c74212

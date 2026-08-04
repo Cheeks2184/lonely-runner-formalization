@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - unrestricted direct-pivot contract only
 task_id: PIPE-P85-WIDTH2-JUNCTION-DEFICIT-CONTRACT-226
-base_commit: 70ef1a13f7383e2e4af34f404cf7a863652b056f
+base_commit: ff61edd6a4a03754b77e9298a7afe847dca3c8c6
 admission: LAUNCH-READY
 ---
 

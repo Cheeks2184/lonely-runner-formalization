@@ -1,8 +1,8 @@
 # Response94 independent mathematical audit
 
 - Task: `P94-MATHEMATICAL-VERIFICATION-311`
-- Audit base: `5db949acb0866ab9b67543b889b6d2d73447afc8`
-- Persistence base: `3df57af646f0618110db6b352709af56a5bd6208`
+- Audit base: `ead7361e79923e8b4e27c1757f2304c68dcebb81`
+- Persistence base: `4fec7c4225789e933d52270e23e68f4733bff887`
 - Scope: tracked Prompt94 contract and normalized response only
 - Overall disposition: `MIXED / OPEN`
 
@@ -15,8 +15,8 @@ No archive member was opened, listed, parsed, extracted, imported, or executed.
 
 | Item | Commit or SHA-256 |
 | --- | --- |
-| Prompt integration commit | `eb143b4ed47cfc91807cf872de8eb48fd13c4089` |
-| Prompt94 launch record commit | `a819e68163503278d12d2c70e80fa2632c9f8fe4` |
+| Prompt integration commit | `3467593e061df081d318cbf957ca201b185949d0` |
+| Prompt94 launch record commit | `1bc7708afd9e116c62ebf836ae85172319cb2d98` |
 | Prompt94 launch record SHA-256 | `baa90c569761e85700813f4e6f8cd832272b9afff0fe0f4ced510c2378d89466` |
 | Tracked prompt SHA-256 | `dfb9d28e46091512864edb182524a60819d5ae0e34b4d1c4b9ba05f09e0e3ae8` |
 | Submitted prompt payload SHA-256 | `a639ddf8a11bd17a9aff998988a3a48d10c9102b14adfeb43fbbf0f134e8c0e8` |
@@ -24,7 +24,7 @@ No archive member was opened, listed, parsed, extracted, imported, or executed.
 | Raw decoded response SHA-256 | `5231192b29d4cbdce1c00bf6c7524fbec9eb769fe09ff91417cb248beccf8932` |
 | Normalized response SHA-256 | `08715c3b0baa64dd5b252121f670ada6fe1e64b151223133f5eae564e707ff41` |
 | Original recovery commit | `8f6fa5c7d6e85b7013fd862baaddfd3f8480b73a` |
-| Authoritative integrated recovery commit at audit time | `5db949acb0866ab9b67543b889b6d2d73447afc8` |
+| Authoritative integrated recovery commit at audit time | `ead7361e79923e8b4e27c1757f2304c68dcebb81` |
 | Recovery manifest SHA-256 | `c25fb4ad62517033fd59277d3b59b05eaa028f12c9021beed32d5fc17316e25f` |
 | Recovery audit SHA-256 | `359a053c432f7a64bc783ebefdc392923a5c1e6c61711ac67c1c6a84903a13a4` |
 

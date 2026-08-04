@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - unrestricted dyadic forcing contract only
 task_id: PIPE-P84-DYADIC-VALUATION-FORCING-CONTRACT-221
-base_commit: 2a210d4565006c9659ec0857527b1269b9b3def1
+base_commit: 075fc59fad9fdb3eeb7cee5b8e2055d5ad047647
 admission: LAUNCH-READY
 ---
 

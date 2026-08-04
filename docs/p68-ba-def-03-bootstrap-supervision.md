@@ -8,7 +8,7 @@ Admission: **`MEDIUM-SPEC-REQUIRED` pending independent contract review**
 ## Disposable exact-base tests
 
 All tests used a fresh Linux-native detached checkout of
-`c05cd83743e6290598077006b380da5d80a1c122`, with no initial `.lake/build`.
+`1bfe7fe27e01478cac8921a895882d1fedf6df61`, with no initial `.lake/build`.
 
 | Test | Result | Scope |
 |---|---:|---|
@@ -58,7 +58,7 @@ succeeded, so a broader build is unnecessary for this admission repair.
 Requested fresh review ID: `VER-P68-BA-DEF03-CONTRACT-223`.
 
 The reviewer must compare the correction with commit
-`39b6129238d41875e1a308ef67b6ab3c9995037f`, confirm that only review-211's two
+`138f3eb72899846ce1c5147b8baa8e1b80af5720`, confirm that only review-211's two
 operational defects changed, audit the allowlisted diagnostic retention and
 bootstrap timeout handling, and confirm that the six fixture semantics and
 four declaration signatures remain unchanged. This Level-1 correction does

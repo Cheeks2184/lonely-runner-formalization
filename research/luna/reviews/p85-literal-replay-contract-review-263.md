@@ -4,7 +4,7 @@ Task ID: `P85-LITERAL-REPLAY-REVIEW-RECORD-263`
 
 Review level: Level 1, documentation-only independent contract review
 
-Review base: `dbc5d83551b68ddcca7edd8d1a1c3f78a6f0c5ff`
+Review base: `66f4dc8adc96e4fdf1b0686088b9c18a9f12c83d`
 
 Candidate contract commit:
 `2b0b537bfc3d1cd0bc619e3d84caf2ff2d663a98`

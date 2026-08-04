@@ -24,7 +24,7 @@ only after independent review accepts the final contract blob and Sol High
 commits the immutable launch record. Preparation alone is not admission or
 launch.
 
-Base commit: `c05cd83743e6290598077006b380da5d80a1c122`
+Base commit: `1bfe7fe27e01478cac8921a895882d1fedf6df61`
 
 Branch/worktree:
 
@@ -86,7 +86,7 @@ test ! -e ../lrc-luna-p68-ba-def-03
 test -z "$(git branch --list formal/luna-p68-ba-def-03)"
 git worktree add -b formal/luna-p68-ba-def-03 \
   ../lrc-luna-p68-ba-def-03 \
-  c05cd83743e6290598077006b380da5d80a1c122
+  1bfe7fe27e01478cac8921a895882d1fedf6df61
 ```
 
 From the new worktree, the launcher and worker must both run this exact live
@@ -101,11 +101,11 @@ expected_worker_root="$(realpath "$controller_root/../lrc-luna-p68-ba-def-03")"
 test "$worker_root" = "$expected_worker_root"
 test "$(dirname "$worker_root")" = "$(dirname "$controller_root")"
 test "$(basename "$worker_root")" = "lrc-luna-p68-ba-def-03"
-test "$(git rev-parse HEAD)" = "c05cd83743e6290598077006b380da5d80a1c122"
+test "$(git rev-parse HEAD)" = "1bfe7fe27e01478cac8921a895882d1fedf6df61"
 test "$(git branch --show-current)" = "formal/luna-p68-ba-def-03"
 git worktree list --porcelain | awk \
   -v wt="$worker_root" \
-  -v head="c05cd83743e6290598077006b380da5d80a1c122" '
+  -v head="1bfe7fe27e01478cac8921a895882d1fedf6df61" '
     $1 == "worktree" {
       in_target = ($0 == "worktree " wt)
       if (in_target) seen = 1
@@ -142,7 +142,7 @@ fields with final values:
 
 ```text
 Task ID: P68-BA-DEF-03
-Worker base: c05cd83743e6290598077006b380da5d80a1c122
+Worker base: 1bfe7fe27e01478cac8921a895882d1fedf6df61
 Contract commit: <40-hex correction tip containing this contract>
 Contract path: research/luna/contracts/p68-ba-def-03.md
 Contract SHA-256: <64-hex SHA-256 of the blob at Contract commit/Contract path>
@@ -186,7 +186,7 @@ test "$(printf '%s\n' "$record_text" | sed -n 's/^Task ID: //p')" = \
   'P68-BA-DEF-03'
 test "$(git show "${launch_record_commit}:${launch_record_path}" | \
   sed -n 's/^Worker base: //p')" = \
-  'c05cd83743e6290598077006b380da5d80a1c122'
+  '1bfe7fe27e01478cac8921a895882d1fedf6df61'
 test "$(git show "${launch_record_commit}:${launch_record_path}" | \
   sed -n 's/^Contract path: //p')" = "$contract_path"
 test "$(git show "${launch_record_commit}:${launch_record_path}" | \
@@ -629,7 +629,7 @@ must not be committed or included in an artifact bundle.
 Run from the assigned worktree root. Before implementation:
 
 ```bash
-test "$(git rev-parse HEAD)" = "c05cd83743e6290598077006b380da5d80a1c122"
+test "$(git rev-parse HEAD)" = "1bfe7fe27e01478cac8921a895882d1fedf6df61"
 test "$(git branch --show-current)" = "formal/luna-p68-ba-def-03"
 git status --short
 ```
@@ -737,7 +737,7 @@ test "$(cat "$safe_log")" = "$(printf '%s\n%s' \
   'fixture=5 result=expected-failure cause=missing-NeZero-0' \
   'fixture=6 result=expected-failure cause=false-height-9600')"
 git diff --check
-git diff --name-only c05cd83743e6290598077006b380da5d80a1c122 --
+git diff --name-only 1bfe7fe27e01478cac8921a895882d1fedf6df61 --
 git ls-files --others --exclude-standard
 git status --porcelain=v1 --untracked-files=all
 ```
@@ -801,7 +801,7 @@ lake build LonelyRunner.BoundedAnnihilator
 lake env lean tmp/p68-ba-def-03/AxiomProbe.lean
 if git grep -n -E 'sorry|admit|native_decide|unsafe|^[[:space:]]*(axiom|constant)[[:space:]]' -- LonelyRunner/BoundedAnnihilator.lean; then exit 1; fi
 git diff --check
-git diff --name-only c05cd83743e6290598077006b380da5d80a1c122 --
+git diff --name-only 1bfe7fe27e01478cac8921a895882d1fedf6df61 --
 git ls-files --others --exclude-standard
 git status --porcelain=v1 --untracked-files=all
 ```
@@ -816,8 +816,8 @@ run:
 ```bash
 git status --short
 git show --stat --oneline --decorate HEAD
-git diff --check c05cd83743e6290598077006b380da5d80a1c122..HEAD
-git diff --name-only c05cd83743e6290598077006b380da5d80a1c122..HEAD
+git diff --check 1bfe7fe27e01478cac8921a895882d1fedf6df61..HEAD
+git diff --name-only 1bfe7fe27e01478cac8921a895882d1fedf6df61..HEAD
 git ls-files --others --exclude-standard
 git status --porcelain=v1 --untracked-files=all
 ```
@@ -843,7 +843,7 @@ inapplicable value:
 Task ID: P68-BA-DEF-03
 Effective model and effort metadata: <exact sanitized RuntimeProbe PASS line, or FAIL code>
 Runtime probe disclosure audit: <PASS/FAIL; no IDs, paths, raw JSON, or raw errors>
-Base commit: c05cd83743e6290598077006b380da5d80a1c122
+Base commit: 1bfe7fe27e01478cac8921a895882d1fedf6df61
 Launch-record commit/path: <exact external commit and research/luna/launches/p68-ba-def-03.md>
 Contract commit/path/SHA-256: <exact values verified from the launch record>
 Worktree mapping/readback: <../lrc-luna-p68-ba-def-03 and containment PASS/FAIL only>

@@ -1,8 +1,8 @@
 # Response96 independent mathematical audit
 
 - Task: `P96-MATHEMATICAL-VERIFICATION-312`
-- Mathematical audit base: `5db949acb0866ab9b67543b889b6d2d73447afc8`
-- Persistence base: `3df57af646f0618110db6b352709af56a5bd6208`
+- Mathematical audit base: `ead7361e79923e8b4e27c1757f2304c68dcebb81`
+- Persistence base: `4fec7c4225789e933d52270e23e68f4733bff887`
 - Overall disposition: `ACCEPT SEPARATION`
 - Scope: the symbolic all-`E` family only
 
@@ -16,8 +16,8 @@ promote any theorem to `proved-lean`.
 
 | Item | Commit or SHA-256 |
 | --- | --- |
-| Prompt integration commit | `17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4` |
-| Prompt96 launch record commit | `9687dce93c58555043988d859d44f28965b0461a` |
+| Prompt integration commit | `bf11c644c80cc1f4411a1d2bb311c26e7040a8eb` |
+| Prompt96 launch record commit | `2cd5d41704709872765cee549e6d1c0a46761e76` |
 | Prompt96 launch record SHA-256 | `833cafd9303a971bc6c9ea2be7f17797ab668cf6e9b17580177633e123147c3d` |
 | Tracked prompt SHA-256 | `adbcb3215f385df5e21d2f5f3c6a79ec2f775f309c189cd7c731b65fc9d6f1d1` |
 | Submitted payload SHA-256 | `cfe244b748c67d64e1d6c5e8a0710f1ed9ba97d44f7699a12d71ba625821fdab` |
@@ -25,7 +25,7 @@ promote any theorem to `proved-lean`.
 | Raw decoded response SHA-256 | `d9bce8c6cca6fd75da50393c49e301284060519970379fe112d6b5329197b8ed` |
 | Normalized response SHA-256 | `fe812c66937d5ad3b2db9504bd9df5601878af23753d524c9407258b19336d9f` |
 | Original recovery commit | `d13d35fc4d7c69638a32505f680b7e774121edf3` |
-| Authoritative integrated recovery commit | `d3af3bc946bb210f441336759ce3d0612d8cac75` |
+| Authoritative integrated recovery commit | `d257b9502bb31c8220fa051c5ad60857cab3fc06` |
 | Recovery audit SHA-256 | `8b699adcb0998b5cca353c83f9a8890a409634b66150d4a0362bf6a5188bc549` |
 
 No attachment existed for Prompt96. No Prompt92 quarantine file, archive,

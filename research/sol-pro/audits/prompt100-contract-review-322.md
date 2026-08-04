@@ -2,7 +2,7 @@
 
 - Task: `P100-INDEPENDENT-CONTRACT-REVIEW-322`
 - Candidate commit: `f3870caca038cc889420ff1d69d9eedefe5818a4`
-- Candidate base: `d5eae533c0a97ef8240e604adc704b207ca881c6`
+- Candidate base: `64d5a6a62df3cdc963aacc809600bd7d9d10a9ed`
 - Decision: `ACCEPT` as a launch-ready supporting contract
 - Route classification: Prompt95 maximum-covered-pivot subroute
 - Independent third-cell classification: `NO`

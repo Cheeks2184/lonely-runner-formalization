@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - reserved adversarial synthesis contract only
 task_id: PIPE-P87-DYADIC-STOP-SYNTHESIS-CONTRACT-245
-base_commit: 908a91234f5b91bbe5a4d759883e233993d8c9d8
+base_commit: efc6bb80aa4f6b08cb1a8eb00ce2146f6a0426eb
 admission: REVIEW-REQUIRED
 ---
 
@@ -66,8 +66,8 @@ response has SHA-256
 
 Prompt84's independent mathematical audit is
 `docs/response84-mathematical-audit.md` at commit
-`9774598704ec95d7f18dca0819ee6c12fec8dcf6`, merged on main at
-`3c51da2752e6d731cc00da5fbbb9f401596cb196`. It accepts `STOP` and the
+`f86f82389d610f57cce0fceb1b5167945b33ace6`, merged on main at
+`c3c1fa6478270d215bcf51d9325032d4bd8283a7`. It accepts `STOP` and the
 counterfamily at `proved-math-qualified` scope, strengthened from dyadic
 powers to every integer `q>=8` with `4|q`. It accepts no response-authored
 scan or count as computed finite evidence. Independently rederive the theorem

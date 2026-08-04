@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - adversarial synthesis contract only
 task_id: PIPE-P81-ADVERSARIAL-SYNTHESIS-CONTRACT-206
-base_commit: 9789f1dd457f0084838dfe72c5aa5168d33e278b
+base_commit: 33badb893e0cb82d054ef08f479e2314792f8a65
 admission: LAUNCH-READY
 ---
 
@@ -42,8 +42,8 @@ are frozen at contract preparation:
 | Prompt78 contract | `cb8ceeba04ac4b4d89d6bf05b1ff62d68d2a9336` | `research/sol-pro/prompts/prompt78.md` | `0ffb03bb998670392c5e08fb21d800abbae8729180d502f6981c7a7737980099` | exact target and boundary only |
 | Response78 | `5652ab11d436135766ce2147be58b6836f59cc85` | `research/sol-pro/responses/response78.md` | `96e3bc5d0c05fb2b04e8e2d9117a55bf86b1d96d608e92422553bf54ab0a2390` | claims constrained by the audit below |
 | Response78 mathematical audit | `bf4b9671ae0c23f2aa93dcb5c083d59771029347` | `docs/response78-mathematical-audit.md` | `16ba2b8b617dcbc50b97a2c3c029ac67485daeace11d6bae7be13e765052b78a` | accepted manuscript counterexample and exact local lemmas only |
-| Prompt79 contract | `6f7573f1b8f897be894a0a4819d958e447379eac` | `research/sol-pro/prompts/prompt79.md` | `3e22ddf4b0ca5ea82bcbe028594aedb4d8584f640293cacdc2019766e755a93a` | active contract only |
-| Prompt80 contract | `0915ebb280fa34ea7a355c8eeafae9b08684afd9` | `research/sol-pro/prompts/prompt80.md` | `49662646959df4e1a245b36c76d21dade391308bc38e2cedb610674df937092e` | active contract only |
+| Prompt79 contract | `0097d13b8e430ca22b63ae727cdd7a9301cfb638` | `research/sol-pro/prompts/prompt79.md` | `3e22ddf4b0ca5ea82bcbe028594aedb4d8584f640293cacdc2019766e755a93a` | active contract only |
+| Prompt80 contract | `c134e1d5dd980865b8c209c304fe84b3eef0f796` | `research/sol-pro/prompts/prompt80.md` | `49662646959df4e1a245b36c76d21dade391308bc38e2cedb610674df937092e` | active contract only |
 
 Response77's independent audit accepts the infinite primitive family only at
 `proved-math` manuscript scope. Independently rederive each part used in a

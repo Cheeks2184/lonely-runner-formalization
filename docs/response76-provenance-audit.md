@@ -3,7 +3,7 @@
 Task: `OPS-P76-PROVENANCE-AUDIT-200`
 
 Audit base and recovered package commit:
-`8c82bd24a73bd44354db2ae4529caf2e03577929`
+`44bd7b8e97df955987099dc7560c7de005ce1187`
 
 Audit scope: tracked recovery bytes, response normalization, hashes,
 manifest bindings, JSON syntax, source/output hash references, launch and
@@ -128,7 +128,7 @@ consistency rather than independent custody of the raw clipboard.
 ## Lifecycle consistency
 
 Commit `9694789846f6e9e01dede7cb1cfe59e8bea5dcb7` first created the launch
-record with lifecycle `active Sol Pro research`. Recovery commit `8c82bd2`
+record with lifecycle `active Sol Pro research`. Recovery commit `44bd7b8`
 then changed it to `completed/recovered`, added the canonical response and
 five attachments, and appended a matching recovery entry to
 `research/sol-pro/session-log.md`. This history is monotone and does not infer

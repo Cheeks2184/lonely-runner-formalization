@@ -21,32 +21,32 @@ have integrated independent audits. Prompt81's recovered response is
 result. Prompt83 completed, recovered, and audited STOP. Prompt84's immutable
 audit proves the qualified negative `not PowerForcing(4,q)` for every integer
 `q >= 8` divisible by four; this does not decide unrestricted LRC. Prompt85's
-audit is completed at `cc58e9a` with mixed/provisional STOP: generic
+audit is completed at `e0560c5` with mixed/provisional STOP: generic
 mathematics and pivot grids are qualified, but width-two minima and the
 counterexample remain unverified. Task256 and replay `-01` are closed: the
 fresh top-level Luna/xhigh run exited at the runtime-metadata accessibility
 gate before source work or preflight and is rejected operational output only.
-The new `P85-LITERAL-REPLAY-02` contract is integrated through `fe01a9e`, but
+The new `P85-LITERAL-REPLAY-02` contract is integrated through `f64092f`, but
 remains `REVIEW-REQUIRED` / `MEDIUM-SPEC-REQUIRED`. No immutable runtime
 receipt, launch record, worker, preflight, implementation, or evidence exists.
 
-Prompt86 completed and was recovered at `faeb57f` with provisional
+Prompt86 completed and was recovered at `496161c` with provisional
 `MIXED / PIVOT` triage only. Its five attachments are
 `QUARANTINED / UNVERIFIED`, its selector remains `OPEN`, and nothing is
-promoted. Prompt87 completed, was recovered at `143f363`, and has an
-independent audit integrated at `fba819e`. Prompt92 audit301, merged at
-`79c4549`, now supplies a `proved-math-qualified` symbolic counterfamily that
+promoted. Prompt87 completed, was recovered at `df86424`, and has an
+independent audit integrated at `98f4655`. Prompt92 audit301, merged at
+`15dfcd1`, now supplies a `proved-math-qualified` symbolic counterfamily that
 refutes the identical Prompt87/Prompt92 aggregate-dyadic bridge. This stops
 only that auxiliary bridge; it is not Lean or computed finite evidence and
 does not decide unrestricted LRC or the pivot-certificate equivalence.
 Prompt89 completed and its exact response and four attachments are recovered
-at `d389ec8`, while its self-label `PIVOT` and response computation remain
+at `24a8f22`, while its self-label `PIVOT` and response computation remain
 unverified / quarantined.
 
 Prompt90 is a failed research launch and rejected operational output at
-recovery merge `33a690d`: its submitted payload remained a `REVIEW-REQUIRED`
+recovery merge `0941fff`: its submitted payload remained a `REVIEW-REQUIRED`
 Medium contract, so no theorem was attempted. Prompt92 completed and was
-recovered at `2e5554c`; audit301 proves the all-`E` symbolic family and exact
+recovered at `6fb384d`; audit301 proves the all-`E` symbolic family and exact
 `E_6=117` instance at `proved-math-qualified` scope, refuting exactly the
 identical Prompt87/92 aggregate bridge. Quarantined response computation
 remains unpromoted. Prompt91 stopped before launch after REVISE / STOP review
@@ -55,26 +55,26 @@ and provenance remains pending. Prompt93 is frozen at prelaunch STOP after
 review281 found its frozen `Psi` target false at `(1,3,4)`, but no
 artifact-grade accepted counterexample is integrated and it was not launched.
 Its branch-only replay candidate remains `MEDIUM-SPEC-REQUIRED` after
-review294 returned REVISE. Prompt94 is recovered at `5db949a`; its independent
-mathematical audit is integrated at `2334112` with `MIXED / OPEN`
+review294 returned REVISE. Prompt94 is recovered at `ead7361`; its independent
+mathematical audit is integrated at `f190022` with `MIXED / OPEN`
 disposition. The quarantined archive was not used, and its unit-deficit target
-remains open. Prompt95 is recovered through `2c81032`; audit `591b011`
+remains open. Prompt95 is recovered through `dbb94e8`; audit `8e0b115`
 accepts only qualified local capacity, scaling, and slice calculations. Its
 three attachments remain quarantined, `PRIVATE-LIFT-COVERAGE` is open and
 insufficient by itself, and the maximum-covered-pivot theorem remains open.
-Prompt96 is recovered at `d3af3bc`; audit `2334112` accepts a family-specific
+Prompt96 is recovered at `d257b95`; audit `f190022` accepts a family-specific
 `SEPARATION` only. It prevents misuse of the Prompt92 family but proves no
-unrestricted bridge. Prompt97 stopped before launch at `068de11` because its
+unrestricted bridge. Prompt97 stopped before launch at `97776e8` because its
 cycle target was an exact tautological reformulation of the open unit-certificate
 target.
 
 Prompt98 and Prompt99 are active Sol Pro cells on the complementary
 nondivisible and divisible maximum-covered-pivot branches, launched at
-`d5eae53` and `3df57af`. Prompt100 is a third active cell, launched at
-`40f166d` with corrected tab provenance at `5fd423e`; it attacks the uniform
+`64d5a6a` and `4fec7c4`. Prompt100 is a third active cell, launched at
+`a661fe1` with corrected tab provenance at `d25e4e6`; it attacks the uniform
 two-lower-owner noncover theorem and would prove only the `|F(a)|<=3`
 Prompt95 regime. Prompt101's independent global covered-pivot matrix contract
-is reviewed and launch-ready at `1c3cfe7`. A launch or prepared prompt is not
+is reviewed and launch-ready at `fbda0f0`. A launch or prepared prompt is not
 a result, and every target above remains open while its turn runs.
 
 Prompt88 remains parked as `MEDIUM-SPEC-REQUIRED`. At least two Medium lead
@@ -696,7 +696,7 @@ packing existence, `PACK-09`, and unrestricted LRC remain open.
 ## Latest verification
 
 Current authoritative integrated research checkpoint:
-`db438f206b35d51d8b001ae5256c5a3022b8d0b7`.
+`a7709c278bc381ce6ed55e18f61a1e1f973460c7`.
 
 The public-release audit wrapper now resolves and mounts the common Git
 metadata read-only in normal checkouts and linked worktrees, mounts the source

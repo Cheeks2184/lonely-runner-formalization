@@ -1,14 +1,14 @@
 P95 RECOVERY MANIFEST v1
 task_id: OPS-P95-RECOVERY-PACKAGE-310
-base_commit: 5db949acb0866ab9b67543b889b6d2d73447afc8
+base_commit: ead7361e79923e8b4e27c1757f2304c68dcebb81
 launch_task: SOL-P95-DESKTOP-LAUNCH-297
 prompt_path: research/sol-pro/prompts/prompt95.md
 scoped_prompt_sha256: 5f917f80e45fcbc30a442a9c6e434c53d093477eeab2013a49ba599bf314944c
 scoped_prompt_hash_scope: bytes from the line "# Prompt 95:" through EOF
 full_tracked_prompt_sha256: 3fab778e3e11adb920304f8c2537737da24fc31c16c10fb3208b68617d9643fb
 submitted_payload_sha256: c2f64c8107e1a48193a3f8b6a13f3b8d802a62073a8513c2044d30ad4c284fe4
-prompt_integrated_commit: d75b9bcab88bb09d7c03911442a0aa4636aac767
-launch_integrated_commit: e3055a1acdab1476320a1dc742767cd7e2451206
+prompt_integrated_commit: cc281e1fa9f0abcbd9bdd3e928fe976b336a633e
+launch_integrated_commit: 5eea554e788aab23dd4db75f580498efcece9742
 raw_response_source: ignored tmp/p95-response.raw.b64 captured solely by Sol High
 ignored_base64_capture_bytes: 59188
 ignored_base64_capture_sha256: 9419238f11230a9c42bbcb36e8e105357c694e1cc6864ab75e67776929e71ef0

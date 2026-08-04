@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - unrestricted contract preparation only
 task_id: PIPE-P86-LOCAL-PIVOT-SCORE-CONTRACT-238
-base_commit: b083994f6cf2e54f5129f3dc211365ca2a1b8c66
+base_commit: 4944fe1c4af3b6fc1dfdd4e407324f61170edbbb
 admission: LAUNCH-READY
 ---
 

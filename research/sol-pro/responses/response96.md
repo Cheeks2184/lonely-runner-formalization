@@ -34,7 +34,7 @@ Prompt94 and Prompt95 remain `open`. All new reasoning below is `proved-math-res
 The accepted comparison target is audit301 at commit
 
 ```text
-79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa
+15dfcd14bd2e4230b042cf5f8c4c717a006b6913
 ```
 
 with audit-file SHA-256

@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: GPT-5.6 Sol / Pro mathematical research agent
 task_id: SOL-P98-PRO-MAX-COVERED-NONDIVISIBLE-PIVOT-REDUNDANCY-315
-base_commit: 5db949acb0866ab9b67543b889b6d2d73447afc8
+base_commit: ead7361e79923e8b4e27c1757f2304c68dcebb81
 admission: REVIEW-REQUIRED
 prompt_encoding: ASCII
 prompt_line_endings: LF

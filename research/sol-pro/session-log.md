@@ -445,7 +445,7 @@ or unrestricted LRC.
 
 ## OPS-P76-RECOVERY-PACKAGE-197 - Prompt76 recovery package
 
-- **Recovery base:** `628d6edd971cdfffaeecf24c83362bf1462200cf`
+- **Recovery base:** `4da163d22e0f3a805c966545bba802adf7787a54`
 - **Recovery branch:** `research/p76-recovery-package-197`
 - **Launch owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator
   (`/root`) in the original signed-in browser-capable desktop session
@@ -480,7 +480,7 @@ status is promoted by this package.
 
 ## OPS-P77-RECOVERY-PACKAGE-201 - Prompt77 recovery package
 
-- **Recovery base:** `8c82bd24a73bd44354db2ae4529caf2e03577929`
+- **Recovery base:** `44bd7b8e97df955987099dc7560c7de005ce1187`
 - **Recovery branch:** `research/p77-recovery-package-201`
 - **Launch owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator
   (`/root`) in the original signed-in browser-capable desktop session
@@ -515,7 +515,7 @@ or LRC status is promoted by this package.
 
 ## OPS-P78-RECOVERY-PACKAGE-207 - Prompt78 recovery package
 
-- **Recovery base:** `c16dc4e284c47c5ba1604d42d813a972da7693b4`
+- **Recovery base:** `43833f051cbaa4e91b6e54d78745c2ca1df765a7`
 - **Recovery branch:** `research/p78-recovery-package-207`
 - **Launch owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator
   (`/root`) in the original signed-in browser-capable desktop session
@@ -582,4 +582,4 @@ P68 Task02 used the verified fresh top-level Luna/xhigh route but returned zero
 mandatory fixtures and no completed domain, so it is preserved only as
 `rejected-operational-output`. Task03 remains `MEDIUM-SPEC-REQUIRED` and is not
 launchable. These lifecycle decisions are bound to immutable PI registry
-commit `4fcc1d5614852fc609fd5b6dbbace4b5f835b14b`.
+commit `9258be8385313da2c03383e9f12024cafa4af951`.

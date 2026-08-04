@@ -1,6 +1,6 @@
 P89 RECOVERY MANIFEST v1
 task_id: OPS-P89-RECOVERY-PACKAGE-276
-base_commit: faeb57fb41a2cf3486a9717368f8ac5b544ceb23
+base_commit: 496161cbff2874da42d70953daca304bfe36bde4
 launch_task: SOL-P89-DESKTOP-LAUNCH-259
 prompt_path: research/sol-pro/prompts/prompt89.md
 prompt_sha256: acd509f2ac8e471d56f0564b133a98b5d91e2652ebb7892bd3cb5a2990c1cf74

@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Lead - prompt preparation only
 task_id: PIPE-P78-ALTERNATE-CONTRACT-191
-base_commit: c05cd83743e6290598077006b380da5d80a1c122
+base_commit: 1bfe7fe27e01478cac8921a895882d1fedf6df61
 admission: LAUNCH-READY
 ---
 
@@ -34,7 +34,7 @@ Use these immutable inputs only at their integrated audited scopes.
 | Response70 | recovered response `7ca41ed3b537d6270ad07de52fdaf44e80b73f7d`; mathematical audit `d44a5d4508ded714296ec64b1619446355d5388a` | Singleton rigidity, strict-growth functional-graph obstruction, exact bad-set examples, and the all-but-one family are `proved-math`. Private-point-to-gcd and common-prime propagation are rejected or stopped. |
 | Response72 | recovered response `79c7d8937d88ef8c26e11ea5d36f3dc0adafd585`; integrated audit `db0e33091f93311fd95143a0160e7afd60f9e3e8` | Canonical cover existence, uniqueness, inclusion-minimality, private points, singleton cardinality, and boundary facts are `proved-math`. Circuit escape is equivalent to LRC and is excluded here. Quotient transport and canonical-key descent are `rejected`. |
 | Response74 | recovered response `967cabe9d0a94c2504e36e10473ef5eccef87adc`; integrated audit `94442b430f4dbb9b66ec186e5655d556ee4e477e` | Common scaling and the exact nonprimitive signed-Gram counterexample family are `proved-math`. Spectral statements are outside this target. |
-| Prompt75 | recovery commit `b408724`; provenance audit `c05cd83` | Recovery provenance only is accepted. No mathematical, computational, formal, line-attribution, or status claim from Response75 is an input. |
+| Prompt75 | recovery commit `b408724`; provenance audit `1bfe7fe` | Recovery provenance only is accepted. No mathematical, computational, formal, line-attribution, or status claim from Response75 is an input. |
 | Prompt76 and Prompt77 | active launch records integrated before this contract | Both are active, unavailable research cells. Assume no output from either. |
 
 Do not execute a recovered attachment. Use `proved-lean`, `proved-math`,

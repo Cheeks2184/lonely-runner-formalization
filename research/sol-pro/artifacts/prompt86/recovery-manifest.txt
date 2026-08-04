@@ -1,6 +1,6 @@
 P86 RECOVERY MANIFEST v1
 task_id: OPS-P86-RECOVERY-PACKAGE-272
-base_commit: fba819e219e33b3b9a9b9c19adcec94c0065b822
+base_commit: 98f4655e314a97c0d5158d6b3ebe0e8a16259132
 launch_task: SOL-P86-DESKTOP-LAUNCH-242
 prompt_path: research/sol-pro/prompts/prompt86.md
 prompt_sha256: 49135b31319081b732a26fa24ec6154c63c3e2543e6995637d2e2e0b11cc7f77

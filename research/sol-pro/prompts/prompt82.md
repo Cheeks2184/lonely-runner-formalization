@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - unrestricted contract preparation only
 task_id: PIPE-P82-GLOBAL-MULTIPLICITY-CONTRACT-206
-base_commit: 9789f1dd457f0084838dfe72c5aa5168d33e278b
+base_commit: 33badb893e0cb82d054ef08f479e2314792f8a65
 admission: LAUNCH-READY
 ---
 

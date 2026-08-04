@@ -24,7 +24,7 @@ computational, or Lonely Runner claim.
 
 ## Candidate inventory and immutable boundaries
 
-Relative to base `c05cd83743e6290598077006b380da5d80a1c122`, the candidate
+Relative to base `1bfe7fe27e01478cac8921a895882d1fedf6df61`, the candidate
 adds exactly:
 
 - `research/luna/contracts/p68-ba-def-02.md`;

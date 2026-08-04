@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "base_commit": "1c3cfe7746ab672184c5f77a9d6dbe708a50ff37",
+  "base_commit": "fbda0f00ef593c9c6e9ccdfff4e4419678c836cf",
   "promotion_registry_commit": "fe4efb03063555f1f95175ed50a1c55bacbaa7a6",
   "lifecycle_stages": [
     "preparation",
@@ -2872,8 +2872,8 @@
       ],
       "source_refs": [
         "research/sol-pro/launches/prompt75-2026-08-03.md@b40872423d9e6aac3610f058a859600126740365",
-        "docs/response75-provenance-audit.md@c05cd83743e6290598077006b380da5d80a1c122",
-        "docs/response75-mathematical-audit.md@458ee8d0d69abbb7ed83b0fb28960a4f26c4fb14"
+        "docs/response75-provenance-audit.md@1bfe7fe27e01478cac8921a895882d1fedf6df61",
+        "docs/response75-mathematical-audit.md@ead11872fb1daf2c40867760ae1ab37ec816e04b"
       ]
     },
     {
@@ -3495,17 +3495,17 @@
       "disposition": "ACCEPT Prompt75 recovery provenance only: exact three-path inventory, response normalization, prompt and payload linkage, no attachments, and public-safety scope. Prompt75's MIXED and STOP self-assessments, mathematics, computations, formal claims, and evidence labels remain outside this provenance verdict.",
       "audit_outcome": "accepted",
       "review_ids": [],
-      "integration_commit": "c05cd83743e6290598077006b380da5d80a1c122",
+      "integration_commit": "1bfe7fe27e01478cac8921a895882d1fedf6df61",
       "timestamps": [
         {
           "event": "audit_integrated",
           "at": "2026-08-03T21:59:22-05:00",
-          "source": "Git commit c05cd83743e6290598077006b380da5d80a1c122"
+          "source": "Git commit 1bfe7fe27e01478cac8921a895882d1fedf6df61"
         }
       ],
       "source_refs": [
         "reviewed-commit:3f3e126a097ab7a5b80697ebb634af0badbe1f37",
-        "docs/response75-provenance-audit.md@c05cd83743e6290598077006b380da5d80a1c122"
+        "docs/response75-provenance-audit.md@1bfe7fe27e01478cac8921a895882d1fedf6df61"
       ]
     },
     {
@@ -3542,17 +3542,17 @@
       "disposition": "ACCEPT only the independently checked local A1-A4, B1-B6, scaling, singleton, and corrected n=2 results at their prior manuscript scope. STOP every claimed global synthesis: collective bounded-hyperplane exclusion and simultaneous-cover common-prime selection are LRC-equivalent, multiowner compensation remains open, broad scans remain unaccepted, and Prompt75 proves no unrestricted bridge.",
       "audit_outcome": "accepted",
       "review_ids": [],
-      "integration_commit": "458ee8d0d69abbb7ed83b0fb28960a4f26c4fb14",
+      "integration_commit": "ead11872fb1daf2c40867760ae1ab37ec816e04b",
       "timestamps": [
         {
           "event": "audit_integrated",
           "at": "2026-08-03T22:11:28-05:00",
-          "source": "Git commit 458ee8d0d69abbb7ed83b0fb28960a4f26c4fb14"
+          "source": "Git commit ead11872fb1daf2c40867760ae1ab37ec816e04b"
         }
       ],
       "source_refs": [
         "source-commit:67778bfdb44d4e67b8fcdc0ef314e42dc9786611",
-        "docs/response75-mathematical-audit.md@458ee8d0d69abbb7ed83b0fb28960a4f26c4fb14"
+        "docs/response75-mathematical-audit.md@ead11872fb1daf2c40867760ae1ab37ec816e04b"
       ]
     },
     {
@@ -3618,7 +3618,7 @@
         "OPS-P76-PROVENANCE-AUDIT-200",
         "OPS-P76-MATH-AUDIT-199"
       ],
-      "integration_commit": "8c82bd24a73bd44354db2ae4529caf2e03577929",
+      "integration_commit": "44bd7b8e97df955987099dc7560c7de005ce1187",
       "timestamps": [
         {
           "event": "launched",
@@ -3693,7 +3693,7 @@
         "OPS-P77-PROVENANCE-AUDIT-205",
         "OPS-P77-MATH-AUDIT-204"
       ],
-      "integration_commit": "9789f1dd457f0084838dfe72c5aa5168d33e278b",
+      "integration_commit": "33badb893e0cb82d054ef08f479e2314792f8a65",
       "timestamps": [
         {
           "event": "launched",
@@ -3733,7 +3733,7 @@
           "submitted_terminal_lf": false
         }
       },
-      "base_commit": "24f77152bff16aa7a449c1670998789333ca9659",
+      "base_commit": "21467190f572c887b9108c7f4c1f4e885aa9844c",
       "lifecycle_stage": "active_research",
       "dependencies": [],
       "branch": null,
@@ -3767,7 +3767,7 @@
       "review_ids": [
         "OPS-P78-MATH-AUDIT-209"
       ],
-      "integration_commit": "2e150ab97e24125ad09d97c93144115ddd629bf4",
+      "integration_commit": "4252f1f3b6284a79a1f07204405e2916260e4af0",
       "timestamps": [
         {
           "event": "launched",
@@ -3776,8 +3776,8 @@
         }
       ],
       "source_refs": [
-        "prompt-commit:24f77152bff16aa7a449c1670998789333ca9659",
-        "research/sol-pro/launches/prompt78-2026-08-03.md@c2c0adc213c5df85a3f0fe64c87b5cc2b57dc3aa"
+        "prompt-commit:21467190f572c887b9108c7f4c1f4e885aa9844c",
+        "research/sol-pro/launches/prompt78-2026-08-03.md@f21f8b65307344862bde22001d6f59b61dffdbc6"
       ]
     },
     {
@@ -3847,7 +3847,7 @@
         {
           "kind": "artifact",
           "algorithm": "sha256",
-          "value": "911d6109fc70811be6cf38cd4c2f23895835c47fca9662b174a19144c839ddb5",
+          "value": "0163ae5c3af7ed4102bf70bdd99812dbbb14433b0f80a1c38ff7ea526392de81",
           "path": "research/luna/contracts/p68-ba-def-02.md"
         }
       ],
@@ -3856,8 +3856,8 @@
       "integration_commit": null,
       "timestamps": [],
       "source_refs": [
-        "research/luna/contracts/p68-ba-def-02.md@3e1e63eddff43ac44dd214f6907c968411960960",
-        "research/luna/launches/p68-ba-def-02.md@c3572e866f397e617f5e51dd86eabdeb5f621fa5",
+        "research/luna/contracts/p68-ba-def-02.md@f3c130eec10157d22af8dd14a90c2140ee4e9b74",
+        "research/luna/launches/p68-ba-def-02.md@909662a13fa6c8a43d531be3329ada96e774a8dd",
         "parent-authoritative:P68-BA-DEF-02-zero-fixtures-rejected"
       ],
       "id": "P68-BA-DEF-02",
@@ -3871,7 +3871,7 @@
         "effort": "xhigh",
         "pro_cell": false
       },
-      "base_commit": "c05cd83743e6290598077006b380da5d80a1c122",
+      "base_commit": "1bfe7fe27e01478cac8921a895882d1fedf6df61",
       "lifecycle_stage": "independent_audit",
       "status": "rejected",
       "operational_state": "frozen",
@@ -3942,11 +3942,11 @@
         "OPS-P76-PROVENANCE-AUDIT-200",
         "OPS-P76-MATH-AUDIT-199"
       ],
-      "integration_commit": "8c82bd24a73bd44354db2ae4529caf2e03577929",
+      "integration_commit": "44bd7b8e97df955987099dc7560c7de005ce1187",
       "timestamps": [],
       "source_refs": [
-        "research/sol-pro/artifacts/prompt76/README.md@8c82bd24a73bd44354db2ae4529caf2e03577929",
-        "research/sol-pro/responses/response76.md@8c82bd24a73bd44354db2ae4529caf2e03577929"
+        "research/sol-pro/artifacts/prompt76/README.md@44bd7b8e97df955987099dc7560c7de005ce1187",
+        "research/sol-pro/responses/response76.md@44bd7b8e97df955987099dc7560c7de005ce1187"
       ],
       "id": "OPS-P76-RECOVERY-PACKAGE-197",
       "parent_route": "Prompt76",
@@ -3992,11 +3992,11 @@
         "OPS-P77-PROVENANCE-AUDIT-205",
         "OPS-P77-MATH-AUDIT-204"
       ],
-      "integration_commit": "9789f1dd457f0084838dfe72c5aa5168d33e278b",
+      "integration_commit": "33badb893e0cb82d054ef08f479e2314792f8a65",
       "timestamps": [],
       "source_refs": [
-        "research/sol-pro/artifacts/prompt77/README.md@9789f1dd457f0084838dfe72c5aa5168d33e278b",
-        "research/sol-pro/responses/response77.md@9789f1dd457f0084838dfe72c5aa5168d33e278b"
+        "research/sol-pro/artifacts/prompt77/README.md@33badb893e0cb82d054ef08f479e2314792f8a65",
+        "research/sol-pro/responses/response77.md@33badb893e0cb82d054ef08f479e2314792f8a65"
       ],
       "id": "OPS-P77-RECOVERY-PACKAGE-201",
       "parent_route": "Prompt77",
@@ -4041,11 +4041,11 @@
       "review_ids": [
         "OPS-P78-MATH-AUDIT-209"
       ],
-      "integration_commit": "2e150ab97e24125ad09d97c93144115ddd629bf4",
+      "integration_commit": "4252f1f3b6284a79a1f07204405e2916260e4af0",
       "timestamps": [],
       "source_refs": [
-        "research/sol-pro/artifacts/prompt78/README.md@2e150ab97e24125ad09d97c93144115ddd629bf4",
-        "research/sol-pro/responses/response78.md@2e150ab97e24125ad09d97c93144115ddd629bf4"
+        "research/sol-pro/artifacts/prompt78/README.md@4252f1f3b6284a79a1f07204405e2916260e4af0",
+        "research/sol-pro/responses/response78.md@4252f1f3b6284a79a1f07204405e2916260e4af0"
       ],
       "id": "OPS-P78-RECOVERY-PACKAGE-207",
       "parent_route": "Prompt78",
@@ -4058,7 +4058,7 @@
         "effort": "high",
         "pro_cell": false
       },
-      "base_commit": "24f77152bff16aa7a449c1670998789333ca9659",
+      "base_commit": "21467190f572c887b9108c7f4c1f4e885aa9844c",
       "lifecycle_stage": "response_recovery",
       "status": "verified",
       "operational_state": "terminal",
@@ -4082,16 +4082,16 @@
         {
           "kind": "artifact",
           "algorithm": "sha256",
-          "value": "608f6e43acfd41a1a1cfbbfe24525ff44bd1b1bd765215b3d3cdfd5ea8fbbbe7",
+          "value": "a786050d12a354e96181933cb4f48c85363edbcb06e385206b89176864961c30",
           "path": "docs/response76-provenance-audit.md"
         }
       ],
       "audit_outcome": "accepted",
       "review_ids": [],
-      "integration_commit": "3cdfc66974280228c48241544afbf972a0e80bd7",
+      "integration_commit": "a4422b762b3a19f5a4cd44aedda2dfb479082f45",
       "timestamps": [],
       "source_refs": [
-        "docs/response76-provenance-audit.md@3cdfc66974280228c48241544afbf972a0e80bd7"
+        "docs/response76-provenance-audit.md@a4422b762b3a19f5a4cd44aedda2dfb479082f45"
       ],
       "id": "OPS-P76-PROVENANCE-AUDIT-200",
       "parent_route": "Prompt76",
@@ -4104,7 +4104,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "8c82bd24a73bd44354db2ae4529caf2e03577929",
+      "base_commit": "44bd7b8e97df955987099dc7560c7de005ce1187",
       "lifecycle_stage": "independent_audit",
       "status": "verified",
       "operational_state": "terminal",
@@ -4128,16 +4128,16 @@
         {
           "kind": "artifact",
           "algorithm": "sha256",
-          "value": "87013715fa8e3c4c7729a6b723ee215ab22d8f6a81f7eb34be08141b89d818da",
+          "value": "f633cefb1e47502cc930d8bcd0971db97f53129c29c8d59350efef87d0249f28",
           "path": "docs/response76-mathematical-audit.md"
         }
       ],
       "audit_outcome": "accepted",
       "review_ids": [],
-      "integration_commit": "1a95f3eb3c083edbe26eefeda3dafa4ff96c28c9",
+      "integration_commit": "5cf6ad3f4e575ba11ce1516f755159c92afdbffe",
       "timestamps": [],
       "source_refs": [
-        "docs/response76-mathematical-audit.md@1a95f3eb3c083edbe26eefeda3dafa4ff96c28c9"
+        "docs/response76-mathematical-audit.md@5cf6ad3f4e575ba11ce1516f755159c92afdbffe"
       ],
       "id": "OPS-P76-MATH-AUDIT-199",
       "parent_route": "Prompt76",
@@ -4150,7 +4150,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "8c82bd24a73bd44354db2ae4529caf2e03577929",
+      "base_commit": "44bd7b8e97df955987099dc7560c7de005ce1187",
       "lifecycle_stage": "independent_audit",
       "status": "verified",
       "operational_state": "terminal",
@@ -4174,16 +4174,16 @@
         {
           "kind": "artifact",
           "algorithm": "sha256",
-          "value": "a65ee1ff2b73581affc2e994e53c44fda5abc455c34cd9c1c07668f2b92f1268",
+          "value": "c80020ff17c6421135e81a30133227c4ec88b34de7b425f0838afeb2378452b4",
           "path": "docs/response77-provenance-audit.md"
         }
       ],
       "audit_outcome": "accepted",
       "review_ids": [],
-      "integration_commit": "ff880ed53c8c27f0ec672cafcfa92f0c3fcfe1cb",
+      "integration_commit": "3f65087f7a8888dec45d643b5ab8fdef362ca36f",
       "timestamps": [],
       "source_refs": [
-        "docs/response77-provenance-audit.md@ff880ed53c8c27f0ec672cafcfa92f0c3fcfe1cb"
+        "docs/response77-provenance-audit.md@3f65087f7a8888dec45d643b5ab8fdef362ca36f"
       ],
       "id": "OPS-P77-PROVENANCE-AUDIT-205",
       "parent_route": "Prompt77",
@@ -4196,7 +4196,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "9789f1dd457f0084838dfe72c5aa5168d33e278b",
+      "base_commit": "33badb893e0cb82d054ef08f479e2314792f8a65",
       "lifecycle_stage": "independent_audit",
       "status": "verified",
       "operational_state": "terminal",
@@ -4220,16 +4220,16 @@
         {
           "kind": "artifact",
           "algorithm": "sha256",
-          "value": "bdbd4fbdc15920f4f966016e713fdd68b1ff8ef5ad50c41c748581822a84fc84",
+          "value": "adf4ec9119cceabd79c466c93fb082663906663a9ce31e2acfeea4c0af10b05e",
           "path": "docs/response77-mathematical-audit.md"
         }
       ],
       "audit_outcome": "accepted",
       "review_ids": [],
-      "integration_commit": "fb5b025c70ad6999c627cf64b2c83820aa759432",
+      "integration_commit": "ea31bcd2a24c55975d279bdb7c9b8b8f8f7514f3",
       "timestamps": [],
       "source_refs": [
-        "docs/response77-mathematical-audit.md@fb5b025c70ad6999c627cf64b2c83820aa759432"
+        "docs/response77-mathematical-audit.md@ea31bcd2a24c55975d279bdb7c9b8b8f8f7514f3"
       ],
       "id": "OPS-P77-MATH-AUDIT-204",
       "parent_route": "Prompt77",
@@ -4242,7 +4242,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "9789f1dd457f0084838dfe72c5aa5168d33e278b",
+      "base_commit": "33badb893e0cb82d054ef08f479e2314792f8a65",
       "lifecycle_stage": "independent_audit",
       "status": "verified",
       "operational_state": "terminal",
@@ -4266,16 +4266,16 @@
         {
           "kind": "artifact",
           "algorithm": "sha256",
-          "value": "16ba2b8b617dcbc50b97a2c3c029ac67485daeace11d6bae7be13e765052b78a",
+          "value": "4acd4a324a297b53cfd49b99b82ad08825755b1b8d0087afe337433d58f294c1",
           "path": "docs/response78-mathematical-audit.md"
         }
       ],
       "audit_outcome": "accepted",
       "review_ids": [],
-      "integration_commit": "415e9cc85f07c2c992987ca5e58394122c8f6c5d",
+      "integration_commit": "c38e43fa868262300dc711cc001aad5d8b6dc732",
       "timestamps": [],
       "source_refs": [
-        "docs/response78-mathematical-audit.md@415e9cc85f07c2c992987ca5e58394122c8f6c5d"
+        "docs/response78-mathematical-audit.md@c38e43fa868262300dc711cc001aad5d8b6dc732"
       ],
       "id": "OPS-P78-MATH-AUDIT-209",
       "parent_route": "Prompt78",
@@ -4288,7 +4288,7 @@
         "effort": null,
         "pro_cell": false
       },
-      "base_commit": "2e150ab97e24125ad09d97c93144115ddd629bf4",
+      "base_commit": "4252f1f3b6284a79a1f07204405e2916260e4af0",
       "lifecycle_stage": "independent_audit",
       "status": "verified",
       "operational_state": "terminal",
@@ -4328,7 +4328,7 @@
         "effort": "xhigh",
         "pro_cell": false
       },
-      "base_commit": "566aa6f7aac835cd34e819ae3fee98396e7a7a36",
+      "base_commit": "2cdda97271736d31e2d2e77114fef71f4b858449",
       "lifecycle_stage": "independent_audit",
       "status": "rejected",
       "operational_state": "terminal",
@@ -4350,16 +4350,16 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "3e22ddf4b0ca5ea82bcbe028594aedb4d8584f640293cacdc2019766e755a93a",
+          "value": "7e133cfff6448f8a3cdf0219e4023481529119c32eab4f4e48176e015855dc65",
           "path": "research/sol-pro/prompts/prompt79.md"
         }
       ],
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "6f7573f1b8f897be894a0a4819d958e447379eac",
+      "integration_commit": "0097d13b8e430ca22b63ae727cdd7a9301cfb638",
       "timestamps": [],
       "source_refs": [
-        "research/sol-pro/prompts/prompt79.md@6f7573f1b8f897be894a0a4819d958e447379eac"
+        "research/sol-pro/prompts/prompt79.md@0097d13b8e430ca22b63ae727cdd7a9301cfb638"
       ],
       "id": "PIPE-P79-OBSTRUCTION-SUPPLY-CONTRACT-196",
       "parent_route": "Prompt79",
@@ -4372,7 +4372,7 @@
         "effort": "medium",
         "pro_cell": false
       },
-      "base_commit": "c2c0adc213c5df85a3f0fe64c87b5cc2b57dc3aa",
+      "base_commit": "f21f8b65307344862bde22001d6f59b61dffdbc6",
       "lifecycle_stage": "launch_ready",
       "status": "completed",
       "operational_state": "terminal",
@@ -4396,7 +4396,7 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "3e22ddf4b0ca5ea82bcbe028594aedb4d8584f640293cacdc2019766e755a93a",
+          "value": "7e133cfff6448f8a3cdf0219e4023481529119c32eab4f4e48176e015855dc65",
           "path": "research/sol-pro/prompts/prompt79.md"
         },
         {
@@ -4417,10 +4417,10 @@
         }
       ],
       "source_refs": [
-        "research/sol-pro/launches/prompt79-2026-08-03.md@2be813b8fb53513fccd3c84864cc17807c3ba1be",
+        "research/sol-pro/launches/prompt79-2026-08-03.md@3c6bba613b40a081ec7a89b8b28f1b01c988d2d4",
         "parent-authoritative:Prompt79-runtime-status-2026-08-03",
-        "recovery-merge:216c2cb",
-        "audit-merge:4d07d0a"
+        "recovery-merge:2c26b5a",
+        "audit-merge:21c32c9"
       ],
       "id": "SOL-P79-DESKTOP-LAUNCH-202",
       "parent_route": "Prompt79",
@@ -4449,7 +4449,7 @@
           "submitted_terminal_lf": false
         }
       },
-      "base_commit": "6f7573f1b8f897be894a0a4819d958e447379eac",
+      "base_commit": "0097d13b8e430ca22b63ae727cdd7a9301cfb638",
       "lifecycle_stage": "active_research",
       "status": "completed",
       "operational_state": "terminal",
@@ -4471,16 +4471,16 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "49662646959df4e1a245b36c76d21dade391308bc38e2cedb610674df937092e",
+          "value": "0bcdb571b07004a35d8ec45be33354576a9d254cf28b4238822c06a7f88a8e90",
           "path": "research/sol-pro/prompts/prompt80.md"
         }
       ],
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "0915ebb280fa34ea7a355c8eeafae9b08684afd9",
+      "integration_commit": "c134e1d5dd980865b8c209c304fe84b3eef0f796",
       "timestamps": [],
       "source_refs": [
-        "research/sol-pro/prompts/prompt80.md@0915ebb280fa34ea7a355c8eeafae9b08684afd9"
+        "research/sol-pro/prompts/prompt80.md@c134e1d5dd980865b8c209c304fe84b3eef0f796"
       ],
       "id": "PIPE-P80-DIVISOR-BLOCK-CONTRACT-196",
       "parent_route": "Prompt80",
@@ -4493,7 +4493,7 @@
         "effort": "medium",
         "pro_cell": false
       },
-      "base_commit": "c2c0adc213c5df85a3f0fe64c87b5cc2b57dc3aa",
+      "base_commit": "f21f8b65307344862bde22001d6f59b61dffdbc6",
       "lifecycle_stage": "launch_ready",
       "status": "completed",
       "operational_state": "terminal",
@@ -4517,7 +4517,7 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "49662646959df4e1a245b36c76d21dade391308bc38e2cedb610674df937092e",
+          "value": "0bcdb571b07004a35d8ec45be33354576a9d254cf28b4238822c06a7f88a8e90",
           "path": "research/sol-pro/prompts/prompt80.md"
         },
         {
@@ -4538,10 +4538,10 @@
         }
       ],
       "source_refs": [
-        "research/sol-pro/launches/prompt80-2026-08-03.md@5cb8d828f702e98e697604f8f7034548b4309801",
+        "research/sol-pro/launches/prompt80-2026-08-03.md@340a32303c483c227f831f42ef3d5cc2d20728c1",
         "parent-authoritative:Prompt80-runtime-status-2026-08-03",
-        "recovery-merge:2a210d4",
-        "audit-merge:b083994"
+        "recovery-merge:075fc59",
+        "audit-merge:4944fe1"
       ],
       "id": "SOL-P80-DESKTOP-LAUNCH-203",
       "parent_route": "Prompt80",
@@ -4570,7 +4570,7 @@
           "submitted_terminal_lf": false
         }
       },
-      "base_commit": "0915ebb280fa34ea7a355c8eeafae9b08684afd9",
+      "base_commit": "c134e1d5dd980865b8c209c304fe84b3eef0f796",
       "lifecycle_stage": "active_research",
       "status": "completed",
       "operational_state": "terminal",
@@ -4592,7 +4592,7 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "5fa8dec300e6042f78502b3e49cca3eb9ed482a86959cc0879808c98270b1d32",
+          "value": "7e167f93e7967cbd95ed122acf4c49eff8f6600091d7f0482d05449150db99ef",
           "path": "research/sol-pro/prompts/prompt81.md"
         }
       ],
@@ -4600,10 +4600,10 @@
       "review_ids": [
         "VER-P81-AUDIT-HASH-CORRECTION-212"
       ],
-      "integration_commit": "ac76e9801d2bd6e1db2331fa2e5b3d42533c1e8f",
+      "integration_commit": "2f3bab351016eca2b9be0022eb22d712485821f0",
       "timestamps": [],
       "source_refs": [
-        "research/sol-pro/prompts/prompt81.md@ac76e9801d2bd6e1db2331fa2e5b3d42533c1e8f",
+        "research/sol-pro/prompts/prompt81.md@2f3bab351016eca2b9be0022eb22d712485821f0",
         "parent-authoritative:VER-P81-AUDIT-HASH-CORRECTION-212"
       ],
       "id": "PIPE-P81-ADVERSARIAL-SYNTHESIS-CONTRACT-206",
@@ -4617,7 +4617,7 @@
         "effort": "medium",
         "pro_cell": false
       },
-      "base_commit": "9789f1dd457f0084838dfe72c5aa5168d33e278b",
+      "base_commit": "33badb893e0cb82d054ef08f479e2314792f8a65",
       "lifecycle_stage": "launch_ready",
       "status": "completed",
       "operational_state": "terminal",
@@ -4641,7 +4641,7 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "5fa8dec300e6042f78502b3e49cca3eb9ed482a86959cc0879808c98270b1d32",
+          "value": "7e167f93e7967cbd95ed122acf4c49eff8f6600091d7f0482d05449150db99ef",
           "path": "research/sol-pro/prompts/prompt81.md"
         },
         {
@@ -4664,9 +4664,9 @@
         }
       ],
       "source_refs": [
-        "research/sol-pro/launches/prompt81-2026-08-03.md@566aa6f7aac835cd34e819ae3fee98396e7a7a36",
+        "research/sol-pro/launches/prompt81-2026-08-03.md@2cdda97271736d31e2d2e77114fef71f4b858449",
         "parent-authoritative:Prompt81-runtime-status-2026-08-03",
-        "recovery-merge:c331062"
+        "recovery-merge:9dc6609"
       ],
       "id": "SOL-P81-DESKTOP-LAUNCH-213",
       "parent_route": "Prompt81",
@@ -4695,7 +4695,7 @@
           "submitted_terminal_lf": false
         }
       },
-      "base_commit": "ac76e9801d2bd6e1db2331fa2e5b3d42533c1e8f",
+      "base_commit": "2f3bab351016eca2b9be0022eb22d712485821f0",
       "lifecycle_stage": "active_research",
       "status": "completed",
       "operational_state": "terminal",
@@ -4717,16 +4717,16 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "502e949d67911578e2958a47604ea7910558ca8e5cc2449444807f3a4748a5c2",
+          "value": "e952c82ea2fa29bf6678039be74a4af5de1cdac3d025825966cae0dfc3a03031",
           "path": "research/sol-pro/prompts/prompt82.md"
         }
       ],
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "d2e5decaa5544af383ae7f5d806c9d7498773c82",
+      "integration_commit": "412981f970a5e439b639c0f715ad0ff4785ec653",
       "timestamps": [],
       "source_refs": [
-        "research/sol-pro/prompts/prompt82.md@d2e5decaa5544af383ae7f5d806c9d7498773c82"
+        "research/sol-pro/prompts/prompt82.md@412981f970a5e439b639c0f715ad0ff4785ec653"
       ],
       "id": "PIPE-P82-GLOBAL-MULTIPLICITY-CONTRACT-206",
       "parent_route": "Prompt82",
@@ -4739,7 +4739,7 @@
         "effort": "medium",
         "pro_cell": false
       },
-      "base_commit": "9789f1dd457f0084838dfe72c5aa5168d33e278b",
+      "base_commit": "33badb893e0cb82d054ef08f479e2314792f8a65",
       "lifecycle_stage": "launch_ready",
       "status": "completed",
       "operational_state": "terminal",
@@ -4763,7 +4763,7 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "502e949d67911578e2958a47604ea7910558ca8e5cc2449444807f3a4748a5c2",
+          "value": "e952c82ea2fa29bf6678039be74a4af5de1cdac3d025825966cae0dfc3a03031",
           "path": "research/sol-pro/prompts/prompt82.md"
         },
         {
@@ -4784,10 +4784,10 @@
         }
       ],
       "source_refs": [
-        "research/sol-pro/launches/prompt82-2026-08-03.md@dbe7de308761ac730df29020acfd7321f4934035",
+        "research/sol-pro/launches/prompt82-2026-08-03.md@932c488dd3808def952fb20994bc49a54869c3f6",
         "parent-authoritative:Prompt82-runtime-status-2026-08-03",
-        "recovery-merge:70d030e",
-        "audit-merge:22cef48"
+        "recovery-merge:9a5ebc2",
+        "audit-merge:8b11c56"
       ],
       "id": "SOL-P82-DESKTOP-LAUNCH-211",
       "parent_route": "Prompt82",
@@ -4816,7 +4816,7 @@
           "submitted_terminal_lf": false
         }
       },
-      "base_commit": "d2e5decaa5544af383ae7f5d806c9d7498773c82",
+      "base_commit": "412981f970a5e439b639c0f715ad0ff4785ec653",
       "lifecycle_stage": "active_research",
       "status": "completed",
       "operational_state": "terminal",
@@ -4853,7 +4853,7 @@
         "effort": "medium",
         "pro_cell": false
       },
-      "base_commit": "566aa6f7aac835cd34e819ae3fee98396e7a7a36",
+      "base_commit": "2cdda97271736d31e2d2e77114fef71f4b858449",
       "lifecycle_stage": "preparation",
       "status": "active",
       "operational_state": "active",
@@ -4890,7 +4890,7 @@
         "effort": "medium",
         "pro_cell": false
       },
-      "base_commit": "566aa6f7aac835cd34e819ae3fee98396e7a7a36",
+      "base_commit": "2cdda97271736d31e2d2e77114fef71f4b858449",
       "lifecycle_stage": "response_recovery",
       "status": "active",
       "operational_state": "active",
@@ -4927,7 +4927,7 @@
         "effort": "medium",
         "pro_cell": false
       },
-      "base_commit": "566aa6f7aac835cd34e819ae3fee98396e7a7a36",
+      "base_commit": "2cdda97271736d31e2d2e77114fef71f4b858449",
       "lifecycle_stage": "contract_review",
       "status": "active",
       "operational_state": "active",
@@ -4949,16 +4949,16 @@
         {
           "kind": "prompt",
           "algorithm": "sha256",
-          "value": "5fa8dec300e6042f78502b3e49cca3eb9ed482a86959cc0879808c98270b1d32",
+          "value": "7e167f93e7967cbd95ed122acf4c49eff8f6600091d7f0482d05449150db99ef",
           "path": "research/sol-pro/prompts/prompt81.md"
         }
       ],
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "ac76e9801d2bd6e1db2331fa2e5b3d42533c1e8f",
+      "integration_commit": "2f3bab351016eca2b9be0022eb22d712485821f0",
       "timestamps": [],
       "source_refs": [
-        "research/sol-pro/prompts/prompt81.md@ac76e9801d2bd6e1db2331fa2e5b3d42533c1e8f",
+        "research/sol-pro/prompts/prompt81.md@2f3bab351016eca2b9be0022eb22d712485821f0",
         "parent-authoritative:VER-P81-AUDIT-HASH-CORRECTION-212"
       ],
       "id": "VER-P81-AUDIT-HASH-CORRECTION-212",
@@ -4972,7 +4972,7 @@
         "effort": "medium",
         "pro_cell": false
       },
-      "base_commit": "d2e5decaa5544af383ae7f5d806c9d7498773c82",
+      "base_commit": "412981f970a5e439b639c0f715ad0ff4785ec653",
       "lifecycle_stage": "contract_review",
       "status": "completed",
       "operational_state": "terminal",
@@ -5006,7 +5006,7 @@
           "submitted_terminal_lf": false
         }
       },
-      "base_commit": "b06e774a6a3c06141fdefdde6f2bb1c51ff666a0",
+      "base_commit": "211ba96e252c67aa86fb6d24f6f044462e67d833",
       "lifecycle_stage": "active_research",
       "dependencies": [],
       "branch": null,
@@ -5019,7 +5019,7 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "3b794b85ed375d25ce3db696eb84aad93dc45e402a8142decdc2150d862bc62e", "path": "research/sol-pro/prompts/prompt83.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "40e1a976a4502811ae636324950c98fd12f3b1d801a185912d175de1edfea99e", "path": "research/sol-pro/prompts/prompt83.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "babc71b13d710014c4884698a75f8a22fe738b9e532aa1cbe62fa1f773d9c1b0", "path": null}
       ],
       "disposition": "Completed and recovered with self-disposition STOP. Independent audit also returned STOP. Lifecycle records promote no result; the unrestricted LRC remains open.",
@@ -5027,7 +5027,7 @@
       "review_ids": ["OPS-P83-AUDIT-STATUS-252"],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T00:27:48.3495568-05:00", "source": "authoritative Prompt83 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt83-2026-08-04.md", "recovery-merge:908a912", "audit-merge:176606e"]
+      "source_refs": ["research/sol-pro/launches/prompt83-2026-08-04.md", "recovery-merge:efc6bb8", "audit-merge:98775a7"]
     },
     {
       "id": "OPS-P83-AUDIT-STATUS-252",
@@ -5036,7 +5036,7 @@
       "owner": "Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "immutable audit status readback", "model": null, "effort": null, "pro_cell": false},
-      "base_commit": "10448a512d55e883ae0c328f7881527b13841d27",
+      "base_commit": "e38f012ba5b413c4c7211b84dbe506464dc43912",
       "lifecycle_stage": "integration",
       "dependencies": ["SOL-P83-DESKTOP-LAUNCH-223"],
       "branch": null,
@@ -5049,12 +5049,12 @@
       "verification": {"level": 2, "state": "complete"},
       "evidence_label": "operational-only",
       "hashes": [],
-      "disposition": "Immutable Prompt83 audit integrated at 176606e with STOP. This row synchronizes status only and neither duplicates nor changes the audit's evidence classification.",
+      "disposition": "Immutable Prompt83 audit integrated at 98775a7 with STOP. This row synchronizes status only and neither duplicates nor changes the audit's evidence classification.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["audit-commit:10448a5", "audit-merge:176606e"]
+      "source_refs": ["audit-commit:e38f012", "audit-merge:98775a7"]
     },
     {
       "id": "SOL-P84-DESKTOP-LAUNCH-227",
@@ -5069,7 +5069,7 @@
         "pro_cell": true,
         "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 16374, "tracked_prompt_characters": 16374, "submitted_payload_bytes": 16373, "submitted_payload_characters": 16373, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
       },
-      "base_commit": "56a5205f5962742c6d2c31884909f1c396709f5a",
+      "base_commit": "ae8937b5eea9ba4e15ef5fec82bee477b8115e0c",
       "lifecycle_stage": "active_research",
       "dependencies": [],
       "branch": null,
@@ -5082,7 +5082,7 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "de9084eba8918366ba7ce8ac5bd5f7ea3580a50256ce0080a1d6382e7d2e33cb", "path": "research/sol-pro/prompts/prompt84.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "e311a7252b1b4bf7a3b9497570f25c7658222384341bdfc9009704389e7c142c", "path": "research/sol-pro/prompts/prompt84.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "b5f3bea0ad60d32c79e7ef9dff71daca9451dc2645d74261917188de800a46ad", "path": null}
       ],
       "disposition": "Completed and recovered with self-disposition STOP; immutable independent audit is integrated. Lifecycle recovery alone promotes no result.",
@@ -5090,7 +5090,7 @@
       "review_ids": ["OPS-P84-AUDIT-STATUS-252"],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T00:33:21.4873455-05:00", "source": "authoritative Prompt84 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt84-2026-08-04.md", "recovery-merge:9cff0a9", "audit-merge:3c51da2"]
+      "source_refs": ["research/sol-pro/launches/prompt84-2026-08-04.md", "recovery-merge:f9d0b86", "audit-merge:c3c1fa6"]
     },
     {
       "id": "OPS-P84-AUDIT-STATUS-252",
@@ -5099,7 +5099,7 @@
       "owner": "Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "immutable audit status readback", "model": null, "effort": null, "pro_cell": false},
-      "base_commit": "9774598704ec95d7f18dca0819ee6c12fec8dcf6",
+      "base_commit": "f86f82389d610f57cce0fceb1b5167945b33ace6",
       "lifecycle_stage": "integration",
       "dependencies": ["SOL-P84-DESKTOP-LAUNCH-227"],
       "branch": null,
@@ -5112,12 +5112,12 @@
       "verification": {"level": 2, "state": "complete"},
       "evidence_label": "operational-only",
       "hashes": [],
-      "disposition": "Immutable audit 9774598, merged at 3c51da2, records the stronger proved-math-qualified negative: PowerForcing(4,q) is false for every integer q >= 8 with 4 dividing q. Unrestricted LRC remains open. This row only synchronizes that immutable disposition.",
+      "disposition": "Immutable audit f86f823, merged at c3c1fa6, records the stronger proved-math-qualified negative: PowerForcing(4,q) is false for every integer q >= 8 with 4 dividing q. Unrestricted LRC remains open. This row only synchronizes that immutable disposition.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["audit-commit:9774598", "audit-merge:3c51da2", "docs/response84-mathematical-audit.md"]
+      "source_refs": ["audit-commit:f86f823", "audit-merge:c3c1fa6", "docs/response84-mathematical-audit.md"]
     },
     {
       "id": "SOL-P85-DESKTOP-LAUNCH-237",
@@ -5132,7 +5132,7 @@
         "pro_cell": true,
         "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 17217, "tracked_prompt_characters": 17217, "submitted_payload_bytes": 17216, "submitted_payload_characters": 17216, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
       },
-      "base_commit": "a74657f5c6eb8f4961a1d0682f9ad8642584d0dd",
+      "base_commit": "71be426ef46bcfea0fc54860c015436947a1817f",
       "lifecycle_stage": "active_research",
       "dependencies": [],
       "branch": null,
@@ -5145,7 +5145,7 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "491e11edbb5fb88756f09f635f08203427035c3ab1eef62c4d18605d7e120255", "path": "research/sol-pro/prompts/prompt85.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "d56aec0cd0ce521ef7700a29461cd5fb146fb9adb3058b1ffbfcdc50b47c9880", "path": "research/sol-pro/prompts/prompt85.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "b4a2d435c8cf02db73079f7db1e095f35df468a36ec23e588e88f7d9849575e5", "path": null}
       ],
       "disposition": "Completed and recovered with self-disposition STOP. The corrected recovery preserves exactly three immutable ======= diff-check lines; width-two minimum remains unverified pending audit.",
@@ -5153,7 +5153,7 @@
       "review_ids": ["P85-MATHEMATICAL-AUDIT-251"],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T00:45:30.8966978-05:00", "source": "authoritative Prompt85 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt85-2026-08-04.md", "recovery-head:e5255d2", "recovery-merge:f6a2252"]
+      "source_refs": ["research/sol-pro/launches/prompt85-2026-08-04.md", "recovery-head:a843651", "recovery-merge:010ff1a"]
     },
     {
       "id": "P85-MATHEMATICAL-AUDIT-251",
@@ -5162,7 +5162,7 @@
       "owner": "Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent mathematical audit", "model": null, "effort": null, "pro_cell": false},
-      "base_commit": "f6a22522892d53f53b43437a4e9bc7a2fe2c1317",
+      "base_commit": "010ff1a3da4d3920b2f53c127c4d51610153fb6b",
       "lifecycle_stage": "integration",
       "dependencies": ["SOL-P85-DESKTOP-LAUNCH-237"],
       "branch": null,
@@ -5180,7 +5180,7 @@
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["recovery-head:e5255d2", "recovery-merge:f6a2252", "audit-merge:cc58e9affd445af9cb5f77911c8ab823916bbeae"]
+      "source_refs": ["recovery-head:a843651", "recovery-merge:010ff1a", "audit-merge:e0560c5cc9076e5ce3b58f968edc8037eee8c4d3"]
     },
     {
       "id": "P85-LITERAL-REPLAY-MEDIUM-SPEC-256",
@@ -5189,7 +5189,7 @@
       "owner": "Sol Medium Formalization and Specification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "Medium literal-replay specification preparation", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "cc58e9affd445af9cb5f77911c8ab823916bbeae",
+      "base_commit": "e0560c5cc9076e5ce3b58f968edc8037eee8c4d3",
       "lifecycle_stage": "contract_review",
       "dependencies": ["P85-MATHEMATICAL-AUDIT-251"],
       "branch": "spec/p85-literal-replay-256",
@@ -5207,7 +5207,7 @@
       "review_ids": ["P85-LITERAL-REPLAY-INDEPENDENT-REVIEW-260"],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["audit-merge:cc58e9affd445af9cb5f77911c8ab823916bbeae", "specification-commit:2b0b537bfc3d1cd0bc619e3d84caf2ff2d663a98", "corrected-contract-commit:54aecab6e19368dc2467ceb2112c0d56e62ae34f", "launch-record-commit:e12d208b6c522d91494b4425b024687ac383b944"]
+      "source_refs": ["audit-merge:e0560c5cc9076e5ce3b58f968edc8037eee8c4d3", "specification-commit:2b0b537bfc3d1cd0bc619e3d84caf2ff2d663a98", "corrected-contract-commit:8a2c4bb2d480df8ad77d2ee6fa6985004fbfa80b", "launch-record-commit:7401127dec4ccc522782d63a6bf3cf371fd53bea"]
     },
     {
       "id": "PIPE-P86-LOCAL-PIVOT-SCORE-CONTRACT-238",
@@ -5216,7 +5216,7 @@
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "Sol Medium Research Pipeline Lead",
       "runtime": {"route": "integrated prompt-preparation worktree", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "f6a22522892d53f53b43437a4e9bc7a2fe2c1317",
+      "base_commit": "010ff1a3da4d3920b2f53c127c4d51610153fb6b",
       "lifecycle_stage": "launch_ready",
       "dependencies": [],
       "branch": "research/p86-local-pivot-score-contract-238",
@@ -5228,13 +5228,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "49135b31319081b732a26fa24ec6154c63c3e2543e6995637d2e2e0b11cc7f77", "path": "research/sol-pro/prompts/prompt86.md"}],
+      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "bbb5b5493f211e21a2d3ae0bcbd1f8c7521047d239f6e021ce0b10278e763fff", "path": "research/sol-pro/prompts/prompt86.md"}],
       "disposition": "Accepted launch contract was consumed by the authoritative Prompt86 desktop launch. Contract preparation promotes no result.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["contract-merge:6d609e5", "launch-commit:481252e"]
+      "source_refs": ["contract-merge:5ee9a0a", "launch-commit:192c087"]
     },
     {
       "id": "SOL-P86-DESKTOP-LAUNCH-242",
@@ -5249,7 +5249,7 @@
         "pro_cell": true,
         "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 18864, "tracked_prompt_characters": 18864, "submitted_payload_bytes": 18863, "submitted_payload_characters": 18863, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
       },
-      "base_commit": "6d609e591f67d1ce3a90abf966e3e5536ca85ff1",
+      "base_commit": "5ee9a0a62b7709ee1ca6c48d81143f14e016888f",
       "lifecycle_stage": "active_research",
       "dependencies": ["PIPE-P86-LOCAL-PIVOT-SCORE-CONTRACT-238"],
       "branch": null,
@@ -5262,15 +5262,15 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "49135b31319081b732a26fa24ec6154c63c3e2543e6995637d2e2e0b11cc7f77", "path": "research/sol-pro/prompts/prompt86.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "bbb5b5493f211e21a2d3ae0bcbd1f8c7521047d239f6e021ce0b10278e763fff", "path": "research/sol-pro/prompts/prompt86.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "ae04d541eb859eb5e408cb1508581bbc9451ffae7b41d8777177116308230da7", "path": null}
       ],
-      "disposition": "Prompt86 completed and was recovered at faeb57f with provisional MIXED / PIVOT only. The local-dimensional selector remains OPEN; five attachments are QUARANTINED / UNVERIFIED, and no response computation, theorem, or mathematical status is promoted.",
+      "disposition": "Prompt86 completed and was recovered at 496161c with provisional MIXED / PIVOT only. The local-dimensional selector remains OPEN; five attachments are QUARANTINED / UNVERIFIED, and no response computation, theorem, or mathematical status is promoted.",
       "audit_outcome": "not_applicable",
       "review_ids": ["OPS-P86-RECOVERY-PACKAGE-272"],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T01:00:44.5228965-05:00", "source": "authoritative Prompt86 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt86-2026-08-04.md", "launch-commit:481252e", "recovery-merge:faeb57fb41a2cf3486a9717368f8ac5b544ceb23"]
+      "source_refs": ["research/sol-pro/launches/prompt86-2026-08-04.md", "launch-commit:192c087", "recovery-merge:496161cbff2874da42d70953daca304bfe36bde4"]
     },
     {
       "id": "PIPE-P87-DYADIC-STOP-SYNTHESIS-CONTRACT-245",
@@ -5279,7 +5279,7 @@
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "Sol Medium Research Pipeline Lead",
       "runtime": {"route": "corrected and reviewed prompt-preparation branch", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "f6a22522892d53f53b43437a4e9bc7a2fe2c1317",
+      "base_commit": "010ff1a3da4d3920b2f53c127c4d51610153fb6b",
       "lifecycle_stage": "launch_ready",
       "dependencies": [],
       "branch": "research/p87-p88-contracts-245",
@@ -5292,12 +5292,12 @@
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
       "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "0a9456c26579ee3e092b8d5e73dae16334226f4ed482d43759a049df8617bbff", "path": null}],
-      "disposition": "Initial review returned REVISE. Task253 correction 1c40ae8 received review254 ACCEPT, merged with the Prompt88 gate at 0e29903, and was consumed by the Prompt87 desktop launch.",
+      "disposition": "Initial review returned REVISE. Task253 correction b8ed8a0 received review254 ACCEPT, merged with the Prompt88 gate at 1cc4371, and was consumed by the Prompt87 desktop launch.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["preparation-commit:2954191", "correction-commit:1c40ae8", "review254:ACCEPT", "contract-merge:0e29903"]
+      "source_refs": ["preparation-commit:18b69f7", "correction-commit:b8ed8a0", "review254:ACCEPT", "contract-merge:1cc4371"]
     },
     {
       "id": "SOL-P87-DESKTOP-LAUNCH-255",
@@ -5312,7 +5312,7 @@
         "pro_cell": true,
         "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 13860, "tracked_prompt_characters": 13836, "submitted_payload_bytes": 13859, "submitted_payload_characters": 13835, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
       },
-      "base_commit": "0e29903c9d04e2054f0bca42715874c8eb7e01e5",
+      "base_commit": "1cc4371a6df1036d54a3580cde5eb73f651eecb7",
       "lifecycle_stage": "active_research",
       "dependencies": ["PIPE-P87-DYADIC-STOP-SYNTHESIS-CONTRACT-245"],
       "branch": null,
@@ -5328,12 +5328,12 @@
         {"kind": "prompt", "algorithm": "sha256", "value": "0a9456c26579ee3e092b8d5e73dae16334226f4ed482d43759a049df8617bbff", "path": null},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "14dfdb0f18c05ee9cb34686fe1e328d3cb82b91774cb4d7719ae3315572cdf06", "path": null}
       ],
-      "disposition": "Prompt87 completed and was recovered at 143f363. Independent audit integrated at fba819e gives provisional PROMISING research triage only: the aggregate dyadic lemma remains wholly OPEN and no unrestricted theorem is promoted.",
+      "disposition": "Prompt87 completed and was recovered at df86424. Independent audit integrated at 98f4655 gives provisional PROMISING research triage only: the aggregate dyadic lemma remains wholly OPEN and no unrestricted theorem is promoted.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P87-MATHEMATICAL-AUDIT-270"],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T01:31:48.0517073-05:00", "source": "authoritative Prompt87 launch record"}],
-      "source_refs": ["launch-record-commit:47ef41a8c6a6c5423c868fd9f850d1349b571342", "recovery-merge:143f363ca8eb4ca68a5ce1bf7963e8cc8a01459c", "audit-merge:fba819e219e33b3b9a9b9c19adcec94c0065b822"]
+      "source_refs": ["launch-record-commit:f865e30f9dc441e1af4fea3e33d81d919abda66e", "recovery-merge:df86424e7e0d7c7f1daeda95c872deeb47de3c07", "audit-merge:98f4655e314a97c0d5158d6b3ebe0e8a16259132"]
     },
     {
       "id": "PIPE-P88-INDEPENDENT-ROUTE-SPEC-245",
@@ -5342,7 +5342,7 @@
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "Sol Medium Research Pipeline Lead",
       "runtime": {"route": "independent route specification gate", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "f6a22522892d53f53b43437a4e9bc7a2fe2c1317",
+      "base_commit": "010ff1a3da4d3920b2f53c127c4d51610153fb6b",
       "lifecycle_stage": "contract_review",
       "dependencies": [],
       "branch": "research/p87-p88-contracts-245",
@@ -5360,7 +5360,7 @@
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["preparation-commit:2954191", "gate-merge:0e29903"]
+      "source_refs": ["preparation-commit:18b69f7", "gate-merge:1cc4371"]
     },
     {
       "id": "PIPE-P89-BALANCED-JUNCTION-CONTRACT-257",
@@ -5369,7 +5369,7 @@
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "Sol Medium Research Pipeline Lead",
       "runtime": {"route": "reviewed prompt-preparation branch", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "cc58e9affd445af9cb5f77911c8ab823916bbeae",
+      "base_commit": "e0560c5cc9076e5ce3b58f968edc8037eee8c4d3",
       "lifecycle_stage": "launch_ready",
       "dependencies": [],
       "branch": "research/p89-balanced-junction-spec-257",
@@ -5381,13 +5381,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "acd509f2ac8e471d56f0564b133a98b5d91e2652ebb7892bd3cb5a2990c1cf74", "path": "research/sol-pro/prompts/prompt89.md"}],
-      "disposition": "Prompt89's balanced-junction contract passed independent review and was integrated at a4cd124; its launch-ready state was consumed by authoritative desktop launch 259. Contract preparation and bounded design preflight promote no result.",
+      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "12025a58795422897cdfcf36b5e4be9a10a33f28ad4978283d7fc5f8f51c393d", "path": "research/sol-pro/prompts/prompt89.md"}],
+      "disposition": "Prompt89's balanced-junction contract passed independent review and was integrated at 85d525a; its launch-ready state was consumed by authoritative desktop launch 259. Contract preparation and bounded design preflight promote no result.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["preparation-commit:3583c7d1e435b5327f5938ad6e07758ca5342aaf", "review258:ACCEPT", "contract-merge:a4cd1242a0a58c22b6407b95256bd96cadc428e8"]
+      "source_refs": ["preparation-commit:599f3c67e0e0a90cfad11b6e18bb70f8eafb296f", "review258:ACCEPT", "contract-merge:85d525a2934f90be5f3e266c3c15c19519822d98"]
     },
     {
       "id": "SOL-P89-DESKTOP-LAUNCH-259",
@@ -5402,7 +5402,7 @@
         "pro_cell": true,
         "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 19318, "tracked_prompt_characters": 19278, "submitted_payload_bytes": 19317, "submitted_payload_characters": 19277, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
       },
-      "base_commit": "a4cd1242a0a58c22b6407b95256bd96cadc428e8",
+      "base_commit": "85d525a2934f90be5f3e266c3c15c19519822d98",
       "lifecycle_stage": "active_research",
       "dependencies": ["PIPE-P89-BALANCED-JUNCTION-CONTRACT-257"],
       "branch": null,
@@ -5415,7 +5415,7 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "acd509f2ac8e471d56f0564b133a98b5d91e2652ebb7892bd3cb5a2990c1cf74", "path": "research/sol-pro/prompts/prompt89.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "12025a58795422897cdfcf36b5e4be9a10a33f28ad4978283d7fc5f8f51c393d", "path": "research/sol-pro/prompts/prompt89.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "41654c6400caf6ae93928a7eb9e10ca04024fcd0f97108bcdfc5bc65c6c30dac", "path": null}
       ],
       "disposition": "Prompt89 completed with response self-disposition PIVOT only. Exact response capture is complete and public-safe recovery packaging task OPS-P89-RECOVERY-PACKAGE-276 is active; all response computation remains unverified and quarantined, with no result promotion.",
@@ -5423,7 +5423,7 @@
       "review_ids": ["OPS-P89-RECOVERY-PACKAGE-276"],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T01:51:53.6678577-05:00", "source": "authoritative Prompt89 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt89-2026-08-04.md", "launch-record-commit:dbc5d83"]
+      "source_refs": ["research/sol-pro/launches/prompt89-2026-08-04.md", "launch-record-commit:66f4dc8"]
     },
     {
       "id": "P85-LITERAL-REPLAY-INDEPENDENT-REVIEW-260",
@@ -5432,7 +5432,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent Medium contract review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "a4cd1242a0a58c22b6407b95256bd96cadc428e8",
+      "base_commit": "85d525a2934f90be5f3e266c3c15c19519822d98",
       "lifecycle_stage": "contract_review",
       "dependencies": ["P85-LITERAL-REPLAY-MEDIUM-SPEC-256"],
       "branch": null,
@@ -5444,13 +5444,13 @@
       "admission_class": "MEDIUM-SPEC-REQUIRED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "none",
-      "hashes": [{"kind": "review", "algorithm": "sha256", "value": "d596f60621d98fb60852becffcd261217c57fcec60103595af1948b6ae3de440", "path": "research/luna/reviews/p85-literal-replay-contract-review-263.md"}],
+      "hashes": [{"kind": "review", "algorithm": "sha256", "value": "3c6084721778e0c093b09d4072b22ca4cda2dab34b832112d1cd8db4b18a5795", "path": "research/luna/reviews/p85-literal-replay-contract-review-263.md"}],
       "disposition": "Independent admission-gate review returned REVISE: Prompt85 semantics and fixtures passed, but the execution contract has an unusable WSL privacy command, a vacuous untracked-file diff check, and no source-byte binding across preflight, full runs, and immutable handoff. No Luna launch or evidence promotion is authorized.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["candidate-specification-commit:2b0b537bfc3d1cd0bc619e3d84caf2ff2d663a98", "review-record-commit:f18da47"]
+      "source_refs": ["candidate-specification-commit:2b0b537bfc3d1cd0bc619e3d84caf2ff2d663a98", "review-record-commit:f74fbaa"]
     },
     {
       "id": "P85-LITERAL-REPLAY-REVIEW-RECORD-263",
@@ -5459,7 +5459,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Medium review-record branch", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "dbc5d83551b68ddcca7edd8d1a1c3f78a6f0c5ff",
+      "base_commit": "66f4dc8adc96e4fdf1b0686088b9c18a9f12c83d",
       "lifecycle_stage": "integration",
       "dependencies": ["P85-LITERAL-REPLAY-INDEPENDENT-REVIEW-260"],
       "branch": "verify/p85-literal-replay-review-record-263",
@@ -5471,13 +5471,13 @@
       "admission_class": "MEDIUM-SPEC-REQUIRED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "none",
-      "hashes": [{"kind": "review", "algorithm": "sha256", "value": "d596f60621d98fb60852becffcd261217c57fcec60103595af1948b6ae3de440", "path": "research/luna/reviews/p85-literal-replay-contract-review-263.md"}],
+      "hashes": [{"kind": "review", "algorithm": "sha256", "value": "3c6084721778e0c093b09d4072b22ca4cda2dab34b832112d1cd8db4b18a5795", "path": "research/luna/reviews/p85-literal-replay-contract-review-263.md"}],
       "disposition": "The exact REVISE review memo is integrated as operational provenance only. It freezes the three specification blockers and authorizes no Luna launch, implementation, Prompt85 minimum, or evidence promotion.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["worker-commit:e1e71b19c4ff6e53d6417b720c3ef153ad070197", "integration-commit:f18da47bb9df2f6650905b4404bc23e36b4990e2"]
+      "source_refs": ["worker-commit:e1e71b19c4ff6e53d6417b720c3ef153ad070197", "integration-commit:f74fbaabb090b4f33a4ac1361fb1e56df3df9a61"]
     },
     {
       "id": "SOL-P90-CONTRACT-PREP-261",
@@ -5486,7 +5486,7 @@
       "owner": "Sol Medium Research Pipeline Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Medium contract preparation", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "a4cd1242a0a58c22b6407b95256bd96cadc428e8",
+      "base_commit": "85d525a2934f90be5f3e266c3c15c19519822d98",
       "lifecycle_stage": "launch_ready",
       "dependencies": [],
       "branch": "research/p90-minimal-cover-uncrossing-261",
@@ -5498,13 +5498,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "fa32686d52bac99073031c85530891a46f3aeac25c185b2432d3b8da05f21a4b", "path": "research/sol-pro/prompts/prompt90.md"}],
-      "disposition": "The reviewed Prompt90 contract was integrated at 4f7a54b and consumed by authoritative Sol High desktop launch 267. Contract preparation promotes no result.",
+      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "970f670eabd190d9495b7c04ddef898ecbbec6e6b0c50dcc47ae5ca4ec224085", "path": "research/sol-pro/prompts/prompt90.md"}],
+      "disposition": "The reviewed Prompt90 contract was integrated at 888e2af and consumed by authoritative Sol High desktop launch 267. Contract preparation promotes no result.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["contract-commit:4f7a54bd0e5477ad075bb719c22acafae2c831dc", "launch-record-commit:b160d8c"]
+      "source_refs": ["contract-commit:888e2af15b01f542af8ac8eb9a67ee90a135db42", "launch-record-commit:de26d89"]
     },
     {
       "id": "SOL-P91-CONTRACT-PREP-262",
@@ -5513,7 +5513,7 @@
       "owner": "Sol Medium Research Pipeline Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Medium contract preparation", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "a4cd1242a0a58c22b6407b95256bd96cadc428e8",
+      "base_commit": "85d525a2934f90be5f3e266c3c15c19519822d98",
       "lifecycle_stage": "contract_review",
       "dependencies": [],
       "branch": null,
@@ -5540,7 +5540,7 @@
       "owner": "fresh top-level Luna worker",
       "supervising_lead": "Sol Medium Recovery and Verification Lead",
       "runtime": {"route": "fresh top-level Codex session", "model": "gpt-5.6-luna", "effort": "xhigh", "pro_cell": false},
-      "base_commit": "cc58e9affd445af9cb5f77911c8ab823916bbeae",
+      "base_commit": "e0560c5cc9076e5ce3b58f968edc8037eee8c4d3",
       "lifecycle_stage": "independent_audit",
       "dependencies": ["P85-LITERAL-REPLAY-MEDIUM-SPEC-256"],
       "branch": "verify/luna-p85-literal-replay-01",
@@ -5552,13 +5552,13 @@
       "admission_class": "LUNA-READY",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "none",
-      "hashes": [{"kind": "contract", "algorithm": "sha256", "value": "b188da7ae45e8f85bd8863b55b285ec03fa0f950185830a8bb589a43a16c61fb", "path": "research/luna/contracts/p85-literal-replay-01.md"}],
+      "hashes": [{"kind": "contract", "algorithm": "sha256", "value": "c322fef79aaad58cced9af2802b72ae34d4f0aaec720fe50ac5219bdc6457130", "path": "research/luna/contracts/p85-literal-replay-01.md"}],
       "disposition": "Failed delegation / rejected operational output: the fresh top-level Luna/xhigh process exited at the runtime-metadata accessibility gate before source work or preflight. No files, implementation, fixture result, computation, theorem, or mathematical evidence are accepted; a successor is MEDIUM-SPEC-REQUIRED.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["corrected-contract-commit:54aecab6e19368dc2467ceb2112c0d56e62ae34f", "launch-record-commit:e12d208b6c522d91494b4425b024687ac383b944", "research/luna/launches/p85-literal-replay-01.md"]
+      "source_refs": ["corrected-contract-commit:8a2c4bb2d480df8ad77d2ee6fa6985004fbfa80b", "launch-record-commit:7401127dec4ccc522782d63a6bf3cf371fd53bea", "research/luna/launches/p85-literal-replay-01.md"]
     },
     {
       "id": "OPS-P86-RECOVERY-PACKAGE-272",
@@ -5567,7 +5567,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "public-safe response recovery and quarantine", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "fba819e219e33b3b9a9b9c19adcec94c0065b822",
+      "base_commit": "98f4655e314a97c0d5158d6b3ebe0e8a16259132",
       "lifecycle_stage": "response_recovery",
       "dependencies": ["SOL-P86-DESKTOP-LAUNCH-242"],
       "branch": "recovery/p86-response-package-272",
@@ -5579,13 +5579,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "operational-only",
-      "hashes": [{"kind": "response", "algorithm": "sha256", "value": "4b977eed0879be8508f1354daaf7db914c254c229e507af3b1b25f8cc52449fa", "path": "research/sol-pro/responses/response86.md"}],
+      "hashes": [{"kind": "response", "algorithm": "sha256", "value": "16bd5c37df60f014d098f8084c3ea554b820071374ee0f5e800c48ea4dd35edc", "path": "research/sol-pro/responses/response86.md"}],
       "disposition": "Completed public-safe recovery with provisional MIXED / PIVOT only. Five attachments are preserved byte-for-byte as QUARANTINED / UNVERIFIED and were not executed; the selector and unrestricted LRC remain OPEN, with no evidence promotion.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "faeb57fb41a2cf3486a9717368f8ac5b544ceb23",
+      "integration_commit": "496161cbff2874da42d70953daca304bfe36bde4",
       "timestamps": [],
-      "source_refs": ["research/sol-pro/audits/response86-recovery-audit-272.md", "recovery-merge:faeb57fb41a2cf3486a9717368f8ac5b544ceb23"]
+      "source_refs": ["research/sol-pro/audits/response86-recovery-audit-272.md", "recovery-merge:496161cbff2874da42d70953daca304bfe36bde4"]
     },
     {
       "id": "OPS-P87-RECOVERY-PACKAGE-265",
@@ -5594,7 +5594,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "public-safe response recovery", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "c7371004ca5a4b7ea77791d1b959cfb00e2eccea",
+      "base_commit": "1736d5bad1652d40926b9939719f47dfb5b80da8",
       "lifecycle_stage": "response_recovery",
       "dependencies": ["SOL-P87-DESKTOP-LAUNCH-255"],
       "branch": "recovery/p87-response-265",
@@ -5608,14 +5608,14 @@
       "evidence_label": "operational-only",
       "hashes": [
         {"kind": "response", "algorithm": "sha256", "value": "228e51affc27c39981cdf3f5f086a17d2ddcef2d1c1a528c74a9ca281a566d5c", "path": "research/sol-pro/responses/response87.md"},
-        {"kind": "recovery_manifest", "algorithm": "sha256", "value": "a8659211652f69254c2f48b272665cb96cd2eed1337b82c585d7949af1138997", "path": "research/sol-pro/artifacts/prompt87/README.md"}
+        {"kind": "recovery_manifest", "algorithm": "sha256", "value": "31b2a88eb4ff3bc2342c17c1ab1c8e23603466801efa7adae47615da2f68cd51", "path": "research/sol-pro/artifacts/prompt87/README.md"}
       ],
-      "disposition": "Completed public-safe response recovery at 143f363. The response self-label PIVOT remained unpromoted pending independent audit, and no attachment or response-authored computation was accepted.",
+      "disposition": "Completed public-safe response recovery at df86424. The response self-label PIVOT remained unpromoted pending independent audit, and no attachment or response-authored computation was accepted.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P87-MATHEMATICAL-AUDIT-270"],
-      "integration_commit": "143f363ca8eb4ca68a5ce1bf7963e8cc8a01459c",
+      "integration_commit": "df86424e7e0d7c7f1daeda95c872deeb47de3c07",
       "timestamps": [],
-      "source_refs": ["research/sol-pro/artifacts/prompt87/README.md", "recovery-merge:143f363ca8eb4ca68a5ce1bf7963e8cc8a01459c"]
+      "source_refs": ["research/sol-pro/artifacts/prompt87/README.md", "recovery-merge:df86424e7e0d7c7f1daeda95c872deeb47de3c07"]
     },
     {
       "id": "P87-MATHEMATICAL-AUDIT-270",
@@ -5624,7 +5624,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent mathematical audit", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "143f363ca8eb4ca68a5ce1bf7963e8cc8a01459c",
+      "base_commit": "df86424e7e0d7c7f1daeda95c872deeb47de3c07",
       "lifecycle_stage": "independent_audit",
       "dependencies": ["OPS-P87-RECOVERY-PACKAGE-265"],
       "branch": "verify/response87-mathematical-audit-270",
@@ -5640,9 +5640,9 @@
       "disposition": "Integrated independent audit gives provisional PROMISING research triage and preserves its exact qualified arithmetic findings. The proposed aggregate dyadic lemma is wholly OPEN, external dependencies remain unformalized, and no unrestricted theorem or response computation is promoted.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "fba819e219e33b3b9a9b9c19adcec94c0065b822",
+      "integration_commit": "98f4655e314a97c0d5158d6b3ebe0e8a16259132",
       "timestamps": [],
-      "source_refs": ["research/sol-pro/audits/response87-mathematical-audit-270.md", "audit-merge:fba819e219e33b3b9a9b9c19adcec94c0065b822"]
+      "source_refs": ["research/sol-pro/audits/response87-mathematical-audit-270.md", "audit-merge:98f4655e314a97c0d5158d6b3ebe0e8a16259132"]
     },
     {
       "id": "OPS-P89-RESPONSE-CAPTURE-276",
@@ -5651,7 +5651,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "authoritative response capture handoff", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "faeb57fb41a2cf3486a9717368f8ac5b544ceb23",
+      "base_commit": "496161cbff2874da42d70953daca304bfe36bde4",
       "lifecycle_stage": "response_recovery",
       "dependencies": ["SOL-P89-DESKTOP-LAUNCH-259"],
       "branch": null,
@@ -5678,7 +5678,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated public-safe recovery packaging", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "faeb57fb41a2cf3486a9717368f8ac5b544ceb23",
+      "base_commit": "496161cbff2874da42d70953daca304bfe36bde4",
       "lifecycle_stage": "response_recovery",
       "dependencies": ["OPS-P89-RESPONSE-CAPTURE-276"],
       "branch": "recovery/p89-response-package-276",
@@ -5691,12 +5691,12 @@
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "operational-only",
       "hashes": [{"kind": "response", "algorithm": "sha256", "value": "2c4e7985a7d2c0622a487ccbfad98215ae3121d24ba3bdc0f8780c27d448c7b9", "path": null}],
-      "disposition": "Public-safe recovery packaging integrated at d389ec8. The response self-label PIVOT and all four attachments remain UNVERIFIED / QUARANTINED; no response computation, theorem, or mathematical status is promoted.",
+      "disposition": "Public-safe recovery packaging integrated at 24a8f22. The response self-label PIVOT and all four attachments remain UNVERIFIED / QUARANTINED; no response computation, theorem, or mathematical status is promoted.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "d389ec8be54d63753719d603147c591ab37a3984",
+      "integration_commit": "24a8f227db16309c6e8cfc842eba1cf163990166",
       "timestamps": [],
-      "source_refs": ["OPS-P89-RESPONSE-CAPTURE-276", "recovery-merge:d389ec8be54d63753719d603147c591ab37a3984"]
+      "source_refs": ["OPS-P89-RESPONSE-CAPTURE-276", "recovery-merge:24a8f227db16309c6e8cfc842eba1cf163990166"]
     },
     {
       "id": "SOL-P90-DESKTOP-LAUNCH-267",
@@ -5711,7 +5711,7 @@
         "pro_cell": true,
         "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 19052, "tracked_prompt_characters": 19052, "submitted_payload_bytes": 19051, "submitted_payload_characters": 19051, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
       },
-      "base_commit": "4f7a54bd0e5477ad075bb719c22acafae2c831dc",
+      "base_commit": "888e2af15b01f542af8ac8eb9a67ee90a135db42",
       "lifecycle_stage": "active_research",
       "dependencies": ["SOL-P90-CONTRACT-PREP-261"],
       "branch": null,
@@ -5724,7 +5724,7 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "fa32686d52bac99073031c85530891a46f3aeac25c185b2432d3b8da05f21a4b", "path": "research/sol-pro/prompts/prompt90.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "970f670eabd190d9495b7c04ddef898ecbbec6e6b0c50dcc47ae5ca4ec224085", "path": "research/sol-pro/prompts/prompt90.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "4f7f1a5f27f8b366a95b796a3e906e664da7c98535797af1fac4c80d45714518", "path": null}
       ],
       "disposition": "The Pro turn completed, but its submitted payload was still a REVIEW-REQUIRED Medium contract-preparation artifact. Recovery289 classifies it as a failed research launch and rejected operational output: no theorem was attempted, and unrestricted LRC remains OPEN.",
@@ -5732,7 +5732,7 @@
       "review_ids": ["OPS-P90-RECOVERY-PACKAGE-289"],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T02:18:04.3072075-05:00", "source": "authoritative Prompt90 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt90-2026-08-04.md", "launch-record-commit:b160d8c", "recovery-merge:33a690d"]
+      "source_refs": ["research/sol-pro/launches/prompt90-2026-08-04.md", "launch-record-commit:de26d89", "recovery-merge:0941fff"]
     },
     {
       "id": "SOL-P92-AGGREGATE-DYADIC-CONTRACT-PREP-271",
@@ -5741,7 +5741,7 @@
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "Sol Medium Research Pipeline Lead",
       "runtime": {"route": "isolated Medium contract preparation", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "d389ec8be54d63753719d603147c591ab37a3984",
+      "base_commit": "24a8f227db16309c6e8cfc842eba1cf163990166",
       "lifecycle_stage": "contract_review",
       "dependencies": [],
       "branch": "research/p92-aggregate-dyadic-contract-271",
@@ -5754,12 +5754,12 @@
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
       "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "654f8bc4de240642483cd83898c6cd272cf0eb3635ab9c08971bdc2d2ac2c3dd", "path": null}],
-      "disposition": "Prompt92's initial review returned REVISE for one unsupported Prompt91 status sentence. Both corrections were accepted and the final prompt was integrated at 42dd00f, then consumed by authoritative desktop launch 284. Preparation promotes no result.",
+      "disposition": "Prompt92's initial review returned REVISE for one unsupported Prompt91 status sentence. Both corrections were accepted and the final prompt was integrated at 14cf36c, then consumed by authoritative desktop launch 284. Preparation promotes no result.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P92-INDEPENDENT-CONTRACT-REVIEW-275", "P92-CORRECTION-REVIEW-282"],
-      "integration_commit": "42dd00f405158e1fced416a1a69a475d1462784b",
+      "integration_commit": "14cf36c46eab2b9a0ef30460624e6f02cbc32091",
       "timestamps": [],
-      "source_refs": ["integrated-preparation:c01d4ca3fee57238918cca7fb9f738d7315238b0", "first-correction:b04c1eb5123e0bf6a4e0f78b932ba572184777b2", "final-correction:42dd00f405158e1fced416a1a69a475d1462784b"]
+      "source_refs": ["integrated-preparation:4f7e8ee109f2d1de8baae2ad06cbd077f889eee3", "first-correction:47d10bbdeef385a611ebcf7ad990b3206b753743", "final-correction:14cf36c46eab2b9a0ef30460624e6f02cbc32091"]
     },
     {
       "id": "P92-INDEPENDENT-CONTRACT-REVIEW-275",
@@ -5808,12 +5808,12 @@
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
       "hashes": [{"kind": "corrected_prompt", "algorithm": "sha256", "value": "654f8bc4de240642483cd83898c6cd272cf0eb3635ab9c08971bdc2d2ac2c3dd", "path": null}],
-      "disposition": "The Prompt91 route wording correction was accepted and integrated at 42dd00f. It changes contract provenance only and promotes no theorem, computation, or result.",
+      "disposition": "The Prompt91 route wording correction was accepted and integrated at 14cf36c. It changes contract provenance only and promotes no theorem, computation, or result.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P92-CORRECTION-REVIEW-282"],
-      "integration_commit": "42dd00f405158e1fced416a1a69a475d1462784b",
+      "integration_commit": "14cf36c46eab2b9a0ef30460624e6f02cbc32091",
       "timestamps": [],
-      "source_refs": ["first-correction:b04c1eb5123e0bf6a4e0f78b932ba572184777b2", "final-correction:42dd00f405158e1fced416a1a69a475d1462784b"]
+      "source_refs": ["first-correction:47d10bbdeef385a611ebcf7ad990b3206b753743", "final-correction:14cf36c46eab2b9a0ef30460624e6f02cbc32091"]
     },
     {
       "id": "SOL-P93-CROSS-PIVOT-RECIPROCITY-CONTRACT-PREP-274",
@@ -5822,7 +5822,7 @@
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "Sol Medium Research Pipeline Lead",
       "runtime": {"route": "isolated Medium contract preparation", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "fba819e219e33b3b9a9b9c19adcec94c0065b822",
+      "base_commit": "98f4655e314a97c0d5158d6b3ebe0e8a16259132",
       "lifecycle_stage": "contract_review",
       "dependencies": [],
       "branch": "research/p93-cross-pivot-reciprocity-274",
@@ -5876,7 +5876,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent corrected-contract review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "42dd00f405158e1fced416a1a69a475d1462784b",
+      "base_commit": "14cf36c46eab2b9a0ef30460624e6f02cbc32091",
       "lifecycle_stage": "contract_review",
       "dependencies": ["P92-NEUTRAL-P91-SEPARATION-CORRECTION-277"],
       "branch": null,
@@ -5892,9 +5892,9 @@
       "disposition": "The corrected Prompt92 contract was accepted for launch at exact contract scope. Review and prompt acceptance promote no mathematical result.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "42dd00f405158e1fced416a1a69a475d1462784b",
+      "integration_commit": "14cf36c46eab2b9a0ef30460624e6f02cbc32091",
       "timestamps": [],
-      "source_refs": ["integrated-correction:42dd00f405158e1fced416a1a69a475d1462784b"]
+      "source_refs": ["integrated-correction:14cf36c46eab2b9a0ef30460624e6f02cbc32091"]
     },
     {
       "id": "SOL-P92-DESKTOP-LAUNCH-284",
@@ -5909,7 +5909,7 @@
         "pro_cell": true,
         "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 25842, "tracked_prompt_characters": 25842, "submitted_payload_bytes": 25841, "submitted_payload_characters": 25841, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
       },
-      "base_commit": "42dd00f405158e1fced416a1a69a475d1462784b",
+      "base_commit": "14cf36c46eab2b9a0ef30460624e6f02cbc32091",
       "lifecycle_stage": "active_research",
       "dependencies": ["P92-CORRECTION-REVIEW-282"],
       "branch": null,
@@ -5930,7 +5930,7 @@
       "review_ids": ["OPS-P92-RECOVERY-PACKAGE-298", "P92-SYMBOLIC-COUNTERFAMILY-MATHEMATICAL-AUDIT-301"],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T02:58:12.4643846-05:00", "source": "authoritative Prompt92 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt92-2026-08-04.md", "launch-record-commit:db438f206b35d51d8b001ae5256c5a3022b8d0b7", "recovery-merge:2e5554c", "audit-merge:79c4549"]
+      "source_refs": ["research/sol-pro/launches/prompt92-2026-08-04.md", "launch-record-commit:a7709c278bc381ce6ed55e18f61a1e1f973460c7", "recovery-merge:6fb384d", "audit-merge:15dfcd1"]
     },
     {
       "id": "SOL-P94-DIVISOR-LATTICE-CONTRACT-PREP-283",
@@ -5939,7 +5939,7 @@
       "owner": "Sol Medium Research Pipeline Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Medium contract preparation", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "d389ec8be54d63753719d603147c591ab37a3984",
+      "base_commit": "24a8f227db16309c6e8cfc842eba1cf163990166",
       "lifecycle_stage": "launch_ready",
       "dependencies": [],
       "branch": "research/p94-divisor-lattice-contract-283",
@@ -5951,13 +5951,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "dfb9d28e46091512864edb182524a60819d5ae0e34b4d1c4b9ba05f09e0e3ae8", "path": "research/sol-pro/prompts/prompt94.md"}],
-      "disposition": "The accepted Prompt94 contract was integrated at eb143b4 and consumed by authoritative desktop launch291. Contract preparation promotes no result.",
+      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "75382bcf8e818345e34d742235940c492c36a3be5dae6bfe63d8cb805f1b5c79", "path": "research/sol-pro/prompts/prompt94.md"}],
+      "disposition": "The accepted Prompt94 contract was integrated at 3467593 and consumed by authoritative desktop launch291. Contract preparation promotes no result.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "eb143b4ed47cfc91807cf872de8eb48fd13c4089",
+      "integration_commit": "3467593e061df081d318cbf957ca201b185949d0",
       "timestamps": [],
-      "source_refs": ["contract-merge:eb143b4ed47cfc91807cf872de8eb48fd13c4089", "launch-commit:a819e68"]
+      "source_refs": ["contract-merge:3467593e061df081d318cbf957ca201b185949d0", "launch-commit:1bc7708"]
     },
     {
       "id": "OPS-P90-RECOVERY-PACKAGE-289",
@@ -5966,7 +5966,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated response-recovery worktree", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "eb143b4ed47cfc91807cf872de8eb48fd13c4089",
+      "base_commit": "3467593e061df081d318cbf957ca201b185949d0",
       "lifecycle_stage": "response_recovery",
       "dependencies": ["SOL-P90-DESKTOP-LAUNCH-267"],
       "branch": "recovery/p90-response-package-289",
@@ -5980,14 +5980,14 @@
       "evidence_label": "rejected-operational-output",
       "hashes": [
         {"kind": "response", "algorithm": "sha256", "value": "b6c69b73405c7ffd468695b6130b33f9deb50f00e96174746904afda3372ea50", "path": "research/sol-pro/responses/response90.md"},
-        {"kind": "audit", "algorithm": "sha256", "value": "67c12580ab4b23a466e87545bbb93daeb4ae1961f588e6d6b1fe31d8484b7ea9", "path": "research/sol-pro/audits/response90-recovery-audit-289.md"}
+        {"kind": "audit", "algorithm": "sha256", "value": "f223702e060359f567cf5c12147aade02b628865758532f81619a5b1b59c49e6", "path": "research/sol-pro/audits/response90-recovery-audit-289.md"}
       ],
       "disposition": "Accepted only as operational recovery: the submitted payload remained a REVIEW-REQUIRED Medium contract, so no theorem was attempted. This is rejected operational output and promotes no mathematical or computational evidence.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "33a690ddcaf66b818b74b6fa62ac16491c9638ba",
+      "integration_commit": "0941fffc47b703bd42196f140629f2883f8bd688",
       "timestamps": [],
-      "source_refs": ["research/sol-pro/audits/response90-recovery-audit-289.md", "recovery-merge:33a690ddcaf66b818b74b6fa62ac16491c9638ba"]
+      "source_refs": ["research/sol-pro/audits/response90-recovery-audit-289.md", "recovery-merge:0941fffc47b703bd42196f140629f2883f8bd688"]
     },
     {
       "id": "OPS-P92-RECOVERY-PACKAGE-298",
@@ -5996,7 +5996,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated response-recovery worktree", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "e3055a1acdab1476320a1dc742767cd7e2451206",
+      "base_commit": "5eea554e788aab23dd4db75f580498efcece9742",
       "lifecycle_stage": "response_recovery",
       "dependencies": ["SOL-P92-DESKTOP-LAUNCH-284"],
       "branch": "recovery/p92-response-package-298",
@@ -6010,14 +6010,14 @@
       "evidence_label": "recovery-provenance",
       "hashes": [
         {"kind": "response", "algorithm": "sha256", "value": "b7299f87eabc0d4836ec15cb14fae5f2286389703ca28c5d20dd973d021ec8f6", "path": "research/sol-pro/responses/response92.md"},
-        {"kind": "audit", "algorithm": "sha256", "value": "1a5908a8fe719fb6b735ef8d2ff4d67432bfe1a08dad48d44505e37389357b1c", "path": "research/sol-pro/audits/response92-recovery-audit-298.md"}
+        {"kind": "audit", "algorithm": "sha256", "value": "684fe07d7d67f9ceab3efc57437958d38a9e275a595196ac391a7c0f3b4b0143", "path": "research/sol-pro/audits/response92-recovery-audit-298.md"}
       ],
       "disposition": "Accepted only as recovery provenance: the response and quarantined attachments are identity-bound, but recovery alone promotes no mathematics or computation.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P92-SYMBOLIC-COUNTERFAMILY-MATHEMATICAL-AUDIT-301"],
-      "integration_commit": "2e5554c508e5ca05a016994e53ce66af31a4702b",
+      "integration_commit": "6fb384d24ad4d8bc04013d8a7117d8d9d526f0b5",
       "timestamps": [],
-      "source_refs": ["research/sol-pro/audits/response92-recovery-audit-298.md", "recovery-merge:2e5554c508e5ca05a016994e53ce66af31a4702b"]
+      "source_refs": ["research/sol-pro/audits/response92-recovery-audit-298.md", "recovery-merge:6fb384d24ad4d8bc04013d8a7117d8d9d526f0b5"]
     },
     {
       "id": "P92-SYMBOLIC-COUNTERFAMILY-MATHEMATICAL-AUDIT-301",
@@ -6026,7 +6026,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent mathematical audit worktree", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "2e5554c508e5ca05a016994e53ce66af31a4702b",
+      "base_commit": "6fb384d24ad4d8bc04013d8a7117d8d9d526f0b5",
       "lifecycle_stage": "independent_audit",
       "dependencies": ["OPS-P92-RECOVERY-PACKAGE-298"],
       "branch": "verify/p92-symbolic-counterfamily-audit-301",
@@ -6038,13 +6038,13 @@
       "admission_class": "NOT-APPLICABLE",
       "verification": {"level": 2, "state": "complete"},
       "evidence_label": "proved-math-qualified",
-      "hashes": [{"kind": "audit", "algorithm": "sha256", "value": "21c738a00bb277f873e8c98762d95b1cd9d8d889a0f3042512e59c08ce6fc69f", "path": "research/sol-pro/audits/response92-symbolic-counterfamily-mathematical-audit-301.md"}],
+      "hashes": [{"kind": "audit", "algorithm": "sha256", "value": "8118dae1edbd7a7f590a29592777ea5135c78ba85e25f83906f03aa447f7d56b", "path": "research/sol-pro/audits/response92-symbolic-counterfamily-mathematical-audit-301.md"}],
       "disposition": "Accepted as proved-math-qualified at exact auxiliary-bridge scope: the symbolic family refutes the identical Prompt87/Prompt92 aggregate-dyadic bridge. It does not decide unrestricted LRC or the pivot-certificate equivalence, and quarantined computation remains unpromoted.",
       "audit_outcome": "accepted",
       "review_ids": [],
-      "integration_commit": "79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa",
+      "integration_commit": "15dfcd14bd2e4230b042cf5f8c4c717a006b6913",
       "timestamps": [],
-      "source_refs": ["research/sol-pro/audits/response92-symbolic-counterfamily-mathematical-audit-301.md", "audit-merge:79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa"]
+      "source_refs": ["research/sol-pro/audits/response92-symbolic-counterfamily-mathematical-audit-301.md", "audit-merge:15dfcd14bd2e4230b042cf5f8c4c717a006b6913"]
     },
     {
       "id": "SOL-P94-DESKTOP-LAUNCH-291",
@@ -6059,7 +6059,7 @@
         "pro_cell": true,
         "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 24074, "tracked_prompt_characters": 24074, "submitted_payload_bytes": 24073, "submitted_payload_characters": 24073, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
       },
-      "base_commit": "eb143b4ed47cfc91807cf872de8eb48fd13c4089",
+      "base_commit": "3467593e061df081d318cbf957ca201b185949d0",
       "lifecycle_stage": "active_research",
       "dependencies": ["SOL-P94-DIVISOR-LATTICE-CONTRACT-PREP-283"],
       "branch": null,
@@ -6072,16 +6072,16 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "dfb9d28e46091512864edb182524a60819d5ae0e34b4d1c4b9ba05f09e0e3ae8", "path": "research/sol-pro/prompts/prompt94.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "75382bcf8e818345e34d742235940c492c36a3be5dae6bfe63d8cb805f1b5c79", "path": "research/sol-pro/prompts/prompt94.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "a639ddf8a11bd17a9aff998988a3a48d10c9102b14adfeb43fbbf0f134e8c0e8", "path": null},
-        {"kind": "launch_record", "algorithm": "sha256", "value": "baa90c569761e85700813f4e6f8cd832272b9afff0fe0f4ced510c2378d89466", "path": "research/sol-pro/launches/prompt94-2026-08-04.md"}
+        {"kind": "launch_record", "algorithm": "sha256", "value": "3da2282ed23e944dff2a2f340ef2fbbe7466c5d554809591aefdfb0b690b417b", "path": "research/sol-pro/launches/prompt94-2026-08-04.md"}
       ],
       "disposition": "Prompt94 generation completed and is awaiting tracked Sol High recovery under provisional audit only. Raw response and bundle remain ignored / quarantined, and recovery304 is not integrated. No response claim, theorem, computation, counterexample, or status promotion is recorded here; its target and unrestricted LRC remain OPEN.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T03:19:17.5802129-05:00", "source": "authoritative Prompt94 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt94-2026-08-04.md", "launch-record-commit:a819e68163503278d12d2c70e80fa2632c9f8fe4", "parent-authoritative:Prompt94-completed-awaiting-recovery304"]
+      "source_refs": ["research/sol-pro/launches/prompt94-2026-08-04.md", "launch-record-commit:1bc7708afd9e116c62ebf836ae85172319cb2d98", "parent-authoritative:Prompt94-completed-awaiting-recovery304"]
     },
     {
       "id": "SOL-P95-PRO-MAX-COVERED-PIVOT-292",
@@ -6090,7 +6090,7 @@
       "owner": "Sol Medium Research Pipeline Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Medium contract preparation and review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "a819e68163503278d12d2c70e80fa2632c9f8fe4",
+      "base_commit": "1bc7708afd9e116c62ebf836ae85172319cb2d98",
       "lifecycle_stage": "launch_ready",
       "dependencies": ["OPS-P90-RECOVERY-PACKAGE-289"],
       "branch": "research/p95-max-covered-pivot-corrected-292",
@@ -6103,15 +6103,15 @@
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "3fab778e3e11adb920304f8c2537737da24fc31c16c10fb3208b68617d9643fb", "path": "research/sol-pro/prompts/prompt95.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "1ea54a91e234a0fbf03a5451422b6524541aa29500104df5ba94851a2235958b", "path": "research/sol-pro/prompts/prompt95.md"},
         {"kind": "scoped_prompt", "algorithm": "sha256", "value": "5f917f80e45fcbc30a442a9c6e434c53d093477eeab2013a49ba599bf314944c", "path": null}
       ],
-      "disposition": "The corrected Prompt95 contract passed independent review, was integrated at d75b9bc, and was consumed by authoritative desktop launch297. Contract preparation promotes no result.",
+      "disposition": "The corrected Prompt95 contract passed independent review, was integrated at cc281e1, and was consumed by authoritative desktop launch297. Contract preparation promotes no result.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "d75b9bcab88bb09d7c03911442a0aa4636aac767",
+      "integration_commit": "cc281e1fa9f0abcbd9bdd3e928fe976b336a633e",
       "timestamps": [],
-      "source_refs": ["contract-merge:d75b9bcab88bb09d7c03911442a0aa4636aac767", "launch-commit:e3055a1acdab1476320a1dc742767cd7e2451206", "review:P95-INDEPENDENT-CONTRACT-REVIEW-295"]
+      "source_refs": ["contract-merge:cc281e1fa9f0abcbd9bdd3e928fe976b336a633e", "launch-commit:5eea554e788aab23dd4db75f580498efcece9742", "review:P95-INDEPENDENT-CONTRACT-REVIEW-295"]
     },
     {
       "id": "SOL-P95-DESKTOP-LAUNCH-297",
@@ -6126,7 +6126,7 @@
         "pro_cell": true,
         "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 27914, "tracked_prompt_characters": 27914, "submitted_payload_bytes": 27913, "submitted_payload_characters": 27913, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
       },
-      "base_commit": "d75b9bcab88bb09d7c03911442a0aa4636aac767",
+      "base_commit": "cc281e1fa9f0abcbd9bdd3e928fe976b336a633e",
       "lifecycle_stage": "active_research",
       "dependencies": ["SOL-P95-PRO-MAX-COVERED-PIVOT-292"],
       "branch": null,
@@ -6139,16 +6139,16 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "3fab778e3e11adb920304f8c2537737da24fc31c16c10fb3208b68617d9643fb", "path": "research/sol-pro/prompts/prompt95.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "1ea54a91e234a0fbf03a5451422b6524541aa29500104df5ba94851a2235958b", "path": "research/sol-pro/prompts/prompt95.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "c2f64c8107e1a48193a3f8b6a13f3b8d802a62073a8513c2044d30ad4c284fe4", "path": null},
-        {"kind": "launch_record", "algorithm": "sha256", "value": "85589e81b09938b03f6b76fabecbb54c57aae685110594868d1a79d83a88bbe4", "path": "research/sol-pro/launches/prompt95-2026-08-04.md"}
+        {"kind": "launch_record", "algorithm": "sha256", "value": "345b7c497621639321dae843db3b3a519a5c2da8811b4279a238e998d2468f78", "path": "research/sol-pro/launches/prompt95-2026-08-04.md"}
       ],
       "disposition": "Sol High's Prompt95 Pro turn completed and was recovered by task310. Audit321 recommends MIXED / OPEN; no recommendation is promoted without an immutable PI registry decision.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T03:41:20.1550921-05:00", "source": "authoritative Prompt95 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt95-2026-08-04.md", "launch-record-commit:e3055a1acdab1476320a1dc742767cd7e2451206", "recovery-merge:6b1e4d424493353874866da1b2c5c7b255ade271"]
+      "source_refs": ["research/sol-pro/launches/prompt95-2026-08-04.md", "launch-record-commit:5eea554e788aab23dd4db75f580498efcece9742", "recovery-merge:97952e9f1bb22ff76449b21c7dd0f85340f0da01"]
     },
     {
       "id": "SOL-P96-ADVERSARIAL-SYNTHESIS-CONTRACT-PREP-299",
@@ -6157,7 +6157,7 @@
       "owner": "Sol Medium Research Pipeline Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Medium contract preparation and independent review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa",
+      "base_commit": "15dfcd14bd2e4230b042cf5f8c4c717a006b6913",
       "lifecycle_stage": "launch_ready",
       "dependencies": ["P92-SYMBOLIC-COUNTERFAMILY-MATHEMATICAL-AUDIT-301", "SOL-P94-DESKTOP-LAUNCH-291", "SOL-P95-DESKTOP-LAUNCH-297"],
       "branch": "research/prompt96-adversarial-synthesis-contract",
@@ -6169,13 +6169,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "adbcb3215f385df5e21d2f5f3c6a79ec2f775f309c189cd7c731b65fc9d6f1d1", "path": "research/sol-pro/prompts/prompt96.md"}],
-      "disposition": "The corrected Prompt96 synthesis contract incorporates accepted audit301 provenance, was integrated at 17b1a2b, received independent review302 ACCEPT, and was consumed by authoritative desktop launch303. Contract acceptance promotes no mathematical result.",
+      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "d48ab7674aa7214a758a50f2526ac37b72ea6a58d3d93c141a1ff28745d5303e", "path": "research/sol-pro/prompts/prompt96.md"}],
+      "disposition": "The corrected Prompt96 synthesis contract incorporates accepted audit301 provenance, was integrated at bf11c64, received independent review302 ACCEPT, and was consumed by authoritative desktop launch303. Contract acceptance promotes no mathematical result.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P96-INDEPENDENT-CONTRACT-REVIEW-302"],
-      "integration_commit": "17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4",
+      "integration_commit": "bf11c644c80cc1f4411a1d2bb311c26e7040a8eb",
       "timestamps": [],
-      "source_refs": ["initial-contract-merge:3a993fcaebfe4a0af8fe097613ba3a364079e9c7", "corrected-contract-merge:17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4", "audit-merge:79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa", "review:P96-INDEPENDENT-CONTRACT-REVIEW-302-ACCEPT"]
+      "source_refs": ["initial-contract-merge:6e58cfca3f9c0471bb8d804247ca1f3d0b8e4872", "corrected-contract-merge:bf11c644c80cc1f4411a1d2bb311c26e7040a8eb", "audit-merge:15dfcd14bd2e4230b042cf5f8c4c717a006b6913", "review:P96-INDEPENDENT-CONTRACT-REVIEW-302-ACCEPT"]
     },
     {
       "id": "P96-INDEPENDENT-CONTRACT-REVIEW-302",
@@ -6184,7 +6184,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent corrected-contract review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4",
+      "base_commit": "bf11c644c80cc1f4411a1d2bb311c26e7040a8eb",
       "lifecycle_stage": "contract_review",
       "dependencies": ["SOL-P96-ADVERSARIAL-SYNTHESIS-CONTRACT-PREP-299"],
       "branch": null,
@@ -6196,13 +6196,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "adbcb3215f385df5e21d2f5f3c6a79ec2f775f309c189cd7c731b65fc9d6f1d1", "path": "research/sol-pro/prompts/prompt96.md"}],
+      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "d48ab7674aa7214a758a50f2526ac37b72ea6a58d3d93c141a1ff28745d5303e", "path": "research/sol-pro/prompts/prompt96.md"}],
       "disposition": "Independent review302 accepted the corrected Prompt96 contract at exact launch scope. Review acceptance and prompt correction promote no mathematical result or finite evidence.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4",
+      "integration_commit": "bf11c644c80cc1f4411a1d2bb311c26e7040a8eb",
       "timestamps": [],
-      "source_refs": ["corrected-contract-merge:17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4", "parent-authoritative:review302-ACCEPT"]
+      "source_refs": ["corrected-contract-merge:bf11c644c80cc1f4411a1d2bb311c26e7040a8eb", "parent-authoritative:review302-ACCEPT"]
     },
     {
       "id": "SOL-P96-DESKTOP-LAUNCH-303",
@@ -6217,7 +6217,7 @@
         "pro_cell": true,
         "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 30214, "tracked_prompt_characters": 30214, "submitted_payload_bytes": 30213, "submitted_payload_characters": 30213, "tracked_terminal_lf": true, "submitted_terminal_lf": false}
       },
-      "base_commit": "17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4",
+      "base_commit": "bf11c644c80cc1f4411a1d2bb311c26e7040a8eb",
       "lifecycle_stage": "active_research",
       "dependencies": ["P96-INDEPENDENT-CONTRACT-REVIEW-302"],
       "branch": null,
@@ -6230,16 +6230,16 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "adbcb3215f385df5e21d2f5f3c6a79ec2f775f309c189cd7c731b65fc9d6f1d1", "path": "research/sol-pro/prompts/prompt96.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "d48ab7674aa7214a758a50f2526ac37b72ea6a58d3d93c141a1ff28745d5303e", "path": "research/sol-pro/prompts/prompt96.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "cfe244b748c67d64e1d6c5e8a0710f1ed9ba97d44f7699a12d71ba625821fdab", "path": null},
-        {"kind": "launch_record", "algorithm": "sha256", "value": "833cafd9303a971bc6c9ea2be7f17797ab668cf6e9b17580177633e123147c3d", "path": "research/sol-pro/launches/prompt96-2026-08-04.md"}
+        {"kind": "launch_record", "algorithm": "sha256", "value": "b6b79325d11541d06daec93c37a83d9363f138907eb52678df0d7531a5611711", "path": "research/sol-pro/launches/prompt96-2026-08-04.md"}
       ],
       "disposition": "Sol High's Prompt96 Pro turn completed and was recovered by task314. Audit312 recommends ACCEPT SEPARATION at proved-math-qualified scope only; no recommendation is promoted without an immutable PI registry decision.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T04:28:22.7138135-05:00", "source": "authoritative Prompt96 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt96-2026-08-04.md", "launch-record-commit:9687dce93c58555043988d859d44f28965b0461a", "recovery-merge:d3af3bc946bb210f441336759ce3d0612d8cac75"]
+      "source_refs": ["research/sol-pro/launches/prompt96-2026-08-04.md", "launch-record-commit:2cd5d41704709872765cee549e6d1c0a46761e76", "recovery-merge:d257b9502bb31c8220fa051c5ad60857cab3fc06"]
     },
     {
       "id": "P85-LITERAL-REPLAY-02",
@@ -6248,7 +6248,7 @@
       "owner": "Sol Medium Formalization and Specification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "integrated Medium replay-contract preparation", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "cc58e9affd445af9cb5f77911c8ab823916bbeae",
+      "base_commit": "e0560c5cc9076e5ce3b58f968edc8037eee8c4d3",
       "lifecycle_stage": "contract_review",
       "dependencies": ["P85-LITERAL-REPLAY-MEDIUM-SPEC-256", "P85-LITERAL-REPLAY-01"],
       "branch": "verify/luna-p85-literal-replay-02",
@@ -6260,13 +6260,13 @@
       "admission_class": "MEDIUM-SPEC-REQUIRED",
       "verification": {"level": 1, "state": "pending"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "artifact", "algorithm": "sha256", "value": "a3c2cb6a5474e91c2dbbc332bcf5de42160b05419e4740dd218bab9cde2b4ee0", "path": "research/luna/contracts/p85-literal-replay-02.md"}],
-      "disposition": "The corrected successor contract is integrated through fe01a9e but remains REVIEW-REQUIRED / MEDIUM-SPEC-REQUIRED. No immutable runtime receipt, launch record, Luna worker, preflight, implementation, output, or evidence exists.",
+      "hashes": [{"kind": "artifact", "algorithm": "sha256", "value": "efd2d5ef6af9f12753789dbe562a9c0fd90e0670ae54749d6ac1c8cca9c31607", "path": "research/luna/contracts/p85-literal-replay-02.md"}],
+      "disposition": "The corrected successor contract is integrated through f64092f but remains REVIEW-REQUIRED / MEDIUM-SPEC-REQUIRED. No immutable runtime receipt, launch record, Luna worker, preflight, implementation, output, or evidence exists.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "fe01a9ee7a1d1f2268454f3cfd2786f41a01098a",
+      "integration_commit": "f64092fecea12246a05ee7dfe6748df7f2454c41",
       "timestamps": [],
-      "source_refs": ["contract-tip:fe01a9ee7a1d1f2268454f3cfd2786f41a01098a", "review:P85-LITERAL-REPLAY-REREVIEW-300", "rejected-predecessor:P85-LITERAL-REPLAY-01"]
+      "source_refs": ["contract-tip:f64092fecea12246a05ee7dfe6748df7f2454c41", "review:P85-LITERAL-REPLAY-REREVIEW-300", "rejected-predecessor:P85-LITERAL-REPLAY-01"]
     },
     {
       "id": "P93-PSI-COUNTEREXAMPLE-REPLAY-01",
@@ -6275,7 +6275,7 @@
       "owner": "Sol Medium Formalization and Specification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Medium replay-contract preparation", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "c6823d75f2cb5d5d479e3b73e17e2ac7074a868f",
+      "base_commit": "e61a01215dbea98c3851b3d9020e7b96ca9485d4",
       "lifecycle_stage": "contract_review",
       "dependencies": ["P93-INDEPENDENT-CONTRACT-REVIEW-281"],
       "branch": "spec/p93-psi-counterexample-replay-287",
@@ -6302,7 +6302,7 @@
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "/root",
       "runtime": {"route": "immutable PI promotion checkpoint", "model": "gpt-5.6-sol", "effort": "high", "pro_cell": false},
-      "base_commit": "fe01a9ee7a1d1f2268454f3cfd2786f41a01098a",
+      "base_commit": "f64092fecea12246a05ee7dfe6748df7f2454c41",
       "lifecycle_stage": "integration",
       "dependencies": ["OPS-P90-RECOVERY-PACKAGE-289", "OPS-P92-RECOVERY-PACKAGE-298", "P92-SYMBOLIC-COUNTERFAMILY-MATHEMATICAL-AUDIT-301"],
       "branch": "ops/pipeline-lifecycle-sync-302",
@@ -6342,12 +6342,12 @@
       "verification": {"level": 2, "state": "complete"},
       "evidence_label": "operational-only",
       "hashes": [],
-      "disposition": "Synchronizes the frozen fe01a9e lifecycle through Prompt95, repins the validator to checkpoint305, and records no theorem promotion. Prompt96 and Prompt94 post-base transitions require a separate follow-up delta after integration.",
+      "disposition": "Synchronizes the frozen f64092f lifecycle through Prompt95, repins the validator to checkpoint305, and records no theorem promotion. Prompt96 and Prompt94 post-base transitions require a separate follow-up delta after integration.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["snapshot-base:fe01a9ee7a1d1f2268454f3cfd2786f41a01098a", "post-base-main:9687dce"]
+      "source_refs": ["snapshot-base:f64092fecea12246a05ee7dfe6748df7f2454c41", "post-base-main:2cd5d41"]
     },
     {
       "id": "OPS-P94-P96-LIFECYCLE-DELTA-308",
@@ -6356,7 +6356,7 @@
       "owner": "Sol Medium Research Pipeline Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated Level-1 lifecycle synchronization", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "243c122500191fb6713d5d697911b0b6935089d1",
+      "base_commit": "f78f0e758d489a2898b991edf70ca63abb218e91",
       "lifecycle_stage": "integration",
       "dependencies": ["SOL-P94-DESKTOP-LAUNCH-291", "SOL-P96-DESKTOP-LAUNCH-303", "OPS-ROLLING-LIFECYCLE-SYNC-306"],
       "branch": "ops/prompt94-prompt96-lifecycle-308",
@@ -6374,7 +6374,7 @@
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [],
-      "source_refs": ["snapshot-base:243c122500191fb6713d5d697911b0b6935089d1", "prompt96-launch-record-commit:9687dce93c58555043988d859d44f28965b0461a"]
+      "source_refs": ["snapshot-base:f78f0e758d489a2898b991edf70ca63abb218e91", "prompt96-launch-record-commit:2cd5d41704709872765cee549e6d1c0a46761e76"]
     },
     {
       "id": "OPS-P94-RECOVERY-PACKAGE-304",
@@ -6383,7 +6383,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "tracked fail-closed response recovery", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "9687dce93c58555043988d859d44f28965b0461a",
+      "base_commit": "2cd5d41704709872765cee549e6d1c0a46761e76",
       "lifecycle_stage": "response_recovery",
       "dependencies": ["SOL-P94-DESKTOP-LAUNCH-291"],
       "branch": null,
@@ -6397,14 +6397,14 @@
       "evidence_label": "operational-only",
       "hashes": [
         {"kind": "response", "algorithm": "sha256", "value": "08715c3b0baa64dd5b252121f670ada6fe1e64b151223133f5eae564e707ff41", "path": "research/sol-pro/responses/response94.md"},
-        {"kind": "recovery_audit", "algorithm": "sha256", "value": "359a053c432f7a64bc783ebefdc392923a5c1e6c61711ac67c1c6a84903a13a4", "path": "research/sol-pro/audits/response94-recovery-audit-304.md"}
+        {"kind": "recovery_audit", "algorithm": "sha256", "value": "b3a086f6755c9149ffbe3b408c4b6db788830f766a64423b544f5b3689f25685", "path": "research/sol-pro/audits/response94-recovery-audit-304.md"}
       ],
       "disposition": "Completed fail-closed recovery preserves Response94's OPEN self-disposition and quarantines its bundle. This ledger row records lifecycle only and does not promote recovery provenance or a response claim.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P94-MATHEMATICAL-VERIFICATION-311"],
-      "integration_commit": "5db949acb0866ab9b67543b889b6d2d73447afc8",
+      "integration_commit": "ead7361e79923e8b4e27c1757f2304c68dcebb81",
       "timestamps": [],
-      "source_refs": ["recovery-merge:5db949acb0866ab9b67543b889b6d2d73447afc8"]
+      "source_refs": ["recovery-merge:ead7361e79923e8b4e27c1757f2304c68dcebb81"]
     },
     {
       "id": "P94-MATHEMATICAL-VERIFICATION-311",
@@ -6413,7 +6413,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent response mathematics audit", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "5db949acb0866ab9b67543b889b6d2d73447afc8",
+      "base_commit": "ead7361e79923e8b4e27c1757f2304c68dcebb81",
       "lifecycle_stage": "independent_audit",
       "dependencies": ["OPS-P94-RECOVERY-PACKAGE-304"],
       "branch": null,
@@ -6425,13 +6425,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "operational-only",
-      "hashes": [{"kind": "audit", "algorithm": "sha256", "value": "baa0163487158f20eb9bef84dee02d4397dc651ac7f60378ea655d3607d55a3e", "path": "research/sol-pro/audits/response94-mathematical-audit-311.md"}],
+      "hashes": [{"kind": "audit", "algorithm": "sha256", "value": "07df0fb38f114583dfc1e331cc89525e63497501208637bd3aaeaed511f8f522", "path": "research/sol-pro/audits/response94-mathematical-audit-311.md"}],
       "disposition": "Completed audit recommendation is MIXED / OPEN. Qualified local claims and the fixed-row counterexample await PI registry disposition; the all-pivot unit-stratum target remains OPEN.",
       "audit_outcome": "deferred",
       "review_ids": [],
-      "integration_commit": "233411207160c920fa0aa1d775ba39693143385c",
+      "integration_commit": "f190022c2bb1184729e2ed81ff9c376bf214d4b9",
       "timestamps": [],
-      "source_refs": ["audit-merge:233411207160c920fa0aa1d775ba39693143385c", "recommendation:MIXED-OPEN"]
+      "source_refs": ["audit-merge:f190022c2bb1184729e2ed81ff9c376bf214d4b9", "recommendation:MIXED-OPEN"]
     },
     {
       "id": "OPS-P95-RECOVERY-PACKAGE-310",
@@ -6440,7 +6440,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "tracked fail-closed response recovery", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "5db949acb0866ab9b67543b889b6d2d73447afc8",
+      "base_commit": "ead7361e79923e8b4e27c1757f2304c68dcebb81",
       "lifecycle_stage": "response_recovery",
       "dependencies": ["SOL-P95-DESKTOP-LAUNCH-297"],
       "branch": null,
@@ -6454,14 +6454,14 @@
       "evidence_label": "operational-only",
       "hashes": [
         {"kind": "response", "algorithm": "sha256", "value": "77586d4231f044a7b9253b26565c7aa78887cba41c48cf11fee4e01de803558c", "path": "research/sol-pro/responses/response95.md"},
-        {"kind": "recovery_audit", "algorithm": "sha256", "value": "65dc1bc114177fe9c48ab17c9d85277dde8b66c29d00153f4d73777fb4d41a81", "path": "research/sol-pro/audits/response95-recovery-audit-310.md"}
+        {"kind": "recovery_audit", "algorithm": "sha256", "value": "6101f073fbeb8628ace445861d6d21e667056d375dd950416100fb276c90cde4", "path": "research/sol-pro/audits/response95-recovery-audit-310.md"}
       ],
       "disposition": "Completed fail-closed recovery preserves Response95's PIVOT self-label while the maximum-pivot theorem remains OPEN. Quarantined files and finite claims are unverified; this row promotes nothing.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P95-MATHEMATICAL-VERIFICATION-321"],
-      "integration_commit": "2c81032e388e6cdc4d1735ca652e89b461736d5c",
+      "integration_commit": "dbb94e8ba1d1a09a6423fab60a5067c25a908368",
       "timestamps": [],
-      "source_refs": ["recovery-merge:6b1e4d424493353874866da1b2c5c7b255ade271", "recovery-correction:2c81032e388e6cdc4d1735ca652e89b461736d5c"]
+      "source_refs": ["recovery-merge:97952e9f1bb22ff76449b21c7dd0f85340f0da01", "recovery-correction:dbb94e8ba1d1a09a6423fab60a5067c25a908368"]
     },
     {
       "id": "P95-MATHEMATICAL-VERIFICATION-321",
@@ -6470,7 +6470,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent response mathematics audit", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "3df57af646f0618110db6b352709af56a5bd6208",
+      "base_commit": "4fec7c4225789e933d52270e23e68f4733bff887",
       "lifecycle_stage": "independent_audit",
       "dependencies": ["OPS-P95-RECOVERY-PACKAGE-310"],
       "branch": null,
@@ -6482,13 +6482,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "operational-only",
-      "hashes": [{"kind": "audit", "algorithm": "sha256", "value": "38ef7e6b3d8cc9fb06532334e1f81a3fea9d1274c25faa0db5de3b6536cf012a", "path": "research/sol-pro/audits/response95-mathematical-audit-321.md"}],
+      "hashes": [{"kind": "audit", "algorithm": "sha256", "value": "953b5dfc28a25d8c984cf5e3b61645bfd847f88bdba9c1cef97f2b9fc1a81a23", "path": "research/sol-pro/audits/response95-mathematical-audit-321.md"}],
       "disposition": "Completed audit recommendation is MIXED / OPEN. Supporting identities may merit qualified status after PI registry review; the maximum-covered-pivot redundancy theorem and unrestricted LRC remain OPEN.",
       "audit_outcome": "deferred",
       "review_ids": [],
-      "integration_commit": "591b01173ef769bbbf02d265a7da3d92c7024e27",
+      "integration_commit": "8e0b1156e731d6028d374adb7eb14fa375c7a171",
       "timestamps": [],
-      "source_refs": ["audit-merge:591b01173ef769bbbf02d265a7da3d92c7024e27", "recommendation:MIXED-OPEN"]
+      "source_refs": ["audit-merge:8e0b1156e731d6028d374adb7eb14fa375c7a171", "recommendation:MIXED-OPEN"]
     },
     {
       "id": "OPS-P96-RECOVERY-PACKAGE-314",
@@ -6497,7 +6497,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "tracked fail-closed response recovery", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "068de11a61a6551256138110e2920af9cec89284",
+      "base_commit": "97776e833c7e5c0aee4a0c7063204bed33380cae",
       "lifecycle_stage": "response_recovery",
       "dependencies": ["SOL-P96-DESKTOP-LAUNCH-303"],
       "branch": null,
@@ -6510,15 +6510,15 @@
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "response", "algorithm": "sha256", "value": "fe812c66937d5ad3b2db9504bd9df5601878af23753d524c9407258b19336d9f", "path": "research/sol-pro/responses/response96.md"},
-        {"kind": "recovery_audit", "algorithm": "sha256", "value": "8b699adcb0998b5cca353c83f9a8890a409634b66150d4a0362bf6a5188bc549", "path": "research/sol-pro/audits/response96-recovery-audit-314.md"}
+        {"kind": "response", "algorithm": "sha256", "value": "3eaa6d6b79de46de646698d37bd21ee27bbf2b3b63fcb1267f76cd9a82242af5", "path": "research/sol-pro/responses/response96.md"},
+        {"kind": "recovery_audit", "algorithm": "sha256", "value": "f2c13201b43b126e3c3f9c5428cb2d310c73f1472d82a944a48c86b863f02ec9", "path": "research/sol-pro/audits/response96-recovery-audit-314.md"}
       ],
       "disposition": "Completed fail-closed recovery preserves Response96's SEPARATION self-disposition only. It does not promote the symbolic family or any response claim.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P96-MATHEMATICAL-VERIFICATION-312"],
-      "integration_commit": "d3af3bc946bb210f441336759ce3d0612d8cac75",
+      "integration_commit": "d257b9502bb31c8220fa051c5ad60857cab3fc06",
       "timestamps": [],
-      "source_refs": ["recovery-merge:d3af3bc946bb210f441336759ce3d0612d8cac75"]
+      "source_refs": ["recovery-merge:d257b9502bb31c8220fa051c5ad60857cab3fc06"]
     },
     {
       "id": "P96-MATHEMATICAL-VERIFICATION-312",
@@ -6527,7 +6527,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent response mathematics audit", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "5db949acb0866ab9b67543b889b6d2d73447afc8",
+      "base_commit": "ead7361e79923e8b4e27c1757f2304c68dcebb81",
       "lifecycle_stage": "independent_audit",
       "dependencies": ["OPS-P96-RECOVERY-PACKAGE-314"],
       "branch": null,
@@ -6539,13 +6539,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "operational-only",
-      "hashes": [{"kind": "audit", "algorithm": "sha256", "value": "6b0f174d4e6ca60aeb89737acc06e855f347b3ac2b28dd30073bbf87aca725db", "path": "research/sol-pro/audits/response96-mathematical-audit-312.md"}],
+      "hashes": [{"kind": "audit", "algorithm": "sha256", "value": "cd9bac1ea4025355e1a608a0445e76a7c5dd9726c5283a8cc97080de58489088", "path": "research/sol-pro/audits/response96-mathematical-audit-312.md"}],
       "disposition": "Completed audit recommends ACCEPT SEPARATION and proved-math-qualified status for the symbolic all-E family only. The recommendation is deferred to Sol High and is not promoted by this ledger sync.",
       "audit_outcome": "deferred",
       "review_ids": [],
-      "integration_commit": "233411207160c920fa0aa1d775ba39693143385c",
+      "integration_commit": "f190022c2bb1184729e2ed81ff9c376bf214d4b9",
       "timestamps": [],
-      "source_refs": ["audit-merge:233411207160c920fa0aa1d775ba39693143385c", "recommendation:ACCEPT-SEPARATION-PROVED-MATH-QUALIFIED"]
+      "source_refs": ["audit-merge:f190022c2bb1184729e2ed81ff9c376bf214d4b9", "recommendation:ACCEPT-SEPARATION-PROVED-MATH-QUALIFIED"]
     },
     {
       "id": "OPS-P97-CONTRACT-STOP-AUDIT-313",
@@ -6554,7 +6554,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "prelaunch contract anti-tautology audit", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "5db949acb0866ab9b67543b889b6d2d73447afc8",
+      "base_commit": "ead7361e79923e8b4e27c1757f2304c68dcebb81",
       "lifecycle_stage": "contract_review",
       "dependencies": ["P94-MATHEMATICAL-VERIFICATION-311"],
       "branch": null,
@@ -6566,13 +6566,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "operational-only",
-      "hashes": [{"kind": "audit", "algorithm": "sha256", "value": "1fc21246c474350c2c5e4b171e1ce2c05fcc6f2027edcfe92ec540ea4bfe78fa", "path": "research/sol-pro/audits/prompt97-contract-stop-audit-313.md"}],
+      "hashes": [{"kind": "audit", "algorithm": "sha256", "value": "14bb5038fb6a7d8370cc82e7c9a46bcd4aafacf0ffe2e58e54577e79d11c1735", "path": "research/sol-pro/audits/prompt97-contract-stop-audit-313.md"}],
       "disposition": "STOP / NOT LAUNCHABLE: the proposed cycle bridge is a tautological duplicate of Prompt94's open unit-certificate target. This is a contract-design stop, not mathematical evidence against LRC.",
       "audit_outcome": "deferred",
       "review_ids": [],
-      "integration_commit": "068de11a61a6551256138110e2920af9cec89284",
+      "integration_commit": "97776e833c7e5c0aee4a0c7063204bed33380cae",
       "timestamps": [],
-      "source_refs": ["stop-record-merge:068de11a61a6551256138110e2920af9cec89284"]
+      "source_refs": ["stop-record-merge:97776e833c7e5c0aee4a0c7063204bed33380cae"]
     },
     {
       "id": "SOL-P98-PRO-MAX-COVERED-NONDIVISIBLE-PIVOT-REDUNDANCY-315",
@@ -6581,7 +6581,7 @@
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "/root",
       "runtime": {"route": "original browser-capable desktop Codex session", "model": "gpt-5.6-sol", "effort": "pro", "pro_cell": true, "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 21850, "tracked_prompt_characters": 21850, "submitted_payload_bytes": 21849, "submitted_payload_characters": 21849, "tracked_terminal_lf": true, "submitted_terminal_lf": false}},
-      "base_commit": "4c35f883e0bb11a2ab1c124327860116b3eff2a9",
+      "base_commit": "817d9c003a756909f030451ad43e982d4a9bf968",
       "lifecycle_stage": "active_research",
       "dependencies": ["SOL-P95-PRO-MAX-COVERED-PIVOT-292", "OPS-P97-CONTRACT-STOP-AUDIT-313"],
       "branch": null,
@@ -6594,16 +6594,16 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "cce1b85fe24c341b6b555eb245afc6bae17466cc3ec6bebc3b11a1e257b603c8", "path": "research/sol-pro/prompts/prompt98.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "4b0a17dd5f68d4787de358e7838c9e530b380ec58670a6dbc6924931f58806fe", "path": "research/sol-pro/prompts/prompt98.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "930b63e7a07cff39cc3bbbb81bc82813fbd94c8b1f5f03f61745ac3a15bfacb5", "path": null},
-        {"kind": "launch_record", "algorithm": "sha256", "value": "6e91c3e4c4d9f9ae9b258fb4ec11f90a818a2437ab1b3c93cc63706405d2d41c", "path": "research/sol-pro/launches/prompt98-2026-08-04.md"}
+        {"kind": "launch_record", "algorithm": "sha256", "value": "08adc21730af74c4e943aa0dcc3ddfa9bfa0794c6334ebf26e063d44aaec036a", "path": "research/sol-pro/launches/prompt98-2026-08-04.md"}
       ],
       "disposition": "Active Sol High Pro cell for the N-nondivisible Prompt95 branch. It is supporting research, not an accepted theorem or independent global route.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T05:14:49.4814375-05:00", "source": "authoritative Prompt98 launch record task317"}],
-      "source_refs": ["research/sol-pro/launches/prompt98-2026-08-04.md", "launch-record-commit:d5eae533c0a97ef8240e604adc704b207ca881c6"]
+      "source_refs": ["research/sol-pro/launches/prompt98-2026-08-04.md", "launch-record-commit:64d5a6a62df3cdc963aacc809600bd7d9d10a9ed"]
     },
     {
       "id": "SOL-P99-PRO-MAX-COVERED-DIVISIBLE-PIVOT-REDUNDANCY-316",
@@ -6612,7 +6612,7 @@
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "/root",
       "runtime": {"route": "original browser-capable desktop Codex session", "model": "gpt-5.6-sol", "effort": "pro", "pro_cell": true, "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 24087, "tracked_prompt_characters": 24087, "submitted_payload_bytes": 24086, "submitted_payload_characters": 24086, "tracked_terminal_lf": true, "submitted_terminal_lf": false}},
-      "base_commit": "79c81a5ee9d6d87948bc74aec703909ff89e8a30",
+      "base_commit": "ef0476a2ee5e5a3249576f5264823c2bd0148c8e",
       "lifecycle_stage": "active_research",
       "dependencies": ["SOL-P95-PRO-MAX-COVERED-PIVOT-292", "SOL-P98-PRO-MAX-COVERED-NONDIVISIBLE-PIVOT-REDUNDANCY-315"],
       "branch": null,
@@ -6625,16 +6625,16 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "56afb4187eeb0f15e423f74a0c026f1725deaee3620d4b64819663b38564c716", "path": "research/sol-pro/prompts/prompt99.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "91e6fe0d97c9a673b3426ec8d02b4670fc85d2e94a0b14048ec9487abafc242b", "path": "research/sol-pro/prompts/prompt99.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "5bced1512485c8b7ca46a07cc6d7e7c9a4a8dc86ea2bdf872439a43a0fcef2b5", "path": null},
-        {"kind": "launch_record", "algorithm": "sha256", "value": "0e04dc063434d45387fb7664321fd7832c5a43df0744c15ba559549463359726", "path": "research/sol-pro/launches/prompt99-2026-08-04.md"}
+        {"kind": "launch_record", "algorithm": "sha256", "value": "3b9dcad10fa2f84e3c95eb8938343df81137e536e7df3101765dc515561c2b0d", "path": "research/sol-pro/launches/prompt99-2026-08-04.md"}
       ],
       "disposition": "Active Sol High Pro cell for the N-divisible Prompt95 branch. Prompt98 is complementary but unproved; neither branch is promoted.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T05:18:23.0731100-05:00", "source": "authoritative Prompt99 launch record task318"}],
-      "source_refs": ["research/sol-pro/launches/prompt99-2026-08-04.md", "launch-record-commit:3df57af646f0618110db6b352709af56a5bd6208"]
+      "source_refs": ["research/sol-pro/launches/prompt99-2026-08-04.md", "launch-record-commit:4fec7c4225789e933d52270e23e68f4733bff887"]
     },
     {
       "id": "SOL-P100-PRO-TWO-LOWER-OWNER-NONCOVER-319",
@@ -6643,7 +6643,7 @@
       "owner": "Sol Medium Research Pipeline Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated supporting-contract preparation", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "d5eae533c0a97ef8240e604adc704b207ca881c6",
+      "base_commit": "64d5a6a62df3cdc963aacc809600bd7d9d10a9ed",
       "lifecycle_stage": "preparation",
       "dependencies": ["SOL-P98-PRO-MAX-COVERED-NONDIVISIBLE-PIVOT-REDUNDANCY-315", "SOL-P99-PRO-MAX-COVERED-DIVISIBLE-PIVOT-REDUNDANCY-316"],
       "branch": "research/prompt100-task319",
@@ -6655,13 +6655,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "a2aaa9c51334bcd9a93df54f470e4e4650494f027f28e04e9702b8bc5cffe4cd", "path": "research/sol-pro/prompts/prompt100.md"}],
+      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "b3044d37c66e7f90c1d74b942d29d44f1fe05bf1935f545dff3732bb082eca9d", "path": "research/sol-pro/prompts/prompt100.md"}],
       "disposition": "Prepared Prompt95-supporting two-owner contract. It is not an independent third-cell global route and promotes no theorem or finite evidence.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P100-INDEPENDENT-CONTRACT-REVIEW-322"],
-      "integration_commit": "3f857f4c83d2b05aa80eef790e853c2aa53e09a0",
+      "integration_commit": "e70135a2a82c22c0e2664e91426e0820a50d023b",
       "timestamps": [],
-      "source_refs": ["preparation-merge:3f857f4c83d2b05aa80eef790e853c2aa53e09a0", "metadata-correction:5fd423e15e1c7438a8059b427c5d39e489b1c52d"]
+      "source_refs": ["preparation-merge:e70135a2a82c22c0e2664e91426e0820a50d023b", "metadata-correction:d25e4e61513fca460b89b89f51f5162564af2de0"]
     },
     {
       "id": "P100-INDEPENDENT-CONTRACT-REVIEW-322",
@@ -6670,7 +6670,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent Level-1 contract review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "3f857f4c83d2b05aa80eef790e853c2aa53e09a0",
+      "base_commit": "e70135a2a82c22c0e2664e91426e0820a50d023b",
       "lifecycle_stage": "contract_review",
       "dependencies": ["SOL-P100-PRO-TWO-LOWER-OWNER-NONCOVER-319"],
       "branch": null,
@@ -6682,13 +6682,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "review", "algorithm": "sha256", "value": "4daadce18086c6721b560df249bb7032a374e1f39e6eac63a8384910ff01ff59", "path": "research/sol-pro/audits/prompt100-contract-review-322.md"}],
+      "hashes": [{"kind": "review", "algorithm": "sha256", "value": "f9ca402268ad10e7cb37a03abb707b865fc5454849970e0e9c57916933348ba9", "path": "research/sol-pro/audits/prompt100-contract-review-322.md"}],
       "disposition": "ACCEPT as launch-ready supporting Prompt95 contract; explicitly not an independent third-cell route. Contract acceptance promotes nothing.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "c6e3605cb7aebb3d6d974b9096782cb9912dc4e8",
+      "integration_commit": "feb558789efc808ecf75a84c2e2dc770993abf00",
       "timestamps": [],
-      "source_refs": ["review-merge:c6e3605cb7aebb3d6d974b9096782cb9912dc4e8"]
+      "source_refs": ["review-merge:feb558789efc808ecf75a84c2e2dc770993abf00"]
     },
     {
       "id": "SOL-P100-DESKTOP-LAUNCH-325",
@@ -6697,7 +6697,7 @@
       "owner": "GPT-5.6 Sol High top-level desktop orchestrator",
       "supervising_lead": "/root",
       "runtime": {"route": "original browser-capable desktop Codex session", "model": "gpt-5.6-sol", "effort": "pro", "pro_cell": true, "desktop_readback": {"signed_in": true, "new_conversation": true, "chat_selected": true, "work_selected": false, "sol_selected": true, "pro_selected": true, "exact_prompt_readback": true, "generation_started": true, "tracked_prompt_bytes": 19501, "tracked_prompt_characters": 19501, "submitted_payload_bytes": 19500, "submitted_payload_characters": 19500, "tracked_terminal_lf": true, "submitted_terminal_lf": false}},
-      "base_commit": "591b01173ef769bbbf02d265a7da3d92c7024e27",
+      "base_commit": "8e0b1156e731d6028d374adb7eb14fa375c7a171",
       "lifecycle_stage": "active_research",
       "dependencies": ["P100-INDEPENDENT-CONTRACT-REVIEW-322"],
       "branch": null,
@@ -6710,16 +6710,16 @@
       "verification": {"level": null, "state": "not_required"},
       "evidence_label": "operational-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "a2aaa9c51334bcd9a93df54f470e4e4650494f027f28e04e9702b8bc5cffe4cd", "path": "research/sol-pro/prompts/prompt100.md"},
+        {"kind": "prompt", "algorithm": "sha256", "value": "b3044d37c66e7f90c1d74b942d29d44f1fe05bf1935f545dff3732bb082eca9d", "path": "research/sol-pro/prompts/prompt100.md"},
         {"kind": "launch_payload", "algorithm": "sha256", "value": "ea2f23f0b24bcf34540400c7cb003355021c1cc59c196ff13d41414d58080486", "path": null},
-        {"kind": "launch_record", "algorithm": "sha256", "value": "994ad840bd669fc21f56c561de95bba70d567f455516a07ba3355b75aa6a0d8a", "path": "research/sol-pro/launches/prompt100-2026-08-04.md"}
+        {"kind": "launch_record", "algorithm": "sha256", "value": "01e7e0acf95d91b5d073c49a6f8f09d3ca797f5f87d92617adb92cc2693d9e65", "path": "research/sol-pro/launches/prompt100-2026-08-04.md"}
       ],
       "disposition": "Active Sol High Pro cell for the supporting Prompt95 two-owner branch. Launch promotes nothing and does not make this an independent global route.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P100-INDEPENDENT-CONTRACT-REVIEW-322"],
       "integration_commit": null,
       "timestamps": [{"event": "launched", "at": "2026-08-04T05:38:19.8349530-05:00", "source": "authoritative Prompt100 launch record"}],
-      "source_refs": ["research/sol-pro/launches/prompt100-2026-08-04.md", "launch-record-commit:40f166df52298b72e00e8e7a040a85a63e98e4b2"]
+      "source_refs": ["research/sol-pro/launches/prompt100-2026-08-04.md", "launch-record-commit:a661fe1fd28042e1f0b0a5a726910d6969c92a32"]
     },
     {
       "id": "SOL-P101-PRO-COVERED-PIVOT-SUBCRITICAL-WEIGHTS-323",
@@ -6728,7 +6728,7 @@
       "owner": "Sol Medium Research Pipeline Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "isolated global-contract preparation", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "3f857f4c83d2b05aa80eef790e853c2aa53e09a0",
+      "base_commit": "e70135a2a82c22c0e2664e91426e0820a50d023b",
       "lifecycle_stage": "preparation",
       "dependencies": ["P100-INDEPENDENT-CONTRACT-REVIEW-322"],
       "branch": "research/p101-cross-pivot-contract-323",
@@ -6740,13 +6740,13 @@
       "admission_class": "RESEARCH-UNRESOLVED",
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
-      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "7cc3ff4a7d9df7dc3514b162739dec335d7bafe45b7a4931de61ce4cb2083c3e", "path": "research/sol-pro/prompts/prompt101.md"}],
+      "hashes": [{"kind": "prompt", "algorithm": "sha256", "value": "cdd2ef72a9665fa34f040e7ad174caff0ca2f97c1a237a64807cd959a7580b92", "path": "research/sol-pro/prompts/prompt101.md"}],
       "disposition": "Prepared genuinely independent unrestricted global cross-pivot matrix contract. Preparation is not launch or evidence.",
       "audit_outcome": "not_applicable",
       "review_ids": ["P101-INDEPENDENT-CONTRACT-REVIEW-326"],
-      "integration_commit": "53eab4931d73b1c5c6b39770508136d1fc0e086c",
+      "integration_commit": "5fde35a56e14b1061f944d6d437c35dedc9bedb3",
       "timestamps": [],
-      "source_refs": ["preparation-merge:53eab4931d73b1c5c6b39770508136d1fc0e086c"]
+      "source_refs": ["preparation-merge:5fde35a56e14b1061f944d6d437c35dedc9bedb3"]
     },
     {
       "id": "P101-INDEPENDENT-CONTRACT-REVIEW-326",
@@ -6755,7 +6755,7 @@
       "owner": "Sol Medium Recovery and Verification Lead",
       "supervising_lead": "/root",
       "runtime": {"route": "independent Level-1 contract review", "model": "gpt-5.6-sol", "effort": "medium", "pro_cell": false},
-      "base_commit": "53eab4931d73b1c5c6b39770508136d1fc0e086c",
+      "base_commit": "5fde35a56e14b1061f944d6d437c35dedc9bedb3",
       "lifecycle_stage": "launch_ready",
       "dependencies": ["SOL-P101-PRO-COVERED-PIVOT-SUBCRITICAL-WEIGHTS-323"],
       "branch": null,
@@ -6768,15 +6768,15 @@
       "verification": {"level": 1, "state": "complete"},
       "evidence_label": "contract-only",
       "hashes": [
-        {"kind": "prompt", "algorithm": "sha256", "value": "7cc3ff4a7d9df7dc3514b162739dec335d7bafe45b7a4931de61ce4cb2083c3e", "path": "research/sol-pro/prompts/prompt101.md"},
-        {"kind": "review", "algorithm": "sha256", "value": "dcf92bde41f226339e53ee54eed2bc5891dbd62d5d7dfd89191067108ec0c622", "path": "research/sol-pro/audits/prompt101-contract-review-326.md"}
+        {"kind": "prompt", "algorithm": "sha256", "value": "cdd2ef72a9665fa34f040e7ad174caff0ca2f97c1a237a64807cd959a7580b92", "path": "research/sol-pro/prompts/prompt101.md"},
+        {"kind": "review", "algorithm": "sha256", "value": "3ec05ed0390ce21983393238c99150ed6443b80ebb345d37e08a6c9e3355e181", "path": "research/sol-pro/audits/prompt101-contract-review-326.md"}
       ],
       "disposition": "ACCEPT / LAUNCH-READY as a genuinely independent unrestricted global cross-pivot route. Queued for Sol High desktop launch; no theorem or finite evidence is promoted.",
       "audit_outcome": "not_applicable",
       "review_ids": [],
-      "integration_commit": "1c3cfe7746ab672184c5f77a9d6dbe708a50ff37",
+      "integration_commit": "fbda0f00ef593c9c6e9ccdfff4e4419678c836cf",
       "timestamps": [],
-      "source_refs": ["review-merge:1c3cfe7746ab672184c5f77a9d6dbe708a50ff37"]
+      "source_refs": ["review-merge:fbda0f00ef593c9c6e9ccdfff4e4419678c836cf"]
     }
   ],
   "placeholders": [

@@ -3,7 +3,7 @@
 Admission: `MEDIUM-SPEC-REQUIRED`
 
 Task ID: P68-BA-DEF-03
-Worker base: c05cd83743e6290598077006b380da5d80a1c122
+Worker base: 1bfe7fe27e01478cac8921a895882d1fedf6df61
 Contract commit: PENDING-INDEPENDENT-REVIEW
 Contract path: research/luna/contracts/p68-ba-def-03.md
 Contract SHA-256: PENDING-INDEPENDENT-REVIEW

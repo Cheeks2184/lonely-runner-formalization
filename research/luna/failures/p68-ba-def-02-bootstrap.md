@@ -3,7 +3,7 @@
 Evidence label: **rejected operational output**
 
 Task02 ran in a fresh isolated worktree at
-`c05cd83743e6290598077006b380da5d80a1c122`. Its runtime and containment
+`1bfe7fe27e01478cac8921a895882d1fedf6df61`. Its runtime and containment
 checks passed, but its first Lean command,
 `lake env lean LonelyRunner/BoundedAnnihilator.lean`, could not resolve the
 pinned dependency build because the fresh worktree had no `.lake/build`

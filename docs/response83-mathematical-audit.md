@@ -2,7 +2,7 @@
 
 Audit task: `P83-MATHEMATICAL-AUDIT-243`
 
-Base: `908a91234f5b91bbe5a4d759883e233993d8c9d8`
+Base: `efc6bb80aa4f6b08cb1a8eb00ce2146f6a0426eb`
 
 Audited response: `research/sol-pro/responses/response83.md`, SHA-256
 `ea582cc4b47d6c5cb047afb80c5e63f36d66f4b2b3a1b9fdb23c2277525ccb15`.

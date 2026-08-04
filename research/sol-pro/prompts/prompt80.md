@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Lead - prompt preparation only
 task_id: PIPE-P80-DIVISOR-BLOCK-CONTRACT-196
-base_commit: c2c0adc213c5df85a3f0fe64c87b5cc2b57dc3aa
+base_commit: f21f8b65307344862bde22001d6f59b61dffdbc6
 admission: LAUNCH-READY
 ---
 

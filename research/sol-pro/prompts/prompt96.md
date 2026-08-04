@@ -4,9 +4,9 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: GPT-5.6 Sol / Pro adversarial mathematical synthesis agent
 task_id: SOL-P96-ADVERSARIAL-SYNTHESIS-CONTRACT-PREP-299
-base_commit: fe01a9ee7a1d1f2268454f3cfd2786f41a01098a
+base_commit: f64092fecea12246a05ee7dfe6748df7f2454c41
 admission: REVIEW-REQUIRED
-accepted_dependency: P92-AUDIT-301-COMMIT-79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa
+accepted_dependency: P92-AUDIT-301-COMMIT-15dfcd14bd2e4230b042cf5f8c4c717a006b6913
 ---
 
 # Prompt 96: PROMPT92 COUNTERFAMILY AND SURVIVING-ROUTE SYNTHESIS
@@ -54,7 +54,7 @@ attachment, or attractive analogy is not a theorem.
 
 Unrestricted LRC remains open. The following tracked files are the only
 repository inputs. SHA-256 values cover exact committed bytes at authoritative
-base `fe01a9ee7a1d1f2268454f3cfd2786f41a01098a` or the explicitly named audit
+base `f64092fecea12246a05ee7dfe6748df7f2454c41` or the explicitly named audit
 commit.
 
 ```text
@@ -74,7 +74,7 @@ research/sol-pro/launches/prompt92-2026-08-04.md
   fda840e7f434917bf5c0350849628c11ff9cce2644a1642a97967be728a19707
 
 recovery commit
-  2e5554c508e5ca05a016994e53ce66af31a4702b
+  6fb384d24ad4d8bc04013d8a7117d8d9d526f0b5
 
 research/sol-pro/responses/response92.md
   b7299f87eabc0d4836ec15cb14fae5f2286389703ca28c5d20dd973d021ec8f6
@@ -86,7 +86,7 @@ research/sol-pro/artifacts/prompt92/recovery-manifest.txt
   d5b45eee7a5127c98fa223bf1858f29fc81aad2b85138c797fdad4d876bc8579
 
 accepted mathematical audit commit
-  79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa
+  15dfcd14bd2e4230b042cf5f8c4c717a006b6913
 
 research/sol-pro/audits/response92-symbolic-counterfamily-mathematical-audit-301.md
   21c738a00bb277f873e8c98762d95b1cd9d8d889a0f3042512e59c08ce6fc69f
@@ -136,7 +136,7 @@ Before launch, verify all of:
 
 ```text
 the integrated contract commit descends from audit301 commit
-79c4549f52ffdc95e06fb3a27a4bd5ecaf7acafa
+15dfcd14bd2e4230b042cf5f8c4c717a006b6913
 the recovery and audit paths and SHA-256 values above match exact committed bytes
 the full raw-response SHA-256 matches the recovery manifest and audit
 accepted audit301 claims retain `proved-math-qualified`

@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - aggregate dyadic contract only
 task_id: SOL-P92-AGGREGATE-DYADIC-CONTRACT-PREP-271
-base_commit: 143f363ca8eb4ca68a5ce1bf7963e8cc8a01459c
+base_commit: df86424e7e0d7c7f1daeda95c872deeb47de3c07
 admission: REVIEW-REQUIRED
 ---
 

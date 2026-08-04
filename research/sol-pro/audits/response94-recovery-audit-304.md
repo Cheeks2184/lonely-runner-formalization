@@ -2,7 +2,7 @@
 
 Task: `OPS-P94-RECOVERY-PACKAGE-304`
 
-Base: `9687dce93c58555043988d859d44f28965b0461a`
+Base: `2cd5d41704709872765cee549e6d1c0a46761e76`
 
 Recovered response: `research/sol-pro/responses/response94.md`, SHA-256
 `08715c3b0baa64dd5b252121f670ada6fe1e64b151223133f5eae564e707ff41`.

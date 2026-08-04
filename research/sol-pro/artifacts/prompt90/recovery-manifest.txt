@@ -1,6 +1,6 @@
 P90 RECOVERY MANIFEST v1
 task_id: OPS-P90-RECOVERY-PACKAGE-289
-base_commit: eb143b4ed47cfc91807cf872de8eb48fd13c4089
+base_commit: 3467593e061df081d318cbf957ca201b185949d0
 capture_owner: GPT-5.6 Sol High top-level desktop orchestrator
 launch_runtime: original browser-capable desktop Codex session
 prompt_path: research/sol-pro/prompts/prompt90.md

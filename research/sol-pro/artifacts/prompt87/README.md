@@ -32,8 +32,8 @@ accept them.
 ## Prompt and launch binding
 
 The launch record names integrated prompt commit
-`0e29903c9d04e2054f0bca42715874c8eb7e01e5`, which is an ancestor of recovery
-base `c7371004ca5a4b7ea77791d1b959cfb00e2eccea`. The tracked prompt independently
+`1cc4371a6df1036d54a3580cde5eb73f651eecb7`, which is an ancestor of recovery
+base `1736d5bad1652d40926b9939719f47dfb5b80da8`. The tracked prompt independently
 recomputes to SHA-256
 `0a9456c26579ee3e092b8d5e73dae16334226f4ed482d43759a049df8617bbff`:
 13,860 UTF-8 bytes, 13,836 characters, 353 LF separators, and a terminal LF.

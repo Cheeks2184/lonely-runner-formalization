@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - self-contained reserved synthesis contract only
 task_id: PIPE-P83-SELF-CONTAINED-SYNTHESIS-CONTRACT-217
-base_commit: 906644f28336d259b38e89c2ef00581bc3066a54
+base_commit: da1a6e61641d6072d37d15c5e69c4ba6e07db4b6
 admission: LAUNCH-READY
 ---
 

@@ -1,7 +1,7 @@
 # Response 92 symbolic counterfamily: independent mathematical audit
 
 - **Task:** `P92-SYMBOLIC-COUNTERFAMILY-MATHEMATICAL-AUDIT-301`
-- **Base commit:** `2e5554c508e5ca05a016994e53ce66af31a4702b`
+- **Base commit:** `6fb384d24ad4d8bc04013d8a7117d8d9d526f0b5`
 - **Scope:** independent hand audit of the symbolic family stated in `response92.md`
 - **Quarantine boundary:** no quarantined code, JSON, or ZIP payload was opened, extracted, imported, or executed. The recovery audit and text manifest were read only to identify provenance and the quarantine boundary.
 - **Disposition recommendation:** accept the symbolic family, the exact `n = 6` arithmetic, and the resulting refutation of the sole Prompt 92 lemma as `proved-math-qualified`. This is not a Lean proof and is not evidence against the Lonely Runner Conjecture.

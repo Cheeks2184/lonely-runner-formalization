@@ -2,7 +2,7 @@
 
 Task: `OPS-P96-RECOVERY-PACKAGE-314`
 
-Base: `068de11a61a6551256138110e2920af9cec89284`
+Base: `97776e833c7e5c0aee4a0c7063204bed33380cae`
 
 Recovered response: `research/sol-pro/responses/response96.md`, SHA-256
 `fe812c66937d5ad3b2db9504bd9df5601878af23753d524c9407258b19336d9f`.
@@ -39,7 +39,7 @@ Recovery neither re-performs nor promotes that review.
   effort selected, exact composer readback, and live generation control.
 - Prompt path: `research/sol-pro/prompts/prompt96.md`.
 - Prompt integration commit:
-  `17b1a2b9d6f6d1b438b29b23710a6e102a7ed5d4`.
+  `bf11c644c80cc1f4411a1d2bb311c26e7040a8eb`.
 - Prompt Git blob: `0d0501617e9553b8e2c5dc89b8afeef0d6c3f9b7`.
 - Prompt SHA-256:
   `adbcb3215f385df5e21d2f5f3c6a79ec2f775f309c189cd7c731b65fc9d6f1d1`.
@@ -50,7 +50,7 @@ Recovery neither re-performs nor promotes that review.
 - Submitted payload SHA-256:
   `cfe244b748c67d64e1d6c5e8a0710f1ed9ba97d44f7699a12d71ba625821fdab`.
 - Launch record commit:
-  `9687dce93c58555043988d859d44f28965b0461a`.
+  `2cd5d41704709872765cee549e6d1c0a46761e76`.
 - Launch record SHA-256:
   `833cafd9303a971bc6c9ea2be7f17797ab668cf6e9b17580177633e123147c3d`.
 

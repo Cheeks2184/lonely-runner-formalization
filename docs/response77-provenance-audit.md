@@ -3,7 +3,7 @@
 Task: `OPS-P77-PROVENANCE-AUDIT-205`
 
 Audit base and recovered package commit:
-`9789f1dd457f0084838dfe72c5aa5168d33e278b`
+`33badb893e0cb82d054ef08f479e2314792f8a65`
 
 Scope: committed recovery bytes, raw/normalized response relation, five
 response-authored hashes, strict JSON and JSONL syntax, JSONL inventory and
@@ -176,13 +176,13 @@ research/sol-pro/responses/response77.md:688: leftover conflict marker
 At that exact immutable line the complete content is `=======`, between
 `\beta_d` and the following displayed formula. The line is response-authored
 mathematical formatting, not evidence of an unresolved Git merge. Running
-`git diff --check` over recovery commit `9789f1d` while excluding only the
+`git diff --check` over recovery commit `33badb8` while excluding only the
 canonical response exits successfully. No other changed path has a whitespace
 or conflict-marker diagnostic. The response must not be edited merely to
 silence this recovery-preservation exception.
 
 Commit `9694789846f6e9e01dede7cb1cfe59e8bea5dcb7` created the launch record
-at lifecycle `active Sol Pro research`. Commit `9789f1d` changed it to
+at lifecycle `active Sol Pro research`. Commit `33badb8` changed it to
 `completed/recovered`, added the response and five attachments, and appended a
 matching recovery record to `research/sol-pro/session-log.md`. This transition
 is monotone and does not infer verification from recovery.

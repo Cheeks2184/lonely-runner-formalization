@@ -1,7 +1,7 @@
 # Response82 mathematical audit
 
 Audit task: `VER-P82-MATHEMATICAL-AUDIT-231`
-Base: `70d030e15d7080a76bff7d4087f6e4c3b5804b1c`
+Base: `9a5ebc29ce91531d674a51908c4fcbedfd0aab6b`
 
 ## Scope and evidence boundary
 

@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - unrestricted minimal-cover uncrossing contract only
 task_id: SOL-P90-CONTRACT-PREP-261
-base_commit: a4cd1242a0a58c22b6407b95256bd96cadc428e8
+base_commit: 85d525a2934f90be5f3e266c3c15c19519822d98
 admission: REVIEW-REQUIRED
 ---
 

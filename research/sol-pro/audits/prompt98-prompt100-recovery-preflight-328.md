@@ -2,8 +2,8 @@
 
 - Task: `OPS-P98-P100-RECOVERY-PREFLIGHT-PERSISTENCE-329`
 - Source review task: `OPS-P98-P100-RECOVERY-PREFLIGHT-328`
-- Frozen base reviewed: `1c3cfe7746ab672184c5f77a9d6dbe708a50ff37`
-- Persistence base: `4b3f063dae5a6a1e6cac9298f5c95a99a997b2a2`
+- Frozen base reviewed: `fbda0f00ef593c9c6e9ccdfff4e4419678c836cf`
+- Persistence base: `e3e38bd0a4eb1da44a424011ecc81e0a22117b77`
 - Scope: tracked Prompt98, Prompt99, and Prompt100 contracts and public launch records only
 - Evidence effect: none; this is an operational preflight
 
@@ -27,7 +27,7 @@ Frozen launch identity:
 - Launch task: `SOL-P98-DESKTOP-LAUNCH-317`
 - Prompt path: `research/sol-pro/prompts/prompt98.md`
 - Launch-record path: `research/sol-pro/launches/prompt98-2026-08-04.md`
-- Prompt commit: `4c35f883e0bb11a2ab1c124327860116b3eff2a9`
+- Prompt commit: `817d9c003a756909f030451ad43e982d4a9bf968`
 - Blob: `9cdf12d13aaf2090b92bbd179800739b7261ac78`
 - Prompt SHA-256: `cce1b85fe24c341b6b555eb245afc6bae17466cc3ec6bebc3b11a1e257b603c8`
 - Submitted SHA-256: `930b63e7a07cff39cc3bbbb81bc82813fbd94c8b1f5f03f61745ac3a15bfacb5`
@@ -123,7 +123,7 @@ Frozen launch identity:
 - Launch task: `SOL-P99-DESKTOP-LAUNCH-318`
 - Prompt path: `research/sol-pro/prompts/prompt99.md`
 - Launch-record path: `research/sol-pro/launches/prompt99-2026-08-04.md`
-- Prompt commit: `79c81a5ee9d6d87948bc74aec703909ff89e8a30`
+- Prompt commit: `ef0476a2ee5e5a3249576f5264823c2bd0148c8e`
 - Blob: `df8c238e68da776a9af6a0916eb65e72bb08d08b`
 - Prompt SHA-256: `56afb4187eeb0f15e423f74a0c026f1725deaee3620d4b64819663b38564c716`
 - Submitted SHA-256: `5bced1512485c8b7ca46a07cc6d7e7c9a4a8dc86ea2bdf872439a43a0fcef2b5`
@@ -208,7 +208,7 @@ Frozen launch identity:
 - Route: P95 supporting subroute, not an independent third Pro route
 - Prompt path: `research/sol-pro/prompts/prompt100.md`
 - Launch-record path: `research/sol-pro/launches/prompt100-2026-08-04.md`
-- Prompt commit and base at launch: `591b01173ef769bbbf02d265a7da3d92c7024e27`
+- Prompt commit and base at launch: `8e0b1156e731d6028d374adb7eb14fa375c7a171`
 - Blob: `aa112b5eaf028bd2ca2ae3fe4d9226d7839321a9`
 - Prompt SHA-256: `a2aaa9c51334bcd9a93df54f470e4e4650494f027f28e04e9702b8bc5cffe4cd`
 - Scoped SHA-256: `f353ac34583d2223276dd08f87acaac6afc996d4507040624c9141cb6386d344`

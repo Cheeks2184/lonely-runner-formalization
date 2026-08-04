@@ -28,7 +28,7 @@ capture byte-for-byte.
 The public launch record is
 `research/sol-pro/launches/prompt86-2026-08-04.md`. It binds the tracked
 prompt `research/sol-pro/prompts/prompt86.md` at integrated commit
-`6d609e591f67d1ce3a90abf966e3e5536ca85ff1` and SHA-256
+`5ee9a0a62b7709ee1ca6c48d81143f14e016888f` and SHA-256
 `49135b31319081b732a26fa24ec6154c63c3e2543e6995637d2e2e0b11cc7f77`.
 No private conversation, browser-session, account, or machine identifier is
 included in this package.

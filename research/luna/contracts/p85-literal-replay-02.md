@@ -26,7 +26,7 @@ review accepts the exact contract blob and Sol High commits the immutable
 runtime receipt and launch record described below. No worker is launched by
 this specification task.
 
-Base commit: `cc58e9affd445af9cb5f77911c8ab823916bbeae`
+Base commit: `e0560c5cc9076e5ce3b58f968edc8037eee8c4d3`
 
 Branch/worktree:
 
@@ -103,7 +103,7 @@ LF:
 
 ```text
 Task ID: P85-LITERAL-REPLAY-02
-Worker base: cc58e9affd445af9cb5f77911c8ab823916bbeae
+Worker base: e0560c5cc9076e5ce3b58f968edc8037eee8c4d3
 Contract commit: <40 lowercase hex commit containing this reviewed contract>
 Contract path: research/luna/contracts/p85-literal-replay-02.md
 Contract SHA-256: <64 lowercase hex SHA-256 of that committed blob>
@@ -226,7 +226,7 @@ one_field () {
 }
 test "$(one_field 'Task ID')" = 'P85-LITERAL-REPLAY-02'
 test "$(one_field 'Worker base')" = \
-  'cc58e9affd445af9cb5f77911c8ab823916bbeae'
+  'e0560c5cc9076e5ce3b58f968edc8037eee8c4d3'
 contract_commit="$(one_field 'Contract commit')"
 contract_sha256="$(one_field 'Contract SHA-256')"
 test "$(one_field 'Contract path')" = "$contract_path"
@@ -317,7 +317,7 @@ test ! -e ../lrc-luna-p85-literal-replay-02
 test -z "$(git branch --list verify/luna-p85-literal-replay-02)"
 git worktree add -b verify/luna-p85-literal-replay-02 \
   ../lrc-luna-p85-literal-replay-02 \
-  cc58e9affd445af9cb5f77911c8ab823916bbeae
+  e0560c5cc9076e5ce3b58f968edc8037eee8c4d3
 ```
 
 The worker must confirm that `realpath .` equals the real path of the declared
@@ -630,7 +630,7 @@ the source, preflight, and full output. It contains:
 ```text
 schema_version: 1
 task_id: P85-LITERAL-REPLAY-02
-worker_base: cc58e9affd445af9cb5f77911c8ab823916bbeae
+worker_base: e0560c5cc9076e5ce3b58f968edc8037eee8c4d3
 contract_commit: <from immutable launch record>
 contract_sha256: <from immutable launch record>
 prompt85_sha256: 491e11edbb5fb88756f09f635f08203427035c3ab1eef62c4d18605d7e120255
@@ -856,7 +856,7 @@ bundle_commit="$(git rev-parse HEAD)"
 test "${#bundle_commit}" -eq 40
 case "$bundle_commit" in *[!0-9a-f]*) exit 1 ;; esac
 test "$(git rev-parse HEAD^)" = \
-  'cc58e9affd445af9cb5f77911c8ab823916bbeae'
+  'e0560c5cc9076e5ce3b58f968edc8037eee8c4d3'
 bundle_paths="$(git diff-tree --no-commit-id --name-only -r \
   "$bundle_commit" | sort)"
 test "$bundle_paths" = "$expected_changed"

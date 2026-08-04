@@ -2,7 +2,7 @@
 
 Task: `OPS-P86-RECOVERY-PACKAGE-272`
 
-Base: `fba819e219e33b3b9a9b9c19adcec94c0065b822`
+Base: `98f4655e314a97c0d5158d6b3ebe0e8a16259132`
 
 Recovered response: `research/sol-pro/responses/response86.md`, SHA-256
 `4b977eed0879be8508f1354daaf7db914c254c229e507af3b1b25f8cc52449fa`.

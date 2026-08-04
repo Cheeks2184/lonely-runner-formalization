@@ -31,36 +31,36 @@ remain unverified. Task256 and replay `-01` are closed after the fresh
 top-level Luna/xhigh process stopped at the runtime-metadata accessibility
 gate before source work or preflight. That run is rejected operational output
 only. Successor contract `P85-LITERAL-REPLAY-02` is integrated through
-`fe01a9e` but remains `REVIEW-REQUIRED` / `MEDIUM-SPEC-REQUIRED`; it creates no
+`f64092f` but remains `REVIEW-REQUIRED` / `MEDIUM-SPEC-REQUIRED`; it creates no
 runtime receipt, launch, implementation, or evidence.
 
 Prompt86 is completed and recovered with provisional `MIXED / PIVOT` triage;
 its selector is `OPEN` and five attachments remain
 `QUARANTINED / UNVERIFIED`. Prompt87 is completed, recovered, and independently
-audited. Prompt92 audit301, merged at `79c4549`, proves a symbolic all-`E`
+audited. Prompt92 audit301, merged at `15dfcd1`, proves a symbolic all-`E`
 counterfamily at `proved-math-qualified` scope and refutes the identical
 Prompt87/Prompt92 aggregate-dyadic bridge. This kills only that auxiliary
 arrow; it is not Lean or computed finite evidence and does not decide LRC or
 the exact pivot equivalence. Prompt89 completed and its response plus four
-attachments are recovered at `d389ec8`; every response computation remains
+attachments are recovered at `24a8f22`; every response computation remains
 unverified / quarantined. None of these lifecycle facts promotes an
 unrestricted result.
 
 Prompt90 is a failed research launch / rejected operational output at recovery
-merge `33a690d`; because its payload remained a `REVIEW-REQUIRED` Medium
+merge `0941fff`; because its payload remained a `REVIEW-REQUIRED` Medium
 contract, no theorem was attempted. Prompt92 completed, was recovered at
-`2e5554c`, and has the exact qualified negative above; its quarantined
+`6fb384d`, and has the exact qualified negative above; its quarantined
 computation remains unpromoted. Prompt91 received prelaunch REVISE / STOP on a
 mandatory fixture and was not launched. Prompt93 also stopped before launch;
 its branch-only replay specification remains `MEDIUM-SPEC-REQUIRED` after
-review294 returned REVISE. Prompt94 is recovered at `5db949a`; independent
-audit `2334112` is `MIXED / OPEN`, keeps the archive quarantined, and leaves
-the global unit-deficit lemma open. Prompt95 is recovered through `2c81032`;
-audit `591b011` accepts qualified local capacity and slice facts only, while
+review294 returned REVISE. Prompt94 is recovered at `ead7361`; independent
+audit `f190022` is `MIXED / OPEN`, keeps the archive quarantined, and leaves
+the global unit-deficit lemma open. Prompt95 is recovered through `dbb94e8`;
+audit `8e0b115` accepts qualified local capacity and slice facts only, while
 `PRIVATE-LIFT-COVERAGE`, redundancy, and LRC remain open. Prompt96 is recovered
-at `d3af3bc`; audit `2334112` accepts a family-specific `SEPARATION` which
+at `d257b95`; audit `f190022` accepts a family-specific `SEPARATION` which
 blocks misuse of the Prompt92 family but narrows no unrestricted edge.
-Prompt97 stopped before launch at `068de11` because its target was equivalent
+Prompt97 stopped before launch at `97776e8` because its target was equivalent
 to the still-open unit-certificate premise.
 
 Prompt98 and Prompt99 are active on complementary maximum-covered-pivot

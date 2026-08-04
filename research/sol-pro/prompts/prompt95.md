@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: GPT-5.6 Sol / Pro mathematical research agent
 task_id: SOL-P95-PRO-MAX-COVERED-PIVOT-292
-base_commit: 33a690ddcaf66b818b74b6fa62ac16491c9638ba
+base_commit: 0941fffc47b703bd42196f140629f2883f8bd688
 admission: LAUNCH-CANDIDATE
 prompt_encoding: UTF-8
 prompt_line_endings: LF

@@ -4,7 +4,7 @@ supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
 role: Research Pipeline Medium Lead - unrestricted independent-route specification only
 task_id: PIPE-P88-INDEPENDENT-ROUTE-SPEC-245
-base_commit: 908a91234f5b91bbe5a4d759883e233993d8c9d8
+base_commit: efc6bb80aa4f6b08cb1a8eb00ce2146f6a0426eb
 admission: MEDIUM-SPEC-REQUIRED
 ---
 

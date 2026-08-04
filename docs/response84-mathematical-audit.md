@@ -2,7 +2,7 @@
 
 Audit task: `P84-MATHEMATICAL-AUDIT-247`
 
-Base: `9cff0a963dffd4a354b10db0969c7ecfd779e3d5`
+Base: `f9d0b865bb4d7ebafcacdc91fe6665734ecfd7f0`
 
 Audited prompt: `research/sol-pro/prompts/prompt84.md`, SHA-256
 `de9084eba8918366ba7ce8ac5bd5f7ea3580a50256ce0080a1d6382e7d2e33cb`

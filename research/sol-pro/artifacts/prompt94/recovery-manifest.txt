@@ -1,10 +1,10 @@
 P94 RECOVERY MANIFEST v1
 task_id: OPS-P94-RECOVERY-PACKAGE-304
-base_commit: 9687dce93c58555043988d859d44f28965b0461a
+base_commit: 2cd5d41704709872765cee549e6d1c0a46761e76
 launch_task: SOL-P94-DESKTOP-LAUNCH-291
 prompt_path: research/sol-pro/prompts/prompt94.md
 prompt_sha256: dfb9d28e46091512864edb182524a60819d5ae0e34b4d1c4b9ba05f09e0e3ae8
-prompt_integrated_commit: eb143b4ed47cfc91807cf872de8eb48fd13c4089
+prompt_integrated_commit: 3467593e061df081d318cbf957ca201b185949d0
 raw_response_source: ignored tmp/p94-response.raw.b64 captured solely by Sol High
 ignored_base64_capture_bytes: 53288
 ignored_base64_capture_sha256: 23d7db131f451559a135d726eed581154b1ec28fd3303c21416a3650a539cd2e

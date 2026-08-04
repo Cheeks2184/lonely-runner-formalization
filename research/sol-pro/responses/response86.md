@@ -1450,7 +1450,7 @@ On the accessible current branch:
 * `positiveIntegerConjecture_iff_positiveRationalConjecture`
 * `conjecture_iff_positiveIntegerConjecture`
 
-The supplied ref `b083994f6cf2e54f5129f3dc211365ca2a1b8c66` was not available through the connected repository interface. These declaration names were therefore checked on accessible `main`, not compiled against the supplied hash. No base-commit `proved-lean` promotion is made.
+The supplied ref `4944fe1c4af3b6fc1dfdd4e407324f61170edbbb` was not available through the connected repository interface. These declaration names were therefore checked on accessible `main`, not compiled against the supplied hash. No base-commit `proved-lean` promotion is made.
 
 ### Target commands
 

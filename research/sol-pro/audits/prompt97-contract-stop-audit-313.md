@@ -2,7 +2,7 @@
 
 Task: `OPS-P97-CONTRACT-STOP-AUDIT-313`
 
-Base: `5db949acb0866ab9b67543b889b6d2d73447afc8`
+Base: `ead7361e79923e8b4e27c1757f2304c68dcebb81`
 
 Candidate commit: `efb8c60aac77c0bcb79e3bd0f0b7d78382c74212`
 
