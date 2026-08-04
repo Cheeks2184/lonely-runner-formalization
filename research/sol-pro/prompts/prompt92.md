@@ -660,7 +660,7 @@ Return `STOP` immediately on:
 - iteration of `PrimeForcing(n,2)` without an independently proved valuation
   accumulation theorem;
 - generalization to arbitrary `q`, contradicted by the prime failures;
-- reliance on Prompt79, Prompt89, Prompt90, or the rejected Prompt91 Fejer
+- reliance on Prompt79, Prompt89, Prompt90, or the separate Prompt91 Fejer
   target;
 - treating Prompt87 reasoning or MSS as repository-proved mathematics;
 - bounded computation offered as a universal theorem; or
