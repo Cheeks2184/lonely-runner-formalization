@@ -327,3 +327,22 @@ without accepting either. The frozen signed-Gram lemma, exact pivot selector,
 positive-integer LRC, and unrestricted LRC retain their prior statuses pending
 the named audits. No theorem, computation, counterexample, or evidence label
 is promoted by this package.
+
+## VER-P74-RECOVERY-PROVENANCE-173 — Prompt74 provenance audit
+
+- **Recovery commit audited:**
+  `967cabe9d0a94c2504e36e10473ef5eccef87adc`
+- **Disposition:** accepted for recovery provenance only
+- **Inventory:** exact three-path recovery change confirmed
+- **Response:** raw hash/shape and CRLF-to-LF-only normalization independently
+  reproduced byte-for-byte
+- **Launch linkage:** tracked prompt and terminal-LF-omitted UI payload hashes
+  independently reproduced
+- **Attachments:** none; input and repository inventories agree
+- **Privacy/hygiene:** targeted scan clean; recovery diff check clean
+- **Mathematical boundary:** response **STOP**, scaling counterexample, finite
+  results, and all theorem statuses remain unaccepted pending audit 174
+
+The authoritative audit is `docs/response74-provenance-audit.md`. Its
+`recovery-provenance-accepted` recommendation is operational only and does not
+promote a theorem, counterexample, computation, or LRC status.
