@@ -95,19 +95,27 @@ premise while preserving primitivity. Neither factor is proved. This scope
 theorem corrects the Prompt99 branch architecture; it does not prove Prompt95,
 the pivot existential, or LRC.
 
-Prompt98 remains active/unrecovered on the nondivisible supporting branch.
+Prompt98's original response and five attachments are recovered at `f698998`.
+Its MBCP proposal is rejected because, universally, it is equivalent to the
+frozen nondivisible branch rather than a narrower bridge. A separate exact
+primitive tuple refutes the proposed maximal-set pair-overlap sufficient
+condition; the generic multiplicity inequality survives. The response's
+finite bundle was replayed independently but remains unpromoted pending a
+Medium semantic audit. A same-chat correction remains active, so Prompt98's
+nondivisible theorem is still open.
 Prompt100 remains active/unrecovered at `a661fe1` on the uniform two-lower-owner
 noncover theorem, which would prove only the `|F(a)|<=3` Prompt95 regime.
-Prompt101 was launched by Sol High in a genuinely new Sol/Pro conversation at
-`b0cf154` and is active/unrecovered on the independent global covered-pivot
-subcritical-weights route. Repository records do not establish any later
-browser terminal state. A launch is not a result; all three research targets,
-Prompt95, and unrestricted LRC remain open.
+Prompt101 completed and is recovered at `6964613`. Independent audit refutes
+`COVERED-PIVOT-SUBCRITICAL-WEIGHTS` on the primitive tuple
+`(1,5,25,125)` and verifies the uniform geometric power-family obstruction at
+`proved-math-qualified` scope. The claimed first-failure scan is rejected as
+unbound evidence. This stops only that sufficient theorem; it is not an LRC
+counterexample.
 
 Prompt88 remains parked as `MEDIUM-SPEC-REQUIRED`. At least two Medium lead
 lanes remain active; no Luna worker or `LUNA-READY` task is active. The three
-repository-recorded active/unrecovered Pro cells are Prompt98, Prompt100, and
-Prompt101, without broadening Luna Narrow Verification Mode.
+repository-recorded active Pro cells are Prompt98's correction and Prompt100;
+Prompt101 is terminal. Luna Narrow Verification Mode is unchanged.
 
 No recovered Prompt76 scan, Prompt77 6,330-record scan, or Prompt78 computation
 has been promoted to computed finite evidence. Current validator queues are

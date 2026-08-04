@@ -7,9 +7,10 @@ the Lonely Runner Conjecture (LRC).
 > `Conjecture` is a formal statement under investigation, not a completed
 > proof. See [STATUS.md](STATUS.md) for the current boundary of knowledge.
 
-Current repository-recorded pipeline: Prompt98, Prompt100, and Prompt101 are
-active/unrecovered browser research cells under the top-level Sol High
-orchestrator. Prompt99 completed and exposed a semantic contract defect: its
+Current repository-recorded pipeline: Prompt98's original response and five
+attachments are recovered while a same-chat correction remains active;
+Prompt100 remains active/unrecovered; Prompt101 is completed, recovered, and
+independently audited. Prompt99 completed and exposed a semantic contract defect: its
 unnormalized divisible restriction is equivalent to full Prompt95 under common
 scaling. This equivalence is now Lean-verified, but neither redundancy theorem
 is proved. Gcd normalization is also Lean-verified: full Prompt95 is exactly
@@ -19,7 +20,7 @@ open. Prompt preparation, launch, and bounded admission preflight are not
 mathematical evidence. The machine-readable lifecycle source is
 [`research/task-ledger.json`](research/task-ledger.json), bound to immutable
 PI decision registry commit
-`b3b04b57fa2dc0c03589c2493ff71a7fa2b37cb9`.
+`fb4c2a047717afbdc93b085f052cd25845297f57`.
 
 ## Verified results
 
@@ -373,9 +374,15 @@ but no redundancy/descent theorem; Prompt96 is a family-specific
 `SEPARATION`. Prompt97 stopped before launch because its target was a
 tautological reformulation of an open unit-certificate premise. Prompt99 is
 completed/recovered and its branch separation is stopped by the new
-Lean-verified scope equivalence. Prompt98 and Prompt100 remain
-active/unrecovered supporting routes; Prompt101 is active/unrecovered on the
-independent global weights route. No active response, launch, quarantined attachment, or admission
+Lean-verified scope equivalence. Prompt98 remains open: its proposed MBCP
+bridge was rejected as equivalent to the frozen branch, and the maximal-set
+pair-overlap sufficient condition is refuted exactly by an in-domain
+primitive tuple. Its recovered finite bundle is replayed but not promoted
+pending a semantic audit. Prompt100 remains active/unrecovered. Prompt101 is
+completed and its subcritical-weights theorem is `refuted-exact` by
+`(1,5,25,125)` and the audited geometric power family. These are bridge
+counterexamples, not LRC counterexamples. No active response, launch,
+quarantined attachment, or admission
 preflight promotes a theorem or finite evidence. Prompt85 replay `-02` and the
 Prompt93 replay remain `MEDIUM-SPEC-REQUIRED`; no Luna task is active or
 `LUNA-READY`.

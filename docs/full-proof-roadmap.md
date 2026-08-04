@@ -83,18 +83,23 @@ divisible branch; it is not collapsed by scaling because a positive common
 scaling of a primitive tuple is primitive only at scale one. This removes the
 normalization/scope ambiguity but proves neither conjunct.
 
-Prompt98 remains active/unrecovered on the nondivisible supporting branch.
-Its success would leave exactly the primitive divisible branch above as the
-remaining Prompt95 edge; while Prompt98 is open, both conjuncts remain open.
+Prompt98's original response is recovered. Its MBCP proposal is rejected as a
+disguised equivalent of the entire nondivisible branch, and the proposed
+maximal-set pair-overlap supply is `refuted-exact`; see
+`docs/response98-provisional-audit.md` and
+`docs/internal-pair-overlap-supply-refutation.md`. Its same-chat correction is
+still active. A valid success would leave exactly the primitive divisible
+branch above as the remaining Prompt95 edge; while Prompt98 is open, both
+conjuncts remain open.
 Prompt100 remains active/unrecovered on the uniform two-lower-owner noncover
 theorem; success would give the `|F(a)|<=3` part of Prompt95, not the full
-bridge. Prompt101 is active/unrecovered after Sol High launch task339. It asks
-for a positive rational vector `x` with `A_F*x<x` for the normalized
-bad-incidence matrix on all covered pivots. If every pivot were covered, the
-minimum-weight row and the union bound would contradict that inequality. The
-weight-existence theorem itself remains open. Three Pro cells are recorded
-active, no launch-ready contract exists, and no launch is mathematical
-evidence. Prompt88 remains parked behind a `MEDIUM-SPEC-REQUIRED` gate.
+bridge. Prompt101 is completed, recovered, and independently audited. Its
+positive subcritical-weight theorem is `refuted-exact` by `(1,5,25,125)` and
+by the uniform family `a_k=cN^k`; see
+`docs/response101-mathematical-audit.md`. The counterfamily stops that
+sufficient matrix route only. Two Pro cells are recorded active, no
+launch-ready contract exists, and no launch is mathematical evidence.
+Prompt88 remains parked behind a `MEDIUM-SPEC-REQUIRED` gate.
 
 These lifecycle transitions do not change the exact unrestricted bottleneck
 below.

@@ -1,5 +1,22 @@
 # Failed approaches and counterexamples
 
+## 2026-08-04: Prompt98/101 bridge stops
+
+Prompt98's proposed MBCP statement is rejected as a disguised equivalent of
+the entire frozen nondivisible branch: that branch implies MBCP vacuously,
+while the response's descent claims MBCP implies the branch. The later
+maximal-set `INTERNAL-PAIR-OVERLAP-SUPPLY` sufficient condition is
+`refuted-exact` by `(7,8,9,10,11,13,18,3243240)`; see
+[`internal-pair-overlap-supply-refutation.md`](internal-pair-overlap-supply-refutation.md).
+The generic pair-incidence inequality remains valid.
+
+Prompt101's `COVERED-PIVOT-SUBCRITICAL-WEIGHTS` theorem is `refuted-exact` by
+the primitive tuple `(1,5,25,125)`, with the same obstruction extending to the
+geometric family `a_k=cN^k`; see
+[`response101-mathematical-audit.md`](response101-mathematical-audit.md).
+Neither tuple is an LRC counterexample. These records stop only the named
+sufficient bridges.
+
 ## 2026-08-01: audit of a claimed CRT/LCM proof
 
 Source audited: Bhaskar Kumar, *A Complete Proof of the Lonely Runner

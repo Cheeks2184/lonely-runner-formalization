@@ -32,9 +32,9 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 3)
+        self.assertEqual(metrics["active_pro_cells"], 2)
         self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 1})
-        self.assertEqual(metrics["audits"], {"total": 46, "accepted": 30, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 8})
+        self.assertEqual(metrics["audits"], {"total": 48, "accepted": 32, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 8})
         self.assertEqual(metrics["verification_level_queues"], {"1": 4, "2": 0, "3": 0})
         self.assertEqual(metrics["pipeline"], {
             "active_medium_leads": 3,
