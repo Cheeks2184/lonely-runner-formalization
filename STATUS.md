@@ -78,6 +78,23 @@ candidate, strict-bad-set, complete-cover, covered-pivot, maximum, internality,
 and redundancy invariance. It does not separately formalize explicit `Q`,
 minimal-cover, or private-set invariance.
 
+`PrimitivePrompt95.lean` now kernel-checks the corrected normalized split.
+Every positive nonempty natural speed family is a positive common scaling of
+its gcd-one `primitivePart`, and every Prompt95 cover predicate transfers
+through that scaling. Consequently
+
+```text
+full Prompt95
+  <-> primitive divisible maximum-pivot redundancy
+      AND unrestricted nondivisible maximum-pivot redundancy.
+```
+
+The second factor is exactly Prompt98's frozen theorem. The first is a genuine
+normalized arithmetic subdomain: common scaling cannot force its divisibility
+premise while preserving primitivity. Neither factor is proved. This scope
+theorem corrects the Prompt99 branch architecture; it does not prove Prompt95,
+the pivot existential, or LRC.
+
 Prompt98 remains active/unrecovered on the nondivisible supporting branch.
 Prompt100 remains active/unrecovered at `a661fe1` on the uniform two-lower-owner
 noncover theorem, which would prove only the `|F(a)|<=3` Prompt95 regime.

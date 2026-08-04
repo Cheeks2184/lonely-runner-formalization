@@ -319,3 +319,9 @@ project-specific axiom.
 #print axioms LonelyRunner.coveredPivots_scale
 #print axioms LonelyRunner.internalCoverRedundantAt_scale_iff
 #print axioms LonelyRunner.maxCoveredDivisible_iff_unrestricted
+#print axioms LonelyRunner.primitiveSpeedFamily_iff_speedGCD_eq_one
+#print axioms LonelyRunner.exists_scaleSpeeds_primitive
+#print axioms LonelyRunner.primitiveMaxCovered_iff_unrestricted
+#print axioms LonelyRunner.primitiveMaxCovered_split_iff
+#print axioms LonelyRunner.maxCoveredNondivisible_iff_primitiveNondivisible
+#print axioms LonelyRunner.maxCovered_iff_primitiveDivisible_and_nondivisible
