@@ -1,0 +1,41 @@
+P95 RECOVERY MANIFEST v1
+task_id: OPS-P95-RECOVERY-PACKAGE-310
+base_commit: 5db949acb0866ab9b67543b889b6d2d73447afc8
+launch_task: SOL-P95-DESKTOP-LAUNCH-297
+prompt_path: research/sol-pro/prompts/prompt95.md
+prompt_sha256: 5f917f80e45fcbc30a442a9c6e434c53d093477eeab2013a49ba599bf314944c
+prompt_integrated_commit: d75b9bcab88bb09d7c03911442a0aa4636aac767
+launch_integrated_commit: e3055a1acdab1476320a1dc742767cd7e2451206
+raw_response_source: ignored tmp/p95-response.raw.b64 captured solely by Sol High
+ignored_base64_capture_bytes: 59188
+ignored_base64_capture_sha256: 9419238f11230a9c42bbcb36e8e105357c694e1cc6864ab75e67776929e71ef0
+raw_response_sha256: 093f68c9c2d9175bf9772d7da2053aa8f2ef3a48fb68311f366c52b699532eb8
+raw_response_bytes: 44390
+raw_response_characters: 44385
+raw_response_line_endings: 1679 CRLF; no lone LF or CR; terminal CRLF
+tracked_response_path: research/sol-pro/responses/response95.md
+tracked_response_sha256: 77586d4231f044a7b9253b26565c7aa78887cba41c48cf11fee4e01de803558c
+tracked_response_bytes: 42711
+tracked_response_characters: 42706
+tracked_response_line_endings: 1679 LF; no CR; terminal LF
+normalization: CRLF-to-LF only
+roundtrip: tracked LF restored to CRLF is byte-identical to decoded raw response
+attachment_origin: three exact response-linked files recovered by Sol High
+attachment_policy: UNVERIFIED / QUARANTINED; DO NOT EXECUTE, IMPORT, OPEN, READ, PARSE, OR TREAT AS EVIDENCE
+artifact: research/sol-pro/artifacts/prompt95/quarantine/prompt95_literal_verifier.py | bytes=24203 | sha256=2c1228c059b26b76f804bc3d55b1ca143344d1685c0c799f24707e10620082ff
+artifact: research/sol-pro/artifacts/prompt95/quarantine/prompt95_manifest.json | bytes=1397 | sha256=e1d4a00dec974926fcaa421e2ee10ef13871427b7a47895a74dd65e2c8c1f9ae
+artifact: research/sol-pro/artifacts/prompt95/quarantine/prompt95_result.json | bytes=138577 | sha256=71c9c47d9869ee4f25ae5ab792797624cd993d330741c1098636d55b2767eb34
+response_declared_attachment_hash_comparison: all three exact matches at whole-file level only
+attachment_open_or_read: none
+attachment_execution_or_import: none
+attachment_content_parsing: none
+attachment_schema_or_field_audit: none
+source_safety_audit: none
+source_output_binding_audit: none
+response_self_disposition: PIVOT preserved as RESPONSE-AUTHORED / UNVERIFIED self-label only
+response_claimed_finite_domain: 12142 primitive tuples and 59996 pivots; UNVERIFIED / QUARANTINED
+response_claimed_first_failure: null; UNVERIFIED / QUARANTINED
+recovery_execution: none
+lean_or_test_execution: none
+evidence_label: recovery-provenance only
+evidence_promotion: none

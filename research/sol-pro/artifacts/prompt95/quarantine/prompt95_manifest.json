@@ -1,0 +1,36 @@
+{
+  "artifact_role": "machine-readable execution manifest",
+  "completed": true,
+  "deterministic_order": {
+    "failures": "first record in the preceding total order",
+    "owner_subsets": "cardinality first, then lexicographic increasing speed list",
+    "owners": "increasing owner speed, retaining original labels",
+    "pivots": "increasing pivot speed",
+    "private_candidates": "least canonical residue",
+    "residues": "canonical representatives 0,...,N*p-1 in increasing order",
+    "tuples": "increasing n, then lexicographic increasing speed tuple"
+  },
+  "first_failure": null,
+  "fixture_completion": true,
+  "independence": "response-authored; not independent audit",
+  "interpreter": "CPython 3.13.5",
+  "language": "Python",
+  "observed_tuple_counts": [
+    127,
+    997,
+    2919,
+    4311,
+    2996,
+    792
+  ],
+  "process_exit_status": 0,
+  "result_file": "prompt95_result.json",
+  "result_sha256": "71c9c47d9869ee4f25ae5ab792797624cd993d330741c1098636d55b2767eb34",
+  "schema_version": 1,
+  "source_file": "prompt95_literal_verifier.py",
+  "source_result_binding": "result produced by invoking the named source with --result prompt95_result.json in this execution",
+  "source_sha256": "2c1228c059b26b76f804bc3d55b1ca143344d1685c0c799f24707e10620082ff",
+  "task_id": "SOL-P95-PRO-MAX-COVERED-PIVOT-292",
+  "total_completed_pivots": 59996,
+  "total_completed_tuples": 12142
+}
