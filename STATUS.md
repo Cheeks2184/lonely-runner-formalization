@@ -1,6 +1,6 @@
 # Project status
 
-Status date: 2026-08-03. Authoritative branch: `main`.
+Status date: 2026-08-04. Authoritative branch: `main`.
 
 Unrestricted Lonely Runner Conjecture: **open**. This repository contains no
 claim that it has been proved or disproved.
@@ -15,17 +15,29 @@ audited. Their exact `proved-math-qualified` dispositions refute respectively
 weakening. These are bridge counterexamples only. Every displayed tuple has
 an exact pivot certificate; unrestricted LRC remains open.
 
-Prompt79, Prompt80, and reserved synthesis Prompt81 have completed and await
-recovery. Prompt81's captured response is `INPUT-NOT-FROZEN` and rejected as
-operational output because it could not access required unpushed inputs; it
-contains no accepted mathematical result. Prompt82 is the sole active Pro
-cell. Three Medium lead lanes are active; no Luna worker or `LUNA-READY` task
-is active. P68 Task02 is a verified Luna/xhigh route but rejected delegation
-with zero fixtures; Task03 remains `MEDIUM-SPEC-REQUIRED`.
+Prompt79--82 are completed and recovered; Prompt79, Prompt80, and Prompt82 also
+have integrated independent audits. Prompt81's recovered response is
+`INPUT-NOT-FROZEN` and rejected operational output with no mathematical
+result. Prompt83 completed, recovered, and audited STOP. Prompt84's immutable
+audit proves the qualified negative `not PowerForcing(4,q)` for every integer
+`q >= 8` divisible by four; this does not decide unrestricted LRC. Prompt85's
+audit is completed at `cc58e9a` with mixed/provisional STOP: generic
+mathematics and pivot grids are qualified, but width-two minima and the
+counterexample remain unverified. Task256 is active Medium specification
+preparation for a literal replay; it is not an audit or `LUNA-READY` task.
+
+Prompt86 and Prompt87 are the two active Pro cells. Prompt87's initial review
+returned REVISE; the corrected contract received review254 ACCEPT and was
+launched from the original browser-capable desktop session. Prompt88 is parked
+as `MEDIUM-SPEC-REQUIRED` and is not launchable. Three Medium lead lanes are
+active; no Luna worker or `LUNA-READY` task is active. P68 Task03 terminated as
+rejected operational output after its cache timed out before `0/6` semantic
+fixtures; no evidence was produced and its successor gate remains
+`MEDIUM-SPEC-REQUIRED`.
 
 No recovered Prompt76 scan, Prompt77 6,330-record scan, or Prompt78 computation
 has been promoted to computed finite evidence. Current validator queues are
-Level 1: 1, Level 2: 1, Level 3: 0. This lifecycle synchronization is a Level
+Level 1: 2, Level 2: 0, Level 3: 0. This lifecycle synchronization is a Level
 1 checkpoint and triggers no full clean Lean replay.
 
 ## Strongest verified theorem

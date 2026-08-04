@@ -17,12 +17,18 @@ Historical rows remain append-only evidence and are not silently reinterpreted.
 | Prompt76 | completed, recovered, audited | `proved-math-qualified`: `(1,4,5,6,7,11)` refutes only `GLOBAL-CANONICAL-PRIVATE-DEFICIT-HALL` and consequences implying it. Both recovered scans are unexecuted and unpromoted. |
 | Prompt77 | completed, recovered, audited | `proved-math-qualified`: the coprime family `(u,v,4uv)`, `6 <= u < v`, refutes only `PRIMITIVE-DEGREE-2N-SIGNED-GRAM-GAP`. The 6,330-record scan is unpromoted. |
 | Prompt78 | completed, recovered, audited | `proved-math-qualified`: `(6,7,12,24,144)` refutes only `SPARSE-MINIMAL-COVER-OWNER-ESCAPE` and its canonical-cover weakening. Recovered computation is unexecuted and unpromoted. |
-| Prompt79 | completed; awaiting recovery | Terminal UI readback was `Worked for 40m 54s`. No response claim or evidence is inferred. |
-| Prompt80 | completed; awaiting recovery | Terminal UI readback was `Worked for 29m 33s`. No response claim or evidence is inferred. |
-| Prompt81 reserved synthesis | completed; awaiting recovery | Terminal UI readback was `Worked for 4m 12s`. Captured response is `INPUT-NOT-FROZEN` and rejected operationally because required unpushed inputs were inaccessible; this is no mathematical result. Corrected contract review and desktop launch remain exact lifecycle facts. |
-| Prompt82 | active Pro research | Contract integrated and launched by Sol High from the original browser-capable desktop session. Launch promotes nothing. |
+| Prompt79 | completed, recovered, audited | Recovery merge `216c2cb`; audit merge `4d07d0a`. The exact immutable audit controls; lifecycle completion promotes nothing. |
+| Prompt80 | completed, recovered, audited | Recovery merge `2a210d4`; audit merge `b083994`. The exact immutable audit controls; lifecycle completion promotes nothing. |
+| Prompt81 reserved synthesis | completed and recovered | Captured response is `INPUT-NOT-FROZEN` and rejected operationally because required unpushed inputs were inaccessible; this is no mathematical result. Recovery merge `c331062`. |
+| Prompt82 | completed, recovered, audited | Recovery merge `70d030e`; audit merge `22cef48`. The qualified counterexample rejects only the frozen score invariant; unrestricted LRC remains open. |
+| Prompt83 | completed, recovered, audited STOP | Recovery merge `908a912`; audit merge `176606e`. No implementation candidate or evidence promotion. |
+| Prompt84 | completed, recovered, audited | Audit `9774598`, merged at `3c51da2`: `proved-math-qualified` negative for every integer `q >= 8` with `4 | q`. Unrestricted LRC remains open. |
+| Prompt85 | completed, recovered, audited mixed/provisional STOP | Audit merge `cc58e9a`: generic mathematics and pivot grids are `proved-math-qualified`; width-two minima and the counterexample remain unverified. Literal-replay Task256 is active Medium specification preparation, not an audit or Luna-ready task. |
+| Prompt86 | active Pro research | Accepted contract merge `6d609e5`; desktop launch `481252e`. Launch promotes nothing. |
+| Prompt87 | active Pro research | Initial contract review returned REVISE; Task253 correction `1c40ae8` received review254 ACCEPT, merged at `0e29903`, and launched at record `47ef41a`. |
+| Prompt88 | parked; `MEDIUM-SPEC-REQUIRED` | Not launchable until a distinct independent route specification is frozen and reviewed. |
 | P68 Task02 | frozen failed delegation | Luna/xhigh runtime routing was verified, but the task returned zero mandatory fixtures and no completed domain: `rejected-operational-output`. |
-| P68 Task03 | `MEDIUM-SPEC-REQUIRED` | No frozen specification or Luna admission exists. |
+| P68 Task03 | terminal rejected operational output | Fresh Luna/xhigh metadata routing passed, but the cache timed out before `0/6` semantic fixtures. No evidence exists; every successor is `MEDIUM-SPEC-REQUIRED`. |
 | Medium lanes | 3 active | Research Pipeline, Recovery/Verification, and Formalization/Specification leads are active downstream lanes. |
 | Luna lane | 0 active; 0 ready | Narrow Verification Mode remains in force. |
 
@@ -30,16 +36,17 @@ Historical rows remain append-only evidence and are not silently reinterpreted.
 
 | Metric | Current value |
 | --- | ---: |
-| Active Pro cells | 1 |
-| Pro cells awaiting recovery | 3 |
+| Active Pro cells | 2 |
+| Pro cells awaiting recovery | 0 |
 | Responses under audit | 0 |
 | Launch-ready contracts | 0 |
 | Active Medium leads | 3 |
 | Luna-ready tasks / active Luna workers | 0 / 0 |
 | Integration backlog / Sol High review backlog | 0 / 0 |
-| Verification queues Level 1 / Level 2 / Level 3 | 1 / 1 / 0 |
-| Audits total / accepted / accepted-negative / deferred | 39 / 27 / 8 / 4 |
-| Luna launched / admitted / rejected / rejected outputs | 3 / 2 / 3 / 3 |
+| Verification queues Level 1 / Level 2 / Level 3 | 2 / 0 / 0 |
+| Audits total / accepted / accepted-negative / pending / deferred | 39 / 27 / 8 / 0 / 4 |
+| Route queues launch-ready / waiting / parked | 0 / 1 / 1 |
+| Luna launched / admitted / rejected / rejected outputs | 4 / 2 / 4 / 3 |
 
 All requested speed metrics remain `null`: the historical ledger does not
 contain a complete, consistently sourced timestamp series from which to derive

@@ -218,9 +218,16 @@ def derive_metrics(tasks: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
     recovered_routes = {
         task["parent_route"]
         for task in tasks
-        if task["kind"] == "recovery"
-        and task["operational_state"] == "terminal"
-        and task["status"] in {"verified", "integrated", "completed"}
+        if (
+            task["kind"] == "recovery"
+            and task["operational_state"] == "terminal"
+            and task["status"] in {"verified", "integrated", "completed"}
+        )
+        or (
+            task["runtime"]["pro_cell"]
+            and task["operational_state"] == "terminal"
+            and any(ref.startswith("recovery-merge:") for ref in task["source_refs"])
+        )
     }
     audited_routes = {
         task["parent_route"]
