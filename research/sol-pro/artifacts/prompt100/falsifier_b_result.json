@@ -1,0 +1,20 @@
+{
+  "implementation": "B-congruence-fibers",
+  "source_sha256": "8d302770222002a4ab9ef17f64b18762dc836ecbe84102d5a3fe8f6f703376ab",
+  "compiler": "gcc 14.2.0",
+  "fixtures_passed": true,
+  "permutation_and_scale_checks": 1920,
+  "domain": {"N_min":4,"N_max":24,"p_min":1,"p_max":240},
+  "pair_cases": 47780880,
+  "owner_rows_built": 602280,
+  "fiber_target_visits": 192930360,
+  "fiber_soluble_targets": 112661448,
+  "fiber_solution_visits": 192284478,
+  "common_domain_pair_cases": 10048800,
+  "common_domain_pointwise_checks": 225271200,
+  "common_domain_pointwise_mismatches": 0,
+  "deterministic_order": "N,p,b,c; targets 0..p-1 then M-p+1..M-1; fiber k increasing; least r canonical",
+  "all_domain_fnv1a64": "55a9a8f24ef40789",
+  "common_domain_fnv1a64": "0e430dd2e7f1b766",
+  "first_failure": null
+}
