@@ -302,21 +302,27 @@ try {
     }
 
     $turnRecord = $null
+    $selectedMalformed = $false
     foreach ($line in Get-Content -LiteralPath $file.FullName) {
       try {
         $record = $line | ConvertFrom-Json -ErrorAction Stop
       } catch {
-        continue
+        $selectedMalformed = $true
+        break
       }
       if ($record.type -eq 'turn_context') {
         $turnRecord = $record
         break
       }
     }
+    if ($selectedMalformed) {
+      Fail-Closed 'selected-record-malformed'
+    }
     $candidates += [pscustomobject]@{
       Meta = $metaRecord
       Turn = $turnRecord
       MetaTime = $metaTime
+      Path = [IO.Path]::GetFullPath($file.FullName)
     }
   }
 
@@ -358,6 +364,47 @@ try {
       $turnTime -gt $now.AddMinutes(1)) {
     Fail-Closed 'timestamp-not-fresh'
   }
+  if ($candidate.MetaTime -gt $turnTime) {
+    Fail-Closed 'timestamp-order'
+  }
+
+  $finalMatches = @()
+  $finalFiles = Get-ChildItem -LiteralPath $sessionRoot -Recurse -File -Filter '*.jsonl' | Where-Object {
+      $_.LastWriteTimeUtc -ge $notBefore.AddMinutes(-1).UtcDateTime
+    }
+  foreach ($file in $finalFiles) {
+    try {
+      $firstLine = Get-Content -LiteralPath $file.FullName -TotalCount 1
+      $metaRecord = $firstLine | ConvertFrom-Json -ErrorAction Stop
+      if ($metaRecord.type -ne 'session_meta') { continue }
+      $metaCwd = [IO.Path]::GetFullPath(
+        [string]$metaRecord.payload.cwd
+      ).TrimEnd('\')
+      $metaTime = [DateTimeOffset]::Parse(
+        [string]$metaRecord.payload.timestamp,
+        [Globalization.CultureInfo]::InvariantCulture,
+        $style
+      ).ToUniversalTime()
+    } catch {
+      continue
+    }
+
+    if ($metaCwd -ine $expected -or
+        [string]$metaRecord.payload.source -cne 'exec' -or
+        $metaTime -lt $notBefore -or
+        $metaTime -gt $now.AddMinutes(1)) {
+      continue
+    }
+    $finalMatches += [IO.Path]::GetFullPath($file.FullName)
+  }
+
+  if ($finalMatches.Count -ne 1) {
+    Fail-Closed 'candidate-count'
+  }
+  if (-not [StringComparer]::OrdinalIgnoreCase.Equals(
+      [string]$finalMatches[0], [string]$candidate.Path)) {
+    Fail-Closed 'candidate-changed'
+  }
 
   [Console]::Out.WriteLine(
     'RUNTIME_METADATA_PASS model=gpt-5.6-luna effort=xhigh ' +
@@ -376,6 +423,7 @@ worker_root="$(realpath .)"
 worker_root_windows="$(wslpath -w "$worker_root")"
 probe_windows="$(wslpath -w tmp/p68-ba-def-02/RuntimeProbe.ps1)"
 if ! runtime_probe_output="$(powershell.exe -NoProfile -NonInteractive \
+    -ExecutionPolicy Bypass \
     -File "$probe_windows" \
     -ExpectedCwd "$worker_root_windows" \
     -NotBeforeUtc "$runtime_not_before_utc" 2>/dev/null)"; then
@@ -721,7 +769,7 @@ Acceptance requires all of the following:
 9. axiom output contains no project-specific or untrusted axiom;
 10. deterministic source hash and command results are reported;
 11. the worktree is clean after its one-file commit and temporary cleanup; and
-12. independent implementation review 182 accepts the exact commit.
+12. independent implementation review 193 accepts the exact commit.
 
 Evidence label on success: **`infrastructure-only`**. This implementation may
 support later formal work, but neither its compilation nor its arithmetic
