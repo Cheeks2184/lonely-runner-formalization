@@ -14,12 +14,13 @@ implement an optimized dynamic program, scan any other speed tuple, modify
 Lean, synchronize general documentation, reject a mathematical route, or
 promote a status label.
 
-Current admission decision: **`MEDIUM-SPEC-REQUIRED`**. All twelve admission
-gate fields are frozen below, but a Medium lead other than this contract's
-author must independently review the contract tip. Sol High may change this
-decision to `LUNA-READY` only after that review accepts the exact contract blob
-and Sol High commits the immutable launch record described below. No worker is
-launched by this specification task.
+Current admission decision: **`REVIEW-REQUIRED`**. All twelve admission gate
+fields and the corrected operational provenance gates are frozen below, but a
+Medium lead other than this contract's author must independently review the
+contract tip. Sol High may change this decision to `LUNA-READY` only after that
+review accepts the exact contract blob and Sol High commits the immutable
+launch record described below. No worker is launched by this specification
+task.
 
 Base commit: `cc58e9affd445af9cb5f77911c8ab823916bbeae`
 
@@ -43,7 +44,10 @@ session/runtime metadata must confirm the effective model and effort. A
 natural-language identity claim, inherited Sol child, or substitute route does
 not satisfy the contract. The executable runtime is `/usr/bin/python3.14`,
 which must report exactly `Python 3.14.4`; only the Python standard library is
-permitted.
+permitted. The privacy scanner is the Linux-native `/usr/bin/grep`, which must
+report exactly `grep (GNU grep) 3.12` on the first line of `--version` output.
+Do not use an inherited Windows `rg`, `grep`, or other executable through a
+mounted Windows path.
 
 ## Immutable delivery and containment gate
 
@@ -282,11 +286,16 @@ expectation.
    program's dedicated `ExpectationMismatch`, and the preflight records PASS
    only if this wrong value is rejected.
 
-The preflight report must contain the seven fixtures in this order, each with
+The preflight report must contain top-level
+`source_path:"scripts/replay_prompt85_literal.py"` and
+`source_sha256:<64 lowercase hex>`. The program must hash its own exact raw
+source bytes immediately before fixture evaluation and again immediately
+before writing the report, reject a supplied mismatch, and record that frozen
+hash. It must also contain the seven fixtures in this order, each with
 `status:"PASS"`, its observed count and values, and the expected values. It
-must end with `preflight_complete:true` and `all_passed:true`. Any exception
-other than the two explicitly expected exceptions, any missing fixture, or any
-wrong value fails closed.
+must end with `preflight_complete:true` and `all_passed:true`. Any source hash
+change, exception other than the two explicitly expected exceptions, missing
+fixture, or wrong value fails closed.
 
 The worker first writes the preflight report and its SHA-256, then stops for
 the supervising Medium lead's inspection. Full execution is authorized only
@@ -300,13 +309,16 @@ with exactly:
 
 ```text
 Task ID: P85-LITERAL-REPLAY-01
+Source SHA-256: <64 lowercase hex recorded by the retained preflight JSON>
 Preflight SHA-256: <64 lowercase hex of the retained preflight JSON>
 Decision: APPROVED FOR FULL RUN
 ```
 
-The worker verifies all three single-valued fields and the hash. If approval
-does not arrive during the assigned turn, return `preflight-waiting`; do not
-start the large run.
+The worker verifies all four single-valued fields and both hashes. If the
+source changes after preflight, the approval is void: rerun preflight from the
+new source bytes and obtain a new approval file binding both new hashes. If
+approval does not arrive during the assigned turn, return
+`preflight-waiting`; do not start the large run.
 
 ## Allowed files and outputs
 
@@ -339,6 +351,9 @@ commands. All tracked file content must be created or changed with
 `apply_patch`; deterministic report files may instead be written by the
 assigned replay program. No test module, optimized checker, DP, cache,
 certificate for another tuple, or report/documentation file is allowed.
+The Luna worker is authorized to create exactly one final commit containing
+the four allowed tracked paths after every frozen check passes. It may create
+no intermediate commit and may not amend, merge, or push that final commit.
 
 On failure, retained outputs must not say `COMPLETE`; delete any partial
 tracked output created during that failed command, retain only ignored logs,
@@ -427,9 +442,12 @@ prompt85_sha256: 491e11edbb5fb88756f09f635f08203427035c3ab1eef62c4d18605d7e12025
 response85_sha256: 59196ec701c39ab56d8a945897b1719060c3a4070e132597a2f273aad6897722
 response85_audit_sha256: 531959e5bc23541dfa867615e907cf429588b264088d7c76ed2e39918f5ade78
 python: Python 3.14.4
-source_path/source_sha256
-preflight_path/preflight_sha256
-full_path/full_sha256
+source_path: scripts/replay_prompt85_literal.py
+source_sha256: <hash frozen by preflight and Medium approval>
+preflight_path: research/luna/artifacts/p85-literal-replay-01/preflight.json
+preflight_sha256
+full_path: research/luna/artifacts/p85-literal-replay-01/full.json
+full_sha256
 full_second_sha256
 full_outputs_identical: true
 preflight_complete: true
@@ -439,10 +457,13 @@ full_complete: true
 `full-second.json` is generated by a second complete execution of the same
 literal implementation, stays ignored, and must have the same SHA-256 as
 `full.json`. The manifest does not hash itself. The program's
-`--verify-manifest` mode must rehash all three tracked inputs, revalidate both
-completion markers and all construction totals, and exit nonzero on any
-mismatch. Source/output identity does not constitute independent mathematical
-verification.
+`--verify-manifest` mode must rehash the retained source, preflight, full
+output, and canonical ignored
+`tmp/p85-literal-replay-01/full-second.json`; compare both full files
+byte-for-byte; revalidate both completion markers and all construction totals;
+and exit nonzero on any mismatch. The source SHA in the manifest must equal
+the hash frozen in the retained preflight and Medium approval. Source/output
+identity does not constitute independent mathematical verification.
 
 ## Required commands
 
@@ -451,23 +472,45 @@ the worker runs exactly this Level 2 sequence from the isolated worktree:
 
 ```bash
 set -euo pipefail
-test "$(python3.14 --version)" = 'Python 3.14.4'
+test "$(/usr/bin/python3.14 --version)" = 'Python 3.14.4'
+test "$(/usr/bin/grep --version | /usr/bin/head -n 1)" = \
+  'grep (GNU grep) 3.12'
 mkdir -p research/luna/artifacts/p85-literal-replay-01 \
   tmp/p85-literal-replay-01
 
-timeout 300s python3.14 scripts/replay_prompt85_literal.py \
+source_path='scripts/replay_prompt85_literal.py'
+source_sha256="$(sha256sum "$source_path" | cut -d' ' -f1)"
+test "${#source_sha256}" -eq 64
+case "$source_sha256" in *[!0-9a-f]*) exit 1 ;; esac
+assert_source_unchanged () {
+  test "$(sha256sum "$source_path" | cut -d' ' -f1)" = \
+    "$source_sha256"
+}
+
+timeout 300s /usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --preflight \
+  --source-sha256 "$source_sha256" \
   --output research/luna/artifacts/p85-literal-replay-01/preflight.json
+assert_source_unchanged
+/usr/bin/python3.14 scripts/replay_prompt85_literal.py \
+  --verify-preflight \
+  research/luna/artifacts/p85-literal-replay-01/preflight.json \
+  --source-sha256 "$source_sha256"
 sha256sum research/luna/artifacts/p85-literal-replay-01/preflight.json
 
 # Stop here until the supervising Medium lead supplies and the worker verifies
 # medium-preflight-approved.txt exactly as specified above.
 approval='tmp/p85-literal-replay-01/medium-preflight-approved.txt'
 test -f "$approval"
-test "$(wc -l < "$approval")" -eq 3
+test "$(wc -l < "$approval")" -eq 4
 test "$(sed -n 's/^Task ID: //p' "$approval" | wc -l)" -eq 1
 test "$(sed -n 's/^Task ID: //p' "$approval")" = \
   'P85-LITERAL-REPLAY-01'
+test "$(sed -n 's/^Source SHA-256: //p' "$approval" | wc -l)" -eq 1
+approved_source_sha="$(sed -n 's/^Source SHA-256: //p' "$approval")"
+test "${#approved_source_sha}" -eq 64
+case "$approved_source_sha" in *[!0-9a-f]*) exit 1 ;; esac
+test "$approved_source_sha" = "$source_sha256"
 test "$(sed -n 's/^Preflight SHA-256: //p' "$approval" | wc -l)" -eq 1
 approved_preflight_sha="$(sed -n 's/^Preflight SHA-256: //p' "$approval")"
 test "${#approved_preflight_sha}" -eq 64
@@ -477,31 +520,61 @@ test "$approved_preflight_sha" = \
 test "$(sed -n 's/^Decision: //p' "$approval" | wc -l)" -eq 1
 test "$(sed -n 's/^Decision: //p' "$approval")" = \
   'APPROVED FOR FULL RUN'
+assert_source_unchanged
 
-timeout 1500s python3.14 scripts/replay_prompt85_literal.py \
+timeout 1500s /usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --full \
+  --source-sha256 "$source_sha256" \
   --output research/luna/artifacts/p85-literal-replay-01/full.json
-timeout 1500s python3.14 scripts/replay_prompt85_literal.py \
+assert_source_unchanged
+timeout 1500s /usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --full \
+  --source-sha256 "$source_sha256" \
   --output tmp/p85-literal-replay-01/full-second.json
+assert_source_unchanged
 cmp research/luna/artifacts/p85-literal-replay-01/full.json \
   tmp/p85-literal-replay-01/full-second.json
 
-python3.14 scripts/replay_prompt85_literal.py \
+assert_source_unchanged
+/usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --write-manifest \
   --preflight-path research/luna/artifacts/p85-literal-replay-01/preflight.json \
   --full-path research/luna/artifacts/p85-literal-replay-01/full.json \
   --second-full-path tmp/p85-literal-replay-01/full-second.json \
+  --source-sha256 "$source_sha256" \
   --contract-commit "$contract_commit" \
   --contract-sha256 "$contract_sha256" \
   --output research/luna/artifacts/p85-literal-replay-01/manifest.json
-python3.14 scripts/replay_prompt85_literal.py \
+assert_source_unchanged
+/usr/bin/python3.14 scripts/replay_prompt85_literal.py \
   --verify-manifest \
-  research/luna/artifacts/p85-literal-replay-01/manifest.json
+  research/luna/artifacts/p85-literal-replay-01/manifest.json \
+  --second-full-path tmp/p85-literal-replay-01/full-second.json
+assert_source_unchanged
 
 PYTHONPYCACHEPREFIX=tmp/p85-literal-replay-01/pycache \
-  python3.14 -m py_compile scripts/replay_prompt85_literal.py
-git diff --check
+  /usr/bin/python3.14 -m py_compile scripts/replay_prompt85_literal.py
+assert_source_unchanged
+scan_paths=(
+  scripts/replay_prompt85_literal.py
+  research/luna/artifacts/p85-literal-replay-01/preflight.json
+  research/luna/artifacts/p85-literal-replay-01/full.json
+  research/luna/artifacts/p85-literal-replay-01/manifest.json
+)
+
+# From this point, any failed validation restores an empty index, removes all
+# retained COMPLETE-bearing outputs, leaves the source and ignored logs for
+# inspection, and creates no commit.
+cleanup_failed_validation () {
+  git reset --quiet HEAD -- "${scan_paths[@]}" || true
+  rm -f -- \
+    research/luna/artifacts/p85-literal-replay-01/preflight.json \
+    research/luna/artifacts/p85-literal-replay-01/full.json \
+    research/luna/artifacts/p85-literal-replay-01/manifest.json \
+    tmp/p85-literal-replay-01/full-second.json
+}
+trap cleanup_failed_validation ERR
+
 actual_changed="$(git status --porcelain=v1 --untracked-files=all | \
   sed 's/^...//' | sort)"
 expected_changed="$(printf '%s\n' \
@@ -511,29 +584,59 @@ expected_changed="$(printf '%s\n' \
   scripts/replay_prompt85_literal.py | sort)"
 test "$actual_changed" = "$expected_changed"
 
-scan_paths=(
-  scripts/replay_prompt85_literal.py
-  research/luna/artifacts/p85-literal-replay-01/preflight.json
-  research/luna/artifacts/p85-literal-replay-01/full.json
-  research/luna/artifacts/p85-literal-replay-01/manifest.json
-)
 scan_pattern="-----BEGIN [A-Z ]*PRIVATE KEY-----|gh[pousr]_[A-Za-z0-9_]{20,}|(api[_-]?key|access[_-]?token|client[_-]?secret|password|cookie|session[_-]?id)[[:space:]]*[:=][[:space:]]*[\"'][^\"']+|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}|[A-Za-z]:\\\\|/home/[^/]+/|/Users/[^/]+/|\\\\\\\\wsl[^\\\\]*\\\\"
-if rg -l -i -- "$scan_pattern" "${scan_paths[@]}" \
+if /usr/bin/grep -EIl -i -- "$scan_pattern" "${scan_paths[@]}" \
     > tmp/p85-literal-replay-01/privacy-scan.stdout; then
-  exit 1
+  false
 else
   scan_rc="$?"
   test "$scan_rc" -eq 1
 fi
-git status --short
+
+# Stage all four new deliverables so diff validation is nonvacuous.
+git add -- "${scan_paths[@]}"
+git diff --cached --check -- "${scan_paths[@]}"
+staged_changed="$(git diff --cached --name-only --diff-filter=ACMRTUXB | sort)"
+test "$staged_changed" = "$expected_changed"
+assert_source_unchanged
+git -c commit.gpgSign=false commit --no-verify \
+  -m 'verification: replay Prompt85 literal constructions'
+trap - ERR
+
+bundle_commit="$(git rev-parse HEAD)"
+test "${#bundle_commit}" -eq 40
+case "$bundle_commit" in *[!0-9a-f]*) exit 1 ;; esac
+test "$(git rev-parse HEAD^)" = \
+  'cc58e9affd445af9cb5f77911c8ab823916bbeae'
+bundle_paths="$(git diff-tree --no-commit-id --name-only -r \
+  "$bundle_commit" | sort)"
+test "$bundle_paths" = "$expected_changed"
+source_blob_oid="$(git rev-parse "$bundle_commit:$source_path")"
+preflight_blob_oid="$(git rev-parse \
+  "$bundle_commit:research/luna/artifacts/p85-literal-replay-01/preflight.json")"
+full_blob_oid="$(git rev-parse \
+  "$bundle_commit:research/luna/artifacts/p85-literal-replay-01/full.json")"
+manifest_blob_oid="$(git rev-parse \
+  "$bundle_commit:research/luna/artifacts/p85-literal-replay-01/manifest.json")"
+for blob_oid in "$source_blob_oid" "$preflight_blob_oid" \
+  "$full_blob_oid" "$manifest_blob_oid"; do
+  test "${#blob_oid}" -eq 40
+  case "$blob_oid" in *[!0-9a-f]*) exit 1 ;; esac
+done
+test "$(git cat-file blob "$source_blob_oid" | sha256sum | cut -d' ' -f1)" = \
+  "$source_sha256"
+test -z "$(git status --porcelain=v1 --untracked-files=all)"
 ```
 
-The worker must then assert that the changed tracked-file set is exactly the
-four allowed paths, scan those files for credentials, private keys, cookies,
+The worker must assert that the changed tracked-file set is exactly the four
+allowed paths, scan those files for credentials, private keys, cookies,
 browser/session data, email addresses, absolute Windows/WSL/home paths, and
-machine identifiers, and report PASS/FAIL without printing any detected secret
-value. No Lean build, repository-wide regression suite, or clean clone is part
-of this one-layer checkpoint.
+machine identifiers, and report PASS/FAIL without printing any detected
+secret value. The staging trap must leave the index empty on any precommit
+failure. A successful task has exactly one final commit with the exact worker
+base as parent, the exact four paths as its complete diff, and a clean
+worktree. No Lean build, repository-wide regression suite, or clean clone is
+part of this one-layer checkpoint.
 
 ## Expected worker return schema
 
@@ -542,6 +645,8 @@ Task ID:
 Effective model and effort metadata:
 Base commit:
 Branch/commit:
+Bundle parent:
+Bundle Git blob OIDs:
 Files changed:
 Commands run:
 Preflight result:
@@ -550,6 +655,7 @@ Domain completed:
 Counts:
 First failure or certificate:
 Hashes:
+CHECK-02 handoff:
 Independent comparison:
 Tests:
 Axiom output:
@@ -564,7 +670,12 @@ comparison` must say `pending P85-LITERAL-REPLAY-CHECK-02` unless that separate
 reviewed task has actually completed; the worker may not perform or impersonate
 it. The return must include all eight discovered `min_J` values and the eight
 least minimizer keys, or identify the first failed pivot without presenting a
-partial prefix as evidence.
+partial prefix as evidence. `Bundle parent` is the exact worker base. `Bundle
+Git blob OIDs` lists the source, preflight, full, and manifest blobs in that
+order. `Hashes` includes the SHA-256 of those four committed files and the
+ignored second full output. `CHECK-02 handoff` supplies the final bundle commit,
+its parent, all four Git blob OIDs, and all five SHA-256 values; no mutable
+worktree path is an admissible handoff.
 
 ## Independent checker
 
@@ -576,6 +687,14 @@ all eight minima, least minimizers, counts, and completion markers. Reusing
 this program's enumeration function is prohibited. Until that task and Medium
 review succeed, the current output is an implementation candidate only.
 
+The immutable input to that checker is the Luna-created final bundle commit,
+not the worker's mutable worktree. The checker contract must receive the exact
+commit SHA and four Git blob OIDs from the primary worker report. It must verify
+the commit exists, has the exact worker base as its sole parent, changes exactly
+the four allowed paths, reproduces every handed-off blob OID and SHA-256, and
+matches the source/preflight/full hashes recorded by the manifest. A missing,
+uncommitted, amended, or mismatched bundle fails closed before replay.
+
 ## Acceptance criteria and evidence label
 
 The implementation task is accepted operationally only if:
@@ -583,7 +702,7 @@ The implementation task is accepted operationally only if:
 - authoritative metadata confirms Luna/xhigh and all immutable delivery and
   worktree gates pass;
 - all seven preflight fixtures pass and Medium authorizes the full run using
-  the exact preflight hash;
+  the exact source and preflight hashes;
 - both full executions complete the entire declared domain within the budget;
 - all per-pivot and total construction counts and the audited non-minimum grid
   match exactly;
@@ -591,6 +710,11 @@ The implementation task is accepted operationally only if:
 - manifest verification, Python compilation, diff check, changed-file
   inventory, and changed-file privacy/secret scan pass;
 - only the four allowed tracked files changed;
+- the exact four paths pass a nonvacuous staged `git diff --check`, and the
+  Luna worker creates exactly one clean final commit with the worker base as
+  its parent;
+- the worker report supplies the final commit, all four Git blob OIDs, and the
+  exact SHA-256 handoff for the independent checker;
 - no prohibited technique or semantic substitution is present; and
 - the supervising Medium lead inspects the source, discovered values,
   minimizers, manifests, and worker report.
@@ -612,7 +736,8 @@ Stop immediately and preserve the failure only as operational provenance if:
   parent is nonleast, an owner label is lost, or a bag/intersection invariant
   fails;
 - any preflight value fails or the altered value is accepted;
-- Medium preflight approval is absent or its hash mismatches;
+- Medium preflight approval is absent, its source or preflight hash mismatches,
+  or the source changes after approval;
 - any pivot count differs from `793800`, the total differs from `6350400`, or
   a non-minimum pivot-grid value differs from the audited table;
 - a full command times out, crashes, writes a partial `COMPLETE` marker, or the
@@ -624,12 +749,17 @@ Stop immediately and preserve the failure only as operational provenance if:
   owner labels, minimizer ordering, malformed behavior, or report schema;
 - an extra tracked file changes, a secret/private artifact is detected, or the
   runtime/worktree/contract provenance gate fails.
+- the Linux-native scanner path/version is wrong, staged diff validation is
+  empty or incomplete, the final commit has the wrong parent or path set, the
+  worktree is not clean afterward, or any bundle/blob handoff hash mismatches.
 
 Escalate semantic defects to the supervising Medium lead. Do not redesign the
 algorithm, invent a replacement theorem, substitute a model, repair a semantic
 failure in the same task, or reinterpret a partial prefix as finite evidence.
 Routine syntax, imports, type annotations, formatting, and deterministic JSON
-serialization may be repaired without altering the frozen semantics.
+serialization may be repaired without altering the frozen semantics. Any
+source-byte repair after preflight invalidates that preflight and its Medium
+approval; both must be regenerated before either full run.
 
 Maximum execution budget: one uninterrupted hour total after implementation,
 including preflight, Medium inspection wait within the live turn, two full
@@ -678,5 +808,5 @@ inside a Luna execution.
 
 The twelve semantic fields are present, but independent contract review and
 the Sol High launch record remain procedural prerequisites. Therefore this
-commit remains `MEDIUM-SPEC-REQUIRED`; it does not self-promote to
+corrected commit remains `REVIEW-REQUIRED`; it does not self-promote to
 `LUNA-READY`.
