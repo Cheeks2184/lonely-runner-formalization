@@ -295,3 +295,35 @@ and proposed route boundaries remain unverified pending independent audits.
 `MODULAR-COVER-CIRCUIT-ESCAPE`, the exact pivot selector, positive-integer LRC,
 and unrestricted LRC remain open. No theorem, computation, or evidence label
 is promoted by this package.
+
+## OPS-P74-RECOVERY-PACKAGE-172 — Prompt74 recovery package
+
+- **Recovery base:** `5b426830263ba49674a7178ff371877200f123bc`
+- **Recovery branch:** `research/p74-recovery-package-172`
+- **Launch owner/runtime:** GPT-5.6 Sol High top-level desktop orchestrator
+  (`/root`) in the original signed-in browser-capable desktop session
+- **Launch time:** 2026-08-03 20:05:37 -05:00
+  (2026-08-04T01:05:37.2904564Z)
+- **Selected UI state:** Chat; `GPT-5.6 Sol`; Pro; exact prompt readback
+- **Prompt SHA-256:**
+  `1b4eb2ec7642522711be1b00b87b7cd17cc04635d499783e335eae1b21977b24`
+- **Submitted payload SHA-256:**
+  `b63df8588f6bc76d2bd889d6fb87b2429ce30e4a3ff11362c8f51109d27fcba0`
+- **Completion:** terminal UI readback `Worked for 36m 54s`; observed at
+  2026-08-04T01:50:40.9759997Z
+- **Normalized response:** `research/sol-pro/responses/response74.md`; 19,631
+  UTF-8 bytes and characters; 852 LF separators; terminal LF; SHA-256
+  `dbe3073cbc6b25f890feec995ffa3baa369e65175721d01c4e33e1b5d3f5e94d`
+- **Raw clipboard:** 20,483 UTF-8 bytes and characters; 852 CRLF separators;
+  no lone LF or lone CR; terminal CRLF; SHA-256
+  `68a0e350b8a04c1fb03aa11b8db8ced35cdfe4e7c161dfaf37c2e474a9c645f6`
+- **Attachments:** none
+- **Lifecycle:** completed/recovered; recovery-provenance audit 173 and
+  independent mathematical audit 174 pending
+
+No recovered code or attachment exists to execute. Recovery preserves the
+response's **STOP** self-disposition and claimed common-scaling counterexample
+without accepting either. The frozen signed-Gram lemma, exact pivot selector,
+positive-integer LRC, and unrestricted LRC retain their prior statuses pending
+the named audits. No theorem, computation, counterexample, or evidence label
+is promoted by this package.
