@@ -2,244 +2,326 @@
 owner: GPT-5.6 Sol High top-level desktop orchestrator
 supervising_authority: /root
 launch_runtime: original browser-capable desktop Codex session
-role: Medium - prompt preparation only
+role: Research Pipeline/Specification Lead - prompt preparation only
+task_id: PIPE-P69-RESPEC-128
 ---
 
-# Prompt 69: GLOBAL ALL-PIVOT COVER INCOMPATIBILITY
+# Prompt 69: CROSS-PIVOT-WEIGHTED-DEFICIT-COMPENSATION
 
-This is one isolated unrestricted Sol Pro research contract. Work only on the
-global incompatibility of simultaneous strict bad-set covers across every
-pivot, or decisively refute the proposed structural route. This file is prompt
-preparation only: it is not a launch record, active research, a response, an
-audit, or a mathematical status promotion.
+This is one isolated unrestricted Sol Pro research contract. Prove or
+decisively refute the exact quantitative cross-pivot compensation lemma below.
+The intended structure is modular uncrossing or exchange: a pivot row with no
+uncovered candidate must force enough explicitly weighted uncovered mass at
+other pivot moduli.
 
-Do not duplicate Prompt68's cofinite-prime-forcing route, Prompt66's
-whole-block packing route, Prompt64's top-two route, Prompt65's deletion
-descent verifier, or the separate simultaneous-pivot Fourier contract. Do not
-replace the problem by bounded search, a reformulation of the existing pivot
-certificate, or a new sufficient condition with no path to the global target.
+This file is only a prepared contract. It is not a launch record, response,
+proof, computation, audit, or mathematical promotion. Only GPT-5.6 Sol High
+under `/root` may launch the Pro turn. Do not delegate research to Luna.
+
+This route must remain distinct from:
+
+- Prompt68 cofinite prime forcing;
+- corrected Prompt70 simultaneous-full-cover common-prime propagation;
+- Prompt66 packing, radial descent, and signed phase cells;
+- Fourier aggregation;
+- top-two, owner-shift, Gamma matching, height compression, deletion,
+  first-blocker descent, and coefficient-bounded searches.
+
+Do not turn the task into descent or into a simultaneous-cover contradiction.
+The former target `not (forall j, Covers(j))` is **rejected as tautological**:
+after expanding `Covers`, it is exactly the existing pivot-certificate
+existence statement.
 
 Use `proved-lean`, `proved-math`, `computed finite evidence`, `conditional`,
-`conjectural`, `rejected`, `open`, `literature`, and
-`external-unformalized` strictly. Every claim must receive one exact label.
-No response self-label becomes accepted without independent audit and `/root`
-approval.
+`conjectural`, `rejected`, and `open` literally. The response may recommend a
+disposition but may not promote its own claims before independent audit.
 
-## Exact unrestricted definitions
+## Existing exact boundary
 
-Fix `n>=1`, put `N=n+1`, and let
+The repository has the `proved-lean` equivalences
+
+```text
+exists_witness_iff_exists_pivot_certificate
+positiveIntegerConjecture_iff_pivotCertificateConjecture
+conjecture_iff_positiveIntegerConjecture.
+```
+
+They identify one uncovered canonical pivot residue with a fixed-instance real
+witness and reduce unrestricted real LRC to the positive-integer proposition.
+They do not prove that an uncovered residue exists. A formula which merely
+renames `exists j, G_j>0`, including a minimum or an indicator sum over the
+unknown good set, earns `STOP`.
+
+The quantitative target `sum_j G_j >= n` is also **rejected**: for `n=6`,
+`N=7`, the primitive tuple `(1,2,3,4,5,7)` has
+`G=(0,0,0,0,2,2)` and total uncovered mass `4<6`.
+
+## Frozen definitions and conventions
+
+Let `n : Nat`, `2 <= n`, `N=n+1`, and let
 
 ```text
 a : Fin n -> Nat
 ```
 
-be positive and injective. For each pivot `j : Fin n`, put `p_j=a_j` and
-`M_j=N*p_j`. For a natural representative `x`, define
+be positive and injective. For every pivot `j : Fin n`, set
 
 ```text
-rho_M(x) = min(x mod M, M-(x mod M)).
+p_j = a_j,
+M_j = N*p_j,
+rho_M(x) = min(x mod M, M-(x mod M)),
+R_j = {r : Fin M_j | N does not divide r.val},
+B_i^j = {r : R_j | rho_(M_j)(r.val*a_i) < p_j}  for i != j,
+mu_j(r) = #{i : Fin n | i != j and r in B_i^j},
+Q_j = {r : R_j | mu_j(r)=0},
+G_j(a) = |Q_j|.
 ```
 
-The canonical pivot grid and strict bad sets are
+The boundary is frozen: `<p_j` is bad and equality `rho=p_j` is safe. Never
+replace cyclic distance by a one-sided interval. Every residue uses its unique
+representative `0 <= r.val < M_j`; `N`-multiples are excluded; and the pivot
+coordinate is safe for exactly that candidate reason. Original speeds are
+injective integers, but their residues modulo `M_j` need not be distinct.
+Retain nonunits, gcd degeneracies, repeated residues, and coincident bad sets
+with their separate owners.
+
+Write
 
 ```text
-R_j = {r : Fin M_j : N does not divide r.val},
-B_i^j = {r : R_j : rho_(M_j)(r.val*a_i) < p_j}   for i != j.
+Covers(j) :<=> Q_j is empty
+           :<=> union_(i!=j) B_i^j = R_j.
 ```
 
-Badness is strict `<p_j`; equality is safe. Residues use their unique
-representatives in `Fin M_j`. The pivot coordinate is safe on `R_j`, but this
-must be proved through the canonical pivot equivalence rather than assumed.
-The exact row-failure statement is
+Prove this equivalence before using finite-set subtraction. Reflection is
+`r |-> -r` modulo `M_j`; handle fixed points, particularly all-odd half-time
+points, without doubling. Different pivots live in different cyclic groups.
+There is no implicit residue or character identification between them.
+
+For distinct pivots `j,k`, define the frozen arithmetic exchange weight
 
 ```text
-Covers(j) : union_(i != j) B_i^j = R_j.
+w(j,k) = a_k / gcd(a_j,a_k).
 ```
 
-The unrestricted positive-integer pivot certificate is equivalent to
+This is a natural quotient by a positive divisor. Prove positivity and every
+divisibility fact before cancellation. The weight is fixed from the original
+integer tuple, not selected after inspecting which pivot succeeds.
+
+## Sole unrestricted structural lemma
+
+There is exactly one permitted unresolved lemma:
 
 ```text
-exists j, not Covers(j).
+CROSS-PIVOT-WEIGHTED-DEFICIT-COMPENSATION:
+
+For every n : Nat with 2 <= n, every positive injective
+a : Fin n -> Nat, and every pivot j : Fin n,
+
+  Covers(j) ->
+    2*a_j <= sum_(k : Fin n, k != j) w(j,k)*G_k(a).
 ```
 
-State the repository equivalence precisely, including the one-speed base,
-positivity, injectivity, strict endpoint, and real/integer reduction. Merely
-restating this equivalence is tautological and earns no progress label.
+This is a quantitative cross-pivot statement. It is strictly stronger than
+the existing certificate equivalence: for every completely covered row it
+requires at least `2*a_j` units of gcd-weighted uncovered mass at other,
+different pivot moduli. It is not permitted to weaken the right side to
+`some G_k>0`, `sum G_k>0`, `U>0`, a reflection pair, or any condition
+definitionally equivalent to a pivot certificate.
 
-## Sole target and required form of progress
+The factor `2*a_j` and the exact quotient weight are frozen. If either is
+refuted, return `STOP` or a rigorously proved replacement under the disposition
+rules; do not silently alter constants, weights, or quantifiers.
 
-The sole target is:
+## Complete implication chain
 
-### `GLOBAL-ALL-PIVOT-COVER-INCOMPATIBILITY`
+Split `n=1` first. For its unique positive speed, there are no nonpivot bad
+owners, `R_j` is nonempty, and any candidate gives the certificate. Do not
+invoke a nonexistent second pivot.
 
-```text
-For every n>=1 and every positive injective a : Fin n -> Nat,
-not (for every j : Fin n, Covers(j)).
-```
+For `n>=2`, choose any pivot `j`. If `Q_j` is nonempty, it directly supplies a
+canonical certificate. If `Covers(j)`, apply the compensation lemma. Since
+`2*a_j>0`, its finite nonnegative sum is positive; therefore some
+`k != j` has `w(j,k)*G_k(a)>0`, hence `G_k(a)>0`. Extract an exact
+`r in Q_k`, expand `mu_k(r)=0` into avoidance of every owner bad set, and prove
+the pivot coordinate safe at the closed boundary.
 
-A proof must use compatibility between at least two genuinely different pivot
-moduli. A row-by-row certificate search, independent fixed-pivot bound, or
-selection of the best pivot after exhaustive evaluation is not a uniform
-argument. A stronger intermediate counts only when its quantifiers are fully
-stated and it yields the target without adding another open lemma.
-
-An exact counterexample to the target would be an unrestricted LRC
-counterexample at the positive-integer pivot-certificate level. Do not claim
-one from failure of a sufficient criterion. A decisive refutation of a
-proposed intermediate must identify that intermediate exactly and preserve
-the main target as `open`.
-
-## Mandatory global minimal-cover setup
-
-Assume for contradiction that `Covers(j)` holds for every pivot. For every
-`j`, first obtain by finite deletion an inclusion-minimal owner set
+Then give every repository arrow:
 
 ```text
-I_j subset {i : Fin n | i != j}
-```
-
-whose strict bad sets cover `R_j`. For each `i in I_j`, choose a private point
-
-```text
-r_(j,i) in B_i^j \ union_(k in I_j, k != i) B_k^j.
-```
-
-Prove existence and all representative bounds before using these witnesses.
-Track
-
-```text
-d_i^j = gcd(M_j,a_i),
-|B_i^j|,
-the attained residue fibers,
-all private-point congruences,
-and every divisibility forced by cover minimality.
-```
-
-Do not assume coordinates are units modulo `M_j`, do not cancel a nonunit,
-and do not replace injective integers by distinct residues. Repeated residues
-modulo a pivot modulus and coincident bad sets are allowed. Any normalization
-by sign, unit, permutation, or scaling must be shown to preserve every pivot
-row used later, not only the current row.
-
-## Attack A: cross-pivot incidence accounting
-
-Build one global incidence object from all triples `(j,i,r)` with `i in I_j`
-and `r in B_i^j`. Seek an exact double count or weighted inequality whose
-local lower bounds follow from full minimal covers while its global upper
-bound follows from the arithmetic relation `M_j=N*a_j` across pivots.
-
-The successful endpoint must give a strict contradiction, not an equality or
-an average that merely identifies a favorable fixed row. Track all diagonal
-exclusions `i=j`, gcd-dependent fiber sizes, and the change of canonical
-representative between `M_j` and `M_i`. If weights are introduced, give an
-explicit nonnegative formula determined before inspecting a counterexample.
-
-Do not import whole-block packing, generic hypergraph integrality, fractional
-duality, or a Fourier transform. Those are separate routes. If the double
-count closes only after assuming uniform fiber size, pairwise coprimality, or
-distinct residues modulo every `M_j`, stop at that exact unsupported arrow.
-
-## Attack B: global arithmetic descent from all covered pivots
-
-Choose a primitive counterexample minimal in the explicit well-order
-
-```text
-(n, max_i a_i, sum_i a_i, sorted tuple lexicographically).
-```
-
-Starting from the full family of minimal covers and private points, derive a
-single arithmetic transformation of the speed tuple that simultaneously
-preserves the hypotheses needed for every new pivot row and strictly lowers
-the declared measure. The transformation may use a signed residue or divisor
-relation only after proving:
-
-1. positivity and injectivity of the transformed tuple;
-2. the exact new pivot moduli and canonical grids;
-3. transport of every required strict badness/coverage relation;
-4. preservation or controlled restoration of primitivity; and
-5. strict decrease in the declared well-order.
-
-Fixed-pivot signed replacement is already known not to be a global descent:
-other pivot moduli change and representatives may collide. The unsupported
-chain from Prompt65 involving `N*a_h`, `M_h`, active `n*a_j`, successor edges,
-and `Delta<=tau` remains frozen. Do not cite either as an established step.
-Attack B must supply the missing simultaneous transport directly or stop.
-
-## Known obstructions and mandatory falsification
-
-Before recommending either attack:
-
-1. Reproduce exact row conventions on the established stress tuples cited in
-   the repository, including the all-pivot failures of additive, relocation,
-   anchor-star, dispersion, range-sum, top-cycle, and packing criteria.
-2. Confirm that each such tuple refutes only its named sufficient condition;
-   none is an all-pivot bad-set-cover counterexample.
-3. Test repeated residues, nonunit coordinates, `p_j|N`, equality
-   `rho_(M_j)=p_j`, the excluded `N|r`, and both cyclic endpoints.
-4. Test every claimed cross-pivot map in both directions on at least one pair
-   with neither pivot dividing the other and one pair with nontrivial gcd.
-5. Reject any argument that chooses pivot-dependent weights or a descent move
-   only after seeing which row is easiest.
-6. Reject finite zero-failure evidence as proof of a uniform pivot.
-7. State the first invalid implication for every failed strategy.
-
-Any counterexample must include the exact quantified statement rejected,
-ordered tuple, pivot data, all premises, and a complete certificate. Numerical
-approximations or aggregate counts are insufficient.
-
-## Exact implication chain
-
-If the sole target is proved, give every arrow:
-
-```text
-GLOBAL-ALL-PIVOT-COVER-INCOMPATIBILITY
-  -> exists a pivot j and r in R_j outside every B_i^j
-  -> the canonical positive-integer pivot certificate
+one canonical pivot certificate
   -> PositiveIntegerPivotCertificateConjecture
   -> PositiveIntegerConjecture
-  -> conjecture_iff_positiveIntegerConjecture
+  -> Conjecture
   -> unrestricted real LRC.
 ```
 
-Identify exact repository declarations and hypotheses. Do not abbreviate the
-strict boundary, the pivot coordinate, `Fin`/natural representatives,
-one-speed base, or positivity/injectivity conditions. A local Lean prototype
-may formalize at most one new cross-pivot lemma; report compilation and axiom
-audit separately.
+Use both `proved-lean` equivalences in the correct direction with exact
+positivity, injectivity, indexing, and `Fin`/natural representative hypotheses.
+The finite-sum positivity and product-positivity steps are part of the proof,
+not implicit classical choice.
 
-## Disposition and stop rule
+## Attack A: explicit modular exchange injection
 
-Return exactly one disposition:
+Fix a covered pivot `j`. Select the canonical inclusion-minimal owner cover
+`I_j` using a declared total order. For every `i in I_j`, prove existence of a
+private candidate
 
-- `BRIDGE` only if the sole target is completely proved at unrestricted
-  quantifiers, with the full implication chain.
-- `PIVOT` only if a precise proved cross-pivot theorem materially narrows the
-  target and is neither a renamed cover statement nor a previously rejected
-  sufficient condition.
-- `STOP` if both attacks reduce to independent pivot rows, require a false
-  normalization, duplicate a frozen route, or leave their first global arrow
-  unsupported.
+```text
+r_(j,i) in B_i^j \ union_(h in I_j, h != i) B_h^j.
+```
 
-One major Sol Pro turn is the complete budget. Do not open a second target,
-perform a broad literature survey, or expand a finite search after seeing its
-results. Optional computation is falsification only, with a predeclared finite
-domain, deterministic order and stop rule, at most one source file and one
-machine-readable output. It remains `computed finite evidence` only.
+Track its unique representative, centered signed residue, quotient/remainder
+equation, `gcd(M_j,a_i)`, attained fibers, and strict inequalities.
 
-## Required output
+Define the finite token and destination types
+
+```text
+T_j = Fin (2*a_j),
+D_j = Sigma (k : {k : Fin n // k != j}),
+        (Fin (w(j,k)) x Q_k).
+```
+
+Construct an explicit arithmetic map `Phi_j : T_j -> D_j` and prove it
+injective. Its pivot, slot, and residue components must be determined from the
+minimal-cover/private-point congruence data by a formula declared before
+examining favorable rows. Merely invoking the finite-cardinality theorem
+`|T_j|<=|D_j| iff an injection exists`, after assuming the desired inequality,
+is circular.
+
+An accepted construction must prove:
+
+1. the target pivot differs from `j`;
+2. its output lies in the canonical grid and avoids all strict bad sets;
+3. equality at the LRC boundary is retained as safe;
+4. slot indices lie below `a_k/gcd(a_j,a_k)`;
+5. collisions of output residues are separated by the slot or proved absent;
+6. nonunit owners and coincident bad sets remain valid; and
+7. injectivity survives changes between the moduli `M_j` and `M_k`.
+
+Cardinality of this injection gives the frozen compensation inequality. A map
+defined only on a convenient subset of tokens, an owner exchange with no good
+target residue, or a pivot chosen after knowing `Q_k` is nonempty is
+insufficient.
+
+## Attack B: weighted charge conservation across pivot rows
+
+Independently build the owner-indexed incidence object of triples `(j,i,r)`
+with `r in B_i^j`, retaining coincident sets. From the same exact modular
+quotient/remainder equations, assign `2*a_j` units of demand from a covered row
+`j` to uncovered residues at other pivots. Prove a local arithmetic transport
+identity and a global capacity bound in which each residue of `Q_k` receives at
+most `a_k/gcd(a_j,a_k)` slots for the fixed source `j`.
+
+All charges must be nonnegative integers fixed by an explicit rule. Do not use
+Fourier transforms, fractional hypergraph duality, whole-block packing, a
+common-prime conclusion, or a descent transformation. Do not average unrelated
+residue representatives as though the pivot groups were identical.
+
+The argument must finish at the exact weighted inequality. A double count that
+only proves equality with the unknown `G_k`, chooses weights after observing
+the good pivots, or assumes uniform bad-set fibers is bookkeeping or circular
+and earns `STOP`. State the first unsupported transport or capacity arrow.
+
+## Mandatory regression and falsification suite
+
+Recompute all counts and weighted sides from the frozen definitions before
+trusting either attack.
+
+1. `(1,3,4)`, `n=3`: `G=(0,2,2)`. For the covered speed-`1` pivot, the weighted
+   right side is `3*2+4*2=14`, versus demand `2`.
+2. `(1,3,4,5)`, `n=4`: `G=(0,0,2,2)`. The covered speed-`1` row has weighted
+   side `18` versus `2`; the covered speed-`3` row has side `18` versus `6`.
+   Two covered pivots must remain distinct owner-indexed rows.
+3. `(1,2,3,4,5,7)`, `n=6`: `G=(0,0,0,0,2,2)`. Its four covered pivots have
+   weighted right side `24`; their demands are respectively `2,4,6,8`.
+   The good residues are `{6,29}` modulo `35` at speed `5` and `{8,41}`
+   modulo `49` at speed `7`. This tuple rejects `U>=n` and any claim that a
+   large majority of covered pivots is itself contradictory; it does not
+   refute the frozen weighted compensation.
+4. `(1,2,8)`: `G=(0,0,6)`. It rejects any replacement requiring two distinct
+   good pivots, while stressing a large exchange weight.
+5. `(1,3)`: `G=(0,2)`; verify the `n=2` implication and both reflection points.
+6. `(1,2,3)`: `G=(2,2,2)`; at pivot speed `3`, `rho=3` is safe.
+7. `(4,5,9)`: `G=(2,2,4)` although the audited factorwise absolute Fourier
+   criterion fails at every pivot.
+8. `(1,3,5)`: classify all-odd half-time fixed points without double counting.
+9. `(1,3,13)` at pivot speed `3`: the other speeds coincide modulo `12`; keep
+   both owners and their coincident bad sets.
+10. Test `r=0`, exclusion `N|r`, `rho=p_j-1`, equality `rho=p_j`, antipodes,
+    a pivot pair with neither speed dividing the other, a pair with nontrivial
+    gcd, every permutation of fixtures 1--3, and common scaling of a fixture.
+
+For every proposed injection or charge rule, emit the first token for which it
+is undefined, out of range, bad at the destination, or collides improperly.
+One failure rejects that rule, not the frozen lemma. A counterexample to the
+lemma must give the ordered tuple, source covered pivot, every `G_k`, every
+weight, the exact failed inequality, and a complete finite replay certificate.
+
+## Fixed finite budget
+
+Computation is optional and only for falsification. If used, allow one source
+file and one machine-readable output. Run the ten mandatory regressions first.
+Then enumerate primitive strictly increasing tuples for `n=2,3,4,5,6`, largest
+speed at most `12`, ordered by `n` and lexicographically; within a tuple order
+source pivots and residues naturally. Stop at the first covered pivot violating
+the frozen inequality, after emitting its exact certificate. Do not expand the
+box, add random samples, or start a second scan after observing results.
+
+Declare implementation language/version, command, domain, ordering, stop rule,
+schema, and SHA-256 hashes. Completed zero-failure output remains only
+`computed finite evidence` and cannot prove the unrestricted lemma.
+
+An optional Lean prototype may formalize at most one local statement: either
+the finite implication from the frozen inequality to a pivot certificate, or
+cardinality of the explicitly supplied `D_j` type. It may not formalize both,
+the open exchange construction, or an older route. Claim `proved-lean` only
+after standalone compilation and an axiom audit.
+
+## Disposition and stop rules
+
+Return exactly one disposition.
+
+- `BRIDGE`: the frozen compensation lemma is proved for every quantified tuple
+  and pivot, and the complete implication chain is established. A replacement
+  qualifies only if fully proved, genuinely cross-pivot and quantitative,
+  strictly stronger than certificate existence, and sufficient for
+  unrestricted LRC without a second open lemma.
+- `PIVOT`: a prime-independent and height-independent exchange or charge
+  theorem is proved which materially narrows one exact arrow to the frozen
+  inequality, or an infinite family refutes a named strengthening and leaves a
+  precise narrower surviving obligation.
+- `STOP`: the frozen inequality is refuted; both attacks reduce to selecting an
+  already-good pivot; an output map assumes its target is good; weights are
+  chosen post hoc; a modular transport or capacity step is unsupported; only
+  finite enumeration is obtained; or the response migrates to a forbidden
+  route.
+
+Finite success never earns `PIVOT` or `BRIDGE`. Failure of a proposed exchange
+map does not disprove LRC. A true counterexample to the frozen inequality
+rejects this stronger bridge only unless it also has every pivot covered.
+
+## One-turn budget and required output
+
+Use one major Sol Pro turn for the two attacks and the one frozen lemma. No
+broad literature survey, second research target, or follow-up question is
+permitted.
 
 Return one self-contained memo with these sections, in order:
 
 1. **Disposition** — exactly `STOP`, `PIVOT`, or `BRIDGE`.
-2. **Status table** — every claim and dependency with one strict label.
-3. **Exact target** — definitions, quantifiers, and non-tautological progress boundary.
-4. **Global minimal-cover setup** — owner sets, private points, gcds, and fibers.
-5. **Attack A** — cross-pivot incidence proof or first fatal arrow.
-6. **Attack B** — simultaneous descent proof or first fatal arrow.
-7. **Falsification** — boundary, nonunit, collision, and stress-tuple checks.
-8. **Implication chain** — exact repository declarations and hypotheses.
-9. **Artifacts and replay** — only if optional bounded work was used.
-10. **Final boundary** — proved, computed, rejected, conditional, and open claims.
+2. **Status table** — one exact evidence label for each claim and dependency.
+3. **Exact target** — definitions, quantifiers, weights, and strict boundary.
+4. **Regression and non-tautology audit** — all mandatory fixtures and why the
+   target is stronger than certificate existence.
+5. **Attack A** — explicit modular exchange injection or first fatal arrow.
+6. **Attack B** — weighted charge conservation or first fatal arrow.
+7. **Falsification** — rules, exact counterexamples, and any bounded scan.
+8. **Complete implication chain** — including the `n=1` split and exact Lean
+   dependencies.
+9. **Artifacts and replay** — only if an optional artifact was created.
+10. **Final boundary** — proved, computed, conditional, rejected, and open
+    claims without response self-promotion.
 
-Do not return a catalogue of ideas. The goal is a genuine global relation
-between different pivot moduli, not another local certificate heuristic.
+Do not return a catalogue of ideas. The sole goal is the exact weighted
+cross-pivot deficit-compensation lemma, its decisive refutation, or one
+rigorously proved structural partial theorem under these disposition rules.
