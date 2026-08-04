@@ -32,17 +32,17 @@ class TaskLedgerValidatorTests(unittest.TestCase):
         errors, metrics = validate(self.ledger, self.schema)
         self.assertEqual(errors, [])
         self.assertEqual(metrics, self.ledger["expected_metrics"])
-        self.assertEqual(metrics["active_pro_cells"], 1)
-        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 0})
+        self.assertEqual(metrics["active_pro_cells"], 2)
+        self.assertEqual(metrics["route_queues"], {"launch_ready": 0, "waiting": 1, "parked": 1})
         self.assertEqual(metrics["audits"], {"total": 39, "accepted": 27, "accepted_negative": 8, "rejected": 0, "pending": 0, "deferred": 4})
-        self.assertEqual(metrics["verification_level_queues"], {"1": 1, "2": 1, "3": 0})
+        self.assertEqual(metrics["verification_level_queues"], {"1": 2, "2": 0, "3": 0})
         self.assertEqual(metrics["pipeline"], {
             "active_medium_leads": 3,
             "luna_ready_tasks": 0,
             "active_luna_workers": 0,
             "integration_backlog": 0,
             "sol_high_review_backlog": 0,
-            "pro_cells_awaiting_recovery": 3,
+            "pro_cells_awaiting_recovery": 0,
             "responses_under_audit": 0,
             "launch_ready_contracts": 0,
         })
@@ -68,7 +68,21 @@ class TaskLedgerValidatorTests(unittest.TestCase):
             )},
             {"completed"},
         )
-        self.assertEqual(tasks["SOL-P82-DESKTOP-LAUNCH-211"]["status"], "active")
+        self.assertEqual(tasks["SOL-P82-DESKTOP-LAUNCH-211"]["status"], "completed")
+        self.assertEqual(
+            {tasks[task_id]["status"] for task_id in (
+                "SOL-P83-DESKTOP-LAUNCH-223",
+                "SOL-P84-DESKTOP-LAUNCH-227",
+                "SOL-P85-DESKTOP-LAUNCH-237",
+            )},
+            {"completed"},
+        )
+        self.assertEqual(tasks["SOL-P86-DESKTOP-LAUNCH-242"]["status"], "active")
+        self.assertEqual(tasks["SOL-P87-DESKTOP-LAUNCH-255"]["status"], "active")
+        self.assertEqual(tasks["P85-MATHEMATICAL-AUDIT-251"]["status"], "completed")
+        self.assertEqual(tasks["P85-LITERAL-REPLAY-MEDIUM-SPEC-256"]["status"], "active")
+        self.assertEqual(tasks["P85-LITERAL-REPLAY-MEDIUM-SPEC-256"]["admission_class"], "MEDIUM-SPEC-REQUIRED")
+        self.assertEqual(tasks["PIPE-P88-INDEPENDENT-ROUTE-SPEC-245"]["route_queue"], "parked")
         self.assertIn("INPUT-NOT-FROZEN", tasks["SOL-P81-DESKTOP-LAUNCH-213"]["disposition"])
         self.assertEqual(tasks["P68-BA-DEF-01"]["evidence_label"], "rejected-operational-output")
         self.assertEqual(tasks["P68-BA-DEF-01"]["admission_class"], "LUNA-READY")
@@ -272,8 +286,8 @@ class TaskLedgerValidatorTests(unittest.TestCase):
 
     def test_queue_and_level_metrics_cannot_drift(self):
         def mutate_queue(ledger):
-            task = next(task for task in ledger["tasks"] if task["id"] == "INFRA-PIPELINE-LEDGER-CORRECTION-177")
-            task["route_queue"] = "parked"
+            task = next(task for task in ledger["tasks"] if task["id"] == "PIPE-P88-INDEPENDENT-ROUTE-SPEC-245")
+            task["route_queue"] = "waiting"
 
         self.assertHasError(self.errors_for(mutate_queue), "expected metrics mismatch")
 
@@ -326,6 +340,17 @@ class TaskLedgerValidatorTests(unittest.TestCase):
     def test_derived_metrics_ignore_non_authoritative_placeholders(self):
         metrics = derive_metrics(self.ledger["tasks"])
         self.assertNotIn("publication-queue-unassigned", str(metrics))
+
+    def test_terminal_pro_recovery_merge_closes_recovery_backlog(self):
+        tasks = copy.deepcopy(self.ledger["tasks"])
+        task = next(task for task in tasks if task["id"] == "SOL-P82-DESKTOP-LAUNCH-211")
+        task["source_refs"] = [
+            ref for ref in task["source_refs"] if not ref.startswith("recovery-merge:")
+        ]
+        self.assertEqual(
+            derive_metrics(tasks)["pipeline"]["pro_cells_awaiting_recovery"],
+            derive_metrics(self.ledger["tasks"])["pipeline"]["pro_cells_awaiting_recovery"] + 1,
+        )
 
 
 if __name__ == "__main__":

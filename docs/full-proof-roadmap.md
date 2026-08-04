@@ -6,7 +6,7 @@ bounded-height improvement. Results keep the repository-wide labels
 `proved-lean`, `proved-math`, `computed`, `conditional`, `conjectural`,
 `refuted`, and `open`.
 
-## Rolling route triage (Prompt76--82)
+## Rolling route triage (Prompt76--88)
 
 - Prompt76's global canonical private-deficit inequality is refuted at exact
   manuscript scope by `(1,4,5,6,7,11)`: demand `100`, capacity `98`.
@@ -21,12 +21,20 @@ certificate. The response-supplied Prompt76 scans, Prompt77 6,330-record scan,
 and Prompt78 computation are not accepted finite evidence because they were
 not independently executed or replayed.
 
-The live unrestricted pipeline now has Prompt79--81 completed and awaiting
-recovery, with Prompt81 already classified operationally as
-`INPUT-NOT-FROZEN` due inaccessible unpushed inputs and therefore no
-mathematical result. Prompt82 is active on the global all-pivot saturated
-multiplicity-average route. Recovery and audit proceed without changing the
-exact unrestricted bottleneck below.
+Prompt79--82 are now completed and recovered. Prompt79, Prompt80, and Prompt82
+have integrated audits; Prompt81 remains rejected operational output because
+its required inputs were not frozen. Prompt83 is an audited STOP. Prompt84
+rejects `PowerForcing(4,q)` at the qualified scope `q >= 8` and `4 | q`.
+Prompt85's audit completed with mixed/provisional STOP: generic mathematics
+and pivot grids are qualified, while width-two minima and the counterexample
+remain unverified. Task256 is preparing a literal-replay specification at
+Medium effort; it is neither an audit nor a Luna-ready execution.
+
+Prompt86 and Prompt87 are active independent Sol Pro synthesis routes.
+Prompt87 launched only after its corrected Task253 contract received review254
+ACCEPT. Prompt88 remains parked behind a `MEDIUM-SPEC-REQUIRED` independent
+route gate. These lifecycle transitions do not change the exact unrestricted
+bottleneck below.
 
 ## Exact unrestricted bottleneck
 
