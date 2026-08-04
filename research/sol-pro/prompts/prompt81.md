@@ -12,7 +12,7 @@ admission: LAUNCH-READY
 
 This is one reserved-cell adversarial synthesis contract. Compare the stopped
 Prompt76 private-deficit route, Prompt77's audited primitive signed-Gram
-counterexample, and Prompt78's provisional sparse-cover counterexample. Decide
+counterexample, and Prompt78's audited sparse-cover counterexample. Decide
 whether any independently valid local lemma from those responses closes an
 exact edge in active Prompt79 or Prompt80, or whether every proposed transfer
 still crosses the same LRC-equivalent pivot-selection gap.
@@ -40,7 +40,8 @@ are frozen at contract preparation:
 | Response77 | `2bc0830318d82484e0c7f070671a7ee56ba9f8c6` | `research/sol-pro/responses/response77.md` | `c758c5e8759e2b61cb5fc15e4c056e85b9c3551480660006f349944ee72f8835` | claims constrained by the audit below |
 | Response77 mathematical audit | `bea342e87a7d0a3a760ef183df9edd5212ec248b` | `docs/response77-mathematical-audit.md` | `bdbd4fbdc15920f4f966016e713fdd68b1ff8ef5ad50c41c748581822a84fc84` | accepted manuscript counterexample and exact local lemmas only |
 | Prompt78 contract | `cb8ceeba04ac4b4d89d6bf05b1ff62d68d2a9336` | `research/sol-pro/prompts/prompt78.md` | `0ffb03bb998670392c5e08fb21d800abbae8729180d502f6981c7a7737980099` | exact target and boundary only |
-| Response78 | `5652ab11d436135766ce2147be58b6836f59cc85` | `research/sol-pro/responses/response78.md` | `96e3bc5d0c05fb2b04e8e2d9117a55bf86b1d96d608e92422553bf54ab0a2390` | provisional claims pending independent mathematical audit |
+| Response78 | `5652ab11d436135766ce2147be58b6836f59cc85` | `research/sol-pro/responses/response78.md` | `96e3bc5d0c05fb2b04e8e2d9117a55bf86b1d96d608e92422553bf54ab0a2390` | claims constrained by the audit below |
+| Response78 mathematical audit | `bf4b9671ae0c23f2aa93dcb5c083d59771029347` | `docs/response78-mathematical-audit.md` | `16ba2b8b617dcbc50b97a2c3c029ac67485daeace11d6bae7be13e765052b78a` | accepted manuscript counterexample and exact local lemmas only |
 | Prompt79 contract | `6f7573f1b8f897be894a0a4819d958e447379eac` | `research/sol-pro/prompts/prompt79.md` | `3e22ddf4b0ca5ea82bcbe028594aedb4d8584f640293cacdc2019766e755a93a` | active contract only |
 | Prompt80 contract | `0915ebb280fa34ea7a355c8eeafae9b08684afd9` | `research/sol-pro/prompts/prompt80.md` | `49662646959df4e1a245b36c76d21dade391308bc38e2cedb610674df937092e` | active contract only |
 
@@ -48,10 +49,10 @@ Response77's independent audit accepts the infinite primitive family only at
 `proved-math` manuscript scope. Independently rederive each part used in a
 cross-route implication; the audit does not promote LRC or any active target.
 
-Response78 is immutable but has no independently accepted mathematical audit
-at this contract checkpoint. Root-level triage is not a substitute for that
-audit. Treat its counterexample and local claims as provisional and reconstruct
-them inside this synthesis. If any listed blob is absent, mutable, or
+Response78's independent audit accepts its explicit bridge counterexample only
+at `proved-math` manuscript scope. Independently rederive each part used in a
+cross-route implication; the audit does not promote LRC or either active
+target. If any listed blob is absent, mutable, or
 hash-mismatched, do not launch; return `INPUT-NOT-FROZEN`. Do not paste private
 session material into the repository or the synthesis response.
 
@@ -161,7 +162,7 @@ without an explicit map to their arithmetic objects.
 
 ### Prompt78
 
-Reconstruct the provisional exact counterexample
+Reconstruct the audited exact counterexample
 
 ```text
 n=5, N=6, a=(6,7,12,24,144),
@@ -172,8 +173,8 @@ Q_6=Q_12=Q_24=empty.
 Verify every premise, inclusion-minimality, the sparse bound, and each good-set
 claim. Also verify that pivot 144 with numerator `r=25` is a full certificate,
 so the tuple is not an LRC counterexample. Preserve only local classification,
-scaling, or cover facts that this turn proves independently or a later audit
-accepts.
+scaling, or cover facts that this turn proves independently or the tracked
+audit accepts.
 Do not infer that a counterexample to the sparse bridge is an LRC
 counterexample.
 
@@ -336,6 +337,6 @@ launch another agent, promote evidence, or claim unrestricted LRC.
 
 The contract is unrestricted, preserves the strict closed boundary, names one
 synthesis decision, freezes both active interfaces, and contains a fail-closed
-hash gate for the provisional Prompt78 blob. It changes no theorem or
+hash gate for the audited Prompt78 response and audit blobs. It changes no theorem or
 route status. Launch ownership remains exclusively Sol High/browser under
 `/root`.
