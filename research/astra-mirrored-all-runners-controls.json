@@ -1,0 +1,52 @@
+{
+  "source_checkpoint": "8db7eb32fb0aec5f1a62d18f93a72c5096d76743",
+  "manuscript_sha256": "1253cae99e31ff66f66eea170307296f8b3a4c181661ea0e91e5d2d5c9f27e98",
+  "scope": "All chosen runners in fixed m1..12 configurations over two residue periods; selected runners only in8large configurations. Exact deterministic formula controls, not tuple discovery or arbitrary-parameter proof.",
+  "result": "passed",
+  "counts": {
+    "all_chosen_configurations": 360,
+    "bounded_relative_case": 908,
+    "chosen_runners": 6608,
+    "configurations": 368,
+    "core_relative_case": 5700,
+    "reflected_chosen_runners": 3304,
+    "relative_speed_checks": 193200,
+    "selected_large_configurations": 8
+  },
+  "reproducer": {
+    "code_lines": [
+      "from fractions import Fraction as F",
+      "from collections import Counter",
+      "import json",
+      "",
+      "def norm(x):return min(x%1,(-x)%1)",
+      "def core_time(m,p):",
+      " N=2*m+2;k,r=divmod(p,N)",
+      " return F(1,N) if r>=m+1 else F(N*k+1,N*(p-m))",
+      "counts=Counter()",
+      "small=[(m,p,None) for m in range(1,13) for p in range(2*m+1,2*m+1+2*(2*m+2))]",
+      "large=[(m,(2*m+2)*10**12+r,'selected') for m in (50,1000) for r in (0,m,m+1,2*m+1)]",
+      "for m,p,selection in small+large:",
+      " T=list(range(m+1))+list(range(p-m,p+1));N=2*m+2;d=F(1,N)",
+      " assert len(T)==len(set(T))==N",
+      " chosen=T if selection is None else sorted({0,1,m//2,m,p-m,p-m//2,p-1,p})",
+      " for r in chosen:",
+      "  assert r in T",
+      "  u=r if r<=m else p-r;P=p-u",
+      "  bounded=P<=2*m+1",
+      "  t=d if bounded else core_time(m,P)",
+      "  assert 0<=u<=m and P>=m+1 and t>0",
+      "  vals=[norm(t*(s-r)) for s in T if s!=r]",
+      "  assert len(vals)==N-1 and min(vals)>=d",
+      "  counts['chosen_runners']+=1;counts['relative_speed_checks']+=len(vals)",
+      "  counts['bounded_relative_case' if bounded else 'core_relative_case']+=1",
+      "  counts['reflected_chosen_runners']+=r>m",
+      " counts['configurations']+=1",
+      " counts['all_chosen_configurations' if selection is None else 'selected_large_configurations']+=1",
+      "print(json.dumps(dict(counts),sort_keys=True))"
+    ],
+    "sha256": "d8749e046a36437e19a0b61b1c1e2044cd180a190e0039414998fd667596e59c",
+    "expected_stdout": "{\"all_chosen_configurations\": 360, \"bounded_relative_case\": 908, \"chosen_runners\": 6608, \"configurations\": 368, \"core_relative_case\": 5700, \"reflected_chosen_runners\": 3304, \"relative_speed_checks\": 193200, \"selected_large_configurations\": 8}",
+    "invocation": "Join code_lines with newlines and a final newline, then execute with Python3. Standard library only."
+  }
+}

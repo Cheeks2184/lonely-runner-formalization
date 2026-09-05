@@ -6,6 +6,17 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [twenty-third Astra checkpoint](docs/astra-research-23.md) gives an
+independently reviewed Lean proof for every chosen runner in the exact
+mirrored configuration `{0,...,m} union {p-m,...,p}`, with m>=1 and
+p>=2m+1. It verifies cardinality 2m+2, signed relative differences,
+reflection, and the canonical `LonelyAt` statement under any injective
+labelling. The full build passed 3,618 jobs; the trust audit accepted 378
+reports; all 58 focused tests and independent fresh-source probes passed.
+The complement descent audit is also accepted at its precise limited scope.
+Neither result resolves unrestricted LRC. Rebuildable cache cleanup removed
+7,712,253,201 bytes after verification.
+
 The [twenty-second Astra checkpoint](docs/astra-research-22.md) independently
 reviews an exact finite endpoint selector under covered reference-row and
 frequency hypotheses. A least-count, least-sum failure would make its maximum
@@ -14,8 +25,8 @@ unsupplied. A separate width dichotomy decides all one-speed extensions of
 a fixed nonempty old-good set. The proposed uniform bound b>max(V) is
 itself equivalent to unrestricted integer LRC, with the established small
 cases. Exact controls and boundary replays passed. No Lean source changed.
-Further work tests a distinct speed-complement descent while retaining the
-identity of the stationary runner; no such descent is claimed here.
+The subsequent twenty-third checkpoint audits speed-complement descent while
+retaining the identity of the stationary runner; no general descent is established.
 
 The [twenty-first Astra checkpoint](docs/astra-research-21.md) stops the proposed
 whole-old-good-set translation/reflection mechanism. An independently reviewed

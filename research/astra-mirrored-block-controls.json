@@ -1,0 +1,126 @@
+{
+  "source_checkpoint": "8db7eb32fb0aec5f1a62d18f93a72c5096d76743",
+  "manuscript_sha256": "70b5545b8b7af311324967c7272a07f8d714eeabac2b21c381ae168326847e21",
+  "scope": "Deterministic formula verification for m1..32 across three residue periods from p=2m+1;21additional fixed cases including12large-height cases. Not tuple discovery or proof of arbitrary parameters.",
+  "result": "passed",
+  "counts": {
+    "adjusted_case": 1692,
+    "first_case": 1689,
+    "original_speed_checks": 162537,
+    "p_at_minimum": 35,
+    "p_multiple_N": 102,
+    "r_equals_m": 99,
+    "r_equals_m_plus_one": 99,
+    "tuples": 3381
+  },
+  "large_height_fixtures": [
+    {
+      "m": 10,
+      "minimum_norm": "1/22",
+      "p": 22000000000000,
+      "time": "22000000000001/483999999999780"
+    },
+    {
+      "m": 10,
+      "minimum_norm": "1/22",
+      "p": 22000000000010,
+      "time": "22000000000001/484000000000000"
+    },
+    {
+      "m": 10,
+      "minimum_norm": "1/22",
+      "p": 22000000000011,
+      "time": "1/22"
+    },
+    {
+      "m": 10,
+      "minimum_norm": "1/22",
+      "p": 22000000000021,
+      "time": "1/22"
+    },
+    {
+      "m": 100,
+      "minimum_norm": "1/202",
+      "p": 202000000000000,
+      "time": "202000000000001/40803999999979800"
+    },
+    {
+      "m": 100,
+      "minimum_norm": "1/202",
+      "p": 202000000000100,
+      "time": "202000000000001/40804000000000000"
+    },
+    {
+      "m": 100,
+      "minimum_norm": "1/202",
+      "p": 202000000000101,
+      "time": "1/202"
+    },
+    {
+      "m": 100,
+      "minimum_norm": "1/202",
+      "p": 202000000000201,
+      "time": "1/202"
+    },
+    {
+      "m": 1000,
+      "minimum_norm": "1/2002",
+      "p": 2002000000000000,
+      "time": "2002000000000001/4008003999997998000"
+    },
+    {
+      "m": 1000,
+      "minimum_norm": "1/2002",
+      "p": 2002000000001000,
+      "time": "2002000000000001/4008004000000000000"
+    },
+    {
+      "m": 1000,
+      "minimum_norm": "1/2002",
+      "p": 2002000000001001,
+      "time": "1/2002"
+    },
+    {
+      "m": 1000,
+      "minimum_norm": "1/2002",
+      "p": 2002000000002001,
+      "time": "1/2002"
+    }
+  ],
+  "reproducer": {
+    "code_lines": [
+      "from fractions import Fraction as F",
+      "from collections import Counter",
+      "import json",
+      "",
+      "def norm(x):return min(x%1,(-x)%1)",
+      "counts=Counter()",
+      "large=[]",
+      "fixtures=[(m,p) for m in range(1,33) for p in range(2*m+1,2*m+1+3*(2*m+2))]",
+      "for m in (10,100,1000):",
+      " N=2*m+2",
+      " fixtures.extend((m,p) for p in [2*m+1,2*m+2,2*m+3]+[N*10**12+r for r in (0,m,m+1,N-1)])",
+      "for m,p in fixtures:",
+      " N=2*m+2;d=F(1,N);k,r=divmod(p,N)",
+      " t=d if r>=m+1 else F(N*k+1,N*(p-m))",
+      " A=set(range(1,m+1))|set(range(p-m,p))|{p}",
+      " assert len(A)==2*m+1 and min(A)>0 and max(A)==p",
+      " assert d<=t<=2*d and all(norm(a*t)>=d for a in A)",
+      " y=p*t-k",
+      " assert m*t+d<=y<=1-d",
+      " assert all(F(1,N)<=i*t<=1-d and d<=y-i*t<=1-d for i in range(1,m+1))",
+      " counts['tuples']+=1;counts['original_speed_checks']+=len(A)",
+      " counts['first_case' if r>=m+1 else 'adjusted_case']+=1",
+      " counts['p_at_minimum']+=p==2*m+1",
+      " counts['p_multiple_N']+=r==0",
+      " counts['r_equals_m']+=r==m",
+      " counts['r_equals_m_plus_one']+=r==m+1",
+      " if p>10**12:large.append({'m':m,'p':p,'time':str(t),'minimum_norm':str(min(norm(a*t) for a in A))})",
+      "assert counts['first_case'] and counts['adjusted_case'] and counts['p_at_minimum']",
+      "print(json.dumps({'counts':dict(counts),'large_height_fixtures':large},sort_keys=True))"
+    ],
+    "sha256": "520c6a231d9f644a3319eb06e5a43ca1b838a9b9d66a00338b033da843294e4c",
+    "invocation": "Join reproducer.code_lines with newlines and a final newline, then execute with Python3 at repository root. Standard library only.",
+    "expected_stdout": "{\"counts\": {\"adjusted_case\": 1692, \"first_case\": 1689, \"original_speed_checks\": 162537, \"p_at_minimum\": 35, \"p_multiple_N\": 102, \"r_equals_m\": 99, \"r_equals_m_plus_one\": 99, \"tuples\": 3381}, \"large_height_fixtures\": [{\"m\": 10, \"minimum_norm\": \"1/22\", \"p\": 22000000000000, \"time\": \"22000000000001/483999999999780\"}, {\"m\": 10, \"minimum_norm\": \"1/22\", \"p\": 22000000000010, \"time\": \"22000000000001/484000000000000\"}, {\"m\": 10, \"minimum_norm\": \"1/22\", \"p\": 22000000000011, \"time\": \"1/22\"}, {\"m\": 10, \"minimum_norm\": \"1/22\", \"p\": 22000000000021, \"time\": \"1/22\"}, {\"m\": 100, \"minimum_norm\": \"1/202\", \"p\": 202000000000000, \"time\": \"202000000000001/40803999999979800\"}, {\"m\": 100, \"minimum_norm\": \"1/202\", \"p\": 202000000000100, \"time\": \"202000000000001/40804000000000000\"}, {\"m\": 100, \"minimum_norm\": \"1/202\", \"p\": 202000000000101, \"time\": \"1/202\"}, {\"m\": 100, \"minimum_norm\": \"1/202\", \"p\": 202000000000201, \"time\": \"1/202\"}, {\"m\": 1000, \"minimum_norm\": \"1/2002\", \"p\": 2002000000000000, \"time\": \"2002000000000001/4008003999997998000\"}, {\"m\": 1000, \"minimum_norm\": \"1/2002\", \"p\": 2002000000001000, \"time\": \"2002000000000001/4008004000000000000\"}, {\"m\": 1000, \"minimum_norm\": \"1/2002\", \"p\": 2002000000001001, \"time\": \"1/2002\"}, {\"m\": 1000, \"minimum_norm\": \"1/2002\", \"p\": 2002000000002001, \"time\": \"1/2002\"}]}"
+  }
+}
