@@ -6,13 +6,16 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
-The [thirteenth Astra research checkpoint](docs/astra-research-13.md) refutes
-single-step escape with exactly one prime-divisible speed. Its explicit tuple
-has 172 failed endpoint attempts and the strict ordinary witness `1/9`; an
-unbounded family preserves both facts. This retires that proposed universal
-route, including the multiple-zero version rejected in the preceding pass.
+The [fourteenth Astra research checkpoint](docs/astra-research-14.md) proves at
+independently reviewed manuscript scope that three distinct positive lower
+speeds cannot cover a pivot row at denominator seven, for arbitrary speed
+height. Exact exceptional-row overlaps supply the new bound. It protects only
+those three speeds and their pivot; no new Lean declaration is claimed.
+The preceding [single-step escape obstruction](docs/astra-research-13.md)
+remains accepted, including its strict ordinary witness and unbounded family.
 The [latest Lean checkpoint](docs/astra-research-11.md) passed 3,610 build jobs
-and 354 theorem trust reports. The owner/cover bridge is being reassessed.
+and 354 theorem trust reports. General sparse-owner supply and a separate
+constructive test of internal-cover redundancy are under bounded audit.
 The canonical conjecture remains unproved and undisproved.
 
 The research narrative below is the historical 2026-08-04 `main` snapshot.
