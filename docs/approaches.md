@@ -40,6 +40,13 @@ items 5 or 6. The accompanying reviewed endpoint-packet audit also proves
 that this specified small-error mechanism cannot cover all retained tuples,
 even though its large-height application is valid.
 
+The Pass 27 reviewed audits sharpen this boundary: fixed and adaptive endpoint
+packets, even with exact retained-margin rounding, do not supply every case.
+Free exact-loss selection is equivalent to an actual witness and therefore is
+not an independent supply principle. These results do not exclude unions with
+the existing height or insertion methods; a viable route must add a genuinely
+new supply argument.
+
 Obstruction: CRT does not allow a different favorable numerator for each
 coordinate; all conditions share one time. This route has been highly effective
 through the currently verified finite boxes but gives no known uniform

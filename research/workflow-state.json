@@ -6,20 +6,20 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/guard_internal_cover_audit-cardinality-adaptive-affine",
+      "id": "/root/endpoint_label_audit-single-anchor-completeness",
       "kind": "research",
       "status": "in_progress",
-      "target": "Audit genuine cardinality-adaptive collision margin as a proposed escape from fixed-budget endpoint-packet obstruction. Derive exact conditional transfer and test universal packet supply, first on consecutive5runner family.",
-      "source_checkpoint": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+      "target": "Independently prove or refute constructive completeness of generalized one-anchor exact-loss packets retaining collision own-count margin, starting from a supplied pair-sum maximizer; distinguish equivalence from uniform witness supply.",
+      "source_checkpoint": "a4c395827100593500747904a1a11f4251fdb271",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
       "owned_files": [
-        "research/astra-cardinality-adaptive-affine-audit.md"
+        "research/astra-single-anchor-completeness-audit.md"
       ],
       "checks": [],
-      "next_action": "Bounded independent manuscript derivation and exact finite controls; no source/state/Git/cache mutation."
+      "next_action": "Bounded analytical constructor audit and supplied N4 fixture; excluded from Pass27 until separately reviewed."
     }
   ],
   "completed_tasks": [
@@ -3302,13 +3302,184 @@
       ],
       "next_action": "All commands stopped; root publish verified checkpoint.",
       "result": "Accepted exact canonical iff and all five sources; root fresh saved-generator replay passed byte-identical probe/log."
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-cardinality-adaptive-affine",
+      "kind": "research",
+      "status": "complete",
+      "target": "Audit genuine cardinality-adaptive collision margin as a proposed escape from fixed-budget endpoint-packet obstruction. Derive exact conditional transfer and test universal packet supply, first on consecutive5runner family.",
+      "source_checkpoint": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-cardinality-adaptive-affine-audit.md"
+      ],
+      "checks": [
+        "Root read full derivation and exact replay passed with matching program/output hashes."
+      ],
+      "next_action": "Bounded independent manuscript derivation and exact finite controls; no source/state/Git/cache mutation.",
+      "result": "Frozen manuscript obstruction and adaptive transfer; root exact replay passed; independent review pending.",
+      "artifact_sha256": "a71e55b71e6e6a8a7893c5b3523859d9e51255078c2b17de0ea5cb6b5439a101"
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-combined-packet-supply",
+      "kind": "research",
+      "status": "complete",
+      "target": "Audit whether direct small-modulus witnesses remove the adaptive packet obstruction; derive and assess a precise combined supply contract using necessary counterexample restrictions.",
+      "source_checkpoint": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-combined-affine-supply-audit.md"
+      ],
+      "checks": [],
+      "next_action": "Independent bounded semantic research; preserve original tuples and all label/quantifier restrictions.",
+      "result": "Frozen combined two-branch obstruction; root full read and exact replay passed; independent review pending.",
+      "artifact_sha256": "87fd780d4df515910203aaa8824a2f9265cd57dfdf6e323e43c9cb12bb320327"
+    },
+    {
+      "id": "/root/cluster_limit_review-adaptive-margin-review",
+      "kind": "research",
+      "status": "complete",
+      "target": "Independently review adaptive collision transfer, universal denominator folding, and complete N5 packet obstruction. No new mathematical search.",
+      "source_checkpoint": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-cardinality-adaptive-affine-review.md"
+      ],
+      "checks": [
+        "Root read entire review and replayed exact sole program; all source/program/output hashes matched."
+      ],
+      "next_action": "Independent manuscript derivation and exact deterministic controls; no cache/source/state/Git mutation.",
+      "result": "Independent adaptive audit accepted with distinct-adjacent-values wording qualification; root full review replay pending.",
+      "artifact_sha256": "09dd14f819e03a08583754375c6317157b3717bbf54f3e4a289cf1285bb45c49"
+    },
+    {
+      "id": "/root/cluster_limit_review-combined-supply-review",
+      "kind": "research",
+      "status": "complete",
+      "target": "Independently review fixed N4 combined supply obstruction and exact all-q completeness; no stronger disjunction claim.",
+      "source_checkpoint": "a4c395827100593500747904a1a11f4251fdb271",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-combined-affine-supply-review.md"
+      ],
+      "checks": [],
+      "next_action": "Bounded manuscript review and independent exact controls; no source/Git/state/cache changes.",
+      "artifact_sha256": "857ab98220785edd7027d05bd2c45e33b0df70e68d9826f3d56089586c35571a",
+      "result": "Accepted precise two-branch obstruction, root full read and exact independent program replay passed with matching hashes."
+    },
+    {
+      "id": "/root/lower_count_supply-pass27-documentation",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Prepare concise checkpoint27 documentation from settled scope specification; mark pending independent reviews accurately. No mathematical derivation or Lean changes.",
+      "source_checkpoint": "a4c395827100593500747904a1a11f4251fdb271",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "docs/astra-research-27.md"
+      ],
+      "checks": [],
+      "next_action": "Draft one checkpoint document; exact-loss and combined independent acceptance still pending.",
+      "artifact_sha256": "5e9ba054df1bffd640e17e01e337e7865d284031b4ee1e1e32d4b3d3ab3972b7",
+      "result": "Draft read; pending review status correctly retained. One wording correction and final integration remain for later routine finalization."
+    },
+    {
+      "id": "/root/endpoint_label_audit-exact-rounding-scope",
+      "kind": "research",
+      "status": "complete",
+      "target": "Determine exact scope of replacing affine worst-case loss by actual rounding norm; test whether zero-rounding subclass recovers existing pair-sum witness selection and supplies no new uniform mechanism.",
+      "source_checkpoint": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-exact-rounding-scope-audit.md"
+      ],
+      "checks": [],
+      "next_action": "Independent analytical theorem-contract audit; avoid finite tuple discovery or equivalent-obligation promotion.",
+      "result": "Frozen manuscript exact-loss identity, free-supply equivalence and retained-margin universal endpoint obstruction. Root full read/replay and independent review pending.",
+      "artifact_sha256": "ba16410bdd0ca08262573fbfa36d6e46078a7b3910f68e7593318dea63d78c3c"
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-exact-rounding-review",
+      "kind": "research",
+      "status": "complete",
+      "target": "Independently review exact rounding identity, free-supply equivalence including all chosen-label binary cut, and universal retained-margin endpoint obstruction.",
+      "source_checkpoint": "a4c395827100593500747904a1a11f4251fdb271",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-exact-rounding-scope-review.md"
+      ],
+      "checks": [],
+      "next_action": "Independent analytical scope audit and exact controls; no source/cache/Git/state mutation.",
+      "artifact_sha256": "37c5d7c39c24e3153d29008ebcccaa6e6141756b6ae0138f61d9c7c548840435",
+      "result": "Independent manuscript review complete; root read entire derivation and sole program, replayed unmodified code with matching artifact/program/output hashes."
+    },
+    {
+      "id": "/root/cluster_limit_review-kumar-proof-screen",
+      "kind": "research",
+      "status": "complete",
+      "target": "Bounded independent screen of one newly retrieved claimed full proof; check strict-boundary claim and finite nesting lemma on literal controls, not broader literature search.",
+      "source_checkpoint": "a4c395827100593500747904a1a11f4251fdb271",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-kumar-proof-screen.md"
+      ],
+      "checks": [],
+      "next_action": "Read primary 14613-byte PDF and independently verify exact counterexamples; concise source-attributed disposition only.",
+      "artifact_sha256": "7dbe75cc9880c0e202ef5f88220279d3137834fa8c7eb0788874288e64e04a67",
+      "result": "Independent manuscript review complete; root read entire derivation and sole program, replayed unmodified code with matching artifact/program/output hashes."
+    },
+    {
+      "id": "/root/lower_count_supply-pass27-final-docs",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Finalize Pass27 checkpoint documentation and narrow README/STATUS/approach/literature integration using accepted manuscript results; no Lean or mathematical changes.",
+      "source_checkpoint": "a4c395827100593500747904a1a11f4251fdb271",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "docs/astra-research-27.md",
+        "README.md",
+        "STATUS.md",
+        "docs/approaches.md",
+        "docs/literature.md"
+      ],
+      "checks": [
+        "Exact documentation hashes recorded in Pass27 manifest."
+      ],
+      "next_action": "Settled copy edits, exact scope and source links; no model/source/cache/Git/state mutations.",
+      "result": "Final documentation independently read by root; corrected rounding displacement and removed immediately stale publication wording. Workflow/whitespace/new links and source-unchanged checks passed."
     }
   ],
-  "latest_checkpoint": "Pass26 verified: exact canonical Conjecture iff AllInclusivePrimitiveFiniteFamilies, five bodies independently reviewed and root fresh replayed; build3637/trust419/focused58 passed. Publication pending, PR24 latest merged. All finite families/unrestricted LRC remain unproved.",
+  "latest_checkpoint": "Pass27 verified manuscript checkpoint prepared; publication pending. PR25 remains latest merged, canonical LRC unresolved.",
   "next_actions": [
-    "Publish verified Pass26 via commit/push/PR/required checks/exact-head merge and verify main.",
-    "Complete and independently review separately owned adaptive-margin audit; it is excluded from Pass26.",
-    "Seek genuinely new uniform finite-family witness supply; canonical LRC remains unproved."
+    "Publish verified Pass27 by commit/push/PR/CI/exact-head merge and verify main.",
+    "Complete and independently review separate one-anchor constructive completeness audit; equivalence from an existing witness is not uniform supply.",
+    "Continue toward unrestricted canonical proof or disproof; no completion claim from auxiliary results."
   ],
   "research_holds": [
     {
@@ -3818,164 +3989,27 @@
     }
   },
   "storage_checkpoint": {
-    "download_archive_bytes_removed": 439158169,
-    "archive_count": 8639,
-    "archive_names_sha256": "c6488a774e671ba4709034b089eb5a73fcbd6c17743c760b772c898a83d0e392",
-    "shared_lake_cache_retained": false,
-    "retention_reason": "All Pass24 Lean verification complete; active research is manuscript-only.",
-    "report_bytes": 0,
-    "pass5_removed_bytes": 7687680100,
-    "cleanup_command": "python3 scripts/manage_storage.py --clean",
-    "coordination": "Remaining active manuscript agent confirmed no commands running and held new commands; other two agents completed and idle.",
-    "restoration_status": "removed_after_verification",
-    "restoration_command": "PATH=$HOME/.elan/bin:$PATH MATHLIB_CACHE_DIR=$PWD/.lake/download-cache lake exe cache get",
-    "restored_cache_files": 8639,
-    "pass9_archive_bytes_removed": 439158169,
-    "pass9_archive_names_sha256": "0296b2071219f11be9fb1c25c87474046b8b5ab025af36f379b5ba8ac2c394bf",
-    "pass9_cleanup_scope": "Only validated8639.ltar files in task-scoped.lake/download-cache; source andunpackeddependencycache retained. Workers heldLeancommands andreviewer confirmed noactiveverification.",
-    "stale_search_termination": {
-      "pid": 2686193,
-      "parent_pid": 2686192,
-      "scope": "Earlier project-local Python exhaustive find_fixed_normalization search; M2..79,cunits,6-subsets1..79,modeB.",
-      "evidence": "Running145minutes at99.8percent CPU; no current agent owns it. Active source verifications completed and remaining agent confirmed command hold.",
-      "result": "SIGTERM completed; safe cleanup then passed. No result inferred from interrupted nonfinding."
-    },
-    "pass11_removed_bytes": 7700185407,
-    "current_restore": {
-      "status": "complete",
-      "session_id": 99688,
-      "reason": "Explicit goal continuation; immediate N9 independent review.",
-      "log": "/tmp/pass16-cache-restore.log",
-      "downloaded_files": 8639,
-      "decompressed_files": 8639
-    },
-    "archive_cleanup": {
-      "status": "complete",
-      "files_removed": 8639,
-      "bytes_removed": 439158169,
-      "target": ".lake/download-cache/*.ltar",
-      "coordination": "All three active workers confirmed no command running and held commands; root build/probes/trust completed.",
-      "retained": "Source, Git, pinned toolchain, shared dependency clones and all needed build outputs remain for active N9 formalization."
-    },
-    "idle_cleanup": {
-      "status": "complete",
-      "coordination": "All child agents completed; N9 author explicitly reports all owned processes stopped. Root process inventory shows no Lean/lake/project verifier. Remote CI has independent storage.",
-      "bytes_removed": 7705923420,
-      "command": "python3 scripts/manage_storage.py --clean",
-      "preserved": "All source, Git history, pinned toolchain and unique evidence; remote CI unaffected."
-    },
-    "pass16_idle_cleanup": {
-      "status": "complete",
-      "bytes_removed": 8151782106,
-      "paths": [
-        ".lake",
-        "scripts/__pycache__",
-        "tests/__pycache__"
-      ],
-      "command": "python3 scripts/manage_storage.py --clean",
-      "coordination": "Both active workers explicitly confirmed no running commands and held launches; other workers idle, root build/trust/probes completed. Released after successful cleanup.",
-      "preserved": "Source,Git,pinnedLean toolchain,uniqueevidence. Remainingreview uses directinstalledLean; nextresearch uses Python.",
-      "report_lake_bytes": 8151598805
-    },
-    "pass18_final_cleanup": {
-      "status": "complete",
-      "bytes_removed": 0,
-      "command": "python3 scripts/manage_storage.py --clean",
-      "coordination": "Allresearchworkerscompletedandcommandsstopped; rootlocalverificationcomplete;remoteCIindependent.",
-      "shared_dependency_cache_present": false
-    },
-    "pass19_restore": {
-      "status": "complete",
-      "command": "PATH=$HOME/.elan/bin:$PATH lake exe cache get",
-      "log": "/tmp/pass19-cache-restore.log",
-      "reason": "Immediate queued formalization of quantitative nearest-grid transport; one shared pinned cache.",
-      "result": "Pinned cache restored 8639 files; no Lean source changes started because Terra launches hit runtime agent thread limit. Retry after author completion; clean cache if no immediate formalization can launch."
-    },
-    "pass19_final_cleanup": {
-      "status": "complete",
-      "command": "python3 scripts/manage_storage.py --clean",
-      "bytes_removed": 7712906368,
-      "removed_paths": [
-        ".lake"
-      ],
-      "coordination": "All worker tasks completed and confirmed stopped; root full build, final trust audit, focused tests, and fresh-source replay completed before cleanup.",
-      "retained": "Pinned toolchain, source, Git history, unique manuscripts/reviews and compact verification evidence."
-    },
-    "pass20_final_cleanup": {
-      "status": "complete",
-      "command": "python3 scripts/manage_storage.py --clean",
-      "bytes_removed": 164960,
-      "removed_paths": [
-        "scripts/__pycache__",
-        "tests/__pycache__"
-      ],
-      "shared_dependency_cache_present": false,
-      "coordination": "All verification commands stopped; only active research author confirmed command hold, released after cleaner completed.",
-      "retained": "All source,Git,pinnedtoolchain,unique evidence; no dependency restoration."
-    },
-    "pass21_final_cleanup": {
-      "status": "complete",
-      "command": "python3 scripts/manage_storage.py --clean",
-      "bytes_removed": 0,
-      "shared_dependency_cache_present": false,
-      "coordination": "All root/review/routine verification stopped; active research author confirmed command hold and was released after cleaner."
-    },
-    "cleanup_after_pass22": "All local worker commands stopped; report found no allowlisted caches and --clean removed0bytes. After cleanup root ran only small Fraction replay with bytecode disabled.",
+    "phase": "pass27 manuscript verification complete",
     "shared_lake_present": false,
-    "current_cache_restore": {
-      "status": "removed_after_verification",
-      "restoration_session_id": 95175,
-      "cleanup_session_id": 23304,
-      "cleanup_log": "/tmp/astra-pass24-storage-cleanup.log"
-    },
-    "pass23_final_cleanup": {
-      "status": "complete",
-      "command": "python3 scripts/manage_storage.py --clean",
-      "bytes_removed": 7712253201,
-      "removed_paths": [
-        ".lake"
-      ],
-      "coordination": "All child tasks completed and reported stopped; root fullbuild/trust/focusedtests and both final fresh-source replays completed before cleanup.",
-      "retained": "Pinned toolchain,source,Git history,unique manuscripts/reviews and reproducible proof/control evidence."
-    },
-    "pass24_removed_bytes": 7720771757,
-    "status": "cache removed after verified Pass26",
-    "restore_log": "/tmp/astra-pass26-cache-restore.log",
-    "restore_exit_code": 0,
-    "cleanup_deferred_reason": null,
-    "pass25_final_cleanup": {
-      "status": "complete",
-      "command": "python3 -B scripts/manage_storage.py --clean",
-      "bytes_removed": 7734053047,
-      "removed_paths": [
-        ".lake"
-      ],
-      "coordination": "All workers and root verification commands stopped before cleanup.",
-      "log": "/tmp/astra-pass25-storage-cleanup.log"
-    },
-    "pass26_final_cleanup": {
-      "status": "complete",
-      "command": "python3 -B scripts/manage_storage.py --clean",
-      "bytes_removed": 7747979982,
-      "removed_paths": [
-        ".lake"
-      ],
-      "log": "/tmp/astra-pass26-storage-cleanup.log",
-      "coordination": "All root and formal-review verification stopped; active manuscript author confirmed command/file-write hold and was released after cleaner exit0."
-    }
+    "cleanup_exit_code": 0,
+    "rebuildable_repository_bytes_removed": 0,
+    "temporary_render_pngs_removed": 5,
+    "temporary_render_bytes_removed": 636878,
+    "preserved": "Pinned toolchain, Git, all source and unique evidence, 14613-byte source PDF required by exact screen replay.",
+    "coordination": "All worker commands stopped and root exact replays completed before cleanup; no active build/search/verifier."
   },
   "previous_goal_turn_classification": "progress",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "52eb99ea7d4cdd428dadd544c10f247a8a90d3e5",
+    "verified_checkpoint": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-affine-finite-height",
+    "branch": "codex/astra-finite-family-equivalence",
     "base": "main",
     "next_action": "Carry receipt into next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/24",
-    "pr_number": 24,
-    "head_sha": "52eb99ea7d4cdd428dadd544c10f247a8a90d3e5",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/25",
+    "pr_number": 25,
+    "head_sha": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -4200,24 +4234,31 @@
         "merge_sha": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
         "checks": "Lean build/trust passed21:18:37UTC; exact computational certificates passed21:26:10UTC. Exact-head merge21:26:56UTC.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 25,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/25",
+        "head_sha": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
+        "status": "merged_verified",
+        "merge_sha": "a4c395827100593500747904a1a11f4251fdb271",
+        "checks": "Lean build/trust passed22:11:46UTC; exact computational certificates passed22:19:14UTC. Exact-head merge22:21:34UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "52eb99ea7d4cdd428dadd544c10f247a8a90d3e5",
-    "remote_main": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
-    "local_main": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+    "latest_published_source_checkpoint": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
+    "remote_main": "a4c395827100593500747904a1a11f4251fdb271",
+    "local_main": "a4c395827100593500747904a1a11f4251fdb271",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
-    "pending_checkpoint": "research/astra-pass25-verification.json",
-    "merge_sha": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
-    "checks": "Lean build/trust passed21:18:37UTC; exact computational certificates passed21:26:10UTC. Exact-head merge21:26:56UTC.",
+    "pending_checkpoint": null,
+    "merge_sha": "a4c395827100593500747904a1a11f4251fdb271",
+    "checks": "Lean build/trust passed22:11:46UTC; exact computational certificates passed22:19:14UTC. Exact-head merge22:21:34UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
     "status": "active",
-    "root_requested_blocked_status": false,
-    "root_requested_resume": false,
-    "mathematical_status": "unresolved",
-    "token_usage_observed": 15026946,
-    "current_work": "PR24 merged; normalization/transport implementation active. Recovered Terra probe-file misunderstanding on same route; goal stayed active, no resume operation available or needed."
+    "tokens_used": 15826791,
+    "time_used_seconds": 53695,
+    "scope": "Live get_goal read after Pass26 publication began. No worker failure blocked goal; no supported resume control available or needed."
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",
@@ -4234,12 +4275,12 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "pass": 26,
-    "branch": "codex/astra-finite-family-equivalence",
+    "pass": 27,
+    "branch": "codex/astra-affine-supply-boundaries",
+    "base_sha": "a4c395827100593500747904a1a11f4251fdb271",
     "status": "verified_pending_commit",
-    "base_sha": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
     "excluded_unfinished": [
-      "research/astra-cardinality-adaptive-affine-audit.md"
+      "research/astra-single-anchor-completeness-audit.md"
     ],
     "merge_method": "merge",
     "protection_bypass_allowed": false
@@ -4320,5 +4361,42 @@
     "root_contract_read_and_replay": "passed,4fixtures90signedcomparisons9allchosenwitnesses28strictlowercountrequests",
     "status": "Verified at exact canonical iff, finalsourceb47e65f4, independentreview6576d272 and rootreplay passed.",
     "remaining_mathematical_supply": "AllInclusivePrimitiveFiniteFamilies remains unproved."
+  },
+  "current_research_boundary": {
+    "status": "research_in_progress",
+    "canonical_resolution": false,
+    "accepted_pass27": "Three affine-scope audits accepted with independent review and root exact replays. Stand-alone endpoint supply refuted, free-time variant equivalent to witness existence. External candidate rejected at precise defects.",
+    "next_independent_work": "Generalized one-anchor retained-margin completeness construction under audit; excluded from Pass27 and no result yet accepted.",
+    "storage": "Shared Lean cache absent; all evidence small."
+  },
+  "adaptive_affine_audit": {
+    "status": "accepted_manuscript",
+    "author_sha256": "a71e55b71e6e6a8a7893c5b3523859d9e51255078c2b17de0ea5cb6b5439a101",
+    "review_sha256": "09dd14f819e03a08583754375c6317157b3717bbf54f3e4a289cf1285bb45c49",
+    "root_verification": "Read complete author and independent review. Exact unmodified programs replayed with matching program and output hashes.",
+    "qualification": "Adjacency is sufficient only for distinct adjacent ratio values; all accepted theorem/certificate claims explicitly require nowhere-zero collision.",
+    "scope": "Conditional actual-cardinality affine transfer and universal q-folding accepted. Universal endpoint packet supply false at N5 consecutive r0. No LRC or finite-family disproof."
+  },
+  "combined_affine_audit": {
+    "status": "accepted_manuscript",
+    "author_sha256": "87fd780d4df515910203aaa8824a2f9265cd57dfdf6e323e43c9cb12bb320327",
+    "review_sha256": "857ab98220785edd7027d05bd2c45e33b0df70e68d9826f3d56089586c35571a",
+    "root_verification": "Full author/review read; both sole programs replayed with matching source/program/output hashes.",
+    "scope": "Only direct reciprocal or adaptive worst-case packet disjunction refuted. N4 tuple already bounded-height covered; no actual minimal counterexample or LRC disproof."
+  },
+  "exact_rounding_audit": {
+    "status": "accepted_manuscript",
+    "author_sha256": "ba16410bdd0ca08262573fbfa36d6e46078a7b3910f68e7593318dea63d78c3c",
+    "review_sha256": "37c5d7c39c24e3153d29008ebcccaa6e6141756b6ae0138f61d9c7c548840435",
+    "root_replays_passed": true,
+    "scope": "Exact rounding identity valid. Free-time E_r packet existence equivalent to original integer chosen-runner witness via binary-cut pair-sum encoding. Own-count S_r is distinct and not universal: N4consecutive r0 endpoint invariant contradicts complete quarter-good set. No LRC disproof or claim against covering unions."
+  },
+  "kumar_proof_screen": {
+    "status": "candidate_rejected_independently_root_verified",
+    "path": "research/astra-kumar-proof-screen.md",
+    "sha256": "7dbe75cc9880c0e202ef5f88220279d3137834fa8c7eb0788874288e64e04a67",
+    "primary_url": "https://zenodo.org/records/19171253",
+    "pdf_sha256": "74d1e1eaa035c15a2ed7c655aad46482e4a09e79f007076c7116a1a95df89871",
+    "scope": "One claimed strict full proof fails original N3tight tuple; separate finite nesting lemma fails p2 one-level tests n3 andn11. No exhaustive literature conclusion or LRC disproof."
   }
 }
