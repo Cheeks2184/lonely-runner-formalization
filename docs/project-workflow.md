@@ -125,5 +125,27 @@ Rebuild ignored dependencies from the pinned manifest only when needed.
 For setup-only edits run the focused workflow and storage tests plus the existing
 ledger checks; do not regenerate gigabytes of Lean output for documentation.
 A real source change still requires checks appropriate to that change. Local
-setup files and checkpoints are authorized; remote publication and unrelated
-operations require their own authorization.
+setup files and checkpoints are authorized. Checkpoint publication follows the
+standing authorization below; unrelated operations require their own authorization.
+
+## Checkpoint publication
+
+On 2026-09-05 the user instructed: “From now on, each time you save and verify a
+new checkpoint, commit, push, open a PR, then merge it to main.” This is standing
+authorization for this repository, `Cheeks2184/lonely-runner-formalization`.
+After each verified checkpoint, complete those steps in that order without
+requesting renewed approval. Use a `codex/` branch and target `main`.
+
+Stage only the verified checkpoint and its documentation. Preserve unfinished
+worker files and unrelated changes. Confirm appropriate local verification,
+inspect required PR checks and reviews, resolve failures, and merge the exact
+reviewed head SHA. Never bypass branch protections or force-push. Prefer a merge
+commit when permitted so individual checkpoint commits remain traceable. Fetch
+and verify that remote main contains the checkpoint, then record the PR URL,
+head SHA, merge SHA, and checks in the durable state. If publication fails,
+record the precise failure and next action; do not report delivery prematurely.
+
+A receipt-only state update may accompany the next substantive checkpoint,
+avoiding an endless sequence of PRs recording their own merge. This publishing
+authorization does not lift the setup start gate or authorize unrelated external
+actions. The unrestricted mathematical completion gate remains unchanged.

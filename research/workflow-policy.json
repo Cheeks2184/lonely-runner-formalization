@@ -52,5 +52,25 @@
     "branch_failure_ends_goal": false,
     "research_start_requires_user_go_ahead": true,
     "external_runtime_limits_may_interrupt": true
+  },
+  "publication": {
+    "repository": "Cheeks2184/lonely-runner-formalization",
+    "base_branch": "main",
+    "branch_prefix": "codex/",
+    "standing_user_authorization": "2026-09-05: From now on, each time you save and verify a new checkpoint, commit, push, open a PR, then merge it to main.",
+    "sequence": [
+      "verify",
+      "commit",
+      "push",
+      "open_pr",
+      "merge",
+      "verify_remote_main"
+    ],
+    "renewed_confirmation_required": false,
+    "verified_files_only": true,
+    "required_checks_and_reviews_must_pass": true,
+    "merge_expected_head_sha_required": true,
+    "bypass_branch_protections_allowed": false,
+    "receipt_only_update_joins_next_checkpoint": true
   }
 }

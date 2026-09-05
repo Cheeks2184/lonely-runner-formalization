@@ -23,21 +23,38 @@
       "launch_status": "accepted"
     },
     {
-      "id": "/root/zero_kernel-explicit-family",
-      "runtime_agent": "/root/zero_kernel",
-      "kind": "routine",
-      "requested_model": "gpt-5.6-terra",
-      "requested_effort": "medium",
+      "id": "/root/vanishing_slope-dense-formal",
+      "runtime_agent": "/root/vanishing_slope",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Formalize the settled explicit lifted family witness for every integer N>=7, including even and composite counts.",
-      "source_checkpoint": "5c24b77 + verified pass3 sources",
+      "target": "Complete the explicit lifted-family Lean proof without primality, including coordinatewise modular identities and exact reduced time.",
+      "source_checkpoint": "231dc52",
       "owned_files": [
         "LonelyRunner/AffineDenseFamily.lean"
       ],
       "status": "in_progress",
       "checks": [],
-      "launch_status": "pending"
+      "launch_status": "accepted"
+    },
+    {
+      "id": "/root/family_grid_review-pass4",
+      "runtime_agent": "/root/family_grid_review",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independently review the all-modulus normalization obstruction and explicit non-prime lifted-family formalization.",
+      "source_checkpoint": "231dc52",
+      "owned_files": [
+        "research/astra-pass4-review.md"
+      ],
+      "status": "in_progress",
+      "checks": [],
+      "launch_status": "accepted"
     }
   ],
   "completed_tasks": [
@@ -544,15 +561,35 @@
       ],
       "launch_status": "accepted",
       "result": "Exact shifted-rounding helpers and one-zero source accepted; all coordinates, derived modulus bounds, and standard axioms independently checked."
+    },
+    {
+      "id": "/root/zero_kernel-explicit-family",
+      "runtime_agent": "/root/zero_kernel",
+      "kind": "routine",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Formalize the settled explicit lifted family witness for every integer N>=7, including even and composite counts.",
+      "source_checkpoint": "231dc52",
+      "owned_files": [
+        "LonelyRunner/AffineDenseFamily.lean"
+      ],
+      "status": "interrupted",
+      "checks": [
+        "No AffineDenseFamily.lean file was created."
+      ],
+      "launch_status": "accepted",
+      "result": "Terra returned without creating the owned source file. The coordinatewise modular identities and integer-period transport were not completed.",
+      "failure_reason": "Explicit-family proof exceeded the attempted routine implementation; reassigned as a difficult formalization task to Astra xhigh, with no statement change."
     }
   ],
-  "latest_checkpoint": "Pass3 integrated: seven new auxiliary declarations, full build 3604 jobs, trust audit 343 reports, independent review accepted. Saving checkpoint; normalization supply audit and explicit-family formalization are next.",
+  "latest_checkpoint": "Committed pass3 as 231dc52: full build 3604 jobs and 343 accepted trust reports. Active tasks now audit the union of normalization classes and formalize the explicit lifted family without primality.",
   "next_actions": [
-    "Finish shifted Nat rounding and the one-zero affine-grid Lean theorem with every original coordinate included.",
-    "Finish independent pass3 review, then integrate the full-size and shifted-grid modules, run a full source build and trust audit, and save compact evidence.",
-    "Reassess the remaining normalization and multiple-zero gaps. The (10,50) zero-base example forbids assuming one conservative correction automatically handles all zero slopes.",
-    "Retain one shared cache while these formal tasks are active. Preserve source and unique evidence at the next checkpoint.",
-    "Continue toward the unrestricted canonical proof or disproof. Conditional family theorems and finite experiments do not satisfy the goal."
+    "Publish verified checkpoint 231dc52 and the persistent publishing rule through a PR to main, waiting for checks before merge.",
+    "Complete independent pass4 review of the new dense-family Lean source and all-modulus supply manuscript; these files are not included in the previous verified checkpoint.",
+    "Integrate accepted pass4 artifacts, build and audit, then commit, push, open PR and merge the next verified checkpoint.",
+    "Reassess remaining universal supply and multiple-zero gaps; unrestricted canonical LRC remains unresolved."
   ],
   "research_holds": [
     {
@@ -642,6 +679,12 @@
       "path": "LonelyRunner/AffineGridFullSize.lean",
       "remaining": "Small-base normalization and a nonzero original offset remain explicit hypotheses. Global supply is under audit.",
       "review": "research/astra-pass3-review.md"
+    },
+    {
+      "id": "three-grid-normalization-gap",
+      "status": "manuscript-under-construction",
+      "path": "research/astra-grid-supply-audit.md",
+      "remaining": "The core (2,3,N,2N) alone does not obstruct C; an exact N11 counterexample uses a multiplier divisible by N. The stronger core (2,3,4,N,2N) appears to obstruct every current A/B/coarse-C normalization and is being proved. The full escaping family still has simple LRC witnesses."
     }
   ],
   "integration_check": {
@@ -658,5 +701,14 @@
     "retention_reason": "Immediately queued explicit lifted-family formalization and active normalization research use one shared cache.",
     "report_bytes": 7684188472
   },
-  "previous_goal_turn_classification": "progress: commit ed94a47 added four kernel-checked auxiliary declarations and integrated verification; current checkout is clean and matches that checkpoint."
+  "previous_goal_turn_classification": "Progress: verified commits 5c24b77 and 231dc52 added exact restricted full-size grid theorems and zero-kernel family certificates. The canonical unrestricted goal remains unresolved.",
+  "publication": {
+    "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
+    "status": "preparing",
+    "verified_checkpoint": "231dc52",
+    "repository": "Cheeks2184/lonely-runner-formalization",
+    "branch": "codex/astra-workflow-setup",
+    "base": "main",
+    "next_action": "Verify and commit the publishing policy; push accumulated verified checkpoints and merge through a checked PR."
+  }
 }
