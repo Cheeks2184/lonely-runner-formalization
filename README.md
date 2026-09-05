@@ -11,16 +11,12 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks. The
-[latest verified checkpoint](docs/astra-research-26.md) proves the exact
-canonical equivalence with all inclusive primitive finite families in Lean.
-It formalizes sorting, signed-integer translation and gcd normalization,
-original-label/time transport, and strict count induction. Each fixed count
-retains height at most [N(N-1)]^(N-2); supplying those witnesses uniformly in
-N remains unproved. The [preceding checkpoint](docs/astra-research-25.md)
-provides the conditional large-height theorem used in this equivalence.
-An independently reviewed audit shows why the specified endpoint approximation
-method cannot supply all retained cases. Neither side of the final equivalence
-is proved independently, and unrestricted LRC remains unresolved.
+[latest checkpoint](docs/astra-research-27.md) records independently reviewed
+manuscript limits of specified endpoint-packet supply methods and a bounded
+screen of one external proof candidate. The preceding [Pass 26 checkpoint](docs/astra-research-26.md)
+remains the latest formal result: Lean proves canonical LRC equivalent to all
+inclusive primitive finite families. Neither side is independently proved, so
+unrestricted LRC remains unresolved.
 The [endpoint checkpoint](docs/astra-research-22.md) retains its exact
 selector and width dichotomy; the uniform blocker bound remains unproved.
 The [symmetry checkpoint](docs/astra-research-21.md) rules out a universal

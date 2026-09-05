@@ -6,6 +6,14 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [twenty-seventh Astra checkpoint](docs/astra-research-27.md) records
+accepted manuscript audits of adaptive and exact-rounding endpoint packets.
+They preserve a valid conditional lower-count transfer while refuting the
+named universal packet supplies, and screen one March 2026 external proof
+candidate. Lean sources and pinned dependencies are unchanged; no new local
+Lean build or trust audit was needed. The finite-family proposition and
+unrestricted LRC remain unproved.
+
 The [twenty-sixth Astra checkpoint](docs/astra-research-26.md) proves the
 unconditional canonical equivalence with all inclusive primitive finite
 families in Lean. Five modules formalize generic sorting, signed normalization,

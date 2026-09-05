@@ -4,6 +4,12 @@ Latest primary-source check: 2026-09-05 UTC (2026-09-04 local). Historical
 entries retain their original evidence status. A preprint claim is not treated
 as an independently verified theorem here.
 
+A bounded [screen of Bhaskar Kumar’s March 22, 2026 Zenodo candidate](../research/astra-kumar-proof-screen.md)
+checks the supplied source rather than treating it as a result. Its strict
+target already fails for three runners, and a separate finite nesting claim
+fails at `p=2` (including `n=11`). This rejects that proof candidate only; it
+does not prove or disprove the Lonely Runner Conjecture.
+
 ## Origins
 
 - Wills's 1967--68 work contains the homogeneous Diophantine-approximation
