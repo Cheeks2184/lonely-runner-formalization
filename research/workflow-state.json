@@ -6,17 +6,17 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/affine_grid-analytic-obstruction",
+      "id": "/root/affine_grid-exact-band-route",
       "runtime_agent": "/root/affine_grid",
       "kind": "research",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Derive a compact exact manuscript obstruction to the A/B/R union for N7 speeds2,3,4,7,9,14 from elementary geometry or small rational case partition; computational output is a candidate, not an assumed theorem. Assess precise limit of current method.",
-      "source_checkpoint": "1686e674 plus frozen engine393cdc38",
+      "target": "Derive or refute one genuinely stronger a priori affine-avoidance lemma using structured row-dependent forbidden bands, after the coarse union obstruction; distinguish supply from exact witness restatement.",
+      "source_checkpoint": "7ac9e1f plus frozen analytic manuscript3e6a7dc4",
       "owned_files": [
-        "research/astra-union-obstruction.md"
+        "research/astra-exact-band-route.md"
       ],
       "status": "in_progress",
       "checks": [],
@@ -859,13 +859,54 @@
       ],
       "launch_status": "accepted",
       "result": "Accepted frozen exact engine and complete computational all-modulus A/B/R obstruction for N7 speeds2,3,4,7,14,9; no Lean proof or LRC counterexample."
+    },
+    {
+      "id": "/root/affine_grid-analytic-obstruction",
+      "runtime_agent": "/root/affine_grid",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Derive a compact exact manuscript obstruction to the A/B/R union for N7 speeds2,3,4,7,9,14 from elementary geometry or small rational case partition; computational output is a candidate, not an assumed theorem. Assess precise limit of current method.",
+      "source_checkpoint": "1686e674 plus frozen engine393cdc38",
+      "owned_files": [
+        "research/astra-union-obstruction.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "Manuscript3e6a7dc493a649ce786fe49d0ec8d94dd7555c75a11c21da6cbd8253e9238578.",
+        "Root192case rational coretable, strictwitness and exactbandcontrols passed."
+      ],
+      "launch_status": "accepted",
+      "result": "Complete elementary manuscript all-modulus A/B/R obstruction; final independent review pending."
+    },
+    {
+      "id": "/root/vanishing_slope-analytic-review",
+      "runtime_agent": "/root/vanishing_slope",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independently review compact analytic all-modulus union obstruction for N7 candidate, especially projective reduction, necessary inequalities and exact linear elimination completeness.",
+      "source_checkpoint": "7ac9e1f5cb711cf794f9524af31cc8460459bfab",
+      "owned_files": [
+        "research/astra-pass8-review.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "Review600dfe2cbb7ccbf4cf6395d88403a187ed88302fb7a632fec764f359bbeecaa9 binds manuscript3e6a7dc493a649ce786fe49d0ec8d94dd7555c75a11c21da6cbd8253e9238578.",
+        "192corecases,12288independentlinearcases,13824projective/reflectionchecks passed. Root reran both persisted reproducers."
+      ],
+      "launch_status": "accepted",
+      "result": "Accepted independent compact analytic all-modulus union obstruction; no unproved subcase or source correction."
     }
   ],
-  "latest_checkpoint": "Pass7 exact engine and complete computational union obstruction independently accepted; root62tests and separate no-import replay passed. Preparing publication; analytic manuscript task remains excluded.",
+  "latest_checkpoint": "Pass8 compact analytic all-modulus obstruction independently accepted; root manuscript read and both exact reproducibility checks passed. Preparing separate publication; exact-band research remains unfinished and excluded.",
   "next_actions": [
-    "Commit, push, open PR and merge verified pass7 after CI; verify remote main.",
-    "Complete compact analytic obstruction and independent review; do not confuse it with LRC disproof.",
-    "Investigate a justified replacement for coarse normalization supply; exact band transport already expresses this candidate witness.",
+    "Publish verified pass8 through commit,push,PR and checked merge; verify remote main.",
+    "Finish exact-band route audit, independently review any proposed stronger existence lemma, and reject witness-equivalent or false generic claims.",
     "Keep canonical LRC active and unresolved."
   ],
   "research_holds": [
@@ -1006,12 +1047,21 @@
       "path": "research/astra-pass7-review.md",
       "verification": "research/astra-pass7-verification.json",
       "remaining": "N7 speeds2,3,4,7,14,9 refute universal A/B/R supply, not LRC; strict witness1/5. Compact analytic proof in progress; unrestricted replacement mechanism absent."
+    },
+    {
+      "id": "normalization-union-analytic-obstruction",
+      "status": "manuscript-independently-reviewed",
+      "path": "research/astra-union-obstruction.md",
+      "review": "research/astra-pass8-review.md",
+      "remaining": "No Lean formalization of obstruction. Current coarse supply and strict-witness-to-R implication are false; a genuinely stronger existence mechanism is needed."
     }
   ],
   "integration_check": {
     "status": "passed",
-    "verification_record": "research/astra-pass7-verification.json",
-    "focused_tests": 62,
+    "verification_record": "research/astra-pass8-verification.json",
+    "core_table_cases": 192,
+    "independent_linear_cases": 12288,
+    "source_code_changed": false,
     "lean_source_changed": false,
     "last_trust_reports": 346
   },
@@ -1030,14 +1080,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "preparing",
-    "verified_checkpoint": "984721559caf37833beab5f65c17cff3d3fa52d6",
+    "verified_checkpoint": "7ac9e1f5cb711cf794f9524af31cc8460459bfab",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-normalization-engine",
+    "branch": "codex/astra-union-obstruction",
     "base": "main",
-    "next_action": "Commit verified pass7 files, push, open PR and await checked merge.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/4",
-    "pr_number": 4,
-    "head_sha": "984721559caf37833beab5f65c17cff3d3fa52d6",
+    "next_action": "Commit verified pass8, push, open PR and merge after checks.",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/5",
+    "pr_number": 5,
+    "head_sha": "7ac9e1f5cb711cf794f9524af31cc8460459bfab",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -1080,11 +1130,20 @@
         "merge_sha": "1686e67471336b29fa05f517013c25f02e37676d",
         "checks": "Lean build/trust and exact computational certificates passed.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 5,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/5",
+        "head_sha": "7ac9e1f5cb711cf794f9524af31cc8460459bfab",
+        "status": "merged",
+        "merge_sha": "a2b96aee7e8890b25691fbbf791b93b85e3303fe",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "984721559caf37833beab5f65c17cff3d3fa52d6",
-    "remote_main": "1686e67471336b29fa05f517013c25f02e37676d",
-    "local_main": "1686e67471336b29fa05f517013c25f02e37676d",
+    "latest_published_source_checkpoint": "7ac9e1f5cb711cf794f9524af31cc8460459bfab",
+    "remote_main": "a2b96aee7e8890b25691fbbf791b93b85e3303fe",
+    "local_main": "a2b96aee7e8890b25691fbbf791b93b85e3303fe",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy."
   }
 }
