@@ -51,7 +51,21 @@
     "routine_confirmation_required": false,
     "branch_failure_ends_goal": false,
     "research_start_requires_user_go_ahead": true,
-    "external_runtime_limits_may_interrupt": true
+    "external_runtime_limits_may_interrupt": true,
+    "isolated_subagent_failure_is_task_failure": true,
+    "overall_goal_blocked_by_isolated_subagent_failure": false,
+    "standing_worker_recovery_authorization": "2026-09-05: inspect actual goal state; if an isolated subagent failure incorrectly blocks the goal, use a supported resume control autonomously and read back status.",
+    "actual_goal_state_inspection_required": true,
+    "retry_same_requested_routing_or_reassign_bounded_work": true,
+    "autonomous_resume_when_supported": true,
+    "resume_status_readback_required": true,
+    "when_resume_is_unsupported": "record precise limitation and continue useful authorized work in the current turn",
+    "forbidden_recovery_actions": [
+      "fabricate a resume tool",
+      "mark complete and recreate the goal",
+      "bypass runtime limits",
+      "silently change requested model or effort"
+    ]
   },
   "publication": {
     "repository": "Cheeks2184/lonely-runner-formalization",

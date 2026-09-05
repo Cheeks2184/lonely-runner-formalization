@@ -1920,13 +1920,35 @@
         "Acceptedwithoutcorrection review35a5db5b boundsauthor9116444b. Rootfullread/replayedbothblocks. Exact27families716central54boundary80Laurent710binomial18parameter independentcontrols; allh/allkproofsemanticallyreviewed."
       ],
       "launch_status": "accepted"
+    },
+    {
+      "id": "/root/worker_recovery_policy",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Persist supported autonomous goal recovery authorization after isolated subagent failure without changing goal truth or model routing.",
+      "source_checkpoint": "c3bad1e27509d3c189783af0a89a37097e64038d",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        ".codex/config.toml",
+        "docs/project-workflow.md",
+        "research/workflow-policy.json"
+      ],
+      "checks": [
+        "JSON and TOML parsed; workflow validator passed.",
+        "Worker ran 13 existing workflow tests; all passed.",
+        "Root reviewed the complete three-file diff against the user authorization and available goal controls.",
+        "Root ran 48 workflow, storage, and historical-ledger tests; all passed. Workflow validator and git diff --check passed. No local Lean rebuild needed for instruction-only changes."
+      ]
     }
   ],
-  "latest_checkpoint": "Pass18Bonferroni manuscriptindependentlyacceptedandrootverified: everyfixedpositiveoddh refutedasuniformweightedsupply withactualclosedwitness. NoLeanchanges. PR14/15alreadymerged. Pass18publicationnext; runtimegoaltoolreportedblockedwithoutrootrequest, noLRCresolution.",
+  "latest_checkpoint": "Worker recovery authorization persisted in project instructions: retry isolated worker failures within requested routing; autonomously resume an incorrectly blocked goal only through a supported control and read back status. Current runtime goal is active; no root resume operation was performed. PR16 is merged and verified; LRC remains unresolved.",
   "next_actions": [
-    "PublishverifiedPass18 withcommit,push,PR,requiredCI,exactheadmergeandmainverification.",
-    "Atnext research continuation auditconditionalnearest-gridrounding observation andfocuscanonicaldense/all-coveredgap; nofurtherfixedorderweightedcriterionattempts.",
-    "KeepcachesabsentuntilimmediateLeanwork; preserveallproof/reviewevidence. Runtimegoalcurrentlyreportsblocked, rootcannotresumeviaavailablegoaltools."
+    "Persist and verify the worker recovery policy, then commit, push, open PR, pass required checks, merge exact head, and verify main.",
+    "At next research continuation audit conditional nearest-grid rounding and focus the canonical dense/all-covered gap; no further fixed-order weighted criterion attempts.",
+    "Keep caches absent until immediate Lean work. The runtime goal is currently active; isolated worker failure does not end the goal."
   ],
   "research_holds": [
     {
@@ -2318,20 +2340,27 @@
       "coordination": "Both active workers explicitly confirmed no running commands and held launches; other workers idle, root build/trust/probes completed. Released after successful cleanup.",
       "preserved": "Source,Git,pinnedLean toolchain,uniqueevidence. Remainingreview uses directinstalledLean; nextresearch uses Python.",
       "report_lake_bytes": 8151598805
+    },
+    "pass18_final_cleanup": {
+      "status": "complete",
+      "bytes_removed": 0,
+      "command": "python3 scripts/manage_storage.py --clean",
+      "coordination": "Allresearchworkerscompletedandcommandsstopped; rootlocalverificationcomplete;remoteCIindependent.",
+      "shared_dependency_cache_present": false
     }
   },
   "previous_goal_turn_classification": "Meaningfulprogress:PR14N9formalization/conditionalbridge andPR15exactweightedcriterionlimits bothverifiedandmerged; activeBonferroniscopegeneralization. No mathematicalcompletionorblock.",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "verified_pending_commit",
-    "verified_checkpoint": "0f94d4741634c2c96a2567d0eb8f91c1c8501849",
+    "verified_checkpoint": "ecc9652e3eefcff096ab6f0e35f36cf71878975b",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-bonferroni-weight-audit",
+    "branch": "codex/astra-worker-recovery-policy",
     "base": "main",
-    "next_action": "Commitverifiedallowlist,push,openPR,requiredCI,mergeexacthead,verifyremote/localmain.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/15",
-    "pr_number": 15,
-    "head_sha": "0f94d4741634c2c96a2567d0eb8f91c1c8501849",
+    "next_action": "Run focused verification, commit the four-file allowlist, push, open PR, pass required checks, merge exact head and verify main.",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/16",
+    "pr_number": 16,
+    "head_sha": "ecc9652e3eefcff096ab6f0e35f36cf71878975b",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -2475,23 +2504,45 @@
         "merge_sha": "f36d99af32027eee6037ef4967316a01faaf6ec6",
         "checks": "BothrequiredCIchecks passed.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 16,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/16",
+        "head_sha": "ecc9652e3eefcff096ab6f0e35f36cf71878975b",
+        "status": "merged",
+        "merge_sha": "c3bad1e27509d3c189783af0a89a37097e64038d",
+        "checks": "Lean build/trust passed 15:11:58 UTC; exact computational certificates passed 15:18:11 UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "0f94d4741634c2c96a2567d0eb8f91c1c8501849",
-    "remote_main": "f36d99af32027eee6037ef4967316a01faaf6ec6",
-    "local_main": "f36d99af32027eee6037ef4967316a01faaf6ec6",
+    "latest_published_source_checkpoint": "ecc9652e3eefcff096ab6f0e35f36cf71878975b",
+    "remote_main": "c3bad1e27509d3c189783af0a89a37097e64038d",
+    "local_main": "c3bad1e27509d3c189783af0a89a37097e64038d",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
-    "pending_checkpoint": "research/astra-pass18-verification.json",
-    "merge_sha": "f36d99af32027eee6037ef4967316a01faaf6ec6",
-    "checks": "Leanbuild/trustpassed14:40:57UTC;exactcomputationalcertificatespassed14:45:50UTC.",
+    "pending_checkpoint": "Project worker recovery instructions",
+    "merge_sha": "c3bad1e27509d3c189783af0a89a37097e64038d",
+    "checks": "Lean build/trust passed 15:11:58 UTC; exact computational certificates passed 15:18:11 UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
-    "status": "blocked",
-    "observed_after": "PR14/15merged; authortransientcapacityerrorsame-modelretryresolved; independentreviewlaunched",
+    "status": "active",
     "root_requested_blocked_status": false,
+    "root_requested_resume": false,
     "mathematical_status": "unresolved",
-    "current_work": "Rootcontinuesauthorizedwork; independentAstrareviewrunning. Goaltoolcannotresume; statuscontrolledbyuser/system.",
-    "token_usage_observed": 9337712
+    "token_usage_observed": 9357006,
+    "current_work": "Persist the user authorization to resume incorrectly blocked goals after isolated subagent failures when a supported resume control exists. Current callable goal tools expose no resume operation; no resume action is claimed."
+  },
+  "worker_recovery_authorization": {
+    "received_on": "2026-09-05",
+    "user_instruction": "If you're capable of setting the goal to resume on your own, do so whenever the goal is incorrectly blocked by a subagent failure.",
+    "supported_resume_control_currently_available": false,
+    "available_goal_operations": [
+      "get_goal",
+      "create_goal",
+      "update_goal (complete or blocked only)"
+    ],
+    "resume_action_performed": false,
+    "status_observed": "active",
+    "instructions_path": ".codex/config.toml"
   }
 }

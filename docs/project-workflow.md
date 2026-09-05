@@ -65,6 +65,18 @@ record why, reassess its value, and pursue another justified route. Partial
 lemmas, finite searches, and unsuccessful attempts do not satisfy the objective.
 Keep the user informed without requiring replies for routine work.
 
+On 2026-09-05, the user granted standing authorization to recover from an
+isolated subagent failure. Inspect the actual goal state whenever that failure
+appears to have blocked the goal. Treat it as a failed task, preserve its output,
+and retry its same requested role, model, and effort or reassign bounded work
+within the routing table. Never mark the overall goal blocked solely because one
+worker failed. If the actual goal is incorrectly blocked and the runtime exposes
+a supported resume control, use it without renewed permission and read back the
+status. If no such control exists, record that exact limitation and continue
+other useful authorized work in the current turn. Do not fabricate a resume
+control, mark the goal complete and recreate it, bypass a runtime limit, or
+silently substitute a model or effort.
+
 Platform time, context, quota, connectivity, and tool availability can interrupt
 execution; project instructions cannot guarantee unlimited runtime or resolution
 of an open problem. Persist a precise restart point when that happens. Never
