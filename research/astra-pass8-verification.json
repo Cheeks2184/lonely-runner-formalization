@@ -1,0 +1,29 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "a2b96aee7e8890b25691fbbf791b93b85e3303fe",
+  "files": {
+    "research/astra-union-obstruction.md": "3e6a7dc493a649ce786fe49d0ec8d94dd7555c75a11c21da6cbd8253e9238578",
+    "research/astra-pass8-review.md": "600dfe2cbb7ccbf4cf6395d88403a187ed88302fb7a632fec764f359bbeecaa9"
+  },
+  "scope": "Manuscript all-modulus A/B/coarse-C/R obstruction for N7 speeds2,3,4,7,14,9, independent of engine output; not a kernel proof or LRC disproof.",
+  "root_checks": {
+    "full_manuscript_read": true,
+    "author_core_table_cases": 192,
+    "author_table_replay": "pass",
+    "independent_linear_replay_cases": 12288,
+    "independent_linear_survivors_before_final_inequality": 4,
+    "independent_linear_replay": "pass",
+    "final_inequality": "x<=1/42 contradicts x>=37/588 after reflection",
+    "strict_original_witness": "t=1/5,min distance1/5>1/7",
+    "exact_band_escape": "N7,M35,b1,s1,r2,r0=0,beta14; nums98,147,196,98,196,196 in[35,210]."
+  },
+  "reviewer_additional_projective_and_reflection_checks": 13824,
+  "source_code_changed": false,
+  "lean_source_changed": false,
+  "lean_cache_restored": false,
+  "canonical_lrc_status": "unresolved",
+  "reproducers": {
+    "author": "Execute the sole python code block in research/astra-union-obstruction.md.",
+    "reviewer": "Execute between BEGIN INDEPENDENT LINEAR REPLAY and END INDEPENDENT LINEAR REPLAY markers in research/astra-pass8-review.md."
+  }
+}
