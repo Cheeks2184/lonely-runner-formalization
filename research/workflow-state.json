@@ -6,20 +6,20 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/endpoint_label_audit-minimal-height",
+      "id": "/root/endpoint_label_audit-complement-descent",
       "kind": "research",
       "status": "in_progress",
-      "target": "Audit a direct minimal-counterexample route using lexicographic moving-count and sum-of-speeds minimality; derive one substantive consequence beyond a tautological witness restatement.",
-      "source_checkpoint": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+      "target": "Try an actual speed-complement descent in a count/sum minimal failure, keeping the distinguished stationary runner and exact canonical witness scope; seek a new proved implication, not an assumed witness transfer.",
+      "source_checkpoint": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
       "owned_files": [
-        "research/astra-minimal-height-audit.md"
+        "research/astra-complement-descent-audit.md"
       ],
       "checks": [],
-      "next_action": "Use exact canonical positive-integer contract and existing insertion theorems; identify usable same-count smaller-sum premises, avoid rebasing selected runner or circular full-count supply."
+      "next_action": "Bounded semantic derivation using settled minimality and endpoint contracts; report exact remaining lemma. No cache, Lean, tuple discovery, state or Git."
     }
   ],
   "completed_tasks": [
@@ -2204,13 +2204,140 @@
       ],
       "next_action": "Integrate Pass21.",
       "result": "Corrected frozen inventorydad76cc7 has complete executable code_lines; root replay passed.48focusedtests passed."
+    },
+    {
+      "id": "/root/endpoint_label_audit-minimal-height",
+      "kind": "research",
+      "status": "complete",
+      "target": "Audit a direct minimal-counterexample route using lexicographic moving-count and sum-of-speeds minimality; derive one substantive consequence beyond a tautological witness restatement.",
+      "source_checkpoint": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-minimal-height-audit.md"
+      ],
+      "checks": [
+        "Fixed all-choice Euclidean raw witness transfer obstruction being audited: p11\u2192p\u22121=10 has only trapped G7 witnesses; all other p\u2212a collide with V, reducing to G6, also trapped. A itself has witnesses, so this is not a minimal-counterexample refutation.",
+        "Positive endpoint criterion derived independently by author/root: p-row covered bounds every old-good component below2/(Np). For q>0,2q<= (N\u22122)p implies q-good band at least2/(Np), so any old+q witness yields q-good old endpoint. No new unconditional witness supply.",
+        "Minimal-sum descent would follow from a lower q spoiling every fixed old-good endpoint, but no such q is supplied. Preserve this exact gap.",
+        "Root generalized selector replay passed12 fixed covered-p fixtures,2188 frequencies,280528 signed component tests,10 equality contracts,188 singleton components. All exact phase-band intersections match endpoint goodness. q2940 makes every old endpoint bad but admits full witness2101/5880 outside the bound. No new tuple search.",
+        "Author reports sole embedded control block passed72signed component cases,all5Euclideanchoices,12endpoint inventory; workflow/whitespace passed. All owned processes stopped."
+      ],
+      "next_action": "Independent Astra xhigh review of full generalized contract and canonical descent; root has read main derivation and separately verified selector controls, not the complete final artifact.",
+      "root_selector_controls": {
+        "status": "passed",
+        "script_path": "/tmp/astra-endpoint-selector-root.py",
+        "script_sha256": "ad9c4072faeaa2174d821d6695806d36b4d66b5996ad61d4e981b92b0ccd0348",
+        "script": "from fractions import Fraction as F\nfrom pathlib import Path\nfrom types import ModuleType\nimport re,json\nraw=Path('research/astra-endpoint-label-audit.md').read_text()\nblocks=re.findall(r'^```python\\n(.*?)^```[ \\t]*$',raw,re.M|re.S)\ne=ModuleType('frozen_endpoint');exec(compile(blocks[0],'frozen_endpoint','exec'),e.__dict__)\nfixtures=[(z['N'],tuple(z['owners']),z['p']) for z in json.loads(Path('research/astra-cover-corpus-inventory.json').read_text())['fixtures']]\nfixtures.extend([(4,(1,2,3),4),(3,(1,2),3)])\nnorm=lambda x:min(x%1,(-x)%1)\nc=dict(fixtures=0,frequencies=0,signed_component_tests=0,equality_frequency_contracts=0,singleton_components=0,good_components=0)\nfor N,V,p in fixtures:\n    assert not e.safe_residues(N,V+(p,),p)\n    S=e.components(V,N);assert S\n    assert all(R-L<F(2,N*p) for L,R in S)\n    c['fixtures']+=1;c['singleton_components']+=sum(L==R for L,R in S)\n    for q in range(1,((N-2)*p)//2+1):\n        c['frequencies']+=1;c['equality_frequency_contracts']+=2*q==(N-2)*p\n        assert F(N-2,N*q)>=F(2,N*p)\n        for L0,R0 in S:\n          for shift in (-1,0):\n            L,R=L0+shift,R0+shift\n            lower,upper=q*L,q*R\n            witness=any(max(lower,F(j)+F(1,N))<=min(upper,F(j+1)-F(1,N))\n                        for j in range(lower//1-1,upper//1+2))\n            endpoint=norm(lower)>=F(1,N) or norm(upper)>=F(1,N)\n            assert witness==endpoint,(N,V,p,q,L,R)\n            c['signed_component_tests']+=1;c['good_components']+=witness\nV=(1,4,5,6,7);N=7;p=11;q=2940;S=e.components(V,N)\nassert all(norm(q*x)==0 for I in S for x in I)\nw=F(2101,5880)\nassert F(5,14)<w<F(13,35)\nassert all(norm(v*w)>=F(1,N) for v in V+(q,))\nassert norm(q*w)==F(1,2)\nc['outside_bound_control']='q2940: every old endpoint bad, full witness2101/5880'\nprint(json.dumps(c,sort_keys=True))\n",
+        "counts": {
+          "fixtures": 12,
+          "frequencies": 2188,
+          "signed_component_tests": 280528,
+          "good_components": 234648,
+          "equality_frequency_contracts": 10,
+          "singleton_components": 188
+        },
+        "scope": "Supporting finite controls only; generalized theorem manuscript and independent review still pending."
+      },
+      "artifact_sha256": "40e59ba4539eb931a07612e9b972999d3b48006d39ef4760c0e493d08e734325",
+      "result": "Frozen40e59ba4: generalized conditional endpoint selector, exact count/sum descent criterion with lower blocker supply unproved, and all5 Euclidean raw-reuse obstruction. UNREVIEWED; excluded from PR20."
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-minimal-height-review",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independent review of frozen generalized endpoint selector, finite endpoint formula and exact count/sum descent; no new discovery.",
+      "source_checkpoint": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-minimal-height-review.md"
+      ],
+      "checks": [
+        "Root verified reported artifact SHA256.",
+        "Worker reports all commands stopped.",
+        "Pass22 root full read and exact replay passed; see research/astra-pass22-verification.json."
+      ],
+      "next_action": "Verified for Pass22 publication.",
+      "result": "Worker accepted manuscript scope; reproduced author/root suite and additional boundary controls. Root integration pending. Integer q>p exists only when floor((N-2)p/2)>=p+1. Lower blocker remains unsupplied.",
+      "artifact_sha256": "4570fa22f788a0e832165dd4ec5da613003a0181b0200267fcc30b44d9776e92"
+    },
+    {
+      "id": "/root/endpoint_label_audit-primary-resolution",
+      "kind": "research",
+      "status": "complete",
+      "target": "Targeted current primary-source check for unrestricted LRC proof/disproof or complete formal artifact, to avoid overlooking a usable resolution while pursuing local routes.",
+      "source_checkpoint": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-primary-resolution-audit.md"
+      ],
+      "checks": [
+        "Root verified reported artifact SHA256.",
+        "Worker reports all commands stopped.",
+        "Root read complete note and fetched pinned paper, READMEs, withdrawal comment and formal placeholder source."
+      ],
+      "next_action": "Retain bounded nonfinding and unaudited finite-computation scope in Pass22.",
+      "result": "Bounded primary-source screen found no unrestricted resolution among three inspected candidates. Root source verification pending; finite-runner computational claim is not a kernel proof.",
+      "artifact_sha256": "e0b063415f2931888c0ad1371fd31309a97ebc586395a031c04c8a4e8e023d47"
+    },
+    {
+      "id": "/root/nearest_grid_formal-first-blocker-controls",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Exact first simultaneous endpoint-blocking frequency on three fixed old-speed sets; no tuple discovery.",
+      "source_checkpoint": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-first-blocker-controls.json"
+      ],
+      "checks": [
+        "Root verified reported artifact SHA256.",
+        "Worker reports all commands stopped.",
+        "Pass22 root full read and exact replay passed; see research/astra-pass22-verification.json."
+      ],
+      "next_action": "Verified for Pass22 publication.",
+      "result": "Worker exact controls: N4 V(2,5) b8; N7 V(1,4,5,6,7) b2940; N7 V(7,21,28,35,49) b903. Complete reproducer supplied; root replay pending.",
+      "artifact_sha256": "2aa24ca0d4c50b21bb5c15ab3d12cc0105306d15f65a5248adc70cc50bd5a67e"
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-first-blocker-width-review",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independently review root first-blocker width dichotomy and uniform-bound equivalence, checking for tautology, missing premises and strict boundary errors.",
+      "source_checkpoint": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-first-blocker-width-review.md"
+      ],
+      "checks": [
+        "Root full read and exact sole-block replay passed; two low fixtures and24equality controls.",
+        "All worker commands stopped."
+      ],
+      "next_action": "Include in verified Pass22 checkpoint.",
+      "result": "Accepted exact width dichotomy, all-positive-q extension equivalence and uniform U equivalence. Lower bound remains equivalent and unproved; no unrestricted resolution.",
+      "artifact_sha256": "c6aca45e70f2cf5f0cdb818a6eba6860bab55e6f1d40e3dfb95962cd906af41f"
     }
   ],
-  "latest_checkpoint": "Pass21 verified whole-old-good-set isometry obstruction, independent review0a1a8017, complete root replay and48tests. Publication pending. No Lean change; LRC unresolved; minimal-sum follow-up excluded.",
+  "latest_checkpoint": "Pass22 locally verified: generalized endpoint selector and count/sum descent criterion, exact first-blocker width dichotomy and uniform-bound equivalence accepted by independent review; root replays and48tests passed. No Lean changes. Publication pending; full LRC unresolved.",
   "next_actions": [
-    "Publish verified Pass21 allowlist; exclude ongoing research/astra-minimal-height-audit.md.",
-    "Continue /root/endpoint_label_audit-minimal-height from its exact owned note. Seek a substantive direct descent, not a restatement of smaller-sum induction or a change of chosen runner.",
-    "Preserve full canonical completion gate; no cache restoration for manuscript work."
+    "Publish verified Pass22 files through commit/push/PR/exact-head merge and verify main.",
+    "Continue bounded speed-complement descent audit in existing Astra xhigh worker; exclude its unreviewed artifact from Pass22.",
+    "Uniform first-blocker estimate is equivalent to full LRC and remains unproved; seek a new valid exclusion of the actual minimum, not another reformulation or raw witness reuse.",
+    "Keep shared dependency cache absent unless substantive Lean work is immediately queued."
   ],
   "research_holds": [
     {
@@ -2719,20 +2846,27 @@
       "shared_dependency_cache_present": false,
       "coordination": "All verification commands stopped; only active research author confirmed command hold, released after cleaner completed.",
       "retained": "All source,Git,pinnedtoolchain,unique evidence; no dependency restoration."
+    },
+    "pass21_final_cleanup": {
+      "status": "complete",
+      "command": "python3 scripts/manage_storage.py --clean",
+      "bytes_removed": 0,
+      "shared_dependency_cache_present": false,
+      "coordination": "All root/review/routine verification stopped; active research author confirmed command hold and was released after cleaner."
     }
   },
-  "previous_goal_turn_classification": "progress: Pass20 independently reviewed, exact controls verified, committed/pushed/PR19merged and local/remote main verified. Root actual goal remains active; no completion or genuine block. One bounded global symmetry follow-up is being frozen for later review.",
+  "previous_goal_turn_classification": "progress: three completed research artifacts were integrated with exact hash checks; active-goal recovery limitation verified and preserved. Current turn adds independently reviewed first-blocker width reduction, root replays, and a distinct complement descent attempt.",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
-    "status": "verified_pending_commit",
-    "verified_checkpoint": "bc7fc4fb7ff26d7f485c17fda9cae0ec0f0f0435",
+    "status": "local_verified_pending_publication",
+    "verified_checkpoint": "08c02531792524741b5f71665408346e1f966d64",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-endpoint-symmetry-audit",
+    "branch": "codex/astra-first-blocker-descent-audit",
     "base": "main",
-    "next_action": "Commit verified allowlist, push,openPR,inspectrequiredchecksandmergeexacthead.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/19",
-    "pr_number": 19,
-    "head_sha": "bc7fc4fb7ff26d7f485c17fda9cae0ec0f0f0435",
+    "next_action": "Commit verified Pass22 allowlist, push, open PR, inspect checks and reviews, merge exact head, verify remote and local main.",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/20",
+    "pr_number": 20,
+    "head_sha": "08c02531792524741b5f71665408346e1f966d64",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -2912,15 +3046,24 @@
         "merge_sha": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
         "checks": "Lean build/trust passed16:53:58UTC; exact computational certificates passed17:01:44UTC. Exact-head merge17:03:49UTC.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 20,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/20",
+        "head_sha": "08c02531792524741b5f71665408346e1f966d64",
+        "status": "merged",
+        "merge_sha": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
+        "checks": "Lean build/trust passed17:28:51UTC; exact computational certificates passed17:36:40UTC. Exact-head merge17:39:02UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "bc7fc4fb7ff26d7f485c17fda9cae0ec0f0f0435",
-    "remote_main": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
-    "local_main": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+    "latest_published_source_checkpoint": "08c02531792524741b5f71665408346e1f966d64",
+    "remote_main": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
+    "local_main": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
-    "pending_checkpoint": "research/astra-pass21-verification.json",
-    "merge_sha": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
-    "checks": "Lean build/trust passed16:53:58UTC; exact computational certificates passed17:01:44UTC. Exact-head merge17:03:49UTC.",
+    "pending_checkpoint": "research/astra-pass22-verification.json",
+    "merge_sha": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
+    "checks": "Lean build/trust passed17:28:51UTC; exact computational certificates passed17:36:40UTC. Exact-head merge17:39:02UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
@@ -2929,7 +3072,7 @@
     "root_requested_resume": false,
     "mathematical_status": "unresolved",
     "token_usage_observed": 10372697,
-    "current_work": "PR19 merged and verified; primitive exchange manuscript53646c4d frozen but unreviewed. Next step independent semantic review, then choose a useful global route. Goal active; get/create/update goal only, no supported resume control."
+    "current_work": "Pass22 verified for publication; complement descent worker active. Full unrestricted proof absent. Goal active; no resume control needed or available."
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",

@@ -6,14 +6,25 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [twenty-second Astra checkpoint](docs/astra-research-22.md) independently
+reviews an exact finite endpoint selector under covered reference-row and
+frequency hypotheses. A least-count, least-sum failure would make its maximum
+the first speed bad at every fixed old endpoint; a smaller blocker remains
+unsupplied. A separate width dichotomy decides all one-speed extensions of
+a fixed nonempty old-good set. The proposed uniform bound b>max(V) is
+itself equivalent to unrestricted integer LRC, with the established small
+cases. Exact controls and boundary replays passed. No Lean source changed.
+Further work tests a distinct speed-complement descent while retaining the
+identity of the stationary runner; no such descent is claimed here.
+
 The [twenty-first Astra checkpoint](docs/astra-research-21.md) stops the proposed
 whole-old-good-set translation/reflection mechanism. An independently reviewed
 six-component example satisfies every actual endpoint-candidate hypothesis,
 yet its only preserving circle isometries also preserve the new badness.
 A shift selected for one endpoint gives a full original-row witness in that
 same example. Thus the actual endpoint candidate remains unresolved. No Lean
-source changed. Further research is testing minimality in runner count and
-sum of speeds; no new descent result is claimed.
+source changed. Its proposed count-and-sum follow-up is audited in the
+twenty-second checkpoint above.
 
 The [twentieth Astra checkpoint](docs/astra-research-20.md) independently audits
 the proposed endpoint-label route. Under an explicit common-divisor condition,
