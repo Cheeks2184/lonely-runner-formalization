@@ -2,6 +2,16 @@ import LonelyRunner
 import LonelyRunner.FastestPivot
 import LonelyRunner.TopTwoTransversal
 
+-- The mirrored family has an unconditional witness and an exact labelled bridge.
+#print axioms LonelyRunner.mirroredBlockTime
+#print axioms LonelyRunner.mirroredConsecutiveBlockWitness
+#print axioms LonelyRunner.mirroredBlockSpeeds
+#print axioms LonelyRunner.card_mirroredBlockSpeeds
+#print axioms LonelyRunner.mirroredBlockMagnitudeCover
+#print axioms LonelyRunner.mirroredBlockLowerRunner
+#print axioms LonelyRunner.mirroredBlockRunnerWitness
+#print axioms LonelyRunner.mirroredBlockLonelyAt
+
 /-!
 Run with `lake env lean LonelyRunner/AxiomAudit.lean`.
 

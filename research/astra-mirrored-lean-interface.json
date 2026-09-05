@@ -1,0 +1,114 @@
+{
+  "artifact": "read-only Lean interface inventory for the mirrored consecutive-block witness",
+  "status": "inventory only; no Lean implementation, theorem claim, build, import change, cache restoration, workflow-state edit, or Git mutation was performed",
+  "provenance": {
+    "repository_source_commit": "8db7eb32fb0aec5f1a62d18f93a72c5096d76743",
+    "manuscript": "research/astra-mirrored-block-witness.md",
+    "manuscript_sha256": "70b5545b8b7af311324967c7272a07f8d714eeabac2b21c381ae168326847e21",
+    "manuscript_status": "pending independent review and kernel formalization",
+    "scope": "The manuscript establishes an explicit structured family only; it explicitly does not establish unrestricted LRC."
+  },
+  "existing_checked_interfaces": [
+    {
+      "path": "LonelyRunner/StructuredClasses.lean",
+      "lines": "25-32",
+      "declaration": "LonelyRunner.circleNorm_ge_of_int_band",
+      "exact_contract": "(q : Int) (x delta : Real) -> 0 <= delta -> delta <= 1 / 2 -> (q : Real) + delta <= x -> x <= (q : Real) + 1 - delta -> delta <= circleNorm x",
+      "use_in_phase_cell": "Apply to i*t with q=0, to (p-i)*t with q=k, and to p*t with q=k. This is exactly the closed representative-band step requested by the manuscript."
+    },
+    {
+      "path": "LonelyRunner/FastRunnerInsertion.lean",
+      "lines": "13-31",
+      "declaration": "LonelyRunner.circleNorm; LonelyRunner.circleNorm_add_int",
+      "exact_contract": "circleNorm ((z : Real) + x) = circleNorm x for z : Int",
+      "use_in_phase_cell": "This is the underlying integer-periodicity interface; normally the phase-cell proof should invoke circleNorm_ge_of_int_band rather than reprove periodicity."
+    },
+    {
+      "path": "LonelyRunner/PivotResidues.lean",
+      "lines": "99-146",
+      "declaration": "LonelyRunner.circleNorm_nat_div_ge",
+      "exact_contract": "For hM : 0 < M and b <= cyclicResidueDistance M x, (b : Real)/(M : Real) <= circleNorm ((x : Real)/(M : Real)).",
+      "use_in_phase_cell": "Optional only. It provides a natural rational-residue route, but the manuscript's second witness time has denominator N*(p-m) and is more directly handled by real field arithmetic plus the integer-band lemma."
+    },
+    {
+      "path": "LonelyRunner/PivotResidues.lean",
+      "lines": "109-120",
+      "declaration": "local proof pattern using Nat.div_add_mod",
+      "exact_contract": "Nat.div_add_mod x M supplies M * (x / M) + x % M = x; the existing proof then uses exact_mod_cast and field_simp to obtain a real quotient/remainder expansion.",
+      "use_in_phase_cell": "Use this established pattern for p = N*k+r, with k=p/N and r=p%N, if the formal proof chooses division/mod rather than an existential quotient/remainder hypothesis."
+    },
+    {
+      "path": "LonelyRunner/PivotResidues.lean",
+      "lines": "148-155",
+      "declaration": "LonelyRunner.circleNorm_nat_div_eq",
+      "exact_contract": "circleNorm ((x : Real)/(M : Real)) = (cyclicResidueDistance M x : Real)/(M : Real).",
+      "use_in_phase_cell": "Not needed for the real phase-cell argument, but available if a later exact rational corollary is wanted."
+    },
+    {
+      "path": "LonelyRunner/IntegerInduction.lean",
+      "lines": "20-30, 248-268",
+      "declaration": "LonelyRunner.appendNatSpeed; Fin.lastCases construction pattern",
+      "exact_contract": "appendNatSpeed old new : Fin (n+1) -> Nat is Fin.lastCases new old, with simp lemmas for Fin.last and castSucc.",
+      "use_in_phase_cell": "Existing project pattern for a concrete Fin-indexed tuple, but it only appends one value. It does not supply the mirrored-block enumeration or its injectivity proof."
+    },
+    {
+      "path": "LonelyRunner/Formulations.lean",
+      "lines": "47-60",
+      "declaration": "LonelyRunner.PositiveIntegerConjecture",
+      "exact_contract": "Quantifies n, an injective positive speeds : Fin n -> Nat, and produces a time with threshold inverse (n+1).",
+      "use_in_phase_cell": "A later bridge can instantiate this shape after constructing a Fin (2*m+1) enumeration. The current manuscript should not be represented as an instance of the universal conjecture."
+    }
+  ],
+  "proposed_first_theorem_contract": {
+    "status": "proposed declaration only; not an existing Lean API and not compiled",
+    "Lean_shape": "theorem exists_mirrored_block_witness (m p : Nat) (hm : 1 <= m) (hp : 2*m+1 <= p) : exists t : Real, 0 < t /\\ forall i : Nat, 1 <= i -> i <= m -> (((2*m+2 : Nat) : Real)^(-1) <= circleNorm ((i : Real)*t)) /\\ (((2*m+2 : Nat) : Real)^(-1) <= circleNorm (((p-i : Nat) : Real)*t)) /\\ (((2*m+2 : Nat) : Real)^(-1) <= circleNorm ((p : Real)*t)",
+    "reason_for_pointwise_Nat_form": "It states precisely the low, mirrored-high, and top coordinates from the manuscript and keeps all subtraction natural under i<=m<=p. It avoids defining a Fin enumeration before the phase argument is checked.",
+    "witness_plan_from_manuscript": "Let N=2*m+2, k=p/N, r=p%N. Split r>=m+1 versus r<=m. Use t=1/N in the first case and t=(N*k+1)/(N*(p-m)) in the second; use q=0 or q=k in circleNorm_ge_of_int_band."
+  },
+  "minimal_new_support_lemmas": [
+    {
+      "proposed": "phase_cell_implies_mirrored_bounds",
+      "content": "From N=2*m+2, delta=1/N, delta<=t<=2*delta, p*t=(k:Int)+y, and m*t+delta<=y<=1-delta, derive the three pointwise circleNorm lower bounds for 1<=i<=m.",
+      "dependency": "circleNorm_ge_of_int_band, cast/order arithmetic only",
+      "value": "Separates the reusable real phase-cell proof from the two quotient/remainder constructions."
+    },
+    {
+      "proposed": "mirrored_witness_first_remainder_case",
+      "content": "Under r=p%N and m+1<=r, prove the phase-cell hypotheses for t=1/N, k=p/N, y=r/N.",
+      "dependency": "Nat.div_add_mod cast to Real; denominator positivity",
+      "value": "Captures manuscript lines 48-53."
+    },
+    {
+      "proposed": "mirrored_witness_second_remainder_case",
+      "content": "Under r=p%N and r<=m, prove the phase-cell hypotheses for t=(N*k+1)/(N*(p-m)), k=p/N, y=m*t+delta.",
+      "dependency": "Nat.div_add_mod cast to Real; p-m>0; field_simp/ring/nlinarith",
+      "value": "Captures manuscript lines 55-74 without introducing a residue-set layer."
+    }
+  ],
+  "finite_family_bridge": {
+    "recommended_order": "Formalize and audit the pointwise Nat theorem first. Add an explicit Fin (2*m+1) enumeration only in a separate theorem if a consumer requires it.",
+    "available_project_material": "Fin.lastCases is available through IntegerInduction, but no existing declaration found in the inspected sources constructs this two-block enumeration or proves its positivity/injectivity.",
+    "required_for_a_Fin_bridge": "Define an enumeration for {1,...,m} union {p-m,...,p-1} union {p}; prove each branch positive, pairwise distinct including cross-block disjointness from p>=2*m+1, and rewrite its threshold using (2*m+1)+1=2*m+2.",
+    "boundary": "This bridge would demonstrate one explicit family, not prove PositiveIntegerConjecture or any universal covering principle."
+  },
+  "integration_and_trust": {
+    "base_import": "LonelyRunner/StructuredClasses.lean imports LonelyRunner/FastRunnerInsertion.lean, so a new dedicated witness file can import StructuredClasses for the preferred phase-cell proof.",
+    "top_level_import": "LonelyRunner.lean lines 6-11 currently imports FastRunnerInsertion, StructuredClasses, PivotResidues, and NearestPivotGrid. A new file would require a separately reviewed top-level import if it is intended to be exported there.",
+    "audit_path": "LonelyRunner/AxiomAudit.lean lines 5-11 documents lake env lean LonelyRunner/AxiomAudit.lean as the audit entrypoint; current commands already audit circleNorm_ge_of_int_band and circleNorm_nat_div_ge/eq at lines 30 and 38-39.",
+    "future_audit_action": "After implementation, add an explicit print-axioms target for the new theorem before relying on it in any integration. This inventory did not edit the audit file or execute Lean."
+  },
+  "semantic_uncertainties_and_limits": [
+    "The manuscript uses k both as an integer quotient in the phase equation and implicitly as a natural quotient in p=N*k+r. Lean proof design must choose casts consistently; circleNorm_ge_of_int_band requires an Int translate.",
+    "The stated candidate contract intentionally uses p-i : Nat. The proof must establish i<=p before relying on the intended high speed; hp and hm provide it, but this is a proof obligation rather than definitional simplification.",
+    "The manuscript's t formula is rational/real division. Natural division must not be used for that formula.",
+    "No exact existing API was found for the mirrored Fin enumeration, its injectivity, or a direct bridge from the pointwise theorem to PositiveIntegerConjecture. Those are implementation work, not supplied interfaces.",
+    "This inventory has not independently proved the manuscript arithmetic or checked a Lean implementation."
+  ],
+  "commands_run": [
+    "python3 scripts/validate_workflow.py",
+    "git rev-parse HEAD",
+    "sha256sum research/astra-mirrored-block-witness.md",
+    "rg -n exact interface and import queries listed in this inventory"
+  ],
+  "processes_stopped": true
+}

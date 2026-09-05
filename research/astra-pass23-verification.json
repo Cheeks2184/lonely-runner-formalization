@@ -1,0 +1,129 @@
+{
+  "base_checkpoint": "8db7eb32fb0aec5f1a62d18f93a72c5096d76743",
+  "status": "verified",
+  "canonical_lrc_status": "unresolved",
+  "source_hashes": {
+    "LonelyRunner/MirroredBlockWitness.lean": "70d94cf55b457f49dcfa8c22bf8a3404abb4db1aec5e43254749ea73711da9c1",
+    "LonelyRunner/MirroredBlockFamily.lean": "670b27d5e0083cf84999ad81410c9def4437f6d23fca7390374ffd2926169272",
+    "LonelyRunner.lean": "efa3d9c7cab62ea0f33158c17e150e04a249c9a3de1807671beddefbce0aa5eb",
+    "LonelyRunner/AxiomAudit.lean": "1d088786681fa463d0a29702b221d2aab72a5f09a7ad529c8d84742f6ad9846a",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+    "research/astra-complement-descent-audit.md": "0bc27e0ae760565769407c3024b9f10064f00d11b0ab6351ffb40ebbd7affeb8",
+    "research/astra-complement-descent-review.md": "aebc29f74d91c8814bf9af73c1e9b2701ff40ef647662f4cc88596bd4c1cf5f1",
+    "research/astra-mirrored-block-witness.md": "70b5545b8b7af311324967c7272a07f8d714eeabac2b21c381ae168326847e21",
+    "research/astra-mirrored-block-review.md": "05d75866a7c71bf10e34252545d726e4dd3f4910de6ce5795e4ce85b39a299d2",
+    "research/astra-mirrored-block-all-runners.md": "1253cae99e31ff66f66eea170307296f8b3a4c181661ea0e91e5d2d5c9f27e98",
+    "research/astra-mirrored-all-runners-review.md": "367004c97821d9b96c5bd423626af5684c1c414d8f4334e2b5c1895b3756bb9d",
+    "research/astra-mirrored-formal-review.md": "32bb2549037452f012cd972ad3c80e1b649da97726a3b4816101b42e02d22a45",
+    "research/astra-mirrored-block-controls.json": "106bc0ce9c8206d47956528fad2698de840b96dd49deb235a80b463a7b7cd9c5",
+    "research/astra-mirrored-all-runners-controls.json": "e97806fc33c92fd1779ef1fd913c0ec0e5b214c70e644c04fc218ec876f9168b",
+    "research/astra-mirrored-lean-interface.json": "1a806d7443a5781418fab6ff26e70844530ff340f472bb1f01b6f340e818c477",
+    "docs/astra-research-23.md": "07d513d083875bc654759899535466589e1f87a73bcc0c747f7cb842a72e78ec"
+  },
+  "formal_declarations": [
+    "LonelyRunner.mirroredConsecutiveBlockWitness",
+    "LonelyRunner.card_mirroredBlockSpeeds",
+    "LonelyRunner.mirroredBlockMagnitudeCover",
+    "LonelyRunner.mirroredBlockLowerRunner",
+    "LonelyRunner.mirroredBlockRunnerWitness",
+    "LonelyRunner.mirroredBlockLonelyAt"
+  ],
+  "formal_scope": "For all natural m>=1,p>=2m+1, the exact mirrored configuration has2m+2 runners and a positive real witness for each chosen runner at closed threshold1/(2m+2); arbitrary injective Fin labeling, no supplied witness. Unbounded even counts and height, not arbitrary configurations or odd counts. No public universal mirroredBlockTime correctness theorem.",
+  "verification": {
+    "build": {
+      "command": "PATH=$HOME/.elan/bin:$PATH lake build",
+      "result": "passed",
+      "jobs": 3618,
+      "log": "/tmp/astra-pass23-full-build.log"
+    },
+    "trust": {
+      "command": "PATH=$HOME/.elan/bin:$PATH python3 scripts/audit_lean_trust.py",
+      "result": "passed",
+      "theorem_reports": 378,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "log": "/tmp/astra-pass23-trust-final.log",
+      "initial_attempt": "Root placed probes before two existing imports, causing an import-order error. Corrected import order and final audit passed; reviewed core/family source unchanged."
+    },
+    "focused_tests": {
+      "command": "PATH=$HOME/.elan/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests.test_validate_workflow tests.test_manage_storage tests.test_validate_task_ledger tests.test_audit_lean_trust -q",
+      "result": "passed",
+      "count": 58,
+      "log": "/tmp/astra-pass23-focused-tests.log"
+    },
+    "formal_review": {
+      "path": "research/astra-mirrored-formal-review.md",
+      "result": "accepted",
+      "root_full_read": true,
+      "root_reproduced_two_python_generators": true,
+      "root_fresh_lean_replays": "both passed exit0",
+      "commands": [
+        "PATH=$HOME/.elan/bin:$PATH lake env lean /tmp/endpoint-mirrored-core-review.lean",
+        "PATH=$HOME/.elan/bin:$PATH lake env lean /tmp/endpoint-mirrored-family-review.lean"
+      ],
+      "logs": [
+        "/tmp/astra-pass23-core-review-replay.log",
+        "/tmp/astra-pass23-family-review-replay.log"
+      ],
+      "core_phase_controls": 26,
+      "chosen_runner_controls": 14,
+      "labelled_cardinality_fixtures": 7,
+      "generic_nonvacuous_labelled_wrapper": true
+    },
+    "root_core_controls": {
+      "adjusted_case": 1692,
+      "first_case": 1689,
+      "original_speed_checks": 162537,
+      "p_at_minimum": 35,
+      "p_multiple_N": 102,
+      "r_equals_m": 99,
+      "r_equals_m_plus_one": 99,
+      "tuples": 3381
+    },
+    "root_all_runner_controls": {
+      "all_chosen_configurations": 360,
+      "bounded_relative_case": 908,
+      "chosen_runners": 6608,
+      "configurations": 368,
+      "core_relative_case": 5700,
+      "reflected_chosen_runners": 3304,
+      "relative_speed_checks": 193200,
+      "selected_large_configurations": 8
+    },
+    "independent_manuscript_controls": {
+      "core_fixtures": 18,
+      "core_original_speed_checks": 20562,
+      "all_runner_configurations": 25,
+      "all_runner_chosen_runners": 426,
+      "all_runner_signed_comparisons": 11930,
+      "closed_equalities": 622,
+      "root_replay": "passed; line-anchored Python-fence extraction"
+    },
+    "complement_review": {
+      "result": "accepted; root fullread and replay passed",
+      "failed_reuse_controls": 3,
+      "successful_reuse_controls": 2,
+      "scalar_cases": 8,
+      "closed_strip_edges": 3,
+      "central_boundary_cases": 4,
+      "fresh_replacement_and_distinguished_runner_controls": "passed",
+      "remaining": "No general decreasing counterexample replacement or all-witness obstruction established."
+    }
+  },
+  "storage": {
+    "status": "complete",
+    "command": "python3 scripts/manage_storage.py --clean",
+    "bytes_removed": 7712253201,
+    "removed_paths": [
+      ".lake"
+    ],
+    "coordination": "All child tasks completed and reported stopped; root fullbuild/trust/focusedtests and both final fresh-source replays completed before cleanup.",
+    "retained": "Pinned toolchain,source,Git history,unique manuscripts/reviews and reproducible proof/control evidence."
+  },
+  "routing_recovery": "An isolated Terra arithmetic failure was retried with same Terra medium and explicit scaled-identity guidance; a larger bridge was divided into bounded compiling lemmas with same worker. Astra xhigh independently reviewed the exact source/contract. Goal stayed active; no resume operation was needed or callable. No silent model substitution.",
+  "pass": 23
+}

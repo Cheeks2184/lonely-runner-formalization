@@ -109,6 +109,7 @@ import LonelyRunner.BHKRealReduction
 import LonelyRunner.SmallDimensions
 import LonelyRunner.Prompt99Scaling
 import LonelyRunner.PrimitivePrompt95
+import LonelyRunner.MirroredBlockFamily
 
 /-!
 Root import for the formal Lonely Runner development.
