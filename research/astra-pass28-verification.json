@@ -1,0 +1,140 @@
+{
+  "pass_number": 28,
+  "status": "verified",
+  "base_commit": "367a9dc22e093a0347a776f988cac67335bab379",
+  "branch": "codex/astra-pair-sum-completeness",
+  "scope": "Kernel-checked fixed-tuple pair-sum completeness and canonical equivalence; manuscript-only single-anchor equivalence. No uniform witness supply or full proof.",
+  "source_sha256": {
+    "LonelyRunner.lean": "12ca0e46e3fb7d76de08d0a599e8198e38687eed6199eddc13a15f8d686ec7f9",
+    "LonelyRunner/AxiomAudit.lean": "5c34d2ca09363a74c3ca033837b21e0ec28452a937d297c8f6706eece0e8a062",
+    "LonelyRunner/PairSumCompleteness.lean": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f"
+  },
+  "documentation_sha256": {
+    "README.md": "0bf60b6d6b28547aea24ae7eb27ad4106feef8ef75afc93aaad3d3065e658c57",
+    "STATUS.md": "c4fbc84244c0e79aff9fa237e221365befe579f6f0ec3568066d363a15202d67",
+    "docs/approaches.md": "83b82f42f944bf623b82f6ca5c23de8dfe7e46388c8d9913d98e298d30c0ea83",
+    "docs/astra-research-28.md": "4ebfed3cf3445b4ed87871b2e9098e2e910a10e5063d83cd18b0f89db2d4a718"
+  },
+  "implementation_record": {
+    "path": "research/astra-pair-sum-implementation.md",
+    "sha256": "1a2bf3826477a9c3c0b0e0bb78dcd57f70e3c94a08f0dac0815e7661171b7d7f",
+    "focused_source_sha256": "e8b20bf505022f7b098d913d86277134e48e437daa1a1b95913f9f4d194a6708",
+    "final_source_sha256": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f",
+    "body_parity": "Root verified comment-stripped token parity; final source independently rebuilt and reviewed."
+  },
+  "artifacts": [
+    {
+      "path": "research/astra-single-anchor-completeness-audit.md",
+      "sha256": "206e70ab052453c343b6ff5cd6b68d42152f884b8a7868a28ff8e5b49ea1b20a",
+      "program_sha256": "6ca37f19035643b2591f14833d648cd4afc5f417c6142188a8d8542ac4077f56",
+      "output_sha256": "9a01362df1883306496507e37b44200a0402c903433442587e903db194ab8111",
+      "root_replay_output": "/tmp/astra-single-anchor-root-replay.json",
+      "root_full_read": true,
+      "root_exact_replay": "passed"
+    },
+    {
+      "path": "research/astra-single-anchor-completeness-review.md",
+      "sha256": "eb7190b75f0b945ee07aa2b2fb25f6430b1cc5539190c20c7e8a05a8c6f190f1",
+      "program_sha256": "3a1914fbbecb2d5f97199e6d8a0fd65cc8fe1989d17b8cb6425e8689537986e8",
+      "output_sha256": "cd0d960db8fede55e6843b806939a84425ae1db61d2e16f52fef508c3ad1904e",
+      "root_replay_output": "/tmp/astra-single-anchor-review-root-replay.json",
+      "root_full_read": true,
+      "root_exact_replay": "passed"
+    },
+    {
+      "path": "research/astra-pair-sum-cell-contract.md",
+      "sha256": "1b441ec0b0145007cf18bce59482396d175634cdd34d3ba4edba8c0376cb7c8f",
+      "program_sha256": "69b26db3b7ccb8d84394925434437efeaf8394dcdb83ead553e79a1fe20d356c",
+      "output_sha256": "8ec157f9c70a493facec877dc680ee24ccfc6515f6822fbc1bb031b9f629fa59",
+      "root_replay_output": "/tmp/astra-pair-sum-cell-root-replay.json",
+      "root_full_read": true,
+      "root_exact_replay": "passed"
+    },
+    {
+      "path": "research/astra-pair-sum-formal-review.md",
+      "sha256": "7f4a4c4eb3fa6ebfb028be3cab1e29ca94cdbfa8806218781092c87be9455e08",
+      "program_sha256": "6e469b398c5fbc67668d1f358cfd87d93b51e505de31f36263efee9ccd08d150",
+      "output_sha256": "c1ce518a732638af389de5047e07db3be7ad5ab42e09c0f05f1a1b1aee0c0e76",
+      "root_replay_output": "/tmp/astra-pair-sum-review.log",
+      "root_full_read": true,
+      "root_exact_replay": "passed"
+    }
+  ],
+  "full_build": {
+    "status": "passed",
+    "command": "PATH=/home/joshua/.elan/bin:$PATH lake build",
+    "exit_code": 0,
+    "jobs": 3638,
+    "log": "/tmp/astra-pass28-full-build.log",
+    "log_sha256": "ceb31b8ffd9e6f9398a135b2b38adfb4732a076cc12033ff475ec7dfb4b02a6c",
+    "source_sha256": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f"
+  },
+  "trust_audit": {
+    "status": "passed",
+    "command": "PATH=/home/joshua/.elan/bin:$PATH python3 -B scripts/audit_lean_trust.py",
+    "exit_code": 0,
+    "reports": 427,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log": "/tmp/astra-pass28-full-trust.log",
+    "log_sha256": "f5e288f7a61ccb40c5f0dd13fdec3d5b12b17a6b7be3b7c684e7c6af2d61a6c2"
+  },
+  "independent_formal_review": {
+    "status": "accepted; root complete read and byte-exact fresh-body replay passed",
+    "path": "research/astra-pair-sum-formal-review.md",
+    "sha256": "7f4a4c4eb3fa6ebfb028be3cab1e29ca94cdbfa8806218781092c87be9455e08",
+    "program_sha256": "6e469b398c5fbc67668d1f358cfd87d93b51e505de31f36263efee9ccd08d150",
+    "probe_sha256": "c16c6b443231d82ea3feb19f4b2f4cf4d2d4bc4e1d42af153fa2497499f93333",
+    "output_sha256": "c1ce518a732638af389de5047e07db3be7ad5ab42e09c0f05f1a1b1aee0c0e76",
+    "public_declarations": 8,
+    "named_controls": 16,
+    "axiom_reports": 24,
+    "local_dependency_count": 27,
+    "root_replay_exit_code": 0,
+    "root_source_program_probe_output_hashes": "matched",
+    "root_replay_log": "/tmp/astra-pair-sum-review-root-replay.log"
+  },
+  "accepted_results": [
+    "Any positive-margin witness on at least two positive integer speeds, allowing repetitions, yields a balanced finite pair-sum witness with distinct original indices and positive numerator below the denominator.",
+    "Witness existence is equivalent to PairSumCertificate existence for independent positive N and n>=2.",
+    "Canonical Conjecture is equivalent to PositiveIntegerPairSumCertificateConjecture; neither side is proved.",
+    "The single-stationary-anchor exact packet is manuscript-equivalent to ordinary witness existence; the old two-anchor counterexample remains valid."
+  ],
+  "checks": {
+    "root_full_reads": true,
+    "artifact_program_output_hashes": "matched",
+    "relative_file_links_checked": 95,
+    "link_regex_exclusion": "Only mathematical indicator 1_[eta,1-eta](v_i t)",
+    "workflow_validation": "passed before manifest finalization; repeated before commit",
+    "whitespace": "checked before commit",
+    "pinned_dependencies_scripts_tests": "unchanged",
+    "independent_controls": 16,
+    "fresh_axiom_reports": 24,
+    "full_axiom_reports": 427,
+    "rejected_review_fixture_attempts": 4,
+    "source_changed_to_fix_review": false,
+    "nonfatal_new_source_warnings": 5,
+    "trust_options_disabled": false
+  },
+  "storage": {
+    "phase": "Pass28 verification complete",
+    "shared_lake_present": false,
+    "cleanup_exit_code": 0,
+    "rebuildable_repository_bytes_removed": 7749898057,
+    "removed": {
+      ".lake": 7749888746,
+      "scripts/__pycache__": 9311
+    },
+    "log": "/tmp/astra-pass28-storage-cleanup.log",
+    "coordination": "All worker commands and root verification stopped before cleanup; manuscript-only research released after cleanup.",
+    "preserved": "Pinned toolchain, Git history, sources, unique evidence, small replay programs and outputs; unrelated projects untouched."
+  },
+  "excluded_unfinished": [
+    "research/astra-exact-affine-union-audit.md"
+  ],
+  "canonical_completion": false,
+  "publication_status": "Verified; commit, push, PR, required checks and exact-head merge pending"
+}

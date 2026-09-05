@@ -6,20 +6,20 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/endpoint_label_audit-single-anchor-completeness",
+      "id": "/root/cluster_limit_review-exact-affine-union-audit",
       "kind": "research",
       "status": "in_progress",
-      "target": "Independently prove or refute constructive completeness of generalized one-anchor exact-loss packets retaining collision own-count margin, starting from a supplied pair-sum maximizer; distinguish equivalence from uniform witness supply.",
-      "source_checkpoint": "a4c395827100593500747904a1a11f4251fdb271",
+      "target": "Audit the still-unexamined union of a direct small-reciprocal witness and exact retained-margin two-anchor supply, first through its necessary fastest-coordinate mixed-margin condition.",
+      "source_checkpoint": "367a9dc22e093a0347a776f988cac67335bab379",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
       "owned_files": [
-        "research/astra-single-anchor-completeness-audit.md"
+        "research/astra-exact-affine-union-audit.md"
       ],
       "checks": [],
-      "next_action": "Bounded analytical constructor audit and supplied N4 fixture; excluded from Pass27 until separately reviewed."
+      "next_action": "Bounded analytical contract audit; obtain a precise fixed counterexample or new justified structural step, not another witness-equivalent premise. New work excluded from Pass28."
     }
   ],
   "completed_tasks": [
@@ -3473,13 +3473,197 @@
       ],
       "next_action": "Settled copy edits, exact scope and source links; no model/source/cache/Git/state mutations.",
       "result": "Final documentation independently read by root; corrected rounding displacement and removed immediately stale publication wording. Workflow/whitespace/new links and source-unchanged checks passed."
+    },
+    {
+      "id": "/root/endpoint_label_audit-single-anchor-completeness",
+      "kind": "research",
+      "status": "complete",
+      "target": "Independently prove or refute constructive completeness of generalized one-anchor exact-loss packets retaining collision own-count margin, starting from a supplied pair-sum maximizer; distinguish equivalence from uniform witness supply.",
+      "source_checkpoint": "a4c395827100593500747904a1a11f4251fdb271",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-single-anchor-completeness-audit.md"
+      ],
+      "checks": [
+        "Root full read",
+        "Exact saved program/output hash match",
+        "No uniform witness supply follows"
+      ],
+      "next_action": "Bounded analytical constructor audit and supplied N4 fixture; excluded from Pass27 until separately reviewed.",
+      "result": "Frozen manuscript constructive equivalence; root full read and byte-exact replay pass; independent review pending.",
+      "source_sha256": "206e70ab052453c343b6ff5cd6b68d42152f884b8a7868a28ff8e5b49ea1b20a"
+    },
+    {
+      "id": "/root/cluster_limit_review-pair-sum-cell-contract",
+      "kind": "research",
+      "status": "complete",
+      "target": "Independently audit finite floor-cell pair-minimum proof of pair-sum witness completeness and settle an implementation contract; no uniform certificate supply claim.",
+      "source_checkpoint": "dcee411946aff78931147df421e1095d25dbb948",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-pair-sum-cell-contract.md"
+      ],
+      "checks": [
+        "All24 normalized fixtures69 minimizing-pair outputs",
+        "138balanced equations168certificate inequalities",
+        "Root complete read and byte-exact source/program/output replay"
+      ],
+      "next_action": "Review supplied algebraic proof and existing Lean primitives without restoring cache; return settled bounded formalization specification.",
+      "result": "Settled mathematical contract independently accepted; root full read and exact replay passed. Not a Lean theorem or uniform supply.",
+      "source_sha256": "1b441ec0b0145007cf18bce59482396d175634cdd34d3ba4edba8c0376cb7c8f"
+    },
+    {
+      "id": "/root/single_anchor_review",
+      "kind": "research",
+      "status": "complete",
+      "target": "Independent exact-source mathematical review of one-anchor E+C equivalence and explicit simultaneous construction; no uniform supply claim.",
+      "source_checkpoint": "dcee411946aff78931147df421e1095d25dbb948",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-single-anchor-completeness-review.md"
+      ],
+      "checks": [
+        "6constructors18constructor comparisons",
+        "9transports27comparisons10nearest choices",
+        "Root read and exact saved source/program/output replay"
+      ],
+      "next_action": "Review frozen author hash206e70 and selected missing congruence/cardinality controls; no cache/Lean edits.",
+      "result": "Accepted without mathematical correction at manuscript scope. Root full read and exact replay passed. No uniform supply or kernel packet proof.",
+      "source_sha256": "eb7190b75f0b945ee07aa2b2fb25f6430b1cc5539190c20c7e8a05a8c6f190f1"
+    },
+    {
+      "id": "/root/lower_count_supply-pair-sum-implementation",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Implement settled finite-cell balanced pair-sum completeness contract in one new Lean module; preserve all hypotheses and certificate definition.",
+      "source_checkpoint": "367a9dc22e093a0347a776f988cac67335bab379",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/PairSumCompleteness.lean",
+        "research/astra-pair-sum-implementation.md"
+      ],
+      "checks": [
+        "Focused module build passed",
+        "All eight public declarations only propext Classical.choice Quot.sound",
+        "Root full source read; contract preserved"
+      ],
+      "next_action": "Implement frozen contract1b441e, compile focused module; report any semantic issue rather than weaken the theorem.",
+      "result": "Focused module build and eight permitted-only public axiom probes passed. Root full read complete; short source explanation pass before final freeze.",
+      "source_sha256": "e8b20bf505022f7b098d913d86277134e48e437daa1a1b95913f9f4d194a6708"
+    },
+    {
+      "id": "/root/lower_count_supply-pair-sum-source-notes",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Add short source explanations at algorithm steps and export contracts, preserving all Lean proof tokens; finalize implementation record and hashes.",
+      "source_checkpoint": "367a9dc22e093a0347a776f988cac67335bab379",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/PairSumCompleteness.lean",
+        "research/astra-pair-sum-implementation.md"
+      ],
+      "checks": [
+        "Root diff read and comment-stripped parity",
+        "Implementation record read",
+        "Whitespace passed"
+      ],
+      "next_action": "Comments/documentation only, final frozen hash for independent reviewer.",
+      "result": "Comments only; root comment-stripped parity verified against focused-build source.",
+      "source_sha256": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f"
+    },
+    {
+      "id": "/root/lower_count_supply-pass28-docs",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Prepare concise Pass28 documentation for pair-sum completeness and accepted one-anchor manuscript equivalence, preserving pending full-build/review status.",
+      "source_checkpoint": "367a9dc22e093a0347a776f988cac67335bab379",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "README.md",
+        "STATUS.md",
+        "docs/approaches.md",
+        "docs/astra-research-28.md"
+      ],
+      "checks": [
+        "Root full checkpoint read and doc diff read",
+        "Whitespace check passed",
+        "Existing links passed; future review target pending"
+      ],
+      "next_action": "Draft from final module838a3b and accepted manuscript hashes; root supplies final verification outcomes later.",
+      "result": "Draft docs written and root read; final full-build/review outcomes plus section F and source-link corrections pending."
+    },
+    {
+      "id": "/root/endpoint_label_audit-pair-sum-source-review",
+      "kind": "research",
+      "status": "complete",
+      "target": "Independent exact-body kernel and semantic review of PairSumCompleteness, canonical iff and balanced finite cell helper; selected nonvacuous boundary examples.",
+      "source_checkpoint": "367a9dc22e093a0347a776f988cac67335bab379",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-pair-sum-formal-review.md"
+      ],
+      "checks": [
+        "Fresh full body excludes reviewed module from 27 local dependency closure",
+        "24 permitted-only axiom reports",
+        "Balanced134 output extracted and proved M2/7,T3/7",
+        "Repeated speeds, negative times, N0/one-index exclusions, N1 vacuity, exact canonical iff",
+        "Four rejected control-only attempts corrected with reviewed source unchanged"
+      ],
+      "next_action": "Review source838a3b frozen, exact public types, permitted axioms and closed/repeated/half/negative-time controls. Root full build/trust separately.",
+      "result": "Independent exact fresh-body review accepted; all eight public declarations and sixteen named controls produce 24 permitted-only axiom reports. Root full read done; root exact replay in progress.",
+      "source_sha256": "7f4a4c4eb3fa6ebfb028be3cab1e29ca94cdbfa8806218781092c87be9455e08"
+    },
+    {
+      "id": "/root/lower_count_supply-pass28-final-docs",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Finalize Pass28 documentation after successful full build/trust and accepted exact-source review; correct section F scope and source links.",
+      "source_checkpoint": "367a9dc22e093a0347a776f988cac67335bab379",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "README.md",
+        "STATUS.md",
+        "docs/approaches.md",
+        "docs/astra-research-28.md"
+      ],
+      "checks": [
+        "Root full read of final four documents",
+        "Relative file links checked, excluding a mathematical indicator regex false positive",
+        "Existing sorted-distinct denominator bound retained",
+        "Scope distinguishes equivalence from unresolved uniform supply"
+      ],
+      "next_action": "Replace pending-check wording with actual checks, preserving unresolved canonical/uniform supply boundary."
     }
   ],
-  "latest_checkpoint": "Pass27 verified manuscript checkpoint prepared; publication pending. PR25 remains latest merged, canonical LRC unresolved.",
+  "latest_checkpoint": "Pass28 verified: kernel-checked finite pair-sum certificate completeness and canonical equivalence; independently reviewed one-anchor manuscript equivalence. Publication pending; PR26 remains latest merged checkpoint. Full LRC unresolved.",
   "next_actions": [
-    "Publish verified Pass27 by commit/push/PR/CI/exact-head merge and verify main.",
-    "Complete and independently review separate one-anchor constructive completeness audit; equivalence from an existing witness is not uniform supply.",
-    "Continue toward unrestricted canonical proof or disproof; no completion claim from auxiliary results."
+    "Publish verified Pass28 files: commit, push, open PR, inspect checks/reviews, merge exact head, verify remote main.",
+    "Continue excluded exact-affine-union analytical audit; independently review any proposed conditional constructor before accepting it.",
+    "Pursue unrestricted proof/disproof; equivalences and conditional supply do not establish canonical completion."
   ],
   "research_holds": [
     {
@@ -3989,27 +4173,30 @@
     }
   },
   "storage_checkpoint": {
-    "phase": "pass27 manuscript verification complete",
+    "phase": "Pass28 verification complete",
     "shared_lake_present": false,
     "cleanup_exit_code": 0,
-    "rebuildable_repository_bytes_removed": 0,
-    "temporary_render_pngs_removed": 5,
-    "temporary_render_bytes_removed": 636878,
-    "preserved": "Pinned toolchain, Git, all source and unique evidence, 14613-byte source PDF required by exact screen replay.",
-    "coordination": "All worker commands stopped and root exact replays completed before cleanup; no active build/search/verifier."
+    "rebuildable_repository_bytes_removed": 7749898057,
+    "removed": {
+      ".lake": 7749888746,
+      "scripts/__pycache__": 9311
+    },
+    "log": "/tmp/astra-pass28-storage-cleanup.log",
+    "coordination": "All worker commands and root verification stopped before cleanup; manuscript-only research released after cleanup.",
+    "preserved": "Pinned toolchain, Git history, sources, unique evidence, small replay programs and outputs; unrelated projects untouched."
   },
   "previous_goal_turn_classification": "progress",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
+    "verified_checkpoint": "dcee411946aff78931147df421e1095d25dbb948",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-finite-family-equivalence",
+    "branch": "codex/astra-affine-supply-boundaries",
     "base": "main",
-    "next_action": "Carry receipt into next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/25",
-    "pr_number": 25,
-    "head_sha": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
+    "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/26",
+    "pr_number": 26,
+    "head_sha": "dcee411946aff78931147df421e1095d25dbb948",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -4243,22 +4430,32 @@
         "merge_sha": "a4c395827100593500747904a1a11f4251fdb271",
         "checks": "Lean build/trust passed22:11:46UTC; exact computational certificates passed22:19:14UTC. Exact-head merge22:21:34UTC.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 26,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/26",
+        "head_sha": "dcee411946aff78931147df421e1095d25dbb948",
+        "status": "merged_verified",
+        "merge_sha": "367a9dc22e093a0347a776f988cac67335bab379",
+        "checks": "Lean build/trust passed22:51:24UTC; exact computational certificates passed22:59:16UTC. Exact-head merge23:00:23UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
-    "remote_main": "a4c395827100593500747904a1a11f4251fdb271",
-    "local_main": "a4c395827100593500747904a1a11f4251fdb271",
+    "latest_published_source_checkpoint": "dcee411946aff78931147df421e1095d25dbb948",
+    "remote_main": "367a9dc22e093a0347a776f988cac67335bab379",
+    "local_main": "367a9dc22e093a0347a776f988cac67335bab379",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "a4c395827100593500747904a1a11f4251fdb271",
-    "checks": "Lean build/trust passed22:11:46UTC; exact computational certificates passed22:19:14UTC. Exact-head merge22:21:34UTC.",
+    "merge_sha": "367a9dc22e093a0347a776f988cac67335bab379",
+    "checks": "Lean build/trust passed22:51:24UTC; exact computational certificates passed22:59:16UTC. Exact-head merge23:00:23UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
     "status": "active",
     "tokens_used": 15826791,
     "time_used_seconds": 53695,
-    "scope": "Live get_goal read after Pass26 publication began. No worker failure blocked goal; no supported resume control available or needed."
+    "scope": "Live get_goal read after Pass26 publication began. No worker failure blocked goal; no supported resume control available or needed.",
+    "note": "Actual goal remains active after context recovery. No isolated worker failure currently reported; no supported resume control available."
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",
@@ -4275,12 +4472,12 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "pass": 27,
-    "branch": "codex/astra-affine-supply-boundaries",
-    "base_sha": "a4c395827100593500747904a1a11f4251fdb271",
+    "pass_number": 28,
+    "branch": "codex/astra-pair-sum-completeness",
+    "base_sha": "367a9dc22e093a0347a776f988cac67335bab379",
     "status": "verified_pending_commit",
     "excluded_unfinished": [
-      "research/astra-single-anchor-completeness-audit.md"
+      "research/astra-exact-affine-union-audit.md"
     ],
     "merge_method": "merge",
     "protection_bypass_allowed": false
@@ -4314,6 +4511,53 @@
       "reason": "Every q=1..4 divides a speed; only larger allowed q=8 has no omitted coprime complementary pair.",
       "scope": "Refutes these two sufficient mechanisms as a universal union only; not LRC.",
       "checks": "Python Fraction exact assertions passed."
+    },
+    {
+      "id": "pair_sum_floor_cell_proposal",
+      "status": "root derivation under independent contract review",
+      "argument": "For normalized existing witness and z_i=floor(W_i*t), minimize C_ij=(W_i*(z_j+1)-W_j*z_i)/(W_i+W_j) over all ordered pairs. Its minimum M is at least the supplied margin and at most one half via diagonal pairs. A minimizing pair yields equal lower/upper interval endpoints at T=(z_p+z_q+1)/(W_p+W_q); all pair inequalities imply every interval contains T. A diagonal minimizer forces all phases half-integral; choose any distinct pair. The numerator is natural and less than the sum denominator. No compactness needed.",
+      "scope": "Missing reverse direction of fixed-tuple PairSumCertificate; does not supply a witness or resolve LRC.",
+      "cache": "Absent; restore only for settled implementation."
+    },
+    {
+      "id": "exact-union-stringent-N5-positive-control",
+      "status": "root literal Fraction replay passed; later research task excluded from Pass28",
+      "W": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "q": 4,
+      "p": "5/4",
+      "u": [
+        1,
+        3,
+        3,
+        4
+      ],
+      "pair_speed_values": [
+        4,
+        5
+      ],
+      "alpha": -7,
+      "beta": 9,
+      "collision": [
+        2,
+        6,
+        -1,
+        1
+      ],
+      "true_c": 3,
+      "tau": "1/4",
+      "returned_t": "129/20",
+      "exact_bounds": [
+        "9/20",
+        "7/20",
+        "1/5",
+        "1/4"
+      ],
+      "significance": "Despite mixed-fastest good set consisting only of9/20 and11/20 modulo1, original two-anchor exact E+C succeeds. Do not use this tuple to refute the new union. No universal supply claim."
     }
   ],
   "uniform_finite_supply_audit": {
@@ -4365,8 +4609,8 @@
   "current_research_boundary": {
     "status": "research_in_progress",
     "canonical_resolution": false,
-    "accepted_pass27": "Three affine-scope audits accepted with independent review and root exact replays. Stand-alone endpoint supply refuted, free-time variant equivalent to witness existence. External candidate rejected at precise defects.",
-    "next_independent_work": "Generalized one-anchor retained-margin completeness construction under audit; excluded from Pass27 and no result yet accepted.",
+    "accepted_pass27": "Merged and verified PR26, head dcee411946aff78931147df421e1095d25dbb948, main 367a9dc22e093a0347a776f988cac67335bab379. Three affine scope audits accepted; canonical goal remains unresolved.",
+    "next_independent_work": "One-anchor review accepted. Settled finite-cell pair-sum completeness is being implemented in Lean by Terra; exact-source independent review and full build/trust pending.",
     "storage": "Shared Lean cache absent; all evidence small."
   },
   "adaptive_affine_audit": {
@@ -4398,5 +4642,81 @@
     "primary_url": "https://zenodo.org/records/19171253",
     "pdf_sha256": "74d1e1eaa035c15a2ed7c655aad46482e4a09e79f007076c7116a1a95df89871",
     "scope": "One claimed strict full proof fails original N3tight tuple; separate finite nesting lemma fails p2 one-level tests n3 andn11. No exhaustive literature conclusion or LRC disproof."
+  },
+  "pair_sum_formalization": {
+    "status": "Verified; commit/push/PR/merge pending",
+    "branch": "codex/astra-pair-sum-completeness",
+    "base_commit": "367a9dc22e093a0347a776f988cac67335bab379",
+    "target": "Finite-cell balanced pair-sum witness completeness and exact PairSumCertificate reverse implication",
+    "uniform_supply": false,
+    "storage": "Shared rebuildable cache removed after verification; restore only for new formal work",
+    "cache_restore": {
+      "command": "PATH=/home/joshua/.elan/bin:$PATH lake exe cache get",
+      "exit_code": 0,
+      "log": "/tmp/astra-pass28-cache-restore.log",
+      "shared_only": true
+    },
+    "contract_sha256": "1b441ec0b0145007cf18bce59482396d175634cdd34d3ba4edba8c0376cb7c8f",
+    "root_full_read": true,
+    "root_replay_exit_code": 0,
+    "prerequisite_build": {
+      "command": "lake build LonelyRunner.PairSumGeometry LonelyRunner.PivotBoundary LonelyRunner.StructuredClasses LonelyRunner.BHKRealReduction",
+      "exit_code": 0,
+      "jobs": 2975,
+      "log": "/tmp/astra-pass28-prerequisites.log"
+    },
+    "initial_source_sha256": "e8b20bf505022f7b098d913d86277134e48e437daa1a1b95913f9f4d194a6708",
+    "root_initial_full_source_read": true,
+    "source_sha256": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f",
+    "full_build": {
+      "status": "passed",
+      "command": "PATH=/home/joshua/.elan/bin:$PATH lake build",
+      "exit_code": 0,
+      "jobs": 3638,
+      "log": "/tmp/astra-pass28-full-build.log",
+      "log_sha256": "ceb31b8ffd9e6f9398a135b2b38adfb4732a076cc12033ff475ec7dfb4b02a6c",
+      "source_sha256": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f"
+    },
+    "documentation": "Final four documents reviewed and relative links checked",
+    "trust_audit": {
+      "status": "passed",
+      "command": "PATH=/home/joshua/.elan/bin:$PATH python3 -B scripts/audit_lean_trust.py",
+      "exit_code": 0,
+      "reports": 427,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "log": "/tmp/astra-pass28-full-trust.log",
+      "log_sha256": "f5e288f7a61ccb40c5f0dd13fdec3d5b12b17a6b7be3b7c684e7c6af2d61a6c2"
+    },
+    "independent_review": {
+      "status": "accepted; root complete read and byte-exact fresh-body replay passed",
+      "path": "research/astra-pair-sum-formal-review.md",
+      "sha256": "7f4a4c4eb3fa6ebfb028be3cab1e29ca94cdbfa8806218781092c87be9455e08",
+      "program_sha256": "6e469b398c5fbc67668d1f358cfd87d93b51e505de31f36263efee9ccd08d150",
+      "probe_sha256": "c16c6b443231d82ea3feb19f4b2f4cf4d2d4bc4e1d42af153fa2497499f93333",
+      "output_sha256": "c1ce518a732638af389de5047e07db3be7ad5ab42e09c0f05f1a1b1aee0c0e76",
+      "public_declarations": 8,
+      "named_controls": 16,
+      "axiom_reports": 24,
+      "local_dependency_count": 27,
+      "root_replay_exit_code": 0,
+      "root_source_program_probe_output_hashes": "matched",
+      "root_replay_log": "/tmp/astra-pair-sum-review-root-replay.log"
+    }
+  },
+  "single_anchor_completeness": {
+    "status": "independently accepted manuscript equivalence with root replays",
+    "author": "research/astra-single-anchor-completeness-audit.md",
+    "author_sha256": "206e70ab052453c343b6ff5cd6b68d42152f884b8a7868a28ff8e5b49ea1b20a",
+    "review": "research/astra-single-anchor-completeness-review.md",
+    "review_sha256": "eb7190b75f0b945ee07aa2b2fb25f6430b1cc5539190c20c7e8a05a8c6f190f1",
+    "root_full_read_both": true,
+    "root_replays_exit_code": 0,
+    "review_output_sha256": "cd0d960db8fede55e6843b806939a84425ae1db61d2e16f52fef508c3ad1904e",
+    "result": "One-anchor exact-loss E plus true own-count C packet existence iff fixed positive integer stationary witness; reverse explicit A=rho+6beta^2 starts from existing balanced witness and returns same original phase at k+T.",
+    "scope": "m>=2; positive integer speeds with repetitions allowed; q positive integer, p positive rational, pq positive integer; only stationary coordinate anchored. No uniform H_N time selector, no new packet Lean theorem, no canonical resolution. Prior two-anchor obstruction unchanged."
   }
 }
