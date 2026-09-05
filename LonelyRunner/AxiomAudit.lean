@@ -362,3 +362,7 @@ project-specific axiom.
 
 -- Fourth Astra pass: explicit family, with no primality or parity restriction.
 #print axioms LonelyRunner.affine_dense_family_witness
+
+-- Fifth Astra pass: simultaneous zero rows and smaller affine families.
+#print axioms LonelyRunner.affine_avoidance_card_le_sub_two
+#print axioms LonelyRunner.affine_grid_multiple_zero_witness

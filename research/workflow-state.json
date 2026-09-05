@@ -6,17 +6,17 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/affine_grid-multiple-zero-value",
+      "id": "/root/affine_grid-union-supply",
       "runtime_agent": "/root/affine_grid",
       "kind": "research",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Audit whether simultaneous multiple-zero normalization offers independent supply or re-encodes strict witness existence; preserve tight boundary cases.",
-      "source_checkpoint": "5f6c37e plus reviewed grid manuscript and compiled dense-family integration",
+      "target": "Audit the enlarged union on the strict-witness tuple (1,2,3,4,7,14), using exact normalization geometry rather than a bounded scan as proof.",
+      "source_checkpoint": "09eff14 plus final multiple-zero source and value audit",
       "owned_files": [
-        "research/astra-multiple-zero-value.md"
+        "research/astra-union-supply-audit.md"
       ],
       "status": "in_progress",
       "checks": [],
@@ -608,14 +608,73 @@
       ],
       "launch_status": "accepted",
       "result": "Accepted exact dense-family source and uniform normalization obstruction without corrections."
+    },
+    {
+      "id": "/root/vanishing_slope-multiple-zero-formal",
+      "runtime_agent": "/root/vanishing_slope",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Formalize the reviewed simultaneous multiple-zero coarse grid witness, including every actual coordinate and all-zero/empty ordinary cases.",
+      "source_checkpoint": "df8d71f plus research/astra-vanishing-slope.md Section 5",
+      "owned_files": [
+        "LonelyRunner/AffineGridMultipleZero.lean"
+      ],
+      "status": "complete",
+      "checks": [
+        "Source SHA256 225d6c6adcaa1d85309325b2bb4712a48f0adb13019c8e645d4a6699a73f1aca; direct compile, targeted build, standard axioms, all-zero and mixed fixtures passed per author."
+      ],
+      "launch_status": "accepted",
+      "result": "Exact simultaneous multiple-zero Nat theorem and smaller-cardinality affine helper compiled, including empty ordinary case; independent review pending."
+    },
+    {
+      "id": "/root/affine_grid-multiple-zero-value",
+      "runtime_agent": "/root/affine_grid",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Audit whether simultaneous multiple-zero normalization offers independent supply or re-encodes strict witness existence; preserve tight boundary cases.",
+      "source_checkpoint": "5f6c37e plus reviewed grid manuscript and compiled dense-family integration",
+      "owned_files": [
+        "research/astra-multiple-zero-value.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "research/astra-multiple-zero-value.md SHA256 ef3619bfdf74e5b2794f8d4737623e8d3e9cedf62dd21039f9169465e4dd8090; embedded exact reproducer passed; independent review pending."
+      ],
+      "launch_status": "accepted",
+      "result": "Exact all-zero recurrence characterization, strict-to-all-zero obstruction, mixed V7 positive control, and separate unresolved union supply saved."
+    },
+    {
+      "id": "/root/family_grid_review-pass5",
+      "runtime_agent": "/root/family_grid_review",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independently review multiple-zero value audit and exact formal contract; distinguish subclass obstructions from union supply.",
+      "source_checkpoint": "df8d71f",
+      "owned_files": [
+        "research/astra-pass5-review.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "research/astra-pass5-review.md SHA256 39f118f7bf84f155718fef8d03aa5a822e52d4f707cd6b536c46da9880ec529d; compile/axioms and all-zero/mixed Lean fixtures; 1632 coordinate cases,125 transport points,54750 unit controls."
+      ],
+      "launch_status": "accepted",
+      "result": "Accepted final exact multiple-zero source and value audit without corrections."
     }
   ],
-  "latest_checkpoint": "Pass4 verified: explicit dense-family Lean witness for all N>=7, independently reviewed manuscript obstruction to current three normalization classes; 3605 build jobs and 344 accepted trust reports. Publication queue includes PR1 and then this checkpoint.",
+  "latest_checkpoint": "Pass5 independently reviewed and integrated: full build 3606 jobs, 346 accepted theorem reports, two new public declarations. Preparing publication from codex/astra-multiple-zero-checkpoint.",
   "next_actions": [
-    "Finish PR1 publication once remote checks pass.",
-    "Publish pass4 verified source and evidence through its own PR and merge to main after checks.",
-    "Finish bounded audit of whether simultaneous multiple-zero normalization re-encodes strict witness existence; do not assume supply.",
-    "Continue toward unrestricted canonical LRC, which remains unresolved."
+    "Publish pass5 via commit, push, PR and checked merge to main.",
+    "Finish the current union-supply audit: the new tuple enters the mixed contract with M66, so seek a precise global supply question rather than more family-specific formalization.",
+    "Continue toward canonical unrestricted LRC; no result in this checkpoint settles that objective."
   ],
   "research_holds": [
     {
@@ -719,34 +778,77 @@
       "path": "LonelyRunner/AffineDenseFamily.lean",
       "review": "research/astra-pass4-review.md",
       "remaining": "Exact family covers every integer N>=7 and all lifts; it does not quantify over arbitrary tuples."
+    },
+    {
+      "id": "multiple-zero-grid",
+      "status": "proved-lean-and-independently-reviewed",
+      "path": "LonelyRunner/AffineGridMultipleZero.lean",
+      "review": "research/astra-pass5-review.md",
+      "remaining": "Unrestricted supply is unproved; exact theorem retains finite range/coarse size hypotheses."
+    },
+    {
+      "id": "multiple-zero-value",
+      "status": "manuscript-independently-reviewed",
+      "path": "research/astra-multiple-zero-value.md",
+      "review": "research/astra-pass5-review.md",
+      "remaining": "All-zero recurrence characterization and counterexamples are established, but mixed strict-supply and union universality remain unresolved."
     }
   ],
   "integration_check": {
     "status": "passed",
-    "verification_record": "research/astra-pass4-verification.json",
-    "build_jobs": 3605,
-    "trust_reports": 344
+    "verification_record": "research/astra-pass5-verification.json",
+    "build_jobs": 3606,
+    "trust_reports": 346
   },
   "storage_checkpoint": {
     "download_archive_bytes_removed": 439158169,
     "archive_count": 8639,
     "archive_names_sha256": "c6488a774e671ba4709034b089eb5a73fcbd6c17743c760b772c898a83d0e392",
     "shared_lake_cache_retained": true,
-    "retention_reason": "Shared cache retained for immediately queued formal work after the active supply-value audit; no duplicate caches.",
+    "retention_reason": "Active independent source verification and immediately queued full integration use the single shared cache.",
     "report_bytes": 7684188472
   },
-  "previous_goal_turn_classification": "Progress: verified commits 5c24b77 and 231dc52 added exact restricted full-size grid theorems and zero-kernel family certificates. The canonical unrestricted goal remains unresolved.",
+  "previous_goal_turn_classification": "Progress: pass4 formal family and reviewed supply obstruction were integrated and published with successful CI through PR2; multiple-zero formalization compiled and review launched.",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
-    "status": "ci_running",
+    "status": "preparing",
     "verified_checkpoint": "231dc52",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-workflow-setup",
+    "branch": "codex/astra-multiple-zero-checkpoint",
     "base": "main",
-    "next_action": "Wait for CI, merge exact head, fetch and verify remote main.",
+    "next_action": "Commit and push verified pass5 files, open a PR to main, wait for checks and merge its exact head.",
     "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/1",
     "pr_number": 1,
     "head_sha": "5f6c37ecf8c38fd0677f52aa8b88dfe7b4bcc391",
-    "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully."
+    "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
+    "queue": [
+      {
+        "pr_number": 1,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/1",
+        "head_sha": "5f6c37ecf8c38fd0677f52aa8b88dfe7b4bcc391",
+        "status": "merged",
+        "lean_check": "passed",
+        "merge_sha": "599c59c47d398e1b669a6b0dc5015af2feeaf952",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 2,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/2",
+        "head_sha": "df8d71f899e37d48594351ead6dd622a3259a926",
+        "status": "merged",
+        "depends_on": 1,
+        "source_checkpoint": "fb4d78dc3f9f7b5a215c79ca139286810b1b362f",
+        "base_incorporated": "599c59c47d398e1b669a6b0dc5015af2feeaf952",
+        "source_tree_unchanged": true,
+        "merge_sha": "09eff14b7f970629c0c92c0455e62875b1c3861f",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      }
+    ],
+    "latest_published_source_checkpoint": "fb4d78dc3f9f7b5a215c79ca139286810b1b362f",
+    "remote_main": "09eff14b7f970629c0c92c0455e62875b1c3861f",
+    "local_main": "09eff14b7f970629c0c92c0455e62875b1c3861f",
+    "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy."
   }
 }
