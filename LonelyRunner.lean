@@ -14,6 +14,8 @@ import LonelyRunner.OwnerKernelCover
 import LonelyRunner.PeriodicPivotCounts
 import LonelyRunner.ThreeOwnerSevenArithmetic
 import LonelyRunner.ThreeLowerOwnerSeven
+import LonelyRunner.FourLowerOwnerNine
+import LonelyRunner.Prompt95CanonicalBridge
 import LonelyRunner.AffineGridArithmetic
 import LonelyRunner.AffineGridCyclic
 import LonelyRunner.AffineCyclicBadResidues

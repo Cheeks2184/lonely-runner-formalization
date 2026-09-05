@@ -393,3 +393,12 @@ project-specific axiom.
 #print axioms LonelyRunner.normalizedBadCount_seven_seven_lt_remainder_budget
 #print axioms LonelyRunner.threeLowerOwner_noncover_seven
 #print axioms LonelyRunner.threeLowerOwner_circleNorm_witness_seven
+
+-- Sixteenth Astra pass: arbitrary-height denominator-nine four-owner theorem.
+#print axioms LonelyRunner.fourLowerOwner_noncover_nine
+#print axioms LonelyRunner.fourLowerOwner_circleNorm_witness_nine
+
+-- These declarations retain the unproved universal Prompt95 premise.
+#print axioms LonelyRunner.internalCoverRedundantAt_iff_no_internal_complete_cover
+#print axioms LonelyRunner.positiveIntegerConjecture_of_maxCoveredPivotInternalCoverRedundancy
+#print axioms LonelyRunner.conjecture_of_maxCoveredPivotInternalCoverRedundancy
