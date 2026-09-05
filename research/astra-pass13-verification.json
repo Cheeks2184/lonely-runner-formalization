@@ -1,0 +1,57 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "daebd7ba9549814239408bbe8e74309fb83aa740",
+  "files": {
+    "research/astra-single-zero-balanced-audit.md": "7b47f0748b21708b74c84eddc0a5934cb13f0624174e506c4fc2bd8b0b831d76",
+    "research/astra-single-zero-balanced-review.md": "40bf90fe818435a6e7f01758ebb1ccfd1a006ada6b49f77da8e2f16c9955a5e8",
+    "research/astra-single-zero-escape-followup.md": "8f25a66d0da002b4cf942016f9584244ed62d390115a3d3800f54d1809f481bd",
+    "research/astra-balanced-p13-cover-search.md": "a9288fc3585a0bce7fbc3caf370d57f7d1d5f7f322078306751a3eb282b9f0d1",
+    "docs/astra-research-13.md": "22effa757ac415da3a3623a98fa7bbb846b6415515c0bab655ec7e4877a04e7d",
+    "README.md": "d4b7810556bdeff88efbaca4db2073d89a7d5a40539ef628beb8d289c76f77d1",
+    "STATUS.md": "147abcbd5ab7ebf8e9a70c1475727d567ee7b2033ed606e04b29540a25a5cc3f"
+  },
+  "scope": "Exact one-zero single-stependpoint obstruction andunboundedstrict-witnessfamily; noLRCcounterexampleornewLeanproof.",
+  "root_checks": {
+    "full_source_and_review_read": true,
+    "balanced_cover_units": 156,
+    "discovery_trials": 24,
+    "grid_points_per_tuple": 169,
+    "unique_bad_per_tuple": 86,
+    "signed_endpoints_per_tuple": 172,
+    "winners": 0,
+    "strict_witness": "1/9,minimum1/9>1/13",
+    "strict_margin": "4/117",
+    "author_family_controls": 5,
+    "independent_family_controls": 5,
+    "independent_mapping_controls": 1012,
+    "independent_normalization_controls": 10,
+    "historical_nearcover": {
+      "missing": [
+        79,
+        90
+      ],
+      "one_row_neighborhood": 328,
+      "two_new_row_neighborhood": 28744,
+      "scope": "Specific local neighborhoods only; no globalcoverlowerbound orunretaineddiscoveryclaim accepted."
+    },
+    "focused_tests": 48,
+    "lean_source_changed": false,
+    "local_lean_build": "Not rerun for manuscript-only checkpoint; preceding source unchanged.",
+    "preceding_lean_checkpoint": {
+      "pr": 9,
+      "build_jobs": 3610,
+      "trust_reports": 354
+    }
+  },
+  "reproducers": {
+    "author": "Execute sole python block in research/astra-single-zero-balanced-audit.md.",
+    "review": "Execute sole python block in research/astra-single-zero-balanced-review.md.",
+    "historical_neighborhoods": "Execute both python blocks in research/astra-balanced-p13-cover-search.md.",
+    "focused": "python3 -m unittest tests.test_manage_storage tests.test_validate_workflow tests.test_validate_task_ledger -q"
+  },
+  "historical_status_note": "Root conditionaldraft andnearcovernotes retainedatfrozenhashes; acceptednewaudit supersedes their pending/no-hit status.",
+  "canonical_lrc_status": "unresolved",
+  "excluded_followups": [
+    "research/astra-next-bridge-audit.md"
+  ]
+}
