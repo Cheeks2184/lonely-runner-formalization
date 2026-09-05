@@ -4,24 +4,7 @@
   "goal_status": "in_progress",
   "objective": "Produce a kernel-checked full proof or disproof of the canonical unrestricted Lonely Runner Conjecture.",
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
-  "active_tasks": [
-    {
-      "id": "/root/guard_internal_cover_audit-affine-finite-height",
-      "kind": "research",
-      "status": "in_progress",
-      "target": "Audit proposed rank-two rational affine phase supply from existing BHK collision and Dirichlet approximation; determine whether a genuine lower-count-conditional finite primitive height bound follows. Preserve rank-one exception and full hypotheses.",
-      "source_checkpoint": "7a5d0d69520a1d290c1dd6c85902488283394d1e",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "xhigh",
-      "observed_model": null,
-      "observed_effort": null,
-      "owned_files": [
-        "research/astra-affine-finite-height-audit.md"
-      ],
-      "checks": [],
-      "next_action": "Independently derive or refute proposed explicit finite-height reduction, no Lean/cache/Git/state; do not infer unrestricted resolution from finite reduction."
-    }
-  ],
+  "active_tasks": [],
   "completed_tasks": [
     {
       "id": "/root/workflow_validation",
@@ -2691,13 +2674,373 @@
       "next_action": "Include verified evidence in Pass24 checkpoint; unrestricted LRC unresolved.",
       "runtime_agent_id": "/root/cluster_limit_review",
       "sha256": "db9b829a3b8418617921b8b009664e90e77b89fd91857fb42d273b7facebfa19"
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-affine-finite-height",
+      "kind": "research",
+      "status": "complete",
+      "target": "Audit proposed rank-two rational affine phase supply from existing BHK collision and Dirichlet approximation; determine whether a genuine lower-count-conditional finite primitive height bound follows. Preserve rank-one exception and full hypotheses.",
+      "source_checkpoint": "7a5d0d69520a1d290c1dd6c85902488283394d1e",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-affine-finite-height-audit.md"
+      ],
+      "checks": [
+        "Root read full derivation and exactcontrolreplay passed25chosen68signed3closedtargetequalities3clearings7ties4primitivecertificates. Candidate only; H_N explicit."
+      ],
+      "next_action": "Independent global finite-height review active; no Lean or finite-box completion claim.",
+      "sha256": "6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f"
+    },
+    {
+      "id": "/root/nearest_grid_formal-affine-height-interface",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Read-only exact Lean interface inventory for proposed conditional affine finite-height theorem, including local lower-count rational witness transfer, BHK collision, circle phase perturbation, finite pigeonhole and primitive normalization. No proof or cache work before independent review.",
+      "source_checkpoint": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-affine-height-lean-interface.json"
+      ],
+      "checks": [
+        "Root fullread and all citedsourcehashes verified. Corrected H_N/target separation, denominator positivity header, and one transcribed sourcehash. NoLean/cachework; proposedcontracts uncompiled."
+      ],
+      "next_action": "Use corrected inventory after independent manuscript acceptance; no source implementation or cache restoration yet.",
+      "sha256": "a52486c7985b88fb5475e4354b9a80308ac0bc72e39605a4efc680cf0ac16c19"
+    },
+    {
+      "id": "/root/cluster_limit_review-affine-finite-height",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independently challenge rank-two rational affine supply and proposed lower-count-conditional primitive height bound H>[N(N-1)]^(N-2); exact frozen author hash required before acceptance.",
+      "source_checkpoint": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-affine-finite-height-review.md"
+      ],
+      "checks": [
+        "Independent manuscript theorem accepted without correction. Root exact Python block replay passed: 143 lifts, 358 signed comparisons, 16 closed target equalities; block SHA256 9996caf21270e689924d2745a15192e48079685ecc14492f4c2bf1c997668489."
+      ],
+      "next_action": "Formalize conditional global finite-height theorem; H_N and finite families F_N remain unproved.",
+      "sha256": "eb0fb96e22096175fa3b68dc70a1b7981f39356aaf1377863dcaa95b6a510876"
+    },
+    {
+      "id": "/root/nearest_grid_formal-affine-phase-transfer",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Formalize generic nearest-integer affine phase transport from settled specification; no LRC premise supplied.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/AffinePhaseTransfer.lean"
+      ],
+      "checks": [
+        "Worker module build passed; worker generic axiom probe allowed only propext, Classical.choice, Quot.sound. Root read exact source and hash; independent source review and root integrated verification pending."
+      ],
+      "next_action": "Integrate accepted source through finite-height dependency chain; no complete checkpoint or unrestricted theorem claimed.",
+      "agent_id": "/root/nearest_grid_formal",
+      "sha256": "069d7f05229f517639284a58d9bb10f6fd6ee8d949efc3d377361424e7381776"
+    },
+    {
+      "id": "/root/lower_count_supply",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Formalize explicitly bounded positive-integer hypothesis, rational denominator transfer and deduplicated nonzero rational collision witness.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/LowerCountSupply.lean"
+      ],
+      "checks": [
+        "Worker module build passed; worker generic axiom probe allowed only propext, Classical.choice, Quot.sound. Root read exact source and hash; independent source review and root integrated verification pending."
+      ],
+      "next_action": "Integrate accepted source through finite-height dependency chain; no complete checkpoint or unrestricted theorem claimed.",
+      "agent_id": "/root/lower_count_supply",
+      "sha256": "0705291adc53011fb72fc718a7260876512b092741442d6a6cceb4b76eb5ccf4"
+    },
+    {
+      "id": "/root/lower_count_supply-bhk-two-phase",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Formalize adjacent-ratio BHK free two-phase supply at 1/(N-1) using only explicit H_N and m<=N-1.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/BHKTwoPhaseSupply.lean"
+      ],
+      "checks": [
+        "Worker bounded module build and generic axiom probe passed; root source/hash read. Independent source review pending."
+      ],
+      "next_action": "Compose free phases with period normalization and nearest-integer affine transport.",
+      "sha256": "2890e8ad41f9e3c2a0f098ba2a0da7060fa14ac2fe12842adf1c11905148ac09"
+    },
+    {
+      "id": "/root/lower_count_supply-affine-period",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Formalize normalized common-period second affine phase and exact circle-norm preservation.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/AffinePhasePeriod.lean"
+      ],
+      "checks": [
+        "Worker module build and generic axiom probe passed; root source read. Independent integrated review pending."
+      ],
+      "next_action": "Compose normalized phase with BHK supply and affine transport.",
+      "sha256": "340c4dd29276544566175cf791307ca42753ddc964345aa793d33abef1e9b176"
+    },
+    {
+      "id": "/root/nearest_grid_formal-simultaneous-approximation",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Formalize finite-box simultaneous approximation for d real coordinates with q<=Q^d and strict error<1/Q.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/SimultaneousApproximation.lean"
+      ],
+      "checks": [
+        "First bounded dispatch returned after API discovery without implementing required proof. Task remains incomplete; retry same Terra medium with narrower helper stage. Overall goal inspected active.",
+        "Fractional box and strict equal-box lemma compiled after narrowed retries. Main pigeonhole proof written but two final fract/floor identities uncompiled; same-route exact correction next, not overall blockage.",
+        "Root diagnostic corrected worker status: lake env lean on full current SimultaneousApproximation exited0, log /tmp/astra-pass25-approximation-diagnostic.log. Ring suggestions/linter warnings were not compile errors. Worker finishing clean output and axiom probes.",
+        "Final worker clean module build and generic axiom probes exit0; d0/Q1 and d1/Q1 instantiations passed. Source file SHA verified by root."
+      ],
+      "next_action": "Use strict simultaneous approximation in primitive height construction.",
+      "sha256": "144aec242a3f4d06853fed110bf8ee20f1cabf88b925acda889fe08cfe57c729"
+    },
+    {
+      "id": "/root/lower_count_supply-positive-affine-witness",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Compose existing lower-count free phases, common period normalization and nearest-integer transport for positive rational affine speeds.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/PositiveAffineWitness.lean"
+      ],
+      "checks": [
+        "Worker clean module build and generic axiom probe passed; root read full source and hash. Logs /tmp/astra-pass25-positive-affine-build.log and -axioms.log. Independent source review active."
+      ],
+      "next_action": "Apply sign normalization, then anchored rank and primitive approximation adapters.",
+      "sha256": "ed9e66d5a8944f3b5862be66f96c30abe7829c063e866504ca9e9ac1989e2e03"
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-affine-formal-contract",
+      "kind": "review",
+      "status": "complete",
+      "target": "Design exact staged Lean theorem contracts for all-chosen primitive finite-height reduction; preserve rank-two and lower-count assumptions without proving F_N.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-affine-formal-contract.md"
+      ],
+      "checks": [
+        "Root read complete staged contract; current frozen hash verified. Exact natural primitive gcd, anchored rank, Fin(m+2) original count and all-chosen canonical target preserved. Plan only, no compiled theorem claim."
+      ],
+      "next_action": "Implement endpoint packet, signed wrapper, finite gcd rank exclusion and canonical adapters.",
+      "agent_id": "/root/guard_internal_cover_audit",
+      "sha256": "20ab1efc37e90d4838732098741e5b6486166ef0a737d794492eb9a41fe60a75"
+    },
+    {
+      "id": "/root/lower_count_supply-signed-affine-witness",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Sign-normalize nonzero rational affine speeds through checked positive core, preserving ratios, periods, error and closed threshold.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/SignedAffineWitness.lean"
+      ],
+      "checks": [
+        "Worker clean module build and generic axiom probe passed; root read source/hash. Logs /tmp/astra-pass25-signed-affine-build.log and -axioms.log. Independent review expanded to seven frozen modules."
+      ],
+      "next_action": "Apply anchored rank and original chosen-runner adapter; no full primitive-height formal result yet.",
+      "sha256": "19018618fdb454ddbdb199a29db8672bd4729bf68052736133c1d708cc26f3e5"
+    },
+    {
+      "id": "/root/lower_count_supply-relative-rank",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Formalize determinant rank-two and the anchored arbitrary-chosen relative-ratio nonconstancy bridge.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/RationalPairRank.lean"
+      ],
+      "checks": [
+        "Worker focused build and axiom probe passed. Root read exact source; anchor-to-arbitrary-chosen bridge retains all original labels. Not yet part of seven-component review."
+      ],
+      "next_action": "Use rank interface in primitive gcd exclusion and canonical affine adapter.",
+      "sha256": "8ab0d557ad561415b2fdf06566482e780fca1aa5b37c2a9e2340c24805ca6cbe"
+    },
+    {
+      "id": "/root/nearest_grid_formal-endpoint-approximation",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Extend simultaneous approximation on exactly m internal coordinates to Fin(m+2) with exact two endpoint values and strict rational errors.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/EndpointAffineApproximation.lean"
+      ],
+      "checks": [
+        "Worker focused build and allowed-axiom probe passed; root read exact source/hash. Endpoint m0 specialization passed where applicable. Separate adapter review still required."
+      ],
+      "next_action": "Compose full primitive all-chosen conditional height theorem; H_N remains explicit.",
+      "sha256": "19989c0528c028bd0bcb8ef4e514ac35177fafd1a0f889e69b82f25651aaa3d3"
+    },
+    {
+      "id": "/root/lower_count_supply-primitive-rank",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Use exact natural finite gcd to exclude rank one for q<H primitive endpoint approximation.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/PrimitiveAffineRank.lean"
+      ],
+      "checks": [
+        "Worker focused build and allowed-axiom probe passed; root read exact source/hash. Endpoint m0 specialization passed where applicable. Separate adapter review still required."
+      ],
+      "next_action": "Compose full primitive all-chosen conditional height theorem; H_N remains explicit.",
+      "sha256": "0b82838ac09e0572a329d7fe12091c250caa746441216e5a7ec84ceb7ff89eb9"
+    },
+    {
+      "id": "/root/lower_count_supply-canonical-affine",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Compose signed affine supply and anchored rank into exact canonical LonelyAt for an arbitrary chosen runner.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/AffineLonelyAt.lean"
+      ],
+      "checks": [
+        "Initial worker cast/division proof failed; root inspected goal active and supplied exact bare-absolute-value division correction. Same Terra medium retry compiled exact canonical wrapper; allowed-axiom probe passed. Logs /tmp/astra-pass25-affine-lonelyAt-{build,axioms}.log."
+      ],
+      "next_action": "Use frozen canonical affine wrapper in full primitive height composition; independent final adapter review next.",
+      "sha256": "19ef8e3e8b5cc0364b74d13cfb93b608adf176ffdbb1a7e020e2d5f1b484ec7b"
+    },
+    {
+      "id": "/root/nearest_grid_formal-finite-height",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Compose endpoint approximation, primitive rank and canonical affine witness into full sorted primitive large-height theorem under H_N only.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/FiniteHeightReduction.lean"
+      ],
+      "checks": [
+        "Exact full primitive sorted large-height theorem compiled after root-guided correction of error-bound indentation and strict-to-weak multiplication. Worker module build/axioms passed; only allowed axioms. Independent full-source review required before promotion/publication."
+      ],
+      "next_action": "Root integrate and fullbuild/trust, independent exact canonical review and fresh source replay, publish checkpoint; retained F_N remains unproved.",
+      "sha256": "61a5ac9e27c58db10bf014bd91346769665038ebb3c05689237870de49279be1"
+    },
+    {
+      "id": "/root/endpoint_label_audit-affine-components-review",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independently review seven frozen affine/lower-count/approximation sources through fresh-source probes and exact controls.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-affine-components-formal-review.md"
+      ],
+      "checks": [
+        "Independent seven-source review accepted; root fullread and exact sole generator replay passed. Root fresh-source Lean replay88296 exit0: 10generic contracts,29fixed controls,15allowedaxiom reports. ProbeSHA2d79b805f1612d2fde0cda1014f343fff58d132ceb7bb11807c94b4da6d1e842; log /tmp/astra-pass25-components-root-replay.log."
+      ],
+      "next_action": "Use accepted frozen seven modules beneath separately reviewed full primitive finite-height theorem.",
+      "sha256": "6f025889a586ea05fba9ba40c11d0db2c02c19bde00c3ac7070f9cada28dc3de"
+    },
+    {
+      "id": "/root/cluster_limit_review-finite-height-formal",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independently review anchored rank, primitive gcd, endpoint packet, canonical affine wrapper and forthcoming full primitive sorted large-height theorem under H_N only.",
+      "source_checkpoint": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-finite-height-formal-review.md"
+      ],
+      "checks": [
+        {
+          "status": "accepted_root_replay_passed",
+          "path": "research/astra-finite-height-formal-review.md",
+          "scope": "All twelve fresh source bodies and exact primitive sorted all-chosen conditional canonical theorem.",
+          "sha256": "723e52d4ba10a5e8976c301c2f94e312d77c8d1afb42d4ce37b4082892fd0375",
+          "generator_sha256": "88aee9e7bd437c513e00ad68cd126c7fc0a91f2d447cf0680447cf041d8805e2",
+          "probe_sha256": "a23af085457a150bb571573e58b37fccc40ab6a35e5194fd953e83bc14390480",
+          "root_replay_exit_code": 0,
+          "root_replay_log": "/tmp/astra-pass25-final-review-root-replay.log",
+          "public_checks": 19,
+          "examples": 16,
+          "review_theorems": 6,
+          "axiom_reports": 25
+        }
+      ],
+      "next_action": "None; all owned commands stopped.",
+      "result": "Accepted exact conditional H_N finite-height theorem; all twelve source bodies freshly elaborated by independent reviewer and root."
     }
   ],
-  "latest_checkpoint": "Pass24 locally verified: unequal two-cluster canonical Lean family and reviewed conditional fixed-cluster theorem; fullbuild3620/trust389/58tests/freshsourceprobes and exactcontrols passed. Cachecleanup removed7720771757bytes. Commit/push/PR/merge publication pending. Unrestricted LRC unresolved.",
+  "latest_checkpoint": "Pass25 verified: primitive_sorted_largeHeight_lonelyAt under exact lower-count H_N; twelve source bodies independently reviewed and root replayed, build3632/trust408/focused58 passed. Publication pending; unrestricted LRC unresolved.",
   "next_actions": [
-    "Publish verified Pass24 two-cluster source and reviewed conditional cluster-limit manuscript: clean idlecache, commit,push,PR,requiredchecks,exactheadmerge,verify main.",
-    "Independently audit new rational affine/Dirichlet finite-height candidate once frozen. It retains lower-count H_N and is not a full proof.",
-    "Keep full canonical goal active; neither a restricted family nor a conditional finite reduction satisfies completion."
+    "Publish verified Pass25 through commit, push, PR, required CI and exact-head merge; verify remote main.",
+    "Formalize finite-family normalization/count induction bridge and pursue genuine uniform F_N supply."
   ],
   "research_holds": [
     {
@@ -3049,6 +3392,15 @@
       "path": "research/astra-cluster-limit-audit.md",
       "review": "research/astra-cluster-limit-review.md",
       "remaining": "H_N strictly lower-count LRC remains explicit; width-dependent separation only. No Lean formalization or general split supply."
+    },
+    {
+      "id": "conditional-primitive-finite-height",
+      "status": "proved-lean-conditional",
+      "declaration": "LonelyRunner.primitive_sorted_largeHeight_lonelyAt",
+      "assumptions": "N=m+2>=3, exact lower-count H_N, sorted primitive natural speeds starting0, H>[N(N-1)]^(N-2).",
+      "conclusion": "For every original runner, positive time satisfies canonical closed threshold1/N.",
+      "evidence": "research/astra-pass25-verification.json",
+      "remaining": "Uniform inclusive finite boxes F_N and general normalization/induction-to-canonical bridge remain unproved."
     }
   ],
   "integration_check": {
@@ -3310,23 +3662,34 @@
       "coordination": "All child tasks completed and reported stopped; root fullbuild/trust/focusedtests and both final fresh-source replays completed before cleanup.",
       "retained": "Pinned toolchain,source,Git history,unique manuscripts/reviews and reproducible proof/control evidence."
     },
-    "pass24_removed_bytes": 7720771757
+    "pass24_removed_bytes": 7720771757,
+    "status": "cache removed after verified Pass25",
+    "restore_log": "/tmp/astra-pass25-cache-restore.log",
+    "restore_exit_code": 0,
+    "cleanup_deferred_reason": null,
+    "pass25_final_cleanup": {
+      "status": "complete",
+      "command": "python3 -B scripts/manage_storage.py --clean",
+      "bytes_removed": 7734053047,
+      "removed_paths": [
+        ".lake"
+      ],
+      "coordination": "All workers and root verification commands stopped before cleanup.",
+      "log": "/tmp/astra-pass25-storage-cleanup.log"
+    }
   },
-  "previous_goal_turn_classification": {
-    "classification": "no_progress",
-    "reason": "Previous reply verified active goal and existing recovery policy only; no mathematical or source progress. Revalidated current files and terminal cache handle, replayed accepted review, dispatched bounded formal helper now."
-  },
+  "previous_goal_turn_classification": "progress",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "a637d343d7bcc3b1f308de21241d1556126fd690",
+    "verified_checkpoint": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-mirrored-block-formalization",
+    "branch": "codex/astra-two-cluster-formalization",
     "base": "main",
     "next_action": "Carry receipt into next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/22",
-    "pr_number": 22,
-    "head_sha": "a637d343d7bcc3b1f308de21241d1556126fd690",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/23",
+    "pr_number": 23,
+    "head_sha": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -3533,15 +3896,24 @@
         "merge_sha": "7a5d0d69520a1d290c1dd6c85902488283394d1e",
         "checks": "Lean build/trust passed19:12:29UTC; exact computational certificates passed19:19:43UTC. Exact-head merge19:20:12UTC.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 23,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/23",
+        "head_sha": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
+        "status": "merged",
+        "merge_sha": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+        "checks": "Lean build/trust passed 20:09:54 UTC; exact computational certificates passed 20:17:40 UTC. Exact-head merge 20:19:45 UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "a637d343d7bcc3b1f308de21241d1556126fd690",
-    "remote_main": "7a5d0d69520a1d290c1dd6c85902488283394d1e",
-    "local_main": "7a5d0d69520a1d290c1dd6c85902488283394d1e",
+    "latest_published_source_checkpoint": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
+    "remote_main": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+    "local_main": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
-    "pending_checkpoint": "research/astra-pass23-verification.json",
-    "merge_sha": "7a5d0d69520a1d290c1dd6c85902488283394d1e",
-    "checks": "Lean build/trust passed19:12:29UTC; exact computational certificates passed19:19:43UTC. Exact-head merge19:20:12UTC.",
+    "pending_checkpoint": "research/astra-pass24-verification.json",
+    "merge_sha": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+    "checks": "Lean build/trust passed 20:09:54 UTC; exact computational certificates passed 20:17:40 UTC. Exact-head merge 20:19:45 UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
@@ -3549,8 +3921,8 @@
     "root_requested_blocked_status": false,
     "root_requested_resume": false,
     "mathematical_status": "unresolved",
-    "token_usage_observed": 12920239,
-    "current_work": "Pass24 source/manuscript verification passed; prepare storage cleanup and checkpoint publication. New affine finite-height candidate in progress, not yet reviewed or formalized."
+    "token_usage_observed": 14267754,
+    "current_work": "Full conditional height theorem verified. Worker failures recovered without blocking goal; no supported resume control exists."
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",
@@ -3567,12 +3939,27 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "pass": 24,
-    "branch": "codex/astra-two-cluster-formalization",
-    "status": "verified_locally_preparing_commit",
-    "base_sha": "7a5d0d69520a1d290c1dd6c85902488283394d1e",
-    "excluded_unfinished": [
-      "research/astra-affine-finite-height-audit.md"
-    ]
+    "pass": 25,
+    "branch": "codex/astra-affine-finite-height",
+    "status": "verified_pending_commit",
+    "base_sha": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+    "excluded_unfinished": [],
+    "merge_method": "merge",
+    "protection_bypass_allowed": false
+  },
+  "affine_height_formalization_preparation": {
+    "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
+    "author_sha256": "6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f",
+    "interface_inventory": "research/astra-affine-height-lean-interface.json",
+    "priority": "After PR23 exact-head merge and manuscript acceptance, formalize genuine global finite-height reduction without replacing lower-count H_N by all-dimensional LRC.",
+    "stages": [
+      "Generic nearest integer affine phase transfer for integer coefficients U and real error V, supplied joint margin, positive p and normalized y.",
+      "Explicit lower-count positive integer hypothesis and rational absolute-dedup collision witness with at most N-2 positive moving speeds; no global conjecture premise.",
+      "Existing adjacent-ratio BHK algebra supplies the rational affine free phases; handle sign normalization, denominator clearing L*tau and common period q.",
+      "Finite box pigeonhole on N-2 internal normalized coordinates yields q<=Q^(N-2), rationalp=H/q and bounded errors.",
+      "Primitive gcd/Bezout excludes rank one whenH>Q^(N-2); preserve all-chosen runner quantifiers and canonical labelling.",
+      "Independent exact-source review/fullbuild/trust/regressions and checkpoint publication. Finite boxes F_N remain unresolved."
+    ],
+    "review_sha256": "eb0fb96e22096175fa3b68dc70a1b7981f39356aaf1377863dcaa95b6a510876"
   }
 }

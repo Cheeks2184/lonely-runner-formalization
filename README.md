@@ -11,14 +11,14 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks. The
-[latest verified checkpoint](docs/astra-research-24.md) gives kernel-checked
-witnesses for separated endpoint clusters with holes and unequal membership,
-including odd total counts. It preserves the actual count and closed threshold
-through arbitrary injective labelling. A separately reviewed manuscript
-handles arbitrary fixed clusters at sufficiently large separation under an
-explicit smaller-count LRC hypothesis. Neither result resolves the full
-conjecture. The [preceding checkpoint](docs/astra-research-23.md) retains the
-complete mirrored-block theorem and the limited speed-complement audit.
+[latest verified checkpoint](docs/astra-research-25.md) proves a conditional
+finite-height theorem in Lean: assuming the precise smaller-count hypothesis
+H_N, every primitive sorted N-runner configuration above height
+[N(N-1)]^(N-2) has a positive witness for each runner at the closed 1/N
+threshold. All twelve source bodies passed independent review and root replay.
+The inclusive finite families below that bound remain unproved uniformly in N;
+this does not resolve the conjecture. The [preceding checkpoint](docs/astra-research-24.md)
+retains the separated two-cluster theorem and conditional fixed-cluster manuscript.
 The [endpoint checkpoint](docs/astra-research-22.md) retains its exact
 selector and width dichotomy; the uniform blocker bound remains unproved.
 The [symmetry checkpoint](docs/astra-research-21.md) rules out a universal

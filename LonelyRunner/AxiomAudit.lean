@@ -2,6 +2,27 @@ import LonelyRunner
 import LonelyRunner.FastestPivot
 import LonelyRunner.TopTwoTransversal
 
+-- Conditional affine supply keeps the smaller-count premise explicit.
+#print axioms LonelyRunner.LowerCountPositiveIntegerHypothesis
+#print axioms LonelyRunner.lowerCountPositiveIntegerHypothesis_rational
+#print axioms LonelyRunner.exists_lowerCount_rational_collision
+#print axioms LonelyRunner.exists_bhk_twoPhase_margin
+#print axioms LonelyRunner.exists_normalized_affine_second_phase
+#print axioms LonelyRunner.exists_affinePhaseTransfer
+#print axioms LonelyRunner.exists_positiveAffine_witness
+#print axioms LonelyRunner.exists_signedAffine_witness
+#print axioms LonelyRunner.fractionalBox
+#print axioms LonelyRunner.fractionalBox_eq_error
+#print axioms LonelyRunner.exists_simultaneous_integer_approximation
+#print axioms LonelyRunner.RationalPairRankTwo
+#print axioms LonelyRunner.rationalPairRankTwo_elim
+#print axioms LonelyRunner.relative_ratio_nonconstant_of_rankTwo
+#print axioms LonelyRunner.exists_endpoint_affine_approximation
+#print axioms LonelyRunner.primitive_dvd_of_scaled_dvd
+#print axioms LonelyRunner.rankTwo_of_primitive_approximation
+#print axioms LonelyRunner.rational_affine_lonelyAt
+#print axioms LonelyRunner.primitive_sorted_largeHeight_lonelyAt
+
 -- Unequal clusters retain their actual count through the canonical bridge.
 #print axioms LonelyRunner.twoClusterPhaseBand
 #print axioms LonelyRunner.twoClusterPhaseSupply

@@ -1,0 +1,86 @@
+{
+  "artifact": "read-only Lean interface inventory for candidate affine finite-height route",
+  "status": "candidate under independent review; no proof implementation or theorem claim",
+  "provenance": {
+    "repository_commit": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
+    "candidate": "research/astra-affine-finite-height-audit.md",
+    "candidate_sha256": "6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f"
+  },
+  "interfaces": [
+    {
+      "path": "LonelyRunner/BHKCollisionToWitness.lean",
+      "lines": "25-84",
+      "declaration": "exists_stationaryWitness_of_rational_collision",
+      "role": "Converts a nowhere-zero rational collision vector with fewer distinct magnitudes to a stationary witness.",
+      "restriction": "Its hypothesis hRational is an all-dimensional PositiveRationalConjecture-style premise; it cannot be used to establish H_N without a separately restricted lower-count witness theorem."
+    },
+    {
+      "path": "LonelyRunner/BHKAdjacentPair.lean",
+      "lines": "16-63",
+      "declarations": ["exists_adjacent_image_values", "exists_bhk_adjacentRatioCombination"],
+      "role": "Existing adjacent-ratio BHK selection interface."
+    },
+    {
+      "path": "LonelyRunner/RationalReduction.lean",
+      "lines": "9-75, 78-188",
+      "declarations": ["rationalCommonDenominator", "clearRationalSpeed", "clearRationalSpeed_cast", "clearRationalSpeed_pos", "clearRationalSpeed_injective", "positiveIntegerConjecture_iff_positiveRationalConjecture"],
+      "role": "Rational-to-positive-integer normalization and all-dimensional equivalences.",
+      "restriction": "The equivalence theorems are global conjecture equivalences, not a finite-height conditional bridge."
+    },
+    {
+      "path": "LonelyRunner/FastRunnerInsertion.lean",
+      "lines": "17-48",
+      "declarations": ["circleNorm_eq_abs_sub_round", "circleNorm_eq_abs_of_abs_le_half", "circleNorm_add_int", "abs_circleNorm_sub_circleNorm_le", "circleNorm_sub_abs_le_circleNorm"],
+      "role": "Nearest-integer formula, integer periodicity, and Lipschitz/phase-error controls."
+    },
+    {
+      "path": "LonelyRunner/NearestPivotGrid.lean",
+      "lines": "18-137",
+      "declaration": "exists_nearestPivotGrid_residue",
+      "role": "Checked nearest-integer grid transport at a pivot, including round and residue exclusion."
+    },
+    {
+      "path": "LonelyRunner/Formulations.lean",
+      "lines": "47-60",
+      "declaration": "PositiveIntegerConjecture",
+      "role": "Canonical positive-integer all-dimensional statement; not an available lower-count witness."
+    },
+    {
+      "path": "LonelyRunner/IntegerInduction.lean",
+      "lines": "130-294",
+      "declarations": ["exists_appended_witness_of_integerInsertionCover", "positiveIntegerConjecture_of_insertionCoveringPrinciple", "positiveIntegerConjecture_iff_divisorOrUncoveredPivotPrinciple"],
+      "role": "Conditional induction/reduction machinery.",
+      "restriction": "Its covering principles are not proved and cannot silently discharge H_N."
+    }
+  ],
+  "exact_key_headers": {
+    "bhk_adjacent": "exists_bhk_adjacentRatioCombination {m : Nat} [Nonempty (Fin m)] (r s : Fin m -> Rat) (hr : forall k, 0 < r k) (hnonconstant : exists a b, s a / r a != s b / r b) : exists i j, i != j and let w : Fin m -> Rat := fun k => (r i + r j) * s k - (s i + s j) * r k; (forall k, w k != 0) and w i = -w j",
+    "norm_lipschitz": "abs_circleNorm_sub_circleNorm_le (x y : Real) : |circleNorm x - circleNorm y| <= |x - y|; circleNorm_sub_abs_le_circleNorm (x y : Real) : circleNorm x - |x-y| <= circleNorm y",
+    "denominator": "theorem rationalCommonDenominator_pos {n : ℕ} (speeds : Fin n → ℚ) : 0 < rationalCommonDenominator speeds := by; theorem clearRationalSpeed_cast {n : ℕ} (speeds : Fin n → ℚ) (hpos : ∀ i, 0 < speeds i) (i : Fin n) : (clearRationalSpeed speeds i : ℝ) = (rationalCommonDenominator speeds : ℝ) * (speeds i : ℝ) := by"
+  },
+  "cited_source_sha256": {
+    "LonelyRunner/BHKAdjacentPair.lean": "3d36d812db7ed18db8fce521b2505d5904a8387d8e315c6e7d08d9eb7dc75708",
+    "LonelyRunner/BHKCollisionToWitness.lean": "42e7665af7981ef336ab4e1826ff3f096e6d6855b50440f76e2ede7a538f7f87",
+    "LonelyRunner/RationalReduction.lean": "c707227a24eb53d06b20ff00e2e86ce52c158ba7eed55c1d8eba32cf9c457a4e",
+    "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+    "LonelyRunner/NearestPivotGrid.lean": "ca5f8c1eb511a5be14d3eb50c887421ac7efa96426beb5135c0693a76b4f497b",
+    "LonelyRunner/IntegerInduction.lean": "7b315fe9ea7f8639eb45e376365f1c3795c52e2f93e608db578390c1083a5753",
+    "LonelyRunner/Formulations.lean": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788"
+  },
+  "missing_mechanical_lemmas": [
+    "A lower-count-only positive-integer/rational absolute-value dedup witness interface, with exact threshold comparison, independent of PositiveIntegerConjecture.",
+    "Primitive integer relation normalization by gcd/Bezout, including height control.",
+    "Finite integer-box encoding and pigeonhole collision theorem at the required cardinality. No exact project or mathlib API signature was asserted because cache restoration was prohibited.",
+    "A finite-height affine approximation error lemma that connects the box collision to circleNorm bounds using the existing Lipschitz APIs.",
+    "A checked bridge from the candidate H_N conditional statement to the canonical formulation while retaining all N, primitive, and height hypotheses."
+  ],
+  "staged_uncompiled_contracts": [
+    "Define H_N only over nonempty distinct positive integer moving sets D with |D|<=N-2 and threshold 1/(|D|+1). N>=3, input primitivity, and the height cutoff belong to the separate target theorem, not to H_N.",
+    "Prove integer-box collision under the stated height threshold.",
+    "Clear rational denominators for w and construct the rational affine phase transfer with integer u, rational v, and common period q.",
+    "Use the input tuple's primitivity only to exclude the rank-one u,v case through H dividing q; no primitive normalization of collision coefficients is asserted.",
+    "Apply a separately established lower-count rational absolute-dedup supply, then control phase error through circleNorm_sub_abs_le_circleNorm and finish the conditional integer canonical family."
+  ],
+  "commands_run": ["python3 scripts/validate_workflow.py", "git rev-parse HEAD", "sha256sum candidate", "read-only rg source inventory"],
+  "processes_stopped": true
+}

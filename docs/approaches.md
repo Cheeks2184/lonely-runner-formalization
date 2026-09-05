@@ -29,6 +29,13 @@ Dependencies:
 6. A uniform structural result in the dimension, without which this proves
    only finitely many dimensions one at a time.
 
+The [twenty-fifth checkpoint](astra-research-25.md) now supplies item 4 for
+primitive sorted configurations under the exact lower-count hypothesis H_N:
+all heights above [N(N-1)]^(N-2) have a kernel-checked canonical witness for
+every chosen runner. The retained inclusive finite assertion F_N remains
+unproved uniformly in N. General normalization and count induction still need
+a formal bridge; this reduction alone does not supply items 5 or 6.
+
 Obstruction: CRT does not allow a different favorable numerator for each
 coordinate; all conditions share one time. This route has been highly effective
 through the currently verified finite boxes but gives no known uniform

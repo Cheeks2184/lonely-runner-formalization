@@ -6,6 +6,17 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [twenty-fifth Astra checkpoint](docs/astra-research-25.md) proves the
+conditional primitive sorted finite-height theorem in Lean. For N>=3, the
+exact smaller-count hypothesis H_N supplies a positive canonical witness for
+every chosen runner whenever H>[N(N-1)]^(N-2). The caller supplies no affine
+rank, approximation, period, or auxiliary witness premise. All twelve source
+bodies passed independent review and root replay; the full build passed 3,632
+jobs, the trust audit accepted 408 reports, and all 58 focused tests passed.
+The inclusive finite families F_N remain unproved uniformly in N. General
+normalization and the final induction bridge are not part of this theorem;
+unrestricted LRC remains unresolved.
+
 The [twenty-fourth Astra checkpoint](docs/astra-research-24.md) proves the
 unequal two-cluster family in Lean, including holes, odd counts, signed
 relative comparisons, and the canonical statement under arbitrary injective
