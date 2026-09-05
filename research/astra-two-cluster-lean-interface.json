@@ -1,0 +1,127 @@
+{
+  "artifact": "read-only Lean interface inventory for dense paired endpoint clusters",
+  "status": "candidate-manuscript interface map only; no Lean source, import, cache, workflow state, root file, or Git change was made",
+  "provenance": {
+    "repository_commit": "7a5d0d69520a1d290c1dd6c85902488283394d1e",
+    "candidate": "research/astra-dense-paired-blocks.md",
+    "candidate_sha256": "004ef46bce4e9062fff7e0a78fbba97ea7c732d134214249a04ac993a344c16e",
+    "candidate_status": "independent review pending",
+    "frozen_core": {
+      "path": "LonelyRunner/MirroredBlockWitness.lean",
+      "sha256": "70d94cf55b457f49dcfa8c22bf8a3404abb4db1aec5e43254749ea73711da9c1"
+    },
+    "frozen_family": {
+      "path": "LonelyRunner/MirroredBlockFamily.lean",
+      "sha256": "670b27d5e0083cf84999ad81410c9def4437f6d23fca7390374ffd2926169272"
+    }
+  },
+  "existing_public_interfaces": [
+    {
+      "path": "LonelyRunner/StructuredClasses.lean",
+      "lines": "14, 28-32, 68-74",
+      "declarations": [
+        "circleNorm_neg (x : Real) : circleNorm (-x) = circleNorm x",
+        "circleNorm_ge_of_int_band (q : Int) (x delta : Real) ... : delta <= circleNorm x",
+        "circleNorm_ge_of_abs_int_band"
+      ],
+      "role": "The direct closed representative-band bridge for low phases q=0 and high phases q=k; negation transports signed lower differences."
+    },
+    {
+      "path": "LonelyRunner/MirroredBlockWitness.lean",
+      "lines": "19-90, 92-196",
+      "declarations": [
+        "private mirrored_phase_cell",
+        "mirroredConsecutiveBlockWitness (m p : Nat) (hm : 1 <= m) (hp : 2*m+1 <= p)"
+      ],
+      "role": "The private phase-cell proof is the closest checked template: derive N*delta=1, use circleNorm_ge_of_int_band at 0/k, and use Nat.cast_sub for high coordinates. Its public theorem is specialized to N=2m+2 and cannot directly serve a general N,M,P cell."
+    },
+    {
+      "path": "LonelyRunner/PivotResidues.lean",
+      "lines": "102-155",
+      "declarations": [
+        "circleNorm_nat_div_ge",
+        "circleNorm_nat_div_eq"
+      ],
+      "role": "Optional natural rational-phase route. Lines 109-120 give the established Nat.div_add_mod -> exact_mod_cast -> field_simp pattern."
+    },
+    {
+      "path": "LonelyRunner/MirroredBlockFamily.lean",
+      "lines": "15-28, 32-86, 89-190",
+      "declarations": [
+        "mirroredBlockSpeeds",
+        "card_mirroredBlockSpeeds",
+        "mirroredBlockMagnitudeCover",
+        "mirroredBlockLowerRunner",
+        "mirroredBlockRunnerWitness",
+        "mirroredBlockLonelyAt"
+      ],
+      "role": "Checked patterns for Finset.Icc unions/disjointness/cardinality, magnitude containment, reflected memberships, circleNorm_neg, and arbitrary injective Fin labeling through lonelyAt_iff_relativeLonelyAt."
+    },
+    {
+      "path": "LonelyRunner/Definitions.lean",
+      "lines": "34, 89-110",
+      "declarations": [
+        "LonelyAt",
+        "lonelyAt_iff_relativeLonelyAt"
+      ],
+      "role": "The required final labelled-runner transport."
+    },
+    {
+      "path": "LonelyRunner/PivotPairFiberCounts.lean",
+      "lines": "251 onward",
+      "declaration": "Finset.card_image_iff.mpr",
+      "role": "Existing project idiom for proving image cardinality from injectivity (supply the relevant InjOn proof). Similar uses occur in PivotZeroKernel, PrimorialHeight, and CoefficientThreeHeight."
+    }
+  ],
+  "proposed_contracts_not_yet_implemented": [
+    {
+      "name": "twoClusterPhaseCellWitness",
+      "shape": "For N>=4, 1<=M, M<N-2, P>=M+1, and P*(N-2-M)>=M*(N-1), construct t>0 with delta=1/N and closed circleNorm bounds for every natural low i with 1<=i<=M, every high P-i for 0<=i<=M, and P.",
+      "witness": "k=P/N, r=P%N, t=max(delta, ((k:Real)+delta)/((P-M:Nat):Real)).",
+      "implementation_note": "Keep this as a sufficient theorem first, rather than formalizing the manuscript's exact cell iff."
+    },
+    {
+      "name": "twoClusterSpeeds",
+      "shape": "T(A,B,M,p) = (insert 0 A) union ((insert 0 B).image (fun b => p-b)), with A,B subsets of Icc 1 M.",
+      "cardinality_goal": "T.card = A.card + B.card + 2 under p>=2*M+1.",
+      "implementation_note": "Prove image injectivity of b -> p-b on Nat via bounds b<=p, prove p-b is in Icc(p-M,p), then use card_image_iff and pairwise disjoint interval bounds."
+    },
+    {
+      "name": "twoClusterRunnerWitness",
+      "shape": "For r in T, exists t>0, forall s in T with s!=r, inverse(N:Real)<=circleNorm(t*((s:Real)-(r:Real))).",
+      "implementation_note": "Lower r uses the general phase cell at P=p-r. Upper r transports the lower result for swapped (B,A) and reflected labels p-s; unlike the equal-block Family theorem, the reflected finite set is generally a distinct swapped configuration."
+    },
+    {
+      "name": "twoClusterLonelyAt",
+      "shape": "For any injective speeds : Fin N -> Nat whose values lie in T, every runner has a positive LonelyAt witness.",
+      "implementation_note": "Use the pointwise theorem, injectivity to turn distinct Fin indices into distinct speeds, then lonelyAt_iff_relativeLonelyAt.mpr exactly as MirroredBlockFamily.lean lines 178-190."
+    }
+  ],
+  "practical_sequence": [
+    "Implement the general N,M,P phase-cell sufficient lemma in a new dedicated file importing StructuredClasses; copy only the reusable proof structure, not the private declaration.",
+    "Prove the exact two-cluster Finset membership, image-injectivity, disjointness, and cardinality lemmas before the runner theorem.",
+    "Implement lower-cluster relative containment with signed real differences and circleNorm_neg.",
+    "Implement upper-cluster transport to the explicitly swapped A/B configuration; do not assert it is the same Finset when A and B differ.",
+    "Add the arbitrary-injective Fin labeling theorem last, then add imports/audit targets only after review."
+  ],
+  "arithmetic_notes": [
+    "For the phase cell use P=N*k+r and N*delta=1. The robust scaled identity is P*delta = k + r*delta.",
+    "The upper phase bound follows from t <= (k+1-delta)/P. Prove delta is below this from r+1<=N; prove the second max argument is below it from P*(N-2-M)>=M*(N-1) and r>=0.",
+    "Use t>=A and P-M>0 for the lower phase. Retain all divisions as Real divisions; do not use Nat division for t.",
+    "The manuscript's assumption M<N-2 is required for positivity of N-2-M. The actual runner count N=A.card+B.card+2 must remain explicit and must not be replaced by M."
+  ],
+  "semantic_uncertainties_and_limits": [
+    "The candidate manuscript is explicitly pending independent review, so this inventory is not an endorsement or a theorem claim.",
+    "The proposed general phase-cell theorem must state whether its high-coordinate parameter includes i=0; the manuscript does include it to cover P.",
+    "For arbitrary A and B, reflection maps T(A,B) to T(B,A), not necessarily to itself; a proof must carry the swapped configuration explicitly.",
+    "Cardinality needs the stated subset and p>=2M+1 assumptions to exclude zero/image collisions and lower/upper overlap.",
+    "No exact iff or necessity statement is needed for the first formalization; the sufficient large-P contract is the lower-risk target."
+  ],
+  "commands_run": [
+    "python3 scripts/validate_workflow.py",
+    "git rev-parse HEAD",
+    "sha256sum research/astra-dense-paired-blocks.md",
+    "read-only rg and nl source inventory commands"
+  ],
+  "processes_stopped": true
+}

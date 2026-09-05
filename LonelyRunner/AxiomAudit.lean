@@ -2,6 +2,19 @@ import LonelyRunner
 import LonelyRunner.FastestPivot
 import LonelyRunner.TopTwoTransversal
 
+-- Unequal clusters retain their actual count through the canonical bridge.
+#print axioms LonelyRunner.twoClusterPhaseBand
+#print axioms LonelyRunner.twoClusterPhaseSupply
+#print axioms LonelyRunner.twoClusterPhaseCellWitness
+#print axioms LonelyRunner.twoClusterSpeeds
+#print axioms LonelyRunner.card_twoClusterSpeeds
+#print axioms LonelyRunner.twoClusterSpeeds_member_le
+#print axioms LonelyRunner.twoClusterSpeeds_reflect_mem
+#print axioms LonelyRunner.mem_twoClusterSpeeds_reflect_iff
+#print axioms LonelyRunner.twoClusterLowerRunner
+#print axioms LonelyRunner.twoClusterRunnerWitness
+#print axioms LonelyRunner.twoClusterLonelyAt
+
 -- The mirrored family has an unconditional witness and an exact labelled bridge.
 #print axioms LonelyRunner.mirroredBlockTime
 #print axioms LonelyRunner.mirroredConsecutiveBlockWitness
