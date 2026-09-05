@@ -332,3 +332,21 @@ why zero-kernel structure alone cannot be promoted to universal noncover.
 
 This route makes a nonvacuous arithmetic slice available for formalization
 and isolates a narrower obstruction; it leaves unrestricted LRC open.
+
+## Formalization checkpoint, 2026-09-05
+
+The scalar bound is now proved in `LonelyRunner/OwnerKernelBound.lean`.
+`LonelyRunner/PivotZeroKernel.lean` proves the literal zero-set cardinality,
+gcd-divisor containment, capacity, and common nonzero bad pair.
+`LonelyRunner/KernelCoverCertificates.lean` proves the generic family argument,
+including empty and singleton families. `LonelyRunner/OwnerKernelCover.lean`
+instantiates it with actual pivot residues and supplies the closed real
+circle-distance witness. The exact family theorem is
+`exists_pivotCandidate_avoiding_ownerKernel_family`; its gcd wrapper and
+`exists_ownerKernel_circleNorm_witness` use the same numerical condition (6).
+
+The full integrated build passes (3,599 jobs), and the trust audit accepts all
+332 reports using only the permitted standard axioms. These declarations
+resolve the formal obligations above; they do not supply the missing uniform
+dense-case premise. In particular, an example with fewer than `N-2` owners
+does not control unlisted coordinates of a full `N`-runner instance.

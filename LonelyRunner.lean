@@ -8,6 +8,11 @@ import LonelyRunner.DivisorInsertion
 import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
+import LonelyRunner.PivotZeroKernel
+import LonelyRunner.KernelCoverCertificates
+import LonelyRunner.OwnerKernelCover
+import LonelyRunner.AffineGridArithmetic
+import LonelyRunner.AffineGrid
 import LonelyRunner.ReverseGrid
 import LonelyRunner.FastestPivot
 import LonelyRunner.SaturatedTopTwo

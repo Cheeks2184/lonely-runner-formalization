@@ -4,7 +4,24 @@
   "goal_status": "in_progress",
   "objective": "Produce a kernel-checked full proof or disproof of the canonical unrestricted Lonely Runner Conjecture.",
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
-  "active_tasks": [],
+  "active_tasks": [
+    {
+      "id": "/root/vanishing_slope",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Develop and falsify a shifted-rounding bridge allowing one vanishing slope; test genuine enlargement beyond existing normalization.",
+      "source_checkpoint": "ed94a47 + finalized affine-grid manuscript",
+      "owned_files": [
+        "research/astra-vanishing-slope.md"
+      ],
+      "status": "in_progress",
+      "checks": [],
+      "launch_status": "accepted"
+    }
+  ],
   "completed_tasks": [
     {
       "id": "/root/workflow_validation",
@@ -232,14 +249,160 @@
       ],
       "launch_status": "accepted",
       "result": "Setup gate tests now construct stable setup fixtures; current research state and validstart transition also tested."
+    },
+    {
+      "id": "/root/zero_kernel",
+      "kind": "routine",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Formalize candidate-filtered zero-product residues, their exact cardinality, inclusion, and capacity bounds.",
+      "source_checkpoint": "ed94a47",
+      "owned_files": [
+        "LonelyRunner/PivotZeroKernel.lean"
+      ],
+      "status": "complete",
+      "checks": [
+        "lake env lean LonelyRunner/PivotZeroKernel.lean passed.",
+        "lake build LonelyRunner.PivotZeroKernel passed."
+      ],
+      "launch_status": "accepted",
+      "result": "Exact zero-fiber cardinality, gcd containment, capacity, and common pair are formalized.",
+      "continuation_note": "Worker initially stopped at a mechanical modulo gap; explicit continuation completed the full assigned common-pair contract."
+    },
+    {
+      "id": "/root/kernel_family",
+      "kind": "routine",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Formalize the reviewed generic labelled zero-kernel family noncover certificate.",
+      "source_checkpoint": "ed94a47",
+      "owned_files": [
+        "LonelyRunner/KernelCoverCertificates.lean"
+      ],
+      "status": "complete",
+      "checks": [
+        "lake env lean LonelyRunner/KernelCoverCertificates.lean passed.",
+        "lake build LonelyRunner.KernelCoverCertificates passed.",
+        "Worker axiom probes report only propext, Classical.choice, Quot.sound."
+      ],
+      "launch_status": "accepted",
+      "result": "Generic labelled kernel-domination certificate compiled, including empty and singleton families."
+    },
+    {
+      "id": "/root/zero_kernel-adapter",
+      "runtime_agent": "/root/zero_kernel",
+      "kind": "routine",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Adapt generic zero-kernel family noncover to literal pivot residues, gcd dominators, and closed circle-distance witness.",
+      "source_checkpoint": "ed94a47 + compiled PivotZeroKernel and pending family wrapper",
+      "owned_files": [
+        "LonelyRunner/OwnerKernelCover.lean"
+      ],
+      "status": "complete",
+      "checks": [
+        "lake env lean LonelyRunner/OwnerKernelCover.lean passed.",
+        "lake build LonelyRunner.OwnerKernelCover passed."
+      ],
+      "launch_status": "accepted",
+      "result": "Literal dominated-zero, gcd-divisor and closed circleNorm adapters compiled; no exact label-count or injectivity requirement."
+    },
+    {
+      "id": "/root/affine_grid",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Derive and falsify an exact integer-grid application of the affine avoidance lemmas; identify actual unrestricted supply gap.",
+      "source_checkpoint": "ed94a47",
+      "owned_files": [
+        "research/astra-affine-grid.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "Embedded exact reproducer passed; independent review pending."
+      ],
+      "launch_status": "accepted",
+      "result": "Manuscript grid bridges, dense family, normalization and denominator obstructions saved."
+    },
+    {
+      "id": "/root/zero_kernel-grid-arithmetic",
+      "runtime_agent": "/root/zero_kernel",
+      "kind": "routine",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Formalize settled real circle-band arithmetic for a rounded affine grid, without cardinality or conjecture assumptions.",
+      "source_checkpoint": "ed94a47 + pass2 integrated sources",
+      "owned_files": [
+        "LonelyRunner/AffineGridArithmetic.lean"
+      ],
+      "status": "complete",
+      "checks": [
+        "lake env lean LonelyRunner/AffineGridArithmetic.lean passed.",
+        "lake build LonelyRunner.AffineGridArithmetic passed."
+      ],
+      "launch_status": "accepted",
+      "result": "Exact real circle-band helper compiled from the settled affine-grid arithmetic contract."
+    },
+    {
+      "id": "/root/affine_grid-formal",
+      "runtime_agent": "/root/affine_grid",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Formalize exact actual-pivot N-2 affine-grid bridge with original full 1/N threshold and no missing pivot coordinate.",
+      "source_checkpoint": "ed94a47 + pass2 sources and compiled AffineGridArithmetic",
+      "owned_files": [
+        "LonelyRunner/AffineGrid.lean"
+      ],
+      "status": "complete",
+      "checks": [
+        "Targeted source checks and axiom probes passed.",
+        "Independent review: research/astra-pass2-review.md."
+      ],
+      "launch_status": "accepted",
+      "result": "Exact Nat actual-pivot affine-grid theorem and rounding/band helpers compiled; independent semantic review accepted."
+    },
+    {
+      "id": "/root/family_grid_review",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independently audit new exact zero-kernel/family/adapter contracts and affine-grid manuscript, distinguish local scope from canonical completion.",
+      "source_checkpoint": "ed94a47 + current new modules",
+      "owned_files": [
+        "research/astra-pass2-review.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "Targeted source checks and axiom probes passed.",
+        "Independent review: research/astra-pass2-review.md."
+      ],
+      "launch_status": "accepted",
+      "launch_note": "First launch rejected at active-agent limit; retried successfully after completed Terra family worker released slot. Requested routing preserved.",
+      "result": "Independent review accepted all new Lean contracts and scoped manuscript results, with source hashes and exact checks."
     }
   ],
-  "latest_checkpoint": "First authorized research pass: four auxiliary declarations integrated; full build (3,596 jobs), trust audit (319 reports), and independent exact-contract review passed. The canonical Conjecture and its negation remain unproved. The full goal stays active.",
+  "latest_checkpoint": "Second integrated pass complete: five new Lean modules, 17 public auxiliary theorems, full build 3601 jobs, trust audit 336 reports, independent Astra review accepted. Saving local checkpoint while shifted-grid research continues.",
   "next_actions": [
-    "Immediately formalize the reviewed zero-kernel family obstruction: define candidate-filtered zero sets, prove their exact gcd-difference cardinality and capacity, and reuse ordered-union certificates. The single shared cache is retained for this queued work.",
-    "Use Astra Extra High to derive and test an exact integer-grid application of affine avoidance. Distinguish the field prime from the external modulus and compare with existing routes.",
-    "Investigate dense internal covers violating 2*(N+1)*c + (N-2)*q <= N*(N+1). Do not retry the q=1 split-tree method as novel: existing two-parent machinery subsumes it.",
-    "Preserve the full canonical proof/disproof objective. Finite cases and auxiliary results do not complete the goal."
+    "Complete and independently review the actual-pivot affine-grid Lean bridge using the compiled real-arithmetic helper. Include the original pivot and all N-2 remaining speeds at the closed 1/N threshold.",
+    "Checkpoint the zero-kernel family batch with the full build (3599 jobs) and trust audit (332 reports). Retain the shared cache for active affine work.",
+    "Develop and falsify a shifted-rounding bridge allowing one vanishing slope. Preserve exact premises and the known normalization obstructions.",
+    "Investigate dense internal covers outside both restricted criteria. Do not retry the q=1 split-tree method as novel: existing ordered two-parent certificates subsume it.",
+    "Preserve the full canonical proof or disproof objective. Partial families, finite checks, and failed auxiliary claims do not complete it."
   ],
   "research_holds": [
     {
@@ -286,30 +449,44 @@
     },
     {
       "id": "owner-zero-kernel",
-      "status": "scalar-bounds-proved-lean; family-manuscript-reviewed",
-      "path": "LonelyRunner/OwnerKernelBound.lean",
-      "review": "research/astra-owner-review.md",
-      "remaining": "Zero-fiber/capacity/familyformalization anduniformdense-case mechanism."
+      "status": "scalar-zero-and-family-proved-lean",
+      "path": "LonelyRunner/OwnerKernelCover.lean",
+      "review": "research/astra-pass2-review.md",
+      "remaining": "Uniform dense-case cover mechanism; the literal witness controls only listed owners plus pivot."
     },
     {
       "id": "endpoint-search-rank",
       "status": "manuscript-obstruction-recorded",
       "path": "research/astra-pivot-route.md",
       "remaining": "No dimension-onlyjumpbound; this doesnotrefuteLRC."
+    },
+    {
+      "id": "affine-grid-supply",
+      "status": "actual-pivot-bridge-proved-lean",
+      "path": "LonelyRunner/AffineGrid.lean",
+      "remaining": "Unrestricted supply remains false for the all-nonzero-slope normalization. Shifted-rounding extension is under investigation; product-free Theorem A and explicit family remain manuscript-only.",
+      "review": "research/astra-pass2-review.md"
+    },
+    {
+      "id": "explicit-odd-dense-family",
+      "status": "manuscript-independently-reviewed",
+      "path": "research/astra-affine-grid.md",
+      "remaining": "The explicit family has N-1 speeds and a closed 1/N witness for every odd N>=5. It is not yet formalized in Lean and does not cover arbitrary tuples."
     }
   ],
   "integration_check": {
     "status": "passed",
-    "verification_record": "research/astra-pass1-verification.json",
-    "build_jobs": 3596,
-    "trust_reports": 319,
-    "focused_tests_passed": 32
+    "verification_record": "research/astra-pass2-verification.json",
+    "build_jobs": 3601,
+    "trust_reports": 336
   },
   "storage_checkpoint": {
     "download_archive_bytes_removed": 439158169,
     "archive_count": 8639,
     "archive_names_sha256": "c6488a774e671ba4709034b089eb5a73fcbd6c17743c760b772c898a83d0e392",
     "shared_lake_cache_retained": true,
-    "retention_reason": "Immediately queued formalization of the reviewed zero-residue cardinality, capacity, and family noncover theorem."
-  }
+    "retention_reason": "Active affine-grid arithmetic formalization and immediately queued field/grid bridge; one shared cache only.",
+    "report_bytes": 7676302956
+  },
+  "previous_goal_turn_classification": "progress: commit ed94a47 added four kernel-checked auxiliary declarations and integrated verification; current checkout is clean and matches that checkpoint."
 }
