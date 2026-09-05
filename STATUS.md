@@ -6,6 +6,17 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [twenty-sixth Astra checkpoint](docs/astra-research-26.md) proves the
+unconditional canonical equivalence with all inclusive primitive finite
+families in Lean. Five modules formalize generic sorting, signed normalization,
+exact inverse-label/time transport, the low/high height split, and strict
+moving-count induction. The integrated build passed 3,637 jobs, the trust
+audit accepted 419 reports, and all 58 focused tests passed. Independent
+fresh-source review and root replay passed 23 permitted-only axiom reports
+with genuine H_3/F_3 and signed boundary controls. A separate reviewed
+manuscript gives exact limits of the specified endpoint approximation method.
+The universal finite-family proposition and unrestricted LRC remain unproved.
+
 The [twenty-fifth Astra checkpoint](docs/astra-research-25.md) proves the
 conditional primitive sorted finite-height theorem in Lean. For N>=3, the
 exact smaller-count hypothesis H_N supplies a positive canonical witness for

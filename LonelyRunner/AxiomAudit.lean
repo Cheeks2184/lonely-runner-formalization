@@ -2,6 +2,19 @@ import LonelyRunner
 import LonelyRunner.FastestPivot
 import LonelyRunner.TopTwoTransversal
 
+-- The exact finite-family equivalence does not prove either side.
+#print axioms LonelyRunner.exists_strictMono_reindex
+#print axioms LonelyRunner.lonelyAt_reindex_translate_scale_iff
+#print axioms LonelyRunner.exists_sorted_primitive_integer_normalization
+#print axioms LonelyRunner.InclusivePrimitiveFiniteFamily
+#print axioms LonelyRunner.AllInclusivePrimitiveFiniteFamilies
+#print axioms LonelyRunner.integer_lonelyAt_of_lower_and_finiteFamily
+#print axioms LonelyRunner.PositiveIntegerAtCount
+#print axioms LonelyRunner.lowerCount_of_previous_counts
+#print axioms LonelyRunner.positiveIntegerAtCount_of_lower_and_finiteFamily
+#print axioms LonelyRunner.positiveIntegerConjecture_of_allInclusivePrimitiveFiniteFamilies
+#print axioms LonelyRunner.conjecture_iff_allInclusivePrimitiveFiniteFamilies
+
 -- Conditional affine supply keeps the smaller-count premise explicit.
 #print axioms LonelyRunner.LowerCountPositiveIntegerHypothesis
 #print axioms LonelyRunner.lowerCountPositiveIntegerHypothesis_rational
