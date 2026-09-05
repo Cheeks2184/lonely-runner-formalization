@@ -47,6 +47,11 @@ not an independent supply principle. These results do not exclude unions with
 the existing height or insertion methods; a viable route must add a genuinely
 new supply argument.
 
+Pair-sum completeness is now proved for each already witnessed positive
+integer tuple: a finite floor-cell minimum returns an exact certificate without
+discarding repeated labels or closed endpoints. This replaces the former
+fixed-tuple formalization gap, but leaves the uniform certificate supply open.
+
 Obstruction: CRT does not allow a different favorable numerator for each
 coordinate; all conditions share one time. This route has been highly effective
 through the currently verified finite boxes but gives no known uniform
@@ -135,17 +140,19 @@ finite checking for each `n` into a proof of `forall n`.
 
 ## F. Pair-sum critical spectrum
 
-For a positive integer tuple with at least two entries, a global maximum of
-`min_i ||a_i t||` occurs at `t = r/(a_p+a_q)` for two distinct indices. The
-audited proof uses opposite slopes among active triangular waves, with the
-value `1/2` handled separately. This gives a second finite candidate spectrum
-whose invariant denominator bound is `max_{p<q}(a_p+a_q)`; the sharper
-`2a_n-1` bound requires a sorted pairwise-distinct tuple.
+For a positive integer tuple with at least two entries, the new finite-cell
+theorem proves witness/candidate completeness: any supplied closed witness
+gives a time `r/(a_p+a_q)` for distinct original indices, including repeated
+speeds and the half-cell fallback. This is kernel checked and makes the
+pair-sum candidate search complete for a fixed witnessed tuple.
 
-Obstruction: the spectrum is finite only after the speeds are fixed. No bound
-on a minimal counterexample's speeds follows from it. Formalization of the
-piecewise-linear maximum argument remains open; see
-`docs/round6-strategies.md`.
+Candidate denominators are bounded by `max_{p<q}(a_p+a_q)`. For a sorted
+pairwise-distinct tuple this is `a_(n-1)+a_n <= 2a_n-1`.
+
+The older global-maximum identity for `min_i ||a_i t||` remains a manuscript
+statement, not a new kernel declaration. Its finite spectrum has no uniform
+speed bound, so neither result supplies certificates in every dimension. See
+`docs/round6-strategies.md` and the [formal completeness checkpoint](astra-research-28.md).
 
 ## G. Codimension-one divisor insertion
 

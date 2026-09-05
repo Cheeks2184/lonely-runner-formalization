@@ -6,6 +6,14 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [twenty-eighth Astra checkpoint](docs/astra-research-28.md) adds a
+kernel-checked fixed-instance pair-sum completeness bridge and the resulting
+canonical equivalence. The full source build passed 3,638 jobs, the trust audit
+accepted 427 permitted-only reports, and independent exact-source review
+accepted 24 further permitted-only reports. The new equivalence does not supply
+pair-sum certificates or finite-family witnesses uniformly; unrestricted LRC
+remains unproved.
+
 The [twenty-seventh Astra checkpoint](docs/astra-research-27.md) records
 accepted manuscript audits of adaptive and exact-rounding endpoint packets.
 They preserve a valid conditional lower-count transfer while refuting the

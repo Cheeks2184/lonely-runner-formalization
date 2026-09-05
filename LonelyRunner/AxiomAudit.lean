@@ -340,6 +340,14 @@ project-specific axiom.
 #print axioms LonelyRunner.prefixDependentCost_relocate
 #print axioms LonelyRunner.pairSumCertificate_iff_pair_time
 #print axioms LonelyRunner.positiveIntegerPairSumCertificateConjecture_imp_positiveIntegerConjecture
+#print axioms LonelyRunner.circleNorm_le_abs_sub_int
+#print axioms LonelyRunner.int_band_of_circleNorm_ge
+#print axioms LonelyRunner.exists_balanced_pairSum_cell_peak
+#print axioms LonelyRunner.exists_pairSum_time_of_witness
+#print axioms LonelyRunner.pairSumCertificate_of_witness
+#print axioms LonelyRunner.exists_witness_iff_pairSumCertificate
+#print axioms LonelyRunner.positiveIntegerConjecture_iff_pairSumCertificateConjecture
+#print axioms LonelyRunner.conjecture_iff_pairSumCertificateConjecture
 #print axioms LonelyRunner.circleNorm_mul_abs_right
 #print axioms LonelyRunner.exists_stationaryWitness_abs_iff
 #print axioms LonelyRunner.exists_stationaryWitness_scale_iff

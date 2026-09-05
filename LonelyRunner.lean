@@ -87,6 +87,7 @@ import LonelyRunner.ResidualVariationEnergy
 import LonelyRunner.ResidualVariationDebt
 import LonelyRunner.RelocationDescent
 import LonelyRunner.PairSumGeometry
+import LonelyRunner.PairSumCompleteness
 import LonelyRunner.IntegerInduction
 import LonelyRunner.Normalization
 import LonelyRunner.RationalReduction
