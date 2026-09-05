@@ -11,14 +11,16 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks. The
-[latest verified checkpoint](docs/astra-research-25.md) proves a conditional
-finite-height theorem in Lean: assuming the precise smaller-count hypothesis
-H_N, every primitive sorted N-runner configuration above height
-[N(N-1)]^(N-2) has a positive witness for each runner at the closed 1/N
-threshold. All twelve source bodies passed independent review and root replay.
-The inclusive finite families below that bound remain unproved uniformly in N;
-this does not resolve the conjecture. The [preceding checkpoint](docs/astra-research-24.md)
-retains the separated two-cluster theorem and conditional fixed-cluster manuscript.
+[latest verified checkpoint](docs/astra-research-26.md) proves the exact
+canonical equivalence with all inclusive primitive finite families in Lean.
+It formalizes sorting, signed-integer translation and gcd normalization,
+original-label/time transport, and strict count induction. Each fixed count
+retains height at most [N(N-1)]^(N-2); supplying those witnesses uniformly in
+N remains unproved. The [preceding checkpoint](docs/astra-research-25.md)
+provides the conditional large-height theorem used in this equivalence.
+An independently reviewed audit shows why the specified endpoint approximation
+method cannot supply all retained cases. Neither side of the final equivalence
+is proved independently, and unrestricted LRC remains unresolved.
 The [endpoint checkpoint](docs/astra-research-22.md) retains its exact
 selector and width dichotomy; the uniform blocker bound remains unproved.
 The [symmetry checkpoint](docs/astra-research-21.md) rules out a universal

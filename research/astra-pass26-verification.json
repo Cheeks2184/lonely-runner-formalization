@@ -1,0 +1,130 @@
+{
+  "status": "verified",
+  "base_commit": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+  "branch": "codex/astra-finite-family-equivalence",
+  "scope": "Formal bridge from inclusive primitive finite families to canonical Conjecture and back; does not prove either side. Independent bounded affine packet-scope manuscript.",
+  "source_sha256": {
+    "LonelyRunner/FiniteTupleSorting.lean": "71b47c20282d091129fe9990b2d1bbdfdebff45e49dea2bfbd7d4425fe89f775",
+    "LonelyRunner/LonelyAtTransport.lean": "6596481a6087174f7f7bb7d5140e339d0a571b05bc369fd3a9f0c432875ee1ee",
+    "LonelyRunner/PrimitiveTupleNormalization.lean": "cac3351bf8c755c0bd354d0330e766f49c255d7ef21637d0975a8d8633cd94b0",
+    "LonelyRunner/FinitePrimitiveFamilies.lean": "1f693dc423af998e84291b854be3426242a962efe5b691a6cba492874d23b74a",
+    "LonelyRunner/FiniteFamilyEquivalence.lean": "b47e65f4a519e017ff69b54e820e5b913360d8434f2c6518ebb42c988b4c76dc"
+  },
+  "contract": {
+    "path": "research/astra-finite-family-bridge-contract.md",
+    "sha256": "214bfd677cae6cbe5f9a1717511a714bf47781a84689a2e534d470917f8aa018",
+    "root_read_and_replay_exit_code": 0,
+    "generator_sha256": "09014629a2122ec229514ae131ca7fe7c860b8ec5873229e471f7c17f014e947",
+    "normalization_fixtures": 4,
+    "signed_comparisons": 90,
+    "all_chosen_witnesses": 9,
+    "strict_lower_count_requests": 28
+  },
+  "packet_scope_audit": {
+    "path": "research/astra-uniform-finite-supply-audit.md",
+    "sha256": "ab8838edae5de0e1b08fabb72a091f141387ba84ecb37ce7c3465c992c5320f5",
+    "status": "independently_accepted_root_replay_passed",
+    "root_read_and_replay_exit_code": 0,
+    "generator_sha256": "c51414578f21bb121ca0bdf50f6f26c0271e3930a27907be87c999250ce62301",
+    "output_sha256": "01af7ac7db4b1216ee456a0904d46fa87cb448568f231cf103ac646c712649ae",
+    "independent_review": {
+      "status": "accepted_root_replay_passed",
+      "path": "research/astra-uniform-finite-supply-review.md",
+      "sha256": "2ca0787135fcb15220b4dedf8f7b77d79b0d7aee666880e63c69e43a5a8053de",
+      "program_sha256": "06cc57ae12235e93fb5e3c611e3f07b1289ead9dcd6c8cf7335c6045a658ed94",
+      "output_sha256": "7cc1bec542cb000ca61ab65b7e506a8e4a7a705b83efdea0df020fe7668ec16b",
+      "root_replay_exit_code": 0,
+      "counts": {
+        "closed_global_boundary_instances": 18,
+        "coefficient_identity_slots": 189,
+        "consecutive_closed_equalities": 106,
+        "consecutive_families": 6,
+        "consecutive_signed_comparisons": 518,
+        "endpoint_duplicate_count_controls": 1,
+        "even_sharp_families": 3,
+        "global_packet_instances": 24,
+        "identity_folds": 8,
+        "individual_global_scope_controls": 1,
+        "individual_packet_witness_comparisons": 6,
+        "missing_budget_controls": 1,
+        "missing_distinctness_controls": 1,
+        "missing_rank_controls": 1,
+        "mixed_sign_global_fixtures": 2,
+        "nonzero_integer_radius_controls": 24,
+        "odd_sharp_families": 3,
+        "relative_pair_checks": 1863,
+        "residue_function_evaluations": 5376,
+        "sharp_families": 6,
+        "strict_denominator_descents": 16
+      }
+    }
+  },
+  "checks": {
+    "focused_tests": {
+      "status": "passed",
+      "log": "/tmp/astra-pass26-focused-tests.log",
+      "exit_code": 0,
+      "tests": 58,
+      "command": "PATH=/home/joshua/.elan/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests.test_validate_workflow tests.test_manage_storage tests.test_validate_task_ledger tests.test_audit_lean_trust -q"
+    },
+    "independent_five_source_review": {
+      "status": "accepted_root_replay_passed",
+      "path": "research/astra-finite-family-formal-review.md",
+      "sha256": "6576d272f84a8d6df4195e1bb84f058c80a28d1da6f484288d97506bafd16593",
+      "generator_sha256": "e91b82ad275d43b0878a0034605ff03a5c8536a4f76fccd36f40925db66a7ca9",
+      "probe_sha256": "0b91b8592a908bb80785634e3215043e0f91c5115b95f765bb4b483df86afe80",
+      "root_replay_exit_code": 0,
+      "root_replay_log": "/tmp/astra-pass26-source-review-root-replay.log",
+      "root_lean_log": "/tmp/astra-pass26-source-review-root-lean.log",
+      "lean_log_sha256": "a551a2c9960c24bbf2da633b34d7f103c85b0273bc40f2943fe9448840febfd5",
+      "source_declarations": 11,
+      "named_review_theorems": 12,
+      "anonymous_kernel_examples": 22,
+      "axiom_reports": 23,
+      "preexisting_project_dependencies": 37,
+      "fixed_controls": {
+        "phase_identities": 108,
+        "literal_original_runner_witnesses": 12,
+        "literal_witness_comparisons": 24,
+        "wrong_transport_rejections": 2
+      }
+    },
+    "full_build": {
+      "status": "passed",
+      "log": "/tmp/astra-pass26-full-build.log",
+      "exit_code": 0,
+      "jobs": 3637,
+      "command": "PATH=/home/joshua/.elan/bin:$PATH lake build"
+    },
+    "trust_audit": {
+      "status": "passed",
+      "log": "/tmp/astra-pass26-trust.log",
+      "command": "PATH=/home/joshua/.elan/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 scripts/audit_lean_trust.py",
+      "exit_code": 0,
+      "reports": 419
+    }
+  },
+  "storage": {
+    "restore_log": "/tmp/astra-pass26-cache-restore.log",
+    "restore_exit_code": 0,
+    "status": "cache removed after verification",
+    "cleanup": {
+      "status": "complete",
+      "command": "python3 -B scripts/manage_storage.py --clean",
+      "bytes_removed": 7747979982,
+      "removed_paths": [
+        ".lake"
+      ],
+      "log": "/tmp/astra-pass26-storage-cleanup.log",
+      "coordination": "All root and formal-review verification stopped; active manuscript author confirmed command/file-write hold and was released after cleaner exit0."
+    }
+  },
+  "publication_status": "verified; commit, push, PR and exact-head merge pending",
+  "integration_sha256": {
+    "LonelyRunner.lean": "ddd764603323d2d14cfd18fe51539c0bb0baa57002fb8b238cef0549dcfe0bf0",
+    "LonelyRunner/AxiomAudit.lean": "35b90da758f2a831db43ded08d55ddeb75fc8675b83c9b2fcf5b439f86882bed"
+  },
+  "excluded_unfinished": [
+    "research/astra-cardinality-adaptive-affine-audit.md"
+  ]
+}

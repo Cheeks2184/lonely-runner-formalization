@@ -4,7 +4,24 @@
   "goal_status": "in_progress",
   "objective": "Produce a kernel-checked full proof or disproof of the canonical unrestricted Lonely Runner Conjecture.",
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
-  "active_tasks": [],
+  "active_tasks": [
+    {
+      "id": "/root/guard_internal_cover_audit-cardinality-adaptive-affine",
+      "kind": "research",
+      "status": "in_progress",
+      "target": "Audit genuine cardinality-adaptive collision margin as a proposed escape from fixed-budget endpoint-packet obstruction. Derive exact conditional transfer and test universal packet supply, first on consecutive5runner family.",
+      "source_checkpoint": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-cardinality-adaptive-affine-audit.md"
+      ],
+      "checks": [],
+      "next_action": "Bounded independent manuscript derivation and exact finite controls; no source/state/Git/cache mutation."
+    }
+  ],
   "completed_tasks": [
     {
       "id": "/root/workflow_validation",
@@ -3035,12 +3052,263 @@
       ],
       "next_action": "None; all owned commands stopped.",
       "result": "Accepted exact conditional H_N finite-height theorem; all twelve source bodies freshly elaborated by independent reviewer and root."
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-finite-family-contract",
+      "kind": "research",
+      "status": "complete",
+      "target": "Design exact general normalization and strong-count-induction contract bridging the conditional primitive finite-height theorem to canonical Conjecture iff all inclusive finite primitive families F_N. No assumption weakening; source/contract work only.",
+      "source_checkpoint": "52eb99ea7d4cdd428dadd544c10f247a8a90d3e5",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-finite-family-bridge-contract.md"
+      ],
+      "checks": [
+        "4 normalization fixtures",
+        "90 signed transport comparisons",
+        "9 all-chosen witnesses",
+        "28 strict lower-count requests",
+        "2 wrong transport rejections"
+      ],
+      "next_action": "Implement exact contracts; no finite-family supply proved.",
+      "result": "Complete manuscript contract accepted by root semantic review; exact fixed controls root replay passed. Formal implementation pending.",
+      "sha256": "214bfd677cae6cbe5f9a1717511a714bf47781a84689a2e534d470917f8aa018"
+    },
+    {
+      "id": "/root/nearest_grid_formal-finite-tuple-sorting",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Implement exact generic exists_strictMono_reindex for arbitrary Fin n injective tuple in linear order, including n0/n1, using pinned finite range order isomorphism.",
+      "source_checkpoint": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/FiniteTupleSorting.lean"
+      ],
+      "checks": [
+        "lake build LonelyRunner.FiniteTupleSorting exit0",
+        "/tmp/finite_tuple_sorting_probes.lean exit0",
+        "only permitted axioms",
+        "diff and banned-token scans passed"
+      ],
+      "next_action": "Frozen source; implement successor normalization.",
+      "sha256": "71b47c20282d091129fe9990b2d1bbdfdebff45e49dea2bfbd7d4425fe89f775",
+      "result": "Exact generic sorter compiled; n0/n1/non-involutive tuple controls passed. Independent final source review pending."
+    },
+    {
+      "id": "/root/endpoint_label_audit-uniform-finite-supply",
+      "kind": "research",
+      "status": "complete",
+      "target": "Investigate genuine uniform F_N supply after the conditional height theorem; bounded structural audit of extremal primitive configurations, preserving one common time and original closed threshold. Produce proof or precise obstruction and exact controls, not merely finite numerical success.",
+      "source_checkpoint": "52eb99ea7d4cdd428dadd544c10f247a8a90d3e5",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-uniform-finite-supply-audit.md"
+      ],
+      "checks": [
+        "Exact standalone controls author replay exit0",
+        "24 packet instances,16 auxiliary descents,1392 relative error checks,408 consecutive comparisons"
+      ],
+      "next_action": "Independent mathematical review and root replay before acceptance.",
+      "result": "Author manuscript: exact affine endpoint-packet limitations, denominator folding and sharp packet height bound. No uniform finite supply. Independent review pending.",
+      "sha256": "ab8838edae5de0e1b08fabb72a091f141387ba84ecb37ce7c3465c992c5320f5"
+    },
+    {
+      "id": "/root/lower_count_supply-lonely-at-transport",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Implement exact canonical LonelyAt equivalence under permutation, common translation and nonzero common scale; inverse label and inverse time.",
+      "source_checkpoint": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/LonelyAtTransport.lean"
+      ],
+      "checks": [
+        "module build exit0",
+        "fixture probe exit0 at1e0007fc",
+        "permitted-only helper axioms",
+        "source6596481a unchanged"
+      ],
+      "next_action": "Frozen source; implement finite-family fixed-count bridge.",
+      "recovery": {
+        "failure": "Worker misread request to construct probe as expecting existing file and returned missing-file error.",
+        "action": "Retry same Terra medium route with explicit instruction to create owned probe; existing authorization sufficient.",
+        "goal_effect": "Isolated task failure; do not block full goal.",
+        "followup": "Worker created probe but stopped on swap simplification and incorrect negative-scale fixture. Root supplied explicit finite permutation and corrected original array; same-route retry ongoing."
+      },
+      "source_sha256": "6596481a6087174f7f7bb7d5140e339d0a571b05bc369fd3a9f0c432875ee1ee",
+      "result": "Exact generic transport compiled; corrected nonvacuous all-r/all-T, negative-scale and zero-time fixtures passed. Failed draft fixtures rejected, same-route recovery succeeded."
+    },
+    {
+      "id": "/root/nearest_grid_formal-primitive-tuple-normalization",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Implement general signed-integer tuple normalization into sorted primitive natural row with positive gcd, zero anchor, original-label permutation, exact translate/scale factorization.",
+      "source_checkpoint": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/PrimitiveTupleNormalization.lean"
+      ],
+      "checks": [
+        "module build exit0",
+        "exact contract and permitted-only axiom checks passed"
+      ],
+      "next_action": "Frozen source; final independent full-source review pending.",
+      "sha256": "cac3351bf8c755c0bd354d0330e766f49c255d7ef21637d0975a8d8633cd94b0",
+      "result": "Compiled signed normalization, narrowed import; signed2/3/4-label instantiations and jointgcd probe passed. Exact expected 4-label factorization remains a final review control."
+    },
+    {
+      "id": "/root/lower_count_supply-finite-primitive-families",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Implement exact inclusive primitive finite-family definitions and signed integer fixed-count canonical bridge under H_N and F_N, using normalization and transport.",
+      "source_checkpoint": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/FinitePrimitiveFamilies.lean"
+      ],
+      "checks": [
+        "module build exit0",
+        "exact contract and permitted-only axiom checks passed"
+      ],
+      "next_action": "Frozen source; final independent full-source review pending.",
+      "sha256": "1f693dc423af998e84291b854be3426242a962efe5b691a6cba492874d23b74a",
+      "result": "Exact inclusive definitions and signed integer H_N/F_N bridge compiled; contract/axiom checks passed. Genuine finite-premise both-branch controls remain final review work."
+    },
+    {
+      "id": "/root/cluster_limit_review-uniform-finite-supply",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independently audit exact affine endpoint-packet denominator folding, sharp height necessity/constructions, and consecutive all-chosen obstruction; no F_N resolution claim.",
+      "source_checkpoint": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-uniform-finite-supply-review.md"
+      ],
+      "checks": [
+        {
+          "status": "accepted_root_replay_passed",
+          "path": "research/astra-uniform-finite-supply-review.md",
+          "sha256": "2ca0787135fcb15220b4dedf8f7b77d79b0d7aee666880e63c69e43a5a8053de",
+          "program_sha256": "06cc57ae12235e93fb5e3c611e3f07b1289ead9dcd6c8cf7335c6045a658ed94",
+          "output_sha256": "7cc1bec542cb000ca61ab65b7e506a8e4a7a705b83efdea0df020fe7668ec16b",
+          "root_replay_exit_code": 0,
+          "counts": {
+            "closed_global_boundary_instances": 18,
+            "coefficient_identity_slots": 189,
+            "consecutive_closed_equalities": 106,
+            "consecutive_families": 6,
+            "consecutive_signed_comparisons": 518,
+            "endpoint_duplicate_count_controls": 1,
+            "even_sharp_families": 3,
+            "global_packet_instances": 24,
+            "identity_folds": 8,
+            "individual_global_scope_controls": 1,
+            "individual_packet_witness_comparisons": 6,
+            "missing_budget_controls": 1,
+            "missing_distinctness_controls": 1,
+            "missing_rank_controls": 1,
+            "mixed_sign_global_fixtures": 2,
+            "nonzero_integer_radius_controls": 24,
+            "odd_sharp_families": 3,
+            "relative_pair_checks": 1863,
+            "residue_function_evaluations": 5376,
+            "sharp_families": 6,
+            "strict_denominator_descents": 16
+          }
+        }
+      ],
+      "next_action": "Freeze selected endpoint-packet branch; no uniform finite supply achieved.",
+      "result": "Accepted exact manuscript scope without correction; root complete read and independent replay passed."
+    },
+    {
+      "id": "/root/lower_count_supply-finite-family-equivalence",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Implement exact strong-count induction and unconditional Conjecture iff AllInclusivePrimitiveFiniteFamilies; no same-count H_N assumption.",
+      "source_checkpoint": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/FiniteFamilyEquivalence.lean"
+      ],
+      "checks": [
+        "module build exit0",
+        "exact header and permitted-only axiom probe exit0",
+        "root full source read accepted"
+      ],
+      "next_action": "Frozen; integrated build and independent full-source review pending.",
+      "sha256": "b47e65f4a519e017ff69b54e820e5b913360d8434f2c6518ebb42c988b4c76dc",
+      "result": "Exact unconditional Conjecture iff AllInclusivePrimitiveFiniteFamilies compiled; no independent truth of either side."
+    },
+    {
+      "id": "/root/endpoint_label_audit-finite-family-formal-review",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independently review all five complete source bodies and canonical iff, exact count/normalization/label/time/finite-bound conventions. Final fifth body accepted only at root finalhash.",
+      "source_checkpoint": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-finite-family-formal-review.md"
+      ],
+      "checks": [
+        {
+          "status": "accepted_root_replay_passed",
+          "path": "research/astra-finite-family-formal-review.md",
+          "sha256": "6576d272f84a8d6df4195e1bb84f058c80a28d1da6f484288d97506bafd16593",
+          "generator_sha256": "e91b82ad275d43b0878a0034605ff03a5c8536a4f76fccd36f40925db66a7ca9",
+          "probe_sha256": "0b91b8592a908bb80785634e3215043e0f91c5115b95f765bb4b483df86afe80",
+          "root_replay_exit_code": 0,
+          "root_replay_log": "/tmp/astra-pass26-source-review-root-replay.log",
+          "root_lean_log": "/tmp/astra-pass26-source-review-root-lean.log",
+          "lean_log_sha256": "a551a2c9960c24bbf2da633b34d7f103c85b0273bc40f2943fe9448840febfd5",
+          "source_declarations": 11,
+          "named_review_theorems": 12,
+          "anonymous_kernel_examples": 22,
+          "axiom_reports": 23,
+          "preexisting_project_dependencies": 37,
+          "fixed_controls": {
+            "phase_identities": 108,
+            "literal_original_runner_witnesses": 12,
+            "literal_witness_comparisons": 24,
+            "wrong_transport_rejections": 2
+          }
+        }
+      ],
+      "next_action": "All commands stopped; root publish verified checkpoint.",
+      "result": "Accepted exact canonical iff and all five sources; root fresh saved-generator replay passed byte-identical probe/log."
     }
   ],
-  "latest_checkpoint": "Pass25 verified: primitive_sorted_largeHeight_lonelyAt under exact lower-count H_N; twelve source bodies independently reviewed and root replayed, build3632/trust408/focused58 passed. Publication pending; unrestricted LRC unresolved.",
+  "latest_checkpoint": "Pass26 verified: exact canonical Conjecture iff AllInclusivePrimitiveFiniteFamilies, five bodies independently reviewed and root fresh replayed; build3637/trust419/focused58 passed. Publication pending, PR24 latest merged. All finite families/unrestricted LRC remain unproved.",
   "next_actions": [
-    "Publish verified Pass25 through commit, push, PR, required CI and exact-head merge; verify remote main.",
-    "Formalize finite-family normalization/count induction bridge and pursue genuine uniform F_N supply."
+    "Publish verified Pass26 via commit/push/PR/required checks/exact-head merge and verify main.",
+    "Complete and independently review separately owned adaptive-margin audit; it is excluded from Pass26.",
+    "Seek genuinely new uniform finite-family witness supply; canonical LRC remains unproved."
   ],
   "research_holds": [
     {
@@ -3401,6 +3669,14 @@
       "conclusion": "For every original runner, positive time satisfies canonical closed threshold1/N.",
       "evidence": "research/astra-pass25-verification.json",
       "remaining": "Uniform inclusive finite boxes F_N and general normalization/induction-to-canonical bridge remain unproved."
+    },
+    {
+      "id": "canonical-inclusive-finite-family-equivalence",
+      "status": "proved-lean-equivalence",
+      "declaration": "LonelyRunner.conjecture_iff_allInclusivePrimitiveFiniteFamilies",
+      "scope": "Unconditional canonical iff, exact inclusive height bound, all total counts>=3 with2runnerbase. Neither side separately proved.",
+      "evidence": "research/astra-pass26-verification.json",
+      "remaining": "Uniform AllInclusivePrimitiveFiniteFamilies supply; adaptive margin variant under separate audit."
     }
   ],
   "integration_check": {
@@ -3663,8 +3939,8 @@
       "retained": "Pinned toolchain,source,Git history,unique manuscripts/reviews and reproducible proof/control evidence."
     },
     "pass24_removed_bytes": 7720771757,
-    "status": "cache removed after verified Pass25",
-    "restore_log": "/tmp/astra-pass25-cache-restore.log",
+    "status": "cache removed after verified Pass26",
+    "restore_log": "/tmp/astra-pass26-cache-restore.log",
     "restore_exit_code": 0,
     "cleanup_deferred_reason": null,
     "pass25_final_cleanup": {
@@ -3676,20 +3952,30 @@
       ],
       "coordination": "All workers and root verification commands stopped before cleanup.",
       "log": "/tmp/astra-pass25-storage-cleanup.log"
+    },
+    "pass26_final_cleanup": {
+      "status": "complete",
+      "command": "python3 -B scripts/manage_storage.py --clean",
+      "bytes_removed": 7747979982,
+      "removed_paths": [
+        ".lake"
+      ],
+      "log": "/tmp/astra-pass26-storage-cleanup.log",
+      "coordination": "All root and formal-review verification stopped; active manuscript author confirmed command/file-write hold and was released after cleaner exit0."
     }
   },
   "previous_goal_turn_classification": "progress",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
+    "verified_checkpoint": "52eb99ea7d4cdd428dadd544c10f247a8a90d3e5",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-two-cluster-formalization",
+    "branch": "codex/astra-affine-finite-height",
     "base": "main",
     "next_action": "Carry receipt into next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/23",
-    "pr_number": 23,
-    "head_sha": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/24",
+    "pr_number": 24,
+    "head_sha": "52eb99ea7d4cdd428dadd544c10f247a8a90d3e5",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -3905,15 +4191,24 @@
         "merge_sha": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
         "checks": "Lean build/trust passed 20:09:54 UTC; exact computational certificates passed 20:17:40 UTC. Exact-head merge 20:19:45 UTC.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 24,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/24",
+        "head_sha": "52eb99ea7d4cdd428dadd544c10f247a8a90d3e5",
+        "status": "merged",
+        "merge_sha": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+        "checks": "Lean build/trust passed21:18:37UTC; exact computational certificates passed21:26:10UTC. Exact-head merge21:26:56UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
-    "remote_main": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
-    "local_main": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+    "latest_published_source_checkpoint": "52eb99ea7d4cdd428dadd544c10f247a8a90d3e5",
+    "remote_main": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+    "local_main": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
-    "pending_checkpoint": "research/astra-pass24-verification.json",
-    "merge_sha": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
-    "checks": "Lean build/trust passed 20:09:54 UTC; exact computational certificates passed 20:17:40 UTC. Exact-head merge 20:19:45 UTC.",
+    "pending_checkpoint": "research/astra-pass25-verification.json",
+    "merge_sha": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+    "checks": "Lean build/trust passed21:18:37UTC; exact computational certificates passed21:26:10UTC. Exact-head merge21:26:56UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
@@ -3921,8 +4216,8 @@
     "root_requested_blocked_status": false,
     "root_requested_resume": false,
     "mathematical_status": "unresolved",
-    "token_usage_observed": 14267754,
-    "current_work": "Full conditional height theorem verified. Worker failures recovered without blocking goal; no supported resume control exists."
+    "token_usage_observed": 15026946,
+    "current_work": "PR24 merged; normalization/transport implementation active. Recovered Terra probe-file misunderstanding on same route; goal stayed active, no resume operation available or needed."
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",
@@ -3939,11 +4234,13 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "pass": 25,
-    "branch": "codex/astra-affine-finite-height",
+    "pass": 26,
+    "branch": "codex/astra-finite-family-equivalence",
     "status": "verified_pending_commit",
-    "base_sha": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
-    "excluded_unfinished": [],
+    "base_sha": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+    "excluded_unfinished": [
+      "research/astra-cardinality-adaptive-affine-audit.md"
+    ],
     "merge_method": "merge",
     "protection_bypass_allowed": false
   },
@@ -3961,5 +4258,67 @@
       "Independent exact-source review/fullbuild/trust/regressions and checkpoint publication. Finite boxes F_N remain unresolved."
     ],
     "review_sha256": "eb0fb96e22096175fa3b68dc70a1b7981f39356aaf1377863dcaa95b6a510876"
+  },
+  "local_research_observations": [
+    {
+      "target": "Cover all H<=2N-1 primitive positive tuples by small denominator <=N or coprime complementary holes H<q<=2N",
+      "status": "auxiliary universal claim refuted by exact arithmetic",
+      "N": 4,
+      "speeds": [
+        3,
+        4,
+        7
+      ],
+      "witness": "t=1/12 gives norms 1/4,1/3,5/12",
+      "reason": "Every q=1..4 divides a speed; only larger allowed q=8 has no omitted coprime complementary pair.",
+      "scope": "Refutes these two sufficient mechanisms as a universal union only; not LRC.",
+      "checks": "Python Fraction exact assertions passed."
+    }
+  ],
+  "uniform_finite_supply_audit": {
+    "author_sha256": "ab8838edae5de0e1b08fabb72a091f141387ba84ecb37ce7c3465c992c5320f5",
+    "root_read_complete": true,
+    "root_replay_exit_code": 0,
+    "output_sha256": "01af7ac7db4b1216ee456a0904d46fa87cb448568f231cf103ac646c712649ae",
+    "status": "independently accepted with root replay; selected mechanism branch frozen",
+    "scope": "Exact limitation of small-error endpoint packets, not F_N supply.",
+    "review": {
+      "status": "accepted_root_replay_passed",
+      "path": "research/astra-uniform-finite-supply-review.md",
+      "sha256": "2ca0787135fcb15220b4dedf8f7b77d79b0d7aee666880e63c69e43a5a8053de",
+      "program_sha256": "06cc57ae12235e93fb5e3c611e3f07b1289ead9dcd6c8cf7335c6045a658ed94",
+      "output_sha256": "7cc1bec542cb000ca61ab65b7e506a8e4a7a705b83efdea0df020fe7668ec16b",
+      "root_replay_exit_code": 0,
+      "counts": {
+        "closed_global_boundary_instances": 18,
+        "coefficient_identity_slots": 189,
+        "consecutive_closed_equalities": 106,
+        "consecutive_families": 6,
+        "consecutive_signed_comparisons": 518,
+        "endpoint_duplicate_count_controls": 1,
+        "even_sharp_families": 3,
+        "global_packet_instances": 24,
+        "identity_folds": 8,
+        "individual_global_scope_controls": 1,
+        "individual_packet_witness_comparisons": 6,
+        "missing_budget_controls": 1,
+        "missing_distinctness_controls": 1,
+        "missing_rank_controls": 1,
+        "mixed_sign_global_fixtures": 2,
+        "nonzero_integer_radius_controls": 24,
+        "odd_sharp_families": 3,
+        "relative_pair_checks": 1863,
+        "residue_function_evaluations": 5376,
+        "sharp_families": 6,
+        "strict_denominator_descents": 16
+      }
+    }
+  },
+  "finite_family_formalization": {
+    "contract_path": "research/astra-finite-family-bridge-contract.md",
+    "contract_sha256": "214bfd677cae6cbe5f9a1717511a714bf47781a84689a2e534d470917f8aa018",
+    "root_contract_read_and_replay": "passed,4fixtures90signedcomparisons9allchosenwitnesses28strictlowercountrequests",
+    "status": "Verified at exact canonical iff, finalsourceb47e65f4, independentreview6576d272 and rootreplay passed.",
+    "remaining_mathematical_supply": "AllInclusivePrimitiveFiniteFamilies remains unproved."
   }
 }
