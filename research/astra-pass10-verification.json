@@ -1,0 +1,63 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "be9524b9d1f9634db3b78660ccb557e1fc84a51f",
+  "files": {
+    "LonelyRunner/AffineGridCyclic.lean": "b4b42a0dd0f00730c2fbd45814a362a7e30248c97c234fd4d7ed72c7bf521e4b",
+    "LonelyRunner.lean": "bd49427d55780ecbf767f583ae95e19d063fad4d16a1caa29ad03583c3496265",
+    "LonelyRunner/AxiomAudit.lean": "37566a14a265f67061741ac1749848a8fab138697953432142a9d5a3af5e01b8",
+    "research/astra-cyclic-formal-review.md": "49a5ea9d237351ecc6d39e03b89ba0901b3c81c53a2a0303e91f43aed78b86ba",
+    "research/astra-cyclic-verification.md": "10386907d69915d1bcb1835fc8acbc18ed3087f4c7e98fa96827445f404db0e3",
+    "research/astra-weighted-supply-audit.md": "64939cae6b8d1019970feb91a4906595e2f0c30472f6485c0d6ae0235da48ee6",
+    "research/astra-supply-audit-review.md": "f1a833f1628184e6a2149ee864bf8f5ab00520daf0c30b0e8cd72e043118e066",
+    "research/astra-prime-square-cover-search.md": "e6564412dab8c0a112b8f88b1f515da72ce158693c0988cf951df8608d9858bf",
+    "research/astra-p13-cover-review.md": "f28baf270681fba5a2a0ec6f08fd71d67b6bd875db804bd93ac3e6fc7f20de2b",
+    "docs/astra-research-10.md": "67cd787fc906c58ab02c891a5eae878806779e090aeeb72a4729639717aa1432",
+    "README.md": "ee8d506c6588afd4414aab2b4747dff169545314118ea796edcc0192c542b9df",
+    "STATUS.md": "3b202c35b3bed0e9ea2a5c8a55ac2157a7e168b720ff3a6589dcdcbf12ced158"
+  },
+  "scope": "Kernel-checked exact modular closed-band iff; manuscript strip supply and complete grid obstructions; no canonical LRC conclusion.",
+  "root_checks": {
+    "full_cyclic_source_read": true,
+    "full_build_jobs": 3609,
+    "trust_reports": 351,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "cyclic_Lean_examples": 7,
+    "supply_author_reproducer": "passed1622 strips,6105 cover controls,1347 two-outlier controls",
+    "p13_all_grid_residues": 169,
+    "p13_strict_witness": "5/19,min2/19>1/13",
+    "p11_scope": "Specific reported eight-set choice leaves12,32,89,109; no search-wide lower bound",
+    "cyclic_independent_replay": {
+      "cases": 25515,
+      "edge_fixtures": 10,
+      "mutation_controls": 2,
+      "Lean_directions": "both compiled"
+    },
+    "supply_independent_replay": {
+      "unit_strips": 1444,
+      "automatic_strips": 156,
+      "lifts": 243,
+      "covers": 5985,
+      "transports": 28812
+    },
+    "p13_independent_replay": {
+      "unit_cover": 156,
+      "grid_points": 169,
+      "strict_margin": "7/247",
+      "coordinate_lifts": 11
+    },
+    "focused_tests": 48
+  },
+  "reproducers": {
+    "build": "PATH=$HOME/.elan/bin:$PATH lake build",
+    "trust": "python3 scripts/audit_lean_trust.py",
+    "cyclic": "Execute sole python block and Lean stdin probe in research/astra-cyclic-formal-review.md.",
+    "supply": "Execute sole python blocks in research/astra-weighted-supply-audit.md and research/astra-supply-audit-review.md.",
+    "p13": "Execute sole python block in research/astra-prime-square-cover-search.md."
+  },
+  "canonical_lrc_status": "unresolved",
+  "bad_residue_characterization_and_envelope_bridge": "not_formalized"
+}

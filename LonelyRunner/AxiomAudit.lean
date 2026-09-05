@@ -373,3 +373,6 @@ project-specific axiom.
 #print axioms LonelyRunner.weighted_affine_avoidance_author
 #print axioms LonelyRunner.affine_one_outlier_family_witness_nat
 #print axioms LonelyRunner.affine_one_outlier_family_witness
+
+-- Tenth Astra pass: exact cyclic bands, including arbitrary wrapping.
+#print axioms LonelyRunner.circleNorm_affine_grid_iff_modular_band

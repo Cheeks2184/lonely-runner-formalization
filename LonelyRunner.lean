@@ -12,6 +12,7 @@ import LonelyRunner.PivotZeroKernel
 import LonelyRunner.KernelCoverCertificates
 import LonelyRunner.OwnerKernelCover
 import LonelyRunner.AffineGridArithmetic
+import LonelyRunner.AffineGridCyclic
 import LonelyRunner.AffineGrid
 import LonelyRunner.AffineGridFullSize
 import LonelyRunner.AffineShiftArithmetic
