@@ -6,17 +6,17 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/affine_grid-unique-bad-escape-audit",
+      "id": "/root/affine_grid-single-zero-balanced-route",
       "runtime_agent": "/root/affine_grid",
       "kind": "research",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Audit single-step escape from unique-bad prime-square grid points: exact candidate theorem/counterexample, with explicit positive/negative scope and no inference from bounded nonfinding.",
-      "source_checkpoint": "PR8 main8f2aca63; accepted prime-square grid obstructions and current exact bad-residue source.",
+      "target": "Independently audit root conditional one-zero guard construction, then determine value/existence of balanced p-square unit covers; exact positive/counterexample/proof or narrow unresolvedresult, no inferencefromboundednonfinding.",
+      "source_checkpoint": "Rootdraftsingle-zero-followup 8f25a66d0da002b4cf942016f9584244ed62d390115a3d3800f54d1809f481bd; balancednearcoverdocumentrootlimitedverification.",
       "owned_files": [
-        "research/astra-unique-bad-escape-audit.md"
+        "research/astra-single-zero-balanced-audit.md"
       ],
       "status": "in_progress",
       "checks": [],
@@ -1340,15 +1340,117 @@
         "Root read full manuscript/review and reran author/reviewer exact blocks at accepted hashes."
       ],
       "launch_status": "accepted"
+    },
+    {
+      "id": "/root/affine_grid-unique-bad-escape-audit",
+      "runtime_agent": "/root/affine_grid",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Audit single-step escape from unique-bad prime-square grid points: exact candidate theorem/counterexample, with explicit positive/negative scope and no inference from bounded nonfinding.",
+      "source_checkpoint": "PR8 main8f2aca63; accepted prime-square grid obstructions and current exact bad-residue source.",
+      "owned_files": [
+        "research/astra-unique-bad-escape-audit.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "Frozen author manuscript4786e39ab8e91e8d14cac654edfac8fead39fad3d7ff7745f7768508f4dfb674; independent review pending.",
+        "Generalguard proof; p13explicit strict-witnesscounterexample98unique/196blockedendpoints; unboundedguardfamily. Root separately reproducedcentralcounterexample.",
+        "Maximalone-zero positive restriction is already covered by project; not new supply."
+      ],
+      "launch_status": "accepted"
+    },
+    {
+      "id": "/root/vanishing_slope-sieve-invariant-audit",
+      "runtime_agent": "/root/vanishing_slope",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent exact-contract audit of Proposition3.1 lifting/projection invariant in primaryarXiv2604.23906v2, focusing on arbitraryS versus actual algorithm invariants; no external messages or canonical conclusion.",
+      "source_checkpoint": "https://arxiv.org/html/2604.23906v2 Section3, live primary source read2026-09-05.",
+      "owned_files": [
+        "research/astra-sieve-invariant-audit.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "Author source audit7ee42e93fdb11a030204a72c86190a4cd331b9778cb7440bd1168840a30b0f94 frozen; independent review pending.",
+        "Exact1296sources/20736properlifts/improperw/92invariantcontrols pass. Repaired invariant and logical arbitraryS iffJempty scope distinguished."
+      ],
+      "launch_status": "accepted"
+    },
+    {
+      "id": "/root/fixed_grid_checker-balanced-p13-cover",
+      "runtime_agent": "/root/fixed_grid_checker",
+      "kind": "routine",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Bounded exact bitset search for10-speed unitmod169 cover with at most2 speeds in each signed modulo13 class; positive certificate or honest bounded nonfinding only.",
+      "source_checkpoint": "Accepted p13coverA=(1,7,8,9,10,17,33,36,64,69), search domain signedunitclassesmod169.",
+      "owned_files": [
+        "research/astra-balanced-p13-cover-search.md"
+      ],
+      "status": "interrupted",
+      "checks": [
+        "Transient capacity firstlaunch; same Terra medium retry. Agent reported100000proposalnonfinding but failed twice to persist requiredcodeandbeststate. No reproducible discoveryhistory established.",
+        "Reported candidate(1,3,5,7,8,9,11,69,72,76) independently checked byroot: misses79,90; all328balancedone-row replacements alsofail. No global lowerbound. Root will retain exact narrower verification only."
+      ],
+      "launch_status": "pending"
+    },
+    {
+      "id": "/root/affine_grid-sieve-invariant-review",
+      "runtime_agent": "/root/affine_grid",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independently review fixed-primary-source lifting/projection contract and current sieve-invariant audit once frozen; verify real finite set countercontrol and repaired reachable-state invariant.",
+      "source_checkpoint": "Superseding sieveaudit d9c61da83237fa2cefcd533a081b90bd7d6d82ee6c9544ea6a62f7e5cf9dd6af",
+      "owned_files": [
+        "research/astra-sieve-invariant-review.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "Runtime turn failed with Selected model is at capacity after independent primary analysis; retried same Astra xhigh viafollowup. No modelsubstitution, no mathematical blocker/completion inferred.",
+        "Reviewer independently fetched6pinnedC++files andverifiedallhashes; root clarifiedhistoricalbranchnamefor-k-12versusactualactiveK10/P463. Math/reproducerunchanged.",
+        "Accepted d9c61da8 byfrozenreviewc330bdb439cbebd23b18a66fbb8eef5b9ad39f22d8792d27e1d3a8cb6126da40; author92+independent controls passed."
+      ],
+      "launch_status": "accepted"
+    },
+    {
+      "id": "/root/vanishing_slope-unique-bad-escape-review",
+      "runtime_agent": "/root/vanishing_slope",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent review of two-zero guard obstruction tosingle-stependpointescape, p13admissiblecounterexample, unboundedstrict-witnessfamily and accuratelyclassifiedoldpositivecase.",
+      "source_checkpoint": "Superseding guardmanuscriptba5a7cadfa259e4a1c4a9928a4986c11a883d35f158f8c121ee3fa0858c0b4d5",
+      "owned_files": [
+        "research/astra-unique-bad-escape-review.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "Accepted byreviewddbfab221bc6e8f6bd1310044763cbc8b27ef2eae55928140e6277119fef87e0 aftertwocount-wordingclarifications only.",
+        "All169grid/98unique/196blocked endpoints,unboundedfamily,strict5/19,oldpositivecase accepted. Authorandindependentblocks rootreproduced."
+      ],
+      "launch_status": "accepted"
     }
   ],
-  "latest_checkpoint": "Pass11 source5c5ec03d accepted by review4fe28052; corrected manuscript0b70feca accepted by review91a88fad. Root reproduced all accepted check blocks; integration3610build/354trust passed. Publication preparation in progress.",
+  "latest_checkpoint": "Pass12 guardauditba5a7cad/reviewddbfab22 andsieveauditd9c61da8/reviewc330bdb4 fullyaccepted; rootread/replayedallfourblocks and48focusedtests. Publicationready. Laterone-zeroconditionalrouteactive; noactualbalancedcover.",
   "next_actions": [
-    "Publish only verified Pass11 files after focused checks: commit,push,PR,requiredchecks,exact-headmerge,remote main verification.",
-    "Continue bounded unique-bad-grid single-step endpoint escape audit; no inference from finite nonfinding and no unrestricted supply claim.",
-    "Group arbitrary-theta existence is equivalent to the original witness premise; require a nontrivial estimate or another justified route.",
-    "Coordinate idle cache cleanup after completed source verification batch; preserve sources,toolchain,Git,unique evidence.",
-    "Canonical unrestricted goal remains active and unresolved."
+    "Complete and root reproduce exact final independent reviews forguard4786e39a andsieve d9c61da8; publishaccepted Pass12 manuscriptcheckpoint withfocusedchecks,commit,push,PR,checkedexact-headmerge.",
+    "Independently review rootdraft research/astra-single-zero-escape-followup.md beforeusingitsconditionalbalanced-coverconstruction. It hasno actualcounterexample yet.",
+    "Balancedp13nearcover(1,3,5,7,8,9,11,69,72,76) misses79,90; rootverified328one-swapsfailonlylocally. Terra discovery100000claimnotreproduciblypersisted; do notinferlowerbound.",
+    "No Lean source change in newaudits; cachecleaned afterPass11, do notrestore/fullbuildfor manuscript-onlychanges.",
+    "Canonical unrestricted goal remains active and unresolved; failedlocalroutes and correctedliteraturearguments do not complete it."
   ],
   "research_holds": [
     {
@@ -1551,16 +1653,30 @@
       "path": "research/astra-constant-correction-audit.md",
       "review": "research/astra-constant-correction-review.md",
       "remaining": "Strict concrete grouping gain; unrestricted grouped constant certificate existence is equivalent to closed-witness existence. No universal existence argument or Lean grouping bridge."
+    },
+    {
+      "id": "single-step-unique-bad-escape-obstruction",
+      "status": "manuscript-and-computation-independently-reviewed",
+      "path": "research/astra-unique-bad-escape-audit.md",
+      "review": "research/astra-unique-bad-escape-review.md",
+      "remaining": "General two-zero guard and strict-witness family refute this candidate only. One-zero followup pending."
+    },
+    {
+      "id": "literature-sieve-reachable-invariant-repair",
+      "status": "manuscript-and-computation-independently-reviewed",
+      "path": "research/astra-sieve-invariant-audit.md",
+      "review": "research/astra-sieve-invariant-review.md",
+      "remaining": "Displayedidentityfalse; correctedfull-stateinvariantproven. DoesnotrefutefinalJinclusionorcertifyfullpapercomputation; noLean/globalLRCresult."
     }
   ],
   "integration_check": {
     "status": "passed",
-    "verification_record": "research/astra-pass11-verification.json",
-    "full_build_jobs": 3610,
+    "verification_record": "research/astra-pass12-verification.json",
     "last_trust_reports": 354,
     "focused_tests": 48,
-    "lean_source_changed": true,
-    "source_code_changed": true
+    "lean_source_changed": false,
+    "source_code_changed": false,
+    "local_lean_build": "Notrerun; sourceunchangedfromPR9."
   },
   "storage_checkpoint": {
     "download_archive_bytes_removed": 439158169,
@@ -1591,14 +1707,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "ready_to_commit",
-    "verified_checkpoint": "49e27215fb1c1bf4d770d2368f34e7fff259a601",
+    "verified_checkpoint": "d3a779a943666e07d966554f0e6868f38821a0ad",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-cyclic-envelopes",
+    "branch": "codex/astra-escape-and-sieve-audits",
     "base": "main",
-    "next_action": "Commit exact Pass11 file allowlist, push, open PR, wait required CI, merge reviewed head, verify main.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/8",
-    "pr_number": 8,
-    "head_sha": "49e27215fb1c1bf4d770d2368f34e7fff259a601",
+    "next_action": "Commit/push exactverifiedPass12allowlist,openPR,waitrequiredchecks,mergeexacthead,verifyremote/localmain.",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/9",
+    "pr_number": 9,
+    "head_sha": "d3a779a943666e07d966554f0e6868f38821a0ad",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -1679,12 +1795,22 @@
         "merge_sha": "8f2aca63b49f28c906eede045dd778c9c71be48e",
         "checks": "Both Lean build/trust and exact computational certificates passed.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 9,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/9",
+        "head_sha": "d3a779a943666e07d966554f0e6868f38821a0ad",
+        "status": "merged",
+        "merge_sha": "5b7a1da6f40f1b264d16a689144f413a3ed047f9",
+        "checks": "Both Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "49e27215fb1c1bf4d770d2368f34e7fff259a601",
-    "remote_main": "8f2aca63b49f28c906eede045dd778c9c71be48e",
-    "local_main": "8f2aca63b49f28c906eede045dd778c9c71be48e",
+    "latest_published_source_checkpoint": "d3a779a943666e07d966554f0e6868f38821a0ad",
+    "remote_main": "5b7a1da6f40f1b264d16a689144f413a3ed047f9",
+    "local_main": "5b7a1da6f40f1b264d16a689144f413a3ed047f9",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
-    "pending_checkpoint": "research/astra-pass11-verification.json"
+    "pending_checkpoint": "research/astra-pass12-verification.json",
+    "merge_sha": "5b7a1da6f40f1b264d16a689144f413a3ed047f9"
   }
 }

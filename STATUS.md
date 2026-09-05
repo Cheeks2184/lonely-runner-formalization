@@ -6,13 +6,13 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
-The [eleventh Astra research checkpoint](docs/astra-research-11.md) formalizes
-exact singleton/pair bad residues, with an integrated 3,610-job build and
-354-report trust audit. The independently reviewed constant-correction audit
-proves a strict gain from grouping proportional rows, but shows that unrestricted
-grouped certificate existence is equivalent to ordinary closed-witness existence.
-The [preceding checkpoint](docs/astra-research-10.md) rules out universal
-prime-square-grid supply. Neither route currently supplies arbitrary tuples.
+The [twelfth Astra research checkpoint](docs/astra-research-12.md) rejects
+single-step escape from unique-bad grid points with an exact unbounded guard
+family retaining strict witnesses. A separate independent audit rejects a
+projection equality in a literature proof and establishes a stronger invariant
+for the complete-lift algorithm, without certifying its full computation.
+The [preceding Lean checkpoint](docs/astra-research-11.md) passed 3,610 build
+jobs and 354 theorem trust reports. Unrestricted witness supply is still absent.
 The canonical conjecture remains unproved and undisproved.
 
 The research narrative below is the historical 2026-08-04 `main` snapshot.
