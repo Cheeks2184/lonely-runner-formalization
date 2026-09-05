@@ -381,3 +381,15 @@ project-specific axiom.
 #print axioms LonelyRunner.not_mem_affineCyclicBadResidues_iff
 #print axioms LonelyRunner.affineCyclicBadResidues_not_mem_iff_modular_band
 #print axioms LonelyRunner.circleNorm_affine_grid_iff_not_mem_bad_residues
+
+-- Fifteenth Astra pass: exact periodic counts and denominator-seven arithmetic.
+#print axioms LonelyRunner.card_filter_range_mul_mod_coprime
+#print axioms LonelyRunner.card_filter_range_mod_mem
+#print axioms LonelyRunner.card_filter_pivotCandidates_mod_mem
+#print axioms LonelyRunner.normalizedBadCount_seven_seven
+#print axioms LonelyRunner.normalizedBadCount_seven_one_bound
+#print axioms LonelyRunner.normalizedBadCount_seven_seven_bound
+#print axioms LonelyRunner.normalizedBadCount_seven_seven_le_two
+#print axioms LonelyRunner.normalizedBadCount_seven_seven_lt_remainder_budget
+#print axioms LonelyRunner.threeLowerOwner_noncover_seven
+#print axioms LonelyRunner.threeLowerOwner_circleNorm_witness_seven

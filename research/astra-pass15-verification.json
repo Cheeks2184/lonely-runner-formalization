@@ -1,0 +1,59 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "a25799bfbbb41b4c31f222b25060a4d6e0e5d117",
+  "files": {
+    "LonelyRunner.lean": "6ee8f25d27ecd6b0f8ef55188a8094876398064d3117fc05f0a203658c6600a0",
+    "LonelyRunner/AxiomAudit.lean": "6efbb5eaf4a8253e2b93c97b317b233cd9bf99a417ea62ab7ba5ba4db07e5af9",
+    "LonelyRunner/PeriodicPivotCounts.lean": "a6199b77071b81868abffe0959c1b5aa4e64a06369adb93eddbc2fa7b6c90b7e",
+    "LonelyRunner/ThreeOwnerSevenArithmetic.lean": "1f05a8f42c2d49b86e3d234cbd72b01e9b3b30d75549b133aad030f51a61455a",
+    "LonelyRunner/ThreeLowerOwnerSeven.lean": "8f65dc593228a1e639b7997746987c75b4312b18b4fcd591fd47d701714c7645",
+    "README.md": "1bca7e5c137a84c979150e3d6fb22530536058e6a4966c4732fffcca6b2e0455",
+    "STATUS.md": "52cf5cea8a713522b3e60b3a159a745d2909e5b2d1857bad440cb4564a2841b2",
+    "docs/astra-research-15.md": "03578088260b50b32d6234fc602930032c220edab7be02c49dc71fd8a3060c41",
+    "research/astra-three-owner-formalization.md": "7141c0f8c20d79bd35e2fe11454662b221d7185d04af169712359614aec1a7d4",
+    "research/astra-three-owner-arithmetic-implementation.md": "cc179dfa5ee74912c542c55039ad765977378d47094e7a3805f8669f53cbb542",
+    "research/astra-three-owner-formal-review.md": "44d6773942d3bf31575af1bfbffdb98e94cb038188462daa86646e79ca514df2",
+    "research/astra-periodic-arithmetic-review.md": "73a4e6cec433c79eda9382d4938932bd03583ba117d475afc6324272ab8cd9b7",
+    "research/astra-sparse-owner-supply-audit.md": "a51e581cdf4dc7b37a9b7481e930af00f0605fb4aa0a8aa06d848845fdb99f8f",
+    "research/astra-sparse-owner-supply-review.md": "0aacc39cf9dba3147b8002c2b0266309d0a2c57214b38645b246e20718f27684",
+    "research/astra-guard-internal-cover-audit.md": "b0139c276fa6f3f331b382796085d4972c73d3ef2e13dac92813fcd8d9490f70",
+    "research/astra-guard-internal-cover-review.md": "db11a17ceaa0eda0a62e42704dfab9c3497fc32f884ac1c041db6ec032722b60"
+  },
+  "scope": "Kernel proof of arbitrary-height denominator-seven three-lower-owner noncover and closed witness, with eight counting helpers. Separate accepted N9 manuscript and qualified conditional guard audit. Unrestricted LRC unresolved.",
+  "root_checks": {
+    "full_build_jobs": 3613,
+    "trust_reports": 364,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "focused_tests": 48,
+    "helper_lean_probes": 20,
+    "three_owner_lean_probes": 13,
+    "three_owner_literal_rows": 7140,
+    "three_owner_literal_triples": 91390,
+    "three_owner_literal_remainders": 3660,
+    "three_owner_scaling_controls": 30,
+    "three_owner_mutations": 5,
+    "sparse_owner_normalized_pairs": 68,
+    "sparse_owner_wide_scan_subsets": 9582210,
+    "guard_oracle_cases": 440,
+    "guard_oracle_positive": 101,
+    "guard_oracle_negative": 339,
+    "guard_large_timed_searches": "Author-reported only; not independently replayed.",
+    "full_source_and_review_read": true,
+    "final_replay_harness": "Python controls passed; final Lean13probe replay passed exit0 after fixing disposable extraction variable collision. No source correction required."
+  },
+  "reproducers": {
+    "build": "PATH=$HOME/.elan/bin:$PATH lake build LonelyRunner",
+    "trust": "PATH=$HOME/.elan/bin:$PATH python3 scripts/audit_lean_trust.py",
+    "focused": "python3 -m unittest tests.test_manage_storage tests.test_validate_workflow tests.test_validate_task_ledger -q",
+    "review_controls": "Execute anchored Python fenced blocks in the four independent reviews. For each formal review, append its Lean probe block to the named source as specified in that review and compile with lake env lean."
+  },
+  "canonical_lrc_status": "unresolved",
+  "excluded_followups": [
+    "LonelyRunner/FourLowerOwnerNine.lean",
+    "research/astra-four-owner-formalization.md"
+  ]
+}

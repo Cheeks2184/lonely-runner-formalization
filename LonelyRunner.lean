@@ -11,6 +11,9 @@ import LonelyRunner.PivotResidues
 import LonelyRunner.PivotZeroKernel
 import LonelyRunner.KernelCoverCertificates
 import LonelyRunner.OwnerKernelCover
+import LonelyRunner.PeriodicPivotCounts
+import LonelyRunner.ThreeOwnerSevenArithmetic
+import LonelyRunner.ThreeLowerOwnerSeven
 import LonelyRunner.AffineGridArithmetic
 import LonelyRunner.AffineGridCyclic
 import LonelyRunner.AffineCyclicBadResidues
