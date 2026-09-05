@@ -1,0 +1,45 @@
+{
+  "recorded_at": "2026-09-05T06:15:42.800365+00:00",
+  "source_base": "09eff14b7f970629c0c92c0455e62875b1c3861f",
+  "source_sha256": {
+    "LonelyRunner/AffineGridMultipleZero.lean": "225d6c6adcaa1d85309325b2bb4712a48f0adb13019c8e645d4a6699a73f1aca",
+    "LonelyRunner.lean": "93fab3795969e62427bf3be5714563286d0209c1ebfd943f3a8fc45209381b4c",
+    "LonelyRunner/AxiomAudit.lean": "831ee33c3db74a49bcc4d504f221730d54dca4ada4f6cb52a3c09bbb0f21b163",
+    "research/astra-multiple-zero-value.md": "ef3619bfdf74e5b2794f8d4737623e8d3e9cedf62dd21039f9169465e4dd8090",
+    "research/astra-pass5-review.md": "39f118f7bf84f155718fef8d03aa5a822e52d4f707cd6b536c46da9880ec529d",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218"
+  },
+  "build": {
+    "command": "PATH=\"$HOME/.elan/bin:$PATH\" lake build",
+    "exit_code": 0,
+    "jobs": 3606,
+    "log_sha256": "9e909d8d1100618b50df18a9cf5b623bba38b21e1533aeef1e2b4257f02fbd27"
+  },
+  "trust": {
+    "command": "python3 scripts/audit_lean_trust.py",
+    "exit_code": 0,
+    "reports": 346,
+    "new_declarations": [
+      "LonelyRunner.affine_avoidance_card_le_sub_two",
+      "LonelyRunner.affine_grid_multiple_zero_witness"
+    ],
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log_sha256": "139d5223dc973b832b8c5fae2eb73345be09dfae5d87133bdf5b2caf23e2315a"
+  },
+  "independent_review": {
+    "path": "research/astra-pass5-review.md",
+    "result": "accepted without corrections",
+    "full_coordinate_cases": 1632,
+    "empty_ordinary_cases": 240,
+    "boundary_cases": 83,
+    "signed_transport_grid_points": 125,
+    "absolute_unit_controls": 54750
+  },
+  "scope": "Conditional full-size multiple-zero witness including empty ordinary case; manuscript value audit with exact normalization controls.",
+  "unrestricted_lrc": "unresolved"
+}
