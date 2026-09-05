@@ -1,0 +1,97 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "8a3a407f729163316a11ffbb863ca9dddf249d36",
+  "files": {
+    "LonelyRunner.lean": "2f8895f40facc4dd597191a6d57d05a761684d7263f000ec962ff701eead9968",
+    "LonelyRunner/AxiomAudit.lean": "a8291ff654d9cc97d9f3a4eb1cab9e7f0cdafe2e8a342fd48dc07723c51314b5",
+    "LonelyRunner/FourLowerOwnerNine.lean": "cf11f4738d51c4455e1c9fbe18810023d21794c8bb047414b793c048adbd1c5d",
+    "LonelyRunner/Prompt95CanonicalBridge.lean": "4cf03bcbb47c7d935766281927e333e8734c09b08a2ae399815cc79dc05695d2",
+    "README.md": "d1469e4715a366720e54157d2808369d0ef7bc159a81d657efc4a3266a2c9c30",
+    "STATUS.md": "95615fde7b84db05ff4377d7524148c6f5805e2377a8fed6b366b7b331543b4d",
+    "docs/astra-research-16.md": "ca4d9af16054a56bf6d495f4411804493a4286023a36ea2fa39591b735d6463b",
+    "research/astra-four-owner-formalization.md": "321049a3e6863c9b67dba3c2f3a0f0582e7e001ee8da90a8c58b93851a1d5157",
+    "research/astra-four-owner-formal-review.md": "da7f66fb6448fced4ef0352685aa6135c9c928a529ea2a6d696979173175406a",
+    "research/astra-prompt95-bridge-implementation.md": "677dd245715583b78b5e04d5d2fd77a1c813bdfce251a744ef6d5c88b4270f61",
+    "research/astra-prompt95-bridge-review.md": "85eeb91d963c271f569a78cf2b11bc4d1cc021212ac37a6f81526b2e1d511869",
+    "research/astra-general-sparse-route.md": "37aac6b4b044504d5ef8c456baa734de1db314edc7e526a0d08080d489c34036",
+    "research/astra-general-sparse-review.md": "f2bd2af612470521c08c1d031883ec56a1255f60086370b4af4bccdf413ba408",
+    "scripts/audit_lean_trust.py": "bc46f490dded05f768d58766df4c0b0ac9d3af7670760dee6ed8d87a5b078cad",
+    "tests/test_audit_lean_trust.py": "301e557c7f705e6e402ef8b6247a78da8b1992e50ec5d492f7785a8b248fd93d",
+    "research/astra-trust-option-fix.md": "674677a963ce350234457929e56183d343b17b3728e8ed4f5d72eb4e30a84cba",
+    "research/astra-trust-option-review.md": "9f781a2206a4e8b4a3ad91295b6b53485574a265b25d81cf4c1cbebe15b137df"
+  },
+  "scope": "Kernel proof of arbitrary-height denominator-nine four-lower-owner noncover and closed witness; conditional Prompt95-to-canonical bridge with explicit unproved premise. Reviewed manuscript actual-pivot-grid Riesz criterion and all-c independent additive-triple class. Unrestricted LRC unresolved.",
+  "root_checks": {
+    "full_build_jobs": 3615,
+    "trust_reports": 369,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "focused_tests": 58,
+    "forced_no_lean_tests": 10,
+    "forced_no_lean_skips": 1,
+    "four_owner_lean_probes": 17,
+    "bridge_named_lean_controls": 5,
+    "bridge_additional_empty_row_controls": 2,
+    "four_owner_normalized_pairs": 68,
+    "four_owner_pair_classes": [
+      37,
+      13,
+      9,
+      9
+    ],
+    "four_owner_scaling_cases": 204,
+    "four_owner_scalar_cases": 30027,
+    "four_owner_literal_rows": 4950,
+    "four_owner_literal_quadruples": 201376,
+    "general_sparse_multisets": 792,
+    "general_sparse_grids": 6590,
+    "general_sparse_rational_admissions": 3548,
+    "general_sparse_delta_admissions": 348,
+    "general_sparse_block_constructions": 18,
+    "N15_fixture": {
+      "N": 15,
+      "pivot": 2303,
+      "lower": [
+        1,
+        705,
+        735,
+        1410,
+        1470,
+        2115,
+        2205
+      ],
+      "A": 144,
+      "S": 648,
+      "rational_margin": 6480,
+      "safe_candidates": 13204,
+      "first_safe": 2307
+    },
+    "full_source_and_review_read": true,
+    "N9_root_probe_mode": "Imported freshly target-built N9 source, all17 probes passed. Independent reviewer separately compiled entire source plus probes.",
+    "bridge_root_probe_mode": "Fresh entire bridge source concatenated with review probes; passed.",
+    "trust_review_final_replay": {
+      "option_cases": 540,
+      "forbidden_layouts": 33,
+      "valid_lean_programs": 16,
+      "appended_forbidden_payloads": 32,
+      "current_lean_files": 112,
+      "direct_kernel_pair": "Truepassed;Falserejectedwithspecificdiagnostic",
+      "runtime_lookup_branches": 3
+    }
+  },
+  "reproducers": {
+    "build": "PATH=$HOME/.elan/bin:$PATH lake build LonelyRunner",
+    "trust": "PATH=$HOME/.elan/bin:$PATH python3 scripts/audit_lean_trust.py",
+    "focused": "python3 -m unittest tests.test_manage_storage tests.test_validate_workflow tests.test_validate_task_ledger tests.test_audit_lean_trust -q",
+    "exact_controls": "Execute the sole anchored Python fenced block in each of the N9 formal review and general-sparse author/review notes. Compile Lean controls as specified in the two formal reviews.",
+    "trust_controls": "python3 -m unittest tests.test_audit_lean_trust; exact direct Lean and scanner reproductions are recorded in the trust review."
+  },
+  "canonical_lrc_status": "unresolved",
+  "excluded_followups": [
+    "research/astra-weighted-sparse-audit.md"
+  ],
+  "storage_cleanup_bytes": 8151782106
+}

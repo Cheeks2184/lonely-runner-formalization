@@ -6,21 +6,20 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
-The [fifteenth Astra research checkpoint](docs/astra-research-15.md) provides an
-independently reviewed Lean proof that three distinct positive lower speeds
-cannot cover a pivot row at denominator seven, for arbitrary speed height.
-Its closed witness protects precisely those three speeds and their pivot.
-Three periodic counting lemmas and five normalized-count arithmetic lemmas
-support the proof. The full build passed 3,613 jobs and the trust audit accepted
-364 theorem reports using only the permitted standard axioms.
+The [sixteenth Astra research checkpoint](docs/astra-research-16.md) provides an
+independently reviewed Lean proof that four distinct positive lower speeds
+cannot cover a pivot row at denominator nine, for arbitrary speed height.
+Its closed witness protects precisely those four speeds and their pivot.
+The proof classifies 68 normalized exceptional pairs and transports the checked
+base cases through every positive common scaling. The full build passed 3,615 jobs and the trust audit accepted 369 reports.
 
-The four-owner result at denominator nine is independently accepted at
-manuscript scope; its separate Lean implementation is not part of this checkpoint.
-A denominator-15 example refutes a proposed uniform remainder bound, while an
-explicit witness shows that example does not refute LRC. The guard audit verifies
-a conditional construction and small exact solver controls, but supplies no
-counterexample to internal-cover redundancy. Its larger timed search negatives
-remain author-reported. The canonical conjecture remains unproved and undisproved.
+A new conditional Lean bridge derives the unrestricted canonical conjecture
+from maximum-covered-pivot internal-cover redundancy. That hypothesis remains
+unproved; the bridge is not an unconditional LRC proof. A separate reviewed
+manuscript establishes an exact constant-term criterion on the actual pivot
+grid and an unbounded class of independent additive-triple configurations.
+An explicit denominator-nine example shows that the criterion is not universal.
+The canonical conjecture remains unproved and undisproved in this project.
 
 The research narrative below is the historical 2026-08-04 `main` snapshot.
 Old model routing and active-task language are superseded by the current workflow.
