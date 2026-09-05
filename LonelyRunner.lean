@@ -13,6 +13,9 @@ import LonelyRunner.KernelCoverCertificates
 import LonelyRunner.OwnerKernelCover
 import LonelyRunner.AffineGridArithmetic
 import LonelyRunner.AffineGrid
+import LonelyRunner.AffineGridFullSize
+import LonelyRunner.AffineShiftArithmetic
+import LonelyRunner.AffineGridVanishing
 import LonelyRunner.ReverseGrid
 import LonelyRunner.FastestPivot
 import LonelyRunner.SaturatedTopTwo

@@ -352,3 +352,10 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_affine_grid_rounding
 #print axioms LonelyRunner.nat_mod_band_of_zmod_avoidance
 #print axioms LonelyRunner.affine_grid_pivot_witness
+#print axioms LonelyRunner.circleNorm_ge_of_affine_grid_residue_band
+#print axioms LonelyRunner.affine_avoidance_allow_zero_scale
+#print axioms LonelyRunner.affine_grid_full_size_witness
+#print axioms LonelyRunner.exists_affine_shift_rounding
+#print axioms LonelyRunner.affine_shift_large_scalar_bounds
+#print axioms LonelyRunner.affine_shift_ordinary_correction_bound
+#print axioms LonelyRunner.affine_grid_one_zero_witness

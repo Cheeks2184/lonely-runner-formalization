@@ -3,7 +3,9 @@
 Status: complete manuscript derivations and exact bounded checks. The Nat
 actual-pivot Theorem B and its arithmetic bridge are now formalized in
 `LonelyRunner/AffineGrid.lean` and `LonelyRunner/AffineGridArithmetic.lean`.
-Theorem A, signed transport, and the explicit family remain manuscript results.
+The Nat product-free Theorem A is also compiled in
+`LonelyRunner/AffineGridFullSize.lean`. Signed transport and the explicit family
+specialization remain manuscript results.
 Independent Astra review is recorded in `research/astra-pass2-review.md`. This note
 does not prove or disprove unrestricted LRC. Worker `/root/affine_grid` owns
 only this file; requested routing Astra xhigh, independently observed runtime
