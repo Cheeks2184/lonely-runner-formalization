@@ -6,6 +6,14 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [seventeenth Astra checkpoint](docs/astra-research-17.md) independently
+certifies failure of universal availability of the weighted bad-incidence
+condition. At denominator 35, seventeen lower owners give `T_bad>1.01*A`,
+yet have explicit closed and strict pivot-grid witnesses. The same condition
+does succeed on the earlier denominator-nine control where the factor bound
+failed. These exact calculations establish its improvement and its limits;
+they add no Lean theorem and do not refute sparse noncover or LRC.
+
 The [sixteenth Astra research checkpoint](docs/astra-research-16.md) provides an
 independently reviewed Lean proof that four distinct positive lower speeds
 cannot cover a pivot row at denominator nine, for arbitrary speed height.

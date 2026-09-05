@@ -11,15 +11,15 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks. The
-[latest verified checkpoint](docs/astra-research-16.md) formalizes the arbitrary-height
-four-lower-owner theorem at denominator nine, with a closed witness for those
-four speeds and their pivot. A separate conditional Lean bridge derives the
-canonical conjecture from the still-unproved maximum-covered-pivot redundancy
-hypothesis. The full Lean build passed 3,615 jobs and the trust audit accepted 369 reports.
-An independently reviewed
-manuscript gives an actual-grid constant-term criterion and an unbounded class
-of sparse configurations satisfying it. General sparse-owner supply and
-unrestricted LRC remain unresolved.
+[latest verified checkpoint](docs/astra-research-17.md) gives an exact,
+independently reviewed counterexample to universal availability of a weighted
+sufficient condition. The example has explicit closed and strict witnesses;
+it refutes that auxiliary criterion, not LRC. The
+[latest formal checkpoint](docs/astra-research-16.md) proves arbitrary-height
+four-lower-owner noncover at denominator nine and a conditional canonical
+bridge with its unproved premise explicit. Its full Lean build passed 3,615
+jobs and its trust audit accepted 369 reports. General sparse-owner supply
+and unrestricted LRC remain unresolved.
 The following pipeline is the **historical 2026-08-04 snapshot**, not a live launch queue.
 
 Historical repository-recorded pipeline: Prompt98's original response and five

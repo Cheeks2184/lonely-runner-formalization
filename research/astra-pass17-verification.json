@@ -1,0 +1,54 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "a04bbdb819860ec35174e94b565dcc4665c981ca",
+  "files": {
+    "README.md": "bea700a42bce4822a777b096109d3ac292a07af9207695318ccb2b59db583fe5",
+    "STATUS.md": "df8e3eb3949033309fd3017d439afc5ca6fc87de6a1a525083df58408cf8b213",
+    "docs/astra-research-17.md": "88e493244d5fb8fb1b904e59dd19f4060f76259cf28a305618bd1bf399a4a012",
+    "research/astra-weighted-sparse-audit.md": "9e0ee5af6fb466f9504c03e2822706461103a8698307e620b1de879aad4e6d1b",
+    "research/astra-weighted-sparse-review.md": "07ab07f1b2674e838b227a36a91730dd7ad614fb867be29f6ac7ef9caf0e6d2d"
+  },
+  "scope": "Exact manuscript counterexample to universalavailability of product-weighted bad-incidence sufficientcondition; positiveN9control, N35failurewithclosedandstrictwitnesses, arbitraryheight commonscaling. NoLeanchange orLRCresolution.",
+  "root_checks": {
+    "author_full_read_and_sole_fraction_replay": true,
+    "review_full_read_and_sole_fraction_replay": true,
+    "independent_root_laurent_constant": 860,
+    "independent_root_weaker_rational_bound": "centralmean>434>860/2,thereforeTbad>868>860",
+    "N9_A_S": [
+      12,
+      44
+    ],
+    "N9_Tbad_upper": "268573232580726195617792/71247850975245287109375",
+    "N35_A_degree": [
+      860,
+      262
+    ],
+    "central_points": 16,
+    "L_bracket": "[4343817/10000,4343818/10000)",
+    "certified_Tbad_over_A_lower": "101/100",
+    "boundary_controls": 12,
+    "distance_scaling_checks": 136710,
+    "scales": [
+      1,
+      2,
+      3,
+      7,
+      35,
+      100,
+      1000000000
+    ],
+    "lean_source_changed": false,
+    "local_lean_build": "Not repeated for manuscript-only changes; Pass16 source unchanged and publishedCIpassed.",
+    "workflow_validator": "passed",
+    "focused_tests": 58
+  },
+  "reproducers": {
+    "mathematics": "Execute solePythonfencedblock in each weighted audit/review fromrepositoryroot. Integer/Fractiononly.",
+    "workflow": "python3 scripts/validate_workflow.py",
+    "focused": "python3 -m unittest tests.test_manage_storage tests.test_validate_workflow tests.test_validate_task_ledger tests.test_audit_lean_trust -q"
+  },
+  "canonical_lrc_status": "unresolved",
+  "excluded_followups": [
+    "research/astra-bonferroni-weight-audit.md"
+  ]
+}
