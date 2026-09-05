@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "scope": "lonely-runner-formalization",
+  "instructions_path": ".codex/config.toml",
+  "roles": {
+    "orchestrator": {
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "transport": "current-session"
+    },
+    "research": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "transport": "in-session-subagent",
+      "fork_turns": "none"
+    },
+    "routine": {
+      "model": "gpt-5.6-terra",
+      "effort": "medium",
+      "transport": "in-session-subagent",
+      "fork_turns": "none"
+    }
+  },
+  "max_concurrent_agents_including_orchestrator": 4,
+  "browser_model_sessions_allowed": false,
+  "external_cli_agents_allowed": false,
+  "silent_model_substitution_allowed": false,
+  "legacy_ledger": {
+    "path": "research/task-ledger.json",
+    "mode": "historical-only",
+    "sha256": "595a0aba29a22195d4611937dc3bbb805880bf38952f129a86033f75e50e2527"
+  },
+  "completion": {
+    "proof_declaration_type": "LonelyRunner.Conjecture",
+    "disproof_declaration_type": "Not LonelyRunner.Conjecture",
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "independent_semantic_review_required": true,
+    "clean_source_build_required": true
+  },
+  "storage": {
+    "retain_toolchain": true,
+    "retain_unique_evidence": true,
+    "duplicate_build_caches_allowed": false,
+    "clean_rebuildable_outputs_when_idle": true
+  },
+  "continuation": {
+    "routine_confirmation_required": false,
+    "branch_failure_ends_goal": false,
+    "research_start_requires_user_go_ahead": true,
+    "external_runtime_limits_may_interrupt": true
+  },
+  "publication": {
+    "repository": "Cheeks2184/lonely-runner-formalization",
+    "base_branch": "main",
+    "branch_prefix": "codex/",
+    "standing_user_authorization": "2026-09-05: From now on, each time you save and verify a new checkpoint, commit, push, open a PR, then merge it to main.",
+    "sequence": [
+      "verify",
+      "commit",
+      "push",
+      "open_pr",
+      "merge",
+      "verify_remote_main"
+    ],
+    "renewed_confirmation_required": false,
+    "verified_files_only": true,
+    "required_checks_and_reviews_must_pass": true,
+    "merge_expected_head_sha_required": true,
+    "bypass_branch_protections_allowed": false,
+    "receipt_only_update_joins_next_checkpoint": true
+  }
+}

@@ -5,6 +5,10 @@ Statuses: `proved-lean`, `proved-math`, `literature`, `open`, `rejected`, and
 
 | ID | Obligation | Status | Evidence / next action |
 |---|---|---|---|
+| ASTRA-KERNEL | Prove the normalized and actual strict bad-set zero-kernel bounds. | proved-lean | `OwnerKernelBound.lean` proves both bounds without witness/cover assumptions. |
+| ASTRA-AFFINE | Prove prime-field affine avoidance with product -1, and the p-2 corollary. | proved-lean | Both public declarations in `AffineAvoidance.lean`; repeated slopes allowed. No uniform integer-grid supply is established. |
+| ASTRA-FAMILY | Formalize the reviewed zero-kernel domination noncover criterion. | open | Manuscript and independent review accepted; zero-fiber, capacity and finite-family adapters remain. |
+| ASTRA-DENSE | Resolve dense internal covers outside the new criterion or supply another uniform certificate mechanism. | open | The unrestricted existential is unchanged. See `astra-research-01.md`. |
 | PIPE-76 | Decide `GLOBAL-CANONICAL-PRIVATE-DEFICIT-HALL`. | rejected | `proved-math-qualified`: `(1,4,5,6,7,11)` has private demand `100` and external capacity `98`. This stops only the frozen bridge; the tuple has a pivot certificate. Recovered scans remain unexecuted and unpromoted. |
 | PIPE-77 | Decide `PRIMITIVE-DEGREE-2N-SIGNED-GRAM-GAP`. | rejected | `proved-math-qualified`: for coprime `6 <= u < v`, `(u,v,4uv)` has the frozen six-mode blocks nonpositive. This stops only the signed-Gram bridge. The 6,330-record scan is not computed finite evidence. |
 | PIPE-78 | Decide `SPARSE-MINIMAL-COVER-OWNER-ESCAPE`. | rejected | `proved-math-qualified`: `(6,7,12,24,144)` refutes the exact theorem and canonical-cover weakening. Recovered computation is unexecuted and unpromoted; the tuple has a pivot certificate. |

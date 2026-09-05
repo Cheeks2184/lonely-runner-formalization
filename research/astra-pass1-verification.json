@@ -1,0 +1,38 @@
+{
+  "recorded_at": "2026-09-05T04:40:42.584271+00:00",
+  "source_base": "ec30e172d792e51ee9712a3f204336f7bee8724c",
+  "source_sha256": {
+    "LonelyRunner/AffineAvoidance.lean": "9fb78dc2b12694f096ac423c04835f3f961e0769dc6d5ae6180033d6004f22c0",
+    "LonelyRunner/OwnerKernelBound.lean": "4a9e242429e601f07559a1482031d84f0cc5677a3c128a15481f4003d4f5333e",
+    "LonelyRunner.lean": "f1400763af19b8ef011a27f2297a3b71e39adec8fea29a98cdded70f2425ee4c",
+    "LonelyRunner/AxiomAudit.lean": "82f88da3e08f0cd102af7228fd8e3da74348abc7b068bc9170443d2688062260",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+    "research/astra-owner-review.md": "39e235f311aef5f0a790a89c7e22cb8c8206a7d3f94ba30e9911e22544d199b8"
+  },
+  "build": {
+    "command": "PATH=\"$HOME/.elan/bin:$PATH\" lake build",
+    "exit_code": 0,
+    "jobs": 3596,
+    "log_sha256": "7a94336ba0a93642a733bde96a0837a0e665bdc27355cf2ba313f09d8b171d7e"
+  },
+  "trust": {
+    "command": "python3 scripts/audit_lean_trust.py",
+    "exit_code": 0,
+    "reports": 319,
+    "new_public_axioms": {
+      "normalizedBadCount_ownerKernel_bound": "propext, Classical.choice, Quot.sound",
+      "pivotBadResidues_ownerKernel_bound": "propext, Classical.choice, Quot.sound",
+      "affine_avoidance_of_slope_product": "propext, Classical.choice, Quot.sound",
+      "affine_avoidance_card_sub_two": "propext, Classical.choice, Quot.sound"
+    },
+    "log_sha256": "0bfd09b85aab4e54bcb1ce8b3f083ff2a19abb44ca85a5e98ae4ac4579ee3e1b"
+  },
+  "focused_tests": {
+    "command": "python3 -m unittest tests.test_validate_workflow tests.test_validate_task_ledger",
+    "passed": 32
+  },
+  "independent_review": "research/astra-owner-review.md",
+  "unrestricted_lrc": "unresolved",
+  "scope": "Four exact auxiliary declarations only; no Conjecture or negation declaration."
+}

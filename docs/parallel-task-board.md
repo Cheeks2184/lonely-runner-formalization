@@ -1,6 +1,10 @@
 # Parallel task board
 
-This file is the authoritative coordination record. The current lifecycle
+> Historical coordination snapshot. Current coordination lives in
+> `research/workflow-state.json`; use [project-workflow.md](project-workflow.md).
+> Old model routing and active rows are historical and must not launch workers.
+
+This file was the coordination record before the Astra takeover. The current lifecycle
 snapshot is based at `894a7eaea070a9935247dfb4fe4848bb21220300` and is bound to PI
 registry commit `318f073965cdbf580a200ab2f8d6d8fe1bb82ac6`; historical worker rows retain
 their actual fixture bases. The board records task routing and integration

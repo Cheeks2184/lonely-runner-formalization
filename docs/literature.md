@@ -1,7 +1,8 @@
 # Literature and known results
 
-Research cutoff: 2026-08-02. Results are labeled by publication status. A
-preprint claim is not treated as an independently verified theorem here.
+Latest primary-source check: 2026-09-05 UTC (2026-09-04 local). Historical
+entries retain their original evidence status. A preprint claim is not treated
+as an independently verified theorem here.
 
 ## Origins
 
@@ -44,8 +45,19 @@ is the primary-source basis for the prime-forcing contract in
 Sungkawichai--Trakulthongchai claim computer-assisted proofs through `N = 13`
 in a 2026 preprint, <https://arxiv.org/abs/2604.23906>. This repository treats
 `N = 11,12,13` as unaudited preprint claims until the proof and certificate code
-are independently reproduced. No recognized proof or disproof for all `N` was
-found; `N >= 14` remains open at the cutoff.
+are independently reproduced. The v2 source (2026-09-01) retains this finite scope. No unrestricted proof or
+disproof was established by this source check.
+
+A new preprint by Jaan Allikvere, *Fourteen lonely runners*, submitted
+2026-09-02, claims the next total-runner case `N=14`:
+<https://arxiv.org/abs/2609.02604v1>. It reports 111 finite prime gates and
+uses the preceding thirteen-runner theorem as induction input. The repeated
+survival of two modular orbits is explicitly an empirical observation limited
+to those gates, not a theorem for arbitrary primes or dimensions. Its Section
+2 also makes the complete-lift-fiber invariant explicit. The paper and its
+external certificate package have not been independently verified here; this
+entry supplies no new Lean theorem or accepted computational certificate.
+The unrestricted quantifier remains the project target.
 
 ## General and structural results
 

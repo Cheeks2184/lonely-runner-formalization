@@ -8,6 +8,14 @@ import LonelyRunner.DivisorInsertion
 import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
+import LonelyRunner.PivotZeroKernel
+import LonelyRunner.KernelCoverCertificates
+import LonelyRunner.OwnerKernelCover
+import LonelyRunner.AffineGridArithmetic
+import LonelyRunner.AffineGrid
+import LonelyRunner.AffineGridFullSize
+import LonelyRunner.AffineShiftArithmetic
+import LonelyRunner.AffineGridVanishing
 import LonelyRunner.ReverseGrid
 import LonelyRunner.FastestPivot
 import LonelyRunner.SaturatedTopTwo
@@ -34,6 +42,8 @@ import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts
 import LonelyRunner.Prompt100TwoOwnerCounts
+import LonelyRunner.OwnerKernelBound
+import LonelyRunner.AffineAvoidance
 import LonelyRunner.CommonPivotBadCount
 import LonelyRunner.SimultaneousCongruence
 import LonelyRunner.TripleCongruence

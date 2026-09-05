@@ -327,3 +327,35 @@ project-specific axiom.
 #print axioms LonelyRunner.primitiveMaxCovered_split_iff
 #print axioms LonelyRunner.maxCoveredNondivisible_iff_primitiveNondivisible
 #print axioms LonelyRunner.maxCovered_iff_primitiveDivisible_and_nondivisible
+
+-- First Astra research pass: exact auxiliary arithmetic, not unrestricted LRC.
+#print axioms LonelyRunner.normalizedBadCount_ownerKernel_bound
+#print axioms LonelyRunner.pivotBadResidues_ownerKernel_bound
+#print axioms LonelyRunner.affine_avoidance_of_slope_product
+#print axioms LonelyRunner.affine_avoidance_card_sub_two
+
+-- Second Astra pass: exact zero kernels and the restricted family certificate.
+#print axioms LonelyRunner.mem_pivotZeroResidues
+#print axioms LonelyRunner.card_range_mul_mod_eq_zero
+#print axioms LonelyRunner.card_pivotZeroResidues
+#print axioms LonelyRunner.pivotZeroResidues_subset_pivotBadResidues
+#print axioms LonelyRunner.pivotZeroResidues_subset_of_gcd_dvd
+#print axioms LonelyRunner.normalizedZeroKernel_capacity
+#print axioms LonelyRunner.pivotZeroResidues_capacity
+#print axioms LonelyRunner.one_and_last_mem_pivotBadResidues_sdiff_pivotZeroResidues
+#print axioms LonelyRunner.exists_candidate_avoiding_kernel_family_two_or_more
+#print axioms LonelyRunner.exists_candidate_avoiding_kernel_family
+#print axioms LonelyRunner.exists_pivotCandidate_avoiding_ownerKernel_family
+#print axioms LonelyRunner.exists_pivotCandidate_avoiding_ownerKernel_family_of_gcd_dvd
+#print axioms LonelyRunner.exists_ownerKernel_circleNorm_witness
+#print axioms LonelyRunner.circleNorm_ge_of_affine_grid_band
+#print axioms LonelyRunner.exists_affine_grid_rounding
+#print axioms LonelyRunner.nat_mod_band_of_zmod_avoidance
+#print axioms LonelyRunner.affine_grid_pivot_witness
+#print axioms LonelyRunner.circleNorm_ge_of_affine_grid_residue_band
+#print axioms LonelyRunner.affine_avoidance_allow_zero_scale
+#print axioms LonelyRunner.affine_grid_full_size_witness
+#print axioms LonelyRunner.exists_affine_shift_rounding
+#print axioms LonelyRunner.affine_shift_large_scalar_bounds
+#print axioms LonelyRunner.affine_shift_ordinary_correction_bound
+#print axioms LonelyRunner.affine_grid_one_zero_witness

@@ -1,0 +1,86 @@
+{
+  "recorded_at": "2026-09-05T05:32:10.835023+00:00",
+  "source_base": "5c24b77",
+  "source_sha256": {
+    "LonelyRunner/AffineGridArithmetic.lean": "0be8553d88fed2346895abcaeb961d0fb2967ee8db356feff8877ceb8b49b079",
+    "LonelyRunner/AffineGridFullSize.lean": "9badca0a324c37a2f9a57c860ab83f9da6e7b8aac922f52e4985352ec57bee54",
+    "LonelyRunner/AffineShiftArithmetic.lean": "a883b84e19096d0a1b3a007216c42edcbce72f1d527969d0f88ff41a52a37a0d",
+    "LonelyRunner/AffineGridVanishing.lean": "7bcec521f38f065e03c2f112e4af91f20b3e05b0cedcbc1e6f8f49cca350d5c4",
+    "LonelyRunner.lean": "7243033e4560ed8911e06725e6c7cee45279d477cf03cbaf48eb907185b9ec3c",
+    "LonelyRunner/AxiomAudit.lean": "8c14c645dbd53660e4ebd10c41eef65f392cda43469c0f17ebe8f0deaa6565eb",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+    "research/astra-pass3-review.md": "e801ca41d0fb37a5eaebc68a134367bc2dad3fb4f38376155e57d027139254ed",
+    "research/astra-vanishing-slope.md": "f3e2c58177b5f3033afd0d164fbb688eacd30e5f42f39a7bc6ccaec5e82f599e"
+  },
+  "build": {
+    "command": "PATH=\"$HOME/.elan/bin:$PATH\" lake build",
+    "exit_code": 0,
+    "jobs": 3604,
+    "log_sha256": "61f1059bba57be4258c35d0575c10155c38fdeca7df0ed73f4fe51863e6ab44d"
+  },
+  "trust": {
+    "command": "python3 scripts/audit_lean_trust.py",
+    "exit_code": 0,
+    "reports": 343,
+    "new_public_axioms": {
+      "circleNorm_ge_of_affine_grid_residue_band": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "affine_avoidance_allow_zero_scale": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "affine_grid_full_size_witness": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "exists_affine_shift_rounding": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "affine_shift_large_scalar_bounds": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "affine_shift_ordinary_correction_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "affine_grid_one_zero_witness": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "log_sha256": "224db04c5e750cbbc3afc085d504ba40807a99422f04b7789d2799a175a01552"
+  },
+  "independent_review": {
+    "path": "research/astra-pass3-review.md",
+    "scope": "Full-size theorem, refactored arithmetic, shifted rounding and exact one-zero theorem accepted. All original coordinates and closed threshold checked.",
+    "exact_checks": {
+      "combined_band": 105789,
+      "zero_affine_residues": 21560,
+      "upper_endpoint_equalities": 11867,
+      "shift_rounding": 7920,
+      "one_zero_constructions": 94560,
+      "explicit_family": 776,
+      "multiple_zero_constructions": 5200,
+      "modular_units": 304460
+    }
+  },
+  "unrestricted_lrc": "unresolved",
+  "scope": "Seven new public auxiliary declarations. Two full-size witness theorems require explicit restricted arithmetic inputs; no universal normalization theorem.",
+  "storage": {
+    "report_bytes": 7684188472,
+    "shared_cache_retained": true,
+    "reason": "Immediately queued formalization of the explicit lifted family, including even and composite runner counts, uses the shared cache."
+  }
+}

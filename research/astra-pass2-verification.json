@@ -1,0 +1,184 @@
+{
+  "recorded_at": "2026-09-05T05:07:41.137310+00:00",
+  "source_base": "ed94a47",
+  "source_sha256": {
+    "LonelyRunner/PivotZeroKernel.lean": "6487d679e2f8d84657827f01f1c98e232c997c62cb48dad5ac9c22db897df3b1",
+    "LonelyRunner/KernelCoverCertificates.lean": "0298105bda5d7af5beb7bdc1cab32880e170979ab5b611dcb706b9409777685a",
+    "LonelyRunner/OwnerKernelCover.lean": "bf4c025bcdcc178f4e9c94884314635e3d26697fe105a9a9a6a55ca1aa60f139",
+    "LonelyRunner/AffineGridArithmetic.lean": "09586c73becd90c49966eed06eac8700acf91a3ce68327403a6a557ffed3eb95",
+    "LonelyRunner/AffineGrid.lean": "ea7f4c3058f486dd29c3624d914251d37b9f85d24cca2a7152e0e796a9dc46a8",
+    "LonelyRunner.lean": "95bc11e6a2631f9043d7bf542e0e51cfe2c90b52e26a0f72ec5632283577341f",
+    "LonelyRunner/AxiomAudit.lean": "bd11d146ce0c01b9bec9e0158aa8142b9d45399b1b0e7976c8583c96ca58d2d0",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+    "research/astra-pass2-review.md": "7fd53edb11e3161c103c59c3f95c5661d215e41cef4c83674ba60851becde0f8",
+    "research/astra-affine-grid.md": "29c37e54297071653c1f8ae1e4a6e4981ae8eee341634ac9273151e2fda22c19"
+  },
+  "build": {
+    "command": "PATH=\"$HOME/.elan/bin:$PATH\" lake build",
+    "exit_code": 0,
+    "jobs": 3601,
+    "log_sha256": "c49277e4a58b653a32317cd4549cb98861f71232bf479914e317dec3c7accbe8"
+  },
+  "trust": {
+    "command": "python3 scripts/audit_lean_trust.py",
+    "exit_code": 0,
+    "reports": 336,
+    "new_public_axioms": {
+      "mem_pivotZeroResidues": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "card_range_mul_mod_eq_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "card_pivotZeroResidues": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "pivotZeroResidues_subset_pivotBadResidues": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "pivotZeroResidues_subset_of_gcd_dvd": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "normalizedZeroKernel_capacity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "pivotZeroResidues_capacity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "one_and_last_mem_pivotBadResidues_sdiff_pivotZeroResidues": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "exists_candidate_avoiding_kernel_family_two_or_more": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "exists_candidate_avoiding_kernel_family": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "exists_pivotCandidate_avoiding_ownerKernel_family": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "exists_pivotCandidate_avoiding_ownerKernel_family_of_gcd_dvd": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "exists_ownerKernel_circleNorm_witness": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "circleNorm_ge_of_affine_grid_band": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "exists_affine_grid_rounding": [
+        "propext",
+        "Quot.sound"
+      ],
+      "nat_mod_band_of_zmod_avoidance": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "affine_grid_pivot_witness": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "log_sha256": "8fc4633aa978a0e015faf39cfd01bd3a4e95a3bc89dfef0966f7b9432f86619c"
+  },
+  "independent_review": {
+    "path": "research/astra-pass2-review.md",
+    "scope": "All five new Lean modules and exact actual-pivot Theorem B accepted; manuscript-only claims distinguished.",
+    "checks": {
+      "zero_triples": 1863,
+      "gcd_containment_pairs": 15517,
+      "labelled_families": 14190,
+      "admitted_noncover": 6010
+    },
+    "status_note": "After the review, only manuscript formalization-status prose was updated to identify already compiled Theorem B. Mathematical statements are unchanged."
+  },
+  "integration_fixtures": [
+    {
+      "N": 11,
+      "p": 72,
+      "owners": [
+        22,
+        33,
+        55,
+        66,
+        70
+      ],
+      "q": 1,
+      "safe": 256
+    },
+    {
+      "N": 7,
+      "p": 24,
+      "owners": [
+        7,
+        10,
+        14
+      ],
+      "q": 1,
+      "safe": 56
+    },
+    {
+      "N": 6,
+      "p": 24,
+      "owners": [
+        6,
+        7,
+        12
+      ],
+      "q": 0,
+      "safe": 48
+    },
+    {
+      "N": 7,
+      "p": 11,
+      "owners": [
+        1,
+        4,
+        5,
+        6,
+        7
+      ],
+      "q": 1,
+      "safe": 0,
+      "admitted": false
+    }
+  ],
+  "unrestricted_lrc": "unresolved",
+  "scope": "Seventeen new auxiliary declarations, including a full N-1-speed affine-grid witness under explicit restricted arithmetic premises. No unrestricted Conjecture or negation declaration.",
+  "storage": {
+    "report_bytes": 7676302956,
+    "shared_cache_retained": true,
+    "reason": "Immediately queued shifted-grid arithmetic and vanishing-slope bridge formalization use the same shared cache."
+  }
+}
