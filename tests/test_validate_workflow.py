@@ -37,12 +37,35 @@ class WorkflowValidatorTests(unittest.TestCase):
         mutate(value)
         path.write_text(json.dumps(value), encoding="utf-8")
 
+    def write_setup_state(self):
+        """Install a phase-stable state for tests that exercise setup gates.
+
+        The checked-in state advances as the project progresses, so setup-gate
+        tests must not inherit its phase or task history.
+        """
+        state = {
+            "schema_version": 1,
+            "phase": "setup_only",
+            "goal_status": "not_started",
+            "objective": "Validate workflow lifecycle gates.",
+            "start_authorization": None,
+            "active_tasks": [],
+            "completed_tasks": [],
+            "latest_checkpoint": "Stable setup-phase test fixture.",
+            "next_actions": ["Exercise the setup gate."],
+            "research_holds": [],
+            "completion_evidence": None,
+        }
+        (self.root / "research/workflow-state.json").write_text(
+            json.dumps(state), encoding="utf-8"
+        )
+
     def assertError(self, fragment):
         errors = validate_root(self.root)
         self.assertTrue(any(fragment in error for error in errors), errors)
 
-    def test_checked_in_setup_state_is_valid(self):
-        self.assertEqual(validate_root(self.root), [])
+    def test_checked_in_research_state_is_valid(self):
+        self.assertEqual(validate_root(ROOT), [])
 
     def test_rejects_policy_routing_drift(self):
         self.change_json("research/workflow-policy.json", lambda policy: policy["roles"]["research"].update(effort="high"))
@@ -54,6 +77,8 @@ class WorkflowValidatorTests(unittest.TestCase):
         self.assertError("implementer.toml must match")
 
     def test_rejects_setup_gate_violation(self):
+        self.write_setup_state()
+
         def add_research_task(state):
             state["active_tasks"] = [{
                 "id": "research-1", "kind": "research", "requested_model": "gpt-6-astra",
@@ -62,6 +87,24 @@ class WorkflowValidatorTests(unittest.TestCase):
             }]
         self.change_json("research/workflow-state.json", add_research_task)
         self.assertError("may contain only setup task records")
+
+    def test_setup_state_can_transition_to_valid_research(self):
+        self.write_setup_state()
+
+        def start_research(state):
+            state.update(
+                phase="research",
+                goal_status="in_progress",
+                start_authorization="User approved research.",
+            )
+            state["active_tasks"] = [{
+                "id": "research-1", "kind": "research", "requested_model": "gpt-6-astra",
+                "requested_effort": "xhigh", "target": "bounded review", "source_checkpoint": "abc",
+                "owned_files": [], "status": "in_progress", "checks": [],
+            }]
+
+        self.change_json("research/workflow-state.json", start_research)
+        self.assertEqual(validate_root(self.root), [])
 
     def test_rejects_legacy_hash_drift(self):
         self.change_json("research/workflow-policy.json", lambda policy: policy["legacy_ledger"].update(sha256="0" * 64))
@@ -76,8 +119,10 @@ class WorkflowValidatorTests(unittest.TestCase):
         self.assertError("allowed axioms")
 
     def test_setup_and_ready_allow_only_setup_records_and_ready_has_no_active_tasks(self):
+        self.write_setup_state()
+
         def violate_gate(state):
-            state["phase"] = "ready"
+            state.update(phase="ready", goal_status="not_started")
             state["active_tasks"] = [{
                 "id": "routine-1", "kind": "routine", "requested_model": "gpt-5.6-terra",
                 "requested_effort": "medium", "target": "script", "source_checkpoint": "abc",

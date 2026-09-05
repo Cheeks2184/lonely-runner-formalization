@@ -34,6 +34,8 @@ import LonelyRunner.CrossPivotScaling
 import LonelyRunner.ComparableSignedDivisor
 import LonelyRunner.PivotCounts
 import LonelyRunner.Prompt100TwoOwnerCounts
+import LonelyRunner.OwnerKernelBound
+import LonelyRunner.AffineAvoidance
 import LonelyRunner.CommonPivotBadCount
 import LonelyRunner.SimultaneousCongruence
 import LonelyRunner.TripleCongruence

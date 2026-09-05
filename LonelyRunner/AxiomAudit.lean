@@ -327,3 +327,9 @@ project-specific axiom.
 #print axioms LonelyRunner.primitiveMaxCovered_split_iff
 #print axioms LonelyRunner.maxCoveredNondivisible_iff_primitiveNondivisible
 #print axioms LonelyRunner.maxCovered_iff_primitiveDivisible_and_nondivisible
+
+-- First Astra research pass: exact auxiliary arithmetic, not unrestricted LRC.
+#print axioms LonelyRunner.normalizedBadCount_ownerKernel_bound
+#print axioms LonelyRunner.pivotBadResidues_ownerKernel_bound
+#print axioms LonelyRunner.affine_avoidance_of_slope_product
+#print axioms LonelyRunner.affine_avoidance_card_sub_two
