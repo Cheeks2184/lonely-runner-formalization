@@ -1,0 +1,39 @@
+{
+  "recorded_at": "2026-09-05T05:52:13.527095+00:00",
+  "source_base": "5f6c37ecf8c38fd0677f52aa8b88dfe7b4bcc391",
+  "source_sha256": {
+    "LonelyRunner/AffineDenseFamily.lean": "20c27df2612953b67ed110694dbec27935cbfa41adbbe6dc0ee9cf6f7bda7dcf",
+    "LonelyRunner.lean": "a09ec3a0b86e52546a1106a27d0f25a7daef86723371c0dec43a453b72293271",
+    "LonelyRunner/AxiomAudit.lean": "599ed2402a062490dd51e144234ce99d78ed544e24fd6f6b57358b5b781ee9d1",
+    "research/astra-grid-supply-audit.md": "7caa2b660942cacb92382bc9cd661b83647af85f212b71589d162e6734bb22c1",
+    "research/astra-pass4-review.md": "2fa6760b347f08d6e45b698bea06d005f998ce7de93ec8c639b46af5f22db431",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218"
+  },
+  "build": {
+    "command": "PATH=\"$HOME/.elan/bin:$PATH\" lake build",
+    "exit_code": 0,
+    "jobs": 3605,
+    "log_sha256": "1211a9bbc6108ec0ef04ec1ddc2c174de6cdd052a5b9a4512975e180ff486414"
+  },
+  "trust": {
+    "command": "python3 scripts/audit_lean_trust.py",
+    "exit_code": 0,
+    "reports": 344,
+    "new_declaration": "LonelyRunner.affine_dense_family_witness",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log_sha256": "947167827853a7f5f4ff06d416dcdd84386a96c4e82aa7c5cad2256a10cb5772"
+  },
+  "independent_review": {
+    "path": "research/astra-pass4-review.md",
+    "result": "accepted without corrections",
+    "extra_all_multiplier_core_checks": 108900,
+    "extra_family_checks": 370
+  },
+  "scope": "Explicit lifted family for all integer N>=7; separate manuscript obstruction to three restricted normalization contracts.",
+  "unrestricted_lrc": "unresolved"
+}

@@ -16,6 +16,7 @@ import LonelyRunner.AffineGrid
 import LonelyRunner.AffineGridFullSize
 import LonelyRunner.AffineShiftArithmetic
 import LonelyRunner.AffineGridVanishing
+import LonelyRunner.AffineDenseFamily
 import LonelyRunner.ReverseGrid
 import LonelyRunner.FastestPivot
 import LonelyRunner.SaturatedTopTwo
