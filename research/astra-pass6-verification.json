@@ -1,0 +1,38 @@
+{
+  "recorded_at": "2026-09-05T06:37:40.634045+00:00",
+  "source_base": "bbbb4193df062919949ec64d53b53fe7d16c8120",
+  "source_sha256": {
+    "scripts/grid_normalization.py": "38bc58b6a53c044998a9b48d4fda8dc4a717fa6936dee9e8cb68935bf690cdb0",
+    "tests/test_grid_normalization.py": "f68d210ec6295f3196c7849d1effc1bbc90aef0dfb67ebe2739a8f5432bcd0da",
+    "research/astra-fixed-grid-checker.md": "c3465adc8b5794e88404c8f1de41a45d64ddbdd59d07c864b631316e1d6bfa9c",
+    "research/astra-union-supply-audit.md": "dc5cf0ec0d7e0b77b79f998f6419a8d81b5be5851bc861a8701f062d7aec012e",
+    "research/astra-normalization-decision.md": "6e3a76646f4f93dec9420a4285ffbdc8848b4437dc607a6485a555f7c7c4d89f",
+    "research/astra-pass6-review.md": "c3d362c09a34fb375329bb01d71de9a6bb9f610f39770837044e2264d130983b"
+  },
+  "checks": {
+    "command": "python3 -m unittest tests.test_grid_normalization tests.test_validate_workflow tests.test_validate_task_ledger -q",
+    "exit_code": 0,
+    "tests": 40
+  },
+  "independent_review": {
+    "path": "research/astra-pass6-review.md",
+    "result": "accepted without open findings",
+    "fixed_cases": 85354,
+    "returned_witnesses": 10102,
+    "normalized_formula_cases": 19076,
+    "extra_density_constructions": 576,
+    "malformed_numeric_mutations": 42
+  },
+  "lean": {
+    "source_changed": false,
+    "last_verification": "research/astra-pass5-verification.json",
+    "trust_reports": 346,
+    "local_rebuild": "not needed for unchanged Lean source"
+  },
+  "storage": {
+    "cache_bytes_removed": 7687680100,
+    "lean_cache_retained": false
+  },
+  "scope": "Exact fixed-(M,c) checker; independently reviewed manuscript all-modulus decision reduction. Symbolic engine not part of checkpoint.",
+  "unrestricted_lrc": "unresolved"
+}
