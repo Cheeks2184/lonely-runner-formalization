@@ -1,0 +1,55 @@
+{
+  "pass": 20,
+  "base_checkpoint": "e371af814f023bf2761e7b25de980b763347d049",
+  "status": "verified",
+  "canonical_lrc_status": "unresolved",
+  "lean_source_changed": false,
+  "new_formal_declaration": null,
+  "source_hashes": {
+    "research/astra-endpoint-label-audit.md": "667b9bcdebf30333c551badf6e9ef6c861e5e1ca1095808ece5354733745e44d",
+    "research/astra-endpoint-label-review.md": "865f434052997ff1cd0b9d6fdd5c4a23c792feb409c9e3b492ccb009076e01e7",
+    "research/astra-endpoint-controls.json": "16f4724525f6ce05d01c6a3037aaa934417e7be16b55ce85fa6349e06202a51a",
+    "LonelyRunner/DivisorInsertion.lean": "212fa6d879bab6d70f09a4a43b2027b96724b5e5ac4a22cdf4b368509973166f",
+    "LonelyRunner/PivotResidues.lean": "362da5ab923f22e900ae7ac821dd4cf4aab91dfe70889987bc9e5a05d19c276a",
+    "LonelyRunner/Prompt99Scaling.lean": "49131a7f9690042d1b16cbc876417f9d9ce1b53cc6565f87b6d1b53c4e3340cd"
+  },
+  "manuscript_scope": [
+    "Same actual old pivot row is preserved under divisor shifts when2m<=N(m-1), m=gcd(V)/gcd(gcd(V),p). For N>=4,m>=2 this handles every endpoint owner.",
+    "Positive common scaling restricts the remaining endpoint candidate to primitive old gcd1.",
+    "Exact N7,V2,5,7,12,17,p19 counterexample drops largest-row coverage; neither actual C_all nor C_some is refuted."
+  ],
+  "independent_review": {
+    "path": "research/astra-endpoint-label-review.md",
+    "disposition": "accepted at manuscript scope",
+    "root_full_read": true,
+    "root_replay": "passed",
+    "stdout": "{'solver_comparisons': 480, 'positive_covers': 10, 'trapped_components': 60, 'shifted_old_candidates': 2448, 'closed_mesh_equality': 'passed', 'near_control': 'passed'}\n{'independent_fixture_rows': 70, 'independent_trapped_components': 60, 'tie_assignments': 196, 'signed_near_control': 'passed', 'completed_prefix_arithmetic': 'passed', 'discovery_runs': 0}\n",
+    "timed_discovery": "Author-reported only; reviewer/root did not rerun discovery."
+  },
+  "mechanical_verification": {
+    "record": "research/astra-endpoint-controls.json",
+    "focused_tests": 48,
+    "result": "passed"
+  },
+  "root_divisor_controls": {
+    "result": "passed",
+    "contract_domain": "N=3..6; D0=2..5; V=D0 times every size1..3 subset of1..4; p=1..13; restrict2m<=N(m-1),m=gcd(V)/gcd(gcd(V),p). Every old-safe residue on every old pivot; signed representatives r-2Na,r,r+Na.",
+    "counts": {
+      "contracts": 2108,
+      "old_safe": 85270,
+      "signed_normalizations": 255810,
+      "nonprimitive_contracts": 414,
+      "p_not_above_old_max_contracts": 1632,
+      "closed_equality_candidates": 264
+    },
+    "script_sha256": "6a33b8487269961f4752f8e6add33a07aa4d50fbe994153789320e554be46394",
+    "reproduction": "Write the script field verbatim to a temporary.py file and run with standard Python.",
+    "script": "from fractions import Fraction as Q\nfrom itertools import combinations\nfrom math import gcd\nimport json\n\ndef norm(x):\n    f=x//1\n    return min(x-f,1-(x-f))\n\ncounts=dict(contracts=0,old_safe=0,signed_normalizations=0,nonprimitive=0,below_old_max=0,closed_equality=0)\nfor N in range(3,7):\n  for D0 in range(2,6):\n    for size in range(1,4):\n      for base in combinations(range(1,5),size):\n        V=tuple(D0*v for v in base);D=gcd(*V)\n        for p in range(1,14):\n          g=gcd(D,p);m=D//g\n          if 2*m>N*(m-1):continue\n          counts['contracts']+=1\n          counts['nonprimitive']+=g>1\n          counts['below_old_max']+=p<=max(V)\n          for a in V:\n            oldsafe=[];newsafe=[]\n            for r in range(N*a):\n              if r%N==0:continue\n              t=Q(r,N*a)\n              if not all(norm(v*t)>=Q(1,N) for v in V):continue\n              oldsafe.append(r);counts['old_safe']+=1\n              if norm(p*t)>=Q(1,N):newsafe.append(r)\n              phases=[norm(p*(t+Q(j,D))) for j in range(m)]\n              assert max(phases)>=Q(m-1,2*m)>=Q(1,N)\n              j=phases.index(max(phases))\n              counts['closed_equality']+=max(phases)==Q(1,N)\n              for signed in (r-2*N*a,r,r+N*a):\n                u=signed+N*(a//D)*j\n                rr=u%(N*a)\n                assert 0<=rr<N*a and rr%N==r%N!=0\n                assert all(norm(v*Q(rr,N*a))>=Q(1,N) for v in V+(p,))\n                assert all(norm(v*Q(rr,N*a))==norm(v*t) for v in V)\n                counts['signed_normalizations']+=1\n            assert bool(oldsafe)==bool(newsafe)\nprint(json.dumps(counts,sort_keys=True))\n"
+  },
+  "local_build": "Not repeated: no Lean source, imports, audit, toolchain, or manifest changed; previous Pass19 full3616build and370trustreports remain source evidence. Required remote CI is inspected before merge.",
+  "storage": {
+    "dependency_cache_restored": false,
+    "shared_lake_present": false
+  },
+  "completion_gate": "Unchanged; full unconditional canonical proof/disproof, independent semantic review and kernel trust validation still required."
+}
