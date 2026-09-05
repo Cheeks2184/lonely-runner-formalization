@@ -1,0 +1,120 @@
+{
+  "pass": 24,
+  "base_checkpoint": "7a5d0d69520a1d290c1dd6c85902488283394d1e",
+  "status": "verified",
+  "canonical_lrc_status": "unresolved",
+  "source_hashes": {
+    "LonelyRunner/TwoClusterWitness.lean": "ba53de4431417ea6b3989aff2e078acef12997b9000b408629a1f329052bb301",
+    "LonelyRunner/TwoClusterFamily.lean": "05eb795185e08ee7d64aea351764781f7a8d493af1a3000c0cd2826141653915",
+    "LonelyRunner.lean": "866ece505486e83be0bbe567d77a8a4a80e793a962a0fe66b6c618c11ce1bad3",
+    "LonelyRunner/AxiomAudit.lean": "a926f706168556284a7e4acd3ac9a9d97e9d47e0bceef5eac2130010ecc34ba1",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+    "README.md": "504023a40221e0537a646da052919690e08770f92b3ad3f178051230599fee07",
+    "STATUS.md": "0d10cfb0c97bff08396737e15a3dd9e6e6f0e0ed0cb780bd8360b89eb536f287",
+    "docs/astra-research-24.md": "af63f7783c0acd1b82203c28414959e60a939ee249c3946763632c1d83d0f989",
+    "research/astra-dense-paired-blocks.md": "004ef46bce4e9062fff7e0a78fbba97ea7c732d134214249a04ac993a344c16e",
+    "research/astra-two-cluster-controls.json": "ba6acc7205fffca141415335e86ec0bd426ec869e21a98365738a07f2f76c7a0",
+    "research/astra-two-cluster-lean-interface.json": "8dff77fe6dc7b30a2b58e9a240057f4fdf330972de742e7be761453e1e1029c6",
+    "research/astra-two-cluster-review.md": "50ea188ace7ef31ad766146d165b584a0ec19397ec993e293defbff1cd946b5c",
+    "research/astra-two-cluster-formal-review.md": "7e00621b0484881b17454b527fc67df0978206bd7e0c6685ab430d74555d2f17",
+    "research/astra-cluster-limit-audit.md": "24579e2572d5d9c37737e44b5d7ee1278bbe4f54a6138c171b57ad034da1e94b",
+    "research/astra-cluster-limit-review.md": "db9b829a3b8418617921b8b009664e90e77b89fd91857fb42d273b7facebfa19",
+    "research/astra-cluster-limit-controls.json": "7374c5e9c482fc73713afdd2dd862ebe1bd6aff44fa8ae8df792592fd5f773a9"
+  },
+  "formal_scope": "For A,B finite subsets of positive integers through M, N=|A|+|B|+2>=4,1<=M<N-2,p>=2M+1,M*(N-1)<=(p-M)*(N-2-M), exact configuration {0} union A union {p-b:b in B} union {p} has N distinct runners and a positive canonical LonelyAt witness for every chosen runner under arbitrary injective Fin N labelling. Holes, unequal sets/cardinalities and odd counts permitted. No unrestricted quantification over speed configurations; no exact cell iff or public named-time correctness theorem exported.",
+  "formal_declarations": [
+    "LonelyRunner.twoClusterPhaseBand",
+    "LonelyRunner.twoClusterPhaseSupply",
+    "LonelyRunner.twoClusterPhaseCellWitness",
+    "LonelyRunner.card_twoClusterSpeeds",
+    "LonelyRunner.twoClusterSpeeds_member_le",
+    "LonelyRunner.twoClusterSpeeds_reflect_mem",
+    "LonelyRunner.mem_twoClusterSpeeds_reflect_iff",
+    "LonelyRunner.twoClusterLowerRunner",
+    "LonelyRunner.twoClusterRunnerWitness",
+    "LonelyRunner.twoClusterLonelyAt"
+  ],
+  "verification": {
+    "build": {
+      "command": "PATH=$HOME/.elan/bin:$PATH lake build",
+      "result": "passed",
+      "jobs": 3620,
+      "log": "/tmp/astra-pass24-full-build.log"
+    },
+    "trust": {
+      "command": "PATH=$HOME/.elan/bin:$PATH python3 scripts/audit_lean_trust.py",
+      "result": "passed",
+      "theorem_reports": 389,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "log": "/tmp/astra-pass24-trust.log"
+    },
+    "focused_tests": {
+      "command": "PATH=$HOME/.elan/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests.test_validate_workflow tests.test_manage_storage tests.test_validate_task_ledger tests.test_audit_lean_trust -q",
+      "result": "passed",
+      "count": 58,
+      "log": "/tmp/astra-pass24-focused-tests.log"
+    },
+    "formal_review": {
+      "path": "research/astra-two-cluster-formal-review.md",
+      "result": "accepted",
+      "root_full_read": true,
+      "root_replayed_both_generators": true,
+      "root_fresh_source_lean_replays": "both exit0",
+      "core_probe_sha256": "07a2ad3a6e640cb18007eee6016d430c525f526fecff905f6b6aa89f8f226cc8",
+      "combined_probe_sha256": "87b0d9e3641f5d8cda65f988e00157e54d0322cbd40258fc5b778c753349ac04",
+      "commands": [
+        "PATH=$HOME/.elan/bin:$PATH lake env lean /tmp/endpoint-two-cluster-core-review.lean",
+        "PATH=$HOME/.elan/bin:$PATH lake env lean /tmp/endpoint-two-cluster-family-review.lean"
+      ],
+      "logs": [
+        "/tmp/astra-pass24-core-review-replay.log",
+        "/tmp/astra-pass24-family-review-replay.log"
+      ],
+      "core_fixtures": 10,
+      "core_phase_controls": 45,
+      "invalid_hypothesis_exclusions": 6,
+      "family_fixtures": 9,
+      "chosen_runners": 56,
+      "signed_comparisons": 310,
+      "negative_comparisons": 155,
+      "closed_equalities": 65,
+      "generic_full_enumeration_natural_and_real_injectivity": true,
+      "large_labelled_total_count": 1001,
+      "diagnostics": "Combined reviewer probe has unused-simp-argument warnings in generated fixture proofs only; both replays exited0."
+    },
+    "manuscript_replays": {
+      "root_full_read_and_exact_replay": "all passed",
+      "author_scalar_comparisons": 429,
+      "author_signed_comparisons": 532,
+      "review_scalar_comparisons": 176,
+      "review_signed_comparisons": 1708,
+      "root_scalar_cases": 177,
+      "root_signed_comparisons": 3226
+    },
+    "conditional_cluster_limit": {
+      "status": "manuscript independently accepted; not Lean formalized",
+      "hypothesis": "H_N: positive stationary integer LRC for each nonempty distinct positive moving-speed set of cardinality <=N-2.",
+      "scope": "For fixed finite signed integer sets A,B both containing0,N=|A|+|B|>=3,K=max diameters,R=max maxima, all integerp>=R+N*(N-1)*K/2 yield exactlyN and positive per-runner closed1/N witnesses. Singleton and N2 cases separate. No claim that arbitrary tuples admit a certified split.",
+      "author_replay": "88 lifts,358 signed comparison slots passed",
+      "independent_review_replay": "59 lifts,181 signed comparisons,11 nearest ties,2 exact closed boundary witnesses passed",
+      "implementation_controls": "120 chosen runners,528 signed comparisons,240 error bounds,6 exact separation equalities passed after root-reviewed checker correction.",
+      "root_full_read_and_replay": true
+    }
+  },
+  "storage": {
+    "status": "complete",
+    "command": "python3 scripts/manage_storage.py --clean",
+    "bytes_removed": 7720771757,
+    "removed_paths": [
+      ".lake"
+    ],
+    "coordination": "All root build/trust/tests/probes terminated; independent reviewers and Terra workers stopped; sole active mathematical author confirmed no commands and held new verifier/search/build commands until cleanup completed.",
+    "retained": "Pinned Lean toolchain, source, Git history, unique manuscripts/reviews and exact reproducible evidence."
+  },
+  "routing_recovery": "Same requested Terra medium arithmetic work was split into bounded compiling stages. A fixed-control checker initially returned the unadjusted time; root isolated it and Terra corrected/replayed the construction. Root integration corrected near-bound versus equality counter labels. No mathematical counterexample, overall goal blockage, fabricated resume action, or silent model substitution."
+}

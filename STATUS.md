@@ -6,6 +6,17 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [twenty-fourth Astra checkpoint](docs/astra-research-24.md) proves the
+unequal two-cluster family in Lean, including holes, odd counts, signed
+relative comparisons, and the canonical statement under arbitrary injective
+labelling. The exact density and separation hypotheses remain explicit.
+The full build passed 3,620 jobs, the trust audit accepted 389 reports, and
+58 focused tests passed. Independent fresh-source probes and the root replay
+verify the complete bodies and nonvacuous labelling. A separate reviewed
+manuscript supplies arbitrary fixed clusters at sufficiently large separation
+assuming LRC for fewer runners; its exact controls include attained closed
+boundaries. No unrestricted proof or disproof has been established.
+
 The [twenty-third Astra checkpoint](docs/astra-research-23.md) gives an
 independently reviewed Lean proof for every chosen runner in the exact
 mirrored configuration `{0,...,m} union {p-m,...,p}`, with m>=1 and
