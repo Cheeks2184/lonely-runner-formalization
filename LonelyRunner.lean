@@ -46,6 +46,8 @@ import LonelyRunner.PivotCounts
 import LonelyRunner.Prompt100TwoOwnerCounts
 import LonelyRunner.OwnerKernelBound
 import LonelyRunner.AffineAvoidance
+import LonelyRunner.WeightedAffineAvoidance
+import LonelyRunner.AffineOneOutlierFamily
 import LonelyRunner.CommonPivotBadCount
 import LonelyRunner.SimultaneousCongruence
 import LonelyRunner.TripleCongruence

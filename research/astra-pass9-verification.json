@@ -1,0 +1,60 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "4d65e3f47fdea6c0f920f01b928310af833d3247",
+  "files": {
+    "LonelyRunner/WeightedAffineAvoidance.lean": "59c8421001abfa0b7776783ea0af3bae562eb3a5a3270c07d6971cf07a20b195",
+    "LonelyRunner/AffineOneOutlierFamily.lean": "f4340eda138464cb2383af4582d1bbb64237cb31153f5296504023feaf994ec8",
+    "LonelyRunner.lean": "ab124b0214612ffa4636e35bbc2aed369dfe306b3cfc005e3c987d2526858814",
+    "LonelyRunner/AxiomAudit.lean": "294a7bbc88df8280881c690839b6312cb926ba6449eaea6a04fcde446f673b4d",
+    "research/astra-exact-band-route.md": "0e2d264986a98b69d93cbfd28ffd81f759df6031869b96a3219249e77b504554",
+    "research/astra-pass9-review.md": "d489613c466422a94e1a1d95360bbba6854fc073765267b5fc47dd4496ba125a",
+    "research/astra-weighted-formal-review.md": "001591836ecb1bebbcb3145334fb95a5df70218280ff0c046ef250d2c880046d",
+    "research/astra-family-formal-review.md": "64a9698c548bbccb8ede1e1cfdad655996acdcf60f9dc84f73bf4d166d69da5c",
+    "docs/astra-research-09.md": "60ac24fea16699cb9959285cb519b8537fa0d517fc2a2bf4dc83388b86998d87",
+    "README.md": "2db3996865e4d7087af59c74819404bd41f3eb80f2cad754d76ad12493f38842",
+    "STATUS.md": "7091e56c52afce2fd481a9f5a0295bf4175ec939041c41494ccbb14ac4be5e11"
+  },
+  "scope": "Kernel-checked weighted prime-field sufficient lemma and full odd-N one-outlier family; general cyclic envelope bridge manuscript-only; canonical LRC unresolved.",
+  "root_checks": {
+    "full_new_Lean_source_read": true,
+    "author_replay": {
+      "weighted": 53848,
+      "cyclic": 9504,
+      "family": 1335,
+      "bridge_controls": 3,
+      "negative_control": "pass"
+    },
+    "independent_replay": {
+      "weighted": 148848,
+      "cyclic": 35000,
+      "family": 10892,
+      "negative_controls": "pass"
+    },
+    "full_build_jobs": 3608,
+    "trust_reports": 350,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "weighted_review_Lean_reproducer": "passed, seven fixtures",
+    "family_review_reproducer": {
+      "Lean": "passed symbolic N9 and square endpoint probes",
+      "ring_cases": 2024,
+      "family_cases": 4270
+    },
+    "focused_workflow_storage_ledger_tests": 48
+  },
+  "reproducers": {
+    "author": "Execute sole python code block in research/astra-exact-band-route.md.",
+    "reviewer": "Execute sole python code block in research/astra-pass9-review.md.",
+    "build": "PATH=$HOME/.elan/bin:$PATH lake build",
+    "trust": "python3 scripts/audit_lean_trust.py"
+  },
+  "canonical_lrc_status": "unresolved",
+  "general_cyclic_bridge_status": "independently_reviewed_manuscript_not_Lean",
+  "independent_Lean_reviews": {
+    "weighted": "research/astra-weighted-formal-review.md",
+    "family": "research/astra-family-formal-review.md"
+  }
+}
