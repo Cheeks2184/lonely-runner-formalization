@@ -7,7 +7,13 @@ the Lonely Runner Conjecture (LRC).
 > `Conjecture` is a formal statement under investigation, not a completed
 > proof. See [STATUS.md](STATUS.md) for the current boundary of knowledge.
 
-Current repository-recorded pipeline: Prompt98's original response and five
+**Current operating instructions:** [.codex/config.toml](.codex/config.toml) and
+[project workflow](docs/project-workflow.md). Astra High orchestrates in-session
+Astra Extra High research/review and Terra Medium implementation. Setup is the
+current phase; research has not been started. The following pipeline is the
+**historical 2026-08-04 snapshot**, not a live launch queue.
+
+Historical repository-recorded pipeline: Prompt98's original response and five
 attachments are recovered while a same-chat correction remains active.
 Prompt100 is completed, recovered, and independently audited. Its exact
 two-owner theorem and Task366 owner-density consequences are
@@ -284,9 +290,15 @@ See [STATUS.md](STATUS.md) for the exact environment, timings, warnings, and
 historical CI results.
 
 Install [Elan](https://github.com/leanprover/elan), clone the repository, and
-run from its root:
+use the versions pinned in `lean-toolchain` and `lake-manifest.json`. The
+deterministic suite also needs Python 3.11+ (CI uses 3.14), Node.js, a C++
+compiler, and Boost headers. The takeover audit used Python 3.12.3, Node
+24.19.0, GCC 13.3, and Boost 1.83. On Ubuntu, the native prerequisites are
+`curl build-essential libboost-dev nodejs`; the release scan also uses Docker.
+Run from the project root when verification is needed:
 
 ```bash
+export PATH="$HOME/.elan/bin:$PATH"
 lake exe cache get
 lake build
 python3 scripts/audit_lean_trust.py

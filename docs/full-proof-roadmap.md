@@ -1,5 +1,10 @@
 # Full-proof roadmap
 
+> Historical route and decision record. [project-workflow.md](project-workflow.md)
+> supersedes all model routing, browser, and operating-budget instructions here.
+> A branch budget is not a stopping condition for the full goal. Research remains
+> gated on a later user instruction to begin; Prompt104/105 are on audit hold.
+
 This document is the decision record for **FULL-PROOF PRIORITY MODE**. The
 primary objective is unrestricted Lonely Runner, not another isolated
 bounded-height improvement. Results keep the repository-wide labels

@@ -740,7 +740,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         for error in sorted(errors):
             print(f"- {error}", file=sys.stderr)
         return 1
-    print("TASK LEDGER VALID")
+    print("TASK LEDGER VALID (historical snapshot; live state: research/workflow-state.json)")
     if args.print_metrics:
         print(json.dumps(metrics, indent=2, sort_keys=True))
     return 0

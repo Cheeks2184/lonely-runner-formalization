@@ -1,6 +1,13 @@
 # Project status
 
-Status date: 2026-08-04. Authoritative branch: `main`.
+Setup update: 2026-09-04. The current project-only workflow is documented in
+[project-workflow.md](docs/project-workflow.md); resumable status is
+[workflow-state.json](research/workflow-state.json). Research remains unstarted
+pending the user instruction to begin. No mathematical source was changed during
+this setup.
+
+The research narrative below is the historical 2026-08-04 `main` snapshot.
+Old model routing and active-task language are superseded by the current workflow.
 
 Unrestricted Lonely Runner Conjecture: **open**. This repository contains no
 claim that it has been proved or disproved.

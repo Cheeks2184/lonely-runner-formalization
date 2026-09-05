@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "phase": "ready",
+  "goal_status": "not_started",
+  "objective": "Produce a kernel-checked full proof or disproof of the canonical unrestricted Lonely Runner Conjecture.",
+  "start_authorization": null,
+  "active_tasks": [],
+  "completed_tasks": [
+    {
+      "id": "/root/workflow_validation",
+      "kind": "setup",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Validate project routing and lifecycle gates structurally; no mathematical work.",
+      "source_checkpoint": "166dbb2b817bf8d4d1fbb505858e770017e9ea35 + local setup changes",
+      "owned_files": [
+        "scripts/validate_workflow.py",
+        "tests/test_validate_workflow.py"
+      ],
+      "status": "complete",
+      "checks": [
+        "12 workflow tests passed, including routing drift and no-start/completion gates.",
+        "Current project structural validation passed."
+      ],
+      "record_note": "Setup launch record recovered from accepted collaboration tool calls; per-task runtime model metadata is not exposed.",
+      "result": "Setup-only deliverable complete; no mathematical work performed."
+    },
+    {
+      "id": "/root/setup_review",
+      "kind": "setup",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independently review setup persistence and routing; no mathematical research.",
+      "source_checkpoint": "166dbb2b817bf8d4d1fbb505858e770017e9ea35 + local setup changes",
+      "owned_files": [],
+      "status": "complete",
+      "checks": [
+        "Independent Astra xhigh setup-only review completed.",
+        "All three prose findings addressed: single state writer, permanent toolchain retention, effective configuration versus runtime metadata."
+      ],
+      "record_note": "Setup launch record recovered from accepted collaboration tool calls; per-task runtime model metadata is not exposed.",
+      "result": "Setup-only deliverable complete; no mathematical work performed."
+    },
+    {
+      "id": "/root/storage_setup",
+      "kind": "setup",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement safe project cache reporting and cleanup; do not perform real cleanup.",
+      "source_checkpoint": "166dbb2b817bf8d4d1fbb505858e770017e9ea35 + local setup changes",
+      "owned_files": [
+        "scripts/manage_storage.py",
+        "tests/test_manage_storage.py",
+        "docs/storage-policy.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "16 storage safety tests passed, including real-environment process guard refinements.",
+        "47 combined storage/workflow/historical-ledger tests passed."
+      ],
+      "record_note": "Setup launch record recovered from accepted collaboration tool calls; per-task runtime model metadata is not exposed.",
+      "result": "Cleanup implementation complete; no mathematical work performed."
+    }
+  ],
+  "latest_checkpoint": "Setup complete at baseline 166dbb2 with local Astra workflow changes: effective project-only settings verified, independent setup review addressed, 47 focused tests passed, 8,106,978,870 bytes of rebuildable audit/cache files removed. No mathematical work begun in this setup pass.",
+  "next_actions": [
+    "Await the user instruction to begin; do not activate a goal or schedule work from readiness alone.",
+    "When explicitly authorized, record the exact start instruction/date, enter research/in_progress, validate workflow state, read the takeover audit and route holds, and pursue the full canonical proof/disproof autonomously using the configured in-session roles."
+  ],
+  "research_holds": [
+    {
+      "route": "Prompt104",
+      "reason": "Takeover audit found claimed weaker intermediate collapses to Prompt95 under accepted density. Reassess before reuse."
+    },
+    {
+      "route": "Prompt105",
+      "reason": "Takeover audit contains manuscript equivalence with ordinary witness existence, not yet Lean formalized. Reassess before reuse."
+    }
+  ],
+  "completion_evidence": null,
+  "setup_verification": {
+    "focused_tests": {
+      "command": "python3 -m unittest tests.test_manage_storage tests.test_validate_workflow tests.test_validate_task_ledger -q",
+      "count": 47,
+      "result": "pass"
+    },
+    "config_read": {
+      "project_model": "gpt-6-astra",
+      "project_effort": "high",
+      "project_instructions_loaded": true,
+      "home_directory_project_instructions_loaded": false,
+      "runtime_model_independently_observed": false
+    },
+    "baseline_audit": "/home/joshua/Documents/Codex/audits/lonely-runner-2026-09-04/audit.md",
+    "storage_cleanup": {
+      "project_cache_bytes_removed": 7667820701,
+      "audit_download_archive_bytes_removed": 439158169,
+      "audit_download_archive_count": 8639,
+      "audit_download_archive_names_sha256": "c6488a774e671ba4709034b089eb5a73fcbd6c17743c760b772c898a83d0e392",
+      "audit_archive_scope": "Only 8639 .ltar archives generated by takeover audit 2026-09-05 03:21:27\u201303:22:11 UTC; fingerprint/count/size/time validated before removal.",
+      "retained": "Pinned Lean toolchain; project source and Git; unique certificates; compact audit bundle; unrelated caches.",
+      "temporary_app_schema_removed": true
+    }
+  }
+}
