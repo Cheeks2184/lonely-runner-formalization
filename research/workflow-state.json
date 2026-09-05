@@ -6,20 +6,20 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/endpoint_label_audit-primitive-exchange",
+      "id": "/root/endpoint_label_audit-minimal-height",
       "kind": "research",
       "status": "in_progress",
-      "target": "Attempt one structural argument for the precise primitive old-gcd-one endpoint-label candidate, using largest-row coverage on the original labels; no broad finite search.",
-      "source_checkpoint": "e371af814f023bf2761e7b25de980b763347d049 + frozen endpoint audit667b9bcd",
+      "target": "Audit a direct minimal-counterexample route using lexicographic moving-count and sum-of-speeds minimality; derive one substantive consequence beyond a tautological witness restatement.",
+      "source_checkpoint": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
       "owned_files": [
-        "research/astra-primitive-endpoint-exchange.md"
+        "research/astra-minimal-height-audit.md"
       ],
       "checks": [],
-      "next_action": "Use the accepted common-divisor boundary; focus one exact global row-exchange mechanism and stop that branch if circular or refuted."
+      "next_action": "Use exact canonical positive-integer contract and existing insertion theorems; identify usable same-count smaller-sum premises, avoid rebasing selected runner or circular full-count supply."
     }
   ],
   "completed_tasks": [
@@ -2125,13 +2125,92 @@
       ],
       "next_action": "Integrate verified Pass20.",
       "result": "Accepted frozen667b9bcd manuscript at exact scope; review865f4340, all reproduced controls pass. Actual candidate unresolved."
+    },
+    {
+      "id": "/root/endpoint_label_audit-primitive-exchange",
+      "kind": "research",
+      "status": "complete",
+      "target": "Attempt one structural argument for the precise primitive old-gcd-one endpoint-label candidate, using largest-row coverage on the original labels; no broad finite search.",
+      "source_checkpoint": "e371af814f023bf2761e7b25de980b763347d049 + frozen endpoint audit667b9bcd",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-primitive-endpoint-exchange.md"
+      ],
+      "checks": [
+        "Root derived oldgcd1 exact-phase-preserving shifts are integer by Bezout, hence preserve newphase too. Sent to author; manuscript integration pending.",
+        "Root rational control: N7,V1,4,5,6,7,p11,L5/14; preserving every oldnorm preserves norm at speed1 and forces tprime=plus/minusL mod1, leaving pbad1/14. Row6 still noncovered at29/42 via shift1/3, preserving6phase1/7 and changing otheroldnorms.",
+        "Root derived automatic adjacent p-grid coverage from trapping: old endpoint owner a spoils left p-bad boundary x because aL phase1/N and0<a(L-x)<2/N; analogous rightowner. Full largest-row coverage must enter beyond these two neighbors.",
+        "Author is freezing a whole-old-good-set isometry obstruction for knownN7tuple; file now exists, independent review pending. Root exact widths1/294,1/70,3/196 and shortest-pair separation113/294 confirmed. This does not rule out endpoint-specific inequality-preserving exchanges.",
+        "Author reports sole embedded block and validator passed, original audit unchanged, all owned processes stopped. Root has checked width arithmetic only, not full final manuscript."
+      ],
+      "next_action": "Independent Astra xhigh review required before integrating a new checkpoint.",
+      "result": "Frozen53646c4d: exact whole-old-good-set translation/reflection obstruction under actual candidate hypotheses; endpoint-specific exchanges and C_some unresolved. UNREVIEWED; excluded from PR19.",
+      "artifact_sha256": "53646c4ddfbc0b25ceb6027503434b22072ec5782bed68bf5bba50beeaffe24f"
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-primitive-exchange-review",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independent review of frozen whole-old-good-set isometry obstruction and exact scope; no new discovery.",
+      "source_checkpoint": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-primitive-endpoint-exchange-review.md"
+      ],
+      "checks": [],
+      "next_action": "Root review/replay before checkpoint publication.",
+      "result": "Accepted frozen53646c4d isometry audit at exact limited scope; review0a1a8017 and all independent controls passed. Root final replay pending."
+    },
+    {
+      "id": "/root/nearest_grid_formal-cover-corpus-inventory",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Inventory existing explicit pivot-cover fixtures in repository evidence and recheck literal candidate rows; no new tuple search.",
+      "source_checkpoint": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-cover-corpus-inventory.json"
+      ],
+      "checks": [],
+      "next_action": "Root review/replay before checkpoint publication.",
+      "result": "Literal recheck of10 known table fixtures passed; no new admissible corpus fixture identified. Inventory912a643d; not an exhaustive corpus exclusion."
+    },
+    {
+      "id": "/root/nearest_grid_formal-inventory-reproducer-fix",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Make inventory checker field a complete executable multiline reproducer and run focused verification.",
+      "source_checkpoint": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-cover-corpus-inventory.json"
+      ],
+      "checks": [
+        "Root found checker field records literal backslash-n and omits fixture invocations; finite results not disputed, reproduction completeness requires correction.",
+        "Root read and executed corrected code_lines against10 frozen fixtures; source hash and all row counts passed.",
+        "Terra48focusedtests,validator,whitespace passed; commands stopped."
+      ],
+      "next_action": "Integrate Pass21.",
+      "result": "Corrected frozen inventorydad76cc7 has complete executable code_lines; root replay passed.48focusedtests passed."
     }
   ],
-  "latest_checkpoint": "Pass20 verified endpoint-label manuscript audit: common-divisor same-row preservation, dropped-largest-row counterexample, independent review865f4340,48tests and root exact replay. Publication pending; LRC unresolved.",
+  "latest_checkpoint": "Pass21 verified whole-old-good-set isometry obstruction, independent review0a1a8017, complete root replay and48tests. Publication pending. No Lean change; LRC unresolved; minimal-sum follow-up excluded.",
   "next_actions": [
-    "Publish verified Pass20 allowlist; exclude ongoing research/astra-primitive-endpoint-exchange.md.",
-    "Continue active primitive endpoint exchange worker from its exact owned note; isolated failure does not block the goal.",
-    "Keep full canonical completion gate and storage policy unchanged."
+    "Publish verified Pass21 allowlist; exclude ongoing research/astra-minimal-height-audit.md.",
+    "Continue /root/endpoint_label_audit-minimal-height from its exact owned note. Seek a substantive direct descent, not a restatement of smaller-sum induction or a change of chosen runner.",
+    "Preserve full canonical completion gate; no cache restoration for manuscript work."
   ],
   "research_holds": [
     {
@@ -2173,6 +2252,16 @@
         "research/astra-dense-pivot-induction.md",
         "research/astra-dense-pivot-review.md"
       ]
+    },
+    {
+      "route": "whole-old-good-set circle-isometry supply",
+      "reason": "N7,V1,4,5,6,7,p11 satisfies every endpoint-candidate premise, but the old-good set has only integer translations and integer-minus-time reflections. They preserve p badness. A point-selected shift succeeds, so endpoint-specific exchanges and C_some remain open.",
+      "evidence": [
+        "research/astra-primitive-endpoint-exchange.md",
+        "research/astra-primitive-endpoint-exchange-review.md"
+      ],
+      "author_sha256": "53646c4ddfbc0b25ceb6027503434b22072ec5782bed68bf5bba50beeaffe24f",
+      "review_sha256": "0a1a8017c39f2eb0f4762e0be55088ae5f1473c13fc4b68a8080eeac68a3c1e7"
     }
   ],
   "completion_evidence": null,
@@ -2442,6 +2531,12 @@
       "verification": "research/astra-pass20-verification.json",
       "remaining": "C_all and C_some both unresolved with original largest-row hypothesis in primitive oldgcd1 case. No new Lean declaration.",
       "timed_search_boundary": "Author reports381completedfirstinstances and564completedsecondprefixinstances with unfinished10,119excluded. Positive certificates independently reproduced; no timed discovery rerun."
+    },
+    {
+      "id": "primitive-global-symmetry-obstruction",
+      "status": "manuscript_independently_reviewed_and_exact_controls_verified",
+      "verification": "research/astra-pass21-verification.json",
+      "remaining": "Actual endpoint candidate unresolved; no positive primitive exchange theorem. Next direct count/sum descent audit in progress."
     }
   ],
   "integration_check": {
@@ -2520,6 +2615,13 @@
       "lean_source_changed": false,
       "focused_tests": 48,
       "independent_review": "Accepted; root fullread and exactreplay passed."
+    },
+    "pass21": {
+      "status": "verified",
+      "verification_record": "research/astra-pass21-verification.json",
+      "lean_source_changed": false,
+      "focused_tests": 48,
+      "independent_review": "Accepted; root fullread and both final reproductions passed."
     }
   },
   "storage_checkpoint": {
@@ -2605,20 +2707,32 @@
       ],
       "coordination": "All worker tasks completed and confirmed stopped; root full build, final trust audit, focused tests, and fresh-source replay completed before cleanup.",
       "retained": "Pinned toolchain, source, Git history, unique manuscripts/reviews and compact verification evidence."
+    },
+    "pass20_final_cleanup": {
+      "status": "complete",
+      "command": "python3 scripts/manage_storage.py --clean",
+      "bytes_removed": 164960,
+      "removed_paths": [
+        "scripts/__pycache__",
+        "tests/__pycache__"
+      ],
+      "shared_dependency_cache_present": false,
+      "coordination": "All verification commands stopped; only active research author confirmed command hold, released after cleaner completed.",
+      "retained": "All source,Git,pinnedtoolchain,unique evidence; no dependency restoration."
     }
   },
-  "previous_goal_turn_classification": "Progress: new quantitative transport theorem integrated, independently reviewed, built and trust audited; exact induction limits verified and PR18 merged on main. Follow-up endpoint-label investigation active; no completion or genuine block.",
+  "previous_goal_turn_classification": "progress: Pass20 independently reviewed, exact controls verified, committed/pushed/PR19merged and local/remote main verified. Root actual goal remains active; no completion or genuine block. One bounded global symmetry follow-up is being frozen for later review.",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "verified_pending_commit",
-    "verified_checkpoint": "963544eab50cc8c7cdbb24e733ec7d1a30947d09",
+    "verified_checkpoint": "bc7fc4fb7ff26d7f485c17fda9cae0ec0f0f0435",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-endpoint-label-audit",
+    "branch": "codex/astra-endpoint-symmetry-audit",
     "base": "main",
-    "next_action": "Commit verified allowlist; push,openPR,inspectrequiredchecks,mergeexactheadandverify main.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/18",
-    "pr_number": 18,
-    "head_sha": "963544eab50cc8c7cdbb24e733ec7d1a30947d09",
+    "next_action": "Commit verified allowlist, push,openPR,inspectrequiredchecksandmergeexacthead.",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/19",
+    "pr_number": 19,
+    "head_sha": "bc7fc4fb7ff26d7f485c17fda9cae0ec0f0f0435",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -2789,15 +2903,24 @@
         "merge_sha": "e371af814f023bf2761e7b25de980b763347d049",
         "checks": "Lean build/trust passed 16:21:31 UTC; exact computational certificates passed 16:29:14 UTC.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 19,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/19",
+        "head_sha": "bc7fc4fb7ff26d7f485c17fda9cae0ec0f0f0435",
+        "status": "merged",
+        "merge_sha": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+        "checks": "Lean build/trust passed16:53:58UTC; exact computational certificates passed17:01:44UTC. Exact-head merge17:03:49UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "963544eab50cc8c7cdbb24e733ec7d1a30947d09",
-    "remote_main": "e371af814f023bf2761e7b25de980b763347d049",
-    "local_main": "e371af814f023bf2761e7b25de980b763347d049",
+    "latest_published_source_checkpoint": "bc7fc4fb7ff26d7f485c17fda9cae0ec0f0f0435",
+    "remote_main": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+    "local_main": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
-    "pending_checkpoint": "research/astra-pass20-verification.json",
-    "merge_sha": "e371af814f023bf2761e7b25de980b763347d049",
-    "checks": "Lean build/trust passed 16:21:31 UTC; exact computational certificates passed 16:29:14 UTC.",
+    "pending_checkpoint": "research/astra-pass21-verification.json",
+    "merge_sha": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+    "checks": "Lean build/trust passed16:53:58UTC; exact computational certificates passed17:01:44UTC. Exact-head merge17:03:49UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
@@ -2805,8 +2928,8 @@
     "root_requested_blocked_status": false,
     "root_requested_resume": false,
     "mathematical_status": "unresolved",
-    "token_usage_observed": 10144029,
-    "current_work": "Endpoint-label independent review and bounded controls continue. Recovery authorization remains persisted; available goal tools expose no resume operation."
+    "token_usage_observed": 10372697,
+    "current_work": "PR19 merged and verified; primitive exchange manuscript53646c4d frozen but unreviewed. Next step independent semantic review, then choose a useful global route. Goal active; get/create/update goal only, no supported resume control."
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",

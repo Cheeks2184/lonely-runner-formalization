@@ -6,6 +6,15 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [twenty-first Astra checkpoint](docs/astra-research-21.md) stops the proposed
+whole-old-good-set translation/reflection mechanism. An independently reviewed
+six-component example satisfies every actual endpoint-candidate hypothesis,
+yet its only preserving circle isometries also preserve the new badness.
+A shift selected for one endpoint gives a full original-row witness in that
+same example. Thus the actual endpoint candidate remains unresolved. No Lean
+source changed. Further research is testing minimality in runner count and
+sum of speeds; no new descent result is claimed.
+
 The [twentieth Astra checkpoint](docs/astra-research-20.md) independently audits
 the proposed endpoint-label route. Under an explicit common-divisor condition,
 a manuscript proof preserves old-safe candidates on the same actual pivot row
