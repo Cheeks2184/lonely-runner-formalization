@@ -4,7 +4,24 @@
   "goal_status": "in_progress",
   "objective": "Produce a kernel-checked full proof or disproof of the canonical unrestricted Lonely Runner Conjecture.",
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
-  "active_tasks": [],
+  "active_tasks": [
+    {
+      "id": "/root/endpoint_label_audit-primitive-exchange",
+      "kind": "research",
+      "status": "in_progress",
+      "target": "Attempt one structural argument for the precise primitive old-gcd-one endpoint-label candidate, using largest-row coverage on the original labels; no broad finite search.",
+      "source_checkpoint": "e371af814f023bf2761e7b25de980b763347d049 + frozen endpoint audit667b9bcd",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-primitive-endpoint-exchange.md"
+      ],
+      "checks": [],
+      "next_action": "Use the accepted common-divisor boundary; focus one exact global row-exchange mechanism and stop that branch if circular or refuted."
+    }
+  ],
   "completed_tasks": [
     {
       "id": "/root/workflow_validation",
@@ -2043,13 +2060,78 @@
       ],
       "result": "Accepted frozen manuscript and relevant source at their exact stated scope.",
       "recovery_status": "complete, same requested routing"
+    },
+    {
+      "id": "/root/endpoint_label_audit",
+      "kind": "research",
+      "status": "complete",
+      "target": "Audit the precise candidate that a trapped stronger-witness component with largest pivot covered must have a noncovered endpoint owner; seek proof or exact counterexample with original count and labels.",
+      "source_checkpoint": "963544eab50cc8c7cdbb24e733ec7d1a30947d09",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-endpoint-label-audit.md"
+      ],
+      "checks": [
+        "Worker reports exact bounded discovery N6..11,p<=70: 381 feasible pivot instances,10 covers incl scalings,5 primitive tuples,24 trapped seeded components; no candidate failure. Unreviewed finite evidence only.",
+        "Root and author independently derived endpoint-preserving common-divisor shift: D=gcd(V), m=D/gcd(D,p)>=2 implies every old-safe old-row candidate has a full-safe shift j/D atN>=4. Existing DivisorInsertion mesh bound applies; formal interface and independent review pending.",
+        "Worker search2 terminated at150.096seconds: completed N6..10,p<=118 plus N6..9,p119; unfinished(10,119)excluded.564completedinstances,24covers inclscales,10primitive tuples,60trappedcomponents,no actualcandidatefailure. Unreviewed finite evidence.",
+        "Worker solver matched literal covers on480smallinstances. Dropped-largest-row control: N7,V2,5,7,12,17,p19,t31/85,component[43/119,13/35],bothendpointowners17,5covered butpivot19noncovered. This is not a counterexample to the actual candidate.",
+        "Author complete480solvercomparisons,10positivecovers,60traps,2448old-safe shifts; all owned commands stopped."
+      ],
+      "next_action": "Independent review and root replay; do not restart discovery.",
+      "result": "Frozen667b9bcd: common-divisor manuscript scope and dropped-largest-row near-control; actual gcd(V)=1 candidate unresolved. Independent review pending."
+    },
+    {
+      "id": "/root/nearest_grid_formal-endpoint-controls",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Replay frozen author code and focused regression checks without Lean/cache restoration.",
+      "source_checkpoint": "e371af814f023bf2761e7b25de980b763347d049",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-endpoint-controls.json"
+      ],
+      "checks": [
+        "Frozen author and extracted module hashes matched.",
+        "480oracle,10covers,60traps,2448shifts passed.",
+        "48focusedtests,workflow validator,whitespace passed;all commands stopped."
+      ],
+      "next_action": "Root integrates evidence with independent semantic review.",
+      "result": "Frozen16f47245: exact authored controls and48focusedtests passed; no search entrypoint,Lean or cache restoration."
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-endpoint-review",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independent review of the frozen endpoint-label audit, common-divisor pivot preservation, dropped-largest-row certificate and finite search coverage; no new discovery searches.",
+      "source_checkpoint": "e371af814f023bf2761e7b25de980b763347d049",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-endpoint-label-review.md"
+      ],
+      "checks": [
+        "Root read complete review and replayed unchanged embedded script.",
+        "480oracle,10covers,60traps,2448shifts; independent70rows,196ties,negativecontrol all passed.",
+        "Timed381/564discovery is author-reported, not rerun."
+      ],
+      "next_action": "Integrate verified Pass20.",
+      "result": "Accepted frozen667b9bcd manuscript at exact scope; review865f4340, all reproduced controls pass. Actual candidate unresolved."
     }
   ],
-  "latest_checkpoint": "Pass19 verified: generic nearest-pivot-grid transport kernel checked; nearest/count and dense insertion/seeded-component obstruction manuscripts independently accepted. Full3616build,370trustreports,58focusedtests, freshsourceprobes passed. LRC unresolved; publish checkpoint next.",
+  "latest_checkpoint": "Pass20 verified endpoint-label manuscript audit: common-divisor same-row preservation, dropped-largest-row counterexample, independent review865f4340,48tests and root exact replay. Publication pending; LRC unresolved.",
   "next_actions": [
-    "Publish the verified Pass19 allowlist through commit, push, PR, required checks, exact-head merge, and main verification.",
-    "Investigate whether original covered-label relations force escape from a trapped stronger-witness component; the N7 fixture has one noncovered endpoint owner in each trapped pair. This is an unproved candidate, not an accepted all-covered theorem.",
-    "Keep dependency caches absent until immediate Lean work; preserve the unrestricted completion gate."
+    "Publish verified Pass20 allowlist; exclude ongoing research/astra-primitive-endpoint-exchange.md.",
+    "Continue active primitive endpoint exchange worker from its exact owned note; isolated failure does not block the goal.",
+    "Keep full canonical completion gate and storage policy unchanged."
   ],
   "research_holds": [
     {
@@ -2353,6 +2435,13 @@
         "research/astra-dense-pivot-review.md"
       ],
       "remaining": "Dense all-covered exclusion remains unproved; smaller-count premises cannot be reused on the full family. Seeded component deformation is not universal."
+    },
+    {
+      "id": "endpoint-label-divisor-scope",
+      "status": "manuscript_independently_reviewed_and_exact_controls_verified",
+      "verification": "research/astra-pass20-verification.json",
+      "remaining": "C_all and C_some both unresolved with original largest-row hypothesis in primitive oldgcd1 case. No new Lean declaration.",
+      "timed_search_boundary": "Author reports381completedfirstinstances and564completedsecondprefixinstances with unfinished10,119excluded. Positive certificates independently reproduced; no timed discovery rerun."
     }
   ],
   "integration_check": {
@@ -2424,6 +2513,13 @@
       "trust_reports": 370,
       "focused_tests": 58,
       "independent_reviews": "Both accepted with root replay; exact hashes in research/astra-pass19-verification.json."
+    },
+    "pass20": {
+      "status": "verified",
+      "verification_record": "research/astra-pass20-verification.json",
+      "lean_source_changed": false,
+      "focused_tests": 48,
+      "independent_review": "Accepted; root fullread and exactreplay passed."
     }
   },
   "storage_checkpoint": {
@@ -2511,18 +2607,18 @@
       "retained": "Pinned toolchain, source, Git history, unique manuscripts/reviews and compact verification evidence."
     }
   },
-  "previous_goal_turn_classification": "Progress: persisted the explicit worker recovery authorization and verified PR17 merge on main; actual runtime goal active. No mathematical completion claimed.",
+  "previous_goal_turn_classification": "Progress: new quantitative transport theorem integrated, independently reviewed, built and trust audited; exact induction limits verified and PR18 merged on main. Follow-up endpoint-label investigation active; no completion or genuine block.",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "verified_pending_commit",
-    "verified_checkpoint": "48ed42556286934ff516e4c357210d35d54c967a",
+    "verified_checkpoint": "963544eab50cc8c7cdbb24e733ec7d1a30947d09",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-grid-induction-audit",
+    "branch": "codex/astra-endpoint-label-audit",
     "base": "main",
-    "next_action": "Coordinate idle cleanup, commit verified allowlist, push, open PR, pass required checks, merge exact head and verify main.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/17",
-    "pr_number": 17,
-    "head_sha": "48ed42556286934ff516e4c357210d35d54c967a",
+    "next_action": "Commit verified allowlist; push,openPR,inspectrequiredchecks,mergeexactheadandverify main.",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/18",
+    "pr_number": 18,
+    "head_sha": "963544eab50cc8c7cdbb24e733ec7d1a30947d09",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -2684,15 +2780,24 @@
         "merge_sha": "808595cf7615d01f849eb071648d8a82ee7c97c1",
         "checks": "Lean build and trust audit passed 15:32:00 UTC; exact computational certificates passed 15:38:12 UTC.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 18,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/18",
+        "head_sha": "963544eab50cc8c7cdbb24e733ec7d1a30947d09",
+        "status": "merged",
+        "merge_sha": "e371af814f023bf2761e7b25de980b763347d049",
+        "checks": "Lean build/trust passed 16:21:31 UTC; exact computational certificates passed 16:29:14 UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "48ed42556286934ff516e4c357210d35d54c967a",
-    "remote_main": "808595cf7615d01f849eb071648d8a82ee7c97c1",
-    "local_main": "808595cf7615d01f849eb071648d8a82ee7c97c1",
+    "latest_published_source_checkpoint": "963544eab50cc8c7cdbb24e733ec7d1a30947d09",
+    "remote_main": "e371af814f023bf2761e7b25de980b763347d049",
+    "local_main": "e371af814f023bf2761e7b25de980b763347d049",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
-    "pending_checkpoint": "research/astra-pass19-verification.json",
-    "merge_sha": "808595cf7615d01f849eb071648d8a82ee7c97c1",
-    "checks": "Lean build and trust audit passed 15:32:00 UTC; exact computational certificates passed 15:38:12 UTC.",
+    "pending_checkpoint": "research/astra-pass20-verification.json",
+    "merge_sha": "e371af814f023bf2761e7b25de980b763347d049",
+    "checks": "Lean build/trust passed 16:21:31 UTC; exact computational certificates passed 16:29:14 UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
@@ -2700,8 +2805,8 @@
     "root_requested_blocked_status": false,
     "root_requested_resume": false,
     "mathematical_status": "unresolved",
-    "token_usage_observed": 9357006,
-    "current_work": "Isolated agent thread-limit failures recovered by retrying the identical requested Terra medium routing after a worker completed; no root goal resume operation needed or available."
+    "token_usage_observed": 10144029,
+    "current_work": "Endpoint-label independent review and bounded controls continue. Recovery authorization remains persisted; available goal tools expose no resume operation."
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",

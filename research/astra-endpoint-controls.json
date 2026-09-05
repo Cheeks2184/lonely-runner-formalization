@@ -1,0 +1,77 @@
+{
+  "task": "/root/nearest_grid_formal",
+  "kind": "bounded mechanical verification",
+  "date": "2026-09-05",
+  "source_main": "e371af814f023bf2761e7b25de980b763347d049",
+  "author_note": {
+    "path": "research/astra-endpoint-label-audit.md",
+    "sha256": "667b9bcdebf30333c551badf6e9ef6c861e5e1ca1095808ece5354733745e44d",
+    "frozen_sha256_expected": "667b9bcdebf30333c551badf6e9ef6c861e5e1ca1095808ece5354733745e44d"
+  },
+  "extraction": {
+    "search_module": {
+      "source_lines": "228-349",
+      "destination": "/tmp/lrc_endpoint_audit.py",
+      "trailing_newline": true,
+      "sha256": "a229711e8e32b4eb197473e8e2711f2893eef229a87f1aeb0ca7dc2821cc58b2",
+      "expected_sha256": "a229711e8e32b4eb197473e8e2711f2893eef229a87f1aeb0ca7dc2821cc58b2"
+    },
+    "control_module": {
+      "source_lines": "372-462",
+      "destination": "/tmp/lrc_endpoint_controls.py",
+      "sha256": "9c9eb8a14171f2dc0c08400eca77949b6a799401c44d579ae6994ccefe6868b9"
+    },
+    "commands": [
+      "awk '/^```python$/{block++; next} /^```$/{if (block == 1) exit} block == 1 {print}' research/astra-endpoint-label-audit.md > /tmp/lrc_endpoint_audit.py",
+      "awk '/^```python$/{block++; next} /^```$/{if (block == 2) exit} block == 2 {print}' research/astra-endpoint-label-audit.md > /tmp/lrc_endpoint_controls.py",
+      "sha256sum /tmp/lrc_endpoint_audit.py /tmp/lrc_endpoint_controls.py",
+      "python3 /tmp/lrc_endpoint_controls.py"
+    ],
+    "search_entrypoint_executed": false
+  },
+  "control_stdout": "{'solver_comparisons': 480, 'positive_covers': 10, 'trapped_components': 60, 'shifted_old_candidates': 2448, 'closed_mesh_equality': 'passed', 'near_control': 'passed'}",
+  "checks": {
+    "oracle_comparisons": 480,
+    "positive_covers": 10,
+    "trapped_components": 60,
+    "shifted_old_candidates": 2448,
+    "closed_mesh_equality": "passed",
+    "near_control": "passed",
+    "workflow_validator": {
+      "command": "python3 scripts/validate_workflow.py",
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity."
+    },
+    "focused_tests": {
+      "command": "python3 -m unittest tests.test_validate_workflow tests.test_manage_storage tests.test_validate_task_ledger",
+      "stdout": "................................................\n----------------------------------------------------------------------\nRan 48 tests in 0.554s\n\nOK",
+      "tests_run": 48,
+      "status": "passed"
+    },
+    "diff_check": {
+      "command": "git diff --check",
+      "stdout": "",
+      "status": "passed"
+    },
+    "process_check": {
+      "command": "ps -eo pid=,comm=,args= | rg '[p]ython3 /tmp/lrc_endpoint|[l]rc_endpoint_(audit|controls)\\.py' || true",
+      "stdout": "",
+      "status": "no matching control or search processes"
+    }
+  },
+  "provenance": {
+    "repository_head_observed": "e371af814f023bf2761e7b25de980b763347d049",
+    "workflow_inputs_read": [
+      ".codex/config.toml",
+      "docs/project-workflow.md",
+      "research/workflow-policy.json",
+      "research/workflow-state.json"
+    ],
+    "shared_state_or_git_mutated": false,
+    "lean_or_cache_restored": false
+  },
+  "limitations": [
+    "This reruns only the completed deterministic control block; it does not run the discovery search entrypoint or establish an exhausted search domain.",
+    "The Python controls are computational evidence and do not constitute a Lean kernel proof, a semantic review, a proof of the endpoint candidate, or a proof or disproof of the Lonely Runner Conjecture.",
+    "The author note explicitly leaves the primitive old-gcd-one endpoint case unresolved."
+  ]
+}

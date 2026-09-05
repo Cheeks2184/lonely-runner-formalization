@@ -6,6 +6,15 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [twentieth Astra checkpoint](docs/astra-research-20.md) independently audits
+the proposed endpoint-label route. Under an explicit common-divisor condition,
+a manuscript proof preserves old-safe candidates on the same actual pivot row
+while inserting the new speed. The remaining candidate reduces to old gcd one.
+An exact example refutes the claim after dropping largest-row coverage, while
+satisfying LRC. Independent checks of all positive certificates, 70 pivot rows,
+and 196 tie assignments passed, as did 48 focused tests. No Lean declaration
+was added; neither full endpoint candidate nor unrestricted LRC is settled.
+
 The [nineteenth Astra checkpoint](docs/astra-research-19.md) adds an independently
 reviewed Lean theorem for nearest-grid transport of a supplied witness with
 explicit quantitative margins. It handles signed times and arbitrary finite
