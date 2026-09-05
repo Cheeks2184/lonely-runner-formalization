@@ -1,0 +1,62 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "8f2aca63b49f28c906eede045dd778c9c71be48e",
+  "files": {
+    "LonelyRunner/AffineCyclicBadResidues.lean": "5c5ec03de4c5363987098055aa0df170579156bd390206655e417c34f7a2a9bd",
+    "LonelyRunner.lean": "2810787fa6fe3aed0b148cc5ec8082bec86e163b50f3ef2c50e69c859f2ab08a",
+    "LonelyRunner/AxiomAudit.lean": "48b86ce17fd152eafec4dca3eaa25119350d70837869f2e101329b5215faafc7",
+    "research/astra-bad-residues-review.md": "4fe280524548aee8d03f424d51127752797be0e35e7e3445779026360c50771b",
+    "research/astra-constant-correction-audit.md": "0b70fecaf49a7be91da0c49609e35ee56d3603222ac5d20efba9e3339707e9c0",
+    "research/astra-constant-correction-review.md": "91a88fad09f2d779cdd04510b5a9767b0bb4a981b9e14fbe983560c1002b9d18",
+    "docs/astra-research-11.md": "5b0fbfc6f8a72ab9712399e107d016354a8ee9be689c864348062f897974671c",
+    "README.md": "c976f0585b9aaf0bfadfc6b00817a7db8c2375a36f41ce8e8641e6dad989361c",
+    "STATUS.md": "3f09298a45499a1fae6f64125e43bd7a62977a9a35641fd34d0da3a06a0f0d6d"
+  },
+  "scope": "Kernel exact bad-residue equivalences; manuscript constant-correction classification, grouping gain and exact existence-equivalence barrier. No canonical conclusion.",
+  "root_checks": {
+    "full_source_and_reviews_read": true,
+    "full_build_jobs": 3610,
+    "trust_reports": 354,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "bad_residue_lean_examples": 13,
+    "bad_residue_local_cases": 39312,
+    "bad_residue_actual_phase_cases": 11907,
+    "mutation_controls": 3,
+    "constant_author_reproducer": "91breakpoints,90cells,6points,23tableentries,3certificates,32roundingcontrols,p13negativecontrol all passed",
+    "constant_independent_reproducer": {
+      "theta_atoms": 181,
+      "table_entries": 23,
+      "roundings": 2016,
+      "group_systems": 41472,
+      "admitted_group_systems": 4032,
+      "reverse_constructions": 113,
+      "singleton_intersections": 20,
+      "empty_ordinary_subsystems": 7,
+      "square_divisible_zero_cases": 1
+    },
+    "focused_tests": 48
+  },
+  "reproducers": {
+    "build": "PATH=$HOME/.elan/bin:$PATH lake build",
+    "trust": "python3 scripts/audit_lean_trust.py",
+    "source_review": "Execute both python blocks in research/astra-bad-residues-review.md with Elan PATH.",
+    "constant_author": "Execute sole python block in research/astra-constant-correction-audit.md.",
+    "constant_review": "Execute sole python block in research/astra-constant-correction-review.md."
+  },
+  "storage": {
+    "rebuildable_bytes_removed": 7700185407,
+    "paths": [
+      ".lake",
+      "scripts/__pycache__",
+      "tests/__pycache__"
+    ],
+    "coordination": "Formal source verification completed; only remaining active manuscript agent confirmed no command running and held commands during cleanup.",
+    "retained": "Pinned toolchain, sources,Git,unique certificates,compact records; no unrelated cache removed."
+  },
+  "canonical_lrc_status": "unresolved",
+  "grouped_whole_envelope_bridge": "manuscript_only"
+}
