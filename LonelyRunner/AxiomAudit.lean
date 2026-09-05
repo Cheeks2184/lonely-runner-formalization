@@ -359,3 +359,6 @@ project-specific axiom.
 #print axioms LonelyRunner.affine_shift_large_scalar_bounds
 #print axioms LonelyRunner.affine_shift_ordinary_correction_bound
 #print axioms LonelyRunner.affine_grid_one_zero_witness
+
+-- Fourth Astra pass: explicit family, with no primality or parity restriction.
+#print axioms LonelyRunner.affine_dense_family_witness
