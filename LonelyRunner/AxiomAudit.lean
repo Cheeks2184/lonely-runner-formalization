@@ -402,3 +402,6 @@ project-specific axiom.
 #print axioms LonelyRunner.internalCoverRedundantAt_iff_no_internal_complete_cover
 #print axioms LonelyRunner.positiveIntegerConjecture_of_maxCoveredPivotInternalCoverRedundancy
 #print axioms LonelyRunner.conjecture_of_maxCoveredPivotInternalCoverRedundancy
+
+-- Nineteenth Astra pass: transport a supplied witness with explicit margins.
+#print axioms LonelyRunner.exists_nearestPivotGrid_residue

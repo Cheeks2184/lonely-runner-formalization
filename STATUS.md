@@ -6,6 +6,21 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [nineteenth Astra checkpoint](docs/astra-research-19.md) adds an independently
+reviewed Lean theorem for nearest-grid transport of a supplied witness with
+explicit quantitative margins. It handles signed times and arbitrary finite
+natural coordinates, and concludes actual candidate membership and closed
+goodness. The full source build passed 3,616 jobs; the trust audit accepted
+370 reports; all 58 focused tests passed.
+
+Reviewed manuscripts give stronger adjacent-grid and arithmetic pair insertion
+criteria. In a hypothetical least-count integer counterexample, the available
+smaller-count witnesses exclude sparse proper covers. They do not supply a
+witness for the full family. An exact seven-runner example further shows that
+every stronger fastest-deletion witness can be trapped in its old-good
+component, while full witnesses exist in other components. The dense
+all-covered exclusion and the canonical conjecture remain unproved.
+
 The [eighteenth Astra checkpoint](docs/astra-research-18.md) extends the
 weighted obstruction to every fixed positive odd inclusion-exclusion order.
 The independently reviewed manuscript specifies an explicit sparse family
