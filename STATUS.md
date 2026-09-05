@@ -6,13 +6,13 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
-The [tenth Astra research checkpoint](docs/astra-research-10.md) adds a full
-cyclic closed-band equivalence, with an integrated 3,609-job build and 351-report
-trust audit. Independently checked finite counterexamples rule out universal
-prime-square-grid supply, including the proposed covering bound at p=13.
-The [preceding checkpoint](docs/astra-research-09.md) proves weighted avoidance
-and the complete odd-count one-outlier family. Neither these results nor the
-new exact cyclic transport provides arbitrary-tuple envelope supply.
+The [eleventh Astra research checkpoint](docs/astra-research-11.md) formalizes
+exact singleton/pair bad residues, with an integrated 3,610-job build and
+354-report trust audit. The independently reviewed constant-correction audit
+proves a strict gain from grouping proportional rows, but shows that unrestricted
+grouped certificate existence is equivalent to ordinary closed-witness existence.
+The [preceding checkpoint](docs/astra-research-10.md) rules out universal
+prime-square-grid supply. Neither route currently supplies arbitrary tuples.
 The canonical conjecture remains unproved and undisproved.
 
 The research narrative below is the historical 2026-08-04 `main` snapshot.

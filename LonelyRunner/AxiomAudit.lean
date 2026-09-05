@@ -376,3 +376,8 @@ project-specific axiom.
 
 -- Tenth Astra pass: exact cyclic bands, including arbitrary wrapping.
 #print axioms LonelyRunner.circleNorm_affine_grid_iff_modular_band
+
+-- Eleventh Astra pass: affine cyclic bad residues and the exact complement.
+#print axioms LonelyRunner.not_mem_affineCyclicBadResidues_iff
+#print axioms LonelyRunner.affineCyclicBadResidues_not_mem_iff_modular_band
+#print axioms LonelyRunner.circleNorm_affine_grid_iff_not_mem_bad_residues
