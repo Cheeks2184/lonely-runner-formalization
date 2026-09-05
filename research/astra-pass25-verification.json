@@ -1,0 +1,127 @@
+{
+  "status": "verified",
+  "base_commit": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+  "branch": "codex/astra-affine-finite-height",
+  "scope": "Full conditional primitive sorted all-chosen finite-height theorem under H_N only, with twelve Lean modules and independent manuscript/component/final source reviews. Uniform retained finite cases F_N and unrestricted LRC remain unproved.",
+  "source_sha256": {
+    "LonelyRunner/LowerCountSupply.lean": "0705291adc53011fb72fc718a7260876512b092741442d6a6cceb4b76eb5ccf4",
+    "LonelyRunner/BHKTwoPhaseSupply.lean": "2890e8ad41f9e3c2a0f098ba2a0da7060fa14ac2fe12842adf1c11905148ac09",
+    "LonelyRunner/AffinePhasePeriod.lean": "340c4dd29276544566175cf791307ca42753ddc964345aa793d33abef1e9b176",
+    "LonelyRunner/AffinePhaseTransfer.lean": "069d7f05229f517639284a58d9bb10f6fd6ee8d949efc3d377361424e7381776",
+    "LonelyRunner/PositiveAffineWitness.lean": "ed9e66d5a8944f3b5862be66f96c30abe7829c063e866504ca9e9ac1989e2e03",
+    "LonelyRunner/SignedAffineWitness.lean": "19018618fdb454ddbdb199a29db8672bd4729bf68052736133c1d708cc26f3e5",
+    "LonelyRunner/SimultaneousApproximation.lean": "144aec242a3f4d06853fed110bf8ee20f1cabf88b925acda889fe08cfe57c729",
+    "LonelyRunner/RationalPairRank.lean": "8ab0d557ad561415b2fdf06566482e780fca1aa5b37c2a9e2340c24805ca6cbe",
+    "LonelyRunner/PrimitiveAffineRank.lean": "0b82838ac09e0572a329d7fe12091c250caa746441216e5a7ec84ceb7ff89eb9",
+    "LonelyRunner/EndpointAffineApproximation.lean": "19989c0528c028bd0bcb8ef4e514ac35177fafd1a0f889e69b82f25651aaa3d3",
+    "LonelyRunner/AffineLonelyAt.lean": "19ef8e3e8b5cc0364b74d13cfb93b608adf176ffdbb1a7e020e2d5f1b484ec7b",
+    "LonelyRunner/FiniteHeightReduction.lean": "61a5ac9e27c58db10bf014bd91346769665038ebb3c05689237870de49279be1"
+  },
+  "integration_sha256": {
+    "LonelyRunner.lean": "e245da56173a4d7a8f9693302c865a0e64f0a2940de025fe5919e13e25f67fda",
+    "LonelyRunner/AxiomAudit.lean": "a65e797d0621a6f9fb39eb50555644d5810925d2eee301315e9c6d36acc32b48"
+  },
+  "manuscript_sha256": {
+    "research/astra-affine-finite-height-audit.md": "6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f",
+    "research/astra-affine-finite-height-review.md": "eb0fb96e22096175fa3b68dc70a1b7981f39356aaf1377863dcaa95b6a510876",
+    "research/astra-affine-formal-contract.md": "20ab1efc37e90d4838732098741e5b6486166ef0a737d794492eb9a41fe60a75",
+    "research/astra-affine-height-lean-interface.json": "a52486c7985b88fb5475e4354b9a80308ac0bc72e39605a4efc680cf0ac16c19"
+  },
+  "checks": {
+    "focused_tests": {
+      "command": "PATH=/home/joshua/.elan/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests.test_validate_workflow tests.test_manage_storage tests.test_validate_task_ledger tests.test_audit_lean_trust -q",
+      "exit_code": 0,
+      "tests": 58,
+      "log": "/tmp/astra-pass25-focused-tests.log"
+    },
+    "independent_source_review": {
+      "status": "accepted_root_replay_passed",
+      "path": "research/astra-affine-components-formal-review.md",
+      "scope": [
+        "LowerCountSupply",
+        "BHKTwoPhaseSupply",
+        "AffinePhasePeriod",
+        "AffinePhaseTransfer",
+        "PositiveAffineWitness",
+        "SignedAffineWitness",
+        "SimultaneousApproximation"
+      ],
+      "sha256": "6f025889a586ea05fba9ba40c11d0db2c02c19bde00c3ac7070f9cada28dc3de",
+      "generator_sha256": "0dd32d3969072f2f817a4342d4f415ca1cabd15ad5e50b7dacb8855f49c41be5",
+      "probe_sha256": "2d79b805f1612d2fde0cda1014f343fff58d132ceb7bb11807c94b4da6d1e842",
+      "root_replay_exit_code": 0,
+      "root_replay_log": "/tmp/astra-pass25-components-root-replay.log",
+      "generic_contract_checks": 10,
+      "fixed_controls": 29,
+      "axiom_reports": 15
+    },
+    "independent_manuscript_replay": {
+      "exit_code": 0,
+      "program_sha256": "9996caf21270e689924d2745a15192e48079685ecc14492f4c2bf1c997668489",
+      "rounding_lifts": 143,
+      "signed_comparisons": 358,
+      "target_equalities": 16,
+      "exhaustive_finite_box_verification": false
+    },
+    "component_stage_build": {
+      "command": "PATH=/home/joshua/.elan/bin:$PATH lake build",
+      "status": "passed",
+      "session_id": 37424,
+      "log": "/tmp/astra-pass25-full-build.log",
+      "exit_code": 0,
+      "jobs": 3627
+    },
+    "full_build": {
+      "command": "PATH=/home/joshua/.elan/bin:$PATH lake build",
+      "exit_code": 0,
+      "jobs": 3632,
+      "log": "/tmp/astra-pass25-final-build.log"
+    },
+    "component_stage_trust": {
+      "command": "PATH=/home/joshua/.elan/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 scripts/audit_lean_trust.py",
+      "exit_code": 0,
+      "reports": 400,
+      "log": "/tmp/astra-pass25-trust.log",
+      "scope": "Seven imported component modules and existing project; additional unimported adapters excluded from theorem reports."
+    },
+    "trust_audit": {
+      "status": "passed",
+      "command": "PATH=/home/joshua/.elan/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 scripts/audit_lean_trust.py",
+      "session_id": 84632,
+      "log": "/tmp/astra-pass25-final-trust.log",
+      "exit_code": 0,
+      "reports": 408
+    },
+    "independent_finite_height_review": {
+      "status": "accepted_root_replay_passed",
+      "path": "research/astra-finite-height-formal-review.md",
+      "scope": "All twelve fresh source bodies and exact primitive sorted all-chosen conditional canonical theorem.",
+      "sha256": "723e52d4ba10a5e8976c301c2f94e312d77c8d1afb42d4ce37b4082892fd0375",
+      "generator_sha256": "88aee9e7bd437c513e00ad68cd126c7fc0a91f2d447cf0680447cf041d8805e2",
+      "probe_sha256": "a23af085457a150bb571573e58b37fccc40ab6a35e5194fd953e83bc14390480",
+      "root_replay_exit_code": 0,
+      "root_replay_log": "/tmp/astra-pass25-final-review-root-replay.log",
+      "public_checks": 19,
+      "examples": 16,
+      "review_theorems": 6,
+      "axiom_reports": 25
+    }
+  },
+  "excluded_unfinished": [],
+  "storage": {
+    "restore_exit_code": 0,
+    "restore_log": "/tmp/astra-pass25-cache-restore.log",
+    "cleanup_status": "complete",
+    "cleanup": {
+      "status": "complete",
+      "command": "python3 -B scripts/manage_storage.py --clean",
+      "bytes_removed": 7734053047,
+      "removed_paths": [
+        ".lake"
+      ],
+      "coordination": "All workers and root verification commands stopped before cleanup.",
+      "log": "/tmp/astra-pass25-storage-cleanup.log"
+    }
+  },
+  "publication_status": "verified; commit, push, PR and exact-head merge pending"
+}
