@@ -1,0 +1,43 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "f36d99af32027eee6037ef4967316a01faaf6ec6",
+  "files": {
+    "README.md": "f5cb8f3cd018ba93de9ef6964b399f3968c468bb3b076c0f0ab1092b56f91227",
+    "STATUS.md": "ff683b769703acbc6cbcc980b596a8cccd63aace39ac1507a9085875d6b3185d",
+    "docs/astra-research-18.md": "73ae1d25f4e3da4200e1e54f5056e986292f597d64fa03cdbbe340ef1f99fd58",
+    "research/astra-bonferroni-weight-audit.md": "9116444bc4b55f976a148ecd0431c3032ec4b4d62b7396bd4ed420cc477cfaa0",
+    "research/astra-bonferroni-weight-review.md": "35a5db5bad8a895743491ac2f84dc45d2d25cc1c18c6b50680144dcf15f7f625"
+  },
+  "scope": "Independentlyreviewedmanuscript: for everyfixedpositiveoddh, explicitfamilyandeveryk>=explicitke giveT_h>A despiteclosedactualgridwitness. NoLeantheoremorLRCresolution; no growingorderrefutation.",
+  "root_checks": {
+    "author_and_review_full_read": true,
+    "both_sole_python_reproducers": "passed",
+    "author_controls": {
+      "binomial": 305,
+      "families": 15,
+      "central_candidates": 466,
+      "large_parameters": 5
+    },
+    "independent_controls": {
+      "families": 27,
+      "central_candidates": 716,
+      "outside_boundary": 54,
+      "Laurent_identities": 80,
+      "binomial": 710,
+      "large_parameters": 18,
+      "even_order_negative_control": true
+    },
+    "symbolic_proof_review": "Allfixedh andallk>=ke quantifiers, actualgridparity/exclusion, degree, strictbad/closedgood, totalmass anduniformtailconstants, explicitexponentialterm andoptionalfixedhlimit accepted withoutcorrection.",
+    "huge_grids_or_polynomials_materialized": false,
+    "lean_source_changed": false,
+    "local_lean_build": "Notrepeated: manuscript-onlycheckpoint. PublishedPass16 formal source unchanged.",
+    "workflow_validator": "passed",
+    "focused_tests": 58
+  },
+  "reproducers": {
+    "exact_controls": "Execute solePythonblock in each Bonferroniaudit/review, fromrepositoryroot, usingstandardPython.",
+    "focused": "python3 -m unittest tests.test_manage_storage tests.test_validate_workflow tests.test_validate_task_ledger tests.test_audit_lean_trust -q",
+    "workflow": "python3 scripts/validate_workflow.py"
+  },
+  "canonical_lrc_status": "unresolved"
+}

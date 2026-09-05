@@ -11,10 +11,11 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks. The
-[latest verified checkpoint](docs/astra-research-17.md) gives an exact,
-independently reviewed counterexample to universal availability of a weighted
-sufficient condition. The example has explicit closed and strict witnesses;
-it refutes that auxiliary criterion, not LRC. The
+[latest verified checkpoint](docs/astra-research-18.md) proves at independently
+reviewed manuscript scope that every fixed positive odd inclusion-exclusion
+order fails to make the product-weighted sufficient criterion universal.
+Its explicit sparse counterfamilies have closed witnesses, so this refutes
+only that auxiliary method. The
 [latest formal checkpoint](docs/astra-research-16.md) proves arbitrary-height
 four-lower-owner noncover at denominator nine and a conditional canonical
 bridge with its unproved premise explicit. Its full Lean build passed 3,615
