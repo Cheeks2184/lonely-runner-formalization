@@ -1,0 +1,83 @@
+{
+  "pass": 22,
+  "base_checkpoint": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
+  "status": "verified",
+  "canonical_lrc_status": "unresolved",
+  "lean_source_changed": false,
+  "new_formal_declaration": null,
+  "source_hashes": {
+    "research/astra-minimal-height-audit.md": "40e59ba4539eb931a07612e9b972999d3b48006d39ef4760c0e493d08e734325",
+    "research/astra-minimal-height-review.md": "4570fa22f788a0e832165dd4ec5da613003a0181b0200267fcc30b44d9776e92",
+    "research/astra-first-blocker-controls.json": "2aa24ca0d4c50b21bb5c15ab3d12cc0105306d15f65a5248adc70cc50bd5a67e",
+    "research/astra-first-blocker-width-audit.md": "79638a6e7ff3454ac0efd8bcd7a13b73a42a22a989b4f25d7c8a52f0e16646df",
+    "research/astra-primary-resolution-audit.md": "e0b063415f2931888c0ad1371fd31309a97ebc586395a031c04c8a4e8e023d47",
+    "research/astra-first-blocker-width-review.md": "c6aca45e70f2cf5f0cdb818a6eba6860bab55e6f1d40e3dfb95962cd906af41f"
+  },
+  "minimal_height_review": {
+    "path": "research/astra-minimal-height-review.md",
+    "result": "accepted at manuscript scope",
+    "root_full_read": true,
+    "root_exact_replay": "passed",
+    "general_contract": "N>=3, nonempty finite positive V, covered actual reference p row, 2q<=(N-2)p; old-good set may be empty, singleton, unordered; p may belong to V and need not be maximum.",
+    "integer_cap_clarification": "Extra integer q>p only if floor((N-2)p/2)>=p+1. The explicit theorem inequality is unchanged.",
+    "descent_gap": "No positive blocker below the hypothetical minimum maximum p has been supplied."
+  },
+  "root_replays": {
+    "result": "passed",
+    "session": 84390,
+    "exit_code": 0,
+    "reproduction": "Execute both line-anchored Python blocks from research/astra-minimal-height-review.md at repo root; then execute newline-joined checker.code_lines from research/astra-first-blocker-controls.json and compare stdout to checker.observed_stdout.",
+    "stdout": "minimal-height-review block 1\n{'euclidean_choices': [(1, 10, 6, 33, 7), (4, 7, 5, 23, 6), (5, 6, 5, 23, 6), (6, 5, 5, 23, 6), (7, 4, 5, 23, 6)], 'original_endpoints': 12, 'pointwise_component_checks': 72, 'equality_singleton_negative_period_controls': 'passed', 'omitted_frequency_bound_countercontrol': 'passed'}\n{\"equality_frequency_contracts\": 10, \"fixtures\": 12, \"frequencies\": 2188, \"good_components\": 234648, \"outside_bound_control\": \"q2940: every old endpoint bad, full witness2101/5880\", \"signed_component_tests\": 280528, \"singleton_components\": 188}\nminimal-height-review block 2\n{'additional_fixed_fixtures': 5, 'signed_component_checks': 78, 'singleton_components': 4, 'signed_endpoint_owner_checks': 108, 'equality_good_cases': 30, 'p_in_old_nonmaximum': 'passed', 'empty_old_good': 'passed', 'independent_euclidean_inventories': 'passed'}\nfirst-blocker controls [{\"T\":40,\"b\":8,\"bW\":\"4/5\",\"full_witness_point\":\"9/32\",\"id\":\"F1\"},{\"T\":2940,\"b\":2940,\"bW\":\"45\",\"full_witness_point\":\"6301/20580\",\"id\":\"F2\"},{\"T\":20580,\"b\":903,\"bW\":\"387/196\",\"full_witness_point\":\"148/6321\",\"id\":\"F3\"}]\nALL ROOT REPLAYS PASSED\n",
+    "scope": "Fixed controls only; no tuple discovery. Root reran the exact stored selector script, not merely its counts."
+  },
+  "first_blocker_controls": {
+    "path": "research/astra-first-blocker-controls.json",
+    "root_full_read_and_replay": true,
+    "fixtures": 3,
+    "first_blockers": [
+      8,
+      2940,
+      903
+    ],
+    "reproducer_sha256": "35f1521292973a9413e975dd86cc13ffb1f7b44767b55f9d3d2f4a41c2a0a8ef"
+  },
+  "first_blocker_width_review": {
+    "path": "research/astra-first-blocker-width-review.md",
+    "result": "accepted, no required correction",
+    "root_full_read": true,
+    "root_exact_replay": "passed",
+    "exit_code": 0,
+    "reproduction": "Execute the sole line-anchored Python block from research/astra-first-blocker-width-review.md at repo root.",
+    "stdout": "[{\"T\":40,\"b\":8,\"bW\":\"4/5\",\"full_witness_point\":\"9/32\",\"id\":\"F1\"},{\"T\":2940,\"b\":2940,\"bW\":\"45\",\"full_witness_point\":\"6301/20580\",\"id\":\"F2\"},{\"T\":20580,\"b\":903,\"bW\":\"387/196\",\"full_witness_point\":\"148/6321\",\"id\":\"F3\"}]\n{'low_fixed_sets': 2, 'singleton_components': 2, 'equality_controls': 24, 'signed_low_controls': 'passed', 'false_period_shortcut': 'passed', 'covered_reference_p58': 'passed', 'discovery_searches': 0}\nWIDTH ROOT REPLAY PASSED\n",
+    "accepted_scope": [
+      "N>=4 fixed old set: strict width dichotomy and equivalence of first-blocker witness with a separate witness for every positive inserted speed.",
+      "Uniform b>max(V) over canonical old sets is equivalent to unrestricted positive-integer LRC with established small cases.",
+      "Two low controls have noncanonical old counts and do not refute LRC; endpoint-integrality shortcut is false."
+    ],
+    "low_fixed_sets": 2,
+    "equality_controls": 24
+  },
+  "primary_source_screen": {
+    "path": "research/astra-primary-resolution-audit.md",
+    "result": "No unrestricted resolution among three selected candidates; bounded nonfinding.",
+    "root_readback": [
+      "arXiv2604.23906v2 Theorem1.3 and reduction context",
+      "pinned author repository main and for-k-12 READMEs",
+      "arXiv1209.3920v5 withdrawal comment",
+      "pinned official FormalConjectures file, unrestricted and weaker variant sorry bodies"
+    ],
+    "limits": "No independent audit of central finite computations, no external code build, no exhaustive literature claim. These sources supply no canonical kernel proof."
+  },
+  "focused_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests.test_validate_workflow tests.test_manage_storage tests.test_validate_task_ledger -q",
+    "result": "passed",
+    "count": 48,
+    "executor": "root"
+  },
+  "source_verification": "No Lean source, imports, trust script, toolchain or manifest changed. No local dependency restoration or Lean rebuild. Required remote CI will be checked before merge.",
+  "storage": {
+    "dependency_cache_restored": false,
+    "shared_lake_present": false
+  },
+  "strategic_decision": "Retain exact endpoint selector and finite descent criterion; do not promote first-blocker periodicity, universal b>max(V), or raw Euclidean witness reuse as established unconditional supply. Test a distinct complement descent with distinguished-runner identity explicit."
+}
