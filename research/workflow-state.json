@@ -6,34 +6,34 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/affine_grid-cyclic-formal-review",
+      "id": "/root/affine_grid-weighted-constant-audit",
       "runtime_agent": "/root/affine_grid",
       "kind": "research",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Independent source review of root-corrected full cyclic modular-band equivalence, all wrap and closed endpoints with arbitrary N>=2.",
-      "source_checkpoint": "AffineGridCyclic b4b42a0dd0f00730c2fbd45814a362a7e30248c97c234fd4d7ed72c7bf521e4b",
+      "target": "Assess arbitrary constant-correction weighted supply with one zero row; test root p5 (1,6,11,5) prototype and distinguish identity-model obstruction from allnormalizations.",
+      "source_checkpoint": "Accepted weighted manuscript plus p13 completegrid counter; root candidate argument",
       "owned_files": [
-        "research/astra-cyclic-formal-review.md"
+        "research/astra-constant-correction-audit.md"
       ],
       "status": "in_progress",
       "checks": [],
       "launch_status": "accepted"
     },
     {
-      "id": "/root/vanishing_slope-supply-audit-review",
+      "id": "/root/vanishing_slope-cyclic-bad-residues-formal",
       "runtime_agent": "/root/vanishing_slope",
       "kind": "research",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Independent review of uniform strip count, exact full49-grid obstruction/lifts, strict witnesses and scope of unproved covering target.",
-      "source_checkpoint": "Weighted supply manuscript64939cae6b8d1019970feb91a4906595e2f0c30472f6485c0d6ae0235da48ee6",
+      "target": "Formalize exact singleton/two-residue cyclic bad set and iff to existing affine phase, all N>=2 with closed endpoints and arbitrary wraps.",
+      "source_checkpoint": "Accepted pass9 manuscript and cyclic b4b42a0d source",
       "owned_files": [
-        "research/astra-supply-audit-review.md"
+        "LonelyRunner/AffineCyclicBadResidues.lean"
       ],
       "status": "in_progress",
       "checks": [],
@@ -1139,14 +1139,118 @@
       "checks": [],
       "launch_status": "accepted",
       "result": "Incomplete fixture note: only two of seven requested Lean examples persisted, repeated casts unresolved. Root took note for exact completion; no source changes."
+    },
+    {
+      "id": "/root/affine_grid-cyclic-formal-review",
+      "runtime_agent": "/root/affine_grid",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent source review of root-corrected full cyclic modular-band equivalence, all wrap and closed endpoints with arbitrary N>=2.",
+      "source_checkpoint": "AffineGridCyclic b4b42a0dd0f00730c2fbd45814a362a7e30248c97c234fd4d7ed72c7bf521e4b",
+      "owned_files": [
+        "research/astra-cyclic-formal-review.md"
+      ],
+      "status": "complete",
+      "checks": [],
+      "launch_status": "accepted",
+      "result": "Accepted exact source and iff, no corrections. Fresh compile/type/standardaxioms;25515 cases,10 fixtures,2 mutations.",
+      "review_sha256": "49a5ea9d237351ecc6d39e03b89ba0901b3c81c53a2a0303e91f43aed78b86ba"
+    },
+    {
+      "id": "/root/vanishing_slope-supply-audit-review",
+      "runtime_agent": "/root/vanishing_slope",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent review of uniform strip count, exact full49-grid obstruction/lifts, strict witnesses and scope of unproved covering target.",
+      "source_checkpoint": "Weighted supply manuscript64939cae6b8d1019970feb91a4906595e2f0c30472f6485c0d6ae0235da48ee6",
+      "owned_files": [
+        "research/astra-supply-audit-review.md"
+      ],
+      "status": "complete",
+      "checks": [],
+      "launch_status": "accepted",
+      "result": "Accepted strip count,49-grid/lift obstruction, strict witnesses and precise scope. Independent1444+156 strips,243 lifts,5985 covers,28812 transports.",
+      "review_sha256": "f1a833f1628184e6a2149ee864bf8f5ab00520daf0c30b0e8cd72e043118e066"
+    },
+    {
+      "id": "/root/fixed_grid_checker-prime-square-cover-search",
+      "runtime_agent": "/root/fixed_grid_checker",
+      "kind": "routine",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Bounded reproducible exact-bitset search for a p\u22123-set unit-group cover at p11 or13; counterexamples only, no universal conclusions from failure.",
+      "source_checkpoint": "Frozen supply audit64939cae section6; root exact finite model",
+      "owned_files": [
+        "research/astra-prime-square-cover-search.md"
+      ],
+      "status": "complete",
+      "checks": [],
+      "launch_status": "accepted",
+      "result": "Found p13 ten-set cover [1,7,8,9,10,17,33,36,64,69], refuting proposed tau_p>=p\u22122. Root independently verified all169 grid points and strict5/19 min2/19. p11 bounded nonfinding only; bestset leaves12,32,89,109. Root adding compact reproducible certificate; search algorithm not persisted.",
+      "review_sha256": null
+    },
+    {
+      "id": "/root/fixed_grid_checker-pass10-integration",
+      "runtime_agent": "/root/fixed_grid_checker",
+      "kind": "routine",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Integrate accepted AffineGridCyclic source import and one axiom probe; full build/trust audit, no theorem edits.",
+      "source_checkpoint": "17b448c3 plus accepted cyclicb4b42a0d",
+      "owned_files": [
+        "LonelyRunner.lean",
+        "LonelyRunner/AxiomAudit.lean"
+      ],
+      "status": "complete",
+      "checks": [
+        "lake build passed3609 jobs",
+        "trust audit accepted351 reports"
+      ],
+      "launch_status": "accepted",
+      "result": "Full build3609 jobs and trust351 reports passed. One accepted cyclic theorem imported and audited, standard axioms only."
+    },
+    {
+      "id": "/root/vanishing_slope-p13-cover-review",
+      "runtime_agent": "/root/vanishing_slope",
+      "kind": "research",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independently verify p13 ten-unit-set cover, all169-grid obstruction, strict5/19 and3211-lifts, and refutation of proposed universal tau_p>=p\u22122.",
+      "source_checkpoint": "p13 certificatee6564412dab8c0a112b8f88b1f515da72ce158693c0988cf951df8608d9858bf",
+      "owned_files": [
+        "research/astra-p13-cover-review.md"
+      ],
+      "status": "complete",
+      "checks": [
+        "156-unit inverse-set cover",
+        "169 exact Fraction grid checks",
+        "Strict margin7/247",
+        "11 independent large lift coordinate controls",
+        "p11 specific-set control"
+      ],
+      "launch_status": "accepted",
+      "result": "Accepted p13 ten-set cover, all169 obstruction, strict5/19 and whole3211-lift family; proposed tau_p>=p\u22122 refuted.",
+      "review_sha256": "f28baf270681fba5a2a0ec6f08fd71d67b6bd875db804bd93ac3e6fc7f20de2b"
     }
   ],
-  "latest_checkpoint": "Pass9 verified: weighted avoidance and complete alloddN>=5/allpositivev family compiled and independently accepted; full build3608 jobs, trust350 reports, root reproductions passed. Publication sequence starting; canonical LRC unresolved.",
+  "latest_checkpoint": "Pass10 verified: exact cyclic iff formalized and independently accepted; fullbuild3609/trust351 passed. Complete49 and169-grid obstructions/strict witnesses accepted, including refutation of tau_p>=p\u22122. Publication starting; canonical LRC unresolved.",
   "next_actions": [
-    "Complete pass9 publication through checked PR and exact-head merge; preserve unfinished future-pass files.",
-    "Finish independent cyclic source review and weighted-supply manuscript review; root completes all seven cyclic fixture applications.",
-    "Formalize exact two-residue bad-set characterization and then weighted whole-envelope bridge; avoid assuming arbitrary-tuple supply.",
-    "Retain shared cache for immediate formal work. Canonical LRC remains unresolved."
+    "Complete pass10 publication; exclude active constant-correction manuscript and new cyclic bad-residue implementation.",
+    "Finish exact cyclic bad-residue characterization, then independently review before formal weighted-envelope bridge.",
+    "Audit arbitrary constant corrections and proportional-form aggregation; do not reuse refuted tau_p bound.",
+    "Keep single shared cache for active formalization; canonical LRC remains unresolved."
   ],
   "research_holds": [
     {
@@ -1314,16 +1418,37 @@
       "path": "research/astra-exact-band-route.md",
       "review": "research/astra-pass9-review.md",
       "remaining": "General cyclic envelope bridge not formalized. Separate modular equivalence source pending independent review; unrestricted supply absent."
+    },
+    {
+      "id": "exact-cyclic-modular-band",
+      "status": "proved-lean-and-independently-reviewed",
+      "path": "LonelyRunner/AffineGridCyclic.lean",
+      "review": "research/astra-cyclic-formal-review.md",
+      "remaining": "Arithmetic iff only; no parameter or envelope supply."
+    },
+    {
+      "id": "prime-square-grid-obstruction",
+      "status": "manuscript-and-computation-independently-reviewed",
+      "path": "research/astra-weighted-supply-audit.md",
+      "review": "research/astra-supply-audit-review.md",
+      "remaining": "Full49-grid failure and lifts, strict witnesses; not arbitrary correction/modulus obstruction."
+    },
+    {
+      "id": "prime-square-cover-bound-refuted",
+      "status": "exact-counterexample-independently-reviewed",
+      "path": "research/astra-prime-square-cover-search.md",
+      "review": "research/astra-p13-cover-review.md",
+      "remaining": "tau13<=10 refutes proposed tau_p>=p\u22122; canonical LRC and arbitrary weighted supply unresolved."
     }
   ],
   "integration_check": {
     "status": "passed",
-    "verification_record": "research/astra-pass9-verification.json",
-    "full_build_jobs": 3608,
-    "last_trust_reports": 350,
+    "verification_record": "research/astra-pass10-verification.json",
+    "full_build_jobs": 3609,
+    "last_trust_reports": 351,
     "focused_tests": 48,
-    "source_code_changed": true,
-    "lean_source_changed": true
+    "lean_source_changed": true,
+    "source_code_changed": true
   },
   "storage_checkpoint": {
     "download_archive_bytes_removed": 439158169,
@@ -1348,9 +1473,9 @@
     "status": "verified_ready",
     "verified_checkpoint": null,
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-weighted-bands",
+    "branch": "codex/astra-cyclic-obstructions",
     "base": "main",
-    "next_action": "Commit exact accepted pass9 files, push, open PR, wait for checks, merge reviewed head and verify main.",
+    "next_action": "Commit/push accepted pass10 files, open PR, pass checks, merge exact reviewed head, verify main.",
     "pr_url": null,
     "pr_number": null,
     "head_sha": null,
@@ -1414,11 +1539,20 @@
         "merge_sha": "4d65e3f47fdea6c0f920f01b928310af833d3247",
         "checks": "Lean build/trust and exact computational certificates passed.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 7,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/7",
+        "head_sha": "17b448c3cd81266fbeae82d43b6c7e7d4abc16c4",
+        "status": "merged",
+        "merge_sha": "be9524b9d1f9634db3b78660ccb557e1fc84a51f",
+        "checks": "Both Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "819525f972fcf1b9646f3610906cf3f8c72f1496",
-    "remote_main": "4d65e3f47fdea6c0f920f01b928310af833d3247",
-    "local_main": "4d65e3f47fdea6c0f920f01b928310af833d3247",
+    "latest_published_source_checkpoint": "17b448c3cd81266fbeae82d43b6c7e7d4abc16c4",
+    "remote_main": "be9524b9d1f9634db3b78660ccb557e1fc84a51f",
+    "local_main": "be9524b9d1f9634db3b78660ccb557e1fc84a51f",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy."
   }
 }

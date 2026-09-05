@@ -6,13 +6,14 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
-The [ninth Astra research checkpoint](docs/astra-research-09.md) adds a weighted
-finite-field avoidance lemma and a full closed-witness theorem for
-`(2,3,...,N-3,v,N,2N)`, for every odd `N>=5` and every positive `v`.
-The integrated build passes 3,608 jobs and the trust audit accepts 350 reports.
-The exact cyclic envelope bridge remains a reviewed manuscript, and no
-arbitrary-tuple supply theorem is established. The canonical conjecture
-remains unproved and undisproved.
+The [tenth Astra research checkpoint](docs/astra-research-10.md) adds a full
+cyclic closed-band equivalence, with an integrated 3,609-job build and 351-report
+trust audit. Independently checked finite counterexamples rule out universal
+prime-square-grid supply, including the proposed covering bound at p=13.
+The [preceding checkpoint](docs/astra-research-09.md) proves weighted avoidance
+and the complete odd-count one-outlier family. Neither these results nor the
+new exact cyclic transport provides arbitrary-tuple envelope supply.
+The canonical conjecture remains unproved and undisproved.
 
 The research narrative below is the historical 2026-08-04 `main` snapshot.
 Old model routing and active-task language are superseded by the current workflow.
