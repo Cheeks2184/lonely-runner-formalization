@@ -8,6 +8,7 @@ import LonelyRunner.DivisorInsertion
 import LonelyRunner.StructuredClasses
 import LonelyRunner.ModularCertificates
 import LonelyRunner.PivotResidues
+import LonelyRunner.NearestPivotGrid
 import LonelyRunner.PivotZeroKernel
 import LonelyRunner.KernelCoverCertificates
 import LonelyRunner.OwnerKernelCover

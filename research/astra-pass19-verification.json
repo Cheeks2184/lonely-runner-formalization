@@ -1,0 +1,97 @@
+{
+  "pass": 19,
+  "base_checkpoint": "808595cf7615d01f849eb071648d8a82ee7c97c1",
+  "status": "verified",
+  "canonical_lrc_status": "unresolved",
+  "source_hashes": {
+    "LonelyRunner/NearestPivotGrid.lean": "ca5f8c1eb511a5be14d3eb50c887421ac7efa96426beb5135c0693a76b4f497b",
+    "LonelyRunner.lean": "f158f185c9b96442a716f2b74582ccc07a6aad77e4992cd928daa95cadf7ea01",
+    "LonelyRunner/AxiomAudit.lean": "0c7d4d7d2058d7b313964a7bc065900f66614078ffe79cd78df7085c6259615b",
+    "research/astra-nearest-grid-induction.md": "1f6d97ac0eda4683fccb1b815f58621bfc9bd3c9fc0c477fd16bbcecf67f6997",
+    "research/astra-nearest-grid-formalization.md": "8e072939b7eefae717865f630f747a52d91a511408b9ec7d1ddb06b95eb3cb86",
+    "research/astra-nearest-grid-review.md": "3d3b0036ff62daf9106979b785cc228bfca3680a9ca8fb61f533287331b0ae8b",
+    "research/astra-dense-pivot-induction.md": "6267ff6fb165ba01d5f982fd4931342c3e594d1ca1ca765d0aa41f0813598446",
+    "research/astra-dense-pivot-review.md": "151b0cdb8c701610e2c2e2e0508e11a9a630ae93f7c57e1d5010227b7187887b"
+  },
+  "formal_declaration": "LonelyRunner.exists_nearestPivotGrid_residue",
+  "formal_scope": "Supplied pivot and coordinate witness, strict pivot margin >1/(2N), and coordinate losses explicitly bounded. Arbitrary finite Nat coordinates; actual natural pivot candidate with closed goodness. No unconditional witness supply.",
+  "manuscript_scope": [
+    "Refined nearest and two-neighbor criteria; proper smaller-count subfamily induction, sparse exclusion only inside a hypothetical least-count integer counterexample.",
+    "Closed pair-determinant insertion criterion and exact obstruction to all stronger fastest-deletion witness component deformations. Not a counterexample to LRC, internal redundancy, or an all-covered implication."
+  ],
+  "verification": {
+    "build": {
+      "command": "PATH=$HOME/.elan/bin:$PATH lake build",
+      "result": "passed",
+      "jobs": 3616,
+      "log": "/tmp/pass19-full-build.log"
+    },
+    "trust": {
+      "command": "PATH=$HOME/.elan/bin:$PATH python3 scripts/audit_lean_trust.py",
+      "result": "passed",
+      "theorem_reports": 370,
+      "allowed_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "log": "/tmp/pass19-trust-final.log",
+      "initial_attempt": "An early audit before the full build finished lacked the root object. The final audit ran successfully after the build completed."
+    },
+    "focused_tests": {
+      "command": "PATH=$HOME/.elan/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests.test_validate_workflow tests.test_manage_storage tests.test_validate_task_ledger tests.test_audit_lean_trust -q",
+      "result": "passed",
+      "count": 58,
+      "log": "/tmp/pass19-focused-tests.log"
+    },
+    "independent_nearest_review": {
+      "result": "accepted",
+      "path": "research/astra-nearest-grid-review.md",
+      "fresh_source_compiled": true,
+      "full_contract_cases": [
+        "empty N2",
+        "above-pivot coordinate",
+        "repeated above-pivot coordinates",
+        "positive equality",
+        "negative equality"
+      ],
+      "kernel_residue_controls": 3,
+      "root_exact_block_replay": "passed; extract Python block using line-anchored Markdown fences",
+      "root_log": "/tmp/pass19-nearest-root-replay.log"
+    },
+    "independent_dense_review": {
+      "result": "accepted",
+      "path": "research/astra-dense-pivot-review.md",
+      "root_exact_block_replay": "passed",
+      "strong_weak_full_component_counts": [
+        4,
+        6,
+        2
+      ],
+      "internal_safe_residues": 22
+    },
+    "root_supporting_controls": {
+      "method": "Exact rational phase-band intersection, with old-witness component endpoints computed directly; integer norm and modular candidate assertions. Finite controls only.",
+      "insertion_domain": "Old sizes 2..4, all subsets of speeds1..11; N=old size+2; midpoints of every stronger-good component; p from q+1 to min(40,3q+2)-1 satisfying harmonic criterion.",
+      "insertion_checks": 4362,
+      "checks_outside_existing_fast_bound": 3864,
+      "distinct_endpoint_components": 2638,
+      "same_owner_components": 280,
+      "determinant_width_checks": 2638,
+      "grid_domain": "c=2..4, p=c+1..12, every lower subset; endpoints/midpoint/negative integer translate of each supplied1/(c+2) good component; N=c+3..c+5.",
+      "refined_nearest_checks": 48564,
+      "two_neighbor_checks": 59964
+    }
+  },
+  "storage": {
+    "status": "complete",
+    "command": "python3 scripts/manage_storage.py --clean",
+    "bytes_removed": 7712906368,
+    "removed_paths": [
+      ".lake"
+    ],
+    "coordination": "All worker tasks completed and confirmed stopped; root full build, final trust audit, focused tests, and fresh-source replay completed before cleanup.",
+    "retained": "Pinned toolchain, source, Git history, unique manuscripts/reviews and compact verification evidence."
+  },
+  "routing_recovery": "Terra launch hit runtime thread limit, then identical Terra medium request succeeded after an author finished. Independent Astra review hit model capacity during compaction; same Astra xhigh retry completed. Goal stayed active; no model substitution or goal resume action."
+}

@@ -11,16 +11,18 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks. The
-[latest verified checkpoint](docs/astra-research-18.md) proves at independently
-reviewed manuscript scope that every fixed positive odd inclusion-exclusion
-order fails to make the product-weighted sufficient criterion universal.
-Its explicit sparse counterfamilies have closed witnesses, so this refutes
-only that auxiliary method. The
-[latest formal checkpoint](docs/astra-research-16.md) proves arbitrary-height
-four-lower-owner noncover at denominator nine and a conditional canonical
-bridge with its unproved premise explicit. Its full Lean build passed 3,615
-jobs and its trust audit accepted 369 reports. General sparse-owner supply
-and unrestricted LRC remain unresolved.
+[latest verified checkpoint](docs/astra-research-19.md) adds a kernel-checked
+theorem transporting a supplied witness with explicit margins to an actual
+pivot grid. Independently reviewed manuscripts derive conditional induction
+bounds and show why following any stronger fastest-deletion witness within
+its old-good component cannot be a universal strategy. The full Lean build
+passed 3,616 jobs and the trust audit accepted 370 reports. Sparse covers are
+excluded inside a hypothetical minimal-count counterexample, with the
+smaller-count premise explicit; the dense all-covered case and unrestricted
+LRC remain unresolved. The [previous weighted audit](docs/astra-research-18.md)
+rules out fixed odd inclusion-exclusion corrections of the studied product
+weight, and the [denominator-nine checkpoint](docs/astra-research-16.md)
+retains its arbitrary-height four-owner theorem and conditional canonical bridge.
 The following pipeline is the **historical 2026-08-04 snapshot**, not a live launch queue.
 
 Historical repository-recorded pipeline: Prompt98's original response and five

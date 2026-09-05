@@ -1942,13 +1942,114 @@
         "Root reviewed the complete three-file diff against the user authorization and available goal controls.",
         "Root ran 48 workflow, storage, and historical-ledger tests; all passed. Workflow validator and git diff --check passed. No local Lean rebuild needed for instruction-only changes."
       ]
+    },
+    {
+      "id": "/root/nearest_grid_audit",
+      "kind": "research",
+      "status": "complete",
+      "target": "Audit nearest actual-pivot-grid rounding from a smaller-count LRC hypothesis, exact endpoints, sharp size conditions, and application to minimal canonical counterexamples.",
+      "source_checkpoint": "808595cf7615d01f849eb071648d8a82ee7c97c1",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-nearest-grid-induction.md"
+      ],
+      "checks": [
+        "Root read complete manuscript; exact rational author controls passed (independent reviewer pending)."
+      ],
+      "result": "Frozen conditional nearest and two-neighbor transport manuscript with precise minimal-count implications.",
+      "artifact_sha256": "1f6d97ac0eda4683fccb1b815f58621bfc9bd3c9fc0c477fd16bbcecf67f6997"
+    },
+    {
+      "id": "/root/dense_pivot_audit",
+      "kind": "research",
+      "status": "complete",
+      "target": "Develop a bounded dense all-covered canonical route using smaller-count LRC and actual pivot constraints; audit exact residual burden and a concrete next lemma, without relaunching retired weighted criteria.",
+      "source_checkpoint": "808595cf7615d01f849eb071648d8a82ee7c97c1",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-dense-pivot-induction.md"
+      ],
+      "checks": [
+        "Author embedded exact reproduction passed; root independent component arithmetic replay passed. Independent review pending."
+      ],
+      "result": "Frozen harmonic and pair-determinant insertion manuscript with exact obstruction to all old-witness-seeded component deformation.",
+      "artifact_sha256": "6267ff6fb165ba01d5f982fd4931342c3e594d1ca1ca765d0aa41f0813598446"
+    },
+    {
+      "id": "/root/nearest_grid_formal",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Formalize settled quantitative nearest actual-pivot-grid witness transport using existing circleNorm Lipschitz lemmas; hypotheses remain explicit.",
+      "source_checkpoint": "808595cf7615d01f849eb071648d8a82ee7c97c1",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/NearestPivotGrid.lean",
+        "research/astra-nearest-grid-formalization.md"
+      ],
+      "checks": [
+        "Terra target build passed; public theorem uses only propext, Classical.choice, Quot.sound.",
+        "Root read entire frozen source; correct signed rounding, candidate exclusion, positive modulus, integer periodicity, and margin direction.",
+        "Root integrated one import and one axiom report; full source build passed 3616 jobs.",
+        "58 focused workflow/storage/ledger/trust tests passed. Independent source review and final trust audit pending."
+      ],
+      "recovery": "Same requested Terra medium route successfully launched after nearest author completed. Prior thread-limit failures did not end the goal.",
+      "result": "Quantitative nearest actual-pivot-grid transport compiled for arbitrary finite Nat coordinates, explicit witness/pivot and per-coordinate margins.",
+      "artifact_sha256": "ca5f8c1eb511a5be14d3eb50c887421ac7efa96426beb5135c0693a76b4f497b"
+    },
+    {
+      "id": "/root/guard_internal_cover_audit-nearest-review",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independent semantic review of frozen nearest-grid manuscript, then owned formal source when ready; exact hypotheses and minimal-count scope.",
+      "source_checkpoint": "808595cf7615d01f849eb071648d8a82ee7c97c1 + author manuscript1f6d97ac",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-nearest-grid-review.md"
+      ],
+      "checks": [
+        "Root read complete review and replayed its exact embedded controls."
+      ],
+      "failure_reason": "Astra xhigh reviewer turn failed during remote compaction: selected model at capacity. Preserve existing artifacts; retry identical requested model/effort. This isolated failure does not block the goal.",
+      "recovery_status": "complete, same requested routing",
+      "result": "Accepted frozen manuscript and relevant source at their exact stated scope."
+    },
+    {
+      "id": "/root/nearest_grid_audit-dense-review",
+      "kind": "review",
+      "status": "complete",
+      "target": "Independent semantic review of dense insertion and complete seeded-component obstruction; primary harmonic precedent, exact closed determinant bounds.",
+      "source_checkpoint": "808595cf7615d01f849eb071648d8a82ee7c97c1 + manuscript6267ff6f",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-dense-pivot-review.md"
+      ],
+      "checks": [
+        "Root read complete review and replayed its exact embedded controls."
+      ],
+      "result": "Accepted frozen manuscript and relevant source at their exact stated scope.",
+      "recovery_status": "complete, same requested routing"
     }
   ],
-  "latest_checkpoint": "Worker recovery authorization persisted in project instructions: retry isolated worker failures within requested routing; autonomously resume an incorrectly blocked goal only through a supported control and read back status. Current runtime goal is active; no root resume operation was performed. PR16 is merged and verified; LRC remains unresolved.",
+  "latest_checkpoint": "Pass19 verified: generic nearest-pivot-grid transport kernel checked; nearest/count and dense insertion/seeded-component obstruction manuscripts independently accepted. Full3616build,370trustreports,58focusedtests, freshsourceprobes passed. LRC unresolved; publish checkpoint next.",
   "next_actions": [
-    "Persist and verify the worker recovery policy, then commit, push, open PR, pass required checks, merge exact head, and verify main.",
-    "At next research continuation audit conditional nearest-grid rounding and focus the canonical dense/all-covered gap; no further fixed-order weighted criterion attempts.",
-    "Keep caches absent until immediate Lean work. The runtime goal is currently active; isolated worker failure does not end the goal."
+    "Publish the verified Pass19 allowlist through commit, push, PR, required checks, exact-head merge, and main verification.",
+    "Investigate whether original covered-label relations force escape from a trapped stronger-witness component; the N7 fixture has one noncovered endpoint owner in each trapped pair. This is an unproved candidate, not an accepted all-covered theorem.",
+    "Keep dependency caches absent until immediate Lean work; preserve the unrestricted completion gate."
   ],
   "research_holds": [
     {
@@ -1965,7 +2066,7 @@
     },
     {
       "route": "universalproduct-weightedincidence-sparse-supply",
-      "reason": "AcceptedweightedcounterexampleN35p31c17V{2,4}+odds1..31 provesTbad>1.01A withclosedr31/strictr33 witnesses; allcommonpositiveheights. Do notrelaunch universalTbad<A under2c<N. The implication Tbad<A=>noncover andN9positivecontrol remainvalid. Fixed-orderBonferronicorrection currentlyunderseparateunreviewed audit.",
+      "reason": "AcceptedweightedcounterexampleN35p31c17V{2,4}+odds1..31 provesTbad>1.01A withclosedr31/strictr33 witnesses; allcommonpositiveheights. Do notrelaunch universalTbad<A under2c<N. The implication Tbad<A=>noncover andN9positivecontrol remainvalid. Pass18 also refuted every fixed positive odd Bonferroni correction for this product weight at independently reviewed manuscript scope.",
       "evidence": [
         "research/astra-weighted-sparse-audit.md",
         "research/astra-weighted-sparse-review.md"
@@ -1982,6 +2083,14 @@
       ],
       "author_sha256": "9116444bc4b55f976a148ecd0431c3032ec4b4d62b7396bd4ed420cc477cfaa0",
       "review_sha256": "35a5db5bad8a895743491ac2f84dc45d2d25cc1c18c6b50680144dcf15f7f625"
+    },
+    {
+      "route": "universal-fastest-deletion-seeded-component-deformation",
+      "reason": "Accepted N7 tuple1,4,5,6,7,11 traps every weak-good component containing any old1/6 witness, yet full1/7 witnesses exist in unseeded components. This refutes only that strategy; exact covered labels exclude6,7 frominternalowners.",
+      "evidence": [
+        "research/astra-dense-pivot-induction.md",
+        "research/astra-dense-pivot-review.md"
+      ]
     }
   ],
   "completion_evidence": null,
@@ -2205,16 +2314,45 @@
       "remaining": "Protects precisely three lower owners and pivot at N7; no unrestricted witness supply."
     },
     {
-      "status": "unreviewed_candidate",
+      "status": "manuscript_independently_reviewed",
       "target": "allfixedoddBonferroni truncation failure",
       "evidence": "Rootoutline toAstraauthor: e=h+1,k>=max40,e+1,N2k+2e\u22121,p2k\u22121. Proposed outsideQmass/A<=2^(4e+3)k^(4e+2)exp(\u2212k/(1024e\u00b2))/(e!)\u00b2; exponentialTaylorbound gives explicitlargek withoutside<A/2,centralbadmultiplicitye yieldsBonferroniweight2. Authorauditing; noacceptedproofyet.",
-      "owned_note": "research/astra-bonferroni-weight-audit.md"
+      "owned_note": "research/astra-bonferroni-weight-audit.md",
+      "promotion": "Pass18 accepted and published; see research/astra-bonferroni-weight-review.md. Original outline below is historical."
     },
     {
-      "status": "unreviewed_planning_observation",
+      "status": "manuscript_independently_reviewed",
       "target": "conditionalnearest-gridrounding andminimal-runner-count focus",
       "evidence": "Rootobservation: c lower+actualpivot givesn=c+1speeds. IfordinaryLRCforthose speeds suppliesnorm>=1/(c+2), nearestNpgrid roundingloses<=1/(2N) sinceallv<=p. Thusactualcandidateclosed1/N followswhenever2N>=3(c+2); pivotgoodexcludesN|r. Under2c<N thisholdsforc>=4. Inminimal-runner-countcanonicalcounterexample, lower-countLRCinduction couldtherefore supply sparse-caseargumentwithout independentlyprovingallN sparse theorem. Needsindependentreview/formalcontract beforeuse; c<=3 specialcasesseparate. Mainremainingissueisdense/all-covered configuration, notmissingordinarysparsebound.",
-      "promotion": "none; futureauditonly"
+      "promotion": "Pass19 nearest manuscript accepted; generic transport kernel checked. See research/astra-pass19-verification.json."
+    },
+    {
+      "id": "pass19-induction-planning",
+      "status": "reviewed_and_verified",
+      "nearest": "Astra author and root agree quantitative nearest transport and sharper distinct two-neighbor bound p(N-k)(q+s)>=kqs from supplied1/k witness includingpivot; no unconditional supply.",
+      "dense": "Astra author and root agree harmonicfastinsertion p(q+s)>=2(N-1)qs and determinantwidthlowerbound. A primary preprint already states strict harmonic criterion; no noveltyclaim. Exact N7 tuple1,4,5,6,7,11 traps all4 old1/6-seeded1/7components in11badarcs, whilefullwitness components [15/49,13/42] andreflection exist elsewhere.",
+      "root_controls": {
+        "insertion": 4362,
+        "strict_improvements_over_existing_fast_bound": 3864,
+        "component_distinct_pairs": 2638,
+        "component_same_owner": 280,
+        "determinant_width": 2638,
+        "refined_nearest": 48564,
+        "two_neighbor": 59964,
+        "seeded_trap_components": 4
+      },
+      "promotion": "See research/astra-pass19-verification.json; generic transport formalized, count/two-neighbor and dense insertion remain reviewed manuscripts."
+    },
+    {
+      "id": "nearest-grid-and-induction-limits",
+      "status": "generic_transport_proved_lean_manuscripts_independently_reviewed",
+      "formal_source": "LonelyRunner/NearestPivotGrid.lean",
+      "verification": "research/astra-pass19-verification.json",
+      "reviews": [
+        "research/astra-nearest-grid-review.md",
+        "research/astra-dense-pivot-review.md"
+      ],
+      "remaining": "Dense all-covered exclusion remains unproved; smaller-count premises cannot be reused on the full family. Seeded component deformation is not universal."
     }
   ],
   "integration_check": {
@@ -2279,7 +2417,14 @@
     },
     "pass16_focused_tests": "Passed58 including10trustfilter tests; forcednoLean10run1skip.",
     "pass16_source_filter_controls": "Root replayed scoped axiom/inline sorry/interpolation regression rejection and double-prime acceptance; explicit decide+kernel True succeeds,False rejects with expected diagnostic.",
-    "pass16_general_sparse_replay": "Root fullread author/review and both solePython blocks replayed; independentreview792multisets6590grids3548rational348Delta18block controls passed;N15A144S648safe13204."
+    "pass16_general_sparse_replay": "Root fullread author/review and both solePython blocks replayed; independentreview792multisets6590grids3548rational348Delta18block controls passed;N15A144S648safe13204.",
+    "pass19": {
+      "status": "verified",
+      "full_build_jobs": 3616,
+      "trust_reports": 370,
+      "focused_tests": 58,
+      "independent_reviews": "Both accepted with root replay; exact hashes in research/astra-pass19-verification.json."
+    }
   },
   "storage_checkpoint": {
     "download_archive_bytes_removed": 439158169,
@@ -2347,20 +2492,37 @@
       "command": "python3 scripts/manage_storage.py --clean",
       "coordination": "Allresearchworkerscompletedandcommandsstopped; rootlocalverificationcomplete;remoteCIindependent.",
       "shared_dependency_cache_present": false
+    },
+    "pass19_restore": {
+      "status": "complete",
+      "command": "PATH=$HOME/.elan/bin:$PATH lake exe cache get",
+      "log": "/tmp/pass19-cache-restore.log",
+      "reason": "Immediate queued formalization of quantitative nearest-grid transport; one shared pinned cache.",
+      "result": "Pinned cache restored 8639 files; no Lean source changes started because Terra launches hit runtime agent thread limit. Retry after author completion; clean cache if no immediate formalization can launch."
+    },
+    "pass19_final_cleanup": {
+      "status": "complete",
+      "command": "python3 scripts/manage_storage.py --clean",
+      "bytes_removed": 7712906368,
+      "removed_paths": [
+        ".lake"
+      ],
+      "coordination": "All worker tasks completed and confirmed stopped; root full build, final trust audit, focused tests, and fresh-source replay completed before cleanup.",
+      "retained": "Pinned toolchain, source, Git history, unique manuscripts/reviews and compact verification evidence."
     }
   },
-  "previous_goal_turn_classification": "Meaningfulprogress:PR14N9formalization/conditionalbridge andPR15exactweightedcriterionlimits bothverifiedandmerged; activeBonferroniscopegeneralization. No mathematicalcompletionorblock.",
+  "previous_goal_turn_classification": "Progress: persisted the explicit worker recovery authorization and verified PR17 merge on main; actual runtime goal active. No mathematical completion claimed.",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "verified_pending_commit",
-    "verified_checkpoint": "ecc9652e3eefcff096ab6f0e35f36cf71878975b",
+    "verified_checkpoint": "48ed42556286934ff516e4c357210d35d54c967a",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-worker-recovery-policy",
+    "branch": "codex/astra-grid-induction-audit",
     "base": "main",
-    "next_action": "Run focused verification, commit the four-file allowlist, push, open PR, pass required checks, merge exact head and verify main.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/16",
-    "pr_number": 16,
-    "head_sha": "ecc9652e3eefcff096ab6f0e35f36cf71878975b",
+    "next_action": "Coordinate idle cleanup, commit verified allowlist, push, open PR, pass required checks, merge exact head and verify main.",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/17",
+    "pr_number": 17,
+    "head_sha": "48ed42556286934ff516e4c357210d35d54c967a",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -2513,15 +2675,24 @@
         "merge_sha": "c3bad1e27509d3c189783af0a89a37097e64038d",
         "checks": "Lean build/trust passed 15:11:58 UTC; exact computational certificates passed 15:18:11 UTC.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 17,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/17",
+        "head_sha": "48ed42556286934ff516e4c357210d35d54c967a",
+        "status": "merged",
+        "merge_sha": "808595cf7615d01f849eb071648d8a82ee7c97c1",
+        "checks": "Lean build and trust audit passed 15:32:00 UTC; exact computational certificates passed 15:38:12 UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "ecc9652e3eefcff096ab6f0e35f36cf71878975b",
-    "remote_main": "c3bad1e27509d3c189783af0a89a37097e64038d",
-    "local_main": "c3bad1e27509d3c189783af0a89a37097e64038d",
+    "latest_published_source_checkpoint": "48ed42556286934ff516e4c357210d35d54c967a",
+    "remote_main": "808595cf7615d01f849eb071648d8a82ee7c97c1",
+    "local_main": "808595cf7615d01f849eb071648d8a82ee7c97c1",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
-    "pending_checkpoint": "Project worker recovery instructions",
-    "merge_sha": "c3bad1e27509d3c189783af0a89a37097e64038d",
-    "checks": "Lean build/trust passed 15:11:58 UTC; exact computational certificates passed 15:18:11 UTC.",
+    "pending_checkpoint": "research/astra-pass19-verification.json",
+    "merge_sha": "808595cf7615d01f849eb071648d8a82ee7c97c1",
+    "checks": "Lean build and trust audit passed 15:32:00 UTC; exact computational certificates passed 15:38:12 UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
@@ -2530,7 +2701,7 @@
     "root_requested_resume": false,
     "mathematical_status": "unresolved",
     "token_usage_observed": 9357006,
-    "current_work": "Persist the user authorization to resume incorrectly blocked goals after isolated subagent failures when a supported resume control exists. Current callable goal tools expose no resume operation; no resume action is claimed."
+    "current_work": "Isolated agent thread-limit failures recovered by retrying the identical requested Terra medium routing after a worker completed; no root goal resume operation needed or available."
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",
