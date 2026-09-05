@@ -10,8 +10,10 @@ the Lonely Runner Conjecture (LRC).
 **Current operating instructions:** [.codex/config.toml](.codex/config.toml) and
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
-[workflow-state.json](research/workflow-state.json) for current tasks. The following pipeline is the
-**historical 2026-08-04 snapshot**, not a live launch queue.
+[workflow-state.json](research/workflow-state.json) for current tasks. The
+[latest verified checkpoint](docs/astra-research-09.md) adds weighted avoidance
+and the full odd-count one-outlier family, with 350 accepted axiom reports.
+The following pipeline is the **historical 2026-08-04 snapshot**, not a live launch queue.
 
 Historical repository-recorded pipeline: Prompt98's original response and five
 attachments are recovered while a same-chat correction remains active.

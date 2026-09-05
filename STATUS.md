@@ -6,9 +6,13 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
-The [first Astra research checkpoint](docs/astra-research-01.md) adds four
-auxiliary Lean declarations, with an integrated 3,596-job build and 319-report
-trust audit. The canonical conjecture remains unproved and undisproved.
+The [ninth Astra research checkpoint](docs/astra-research-09.md) adds a weighted
+finite-field avoidance lemma and a full closed-witness theorem for
+`(2,3,...,N-3,v,N,2N)`, for every odd `N>=5` and every positive `v`.
+The integrated build passes 3,608 jobs and the trust audit accepts 350 reports.
+The exact cyclic envelope bridge remains a reviewed manuscript, and no
+arbitrary-tuple supply theorem is established. The canonical conjecture
+remains unproved and undisproved.
 
 The research narrative below is the historical 2026-08-04 `main` snapshot.
 Old model routing and active-task language are superseded by the current workflow.

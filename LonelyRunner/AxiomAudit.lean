@@ -86,6 +86,7 @@ project-specific axiom.
 #print axioms LonelyRunner.rectangleReversalAt_isSdr_of_feasible
 #print axioms LonelyRunner.rectangleReversalAt_isSdr_of_mem_startInterval
 #print axioms LonelyRunner.gammaTwoTranslation_isSdr
+
 #print axioms LonelyRunner.PartialMatching.extension_or_deficiency_one
 #print axioms LonelyRunner.tight_iff_successorClosed_and_avoidsBad
 #print axioms LonelyRunner.strictHall_iff_every_vertex_reaches_bad
@@ -366,3 +367,9 @@ project-specific axiom.
 -- Fifth Astra pass: simultaneous zero rows and smaller affine families.
 #print axioms LonelyRunner.affine_avoidance_card_le_sub_two
 #print axioms LonelyRunner.affine_grid_multiple_zero_witness
+
+-- Ninth Astra pass: weighted avoidance and an explicit one-outlier family.
+#print axioms LonelyRunner.weighted_affine_avoidance
+#print axioms LonelyRunner.weighted_affine_avoidance_author
+#print axioms LonelyRunner.affine_one_outlier_family_witness_nat
+#print axioms LonelyRunner.affine_one_outlier_family_witness
