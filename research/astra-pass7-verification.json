@@ -1,0 +1,92 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "1686e67471336b29fa05f517013c25f02e37676d",
+  "files": {
+    "scripts/grid_normalization_decision.py": "393cdc38eee2fdead8a3ef47bdad599917a5319e407d768b197c5997ffd8e5d1",
+    "tests/test_grid_normalization_decision.py": "43893659bea8251824d82c8dde6a50c55004ddbb05be0cdad4e462efb266985b",
+    "research/astra-decision-engine.md": "b65756e4c83365c05ae43c5a5ffc4d1f48d9bbc7b477c5df63ff3d910ec8b90f",
+    "research/astra-normalization-candidates.md": "4fa5cc65d9232fe69f4749c83862e26e3b1b9069f6e76417272285189ad69dc7",
+    "scripts/grid_normalization.py": "38bc58b6a53c044998a9b48d4fda8dc4a717fa6936dee9e8cb68935bf690cdb0",
+    "research/astra-normalization-decision.md": "6e3a76646f4f93dec9420a4285ffbdc8848b4437dc607a6485a555f7c7c4d89f",
+    "research/astra-pass7-review.md": "e859e06cd6ae9a02ed8b6b4ebff6b0e5726e5e054f28a3cbe210cd46e60d71fa"
+  },
+  "local_verification": {
+    "command": "python3 -m unittest tests.test_grid_normalization_decision tests.test_grid_normalization tests.test_validate_workflow tests.test_validate_task_ledger -q",
+    "tests": 62,
+    "result": "pass",
+    "source_diff_check": "Lean source, canonical entrypoint and pinned dependency files unchanged.",
+    "storage_report_bytes": 217834,
+    "lean_cache_restored": false
+  },
+  "candidate_all_modulus_receipt": {
+    "status": "INFEASIBLE",
+    "scope": "A/B/R normalization union only; not an LRC decision",
+    "algorithm_version": 1,
+    "N": 7,
+    "V": [
+      2,
+      3,
+      4,
+      7,
+      14,
+      9
+    ],
+    "max_cases": null,
+    "counts": {
+      "b_moduli": 4,
+      "cases": 3395,
+      "b_units": 11,
+      "velocity_cells": 24,
+      "class_pairs": 1152,
+      "a_cases": 1152,
+      "formulas": 3384,
+      "root_sets": 3240,
+      "open_atoms": 13164,
+      "point_atoms": 9924,
+      "r_anchors": 2232,
+      "constant_false": 144
+    },
+    "coverage_sha256": "0a6ce7c28901b555a65e478a87c3e6d94020da444aeb9b7db1a3be73fbb1a4c6",
+    "sources": {
+      "engine": "393cdc38eee2fdead8a3ef47bdad599917a5319e407d768b197c5997ffd8e5d1",
+      "fixed_checker": "38bc58b6a53c044998a9b48d4fda8dc4a717fa6936dee9e8cb68935bf690cdb0",
+      "manuscript": "6e3a76646f4f93dec9420a4285ffbdc8848b4437dc607a6485a555f7c7c4d89f"
+    },
+    "discovery": null,
+    "certificate": null
+  },
+  "candidate_replay": "Root independently executed the same engine uncapped and replay_record returned True; this is not an independent implementation or kernel proof.",
+  "original_witness": {
+    "time": "1/5",
+    "distances": [
+      "2/5",
+      "2/5",
+      "1/5",
+      "2/5",
+      "1/5",
+      "1/5"
+    ],
+    "threshold": "1/7",
+    "strict": true
+  },
+  "canonical_lrc_status": "unresolved",
+  "independent_review": {
+    "path": "research/astra-pass7-review.md",
+    "status": "accepted",
+    "radical_sign_checks": 48000,
+    "scaled_root_checks": 1152,
+    "root_order_checks": 3517,
+    "rational_range_checks": 40474,
+    "additional_density_checks": 864,
+    "independent_replay": {
+      "root_rerun": "pass",
+      "project_imports": false,
+      "b_pairs": 11,
+      "signed_class_cases": 73728,
+      "geometric_conjunctions": 7856,
+      "nonempty_real_conjunctions": 0,
+      "coverage_sha256": "83b18bf63072e61140f32c3666535d66efc4bdb5d28942d83dbfad4158f1e0af"
+    },
+    "scope": "Complete computational obstruction to A/B/R normalization; not a kernel proof or LRC counterexample."
+  }
+}
