@@ -11,9 +11,12 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks. The
-[latest verified checkpoint](docs/astra-research-13.md) refutes single-step
-endpoint escape even with one prime-divisible speed, using an unbounded family
-with strict ordinary witnesses. The [latest Lean checkpoint](docs/astra-research-11.md)
+[latest verified checkpoint](docs/astra-research-14.md) supplies an independently
+reviewed manuscript proof for three distinct lower owners at denominator seven,
+with no speed-height bound. It also identifies the precise remaining gap in
+the owner-cover approach. The [preceding checkpoint](docs/astra-research-13.md)
+refutes single-step endpoint escape even with one prime-divisible speed.
+The [latest Lean checkpoint](docs/astra-research-11.md)
 has 354 accepted axiom reports. Unrestricted witness supply remains unresolved.
 The following pipeline is the **historical 2026-08-04 snapshot**, not a live launch queue.
 

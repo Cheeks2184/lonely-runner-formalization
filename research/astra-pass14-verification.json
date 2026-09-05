@@ -1,0 +1,47 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "7a3ea75d1221b815a46b97f2b487807e48375649",
+  "files": {
+    "research/astra-next-bridge-audit.md": "f6130fd8ed2bda6b50aa73b64a6fcbdbacb27efb478163d0b6e4e9e12d69dc50",
+    "research/astra-three-owner-review.md": "5fb7f5765e1a4dd802dee0a5fe9dec592faaaa51a3e51a519b56f26584c166df",
+    "research/astra-three-owner-api-inventory.md": "120010135dad886dfb66b35f824193001b0c384cc0f36f9846bcfb214bd343dd",
+    "docs/astra-research-14.md": "d168508ad45b13568a59b101d239478bc1ef2811d19416ce51de4db340b2c1c8",
+    "README.md": "81c4a14c2e2dd475898285f54a6a509d2c77fe4b293f16459fd860922f17ffb8",
+    "STATUS.md": "edb8b3a4d1346e79d438e8656238564efef6df0a84d4cb6f2338ba50485b78cd"
+  },
+  "scope": "Manuscript proof of N=7 three-distinct-lower-owner noncover at arbitrary height; exact covered-pivot guard control and contract audit. No new Lean theorem or unrestricted LRC resolution.",
+  "root_checks": {
+    "full_author_and_review_read": true,
+    "source_bindings": 16,
+    "author_triples": 230300,
+    "author_periodic_pairs": 6074,
+    "author_seven_power_controls": 2,
+    "author_separating_fixtures": 2,
+    "author_guard_certificates": 3,
+    "independent_literal_rows": 4950,
+    "independent_literal_triples": 27405,
+    "independent_literal_remainders": 65,
+    "independent_exception_controls": 18,
+    "independent_separating_fixtures": 2,
+    "independent_guard_certificates": 3,
+    "focused_tests": 48,
+    "lean_source_changed": false,
+    "local_lean_build": "Not rerun for manuscript-only checkpoint; preceding source unchanged.",
+    "preceding_lean_checkpoint": {
+      "pr": 9,
+      "build_jobs": 3610,
+      "trust_reports": 354
+    },
+    "api_inventory": "Root regenerated eight literal declaration headers with exact lines and file hashes after incomplete routine output."
+  },
+  "reproducers": {
+    "author": "Execute sole Python block in research/astra-next-bridge-audit.md.",
+    "review": "Execute sole Python block in research/astra-three-owner-review.md.",
+    "focused": "python3 -m unittest tests.test_manage_storage tests.test_validate_workflow tests.test_validate_task_ledger -q"
+  },
+  "canonical_lrc_status": "unresolved",
+  "excluded_followups": [
+    "research/astra-sparse-owner-supply-audit.md",
+    "research/astra-guard-internal-cover-audit.md"
+  ]
+}
