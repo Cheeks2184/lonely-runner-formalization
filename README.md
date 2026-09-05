@@ -11,15 +11,15 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks. The
-[latest verified checkpoint](docs/astra-research-20.md) audits a proposed
-endpoint-label argument. A reviewed common-divisor shift preserves each old
-runner's actual pivot row; an exact counterexample shows why the largest-row
-hypothesis cannot be omitted. Independent rational checks and 48 focused tests
-passed. The remaining primitive old-gcd-one candidate is unresolved, and this
-checkpoint adds no Lean theorem. The [previous grid checkpoint](docs/astra-research-19.md)
-retains its kernel-checked transport of a supplied witness with explicit margins,
-with 3,616 build jobs and 370 trust reports. Neither result supplies the missing
-unrestricted witness or excludes the dense all-covered case.
+[latest verified checkpoint](docs/astra-research-21.md) gives an independently
+reviewed obstruction to global translations and reflections that preserve the
+entire old-good set. An exchange chosen for one endpoint succeeds in the same
+example, so the actual endpoint candidate remains unresolved. The
+[divisor checkpoint](docs/astra-research-20.md) retains its limited same-row
+shift theorem at manuscript scope, and the [grid checkpoint](docs/astra-research-19.md)
+retains its kernel-checked transport of a supplied witness with explicit margins.
+No unrestricted witness supply or exclusion of the dense all-covered case has
+been established.
 The following pipeline is the **historical 2026-08-04 snapshot**, not a live launch queue.
 
 Historical repository-recorded pipeline: Prompt98's original response and five

@@ -1,0 +1,107 @@
+{
+  "task": "/root/nearest_grid_formal",
+  "kind": "bounded literal pivot-cover corpus inventory",
+  "source_main": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+  "scope": {
+    "target": "actual largest-pivot rows with lower owners",
+    "literal_predicate": "R(N,p)={r:0<=r<N*p and r%N!=0}; an owner a is bad at r iff min((r*a)%(N*p), (-(r*a))%(N*p))<p.",
+    "no_search_or_legacy_execution": true,
+    "fixtures_recomputed": 10,
+    "fixture_limit": 20
+  },
+  "source_inventory": {
+    "rg_command": "rg -n -i --glob 'research/astra*.md' --glob 'research/sol-pro/artifacts/**/*.json' --glob 'research/**/*.json' \"(covered.*(pivot|label|row)|pivot.*cover|safe residues|safe_residues|N\\s*=\\s*[0-9]+.*p\\s*=\\s*[0-9]+|fixtures\\s*=|\\\"N\\\"\\s*:\\s*[0-9]+)\" research",
+    "accepted_source": "research/astra-endpoint-label-audit.md:185-196",
+    "accepted_source_sha256": "667b9bcdebf30333c551badf6e9ef6c861e5e1ca1095808ece5354733745e44d",
+    "source_semantics": "The table explicitly labels N, V, p and reports covered original speeds. Each accepted entry names p among those labels; the direct check below independently establishes only the required p-row coverage.",
+    "artifact_review": {
+      "paths_inspected_by_rg": [
+        "research/sol-pro/artifacts/prompt80/prompt80_exact_search.json",
+        "research/sol-pro/artifacts/prompt82/p82_exact_python.json",
+        "research/sol-pro/artifacts/prompt86/quarantine/p86_literal.json",
+        "research/sol-pro/artifacts/prompt92/quarantine/target_counterexample.json",
+        "research/sol-pro/artifacts/prompt95/quarantine/prompt95_result.json"
+      ],
+      "disposition": "No additional artifact fixture was admitted: the available JSON schemas either describe different pivots/contracts, are nested without an unambiguous lower-owner-largest-pivot tuple, or are explicitly quarantined. Their coverage claims were not inferred from names or keys."
+    }
+  },
+  "checker": {
+    "extraction_command": "PYTHONDONTWRITEBYTECODE=1 python3 -c 'import json,pathlib; d=json.load(open(\"research/astra-cover-corpus-inventory.json\")); pathlib.Path(\"/tmp/lrc_cover_corpus_reproducer.py\").write_text(\"\\n\".join(d[\"checker\"][\"code_lines\"])+\"\\n\")'",
+    "invocation": "PYTHONDONTWRITEBYTECODE=1 python3 /tmp/lrc_cover_corpus_reproducer.py",
+    "extracted_reproducer_sha256": "0cacda576672fd9b49ba7c73460b68264959e9d0e7136d0a1306c7445be2f02a",
+    "observed_stdout": "{\"checked\":[\"E01\",\"E02\",\"E03\",\"E04\",\"E05\",\"E06\",\"E07\",\"E08\",\"E09\",\"E10\"],\"fixtures\":10,\"largest_checked_modulus\":1030,\"source_hash\":\"667b9bcdebf30333c551badf6e9ef6c861e5e1ca1095808ece5354733745e44d\"}",
+    "code_lines": [
+      "import hashlib",
+      "import json",
+      "import math",
+      "from pathlib import Path",
+      "",
+      "ROOT = Path.cwd()",
+      "INVENTORY = ROOT / 'research' / 'astra-cover-corpus-inventory.json'",
+      "AUTHOR_NOTE = ROOT / 'research' / 'astra-endpoint-label-audit.md'",
+      "data = json.loads(INVENTORY.read_text())",
+      "assert hashlib.sha256(AUTHOR_NOTE.read_bytes()).hexdigest() == data['source_inventory']['accepted_source_sha256']",
+      "assert data['scope']['fixtures_recomputed'] == len(data['fixtures']) == 10",
+      "",
+      "def distance(modulus, value):",
+      "    return min(value % modulus, (-value) % modulus)",
+      "",
+      "checked = []",
+      "for fixture in data['fixtures']:",
+      "    N = fixture['N']",
+      "    p = fixture['p']",
+      "    owners = fixture['owners']",
+      "    M = N * p",
+      "    assert M == fixture['M']",
+      "    assert all(a > 0 for a in owners) == fixture['positive'] == True",
+      "    assert len(set(owners)) == len(owners) == fixture['c']",
+      "    assert fixture['distinct'] is True",
+      "    assert all(a < p for a in owners) == fixture['all_owners_lt_p'] == True",
+      "    assert fixture['c'] == fixture['N_minus_2'] == N - 2",
+      "    assert math.gcd(*owners, p) == fixture['tuple_gcd'] == 1",
+      "    assert math.gcd(*owners) == fixture['lower_gcd']",
+      "    assert fixture['primitive_normalization'] == 'already primitive'",
+      "    R = {r for r in range(M) if r % N != 0}",
+      "    bad = {a: {r for r in R if distance(M, r * a) < p} for a in owners}",
+      "    union = set().union(*bad.values())",
+      "    safe = sorted(R - union)",
+      "    assert len(R) == fixture['candidate_count']",
+      "    assert len(union) == fixture['union_count']",
+      "    assert safe == fixture['safe_residues'] == []",
+      "    assert {str(a): len(bad[a]) for a in owners} == fixture['bad_counts']",
+      "    assert (union == R) == fixture['actual_pivot_covered'] == True",
+      "    checked.append(fixture['id'])",
+      "",
+      "assert data['result']['all_accepted_rows_literal_covered'] is True",
+      "assert data['result']['all_accepted_have_c_equals_N_minus_2'] is True",
+      "assert data['result']['all_accepted_full_tuples_primitive'] is True",
+      "print(json.dumps({'checked': checked, 'fixtures': len(checked), 'largest_checked_modulus': max(x['M'] for x in data['fixtures']), 'source_hash': hashlib.sha256(AUTHOR_NOTE.read_bytes()).hexdigest()}, sort_keys=True, separators=(',', ':')))"
+    ],
+    "method": "Direct finite construction of the one named row and the union of its named owner bad sets. No tuple generation, branching search, or legacy/quarantined executable was invoked."
+  },
+  "fixtures": [
+    {"id":"E01","source":"research/astra-endpoint-label-audit.md:187","N":7,"p":11,"owners":[1,4,5,6,7],"M":77,"c":5,"N_minus_2":5,"positive":true,"distinct":true,"all_owners_lt_p":true,"tuple_gcd":1,"lower_gcd":1,"primitive_normalization":"already primitive","candidate_count":66,"union_count":66,"safe_residues":[],"bad_counts":{"1":18,"4":18,"5":18,"6":18,"7":18},"actual_pivot_covered":true},
+    {"id":"E02","source":"research/astra-endpoint-label-audit.md:188","N":6,"p":37,"owners":[6,18,24,30],"M":222,"c":4,"N_minus_2":4,"positive":true,"distinct":true,"all_owners_lt_p":true,"tuple_gcd":1,"lower_gcd":6,"primitive_normalization":"already primitive","candidate_count":185,"union_count":185,"safe_residues":[],"bad_counts":{"6":65,"18":65,"24":65,"30":65},"actual_pivot_covered":true},
+    {"id":"E03","source":"research/astra-endpoint-label-audit.md:189","N":10,"p":46,"owners":[5,10,15,25,30,35,40,45],"M":460,"c":8,"N_minus_2":8,"positive":true,"distinct":true,"all_owners_lt_p":true,"tuple_gcd":1,"lower_gcd":5,"primitive_normalization":"already primitive","candidate_count":414,"union_count":414,"safe_residues":[],"bad_counts":{"5":86,"10":80,"15":86,"25":86,"30":80,"35":86,"40":90,"45":86},"actual_pivot_covered":true},
+    {"id":"E04","source":"research/astra-endpoint-label-audit.md:190","N":8,"p":57,"owners":[8,16,24,32,40,56],"M":456,"c":6,"N_minus_2":6,"positive":true,"distinct":true,"all_owners_lt_p":true,"tuple_gcd":1,"lower_gcd":8,"primitive_normalization":"already primitive","candidate_count":399,"union_count":399,"safe_residues":[],"bad_counts":{"8":105,"16":105,"24":105,"32":105,"40":105,"56":105},"actual_pivot_covered":true},
+    {"id":"E05","source":"research/astra-endpoint-label-audit.md:191","N":7,"p":58,"owners":[7,21,28,35,49],"M":406,"c":5,"N_minus_2":5,"positive":true,"distinct":true,"all_owners_lt_p":true,"tuple_gcd":1,"lower_gcd":7,"primitive_normalization":"already primitive","candidate_count":348,"union_count":348,"safe_residues":[],"bad_counts":{"7":102,"21":102,"28":108,"35":102,"49":102},"actual_pivot_covered":true},
+    {"id":"E06","source":"research/astra-endpoint-label-audit.md:192","N":8,"p":89,"owners":[8,32,40,48,56,88],"M":712,"c":6,"N_minus_2":6,"positive":true,"distinct":true,"all_owners_lt_p":true,"tuple_gcd":1,"lower_gcd":8,"primitive_normalization":"already primitive","candidate_count":623,"union_count":623,"safe_residues":[],"bad_counts":{"8":161,"32":161,"40":161,"48":161,"56":161,"88":161},"actual_pivot_covered":true},
+    {"id":"E07","source":"research/astra-endpoint-label-audit.md:193","N":8,"p":89,"owners":[8,16,40,48,56,64],"M":712,"c":6,"N_minus_2":6,"positive":true,"distinct":true,"all_owners_lt_p":true,"tuple_gcd":1,"lower_gcd":8,"primitive_normalization":"already primitive","candidate_count":623,"union_count":623,"safe_residues":[],"bad_counts":{"8":161,"16":161,"40":161,"48":161,"56":161,"64":161},"actual_pivot_covered":true},
+    {"id":"E08","source":"research/astra-endpoint-label-audit.md:194","N":8,"p":99,"owners":[8,32,40,48,56,88],"M":792,"c":6,"N_minus_2":6,"positive":true,"distinct":true,"all_owners_lt_p":true,"tuple_gcd":1,"lower_gcd":8,"primitive_normalization":"already primitive","candidate_count":693,"union_count":693,"safe_residues":[],"bad_counts":{"8":175,"32":175,"40":175,"48":189,"56":175,"88":231},"actual_pivot_covered":true},
+    {"id":"E09","source":"research/astra-endpoint-label-audit.md:195","N":10,"p":103,"owners":[10,20,30,50,60,70,80,90],"M":1030,"c":8,"N_minus_2":8,"positive":true,"distinct":true,"all_owners_lt_p":true,"tuple_gcd":1,"lower_gcd":10,"primitive_normalization":"already primitive","candidate_count":927,"union_count":927,"safe_residues":[],"bad_counts":{"10":189,"20":189,"30":189,"50":189,"60":189,"70":189,"80":189,"90":189},"actual_pivot_covered":true},
+    {"id":"E10","source":"research/astra-endpoint-label-audit.md:196","N":8,"p":113,"owners":[16,48,56,64,80,104],"M":904,"c":6,"N_minus_2":6,"positive":true,"distinct":true,"all_owners_lt_p":true,"tuple_gcd":1,"lower_gcd":8,"primitive_normalization":"already primitive","candidate_count":791,"union_count":791,"safe_residues":[],"bad_counts":{"16":203,"48":203,"56":203,"64":203,"80":203,"104":203},"actual_pivot_covered":true}
+  ],
+  "result": {
+    "all_accepted_rows_literal_covered": true,
+    "all_accepted_have_c_equals_N_minus_2": true,
+    "all_accepted_full_tuples_primitive": true,
+    "largest_checked_modulus": 1030,
+    "skipped_as_ambiguous_or_quarantined": true
+  },
+  "limitations": [
+    "This is a fixed-fixture inventory, not an exhaustive corpus or a new search.",
+    "Only the stated actual p-row and named lower owners were recomputed. No claim about every original pivot, endpoint condition, or any manuscript theorem follows.",
+    "The literal finite checks are computational evidence, not a Lean kernel proof and not a proof or disproof of the endpoint candidate or Lonely Runner Conjecture."
+  ],
+  "processes": {"search_started":false,"legacy_or_quarantined_script_executed":false,"postrun_matching_processes":"none"}
+}

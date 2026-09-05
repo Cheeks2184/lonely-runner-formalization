@@ -1,0 +1,53 @@
+{
+  "pass": 21,
+  "base_checkpoint": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+  "status": "verified",
+  "canonical_lrc_status": "unresolved",
+  "lean_source_changed": false,
+  "new_formal_declaration": null,
+  "source_hashes": {
+    "research/astra-primitive-endpoint-exchange.md": "53646c4ddfbc0b25ceb6027503434b22072ec5782bed68bf5bba50beeaffe24f",
+    "research/astra-primitive-endpoint-exchange-review.md": "0a1a8017c39f2eb0f4762e0be55088ae5f1473c13fc4b68a8080eeac68a3c1e7",
+    "research/astra-cover-corpus-inventory.json": "dad76cc7ddfc078fbd5eb3528c441cdadd555d68513ad07f9f45fb24089eff2c",
+    "research/astra-endpoint-label-audit.md": "667b9bcdebf30333c551badf6e9ef6c861e5e1ca1095808ece5354733745e44d"
+  },
+  "accepted_scope": [
+    "Actual covered largest row iff the old-good set avoids the infinite signed candidate grid; all old-good components are contained strictly in candidate gaps.",
+    "Fixed N7 example with every actual endpoint-candidate premise refutes a supply of global old-good-set preserving translations/reflections, even one-sided inclusion.",
+    "Point-selected translation1/3 yields full witness29/42 on original row6 but fails to preserve all old-good points; neither actual C_some nor endpoint-specific exchanges is refuted."
+  ],
+  "independent_review": {
+    "path": "research/astra-primitive-endpoint-exchange-review.md",
+    "result": "accepted",
+    "root_full_read": true,
+    "root_exact_replay": "passed",
+    "reproduction": "Execute the sole line-anchored Python fenced block from research/astra-primitive-endpoint-exchange-review.md at repo root. It invokes the frozen author block and independent controls.",
+    "stdout": "{'old_components': 6, 'covered_labels': [1, 4, 5, 11], 'three_widths': [Fraction(1, 294), Fraction(1, 70), Fraction(3, 196)], 'shortest_separation': Fraction(113, 294), 'twice_separation': Fraction(113, 147), 'global_isometry_obstruction': 'passed', 'actual_endpoint_candidate_control': 'passed'}\n{'old_band_boxes': 840, 'full_band_boxes': 9240, 'components': 6, 'total_circle_length': '97/1470', 'possible_translation_shifts': 6, 'signed_grid_controls': 264, 'original_rows': 6, 'pointwise_exchange': 'passed', 'discovery_searches': 0}\n",
+    "old_phase_band_boxes": 840,
+    "full_phase_band_boxes": 9240,
+    "all_real_isometry_argument": "Complete shortest-component permutation argument; finite shift controls are not its only justification.",
+    "candidate_shifts": 6,
+    "signed_grid_representatives": 264,
+    "original_rows": 6
+  },
+  "fixed_fixture_inventory": {
+    "path": "research/astra-cover-corpus-inventory.json",
+    "result": "passed",
+    "root_full_read_and_replay": true,
+    "stdout": "{\"checked\":[\"E01\",\"E02\",\"E03\",\"E04\",\"E05\",\"E06\",\"E07\",\"E08\",\"E09\",\"E10\"],\"fixtures\":10,\"largest_checked_modulus\":1030,\"source_hash\":\"667b9bcdebf30333c551badf6e9ef6c861e5e1ca1095808ece5354733745e44d\"}\n",
+    "scope": "Ten already-recorded explicit source-table fixtures only. No exhaustive corpus exclusion and no new speed search.",
+    "reproduction_correction": "Initial checker field used literal backslash-n and omitted invocations. Corrected frozen JSON has complete code_lines and extraction command; root executed the final field successfully."
+  },
+  "focused_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tests.test_validate_workflow tests.test_manage_storage tests.test_validate_task_ledger -q",
+    "worker": "/root/nearest_grid_formal",
+    "result": "passed",
+    "count": 48
+  },
+  "source_verification": "No Lean source,imports,audit,toolchain or manifest changed. No local dependency restoration or Lean rebuild. Required remote CI is inspected before merge.",
+  "storage": {
+    "dependency_cache_restored": false,
+    "shared_lake_present": false
+  },
+  "strategic_decision": "Retire whole-old-good-set circle-isometry supply, retain precise unproved C_some scope, and test a direct count/sum minimal-counterexample descent. No new descent theorem is part of this checkpoint."
+}
