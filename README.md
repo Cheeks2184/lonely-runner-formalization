@@ -11,10 +11,10 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks. The
-[latest verified checkpoint](docs/astra-research-11.md) adds the exact cyclic
-bad-residue characterization, with 354 accepted axiom reports. An independently
-reviewed grouping argument improves a concrete family, while its unrestricted
-existence condition is equivalent to the original witness problem.
+[latest verified checkpoint](docs/astra-research-12.md) proves a guard-speed
+obstruction to a proposed escape method and repairs a literature sieve invariant.
+The [preceding Lean checkpoint](docs/astra-research-11.md) has 354 accepted axiom
+reports. Neither checkpoint establishes unrestricted witness supply.
 The following pipeline is the **historical 2026-08-04 snapshot**, not a live launch queue.
 
 Historical repository-recorded pipeline: Prompt98's original response and five

@@ -1,0 +1,74 @@
+{
+  "status": "passed_and_independently_accepted",
+  "source_base": "5b7a1da6f40f1b264d16a689144f413a3ed047f9",
+  "files": {
+    "research/astra-unique-bad-escape-audit.md": "ba5a7cadfa259e4a1c4a9928a4986c11a883d35f158f8c121ee3fa0858c0b4d5",
+    "research/astra-unique-bad-escape-review.md": "ddbfab221bc6e8f6bd1310044763cbc8b27ef2eae55928140e6277119fef87e0",
+    "research/astra-sieve-invariant-audit.md": "d9c61da83237fa2cefcd533a081b90bd7d6d82ee6c9544ea6a62f7e5cf9dd6af",
+    "research/astra-sieve-invariant-review.md": "c330bdb439cbebd23b18a66fbb8eef5b9ad39f22d8792d27e1d3a8cb6126da40",
+    "docs/astra-research-12.md": "02b4abb34e1e200cb465eac691871b87f27bcbc21a095077bf8589eaf14ee25a",
+    "README.md": "2eae5ea41318dada2c94dfd7dfaa7b4a4ef711b868e7f864f1ff4d1aecb5e452",
+    "STATUS.md": "cc84a279077c3a536218b68d57bbe78a3d52e6af8b4a3beb379c6768ddbb26f5"
+  },
+  "scope": "Manuscript guard obstruction with strict witnesses; exact falseprojectionidentitycontrol and rigorous stronger reachable-state invariant. Neither canonical LRC nor paperfullcomputation certified.",
+  "root_checks": {
+    "full_manuscripts_and_reviews_read": true,
+    "guard_author": {
+      "grid_points": 169,
+      "unique_bad_points": 98,
+      "signed_endpoints": 196,
+      "winners": 0,
+      "p7_controls": 4,
+      "maximal_zero_controls": 852,
+      "strict_witness": "5/19 withminimum2/19"
+    },
+    "guard_independent": {
+      "guard_family_controls": 5,
+      "each_unique_bad_points": 98,
+      "each_endpoints": 196,
+      "each_winners": 0,
+      "p7_controls": 4,
+      "maximal_zero_controls": 852
+    },
+    "sieve_author": {
+      "source_representatives": 1296,
+      "proper_lifts": 20736,
+      "improper_example": "(1,2,3,4) atmodulus28 hasbestminimum5/28<1/5",
+      "invariant_controls": 92
+    },
+    "sieve_independent": {
+      "source_representatives": 1296,
+      "proper_lifts": 20736,
+      "improper_counts": {
+        "1": 48,
+        "2": 96,
+        "3": 288,
+        "6": 384
+      },
+      "fiber_union_controls": 16,
+      "closed_endpoint_control": "modulus35 at1/5 accepted"
+    },
+    "focused_tests": 48,
+    "diff_check": "passed",
+    "lean_source_changed": false,
+    "local_lean_build": "Not rerun for manuscript-only checkpoint; preceding verified source unchanged.",
+    "preceding_lean_checkpoint": {
+      "pr": 9,
+      "source_head": "d3a779a943666e07d966554f0e6868f38821a0ad",
+      "build_jobs": 3610,
+      "trust_reports": 354
+    }
+  },
+  "reproducers": {
+    "guard": "Execute sole python blocks in both astra-unique-bad-escape-{audit,review}.md files.",
+    "sieve": "Execute sole python blocks in both astra-sieve-invariant-{audit,review}.md files.",
+    "focused": "python3 -m unittest tests.test_manage_storage tests.test_validate_workflow tests.test_validate_task_ledger -q"
+  },
+  "canonical_lrc_status": "unresolved",
+  "lean_status": "No new Lean declaration; both results manuscript-only.",
+  "excluded_followups": [
+    "research/astra-balanced-p13-cover-search.md",
+    "research/astra-single-zero-escape-followup.md",
+    "research/astra-single-zero-balanced-audit.md"
+  ]
+}
