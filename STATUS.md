@@ -6,6 +6,16 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [eighteenth Astra checkpoint](docs/astra-research-18.md) extends the
+weighted obstruction to every fixed positive odd inclusion-exclusion order.
+The independently reviewed manuscript specifies an explicit sparse family
+and a sufficiently large integer parameter for each fixed order. Two actual
+grid points give a lower bound on total weight, and a uniform trigonometric
+estimate suppresses weight outside a region with too many bad owners.
+Every counterfamily member has a closed pivot-grid witness. This rules out
+fixed-order corrections of this specific weighted method, not growing-order
+methods, sparse noncover, or LRC. It adds no Lean theorem.
+
 The [seventeenth Astra checkpoint](docs/astra-research-17.md) independently
 certifies failure of universal availability of the weighted bad-incidence
 condition. At denominator 35, seventeen lower owners give `T_bad>1.01*A`,
