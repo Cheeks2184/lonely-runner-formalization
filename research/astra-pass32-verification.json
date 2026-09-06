@@ -1,0 +1,78 @@
+{
+  "checkpoint": "Pass32",
+  "source_base": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
+  "status": "verified_ready_for_publication",
+  "source_sha256": {
+    "LonelyRunner/AffinePhaseTransfer.lean": "62291689ea8fb589ae96f50e159363277713ee67ad6bc172f8f2804cbd69ba05",
+    "LonelyRunner/PositiveAffineWitness.lean": "94532f1686bc612e9f0e852f541ed06a0e20362878c2be1ecaff645df69f261f",
+    "LonelyRunner/SignedAffineWitness.lean": "a1652cdad78c03da52c39d869b0e37d5c97d3aafb14359674492f8d4e17c3c6e",
+    "LonelyRunner/AffineLonelyAt.lean": "6866bbb379b7b8fcd62f686818d5929e2ba8b2def5b06f2bf5def2b587a68459",
+    "LonelyRunner/FiniteHeightReduction.lean": "cb41059260b943411e2ab5360b84b59cd13f2ddf352c3c50a0b3715b9b9987d6",
+    "LonelyRunner/AxiomAudit.lean": "834a94f4a431c4728e5ebf22e722ee518c4c7060133fae665ee9ecfb74d54aa6"
+  },
+  "evidence_sha256": {
+    "research/astra-zero-residual-mixed-height.md": "91f2bfee846f2c682976e3476e8c3e3214c163661945957bdef8bdb6cecbb8a7",
+    "research/astra-zero-residual-implementation.md": "3a037d5308e8def843b9b2ccca52375a92e349490f68da019ebe9b46d264f583",
+    "research/astra-strict-to-mixed-audit.md": "c7559719cc61d715a47958ab8d1a844faf021c53e08ee3e87c1d0d54e0fb5f2f",
+    "research/astra-strict-to-mixed-review.md": "6f0ba11b6640b662eb72a86326a1b7d429444e61a1a78b60a8d1b8b8e06a466d",
+    "research/astra-zero-residual-review.md": "2d280adc4e51068db4b2c5fdb6684dc3e507d9027b522b332849891387d2fdff"
+  },
+  "lean_verification": {
+    "reported_by": "in-session Terra medium implementer; exact source hashes frozen",
+    "focused_command": "lake build LonelyRunner.FiniteHeightReduction",
+    "focused_jobs_reported": 2966,
+    "full_command": "lake build LonelyRunner",
+    "full_jobs_reported": 3638,
+    "axiom_probe_command": "lake env lean LonelyRunner/AxiomAudit.lean",
+    "trust_command": "python3 scripts/audit_lean_trust.py",
+    "trust_reports": 438,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "result": "passed",
+    "job_count_note": "Lake job totals include cached targets; they are not fresh recompilation counts."
+  },
+  "root_review": {
+    "full_final_patch_read": true,
+    "five_original_signatures_match_base_modulo_whitespace": true,
+    "unchanged_modules_byte_checked": [
+      "FinitePrimitiveFamilies",
+      "FiniteFamilyEquivalence",
+      "BHKTwoPhaseSupply",
+      "AffinePhasePeriod",
+      "LowerCountSupply",
+      "SmallDimensions"
+    ],
+    "same_positive_time": true,
+    "chosen_runner_excluded_from_stronger_relative_bound": true,
+    "scope": "N=m+2>=3, lower-count ordinary hypothesis, sorted stationary primitive tuple, H>choose(N,2)^(N-2), all ordinary margins1/N and fastest1/(N-1); noMixed implies inclusive H<=B."
+  },
+  "strict_to_mixed": {
+    "independent_review": "accepted at precise necessary-condition scope",
+    "author_program_sha256": "9d2275e0229d8a4b1346c317339ba7363337d04b9e6027d2046fc56c7182608b",
+    "author_stdout_sha256": "97671355d56908a2c06b4ad6ae9dc20cab31377c1c78968ea2f181fa462ed622",
+    "review_program_sha256": "56ace63f4c6d931fac8ab58df9cdb93077ce0a5b98a9ffeb07e4052950f984de",
+    "review_stdout_sha256": "a900838e456577093f71cd67cf378605f48cf5957f303566585cd3207af29f30",
+    "root_replays": "Both fully inspected sole programs replayed with exact artifact/program/stdout guards; passed.",
+    "diagnostic_tuples": 2330,
+    "scope": "K unproved/unrefuted by this manuscript; primitive lower core required, N4 pairwise coprime with b>=4 and b<H<4b."
+  },
+  "excluded_future_work": [
+    "Modular direct-to-mixed unit manuscript",
+    "N4 complete finite-classification plan and compact certificate data"
+  ],
+  "canonical_lrc": "unresolved",
+  "independent_formal_review": {
+    "verdict": "accepted",
+    "root_full_read_and_guarded_replay": "passed",
+    "program_sha256": "75f60fd0a4a20f7c46bc4684e34d2e3cb590ac636429590250caf4697d0a5169",
+    "stdout_sha256": "9477bfd14c4052d96f142b44c525ffcd277e18e4891713df78f922553f4469fa",
+    "lean_input_sha256": "105d76fe86b7168055d1e46f131a15bc1c3b9c7314550d3b7f27dd948cc5c4cf",
+    "lean_output_sha256": "a6a90c0f9f02350f37bf86ade7070e544f94ab3039eb82a05d78e315a3fc6fc4",
+    "kernel_compatibility_examples": 6,
+    "conditional_boundary_examples": 4,
+    "permitted_axiom_reports": 14
+  }
+}
