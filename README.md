@@ -11,6 +11,13 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks.
+The [Pass 36 checkpoint](docs/astra-research-36.md) adds exact rational-margin
+row checks, closed nonuniform endpoint completeness in the half period, and
+strict pair-sum completeness. These generic interfaces allow repeated speeds
+where applicable and retain their distinct positivity requirements. The full
+build and 470-report trust audit passed, as did independent source review
+and a root replay of 23 kernel examples. The reviewed resource design does
+not supply a finite-domain certificate or prove higher-count witness supply.
 The [Pass 35 checkpoint](docs/astra-research-35.md) adds insertion with unequal
 seed margins and sufficient five-runner mixed classes. For `0<a<b<c<H`, the
 conditions `10ab<=H(a+b)` and `30bc<=H(3c+8b)` give margins

@@ -6,18 +6,36 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/five_runner_certificate_design",
-      "agent_id": "/root/mixed_equivalence_freeze",
+      "id": "/root/rational_margin_box_pilot_plan_review",
+      "agent_id": "/root/mss_published_bound_audit",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Assess exact bounded certificate design for remaining N5 strict-to-mixed implication, including correct finite reduction, resource complexity and alternatives, without tuple enumeration.",
-      "source_checkpoint": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+      "target": "Independently check the exact settled generic box/partition API and two supplied leaves, no Lean or source change, before bounded Terra implementation.",
+      "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
       "owned_files": [
-        "research/astra-five-runner-certificate-design.md"
+        "research/astra-rational-margin-box-pilot-plan-review.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "/root/rational_margin_box_pilot_implementation",
+      "agent_id": "/root/five_runner_exception",
+      "kind": "routine",
+      "status": "in_progress",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement root-reviewed generic rational-margin box/derived-partition checker and exactly the supplied two-leaf pilot, with resource gates; separate from frozen Pass36.",
+      "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f plus frozen Pass36 cores",
+      "owned_files": [
+        "LonelyRunner/RationalMarginBoxes.lean",
+        "LonelyRunner/RationalMarginBoxPilot.lean",
+        "research/astra-rational-margin-box-pilot-implementation.md"
       ],
       "checks": []
     }
@@ -4668,13 +4686,139 @@
         "root fullread and guarded replay50455 terminal0"
       ],
       "evidence_sha256": "9fb96dcb10485ccb2bcacb7966cf68bd3dd7503aa5c0e75338303ae823f7616e"
+    },
+    {
+      "id": "/root/five_runner_certificate_design",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Assess exact bounded certificate design for remaining N5 strict-to-mixed implication, including correct finite reduction, resource complexity and alternatives, without tuple enumeration.",
+      "source_checkpoint": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+      "owned_files": [
+        "research/astra-five-runner-certificate-design.md"
+      ],
+      "checks": [
+        "algebraic counts and3namedtuples/boxchecks passed; no tuple scan/Lean/cache access"
+      ],
+      "evidence_sha256": "cc7990790d3ca8ddd50d36dc64d80af74b1f82d45b64ba20e31fbbc0b78fc403"
+    },
+    {
+      "id": "/root/rational_margin_row_implementation",
+      "agent_id": "/root/five_runner_exception",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Generic natural rational-margin residue equivalence and shared row checker soundness, allowing zero margin numerators; no scan.",
+      "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+      "owned_files": [
+        "LonelyRunner/RationalMarginCertificates.lean",
+        "research/astra-rational-margin-certificates-implementation.md"
+      ],
+      "checks": [
+        "Final source/named builds and kernelfixedcontrols passed, reports inownedpaths"
+      ]
+    },
+    {
+      "id": "/root/endpoint_strict_pair_implementation",
+      "agent_id": "/root/four_runner_completion",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Generic nonuniform halfperiod endpoint completeness and strict pair-sum completeness from approved finite-band/minimum arguments; no N5-specific or uniform supply claim.",
+      "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+      "owned_files": [
+        "LonelyRunner/EndpointCompleteness.lean",
+        "LonelyRunner/StrictPairSumCompleteness.lean",
+        "research/astra-endpoint-completeness-implementation.md",
+        "research/astra-strict-pair-sum-implementation.md"
+      ],
+      "checks": [
+        "Final source/named builds and kernelfixedcontrols passed, reports inownedpaths"
+      ]
+    },
+    {
+      "id": "/root/five_runner_certificate_design_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independently review exact finite K5 normalization, strict pair-sum and mixed left endpoint completeness, algebraic resource counts and proposed bounded certificate design; no scan/Lean/cache.",
+      "source_checkpoint": "6ac2e9f46c9aeb376ea140de00b40a6be03d3a95",
+      "owned_files": [
+        "research/astra-five-runner-certificate-design-review.md"
+      ],
+      "checks": [
+        "independent17guards/arithmeticcontrols passed",
+        "root completeprogram/proseread andfrozenreplay passed"
+      ],
+      "evidence_sha256": "c86e42c2ed14c015f83776644469827a850614fc6fbdd5c55a96ce61c8b12b40"
+    },
+    {
+      "id": "/root/rational_margin_final_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent final8theorem generic rationalmargin/endpoint/strictpair source androot/audit review, exacttypes/axioms/edgecontrols, no supplyclaim.",
+      "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+      "owned_files": [
+        "research/astra-rational-margin-formal-review.md"
+      ],
+      "checks": [
+        {
+          "path": "research/astra-rational-margin-formal-review.md",
+          "artifact_sha256": "deec0d70183627c53bdafc631c6496700d0f7cb9fbce67d9512e3fb6019227d3",
+          "program_sha256": "c6b4f8a9740bcae517c1484fe7452ed2d5478d06b6dcf1f25259bfad5822c518",
+          "stdout_sha256": "449bcbc7ba635810debc421b58b1acb6f8424b83e465ab3baa41cc579a41ec18",
+          "status": "passed",
+          "kernel_examples": 23,
+          "axiom_reports": 9,
+          "source_guards": 15,
+          "root_session": 45402,
+          "exit_code": 0
+        }
+      ],
+      "result": "Accepted and root guarded replay passed."
+    },
+    {
+      "id": "/root/rational_margin_box_pilot_plan",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Settle a bounded generic rational-margin box/partition checker contract and one tiny two-leaf pilot, with resourcecaps and no discovery/tuple scans; futurework excluded fromPass36.",
+      "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+      "owned_files": [
+        "research/astra-rational-margin-box-pilot-plan.md"
+      ],
+      "checks": [],
+      "result": "Frozen plan fully read and guarded root replay passed; independent review pending. No pilot execution."
     }
   ],
-  "latest_checkpoint": "Pass35 mathematical source, full build3646, trust462, independent final review17examples/6reports, root guarded replay50455 all passed. Prepare publication; unrestricted LRC andglobalK5remainunresolved.",
+  "latest_checkpoint": "Pass36 verified: full build 3649 jobs, trust audit 470 reports, independent source review and exact root replay passed 23 examples/9 axiom reports/15 guards. Publication preparation; unrestricted LRC remains unresolved.",
   "next_actions": [
-    "Publish verified Pass35: commit, push, open PR, inspect checks and reviews, merge exact head, verify main.",
-    "Finish bounded N5 certificate-design manuscript, independently review before implementation or enumeration.",
-    "Unrestricted LRC and globalK5 remain unresolved; no cache-dependent work currently queued."
+    "Complete two Terra genericcertificate tasks and exactsource/type/axiom checks.",
+    "Finish final independent resource-design report and rootreplay; then freeze sourceintegration/fullbuild/trust/finalsource review.",
+    "No fulltuple scan; scopedpilot only aftersoundness and measuredresourcechecks."
   ],
   "research_holds": [
     {
@@ -5531,26 +5675,54 @@
         "remote_main_contains_head": true,
         "local_main": "5a621b8065fdbc69694168e6d406824b1fa23cff",
         "no_pending_reviews": true
+      },
+      {
+        "checkpoint": "Pass35",
+        "pr_number": 34,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/34",
+        "head_sha": "6ac2e9f46c9aeb376ea140de00b40a6be03d3a95",
+        "status": "merged_verified",
+        "ci_run": 34011811500,
+        "branch": "codex/astra-buffered-runner-insertion",
+        "next_action": "Inspect both CI checks/reviews; merge exacthead after success, fetch/verify main, record receipt.",
+        "merge_sha": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+        "merged_at": "2026-09-06T04:46:34Z",
+        "checks": [
+          {
+            "name": "Lean build and trust audit",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T04:36:24Z",
+            "job_id": 101428840613
+          },
+          {
+            "name": "Exact computational certificates",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T04:43:07Z",
+            "job_id": 101428840750
+          }
+        ],
+        "remote_main_contains_head": true,
+        "no_pending_reviews": true
       }
     ],
-    "latest_published_source_checkpoint": "e3e13a0d2a4f0ed76f5bbdd10305130ad079e505",
-    "remote_main": "5a621b8065fdbc69694168e6d406824b1fa23cff",
-    "local_main": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+    "latest_published_source_checkpoint": "6ac2e9f46c9aeb376ea140de00b40a6be03d3a95",
+    "remote_main": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+    "local_main": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+    "merge_sha": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
     "checks": [
       {
         "name": "Lean build and trust audit",
         "conclusion": "SUCCESS",
-        "completed_at": "2026-09-06T03:40:39Z",
-        "job_id": 101422692222
+        "completed_at": "2026-09-06T04:36:24Z",
+        "job_id": 101428840613
       },
       {
         "name": "Exact computational certificates",
         "conclusion": "SUCCESS",
-        "completed_at": "2026-09-06T03:47:46Z",
-        "job_id": 101422692197
+        "completed_at": "2026-09-06T04:43:07Z",
+        "job_id": 101428840750
       }
     ],
     "remote_main_contains_head": true
@@ -5991,7 +6163,7 @@
     "formal_verification": "fullbuild3638 jobs reported, trust438, independent review/root guarded replay passed",
     "canonical_status": "unresolved"
   },
-  "storage_checkpoint_next_action": "Pass35 verification/review/replay complete; safe cleanup95273 exit0 removed7,762,815,050 bytes of .lake. Pinned toolchain retained. Current certificate-design research uses tracked sources only.",
+  "storage_checkpoint_next_action": "Settled generic Lean implementations queued; restore one pinned sharedcache, prebuild common PairSumCompleteness/PivotResidues, retain through implementation/review/fullverification.",
   "four_runner_mixed_build_recovery": {
     "status": "separate_declaration_split_verified_composition_in_progress",
     "actual_goal_status": "active",
@@ -6044,19 +6216,13 @@
     "current_disposition": "Verified and merged in Pass33 / PR32; historical intermediate fields retained below."
   },
   "worker_recovery_latest": {
-    "worker": "/root/five_runner_exception",
-    "status": "A1_helper_verified_remaining_scope_reassigned",
+    "worker": "/root/four_runner_completion",
+    "status": "recovered_verified",
     "actual_goal_status": "active",
-    "failure": "Worker stopped after one source-only exit1 in unfinished A=1 modular branch and removed its own draft. No completed theorem was established; report preserved but draft not retained.",
-    "recovery": "Resume same role with bounded A=1 lemma first, preserve source, verify terminal results, then continue grid/scaling. No user permission needed and goal not blocked.",
-    "actual_exit_code": 1,
-    "root_reproduction_session": 88548,
-    "root_log": "/tmp/astra-five-exception-recovery.log",
-    "root_diagnosis": "All three remaining failures need the cast inequality 1 <= (d:Real), not just 0 < (d:Real). Since d:Nat and0<d, this follows immediately. No semantic obstacle; wholeA1helperstillunverified.",
-    "A1_source_sha256": "6d5a15c292ae4adf661a01f6cc82942398c1adaff0fc71d7ca1ac219b63bc15e",
-    "A1_build_exit_code": 0,
-    "A1_build_jobs": 3002,
-    "next_owner": "/root/four_runner_completion"
+    "failure": "Worker ended after reporting strictpairbuildsuccess; endpointsource and both reports absent. No overall blockage.",
+    "recovery": "Followup same Terra medium worker to finish endpoint and exactprobes/reports. Retain strictpair draft; requested actual build/probe evidence.",
+    "next_action": "Continue endpoint implementation and record actual terminal verification results.",
+    "final_checks": "Endpoint/strict finalsaved source andnamed92472 exit0; exactprobes98427 exit0. Root isolatedendpointfinaltwo arithmetic/no-progressdraftissues, sourcefixedbyowner; no goalblock."
   },
   "four_runner_completion_initial_check": {
     "status": "worker_success_claim_withdrawn_root_exit1",
@@ -6210,7 +6376,7 @@
     "A1_root_probe": "87623 terminal0 exactA1type,allowedaxioms andK4/K12/K20 controls"
   },
   "pending_pass35": {
-    "phase": "verified_preparing_publication",
+    "phase": "merged_verified",
     "build_session": 3712,
     "source_hashes": {
       "LonelyRunner/BufferedRunnerInsertion.lean": "a135f5c41ead308a2a4250f07535bf3e32f78c88599497bf79bb632cd1e05f0a",
@@ -6243,7 +6409,33 @@
       "log_sha256": "47d44c5c64d37de449fb805476228d42215d377db7af227de445aa41a4b2d2bf",
       "no_active_or_queued_cache_dependent_work": true,
       "pinned_toolchain_retained": true
-    }
+    },
+    "checkpoint": "Pass35",
+    "pr_number": 34,
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/34",
+    "head_sha": "6ac2e9f46c9aeb376ea140de00b40a6be03d3a95",
+    "status": "merged_verified",
+    "ci_run": 34011811500,
+    "branch": "codex/astra-buffered-runner-insertion",
+    "next_action": "Inspect both CI checks/reviews; merge exacthead after success, fetch/verify main, record receipt.",
+    "merge_sha": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+    "merged_at": "2026-09-06T04:46:34Z",
+    "checks": [
+      {
+        "name": "Lean build and trust audit",
+        "conclusion": "SUCCESS",
+        "completed_at": "2026-09-06T04:36:24Z",
+        "job_id": 101428840613
+      },
+      {
+        "name": "Exact computational certificates",
+        "conclusion": "SUCCESS",
+        "completed_at": "2026-09-06T04:43:07Z",
+        "job_id": 101428840750
+      }
+    ],
+    "remote_main_contains_head": true,
+    "no_pending_reviews": true
   },
   "literature_screen_latest": {
     "url": "https://arxiv.org/html/2605.27941v1",
@@ -6253,5 +6445,96 @@
     "scope": "Advertised exact MLPS2 characterization, progression sum and unequal pair integral; higher mixed statements announced for future paper. No K5 or unrestricted result adopted.",
     "independent_fixed_control": "For(1,2,3,4),t=2/5 has norms2/5,1/5,1/5,2/5, hence increasing only fourth target to1/4 is compatible with this tuple. Introductory consecutive-speed argument cannot alone exclude every single-coordinate increase. This does not prove the associated universal mixed statement.",
     "status": "screening only, no implementation decision"
+  },
+  "certificate_design_latest": {
+    "status": "accepted_root_replayed",
+    "artifact_sha256": "cc7990790d3ca8ddd50d36dc64d80af74b1f82d45b64ba20e31fbbc0b78fc403",
+    "program_sha256": "1f70819cca181bd17a630e7dcf417c9591c8f9b53444ac9ef8247dcfe4e4b7fb",
+    "stdout_sha256": "41817670c8a496155affbadd86f2738a64830bbe9b7d46e5c84135841adb37e0",
+    "recommendation": "Generic rational margin residue soundness, endpoint completeness, strict pair-sum wrapper; then capped compression pilot. No fullscan.",
+    "root_replay": {
+      "artifact_sha256": "cc7990790d3ca8ddd50d36dc64d80af74b1f82d45b64ba20e31fbbc0b78fc403",
+      "program_sha256": "1f70819cca181bd17a630e7dcf417c9591c8f9b53444ac9ef8247dcfe4e4b7fb",
+      "stdout_sha256": "41817670c8a496155affbadd86f2738a64830bbe9b7d46e5c84135841adb37e0",
+      "status": "passed"
+    },
+    "generic_contract_review": "Astra xhigh approved generic endpoint with positive margins<=half, strict pair label-distinct not value-distinct, rational row allowing zero numerators; no source implementation yet.",
+    "review_replay": {
+      "artifact_sha256": "c86e42c2ed14c015f83776644469827a850614fc6fbdd5c55a96ce61c8b12b40",
+      "program_sha256": "b8cdf01759b31074e23c8672164866b3840ef52384d6d0dd1ffbeacd329c7835",
+      "stdout_sha256": "25ba84e81c44805a10986b6c89adf89b34e3104934d1eb3adebd4c1afbce85fe",
+      "status": "passed"
+    }
+  },
+  "pending_pass36": {
+    "phase": "verified_publication_preparation",
+    "branch": "codex/astra-rational-margin-certificates",
+    "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+    "cache_restore_session": 33655,
+    "scope": "Generic natural rational-margin row checking, halfperiod nonuniform endpoint completeness, strict pair-sum completeness plus accepted finite-domain design. No uniform supply or large scan.",
+    "generic_interfaces_independently_approved": true,
+    "final_design_review_pending": false,
+    "cache_restore_exit_code": 0,
+    "base_build_session": 6972,
+    "base_build_exit_code": 0,
+    "base_build_jobs": 2976,
+    "base_build_log_sha256": "1da9597535f004fd83e7d1c7af8f08c9d37a0d46e6c69da937029141621ec079",
+    "workers_base_ready_sent": true,
+    "full_build_session": 50426,
+    "source_hashes": {
+      "LonelyRunner/RationalMarginCertificates.lean": "ffe31ce9636281f6c4b8fc2cdf618043a6c02b0195bf75ff6e0aee65c317c1d9",
+      "LonelyRunner/EndpointCompleteness.lean": "0e3f10f64daf41bedebf31bb71cb6b93ffa5358615c6c30ec941b01fc97b9d57",
+      "LonelyRunner/StrictPairSumCompleteness.lean": "549e879d49b54560a56f402aec18d64b6b227f86a71821a28c13c7356f622bd6",
+      "LonelyRunner.lean": "4e2bcd1c805cba6ac47c42a95298fafaa80047829127b7f367eedb13575d8ff4",
+      "LonelyRunner/AxiomAudit.lean": "f9dc948ca09cca91857ff9b75a21206ef82470fe774ac7bdb451c1ec3c17c54b"
+    },
+    "root_sources_fully_read": true,
+    "root_strict_probe": {
+      "session": 56047,
+      "exit_code": 0,
+      "scope": "Exact generic type plus repeatedspeed Fin2 strictquarter application andallowedaxioms",
+      "prior_probe_failures": "40871 and96210 exited1 due testcast/norm simplification errors; sourceunchanged."
+    },
+    "full_build_exit_code": 0,
+    "full_build_jobs": 3649,
+    "full_build_log_sha256": "914f9c993770fd4f90eea73cadcb16b4bf30fa5c8bceb596be177ce65746126f",
+    "trust_session": 39997,
+    "trust_exit_code": 0,
+    "trust_reports": 470,
+    "trust_log_sha256": "f014583ce8db5db95bdfb322723d7e4a1e45bd10ab2fb96567d226d9c482d11c",
+    "design_review_root_replay": "passed",
+    "excluded_future_work": [
+      "research/astra-rational-margin-box-pilot-plan.md",
+      "research/astra-rational-margin-box-pilot-plan-review.md",
+      "LonelyRunner/RationalMarginBoxes.lean",
+      "LonelyRunner/RationalMarginBoxPilot.lean",
+      "research/astra-rational-margin-box-pilot-implementation.md"
+    ],
+    "final_source_review": {
+      "path": "research/astra-rational-margin-formal-review.md",
+      "artifact_sha256": "deec0d70183627c53bdafc631c6496700d0f7cb9fbce67d9512e3fb6019227d3",
+      "program_sha256": "c6b4f8a9740bcae517c1484fe7452ed2d5478d06b6dcf1f25259bfad5822c518",
+      "stdout_sha256": "449bcbc7ba635810debc421b58b1acb6f8424b83e465ab3baa41cc579a41ec18",
+      "status": "passed",
+      "kernel_examples": 23,
+      "axiom_reports": 9,
+      "source_guards": 15,
+      "root_session": 45402,
+      "exit_code": 0
+    },
+    "source_hashes_rechecked": true,
+    "storage": {
+      "report_bytes": 7769166751,
+      "disposition": "One shared cache retained for immediately queued separate box pilot Lean implementation; all Pass36 verification processes finished."
+    }
+  },
+  "pending_pass37": {
+    "plan": "research/astra-rational-margin-box-pilot-plan.md",
+    "plan_sha256": "0c1eecb6872e4c202643e5fdf237747b8262a06ed2de4cc7fea2bd84acf8a67a",
+    "root_read_and_guarded_replay": "passed",
+    "independent_review": "in_progress",
+    "cache_needed": true,
+    "caps": "256 leaves; 64 KiB explicit certificate data; 60 seconds per whole pilot kernel check; 4 GiB peak RSS",
+    "scope": "Exactly two supplied leaves; no tuple scan or discovery."
   }
 }

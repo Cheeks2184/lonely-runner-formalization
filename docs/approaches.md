@@ -3,6 +3,13 @@
 This is a research map, not a list of claimed proofs. Each route terminates at
 an obligation that is currently open in general.
 
+The [Pass 36 checkpoint](astra-research-36.md) supplies generic exact rational
+row checks, nonuniform half-period endpoints, and strict pair-sum completeness.
+The associated resource design rejects a flat `Fin 1001` four-coordinate
+certificate in favor of first measuring a small partition checker. No compact
+full-domain partition is known here. Strict-to-mixed rejection leaves cannot
+replace the closed ordinary witnesses needed by the canonical real bridge.
+
 The [Pass 35 checkpoint](astra-research-35.md) formalizes nonuniform buffered
 insertion and its two-inequality five-runner specialization. It combines the
 four-runner mixed seed with an explicit proof for every lower exceptional
