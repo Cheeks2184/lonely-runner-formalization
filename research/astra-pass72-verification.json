@@ -1,0 +1,106 @@
+{
+  "checkpoint": "Pass72",
+  "parent_main": "ca9d2d7f20f66cceb7db3b440d0378203624aa39",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-72.md": "251cf6dd105332958e860336fa2080d9b3d49facb2c8bcd3f628a6ac507ee481",
+    "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+    "research/astra-joint-seed-maximum-review.md": "3bbee63f444eb4a327b97d898991183c7c884560122944c48ecfcad988ce5cc5"
+  },
+  "dependency_hashes": {
+    "research/astra-uniform-all-deletion-seed-screen.md": "b2b6acd00dae3c8ed777bc3da4227fab0254016eec035c2c100f8d346a398f1b",
+    "research/astra-uniform-seed-screen-review.md": "11f738862f1302dda62e2f0fcd7c8cdff0b3dad9462297b79cd1769371c70522",
+    "research/astra-uniform-seed-coupling.md": "b52f92b8dca3de5b0ba9f41c24c2dc6bd83a27329a035d40a1273a0401f215ea",
+    "research/astra-uniform-seed-coupling-review.md": "537c008719aa858c9d97ab46acb5b5cd197b873a78d0266aeae6c05950c7c0bb",
+    "research/astra-uniform-global-seed-geometry.md": "3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524",
+    "research/astra-uniform-global-seed-geometry-review.md": "dd1cb0c56f383cd9c4c92c7789a889c591da8a7f6eb7b418c06466546e05752d",
+    "research/astra-minimal-height-audit.md": "40e59ba4539eb931a07612e9b972999d3b48006d39ef4760c0e493d08e734325",
+    "research/astra-minimal-height-review.md": "4570fa22f788a0e832165dd4ec5da613003a0181b0200267fcc30b44d9776e92"
+  },
+  "review_bindings": {
+    "research/astra-joint-seed-maximum-review.md": [
+      "research/astra-joint-seed-maximum-audit.md",
+      "research/astra-uniform-all-deletion-seed-screen.md",
+      "research/astra-uniform-seed-screen-review.md",
+      "research/astra-uniform-seed-coupling.md",
+      "research/astra-uniform-seed-coupling-review.md",
+      "research/astra-uniform-global-seed-geometry.md",
+      "research/astra-uniform-global-seed-geometry-review.md",
+      "research/astra-minimal-height-audit.md",
+      "research/astra-minimal-height-review.md"
+    ]
+  },
+  "checks": {
+    "frozen_files": 3,
+    "dependency_bindings": 8,
+    "review_bindings": 9
+  },
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "/usr/bin/python3",
+      "/tmp/astra-pass72-verify.py"
+    ],
+    "source": "import hashlib\nimport json\nfrom pathlib import Path\nimport subprocess\nimport sys\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nmanifest = json.loads(Path('/tmp/astra-pass72-inputs.json').read_text())\nassert len(manifest['hashes']) == 3\nassert len(manifest['dependency_hashes']) == 8\nbindings = manifest['hashes'] | manifest['dependency_hashes']\nfor name, digest in bindings.items():\n    data = (root / name).read_bytes()\n    assert hashlib.sha256(data).hexdigest() == digest, name\n    assert data.endswith(b'\\n'), name\n    assert all(line.rstrip() == line for line in data.splitlines()), name\nauthor = 'research/astra-joint-seed-maximum-audit.md'\nreview = 'research/astra-joint-seed-maximum-review.md'\nreview_text = (root / review).read_text()\nassert bindings[author] in review_text\nfor digest in manifest['dependency_hashes'].values():\n    assert digest in (root / author).read_text()\n    assert digest in review_text\ncommands = []\nfor argv in ([sys.executable, '-B', 'scripts/validate_workflow.py'],\n             ['git', 'diff', '--check'],\n             [sys.executable, '-B', 'scripts/manage_storage.py']):\n    result = subprocess.run(argv, cwd=root, capture_output=True, text=True)\n    commands.append({'argv': argv, 'exit_code': result.returncode,\n                     'stdout': result.stdout, 'stderr': result.stderr})\n    assert result.returncode == 0, commands[-1]\nprint(json.dumps({'frozen_files': 3, 'dependency_bindings': 8,\n                  'review_bindings': 9, 'commands': commands}, indent=2))\n",
+    "source_sha256": "9d8d22004ed9507072352d650c38669d0f3bd6696de4e56599c7489e893b4c20",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-72.md": "251cf6dd105332958e860336fa2080d9b3d49facb2c8bcd3f628a6ac507ee481",
+        "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+        "research/astra-joint-seed-maximum-review.md": "3bbee63f444eb4a327b97d898991183c7c884560122944c48ecfcad988ce5cc5"
+      },
+      "dependency_hashes": {
+        "research/astra-uniform-all-deletion-seed-screen.md": "b2b6acd00dae3c8ed777bc3da4227fab0254016eec035c2c100f8d346a398f1b",
+        "research/astra-uniform-seed-screen-review.md": "11f738862f1302dda62e2f0fcd7c8cdff0b3dad9462297b79cd1769371c70522",
+        "research/astra-uniform-seed-coupling.md": "b52f92b8dca3de5b0ba9f41c24c2dc6bd83a27329a035d40a1273a0401f215ea",
+        "research/astra-uniform-seed-coupling-review.md": "537c008719aa858c9d97ab46acb5b5cd197b873a78d0266aeae6c05950c7c0bb",
+        "research/astra-uniform-global-seed-geometry.md": "3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524",
+        "research/astra-uniform-global-seed-geometry-review.md": "dd1cb0c56f383cd9c4c92c7789a889c591da8a7f6eb7b418c06466546e05752d",
+        "research/astra-minimal-height-audit.md": "40e59ba4539eb931a07612e9b972999d3b48006d39ef4760c0e493d08e734325",
+        "research/astra-minimal-height-review.md": "4570fa22f788a0e832165dd4ec5da613003a0181b0200267fcc30b44d9776e92"
+      }
+    },
+    "actual_tool_result": {
+      "chunk_id": "f4026c",
+      "wall_time_seconds": 5.801e-06,
+      "exit_code": 0,
+      "original_token_count": 197,
+      "output": "{\n  \"frozen_files\": 3,\n  \"dependency_bindings\": 8,\n  \"review_bindings\": 9,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": "Independent Astra/xhigh full manuscript and eight dependency review, accepted without correction. Root full author and review reads. No mathematical program or old control replay.",
+  "scope": "Conditional joint-seed separation and transfer comparison; explicit good smaller replacement, compatible with minimality. No original-seed supply, lower simultaneous blocker, smaller failure, or unrestricted resolution.",
+  "excluded": "Active centre-preserving projection research and any draft it creates.",
+  "failure_history": "Root requested unambiguous eta/P endpoint separation before author freeze; author confirmed full tuple maximum. No mathematical correction or executable failure. Root binding verifier first execution passed."
+}
