@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import sys
 import tomllib
 from pathlib import Path
@@ -26,7 +27,7 @@ EXPECTED_LEGACY_SHA256 = "595a0aba29a22195d4611937dc3bbb805880bf38952f129a86033f
 EXPECTED_ROLES = {
     "orchestrator": ("gpt-6-astra", "high"),
     "research": ("gpt-6-astra", "xhigh"),
-    "routine": ("gpt-5.6-terra", "medium"),
+    "routine": ("gpt-5.6-terra", "high"),
 }
 AGENT_CONFIGS = {
     "research": Path(".codex/agents/researcher.toml"),
@@ -86,6 +87,117 @@ def recorded(value: Any) -> bool:
     return bool(value)
 
 
+def nonnegative_integer(value: Any) -> bool:
+    """Return whether a JSON value is a nonnegative integer, excluding booleans."""
+    return isinstance(value, int) and not isinstance(value, bool) and value >= 0
+
+
+def nonnegative_finite_number(value: Any) -> bool:
+    """Return whether a JSON number is finite, nonnegative, and not a boolean."""
+    if isinstance(value, bool):
+        return False
+    if isinstance(value, int):
+        # JSON integers are finite regardless of magnitude; passing a very
+        # large one to math.isfinite first can itself raise OverflowError.
+        return value >= 0
+    return isinstance(value, float) and math.isfinite(value) and value >= 0
+
+
+def historical_medium_task_ids(policy: Mapping[str, Any], errors: list[str]) -> set[str]:
+    """Validate and return the immutable exception list for pre-migration records.
+
+    The exception exists only to preserve durable provenance for completed work
+    launched under the previous Terra/medium policy.  It is deliberately not a
+    general permit for new or active Medium records.
+    """
+    history = policy.get("routing_history")
+    if not isinstance(history, Mapping):
+        errors.append("policy.routing_history must be an object")
+        return set()
+    task_ids = history.get("terra_medium_task_ids")
+    if not isinstance(task_ids, list):
+        errors.append("policy.routing_history.terra_medium_task_ids must be an array of nonempty task IDs")
+        return set()
+    valid_ids = [task_id for task_id in task_ids if nonempty_string(task_id)]
+    if len(valid_ids) != len(task_ids):
+        errors.append("policy.routing_history.terra_medium_task_ids must be an array of nonempty task IDs")
+    if len(valid_ids) != len(set(valid_ids)):
+        errors.append("policy.routing_history.terra_medium_task_ids must contain unique task IDs")
+    return set(valid_ids)
+
+
+def is_historical_medium_record(
+    task: Mapping[str, Any], collection: str, historical_ids: set[str]
+) -> bool:
+    """Recognize only terminal completed records explicitly preserved by policy."""
+    return (
+        collection == "completed_tasks"
+        and task.get("status") in {"complete", "interrupted"}
+        and task.get("id") in historical_ids
+        and (task.get("requested_model"), task.get("requested_effort")) == ("gpt-5.6-terra", "medium")
+    )
+
+
+def validate_delivery_metrics(task: Mapping[str, Any], collection: str, label: str, errors: list[str]) -> None:
+    """Validate measured Terra/high delivery metadata without inventing usage.
+
+    ``usage`` is either null (the runtime did not expose usage) or exactly a
+    source plus actual input/output token counts from one per-task receipt.
+    Null remains unknown and is never converted to a zero value by reporting.
+    """
+    metrics = task.get("delivery_metrics")
+    required = {
+        "check_kind",
+        "first_check_success",
+        "worker_repair_rounds",
+        "astra_repair_rounds",
+        "astra_repair_lines",
+        "worker_elapsed_seconds",
+        "usage",
+        "evidence",
+    }
+    if not isinstance(metrics, Mapping):
+        errors.append(f"{label}.delivery_metrics must be an object for a new Terra high task")
+        return
+    missing = sorted(required - set(metrics))
+    extra = sorted(set(metrics) - required)
+    if missing or extra:
+        errors.append(f"{label}.delivery_metrics must contain exactly the documented delivery metric fields")
+        return
+    if not isinstance(metrics["check_kind"], str) or metrics["check_kind"] not in {"lean", "python", "static", "other"}:
+        errors.append(f"{label}.delivery_metrics.check_kind must be lean, python, static, or other")
+    if metrics["first_check_success"] is not None and not isinstance(metrics["first_check_success"], bool):
+        errors.append(f"{label}.delivery_metrics.first_check_success must be a boolean or null")
+    repairs = metrics["worker_repair_rounds"]
+    if not nonnegative_integer(repairs) or repairs > 2:
+        errors.append(f"{label}.delivery_metrics.worker_repair_rounds must be a nonnegative integer at most 2")
+    if not nonnegative_integer(metrics["astra_repair_rounds"]):
+        errors.append(f"{label}.delivery_metrics.astra_repair_rounds must be a nonnegative integer")
+    lines = metrics["astra_repair_lines"]
+    if lines is not None and not nonnegative_integer(lines):
+        errors.append(f"{label}.delivery_metrics.astra_repair_lines must be a nonnegative integer or null")
+    elapsed = metrics["worker_elapsed_seconds"]
+    if elapsed is not None and not nonnegative_finite_number(elapsed):
+        errors.append(f"{label}.delivery_metrics.worker_elapsed_seconds must be a nonnegative finite number or null")
+
+    usage = metrics["usage"]
+    if usage is not None:
+        if not isinstance(usage, Mapping) or set(usage) != {"source", "input_tokens", "output_tokens"}:
+            errors.append(f"{label}.delivery_metrics.usage must be null or source with actual input_tokens and output_tokens")
+        else:
+            if not nonempty_string(usage["source"]):
+                errors.append(f"{label}.delivery_metrics.usage.source must be a nonempty evidence source")
+            for field in ("input_tokens", "output_tokens"):
+                if not nonnegative_finite_number(usage[field]):
+                    errors.append(f"{label}.delivery_metrics.usage.{field} must be a nonnegative finite number")
+
+    evidence = metrics["evidence"]
+    if not isinstance(evidence, list) or not all(nonempty_string(path) for path in evidence):
+        errors.append(f"{label}.delivery_metrics.evidence must be an array of nonempty paths")
+    elif collection == "completed_tasks" and not evidence:
+        errors.append(f"{label}.delivery_metrics.evidence must be nonempty for a closed task")
+
+
 def has_explicit_user_high_override(task: Mapping[str, Any], label: str, errors: list[str]) -> bool:
     """Accept only the durable record for a per-task user-authorized Astra/high route."""
     override = task.get("routing_override")
@@ -114,7 +226,9 @@ def has_explicit_user_high_override(task: Mapping[str, Any], label: str, errors:
     return True
 
 
-def validate_task(task: Any, collection: str, index: int, errors: list[str]) -> None:
+def validate_task(
+    task: Any, collection: str, index: int, errors: list[str], historical_medium_ids: set[str]
+) -> None:
     label = f"{collection}[{index}]"
     if not isinstance(task, Mapping):
         errors.append(f"{label} must be an object")
@@ -147,12 +261,11 @@ def validate_task(task: Any, collection: str, index: int, errors: list[str]) -> 
             errors.append(f"{label} {kind} routing must request gpt-6-astra xhigh")
             if "routing_override" in task:
                 errors.append(f"{label}.routing_override must match the task requested route")
-    if kind == "routine" and (model, effort) != EXPECTED_ROLES["routine"]:
-        errors.append(f"{label} routine routing must request gpt-5.6-terra medium")
-    if kind == "setup" and (model, effort) not in {
-        EXPECTED_ROLES["research"], EXPECTED_ROLES["routine"],
-    }:
-        errors.append(f"{label} setup routing must request an approved research or routine route")
+    uses_historical_medium = is_historical_medium_record(task, collection, historical_medium_ids)
+    if kind == "routine" and (model, effort) != EXPECTED_ROLES["routine"] and not uses_historical_medium:
+        errors.append(f"{label} routine routing must request gpt-5.6-terra high; Medium is reserved for listed completed historical records")
+    if kind == "setup" and (model, effort) not in {EXPECTED_ROLES["research"], EXPECTED_ROLES["routine"]} and not uses_historical_medium:
+        errors.append(f"{label} setup routing must request an approved current route; Medium is reserved for listed completed historical records")
     if kind not in {"research", "review"} and "routing_override" in task:
         errors.append(f"{label}.routing_override is allowed only for research or review tasks")
 
@@ -166,6 +279,12 @@ def validate_task(task: Any, collection: str, index: int, errors: list[str]) -> 
     if any(value is not None for value in observed) and observed != requested:
         if status != "interrupted" or not nonempty_string(task.get("failure_reason")):
             errors.append(f"{label} observed routing differs from requested routing without an interrupted failure record")
+
+    # Both routine tasks and setup maintenance on the current Terra/high route
+    # receive the same delivery record.  Astra work and preserved historical
+    # Medium records retain their original, intentionally sparse provenance.
+    if (model, effort) == EXPECTED_ROLES["routine"]:
+        validate_delivery_metrics(task, collection, label, errors)
 
 
 def validate_root(root: Path = ROOT) -> list[str]:
@@ -187,6 +306,8 @@ def validate_root(root: Path = ROOT) -> list[str]:
         return [str(exc)]
     if not isinstance(policy, Mapping) or not isinstance(state, Mapping):
         return ["workflow policy and state must both be JSON objects"]
+
+    medium_history_ids = historical_medium_task_ids(policy, errors)
 
     if policy.get("schema_version") != 1:
         errors.append("policy.schema_version must be 1")
@@ -295,7 +416,7 @@ def validate_root(root: Path = ROOT) -> list[str]:
             errors.append(f"state.{collection} must be an array")
             continue
         for index, task in enumerate(tasks):
-            validate_task(task, collection, index, errors)
+            validate_task(task, collection, index, errors, medium_history_ids)
     all_tasks = [task for tasks in (active, completed) if isinstance(tasks, list) for task in tasks if isinstance(task, Mapping)]
     ids = [task.get("id") for task in all_tasks if nonempty_string(task.get("id"))]
     if len(ids) != len(set(ids)):

@@ -196,6 +196,11 @@ import LonelyRunner.TwoDivisibleBoundary
 import LonelyRunner.PrimitiveTwoDivisible
 import LonelyRunner.TwoDivisibleNormalization
 
+import LonelyRunner.BadSixthDilate
+import LonelyRunner.NonzeroThirdShift
+import LonelyRunner.OneSixthComplementMaximizer
+import LonelyRunner.ThreeWeakExceptions
+
 /-!
 Root import for the formal Lonely Runner development.
 -/

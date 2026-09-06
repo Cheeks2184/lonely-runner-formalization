@@ -24,7 +24,7 @@ Record that instruction and its date before entering `research` / `in_progress`.
 | --- | --- | --- | --- |
 | Orchestration, final integration | `gpt-6-astra` | `high` | Current session |
 | Novel mathematics, difficult semantic reasoning, independent review | `gpt-6-astra` | `xhigh` | In-session subagent |
-| Implementation from settled specifications and mechanical verification | `gpt-5.6-terra` | `medium` | In-session subagent |
+| Implementation from settled specifications and mechanical verification | `gpt-5.6-terra` | `high` | In-session subagent |
 
 Use `collaboration.spawn_agent` with explicit `model`, `reasoning_effort`, and
 `fork_turns: "none"`. Supply the current policy, source checkpoint, precise target,
@@ -45,6 +45,70 @@ The old Sol, browser Pro, and Luna procedure is retired. Browser model sessions,
 external CLI model workers, and new user-visible tasks are not substitutes.
 Web and existing integrations may still retrieve primary sources when needed;
 this is distinct from asking a browser model to do research.
+
+## Implementation delivery and measurement
+
+On 2026-09-06 the user approved all four delegation-audit recommendations and
+raised the Terra standard to High. Use fresh explicit `gpt-5.6-terra` / `high`
+launches for new implementation work. Existing Medium sessions remain historical;
+a follow-up prompt or edited config does not establish that they changed effort.
+Retain original routing in completed records. The policy freezes their task IDs;
+the validator must reject active or unlisted new Medium tasks.
+
+Give Terra a cohesive implementation with exact settled contracts and known
+dependencies. Terra owns its focused compilation or test run and routine repairs.
+Astra retains mathematical discovery, theorem scope, delicate endpoints, and
+independent final source review. Do not split work into tiny tasks merely to
+avoid a normal local repair, or delegate unresolved mathematics as routine work.
+
+Before a Lean check, root grants one serial shared-cache slot in the state and
+records its owner and scope. Workers and root acquire the same advisory lock
+with `flock -n .lake/verification.lock` before a cache-writing build. A busy slot
+is a coordination wait, not a failed proof or permission to launch another build.
+No cleanup may overlap any check. Python-only checks can proceed separately.
+Use the pinned toolchain, focused owned targets and bounded tool calls that yield
+while running. Full integration and trust checks remain root-owned.
+
+Allow an initial focused check followed by at most two repair rounds. A repair
+round is an edit prompted by diagnostics followed by another check. Escalate
+mathematical uncertainty immediately. After persistent engineering failure,
+return the exact blocker, preserved partial source and diagnostics to Astra;
+do not repeatedly redispatch the same oversized task. Completion of a routine
+implementation means compiled code with complete receipts, not an unchecked draft.
+
+A handoff includes exact commands, exit statuses, complete bounded output,
+source hashes, applicable tests, and failure history. Root reads the source and
+validates the receipt against current files. Do not repeat an identical focused
+check or independent import probe solely because a different agent performed it.
+Repeat only for changed inputs, incomplete evidence, a failure, or an explicit
+unresolved concern. Keep one full integration build/trust audit and independent
+mathematical review for each source checkpoint. These checks serve different
+purposes and remain necessary.
+
+Every new routine task has a `delivery_metrics` record: check kind, first-check
+success, worker repair rounds, Astra repair rounds and changed lines, worker
+elapsed seconds, usage when exposed, and evidence paths. Unknown values are
+null, never zero. Astra repair rounds include concrete correction guidance from
+review, even when the worker makes every source edit; Astra changed lines count
+only direct edits. Separate measured worker time from compilation durations.
+A usage receipt contains source, input_tokens and output_tokens; absent evidence
+means null.
+Use `python3 -B scripts/report_delegation.py` (or `--json`) after each batch of ten
+Terra High deliveries to assess first-check success, repair burden and actual
+usage coverage. Task counts, lines and account-wide percentages cannot establish
+per-model token savings. Review Lean and tooling tasks separately when comparing
+results; the first measured task is the workflow tooling migration itself.
+
+The baseline audit examined 25 closed Medium task records: 23 draft deliveries
+and two returns without code. Eight of its latest ten delivered Lean modules
+needed root compilation fixes. This source-only baseline is not directly
+comparable to High compile-owning deliveries; report both task scope and the
+changed handoff when assessing improvement.
+
+Configuration references: [official subagent documentation](https://learn.chatgpt.com/docs/agent-configuration/subagents)
+documents explicit model/effort selection and project-scoped custom agent files.
+The tool's supported explicit spawn arguments determine the request in this
+session; observed model and usage remain null unless the runtime exposes them.
 
 ## Recovery and continuous work after authorization
 

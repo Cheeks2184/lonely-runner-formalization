@@ -767,3 +767,10 @@ project-specific axiom.
 #print axioms LonelyRunner.fiveMovingNaturalRunners_of_primitive_two_divisible_three
 #print axioms LonelyRunner.fiveMovingNaturalRunners_of_primitive_at_least_two_divisible_three
 #print axioms LonelyRunner.fiveMovingNaturalRunners_of_exactly_two_divisible_three
+
+-- Exact first helpers for the one-three-divisible branch.
+#print axioms LonelyRunner.exists_bad_sixth_dilate
+#print axioms LonelyRunner.third_shift_safe_of_weak_bad
+#print axioms LonelyRunner.exists_nonzero_third_shift_safe
+#print axioms LonelyRunner.exists_one_sixth_complement_maximizer
+#print axioms LonelyRunner.third_shift_of_three_weak_exceptions
