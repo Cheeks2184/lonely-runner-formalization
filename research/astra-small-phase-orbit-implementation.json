@@ -1,0 +1,86 @@
+{
+  "task_id": "/root/small_phase_orbits_high",
+  "kind": "lean",
+  "status": "compiled",
+  "contract_plan_sha256": "c8f8ff1f59e8dbe5859075ab7054f7a78d2e1bf939ce433daaf473a368c2bbca",
+  "owned_files": [
+    "LonelyRunner/SmallPhaseOrbits.lean",
+    "research/astra-small-phase-orbit-implementation.json"
+  ],
+  "source_hashes": {
+    "LonelyRunner/SmallPhaseOrbits.lean": "033d7c9f84e924ab7f66ad0f37cfddf7b22c395a596d7fef57b273b2459a0e97",
+    "research/astra-small-phase-orbit-contract-plan.md": "c8f8ff1f59e8dbe5859075ab7054f7a78d2e1bf939ce433daaf473a368c2bbca"
+  },
+  "final_artifacts": {
+    "LonelyRunner/SmallPhaseOrbits.lean": {
+      "sha256": "033d7c9f84e924ab7f66ad0f37cfddf7b22c395a596d7fef57b273b2459a0e97"
+    },
+    ".lake/build/lib/lean/LonelyRunner/SmallPhaseOrbits.olean": {
+      "sha256": "1d1206725e6fd4f95d6d17762efd18f2a0de332bf8212ae86371757455e10adb",
+      "byte_count": 377192
+    }
+  },
+  "delivery_metrics": {
+    "check_kind": "lean",
+    "first_check_success": false,
+    "worker_repair_rounds": 2,
+    "astra_repair_rounds": 0,
+    "astra_repair_lines": 0,
+    "worker_elapsed_seconds": null,
+    "usage": null,
+    "evidence": [
+      "research/astra-small-phase-orbit-implementation.json"
+    ],
+    "lake_reported_module_build_seconds_sum": 5.9
+  },
+  "precheck_source_snapshots": {
+    "available": false,
+    "retained": "Only the precheck SHA-256 values were retained; source snapshots were not created and are not reconstructed."
+  },
+  "checks": [
+    {
+      "name": "initial",
+      "source_before": "cfc37d6069159ff558b10ae95d686ff6a53240ff84ef027c94999ad376adb58b",
+      "receipt_before": "9a2aa3ef646d7398f5351d9ced96414172267f6952927effed9dc549e585f74e",
+      "command": "export PATH=\"$HOME/.elan/bin:$PATH\"; flock -n .lake/verification.lock lake build LonelyRunner.SmallPhaseOrbits",
+      "log": "/tmp/small_phase_orbits_initial.CDMXeV.log",
+      "exit": 1,
+      "summary": "Initial focused build failed; subsequent repairs addressed the reported proof-engineering diagnostics.",
+      "log_sha256": "0f18a83e2f450bd2ea4f0ad98267a703558a94f5f144ea7def7504157a046776",
+      "log_byte_count": 5880,
+      "log_ends_with_newline": true,
+      "output_verbatim": "✖ [3002/3002] Building LonelyRunner.SmallPhaseOrbits (1.4s)\ntrace: .> LEAN_PATH=/home/joshua/lonely-runner-formalization/.lake/packages/Cli/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/batteries/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/Qq/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/aesop/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/importGraph/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/plausible/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/mathlib/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/build/lib/lean /home/joshua/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /home/joshua/lonely-runner-formalization/LonelyRunner/SmallPhaseOrbits.lean -o /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/SmallPhaseOrbits.olean -i /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/SmallPhaseOrbits.ilean -c /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/SmallPhaseOrbits.c --setup /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/SmallPhaseOrbits.setup.json --json\nerror: LonelyRunner/SmallPhaseOrbits.lean:116:27: No goals to be solved\nerror: LonelyRunner/SmallPhaseOrbits.lean:116:27: No goals to be solved\nerror: LonelyRunner/SmallPhaseOrbits.lean:116:27: No goals to be solved\nerror: LonelyRunner/SmallPhaseOrbits.lean:116:27: No goals to be solved\nerror: LonelyRunner/SmallPhaseOrbits.lean:125:61: Type mismatch: After simplification, term\n  hcn\n has type\n  c.Coprime (q / g)\nbut is expected to have type\n  c.Coprime 5\nerror: LonelyRunner/SmallPhaseOrbits.lean:126:27: Application type mismatch: The argument\n  hnle\nhas type\n  q / g ≤ q\nbut is expected to have type\n  5 ≤ q\nin the application\n  LT.lt.trans_le hk hnle\nerror: LonelyRunner/SmallPhaseOrbits.lean:128:69: unsolved goals\nA q : ℕ\nhq : 0 < q\nhcop : q.Coprime 6\nhnot : ¬q ∣ A\ng : ℕ := q.gcd A\nc : ℕ := A / g\nhg : 0 < g\nhgq : g ∣ q\nhgA : g ∣ A\nhAeq : A = g * c\nhgR : ↑g ≠ 0\nhqeq : q = g * (q / g)\nhnpos : 0 < q / g\nhnle : q / g ≤ q\nhnone : q / g ≠ 1\nhntwo : 1 < q / g\nhcn : c.Coprime (q / g)\nhndvd : q / g ∣ q\nhn6 : (q / g).Coprime 6\nhnot2 : ¬2 ∣ q / g\nhnot3 : ¬3 ∣ q / g\nhphase : ↑A / ↑q = ↑c / ↑(q / g)\nhfive : q / g = 5\nk : ℕ\nhk : k < 5\nhkphase : Int.fract (↑k * ↑c / ↑5) = ↑1 / ↑5\n⊢ ↑k * ↑c / ↑(q / g) = ↑k * ↑c / 5\nerror: LonelyRunner/SmallPhaseOrbits.lean:130:17: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  Int.fract (↑k * ↑c / ↑5)\nin the target expression\n  Int.fract (↑k * ↑c / 5) = 1 / 5\n\ncase inl\nA q : ℕ\nhq : 0 < q\nhcop : q.Coprime 6\nhnot : ¬q ∣ A\ng : ℕ := q.gcd A\nc : ℕ := A / g\nhg : 0 < g\nhgq : g ∣ q\nhgA : g ∣ A\nhAeq : A = g * c\nhgR : ↑g ≠ 0\nhqeq : q = g * (q / g)\nhnpos : 0 < q / g\nhnle : q / g ≤ q\nhnone : q / g ≠ 1\nhntwo : 1 < q / g\nhcn : c.Coprime (q / g)\nhndvd : q / g ∣ q\nhn6 : (q / g).Coprime 6\nhnot2 : ¬2 ∣ q / g\nhnot3 : ¬3 ∣ q / g\nhphase : ↑A / ↑q = ↑c / ↑(q / g)\nhfive : q / g = 5\nk : ℕ\nhk : k < 5\nhkphase : Int.fract (↑k * ↑c / ↑5) = ↑1 / ↑5\nhphasek : ↑k * ↑A / ↑q = ↑k * ↑c / 5\n⊢ Int.fract (↑k * ↑c / 5) = 1 / 5\nerror: LonelyRunner/SmallPhaseOrbits.lean:144:6: Tactic `apply` failed: could not unify the conclusion of `(div_le_iff₀ ?m.654).mpr`\n  ?m.642 / (12 * ↑n) ≤ ?m.641\nwith the goal\n  1 / 12 ≤ ↑m / ↑n\n\nNote: The full type of `(div_le_iff₀ ?m.654).mpr` is\n  ?m.642 ≤ ?m.641 * (12 * ↑n) → ?m.642 / (12 * ↑n) ≤ ?m.641\n\ncase inr.left\nA q : ℕ\nhq : 0 < q\nhcop : q.Coprime 6\nhnot : ¬q ∣ A\ng : ℕ := ⋯\nn : ℕ := ⋯\nc : ℕ := ⋯\nhg : 0 < g\nhgq : g ∣ q\nhgA : g ∣ A\nhqeq : q = g * n\nhAeq : A = g * c\nhnpos : 0 < n\nhnle : n ≤ q\nhnone : n ≠ 1\nhntwo : 1 < n\nhcn : c.Coprime n\nhndvd : n ∣ q\nhn6 : n.Coprime 6\nhnot2 : ¬2 ∣ n\nhnot3 : ¬3 ∣ n\nhgR : ↑g ≠ 0\nhphase : ↑A / ↑q = ↑c / ↑n\nhlarge : 7 ≤ n\nm : ℕ := ⋯\nhmpos : 0 < (n + 11) / 12\nhmlt : (n + 11) / 12 < n\nhnlow : n ≤ 12 * ((n + 11) / 12)\nhmupp : 6 * ((n + 11) / 12) ≤ n\nk : ℕ\nhk : k < n\nhkphase : Int.fract (↑k * ↑c / ↑n) = ↑m / ↑n\nhnR : 0 < ↑n\nhnlowR : ↑n ≤ 12 * ↑m\nhmuppR : 6 * ↑m ≤ ↑n\nhphasek : ↑k * ↑A / ↑q = ↑k * ↑c / ↑n\n⊢ 1 / 12 ≤ ↑m / ↑n\nerror: LonelyRunner/SmallPhaseOrbits.lean:146:6: Tactic `apply` failed: could not unify the conclusion of `(div_le_iff₀ ?m.675).mpr`\n  ?m.663 / (6 * ↑n) ≤ ?m.662\nwith the goal\n  ↑m / ↑n ≤ 1 / 6\n\nNote: The full type of `(div_le_iff₀ ?m.675).mpr` is\n  ?m.663 ≤ ?m.662 * (6 * ↑n) → ?m.663 / (6 * ↑n) ≤ ?m.662\n\ncase inr.right\nA q : ℕ\nhq : 0 < q\nhcop : q.Coprime 6\nhnot : ¬q ∣ A\ng : ℕ := ⋯\nn : ℕ := ⋯\nc : ℕ := ⋯\nhg : 0 < g\nhgq : g ∣ q\nhgA : g ∣ A\nhqeq : q = g * n\nhAeq : A = g * c\nhnpos : 0 < n\nhnle : n ≤ q\nhnone : n ≠ 1\nhntwo : 1 < n\nhcn : c.Coprime n\nhndvd : n ∣ q\nhn6 : n.Coprime 6\nhnot2 : ¬2 ∣ n\nhnot3 : ¬3 ∣ n\nhgR : ↑g ≠ 0\nhphase : ↑A / ↑q = ↑c / ↑n\nhlarge : 7 ≤ n\nm : ℕ := ⋯\nhmpos : 0 < (n + 11) / 12\nhmlt : (n + 11) / 12 < n\nhnlow : n ≤ 12 * ((n + 11) / 12)\nhmupp : 6 * ((n + 11) / 12) ≤ n\nk : ℕ\nhk : k < n\nhkphase : Int.fract (↑k * ↑c / ↑n) = ↑m / ↑n\nhnR : 0 < ↑n\nhnlowR : ↑n ≤ 12 * ↑m\nhmuppR : 6 * ↑m ≤ ↑n\nhphasek : ↑k * ↑A / ↑q = ↑k * ↑c / ↑n\n⊢ ↑m / ↑n ≤ 1 / 6\nerror: Lean exited with code 1\nSome required targets logged failures:\n- LonelyRunner.SmallPhaseOrbits\nerror: build failed\n"
+    },
+    {
+      "name": "repair_1",
+      "source_before": "8cb5ab5466a7eb3627e1421ef2e8bbd6c5c0a378cd16e256d1d2e85f37490b5c",
+      "receipt_before": "9a2aa3ef646d7398f5351d9ced96414172267f6952927effed9dc549e585f74e",
+      "command": "export PATH=\"$HOME/.elan/bin:$PATH\"; flock -n .lake/verification.lock lake build LonelyRunner.SmallPhaseOrbits",
+      "log": "/tmp/small_phase_orbits_repair1.mR5z2G.log",
+      "exit": 1,
+      "summary": "First repair build failed only on the remaining fifth-case cast-normalization equality.",
+      "log_sha256": "c73d5ee95dd2b6b9c613ec2f9b72c7348c05310d6c4083a274f91db7a5259f43",
+      "log_byte_count": 2275,
+      "log_ends_with_newline": true,
+      "output_verbatim": "✖ [3002/3002] Building LonelyRunner.SmallPhaseOrbits (2.2s)\ntrace: .> LEAN_PATH=/home/joshua/lonely-runner-formalization/.lake/packages/Cli/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/batteries/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/Qq/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/aesop/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/importGraph/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/plausible/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/mathlib/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/build/lib/lean /home/joshua/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /home/joshua/lonely-runner-formalization/LonelyRunner/SmallPhaseOrbits.lean -o /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/SmallPhaseOrbits.olean -i /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/SmallPhaseOrbits.ilean -c /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/SmallPhaseOrbits.c --setup /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/SmallPhaseOrbits.setup.json --json\nerror: LonelyRunner/SmallPhaseOrbits.lean:142:53: unsolved goals\nA q : ℕ\nhq : 0 < q\nhcop : q.Coprime 6\nhnot : ¬q ∣ A\ng : ℕ := q.gcd A\nn : ℕ := q / g\nc : ℕ := A / g\nhg : 0 < g\nhgq : g ∣ q\nhgA : g ∣ A\nhqeq : q = g * n\nhAeq : A = g * c\nhnpos : 0 < n\nhnle : n ≤ q\nhnone : n ≠ 1\nhntwo : 1 < n\nhcn : c.Coprime n\nhndvd : n ∣ q\nhn6 : n.Coprime 6\nhnot2 : ¬2 ∣ n\nhnot3 : ¬3 ∣ n\nhgR : ↑g ≠ 0\nhphase : ↑A / ↑q = ↑c / ↑n\nhfive : n = 5\nhcn5 : c.Coprime 5\nhnle5 : 5 ≤ q\nk : ℕ\nhk : k < 5\nhkphase : Int.fract (↑k * ↑c / ↑5) = ↑1 / ↑5\nhphasek : ↑k * ↑A / ↑q = ↑k * ↑c / ↑5\n⊢ Int.fract (↑k * ↑c / ↑5) = Int.fract (↑k * ↑c / 5)\nerror: Lean exited with code 1\nSome required targets logged failures:\n- LonelyRunner.SmallPhaseOrbits\nerror: build failed\n"
+    },
+    {
+      "name": "repair_2",
+      "source_before": "033d7c9f84e924ab7f66ad0f37cfddf7b22c395a596d7fef57b273b2459a0e97",
+      "receipt_before": "9a2aa3ef646d7398f5351d9ced96414172267f6952927effed9dc549e585f74e",
+      "command": "export PATH=\"$HOME/.elan/bin:$PATH\"; flock -n .lake/verification.lock lake build LonelyRunner.SmallPhaseOrbits",
+      "log": "/tmp/small_phase_orbits_repair2.wxvFq3.log",
+      "exit": 0,
+      "summary": "Final focused build succeeded.",
+      "log_sha256": "6d7757423ed068e698141df81830505f3a23b6503cf1f3b706a8df965e50c8e7",
+      "log_byte_count": 101,
+      "log_ends_with_newline": true,
+      "output_verbatim": "✔ [3002/3002] Built LonelyRunner.SmallPhaseOrbits (2.3s)\nBuild completed successfully (3002 jobs).\n"
+    }
+  ],
+  "additional_check": {
+    "command": "python3 scripts/validate_workflow.py",
+    "exit": 0,
+    "output": "workflow structural validation passed; it cannot certify mathematical validity."
+  }
+}
