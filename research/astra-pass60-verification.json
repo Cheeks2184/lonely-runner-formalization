@@ -1,0 +1,65 @@
+{
+  "checkpoint": "Pass60",
+  "parent_main": "e45793996d7ab435ad93822b068ef489edf52f53",
+  "status": "Accepted exact finite seed reduction, twelve fixed controls and explanatory restricted-family manuscript proof. Uniform Q remains unresolved.",
+  "hashes": {
+    "research/astra-uniform-all-deletion-seed-screen.md": "b2b6acd00dae3c8ed777bc3da4227fab0254016eec035c2c100f8d346a398f1b",
+    "research/astra-uniform-seed-screen-review.md": "11f738862f1302dda62e2f0fcd7c8cdff0b3dad9462297b79cd1769371c70522",
+    "research/astra-tight-seed-controls-plan.md": "810cefdc5466df979b3c91419159e67565fdb0c858f6704039e6340cb9640203",
+    "research/astra-tight-seed-controls.json": "1b45a4b38b4964ae192304f942aa00ed5a5e16089fb63d8a277548408b5de876",
+    "research/astra-tight-seed-grid-explanation.md": "0ba5e0aaeedd556eecf24eb2986123e6a81369291d3547e48c42d709e2e5595a",
+    "research/astra-tight-seed-grid-review.md": "6fa3b63bd53a4d12ce7bad48f13a9c2aaec0d5da2385d38da97422e9aaa222e0"
+  },
+  "prior_publication": {
+    "pr": 58,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/58",
+    "head": "e48f49dadc7a80f8ec0910c1ab192140142b82ac",
+    "merge": "e45793996d7ab435ad93822b068ef489edf52f53",
+    "merged_at": "2026-09-06T16:49:49Z",
+    "ci_run": 34046088713,
+    "checks": [
+      {
+        "name": "Lean build and trust audit",
+        "job": 101521271222,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T16:39:52Z"
+      },
+      {
+        "name": "Exact computational certificates",
+        "job": 101521271103,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T16:47:59Z"
+      }
+    ],
+    "verification": "CLEAN exact head non-draft no blocking reviews; match-head merge succeeded; fetched main and ancestry exit0; current branch and local main advanced to verified merge."
+  },
+  "storage": {
+    "command": "python3 -B scripts/manage_storage.py --clean",
+    "exit_code": 0,
+    "removed_bytes": 7943743726,
+    "paths": [
+      ".lake"
+    ],
+    "output": "Removed .lake (7,943,743,726 bytes)\nRemoved 7,943,743,726 bytes from 1 allowlisted paths.\n",
+    "coordination": "Both active research/check owners explicitly completed all Python processes and needed no Lean/dependency source. Reviewer held new checks during cleanup. Source, evidence and pinned toolchain retained."
+  },
+  "root_script_sha256": "018c1f37453eec1985b4b3fccb9fdf885de932dbe7a81099d79b1d08c8d45a8a",
+  "root_receipt_check": {
+    "command": "python3 -B /tmp/astra-pass60-receipt-check.py",
+    "actual_script_utf8": "import ast\nimport base64\nimport hashlib\nimport json\nfrom fractions import Fraction as F\nfrom pathlib import Path\n\ndef sha(b):\n    return hashlib.sha256(b).hexdigest()\n\ndef norm(x):\n    y = x % 1\n    return min(y, 1-y)\n\npath = Path('research/astra-tight-seed-controls.json')\nreceipt = json.loads(path.read_text())\nassert sha(path.read_bytes()) == '1b45a4b38b4964ae192304f942aa00ed5a5e16089fb63d8a277548408b5de876'\nsource = receipt['frozen_source']\nchecker = Path(source['checker_path']).read_bytes()\nassert sha(checker) == source['checker_sha256_before_execution']\nassert sha(Path(source['plan_path']).read_bytes()) == source['plan_sha256_before_execution']\nblock = checker.decode().split('```python\\n', 1)[1].split('\\n```', 1)[0]\nprefix = block.split('\\nv=(1,4,5,6,7,11)', 1)[0].encode()\nassert sha(block.encode()) == source['full_python_block_sha256_before_execution']\nassert prefix == base64.b64decode(source['frozen_definition_prefix_base64'])\nassert sha(prefix) == source['frozen_definition_prefix_sha256_before_execution']\nrecovered = receipt['execution_evidence_amendment']['recovery']\ncontents = {}\nfor name in ['actual_child_program', 'outer_inline_command', 'parent_harness']:\n    contents[name] = base64.b64decode(recovered[name+'_utf8_base64'])\n    assert len(contents[name]) == recovered[name+'_bytes']\n    assert sha(contents[name]) == recovered[name+'_sha256']\nassert sha(contents['actual_child_program']) == source['child_program_sha256']\nassert recovered['outer_argv'][2].encode() == contents['outer_inline_command']\nassert contents['outer_inline_command'].split(b\"<<'PY'\\n\", 1)[1].rsplit(b'\\nPY', 1)[0] == contents['parent_harness']\ntree = ast.parse(contents['parent_harness'])\ndriver = next(ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign) and any(isinstance(t, ast.Name) and t.id == 'driver' for t in n.targets))\nassert prefix + b'\\n' + driver.encode() == contents['actual_child_program']\nprovenance = recovered['provenance']\nline = Path(provenance['transcript_path']).read_bytes().splitlines()[provenance['transcript_line']-1]\nassert sha(line) == provenance['transcript_line_sha256']\nevent = json.loads(line)['payload']['item']\nassert event['command'] == recovered['outer_argv']\nassert event['exit_code'] == 0\nassert json.loads(event['stdout'])['stdout_sha256'] == receipt['execution']['stdout_sha256']\nexecution = receipt['execution']\nassert execution['child_exit_status'] == 0 and execution['parse_error'] is None\nfor name in ['stdout', 'stderr']:\n    assert sha(execution[name].encode()) == execution[name+'_sha256']\nassert execution['stderr'] == ''\nassert json.loads(execution['stdout']) == receipt['results']\nexpected = [(1,3,4,7), (1,3,4,5,9), (1,4,5,6,7,11,13)]\nfor N,r,w in [(8,6,12),(14,12,24),(20,18,36),(26,24,48),(32,30,60),(32,30,90),(33,30,60),(38,36,72),(44,42,84)]:\n    expected.append(tuple(sorted((set(range(1,N))-{r})|{w})))\nrecords = receipt['results']['records']\nassert receipt['results']['input_count'] == len(records) == 12\nassert [tuple(r['tuple']) for r in records] == expected\nlabel_count = 0\nfor r in records:\n    v = r['tuple']; N = len(v)+1; delta = F(1,N); gamma = F(1,N-1)\n    assert r['N'] == N and r['Q_succeeds'] and r['all_deletion_seed_sets_nonempty']\n    assert len(r['per_label']) == len(v)\n    for p,row in enumerate(r['per_label']):\n        assert row['pivot_index'] == p and row['pivot_speed'] == v[p]\n        assert row['seed_count'] == len(row['seed_intervals']) > 0\n        s = F(row['attaining_time']); old = v[:p]+v[p+1:]\n        assert all(norm(s*x) >= gamma for x in old)\n        rho = min((norm(s*x)-delta)/x for x in old)\n        assert norm(s*v[p])+v[p]*rho == F(row['score_maximum'])\n        label_count += 1\n    for key in ['full_1_over_N_witness', 'protected_witness']:\n        w = r[key]; t = F(w['time']); norms = [norm(t*x) for x in v]\n        assert norms == list(map(F, w['coordinate_norms']))\n        assert min(norms) == F(w['minimum_norm']) >= delta\n    w = r['protected_witness']; p = w['pivot_index']; s = F(w['seed_time'])\n    rho = min((norm(s*x)-delta)/x for j,x in enumerate(v) if j != p)\n    assert rho == F(w['rho'])\n    assert abs(F(w['time'])-s) <= rho\n    assert all(norm(s*x) >= gamma for j,x in enumerate(v) if j != p)\nprint(json.dumps({'status':'passed', 'receipt_sha256':sha(path.read_bytes()), 'fixed_inputs':len(records), 'attaining_label_records_checked':label_count, 'explicit_full_and_protected_witnesses_checked':2*len(records), 'all_real_interval_search_replayed':False, 'provenance':'Exact persisted execution transcript binds recovered full original driver; all source, byte, raw stream and result bindings checked.'}, sort_keys=True))\n",
+    "exit_code": 0,
+    "complete_tool_output": "{\"all_real_interval_search_replayed\": false, \"attaining_label_records_checked\": 254, \"explicit_full_and_protected_witnesses_checked\": 24, \"fixed_inputs\": 12, \"provenance\": \"Exact persisted execution transcript binds recovered full original driver; all source, byte, raw stream and result bindings checked.\", \"receipt_sha256\": \"1b45a4b38b4964ae192304f942aa00ed5a5e16089fb63d8a277548408b5de876\", \"status\": \"passed\"}\n",
+    "failed_attempts": [
+      {
+        "exit_code": 1,
+        "script_sha256": "a726f1b7a8e90ec1745d8c991f2dd6af35295adbbe6d2c0a422431485b812834",
+        "diagnostic_summary": "Root validator initially included the JSONL line terminator in the provenance hash. The retained worker hash excludes that terminator. Corrected root splitlines convention; no worker receipt/source mutation or mathematical-check replay."
+      }
+    ],
+    "scope": "Validated complete actual original child driver recovered from persisted execution transcript, exact commands, source/byte/raw-output bindings. Checked all 254 retained score attainers and 24 full/protected witnesses without rerunning all-real interval enumeration."
+  },
+  "independent_reviews": "Both exact finite reduction and restricted grid proof independently reviewed by Astra xhigh. Root read complete proofs, code and final review. Code, source and retained raw output hashes matched; no duplicate review execution.",
+  "failure_accounting": "Author original finite-discovery assertions reached PASS but metadata launcher failed afterwards (exit1), disclosed in author/review. Small independent run exit0. Terra twelve-input computational check first-pass exit0; one Astra-guided receipt correction recovered actual original driver, zero Astra direct edits. Root static-validator newline-convention correction is separate.",
+  "lean": "No Lean source change, no new kernel theorem, no repeated local full build/trust. Existing canonical N6 checkpoint remains established.",
+  "unrestricted_goal": "Active and unresolved. No finite positive controls imply Q or LRC for arbitrary N."
+}
