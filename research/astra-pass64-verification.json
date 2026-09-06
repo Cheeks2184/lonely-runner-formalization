@@ -1,0 +1,70 @@
+{
+  "checkpoint": "Pass64",
+  "parent_main": "15a34041b72e17734d746fea005c83130a7e41fb",
+  "status": "Accepted manuscript checkpoint only; unrestricted canonical conjecture unresolved.",
+  "hashes": {
+    "research/astra-uniform-colour-critical-cover.md": "84b7f417a73dd8e580300390a3e1081f61904ad1860215487f03f7c1a51e578f",
+    "research/astra-uniform-colour-critical-review.md": "49e42ed76159de73c3e2fd568021c82942913f76d976a596544323e1ef1caed9",
+    "research/astra-uniform-label-cut-profile.md": "05b89f854f5076ffcfb139a19ea34a8ed6d9481c893211560aa443881bc89326",
+    "research/astra-uniform-label-cut-profile-review.md": "3b1133ca8bde4ae75794dc8681a5c2611670cd6e21b0f063a7cfdcc81b7de239",
+    "docs/astra-research-64.md": "cf80e5d2c0789076c0f4248b9a81c193eb6fda0e59610d67a1e92b6a295cf719"
+  },
+  "root_binding_script_utf8": "from pathlib import Path\nimport hashlib,json,re\nexpected={'research/astra-uniform-colour-critical-cover.md': '84b7f417a73dd8e580300390a3e1081f61904ad1860215487f03f7c1a51e578f', 'research/astra-uniform-colour-critical-review.md': '49e42ed76159de73c3e2fd568021c82942913f76d976a596544323e1ef1caed9', 'research/astra-uniform-label-cut-profile.md': '05b89f854f5076ffcfb139a19ea34a8ed6d9481c893211560aa443881bc89326', 'research/astra-uniform-label-cut-profile-review.md': '3b1133ca8bde4ae75794dc8681a5c2611670cd6e21b0f063a7cfdcc81b7de239'}\ncount=0\nfor name,h in expected.items():\n data=Path(name).read_bytes();assert hashlib.sha256(data).hexdigest()==h,name\n for source,binding in re.findall(r'\\| `([^`]+)` \\| `([0-9a-f]{64})` \\|',data.decode()):\n  assert hashlib.sha256(Path(source).read_bytes()).hexdigest()==binding,source\n  count+=1\nprint(json.dumps({'status':'passed','frozen_files':expected,'table_bindings':count,'scope':'Byte bindings only. Mathematical proofs independently read; no mathematical program or Lean run.'},sort_keys=True))\n",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/tmp/astra-pass64-bindings.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"frozen_files\": {\"research/astra-uniform-colour-critical-cover.md\": \"84b7f417a73dd8e580300390a3e1081f61904ad1860215487f03f7c1a51e578f\", \"research/astra-uniform-colour-critical-review.md\": \"49e42ed76159de73c3e2fd568021c82942913f76d976a596544323e1ef1caed9\", \"research/astra-uniform-label-cut-profile-review.md\": \"3b1133ca8bde4ae75794dc8681a5c2611670cd6e21b0f063a7cfdcc81b7de239\", \"research/astra-uniform-label-cut-profile.md\": \"05b89f854f5076ffcfb139a19ea34a8ed6d9481c893211560aa443881bc89326\"}, \"scope\": \"Byte bindings only. Mathematical proofs independently read; no mathematical program or Lean run.\", \"status\": \"passed\", \"table_bindings\": 15}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "evidence": "Executed after staging the seven named checkpoint files; command chain proceeded to full staged stat and name list."
+    }
+  ],
+  "mathematical_verification": "Root full read of both authors and both independent Astra xhigh reviews including final addendum. Hand proofs only; no computation or Lean declaration.",
+  "scope_limit": "No unconditional anchor/cut supply. Profile plus complete label graph remains compatible on lcm family for allN>=5. Conditional implementation deferred.",
+  "storage": "No allowlisted rebuildable cache present. No restoration or cleanup needed."
+}
