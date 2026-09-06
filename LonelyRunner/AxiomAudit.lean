@@ -710,3 +710,10 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_third_shift_of_seeded_divisible
 #print axioms LonelyRunner.fiveMovingNaturalRunners_of_three_or_four_divisible_three
 #print axioms LonelyRunner.fiveMovingNaturalRunners_of_primitive_three_divisible_three
+
+-- Positive-time fast-speed insertion; equality at the speed ratio is included.
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_fast_speed
+
+-- A zero-permitted anchored pair maximum and one shift after a bad-set collision.
+#print axioms LonelyRunner.exists_five_sixths_fiber_pair_maximizer
+#print axioms LonelyRunner.exists_third_shift_safe_of_two_bad
