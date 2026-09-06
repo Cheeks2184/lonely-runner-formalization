@@ -6,6 +6,17 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [thirty-fourth Astra checkpoint](docs/astra-research-34.md) adds the
+unconditional canonical `LonelyRunner.fourRunners`: every injective family
+of four real speeds has a lonely time for each chosen runner, at the closed
+quarter threshold. Natural triple witnesses discharge H5, and a new generic
+bounded reduction handles irrational ratios, repeated relative magnitudes,
+signs, and original labels without an all-dimensional conjecture premise.
+The full build passed with 3,643 jobs and the trust audit accepted 457
+permitted-only reports. Independent source review and the root replay passed
+18 Lean examples and nine permitted-only axiom reports. Higher counts and
+unrestricted LRC remain unresolved.
+
 The [thirty-third Astra checkpoint](docs/astra-research-33.md) proves the
 complete mixed classification for natural `0<a<b<H`: a common positive time
 with margins `1/4,1/4,1/3` exists exactly outside `(a,2*a,3*a)`. There is no
@@ -14,8 +25,9 @@ quarter witness at any real time implies positive mixed existence, resolving
 the N=4 case of the earlier strict-to-mixed question. The full source build
 passed with 3,640 jobs reported and 449 permitted-only axiom reports. Independent
 review and the root guarded replay passed 20 boundary/contract examples and
-11 exact declaration/axiom probes. This does not yet add the canonical arbitrary
-real-speed four-runner bridge, settle higher counts, or resolve unrestricted LRC.
+11 exact declaration/axiom probes. That checkpoint did not include the canonical arbitrary
+real-speed bridge subsequently added in Pass 34. Neither checkpoint settles
+higher counts or unrestricted LRC.
 The accompanying modular and tight-family manuscripts retain their reviewed
 scope, including normalization before comparing coverage.
 

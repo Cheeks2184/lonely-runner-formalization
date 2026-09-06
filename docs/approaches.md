@@ -3,6 +3,14 @@
 This is a research map, not a list of claimed proofs. Each route terminates at
 an obligation that is currently open in general.
 
+The [Pass 34 checkpoint](astra-research-34.md) closes the canonical four-total-
+runner case for arbitrary real speeds. The reusable bounded real reduction
+requires natural witness supply through the same number of moving speeds;
+it does not create that supply for higher counts. The reviewed deletion-gcd
+condition is an existing divisor-grid specialization, so that research branch
+is closed without adding a redundant formal wrapper. Uniform finite-family
+supply remains the unresolved requirement for this route.
+
 ## A. Modular witnesses, finite checking, and sieving
 
 For a prime or modulus `p`, search for one shared numerator `a` such that all

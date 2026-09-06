@@ -1,6 +1,9 @@
 import LonelyRunner
 import LonelyRunner.FastestPivot
 import LonelyRunner.TopTwoTransversal
+import LonelyRunner.FourRunnerOrdinary
+import LonelyRunner.BoundedRealReduction
+import LonelyRunner.FourRunnerCanonical
 
 -- The exact finite-family equivalence does not prove either side.
 #print axioms LonelyRunner.exists_strictMono_reindex
@@ -500,3 +503,14 @@ project-specific axiom.
 #print axioms LonelyRunner.fourRunnerMixed_iff
 #print axioms LonelyRunner.not_strict_ordinary_one_two_three
 #print axioms LonelyRunner.strict_ordinary_witness_implies_fourRunnerMixed
+
+-- Bounded ordinary and real bridges, followed by the exact four-total-runner
+-- specialization.  These do not assert any unrestricted count theorem.
+#print axioms LonelyRunner.threeMovingNaturalSpeeds
+#print axioms LonelyRunner.threeMovingNaturalRunners
+#print axioms LonelyRunner.lowerCountPositiveIntegerHypothesis_five
+#print axioms LonelyRunner.exists_stationaryStrictWitness_of_relations
+#print axioms LonelyRunner.positiveRealWitness_of_lowerCount
+#print axioms LonelyRunner.stationaryWitness_of_lowerCount
+#print axioms LonelyRunner.lonelyAt_of_lowerCount
+#print axioms LonelyRunner.fourRunners

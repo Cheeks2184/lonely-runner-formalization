@@ -1,0 +1,99 @@
+{
+  "checkpoint": "Pass34",
+  "source_base": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+  "remote_main_verified": "4e55a24baea869a4d6249003f0bb07c8a90533c2",
+  "status": "verified_ready_for_publication",
+  "source_sha256": {
+    "LonelyRunner/FourRunnerOrdinary.lean": "2fb2f5c9c0742daa3278ee0ddeacd8643e1e22f8c885de95f5f38e10734b29f6",
+    "LonelyRunner/BHKCollisionToWitness.lean": "e5175b1f55a2d73e850ffd3e5a5dab140b6e4d84f0cefd94ebf6d7663d3a0d6a",
+    "LonelyRunner/BoundedRealReduction.lean": "7eae68d2c46041b39c3e18f9a1e105c75680352f8e4b4edf65e0dd2a92becb72",
+    "LonelyRunner/FourRunnerCanonical.lean": "353b116d04d464fb9aedb92437e7f56168992e087a862f934044bc9062761c38",
+    "LonelyRunner.lean": "dae4d7c57a2cd80e33b8d087c62fa0ba64fb039012112078a2e4ef7c24c93756",
+    "LonelyRunner/AxiomAudit.lean": "31ca9c8be208cca88007162b5a6941d90fdf901a21f55f2176fc0d51c9e43b4a"
+  },
+  "evidence_sha256": {
+    "research/astra-four-runner-ordinary-implementation.md": "1b05b304158ae1a1b3cec12ed16955b7ec7273cf0b4a1e59663c51369229b42c",
+    "research/astra-bounded-real-reduction-implementation.md": "f97466dd5cfc2f376cb3934a66f6c16773ee820c09696bffa2edca4b86e57d07",
+    "research/astra-four-runner-canonical-implementation.md": "2714bd3c9fc2a5228c26f940f43be08417167317ee3d1cb769249a87eeba94cf",
+    "research/astra-four-runner-canonical-bridge-plan.md": "9f752fa91fcbf56bb80d1a8a424697801e21b78262bc1315c138431c2e160f0c",
+    "research/astra-four-runner-canonical-bridge-review.md": "d957473a23aeab123ab754dd00ce3e027e71ff795bea15cac167b1282c88b53c",
+    "research/astra-mixed-codimension-one-gcd.md": "8c97c3362518d753624e0dad27bd605f2b5e73452adf37d0310e33686c91b3e7",
+    "research/astra-mixed-codimension-one-gcd-review.md": "9f7f0e43e17f10a679e67a6945ab24b494dd2bf59d4e300233933371b4e3eb32",
+    "research/astra-four-runner-canonical-formal-review.md": "101676b1aa7bff0a66064dfaad38e7fbb42e0e40d1568a12230c56984f05248f"
+  },
+  "formal_scope": {
+    "declaration": "LonelyRunner.fourRunners",
+    "type": "\u2200 speeds : Fin 4 \u2192 \u211d, Function.Injective speeds \u2192 \u2200 runner : Fin 4, \u2203 t : \u211d, LonelyRunner.LonelyAt speeds runner t",
+    "total_runners": 4,
+    "threshold": "closed 1/4",
+    "speed_domain": "arbitrary real speeds",
+    "time_domain": "real; witness may depend on chosen runner",
+    "remaining_hypotheses": "injectivity only",
+    "bounded_helper": "For m>=1, H_(m+2) gives ordinary witnesses for nonzero real Fin m rows, including repeated absolute values, and arbitrary chosen runner in Fin(m+1).",
+    "H5_scope": "distinct positive natural rows in dimensions 1,2,3; not five total runners"
+  },
+  "verification": {
+    "full_command": "lake build LonelyRunner",
+    "full_exit_code": 0,
+    "full_jobs_reported": 3643,
+    "full_log_sha256": "2ee002515a58c40fde734e39bd7e4b3f53afdcafcba232aeaf722281df354265",
+    "trust_command": "python3 -B scripts/audit_lean_trust.py",
+    "trust_exit_code": 0,
+    "trust_reports": 457,
+    "trust_log_sha256": "7df3ad88a21f875a339110f3d5ce27baf163a66296e7fe91c7886706ac87a93e",
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "note": "Job totals include cached targets. No Lean source changes after full build and trust audit."
+  },
+  "root_review": {
+    "complete_mathematical_source_read": true,
+    "old_BHK_public_type_preserved": true,
+    "irrational_branch_margin": "1/m strictly exceeds 1/(m+1)",
+    "rational_branch_margin": "closed 1/(m+1), weak magnitude-cardinality bound permits repetitions",
+    "manuscript_replay": {
+      "status": "passed",
+      "gcd_review": "9f7f0e43e17f10a679e67a6945ab24b494dd2bf59d4e300233933371b4e3eb32",
+      "program": "1bfa717c03552ed33ee9f3f6f0c14024cd4693bb23791747f934eadea4564f16",
+      "stdout": "339d287c83260d5cee891907647b6c85bc3d64d333962fd8e11387de116b1e4d",
+      "plan_review": "d957473a23aeab123ab754dd00ce3e027e71ff795bea15cac167b1282c88b53c",
+      "historical_interface_count": 15,
+      "base": "0e49249d9fcbba5e4a8312d845224bc11466db76"
+    }
+  },
+  "research_disposition": {
+    "deletion_gcd": "Accepted conditional all-alpha deduction, already supplied by existing grid machinery. Redundant branch closed without unused formal wrapper.",
+    "canonical_bridge_plan": "Accepted, implemented at exact bounded scope."
+  },
+  "excluded_future_work": [
+    "research/astra-five-runner-mixed-structure.md"
+  ],
+  "canonical_lrc": "unresolved",
+  "independent_formal_review": {
+    "verdict": "accepted",
+    "artifact_sha256": "101676b1aa7bff0a66064dfaad38e7fbb42e0e40d1568a12230c56984f05248f",
+    "program_sha256": "5a3d2526aab2deea5c0acdde5de67901bb9f6f0e0cc2ead3076826c0f32b7f89",
+    "stdout_sha256": "06ace03ec96989b7ff0dcc0eb317f90ac048fca4c5cbc4d1fd9a39bf039b85f0",
+    "lean_stdin_sha256": "0a6ac6cb98fbcc9af58f9d20a917820fbfba2e116785b833871168ffc33cecff",
+    "lean_stdout_sha256": "e1e21ae9cd4fa87834c6f2e25689f3ea3518367743f53ebd14181c74bed5c4a7",
+    "root_full_read_and_guarded_replay": "passed",
+    "kernel_examples": 18,
+    "new_exact_types": 8,
+    "old_compatibility_types": 1,
+    "allowed_axiom_reports": 9,
+    "source_guards": 7
+  },
+  "storage": {
+    "cleanup_command": "python3 -B scripts/manage_storage.py --clean",
+    "exit_code": 0,
+    "removed_bytes": 8006076991,
+    "paths": [
+      ".lake"
+    ],
+    "log_sha256": "250d6e406110b8179c5043848f3c679f4fed40353d4bcb9944f88bc8243d8767",
+    "no_active_or_queued_cache_dependent_work": true,
+    "pinned_toolchain_retained": true
+  }
+}
