@@ -1,0 +1,115 @@
+{
+  "checkpoint": "Pass74",
+  "parent_main": "4818e5916e57697f83e842ca642f4e7599bbd32c",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-74.md": "eb31984cd4c8f95c323106f8a429f6198cdf27e1ba7bf04a0f073bf0054105ea",
+    "research/astra-parity-coset-minimum-audit.md": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+    "research/astra-parity-coset-minimum-review.md": "fda600dd2cdbf2f470bc18e24baeab0bb4b9a90616f34b10d160ba3fa86b3360"
+  },
+  "dependency_hashes": {
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-center-preserving-projection-audit.md": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e",
+    "research/astra-center-preserving-projection-review.md": "a1402e6545dd2de6a2d4b2f832b2ff13ec52f759a1ae5fb183122d1ad3d0c7e6",
+    "research/astra-pair-sum-cell-contract.md": "1b441ec0b0145007cf18bce59482396d175634cdd34d3ba4edba8c0376cb7c8f",
+    "LonelyRunner/PairSumGeometry.lean": "3bc47a6f1a77950577edc54b571e9809bb03bffd37575ebc10bae0fcfcab9384",
+    "LonelyRunner/PairSumCompleteness.lean": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f",
+    "research/astra-uniform-global-seed-geometry.md": "3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524",
+    "research/astra-minimal-height-audit.md": "40e59ba4539eb931a07612e9b972999d3b48006d39ef4760c0e493d08e734325"
+  },
+  "review_bindings": {
+    "research/astra-parity-coset-minimum-review.md": [
+      "research/astra-parity-coset-minimum-audit.md",
+      ".codex/config.toml",
+      "docs/project-workflow.md",
+      "research/workflow-policy.json",
+      "scripts/validate_workflow.py",
+      "research/astra-center-preserving-projection-audit.md",
+      "research/astra-center-preserving-projection-review.md",
+      "research/astra-pair-sum-cell-contract.md",
+      "LonelyRunner/PairSumGeometry.lean",
+      "LonelyRunner/PairSumCompleteness.lean",
+      "research/astra-uniform-global-seed-geometry.md",
+      "research/astra-minimal-height-audit.md"
+    ]
+  },
+  "checks": {
+    "frozen_files": 3,
+    "dependency_bindings": 11,
+    "review_bindings": 12
+  },
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "/usr/bin/python3",
+      "/tmp/astra-pass74-verify.py"
+    ],
+    "source": "import hashlib\nimport json\nfrom pathlib import Path\nimport subprocess\nimport sys\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nmanifest = json.loads(Path('/tmp/astra-pass74-inputs.json').read_text())\nassert len(manifest['hashes']) == 3\nassert len(manifest['dependency_hashes']) == 11\nbindings = manifest['hashes'] | manifest['dependency_hashes']\nfor name, digest in bindings.items():\n    assert hashlib.sha256((root / name).read_bytes()).hexdigest() == digest, name\nfor name in manifest['hashes']:\n    data = (root / name).read_bytes()\n    assert data.endswith(b'\\n'), name\n    assert all(line.rstrip() == line for line in data.splitlines()), name\nauthor = 'research/astra-parity-coset-minimum-audit.md'\nreview = 'research/astra-parity-coset-minimum-review.md'\nassert bindings[author] in (root / review).read_text()\nfor digest in manifest['dependency_hashes'].values():\n    assert digest in (root / author).read_text()\n    assert digest in (root / review).read_text()\ncommands = []\nfor argv in ([sys.executable, '-B', 'scripts/validate_workflow.py'],\n             ['git', 'diff', '--check'],\n             [sys.executable, '-B', 'scripts/manage_storage.py']):\n    result = subprocess.run(argv, cwd=root, capture_output=True, text=True)\n    commands.append({'argv': argv, 'exit_code': result.returncode,\n                     'stdout': result.stdout, 'stderr': result.stderr})\n    assert result.returncode == 0, commands[-1]\nprint(json.dumps({'frozen_files': 3, 'dependency_bindings': 11,\n                  'review_bindings': 12, 'commands': commands}, indent=2))\n",
+    "source_sha256": "79bd0e9069d809185b27ed5b982165951c9851a9bb1677311e93cb2046d7db9e",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-74.md": "eb31984cd4c8f95c323106f8a429f6198cdf27e1ba7bf04a0f073bf0054105ea",
+        "research/astra-parity-coset-minimum-audit.md": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+        "research/astra-parity-coset-minimum-review.md": "fda600dd2cdbf2f470bc18e24baeab0bb4b9a90616f34b10d160ba3fa86b3360"
+      },
+      "dependency_hashes": {
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-center-preserving-projection-audit.md": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e",
+        "research/astra-center-preserving-projection-review.md": "a1402e6545dd2de6a2d4b2f832b2ff13ec52f759a1ae5fb183122d1ad3d0c7e6",
+        "research/astra-pair-sum-cell-contract.md": "1b441ec0b0145007cf18bce59482396d175634cdd34d3ba4edba8c0376cb7c8f",
+        "LonelyRunner/PairSumGeometry.lean": "3bc47a6f1a77950577edc54b571e9809bb03bffd37575ebc10bae0fcfcab9384",
+        "LonelyRunner/PairSumCompleteness.lean": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f",
+        "research/astra-uniform-global-seed-geometry.md": "3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524",
+        "research/astra-minimal-height-audit.md": "40e59ba4539eb931a07612e9b972999d3b48006d39ef4760c0e493d08e734325"
+      }
+    },
+    "actual_tool_result": {
+      "chunk_id": "f1213f",
+      "wall_time_seconds": 3.627e-06,
+      "exit_code": 0,
+      "original_token_count": 197,
+      "output": "{\n  \"frozen_files\": 3,\n  \"dependency_bindings\": 11,\n  \"review_bindings\": 12,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": "Independent Astra/xhigh full author and11 input review; root complete source/review read. Exact hand all-real old/new optima, primitive plane, candidate gauge and all-competitor comparison. No mathematical program or old-control replay.",
+  "scope": "Uniform counterexample to determinant/height-only coset-minimum monotonicity; both families satisfy LRC. No actual strict-failure descent or uniform witness supply.",
+  "excluded": "Active joint smaller-parity-direction research and its unfinished manuscript.",
+  "failure_history": "One notation-only quotient direction u=2x clarification, independently reverse-hash verified; no mathematical correction. Root binding verifier first execution passed."
+}

@@ -6,7 +6,7 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/parity_coset_minimum_audit",
+      "id": "/root/parity_plane_joint_descent",
       "agent_id": "/root/uniform_affine_phase_screen",
       "kind": "research",
       "status": "in_progress",
@@ -14,11 +14,11 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4",
+      "source_checkpoint": "4818e5916e57697f83e842ca642f4e7599bbd32c",
       "owned_files": [
-        "research/astra-parity-coset-minimum-audit.md"
+        "research/astra-parity-plane-joint-descent.md"
       ],
-      "target": "Direct uniform bound at the globally closest point of the ordinary half-lattice coset in the projected-cube norm. Use all lattice competitors, exact pairwise facet gauge and count/sum minimality; at most two analytic approaches for an actual norm upper bound or preserved-failure descent. No short local rescue or equivalent reformulation promoted as supply.",
+      "target": "Test whether joint count/sum minimality over all smaller parity-preserving directions in the saturated closest plane can transport a witness to original v. Start with exact nearest-coset ray distance; retain the common time coupling. One analytic branch, no numerical or Lean work.",
       "checks": []
     }
   ],
@@ -9353,13 +9353,62 @@
         "research/astra-center-preserving-projection-review.md"
       ],
       "sha256": "a1402e6545dd2de6a2d4b2f832b2ff13ec52f759a1ae5fb183122d1ad3d0c7e6"
+    },
+    {
+      "id": "/root/parity_coset_minimum_audit",
+      "agent_id": "/root/uniform_affine_phase_screen",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4",
+      "owned_files": [
+        "research/astra-parity-coset-minimum-audit.md"
+      ],
+      "target": "Direct uniform bound at the globally closest point of the ordinary half-lattice coset in the projected-cube norm. Use all lattice competitors, exact pairwise facet gauge and count/sum minimality; at most two analytic approaches for an actual norm upper bound or preserved-failure descent. No short local rescue or equivalent reformulation promoted as supply.",
+      "checks": [
+        "Root complete manuscript read",
+        "Author validator and all11 input bindings reported passed"
+      ],
+      "result": "Root read complete final manuscript. Uniform determinant-one sum descent decreases the global coset minimum despite increasing its tracked candidate; exact all-competitor phase loss derived. Independent final byte binding pending after notation-only quotient direction clarification.",
+      "sha256": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+      "evidence": [
+        "research/astra-parity-coset-minimum-audit.md"
+      ]
+    },
+    {
+      "id": "/root/parity_coset_minimum_review",
+      "agent_id": "/root/uniform_screen_review",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "4818e5916e57697f83e842ca642f4e7599bbd32c",
+      "owned_files": [
+        "research/astra-parity-coset-minimum-review.md"
+      ],
+      "target": "Independent audit of global closest-coset reformulations and uniform determinant-one height-reduction counterexample to coset-minimum monotonicity. Check all-d family, exact old/new/global candidate minima, saturation, outside-plane competitor, transport-loss inequality and strict-failure scope. Read and bind complete frozen author before final acceptance.",
+      "checks": [
+        "Independent complete source and11 dependency review",
+        "Root complete review read",
+        "Validator/text checks reported passed"
+      ],
+      "result": "Independent complete author and11 dependency review accepted after notation-only u=2x clarification; root full review read and final updated header/receipt read. No mathematical correction or unrestricted supply.",
+      "sha256": "fda600dd2cdbf2f470bc18e24baeab0bb4b9a90616f34b10d160ba3fa86b3360",
+      "evidence": [
+        "research/astra-parity-coset-minimum-review.md"
+      ]
     }
   ],
-  "latest_checkpoint": "Pass73 verified locally: independently reviewed ordinary fibre/parity scope and integral affine cube rigidity. Publication in progress; unrestricted goal unresolved.",
+  "latest_checkpoint": "Pass74: independently reviewed closest-coset minimum audit; frozen local evidence verified, publication pending.",
   "next_actions": [
-    "Finish frozen centre-preserving projection review, verify its precise manuscript scope and publish the next substantive checkpoint.",
-    "Pursue centre-preserving projection and lattice-point lift/descent with full ordinary-LRC coset and minimality; do not substitute shifted LRC or a finite-family equivalence for proof.",
-    "No additional ideal-mask solver expansion or disconnected Lean work. Next Terra High aggregate review at30 closed tasks;24 complete."
+    "Finish frozen parity-coset review and publish accepted substantive checkpoint.",
+    "Test joint smaller parity-direction witness transport with exact common time retained. No isolated-candidate monotonicity assumption.",
+    "Next Terra High aggregate review at30 closed tasks;24 complete."
   ],
   "research_holds": [
     {
@@ -9941,7 +9990,7 @@
     "coordination": "All worker commands and root verification stopped before cleanup; manuscript-only research released after cleanup.",
     "preserved": "Pinned toolchain, Git history, sources, unique evidence, small replay programs and outputs; unrelated projects untouched."
   },
-  "previous_goal_turn_classification": "Progress: Pass72 reviewed, verified, committed/pushed as PR71; root strengthened the integral lift class obstruction, author confirmed and independent review launched. Specific CI watch15018 and exact-certificate job101575129197 revalidated live.",
+  "previous_goal_turn_classification": "Progress: PR71 merged/main verified; geometric audit independently accepted and Pass73 verified/pushed as PR72, both required CI jobs live. New global parity-coset minimum investigation active.",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
@@ -10482,13 +10531,17 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "checkpoint": "Pass73",
-    "branch": "codex/astra-center-preserving-projection",
-    "base": "main",
-    "status": "verified_local_pending_commit_push_pr",
-    "scope": "Frozen geometric author/review, docs, verification and state. Active parity-coset global minimum audit excluded.",
-    "verification": "research/astra-pass73-verification.json",
-    "verification_sha256": "8d98ba689992af21a8e488bc4c04fe8b33b76a242defa9d6ba36fb19f27cd4f5"
+    "checkpoint": "Pass74",
+    "branch": "codex/astra-parity-coset-minimum",
+    "status": "verified_ready_to_commit",
+    "parent_main": "4818e5916e57697f83e842ca642f4e7599bbd32c",
+    "files": [
+      "docs/astra-research-74.md",
+      "research/astra-parity-coset-minimum-audit.md",
+      "research/astra-parity-coset-minimum-review.md",
+      "research/astra-pass74-verification.json",
+      "research/workflow-state.json"
+    ]
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -10788,10 +10841,10 @@
     }
   ],
   "last_continuation_assessment": {
-    "checkpoint": "PR71 merged/main verified at c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4, all3 frozen and8 dependency bindings matched.",
-    "mathematical_scope": "Geometric author frozen0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e,12 local bindings matched; independent reviewer reports no defect and is finishing frozen review. No witness supply or smaller failure obtained.",
-    "next": "Finish geometric independent review and publication; select next genuine uniform supply mechanism outside the excluded pointwise integral cube class.",
-    "storage": "No cache/build restoration, numerical expansion or source formalization queued."
+    "checkpoint": "PR72 head7de10b8317801e498c7e36ae04168c17eed9adf7 open; Lean/trust passed, exact-certificate job live in run34067164728; watch1838 re-polled live.",
+    "mathematical_scope": "Closest-coset gauge recovers existing pair-sum formula; primitive-plane condition is not a new upper bound. Root proposed a concrete parity-preserving rank-two basis descent with explicit competitor-transport gap for the active second approach.",
+    "next": "Finish PR72 required checks and exact-head publication; test the specific rank-two transformation for actual failure preservation, not one-candidate gauge growth.",
+    "storage": "No cache/Lean restoration or mathematical numerical run queued."
   },
   "pending_two_hole_review": "Frozen author SHA256 2bbc12481c164bf5e4eaf30ea7ca966cb0b2614524d9bea779034a2ebf115ccb; independent review deferred until slot available; excluded from Pass29.",
   "pass29_final_semantic_acceptance": {
@@ -13265,6 +13318,66 @@
       },
       "next_branch": "codex/astra-center-preserving-projection",
       "scope": "Reviewed conditional joint-seed comparison and good smaller replacement, no unrestricted witness supply or smaller failure."
+    },
+    {
+      "pr": 72,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/72",
+      "head": "7de10b8317801e498c7e36ae04168c17eed9adf7",
+      "merge": "4818e5916e57697f83e842ca642f4e7599bbd32c",
+      "merged_at": "2026-09-06T23:43:31Z",
+      "ci_run": 34067164728,
+      "checks": [
+        {
+          "name": "Lean build and trust audit",
+          "job": 101577844114,
+          "result": "SUCCESS",
+          "completedAt": "2026-09-06T23:33:53Z",
+          "startedAt": "2026-09-06T23:32:20Z"
+        },
+        {
+          "name": "Exact computational certificates",
+          "job": 101577844152,
+          "result": "SUCCESS",
+          "completedAt": "2026-09-06T23:41:52Z",
+          "startedAt": "2026-09-06T23:32:20Z"
+        }
+      ],
+      "premerge": {
+        "state": "OPEN",
+        "isDraft": false,
+        "mergeStateStatus": "CLEAN",
+        "reviews": [],
+        "exact_head_matched": true
+      },
+      "sessions": {
+        "push": {
+          "id": 15340,
+          "exit_code": 0
+        },
+        "create": {
+          "id": 67227,
+          "exit_code": 0
+        },
+        "watch": {
+          "id": 1838,
+          "exit_code": 0
+        },
+        "merge": {
+          "id": 34462,
+          "exit_code": 0
+        }
+      },
+      "fetched_main": {
+        "sha": "4818e5916e57697f83e842ca642f4e7599bbd32c",
+        "head_ancestry_exit_code": 0,
+        "old_main_ancestry_exit_code": 0,
+        "frozen_file_bindings_matched": 3,
+        "dependency_bindings_matched": 12,
+        "current_branch_fast_forwarded": true,
+        "local_main_updated": true
+      },
+      "next_branch": "codex/astra-parity-coset-minimum",
+      "scope": "Reviewed ordinary fibre/parity scope and pointwise integral cube-rigidity obstruction. No unrestricted supply or preserved-failure descent."
     }
   ],
   "three_divisible_shift_plan": {
@@ -13355,7 +13468,10 @@
     "status": "Author candidate; rootread; independent review queued. Two small scalar/weakshiftarguments rootvalidated for drafting.",
     "scope": "Remaining canonical N6 branch only; uniform arbitrary-N priority afterverifiedN6."
   },
-  "last_goal_turn_classification": "Progress: PR71 merged/main verified; geometric author/review accepted with all-lower-count rigidity, Pass73 root verification passed and saved; global closest-coset research launched.",
+  "last_goal_turn_classification": {
+    "classification": "progress",
+    "reason": "Read and independently accepted exact global-coset method obstruction, bound all11 inputs and saved Pass74 verified checkpoint; launched bounded joint smaller-direction investigation."
+  },
   "one_three_manuscript_review": "Independent frozen 8f720fbd report fully read by root; exact static replay exit0 with sixteen bindings, twelve contract names. Specification accepted, not a Lean result.",
   "publication_latest_pending": null,
   "delegation_revision": {
@@ -13381,26 +13497,26 @@
     "comparison_caveat": "Sample preceded SignedRenaultFiveOne; later deliveries excluded. New High compiled handoff changes both effort and ownership, so no causal effort-only attribution."
   },
   "publication_latest_verified": {
-    "pr": 71,
-    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/71",
-    "head": "01961736f5c07af8d2f7d4cb9397553f0baa284e",
-    "merge": "c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4",
-    "merged_at": "2026-09-06T23:22:48Z",
-    "ci_run": 34066145896,
+    "pr": 72,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/72",
+    "head": "7de10b8317801e498c7e36ae04168c17eed9adf7",
+    "merge": "4818e5916e57697f83e842ca642f4e7599bbd32c",
+    "merged_at": "2026-09-06T23:43:31Z",
+    "ci_run": 34067164728,
     "checks": [
       {
         "name": "Lean build and trust audit",
-        "job": 101575129109,
+        "job": 101577844114,
         "result": "SUCCESS",
-        "completedAt": "2026-09-06T23:12:35Z",
-        "startedAt": "2026-09-06T23:10:53Z"
+        "completedAt": "2026-09-06T23:33:53Z",
+        "startedAt": "2026-09-06T23:32:20Z"
       },
       {
         "name": "Exact computational certificates",
-        "job": 101575129197,
+        "job": 101577844152,
         "result": "SUCCESS",
-        "completedAt": "2026-09-06T23:20:15Z",
-        "startedAt": "2026-09-06T23:10:53Z"
+        "completedAt": "2026-09-06T23:41:52Z",
+        "startedAt": "2026-09-06T23:32:20Z"
       }
     ],
     "premerge": {
@@ -13412,48 +13528,33 @@
     },
     "sessions": {
       "push": {
-        "id": 13543,
+        "id": 15340,
         "exit_code": 0
       },
       "create": {
-        "id": 89050,
+        "id": 67227,
         "exit_code": 0
       },
       "watch": {
-        "id": 15018,
+        "id": 1838,
         "exit_code": 0
       },
       "merge": {
-        "id": 28946,
+        "id": 34462,
         "exit_code": 0
       }
     },
-    "watch_start_observation": {
-      "argv": [
-        "gh",
-        "pr",
-        "checks",
-        "71",
-        "--required",
-        "--watch",
-        "--interval",
-        "30"
-      ],
-      "exit_code": 1,
-      "output": "no required checks reported on the 'codex/astra-joint-seed-maximum' branch\n",
-      "disposition": "Required-only watch ended during initial check discovery; both project-required jobs were already observed queued/live via pr view. Watching all checks in session15018; both named jobs remain merge gates."
-    },
     "fetched_main": {
-      "sha": "c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4",
+      "sha": "4818e5916e57697f83e842ca642f4e7599bbd32c",
       "head_ancestry_exit_code": 0,
       "old_main_ancestry_exit_code": 0,
       "frozen_file_bindings_matched": 3,
-      "dependency_bindings_matched": 8,
+      "dependency_bindings_matched": 12,
       "current_branch_fast_forwarded": true,
       "local_main_updated": true
     },
-    "next_branch": "codex/astra-center-preserving-projection",
-    "scope": "Reviewed conditional joint-seed comparison and good smaller replacement, no unrestricted witness supply or smaller failure."
+    "next_branch": "codex/astra-parity-coset-minimum",
+    "scope": "Reviewed ordinary fibre/parity scope and pointwise integral cube-rigidity obstruction. No unrestricted supply or preserved-failure descent."
   },
   "small_phase_orbit_plan_root_read": {
     "report": "research/astra-small-phase-orbit-contract-plan.md",
@@ -13572,6 +13673,11 @@
       "kind": "joint_seed_distance_review",
       "status": "resolved_before_freeze_full_maximum_P_explicit",
       "observation": "If q deletes the endpoint owner a, the pivot alone only forces distance >(gamma-||p e||)/p>eta/p; eta/maxV does not follow when p is fastest. No manuscript accepted yet."
+    },
+    {
+      "kind": "pass74_state_schema_repair",
+      "failure": "After source verification root assigned latest_checkpoint an object; validation rejected because the field requires a nonempty string.",
+      "correction": "Preserved details in pass74_checkpoint_details and restored latest_checkpoint to a string before commit. No mathematical source or worker repair."
     }
   ],
   "two_even_escalation": {
@@ -13969,5 +14075,44 @@
     "review_sha256": "a1402e6545dd2de6a2d4b2f832b2ff13ec52f759a1ae5fb183122d1ad3d0c7e6",
     "root_full_review_read": true,
     "review_corrections": 0
+  },
+  "parity_coset_contact_scope_observation": {
+    "status": "independently_accepted_boundary_only_span_obstruction",
+    "claim": "At the sharp boundary, consecutive speeds for prime total N>=5 supply only N-1 common witness times, hence at most N-1 nearest ordinary coset points paired by sign; their linear span is at most (N-1)/2<N-2.",
+    "scope": "Needs exact witness-to-nearest-point correspondence checked before use. Shows full-span cannot be assumed from mere minimization or inclusive r>=beta. Does not refute an inference under strict original failure. No computation requested."
+  },
+  "parity_coset_basis_descent_candidate": {
+    "status": "independently_accepted_method_obstruction_no_failure_descent",
+    "proposal": "For nearest odd lift n with saturated plane Zv+Zn, test v_prime=a*v+2*b*n and n_prime=2*c*v+d*n, a,d odd and a*d-4*b*c=+/-1, followed by justified absolute-value/dedup/primitive normalization.",
+    "motivation": "Same pair minors under unimodular basis change and possible speed-sum reduction via n approximately t0*v; retain full global lattice minimality.",
+    "essential_gap": "A gauge estimate for the transported n_prime is only one candidate and does not lower-bound the new coset minimum. Must transport every new competitor or otherwise prove actual failure preservation, including competitors outside the rank-two plane.",
+    "constraints": "Within current second analytic approach, no third branch, numerical experiment, or parity/volume-only descent assumption.",
+    "result": "Hand-derived all-d>=6 family lowers natural sum under a parity-preserving determinant-one basis change but lowers the GLOBAL coset minimum from5/13 to1/3; transported candidate gauge is5/7. Actual new minimizer lies outside the old saturated plane. Both families satisfy LRC; strict-failure-only implication remains unrefuted."
+  },
+  "parity_plane_ray_identity": {
+    "status": "root_hand_derivation_pending_independent_check",
+    "normalization": "Use quotient norm of U([-1,1]^d); odd coset C=U(1+2Z^d), nearest y=Un with norm r.",
+    "identity": "dist(s*y,C)=r*dist(s,2Z+1) for every real s. On [-1,1], reverse triangle gives lower r(1-|s|), attained by sign(s)*y; C+2y=C extends by2-periodicity.",
+    "coordinate_form": "min over odd m and real t of ||m-t*v-s*n||_infinity = r*dist(s,2Z+1).",
+    "gap": "Optimized v-time cannot be chosen freely on a new w=a*v+2*b*n orbit, whose coordinates are (a*tau,2*b*tau). Joint smaller-direction minimality must address this tied time, not only projected distance."
+  },
+  "parity_coset_minimum_audit": {
+    "status": "accepted_pending_checkpoint_publication",
+    "author": "research/astra-parity-coset-minimum-audit.md",
+    "author_sha256": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+    "review": "research/astra-parity-coset-minimum-review.md",
+    "review_sha256": "fda600dd2cdbf2f470bc18e24baeab0bb4b9a90616f34b10d160ba3fa86b3360",
+    "scope": "Uniform determinant-and-height-only monotonicity obstruction with global minima5/13 and1/3, tracked gauge5/7; exact all-competitor loss. Both control families satisfy LRC; no strict-failure descent."
+  },
+  "pass74_checkpoint_details": {
+    "name": "Pass74",
+    "status": "verified_local_pending_publication",
+    "evidence": [
+      "docs/astra-research-74.md",
+      "research/astra-parity-coset-minimum-audit.md",
+      "research/astra-parity-coset-minimum-review.md",
+      "research/astra-pass74-verification.json"
+    ],
+    "source_checkpoint": "4818e5916e57697f83e842ca642f4e7599bbd32c"
   }
 }
