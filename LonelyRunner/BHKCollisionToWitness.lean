@@ -20,6 +20,34 @@ noncomputable section
 open Finset Set
 open scoped BigOperators
 
+/-- A strict target orbit point satisfying every integer relation transfers to
+an actual strict point of the original real orbit. -/
+theorem exists_stationaryStrictWitness_of_relations {m : ℕ}
+    (u z : Fin m → ℝ) (δ τ : ℝ)
+    (hrelations : ∀ a : Fin m → ℤ,
+      (∑ i, (a i : ℝ) * u i = 0) →
+        ∑ i, (a i : ℝ) * z i = 0)
+    (hstrict : ∀ i, δ < circleNorm (τ * z i)) :
+    ∃ t : ℝ, ∀ i, δ < circleNorm (t * u i) := by
+  let good : Set (UnitAddTorus (Fin m)) := {x | ∀ i, δ < ‖x i‖}
+  have hopen : IsOpen good := by
+    rw [show good = ⋂ i : Fin m, {x | δ < ‖x i‖} by
+      ext x
+      simp [good]]
+    apply isOpen_iInter_of_finite
+    intro i
+    exact isOpen_lt continuous_const (continuous_apply i).norm
+  have htargetGood : orbitHom z τ ∈ good := by
+    intro i
+    simpa [good, circleNorm] using hstrict i
+  have htargetClosure : orbitHom z τ ∈ closure (Set.range (orbitHom u)) :=
+    orbitHom_mem_closure_range_of_relations u z τ hrelations
+  obtain ⟨x, hxgood, hxrange⟩ :=
+    (mem_closure_iff.mp htargetClosure) good hopen htargetGood
+  rcases hxrange with ⟨time, rfl⟩
+  refine ⟨time, fun i => ?_⟩
+  simpa [good, circleNorm] using hxgood i
+
 /-- A compatible rational collision vector converts the all-dimensional
 positive-rational conjecture into a witness for the given real tuple. -/
 theorem exists_stationaryWitness_of_rational_collision {m : ℕ}
@@ -84,27 +112,12 @@ theorem exists_stationaryWitness_of_rational_collision {m : ℕ}
         norm_cast
       _ = circleNorm (τ * (w i : ℝ)) := circleNorm_mul_abs_right τ (w i : ℝ)
   let c : ℝ := (((m + 1 : ℕ) : ℝ)⁻¹)
-  let good : Set (UnitAddTorus (Fin m)) := {x | ∀ i, c < ‖x i‖}
-  have hopen : IsOpen good := by
-    rw [show good = ⋂ i : Fin m, {x | c < ‖x i‖} by
-      ext x
-      simp [good]]
-    apply isOpen_iInter_of_finite
-    intro i
-    exact isOpen_lt continuous_const (continuous_apply i).norm
   let wReal : Fin m → ℝ := fun i => (w i : ℝ)
-  have htargetGood : orbitHom wReal τ ∈ good := by
-    intro i
-    change c < ‖((τ * wReal i : ℝ) : UnitAddCircle)‖
-    simpa [c, wReal, circleNorm] using htargetStrict i
-  have htargetClosure : orbitHom wReal τ ∈ closure (Set.range (orbitHom u)) :=
-    orbitHom_mem_closure_range_of_relations u wReal τ hrelations
-  obtain ⟨x, hxgood, hxrange⟩ :=
-    (mem_closure_iff.mp htargetClosure) good hopen htargetGood
-  rcases hxrange with ⟨time, rfl⟩
+  obtain ⟨time, htime⟩ :=
+    exists_stationaryStrictWitness_of_relations u wReal c τ hrelations
+      (by simpa [c, wReal] using htargetStrict)
   refine ⟨time, fun i => le_of_lt ?_⟩
-  have hi := hxgood i
-  simpa [good, c, circleNorm] using hi
+  simpa [c, wReal] using htime i
 
 end
 

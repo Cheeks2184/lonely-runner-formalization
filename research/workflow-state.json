@@ -6,7 +6,7 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/mixed_codimension_one_gcd_audit",
+      "id": "/root/five_runner_mixed_structure",
       "agent_id": "/root/mixed_equivalence_freeze",
       "kind": "research",
       "status": "in_progress",
@@ -14,10 +14,10 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Audit conditional all-coordinate1/(N-1) supply for primitive tuples when any N-2 moving speeds share gcd>1, N>=5 under H_N; compare existing divisor insertion scope and exact noMixed restrictions. Bounded manuscript only.",
-      "source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
+      "target": "Bounded analytic investigation of N=5 global strict-ordinary-to-fastest-mixed implication, isolating a useful structural theorem or precise obstruction without large enumeration.",
+      "source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
       "owned_files": [
-        "research/astra-mixed-codimension-one-gcd.md"
+        "research/astra-five-runner-mixed-structure.md"
       ],
       "checks": []
     }
@@ -4420,14 +4420,113 @@
       ],
       "checks": [],
       "disposition": "Clarified tight-familyreview accepted21f05428 and N4formalreview accepted07ce0bc6; root fullreads/guardedreplays passed20Leanexamples11typesaxioms plusfixedliteraturecontrols."
+    },
+    {
+      "id": "/root/mixed_codimension_one_gcd_audit",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Audit conditional all-coordinate1/(N-1) supply for primitive tuples when any N-2 moving speeds share gcd>1, N>=5 under H_N; compare existing divisor insertion scope and exact noMixed restrictions. Bounded manuscript only.",
+      "source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
+      "owned_files": [
+        "research/astra-mixed-codimension-one-gcd.md"
+      ],
+      "checks": [],
+      "disposition": "Root fullread and6-source/fourfixture/eightorbit-point guardedreplay passed; correct conditional deletion-gcd filter but specializationofexistinggridmachinery. Close researchbranch afterindependentreview; no wrapper withoutcaller."
+    },
+    {
+      "id": "/root/four_runner_ordinary_H5_implementation",
+      "agent_id": "/root/four_runner_completion",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement accepted ordinary sorted/unordered natural triple witness and H5 from verified C4; no real or higher-count claim.",
+      "source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+      "owned_files": [
+        "LonelyRunner/FourRunnerOrdinary.lean",
+        "research/astra-four-runner-ordinary-implementation.md"
+      ],
+      "checks": [],
+      "disposition": "Ordinarynatural3 andH5 module2fb2f5c9 compiledfocused2993jobs; scaled/unsortedcontrols reportedpassed; rootfullread andtypeprobe pendingterminal."
+    },
+    {
+      "id": "/root/bounded_real_reduction_implementation",
+      "agent_id": "/root/four_runner_completion",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement reviewed generic strict orbit transfer and bounded positive/signed real witness from H_(m+2), preserving old BHK theorem type; no global hypothesis or count4canonical wrapper yet.",
+      "source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+      "owned_files": [
+        "LonelyRunner/BHKCollisionToWitness.lean",
+        "LonelyRunner/BoundedRealReduction.lean",
+        "research/astra-bounded-real-reduction-implementation.md"
+      ],
+      "checks": [
+        "Independent Astra xhigh earlycoreverdict accepts exactsteps3a-3c; finalmanuscriptreviewbeingfrozen."
+      ],
+      "disposition": "Genericstricttransfer/positive/signed/labelled wrappers compiledfocused andoldAPIcompatibility; rootfullread completed, independentfinalpatchreview pending."
+    },
+    {
+      "id": "/root/four_runner_canonical_integration",
+      "agent_id": "/root/four_runner_completion",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Add unconditional arbitrary-real arbitrary-chosen-label fourRunners specialization from H5 andgenericboundedwrapper, integrate root imports andall8newaxiomprobes, focusedverify.",
+      "source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+      "owned_files": [
+        "LonelyRunner/FourRunnerCanonical.lean",
+        "LonelyRunner.lean",
+        "LonelyRunner/AxiomAudit.lean",
+        "research/astra-four-runner-canonical-implementation.md"
+      ],
+      "checks": [],
+      "disposition": "Named unconditionalrealcount4 theorem/rootimports/8axiomprobes integrated; focusedbuild2995jobs/controlpassed. Fullsourcebuildsession45414 running; independentfinalreviewnext."
+    },
+    {
+      "id": "/root/bounded_bridge_and_gcd_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Finish two manuscriptreviews then independent exact canonical-real-count4 implementation review onfrozenPass34sources.",
+      "source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+      "owned_files": [
+        "research/astra-four-runner-canonical-bridge-review.md",
+        "research/astra-mixed-codimension-one-gcd-review.md",
+        "research/astra-four-runner-canonical-formal-review.md"
+      ],
+      "checks": [
+        "Full root build3643 and trust457 passed",
+        "Final source review and root replay18examples/9allowedreports passed",
+        "Deletion-gcd fixed controls and15historical interface guards passed"
+      ],
+      "result": "Both manuscript reviews and final canonical source review accepted. Root full reads, exact guards and replays passed. All child processes stopped."
     }
   ],
-  "latest_checkpoint": "Pass33 verified locally: complete natural four-runner mixed classification, fullbuild3640, trust449, independentreview/rootreplay passed. Publication in progress; unrestricted LRC unresolved.",
+  "latest_checkpoint": "Pass34 canonical four-total-runner theorem verified: full build3643, trust457, independent review and root replay18examples/9reports. Source and evidence frozen; commit/push/PR/merge next. Unrestricted goal unresolved.",
   "next_actions": [
-    "Finish independent final N4 formal review, root guarded replay, and Pass33 documentation/verification record.",
-    "Commit,push,openPR,merge exact verified Pass33 head and verify main; remote main ac36f4ba verified, no openPR yet.",
-    "After C4 acceptance, implement accepted ordinary/H5 and bounded canonical real count4 plan with Terra medium, then independent Astra xhigh review.",
-    "Full goal remains active and unresolved; maintain one shared cache while reviewer and next Lean task need it."
+    "Commit,push,openPR,merge exact reviewed Pass34 head after remote CI, verify main and persist receipt.",
+    "Continue manuscript-only N5 strict-ordinary-to-mixed structural investigation; separate from verified Pass34.",
+    "Review any useful new mathematical finding independently before implementation or publication; no huge finite sweep.",
+    "Unrestricted goal remains active; local rebuildable cache is absent."
   ],
   "research_holds": [
     {
@@ -5248,23 +5347,31 @@
         "merge_sha": "ac36f4bab463be33dda24f9272731f45e56618fb",
         "checks": "Lean build/trust passed 2026-09-06T02:17:11Z; exact certificates passed02:24:46Z; exact-head merge02:25:27Z.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 32,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/32",
+        "head_sha": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+        "status": "merged_verified",
+        "merge_sha": "4e55a24baea869a4d6249003f0bb07c8a90533c2",
+        "checks": "Lean build/trust passed2026-09-06T03:13:27Z; exactcertificates passed03:20:33Z; exact-headmerge03:23:00Z; CIrun34008344568.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
-    "remote_main": "ac36f4bab463be33dda24f9272731f45e56618fb",
-    "local_main": "ac36f4bab463be33dda24f9272731f45e56618fb",
+    "latest_published_source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+    "remote_main": "4e55a24baea869a4d6249003f0bb07c8a90533c2",
+    "local_main": "4e55a24baea869a4d6249003f0bb07c8a90533c2",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "ac36f4bab463be33dda24f9272731f45e56618fb",
-    "checks": "Lean build/trust passed 2026-09-06T02:17:11Z; exact certificates passed02:24:46Z; exact-head merge02:25:27Z.",
+    "merge_sha": "4e55a24baea869a4d6249003f0bb07c8a90533c2",
+    "checks": "Lean build/trust passed2026-09-06T03:13:27Z; exactcertificates passed03:20:33Z; exact-headmerge03:23:00Z; CIrun34008344568.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
     "status": "active",
-    "tokens_used": 15826791,
-    "time_used_seconds": 53695,
-    "scope": "Live get_goal read after Pass26 publication began. No worker failure blocked goal; no supported resume control available or needed.",
-    "note": "Actual goal remains active after context recovery. No isolated worker failure currently reported; no supported resume control available."
+    "objective": "Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
+    "observed_this_continuation": true,
+    "supported_resume_needed": false
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",
@@ -5281,11 +5388,10 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "checkpoint": "Pass33",
-    "branch": "codex/astra-four-runner-mixed-classification",
-    "status": "commit_next",
-    "expected_head_sha": null,
-    "pr_url": null
+    "checkpoint": "Pass34",
+    "branch": "codex/astra-four-runner-canonical-bridges",
+    "status": "verified_awaiting_commit",
+    "source_base": "0e49249d9fcbba5e4a8312d845224bc11466db76"
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -5414,9 +5520,10 @@
   "current_research_boundary": {
     "status": "research_in_progress",
     "canonical_resolution": false,
-    "accepted_pass27": "Merged and verified PR26, head dcee411946aff78931147df421e1095d25dbb948, main 367a9dc22e093a0347a776f988cac67335bab379. Three affine scope audits accepted; canonical goal remains unresolved.",
-    "next_independent_work": "One-anchor review accepted. Settled finite-cell pair-sum completeness is being implemented in Lean by Terra; exact-source independent review and full build/trust pending.",
-    "storage": "Shared Lean cache absent; all evidence small."
+    "latest_published": "Pass33 / PR32 merged at 4e55a24baea869a4d6249003f0bb07c8a90533c2",
+    "pending_formal": "Pass34 unconditional canonical four-total-runner theorem verified by full build and trust audit; independent review pending.",
+    "open_mathematics": "Uniform finite-family supply and higher-count global mixed supply remain unproved.",
+    "storage": "One shared dependency/build cache retained for active verification."
   },
   "adaptive_affine_audit": {
     "status": "accepted_manuscript",
@@ -5645,15 +5752,16 @@
     "verification": "research/astra-pass31-verification.json"
   },
   "four_runner_mixed_finite_plan": {
-    "status": "accepted_plan_and_affine_dependency_kernel_implementation_in_progress",
+    "status": "verified_merged_pass33",
     "source_checkpoint": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
     "artifact": "research/astra-four-runner-mixed-finite-plan.md",
     "artifact_sha256": "9b71c56eb36093793df2bf02807e4f7da5f69ef1bccf4edeb68230c154dee085",
     "program_sha256": "233831abc5b5fa246012c05d4ac8ee84738520529c6bf320f1a88d0aec83c845",
     "stdout_sha256": "1b39847584961da45a366d2bfc8035c5be82ef0a7d179927a1297016e6f70aa9",
     "scope": "N4 sharper mixed bound is36 under existing one/two-moving-runner supply; all6079 primitive triples H<=36 checked, only exception(1,2,3),6078 positive rational certificates. Requires stronger Lean theorem, finite kernel certificate, scaling and exceptional-case proofs. No unrestricted LRC result.",
-    "next_action": "After affine review, implement Fin37 exhaustive coverage using compact candidate list, H4 supply, normalized high-height branch, analytic exception and positive gcd transport.",
-    "review_sha256": "a5ecf0dac9c1e5049606d29fd39c740295f936a1221dc6dbf619c345b8e01371"
+    "next_action": "No pending work in this record; consult active_tasks and next_actions for current work.",
+    "review_sha256": "a5ecf0dac9c1e5049606d29fd39c740295f936a1221dc6dbf619c345b8e01371",
+    "current_disposition": "Verified and merged in Pass33 / PR32; historical intermediate fields retained below."
   },
   "strict_to_mixed_root_replay": {
     "artifact_sha256": "c7559719cc61d715a47958ab8d1a844faf021c53e08ee3e87c1d0d54e0fb5f2f",
@@ -5663,12 +5771,13 @@
   },
   "zero_residual_root_initial_review": "Exact stronger statements match plan and closed shared-time margins. Root requested factoring duplicated phase identities in transfer/signed proofs before final independent review; no semantic flaw found.",
   "direct_to_mixed_unit_audit": {
-    "status": "independently_reviewed_pending_next_checkpoint",
+    "status": "verified_merged_pass33",
     "artifact_sha256": "a9ac1da5754a1ef8921ad22f3f28785a4dc841e2a2cfa1bd3a04f338224fcb01",
     "program_sha256": "8697cbd8e3828b06e69acc66ba3d366f1ef95a330543f562190d4a6712b24161",
     "stdout_sha256": "1730cce7193a1a642637df61ea90f736d2a9f72b80bab1c578101f54cfab15af",
-    "next_action": "Independent Astra xhigh manuscript review before publication.",
-    "review_sha256": "c424fc7970ade6a65e5388e0b3f60a34e091c01f2603f154646301bb5b9c96f5"
+    "next_action": "No pending work in this record; consult active_tasks and next_actions for current work.",
+    "review_sha256": "c424fc7970ade6a65e5388e0b3f60a34e091c01f2603f154646301bb5b9c96f5",
+    "current_disposition": "Verified and merged in Pass33 / PR32; historical intermediate fields retained below."
   },
   "pending_pass32": {
     "status": "merged_verified",
@@ -5690,7 +5799,8 @@
     "program_sha256": "7a0dc12d145b9b9672bb026e594f26058ad3dca984900da53117a63e7f9a7720",
     "stdout_sha256": "67c3a57dabaa6cb0ce5090aaf9b90fdd0e22f2ea2396a608aef667102f0ce21c",
     "candidate_count": 34,
-    "status": "root_verified_pending_kernel_certificate"
+    "status": "verified_merged_pass33",
+    "current_disposition": "Verified and merged in Pass33 / PR32; historical intermediate fields retained below."
   },
   "pass32_verified_checkpoint_details": {
     "name": "Pass32 verified before publication",
@@ -5698,7 +5808,7 @@
     "formal_verification": "fullbuild3638 jobs reported, trust438, independent review/root guarded replay passed",
     "canonical_status": "unresolved"
   },
-  "storage_checkpoint_next_action": "Single shared cache8,000,412,620bytes retained for active formalreview and immediatelyqueued canonicalbridge implementation; finalcertificate sourcecheck3,985,760KiBpeak, no persistentcompileroutputs. Clean whenbatchtrulyidle.",
+  "storage_checkpoint_next_action": "Cache cleanup completed after all local verification processes stopped: removed .lake, 8,006,076,991 bytes. Retain toolchain and small unique evidence; restore pinned cache only for a settled future Lean task.",
   "four_runner_mixed_build_recovery": {
     "status": "separate_declaration_split_verified_composition_in_progress",
     "actual_goal_status": "active",
@@ -5729,30 +5839,26 @@
     }
   },
   "four_runner_mixed_kernel_progress": {
-    "status": "full_classification_final_source_built_root_independent_review_pending",
+    "status": "verified_merged_pass33",
     "source_sha256": "3fee16348b510ed25fd75194d59ed24ec5ffb6d02a3af1318761b772be167c56",
     "root_check": "Split finiteCoverage and rowOK soundness use propext, Classical.choice, Quot.sound, no others.",
-    "remaining": [
-      "Construct and verify H4 from existing small counts",
-      "Connect primitive high-height tuple and all-height nonexceptional branch",
-      "Prove analytic exceptional family and strict exclusion",
-      "Transport via positive gcd and complete arbitrary integer iff/K4",
-      "Full build/trust and independent semantic review"
-    ],
+    "remaining": [],
     "split_result": "37 private fixed-H decide declarations, identical public coverage type; worker focused build exit0 in27s; peakRSS not yet measured. Root check/axiom probe exit0.",
-    "primitive_all_height_worker_result": "fourRunnerMixed_lowerCount4, primitive_fourRunnerMixed_of_gt_36, primitive_fourRunnerMixed compiled in focused2971jobs build exit0; root checks next."
+    "primitive_all_height_worker_result": "fourRunnerMixed_lowerCount4, primitive_fourRunnerMixed_of_gt_36, primitive_fourRunnerMixed compiled in focused2971jobs build exit0; root checks next.",
+    "current_disposition": "Verified and merged in Pass33 / PR32; historical intermediate fields retained below."
   },
   "tight_family_mixed_audit": {
-    "status": "clarified_source_independently_accepted_root_replay_passed",
+    "status": "verified_merged_pass33",
     "artifact_sha256": "717995d2f3adfdea64d09f8022493c31e2a606262c5361fee37ca1fc9879a7c4",
     "program_sha256": "56bc4f0b72ffcadac9ec4e02437e5fe897b3752a1f2965d1a1da983c1c7203ab",
     "stdout_sha256": "8e01feefa0786193cbb92aa8a935859e31a55baa9b8c720db06970c373935010",
-    "next_action": "Include normalized-scope manuscript and final review in next verified checkpoint.",
+    "next_action": "No pending work in this record; consult active_tasks and next_actions for current work.",
     "root_replay": "/tmp/astra-tight-family-root-replay.json",
     "scope_clarification": "Reviewer requires normalized/base-family scope for no comparable-height advance; scaling can destroy D while preserving H/b. Scaled(12,24,72) is raw covered and H<4b, inherits mixed5/216. Review artifact pending.",
     "author_initial_sha256": "f6cd2d351226e36cf0bb2a283ca4ac002ebf151bb970e6379f9dbd034e2d25d2",
     "review_sha256": "21f054285e1d2103b961598d1da00fdf51afcc96c672057ad9b435bf51fb80da",
-    "root_review_replay": "/tmp/astra-tight-family-review-root-replay.json"
+    "root_review_replay": "/tmp/astra-tight-family-review-root-replay.json",
+    "current_disposition": "Verified and merged in Pass33 / PR32; historical intermediate fields retained below."
   },
   "worker_recovery_latest": {
     "actual_goal_status": "active",
@@ -5779,7 +5885,7 @@
     "recovery": "Corrected direct root session87370 exit0; final sourceae47b419, root fullbuild session27658 terminalexit0,3640jobs. Initial claim remains withdrawn."
   },
   "pending_pass33": {
-    "status": "verified_ready_for_publication",
+    "status": "merged_verified",
     "branch": "codex/astra-four-runner-mixed-classification",
     "source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
     "source_sha256": "ae47b419c5b4cebfa72a325bdb50cd32e03444c39850a74b885037d83e312a5c",
@@ -5803,7 +5909,9 @@
       "source_sha256": "3fee16348b510ed25fd75194d59ed24ec5ffb6d02a3af1318761b772be167c56"
     },
     "formal_review_sha256": "07ce0bc6831899c3ac3f00482f7143b5daaff5ea0dacee284d0038c12742ca4b",
-    "verification": "research/astra-pass33-verification.json"
+    "verification": "research/astra-pass33-verification.json",
+    "head_sha": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/32"
   },
   "four_runner_canonical_bridge_plan": {
     "status": "root_accepted_plan_pending_C4_review_and_implementation",
@@ -5811,6 +5919,31 @@
     "program_sha256": "6e5ecddab2f0bfe3781ac219d8300726eb5daf3dd90ffb0d67167751561efd92",
     "stdout_sha256": "56b4f981f84181586e284f41628874900bf74a8178ca2bac34f4e2327ae21aa8",
     "scope": "Ordinary natural count4, H5, generic bounded real reduction and canonical real count4; no fixedN5 or fullLRC claim.",
-    "next_action": "After C4 independentreview, Terra implements additive bridges, with Astra review before publishing."
+    "next_action": "After C4 independentreview, Terra implements additive bridges, with Astra review before publishing.",
+    "current_disposition": "Accepted plan and implementation completed; Pass34 full build, trust, and root review replay passed; final independent review freeze and publication pending."
+  },
+  "ordinary_H5_progress": {
+    "status": "focused_build_and_root_type_axiom_probe_passed",
+    "source_sha256": "2fb2f5c9c0742daa3278ee0ddeacd8643e1e22f8c885de95f5f38e10734b29f6",
+    "root_session": 19429,
+    "root_exit_code": 0,
+    "scope": "positive sorted/unordered natural3 ordinaryquarter witness andH5only; no canonicalrealorN5result",
+    "next_action": "Combine with reviewed boundedrealimplementation andcanonicalwrapper, thenfinalindependentreview/fullbuild/trustbeforePass34promotion."
+  },
+  "pending_pass34": {
+    "status": "verified_ready_for_publication",
+    "source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+    "branch": "codex/astra-four-runner-canonical-bridges",
+    "full_build_session": 45414,
+    "formal_scope": "Unconditional fourRunners forinjective Fin4 arbitraryreals/anylabel, fromnaturalH5 andgenericboundedrealreduction; no highercount/fullLRC claim.",
+    "full_build_exit_code": 0,
+    "full_build_jobs": 3643,
+    "trust_exit_code": 0,
+    "trust_reports": 457,
+    "manuscript_reviews_root_replay": "passed",
+    "root_formal_replay": "passed: 18 kernel examples, eight new exact types plus old compatibility, nine allowed reports; session20684 terminal exit0",
+    "root_replay_record": "/tmp/astra-pass34-formal-review-root-replay.json",
+    "verification_artifact": "research/astra-pass34-verification.json",
+    "formal_review_sha256": "101676b1aa7bff0a66064dfaad38e7fbb42e0e40d1568a12230c56984f05248f"
   }
 }

@@ -116,6 +116,9 @@ import LonelyRunner.FiniteHeightReduction
 import LonelyRunner.FiniteFamilyEquivalence
 import LonelyRunner.FourRunnerMixedCertificate
 import LonelyRunner.FourRunnerMixed
+import LonelyRunner.FourRunnerOrdinary
+import LonelyRunner.BoundedRealReduction
+import LonelyRunner.FourRunnerCanonical
 
 /-!
 Root import for the formal Lonely Runner development.

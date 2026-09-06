@@ -11,6 +11,12 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks.
+The [Pass 34 checkpoint](docs/astra-research-34.md) proves
+`LonelyRunner.fourRunners` for arbitrary distinct real speeds and any chosen
+runner among four. Its reusable bounded reduction needs integer witness
+supply only through the number of moving speeds; the four-runner
+specialization discharges that premise. The full build and 457-report trust
+audit, independent source review, and root replay passed. This fixed-count theorem does not settle unrestricted LRC.
 The [Pass 33 checkpoint](docs/astra-research-33.md) classifies mixed witnesses
 for every natural triple `0<a<b<H`: one positive time gives the lower speeds
 margin `1/4` and the fastest margin `1/3` exactly when
