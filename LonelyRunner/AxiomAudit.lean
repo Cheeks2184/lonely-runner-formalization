@@ -728,3 +728,14 @@ project-specific axiom.
 #print axioms LonelyRunner.circleNorm_third_shift_of_special_sixth
 #print axioms LonelyRunner.exists_third_shift_fract_five_sixths
 #print axioms LonelyRunner.exists_third_shift_of_special_sixth_seeded_divisible
+
+-- Exact sixth-affine phases, transported pair bounds, and label selection.
+#print axioms LonelyRunner.fract_sixth_affine_time
+#print axioms LonelyRunner.exists_centered_sixth_residue_of_not_dvd_three
+#print axioms LonelyRunner.foldedPairSafeBands_of_bounds
+#print axioms LonelyRunner.small_folded_three_five_improve
+#print axioms LonelyRunner.circleNorm_double_half_gt_of_small
+#print axioms LonelyRunner.fract_int_dilate_eq
+#print axioms LonelyRunner.pair_min_le_of_special_sixth_fiber_bound
+#print axioms LonelyRunner.foldedPairSafeBands_of_five_sixths_pair_bound
+#print axioms LonelyRunner.exists_two_same_side_of_three
