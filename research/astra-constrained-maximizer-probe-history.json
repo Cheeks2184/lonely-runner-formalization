@@ -1,0 +1,497 @@
+{
+  "scope": "Exact fixed maximizer source-review history, including startup/import/probe-proof failures and passing independent/root runs.",
+  "probes": {
+    "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb": "import LonelyRunner.ConstrainedMaximizer\n\nset_option autoImplicit false\nset_option maxHeartbeats 1000000\nset_option linter.unusedVariables false\n\nopen LonelyRunner\nuniverse u\n\n-- Each assignment checks the complete public type at an arbitrary universe.\nexample : \u2200 x : \u211d, circleNorm x = min (Int.fract x) (1 - Int.fract x) :=\n  circleNorm_eq_min_fract\n\nexample {I : Type u} [Fintype I] [DecidableEq I]\n    (v : I \u2192 \u2115) (i : I) (hv : \u2200 j, 0 < v j)\n    (\u03b4 s : \u211d) (h\u03b4 : 0 < \u03b4) (h\u03b4half : \u03b4 < (1 : \u211d) / 2)\n    (hi : Int.fract (s * (v i : \u211d)) < (1 : \u211d) / 2)\n    (hbands : \u2200 j, j \u2260 i \u2192\n      \u03b4 \u2264 Int.fract (s * (v j : \u211d)) \u2227\n      Int.fract (s * (v j : \u211d)) < 1 - \u03b4) :\n    \u2203 \u03b5 : \u211d, 0 < \u03b5 \u2227 ComplementSafe v i \u03b4 (s + \u03b5) \u2227\n      circleNorm (s * (v i : \u211d)) <\n        circleNorm ((s + \u03b5) * (v i : \u211d)) :=\n  exists_forward_complement_improvement v i hv \u03b4 s h\u03b4 h\u03b4half hi hbands\n\nexample {I : Type u} [Fintype I] [DecidableEq I]\n    (v : I \u2192 \u2115) (i : I) (hv : \u2200 j, 0 < v j)\n    (\u03b4 : \u211d) (h\u03b4 : 0 < \u03b4) (h\u03b4half : \u03b4 < (1 : \u211d) / 2)\n    (hstrict : \u2203 s : \u211d, \u2200 j, j \u2260 i \u2192\n      \u03b4 < circleNorm (s * (v j : \u211d)))\n    (hno : \u00ac \u2203 t : \u211d, \u2200 j, \u03b4 \u2264 circleNorm (t * (v j : \u211d))) :\n    \u2203 \u03c4 : \u211d, 0 < \u03c4 \u2227 \u03c4 < 1 \u2227 ComplementSafe v i \u03b4 \u03c4 \u2227\n      (\u2200 t : \u211d, ComplementSafe v i \u03b4 t \u2192\n        circleNorm (t * (v i : \u211d)) \u2264 circleNorm (\u03c4 * (v i : \u211d))) \u2227\n      0 < Int.fract (\u03c4 * (v i : \u211d)) \u2227\n      Int.fract (\u03c4 * (v i : \u211d)) < \u03b4 \u2227\n      Int.fract (\u03c4 * (v i : \u211d)) = circleNorm (\u03c4 * (v i : \u211d)) \u2227\n      \u2203 j, j \u2260 i \u2227 Int.fract (\u03c4 * (v j : \u211d)) = 1 - \u03b4 :=\n  exists_oriented_complement_maximizer v i hv \u03b4 h\u03b4 h\u03b4half hstrict hno\n\nexample (N d \u03b1 : \u2115) (\u03b2 : \u2124) (t : \u211d) (hN : 3 \u2264 N)\n    (hdiv : N \u2223 d) (h\u03b1 : 2 \u2264 \u03b1) (h\u03b1N : \u03b1 < N)\n    (hx : 0 < Int.fract (t * (d : \u211d)))\n    (hxN : Int.fract (t * (d : \u211d)) < (N : \u211d)\u207b\u00b9) :\n    circleNorm (t * (d : \u211d)) <\n      circleNorm (((\u03b1 : \u211d) * t + (\u03b2 : \u211d) / (N : \u211d)) * (d : \u211d)) :=\n  reciprocal_dilate_shift_improves N d \u03b1 \u03b2 t hN hdiv h\u03b1 h\u03b1N hx hxN\n\n#print axioms LonelyRunner.circleNorm_eq_min_fract\n#print axioms LonelyRunner.exists_forward_complement_improvement\n#print axioms LonelyRunner.exists_oriented_complement_maximizer\n#print axioms LonelyRunner.reciprocal_dilate_shift_improves\n\n-- Exact integer floor certificates, including negative real phases.\nprivate theorem norm_from_band (x r : \u211d) (z : \u2124)\n    (hr0 : 0 \u2264 r) (hr1 : r < 1) (hx : x = (z : \u211d) + r) :\n    circleNorm x = min r (1 - r) := by\n  have hf : Int.fract x = r := by\n    apply Int.fract_eq_iff.mpr\n    refine \u27e8hr0, hr1, \u27e8z, ?_\u27e9\u27e9\n    linarith\n  rw [circleNorm_eq_min_fract, hf]\n\nexample : circleNorm (-(1 : \u211d) / 10) = (1 : \u211d) / 10 \u2227\n    circleNorm 0 = 0 \u2227\n    circleNorm ((1 : \u211d) / 10) = (1 : \u211d) / 10 \u2227\n    circleNorm ((1 : \u211d) / 2) = (1 : \u211d) / 2 \u2227\n    circleNorm ((9 : \u211d) / 10) = (1 : \u211d) / 10 \u2227\n    circleNorm ((11 : \u211d) / 10) = (1 : \u211d) / 10 := by\n  have hn := norm_from_band (-(1 : \u211d) / 10) (9 / 10) (-1)\n    (by norm_num) (by norm_num) (by norm_num)\n  have hz := norm_from_band 0 0 0 (by norm_num) (by norm_num) (by norm_num)\n  have hp := norm_from_band ((1 : \u211d) / 10) (1 / 10) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hh := norm_from_band ((1 : \u211d) / 2) (1 / 2) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hl := norm_from_band ((9 : \u211d) / 10) (9 / 10) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hu := norm_from_band ((11 : \u211d) / 10) (1 / 10) 1\n    (by norm_num) (by norm_num) (by norm_num)\n  norm_num at hn hz hp hh hl hu\n  exact \u27e8hn, hz, hp, hh, hl, hu\u27e9\n\n-- Repeated inputs and a lower-endpoint equality remain admissible for P.\nexample : \u2203 \u03b5 : \u211d, 0 < \u03b5 \u2227\n    ComplementSafe (fun _ : Fin 2 => 1) 0 ((1 : \u211d) / 6) ((1 : \u211d) / 6 + \u03b5) \u2227\n    circleNorm ((1 : \u211d) / 6 * 1) < circleNorm (((1 : \u211d) / 6 + \u03b5) * 1) := by\n  have hf : Int.fract ((1 : \u211d) / 6) = (1 : \u211d) / 6 :=\n    Int.fract_eq_self.mpr \u27e8by norm_num, by norm_num\u27e9\n  refine exists_forward_complement_improvement (fun _ : Fin 2 => 1) 0\n    (by intro j; norm_num) ((1 : \u211d) / 6) ((1 : \u211d) / 6)\n    (by norm_num) (by norm_num) ?_ ?_\n  \u00b7 simpa only [mul_one, hf] using (show (1 : \u211d) / 6 < 1 / 2 by norm_num)\n  \u00b7 intro j hj\n    change (1 : \u211d) / 6 \u2264 Int.fract ((1 : \u211d) / 6 * 1) \u2227\n      Int.fract ((1 : \u211d) / 6 * 1) < 1 - (1 : \u211d) / 6\n    rw [mul_one, hf]\n    norm_num\n\n-- D applied to fixed speeds and phase, still universally quantified over beta.\nexample (\u03b2 : \u2124) : circleNorm ((1 : \u211d) / 80 * 12) <\n    circleNorm ((5 * ((1 : \u211d) / 80) + (\u03b2 : \u211d) / 6) * 12) := by\n  have hf : Int.fract ((1 : \u211d) / 80 * 12) = (3 : \u211d) / 20 := by\n    apply Int.fract_eq_iff.mpr\n    exact \u27e8by norm_num, by norm_num, \u27e80, by norm_num\u27e9\u27e9\n  refine reciprocal_dilate_shift_improves 6 12 5 \u03b2 ((1 : \u211d) / 80)\n    (by norm_num) (by norm_num) (by norm_num) (by norm_num) ?_ ?_\n  \u00b7 rw [hf]; norm_num\n  \u00b7 rw [hf]; norm_num\n\nexample : (5 * ((1 : \u211d) / 80) + (-3 : \u211d) / 6) * 12 = -(21 : \u211d) / 4 \u2227\n    circleNorm (-(21 : \u211d) / 4) = (1 : \u211d) / 4 \u2227\n    (5 * ((1 : \u211d) / 80) + (2 : \u211d) / 6) * 12 = (19 : \u211d) / 4 \u2227\n    circleNorm ((19 : \u211d) / 4) = (1 : \u211d) / 4 \u2227\n    (3 : \u211d) / 20 < 1 / 4 := by\n  have hn := norm_from_band (-(21 : \u211d) / 4) (3 / 4) (-6)\n    (by norm_num) (by norm_num) (by norm_num)\n  have hp := norm_from_band ((19 : \u211d) / 4) (3 / 4) 4\n    (by norm_num) (by norm_num) (by norm_num)\n  norm_num at hn hp\n  exact \u27e8by norm_num, hn, by norm_num, hp, by norm_num\u27e9\n\n-- The upper endpoint excluded by D can give equality instead of improvement.\nexample : circleNorm ((1 : \u211d) / 6) = circleNorm (5 * ((1 : \u211d) / 6)) := by\n  have h1 := norm_from_band ((1 : \u211d) / 6) (1 / 6) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have h5 := norm_from_band (5 * ((1 : \u211d) / 6)) (5 / 6) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  norm_num at h1 h5\n  exact h1.trans h5.symm\n\n-- Fixed seed (3,1,2) at t=1/3: closed complement, zero objective, not strict.\nexample : circleNorm ((1 : \u211d) / 3) = (1 : \u211d) / 3 \u2227\n    circleNorm ((2 : \u211d) / 3) = (1 : \u211d) / 3 \u2227\n    circleNorm 1 = 0 \u2227 \u00ac ((1 : \u211d) / 3 < circleNorm ((1 : \u211d) / 3)) := by\n  have h1 := norm_from_band ((1 : \u211d) / 3) (1 / 3) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have h2 := norm_from_band ((2 : \u211d) / 3) (2 / 3) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hz := norm_from_band 1 0 1 (by norm_num) (by norm_num) (by norm_num)\n  norm_num at h1 h2 hz\n  refine \u27e8h1, h2, hz, ?_\u27e9\n  rw [h1]\n  norm_num\n",
+    "6d667af6ce89e5fed04d425aae77703f4018144ae21ff15def7c2db95ece0131": "import LonelyRunner.ConstrainedMaximizer\n\nset_option autoImplicit false\nset_option maxHeartbeats 1000000\nset_option linter.unusedVariables false\n\nopen LonelyRunner\nuniverse u\n\n-- Each assignment checks the complete public type at an arbitrary universe.\nexample : \u2200 x : \u211d, circleNorm x = min (Int.fract x) (1 - Int.fract x) :=\n  circleNorm_eq_min_fract\n\nexample {I : Type u} [Fintype I] [DecidableEq I]\n    (v : I \u2192 \u2115) (i : I) (hv : \u2200 j, 0 < v j)\n    (\u03b4 s : \u211d) (h\u03b4 : 0 < \u03b4) (h\u03b4half : \u03b4 < (1 : \u211d) / 2)\n    (hi : Int.fract (s * (v i : \u211d)) < (1 : \u211d) / 2)\n    (hbands : \u2200 j, j \u2260 i \u2192\n      \u03b4 \u2264 Int.fract (s * (v j : \u211d)) \u2227\n      Int.fract (s * (v j : \u211d)) < 1 - \u03b4) :\n    \u2203 \u03b5 : \u211d, 0 < \u03b5 \u2227 ComplementSafe v i \u03b4 (s + \u03b5) \u2227\n      circleNorm (s * (v i : \u211d)) <\n        circleNorm ((s + \u03b5) * (v i : \u211d)) :=\n  exists_forward_complement_improvement v i hv \u03b4 s h\u03b4 h\u03b4half hi hbands\n\nexample {I : Type u} [Fintype I] [DecidableEq I]\n    (v : I \u2192 \u2115) (i : I) (hv : \u2200 j, 0 < v j)\n    (\u03b4 : \u211d) (h\u03b4 : 0 < \u03b4) (h\u03b4half : \u03b4 < (1 : \u211d) / 2)\n    (hstrict : \u2203 s : \u211d, \u2200 j, j \u2260 i \u2192\n      \u03b4 < circleNorm (s * (v j : \u211d)))\n    (hno : \u00ac \u2203 t : \u211d, \u2200 j, \u03b4 \u2264 circleNorm (t * (v j : \u211d))) :\n    \u2203 \u03c4 : \u211d, 0 < \u03c4 \u2227 \u03c4 < 1 \u2227 ComplementSafe v i \u03b4 \u03c4 \u2227\n      (\u2200 t : \u211d, ComplementSafe v i \u03b4 t \u2192\n        circleNorm (t * (v i : \u211d)) \u2264 circleNorm (\u03c4 * (v i : \u211d))) \u2227\n      0 < Int.fract (\u03c4 * (v i : \u211d)) \u2227\n      Int.fract (\u03c4 * (v i : \u211d)) < \u03b4 \u2227\n      Int.fract (\u03c4 * (v i : \u211d)) = circleNorm (\u03c4 * (v i : \u211d)) \u2227\n      \u2203 j, j \u2260 i \u2227 Int.fract (\u03c4 * (v j : \u211d)) = 1 - \u03b4 :=\n  exists_oriented_complement_maximizer v i hv \u03b4 h\u03b4 h\u03b4half hstrict hno\n\nexample (N d \u03b1 : \u2115) (\u03b2 : \u2124) (t : \u211d) (hN : 3 \u2264 N)\n    (hdiv : N \u2223 d) (h\u03b1 : 2 \u2264 \u03b1) (h\u03b1N : \u03b1 < N)\n    (hx : 0 < Int.fract (t * (d : \u211d)))\n    (hxN : Int.fract (t * (d : \u211d)) < (N : \u211d)\u207b\u00b9) :\n    circleNorm (t * (d : \u211d)) <\n      circleNorm (((\u03b1 : \u211d) * t + (\u03b2 : \u211d) / (N : \u211d)) * (d : \u211d)) :=\n  reciprocal_dilate_shift_improves N d \u03b1 \u03b2 t hN hdiv h\u03b1 h\u03b1N hx hxN\n\n#print axioms LonelyRunner.circleNorm_eq_min_fract\n#print axioms LonelyRunner.exists_forward_complement_improvement\n#print axioms LonelyRunner.exists_oriented_complement_maximizer\n#print axioms LonelyRunner.reciprocal_dilate_shift_improves\n\n-- Exact integer floor certificates, including negative real phases.\nprivate theorem norm_from_band (x r : \u211d) (z : \u2124)\n    (hr0 : 0 \u2264 r) (hr1 : r < 1) (hx : x = (z : \u211d) + r) :\n    circleNorm x = min r (1 - r) := by\n  have hf : Int.fract x = r := by\n    apply Int.fract_eq_iff.mpr\n    refine \u27e8hr0, hr1, \u27e8z, ?_\u27e9\u27e9\n    linarith\n  rw [circleNorm_eq_min_fract, hf]\n\nexample : circleNorm (-(1 : \u211d) / 10) = (1 : \u211d) / 10 \u2227\n    circleNorm 0 = 0 \u2227\n    circleNorm ((1 : \u211d) / 10) = (1 : \u211d) / 10 \u2227\n    circleNorm ((1 : \u211d) / 2) = (1 : \u211d) / 2 \u2227\n    circleNorm ((9 : \u211d) / 10) = (1 : \u211d) / 10 \u2227\n    circleNorm ((11 : \u211d) / 10) = (1 : \u211d) / 10 := by\n  have hn := norm_from_band (-(1 : \u211d) / 10) (9 / 10) (-1)\n    (by norm_num) (by norm_num) (by norm_num)\n  have hz := norm_from_band 0 0 0 (by norm_num) (by norm_num) (by norm_num)\n  have hp := norm_from_band ((1 : \u211d) / 10) (1 / 10) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hh := norm_from_band ((1 : \u211d) / 2) (1 / 2) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hl := norm_from_band ((9 : \u211d) / 10) (9 / 10) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hu := norm_from_band ((11 : \u211d) / 10) (1 / 10) 1\n    (by norm_num) (by norm_num) (by norm_num)\n  norm_num at hn hz hp hh hl hu \u22a2\n  exact \u27e8hn, hz, hp, hh, hl, hu\u27e9\n\n-- Repeated inputs and a lower-endpoint equality remain admissible for P.\nexample : \u2203 \u03b5 : \u211d, 0 < \u03b5 \u2227\n    ComplementSafe (fun _ : Fin 2 => 1) 0 ((1 : \u211d) / 6) ((1 : \u211d) / 6 + \u03b5) \u2227\n    circleNorm ((1 : \u211d) / 6 * 1) < circleNorm (((1 : \u211d) / 6 + \u03b5) * 1) := by\n  have hf : Int.fract ((1 : \u211d) / 6) = (1 : \u211d) / 6 :=\n    Int.fract_eq_self.mpr \u27e8by norm_num, by norm_num\u27e9\n  have result := exists_forward_complement_improvement (fun _ : Fin 2 => 1) 0\n    (by intro j; norm_num) ((1 : \u211d) / 6) ((1 : \u211d) / 6)\n    (by norm_num) (by norm_num)\n    (by simpa only [Nat.cast_one, mul_one, hf] using\n      (show (1 : \u211d) / 6 < 1 / 2 by norm_num))\n    (by intro j hj; norm_num only [Nat.cast_one, mul_one, hf])\n  simpa only [Nat.cast_one] using result\n\n-- D applied to fixed speeds and phase, still universally quantified over beta.\nexample (\u03b2 : \u2124) : circleNorm ((1 : \u211d) / 80 * 12) <\n    circleNorm ((5 * ((1 : \u211d) / 80) + (\u03b2 : \u211d) / 6) * 12) := by\n  have hf : Int.fract ((1 : \u211d) / 80 * 12) = (3 : \u211d) / 20 := by\n    apply Int.fract_eq_iff.mpr\n    exact \u27e8by norm_num, by norm_num, \u27e80, by norm_num\u27e9\u27e9\n  refine reciprocal_dilate_shift_improves 6 12 5 \u03b2 ((1 : \u211d) / 80)\n    (by norm_num) (by norm_num) (by norm_num) (by norm_num) ?_ ?_\n  \u00b7 simpa only [Nat.cast_ofNat] using\n      (show 0 < Int.fract ((1 : \u211d) / 80 * 12) by rw [hf]; norm_num)\n  \u00b7 simpa only [Nat.cast_ofNat] using\n      (show Int.fract ((1 : \u211d) / 80 * 12) < (6 : \u211d)\u207b\u00b9 by rw [hf]; norm_num)\n\nexample : (5 * ((1 : \u211d) / 80) + (-3 : \u211d) / 6) * 12 = -(21 : \u211d) / 4 \u2227\n    circleNorm (-(21 : \u211d) / 4) = (1 : \u211d) / 4 \u2227\n    (5 * ((1 : \u211d) / 80) + (2 : \u211d) / 6) * 12 = (19 : \u211d) / 4 \u2227\n    circleNorm ((19 : \u211d) / 4) = (1 : \u211d) / 4 \u2227\n    (3 : \u211d) / 20 < 1 / 4 := by\n  have hn := norm_from_band (-(21 : \u211d) / 4) (3 / 4) (-6)\n    (by norm_num) (by norm_num) (by norm_num)\n  have hp := norm_from_band ((19 : \u211d) / 4) (3 / 4) 4\n    (by norm_num) (by norm_num) (by norm_num)\n  norm_num at hn hp \u22a2\n  exact \u27e8by norm_num, hn, by norm_num, hp, by norm_num\u27e9\n\n-- The upper endpoint excluded by D can give equality instead of improvement.\nexample : circleNorm ((1 : \u211d) / 6) = circleNorm (5 * ((1 : \u211d) / 6)) := by\n  have h1 := norm_from_band ((1 : \u211d) / 6) (1 / 6) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have h5 := norm_from_band (5 * ((1 : \u211d) / 6)) (5 / 6) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  norm_num at h1 h5 \u22a2\n  exact h1.trans h5.symm\n\n-- Fixed seed (3,1,2) at t=1/3: closed complement, zero objective, not strict.\nexample : circleNorm ((1 : \u211d) / 3) = (1 : \u211d) / 3 \u2227\n    circleNorm ((2 : \u211d) / 3) = (1 : \u211d) / 3 \u2227\n    circleNorm 1 = 0 \u2227 \u00ac ((1 : \u211d) / 3 < circleNorm ((1 : \u211d) / 3)) := by\n  have h1 := norm_from_band ((1 : \u211d) / 3) (1 / 3) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have h2 := norm_from_band ((2 : \u211d) / 3) (2 / 3) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hz := norm_from_band 1 0 1 (by norm_num) (by norm_num) (by norm_num)\n  norm_num at h1 h2 hz\n  refine \u27e8h1, h2, hz, ?_\u27e9\n  rw [h1]\n  norm_num\n",
+    "120c938fe6ba3eeb2c3b5f9b805d5dc9203e20690dc495a2481517852764e858": "import LonelyRunner.ConstrainedMaximizer\n\nset_option autoImplicit false\nset_option maxHeartbeats 1000000\nset_option linter.unusedVariables false\n\nopen LonelyRunner\nuniverse u\n\n-- Each assignment checks the complete public type at an arbitrary universe.\nexample : \u2200 x : \u211d, circleNorm x = min (Int.fract x) (1 - Int.fract x) :=\n  circleNorm_eq_min_fract\n\nexample {I : Type u} [Fintype I] [DecidableEq I]\n    (v : I \u2192 \u2115) (i : I) (hv : \u2200 j, 0 < v j)\n    (\u03b4 s : \u211d) (h\u03b4 : 0 < \u03b4) (h\u03b4half : \u03b4 < (1 : \u211d) / 2)\n    (hi : Int.fract (s * (v i : \u211d)) < (1 : \u211d) / 2)\n    (hbands : \u2200 j, j \u2260 i \u2192\n      \u03b4 \u2264 Int.fract (s * (v j : \u211d)) \u2227\n      Int.fract (s * (v j : \u211d)) < 1 - \u03b4) :\n    \u2203 \u03b5 : \u211d, 0 < \u03b5 \u2227 ComplementSafe v i \u03b4 (s + \u03b5) \u2227\n      circleNorm (s * (v i : \u211d)) <\n        circleNorm ((s + \u03b5) * (v i : \u211d)) :=\n  exists_forward_complement_improvement v i hv \u03b4 s h\u03b4 h\u03b4half hi hbands\n\nexample {I : Type u} [Fintype I] [DecidableEq I]\n    (v : I \u2192 \u2115) (i : I) (hv : \u2200 j, 0 < v j)\n    (\u03b4 : \u211d) (h\u03b4 : 0 < \u03b4) (h\u03b4half : \u03b4 < (1 : \u211d) / 2)\n    (hstrict : \u2203 s : \u211d, \u2200 j, j \u2260 i \u2192\n      \u03b4 < circleNorm (s * (v j : \u211d)))\n    (hno : \u00ac \u2203 t : \u211d, \u2200 j, \u03b4 \u2264 circleNorm (t * (v j : \u211d))) :\n    \u2203 \u03c4 : \u211d, 0 < \u03c4 \u2227 \u03c4 < 1 \u2227 ComplementSafe v i \u03b4 \u03c4 \u2227\n      (\u2200 t : \u211d, ComplementSafe v i \u03b4 t \u2192\n        circleNorm (t * (v i : \u211d)) \u2264 circleNorm (\u03c4 * (v i : \u211d))) \u2227\n      0 < Int.fract (\u03c4 * (v i : \u211d)) \u2227\n      Int.fract (\u03c4 * (v i : \u211d)) < \u03b4 \u2227\n      Int.fract (\u03c4 * (v i : \u211d)) = circleNorm (\u03c4 * (v i : \u211d)) \u2227\n      \u2203 j, j \u2260 i \u2227 Int.fract (\u03c4 * (v j : \u211d)) = 1 - \u03b4 :=\n  exists_oriented_complement_maximizer v i hv \u03b4 h\u03b4 h\u03b4half hstrict hno\n\nexample (N d \u03b1 : \u2115) (\u03b2 : \u2124) (t : \u211d) (hN : 3 \u2264 N)\n    (hdiv : N \u2223 d) (h\u03b1 : 2 \u2264 \u03b1) (h\u03b1N : \u03b1 < N)\n    (hx : 0 < Int.fract (t * (d : \u211d)))\n    (hxN : Int.fract (t * (d : \u211d)) < (N : \u211d)\u207b\u00b9) :\n    circleNorm (t * (d : \u211d)) <\n      circleNorm (((\u03b1 : \u211d) * t + (\u03b2 : \u211d) / (N : \u211d)) * (d : \u211d)) :=\n  reciprocal_dilate_shift_improves N d \u03b1 \u03b2 t hN hdiv h\u03b1 h\u03b1N hx hxN\n\n#print axioms LonelyRunner.circleNorm_eq_min_fract\n#print axioms LonelyRunner.exists_forward_complement_improvement\n#print axioms LonelyRunner.exists_oriented_complement_maximizer\n#print axioms LonelyRunner.reciprocal_dilate_shift_improves\n\n-- Exact integer floor certificates, including negative real phases.\nprivate theorem norm_from_band (x r : \u211d) (z : \u2124)\n    (hr0 : 0 \u2264 r) (hr1 : r < 1) (hx : x = (z : \u211d) + r) :\n    circleNorm x = min r (1 - r) := by\n  have hf : Int.fract x = r := by\n    apply Int.fract_eq_iff.mpr\n    refine \u27e8hr0, hr1, \u27e8z, ?_\u27e9\u27e9\n    linarith\n  rw [circleNorm_eq_min_fract, hf]\n\nexample : circleNorm (-(1 : \u211d) / 10) = (1 : \u211d) / 10 \u2227\n    circleNorm 0 = 0 \u2227\n    circleNorm ((1 : \u211d) / 10) = (1 : \u211d) / 10 \u2227\n    circleNorm ((1 : \u211d) / 2) = (1 : \u211d) / 2 \u2227\n    circleNorm ((9 : \u211d) / 10) = (1 : \u211d) / 10 \u2227\n    circleNorm ((11 : \u211d) / 10) = (1 : \u211d) / 10 := by\n  have hn := norm_from_band (-(1 : \u211d) / 10) (9 / 10) (-1)\n    (by norm_num) (by norm_num) (by norm_num)\n  have hz := norm_from_band 0 0 0 (by norm_num) (by norm_num) (by norm_num)\n  have hp := norm_from_band ((1 : \u211d) / 10) (1 / 10) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hh := norm_from_band ((1 : \u211d) / 2) (1 / 2) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hl := norm_from_band ((9 : \u211d) / 10) (9 / 10) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hu := norm_from_band ((11 : \u211d) / 10) (1 / 10) 1\n    (by norm_num) (by norm_num) (by norm_num)\n  norm_num at hn hz hp hh hl hu \u22a2\n  exact \u27e8hn, hz, hp, hh, hl, hu\u27e9\n\n-- Repeated inputs and a lower-endpoint equality remain admissible for P.\nexample : \u2203 \u03b5 : \u211d, 0 < \u03b5 \u2227\n    ComplementSafe (fun _ : Fin 2 => 1) 0 ((1 : \u211d) / 6) ((1 : \u211d) / 6 + \u03b5) \u2227\n    circleNorm ((1 : \u211d) / 6 * 1) < circleNorm (((1 : \u211d) / 6 + \u03b5) * 1) := by\n  have hf : Int.fract ((1 : \u211d) / 6) = (1 : \u211d) / 6 :=\n    Int.fract_eq_self.mpr \u27e8by norm_num, by norm_num\u27e9\n  have result := exists_forward_complement_improvement (fun _ : Fin 2 => 1) 0\n    (by intro j; norm_num) ((1 : \u211d) / 6) ((1 : \u211d) / 6)\n    (by norm_num) (by norm_num)\n    (by simpa only [Nat.cast_one, mul_one, hf] using\n      (show (1 : \u211d) / 6 < 1 / 2 by norm_num))\n    (by intro j hj; norm_num only [Nat.cast_one, mul_one, hf]; trivial)\n  simpa only [Nat.cast_one] using result\n\n-- D applied to fixed speeds and phase, still universally quantified over beta.\nexample (\u03b2 : \u2124) : circleNorm ((1 : \u211d) / 80 * 12) <\n    circleNorm ((5 * ((1 : \u211d) / 80) + (\u03b2 : \u211d) / 6) * 12) := by\n  have hf : Int.fract ((1 : \u211d) / 80 * 12) = (3 : \u211d) / 20 := by\n    apply Int.fract_eq_iff.mpr\n    exact \u27e8by norm_num, by norm_num, \u27e80, by norm_num\u27e9\u27e9\n  refine reciprocal_dilate_shift_improves 6 12 5 \u03b2 ((1 : \u211d) / 80)\n    (by norm_num) (by norm_num) (by norm_num) (by norm_num) ?_ ?_\n  \u00b7 simpa only [Nat.cast_ofNat] using\n      (show 0 < Int.fract ((1 : \u211d) / 80 * 12) by rw [hf]; norm_num)\n  \u00b7 simpa only [Nat.cast_ofNat] using\n      (show Int.fract ((1 : \u211d) / 80 * 12) < (6 : \u211d)\u207b\u00b9 by rw [hf]; norm_num)\n\nexample : (5 * ((1 : \u211d) / 80) + (-3 : \u211d) / 6) * 12 = -(21 : \u211d) / 4 \u2227\n    circleNorm (-(21 : \u211d) / 4) = (1 : \u211d) / 4 \u2227\n    (5 * ((1 : \u211d) / 80) + (2 : \u211d) / 6) * 12 = (19 : \u211d) / 4 \u2227\n    circleNorm ((19 : \u211d) / 4) = (1 : \u211d) / 4 \u2227\n    (3 : \u211d) / 20 < 1 / 4 := by\n  have hn := norm_from_band (-(21 : \u211d) / 4) (3 / 4) (-6)\n    (by norm_num) (by norm_num) (by norm_num)\n  have hp := norm_from_band ((19 : \u211d) / 4) (3 / 4) 4\n    (by norm_num) (by norm_num) (by norm_num)\n  norm_num at hn hp \u22a2\n  exact \u27e8hn, hp\u27e9\n\n-- The upper endpoint excluded by D can give equality instead of improvement.\nexample : circleNorm ((1 : \u211d) / 6) = circleNorm (5 * ((1 : \u211d) / 6)) := by\n  have h1 := norm_from_band ((1 : \u211d) / 6) (1 / 6) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have h5 := norm_from_band (5 * ((1 : \u211d) / 6)) (5 / 6) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  norm_num at h1 h5 \u22a2\n  exact h1.trans h5.symm\n\n-- Fixed seed (3,1,2) at t=1/3: closed complement, zero objective, not strict.\nexample : circleNorm ((1 : \u211d) / 3) = (1 : \u211d) / 3 \u2227\n    circleNorm ((2 : \u211d) / 3) = (1 : \u211d) / 3 \u2227\n    circleNorm 1 = 0 \u2227 \u00ac ((1 : \u211d) / 3 < circleNorm ((1 : \u211d) / 3)) := by\n  have h1 := norm_from_band ((1 : \u211d) / 3) (1 / 3) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have h2 := norm_from_band ((2 : \u211d) / 3) (2 / 3) 0\n    (by norm_num) (by norm_num) (by norm_num)\n  have hz := norm_from_band 1 0 1 (by norm_num) (by norm_num) (by norm_num)\n  norm_num at h1 h2 hz\n  refine \u27e8h1, h2, hz, ?_\u27e9\n  rw [h1]\n  norm_num\n"
+  },
+  "launchers": {
+    "9293e2386ef5dbdff38cd4bf351b1b6be451dbf22f7e0058f21b1af59ef3d640": "#!/usr/bin/env bash\nset -euo pipefail\ncd /home/joshua/lonely-runner-formalization\nexport PATH=\"$HOME/.elan/bin:$PATH\"\npython3 - <<'PY'\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport resource\nimport signal\nimport subprocess\nimport tempfile\nimport time\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nreport = root / 'research/astra-constrained-maximizer-final-source-review.md'\ntext = report.read_text()\nprobe = (text.split('```lean\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nlauncher = (text.split('```bash\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nexpected_probe = '67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb'\nguards = {\n    'LonelyRunner/ConstrainedMaximizer.lean': '2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92',\n    '.lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean': '443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170',\n    'research/astra-six-total-maximizer-plan.md': 'ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100',\n    'research/astra-six-total-maximizer-review.md': 'd65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0',\n    'lean-toolchain': '8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af',\n    'lake-manifest.json': '887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218',\n}\n\ndef digest(data):\n    return hashlib.sha256(data).hexdigest()\n\ndef check_guards():\n    for name, expected in guards.items():\n        if digest((root / name).read_bytes()) != expected:\n            raise ValueError('frozen guard mismatch: ' + name)\n\ndef caps():\n    resource.setrlimit(resource.RLIMIT_AS, (2 * 1024**3, 2 * 1024**3))\n    resource.setrlimit(resource.RLIMIT_CPU, (59, 60))\n    resource.setrlimit(resource.RLIMIT_FSIZE, (256 * 1024, 256 * 1024))\n    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))\n\ncheck_guards()\nif digest(probe) != expected_probe:\n    raise ValueError('probe hash mismatch')\nout = Path(tempfile.mkdtemp(prefix='astra-constrained-review-', dir='/tmp'))\n(out / 'Probe.lean').write_bytes(probe)\n(out / 'replay.sh').write_bytes(launcher)\n(out / 'stdin.bin').write_bytes(b'')\ncommand = ['/home/joshua/.elan/bin/lake', 'env', 'lean', '-DwarningAsError=true',\n           str(out / 'Probe.lean')]\nfailure = None\nstarted = time.monotonic()\nwith (out / 'stdin.bin').open('rb') as sin, (out / 'stdout.bin').open('wb') as sout, \\\n        (out / 'stderr.bin').open('wb') as serr:\n    process = subprocess.Popen(command, cwd=root, stdin=sin, stdout=sout, stderr=serr,\n                               start_new_session=True, preexec_fn=caps)\n    try:\n        process.wait(timeout=60)\n    except subprocess.TimeoutExpired:\n        failure = 'wall-timeout'\n        try:\n            os.killpg(process.pid, signal.SIGKILL)\n        except ProcessLookupError:\n            pass\n        process.wait()\nelapsed = time.monotonic() - started\ncheck_guards()\nhashes = {p.name: digest(p.read_bytes()) for p in out.iterdir()}\nsizes = {p.name: p.stat().st_size for p in out.iterdir()}\nreceipt = {'command': command, 'cwd': str(root), 'returncode': process.returncode,\n           'failure': failure, 'wall_seconds': elapsed, 'cpu_limits': [59, 60],\n           'address_limit_bytes': 2 * 1024**3, 'stream_limit_bytes': 256 * 1024,\n           'python': os.sys.version, 'source_guards_unchanged': True,\n           'guards': guards, 'sha256': hashes, 'bytes': sizes}\n(out / 'receipt.json').write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\\n')\nevidence_bytes = sum(p.stat().st_size for p in out.iterdir())\nif evidence_bytes > 1024 * 1024:\n    raise ValueError('evidence exceeds 1 MiB')\nprint(json.dumps({'evidence': str(out), 'bytes': evidence_bytes,\n                  'returncode': process.returncode, 'failure': failure}, sort_keys=True))\nprint('STDOUT_BEGIN')\nprint((out / 'stdout.bin').read_text(), end='')\nprint('STDOUT_END')\nprint('STDERR_BEGIN')\nprint((out / 'stderr.bin').read_text(), end='')\nprint('STDERR_END')\nprint((out / 'receipt.json').read_text(), end='')\nraise SystemExit(124 if failure else (process.returncode if process.returncode >= 0\n                                    else 128 - process.returncode))\nPY\n",
+    "d3ad79c3a14e60877d2b1636a0050dfdcadacc86a373e703f2cb62b2d2448110": "#!/usr/bin/env bash\nset -euo pipefail\ncd /home/joshua/lonely-runner-formalization\nexport PATH=\"$HOME/.elan/bin:$PATH\"\npython3 - <<'PY'\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport resource\nimport signal\nimport subprocess\nimport tempfile\nimport time\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nreport = root / 'research/astra-constrained-maximizer-final-source-review.md'\ntext = report.read_text()\nprobe = (text.split('```lean\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nlauncher = (text.split('```bash\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nexpected_probe = '67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb'\nguards = {\n    'LonelyRunner/ConstrainedMaximizer.lean': '2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92',\n    '.lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean': '443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170',\n    'research/astra-six-total-maximizer-plan.md': 'ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100',\n    'research/astra-six-total-maximizer-review.md': 'd65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0',\n    'lean-toolchain': '8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af',\n    'lake-manifest.json': '887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218',\n}\n\ndef digest(data):\n    return hashlib.sha256(data).hexdigest()\n\ndef check_guards():\n    for name, expected in guards.items():\n        if digest((root / name).read_bytes()) != expected:\n            raise ValueError('frozen guard mismatch: ' + name)\n\ndef caps():\n    resource.setrlimit(resource.RLIMIT_AS, (2 * 1024**3, 2 * 1024**3))\n    resource.setrlimit(resource.RLIMIT_CPU, (59, 60))\n    resource.setrlimit(resource.RLIMIT_FSIZE, (256 * 1024, 256 * 1024))\n    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))\n\ncheck_guards()\nif digest(probe) != expected_probe:\n    raise ValueError('probe hash mismatch')\nout = Path(tempfile.mkdtemp(prefix='astra-constrained-review-', dir='/tmp'))\n(out / 'Probe.lean').write_bytes(probe)\n(out / 'replay.sh').write_bytes(launcher)\n(out / 'stdin.bin').write_bytes(b'')\ncommand = ['/home/joshua/.elan/bin/lake', 'env', 'lean', '-j1', '-DwarningAsError=true',\n           str(out / 'Probe.lean')]\nfailure = None\nstarted = time.monotonic()\nwith (out / 'stdin.bin').open('rb') as sin, (out / 'stdout.bin').open('wb') as sout, \\\n        (out / 'stderr.bin').open('wb') as serr:\n    process = subprocess.Popen(command, cwd=root, stdin=sin, stdout=sout, stderr=serr,\n                               start_new_session=True, preexec_fn=caps)\n    try:\n        process.wait(timeout=60)\n    except subprocess.TimeoutExpired:\n        failure = 'wall-timeout'\n        try:\n            os.killpg(process.pid, signal.SIGKILL)\n        except ProcessLookupError:\n            pass\n        process.wait()\nelapsed = time.monotonic() - started\ncheck_guards()\nhashes = {p.name: digest(p.read_bytes()) for p in out.iterdir()}\nsizes = {p.name: p.stat().st_size for p in out.iterdir()}\nreceipt = {'command': command, 'cwd': str(root), 'returncode': process.returncode,\n           'failure': failure, 'wall_seconds': elapsed, 'cpu_limits': [59, 60],\n           'address_limit_bytes': 2 * 1024**3, 'stream_limit_bytes': 256 * 1024,\n           'python': os.sys.version, 'source_guards_unchanged': True,\n           'guards': guards, 'sha256': hashes, 'bytes': sizes}\n(out / 'receipt.json').write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\\n')\nevidence_bytes = sum(p.stat().st_size for p in out.iterdir())\nif evidence_bytes > 1024 * 1024:\n    raise ValueError('evidence exceeds 1 MiB')\nprint(json.dumps({'evidence': str(out), 'bytes': evidence_bytes,\n                  'returncode': process.returncode, 'failure': failure}, sort_keys=True))\nprint('STDOUT_BEGIN')\nprint((out / 'stdout.bin').read_text(), end='')\nprint('STDOUT_END')\nprint('STDERR_BEGIN')\nprint((out / 'stderr.bin').read_text(), end='')\nprint('STDERR_END')\nprint((out / 'receipt.json').read_text(), end='')\nraise SystemExit(124 if failure else (process.returncode if process.returncode >= 0\n                                    else 128 - process.returncode))\nPY\n",
+    "d64b2302fd9a68182a31ccaf6ba068944cafdae7471abb1f482b25bb10e98891": "#!/usr/bin/env bash\nset -euo pipefail\ncd /home/joshua/lonely-runner-formalization\nexport PATH=\"$HOME/.elan/bin:$PATH\"\nexport LEAN_NUM_THREADS=1\npython3 - <<'PY'\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport resource\nimport signal\nimport subprocess\nimport tempfile\nimport time\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nreport = root / 'research/astra-constrained-maximizer-final-source-review.md'\ntext = report.read_text()\nprobe = (text.split('```lean\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nlauncher = (text.split('```bash\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nexpected_probe = '67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb'\nguards = {\n    'LonelyRunner/ConstrainedMaximizer.lean': '2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92',\n    '.lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean': '443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170',\n    'research/astra-six-total-maximizer-plan.md': 'ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100',\n    'research/astra-six-total-maximizer-review.md': 'd65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0',\n    'lean-toolchain': '8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af',\n    'lake-manifest.json': '887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218',\n}\n\ndef digest(data):\n    return hashlib.sha256(data).hexdigest()\n\ndef check_guards():\n    for name, expected in guards.items():\n        if digest((root / name).read_bytes()) != expected:\n            raise ValueError('frozen guard mismatch: ' + name)\n\ndef caps():\n    resource.setrlimit(resource.RLIMIT_AS, (2 * 1024**3, 2 * 1024**3))\n    resource.setrlimit(resource.RLIMIT_CPU, (59, 60))\n    resource.setrlimit(resource.RLIMIT_FSIZE, (256 * 1024, 256 * 1024))\n    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))\n\ncheck_guards()\nif digest(probe) != expected_probe:\n    raise ValueError('probe hash mismatch')\nout = Path(tempfile.mkdtemp(prefix='astra-constrained-review-', dir='/tmp'))\n(out / 'Probe.lean').write_bytes(probe)\n(out / 'replay.sh').write_bytes(launcher)\n(out / 'stdin.bin').write_bytes(b'')\ncommand = ['/home/joshua/.elan/bin/lake', 'env', 'lean', '-j1', '-DwarningAsError=true',\n           str(out / 'Probe.lean')]\nfailure = None\nstarted = time.monotonic()\nwith (out / 'stdin.bin').open('rb') as sin, (out / 'stdout.bin').open('wb') as sout, \\\n        (out / 'stderr.bin').open('wb') as serr:\n    process = subprocess.Popen(command, cwd=root, stdin=sin, stdout=sout, stderr=serr,\n                               start_new_session=True, preexec_fn=caps)\n    try:\n        process.wait(timeout=60)\n    except subprocess.TimeoutExpired:\n        failure = 'wall-timeout'\n        try:\n            os.killpg(process.pid, signal.SIGKILL)\n        except ProcessLookupError:\n            pass\n        process.wait()\nelapsed = time.monotonic() - started\ncheck_guards()\nhashes = {p.name: digest(p.read_bytes()) for p in out.iterdir()}\nsizes = {p.name: p.stat().st_size for p in out.iterdir()}\nreceipt = {'command': command, 'cwd': str(root), 'returncode': process.returncode,\n           'lean_num_threads': os.environ.get('LEAN_NUM_THREADS'),\n           'failure': failure, 'wall_seconds': elapsed, 'cpu_limits': [59, 60],\n           'address_limit_bytes': 2 * 1024**3, 'stream_limit_bytes': 256 * 1024,\n           'python': os.sys.version, 'source_guards_unchanged': True,\n           'guards': guards, 'sha256': hashes, 'bytes': sizes}\n(out / 'receipt.json').write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\\n')\nevidence_bytes = sum(p.stat().st_size for p in out.iterdir())\nif evidence_bytes > 1024 * 1024:\n    raise ValueError('evidence exceeds 1 MiB')\nprint(json.dumps({'evidence': str(out), 'bytes': evidence_bytes,\n                  'returncode': process.returncode, 'failure': failure}, sort_keys=True))\nprint('STDOUT_BEGIN')\nprint((out / 'stdout.bin').read_text(), end='')\nprint('STDOUT_END')\nprint('STDERR_BEGIN')\nprint((out / 'stderr.bin').read_text(), end='')\nprint('STDERR_END')\nprint((out / 'receipt.json').read_text(), end='')\nraise SystemExit(124 if failure else (process.returncode if process.returncode >= 0\n                                    else 128 - process.returncode))\nPY\n",
+    "9f3ba3ee79b3cef0c295709ca32f14b9dec9bdd7b01724a20a2a5a9fe77b3c2f": "#!/usr/bin/env bash\nset -euo pipefail\ncd /home/joshua/lonely-runner-formalization\nexport PATH=\"$HOME/.elan/bin:$PATH\"\nexport LEAN_NUM_THREADS=1\nexport LEAN_STACK_SIZE_KB=65536\npython3 - <<'PY'\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport resource\nimport signal\nimport subprocess\nimport tempfile\nimport time\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nreport = root / 'research/astra-constrained-maximizer-final-source-review.md'\ntext = report.read_text()\nprobe = (text.split('```lean\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nlauncher = (text.split('```bash\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nexpected_probe = '67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb'\nguards = {\n    'LonelyRunner/ConstrainedMaximizer.lean': '2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92',\n    '.lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean': '443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170',\n    'research/astra-six-total-maximizer-plan.md': 'ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100',\n    'research/astra-six-total-maximizer-review.md': 'd65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0',\n    'lean-toolchain': '8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af',\n    'lake-manifest.json': '887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218',\n}\n\ndef digest(data):\n    return hashlib.sha256(data).hexdigest()\n\ndef check_guards():\n    for name, expected in guards.items():\n        if digest((root / name).read_bytes()) != expected:\n            raise ValueError('frozen guard mismatch: ' + name)\n\ndef caps():\n    resource.setrlimit(resource.RLIMIT_AS, (2 * 1024**3, 2 * 1024**3))\n    resource.setrlimit(resource.RLIMIT_CPU, (59, 60))\n    resource.setrlimit(resource.RLIMIT_FSIZE, (256 * 1024, 256 * 1024))\n    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))\n\ncheck_guards()\nif digest(probe) != expected_probe:\n    raise ValueError('probe hash mismatch')\nout = Path(tempfile.mkdtemp(prefix='astra-constrained-review-', dir='/tmp'))\n(out / 'Probe.lean').write_bytes(probe)\n(out / 'replay.sh').write_bytes(launcher)\n(out / 'stdin.bin').write_bytes(b'')\ncommand = ['/home/joshua/.elan/bin/lake', 'env', 'lean', '-j1', '-s65536', '-DwarningAsError=true',\n           str(out / 'Probe.lean')]\nfailure = None\nstarted = time.monotonic()\nwith (out / 'stdin.bin').open('rb') as sin, (out / 'stdout.bin').open('wb') as sout, \\\n        (out / 'stderr.bin').open('wb') as serr:\n    process = subprocess.Popen(command, cwd=root, stdin=sin, stdout=sout, stderr=serr,\n                               start_new_session=True, preexec_fn=caps)\n    try:\n        process.wait(timeout=60)\n    except subprocess.TimeoutExpired:\n        failure = 'wall-timeout'\n        try:\n            os.killpg(process.pid, signal.SIGKILL)\n        except ProcessLookupError:\n            pass\n        process.wait()\nelapsed = time.monotonic() - started\ncheck_guards()\nhashes = {p.name: digest(p.read_bytes()) for p in out.iterdir()}\nsizes = {p.name: p.stat().st_size for p in out.iterdir()}\nreceipt = {'command': command, 'cwd': str(root), 'returncode': process.returncode,\n           'lean_num_threads': os.environ.get('LEAN_NUM_THREADS'),\n           'lean_stack_size_kb': os.environ.get('LEAN_STACK_SIZE_KB'),\n           'failure': failure, 'wall_seconds': elapsed, 'cpu_limits': [59, 60],\n           'address_limit_bytes': 2 * 1024**3, 'stream_limit_bytes': 256 * 1024,\n           'python': os.sys.version, 'source_guards_unchanged': True,\n           'guards': guards, 'sha256': hashes, 'bytes': sizes}\n(out / 'receipt.json').write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\\n')\nevidence_bytes = sum(p.stat().st_size for p in out.iterdir())\nif evidence_bytes > 1024 * 1024:\n    raise ValueError('evidence exceeds 1 MiB')\nprint(json.dumps({'evidence': str(out), 'bytes': evidence_bytes,\n                  'returncode': process.returncode, 'failure': failure}, sort_keys=True))\nprint('STDOUT_BEGIN')\nprint((out / 'stdout.bin').read_text(), end='')\nprint('STDOUT_END')\nprint('STDERR_BEGIN')\nprint((out / 'stderr.bin').read_text(), end='')\nprint('STDERR_END')\nprint((out / 'receipt.json').read_text(), end='')\nraise SystemExit(124 if failure else (process.returncode if process.returncode >= 0\n                                    else 128 - process.returncode))\nPY\n",
+    "aa5b4e9368c064cd3188d0a6bb5d8ac54138147ed2910d7840a645de51aa3c03": "#!/usr/bin/env bash\nset -euo pipefail\ncd /home/joshua/lonely-runner-formalization\nexport PATH=\"$HOME/.elan/bin:$PATH\"\nexport LEAN_NUM_THREADS=1\nexport LEAN_STACK_SIZE_KB=65536\npython3 - <<'PY'\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport resource\nimport signal\nimport subprocess\nimport tempfile\nimport time\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nreport = root / 'research/astra-constrained-maximizer-final-source-review.md'\ntext = report.read_text()\nprobe = (text.split('```lean\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nlauncher = (text.split('```bash\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nexpected_probe = '67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb'\nguards = {\n    'LonelyRunner/ConstrainedMaximizer.lean': '2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92',\n    '.lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean': '443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170',\n    'research/astra-six-total-maximizer-plan.md': 'ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100',\n    'research/astra-six-total-maximizer-review.md': 'd65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0',\n    'lean-toolchain': '8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af',\n    'lake-manifest.json': '887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218',\n}\n\ndef digest(data):\n    return hashlib.sha256(data).hexdigest()\n\ndef check_guards():\n    for name, expected in guards.items():\n        if digest((root / name).read_bytes()) != expected:\n            raise ValueError('frozen guard mismatch: ' + name)\n\ndef caps():\n    resource.setrlimit(resource.RLIMIT_AS, (4 * 1024**3, 4 * 1024**3))\n    resource.setrlimit(resource.RLIMIT_CPU, (59, 60))\n    resource.setrlimit(resource.RLIMIT_FSIZE, (256 * 1024, 256 * 1024))\n    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))\n\ncheck_guards()\nif digest(probe) != expected_probe:\n    raise ValueError('probe hash mismatch')\nout = Path(tempfile.mkdtemp(prefix='astra-constrained-review-', dir='/tmp'))\n(out / 'Probe.lean').write_bytes(probe)\n(out / 'replay.sh').write_bytes(launcher)\n(out / 'stdin.bin').write_bytes(b'')\ncommand = ['/home/joshua/.elan/bin/lake', 'env', 'lean', '-j1', '-s65536', '-DwarningAsError=true',\n           str(out / 'Probe.lean')]\nfailure = None\nstarted = time.monotonic()\nwith (out / 'stdin.bin').open('rb') as sin, (out / 'stdout.bin').open('wb') as sout, \\\n        (out / 'stderr.bin').open('wb') as serr:\n    process = subprocess.Popen(command, cwd=root, stdin=sin, stdout=sout, stderr=serr,\n                               start_new_session=True, preexec_fn=caps)\n    try:\n        process.wait(timeout=60)\n    except subprocess.TimeoutExpired:\n        failure = 'wall-timeout'\n        try:\n            os.killpg(process.pid, signal.SIGKILL)\n        except ProcessLookupError:\n            pass\n        process.wait()\nelapsed = time.monotonic() - started\ncheck_guards()\nhashes = {p.name: digest(p.read_bytes()) for p in out.iterdir()}\nsizes = {p.name: p.stat().st_size for p in out.iterdir()}\nreceipt = {'command': command, 'cwd': str(root), 'returncode': process.returncode,\n           'lean_num_threads': os.environ.get('LEAN_NUM_THREADS'),\n           'lean_stack_size_kb': os.environ.get('LEAN_STACK_SIZE_KB'),\n           'failure': failure, 'wall_seconds': elapsed, 'cpu_limits': [59, 60],\n           'address_limit_bytes': 4 * 1024**3, 'stream_limit_bytes': 256 * 1024,\n           'python': os.sys.version, 'source_guards_unchanged': True,\n           'guards': guards, 'sha256': hashes, 'bytes': sizes}\n(out / 'receipt.json').write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\\n')\nevidence_bytes = sum(p.stat().st_size for p in out.iterdir())\nif evidence_bytes > 1024 * 1024:\n    raise ValueError('evidence exceeds 1 MiB')\nprint(json.dumps({'evidence': str(out), 'bytes': evidence_bytes,\n                  'returncode': process.returncode, 'failure': failure}, sort_keys=True))\nprint('STDOUT_BEGIN')\nprint((out / 'stdout.bin').read_text(), end='')\nprint('STDOUT_END')\nprint('STDERR_BEGIN')\nprint((out / 'stderr.bin').read_text(), end='')\nprint('STDERR_END')\nprint((out / 'receipt.json').read_text(), end='')\nraise SystemExit(124 if failure else (process.returncode if process.returncode >= 0\n                                    else 128 - process.returncode))\nPY\n",
+    "0071dbe973c82921722f21376a1e8a4c7044eb5bae3ecd9b791647bbd0cb745a": "#!/usr/bin/env bash\nset -euo pipefail\ncd /home/joshua/lonely-runner-formalization\nexport PATH=\"$HOME/.elan/bin:$PATH\"\nexport LEAN_NUM_THREADS=1\nexport LEAN_STACK_SIZE_KB=65536\npython3 - <<'PY'\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport resource\nimport signal\nimport subprocess\nimport tempfile\nimport time\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nreport = root / 'research/astra-constrained-maximizer-final-source-review.md'\ntext = report.read_text()\nprobe = (text.split('```lean\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nlauncher = (text.split('```bash\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nexpected_probe = '67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb'\nguards = {\n    'LonelyRunner/ConstrainedMaximizer.lean': '2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92',\n    '.lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean': '443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170',\n    'research/astra-six-total-maximizer-plan.md': 'ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100',\n    'research/astra-six-total-maximizer-review.md': 'd65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0',\n    'lean-toolchain': '8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af',\n    'lake-manifest.json': '887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218',\n}\n\ndef digest(data):\n    return hashlib.sha256(data).hexdigest()\n\ndef check_guards():\n    for name, expected in guards.items():\n        if digest((root / name).read_bytes()) != expected:\n            raise ValueError('frozen guard mismatch: ' + name)\n\ndef caps():\n    resource.setrlimit(resource.RLIMIT_AS, (8 * 1024**3, 8 * 1024**3))\n    resource.setrlimit(resource.RLIMIT_CPU, (59, 60))\n    resource.setrlimit(resource.RLIMIT_FSIZE, (256 * 1024, 256 * 1024))\n    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))\n\ncheck_guards()\nif digest(probe) != expected_probe:\n    raise ValueError('probe hash mismatch')\nout = Path(tempfile.mkdtemp(prefix='astra-constrained-review-', dir='/tmp'))\n(out / 'Probe.lean').write_bytes(probe)\n(out / 'replay.sh').write_bytes(launcher)\n(out / 'stdin.bin').write_bytes(b'')\ncommand = ['/home/joshua/.elan/bin/lake', 'env', 'lean', '-j1', '-s65536', '-DwarningAsError=true',\n           str(out / 'Probe.lean')]\nfailure = None\nstarted = time.monotonic()\nwith (out / 'stdin.bin').open('rb') as sin, (out / 'stdout.bin').open('wb') as sout, \\\n        (out / 'stderr.bin').open('wb') as serr:\n    process = subprocess.Popen(command, cwd=root, stdin=sin, stdout=sout, stderr=serr,\n                               start_new_session=True, preexec_fn=caps)\n    try:\n        process.wait(timeout=60)\n    except subprocess.TimeoutExpired:\n        failure = 'wall-timeout'\n        try:\n            os.killpg(process.pid, signal.SIGKILL)\n        except ProcessLookupError:\n            pass\n        process.wait()\nelapsed = time.monotonic() - started\ncheck_guards()\nhashes = {p.name: digest(p.read_bytes()) for p in out.iterdir()}\nsizes = {p.name: p.stat().st_size for p in out.iterdir()}\nreceipt = {'command': command, 'cwd': str(root), 'returncode': process.returncode,\n           'lean_num_threads': os.environ.get('LEAN_NUM_THREADS'),\n           'lean_stack_size_kb': os.environ.get('LEAN_STACK_SIZE_KB'),\n           'failure': failure, 'wall_seconds': elapsed, 'cpu_limits': [59, 60],\n           'address_limit_bytes': 8 * 1024**3, 'stream_limit_bytes': 256 * 1024,\n           'python': os.sys.version, 'source_guards_unchanged': True,\n           'guards': guards, 'sha256': hashes, 'bytes': sizes}\n(out / 'receipt.json').write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\\n')\nevidence_bytes = sum(p.stat().st_size for p in out.iterdir())\nif evidence_bytes > 1024 * 1024:\n    raise ValueError('evidence exceeds 1 MiB')\nprint(json.dumps({'evidence': str(out), 'bytes': evidence_bytes,\n                  'returncode': process.returncode, 'failure': failure}, sort_keys=True))\nprint('STDOUT_BEGIN')\nprint((out / 'stdout.bin').read_text(), end='')\nprint('STDOUT_END')\nprint('STDERR_BEGIN')\nprint((out / 'stderr.bin').read_text(), end='')\nprint('STDERR_END')\nprint((out / 'receipt.json').read_text(), end='')\nraise SystemExit(124 if failure else (process.returncode if process.returncode >= 0\n                                    else 128 - process.returncode))\nPY\n",
+    "851c8523b424e728958f1173b82df6944128ddfa35587ed59617318a2cac8c78": "#!/usr/bin/env bash\nset -euo pipefail\ncd /home/joshua/lonely-runner-formalization\nexport PATH=\"$HOME/.elan/bin:$PATH\"\nexport LEAN_NUM_THREADS=1\nexport LEAN_STACK_SIZE_KB=65536\npython3 - <<'PY'\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport resource\nimport signal\nimport subprocess\nimport tempfile\nimport time\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nreport = root / 'research/astra-constrained-maximizer-final-source-review.md'\ntext = report.read_text()\nprobe = (text.split('```lean\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nlauncher = (text.split('```bash\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nexpected_probe = '6d667af6ce89e5fed04d425aae77703f4018144ae21ff15def7c2db95ece0131'\nguards = {\n    'LonelyRunner/ConstrainedMaximizer.lean': '2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92',\n    '.lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean': '443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170',\n    'research/astra-six-total-maximizer-plan.md': 'ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100',\n    'research/astra-six-total-maximizer-review.md': 'd65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0',\n    'lean-toolchain': '8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af',\n    'lake-manifest.json': '887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218',\n}\n\ndef digest(data):\n    return hashlib.sha256(data).hexdigest()\n\ndef check_guards():\n    for name, expected in guards.items():\n        if digest((root / name).read_bytes()) != expected:\n            raise ValueError('frozen guard mismatch: ' + name)\n\ndef caps():\n    resource.setrlimit(resource.RLIMIT_AS, (8 * 1024**3, 8 * 1024**3))\n    resource.setrlimit(resource.RLIMIT_CPU, (59, 60))\n    resource.setrlimit(resource.RLIMIT_FSIZE, (256 * 1024, 256 * 1024))\n    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))\n\ncheck_guards()\nif digest(probe) != expected_probe:\n    raise ValueError('probe hash mismatch')\nout = Path(tempfile.mkdtemp(prefix='astra-constrained-review-', dir='/tmp'))\n(out / 'Probe.lean').write_bytes(probe)\n(out / 'replay.sh').write_bytes(launcher)\n(out / 'stdin.bin').write_bytes(b'')\ncommand = ['/home/joshua/.elan/bin/lake', 'env', 'lean', '-j1', '-s65536', '-DwarningAsError=true',\n           str(out / 'Probe.lean')]\nfailure = None\nstarted = time.monotonic()\nwith (out / 'stdin.bin').open('rb') as sin, (out / 'stdout.bin').open('wb') as sout, \\\n        (out / 'stderr.bin').open('wb') as serr:\n    process = subprocess.Popen(command, cwd=root, stdin=sin, stdout=sout, stderr=serr,\n                               start_new_session=True, preexec_fn=caps)\n    try:\n        process.wait(timeout=60)\n    except subprocess.TimeoutExpired:\n        failure = 'wall-timeout'\n        try:\n            os.killpg(process.pid, signal.SIGKILL)\n        except ProcessLookupError:\n            pass\n        process.wait()\nelapsed = time.monotonic() - started\ncheck_guards()\nhashes = {p.name: digest(p.read_bytes()) for p in out.iterdir()}\nsizes = {p.name: p.stat().st_size for p in out.iterdir()}\nreceipt = {'command': command, 'cwd': str(root), 'returncode': process.returncode,\n           'lean_num_threads': os.environ.get('LEAN_NUM_THREADS'),\n           'lean_stack_size_kb': os.environ.get('LEAN_STACK_SIZE_KB'),\n           'failure': failure, 'wall_seconds': elapsed, 'cpu_limits': [59, 60],\n           'address_limit_bytes': 8 * 1024**3, 'stream_limit_bytes': 256 * 1024,\n           'python': os.sys.version, 'source_guards_unchanged': True,\n           'guards': guards, 'sha256': hashes, 'bytes': sizes}\n(out / 'receipt.json').write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\\n')\nevidence_bytes = sum(p.stat().st_size for p in out.iterdir())\nif evidence_bytes > 1024 * 1024:\n    raise ValueError('evidence exceeds 1 MiB')\nprint(json.dumps({'evidence': str(out), 'bytes': evidence_bytes,\n                  'returncode': process.returncode, 'failure': failure}, sort_keys=True))\nprint('STDOUT_BEGIN')\nprint((out / 'stdout.bin').read_text(), end='')\nprint('STDOUT_END')\nprint('STDERR_BEGIN')\nprint((out / 'stderr.bin').read_text(), end='')\nprint('STDERR_END')\nprint((out / 'receipt.json').read_text(), end='')\nraise SystemExit(124 if failure else (process.returncode if process.returncode >= 0\n                                    else 128 - process.returncode))\nPY\n",
+    "2d666c61785457c89c8b93551e6735fd0d5160d2736b128db15898c803bb319e": "#!/usr/bin/env bash\nset -euo pipefail\ncd /home/joshua/lonely-runner-formalization\nexport PATH=\"$HOME/.elan/bin:$PATH\"\nexport LEAN_NUM_THREADS=1\nexport LEAN_STACK_SIZE_KB=65536\npython3 - <<'PY'\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport resource\nimport signal\nimport subprocess\nimport tempfile\nimport time\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nreport = root / 'research/astra-constrained-maximizer-final-source-review.md'\ntext = report.read_text()\nprobe = (text.split('```lean\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nlauncher = (text.split('```bash\\n', 1)[1].split('\\n```', 1)[0] + '\\n').encode()\nexpected_probe = '120c938fe6ba3eeb2c3b5f9b805d5dc9203e20690dc495a2481517852764e858'\nguards = {\n    'LonelyRunner/ConstrainedMaximizer.lean': '2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92',\n    '.lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean': '443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170',\n    'research/astra-six-total-maximizer-plan.md': 'ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100',\n    'research/astra-six-total-maximizer-review.md': 'd65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0',\n    'lean-toolchain': '8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af',\n    'lake-manifest.json': '887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218',\n}\n\ndef digest(data):\n    return hashlib.sha256(data).hexdigest()\n\ndef check_guards():\n    for name, expected in guards.items():\n        if digest((root / name).read_bytes()) != expected:\n            raise ValueError('frozen guard mismatch: ' + name)\n\ndef caps():\n    resource.setrlimit(resource.RLIMIT_AS, (8 * 1024**3, 8 * 1024**3))\n    resource.setrlimit(resource.RLIMIT_CPU, (59, 60))\n    resource.setrlimit(resource.RLIMIT_FSIZE, (256 * 1024, 256 * 1024))\n    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))\n\ncheck_guards()\nif digest(probe) != expected_probe:\n    raise ValueError('probe hash mismatch')\nout = Path(tempfile.mkdtemp(prefix='astra-constrained-review-', dir='/tmp'))\n(out / 'Probe.lean').write_bytes(probe)\n(out / 'replay.sh').write_bytes(launcher)\n(out / 'stdin.bin').write_bytes(b'')\ncommand = ['/home/joshua/.elan/bin/lake', 'env', 'lean', '-j1', '-s65536', '-DwarningAsError=true',\n           str(out / 'Probe.lean')]\nfailure = None\nstarted = time.monotonic()\nwith (out / 'stdin.bin').open('rb') as sin, (out / 'stdout.bin').open('wb') as sout, \\\n        (out / 'stderr.bin').open('wb') as serr:\n    process = subprocess.Popen(command, cwd=root, stdin=sin, stdout=sout, stderr=serr,\n                               start_new_session=True, preexec_fn=caps)\n    try:\n        process.wait(timeout=60)\n    except subprocess.TimeoutExpired:\n        failure = 'wall-timeout'\n        try:\n            os.killpg(process.pid, signal.SIGKILL)\n        except ProcessLookupError:\n            pass\n        process.wait()\nelapsed = time.monotonic() - started\ncheck_guards()\nhashes = {p.name: digest(p.read_bytes()) for p in out.iterdir()}\nsizes = {p.name: p.stat().st_size for p in out.iterdir()}\nreceipt = {'command': command, 'cwd': str(root), 'returncode': process.returncode,\n           'lean_num_threads': os.environ.get('LEAN_NUM_THREADS'),\n           'lean_stack_size_kb': os.environ.get('LEAN_STACK_SIZE_KB'),\n           'failure': failure, 'wall_seconds': elapsed, 'cpu_limits': [59, 60],\n           'address_limit_bytes': 8 * 1024**3, 'stream_limit_bytes': 256 * 1024,\n           'python': os.sys.version, 'source_guards_unchanged': True,\n           'guards': guards, 'sha256': hashes, 'bytes': sizes}\n(out / 'receipt.json').write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\\n')\nevidence_bytes = sum(p.stat().st_size for p in out.iterdir())\nif evidence_bytes > 1024 * 1024:\n    raise ValueError('evidence exceeds 1 MiB')\nprint(json.dumps({'evidence': str(out), 'bytes': evidence_bytes,\n                  'returncode': process.returncode, 'failure': failure}, sort_keys=True))\nprint('STDOUT_BEGIN')\nprint((out / 'stdout.bin').read_text(), end='')\nprint('STDOUT_END')\nprint('STDERR_BEGIN')\nprint((out / 'stderr.bin').read_text(), end='')\nprint('STDERR_END')\nprint((out / 'receipt.json').read_text(), end='')\nraise SystemExit(124 if failure else (process.returncode if process.returncode >= 0\n                                    else 128 - process.returncode))\nPY\n"
+  },
+  "runs": [
+    {
+      "original_directory": "/tmp/astra-constrained-review-7gs4hhhk",
+      "receipt": {
+        "address_limit_bytes": 2147483648,
+        "bytes": {
+          "Probe.lean": 6641,
+          "replay.sh": 4192,
+          "stderr.bin": 98,
+          "stdin.bin": 0,
+          "stdout.bin": 0
+        },
+        "command": [
+          "/home/joshua/.elan/bin/lake",
+          "env",
+          "lean",
+          "-DwarningAsError=true",
+          "/tmp/astra-constrained-review-7gs4hhhk/Probe.lean"
+        ],
+        "cpu_limits": [
+          59,
+          60
+        ],
+        "cwd": "/home/joshua/lonely-runner-formalization",
+        "failure": null,
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean": "443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170",
+          "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-six-total-maximizer-plan.md": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+          "research/astra-six-total-maximizer-review.md": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0"
+        },
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+        "returncode": -6,
+        "sha256": {
+          "Probe.lean": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+          "replay.sh": "9293e2386ef5dbdff38cd4bf351b1b6be451dbf22f7e0058f21b1af59ef3d640",
+          "stderr.bin": "32a60967270365f092cad81a408cf0e68f13aceab4359f32700f140a54129b9b",
+          "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_guards_unchanged": true,
+        "stream_limit_bytes": 262144,
+        "wall_seconds": 1.1177899860194884
+      },
+      "stdout": "",
+      "stderr": "libc++abi: terminating due to uncaught exception of type lean::exception: failed to create thread\n",
+      "Probe.lean_sha256": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+      "replay.sh_sha256": "9293e2386ef5dbdff38cd4bf351b1b6be451dbf22f7e0058f21b1af59ef3d640"
+    },
+    {
+      "original_directory": "/tmp/astra-constrained-review-7uighay5",
+      "receipt": {
+        "address_limit_bytes": 2147483648,
+        "bytes": {
+          "Probe.lean": 6641,
+          "replay.sh": 4199,
+          "stderr.bin": 98,
+          "stdin.bin": 0,
+          "stdout.bin": 0
+        },
+        "command": [
+          "/home/joshua/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-DwarningAsError=true",
+          "/tmp/astra-constrained-review-7uighay5/Probe.lean"
+        ],
+        "cpu_limits": [
+          59,
+          60
+        ],
+        "cwd": "/home/joshua/lonely-runner-formalization",
+        "failure": null,
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean": "443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170",
+          "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-six-total-maximizer-plan.md": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+          "research/astra-six-total-maximizer-review.md": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0"
+        },
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+        "returncode": -6,
+        "sha256": {
+          "Probe.lean": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+          "replay.sh": "d3ad79c3a14e60877d2b1636a0050dfdcadacc86a373e703f2cb62b2d2448110",
+          "stderr.bin": "32a60967270365f092cad81a408cf0e68f13aceab4359f32700f140a54129b9b",
+          "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_guards_unchanged": true,
+        "stream_limit_bytes": 262144,
+        "wall_seconds": 1.116638765000971
+      },
+      "stdout": "",
+      "stderr": "libc++abi: terminating due to uncaught exception of type lean::exception: failed to create thread\n",
+      "Probe.lean_sha256": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+      "replay.sh_sha256": "d3ad79c3a14e60877d2b1636a0050dfdcadacc86a373e703f2cb62b2d2448110"
+    },
+    {
+      "original_directory": "/tmp/astra-constrained-review-ofw2hgxk",
+      "receipt": {
+        "address_limit_bytes": 2147483648,
+        "bytes": {
+          "Probe.lean": 6641,
+          "replay.sh": 4292,
+          "stderr.bin": 98,
+          "stdin.bin": 0,
+          "stdout.bin": 0
+        },
+        "command": [
+          "/home/joshua/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-DwarningAsError=true",
+          "/tmp/astra-constrained-review-ofw2hgxk/Probe.lean"
+        ],
+        "cpu_limits": [
+          59,
+          60
+        ],
+        "cwd": "/home/joshua/lonely-runner-formalization",
+        "failure": null,
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean": "443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170",
+          "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-six-total-maximizer-plan.md": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+          "research/astra-six-total-maximizer-review.md": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0"
+        },
+        "lean_num_threads": "1",
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+        "returncode": -6,
+        "sha256": {
+          "Probe.lean": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+          "replay.sh": "d64b2302fd9a68182a31ccaf6ba068944cafdae7471abb1f482b25bb10e98891",
+          "stderr.bin": "32a60967270365f092cad81a408cf0e68f13aceab4359f32700f140a54129b9b",
+          "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_guards_unchanged": true,
+        "stream_limit_bytes": 262144,
+        "wall_seconds": 1.1170560540049337
+      },
+      "stdout": "",
+      "stderr": "libc++abi: terminating due to uncaught exception of type lean::exception: failed to create thread\n",
+      "Probe.lean_sha256": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+      "replay.sh_sha256": "d64b2302fd9a68182a31ccaf6ba068944cafdae7471abb1f482b25bb10e98891"
+    },
+    {
+      "original_directory": "/tmp/astra-constrained-review-9ula7146",
+      "receipt": {
+        "address_limit_bytes": 2147483648,
+        "bytes": {
+          "Probe.lean": 6641,
+          "replay.sh": 4406,
+          "stderr.bin": 98,
+          "stdin.bin": 0,
+          "stdout.bin": 0
+        },
+        "command": [
+          "/home/joshua/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-s65536",
+          "-DwarningAsError=true",
+          "/tmp/astra-constrained-review-9ula7146/Probe.lean"
+        ],
+        "cpu_limits": [
+          59,
+          60
+        ],
+        "cwd": "/home/joshua/lonely-runner-formalization",
+        "failure": null,
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean": "443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170",
+          "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-six-total-maximizer-plan.md": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+          "research/astra-six-total-maximizer-review.md": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0"
+        },
+        "lean_num_threads": "1",
+        "lean_stack_size_kb": "65536",
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+        "returncode": -6,
+        "sha256": {
+          "Probe.lean": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+          "replay.sh": "9f3ba3ee79b3cef0c295709ca32f14b9dec9bdd7b01724a20a2a5a9fe77b3c2f",
+          "stderr.bin": "32a60967270365f092cad81a408cf0e68f13aceab4359f32700f140a54129b9b",
+          "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "source_guards_unchanged": true,
+        "stream_limit_bytes": 262144,
+        "wall_seconds": 1.1167334420024417
+      },
+      "stdout": "",
+      "stderr": "libc++abi: terminating due to uncaught exception of type lean::exception: failed to create thread\n",
+      "Probe.lean_sha256": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+      "replay.sh_sha256": "9f3ba3ee79b3cef0c295709ca32f14b9dec9bdd7b01724a20a2a5a9fe77b3c2f"
+    },
+    {
+      "original_directory": "/tmp/astra-constrained-review-gxux_d4t",
+      "receipt": {
+        "address_limit_bytes": 4294967296,
+        "bytes": {
+          "Probe.lean": 6641,
+          "replay.sh": 4406,
+          "stderr.bin": 0,
+          "stdin.bin": 0,
+          "stdout.bin": 218
+        },
+        "command": [
+          "/home/joshua/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-s65536",
+          "-DwarningAsError=true",
+          "/tmp/astra-constrained-review-gxux_d4t/Probe.lean"
+        ],
+        "cpu_limits": [
+          59,
+          60
+        ],
+        "cwd": "/home/joshua/lonely-runner-formalization",
+        "failure": null,
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean": "443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170",
+          "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-six-total-maximizer-plan.md": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+          "research/astra-six-total-maximizer-review.md": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0"
+        },
+        "lean_num_threads": "1",
+        "lean_stack_size_kb": "65536",
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+        "returncode": 1,
+        "sha256": {
+          "Probe.lean": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+          "replay.sh": "aa5b4e9368c064cd3188d0a6bb5d8ac54138147ed2910d7840a645de51aa3c03",
+          "stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout.bin": "bee74184b9702de45f03575579925a90f80a330709cdb97c8ed948a33c623ff4"
+        },
+        "source_guards_unchanged": true,
+        "stream_limit_bytes": 262144,
+        "wall_seconds": 0.766089851007564
+      },
+      "stdout": "/tmp/astra-constrained-review-gxux_d4t/Probe.lean:1:0: error: failed to read file '/home/joshua/lonely-runner-formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Group/Submonoid/Operations.olean'\n",
+      "stderr": "",
+      "Probe.lean_sha256": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+      "replay.sh_sha256": "aa5b4e9368c064cd3188d0a6bb5d8ac54138147ed2910d7840a645de51aa3c03"
+    },
+    {
+      "original_directory": "/tmp/astra-constrained-review-1d3yv8g6",
+      "receipt": {
+        "address_limit_bytes": 8589934592,
+        "bytes": {
+          "Probe.lean": 6641,
+          "replay.sh": 4406,
+          "stderr.bin": 0,
+          "stdin.bin": 0,
+          "stdout.bin": 3931
+        },
+        "command": [
+          "/home/joshua/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-s65536",
+          "-DwarningAsError=true",
+          "/tmp/astra-constrained-review-1d3yv8g6/Probe.lean"
+        ],
+        "cpu_limits": [
+          59,
+          60
+        ],
+        "cwd": "/home/joshua/lonely-runner-formalization",
+        "failure": null,
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean": "443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170",
+          "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-six-total-maximizer-plan.md": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+          "research/astra-six-total-maximizer-review.md": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0"
+        },
+        "lean_num_threads": "1",
+        "lean_stack_size_kb": "65536",
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+        "returncode": 1,
+        "sha256": {
+          "Probe.lean": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+          "replay.sh": "0071dbe973c82921722f21376a1e8a4c7044eb5bae3ecd9b791647bbd0cb745a",
+          "stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout.bin": "d23a4b728055abc5a5eb00447ea75075b8dc7d209601f745b1fddbdb2892525e"
+        },
+        "source_guards_unchanged": true,
+        "stream_limit_bytes": 262144,
+        "wall_seconds": 2.068965215003118
+      },
+      "stdout": "'LonelyRunner.circleNorm_eq_min_fract' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_forward_complement_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_oriented_complement_maximizer' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.reciprocal_dilate_shift_improves' depends on axioms: [propext, Classical.choice, Quot.sound]\n/tmp/astra-constrained-review-1d3yv8g6/Probe.lean:82:9: error: Application type mismatch: The argument\n  hn\nhas type\n  circleNorm (-(1 / 10)) = 1 / 10\nbut is expected to have type\n  circleNorm (-1 / 10) = 1 / 10\nin the application\n  And.intro hn\n/tmp/astra-constrained-review-1d3yv8g6/Probe.lean:90:2: error: Type mismatch\n  exists_forward_complement_improvement (fun x => 1) 0\n    (fun j =>\n      Mathlib.Meta.NormNum.isNat_lt_true (Mathlib.Meta.NormNum.isNat_ofNat \u2115 (Eq.refl 0))\n        (Mathlib.Meta.NormNum.isNat_ofNat \u2115 (Eq.refl 1)) (Eq.refl false))\n    (1 / 6) (1 / 6)\n    (Mathlib.Meta.NormNum.isNNRat_lt_true\n      (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat \u211d Nat.cast_zero))\n      (Mathlib.Meta.NormNum.isNNRat_div\n        (Mathlib.Meta.NormNum.isNNRat_mul (Eq.refl HMul.hMul)\n          (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat \u211d Nat.cast_one))\n          (Mathlib.Meta.NormNum.isNNRat_inv_pos\n            (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat \u211d (Eq.refl 6))))\n          (Eq.refl (Nat.mul 1 1)) (Eq.refl 6)))\n      (Eq.refl true))\n    (Mathlib.Meta.NormNum.isNNRat_lt_true\n      (Mathlib.Meta.NormNum.isNNRat_div\n        (Mathlib.Meta.NormNum.isNNRat_mul (Eq.refl HMul.hMul)\n          (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat \u211d Nat.cast_one))\n          (Mathlib.Meta.NormNum.isNNRat_inv_pos\n            (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat \u211d (Eq.refl 6))))\n          (Eq.refl (Nat.mul 1 1)) (Eq.refl 6)))\n      (Mathlib.Meta.NormNum.isNNRat_div\n        (Mathlib.Meta.NormNum.isNNRat_mul (Eq.refl HMul.hMul)\n          (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat \u211d Nat.cast_one))\n          (Mathlib.Meta.NormNum.isNNRat_inv_pos\n            (Mathlib.Meta.NormNum.IsNat.to_isNNRat (Mathlib.Meta.NormNum.isNat_ofNat \u211d (Eq.refl 2))))\n          (Eq.refl (Nat.mul 1 1)) (Eq.refl 2)))\n      (Eq.refl true))\n    ?m.132 ?m.133\nhas type\n  \u2203 \u03b5,\n    0 < \u03b5 \u2227 ComplementSafe (fun x => 1) 0 (1 / 6) (1 / 6 + \u03b5) \u2227 circleNorm (1 / 6 * \u21911) < circleNorm ((1 / 6 + \u03b5) * \u21911)\nbut is expected to have type\n  \u2203 \u03b5, 0 < \u03b5 \u2227 ComplementSafe (fun x => 1) 0 (1 / 6) (1 / 6 + \u03b5) \u2227 circleNorm (1 / 6 * 1) < circleNorm ((1 / 6 + \u03b5) * 1)\n/tmp/astra-constrained-review-1d3yv8g6/Probe.lean:108:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  Int.fract (1 / 80 * 12)\nin the target expression\n  0 < Int.fract (1 / 80 * \u219112)\n\ncase refine_1\n\u03b2 : \u2124\nhf : Int.fract (1 / 80 * 12) = 3 / 20\n\u22a2 0 < Int.fract (1 / 80 * \u219112)\n/tmp/astra-constrained-review-1d3yv8g6/Probe.lean:109:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  Int.fract (1 / 80 * 12)\nin the target expression\n  Int.fract (1 / 80 * \u219112) < (\u21916)\u207b\u00b9\n\ncase refine_2\n\u03b2 : \u2124\nhf : Int.fract (1 / 80 * 12) = 3 / 20\n\u22a2 Int.fract (1 / 80 * \u219112) < (\u21916)\u207b\u00b9\n/tmp/astra-constrained-review-1d3yv8g6/Probe.lean:121:22: error: Application type mismatch: The argument\n  hn\nhas type\n  circleNorm (-(21 / 4)) = 1 / 4\nbut is expected to have type\n  circleNorm (-21 / 4) = 1 / 4\nin the application\n  And.intro hn\n/tmp/astra-constrained-review-1d3yv8g6/Probe.lean:130:17: error: Application type mismatch: The argument\n  Eq.symm h5\nhas type\n  1 / 6 = circleNorm (5 / 6)\nbut is expected to have type\n  1 / 6 = circleNorm (5 * (1 / 6))\nin the application\n  Eq.trans h1 (Eq.symm h5)\n",
+      "stderr": "",
+      "Probe.lean_sha256": "67781e523e63ff4dd189c43853abf005939ab4ddd548c6123459017dcdeb7dcb",
+      "replay.sh_sha256": "0071dbe973c82921722f21376a1e8a4c7044eb5bae3ecd9b791647bbd0cb745a"
+    },
+    {
+      "original_directory": "/tmp/astra-constrained-review-vdfffwt6",
+      "receipt": {
+        "address_limit_bytes": 8589934592,
+        "bytes": {
+          "Probe.lean": 6799,
+          "replay.sh": 4406,
+          "stderr.bin": 0,
+          "stdin.bin": 0,
+          "stdout.bin": 957
+        },
+        "command": [
+          "/home/joshua/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-s65536",
+          "-DwarningAsError=true",
+          "/tmp/astra-constrained-review-vdfffwt6/Probe.lean"
+        ],
+        "cpu_limits": [
+          59,
+          60
+        ],
+        "cwd": "/home/joshua/lonely-runner-formalization",
+        "failure": null,
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean": "443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170",
+          "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-six-total-maximizer-plan.md": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+          "research/astra-six-total-maximizer-review.md": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0"
+        },
+        "lean_num_threads": "1",
+        "lean_stack_size_kb": "65536",
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+        "returncode": 1,
+        "sha256": {
+          "Probe.lean": "6d667af6ce89e5fed04d425aae77703f4018144ae21ff15def7c2db95ece0131",
+          "replay.sh": "851c8523b424e728958f1173b82df6944128ddfa35587ed59617318a2cac8c78",
+          "stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout.bin": "4bd13f9a1d4893f4135f958b644b06a2548c2b045b6d1ed6bbc5bac04092e62d"
+        },
+        "source_guards_unchanged": true,
+        "stream_limit_bytes": 262144,
+        "wall_seconds": 2.0688452599861193
+      },
+      "stdout": "'LonelyRunner.circleNorm_eq_min_fract' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_forward_complement_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_oriented_complement_maximizer' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.reciprocal_dilate_shift_improves' depends on axioms: [propext, Classical.choice, Quot.sound]\n/tmp/astra-constrained-review-vdfffwt6/Probe.lean:95:5: error: unsolved goals\nhf : Int.fract (1 / 6) = 1 / 6\nj : Fin 2\nhj : j \u2260 0\n\u22a2 True \u2227 True\n/tmp/astra-constrained-review-vdfffwt6/Probe.lean:121:8: error: Insufficient number of fields for `\u27e8...\u27e9` constructor: Constructor `Eq.refl` does not have explicit fields, but 4 were provided\n/tmp/astra-constrained-review-vdfffwt6/Probe.lean:121:9: error: unsolved goals\nhn : circleNorm (-(21 / 4)) = 1 / 4\nhp : circleNorm (19 / 4) = 1 / 4\n\u22a2 circleNorm (-(21 / 4)) = 1 / 4\n",
+      "stderr": "",
+      "Probe.lean_sha256": "6d667af6ce89e5fed04d425aae77703f4018144ae21ff15def7c2db95ece0131",
+      "replay.sh_sha256": "851c8523b424e728958f1173b82df6944128ddfa35587ed59617318a2cac8c78"
+    },
+    {
+      "original_directory": "/tmp/astra-constrained-review-rrucn5x5",
+      "receipt": {
+        "address_limit_bytes": 8589934592,
+        "bytes": {
+          "Probe.lean": 6769,
+          "replay.sh": 4406,
+          "stderr.bin": 0,
+          "stdin.bin": 0,
+          "stdout.bin": 428
+        },
+        "command": [
+          "/home/joshua/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-s65536",
+          "-DwarningAsError=true",
+          "/tmp/astra-constrained-review-rrucn5x5/Probe.lean"
+        ],
+        "cpu_limits": [
+          59,
+          60
+        ],
+        "cwd": "/home/joshua/lonely-runner-formalization",
+        "failure": null,
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean": "443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170",
+          "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-six-total-maximizer-plan.md": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+          "research/astra-six-total-maximizer-review.md": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0"
+        },
+        "lean_num_threads": "1",
+        "lean_stack_size_kb": "65536",
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+        "returncode": 0,
+        "sha256": {
+          "Probe.lean": "120c938fe6ba3eeb2c3b5f9b805d5dc9203e20690dc495a2481517852764e858",
+          "replay.sh": "2d666c61785457c89c8b93551e6735fd0d5160d2736b128db15898c803bb319e",
+          "stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout.bin": "24f50b15c9b6c8cfc0112f0fff416184177b15db02b8c6c3be02cf2ddb2e0035"
+        },
+        "source_guards_unchanged": true,
+        "stream_limit_bytes": 262144,
+        "wall_seconds": 2.1186751589993946
+      },
+      "stdout": "'LonelyRunner.circleNorm_eq_min_fract' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_forward_complement_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_oriented_complement_maximizer' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.reciprocal_dilate_shift_improves' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "Probe.lean_sha256": "120c938fe6ba3eeb2c3b5f9b805d5dc9203e20690dc495a2481517852764e858",
+      "replay.sh_sha256": "2d666c61785457c89c8b93551e6735fd0d5160d2736b128db15898c803bb319e"
+    },
+    {
+      "original_directory": "/tmp/astra-constrained-review-4c4l61sf",
+      "receipt": {
+        "address_limit_bytes": 8589934592,
+        "bytes": {
+          "Probe.lean": 6769,
+          "replay.sh": 4406,
+          "stderr.bin": 0,
+          "stdin.bin": 0,
+          "stdout.bin": 428
+        },
+        "command": [
+          "/home/joshua/.elan/bin/lake",
+          "env",
+          "lean",
+          "-j1",
+          "-s65536",
+          "-DwarningAsError=true",
+          "/tmp/astra-constrained-review-4c4l61sf/Probe.lean"
+        ],
+        "cpu_limits": [
+          59,
+          60
+        ],
+        "cwd": "/home/joshua/lonely-runner-formalization",
+        "failure": null,
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean": "443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170",
+          "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-six-total-maximizer-plan.md": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+          "research/astra-six-total-maximizer-review.md": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0"
+        },
+        "lean_num_threads": "1",
+        "lean_stack_size_kb": "65536",
+        "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+        "returncode": 0,
+        "sha256": {
+          "Probe.lean": "120c938fe6ba3eeb2c3b5f9b805d5dc9203e20690dc495a2481517852764e858",
+          "replay.sh": "2d666c61785457c89c8b93551e6735fd0d5160d2736b128db15898c803bb319e",
+          "stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout.bin": "24f50b15c9b6c8cfc0112f0fff416184177b15db02b8c6c3be02cf2ddb2e0035"
+        },
+        "source_guards_unchanged": true,
+        "stream_limit_bytes": 262144,
+        "wall_seconds": 2.118968858005246
+      },
+      "stdout": "'LonelyRunner.circleNorm_eq_min_fract' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_forward_complement_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_oriented_complement_maximizer' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.reciprocal_dilate_shift_improves' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "Probe.lean_sha256": "120c938fe6ba3eeb2c3b5f9b805d5dc9203e20690dc495a2481517852764e858",
+      "replay.sh_sha256": "2d666c61785457c89c8b93551e6735fd0d5160d2736b128db15898c803bb319e"
+    }
+  ]
+}

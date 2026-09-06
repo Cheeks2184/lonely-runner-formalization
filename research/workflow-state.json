@@ -6,7 +6,7 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/constrained_maximizer_final_source_review",
+      "id": "/root/six_total_divisibility_seed_review",
       "agent_id": "/root/prime_difference_compression_plan",
       "kind": "research",
       "status": "in_progress",
@@ -14,15 +14,15 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
-      "target": "Independent frozen ConstrainedMaximizer source/type/axiom review against exact independently accepted P/M/D contracts.",
+      "source_checkpoint": "a39edc784be728b127aac6387277205136407c01",
+      "target": "Independent exact manuscript and eight-contract review of divisor orbit/insertion/count plan, no execution.",
       "owned_files": [
-        "research/astra-constrained-maximizer-final-source-review.md"
+        "research/astra-six-total-divisibility-seed-review.md"
       ],
       "checks": []
     },
     {
-      "id": "/root/renault_phase_fixed_certificate_review",
+      "id": "/root/renault_phase_concrete_bridge_plan",
       "agent_id": "/root/seven_adic_expanded_falsifier",
       "kind": "research",
       "status": "in_progress",
@@ -30,10 +30,27 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
-      "target": "Independent review of exact Renault5.1 fixed certificate and continuum endpoint/mask transfer; generic Lean soundness type/source review; no new discovery.",
+      "source_checkpoint": "a39edc784be728b127aac6387277205136407c01",
+      "target": "Settle concrete Lean real-phase atom partition and true-bit band soundness using accepted frozen120-atom/23candidate certificate; no new search.",
       "owned_files": [
-        "research/astra-renault-phase-fixed-certificate-review.md"
+        "research/astra-renault-phase-concrete-bridge-plan.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "/root/renault_fixed_core_mask_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "in_progress",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a39edc784be728b127aac6387277205136407c01",
+      "target": "Fixed41mask source,41 independently decided rows and all-row assembly, mask bound; no new search.",
+      "owned_files": [
+        "LonelyRunner/RenaultPhaseMasks.lean",
+        "research/astra-renault-core-mask-implementation.md"
       ],
       "checks": []
     }
@@ -5678,9 +5695,86 @@
       "checks": [],
       "result": "Independent source review accepts all exact F/C/int contracts; root fully read report/probe and replay passed,28allowed axiom outputs/15guards.",
       "sha256": "687ea1cd302b3ce741ee67cf4045c828e755ed986db3993c6dba06f026aecd8d"
+    },
+    {
+      "id": "/root/renault_phase_fixed_certificate_review",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Independent review of exact Renault5.1 fixed certificate and continuum endpoint/mask transfer; generic Lean soundness type/source review; no new discovery.",
+      "owned_files": [
+        "research/astra-renault-phase-fixed-certificate-review.md"
+      ],
+      "checks": [],
+      "result": "Independent fixedcertificate+continuum manuscript+generic Lean source accepted; root fullread and bothreplays exit0/eightguards.",
+      "sha256": "e0771ca34ce9c0d484b72da43c444bd37dd02dd8173442d2dde7251b64c37211"
+    },
+    {
+      "id": "/root/pass42_import_audit_integration",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a39edc784be728b127aac6387277205136407c01",
+      "target": "Add two frozen module imports and six public declaration axiom audit entries, no source edits or builds.",
+      "owned_files": [
+        "LonelyRunner.lean",
+        "LonelyRunner/AxiomAudit.lean"
+      ],
+      "checks": [
+        "Root inspected exact two imports and six audit entries; diff check passed. Root clarified comment; full build/trust queued."
+      ]
+    },
+    {
+      "id": "/root/constrained_maximizer_final_source_review",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Independent frozen ConstrainedMaximizer source/type/axiom review against exact independently accepted P/M/D contracts.",
+      "owned_files": [
+        "research/astra-constrained-maximizer-final-source-review.md"
+      ],
+      "checks": [
+        "Root fully read frozen report; mathematical scope accepted; independent probe evidence as recorded in report where applicable."
+      ],
+      "report": "research/astra-constrained-maximizer-final-source-review.md",
+      "report_sha256": "e99bed1781933ce2f30652bce0041f4fe7ebccc29bf4638a76ccc244e08f4f56"
+    },
+    {
+      "id": "/root/six_total_divisibility_seed_plan",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
+      "target": "Settle generic nontrivial rational shift-orbit safe point and Renault preliminary divisor-count bounds, exact manuscript/Lean contracts only.",
+      "owned_files": [
+        "research/astra-six-total-divisibility-seed-plan.md"
+      ],
+      "checks": [
+        "Root fully read frozen report; mathematical scope accepted; independent probe evidence as recorded in report where applicable."
+      ],
+      "report": "research/astra-six-total-divisibility-seed-plan.md",
+      "report_sha256": "752cc8e216bde3cc8b533e84da02967972781a2bd7cbc95e6b62503f26d5e792"
     }
   ],
-  "latest_checkpoint": "Pass41 exact F/C/int fullbuild/trust and independent source/rootreplay accepted; ready to publish. Pass42maxsource focusedchecked underreview; phase5.1 finitecertificate verified, continuumkernelpending.",
+  "latest_checkpoint": "Pass42 exact maximizer and conditional phase transfer fully built/trust audited, independent reviews/root replays accepted; ready to commit/push/PR/merge. Full mask table and real-phase/divisor work remains separate.",
   "next_actions": [
     "Publish verified Pass41, await required CI, merge exact reviewed head and verify main.",
     "Finish independent maximizer source review; root replay and integrate next source checkpoint.",
@@ -6210,14 +6304,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
+    "verified_checkpoint": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-seven-adic-scope",
+    "branch": "codex/astra-prime-adic-compression",
     "base": "main",
     "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/39",
-    "pr_number": 39,
-    "head_sha": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/40",
+    "pr_number": 40,
+    "head_sha": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
     "integration_note": "Prior GitHub integration 403 established authenticated gh fallback; this checkpoint used that fallback successfully.",
     "queue": [
       {
@@ -6655,38 +6749,59 @@
           "Exact computational certificates": "SUCCESS 2026-09-06T08:47:25Z"
         },
         "verification": "Exact reviewed head merged after CLEAN/no blocking reviews/not draft; fetched origin/main, ancestor command exit0; local main and new branch HEAD equal merge SHA."
+      },
+      {
+        "checkpoint": "Pass41",
+        "pr_number": 40,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/40",
+        "head_sha": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
+        "merge_sha": "a39edc784be728b127aac6387277205136407c01",
+        "merged_at": "2026-09-06T09:32:20Z",
+        "ci_run": 34024320508,
+        "checks": {
+          "Lean build and trust audit": "SUCCESS 2026-09-06T09:21:04Z",
+          "Exact computational certificates": "SUCCESS 2026-09-06T09:29:03Z"
+        },
+        "status": "merged_verified",
+        "exact_head_merge": true,
+        "remote_main_contains_head": true,
+        "reviews": []
       }
     ],
-    "latest_published_source_checkpoint": "173f16275638c8d067d80b66b53094312294fbbf",
-    "remote_main": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
-    "local_main": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+    "latest_published_source_checkpoint": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
+    "remote_main": "a39edc784be728b127aac6387277205136407c01",
+    "local_main": "a39edc784be728b127aac6387277205136407c01",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+    "merge_sha": "a39edc784be728b127aac6387277205136407c01",
     "checks": {
-      "Lean build and trust audit": "SUCCESS 2026-09-06T08:39:27Z",
-      "Exact computational certificates": "SUCCESS 2026-09-06T08:47:25Z"
+      "Lean build and trust audit": "SUCCESS 2026-09-06T09:21:04Z",
+      "Exact computational certificates": "SUCCESS 2026-09-06T09:29:03Z"
     },
     "remote_main_contains_head": true,
     "latest_receipt": {
-      "checkpoint": "Pass40",
-      "pr": 39,
-      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/39",
-      "head_sha": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
-      "merge_sha": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
-      "merged_at": "2026-09-06T08:50:39Z",
-      "ci_run": 34022379313,
+      "checkpoint": "Pass41",
+      "pr_number": 40,
+      "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/40",
+      "head_sha": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
+      "merge_sha": "a39edc784be728b127aac6387277205136407c01",
+      "merged_at": "2026-09-06T09:32:20Z",
+      "ci_run": 34024320508,
       "checks": {
-        "Lean build and trust audit": "SUCCESS 2026-09-06T08:39:27Z",
-        "Exact computational certificates": "SUCCESS 2026-09-06T08:47:25Z"
+        "Lean build and trust audit": "SUCCESS 2026-09-06T09:21:04Z",
+        "Exact computational certificates": "SUCCESS 2026-09-06T09:29:03Z"
       },
+      "status": "merged_verified",
       "exact_head_merge": true,
-      "remote_main_ancestor_verified": true,
-      "reviews": [],
-      "status": "merged_verified"
+      "remote_main_contains_head": true,
+      "reviews": []
     },
-    "merged_at": "2026-09-06T08:50:39Z",
-    "verification": "Exact reviewed head merged after CLEAN/no blocking reviews/not draft; fetched origin/main, ancestor command exit0; local main and new branch HEAD equal merge SHA."
+    "merged_at": "2026-09-06T09:32:20Z",
+    "verification": "Exact reviewed head merged after CLEAN/no blocking reviews/not draft; fetched origin/main, ancestor command exit0; local main and new branch HEAD equal merge SHA.",
+    "checkpoint": "Pass41",
+    "ci_run": 34024320508,
+    "exact_head_merge": true,
+    "reviews": []
   },
   "runtime_goal_observation": {
     "status": "active",
@@ -6709,11 +6824,11 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "checkpoint": "Pass41",
+    "checkpoint": "Pass42",
     "phase": "verified_ready_to_commit",
-    "branch": "codex/astra-prime-adic-compression",
-    "base": "main",
-    "previous_main": "f1d45fdf95af26f31cffcc92485fc5951c4b0169"
+    "branch": "codex/astra-constrained-maximizer",
+    "base_main": "a39edc784be728b127aac6387277205136407c01",
+    "verification": "research/astra-pass42-verification.json"
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -8151,7 +8266,7 @@
     }
   },
   "pending_pass41": {
-    "phase": "verified_ready_to_publish",
+    "phase": "PR_checks_pending",
     "target": "Exact reviewed primeAdic_two_distinct_targets and primeAdic_triple_compression, oriented signed adapter and prerequisite arithmetic.",
     "manuscript": "ee396d22cae90460868ee13ba70c26204cafad190aea3b72835680218b3c88c2",
     "independent_review": "a3a77cdfbc4f983755d38bd75a7aad6ccdeb4534d5c1ec455dfce0320c1d4947",
@@ -8311,17 +8426,48 @@
   },
   "pending_pass42": {
     "target": "Exact independently accepted maximizer P/M/D contracts",
-    "phase": "focused_module_checked_independent_review",
+    "phase": "verified_ready_to_publish",
     "source": "LonelyRunner/ConstrainedMaximizer.lean",
     "helper_sha256": "b2c6d34e58e3b70e11bb3e84f479cdbf7b949a291dbe50ecd00bf2c1dfe760ec",
     "helper_status": "author focusedbuild/axioms passed; root read proof; not yet root integrated or independently kernel reviewed",
-    "next": "Independent frozen module review/probes; integrate root/AxiomAudit only after Pass41 frozen-source publication.",
+    "next": "Full build/trust, frozen independent maximizer replay, documentation and publication.",
     "source_sha256": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
     "root_implementation": "Root implemented exact P/M/D after Terra returned helper only; full module focused build passed, not root integrated yet.",
     "verification": {
       "focused_build_exit_code": 0,
       "jobs": 1844,
       "log_sha256": "44d384d55316a62d5d3a07f21550ca840745307027ec46ac8663812ed5b2c28a"
+    },
+    "root_exact_maximizer_replay": {
+      "report_sha256": "e99bed1781933ce2f30652bce0041f4fe7ebccc29bf4638a76ccc244e08f4f56",
+      "launcher_sha256": "2d666c61785457c89c8b93551e6735fd0d5160d2736b128db15898c803bb319e",
+      "exit_code": 0,
+      "wall_seconds": 2.1558807060064282,
+      "stdout": "{\"bytes\": 13454, \"evidence\": \"/tmp/astra-constrained-review-4c4l61sf\", \"failure\": null, \"returncode\": 0}\nSTDOUT_BEGIN\n'LonelyRunner.circleNorm_eq_min_fract' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_forward_complement_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_oriented_complement_maximizer' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.reciprocal_dilate_shift_improves' depends on axioms: [propext, Classical.choice, Quot.sound]\nSTDOUT_END\nSTDERR_BEGIN\nSTDERR_END\n{\n  \"address_limit_bytes\": 8589934592,\n  \"bytes\": {\n    \"Probe.lean\": 6769,\n    \"replay.sh\": 4406,\n    \"stderr.bin\": 0,\n    \"stdin.bin\": 0,\n    \"stdout.bin\": 428\n  },\n  \"command\": [\n    \"/home/joshua/.elan/bin/lake\",\n    \"env\",\n    \"lean\",\n    \"-j1\",\n    \"-s65536\",\n    \"-DwarningAsError=true\",\n    \"/tmp/astra-constrained-review-4c4l61sf/Probe.lean\"\n  ],\n  \"cpu_limits\": [\n    59,\n    60\n  ],\n  \"cwd\": \"/home/joshua/lonely-runner-formalization\",\n  \"failure\": null,\n  \"guards\": {\n    \".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean\": \"443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170\",\n    \"LonelyRunner/ConstrainedMaximizer.lean\": \"2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92\",\n    \"lake-manifest.json\": \"887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218\",\n    \"lean-toolchain\": \"8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af\",\n    \"research/astra-six-total-maximizer-plan.md\": \"ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100\",\n    \"research/astra-six-total-maximizer-review.md\": \"d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0\"\n  },\n  \"lean_num_threads\": \"1\",\n  \"lean_stack_size_kb\": \"65536\",\n  \"python\": \"3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]\",\n  \"returncode\": 0,\n  \"sha256\": {\n    \"Probe.lean\": \"120c938fe6ba3eeb2c3b5f9b805d5dc9203e20690dc495a2481517852764e858\",\n    \"replay.sh\": \"2d666c61785457c89c8b93551e6735fd0d5160d2736b128db15898c803bb319e\",\n    \"stderr.bin\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"stdin.bin\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"stdout.bin\": \"24f50b15c9b6c8cfc0112f0fff416184177b15db02b8c6c3be02cf2ddb2e0035\"\n  },\n  \"source_guards_unchanged\": true,\n  \"stream_limit_bytes\": 262144,\n  \"wall_seconds\": 2.118968858005246\n}\n",
+      "stderr": "",
+      "stdout_sha256": "e562d1b6297452ffc4407e1cad9dd47d7acf3c415993c49f0aa51a52bc091c26",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "full_build": {
+      "command": "lake build",
+      "exit_code": 0,
+      "jobs": 3661,
+      "log_sha256": "aa92c980a4e1e6362aae03729291adc444235a52a7e9833e58a9bbb08ff42b6b"
+    },
+    "trust": {
+      "command": "python3 -B scripts/audit_lean_trust.py",
+      "exit_code": 0,
+      "dependency_reports": 558,
+      "axiom_free_reports": 3,
+      "log_sha256": "b77b49feeef43fe4febb21a425a9afa8e03c1bfd64613eebc1707916eb9bdc02",
+      "new_public_axiom_output": [
+        "'LonelyRunner.circleNorm_eq_min_fract' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.exists_forward_complement_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.exists_oriented_complement_maximizer' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.reciprocal_dilate_shift_improves' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.PhaseGood' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.phase_certificate_sound' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
     }
   },
   "renault_phase_certificate_experiment": {
@@ -8441,6 +8587,260 @@
       "path": "LonelyRunner/RenaultPhaseCertificates.lean",
       "sha256": "36b58c04e0c755d462f32bae3388c30d744d97ccb20a3bc27aa0daa99b7e49f0",
       "status": "Terra completed generic certificate soundness only; focused build/axiom exit0 reported; root source reading, independent review pending."
+    },
+    "independent_review": {
+      "path": "research/astra-renault-phase-fixed-certificate-review.md",
+      "sha256": "e0771ca34ce9c0d484b72da43c444bd37dd02dd8173442d2dde7251b64c37211",
+      "root_replays": {
+        "fixed": {
+          "mode": "fixed",
+          "report_sha256": "e0771ca34ce9c0d484b72da43c444bd37dd02dd8173442d2dde7251b64c37211",
+          "bash_sha256": "7949579dd3e68df3d727471ae600488efe62fb716b1398fbf398e661c4a48eb0",
+          "exit_code": 0,
+          "wall_seconds": 0.04621862800559029,
+          "stdout": "{\"argv_sha256\": \"ff6d6eea21da4f53cc6e4a69be2a40daf6541a3ade4c6bb5cd8ccc0ba9e6cdae\", \"child_max_rss_kib\": 11372, \"child_system_seconds\": 0.0029349999999999997, \"child_user_seconds\": 0.018588999999999998, \"exit\": 0, \"guard_count\": 8, \"guards\": \"PASS\", \"mode\": \"fixed\", \"program_bytes\": 6040, \"program_sha256\": \"7f8be20e9ce9cbf6e257ab0e6042e207ed587873aa854acf4584fcd1fb4c39de\", \"python\": \"3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]\", \"stderr_bytes\": 0, \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdin_bytes\": 19034, \"stdin_sha256\": \"c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1\", \"stdout_bytes\": 170, \"stdout_sha256\": \"c5a5255fa822e07684c32339d8a8fe64d149466f2f1c3f2b5cadd79e3e234309\", \"wall_limit_seconds\": 60, \"wall_seconds\": 0.021928}\nSTDOUT-BEGIN\n{\"atoms\": 120, \"candidate_predicates\": 2760, \"classes\": 98, \"kernel_theorem\": false, \"retained\": 41, \"triple_witnesses\": 12341, \"verified\": \"fixed-coverage-certificate\"}\nSTDOUT-END\nSTDERR-BEGIN\nSTDERR-END\n",
+          "stderr": "",
+          "stdout_sha256": "4e02dd9b46cddb17af2364ff96a0a260219d01af1369b4d53f9be70b106c23e2",
+          "metadata": {
+            "argv_sha256": "ff6d6eea21da4f53cc6e4a69be2a40daf6541a3ade4c6bb5cd8ccc0ba9e6cdae",
+            "child_max_rss_kib": 11372,
+            "child_system_seconds": 0.0029349999999999997,
+            "child_user_seconds": 0.018588999999999998,
+            "exit": 0,
+            "guard_count": 8,
+            "guards": "PASS",
+            "mode": "fixed",
+            "program_bytes": 6040,
+            "program_sha256": "7f8be20e9ce9cbf6e257ab0e6042e207ed587873aa854acf4584fcd1fb4c39de",
+            "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdin_bytes": 19034,
+            "stdin_sha256": "c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1",
+            "stdout_bytes": 170,
+            "stdout_sha256": "c5a5255fa822e07684c32339d8a8fe64d149466f2f1c3f2b5cadd79e3e234309",
+            "wall_limit_seconds": 60,
+            "wall_seconds": 0.021928
+          }
+        },
+        "lean": {
+          "mode": "lean",
+          "report_sha256": "e0771ca34ce9c0d484b72da43c444bd37dd02dd8173442d2dde7251b64c37211",
+          "bash_sha256": "abf97294d861ab5c22a60d1b54f3a6555800c6fc27a98d8d5980d05862c8a5b4",
+          "exit_code": 0,
+          "wall_seconds": 2.0529161030135583,
+          "stdout": "{\"argv_sha256\": \"a5186ea02e35b2784babb645b3f6342f42dffd24a31358744dbd611b87f6a43f\", \"child_max_rss_kib\": 3302776, \"child_system_seconds\": 0.489513, \"child_user_seconds\": 1.541245, \"exit\": 0, \"guard_count\": 8, \"guards\": \"PASS\", \"mode\": \"lean\", \"program_bytes\": 1770, \"program_sha256\": \"eb4981dd9dbce30ca96e34ed24562cc57eafea96c3679bf7d81c376d9a265fe6\", \"python\": \"3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]\", \"stderr_bytes\": 0, \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdin_bytes\": 1770, \"stdin_sha256\": \"eb4981dd9dbce30ca96e34ed24562cc57eafea96c3679bf7d81c376d9a265fe6\", \"stdout_bytes\": 182, \"stdout_sha256\": \"42b8053454b029c76cd77fb3ff1852d6cadf68f177fb46bbc2de2eef77bc9f87\", \"wall_limit_seconds\": 120, \"wall_seconds\": 2.027834}\nSTDOUT-BEGIN\n'LonelyRunner.PhaseGood' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.phase_certificate_sound' depends on axioms: [propext, Classical.choice, Quot.sound]\nSTDOUT-END\nSTDERR-BEGIN\nSTDERR-END\n",
+          "stderr": "",
+          "stdout_sha256": "d4612a9f9b4d8f1f684f18c74af5c2b73304ad7bfa9d837401c822c5f3a88998",
+          "metadata": {
+            "argv_sha256": "a5186ea02e35b2784babb645b3f6342f42dffd24a31358744dbd611b87f6a43f",
+            "child_max_rss_kib": 3302776,
+            "child_system_seconds": 0.489513,
+            "child_user_seconds": 1.541245,
+            "exit": 0,
+            "guard_count": 8,
+            "guards": "PASS",
+            "mode": "lean",
+            "program_bytes": 1770,
+            "program_sha256": "eb4981dd9dbce30ca96e34ed24562cc57eafea96c3679bf7d81c376d9a265fe6",
+            "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdin_bytes": 1770,
+            "stdin_sha256": "eb4981dd9dbce30ca96e34ed24562cc57eafea96c3679bf7d81c376d9a265fe6",
+            "stdout_bytes": 182,
+            "stdout_sha256": "42b8053454b029c76cd77fb3ff1852d6cadf68f177fb46bbc2de2eef77bc9f87",
+            "wall_limit_seconds": 120,
+            "wall_seconds": 2.027834
+          }
+        }
+      },
+      "status": "accepted, concrete Lean phase theorem remains absent"
     }
+  },
+  "renault_phase_kernel_pilot": {
+    "phase": "first_row_kernel_checked",
+    "plan": "research/astra-renault-kernel-pilot-plan.md",
+    "source_sha256": "793235f5bf75617b5e9590e9f6256ef41da62046486559ab636688b42cbe4233",
+    "target": "forall j,k:Fin41,j<=k -> masks0 & masksj & masksk !=0",
+    "bounds": {
+      "index_pairs": 1681,
+      "ordered_pairs": 861,
+      "wall_seconds": 60,
+      "cpu_seconds": [
+        59,
+        60
+      ],
+      "address_bytes_per_process": 2147483648,
+      "maxHeartbeats": 1000000,
+      "maxRecDepth": 4096,
+      "evidence_acceptance_bytes": 1048576
+    },
+    "scope": "Fixed first row only; no full kernel coverage or phase theorem.",
+    "next": "Only fixed first row checked; predeclare all-row partition and kernel bridge before implementation.",
+    "runtime": "Pinned help verified; first attempt uses lake env lean -j 1, unchangedcaps andsource.",
+    "startup_failure": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "/tmp/astra-renault-first-row-pilot.lean"
+      ],
+      "source_sha256": "793235f5bf75617b5e9590e9f6256ef41da62046486559ab636688b42cbe4233",
+      "exit_code": -6,
+      "signal": 6,
+      "wall_seconds": 1.1007042939891107,
+      "failure": null,
+      "capture_complete": true,
+      "stdout": "",
+      "stderr": "libc++abi: terminating due to uncaught exception of type lean::exception: failed to create thread\n",
+      "stdout_bytes": 0,
+      "stderr_bytes": 98,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "32a60967270365f092cad81a408cf0e68f13aceab4359f32700f140a54129b9b",
+      "child_max_rss_kib": 23316,
+      "cpu_limits": [
+        59,
+        60
+      ],
+      "address_bytes_per_process": 2147483648,
+      "wall_limit_seconds": 60
+    },
+    "runtime_source": "https://raw.githubusercontent.com/leanprover/lean4/v4.32.1/src/runtime/object.cpp lines1006-1020 rootread",
+    "retry": "Identical first-row source and CPU/wall/heartbeat; 8GiB virtual envelope justified by failed import mappings at4GiB and successful independent same-runtime probe at8GiB.",
+    "retry_launcher_sha256": "0e2d5909f44d2f26aec0f16e467f296295bf73e2dc8e949a5ddedcb249787bae",
+    "thread_count_only_failure": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "/tmp/astra-renault-first-row-pilot.lean"
+      ],
+      "source_sha256": "793235f5bf75617b5e9590e9f6256ef41da62046486559ab636688b42cbe4233",
+      "exit_code": -6,
+      "signal": 6,
+      "wall_seconds": 1.086014536995208,
+      "failure": null,
+      "capture_complete": true,
+      "stdout": "",
+      "stderr": "libc++abi: terminating due to uncaught exception of type lean::exception: failed to create thread\n",
+      "stdout_bytes": 0,
+      "stderr_bytes": 98,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "32a60967270365f092cad81a408cf0e68f13aceab4359f32700f140a54129b9b",
+      "child_max_rss_kib": 23312,
+      "cpu_limits": [
+        59,
+        60
+      ],
+      "address_bytes_per_process": 2147483648,
+      "wall_limit_seconds": 60
+    },
+    "runtime_stack_source": "https://raw.githubusercontent.com/leanprover/lean4/v4.32.1/src/runtime/thread.cpp rootread lines21-26 and160-177",
+    "stack_retry_launcher_sha256": "8dd071e95bb9d40de218eadeea2d9235d99624f322a1a5070fed45b16015d41c",
+    "stack_setting_failure": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "/tmp/astra-renault-first-row-pilot.lean"
+      ],
+      "source_sha256": "793235f5bf75617b5e9590e9f6256ef41da62046486559ab636688b42cbe4233",
+      "exit_code": -6,
+      "signal": 6,
+      "wall_seconds": 1.1000995020149276,
+      "failure": null,
+      "capture_complete": true,
+      "stdout": "",
+      "stderr": "libc++abi: terminating due to uncaught exception of type lean::exception: failed to create thread\n",
+      "stdout_bytes": 0,
+      "stderr_bytes": 98,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "32a60967270365f092cad81a408cf0e68f13aceab4359f32700f140a54129b9b",
+      "child_max_rss_kib": 23232,
+      "cpu_limits": [
+        59,
+        60
+      ],
+      "address_bytes_per_process": 2147483648,
+      "wall_limit_seconds": 60
+    },
+    "startup_trace": {
+      "path": "research/astra-lean-capped-startup-trace.log",
+      "sha256": "ace24a55f6664ecfd29195a3e26173fbe4f85f2c1215111c438c512a675822c2",
+      "finding": "Successful1GiB MAP_NORESERVE then~1GiB MAP_STACK ENOMEM under2GiB, pre-theorem."
+    },
+    "address_retry_launcher_sha256": "da7ba525a07e98cf89b13f695dee0ce569ca3f41fbca62d225b2ed85541d9539",
+    "four_gib_import_failure": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "/tmp/astra-renault-first-row-pilot.lean"
+      ],
+      "source_sha256": "793235f5bf75617b5e9590e9f6256ef41da62046486559ab636688b42cbe4233",
+      "exit_code": 1,
+      "signal": null,
+      "wall_seconds": 0.8023839090019464,
+      "failure": null,
+      "capture_complete": true,
+      "stdout": "/tmp/astra-renault-first-row-pilot.lean:1:0: error: failed to read file '/home/joshua/.elan/toolchains/leanprover--lean4---v4.32.1/lib/lean/Lean/Language/Lean/Types.olean'\n",
+      "stderr": "",
+      "stdout_bytes": 172,
+      "stderr_bytes": 0,
+      "stdout_sha256": "7285109f9e8c047edab52a8e69ff49aa025d071609ba9eeed922a319e0ad1e58",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "child_max_rss_kib": 804912,
+      "cpu_limits": [
+        59,
+        60
+      ],
+      "address_bytes_per_process": 4294967296,
+      "wall_limit_seconds": 60
+    },
+    "success": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "/tmp/astra-renault-first-row-pilot.lean"
+      ],
+      "source_sha256": "793235f5bf75617b5e9590e9f6256ef41da62046486559ab636688b42cbe4233",
+      "exit_code": 0,
+      "signal": null,
+      "wall_seconds": 1.830493090004893,
+      "failure": null,
+      "capture_complete": true,
+      "stdout": "'RenaultKernelPilot.first_row' depends on axioms: [propext]\n",
+      "stderr": "",
+      "stdout_bytes": 60,
+      "stderr_bytes": 0,
+      "stdout_sha256": "87ee2149bdd641bd7ed0483c87632ef808a1262a37f4725f1427c4cfd2b2cf48",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "child_max_rss_kib": 1581704,
+      "cpu_limits": [
+        59,
+        60
+      ],
+      "address_bytes_per_process": 8589934592,
+      "wall_limit_seconds": 60
+    }
+  },
+  "renault_all_row_kernel_check": {
+    "phase": "predeclared",
+    "plan": "research/astra-renault-all-row-kernel-plan.md",
+    "certificate_sha256": "c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1",
+    "first_row_reference": "research/astra-renault-kernel-pilot-success.json",
+    "next": "Terra fixed implementation and capped focused source invocation; exact evidence before independent review."
   }
 }

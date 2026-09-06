@@ -1,0 +1,175 @@
+{
+  "checkpoint": "Pass42",
+  "status": "verified_ready_to_publish",
+  "base_main": "a39edc784be728b127aac6387277205136407c01",
+  "files": {
+    "LonelyRunner.lean": "35ba25e3cf59df1c093116b94a302f7e8c1695395a192a705dec30b51c199a00",
+    "LonelyRunner/AxiomAudit.lean": "d483e42ee9a5cfa78fe408ee61d2c14546fdfa625a6b28b63305cf3eaa75ca97",
+    "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+    "LonelyRunner/RenaultPhaseCertificates.lean": "36b58c04e0c755d462f32bae3388c30d744d97ccb20a3bc27aa0daa99b7e49f0",
+    "docs/astra-research-42.md": "3518d8c0c912d649064d9e6eace50e912cc328cb2ef5b775a1d0f7c1c002717a",
+    "research/astra-constrained-maximizer-final-source-review.md": "e99bed1781933ce2f30652bce0041f4fe7ebccc29bf4638a76ccc244e08f4f56",
+    "research/astra-constrained-maximizer-probe-history.json": "c492c8d6a1bb80215440c510dff7c2fe1da63a6fcb87897ccab2892088c4a010",
+    "research/astra-renault-phase-certificate-plan.md": "7f9d296d61db16467e7b7bf34e5070b7497f3b6a0be939e2e8fa273887ecf4af",
+    "research/astra-renault-phase-certificate-result.md": "3df3af5721cc79d123eea92161fec91e723b8cd1d0e4154395ead7ce2bea9edb",
+    "research/astra-renault-phase-five-one-certificate.json": "c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1",
+    "research/astra-renault-phase-five-one-execution.json": "3c426aa110ef307a909f5f127f617a20fd738f394f2fa1a7ff97532a0fc0a694",
+    "research/astra-renault-phase-fixed-certificate-review.md": "e0771ca34ce9c0d484b72da43c444bd37dd02dd8173442d2dde7251b64c37211",
+    "research/astra-renault-kernel-pilot-plan.md": "0f49c653a6da4d94d88c23e88ddcf0dbbbefd13b5996f7eac4b133ad0dc49fbc",
+    "research/astra-renault-kernel-pilot-startup-failure.json": "1b6967c3ae3c9308bdbc5fc2de8b07ce34a5f9df45a6e039593d2e5bc522df8b",
+    "research/astra-renault-kernel-pilot-thread-limit-failure.json": "479aab1a8613200351d1e5d94381c98304f65b9188554199ec5302f4f3e48e11",
+    "research/astra-renault-kernel-pilot-stack-limit-failure.json": "1ae72858e0c74898b54a0f70f437a405c225400d5edc543af6b7a31cb6ddd562",
+    "research/astra-renault-kernel-pilot-four-gib-import-failure.json": "6127ddc75159ad527808dcb662b7f236c564e2c0eb48f449de18487aee5d819e",
+    "research/astra-renault-kernel-pilot-success.json": "61e9c4b34cfa1d17eef07670e9bb0e5ea0d1d424d277d2b4703453f1e8eef4e9",
+    "research/astra-lean-capped-startup-trace.log": "ace24a55f6664ecfd29195a3e26173fbe4f85f2c1215111c438c512a675822c2"
+  },
+  "verification": {
+    "focused_maximizer_build": {
+      "focused_build_exit_code": 0,
+      "jobs": 1844,
+      "log_sha256": "44d384d55316a62d5d3a07f21550ca840745307027ec46ac8663812ed5b2c28a"
+    },
+    "full_build": {
+      "command": "lake build",
+      "exit_code": 0,
+      "jobs": 3661,
+      "log_sha256": "aa92c980a4e1e6362aae03729291adc444235a52a7e9833e58a9bbb08ff42b6b"
+    },
+    "trust": {
+      "command": "python3 -B scripts/audit_lean_trust.py",
+      "exit_code": 0,
+      "dependency_reports": 558,
+      "axiom_free_reports": 3,
+      "log_sha256": "b77b49feeef43fe4febb21a425a9afa8e03c1bfd64613eebc1707916eb9bdc02",
+      "new_public_axiom_output": [
+        "'LonelyRunner.circleNorm_eq_min_fract' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.exists_forward_complement_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.exists_oriented_complement_maximizer' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.reciprocal_dilate_shift_improves' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.PhaseGood' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.phase_certificate_sound' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    "maximizer_root_exact_replay": {
+      "report_sha256": "e99bed1781933ce2f30652bce0041f4fe7ebccc29bf4638a76ccc244e08f4f56",
+      "launcher_sha256": "2d666c61785457c89c8b93551e6735fd0d5160d2736b128db15898c803bb319e",
+      "exit_code": 0,
+      "wall_seconds": 2.1558807060064282,
+      "stdout": "{\"bytes\": 13454, \"evidence\": \"/tmp/astra-constrained-review-4c4l61sf\", \"failure\": null, \"returncode\": 0}\nSTDOUT_BEGIN\n'LonelyRunner.circleNorm_eq_min_fract' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_forward_complement_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_oriented_complement_maximizer' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.reciprocal_dilate_shift_improves' depends on axioms: [propext, Classical.choice, Quot.sound]\nSTDOUT_END\nSTDERR_BEGIN\nSTDERR_END\n{\n  \"address_limit_bytes\": 8589934592,\n  \"bytes\": {\n    \"Probe.lean\": 6769,\n    \"replay.sh\": 4406,\n    \"stderr.bin\": 0,\n    \"stdin.bin\": 0,\n    \"stdout.bin\": 428\n  },\n  \"command\": [\n    \"/home/joshua/.elan/bin/lake\",\n    \"env\",\n    \"lean\",\n    \"-j1\",\n    \"-s65536\",\n    \"-DwarningAsError=true\",\n    \"/tmp/astra-constrained-review-4c4l61sf/Probe.lean\"\n  ],\n  \"cpu_limits\": [\n    59,\n    60\n  ],\n  \"cwd\": \"/home/joshua/lonely-runner-formalization\",\n  \"failure\": null,\n  \"guards\": {\n    \".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean\": \"443a61889184bd7fc7ea52a85ebcfa3fc0ba6f1e458b34824afb166812f38170\",\n    \"LonelyRunner/ConstrainedMaximizer.lean\": \"2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92\",\n    \"lake-manifest.json\": \"887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218\",\n    \"lean-toolchain\": \"8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af\",\n    \"research/astra-six-total-maximizer-plan.md\": \"ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100\",\n    \"research/astra-six-total-maximizer-review.md\": \"d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0\"\n  },\n  \"lean_num_threads\": \"1\",\n  \"lean_stack_size_kb\": \"65536\",\n  \"python\": \"3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]\",\n  \"returncode\": 0,\n  \"sha256\": {\n    \"Probe.lean\": \"120c938fe6ba3eeb2c3b5f9b805d5dc9203e20690dc495a2481517852764e858\",\n    \"replay.sh\": \"2d666c61785457c89c8b93551e6735fd0d5160d2736b128db15898c803bb319e\",\n    \"stderr.bin\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"stdin.bin\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n    \"stdout.bin\": \"24f50b15c9b6c8cfc0112f0fff416184177b15db02b8c6c3be02cf2ddb2e0035\"\n  },\n  \"source_guards_unchanged\": true,\n  \"stream_limit_bytes\": 262144,\n  \"wall_seconds\": 2.118968858005246\n}\n",
+      "stderr": "",
+      "stdout_sha256": "e562d1b6297452ffc4407e1cad9dd47d7acf3c415993c49f0aa51a52bc091c26",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "phase_root_exact_replays": {
+      "fixed": {
+        "mode": "fixed",
+        "report_sha256": "e0771ca34ce9c0d484b72da43c444bd37dd02dd8173442d2dde7251b64c37211",
+        "bash_sha256": "7949579dd3e68df3d727471ae600488efe62fb716b1398fbf398e661c4a48eb0",
+        "exit_code": 0,
+        "wall_seconds": 0.04621862800559029,
+        "stdout": "{\"argv_sha256\": \"ff6d6eea21da4f53cc6e4a69be2a40daf6541a3ade4c6bb5cd8ccc0ba9e6cdae\", \"child_max_rss_kib\": 11372, \"child_system_seconds\": 0.0029349999999999997, \"child_user_seconds\": 0.018588999999999998, \"exit\": 0, \"guard_count\": 8, \"guards\": \"PASS\", \"mode\": \"fixed\", \"program_bytes\": 6040, \"program_sha256\": \"7f8be20e9ce9cbf6e257ab0e6042e207ed587873aa854acf4584fcd1fb4c39de\", \"python\": \"3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]\", \"stderr_bytes\": 0, \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdin_bytes\": 19034, \"stdin_sha256\": \"c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1\", \"stdout_bytes\": 170, \"stdout_sha256\": \"c5a5255fa822e07684c32339d8a8fe64d149466f2f1c3f2b5cadd79e3e234309\", \"wall_limit_seconds\": 60, \"wall_seconds\": 0.021928}\nSTDOUT-BEGIN\n{\"atoms\": 120, \"candidate_predicates\": 2760, \"classes\": 98, \"kernel_theorem\": false, \"retained\": 41, \"triple_witnesses\": 12341, \"verified\": \"fixed-coverage-certificate\"}\nSTDOUT-END\nSTDERR-BEGIN\nSTDERR-END\n",
+        "stderr": "",
+        "stdout_sha256": "4e02dd9b46cddb17af2364ff96a0a260219d01af1369b4d53f9be70b106c23e2",
+        "metadata": {
+          "argv_sha256": "ff6d6eea21da4f53cc6e4a69be2a40daf6541a3ade4c6bb5cd8ccc0ba9e6cdae",
+          "child_max_rss_kib": 11372,
+          "child_system_seconds": 0.0029349999999999997,
+          "child_user_seconds": 0.018588999999999998,
+          "exit": 0,
+          "guard_count": 8,
+          "guards": "PASS",
+          "mode": "fixed",
+          "program_bytes": 6040,
+          "program_sha256": "7f8be20e9ce9cbf6e257ab0e6042e207ed587873aa854acf4584fcd1fb4c39de",
+          "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdin_bytes": 19034,
+          "stdin_sha256": "c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1",
+          "stdout_bytes": 170,
+          "stdout_sha256": "c5a5255fa822e07684c32339d8a8fe64d149466f2f1c3f2b5cadd79e3e234309",
+          "wall_limit_seconds": 60,
+          "wall_seconds": 0.021928
+        }
+      },
+      "lean": {
+        "mode": "lean",
+        "report_sha256": "e0771ca34ce9c0d484b72da43c444bd37dd02dd8173442d2dde7251b64c37211",
+        "bash_sha256": "abf97294d861ab5c22a60d1b54f3a6555800c6fc27a98d8d5980d05862c8a5b4",
+        "exit_code": 0,
+        "wall_seconds": 2.0529161030135583,
+        "stdout": "{\"argv_sha256\": \"a5186ea02e35b2784babb645b3f6342f42dffd24a31358744dbd611b87f6a43f\", \"child_max_rss_kib\": 3302776, \"child_system_seconds\": 0.489513, \"child_user_seconds\": 1.541245, \"exit\": 0, \"guard_count\": 8, \"guards\": \"PASS\", \"mode\": \"lean\", \"program_bytes\": 1770, \"program_sha256\": \"eb4981dd9dbce30ca96e34ed24562cc57eafea96c3679bf7d81c376d9a265fe6\", \"python\": \"3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]\", \"stderr_bytes\": 0, \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdin_bytes\": 1770, \"stdin_sha256\": \"eb4981dd9dbce30ca96e34ed24562cc57eafea96c3679bf7d81c376d9a265fe6\", \"stdout_bytes\": 182, \"stdout_sha256\": \"42b8053454b029c76cd77fb3ff1852d6cadf68f177fb46bbc2de2eef77bc9f87\", \"wall_limit_seconds\": 120, \"wall_seconds\": 2.027834}\nSTDOUT-BEGIN\n'LonelyRunner.PhaseGood' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.phase_certificate_sound' depends on axioms: [propext, Classical.choice, Quot.sound]\nSTDOUT-END\nSTDERR-BEGIN\nSTDERR-END\n",
+        "stderr": "",
+        "stdout_sha256": "d4612a9f9b4d8f1f684f18c74af5c2b73304ad7bfa9d837401c822c5f3a88998",
+        "metadata": {
+          "argv_sha256": "a5186ea02e35b2784babb645b3f6342f42dffd24a31358744dbd611b87f6a43f",
+          "child_max_rss_kib": 3302776,
+          "child_system_seconds": 0.489513,
+          "child_user_seconds": 1.541245,
+          "exit": 0,
+          "guard_count": 8,
+          "guards": "PASS",
+          "mode": "lean",
+          "program_bytes": 1770,
+          "program_sha256": "eb4981dd9dbce30ca96e34ed24562cc57eafea96c3679bf7d81c376d9a265fe6",
+          "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdin_bytes": 1770,
+          "stdin_sha256": "eb4981dd9dbce30ca96e34ed24562cc57eafea96c3679bf7d81c376d9a265fe6",
+          "stdout_bytes": 182,
+          "stdout_sha256": "42b8053454b029c76cd77fb3ff1852d6cadf68f177fb46bbc2de2eef77bc9f87",
+          "wall_limit_seconds": 120,
+          "wall_seconds": 2.027834
+        }
+      }
+    },
+    "first_row_kernel_pilot": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "/tmp/astra-renault-first-row-pilot.lean"
+      ],
+      "source_sha256": "793235f5bf75617b5e9590e9f6256ef41da62046486559ab636688b42cbe4233",
+      "exit_code": 0,
+      "signal": null,
+      "wall_seconds": 1.830493090004893,
+      "failure": null,
+      "capture_complete": true,
+      "stdout": "'RenaultKernelPilot.first_row' depends on axioms: [propext]\n",
+      "stderr": "",
+      "stdout_bytes": 60,
+      "stderr_bytes": 0,
+      "stdout_sha256": "87ee2149bdd641bd7ed0483c87632ef808a1262a37f4725f1427c4cfd2b2cf48",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "child_max_rss_kib": 1581704,
+      "cpu_limits": [
+        59,
+        60
+      ],
+      "address_bytes_per_process": 8589934592,
+      "wall_limit_seconds": 60
+    }
+  },
+  "scope": "Four generic maximizer theorems and conditional phase transfer. Fixed finite Python certificate and one-row kernel pilot retained separately. No full concrete real-phase or new runner-count theorem.",
+  "prior_publication": {
+    "checkpoint": "Pass41",
+    "pr_number": 40,
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/40",
+    "head_sha": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
+    "merge_sha": "a39edc784be728b127aac6387277205136407c01",
+    "merged_at": "2026-09-06T09:32:20Z",
+    "ci_run": 34024320508,
+    "checks": {
+      "Lean build and trust audit": "SUCCESS 2026-09-06T09:21:04Z",
+      "Exact computational certificates": "SUCCESS 2026-09-06T09:29:03Z"
+    },
+    "status": "merged_verified",
+    "exact_head_merge": true,
+    "remote_main_contains_head": true,
+    "reviews": []
+  }
+}

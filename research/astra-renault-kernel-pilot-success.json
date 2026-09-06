@@ -1,0 +1,29 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j",
+    "1",
+    "/tmp/astra-renault-first-row-pilot.lean"
+  ],
+  "source_sha256": "793235f5bf75617b5e9590e9f6256ef41da62046486559ab636688b42cbe4233",
+  "exit_code": 0,
+  "signal": null,
+  "wall_seconds": 1.830493090004893,
+  "failure": null,
+  "capture_complete": true,
+  "stdout": "'RenaultKernelPilot.first_row' depends on axioms: [propext]\n",
+  "stderr": "",
+  "stdout_bytes": 60,
+  "stderr_bytes": 0,
+  "stdout_sha256": "87ee2149bdd641bd7ed0483c87632ef808a1262a37f4725f1427c4cfd2b2cf48",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "child_max_rss_kib": 1581704,
+  "cpu_limits": [
+    59,
+    60
+  ],
+  "address_bytes_per_process": 8589934592,
+  "wall_limit_seconds": 60
+}
