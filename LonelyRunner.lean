@@ -154,6 +154,12 @@ import LonelyRunner.RationalShiftGcd
 import LonelyRunner.RationalShiftInsertion
 import LonelyRunner.SixTotalDivisorCounts
 
+import LonelyRunner.SeparatedPhaseFamily
+import LonelyRunner.ThirdShiftSpacing
+import LonelyRunner.ThirdShiftExceptions
+import LonelyRunner.ThirdShiftSeed
+import LonelyRunner.ThreeDivisibleRunners
+
 /-!
 Root import for the formal Lonely Runner development.
 -/

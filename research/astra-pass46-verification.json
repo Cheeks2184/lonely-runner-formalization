@@ -1,0 +1,256 @@
+{
+  "checkpoint": "Pass46",
+  "status": "Full root build, trust audit, independent source review and exact root replay passed; publication pending.",
+  "source_hashes": {
+    "LonelyRunner/SeparatedPhaseFamily.lean": "28c5db2425eef754156e57c284959ff02da743f1fde424e053c4eae0c721b6bd",
+    "LonelyRunner/ThirdShiftSpacing.lean": "146cdfd80495aced0eb93bc322559cf7e950a80b0d01534b2a57cce7129debaa",
+    "LonelyRunner/ThirdShiftExceptions.lean": "85590988cd0e104dc93fd51bc79aa326fe2799974eae426b7ea3336853872073",
+    "LonelyRunner/ThirdShiftSeed.lean": "3c8b90583658df1cfdbe00e4444157e08d8ae7b4a74b986d5770e9f750429b46",
+    "LonelyRunner/ThreeDivisibleRunners.lean": "614dc7bbf75143da6960d74b3eef5427ef93c9c8b3cbe51ec5cd5c6ca47376a3"
+  },
+  "checks": [
+    {
+      "name": "separated-first",
+      "exit_code": 1,
+      "sha256": "cf47f36c65fcb11bd95ada56228138bda39a8f1421679ccc87bdfa8c9dc007f2",
+      "log": "\u2716 [2999/2999] Building LonelyRunner.SeparatedPhaseFamily (1.3s)\ntrace: .> LEAN_PATH=/home/joshua/lonely-runner-formalization/.lake/packages/Cli/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/batteries/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/Qq/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/aesop/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/importGraph/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/plausible/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/mathlib/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/build/lib/lean /home/joshua/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /home/joshua/lonely-runner-formalization/LonelyRunner/SeparatedPhaseFamily.lean -o /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/SeparatedPhaseFamily.olean -i /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/SeparatedPhaseFamily.ilean -c /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/SeparatedPhaseFamily.c --setup /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/SeparatedPhaseFamily.setup.json --json\nerror: LonelyRunner/SeparatedPhaseFamily.lean:24:54: linarith failed to find a contradiction\n\u03b1 : Type u_1\nf : \u03b1 \u2192 \u211d\n\u03b4 : \u211d\nhsep : \u2200 (i j : \u03b1), i \u2260 j \u2192 2 * \u03b4 \u2264 circleNorm (f i - f j)\ni : \u03b1\nhi : i \u2208 {i | circleNorm (f i) < \u03b4}\nj : \u03b1\nhj : j \u2208 {i | circleNorm (f i) < \u03b4}\nhne : \u00aci = j\nhtri : circleNorm (f i - f j) \u2264 circleNorm (f i) + circleNorm (f j)\na\u271d : 2 * \u03b4 \u2264 circleNorm (f i - f j)\n\u22a2 False\nfailed\nerror: Lean exited with code 1\nSome required targets logged failures:\n- LonelyRunner.SeparatedPhaseFamily\nerror: build failed\n"
+    },
+    {
+      "name": "separated-final",
+      "exit_code": 0,
+      "sha256": "97cc45f4cfead35298a941da00638b610177038339cf058c4cd6ed84272fbf6f",
+      "log": "\u2714 [2999/2999] Built LonelyRunner.SeparatedPhaseFamily (1.3s)\nBuild completed successfully (2999 jobs).\n"
+    },
+    {
+      "name": "third-first",
+      "exit_code": 1,
+      "sha256": "9abb09935b99a7efd6b504da6ae6a86d2f4823c4c9f076543ddf54c1127caa2e",
+      "log": "\u2716 [3004/3005] Building LonelyRunner.ThirdShiftSpacing (1.4s)\ntrace: .> LEAN_PATH=/home/joshua/lonely-runner-formalization/.lake/packages/Cli/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/batteries/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/Qq/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/aesop/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/importGraph/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/plausible/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/mathlib/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/build/lib/lean /home/joshua/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /home/joshua/lonely-runner-formalization/LonelyRunner/ThirdShiftSpacing.lean -o /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/ThirdShiftSpacing.olean -i /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/ThirdShiftSpacing.ilean -c /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/ThirdShiftSpacing.c --setup /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/ThirdShiftSpacing.setup.json --json\nerror: LonelyRunner/ThirdShiftSpacing.lean:35:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  \u2191(\u2191s - \u2191r)\nin the target expression\n  x + \u2191\u2191s * \u2191d / 3 - (x + \u2191\u2191r * \u2191d / 3) = \u2191((\u2191s - \u2191r) * d) / 3\n\nx : \u211d\nd : \u2115\nhnot : \u00ac3 \u2223 d\nk l : Fin 3\nhkl : k \u2260 l\nr s : Fin 3\nhrs : \u2191r < \u2191s\nh : \u2115 := \u2191s - \u2191r\nhhpos : 0 < h\nhhlt : h < 3\nhhnot : \u00ac3 \u2223 h\nhprod : \u00ac3 \u2223 h * d\nhsmall : (\u21913)\u207b\u00b9 \u2264 circleNorm (\u2191(h * d) / \u21913)\n\u22a2 x + \u2191\u2191s * \u2191d / 3 - (x + \u2191\u2191r * \u2191d / 3) = \u2191((\u2191s - \u2191r) * d) / 3\nerror: Lean exited with code 1\nSome required targets logged failures:\n- LonelyRunner.ThirdShiftSpacing\nerror: build failed\n"
+    },
+    {
+      "name": "third-second",
+      "exit_code": 1,
+      "sha256": "671c257a7e5767bba43cea218f14139649e1655073172e01a463ac7667a82c46",
+      "log": "\u2714 [3004/3005] Built LonelyRunner.ThirdShiftSpacing (1.5s)\n\u2716 [3005/3005] Building LonelyRunner.ThirdShiftExceptions (1.5s)\ntrace: .> LEAN_PATH=/home/joshua/lonely-runner-formalization/.lake/packages/Cli/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/batteries/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/Qq/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/aesop/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/importGraph/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/plausible/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/mathlib/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/build/lib/lean /home/joshua/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /home/joshua/lonely-runner-formalization/LonelyRunner/ThirdShiftExceptions.lean -o /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/ThirdShiftExceptions.olean -i /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/ThirdShiftExceptions.ilean -c /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/ThirdShiftExceptions.c --setup /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/ThirdShiftExceptions.setup.json --json\nerror: LonelyRunner/ThirdShiftExceptions.lean:28:4: No goals to be solved\nerror: LonelyRunner/ThirdShiftExceptions.lean:19:47: unsolved goals\n\u03b9 : Type u_1\ninst\u271d : Fintype \u03b9\nx : \u03b9 \u2192 \u211d\nd : \u03b9 \u2192 \u2115\nhnot : \u2200 (i : \u03b9), \u00ac3 \u2223 d i\nhcard : Fintype.card \u03b9 \u2264 2\nR : Finset (Fin 3) := Finset.univ\nB : \u03b9 \u2192 Finset (Fin 3) := fun i => {k | circleNorm (x i + \u2191\u2191k * \u2191(d i) / 3) < 1 / 6}\nhBsubset : \u2200 (i : \u03b9), B i \u2286 R\nhBcard : \u2200 (i : \u03b9), (B i).card \u2264 1\nhsum : \u2211 i, (B i).card < R.card\nk : Fin 3\n_hkR : k \u2208 R\nhkavoid : \u2200 (i : \u03b9), k \u2209 B i\ni : \u03b9\nhbad : circleNorm (x i + \u2191\u2191k * \u2191(d i) / 3) < 1 / 6\n\u22a2 circleNorm (x i + \u2191\u2191k * \u2191(d i) / 3) < 6\u207b\u00b9\nwarning: LonelyRunner/ThirdShiftExceptions.lean:60:11: This simp argument is unused:\n  hbad\n\nHint: Omit it from the simp argument list.\n  simp [B,\u0335 \u0335h\u0335b\u0335a\u0335d\u0335]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nerror: Lean exited with code 1\nSome required targets logged failures:\n- LonelyRunner.ThirdShiftExceptions\nerror: build failed\n"
+    },
+    {
+      "name": "third-final",
+      "exit_code": 0,
+      "sha256": "976145eec37f4d38077cd56967863ddbe9aa164dac6a600f766975e4ef4ee600",
+      "log": "\u2714 [3005/3005] Built LonelyRunner.ThirdShiftExceptions (1.6s)\nBuild completed successfully (3005 jobs).\n"
+    },
+    {
+      "name": "seed-first",
+      "exit_code": 1,
+      "sha256": "24107c7a62448ac120e450d2b8b26b641f68f646372a0936b07cd5247c940593",
+      "log": "\u2716 [3008/3008] Building LonelyRunner.ThirdShiftSeed (1.4s)\ntrace: .> LEAN_PATH=/home/joshua/lonely-runner-formalization/.lake/packages/Cli/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/batteries/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/Qq/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/aesop/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/importGraph/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/plausible/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/packages/mathlib/.lake/build/lib/lean:/home/joshua/lonely-runner-formalization/.lake/build/lib/lean /home/joshua/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /home/joshua/lonely-runner-formalization/LonelyRunner/ThirdShiftSeed.lean -o /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/ThirdShiftSeed.olean -i /home/joshua/lonely-runner-formalization/.lake/build/lib/lean/LonelyRunner/ThirdShiftSeed.ilean -c /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/ThirdShiftSeed.c --setup /home/joshua/lonely-runner-formalization/.lake/build/ir/LonelyRunner/ThirdShiftSeed.setup.json --json\nerror: LonelyRunner/ThirdShiftSeed.lean:23:4: Type mismatch: After simplification, term\n  hexceptions\n has type\n  {i | \u00ac3 \u2223 v i}.card \u2264 2\nbut is expected to have type\n  5 \u2264 2 + Fintype.card { x // 3 \u2223 v x }\nerror: LonelyRunner/ThirdShiftSeed.lean:33:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  circleNorm ((t\u2080 + \u2191\u2191k / \u21913) * \u2191(v i))\nin the target expression\n  1 / 6 \u2264 circleNorm ((t\u2080 + \u2191\u2191k / 3) * \u2191(v i))\n\ncase pos\nv : Fin 5 \u2192 \u2115\nt\u2080 : \u211d\nhseed : \u2200 (i : Fin 5), 3 \u2223 v i \u2192 1 / 6 \u2264 circleNorm (t\u2080 * \u2191(v i))\nhexceptions : {i | \u00ac3 \u2223 v i}.card \u2264 2\nE : Finset (Fin 5) := {i | \u00ac3 \u2223 v i}\nX : Type := \u21a5E\nhcard : Fintype.card X \u2264 2\nhnot : \u2200 (i : X), \u00ac3 \u2223 v \u2191i\nk : Fin 3\nhk : \u2200 (i : X), 1 / 6 \u2264 circleNorm (t\u2080 * \u2191(v \u2191i) + \u2191\u2191k * \u2191(v \u2191i) / 3)\ni : Fin 5\nhdiv : 3 \u2223 v i\nhpres : circleNorm ((t\u2080 + \u2191\u2191k / \u21913) * \u2191(v i)) = circleNorm (t\u2080 * \u2191(v i))\n\u22a2 1 / 6 \u2264 circleNorm ((t\u2080 + \u2191\u2191k / 3) * \u2191(v i))\nerror: Lean exited with code 1\nSome required targets logged failures:\n- LonelyRunner.ThirdShiftSeed\nerror: build failed\n"
+    },
+    {
+      "name": "seed-runners-second",
+      "exit_code": 0,
+      "sha256": "663df99af8707a73912e7a858abbc7ebf86704d8bfa65d114cf123663162d6ab",
+      "log": "\u26a0 [3007/3010] Replayed LonelyRunner.FiveAdicFiltering\nwarning: LonelyRunner/FiveAdicFiltering.lean:248:5: Variable name `hd` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n\u2714 [3008/3288] Built LonelyRunner.ThirdShiftSeed (1.4s)\n\u26a0 [3010/3288] Replayed LonelyRunner.FiveAdicCarry\nwarning: LonelyRunner/FiveAdicCarry.lean:193:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:193:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:193:63: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:199:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:199:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:199:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:205:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:205:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:205:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:293:6: 'change\n  fiveCarryFGood\n    (fiveCarryJ u * fiveCarryCast c.top + fiveCarryC c.carry u +\n      fiveCarryJ u * fiveCarryCast k1 * fiveCarryR c.residue)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: LonelyRunner/FiveAdicCarry.lean:312:6: 'change\n  fiveCarryFGood\n    (fiveCarryJ u * fiveCarryCast c.top + fiveCarryC c.carry u +\n      fiveCarryJ u * fiveCarryCast k1 * fiveCarryR c.residue)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: LonelyRunner/FiveAdicCarry.lean:297:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:316:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n\u26a0 [3011/3288] Replayed LonelyRunner.FiveAdicHardPattern\nwarning: LonelyRunner/FiveAdicHardPattern.lean:191:36: Variable name `hr` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: LonelyRunner/FiveAdicHardPattern.lean:192:5: Variable name `h` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\ninfo: LonelyRunner/FiveAdicHardPattern.lean:237:61: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n\u26a0 [3507/3532] Replayed LonelyRunner.AffineLonelyAt\ninfo: LonelyRunner/AffineLonelyAt.lean:69:58: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\ninfo: LonelyRunner/AffineLonelyAt.lean:79:58: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nwarning: LonelyRunner/AffineLonelyAt.lean:69:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/AffineLonelyAt.lean:69:40: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/AffineLonelyAt.lean:69:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/AffineLonelyAt.lean:79:40: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/AffineLonelyAt.lean:79:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n\u26a0 [3527/3532] Replayed LonelyRunner.PairSumCompleteness\nwarning: LonelyRunner/PairSumCompleteness.lean:46:18: Variable name `h\u03b4` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: LonelyRunner/PairSumCompleteness.lean:107:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/PairSumCompleteness.lean:111:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/PairSumCompleteness.lean:167:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/PairSumCompleteness.lean:167:74: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n\u26a0 [3532/3532] Built LonelyRunner.ThreeDivisibleRunners (1.5s)\nwarning: LonelyRunner/ThreeDivisibleRunners.lean:26:15: This simp argument is unused:\n  Finset.card_univ\n\nHint: Omit it from the simp argument list.\n  simp only [\u0335F\u0335i\u0335n\u0335s\u0335e\u0335t\u0335.\u0335c\u0335a\u0335r\u0335d\u0335_\u0335u\u0335n\u0335i\u0335v\u0335,\u0335 \u0335F\u0335i\u0335n\u0335t\u0335y\u0335p\u0335e\u0335.\u0335c\u0335a\u0335r\u0335d\u0335_\u0335f\u0335i\u0335n\u0335]\u0335[\u0332F\u0332i\u0332n\u0332t\u0332y\u0332p\u0332e\u0332.\u0332c\u0332a\u0332r\u0332d\u0332_\u0332f\u0332i\u0332n\u0332]\u0332\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nBuild completed successfully (3532 jobs).\n"
+    }
+  ],
+  "failed_drafts": {
+    "separated": {
+      "sha256": "b3edc5fe1e1c539e0854f867cb029b43770880a7c053d3e8e342d540280cb244",
+      "source": "import LonelyRunner.FastRunnerInsertion\nimport Mathlib.Tactic\n\nnamespace LonelyRunner\n\n/-- The quotient-circle norm satisfies the subtraction triangle inequality. -/\ntheorem circleNorm_sub_le_add (u v : \u211d) :\n    circleNorm (u - v) \u2264 circleNorm u + circleNorm v := by\n  unfold circleNorm\n  rw [AddCircle.coe_sub]\n  exact norm_sub_le _ _\n\n/-- Pairwise separation at twice a threshold permits at most one label to be\nstrictly inside that threshold; labels may represent equal phase values. -/\ntheorem circleNorm_bad_subsingleton_of_separated {\u03b1 : Type*}\n    (f : \u03b1 \u2192 \u211d) (\u03b4 : \u211d)\n    (hsep : \u2200 i j, i \u2260 j \u2192\n      2 * \u03b4 \u2264 circleNorm (f i - f j)) :\n    Set.Subsingleton {i : \u03b1 | circleNorm (f i) < \u03b4} := by\n  intro i hi j hj\n  by_contra hne\n  have htri : circleNorm (f i - f j) \u2264 circleNorm (f i) + circleNorm (f j) :=\n    circleNorm_sub_le_add _ _\n  have hstrict : circleNorm (f i - f j) < 2 * \u03b4 := by linarith\n  exact (not_lt_of_ge (hsep i j hne)) hstrict\n\nend LonelyRunner\n"
+    },
+    "spacing": {
+      "sha256": "60863256f23a7eeb3257fee02ff1b1fa3391f4c2643585189b5b6ebfaf15e024",
+      "source": "import LonelyRunner.SmallDenominatorWitness\nimport LonelyRunner.StructuredClasses\nimport Mathlib.Tactic\n\nnamespace LonelyRunner\n\n/-- Distinct third-grid shifts of a speed not divisible by three are separated\nby at least one third in quotient-circle norm. -/\ntheorem circleNorm_third_shift_sub_ge (x : \u211d) (d : \u2115)\n    (hnot : \u00ac 3 \u2223 d) (k l : Fin 3) (hkl : k \u2260 l) :\n    (1 : \u211d) / 3 \u2264 circleNorm\n      ((x + (k.val : \u211d) * (d : \u211d) / 3) -\n        (x + (l.val : \u211d) * (d : \u211d) / 3)) := by\n  have ordered : \u2200 r s : Fin 3, r.val < s.val \u2192\n      (1 : \u211d) / 3 \u2264 circleNorm\n        ((x + (s.val : \u211d) * (d : \u211d) / 3) -\n          (x + (r.val : \u211d) * (d : \u211d) / 3)) := by\n    intro r s hrs\n    let h := s.val - r.val\n    have hhpos : 0 < h := by dsimp [h]; omega\n    have hhlt : h < 3 := by dsimp [h]; omega\n    have hhnot : \u00ac 3 \u2223 h := by\n      intro hd\n      have hle := Nat.le_of_dvd hhpos hd\n      omega\n    have hprod : \u00ac 3 \u2223 h * d := by\n      intro hd\n      exact hnot ((by decide : Nat.Prime 3).dvd_mul.mp hd |>.resolve_left hhnot)\n    have hsmall := smallDenominator_circleNorm_ge (N := 3) (q := 3) (a := h * d)\n      (by omega) (by omega) (by omega) hprod\n    have hphase :\n        (x + (s.val : \u211d) * (d : \u211d) / 3) -\n          (x + (r.val : \u211d) * (d : \u211d) / 3) = (h * d : \u2115) / (3 : \u211d) := by\n      dsimp [h]\n      rw [Nat.cast_sub hrs.le]\n      push_cast\n      ring\n    rw [hphase]\n    simpa [one_div] using hsmall\n  rcases lt_or_gt_of_ne (Fin.val_ne_of_ne hkl) with hlt | hlt\n  \u00b7 have h := ordered k l hlt\n    have hphase :\n        (x + (k.val : \u211d) * (d : \u211d) / 3) -\n          (x + (l.val : \u211d) * (d : \u211d) / 3) =\n          -((x + (l.val : \u211d) * (d : \u211d) / 3) -\n            (x + (k.val : \u211d) * (d : \u211d) / 3)) := by ring\n    rw [hphase, circleNorm_neg]\n    exact h\n  \u00b7 exact ordered l k hlt\n\nend LonelyRunner\n"
+    },
+    "exceptions": {
+      "sha256": "6e0b14c881d258cd94429605ee5c8e3b99d577629e6f4b1a3abb15f7b7b7bb14",
+      "source": "import LonelyRunner.SeparatedPhaseFamily\nimport LonelyRunner.ThirdShiftSpacing\nimport LonelyRunner.ModularCertificates\n\n/-!\n# A common third shift for at most two exceptions\n\nStrictly bad shifts are pairwise separated, so their finite union cannot cover\nthe three third-shift candidates for a family of at most two labels.\n-/\n\nnamespace LonelyRunner\n\ntheorem exists_third_shift_safe_nondivisible_family {\u03b9 : Type*} [Fintype \u03b9]\n    (x : \u03b9 \u2192 \u211d) (d : \u03b9 \u2192 \u2115)\n    (hnot : \u2200 i, \u00ac 3 \u2223 d i) (hcard : Fintype.card \u03b9 \u2264 2) :\n    \u2203 k : Fin 3, \u2200 i,\n      (1 : \u211d) / 6 \u2264 circleNorm\n        (x i + (k.val : \u211d) * (d i : \u211d) / 3) := by\n  classical\n  let R : Finset (Fin 3) := Finset.univ\n  let B : \u03b9 \u2192 Finset (Fin 3) := fun i =>\n    Finset.univ.filter (fun k =>\n      circleNorm (x i + (k.val : \u211d) * (d i : \u211d) / 3) < (1 : \u211d) / 6)\n  have hBsubset : \u2200 i, B i \u2286 R := by\n    intro i k hk\n    simp only [B, R, Finset.mem_filter, Finset.mem_univ, true_and] at hk \u22a2\n    exact Finset.mem_univ _\n  have hBcard : \u2200 i, (B i).card \u2264 1 := by\n    intro i\n    apply Finset.card_le_one.mpr\n    intro k hk l hl\n    have hsep : \u2200 k l : Fin 3, k \u2260 l \u2192\n        2 * ((1 : \u211d) / 6) \u2264 circleNorm\n          ((x i + (k.val : \u211d) * (d i : \u211d) / 3) -\n            (x i + (l.val : \u211d) * (d i : \u211d) / 3)) := by\n      intro k l hkl\n      have hthird := circleNorm_third_shift_sub_ge (x i) (d i) (hnot i) k l hkl\n      nlinarith [hthird]\n    have hsub := circleNorm_bad_subsingleton_of_separated\n      (fun k : Fin 3 => x i + (k.val : \u211d) * (d i : \u211d) / 3)\n      ((1 : \u211d) / 6) hsep\n    apply hsub\n    \u00b7 simpa [B] using (Finset.mem_filter.mp hk).2\n    \u00b7 simpa [B] using (Finset.mem_filter.mp hl).2\n  have hsum : Finset.univ.sum (fun i => (B i).card) < R.card := by\n    calc\n      Finset.univ.sum (fun i => (B i).card) \u2264 Finset.univ.sum (fun _ => 1) :=\n        Finset.sum_le_sum fun i _ => hBcard i\n      _ = Fintype.card \u03b9 := by simp\n      _ \u2264 2 := hcard\n      _ < R.card := by simp [R]\n  obtain \u27e8k, _hkR, hkavoid\u27e9 :=\n    exists_mem_avoiding_of_sum_card_lt_card R B hBsubset hsum\n  refine \u27e8k, ?_\u27e9\n  intro i\n  apply le_of_not_gt\n  intro hbad\n  apply hkavoid i\n  simp [B, hbad]\n\nend LonelyRunner\n"
+    },
+    "seed": {
+      "sha256": "925e935a1284f50a56164081d2abffcb00bb32c204491132e0ed56f25a77e0fe",
+      "source": "import LonelyRunner.ThirdShiftExceptions\nimport LonelyRunner.RationalShiftOrbits\nimport Mathlib.Tactic\n\nnamespace LonelyRunner\n\n/-- A single third-grid shift preserves every seeded divisible label and is\nsimultaneously safe for up to two nondivisible exceptional labels. -/\ntheorem exists_third_shift_of_seeded_divisible\n    (v : Fin 5 \u2192 \u2115) (t\u2080 : \u211d)\n    (hseed : \u2200 i, 3 \u2223 v i \u2192\n      (1 : \u211d) / 6 \u2264 circleNorm (t\u2080 * (v i : \u211d)))\n    (hexceptions :\n      ((Finset.univ : Finset (Fin 5)).filter\n        (fun i => \u00ac 3 \u2223 v i)).card \u2264 2) :\n    \u2203 k : Fin 3, \u2200 i,\n      (1 : \u211d) / 6 \u2264 circleNorm\n        ((t\u2080 + (k.val : \u211d) / 3) * (v i : \u211d)) := by\n  classical\n  let E : Finset (Fin 5) := Finset.univ.filter (fun i => \u00ac 3 \u2223 v i)\n  let X := {i : Fin 5 // i \u2208 E}\n  have hcard : Fintype.card X \u2264 2 := by\n    simpa [X, E, Fintype.card_coe] using hexceptions\n  have hnot : \u2200 i : X, \u00ac 3 \u2223 v i.val := by\n    intro i\n    exact (Finset.mem_filter.mp i.property).2\n  obtain \u27e8k, hk\u27e9 := exists_third_shift_safe_nondivisible_family\n    (fun i : X => t\u2080 * (v i.val : \u211d)) (fun i : X => v i.val) hnot hcard\n  refine \u27e8k, ?_\u27e9\n  intro i\n  by_cases hdiv : 3 \u2223 v i\n  \u00b7 have hpres := circleNorm_time_add_nat_div_of_dvd 3 (v i) k.val (by decide) hdiv t\u2080\n    rw [hpres]\n    exact hseed i hdiv\n  \u00b7 let j : X := \u27e8i, by\n      apply Finset.mem_filter.mpr\n      exact \u27e8Finset.mem_univ _, hdiv\u27e9\u27e9\n    have hphase :\n        (t\u2080 + (k.val : \u211d) / 3) * (v i : \u211d) =\n          t\u2080 * (v j.val : \u211d) + (k.val : \u211d) * (v j.val : \u211d) / 3 := by\n      dsimp [j]\n      ring\n    rw [hphase]\n    exact hk j\n\nend LonelyRunner\n"
+    }
+  },
+  "corrections": "Unfold set membership before linarith; rewrite cast multiplication before ordered cast subtraction; use direct finite-filter membership rather than broad simplification; use only subtype-card identity without complement-card simplification; normalize literal natural casts before periodicity rewrite; update deprecated push Not spelling and remove unused simp argument. All seven stated contracts retained.",
+  "full_build": {
+    "exit_code": 0,
+    "jobs": 3682,
+    "log_sha256": "cf4e16e91fdf9b52cf3b2e5d4bd51f83054d7ae4777aa203dd80f1aa5f514d12"
+  },
+  "root_integration_hashes": {
+    "LonelyRunner.lean": "31e2d2c280dc64802e399cc1cb752b919a807db4f99283208db5cd4070b975c9",
+    "LonelyRunner/AxiomAudit.lean": "1e0e2bdb76f349b3e29c9969e0fc7ae29e6f1ca17b1fa1667a3affe7c21ac7fc"
+  },
+  "trust": {
+    "exit_code": 0,
+    "dependency_reports": 602,
+    "axiom_free_reports": 8,
+    "log_sha256": "379fd023ddbe6cd21106b772891a531960f90866a787b6e4283bd72637510331",
+    "new_axiom_output": [
+      "'LonelyRunner.circleNorm_sub_le_add' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'LonelyRunner.circleNorm_bad_subsingleton_of_separated' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'LonelyRunner.circleNorm_third_shift_sub_ge' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'LonelyRunner.exists_third_shift_safe_nondivisible_family' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'LonelyRunner.exists_third_shift_of_seeded_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "'LonelyRunner.fiveMovingNaturalRunners_of_three_or_four_divisible_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+      "'LonelyRunner.fiveMovingNaturalRunners_of_primitive_three_divisible_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]"
+    ]
+  },
+  "independent_source_review": {
+    "path": "research/astra-third-shift-source-review.md",
+    "sha256": "3dc34b10715809b31568b128d146f6bfaaf7df8a745493d361643fadda999439",
+    "root_complete_report_read": true,
+    "root_exact_bash_replay": {
+      "argv": [
+        "/home/joshua/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-s65536",
+        "--stdin"
+      ],
+      "axiom_records": [
+        [
+          "circleNorm_sub_le_add",
+          "propext, Classical.choice, Quot.sound"
+        ],
+        [
+          "circleNorm_bad_subsingleton_of_separated",
+          "propext, Classical.choice, Quot.sound"
+        ],
+        [
+          "circleNorm_third_shift_sub_ge",
+          "propext, Classical.choice, Quot.sound"
+        ],
+        [
+          "exists_third_shift_safe_nondivisible_family",
+          "propext, Classical.choice, Quot.sound"
+        ],
+        [
+          "exists_third_shift_of_seeded_divisible",
+          "propext, Classical.choice, Quot.sound"
+        ],
+        [
+          "fiveMovingNaturalRunners_of_three_or_four_divisible_three",
+          "propext,\n Classical.choice,\n Quot.sound"
+        ],
+        [
+          "fiveMovingNaturalRunners_of_primitive_three_divisible_three",
+          "propext,\n Classical.choice,\n Quot.sound"
+        ]
+      ],
+      "axioms_ok": true,
+      "capture_ok": true,
+      "child_maxrss_kib": 3646312,
+      "child_system_seconds": 0.661338,
+      "child_user_seconds": 1.317459,
+      "cwd": "/home/joshua/lonely-runner-formalization",
+      "executable_unchanged": true,
+      "exit_code": 0,
+      "guards_after": {
+        ".lake/build/lib/lean/LonelyRunner/FastRunnerInsertion.olean": "121edfbaed0d7b9fed32bacf891de838142988e48dcb4e7f2bed0c488ea49136",
+        ".lake/build/lib/lean/LonelyRunner/FiveRunnerOrdinary.olean": "408abf21f2b4e3c356ae528f92762826556887d7e5068283399a79d6ca72ef31",
+        ".lake/build/lib/lean/LonelyRunner/ModularCertificates.olean": "3fc9326cf1393d2b053c26cb27c8b6b174546cd588c7d8d4441c92dc5822f6c5",
+        ".lake/build/lib/lean/LonelyRunner/RationalShiftOrbits.olean": "8194c5c6ac0b8495146728fcac70a6a1e9d317f9e7689c4759f22ed33c14340f",
+        ".lake/build/lib/lean/LonelyRunner/SeparatedPhaseFamily.olean": "eff265763238a85323240590e528ff8514eef2f4bdb405f0742e0f0a67f6ba41",
+        ".lake/build/lib/lean/LonelyRunner/SmallDenominatorWitness.olean": "c67482b37cb6a5c0d5da7fbeeb52eb5eb2c24d440553d4be22cbcf8364b28711",
+        ".lake/build/lib/lean/LonelyRunner/StructuredClasses.olean": "4ada0ca2f0a5f20a8c83c3c2e58256e931c3b283882a88a074aeedb02d7e048f",
+        ".lake/build/lib/lean/LonelyRunner/ThirdShiftExceptions.olean": "d9c38deec30bda66014ed4d3e4de79fe5934f323e44e39771d353667ce47c7f9",
+        ".lake/build/lib/lean/LonelyRunner/ThirdShiftSeed.olean": "5305c6fd2737c6a611abdb710e5e7659bdccdb35c346b7e386c0733a592686be",
+        ".lake/build/lib/lean/LonelyRunner/ThirdShiftSpacing.olean": "7bc4793433826271b91dd77e0eb635951c899f55acf5962b94ed3802a2b8c885",
+        ".lake/build/lib/lean/LonelyRunner/ThreeDivisibleRunners.olean": "3420ef54c8e2a26960e7dcb8469a5083202a8ca02338978063dfa06662a14c13",
+        "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+        "LonelyRunner/FiveRunnerOrdinary.lean": "662d0116f13971bce85e76c503e2f3be4fdc6291ba8113aeda43957e38354ffe",
+        "LonelyRunner/ModularCertificates.lean": "8b7e9dc5be1236acb812607c19454fe43ecd1333145aef675e7df8e6d0c3871c",
+        "LonelyRunner/RationalShiftOrbits.lean": "cf615dd6c6b3cf091cd5d31ac641f4f994c1c50d95e0120c311d3ac129b88591",
+        "LonelyRunner/SeparatedPhaseFamily.lean": "28c5db2425eef754156e57c284959ff02da743f1fde424e053c4eae0c721b6bd",
+        "LonelyRunner/SmallDenominatorWitness.lean": "1570a359100594f4a5589588e3b32674dc2d54d60e500df1d47aca64c2faf95f",
+        "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+        "LonelyRunner/ThirdShiftExceptions.lean": "85590988cd0e104dc93fd51bc79aa326fe2799974eae426b7ea3336853872073",
+        "LonelyRunner/ThirdShiftSeed.lean": "3c8b90583658df1cfdbe00e4444157e08d8ae7b4a74b986d5770e9f750429b46",
+        "LonelyRunner/ThirdShiftSpacing.lean": "146cdfd80495aced0eb93bc322559cf7e950a80b0d01534b2a57cce7129debaa",
+        "LonelyRunner/ThreeDivisibleRunners.lean": "614dc7bbf75143da6960d74b3eef5427ef93c9c8b3cbe51ec5cd5c6ca47376a3",
+        "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+        "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+        "research/astra-three-divisible-shift-plan-review.md": "981748f0e5377735fdd43c3109c7011b33ea7a0d75272e9e371aedb443229eb9",
+        "research/astra-three-divisible-shift-plan.md": "e4d53b08ebfeb49ec31a7a6245bdb870795f31dc8831f326cba8005cc9cf03bc"
+      },
+      "guards_before": {
+        ".lake/build/lib/lean/LonelyRunner/FastRunnerInsertion.olean": "121edfbaed0d7b9fed32bacf891de838142988e48dcb4e7f2bed0c488ea49136",
+        ".lake/build/lib/lean/LonelyRunner/FiveRunnerOrdinary.olean": "408abf21f2b4e3c356ae528f92762826556887d7e5068283399a79d6ca72ef31",
+        ".lake/build/lib/lean/LonelyRunner/ModularCertificates.olean": "3fc9326cf1393d2b053c26cb27c8b6b174546cd588c7d8d4441c92dc5822f6c5",
+        ".lake/build/lib/lean/LonelyRunner/RationalShiftOrbits.olean": "8194c5c6ac0b8495146728fcac70a6a1e9d317f9e7689c4759f22ed33c14340f",
+        ".lake/build/lib/lean/LonelyRunner/SeparatedPhaseFamily.olean": "eff265763238a85323240590e528ff8514eef2f4bdb405f0742e0f0a67f6ba41",
+        ".lake/build/lib/lean/LonelyRunner/SmallDenominatorWitness.olean": "c67482b37cb6a5c0d5da7fbeeb52eb5eb2c24d440553d4be22cbcf8364b28711",
+        ".lake/build/lib/lean/LonelyRunner/StructuredClasses.olean": "4ada0ca2f0a5f20a8c83c3c2e58256e931c3b283882a88a074aeedb02d7e048f",
+        ".lake/build/lib/lean/LonelyRunner/ThirdShiftExceptions.olean": "d9c38deec30bda66014ed4d3e4de79fe5934f323e44e39771d353667ce47c7f9",
+        ".lake/build/lib/lean/LonelyRunner/ThirdShiftSeed.olean": "5305c6fd2737c6a611abdb710e5e7659bdccdb35c346b7e386c0733a592686be",
+        ".lake/build/lib/lean/LonelyRunner/ThirdShiftSpacing.olean": "7bc4793433826271b91dd77e0eb635951c899f55acf5962b94ed3802a2b8c885",
+        ".lake/build/lib/lean/LonelyRunner/ThreeDivisibleRunners.olean": "3420ef54c8e2a26960e7dcb8469a5083202a8ca02338978063dfa06662a14c13",
+        "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+        "LonelyRunner/FiveRunnerOrdinary.lean": "662d0116f13971bce85e76c503e2f3be4fdc6291ba8113aeda43957e38354ffe",
+        "LonelyRunner/ModularCertificates.lean": "8b7e9dc5be1236acb812607c19454fe43ecd1333145aef675e7df8e6d0c3871c",
+        "LonelyRunner/RationalShiftOrbits.lean": "cf615dd6c6b3cf091cd5d31ac641f4f994c1c50d95e0120c311d3ac129b88591",
+        "LonelyRunner/SeparatedPhaseFamily.lean": "28c5db2425eef754156e57c284959ff02da743f1fde424e053c4eae0c721b6bd",
+        "LonelyRunner/SmallDenominatorWitness.lean": "1570a359100594f4a5589588e3b32674dc2d54d60e500df1d47aca64c2faf95f",
+        "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+        "LonelyRunner/ThirdShiftExceptions.lean": "85590988cd0e104dc93fd51bc79aa326fe2799974eae426b7ea3336853872073",
+        "LonelyRunner/ThirdShiftSeed.lean": "3c8b90583658df1cfdbe00e4444157e08d8ae7b4a74b986d5770e9f750429b46",
+        "LonelyRunner/ThirdShiftSpacing.lean": "146cdfd80495aced0eb93bc322559cf7e950a80b0d01534b2a57cce7129debaa",
+        "LonelyRunner/ThreeDivisibleRunners.lean": "614dc7bbf75143da6960d74b3eef5427ef93c9c8b3cbe51ec5cd5c6ca47376a3",
+        "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+        "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+        "research/astra-three-divisible-shift-plan-review.md": "981748f0e5377735fdd43c3109c7011b33ea7a0d75272e9e371aedb443229eb9",
+        "research/astra-three-divisible-shift-plan.md": "e4d53b08ebfeb49ec31a7a6245bdb870795f31dc8831f326cba8005cc9cf03bc"
+      },
+      "launcher_after_sha256": "fcb2f3660a0305e0949511da9615a17e7493bed1df299984fb8e8d4aadd0bf6a",
+      "launcher_bytes": 8361,
+      "launcher_sha256": "fcb2f3660a0305e0949511da9615a17e7493bed1df299984fb8e8d4aadd0bf6a",
+      "limits": {
+        "address_space_bytes": 8589934592,
+        "alarm_seconds": 60,
+        "combined_stream_bytes": 262144,
+        "cpu_seconds": [
+          59,
+          60
+        ],
+        "per_stream_bytes": 131072,
+        "wall_seconds": 60.0
+      },
+      "probe_after_sha256": "62b81327c607adbcecf5ede70be0a1f292b64886862133b17aef025c8cd2b5d6",
+      "probe_bytes": 2674,
+      "probe_sha256": "62b81327c607adbcecf5ede70be0a1f292b64886862133b17aef025c8cd2b5d6",
+      "runtime_env": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_STACK_SIZE_KB": "65536"
+      },
+      "status": "passed",
+      "stderr_base64": "",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_utf8": "",
+      "stdout_base64": "J0xvbmVseVJ1bm5lci5jaXJjbGVOb3JtX3N1Yl9sZV9hZGQnIGRlcGVuZHMgb24gYXhpb21zOiBbcHJvcGV4dCwgQ2xhc3NpY2FsLmNob2ljZSwgUXVvdC5zb3VuZF0KJ0xvbmVseVJ1bm5lci5jaXJjbGVOb3JtX2JhZF9zdWJzaW5nbGV0b25fb2Zfc2VwYXJhdGVkJyBkZXBlbmRzIG9uIGF4aW9tczogW3Byb3BleHQsIENsYXNzaWNhbC5jaG9pY2UsIFF1b3Quc291bmRdCidMb25lbHlSdW5uZXIuY2lyY2xlTm9ybV90aGlyZF9zaGlmdF9zdWJfZ2UnIGRlcGVuZHMgb24gYXhpb21zOiBbcHJvcGV4dCwgQ2xhc3NpY2FsLmNob2ljZSwgUXVvdC5zb3VuZF0KJ0xvbmVseVJ1bm5lci5leGlzdHNfdGhpcmRfc2hpZnRfc2FmZV9ub25kaXZpc2libGVfZmFtaWx5JyBkZXBlbmRzIG9uIGF4aW9tczogW3Byb3BleHQsIENsYXNzaWNhbC5jaG9pY2UsIFF1b3Quc291bmRdCidMb25lbHlSdW5uZXIuZXhpc3RzX3RoaXJkX3NoaWZ0X29mX3NlZWRlZF9kaXZpc2libGUnIGRlcGVuZHMgb24gYXhpb21zOiBbcHJvcGV4dCwgQ2xhc3NpY2FsLmNob2ljZSwgUXVvdC5zb3VuZF0KJ0xvbmVseVJ1bm5lci5maXZlTW92aW5nTmF0dXJhbFJ1bm5lcnNfb2ZfdGhyZWVfb3JfZm91cl9kaXZpc2libGVfdGhyZWUnIGRlcGVuZHMgb24gYXhpb21zOiBbcHJvcGV4dCwKIENsYXNzaWNhbC5jaG9pY2UsCiBRdW90LnNvdW5kXQonTG9uZWx5UnVubmVyLmZpdmVNb3ZpbmdOYXR1cmFsUnVubmVyc19vZl9wcmltaXRpdmVfdGhyZWVfZGl2aXNpYmxlX3RocmVlJyBkZXBlbmRzIG9uIGF4aW9tczogW3Byb3BleHQsCiBDbGFzc2ljYWwuY2hvaWNlLAogUXVvdC5zb3VuZF0K",
+      "stdout_bytes": 816,
+      "stdout_sha256": "0ecb53061cee9cb3e2d127456cdf339e24c904f5f7481248b9deca57388ec9ba",
+      "stdout_utf8": "'LonelyRunner.circleNorm_sub_le_add' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.circleNorm_bad_subsingleton_of_separated' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.circleNorm_third_shift_sub_ge' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_third_shift_safe_nondivisible_family' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_third_shift_of_seeded_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveMovingNaturalRunners_of_three_or_four_divisible_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'LonelyRunner.fiveMovingNaturalRunners_of_primitive_three_divisible_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "timed_out": false,
+      "wall_seconds": 1.9709525200014468
+    },
+    "full_report_unchanged_before_after": true
+  },
+  "preceding_publication": {
+    "checkpoint": "Pass45",
+    "pr_number": 44,
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/44",
+    "head_sha": "01e34debf2f07b309d912da8fdb296a0a16c730f",
+    "merge_sha": "354b5106ba34d0f92a2c991ea708d04ec34cfe22",
+    "merged_at": "2026-09-06T11:11:07Z",
+    "ci_run": 34028839946,
+    "checks": {
+      "Lean build and trust audit": "SUCCESS 2026-09-06T10:59:27Z job101474561626",
+      "Exact computational certificates": "SUCCESS 2026-09-06T11:06:59Z job101474561672"
+    },
+    "exact_head_merge": true,
+    "remote_main_ancestry_verified": true,
+    "local_main_verified": true
+  }
+}

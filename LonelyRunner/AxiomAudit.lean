@@ -700,3 +700,13 @@ project-specific axiom.
 #print axioms LonelyRunner.fiveMovingNaturalRunners_of_four_divisible
 #print axioms LonelyRunner.primitive_no_sixth_witness_divisor_count_le_three
 #print axioms LonelyRunner.six_total_divisor_count_bounds
+
+-- A common third shift and the restricted/primitive three-divisible branch.
+-- Strict badness retains closed sixth-margin safety at all boundary ties.
+#print axioms LonelyRunner.circleNorm_sub_le_add
+#print axioms LonelyRunner.circleNorm_bad_subsingleton_of_separated
+#print axioms LonelyRunner.circleNorm_third_shift_sub_ge
+#print axioms LonelyRunner.exists_third_shift_safe_nondivisible_family
+#print axioms LonelyRunner.exists_third_shift_of_seeded_divisible
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_three_or_four_divisible_three
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_primitive_three_divisible_three
