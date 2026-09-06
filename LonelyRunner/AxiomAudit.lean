@@ -12,6 +12,9 @@ import LonelyRunner.EndpointCompleteness
 import LonelyRunner.StrictPairSumCompleteness
 import LonelyRunner.RationalMarginBoxes
 import LonelyRunner.RationalMarginBoxPilot
+import LonelyRunner.FiveAdicCarry
+import LonelyRunner.FiveAdicFiltering
+import LonelyRunner.FiveAdicHardPattern
 
 -- The exact finite-family equivalence does not prove either side.
 #print axioms LonelyRunner.exists_strictMono_reindex
@@ -572,3 +575,26 @@ project-specific axiom.
 #print axioms LonelyRunner.rationalMarginBoxPilot_raw_empty_accepts
 #print axioms LonelyRunner.rationalMarginBoxPilot_public_empty_rejects
 #print axioms LonelyRunner.rationalMarginBoxPilot_fin_zero_accepts
+
+-- Five-adic filtering, finite coupled carries, and natural normalization.
+#print axioms LonelyRunner.fiveCarryTriple
+#print axioms LonelyRunner.fiveAdicCorrection_pos
+#print axioms LonelyRunner.fiveAdicCorrection_mod_five
+#print axioms LonelyRunner.fiveAdic_residue_decomposition
+#print axioms LonelyRunner.fiveAdicGoodDigit_distance
+#print axioms LonelyRunner.fiveAdicCorrection_selected_product
+#print axioms LonelyRunner.fiveAdicCorrection_selected_digit
+#print axioms LonelyRunner.fiveAdicCorrection_higher_residue
+#print axioms LonelyRunner.fiveAdic_top_residue
+#print axioms LonelyRunner.fiveAdic_top_distance
+#print axioms LonelyRunner.fiveAdic_avoid_two
+#print axioms LonelyRunner.fiveAdicDigit_of_mod_eq
+#print axioms LonelyRunner.fiveAdic_unit_representative
+#print axioms LonelyRunner.fiveAdic_fill_level
+#print axioms LonelyRunner.fiveAdic_seeded_unbounded
+#print axioms LonelyRunner.fiveAdic_seeded_multiplier
+#print axioms LonelyRunner.exists_five_adic_filtered_multiplier
+#print axioms LonelyRunner.cyclicResidueDistance_eq_of_mod_eq
+#print axioms LonelyRunner.cyclicResidueDistance_eq_of_add_mod_eq_zero
+#print axioms LonelyRunner.cyclicResidueDistance_mul_complement
+#print axioms LonelyRunner.fiveAdic_normalize_unit

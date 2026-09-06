@@ -1,0 +1,86 @@
+{
+  "checkpoint": "Pass38",
+  "base": "f55744833dd2876e582f0e4e0726614b6b527a54",
+  "phase": "verified_ready_for_publication",
+  "source_sha256": {
+    "LonelyRunner.lean": "f9cf041a31ae8b9434c248c48c2ea59569549b307cb971d841244ca9f846a99b",
+    "LonelyRunner/AxiomAudit.lean": "5501c85618261d7b60668a47e7c4f3ef17bed9686341d4c1e460b978fd7fae72",
+    "LonelyRunner/FiveAdicCarry.lean": "f91d747198374da76ff9e62435db20a8917856d5b9dc52229ce576353cc11d81",
+    "LonelyRunner/FiveAdicFiltering.lean": "1a210e70383e9b00d1a3aec321e9e1a838efcd26c24ca180101964e8c6e71429",
+    "LonelyRunner/FiveAdicHardPattern.lean": "1ca9b35f3e642639dfebc87a96b45894bbea3536f9a28f018c71a61292fa7904"
+  },
+  "new_public_theorems": 21,
+  "full_build": {
+    "session_id": 78054,
+    "exit_code": 0,
+    "jobs": 3654,
+    "log_sha256": "da969a453839b67325b7761867c53b63595221f98ece494c19294f47214715ed"
+  },
+  "trust": {
+    "session_id": 62541,
+    "exit_code": 0,
+    "dependency_lists": 517,
+    "axiom_free_reports": 3,
+    "log_sha256": "2ac6b236114e2185ecedb7cca2802bdddd12d8f5bb73e660f215a1710780400b"
+  },
+  "carry_resource_root_replay": {
+    "report_sha256": "749c2c43d8d87fa0f8b09302bc211b8ad25b78ee7c3d799a0c25ad187d879059",
+    "command_sha256": "0a21598ca158b955d04a55be60e11cb536f27421962d1f6f14688579fe9a3d67",
+    "exit_code": 0,
+    "stdout_sha256": "4e3460159d45487487fa5133863e3c89dbe177f9f21ca29c23915752af8f5757",
+    "stdout": "LonelyRunner/FiveAdicCarry.lean:193:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:193:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:193:63: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:199:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:199:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:199:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:205:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:205:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:205:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:293:6: warning: 'change\n  fiveCarryFGood\n    (fiveCarryJ u * fiveCarryCast c.top + fiveCarryC c.carry u +\n      fiveCarryJ u * fiveCarryCast k1 * fiveCarryR c.residue)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nLonelyRunner/FiveAdicCarry.lean:312:6: warning: 'change\n  fiveCarryFGood\n    (fiveCarryJ u * fiveCarryCast c.top + fiveCarryC c.carry u +\n      fiveCarryJ u * fiveCarryCast k1 * fiveCarryR c.residue)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nLonelyRunner/FiveAdicCarry.lean:297:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:316:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nmonitor=pass wall=4.921 sampled_rss_kib=3853936 child_exit=0\n4.94 3853580 0\npostcheck=pass gnu_time_wall=4.94 gnu_time_rss_kib=3853580 gnu_time_exit=0\n",
+    "stderr": ""
+  },
+  "historical_reproduction": {
+    "archive_sha256": "4ace825e19f3ecaf96f3f13afa4d4d2fce594aabfce42fbd2abd8ccd942add3a",
+    "archive_bytes": 19276,
+    "checks": {
+      "astra-five-adic-carry-symbolic-plan.md": {
+        "exit_code": 0,
+        "stdout_sha256": "3e95ff25d9c4e17ecf30b7979b6d48ef1b6912fcfe2923bc6fbb4e9914e3553c",
+        "program_sha256": "ffd0739e680cbc3c12e3ac0e35cb6b41e6f3b6c4a5a3db4500c76031de4aa6aa"
+      },
+      "astra-five-adic-carry-symbolic-plan-review.md": {
+        "exit_code": 0,
+        "stdout_sha256": "cfe6f316074907d94ca56bbd91d781c34d80e3b70ee4c3917d9f5624942bb8ff",
+        "program_sha256": "cf2eeb638a05889118e1037ec4886c7e60fd13e09539020d93287beafe01e309"
+      }
+    },
+    "historical_Lean_execution": false,
+    "durable_program_sha256": "f8bd39d1ea166183d3a762e7d514b334baa73a15a95b76e6b04ac465eb10450d",
+    "durable_stdout": "astra-five-adic-carry-symbolic-plan.md: historical guarded replay passed\nastra-five-adic-carry-symbolic-plan-review.md: historical guarded replay passed\n"
+  },
+  "independent_source_review": {
+    "status": "accepted",
+    "requested_model": "gpt-6-astra",
+    "requested_effort": "xhigh",
+    "observed_model": null,
+    "observed_effort": null,
+    "root_replay": {
+      "artifact_sha256": "5a7969be45d653e43621ff6f1d23d93f2e2f3ed8ee44a62efecbd335fa900fa9",
+      "program_sha256": "db5231f4c54fa22a8678d36f291db5a1335d70762f7e0cf39eed07fb651b505c",
+      "exit_code": 0,
+      "stdout_sha256": "0a2f5d609b9bb4f2cb0a174c3c48a2852ccdda81233bdb40edd0b7e21273b306",
+      "stdout": "LonelyRunner.fiveAdicCorrection_pos (m j k : \u2115) : 0 < fiveAdicCorrection m j k\nLonelyRunner.fiveAdicCorrection_mod_five (m j k : \u2115) (hj : j < m) : fiveAdicCorrection m j k % 5 = 1\nLonelyRunner.fiveAdic_residue_decomposition (m x : \u2115) : x % (5 * 5 ^ m) = 5 ^ m * fiveAdicDigit m x + x % 5 ^ m\nLonelyRunner.fiveAdicGoodDigit_distance (m x : \u2115) (hgood : FiveAdicGoodDigit m x) :\n  5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) x\nLonelyRunner.fiveAdicCorrection_selected_product (m j k A u : \u2115) (hj : j \u2264 m) :\n  fiveAdicCorrection m j k * (A * (5 ^ j * u)) = A * (5 ^ j * u) + k * 5 ^ m * (A * u)\nLonelyRunner.fiveAdicCorrection_selected_digit (m j k A u : \u2115) (hj : j \u2264 m) :\n  fiveAdicDigit m (fiveAdicCorrection m j k * (A * (5 ^ j * u))) =\n    (fiveAdicDigit m (A * (5 ^ j * u)) + k * (A * u % 5)) % 5\nLonelyRunner.fiveAdicCorrection_higher_residue (m j ell k A u : \u2115) (hjell : j < ell) (hell : ell \u2264 m) :\n  fiveAdicCorrection m j k * (A * (5 ^ ell * u)) % (5 * 5 ^ m) = A * (5 ^ ell * u) % (5 * 5 ^ m)\nLonelyRunner.fiveAdic_top_residue (m A u : \u2115) : A * (5 ^ m * u) % (5 * 5 ^ m) = 5 ^ m * (A * u % 5)\nLonelyRunner.fiveAdic_top_distance (m A u : \u2115) (hunit : \u00ac5 \u2223 A * u) :\n  5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (A * (5 ^ m * u))\nLonelyRunner.fiveAdic_avoid_two.{u_1} {I : Type u_1} [Fintype I] (q s : I \u2192 \u2115) (hcard : Fintype.card I \u2264 2)\n  (hunit : \u2200 (i : I), \u00ac5 \u2223 s i) : \u2203 k, \u2200 (i : I), 1 \u2264 (q i + \u2191k * s i) % 5 \u2227 (q i + \u2191k * s i) % 5 \u2264 3\nLonelyRunner.fiveAdicDigit_of_mod_eq (m x y : \u2115) (h : x % (5 * 5 ^ m) = y % (5 * 5 ^ m)) :\n  fiveAdicDigit m x = fiveAdicDigit m y\nLonelyRunner.fiveAdic_unit_representative (m A : \u2115) (hA : \u00ac5 \u2223 A) :\n  0 < A % (5 * 5 ^ m) \u2227\n    A % (5 * 5 ^ m) < 5 * 5 ^ m \u2227\n      \u00ac5 \u2223 A % (5 * 5 ^ m) \u2227\n        A % (5 * 5 ^ m) % 5 = A % 5 \u2227 \u2200 (d : \u2115), A % (5 * 5 ^ m) * d % (5 * 5 ^ m) = A * d % (5 * 5 ^ m)\nLonelyRunner.fiveAdic_fill_level.{u_1} {I : Type u_1} [Fintype I] [DecidableEq I] (d ell u : I \u2192 \u2115) (m r A : \u2115)\n  (hr : r \u2264 m) (hdecomp : \u2200 (i : I), d i = 5 ^ ell i * u i) (hu : \u2200 (i : I), \u00ac5 \u2223 u i) (hA : \u00ac5 \u2223 A)\n  (hcard : {i | ell i = r}.card \u2264 2) :\n  \u2203 k, \u2200 (i : I), ell i = r \u2192 FiveAdicGoodDigit m (fiveAdicCorrection m r \u2191k * (A * d i))\nLonelyRunner.fiveAdic_seeded_unbounded.{u_1} {I : Type u_1} [Fintype I] [DecidableEq I] (d ell u : I \u2192 \u2115) (m h A : \u2115)\n  (hd : \u2200 (i : I), 0 < d i) (hdecomp : \u2200 (i : I), d i = 5 ^ ell i * u i) (hu : \u2200 (i : I), \u00ac5 \u2223 u i)\n  (hell : \u2200 (i : I), ell i \u2264 m) (hh : h \u2264 m) (hApos : 0 < A) (hAunit : \u00ac5 \u2223 A)\n  (hcard : \u2200 j < h, {i | ell i = j}.card \u2264 2)\n  (hhigh : \u2200 (i : I), h \u2264 ell i \u2192 5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (A * d i)) :\n  \u2203 B,\n    0 < B \u2227\n      \u00ac5 \u2223 B \u2227\n        B % 5 = A % 5 \u2227\n          (\u2200 (i : I), h \u2264 ell i \u2192 B * d i % (5 * 5 ^ m) = A * d i % (5 * 5 ^ m)) \u2227\n            (\u2200 (i : I), ell i < h \u2192 FiveAdicGoodDigit m (B * d i)) \u2227\n              \u2200 (i : I), 5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (B * d i)\nLonelyRunner.fiveAdic_seeded_multiplier.{u_1} {I : Type u_1} [Fintype I] [DecidableEq I] (d ell u : I \u2192 \u2115) (m h A : \u2115)\n  (hd : \u2200 (i : I), 0 < d i) (hdecomp : \u2200 (i : I), d i = 5 ^ ell i * u i) (hu : \u2200 (i : I), \u00ac5 \u2223 u i)\n  (hell : \u2200 (i : I), ell i \u2264 m) (hh : h \u2264 m) (hApos : 0 < A) (hAunit : \u00ac5 \u2223 A)\n  (hcard : \u2200 j < h, {i | ell i = j}.card \u2264 2)\n  (hhigh : \u2200 (i : I), h \u2264 ell i \u2192 5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (A * d i)) :\n  \u2203 lam,\n    0 < lam \u2227\n      lam < 5 * 5 ^ m \u2227\n        \u00ac5 \u2223 lam \u2227\n          lam % 5 = A % 5 \u2227\n            (\u2200 (i : I), h \u2264 ell i \u2192 lam * d i % (5 * 5 ^ m) = A * d i % (5 * 5 ^ m)) \u2227\n              (\u2200 (i : I), ell i < h \u2192 FiveAdicGoodDigit m (lam * d i)) \u2227\n                \u2200 (i : I), 5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (lam * d i)\nLonelyRunner.exists_five_adic_filtered_multiplier.{u_1} {I : Type u_1} [Fintype I] [DecidableEq I] (d ell u : I \u2192 \u2115)\n  (m : \u2115) (hd : \u2200 (i : I), 0 < d i) (hdecomp : \u2200 (i : I), d i = 5 ^ ell i * u i) (hu : \u2200 (i : I), \u00ac5 \u2223 u i)\n  (hell : \u2200 (i : I), ell i \u2264 m) (hcard : \u2200 j < m, {i | ell i = j}.card \u2264 2) :\n  \u2203 lam,\n    0 < lam \u2227\n      lam < 5 * 5 ^ m \u2227\n        lam % 5 = 1 \u2227\n          \u00ac5 \u2223 lam \u2227\n            (\u2200 (i : I), ell i < m \u2192 FiveAdicGoodDigit m (lam * d i)) \u2227\n              (\u2200 (i : I), ell i = m \u2192 lam * d i % (5 * 5 ^ m) = d i % (5 * 5 ^ m)) \u2227\n                \u2200 (i : I), 5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (lam * d i)\nLonelyRunner.cyclicResidueDistance_eq_of_mod_eq (P x y : \u2115) (h : x % P = y % P) :\n  cyclicResidueDistance P x = cyclicResidueDistance P y\nLonelyRunner.cyclicResidueDistance_eq_of_add_mod_eq_zero (P X Y : \u2115) (hP : 0 < P) (h : (X + Y) % P = 0) :\n  cyclicResidueDistance P X = cyclicResidueDistance P Y\nLonelyRunner.cyclicResidueDistance_mul_complement (P s A : \u2115) (hP : 0 < P) (hs : s \u2264 P) :\n  cyclicResidueDistance P (A * (P - s)) = cyclicResidueDistance P (A * s)\nLonelyRunner.fiveAdic_normalize_unit (m d : \u2115) (hd : \u00ac5 \u2223 d) :\n  \u2203 x,\n    0 < x \u2227\n      x < 5 * 5 ^ m \u2227\n        (x % 5 = 1 \u2228 x % 5 = 2) \u2227\n          \u2200 (A : \u2115), cyclicResidueDistance (5 * 5 ^ m) (A * x) = cyclicResidueDistance (5 * 5 ^ m) (A * d)\nLonelyRunner.fiveCarryTriple (s : Fin 3 \u2192 FiveCarryState) :\n  \u2203 u k, \u2200 (i : Fin 3), \u2191(fiveCarryDigit (s i) u k) \u2208 {1, 2, 3}\nLonelyRunner.fourRunners (speeds : Fin 4 \u2192 \u211d) (hinj : Function.Injective speeds) (runner : Fin 4) :\n  \u2203 t, LonelyAt speeds runner t\n'LonelyRunner.fiveAdicCorrection_pos' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdicCorrection_mod_five' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdic_residue_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdicGoodDigit_distance' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdicCorrection_selected_product' depends on axioms: [propext]\n'LonelyRunner.fiveAdicCorrection_selected_digit' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdicCorrection_higher_residue' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdic_top_residue' depends on axioms: [propext]\n'LonelyRunner.fiveAdic_top_distance' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdic_avoid_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdicDigit_of_mod_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_unit_representative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_fill_level' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_seeded_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_seeded_multiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_five_adic_filtered_multiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.cyclicResidueDistance_eq_of_mod_eq' does not depend on any axioms\n'LonelyRunner.cyclicResidueDistance_eq_of_add_mod_eq_zero' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.cyclicResidueDistance_mul_complement' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdic_normalize_unit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveCarryTriple' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n{\"axiom_free_reports\": 1, \"dependency_reports\": 21, \"full_state_replay\": false, \"kernel_examples\": 44, \"lean_exit_code\": 0, \"lean_stdin_sha256\": \"d2105319d804858fc10a4a14d6e318125541fb968d5c3642849770e47d9005de\", \"lean_stdout_sha256\": \"a87b636302712728a7fb3b51841b408b9a47f4569ebf63b2f4dee99bcb10e678\", \"new_public_types\": 21, \"old_root_audit_and_carry_public_bytes_preserved\": true, \"resource_benchmark\": false, \"result\": \"PASS\", \"source_guards\": 19}\n",
+      "stderr": ""
+    },
+    "source_corrections": false,
+    "kernel_examples": 44,
+    "new_public_types": 21,
+    "source_guards": 19
+  },
+  "completion_gate": "Full LRC and canonical five-total supply remain unresolved.",
+  "reports": {
+    "research/astra-five-adic-carry-implementation.md": "749c2c43d8d87fa0f8b09302bc211b8ad25b78ee7c3d799a0c25ad187d879059",
+    "research/astra-five-adic-carry-plan.md": "da1a4f4828f6e9d9cae6ed601151e0b56b518bea8e9add524e06b289b1713e69",
+    "research/astra-five-adic-carry-symbolic-plan-review.md": "7e26dfa590c14bc8ea1f680b51f5f508387983c23a703682440b4ad08aabd201",
+    "research/astra-five-adic-carry-symbolic-plan.md": "d1fef1fafc6c7ae6adaf0ee885b4d44931e26bda667ff040f6c237f082555f80",
+    "research/astra-five-adic-filter-arithmetic-implementation.md": "e81861a1a5757653a939921996ae092205af7d749bd60e274b81c14448ef084e",
+    "research/astra-five-adic-filter-plan-review.md": "750f12219cc784560ec8c8822274f455a3a12c316c95072d645b9f94fe3f328e",
+    "research/astra-five-adic-filter-plan.md": "34725cc13001013cdeefa89d36620442bbe7d6ccffcc0ff6f85585bdd208f500",
+    "research/astra-five-adic-hard-adapter-plan-review.md": "579b1ea58b05788dc388cba4bcabb26aa152bf23fdebc919c497815973e2303f",
+    "research/astra-five-adic-hard-adapter-plan.md": "f2d5e74769d86dc729d0f63f098654a9a538bf690e0c47d952272259bba37eef",
+    "research/astra-five-adic-hard-pattern-implementation.md": "f6ac85dabb50e0c115533e4c1710c551a453990194c11fcc9904a2ecef3e0535",
+    "research/astra-five-adic-formal-review.md": "5a7969be45d653e43621ff6f1d23d93f2e2f3ed8ee44a62efecbd335fa900fa9"
+  }
+}
