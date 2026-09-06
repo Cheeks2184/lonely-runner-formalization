@@ -717,3 +717,14 @@ project-specific axiom.
 -- A zero-permitted anchored pair maximum and one shift after a bad-set collision.
 #print axioms LonelyRunner.exists_five_sixths_fiber_pair_maximizer
 #print axioms LonelyRunner.exists_third_shift_safe_of_two_bad
+
+-- Folded scalar geometry and seeded collision/special-phase rescue.
+#print axioms LonelyRunner.two_divisible_folded_band
+#print axioms LonelyRunner.exists_int_circleNorm_lift
+#print axioms LonelyRunner.circleNorm_nat_mul_add_int_half
+#print axioms LonelyRunner.circleNorm_add_half
+#print axioms LonelyRunner.exists_third_shift_of_two_bad_seeded_divisible
+#print axioms LonelyRunner.exists_third_shift_of_safe_exception_seeded_divisible
+#print axioms LonelyRunner.circleNorm_third_shift_of_special_sixth
+#print axioms LonelyRunner.exists_third_shift_fract_five_sixths
+#print axioms LonelyRunner.exists_third_shift_of_special_sixth_seeded_divisible

@@ -164,6 +164,12 @@ import LonelyRunner.FiveMovingFast
 import LonelyRunner.AnchoredPairMaximizer
 import LonelyRunner.ThirdShiftCollision
 
+import LonelyRunner.TwoDivisibleFoldedBand
+import LonelyRunner.FoldedCirclePhase
+import LonelyRunner.ThirdShiftRescues
+import LonelyRunner.SpecialSixthPhase
+import LonelyRunner.ThirdShiftSpecialSeed
+
 /-!
 Root import for the formal Lonely Runner development.
 -/
