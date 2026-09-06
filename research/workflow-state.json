@@ -4,40 +4,7 @@
   "goal_status": "in_progress",
   "objective": "Produce a kernel-checked full proof or disproof of the canonical unrestricted Lonely Runner Conjecture.",
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
-  "active_tasks": [
-    {
-      "id": "/root/one_three_divisible_plan",
-      "agent_id": "/root/seven_adic_expanded_falsifier",
-      "kind": "research",
-      "status": "in_progress",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "xhigh",
-      "observed_model": null,
-      "observed_effort": null,
-      "source_checkpoint": "a233f95",
-      "target": "Bounded published-proof analysis and exact Lean contract plan for remaining primitive five-moving one-three-divisible case; no implementation.",
-      "owned_files": [
-        "research/astra-one-three-divisible-plan.md"
-      ],
-      "checks": []
-    },
-    {
-      "id": "/root/two_divisible_final_source_review",
-      "agent_id": "/root/prime_difference_compression_plan",
-      "kind": "research",
-      "status": "in_progress",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "xhigh",
-      "observed_model": null,
-      "observed_effort": null,
-      "source_checkpoint": "d2f5f28",
-      "target": "Independent fourcontract source review of primitive exacttwo contradiction/witness and primitive\u22652/nonprimitiveexact2 normalization wrappers.",
-      "owned_files": [
-        "research/astra-two-divisible-final-source-review.md"
-      ],
-      "checks": []
-    }
-  ],
+  "active_tasks": [],
   "completed_tasks": [
     {
       "id": "/root/workflow_validation",
@@ -7029,13 +6996,134 @@
       ],
       "checks": [],
       "result": "Allthree exact source contracts accepted; frozenreport e4f69d48fa3a5930347b33c6b73f0d4b942ab03d3100f80c7041ca64a45f9375; one guardedprobe passed. Root fullread/replay finishing."
+    },
+    {
+      "id": "/root/one_three_divisible_plan",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a233f95",
+      "target": "Bounded published-proof analysis and exact Lean contract plan for remaining primitive five-moving one-three-divisible case; no implementation.",
+      "owned_files": [
+        "research/astra-one-three-divisible-plan.md"
+      ],
+      "checks": [],
+      "result": "Frozen author manuscript9da230600af3a0a0bc8223de3daca2575f8d41f447142687ca64db53ced4ae9e; rootfullmathread; independentreviewnext."
+    },
+    {
+      "id": "/root/two_divisible_final_source_review",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "d2f5f28",
+      "target": "Independent fourcontract source review of primitive exacttwo contradiction/witness and primitive\u22652/nonprimitiveexact2 normalization wrappers.",
+      "owned_files": [
+        "research/astra-two-divisible-final-source-review.md"
+      ],
+      "checks": [],
+      "result": "Frozen fourcontractreview2db9a70c1a8c9c3a6e6625475ab41282b3413b46b39d36b6166c37a9d32152c4 accepted; rootfullread; exactreplaynext."
+    },
+    {
+      "id": "/root/bad_sixth_dilate_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "bdf6326",
+      "target": "Source-only exact scalar strictlysafe phase has strictlybad dilation2..5.",
+      "owned_files": [
+        "LonelyRunner/BadSixthDilate.lean"
+      ],
+      "checks": [],
+      "result": "Source delivered367022aa2eead70f5394fefe4a3825913ecd86232aed617ef723c481150e79b0; rootfullread; focusedcompile next."
+    },
+    {
+      "id": "/root/three_weak_exceptions_implementation",
+      "agent_id": "/root/five_adic_carry_adapter_implementation",
+      "kind": "routine",
+      "status": "interrupted",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "bdf6326",
+      "target": "Source-only exact commonthirdshift from3 weaklybad nondivisible exceptions and safepivot.",
+      "owned_files": [
+        "LonelyRunner/ThreeWeakExceptions.lean"
+      ],
+      "checks": [],
+      "result": "Returned without source citing runtime; goalreadbackactive; narrower same-route retry next."
+    },
+    {
+      "id": "/root/one_three_divisible_review",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "bdf6326",
+      "target": "Independent full mathematical review of threeparity one3div manuscript and exact contracts.",
+      "owned_files": [
+        "research/astra-one-three-divisible-review.md"
+      ],
+      "checks": [
+        "Frozen manuscript mathematical review accepted; root full read pending."
+      ]
+    },
+    {
+      "id": "/root/nonzero_third_shift_implementation",
+      "agent_id": "/root/five_adic_carry_adapter_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "bdf6326",
+      "target": "Narrow source-only two analytical third-shift lemmas; no finite-label bookkeeping.",
+      "owned_files": [
+        "LonelyRunner/NonzeroThirdShift.lean"
+      ],
+      "checks": [
+        "Source draft delivered; root focused build running."
+      ]
+    },
+    {
+      "id": "/root/one_sixth_complement_maximizer",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "4fb7a02",
+      "target": "Source-only specialization of oriented complement maximizer to five positive moving speeds at 1/6, using four-moving strict seed.",
+      "owned_files": [
+        "LonelyRunner/OneSixthComplementMaximizer.lean"
+      ],
+      "checks": [],
+      "result": "Source-only exact wrapper delivered; root full read accepted; compilation pending. Audit pause ended by active-goal continuation; proposed routing changes not applied."
     }
   ],
   "latest_checkpoint": "Pass50PR49openheadc538c85; allfour fullverified/read/replayed. Pass51 sevenfocusedcontracts, halfchoices/residue3review/rootreplaypassed, remaining4reviewactive; fullbuildstarted. Boundaryassemblystaticreviewactive; five-rowselectorTerra sourceactive.",
   "next_actions": [
-    "Read and replay frozen three-contract boundary source review, then publish/merge Pass52.",
-    "Integrate four compiled primitive/normalization contracts, run full build/trust and independent review for Pass53.",
-    "Complete one-three-divisible published-proof decomposition and review exact remaining lemmas."
+    "Publish verified Pass53 with N=6 then uniform arbitrary-N priority.",
+    "Finish exact one-three-divisible helpers and canonical N=6 proof.",
+    "After verified canonical N=6, focus on explicit uniform arbitrary-N mechanisms."
   ],
   "research_holds": [
     {
@@ -8396,9 +8484,10 @@
     }
   ],
   "last_continuation_assessment": {
-    "classification": "progress",
-    "evidence": "Pass32 merged and verified; bounded N4 certificate kernel checked, full classification pending; actual goal remains active.",
-    "next_action": "Finish N4 composition after fixed-height resource split and independently review tight-family audit."
+    "checkpoint": "Pass52 published as PR51; fullbuild/trust and both independent exact source review replays passed. Pass53 fourwrapper contracts fullbuild3710/trust643passed, independentreviewrunning.",
+    "mathematical_scope": "Primitive at-least-two three-divisible and nonprimitive exactly-two branch now compiled; one-three-divisible branches still manuscript/implementation work; full LRC unresolved.",
+    "next": "Finish source review and exact root replay, merge PR51 after required certificates; review complete one-three-divisible plan, begin bounded helper implementations.",
+    "storage": "Shared pinned cache required by active import reviews and immediately queued source work; no cleanup concurrently."
   },
   "pending_two_hole_review": "Frozen author SHA256 2bbc12481c164bf5e4eaf30ea7ca966cb0b2614524d9bea779034a2ebf115ccb; independent review deferred until slot available; excluded from Pass29.",
   "pass29_final_semantic_acceptance": {
@@ -8566,10 +8655,14 @@
     "current_disposition": "Verified and merged in Pass33 / PR32; historical intermediate fields retained below."
   },
   "worker_recovery_latest": {
-    "status": "overall_goal_active",
-    "failure": "Source-only localfinisher worker returned nofile, citingruntime/verification concerns.",
-    "action": "Preserved failure, narrowed same Terra/medium role to scalar seed bound; root assembles finisher.",
-    "goal_blocked": false
+    "task": "/root/three_weak_exceptions_implementation",
+    "agent": "/root/five_adic_carry_adapter_implementation",
+    "requested_model": "gpt-5.6-terra",
+    "requested_effort": "medium",
+    "output": "The exact weak-exception theorem has a substantial finite-cardinality and common-shift proof beyond the available runtime. I did not add an incomplete or weakened declaration to ThreeWeakExceptions.lean.",
+    "source_created": false,
+    "actual_goal_readback": "active",
+    "recovery": "Split analytical two-lemma shift step for same Terra/medium; root assembles finite-cardinality and common-choice proof."
   },
   "four_runner_completion_initial_check": {
     "status": "worker_success_claim_withdrawn_root_exit1",
@@ -10189,27 +10282,27 @@
     }
   },
   "last_publication": {
-    "pr": 50,
-    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/50",
-    "head": "a233f95d86cb4aec65fa57e74961afed9ba02581",
-    "merge": "d2f5f28efb2b7d093f38a9a951acd2571e4ece58",
-    "merged_at": "2026-09-06T12:51:37Z",
-    "ci_run": 34033812717,
+    "pr": 51,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/51",
+    "head": "bdf6326723a27c22e33897ce68f3228feddeea15",
+    "merge": "4fb7a02aa39e9aeffe69cea3fd9b8a23501da6d7",
+    "merged_at": "2026-09-06T13:07:55Z",
+    "ci_run": 34034647337,
     "checks": [
       {
         "name": "Lean build and trust audit",
-        "job": 101488122687,
+        "job": 101490391021,
         "result": "SUCCESS",
-        "completedAt": "2026-09-06T12:42:36Z"
+        "completedAt": "2026-09-06T12:59:40Z"
       },
       {
         "name": "Exact computational certificates",
-        "job": 101488122600,
+        "job": 101490390786,
         "result": "SUCCESS",
-        "completedAt": "2026-09-06T12:50:22Z"
+        "completedAt": "2026-09-06T13:07:15Z"
       }
     ],
-    "verified": "CLEAN, exacthead, no blockingreviews, merge, fetch ancestry, ff and local main sync"
+    "verification": "CLEAN exacthead, noreviewsblocking, merge, fetched ancestry andlocalmain sync"
   },
   "publication_receipts": [
     {
@@ -10378,7 +10471,29 @@
         "LonelyRunner/TwoDivisibleNormalization.lean": "d812237f06d63e67c8739122c76a5e67daa470402575ccafcdcee4c41d950286"
       },
       "status": "focused builds passed; full integration and independent source review queued after boundary checkpoint",
-      "scope": "Primitive exactly-two contradiction/witness; primitive at leasttwo witness; nonprimitive exactlytwo witness. Not unrestricted."
+      "scope": "Primitive exactly-two contradiction/witness; primitive at leasttwo witness; nonprimitive exactlytwo witness. Not unrestricted.",
+      "full_build": "3710 jobs exit0",
+      "trust": "exit0, fulloutputstoredpass53"
     }
-  }
+  },
+  "research_priority_transition": {
+    "instruction_date": "2026-09-06",
+    "instruction": "Finish working formalized canonical N=6, then focus on uniform arbitrary-N LRC mechanism rather than incremental higher-count milestones.",
+    "milestone_status": "not_yet_established",
+    "current_work": "Finish and review exactly-one-three-divisible cases; combine five-moving natural proof and canonical six-runner bridge.",
+    "after_milestone": "Pursue explicit uniform arbitrary-N mechanisms; finite-count work only as stated support.",
+    "unrestricted_goal_status": "active and unresolved",
+    "instructions_persisted_in": [
+      ".codex/config.toml",
+      "docs/project-workflow.md",
+      "research/workflow-policy.json"
+    ]
+  },
+  "one_three_divisible_plan": {
+    "manuscript": "research/astra-one-three-divisible-plan.md",
+    "sha256": "9da230600af3a0a0bc8223de3daca2575f8d41f447142687ca64db53ced4ae9e",
+    "status": "Author candidate; rootread; independent review queued. Two small scalar/weakshiftarguments rootvalidated for drafting.",
+    "scope": "Remaining canonical N6 branch only; uniform arbitrary-N priority afterverifiedN6."
+  },
+  "last_goal_turn_classification": "progress: read-only delegation audit established high routine repair overhead and recommendations; no workflow changes authorized or applied."
 }

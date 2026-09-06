@@ -86,5 +86,21 @@
     "merge_expected_head_sha_required": true,
     "bypass_branch_protections_allowed": false,
     "receipt_only_update_joins_next_checkpoint": true
+  },
+  "research_priority": {
+    "standing_user_instruction": "2026-09-06: after a working formalized N = 6 theorem, focus on a uniform arbitrary-N mechanism for unrestricted LRC, not successive higher runner counts.",
+    "transition_milestone": {
+      "total_runners": 6,
+      "moving_speeds": 5,
+      "closed_margin": "1/6",
+      "canonical_bridge_required": true,
+      "full_build_required": true,
+      "trust_audit_required": true,
+      "independent_exact_scope_review_required": true
+    },
+    "after_milestone": "uniform_arbitrary_N_mechanism",
+    "successive_runner_count_roadmap_allowed": false,
+    "finite_count_support": "Allowed only for an explicitly stated role in a uniform mechanism.",
+    "milestone_completes_unrestricted_goal": false
   }
 }

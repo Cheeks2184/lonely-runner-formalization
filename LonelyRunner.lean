@@ -193,6 +193,9 @@ import LonelyRunner.TwoOddOutsideThree
 import LonelyRunner.EvenAnchorThreeTimes
 import LonelyRunner.TwoDivisibleBoundary
 
+import LonelyRunner.PrimitiveTwoDivisible
+import LonelyRunner.TwoDivisibleNormalization
+
 /-!
 Root import for the formal Lonely Runner development.
 -/
