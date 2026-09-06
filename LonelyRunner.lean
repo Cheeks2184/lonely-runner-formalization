@@ -130,6 +130,9 @@ import LonelyRunner.RationalMarginBoxPilot
 import LonelyRunner.FiveAdicCarry
 import LonelyRunner.FiveAdicFiltering
 import LonelyRunner.FiveAdicHardPattern
+import LonelyRunner.FiveAdicDecomposition
+import LonelyRunner.FiveRunnerOrdinary
+import LonelyRunner.FiveRunnerCanonical
 
 /-!
 Root import for the formal Lonely Runner development.
