@@ -176,6 +176,10 @@ import LonelyRunner.AnchoredPairTransport
 import LonelyRunner.AnchoredPairSafeBands
 import LonelyRunner.ThreeLabelPigeonhole
 
+import LonelyRunner.SmallSixthSeeds
+import LonelyRunner.TwoDivisibleSmallPair
+import LonelyRunner.TwoDivisibleCover
+
 /-!
 Root import for the formal Lonely Runner development.
 -/
