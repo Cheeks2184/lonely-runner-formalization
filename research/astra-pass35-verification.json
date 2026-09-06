@@ -1,0 +1,136 @@
+{
+  "checkpoint": "Pass35",
+  "source_base": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+  "status": "verified_ready_for_publication",
+  "source_sha256": {
+    "LonelyRunner/BufferedRunnerInsertion.lean": "a135f5c41ead308a2a4250f07535bf3e32f78c88599497bf79bb632cd1e05f0a",
+    "LonelyRunner/FiveRunnerMixed.lean": "1e27f19d8906ee0d71b452758a38a7c44fff54e0b1b3c1e08dd5354921eb1eb0",
+    "LonelyRunner/FiveRunnerBuffered.lean": "70f690a2300e122da3e9646e48d2f4e9c6af630c16da89d403e8508cb16b6d04",
+    "LonelyRunner.lean": "0568c0f96dc4c7612d27f39673a9770ce9b780e020b7d6eb4b1268296eb069df",
+    "LonelyRunner/AxiomAudit.lean": "699818b850898afe849785ffb6aae5ab3dc927cd58263f6e477389965c41ebd1"
+  },
+  "evidence_sha256": {
+    "research/astra-five-runner-mixed-structure.md": "8e82088a40db9104237ece65d86900e9cf50b6ffe8e5ec39164fbf8b808473ac",
+    "research/astra-five-runner-mixed-structure-review.md": "ce3e6ecf5bb454ece9e9b71901db9504556a5ecd5c63888e3cb5a963fea9ff5f",
+    "research/astra-buffered-runner-insertion-implementation.md": "c898040cb44e753bce8136514976328de4581e8d3200c9a809dc300f9792656a",
+    "research/astra-buffered-runner-insertion-formal-review.md": "e43fda02baa1ec87a67a27d713ea0e148a7f634a2729e77677195fd24c0c59d5",
+    "research/astra-five-runner-exception-implementation.md": "9126d28b636281e6c9177f06c60792fd8b0b9266b8968c4785d258c38efbbe3c",
+    "research/astra-five-runner-buffered-implementation.md": "deacc4c6a30b8a0054ace8b39d6e031b1241428a7e890b7f60e5175a67c6e8f1",
+    "research/astra-five-runner-buffered-formal-review.md": "9fb96dcb10485ccb2bcacb7966cf68bd3dd7503aa5c0e75338303ae823f7616e"
+  },
+  "formal_scope": {
+    "generic_core": "Nonempty finite positive real speed family, supplied positive seed with coordinatewise margins strictly above delta, explicit same-owner and distinct-owner width inequalities, closed new margin beta in [0,1/2].",
+    "five_runner_predicate": "For natural a,b,c,H, a positive real time has lower norms >=1/5 and H norm >=1/4.",
+    "parameter_class": "0<a<b<c<H; 10ab<=H(a+b) and30bc<=H(3c+8b).",
+    "coarse_class": "0<a<b<c<H;22b<=3H.",
+    "exceptional_family": "a>0,H>3a gives FiveRunnerMixed a (2a) (3a) H.",
+    "no_hidden_premises": [
+      "gcd",
+      "lower-count supply",
+      "strict ordinary witness"
+    ],
+    "canonical_all_five_runners": false,
+    "determinant_ceiling_refinement": "accepted manuscript only; not formalized"
+  },
+  "verification": {
+    "full_command": "lake build LonelyRunner",
+    "full_exit_code": 0,
+    "full_jobs_reported": 3646,
+    "full_log_sha256": "2eb8e7507c62f11d8d97768f7332a4d186ad01dbe4f6ed59d00d91d1e7eba47e",
+    "trust_command": "python3 -B scripts/audit_lean_trust.py",
+    "trust_exit_code": 0,
+    "trust_reports": 462,
+    "trust_log_sha256": "c21d10f41ee0d9a8e7caa43bfcfaae4cc2a58493ab706639ba0d471a57e21129",
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "note": "Job totals include cached targets; no source changes after full build/trust."
+  },
+  "root_review": {
+    "complete_mathematical_source_read": true,
+    "author_replay": {
+      "artifact_sha256": "8e82088a40db9104237ece65d86900e9cf50b6ffe8e5ec39164fbf8b808473ac",
+      "program_sha256": "a3ce150750a3bed484dbfb49db945916dec76b4c107fc14402edfb7a74925ff1",
+      "stdout_sha256": "e07bfc14aa3e408b54da5646a5fd59fd0fe73bbde147d27dd9bea0d88a6c0021",
+      "status": "passed"
+    },
+    "manuscript_review_replay": {
+      "artifact_sha256": "ce3e6ecf5bb454ece9e9b71901db9504556a5ecd5c63888e3cb5a963fea9ff5f",
+      "program_sha256": "a27319964cdc5b582a2cf5b23fd381b561c063b86946bcd96a71144555079d91",
+      "stdout_sha256": "8695a214ecde113b192580f0cee9e4f81b46a3fa81b6714d0183b32c00ab66b2",
+      "status": "passed"
+    },
+    "generic_core_review_replay": {
+      "artifact_sha256": "e43fda02baa1ec87a67a27d713ea0e148a7f634a2729e77677195fd24c0c59d5",
+      "program_sha256": "7559eed92c6f3a20010315b7a575a810131e0426466d1ca3cb1a0109a354beac",
+      "stdout_sha256": "c02252be56235e871cadb4caa2c48a23062b3d8fcbf15d9b6da3565da4d89411",
+      "status": "passed"
+    }
+  },
+  "implementation_controls": {
+    "worker_probe_session": 13530,
+    "worker_probe_exit_code": 0,
+    "exact_new_N5_types": 4,
+    "fixed_tuples": [
+      [
+        6,
+        12,
+        18,
+        21
+      ],
+      [
+        4,
+        8,
+        12,
+        20
+      ],
+      [
+        4,
+        5,
+        11,
+        24
+      ],
+      [
+        1,
+        3,
+        4,
+        22
+      ]
+    ]
+  },
+  "canonical_lrc": "unresolved",
+  "excluded_future_work": [
+    "research/astra-five-runner-certificate-design.md"
+  ],
+  "independent_formal_review": {
+    "artifact_sha256": "9fb96dcb10485ccb2bcacb7966cf68bd3dd7503aa5c0e75338303ae823f7616e",
+    "program_sha256": "511541c6658ebb3b6bc150f9bdd4ad43b42a0ee6fc9550f11a03acbb7b40d55a",
+    "stdout_sha256": "1713297dbc3b4b61e023ff017b9e2a3844f7ba5dfac7c423758fa60120d8bd11",
+    "status": "passed",
+    "verdict": "accepted",
+    "root_full_read_and_guarded_replay": "passed",
+    "root_replay_session": 50455,
+    "kernel_examples": 17,
+    "exact_new_types": 5,
+    "compatibility_types": 1,
+    "definition_equivalences": 1,
+    "fixed_applications": 10,
+    "allowed_axiom_reports": 6,
+    "source_guards": 15,
+    "lean_stdin_sha256": "ba749d528a10f4b91397d7d9b8ae0a9dc0e6f7062086df8a81378d1df2d053bd",
+    "lean_stdout_sha256": "49523e1e16ebb41f61254995061187686d2f2db981cebada703dcf5321fea03a"
+  },
+  "storage": {
+    "cleanup_command": "python3 -B scripts/manage_storage.py --clean",
+    "exit_code": 0,
+    "removed_bytes": 7762815050,
+    "paths": [
+      ".lake"
+    ],
+    "log_sha256": "47d44c5c64d37de449fb805476228d42215d377db7af227de445aa41a4b2d2bf",
+    "no_active_or_queued_cache_dependent_work": true,
+    "pinned_toolchain_retained": true
+  }
+}

@@ -4,6 +4,9 @@ import LonelyRunner.TopTwoTransversal
 import LonelyRunner.FourRunnerOrdinary
 import LonelyRunner.BoundedRealReduction
 import LonelyRunner.FourRunnerCanonical
+import LonelyRunner.BufferedRunnerInsertion
+import LonelyRunner.FiveRunnerMixed
+import LonelyRunner.FiveRunnerBuffered
 
 -- The exact finite-family equivalence does not prove either side.
 #print axioms LonelyRunner.exists_strictMono_reindex
@@ -514,3 +517,11 @@ project-specific axiom.
 #print axioms LonelyRunner.stationaryWitness_of_lowerCount
 #print axioms LonelyRunner.lonelyAt_of_lowerCount
 #print axioms LonelyRunner.fourRunners
+
+-- Buffered insertion and sufficient five-runner classes. The two parameter
+-- inequalities remain explicit; this is not a universal five-runner theorem.
+#print axioms LonelyRunner.bufferedRunnerInsertion
+#print axioms LonelyRunner.fiveRunnerMixed_one_two_three
+#print axioms LonelyRunner.fiveRunnerMixed_exceptional
+#print axioms LonelyRunner.fiveRunnerMixed_of_buffer_inequalities
+#print axioms LonelyRunner.fiveRunnerMixed_of_three_mul_height_ge

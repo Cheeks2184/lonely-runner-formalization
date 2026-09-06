@@ -3,6 +3,16 @@
 This is a research map, not a list of claimed proofs. Each route terminates at
 an obligation that is currently open in general.
 
+The [Pass 35 checkpoint](astra-research-35.md) formalizes nonuniform buffered
+insertion and its two-inequality five-runner specialization. It combines the
+four-runner mixed seed with an explicit proof for every lower exceptional
+family `(a,2a,3a,H)`. This adds sufficient classes, including some tuples
+outside the compared uniform-quarter insertion tests. A sharper integer-ceiling
+bound is reviewed mathematics only. The remaining strict-to-mixed question
+requires global witness supply; integer dilation of an arbitrary strict seed
+does not suffice. A bounded certificate design is being assessed before any
+large finite search.
+
 The [Pass 34 checkpoint](astra-research-34.md) closes the canonical four-total-
 runner case for arbitrary real speeds. The reusable bounded real reduction
 requires natural witness supply through the same number of moving speeds;

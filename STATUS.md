@@ -6,6 +6,17 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [thirty-fifth Astra checkpoint](docs/astra-research-35.md) adds a generic
+buffered insertion theorem for positive real speeds and sufficient stationary
+five-runner classes. Ordered natural `0<a<b<c<H` receive one positive mixed
+witness with margins `1/5,1/5,1/5,1/4` under the two explicit inequalities
+`10ab<=H(a+b)` and `30bc<=H(3c+8b)`, or the coarse condition `22b<=3H`.
+The whole lower exceptional family `(a,2a,3a,H)` is covered for `H>3a>0`.
+The full build passed with 3,646 jobs and the trust audit accepted 462
+permitted-only reports. Independent final source review and root replay passed
+17 kernel examples and six allowed-axiom reports. The integer-ceiling refinement remains manuscript-only;
+global five-runner mixed supply and unrestricted LRC remain unresolved.
+
 The [thirty-fourth Astra checkpoint](docs/astra-research-34.md) adds the
 unconditional canonical `LonelyRunner.fourRunners`: every injective family
 of four real speeds has a lonely time for each chosen runner, at the closed
