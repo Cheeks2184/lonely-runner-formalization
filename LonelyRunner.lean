@@ -201,6 +201,10 @@ import LonelyRunner.NonzeroThirdShift
 import LonelyRunner.OneSixthComplementMaximizer
 import LonelyRunner.ThreeWeakExceptions
 
+import LonelyRunner.SignedRenaultFiveOne
+import LonelyRunner.SmallPhaseOrbits
+import LonelyRunner.AffinePhaseCertificate
+
 /-!
 Root import for the formal Lonely Runner development.
 -/

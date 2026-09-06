@@ -18,6 +18,10 @@ import LonelyRunner.FiveAdicHardPattern
 import LonelyRunner.FiveAdicDecomposition
 import LonelyRunner.FiveRunnerOrdinary
 import LonelyRunner.FiveRunnerCanonical
+import LonelyRunner.SignedRenaultFiveOne
+import LonelyRunner.SmallPhaseOrbits
+import LonelyRunner.AffinePhaseCertificate
+
 
 -- The exact finite-family equivalence does not prove either side.
 #print axioms LonelyRunner.exists_strictMono_reindex
@@ -774,3 +778,12 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_nonzero_third_shift_safe
 #print axioms LonelyRunner.exists_one_sixth_complement_maximizer
 #print axioms LonelyRunner.third_shift_of_three_weak_exceptions
+
+-- Signed phase choices, prescribed rational orbit and generic certificate interfaces.
+#print axioms LonelyRunner.renault_phase_five_one_signed
+#print axioms LonelyRunner.renault_phase_five_one_signed_reflected
+#print axioms LonelyRunner.exists_nat_coprime_grid_fract_eq
+#print axioms LonelyRunner.exists_reciprocal_time_small_phase
+#print axioms LonelyRunner.affineSixthBandFact_sound
+#print axioms LonelyRunner.cutAtomMem_covers_closed_interval
+#print axioms LonelyRunner.typed_phase_certificate_sound
