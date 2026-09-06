@@ -15,6 +15,9 @@ import LonelyRunner.RationalMarginBoxPilot
 import LonelyRunner.FiveAdicCarry
 import LonelyRunner.FiveAdicFiltering
 import LonelyRunner.FiveAdicHardPattern
+import LonelyRunner.FiveAdicDecomposition
+import LonelyRunner.FiveRunnerOrdinary
+import LonelyRunner.FiveRunnerCanonical
 
 -- The exact finite-family equivalence does not prove either side.
 #print axioms LonelyRunner.exists_strictMono_reindex
@@ -598,3 +601,20 @@ project-specific axiom.
 #print axioms LonelyRunner.cyclicResidueDistance_eq_of_add_mod_eq_zero
 #print axioms LonelyRunner.cyclicResidueDistance_mul_complement
 #print axioms LonelyRunner.fiveAdic_normalize_unit
+
+-- Natural carry assembly, valuation decomposition, and ordinary five total runners.
+#print axioms LonelyRunner.fiveAdicCarryTag_spec
+#print axioms LonelyRunner.fiveAdicCarryState_top
+#print axioms LonelyRunner.fiveAdicCarryState_residue
+#print axioms LonelyRunner.fiveAdicCarryState_carry
+#print axioms LonelyRunner.fiveAdicCarryState_digit
+#print axioms LonelyRunner.fiveAdic_hard_pattern_of_carry
+#print axioms LonelyRunner.fiveAdic_hard_pattern
+#print axioms LonelyRunner.fiveAdic_positive_decomposition
+#print axioms LonelyRunner.fiveAdic_cyclicResidueDistance_mul_left
+#print axioms LonelyRunner.fin4_level_dichotomy
+#print axioms LonelyRunner.fiveAdic_four_label_multiplier
+#print axioms LonelyRunner.fourMovingNaturalMultiplier
+#print axioms LonelyRunner.fourMovingNaturalRunners
+#print axioms LonelyRunner.lowerCountPositiveIntegerHypothesis_six
+#print axioms LonelyRunner.fiveRunners

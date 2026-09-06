@@ -1,0 +1,129 @@
+{
+  "checkpoint": "Pass39",
+  "base": "0608747f78d8e07100af900f4f746da902bd2fa9",
+  "phase": "verified_ready_for_publication",
+  "source_sha256": {
+    "LonelyRunner.lean": "62d27ccba30401a77bc17bc2ed68427f9e1dd6eb909269143bae241a46a3786b",
+    "LonelyRunner/AxiomAudit.lean": "edd2310c626f4c7e83592c664b7a69f59e2b11467d6ec1f73960576e27b63162",
+    "LonelyRunner/FiveAdicHardPattern.lean": "b6caced5772fb4b33a7bb6d26792aaa49f5287557f3165c862edeaf7d69daeca",
+    "LonelyRunner/FiveAdicDecomposition.lean": "049da0b10b478fe2cdb0a6239ebc97a60317022f15263c317d5aa56415a7357e",
+    "LonelyRunner/FiveRunnerOrdinary.lean": "662d0116f13971bce85e76c503e2f3be4fdc6291ba8113aeda43957e38354ffe",
+    "LonelyRunner/FiveRunnerCanonical.lean": "a78cdaafcc359110535422d1967676610587a69be8f2bf8810e0ba65be1c8946"
+  },
+  "new_public_theorems": [
+    "fiveAdicCarryTag_spec",
+    "fiveAdicCarryState_top",
+    "fiveAdicCarryState_residue",
+    "fiveAdicCarryState_carry",
+    "fiveAdicCarryState_digit",
+    "fiveAdic_hard_pattern_of_carry",
+    "fiveAdic_hard_pattern",
+    "fiveAdic_positive_decomposition",
+    "fiveAdic_cyclicResidueDistance_mul_left",
+    "fin4_level_dichotomy",
+    "fiveAdic_four_label_multiplier",
+    "fourMovingNaturalMultiplier",
+    "fourMovingNaturalRunners",
+    "lowerCountPositiveIntegerHypothesis_six",
+    "fiveRunners"
+  ],
+  "full_build": {
+    "session_id": 69571,
+    "exit_code": 0,
+    "jobs": 3657,
+    "log_sha256": "ddc5ef82a56dd3966357138205abbe1b1c3432fabc5c9a80e96b39e519a95a8f"
+  },
+  "trust": {
+    "session_id": 17167,
+    "exit_code": 0,
+    "dependency_lists": 532,
+    "axiom_free_reports": 3,
+    "log_sha256": "4bd339a61fbd59a432459fb56adf562068fb46ff6ee2f5411245cf6fcc02abfb"
+  },
+  "decomposition_root_replay": {
+    "source_sha256": "049da0b10b478fe2cdb0a6239ebc97a60317022f15263c317d5aa56415a7357e",
+    "report_sha256": "29dfa1b3d1ce186876ec4b7718d6954d9e19992b47c4a860875a3deff148707b",
+    "command_sha256": "3a78d8fafc011bfdec450f6f8e51ad799abe90b1c0b82cc1fdfe5febd837f2a6",
+    "exit_code": 0,
+    "stdout_sha256": "84bda5eb1ea8623dace4c7235ff2069985b615308566df86afa2913af963e8ea",
+    "stdout": "Build completed successfully (3001 jobs).\nLonelyRunner.fiveAdic_positive_decomposition (v : \u2115) (hv : 0 < v) :\n  v = 5 ^ fiveAdicExponent v * fiveAdicUnit v \u2227 0 < fiveAdicUnit v \u2227 \u00ac5 \u2223 fiveAdicUnit v\nLonelyRunner.fin4_level_dichotomy (ell : Fin 4 \u2192 \u2115) (m : \u2115) (_hbound : \u2200 (i : Fin 4), ell i \u2264 m)\n  (hmax : \u2203 p, ell p = m) : (\u2200 j < m, #{i | ell i = j} \u2264 2) \u2228 \u2203 j < m, \u2203 p, ell p = m \u2227 \u2200 (i : Fin 4), i \u2260 p \u2192 ell i = j\nLonelyRunner.fiveAdic_cyclicResidueDistance_mul_left (g P x : \u2115) :\n  cyclicResidueDistance (g * P) (g * x) = g * cyclicResidueDistance P x\n'LonelyRunner.fiveAdic_positive_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fin4_level_dichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_cyclicResidueDistance_mul_left' depends on axioms: [propext]\n",
+    "stderr": ""
+  },
+  "hard_assembly_root_replay": {
+    "source_sha256": "b6caced5772fb4b33a7bb6d26792aaa49f5287557f3165c862edeaf7d69daeca",
+    "artifact_sha256": "618a30df78f3c21c8740a40e39bfacbb75cb3a1eee905ab0ff7f98fee6ba4e0f",
+    "command_sha256": "27d10bedffcf1a19a76343d197a7a61e537cebff92b3d7d2b836381c07bb6892",
+    "stdout_sha256": "49b8732925b91272df923f7dd50c71f517aa89deff9eaf1894932e8ef84722ca",
+    "stdout": "\u26a0 [3001/3003] Replayed LonelyRunner.FiveAdicCarry\nwarning: LonelyRunner/FiveAdicCarry.lean:193:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:193:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:193:63: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:199:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:199:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:199:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:205:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:205:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:205:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:293:6: 'change\n  fiveCarryFGood\n    (fiveCarryJ u * fiveCarryCast c.top + fiveCarryC c.carry u +\n      fiveCarryJ u * fiveCarryCast k1 * fiveCarryR c.residue)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: LonelyRunner/FiveAdicCarry.lean:312:6: 'change\n  fiveCarryFGood\n    (fiveCarryJ u * fiveCarryCast c.top + fiveCarryC c.carry u +\n      fiveCarryJ u * fiveCarryCast k1 * fiveCarryR c.residue)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nwarning: LonelyRunner/FiveAdicCarry.lean:297:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nwarning: LonelyRunner/FiveAdicCarry.lean:316:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n\u26a0 [3002/3003] Replayed LonelyRunner.FiveAdicFiltering\nwarning: LonelyRunner/FiveAdicFiltering.lean:248:5: Variable name `hd` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n\u26a0 [3003/3003] Replayed LonelyRunner.FiveAdicHardPattern\nwarning: LonelyRunner/FiveAdicHardPattern.lean:191:36: Variable name `hr` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nwarning: LonelyRunner/FiveAdicHardPattern.lean:192:5: Variable name `h` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\ninfo: LonelyRunner/FiveAdicHardPattern.lean:237:61: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nBuild completed successfully (3003 jobs).\n<stdin>:4:7: warning: Variable name `hcarry` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'LonelyRunner.fiveAdic_hard_pattern_of_carry' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_hard_pattern' depends on axioms: [propext, Classical.choice, Quot.sound]\nb6caced5772fb4b33a7bb6d26792aaa49f5287557f3165c862edeaf7d69daeca  LonelyRunner/FiveAdicHardPattern.lean\nf91d747198374da76ff9e62435db20a8917856d5b9dc52229ce576353cc11d81  LonelyRunner/FiveAdicCarry.lean\n1a210e70383e9b00d1a3aec321e9e1a838efcd26c24ca180101964e8c6e71429  LonelyRunner/FiveAdicFiltering.lean\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "assembly_plan_root_replay": {
+    "artifact_sha256": "dcfd7e6133c9b2018596b9ff76d5861fb0abc906e1e6fd00a5ac422a3c3d20bf",
+    "program_sha256": "4e4c3ef87641be643279612347a2503febb548401ee3b9695e5f12fb0194ca7a",
+    "stdout_sha256": "f899e54580e92adf78c6c3ad8789eb25255f911718106a062df87c8aa71258bf",
+    "stdout": "{\"complement_maps\": 4, \"natural_controls\": [{\"distances\": [1, 1, 1, 2], \"lambda\": 1, \"levels\": [0, 0, 0, 0], \"m\": 0, \"name\": \"m0_repeated_unsorted\", \"time\": \"1/5\"}, {\"distances\": [5, 5, 5, 10], \"lambda\": 1, \"levels\": [1, 1, 1, 1], \"m\": 1, \"name\": \"all_top_positive_level\", \"time\": \"1/25\"}, {\"distances\": [25, 62, 31, 30], \"lambda\": 31, \"levels\": [2, 0, 0, 1], \"m\": 2, \"name\": \"filtered_multiple_levels\", \"time\": \"31/125\"}, {\"distances\": [265, 125, 240, 140], \"lambda\": 53, \"levels\": [1, 3, 1, 1], \"m\": 3, \"name\": \"hard_scaled_top_middle\", \"time\": \"53/625\"}, {\"distances\": [140, 125, 140, 265], \"lambda\": 53, \"levels\": [1, 3, 1, 1], \"m\": 3, \"name\": \"hard_scaled_repeated_lower\", \"time\": \"53/625\"}], \"signed_relative\": [-2, -3, -5, 3], \"signed_time\": \"1/8\", \"source_guards\": 16, \"status\": \"passed\"}\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "ordinary_initial_failed_command": {
+    "artifact_sha256": "63a5b71c23e65182f27a704263d471330624a4e1a1a8de0792a50779fc176c70",
+    "command_sha256": "ef2eb28f5a584a6518c2f1f8e11dc93d1f4d04a5962e333712a89e59d04e459e",
+    "exit_code": 1,
+    "stdout": "f387b0612875e66eba815c9f90a4e3b445a28a5adc58e0c12fecc7a1a556cbf0  -\n",
+    "stderr": "",
+    "command": "set -euo pipefail\nlake build LonelyRunner.FiveRunnerOrdinary LonelyRunner.FiveRunnerCanonical >/dev/null\nlake env lean /dev/stdin <<'EOF' | sha256sum\nimport LonelyRunner.FiveRunnerCanonical\n#check LonelyRunner.fiveAdic_four_label_multiplier\n#check LonelyRunner.fourMovingNaturalMultiplier\n#check LonelyRunner.fourMovingNaturalRunners\n#check LonelyRunner.lowerCountPositiveIntegerHypothesis_six\n#check LonelyRunner.fiveRunners\n#check LonelyRunner.fourRunners\n#print axioms LonelyRunner.fiveAdic_four_label_multiplier\n#print axioms LonelyRunner.fourMovingNaturalMultiplier\n#print axioms LonelyRunner.fourMovingNaturalRunners\n#print axioms LonelyRunner.lowerCountPositiveIntegerHypothesis_six\n#print axioms LonelyRunner.fiveRunners\nEOF\n"
+  },
+  "ordinary_initial_failed_probe": {
+    "exit_code": 1,
+    "probe_sha256": "58aeb8bd53aa3aab508aeb3ee36fab934abb833de86894ad19c472d75ce60daf",
+    "stdout_sha256": "02e5a0f8a75bb8c3a8193dc9fc7eeec372ebe32a40dccdcb5e850cc64dad2757",
+    "stdout": "LonelyRunner.fiveAdic_four_label_multiplier (d ell u : Fin 4 \u2192 \u2115) (m : \u2115) (hd : \u2200 (i : Fin 4), 0 < d i)\n  (hdecomp : \u2200 (i : Fin 4), d i = 5 ^ ell i * u i) (hu : \u2200 (i : Fin 4), \u00ac5 \u2223 u i) (hell : \u2200 (i : Fin 4), ell i \u2264 m)\n  (hmax : \u2203 p, ell p = m) :\n  \u2203 lam,\n    0 < lam \u2227\n      lam < 5 * 5 ^ m \u2227 \u00ac5 \u2223 lam \u2227 \u2200 (i : Fin 4), 5 ^ m \u2264 LonelyRunner.cyclicResidueDistance (5 * 5 ^ m) (lam * d i)\nLonelyRunner.fourMovingNaturalMultiplier (speeds : Fin 4 \u2192 \u2115) (hpos : \u2200 (i : Fin 4), 0 < speeds i) :\n  \u2203 m lam,\n    0 < lam \u2227\n      lam < 5 * 5 ^ m \u2227\n        \u00ac5 \u2223 lam \u2227 \u2200 (i : Fin 4), 5 ^ m \u2264 LonelyRunner.cyclicResidueDistance (5 * 5 ^ m) (lam * speeds i)\nLonelyRunner.fourMovingNaturalRunners (speeds : Fin 4 \u2192 \u2115) (hpos : \u2200 (i : Fin 4), 0 < speeds i) :\n  \u2203 t, 0 < t \u2227 \u2200 (i : Fin 4), 5\u207b\u00b9 \u2264 LonelyRunner.circleNorm (t * \u2191(speeds i))\nLonelyRunner.lowerCountPositiveIntegerHypothesis_six : LonelyRunner.LowerCountPositiveIntegerHypothesis 6\nLonelyRunner.fiveRunners (speeds : Fin 5 \u2192 \u211d) (hinj : Function.Injective speeds) (runner : Fin 5) :\n  \u2203 t, LonelyRunner.LonelyAt speeds runner t\n<stdin>:7:7: error(lean.unknownIdentifier): Unknown identifier `LonelyRunner.fourRunners`\n'LonelyRunner.fiveAdic_four_label_multiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourMovingNaturalMultiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourMovingNaturalRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.lowerCountPositiveIntegerHypothesis_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "stderr": "",
+    "lean_stdin": "import LonelyRunner.FiveRunnerCanonical\n#check LonelyRunner.fiveAdic_four_label_multiplier\n#check LonelyRunner.fourMovingNaturalMultiplier\n#check LonelyRunner.fourMovingNaturalRunners\n#check LonelyRunner.lowerCountPositiveIntegerHypothesis_six\n#check LonelyRunner.fiveRunners\n#check LonelyRunner.fourRunners\n#print axioms LonelyRunner.fiveAdic_four_label_multiplier\n#print axioms LonelyRunner.fourMovingNaturalMultiplier\n#print axioms LonelyRunner.fourMovingNaturalRunners\n#print axioms LonelyRunner.lowerCountPositiveIntegerHypothesis_six\n#print axioms LonelyRunner.fiveRunners\n"
+  },
+  "ordinary_final_root_replay": {
+    "artifact_sha256": "fd1fd867f969d9ea5d5f4e6f213175dc593970a507442f1295b0ef743cd85055",
+    "command_sha256": "0ed431149be2935776dd1f9a9d101c6bdf2bd1da48bbe1ccfe70332610929c67",
+    "program_sha256": "44501584f75f23fed13c41840ea4f354ca62441c4f5b1b5c6e8ad8dd6b22a50d",
+    "lean_stdin_sha256": "a31fc9eacec2594e7c6fe8f162627bedcd512cd4e9f413344306c94de8b36cd1",
+    "stdout_sha256": "4b8627cf8eaa9dad4d3a8b72388d75ce4b39774476cdfc79faafa12b8b55420b",
+    "stdout": "probe_source_sha256=a31fc9eacec2594e7c6fe8f162627bedcd512cd4e9f413344306c94de8b36cd1\nprobe_stdout_sha256=ad086aaf529f7adb2efd6ea6377b45b64dfb0195bb9ee222ec99ca3dcc0a3f4f\nprobe_stderr_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\nLonelyRunner.fiveAdic_four_label_multiplier (d ell u : Fin 4 \u2192 \u2115) (m : \u2115) (hd : \u2200 (i : Fin 4), 0 < d i)\n  (hdecomp : \u2200 (i : Fin 4), d i = 5 ^ ell i * u i) (hu : \u2200 (i : Fin 4), \u00ac5 \u2223 u i) (hell : \u2200 (i : Fin 4), ell i \u2264 m)\n  (hmax : \u2203 p, ell p = m) :\n  \u2203 lam,\n    0 < lam \u2227\n      lam < 5 * 5 ^ m \u2227 \u00ac5 \u2223 lam \u2227 \u2200 (i : Fin 4), 5 ^ m \u2264 LonelyRunner.cyclicResidueDistance (5 * 5 ^ m) (lam * d i)\nLonelyRunner.fourMovingNaturalMultiplier (speeds : Fin 4 \u2192 \u2115) (hpos : \u2200 (i : Fin 4), 0 < speeds i) :\n  \u2203 m lam,\n    0 < lam \u2227\n      lam < 5 * 5 ^ m \u2227\n        \u00ac5 \u2223 lam \u2227 \u2200 (i : Fin 4), 5 ^ m \u2264 LonelyRunner.cyclicResidueDistance (5 * 5 ^ m) (lam * speeds i)\nLonelyRunner.fourMovingNaturalRunners (speeds : Fin 4 \u2192 \u2115) (hpos : \u2200 (i : Fin 4), 0 < speeds i) :\n  \u2203 t, 0 < t \u2227 \u2200 (i : Fin 4), 5\u207b\u00b9 \u2264 LonelyRunner.circleNorm (t * \u2191(speeds i))\nLonelyRunner.lowerCountPositiveIntegerHypothesis_six : LonelyRunner.LowerCountPositiveIntegerHypothesis 6\nLonelyRunner.fiveRunners (speeds : Fin 5 \u2192 \u211d) (hinj : Function.Injective speeds) (runner : Fin 5) :\n  \u2203 t, LonelyRunner.LonelyAt speeds runner t\nLonelyRunner.fourRunners (speeds : Fin 4 \u2192 \u211d) (hinj : Function.Injective speeds) (runner : Fin 4) :\n  \u2203 t, LonelyRunner.LonelyAt speeds runner t\n'LonelyRunner.fiveAdic_four_label_multiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourMovingNaturalMultiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourMovingNaturalRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.lowerCountPositiveIntegerHypothesis_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "stderr": "",
+    "exit_code": 0
+  },
+  "completion_gate": "LonelyRunner.fiveRunners proves the exact ordinary Fin5 real statement; unrestricted LonelyRunner.Conjecture remains unresolved.",
+  "independent_source_review": {
+    "status": "accepted",
+    "root_replay": {
+      "artifact_sha256": "f13432e19740acda7a8ed3d42f013640eef910218da0eff7ab0a756b75d5e6d3",
+      "command_sha256": "eee0fe24b007a323746a0769cdffdfae838569e4c3e0e3d5b02b8b1c200fdbda",
+      "exit_code": 0,
+      "stdout_sha256": "d9b6535a09f4f93ade88b10a61eb3aa3b56b54b53be183ea1ec289557b2639f0",
+      "stdout": "'LonelyRunner.fiveAdicCarryTag_spec' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdicCarryState_top' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdicCarryState_residue' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdicCarryState_carry' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdicCarryState_digit' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdic_hard_pattern_of_carry' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_hard_pattern' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_positive_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_cyclicResidueDistance_mul_left' depends on axioms: [propext]\n'LonelyRunner.fin4_level_dichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_four_label_multiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourMovingNaturalMultiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourMovingNaturalRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.lowerCountPositiveIntegerHypothesis_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.cyclicResidueDistance_eq_of_mod_eq' does not depend on any axioms\n'LonelyRunner.cyclicResidueDistance_eq_of_add_mod_eq_zero' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.cyclicResidueDistance_mul_complement' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdic_normalize_unit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n{\"axiom_reports\": 20, \"carry_table_replay\": false, \"compatibility_types\": 5, \"kernel_examples\": 64, \"lean_exit_code\": 0, \"lean_stdin_sha256\": \"b517f3efcc612366adb163764e30d7e82b981d6ad66d3da7e350d58f0211a19c\", \"lean_stdout_sha256\": \"46fe9c2062f4a4a803d221b9307739cdb3ea52c280dfdda8b54a7b86e983d79c\", \"new_public_types\": 15, \"normalization_bytes_preserved\": true, \"prior_root_audit_bytes_preserved\": true, \"result\": \"PASS\", \"source_build\": false, \"source_guards\": 28}\n",
+      "stderr": ""
+    },
+    "new_public_types": 15,
+    "compatibility_types": 5,
+    "kernel_examples": 64,
+    "source_guards": 28,
+    "axiom_reports": 20,
+    "source_corrections": false
+  },
+  "storage_cleanup": {
+    "removed_bytes": 7788671927,
+    "removed_paths": [
+      ".lake"
+    ],
+    "post_report": "No allowlisted cache or build paths are present.",
+    "log_sha256": "a79dbfbcb4bb9662eebd6e96fcc4b46178ec5746c454ec28307b39aa3fee1649",
+    "reason": "All localLean verification/replays completed; only cache-independent future manuscriptreview active. Pinned toolchain/source/Git/uniqueevidence retained."
+  },
+  "reports": {
+    "research/astra-five-adic-carry-adapter-implementation.md": "618a30df78f3c21c8740a40e39bfacbb75cb3a1eee905ab0ff7f98fee6ba4e0f",
+    "research/astra-five-adic-decomposition-implementation.md": "29dfa1b3d1ce186876ec4b7718d6954d9e19992b47c4a860875a3deff148707b",
+    "research/astra-five-runner-assembly-plan.md": "dcfd7e6133c9b2018596b9ff76d5861fb0abc906e1e6fd00a5ac422a3c3d20bf",
+    "research/astra-five-runner-final-source-review.md": "f13432e19740acda7a8ed3d42f013640eef910218da0eff7ab0a756b75d5e6d3",
+    "research/astra-five-runner-ordinary-implementation.md": "fd1fd867f969d9ea5d5f4e6f213175dc593970a507442f1295b0ef743cd85055"
+  }
+}
