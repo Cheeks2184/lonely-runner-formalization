@@ -651,7 +651,7 @@ project-specific axiom.
 #print axioms LonelyRunner.phase_certificate_sound
 
 -- Fixed mask intersections and generic real-band, cut and shift adapters.
--- The concrete real-phase certificate premises are still separate obligations.
+-- The following section supplies the concrete real-phase certificate premises.
 #print axioms LonelyRunner.maskCandidates
 #print axioms LonelyRunner.mem_maskCandidates
 #print axioms LonelyRunner.exists_common_mask_bit
@@ -668,3 +668,26 @@ project-specific axiom.
 #print axioms LonelyRunner.CutAtomMem
 #print axioms LonelyRunner.exists_adjacent_cut_interval
 #print axioms LonelyRunner.cutAtomMem_covers_unit_interval
+
+-- Concrete Renault endpoint certificate, real soundness and shared-candidate lemma.
+-- These phase statements do not by themselves prove a new runner count.
+#print axioms LonelyRunner.maskCandidates_subset_of_and_eq
+#print axioms LonelyRunner.phaseSlope
+#print axioms LonelyRunner.phaseShift
+#print axioms LonelyRunner.phaseSlope_pos
+#print axioms LonelyRunner.phaseRepresentative
+#print axioms LonelyRunner.phaseNumerator
+#print axioms LonelyRunner.phaseQuotient
+#print axioms LonelyRunner.PhaseBandFacts
+#print axioms LonelyRunner.phaseGood_iff
+#print axioms LonelyRunner.phaseGood_fract
+#print axioms LonelyRunner.phaseBandFacts_sound
+#print axioms LonelyRunner.renaultPhaseCuts
+#print axioms LonelyRunner.renaultPhaseAtomMasks
+#print axioms LonelyRunner.renaultPhaseCoreAtoms
+#print axioms LonelyRunner.renaultPhaseDominators
+#print axioms LonelyRunner.renaultPhaseBandFacts
+#print axioms LonelyRunner.renaultPhaseCoreAtoms_masks
+#print axioms LonelyRunner.renaultPhaseDominators_and
+#print axioms LonelyRunner.renault_phase_common_candidate
+#print axioms LonelyRunner.renault_phase_five_one
