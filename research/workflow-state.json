@@ -6,19 +6,19 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/center_preserving_projection_audit",
-      "agent_id": "/root/uniform_screen_review",
+      "id": "/root/parity_coset_minimum_audit",
+      "agent_id": "/root/uniform_affine_phase_screen",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "ca9d2d7f20f66cceb7db3b440d0378203624aa39",
+      "source_checkpoint": "c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4",
       "owned_files": [
-        "research/astra-center-preserving-projection-audit.md"
+        "research/astra-parity-coset-minimum-audit.md"
       ],
-      "target": "Uniform alternative to local seed transport: audit a centre-preserving lower-dimensional zonotope projection and lattice-point lift, using ordinary LRC central coset and count-and-sum minimality. Seek a long-fibre witness / short-fibre smaller-failure dichotomy rather than another finite checking equivalence. At most two proof approaches; no Lean or numeric expansion.",
+      "target": "Direct uniform bound at the globally closest point of the ordinary half-lattice coset in the projected-cube norm. Use all lattice competitors, exact pairwise facet gauge and count/sum minimality; at most two analytic approaches for an actual norm upper bound or preserved-failure descent. No short local rescue or equivalent reformulation promoted as supply.",
       "checks": []
     }
   ],
@@ -9303,11 +9303,61 @@
         "research/astra-joint-seed-maximum-review.md"
       ],
       "sha256": "3bbee63f444eb4a327b97d898991183c7c884560122944c48ecfcad988ce5cc5"
+    },
+    {
+      "id": "/root/center_preserving_projection_audit",
+      "agent_id": "/root/uniform_screen_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "ca9d2d7f20f66cceb7db3b440d0378203624aa39",
+      "owned_files": [
+        "research/astra-center-preserving-projection-audit.md"
+      ],
+      "target": "Uniform alternative to local seed transport: audit a centre-preserving lower-dimensional zonotope projection and lattice-point lift, using ordinary LRC central coset and count-and-sum minimality. Seek a long-fibre witness / short-fibre smaller-failure dichotomy rather than another finite checking equivalence. At most two proof approaches; no Lean or numeric expansion.",
+      "checks": [
+        "Root manuscript read and final corrected row statement checked",
+        "Twelve current input SHA256 bindings matched",
+        "Author validator and whitespace checks reported exit0"
+      ],
+      "result": "Frozen exact fibre/parity audit and pointwise integral affine cube-lift rigidity delivered. Root source read and12 bindings matched; independent review pending. No unrestricted supply, preserved-failure descent, or Lean contract queued.",
+      "evidence": [
+        "research/astra-center-preserving-projection-audit.md"
+      ],
+      "sha256": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e"
+    },
+    {
+      "id": "/root/center_preserving_projection_review",
+      "agent_id": "/root/uniform_seed_coupling",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "01961736f5c07af8d2f7d4cb9397553f0baa284e",
+      "owned_files": [
+        "research/astra-center-preserving-projection-review.md"
+      ],
+      "target": "Independent scope review of the ordinary-LRC centre-preserving projection and fibre-lift/descent audit, including exact MSS dimension/constants and pointwise integral affine cube-lift obstruction for every lower moving count 2<=m<d. Read and bind frozen author before final acceptance; no claim excluding quotient-level or witness-dependent lifts.",
+      "checks": [
+        "Independent full author,12 inputs and primary-source reads",
+        "Root full review read",
+        "Workflow and text checks passed"
+      ],
+      "result": "Accepted without corrections; root full review read. Exact source constants, ordinary coset, all-m affine cube obstruction and same-count sum preservation verified at manuscript scope. No unrestricted supply.",
+      "evidence": [
+        "research/astra-center-preserving-projection-review.md"
+      ],
+      "sha256": "a1402e6545dd2de6a2d4b2f832b2ff13ec52f759a1ae5fb183122d1ad3d0c7e6"
     }
   ],
-  "latest_checkpoint": "Pass72 verified locally: independently reviewed joint-seed comparison and explicit smaller-replacement compatibility. Publication in progress; unrestricted goal unresolved.",
+  "latest_checkpoint": "Pass73 verified locally: independently reviewed ordinary fibre/parity scope and integral affine cube rigidity. Publication in progress; unrestricted goal unresolved.",
   "next_actions": [
-    "Finish independent review of frozen joint-seed maximum audit; then document, verify and publish its exact accepted scope.",
+    "Finish frozen centre-preserving projection review, verify its precise manuscript scope and publish the next substantive checkpoint.",
     "Pursue centre-preserving projection and lattice-point lift/descent with full ordinary-LRC coset and minimality; do not substitute shifted LRC or a finite-family equivalence for proof.",
     "No additional ideal-mask solver expansion or disconnected Lean work. Next Terra High aggregate review at30 closed tasks;24 complete."
   ],
@@ -9891,7 +9941,7 @@
     "coordination": "All worker commands and root verification stopped before cleanup; manuscript-only research released after cleanup.",
     "preserved": "Pinned toolchain, Git history, sources, unique evidence, small replay programs and outputs; unrelated projects untouched."
   },
-  "previous_goal_turn_classification": "Progress: PR70 exact-head merge/main verification completed. Joint-seed manuscript frozen, fully read, and eight dependencies checked; independent reviewer reports no correction and is writing frozen acceptance. New bounded centre-preserving projection/lift/descent research launched with explicit ordinary-LRC scope.",
+  "previous_goal_turn_classification": "Progress: Pass72 reviewed, verified, committed/pushed as PR71; root strengthened the integral lift class obstruction, author confirmed and independent review launched. Specific CI watch15018 and exact-certificate job101575129197 revalidated live.",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
@@ -10432,13 +10482,13 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "checkpoint": "Pass72",
-    "branch": "codex/astra-joint-seed-maximum",
+    "checkpoint": "Pass73",
+    "branch": "codex/astra-center-preserving-projection",
     "base": "main",
     "status": "verified_local_pending_commit_push_pr",
-    "scope": "Frozen joint-seed author/review, docs, verification and state. Active centre-preserving projection manuscript excluded.",
-    "verification": "research/astra-pass72-verification.json",
-    "verification_sha256": "4913d769818ddfca6d2ca94f6a8171d8e9bf7cafa36836e640aaf1008fbdaedc"
+    "scope": "Frozen geometric author/review, docs, verification and state. Active parity-coset global minimum audit excluded.",
+    "verification": "research/astra-pass73-verification.json",
+    "verification_sha256": "8d98ba689992af21a8e488bc4c04fe8b33b76a242defa9d6ba36fb19f27cd4f5"
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -10738,10 +10788,10 @@
     }
   ],
   "last_continuation_assessment": {
-    "checkpoint": "PR70 merged/main verified at ca9d2d7f20f66cceb7db3b440d0378203624aa39; receipt saved for next substantive checkpoint.",
-    "mathematical_scope": "Joint-seed report ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac is author-frozen; independent reviewer read it and all eight dependencies and reports no correction, final review artifact still pending. No unrestricted supply or smaller failure obtained.",
-    "next": "Read/freeze independent review and publish the next substantive joint-seed checkpoint; separately assess the centre-preserving geometric lift/descent attempt.",
-    "storage": "Latest report confirms no allowlisted cache or build paths present; no numerical rerun or Lean restoration queued."
+    "checkpoint": "PR71 merged/main verified at c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4, all3 frozen and8 dependency bindings matched.",
+    "mathematical_scope": "Geometric author frozen0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e,12 local bindings matched; independent reviewer reports no defect and is finishing frozen review. No witness supply or smaller failure obtained.",
+    "next": "Finish geometric independent review and publication; select next genuine uniform supply mechanism outside the excluded pointwise integral cube class.",
+    "storage": "No cache/build restoration, numerical expansion or source formalization queued."
   },
   "pending_two_hole_review": "Frozen author SHA256 2bbc12481c164bf5e4eaf30ea7ca966cb0b2614524d9bea779034a2ebf115ccb; independent review deferred until slot available; excluded from Pass29.",
   "pass29_final_semantic_acceptance": {
@@ -13140,6 +13190,81 @@
       },
       "next_branch": "codex/astra-joint-seed-maximum",
       "scope": "Reviewed ideal-mask carry and fractional barriers plus one fixed unknown solver result; no integral cover, uniform exclusion or unrestricted LRC resolution."
+    },
+    {
+      "pr": 71,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/71",
+      "head": "01961736f5c07af8d2f7d4cb9397553f0baa284e",
+      "merge": "c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4",
+      "merged_at": "2026-09-06T23:22:48Z",
+      "ci_run": 34066145896,
+      "checks": [
+        {
+          "name": "Lean build and trust audit",
+          "job": 101575129109,
+          "result": "SUCCESS",
+          "completedAt": "2026-09-06T23:12:35Z",
+          "startedAt": "2026-09-06T23:10:53Z"
+        },
+        {
+          "name": "Exact computational certificates",
+          "job": 101575129197,
+          "result": "SUCCESS",
+          "completedAt": "2026-09-06T23:20:15Z",
+          "startedAt": "2026-09-06T23:10:53Z"
+        }
+      ],
+      "premerge": {
+        "state": "OPEN",
+        "isDraft": false,
+        "mergeStateStatus": "CLEAN",
+        "reviews": [],
+        "exact_head_matched": true
+      },
+      "sessions": {
+        "push": {
+          "id": 13543,
+          "exit_code": 0
+        },
+        "create": {
+          "id": 89050,
+          "exit_code": 0
+        },
+        "watch": {
+          "id": 15018,
+          "exit_code": 0
+        },
+        "merge": {
+          "id": 28946,
+          "exit_code": 0
+        }
+      },
+      "watch_start_observation": {
+        "argv": [
+          "gh",
+          "pr",
+          "checks",
+          "71",
+          "--required",
+          "--watch",
+          "--interval",
+          "30"
+        ],
+        "exit_code": 1,
+        "output": "no required checks reported on the 'codex/astra-joint-seed-maximum' branch\n",
+        "disposition": "Required-only watch ended during initial check discovery; both project-required jobs were already observed queued/live via pr view. Watching all checks in session15018; both named jobs remain merge gates."
+      },
+      "fetched_main": {
+        "sha": "c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4",
+        "head_ancestry_exit_code": 0,
+        "old_main_ancestry_exit_code": 0,
+        "frozen_file_bindings_matched": 3,
+        "dependency_bindings_matched": 8,
+        "current_branch_fast_forwarded": true,
+        "local_main_updated": true
+      },
+      "next_branch": "codex/astra-center-preserving-projection",
+      "scope": "Reviewed conditional joint-seed comparison and good smaller replacement, no unrestricted witness supply or smaller failure."
     }
   ],
   "three_divisible_shift_plan": {
@@ -13230,7 +13355,7 @@
     "status": "Author candidate; rootread; independent review queued. Two small scalar/weakshiftarguments rootvalidated for drafting.",
     "scope": "Remaining canonical N6 branch only; uniform arbitrary-N priority afterverifiedN6."
   },
-  "last_goal_turn_classification": "Progress: independent joint-seed review accepted without correction; root full read, exact bindings and integration checks passed; Pass72 saved for standing checkpoint publication.",
+  "last_goal_turn_classification": "Progress: PR71 merged/main verified; geometric author/review accepted with all-lower-count rigidity, Pass73 root verification passed and saved; global closest-coset research launched.",
   "one_three_manuscript_review": "Independent frozen 8f720fbd report fully read by root; exact static replay exit0 with sixteen bindings, twelve contract names. Specification accepted, not a Lean result.",
   "publication_latest_pending": null,
   "delegation_revision": {
@@ -13256,26 +13381,26 @@
     "comparison_caveat": "Sample preceded SignedRenaultFiveOne; later deliveries excluded. New High compiled handoff changes both effort and ownership, so no causal effort-only attribution."
   },
   "publication_latest_verified": {
-    "pr": 70,
-    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/70",
-    "head": "6243bfb9f6ae82eca861810b6bdd6dde8e51c55a",
-    "merge": "ca9d2d7f20f66cceb7db3b440d0378203624aa39",
-    "merged_at": "2026-09-06T22:59:35Z",
-    "ci_run": 34065099699,
+    "pr": 71,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/71",
+    "head": "01961736f5c07af8d2f7d4cb9397553f0baa284e",
+    "merge": "c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4",
+    "merged_at": "2026-09-06T23:22:48Z",
+    "ci_run": 34066145896,
     "checks": [
       {
         "name": "Lean build and trust audit",
-        "job": 101572357893,
+        "job": 101575129109,
         "result": "SUCCESS",
-        "completedAt": "2026-09-06T22:50:25Z",
-        "startedAt": "2026-09-06T22:48:51Z"
+        "completedAt": "2026-09-06T23:12:35Z",
+        "startedAt": "2026-09-06T23:10:53Z"
       },
       {
         "name": "Exact computational certificates",
-        "job": 101572358000,
+        "job": 101575129197,
         "result": "SUCCESS",
-        "completedAt": "2026-09-06T22:58:31Z",
-        "startedAt": "2026-09-06T22:48:51Z"
+        "completedAt": "2026-09-06T23:20:15Z",
+        "startedAt": "2026-09-06T23:10:53Z"
       }
     ],
     "premerge": {
@@ -13287,33 +13412,48 @@
     },
     "sessions": {
       "push": {
-        "id": 61147,
+        "id": 13543,
         "exit_code": 0
       },
       "create": {
-        "id": 9103,
+        "id": 89050,
         "exit_code": 0
       },
       "watch": {
-        "id": 46943,
+        "id": 15018,
         "exit_code": 0
       },
       "merge": {
-        "id": 88778,
+        "id": 28946,
         "exit_code": 0
       }
     },
+    "watch_start_observation": {
+      "argv": [
+        "gh",
+        "pr",
+        "checks",
+        "71",
+        "--required",
+        "--watch",
+        "--interval",
+        "30"
+      ],
+      "exit_code": 1,
+      "output": "no required checks reported on the 'codex/astra-joint-seed-maximum' branch\n",
+      "disposition": "Required-only watch ended during initial check discovery; both project-required jobs were already observed queued/live via pr view. Watching all checks in session15018; both named jobs remain merge gates."
+    },
     "fetched_main": {
-      "sha": "ca9d2d7f20f66cceb7db3b440d0378203624aa39",
+      "sha": "c97ae49e6e2787acb48ed8f5a13ca9dd8856f5b4",
       "head_ancestry_exit_code": 0,
       "old_main_ancestry_exit_code": 0,
-      "frozen_file_bindings_matched": 4,
-      "dependency_bindings_matched": 2,
+      "frozen_file_bindings_matched": 3,
+      "dependency_bindings_matched": 8,
       "current_branch_fast_forwarded": true,
       "local_main_updated": true
     },
-    "next_branch": "codex/astra-joint-seed-maximum",
-    "scope": "Reviewed ideal-mask carry and fractional barriers plus one fixed unknown solver result; no integral cover, uniform exclusion or unrestricted LRC resolution."
+    "next_branch": "codex/astra-center-preserving-projection",
+    "scope": "Reviewed conditional joint-seed comparison and good smaller replacement, no unrestricted witness supply or smaller failure."
   },
   "small_phase_orbit_plan_root_read": {
     "report": "research/astra-small-phase-orbit-contract-plan.md",
@@ -13803,6 +13943,31 @@
     ],
     "root_read": "Beck-Schymura abstract and introduction/projection-asymmetry preliminaries through section3 start; general asymmetry bound has an extra log-log factor and is not the target. MSS primary-source search locates centre-preserving lower-LRZ containment. Full proof scope delegated; no new source theorem adopted.",
     "repository_scope_screen": "No asymmetry/rabbits/half-lattice research manuscript found by focused Markdown search; existing MSS height implementation and subset-gcd screen read.",
-    "novel_target": "Remove the unresolved finite-family obligation by an actual centre-preserving projection/lift/descent dichotomy, or identify the exact nonclosing step and stop this bounded attempt."
+    "novel_target": "Remove the unresolved finite-family obligation by an actual centre-preserving projection/lift/descent dichotomy, or identify the exact nonclosing step and stop this bounded attempt.",
+    "integer_point_count_scope": {
+      "source": "https://arxiv.org/html/2301.12182v1",
+      "location": "Section7 Theorem18 and Corollary19",
+      "root_read": "Exact count concerns all interior points of the finite cube+[0,v] zonotope; it does not count points in the target contracted central body.",
+      "decision": "No separate enumeration implementation or uniform-depth claim queued from this formula."
+    }
+  },
+  "projection_integral_lift_root_extension": {
+    "status": "independently_accepted_in_frozen_author_and_review",
+    "claim": "The proposed pointwise integral affine cube-lift obstruction may extend from m=d-1 to every 2<=m<d moving coordinates.",
+    "derivation": "For alpha=(m-1)/(m+1), beta=(d-1)/(d+1), integer row L1<=beta/alpha. m>=3 implies L1<2. m=2 implies L1<3 and half-centre containment forces odd row sum, excluding L1=0,2. Thus signed coordinate rows only, and mapping the source velocity line to a distinct positive d-vector forces duplicate absolute velocities by pigeonhole.",
+    "scope": "Requires actual integral affine cube containment and source-line compatibility; quotient-level containments excluded. m=1 excluded because alpha=0 permits arbitrary odd coefficients."
+  },
+  "center_preserving_projection_audit": {
+    "status": "independently_accepted_conditional_and_method_obstruction_scope",
+    "file": "research/astra-center-preserving-projection-audit.md",
+    "sha256": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e",
+    "root_manuscript_read": true,
+    "dependency_bindings_matched": 12,
+    "scope": "Correct ordinary central coset and fibre criterion; parity-selected successful direction equivalent to original supply. Integral pointwise cube maps cannot lower moving count m>=2 or primitive same-count sum. Quotient/witness-dependent lifts remain outside obstruction.",
+    "next": "Read independent frozen review before promotion; no disconnected Lean implementation.",
+    "review_file": "research/astra-center-preserving-projection-review.md",
+    "review_sha256": "a1402e6545dd2de6a2d4b2f832b2ff13ec52f759a1ae5fb183122d1ad3d0c7e6",
+    "root_full_review_read": true,
+    "review_corrections": 0
   }
 }
