@@ -1,0 +1,70 @@
+{
+  "checkpoint": "Pass65",
+  "parent_main": "badc4e30291ce6379f69fb4d8ac9f971908ca33b",
+  "status": "Accepted manuscript checkpoint only; unrestricted canonical conjecture unresolved.",
+  "hashes": {
+    "research/astra-uniform-fourier-lp-cap.md": "9b2d6ac78271d61d62bc201358243b5236c2afd51b4cd6e33d685699112b4bb5",
+    "research/astra-fourier-lp-source-contract.md": "cf3ea5b08fbaee07e56b34d295632f7c67a35cc80679055a74725b0596b96043",
+    "research/astra-uniform-fourier-upper-barrier.md": "d3ba7474730fb2c17ba5118ee9753367336673eb175bf00080493e7e74a37bb1",
+    "research/astra-uniform-fourier-lp-review.md": "653a93313e333b0f34ac1eb907399d9c9090ab60c58d95d0c575e4f78eccb834",
+    "docs/astra-research-65.md": "1567ae46de4497de376f204b431639d89944da10680e558447b758c1641e62ed"
+  },
+  "root_binding_script_utf8": "from pathlib import Path\nimport hashlib,json,re\nexpected={'research/astra-uniform-fourier-lp-cap.md': '9b2d6ac78271d61d62bc201358243b5236c2afd51b4cd6e33d685699112b4bb5', 'research/astra-fourier-lp-source-contract.md': 'cf3ea5b08fbaee07e56b34d295632f7c67a35cc80679055a74725b0596b96043', 'research/astra-uniform-fourier-upper-barrier.md': 'd3ba7474730fb2c17ba5118ee9753367336673eb175bf00080493e7e74a37bb1', 'research/astra-uniform-fourier-lp-review.md': '653a93313e333b0f34ac1eb907399d9c9090ab60c58d95d0c575e4f78eccb834'}\ncount=0\nfor name,h in expected.items():\n data=Path(name).read_bytes();assert hashlib.sha256(data).hexdigest()==h,name\n for binding,source in re.findall(r\"^([0-9a-f]{64})  (research/[^\\n]+)$\",data.decode(),re.M):\n  assert hashlib.sha256(Path(source).read_bytes()).hexdigest()==binding,source\n  count+=1\nprint(json.dumps({\"status\":\"passed\",\"frozen_files\":expected,\"embedded_source_bindings\":count,\"scope\":\"Byte bindings only. Mathematical arguments independently read; no mathematical program or Lean run.\"},sort_keys=True))\n",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/tmp/astra-pass65-bindings.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"embedded_source_bindings\": 3, \"frozen_files\": {\"research/astra-fourier-lp-source-contract.md\": \"cf3ea5b08fbaee07e56b34d295632f7c67a35cc80679055a74725b0596b96043\", \"research/astra-uniform-fourier-lp-cap.md\": \"9b2d6ac78271d61d62bc201358243b5236c2afd51b4cd6e33d685699112b4bb5\", \"research/astra-uniform-fourier-lp-review.md\": \"653a93313e333b0f34ac1eb907399d9c9090ab60c58d95d0c575e4f78eccb834\", \"research/astra-uniform-fourier-upper-barrier.md\": \"d3ba7474730fb2c17ba5118ee9753367336673eb175bf00080493e7e74a37bb1\"}, \"scope\": \"Byte bindings only. Mathematical arguments independently read; no mathematical program or Lean run.\", \"status\": \"passed\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "evidence": "Executed after staging the seven named checkpoint files; their full staged stat was read."
+    }
+  ],
+  "mathematical_verification": "Root full read of both author manuscripts, root source audit and independent Astra xhigh review of all three frozen inputs. Exact hand arguments only; no mathematical program or Lean declaration.",
+  "scope_limit": "Positive-normalized fixed-sign lower and upper Fourier classes only. No general optimization impossibility, upper bound on true gap from a lower-class ceiling, lower bound on true gap from an upper-class barrier, or LRC resolution.",
+  "storage": "No allowlisted cache/build paths present; no restoration or cleanup needed."
+}
