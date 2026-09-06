@@ -1,0 +1,113 @@
+{
+  "candidate": {
+    "closed_target": "1/N",
+    "coefficients": "0<=k_i<N",
+    "interval_origin": 0,
+    "phases": "ordinary",
+    "time_grid": "t=sum_i k_i/(N*v_i)"
+  },
+  "delivery_metrics": {
+    "astra_repair_lines": 0,
+    "astra_repair_rounds": 1,
+    "check_kind": "python",
+    "evidencepath": "research/astra-adapted-grid-control.json",
+    "first_check_success": true,
+    "usage": null,
+    "worker_elapsed_seconds": null,
+    "worker_repair_rounds": 0
+  },
+  "execution": {
+    "argv": [
+      "python3",
+      "-B",
+      "research/.tmp_adapted_grid_control.py",
+      "--n4-max",
+      "20",
+      "--n5-max",
+      "16"
+    ],
+    "elapsed_seconds": 0.5652751922607422,
+    "exit_code": 0,
+    "input_domain": {
+      "first": "N=4; all increasing triples from 1..20",
+      "second_if_needed": "N=5; all increasing quadruples from 1..16",
+      "stop_rule": "stop at the first tuple whose entire grid misses the closed target"
+    },
+    "stderr": "",
+    "stderr_bytes": 0,
+    "stdout": "{\"N4\":{\"n\":4,\"speed_domain\":\"all increasing 3-tuples from 1..20\",\"status\":\"bounded_nonfinding\",\"tuples_tested\":1140},\"first_counterexample_or_bounded_nonfinding\":{\"n\":5,\"speed_domain\":\"all increasing 4-tuples from 1..16\",\"status\":\"bounded_nonfinding\",\"tuples_tested\":1820},\"screen_order\":[\"N=4 increasing triples 1..20\",\"N=5 increasing quadruples 1..16\"]}\n",
+    "stdout_bytes": 356
+  },
+  "execution_provenance_from_tool_calls": {
+    "receipt_packer_argv": [
+      "python3",
+      "-B",
+      "research/.tmp_adapted_grid_control_pack.py",
+      "--source",
+      "research/.tmp_adapted_grid_control.py",
+      "--source-sha256",
+      "a1ae524d887f9d703b0f0009ff94a2d062f521a83b6cecaae84014f6e6f9382c",
+      "--packer-source",
+      "research/.tmp_adapted_grid_control_pack.py",
+      "--packer-sha256",
+      "a04e7f31b8979df0e1c1cb7d49891e9e343f12ad188381f6fd10d7fd148fdb5e",
+      "--stdout",
+      "/tmp/adapted_grid_control.stdout",
+      "--stderr",
+      "/tmp/adapted_grid_control.stderr",
+      "--exit",
+      "0",
+      "--elapsed-seconds",
+      "0.5652751922607422",
+      "--output",
+      "research/astra-adapted-grid-control.json"
+    ],
+    "receipt_packer_exit_code": 0,
+    "receipt_packer_shell_stdout": "a04e7f31b8979df0e1c1cb7d49891e9e343f12ad188381f6fd10d7fd148fdb5e\n0\n",
+    "screen_outer_shell_command": "source_hash=$(sha256sum research/.tmp_adapted_grid_control.py | awk '{print $1}')\nstart=$(date +%s.%N)\npython3 -B research/.tmp_adapted_grid_control.py --n4-max 20 --n5-max 16 > /tmp/adapted_grid_control.stdout 2> /tmp/adapted_grid_control.stderr\nscreen_exit=$?\nend=$(date +%s.%N)\nelapsed=$(python3 -c \"import sys; print(float(sys.argv[2])-float(sys.argv[1]))\" \"$start\" \"$end\")\nprintf '%s\\n%s\\n%s\\n' \"$source_hash\" \"$screen_exit\" \"$elapsed\"",
+    "screen_outer_shell_stdout": "a1ae524d887f9d703b0f0009ff94a2d062f521a83b6cecaae84014f6e6f9382c\n0\n0.5652751922607422\n"
+  },
+  "frozen_executable_source": {
+    "bytes": "#!/usr/bin/env python3\n\"\"\"Exact bounded screen for the ordinary zero-offset N-grid candidate.\"\"\"\nfrom __future__ import annotations\n\nimport argparse\nimport itertools\nimport json\nimport math\nfrom fractions import Fraction\n\n\ndef fraction_text(q: Fraction) -> str:\n    return f\"{q.numerator}/{q.denominator}\"\n\n\ndef grid_residues(vs: tuple[int, ...], n: int) -> tuple[int, int, list[int]]:\n    \"\"\"Return D=N*lcm(v), then the sorted distinct time numerators modulo D.\"\"\"\n    lcm_v = math.lcm(*vs)\n    modulus = n * lcm_v\n    residues = {0}\n    for speed in vs:\n        step = lcm_v // speed\n        residues = {\n            (prior + coefficient * step) % modulus\n            for prior in residues\n            for coefficient in range(n)\n        }\n    return lcm_v, modulus, sorted(residues)\n\n\ndef integer_bad_labels(x: int, vs: tuple[int, ...], n: int, modulus: int) -> list[int]:\n    \"\"\"Labels failing the closed 1/N target, using only integer arithmetic.\"\"\"\n    bad = []\n    for index, speed in enumerate(vs):\n        residue = (speed * x) % modulus\n        if n * min(residue, modulus - residue) < modulus:\n            bad.append(index)\n    return bad\n\n\ndef fraction_bad_labels(x: int, vs: tuple[int, ...], n: int, modulus: int) -> list[int]:\n    \"\"\"Independent check of the same bad labels through Fraction phases.\"\"\"\n    time = Fraction(x, modulus)\n    target = Fraction(1, n)\n    bad = []\n    for index, speed in enumerate(vs):\n        phase = time * speed\n        fractional = phase - math.floor(phase)\n        if min(fractional, 1 - fractional) < target:\n            bad.append(index)\n    return bad\n\n\ndef full_witness(vs: tuple[int, ...], n: int) -> dict | None:\n    \"\"\"Search all requested closed-boundary candidates for a genuine LRC witness.\"\"\"\n    candidates = set()\n    for speed in vs:\n        for k in range(speed + 1):\n            for sign in (-1, 1):\n                time = Fraction(n * k + sign, n * speed)\n                if 0 <= time <= 1:\n                    candidates.add(time)\n    target = Fraction(1, n)\n    for time in sorted(candidates):\n        distances = []\n        for speed in vs:\n            phase = time * speed\n            fractional = phase - math.floor(phase)\n            distances.append(min(fractional, 1 - fractional))\n        if all(distance >= target for distance in distances):\n            return {\n                \"time\": fraction_text(time),\n                \"distances\": [fraction_text(distance) for distance in distances],\n                \"candidate_family\": \"(N*k plus_or_minus 1)/(N*v_i), k=0..v_i, in [0,1]\",\n            }\n    return None\n\n\ndef screen(n: int, maximum: int) -> dict:\n    arity = n - 1\n    tested = 0\n    for vs in itertools.combinations(range(1, maximum + 1), arity):\n        tested += 1\n        lcm_v, modulus, residues = grid_residues(vs, n)\n        labels = [integer_bad_labels(x, vs, n, modulus) for x in residues]\n        if all(labels):\n            independent = [fraction_bad_labels(x, vs, n, modulus) for x in residues]\n            if independent != labels:\n                raise AssertionError(\"Fraction verification disagreed with integer labels\")\n            witness = full_witness(vs, n)\n            if witness is None:\n                raise AssertionError(\"no closed-boundary full witness found for grid-obstruction tuple\")\n            return {\n                \"n\": n,\n                \"speed_domain\": f\"all increasing {arity}-tuples from 1..{maximum}\",\n                \"tuples_tested_before_first_counterexample\": tested,\n                \"status\": \"first_grid_obstruction_found\",\n                \"counterexample_speeds\": list(vs),\n                \"lcm_speeds\": lcm_v,\n                \"D\": modulus,\n                \"grid_definition\": \"t=sum_i k_i/(N*v_i), 0<=k_i<N, ordinary phases and origin zero\",\n                \"unique_residue_count\": len(residues),\n                \"all_unique_time_numerator_residues_mod_D\": residues,\n                \"bad_label_index_for_each_residue\": [bad[0] for bad in labels],\n                \"all_bad_label_indices_for_each_residue\": labels,\n                \"independent_fraction_confirmation\": {\n                    \"method\": \"Fraction(x,D), exact fractional parts and closed target 1/N\",\n                    \"bad_label_indices_for_each_residue\": independent,\n                    \"agrees_with_integer_check\": True,\n                },\n                \"actual_full_lrc_witness\": witness,\n            }\n    return {\n        \"n\": n,\n        \"speed_domain\": f\"all increasing {arity}-tuples from 1..{maximum}\",\n        \"tuples_tested\": tested,\n        \"status\": \"bounded_nonfinding\",\n    }\n\n\ndef main() -> None:\n    parser = argparse.ArgumentParser()\n    parser.add_argument(\"--n4-max\", type=int, default=20)\n    parser.add_argument(\"--n5-max\", type=int, default=16)\n    args = parser.parse_args()\n    first = screen(4, args.n4_max)\n    if first[\"status\"] == \"first_grid_obstruction_found\":\n        result = {\n            \"screen_order\": [\"N=4 increasing triples 1..20\", \"N=5 increasing quadruples 1..16\"],\n            \"first_counterexample_or_bounded_nonfinding\": first,\n            \"N5\": {\"status\": \"not_run_after_earlier_first_counterexample\"},\n        }\n    else:\n        second = screen(5, args.n5_max)\n        result = {\n            \"screen_order\": [\"N=4 increasing triples 1..20\", \"N=5 increasing quadruples 1..16\"],\n            \"N4\": first,\n            \"first_counterexample_or_bounded_nonfinding\": second,\n        }\n    print(json.dumps(result, sort_keys=True, separators=(\",\", \":\")))\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "encoding": "utf-8",
+    "path_at_execution": "research/.tmp_adapted_grid_control.py",
+    "sha256_before_execution": "a1ae524d887f9d703b0f0009ff94a2d062f521a83b6cecaae84014f6e6f9382c"
+  },
+  "frozen_receipt_packer_source": {
+    "bytes": "#!/usr/bin/env python3\n\"\"\"Package frozen screen source and its bounded execution receipt into JSON.\"\"\"\nfrom __future__ import annotations\n\nimport argparse\nimport hashlib\nimport json\nfrom pathlib import Path\n\n\ndef read_text(path: str) -> str:\n    return Path(path).read_text(encoding=\"utf-8\")\n\n\ndef main() -> None:\n    parser = argparse.ArgumentParser()\n    parser.add_argument(\"--source\", required=True)\n    parser.add_argument(\"--source-sha256\", required=True)\n    parser.add_argument(\"--packer-source\", required=True)\n    parser.add_argument(\"--packer-sha256\", required=True)\n    parser.add_argument(\"--stdout\", required=True)\n    parser.add_argument(\"--stderr\", required=True)\n    parser.add_argument(\"--exit\", type=int, required=True)\n    parser.add_argument(\"--elapsed-seconds\", type=float, required=True)\n    parser.add_argument(\"--output\", required=True)\n    args = parser.parse_args()\n    source_bytes = Path(args.source).read_bytes()\n    source_hash = hashlib.sha256(source_bytes).hexdigest()\n    if source_hash != args.source_sha256:\n        raise SystemExit(\"frozen source hash mismatch\")\n    packer_bytes = Path(args.packer_source).read_bytes()\n    packer_hash = hashlib.sha256(packer_bytes).hexdigest()\n    if packer_hash != args.packer_sha256:\n        raise SystemExit(\"receipt packer source hash mismatch\")\n    stdout = read_text(args.stdout)\n    stderr = read_text(args.stderr)\n    parsed = json.loads(stdout)\n    record = {\n        \"task\": \"/root/adapted_grid_control\",\n        \"scope\": \"bounded falsification screen for one uniform arbitrary-N candidate; no fixed-count LRC claim\",\n        \"candidate\": {\n            \"time_grid\": \"t=sum_i k_i/(N*v_i)\",\n            \"coefficients\": \"0<=k_i<N\",\n            \"phases\": \"ordinary\",\n            \"interval_origin\": 0,\n            \"closed_target\": \"1/N\",\n        },\n        \"frozen_executable_source\": {\n            \"path_at_execution\": args.source,\n            \"encoding\": \"utf-8\",\n            \"bytes\": source_bytes.decode(\"utf-8\"),\n            \"sha256_before_execution\": source_hash,\n        },\n        \"frozen_receipt_packer_source\": {\n            \"path_at_execution\": args.packer_source,\n            \"encoding\": \"utf-8\",\n            \"bytes\": packer_bytes.decode(\"utf-8\"),\n            \"sha256_before_execution\": packer_hash,\n        },\n        \"execution\": {\n            \"argv\": [\"python3\", \"-B\", args.source, \"--n4-max\", \"20\", \"--n5-max\", \"16\"],\n            \"input_domain\": {\n                \"first\": \"N=4; all increasing triples from 1..20\",\n                \"second_if_needed\": \"N=5; all increasing quadruples from 1..16\",\n                \"stop_rule\": \"stop at the first tuple whose entire grid misses the closed target\",\n            },\n            \"exit_code\": args.exit,\n            \"elapsed_seconds\": args.elapsed_seconds,\n            \"stdout\": stdout,\n            \"stderr\": stderr,\n            \"stdout_bytes\": len(stdout.encode(\"utf-8\")),\n            \"stderr_bytes\": len(stderr.encode(\"utf-8\")),\n        },\n        \"result\": parsed,\n        \"delivery_metrics\": {\n            \"check_kind\": \"python\",\n            \"first_check_success\": args.exit == 0,\n            \"worker_repair_rounds\": 0,\n            \"worker_elapsed_seconds\": args.elapsed_seconds,\n            \"usage\": None,\n            \"astra_repair_rounds\": 0,\n            \"astra_repair_lines\": 0,\n            \"evidencepath\": \"research/astra-adapted-grid-control.json\",\n        },\n    }\n    Path(args.output).write_text(json.dumps(record, indent=2, sort_keys=True) + \"\\n\", encoding=\"utf-8\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "encoding": "utf-8",
+    "path_at_execution": "research/.tmp_adapted_grid_control_pack.py",
+    "sha256_before_execution": "a04e7f31b8979df0e1c1cb7d49891e9e343f12ad188381f6fd10d7fd148fdb5e"
+  },
+  "result": {
+    "N4": {
+      "n": 4,
+      "speed_domain": "all increasing 3-tuples from 1..20",
+      "status": "bounded_nonfinding",
+      "tuples_tested": 1140
+    },
+    "first_counterexample_or_bounded_nonfinding": {
+      "n": 5,
+      "speed_domain": "all increasing 4-tuples from 1..16",
+      "status": "bounded_nonfinding",
+      "tuples_tested": 1820
+    },
+    "screen_order": [
+      "N=4 increasing triples 1..20",
+      "N=5 increasing quadruples 1..16"
+    ]
+  },
+  "root_requested_metadata_correction": {
+    "astra_direct_source_lines": 0,
+    "astra_guidance_round": 1,
+    "preserved": {
+      "execution_elapsed_seconds": 0.5652751922607422,
+      "first_mathematical_execution_success": true,
+      "frozen_source_hashes_unchanged": true
+    },
+    "reason": "delivery_metrics.worker_elapsed_seconds had duplicated the measured screen process duration; total worker task time was not measured",
+    "root_final_metric_alignment": "Root set aggregate astra_repair_rounds to the already recorded guidance round 1; no executable bytes or outputs changed."
+  },
+  "scope": "bounded falsification screen for one uniform arbitrary-N candidate; no fixed-count LRC claim",
+  "task": "/root/adapted_grid_control"
+}

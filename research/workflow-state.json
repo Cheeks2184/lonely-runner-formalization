@@ -4,7 +4,24 @@
   "goal_status": "in_progress",
   "objective": "Produce a kernel-checked full proof or disproof of the canonical unrestricted Lonely Runner Conjecture.",
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
-  "active_tasks": [],
+  "active_tasks": [
+    {
+      "id": "/root/adapted_grid_uniform_audit",
+      "agent_id": "/root/uniform_seed_coupling",
+      "kind": "research",
+      "status": "in_progress",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+      "owned_files": [
+        "research/astra-adapted-grid-uniform-audit.md"
+      ],
+      "target": "Analytical audit of ordinary q=N finite sum grid for arbitrary N: find structural counterexample or genuine uniform common-time survivor mechanism. No expansion of completed bounded domains; small-count algebra serves only this candidate.",
+      "checks": []
+    }
+  ],
   "completed_tasks": [
     {
       "id": "/root/workflow_validation",
@@ -8576,14 +8593,202 @@
         }
       ],
       "result": "Independent review accepted all three frozen inputs; root full read accepted. Exact certificate limits only, no LRC resolution."
+    },
+    {
+      "id": "/root/uniform_fourier_orbit_relaxation",
+      "agent_id": "/root/uniform_seed_coupling",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "8e5fd81f95d1a33ce8ed2cd347815bda24d9401f",
+      "owned_files": [
+        "research/astra-fourier-orbit-relaxation.md"
+      ],
+      "target": "Check exact finite discrete-hat duality barrier for relaxing lower signs at kernel zeros for a supplied rational witness; determine whether it can exclude that point as a global maximizer. No solver, Lean, or broad Fourier impossibility.",
+      "checks": [
+        {
+          "kind": "manuscript",
+          "path": "research/astra-fourier-orbit-relaxation.md",
+          "sha256": "18fee9eb62fe473a829f1e1de65e2556d0a66f5b05a3cf7de0c04b894cb55576",
+          "result": "Author frozen; root full read."
+        }
+      ],
+      "result": "Finite zero-weight orbit relaxation barrier checked; root full read accepted for independent review. Bound uses supplied witness only, no global maximality or optimum claim."
+    },
+    {
+      "id": "/root/uniform_fourier_orbit_review",
+      "agent_id": "/root/uniform_screen_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+      "owned_files": [
+        "research/astra-fourier-orbit-relaxation-review.md"
+      ],
+      "target": "Independent bounded review of finite cyclic-hat orbit-relaxation barrier, all endpoints and aliasing, and supplied-witness versus global-maximizer implication. No solver or Lean.",
+      "checks": [
+        {
+          "kind": "manuscript_review",
+          "path": "research/astra-fourier-orbit-relaxation-review.md",
+          "sha256": "5e4128afcb60e2e22f45ccb7a0c772441c89219d546812977138f8790c1aba1f",
+          "result": "Author and prior source bindings match; all endpoints and inference scopes accepted."
+        }
+      ],
+      "result": "Independent review accepted exact finite hat barrier without corrections; root final full read pending."
+    },
+    {
+      "id": "/root/uniform_multi_fast_gluing",
+      "agent_id": "/root/uniform_seed_coupling",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+      "owned_files": [
+        "research/astra-uniform-multi-fast-gluing.md"
+      ],
+      "target": "Derive exact finite-interval union estimate and uniform slow-seed/multiple-fast-label insertion condition for 2b<N. Compare b1 to existing fast insertion, characterize phase-uniform limits, and state the remaining scale-selection gap; no Lean or search.",
+      "checks": [
+        {
+          "kind": "manuscript",
+          "path": "research/astra-uniform-multi-fast-gluing.md",
+          "sha256": "2c5c9b37758cd5e7c52d6db986bde5a11b77ea3cb95a3d09671563b5c527dd03",
+          "result": "Author frozen; root full read."
+        }
+      ],
+      "result": "Frozen sharp-discrepancy group insertion and optimal tail profile, two hand controls and actual ordinary one-seed obstruction. Root full read accepted for independent review."
+    },
+    {
+      "id": "/root/uniform_critical_interval_horizon",
+      "agent_id": "/root/uniform_affine_phase_screen",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+      "owned_files": [
+        "research/astra-critical-interval-horizon.md"
+      ],
+      "target": "Bounded audit of the critical density finite-horizon claim: b positive frequencies >=W with arbitrary phases have a simultaneous closed1/(2b) witness in every interval of length C_b/W. Prove a uniform bound or exact obstruction, retaining boundary and no global-to-local inference.",
+      "checks": [],
+      "result": "Frozen manuscript 5a9e17c215fba90074d06cd48c09084f0a08a310a17290d182496df43b95e87a; author terminal confirmed live. Root full read pending; independent combined review running."
+    },
+    {
+      "id": "/root/uniform_multi_fast_review",
+      "agent_id": "/root/uniform_screen_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+      "owned_files": [
+        "research/astra-uniform-multi-fast-review.md"
+      ],
+      "target": "Independent review of frozen multiple-fast discrepancy insertion, optimal tail profile, complete hand controls, actual ordinary seed obstruction and formalization scope. Critical horizon author may join review after freeze.",
+      "checks": [],
+      "result": "Both frozen manuscripts accepted without correction; root full read completed. Review SHA3f9c786cf3df757536ef933e70f4422a95922d446ba7a340f4ebd89b3c0aef96. No Lean or mathematical program."
+    },
+    {
+      "id": "/root/finite_grid_horizon_review",
+      "agent_id": "/root/uniform_seed_coupling",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+      "owned_files": [
+        "research/astra-finite-grid-horizon-review.md"
+      ],
+      "target": "Independently audit root finite-grid critical horizon and insertion criterion, plus exact scope and whether clean uniform selection is available.",
+      "checks": [],
+      "result": "Final author1cd85650 accepted; reviewc81276f5 frozen and root full read completed. Only optimal-tail wording clarified. No Lean implementation recommended without uniform caller."
+    },
+    {
+      "id": "/root/finite_grid_stronger_margin_audit",
+      "agent_id": "/root/uniform_affine_phase_screen",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+      "owned_files": [
+        "research/astra-finite-grid-stronger-margin-audit.md"
+      ],
+      "target": "Audit exact limits of independent fiber caps plus one anchor saving for canonical margin; determine concrete correlation information needed from actual zero-phase integer frequencies.",
+      "checks": [],
+      "result": "Final source9ec0f708 frozen, root full read including explicit origin/offset scope; independent final review active."
+    },
+    {
+      "id": "/root/adapted_grid_control",
+      "agent_id": "/root/adapted_grid_control",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+      "owned_files": [
+        "research/astra-adapted-grid-control.json"
+      ],
+      "target": "One bounded exact falsification screen of the uniform alternative q=N ordinary zero-offset sum grid; N4 speeds1..20 then N5 speeds1..16, stop at first counterexample. These controls support one arbitrary-N candidate, not fixed-count milestones.",
+      "checks": [
+        "research/astra-adapted-grid-control.json"
+      ],
+      "delivery_metrics": {
+        "astra_repair_lines": 0,
+        "astra_repair_rounds": 1,
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage": null,
+        "worker_elapsed_seconds": null,
+        "worker_repair_rounds": 0,
+        "evidence": [
+          "research/astra-adapted-grid-control.json"
+        ]
+      },
+      "result": "Bounded q=N origin-grid nonfinding: all1140 N4 triples1..20 and1820 N5 quadruples1..16. Exact executable and output root read; no replay. One metadata guidance correction separates screen duration from unmeasured total worker time; executable required no repair. Receipt SHA256 4b5145ae2b52c96f2a84e13b77e0cbd96dd00a268977f1daca95b4a1ca064d36"
+    },
+    {
+      "id": "/root/finite_grid_stronger_margin_review",
+      "agent_id": "/root/uniform_screen_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+      "owned_files": [
+        "research/astra-finite-grid-stronger-margin-review.md"
+      ],
+      "target": "Independent review of exact fiber-cap barrier and actual consecutive-speed prime-count grid obstruction; author report pending freeze, root derivation supplied independently.",
+      "checks": [],
+      "result": "Final author9ec0f708 independently accepted; reviewbb9dd8c9 frozen and root full read completed. Exact mixed cap barrier, D+R identity and origin-specific prime family validated. No Lean."
     }
   ],
   "latest_checkpoint": "Pass65: independently reviewed exact lower Fourier reciprocal-grid optima, finite coloring upper-ratio barrier, and primary-source normalization/dilation controls. No new Lean theorem; unrestricted witness supply unresolved.",
   "next_actions": [
-    "Verify and publish Pass65 through both required CI jobs and exact-head merge; record fetched-main ancestry.",
-    "Pursue a justified uniform actual integer-grid witness mechanism beyond the two screened Fourier sign classes. Do not infer LRC from the upper ratio barrier or convert an arbitrary graph coloring into an orbit witness.",
-    "Do not restore Lean cache or add a solver for the excluded certificate uses. Preserve the independent seed-supply Q gap and avoid a runner-count ladder.",
-    "Use Terra High for settled compiled implementation/checks; next measured delegation review at30 closedHigh tasks."
+    "Complete source-bound stronger-margin review and publish Pass66 checkpoint.",
+    "Analytically audit alternative ordinary q=N grid for arbitrary N; no expanding finite search ladder.",
+    "Keep conditional insertion results available without restoring Lean cache absent a uniform caller.",
+    "Terra High next scheduled aggregate delegation review at30 closed tasks; now21."
   ],
   "research_holds": [
     {
@@ -9165,7 +9370,7 @@
     "coordination": "All worker commands and root verification stopped before cleanup; manuscript-only research released after cleanup.",
     "preserved": "Pinned toolchain, Git history, sources, unique evidence, small replay programs and outputs; unrelated projects untouched."
   },
-  "previous_goal_turn_classification": "progress",
+  "previous_goal_turn_classification": "Progress: PR64 merged and fetched-main verified, and narrow orbit-relaxation author proof preserved. Revalidated against live Git, active review handle and goal state this turn.",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
@@ -9705,7 +9910,13 @@
     "instructions_path": ".codex/config.toml",
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
-  "publication_in_progress": null,
+  "publication_in_progress": {
+    "checkpoint": "Pass66",
+    "branch": "codex/astra-fourier-orbit-audit",
+    "parent_main": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+    "status": "Final manuscript reviews accepted; binding verification before commit.",
+    "receipt": "research/astra-pass66-verification.json"
+  },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
     "author_sha256": "6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f",
@@ -9833,7 +10044,7 @@
   "current_research_boundary": {
     "status": "research_in_progress",
     "canonical_resolution": false,
-    "latest_published": "Pass64 / PR63 merged and fetched-main verified at badc4e30291ce6379f69fb4d8ac9f971908ca33b",
+    "latest_published": "Pass65 / PR64 merged and fetched-main verified at 8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
     "pending_formal": "None. Canonical N6 merged PR57; uniform arbitrary-N priority. Fourier screen is manuscript evidence only.",
     "open_mathematics": "Unrestricted integer-speed witness supply, including the protected-deletion-seed assertion Q, remains unresolved. Exact published Fourier sign classes cannot close the tested uses.",
     "storage": "Shared .lake cache removed after completed verification; pinned toolchain retained."
@@ -12028,6 +12239,29 @@
         }
       ],
       "verification": "CLEAN exact head, non-draft, reviews empty; match-head merge exit0 session7846. Fetched origin/main, checkpoint ancestry exit0, local main and current branch fast-forwarded. New codex/astra-fourier-lp-screen preserves unfinished research. Push5433, PRcreate81586, CIwatch64900 and merge7846 closed exit0."
+    },
+    {
+      "pr": 64,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/64",
+      "head": "8e5fd81f95d1a33ce8ed2cd347815bda24d9401f",
+      "merge": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+      "merged_at": "2026-09-06T19:31:15Z",
+      "ci_run": 34054637499,
+      "checks": [
+        {
+          "name": "Lean build and trust audit",
+          "job": 101544172835,
+          "result": "SUCCESS",
+          "completedAt": "2026-09-06T19:23:28Z"
+        },
+        {
+          "name": "Exact computational certificates",
+          "job": 101544172711,
+          "result": "SUCCESS",
+          "completedAt": "2026-09-06T19:30:46Z"
+        }
+      ],
+      "verification": "CLEAN exact head, non-draft, reviews empty. match-head merge session82937 exit0. Fetched main; checkpoint ancestry exit0, branch and local main fast-forwarded. Push15848, PRcreate49654, CIwatch6056 all closed exit0. New branch codex/astra-fourier-orbit-audit preserves follow-up manuscript and state."
     }
   ],
   "three_divisible_shift_plan": {
@@ -12118,7 +12352,7 @@
     "status": "Author candidate; rootread; independent review queued. Two small scalar/weakshiftarguments rootvalidated for drafting.",
     "scope": "Remaining canonical N6 branch only; uniform arbitrary-N priority afterverifiedN6."
   },
-  "last_goal_turn_classification": "Progress: PR63 merged and verified. Pass65 exact Fourier lower/upper class limits independently accepted, changing solver investment decision; source contract controls checked. Unrestricted goal active and unresolved.",
+  "last_goal_turn_classification": "Progress: established independently reviewed finite-grid critical horizon with improved group insertion, and exact infinite actual-grid obstruction preventing its direct canonical-margin upgrade. One bounded q=N alternative screen gave nonfindings; analytical uniform audit active. Pass66 verification/publication underway; unrestricted goal unresolved.",
   "one_three_manuscript_review": "Independent frozen 8f720fbd report fully read by root; exact static replay exit0 with sixteen bindings, twelve contract names. Specification accepted, not a Lean result.",
   "publication_latest_pending": null,
   "delegation_revision": {
@@ -12144,27 +12378,27 @@
     "comparison_caveat": "Sample preceded SignedRenaultFiveOne; later deliveries excluded. New High compiled handoff changes both effort and ownership, so no causal effort-only attribution."
   },
   "publication_latest_verified": {
-    "pr": 63,
-    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/63",
-    "head": "1fa1a5fed45c66227b686975d659d80f86dcaeb1",
-    "merge": "badc4e30291ce6379f69fb4d8ac9f971908ca33b",
-    "merged_at": "2026-09-06T19:05:19Z",
-    "ci_run": 34053137348,
+    "pr": 64,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/64",
+    "head": "8e5fd81f95d1a33ce8ed2cd347815bda24d9401f",
+    "merge": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+    "merged_at": "2026-09-06T19:31:15Z",
+    "ci_run": 34054637499,
     "checks": [
       {
         "name": "Lean build and trust audit",
-        "job": 101540198536,
+        "job": 101544172835,
         "result": "SUCCESS",
-        "completedAt": "2026-09-06T18:55:05Z"
+        "completedAt": "2026-09-06T19:23:28Z"
       },
       {
         "name": "Exact computational certificates",
-        "job": 101540198575,
+        "job": 101544172711,
         "result": "SUCCESS",
-        "completedAt": "2026-09-06T19:03:15Z"
+        "completedAt": "2026-09-06T19:30:46Z"
       }
     ],
-    "verification": "CLEAN exact head, non-draft, reviews empty; match-head merge exit0 session7846. Fetched origin/main, checkpoint ancestry exit0, local main and current branch fast-forwarded. New codex/astra-fourier-lp-screen preserves unfinished research. Push5433, PRcreate81586, CIwatch64900 and merge7846 closed exit0."
+    "verification": "CLEAN exact head, non-draft, reviews empty. match-head merge session82937 exit0. Fetched main; checkpoint ancestry exit0, branch and local main fast-forwarded. Push15848, PRcreate49654, CIwatch6056 all closed exit0. New branch codex/astra-fourier-orbit-audit preserves follow-up manuscript and state."
   },
   "small_phase_orbit_plan_root_read": {
     "report": "research/astra-small-phase-orbit-contract-plan.md",
@@ -12438,7 +12672,7 @@
     "uniform_limit": "All old profile constraints plus complete label graph coexist on lcm block for everyN>=5; root derivation independently accepted in finalreview addendum. Conditional anchor implementation deferred until a uniform mechanism needs it."
   },
   "pending_fourier_lp": {
-    "status": "Accepted after independent review and root full read; Pass65 verification and publication next.",
+    "status": "Pass65 merged PR64 and fetched-main verified. Exact fixed-sign lower and upper screens accepted; no solver/Lean integration.",
     "source": "https://link.springer.com/article/10.1007/s00574-021-00272-7",
     "root_contract_audit": "research/astra-fourier-lp-source-contract.md",
     "root_contract_sha256": "cf3ea5b08fbaee07e56b34d295632f7c67a35cc80679055a74725b0596b96043",
@@ -12451,6 +12685,54 @@
       "status": "Independently reviewed and root accepted.",
       "result": "Exact finite coloring proof forces every positive-normalized upper ratio at least1/N; consecutive-only sharpness."
     },
-    "review_sha256": "653a93313e333b0f34ac1eb907399d9c9090ab60c58d95d0c575e4f78eccb834"
+    "review_sha256": "653a93313e333b0f34ac1eb907399d9c9090ab60c58d95d0c575e4f78eccb834",
+    "orbit_followup_root_derivation": "Discrete hat H(r)=max(a-dist_q(r),0) is autocorrelation of a consecutive residue interval for integer1<=a<=q/2. Finite nonnegative weights vanish exactly at nonzero s with q|as. Pairing proves ratio<=a/q from the supplied witness alone; author checking. This is not an unconditional uniform supply mechanism.",
+    "orbit_followup": {
+      "path": "research/astra-fourier-orbit-relaxation.md",
+      "sha256": "18fee9eb62fe473a829f1e1de65e2556d0a66f5b05a3cf7de0c04b894cb55576",
+      "status": "Independent review accepted without corrections; root final full read accepted. Bind with next substantive uniform-mechanism checkpoint.",
+      "review_sha256": "5e4128afcb60e2e22f45ccb7a0c772441c89219d546812977138f8790c1aba1f"
+    }
+  },
+  "literature_refresh_pass65": {
+    "source": "https://arxiv.org/html/2603.24784v2",
+    "scope": "Read already-known central-minimum versus covering-radius definitions and projection proof while PR64 CI runs. Reconfirmed ordinary common-origin restriction and conditional large-lattice-point reduction. No new source theorem or stronger cutoff adopted.",
+    "no_new_mathematical_result": true
+  },
+  "pending_multi_fast_gluing": {
+    "status": "Author, independent review and root full read accepted at manuscript scope. Uniform tail/seed supply remains open.",
+    "parameters": "m=N-1-b>=1,1<=b<N/2, slow maxM, gamma1/(N-b), delta1/N, eta=b/[N(N-b)].",
+    "criterion": "M*sum_fast(1/w)<=b*(N-2b)/((N-b)*(N-2)) supplies a closed full witness within the protected slow interval of length2eta/M. Sharp one-pulse discrepancy alpha*(1-alpha)/w withalpha2/N; equality via enlarging hypothetical strict full cover.",
+    "partition": "For fixedb, the b largest speeds minimize this product. b1 exactly recovers existing w>=(N-1)M. Missing a proof that someb passes for every tuple.",
+    "obstruction": "For2b>N, m>=1, choose slow speedsM-2bj withM=b mod2b large, seeds1/(2b), fastW+2i with oddW arbitrarily large. Every point in the protected slow interval stays fast-bad ifM>2b^2(b-1)/((N-b)(2b-N)); this is a one-seed ordinary-phase obstruction, not an all-seed or LRC counterexample.",
+    "control": "N7 tuple(1,6,10,21,420,421), b2, slowseed1/4, satisfies group criterion while all single-fast tests fail. Root supplied hand checks of prior arithmetic profile, height, label connectivity and explicit full witness211/840; author checking.",
+    "implementation": "None queued until reviewed result connects to uniform scale/seed supply. Do not restore Lean cache for conditional lemma accumulation.",
+    "author_sha256": "2c5c9b37758cd5e7c52d6db986bde5a11b77ea3cb95a3d09671563b5c527dd03",
+    "critical_horizon_progress": "Separate Astra author found finite period-uniformization proof: independent U_i uniform on intervals1/w_i, T=sum U_i has every phase marginal uniform, so union bound below1/(2b) and compactness give closed weak witness in horizonP=sum1/w_i. Root checked idea and boundary via maximizing continuous minnorm; author writing, review required."
+  },
+  "pending_finite_grid_horizon": {
+    "manuscript": "research/astra-finite-grid-horizon.md",
+    "status": "Accepted by independent Astra review and root full read; manuscript theorem only.",
+    "criterion": "M*((b-1)*sum_fast(1/w)+1/w_anchor)<=2*b*b/(N*(N-b)), 2b<=N.",
+    "implementation": "Deferred: A84 residual passes previous necessary profiles and fails every new insertion criterion; no new uniform caller established.",
+    "sha256": "1cd85650cc5ba679ad016c6b30f3604787c84e3bf86a4a90f11a82b9f653d865",
+    "review": "research/astra-finite-grid-horizon-review.md",
+    "review_sha256": "c81276f596b5895e38b97be6fbef853b7118fd2c43df5c3cb6399101e6f4102c"
+  },
+  "pending_finite_grid_stronger_margin": {
+    "status": "Accepted by independent Astra source-bound review and root full reads.",
+    "actual_grid_obstruction": "For prime N>=3, n=N-1,V=1..n, full1/N times exactly units p/N. Both zero-offset and anchor-aligned q=n grids have denominator dividing2*n*lcm(1..n), coprime toN, so neither grid contains full-target witness. q=N/other offsets not excluded. Scope is origin A=0 and the two stated offsets only; arbitrary translated intervals may introduce denominator N.",
+    "scope": "A restriction of this exact candidate family, not LRC or every finite grid.",
+    "author": "research/astra-finite-grid-stronger-margin-audit.md",
+    "author_sha256": "9ec0f7087231f67be09680c228826683da51c1af8c19c101581eb62fec2cdb6b",
+    "review": "research/astra-finite-grid-stronger-margin-review.md",
+    "review_sha256": "bb9dd8c91778da17708822e6c239c174d12a1e830256211b60099103520c251c"
+  },
+  "pending_adapted_grid": {
+    "status": "One bounded exact screen completed; no uniform conclusion or additional domain authorized by this result.",
+    "receipt": "research/astra-adapted-grid-control.json",
+    "sha256": "4b5145ae2b52c96f2a84e13b77e0cbd96dd00a268977f1daca95b4a1ca064d36",
+    "candidate": "t=sum_i k_i/(N*v_i),0<=k_i<N, ordinary phases0,origin0.",
+    "next": "Analytical proof or structural counterexample for arbitrary N; do not simply expand enumerated boxes."
   }
 }

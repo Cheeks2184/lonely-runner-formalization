@@ -1,0 +1,77 @@
+{
+  "checkpoint": "Pass66",
+  "parent_main": "8b9ea58d8a477a0fad733c3cf6674c307c1f9782",
+  "status": "Independently reviewed manuscript checkpoint and one bounded exact control; unrestricted canonical goal unresolved.",
+  "hashes": {
+    "research/astra-fourier-orbit-relaxation.md": "18fee9eb62fe473a829f1e1de65e2556d0a66f5b05a3cf7de0c04b894cb55576",
+    "research/astra-fourier-orbit-relaxation-review.md": "5e4128afcb60e2e22f45ccb7a0c772441c89219d546812977138f8790c1aba1f",
+    "research/astra-uniform-multi-fast-gluing.md": "2c5c9b37758cd5e7c52d6db986bde5a11b77ea3cb95a3d09671563b5c527dd03",
+    "research/astra-critical-interval-horizon.md": "5a9e17c215fba90074d06cd48c09084f0a08a310a17290d182496df43b95e87a",
+    "research/astra-uniform-multi-fast-review.md": "3f9c786cf3df757536ef933e70f4422a95922d446ba7a340f4ebd89b3c0aef96",
+    "research/astra-finite-grid-horizon.md": "1cd85650cc5ba679ad016c6b30f3604787c84e3bf86a4a90f11a82b9f653d865",
+    "research/astra-finite-grid-horizon-review.md": "c81276f596b5895e38b97be6fbef853b7118fd2c43df5c3cb6399101e6f4102c",
+    "research/astra-finite-grid-stronger-margin-audit.md": "9ec0f7087231f67be09680c228826683da51c1af8c19c101581eb62fec2cdb6b",
+    "research/astra-finite-grid-stronger-margin-review.md": "bb9dd8c91778da17708822e6c239c174d12a1e830256211b60099103520c251c",
+    "research/astra-adapted-grid-control.json": "4b5145ae2b52c96f2a84e13b77e0cbd96dd00a268977f1daca95b4a1ca064d36",
+    "docs/astra-research-66.md": "6ff231fa20f0f9e65c9dfc87c6cf4fa4dc5c2bbd7ba6627c88ba4c2a47d7e2c1"
+  },
+  "root_verifier": {
+    "argv": [
+      "/tmp/astra-pass66-verify.py",
+      "/tmp/astra-pass66-inputs.json",
+      "research/astra-pass66-verification.json"
+    ],
+    "source_utf8": "from pathlib import Path\nimport hashlib,json,re,subprocess,sys\ninputs=Path(sys.argv[1]);expected=json.loads(inputs.read_text())\nchecks=[]\nfor name,want in expected.items():\n data=Path(name).read_bytes()\n assert hashlib.sha256(data).hexdigest()==want,name\n if name.endswith('.md'):\n  assert data.endswith(b'\\n'),name\n  assert not re.search(rb'[ \\t]+$',data,re.M),name\nembedded=0\nfor name in expected:\n if not name.endswith('.md'):continue\n for want,source in re.findall(r'^([0-9a-f]{64})  ((?:research|LonelyRunner|docs)/[^\\n]+)$',Path(name).read_text(),re.M):\n  assert hashlib.sha256(Path(source).read_bytes()).hexdigest()==want,source\n  embedded+=1\nr=json.loads(Path('research/astra-adapted-grid-control.json').read_text())\nfor key in ['frozen_executable_source','frozen_receipt_packer_source']:\n src=r[key];assert hashlib.sha256(src['bytes'].encode()).hexdigest()==src['sha256_before_execution']\nassert json.loads(r['execution']['stdout'])==r['result']\nassert r['execution']['exit_code']==0 and r['execution']['stderr']==''\nassert r['result']['N4']['tuples_tested']==1140\nassert r['result']['first_counterexample_or_bounded_nonfinding']['tuples_tested']==1820\nassert r['delivery_metrics']['worker_elapsed_seconds'] is None\nassert r['delivery_metrics']['astra_repair_rounds']==1\nfor argv in [['python3','-B','scripts/validate_workflow.py'],['git','diff','--check'],['python3','-B','scripts/manage_storage.py']]:\n done=subprocess.run(argv,text=True,capture_output=True)\n checks.append(dict(argv=argv,exit_code=done.returncode,stdout=done.stdout,stderr=done.stderr))\n assert done.returncode==0,checks[-1]\nrecord=dict(checkpoint='Pass66',parent_main='8b9ea58d8a477a0fad733c3cf6674c307c1f9782',status='Independently reviewed manuscript checkpoint and one bounded exact control; unrestricted canonical goal unresolved.',hashes=expected,root_verifier=dict(argv=sys.argv,source_utf8=Path(__file__).read_text(),input_utf8=inputs.read_text()),embedded_bindings_checked=embedded,checks=checks,mathematical_verification='Independent Astra manuscript reviews plus root full reads. One Terra exact integer q=N grid screen, all1140 N4 triples1..20 and1820 N5 quadruples1..16, bounded nonfindings only. Root read original executable and complete outputs, validated byte bindings without replay. Fraction counterexample-confirmation branch did not execute because no counterexample arose.',scope_limit='Conditional insertion and two prescribed grid/offset obstructions only. No unrestricted proof, no new Lean theorem, no general grid impossibility.',storage='No local Lean cache restored; storage report retained.')\nPath(sys.argv[2]).write_text(json.dumps(record,indent=2)+'\\n')\nprint(json.dumps(dict(status='passed',frozen_files=len(expected),embedded_bindings=embedded,checks=checks,receipt=sys.argv[2]),sort_keys=True))\n",
+    "input_utf8": "{\n  \"research/astra-fourier-orbit-relaxation.md\": \"18fee9eb62fe473a829f1e1de65e2556d0a66f5b05a3cf7de0c04b894cb55576\",\n  \"research/astra-fourier-orbit-relaxation-review.md\": \"5e4128afcb60e2e22f45ccb7a0c772441c89219d546812977138f8790c1aba1f\",\n  \"research/astra-uniform-multi-fast-gluing.md\": \"2c5c9b37758cd5e7c52d6db986bde5a11b77ea3cb95a3d09671563b5c527dd03\",\n  \"research/astra-critical-interval-horizon.md\": \"5a9e17c215fba90074d06cd48c09084f0a08a310a17290d182496df43b95e87a\",\n  \"research/astra-uniform-multi-fast-review.md\": \"3f9c786cf3df757536ef933e70f4422a95922d446ba7a340f4ebd89b3c0aef96\",\n  \"research/astra-finite-grid-horizon.md\": \"1cd85650cc5ba679ad016c6b30f3604787c84e3bf86a4a90f11a82b9f653d865\",\n  \"research/astra-finite-grid-horizon-review.md\": \"c81276f596b5895e38b97be6fbef853b7118fd2c43df5c3cb6399101e6f4102c\",\n  \"research/astra-finite-grid-stronger-margin-audit.md\": \"9ec0f7087231f67be09680c228826683da51c1af8c19c101581eb62fec2cdb6b\",\n  \"research/astra-finite-grid-stronger-margin-review.md\": \"bb9dd8c91778da17708822e6c239c174d12a1e830256211b60099103520c251c\",\n  \"research/astra-adapted-grid-control.json\": \"4b5145ae2b52c96f2a84e13b77e0cbd96dd00a268977f1daca95b4a1ca064d36\",\n  \"docs/astra-research-66.md\": \"6ff231fa20f0f9e65c9dfc87c6cf4fa4dc5c2bbd7ba6627c88ba4c2a47d7e2c1\"\n}\n",
+    "exit_code": 0,
+    "stdout": "{\"checks\": [{\"argv\": [\"python3\", \"-B\", \"scripts/validate_workflow.py\"], \"exit_code\": 0, \"stderr\": \"\", \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\"}, {\"argv\": [\"git\", \"diff\", \"--check\"], \"exit_code\": 0, \"stderr\": \"\", \"stdout\": \"\"}, {\"argv\": [\"python3\", \"-B\", \"scripts/manage_storage.py\"], \"exit_code\": 0, \"stderr\": \"\", \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\"}], \"embedded_bindings\": 11, \"frozen_files\": 11, \"receipt\": \"research/astra-pass66-verification.json\", \"status\": \"passed\"}\n",
+    "stderr": ""
+  },
+  "embedded_bindings_checked": 11,
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "mathematical_verification": "Independent Astra manuscript reviews plus root full reads. One Terra exact integer q=N grid screen, all1140 N4 triples1..20 and1820 N5 quadruples1..16, bounded nonfindings only. Root read original executable and complete outputs, validated byte bindings without replay. Fraction counterexample-confirmation branch did not execute because no counterexample arose.",
+  "scope_limit": "Conditional insertion and two prescribed grid/offset obstructions only. No unrestricted proof, no new Lean theorem, no general grid impossibility.",
+  "storage": "No local Lean cache restored; storage report retained."
+}
