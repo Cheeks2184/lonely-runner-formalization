@@ -1,0 +1,84 @@
+{
+  "checkpoint": "Pass63",
+  "parent_main": "970295eb9ebe88498b3faa9831bac775548a7b43",
+  "status": "Accepted manuscript and source-scope checkpoint; unrestricted LRC unresolved.",
+  "hashes": {
+    "research/astra-uniform-endpoint-euler-screen.md": "00f37303fc266b1843964293500a1be112e3a9d8439d3dcad65a662d60be1b25",
+    "research/astra-uniform-endpoint-euler-review.md": "b3dd8f9923bd77814cff6c8171ca1a930df5058cbf123cdfe165ec9591102aec",
+    "research/astra-uniform-reduced-arc-gap-screen.md": "44dcb9cbc12443efb284cea86f91531d24b6abfd5718969bea9c6a2f0735e8ea",
+    "research/astra-uniform-reduced-arc-gap-review.md": "f8d863ab804ffe0559543ad1f5219a88098a404f438673a6b04e393018d584f0",
+    "research/astra-uniform-literature-refresh.md": "1dc523e25150f5fba8a5d213bbd09ce0cedc4fbee0a364eb014b8cc6f01fb4ab",
+    "docs/pair-sum-geometry.md": "8b5c9621d1bcf8cde277b5dfb67586ec7fa2d60bda42e2fca2bcf4e8dce84bbf",
+    "docs/astra-research-63.md": "b3f9e49779092d09da83802cd80112c30c2ffee19bf005b18a91c0895f1f72e5"
+  },
+  "root_binding_script_utf8": "from pathlib import Path\nimport hashlib,json,re\nexpected={\n'research/astra-uniform-endpoint-euler-screen.md':'00f37303fc266b1843964293500a1be112e3a9d8439d3dcad65a662d60be1b25',\n'research/astra-uniform-endpoint-euler-review.md':'b3dd8f9923bd77814cff6c8171ca1a930df5058cbf123cdfe165ec9591102aec',\n'research/astra-uniform-reduced-arc-gap-screen.md':'44dcb9cbc12443efb284cea86f91531d24b6abfd5718969bea9c6a2f0735e8ea',\n'research/astra-uniform-reduced-arc-gap-review.md':'f8d863ab804ffe0559543ad1f5219a88098a404f438673a6b04e393018d584f0',\n'docs/pair-sum-geometry.md':'8b5c9621d1bcf8cde277b5dfb67586ec7fa2d60bda42e2fca2bcf4e8dce84bbf',\n'research/astra-uniform-literature-refresh.md':'1dc523e25150f5fba8a5d213bbd09ce0cedc4fbee0a364eb014b8cc6f01fb4ab'}\nfor name,h in expected.items():\n data=Path(name).read_bytes();assert hashlib.sha256(data).hexdigest()==h,name\n for source,binding in re.findall(r'\\| `([^`]+)` \\| `([0-9a-f]{64})` \\|',data.decode()):\n  assert hashlib.sha256(Path(source).read_bytes()).hexdigest()==binding,source\nprint(json.dumps({'status':'passed','frozen_files':expected,'scope':'Current source/input byte bindings only. Root read full author/independent mathematical proofs; no mathematical computation or Lean replay.'},sort_keys=True))\n",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/tmp/astra-pass63-bindings.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"frozen_files\": {\"docs/pair-sum-geometry.md\": \"8b5c9621d1bcf8cde277b5dfb67586ec7fa2d60bda42e2fca2bcf4e8dce84bbf\", \"research/astra-uniform-endpoint-euler-review.md\": \"b3dd8f9923bd77814cff6c8171ca1a930df5058cbf123cdfe165ec9591102aec\", \"research/astra-uniform-endpoint-euler-screen.md\": \"00f37303fc266b1843964293500a1be112e3a9d8439d3dcad65a662d60be1b25\", \"research/astra-uniform-literature-refresh.md\": \"1dc523e25150f5fba8a5d213bbd09ce0cedc4fbee0a364eb014b8cc6f01fb4ab\", \"research/astra-uniform-reduced-arc-gap-review.md\": \"f8d863ab804ffe0559543ad1f5219a88098a404f438673a6b04e393018d584f0\", \"research/astra-uniform-reduced-arc-gap-screen.md\": \"44dcb9cbc12443efb284cea86f91531d24b6abfd5718969bea9c6a2f0735e8ea\"}, \"scope\": \"Current source/input byte bindings only. Root read full author/independent mathematical proofs; no mathematical computation or Lean replay.\", \"status\": \"passed\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "prior_publication": {
+    "pr": 61,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/61",
+    "head": "23c84a2cf28aeb6c9483d0ca08131aea0c901356",
+    "merge": "970295eb9ebe88498b3faa9831bac775548a7b43",
+    "merged_at": "2026-09-06T18:05:53Z",
+    "ci_run": 34050087046,
+    "checks": [
+      {
+        "name": "Lean build and trust audit",
+        "job": 101532006044,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T17:57:02Z"
+      },
+      {
+        "name": "Exact computational certificates",
+        "job": 101532005957,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T18:05:06Z"
+      }
+    ],
+    "verification": "CLEAN exact head, non-draft, reviews empty before match-head merge. Fetched origin/main; source-head ancestry exit0; current branch and local main advanced to merge. New codex/astra-endpoint-graph branch preserves unfinished work. All push/PR/CIwatch/merge processes closed."
+  },
+  "mathematical_verification": "Root read complete author and independent reviews; both accepted withoutcorrection. Explicit familyalgebra, closed/simultaneous contacts, strict gcd/ceiling overlap, topology/pruning, integerdeterminants and scope limitations reviewed. No mathematical computation or unchanged localLeanbuild.",
+  "literature_verification": "Primary arxiv2603.24784v2 Proposition1.7/Corollary1.14/Theorems1.16-1.17 andFigure1, arxiv1407.3381v3 introduction/Theorem6, arxiv2605.27941abstract read. Old dimensionfive wording corrected to5moving/6total/d4. No publishedcomputationalcertificate audit ornewuniformtheorem adopted.",
+  "storage": "No allowlisted cache/build paths present; no restoration or cleanup required.",
+  "excluded": "Active colour-critical cover investigation, including proposedlabelgraphcondition, remains authorwork and is excluded."
+}
