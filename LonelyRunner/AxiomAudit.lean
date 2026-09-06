@@ -317,6 +317,7 @@ project-specific axiom.
 #print axioms LonelyRunner.three_witness_or_large_or_exception
 #print axioms LonelyRunner.threeHeight_family_witness
 #print axioms LonelyRunner.DeletionPivotCertificate.exists_full_witness_of_exceptionalGood
+
 #print axioms LonelyRunner.exists_full_witness_of_all_deletions_and_selector
 #print axioms LonelyRunner.exists_full_witness_of_corrected_deletionPivotLiftingPrinciple
 #print axioms LonelyRunner.mem_pivotBadResidues_mul_iff
@@ -484,3 +485,18 @@ project-specific axiom.
 #print axioms LonelyRunner.positiveIntegerAtCount_of_lower_and_sharperFiniteFamily
 #print axioms LonelyRunner.positiveIntegerConjecture_of_allSharperInclusivePrimitiveFiniteFamilies
 #print axioms LonelyRunner.conjecture_iff_allSharperInclusivePrimitiveFiniteFamilies
+
+-- Four-runner mixed finite endpoint certificate.
+#print axioms LonelyRunner.fourRunnerMixed_finiteCoverage
+#print axioms LonelyRunner.fourRunnerMixedRowOK_sound
+#print axioms LonelyRunner.primitive_fourRunnerMixed_of_le_36
+#print axioms LonelyRunner.fourRunnerMixed_lowerCount4
+#print axioms LonelyRunner.primitive_fourRunnerMixed_of_gt_36
+#print axioms LonelyRunner.primitive_fourRunnerMixed
+
+-- Four-runner mixed classification and its strict ordinary-witness consequence.
+#print axioms LonelyRunner.not_fourRunnerMixed_one_two_three
+#print axioms LonelyRunner.fourRunnerMixed_of_not_exception
+#print axioms LonelyRunner.fourRunnerMixed_iff
+#print axioms LonelyRunner.not_strict_ordinary_one_two_three
+#print axioms LonelyRunner.strict_ordinary_witness_implies_fourRunnerMixed

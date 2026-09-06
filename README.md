@@ -11,6 +11,13 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks.
+The [Pass 33 checkpoint](docs/astra-research-33.md) classifies mixed witnesses
+for every natural triple `0<a<b<H`: one positive time gives the lower speeds
+margin `1/4` and the fastest margin `1/3` exactly when
+`not (b=2*a and H=3*a)`. It also proves the four-total-runner strict-ordinary
+to mixed implication for a strict witness at any real time. The full build,
+449-report trust audit, independent review, and guarded root replay passed.
+The higher-count mixed-supply question and unrestricted LRC remain unresolved.
 The [Pass 32 checkpoint](docs/astra-research-32.md) records a kernel-checked
 zero-residual affine strengthening. For total count `N=m+2>=3`, under the
 lower-count hypothesis, a sorted primitive stationary tuple receives

@@ -1,0 +1,102 @@
+{
+  "checkpoint": "Pass33",
+  "source_base": "7e1b4073cfd0095a3e514df975313562feb82688",
+  "remote_main_verified": "ac36f4bab463be33dda24f9272731f45e56618fb",
+  "status": "verified_ready_for_publication",
+  "source_sha256": {
+    "LonelyRunner/FourRunnerMixed.lean": "ae47b419c5b4cebfa72a325bdb50cd32e03444c39850a74b885037d83e312a5c",
+    "LonelyRunner/FourRunnerMixedCertificate.lean": "3fee16348b510ed25fd75194d59ed24ec5ffb6d02a3af1318761b772be167c56",
+    "LonelyRunner/AxiomAudit.lean": "e5b59aba042af33744faaaa10c7eca5e4d3f3d82977921aee31a825b4dd69d84",
+    "LonelyRunner.lean": "72c775735f2a92c118585499f396b2af7771fc169d09972513144446b260590e"
+  },
+  "evidence_sha256": {
+    "research/astra-four-runner-mixed-finite-plan.md": "9b71c56eb36093793df2bf02807e4f7da5f69ef1bccf4edeb68230c154dee085",
+    "research/astra-four-runner-mixed-finite-review.md": "a5ecf0dac9c1e5049606d29fd39c740295f936a1221dc6dbf619c345b8e01371",
+    "research/astra-four-runner-mixed-controls.md": "bf8c14305fb7232dbd6831188559d6440f1f2cd529aa3533f4c08f46e25b597a",
+    "research/astra-four-runner-mixed-implementation.md": "56c05823d7f9ed318cec755ea5a3badfc4087cf93848e9c482d2bd105f4d99b8",
+    "research/astra-direct-to-mixed-units.md": "a9ac1da5754a1ef8921ad22f3f28785a4dc841e2a2cfa1bd3a04f338224fcb01",
+    "research/astra-direct-to-mixed-units-review.md": "c424fc7970ade6a65e5388e0b3f60a34e091c01f2603f154646301bb5b9c96f5",
+    "research/astra-tight-family-mixed-audit.md": "717995d2f3adfdea64d09f8022493c31e2a606262c5361fee37ca1fc9879a7c4",
+    "research/astra-tight-family-mixed-review.md": "21f054285e1d2103b961598d1da00fdf51afcc96c672057ad9b435bf51fb80da",
+    "research/astra-four-runner-mixed-formal-review.md": "07ce0bc6831899c3ac3f00482f7143b5daaff5ea0dacee284d0038c12742ca4b"
+  },
+  "formal_scope": {
+    "total_runners": 4,
+    "speeds": "natural0<a<b<H; stationarychosenrunner; fastestH",
+    "classification": "FourRunnerMixed a b H iff not(b=2*a and H=3*a)",
+    "mixed_time": "one positive real time",
+    "margins": [
+      "a>=1/4",
+      "b>=1/4",
+      "H>=1/3"
+    ],
+    "strict_implication": "strictquarter norms at some arbitrary realtime imply positive mixed existence",
+    "remaining_hypotheses": "positivity and strict order only; no gcd, finiteheight, lower-count or ordinaryexistence premise on classification"
+  },
+  "finite_certificate": {
+    "inclusive_height": 36,
+    "index_type": "Fin37 for each H,a,b",
+    "candidate_count": 34,
+    "private_height_declarations": 37,
+    "kernel_method": "ordinary decide, no native_decide",
+    "controls_primitive_triples": 6079,
+    "controls_positive_cases": 6078,
+    "exception": [
+      1,
+      2,
+      3
+    ],
+    "positive_numerator_denominator_checked": true
+  },
+  "verification": {
+    "full_command": "lake build LonelyRunner",
+    "full_exit_code": 0,
+    "full_jobs_reported": 3640,
+    "full_log_sha256": "86f1fad48e79c7e39ebbe93a2462987432afc8649eea30d56bba1f26629cab92",
+    "trust_command": "python3 -B scripts/audit_lean_trust.py",
+    "trust_exit_code": 0,
+    "trust_reports": 449,
+    "trust_log_sha256": "0d6ebd7e196a91cf1128f086d554bdf1f7ca69eb389a5f458482fc369eef150b",
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "note": "Job totals include cached targets; initial premature worker success claims withdrawn and corrected before final verification."
+  },
+  "root_review": {
+    "complete_final_mathematics_read": true,
+    "strict_premise_arbitrary_real_time": true,
+    "gcd_scaling_positive": true,
+    "initial_errors_detected_and_corrected": true,
+    "literature_replay": "author21fixtures and reviewer4nonunit/3insertion/1rawscale controls passed",
+    "literature_scope": "No expansion of normalized comparable-height divisor-covered domain; rawscaling can destroyD."
+  },
+  "excluded_future_work": [
+    "research/astra-four-runner-canonical-bridge-plan.md",
+    "research/astra-mixed-codimension-one-gcd.md"
+  ],
+  "canonical_lrc": "unresolved",
+  "certificate_resources": {
+    "command": "/usr/bin/time -v lake env lean LonelyRunner/FourRunnerMixedCertificate.lean",
+    "exit_code": 0,
+    "wall_seconds": 28.49,
+    "max_resident_kib": 3985760,
+    "swaps": 0,
+    "signals": 0,
+    "filesystem_outputs": 0,
+    "log_sha256": "ae74162f4c247a6cbcad94856f3e0b9a9d5ecaca9eb3f43171782bbcb18f246c",
+    "source_sha256": "3fee16348b510ed25fd75194d59ed24ec5ffb6d02a3af1318761b772be167c56"
+  },
+  "independent_formal_review": {
+    "verdict": "accepted",
+    "artifact_sha256": "07ce0bc6831899c3ac3f00482f7143b5daaff5ea0dacee284d0038c12742ca4b",
+    "program_sha256": "9f9cc630757d14e957dcf05eb374f4c7cee89e6761749b8494996860e87b46b2",
+    "stdout_sha256": "f9e416f3efeaa87bd63b8f305aa51c37d3e49b7d64325d3ff3a8dc3b59dd43c4",
+    "lean_stdin_sha256": "aee08f64ddcefa30f79878b662c27768942ce016bad189e1b85ca95b83a12542",
+    "lean_stdout_sha256": "7c4cd8810b04aa8e33d230ad9fa42202c785052f29c913b4e6342bbb59a94ffc",
+    "root_full_read_and_guarded_replay": "pass",
+    "kernel_examples": 20,
+    "exact_types_and_axiom_reports": 11
+  }
+}

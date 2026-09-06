@@ -6,6 +6,19 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [thirty-third Astra checkpoint](docs/astra-research-33.md) proves the
+complete mixed classification for natural `0<a<b<H`: a common positive time
+with margins `1/4,1/4,1/3` exists exactly outside `(a,2*a,3*a)`. There is no
+gcd, height, or lower-count premise in this final theorem. A strict ordinary
+quarter witness at any real time implies positive mixed existence, resolving
+the N=4 case of the earlier strict-to-mixed question. The full source build
+passed with 3,640 jobs reported and 449 permitted-only axiom reports. Independent
+review and the root guarded replay passed 20 boundary/contract examples and
+11 exact declaration/axiom probes. This does not yet add the canonical arbitrary
+real-speed four-runner bridge, settle higher counts, or resolve unrestricted LRC.
+The accompanying modular and tight-family manuscripts retain their reviewed
+scope, including normalization before comparing coverage.
+
 The [thirty-second Astra checkpoint](docs/astra-research-32.md) records the
 kernel-checked zero-residual affine and stationary mixed-height strengthening.
 For `N=m+2>=3`, under the lower-count hypothesis, a primitive sorted
