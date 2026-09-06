@@ -94,6 +94,16 @@ lower core. At `N=4`, it must be pairwise coprime `a<b<H` with `b>=4` and
 `b<H<4b`; 2,330 narrowly direct-eligible tuples are exact diagnostics only.
 There is no proof of the global condition K or unrestricted LRC.
 
+Pass 33 resolves the N=4 strict-to-mixed case with a complete kernel-checked
+classification: for positive natural `a<b<H`, mixed existence is equivalent to
+excluding `(a,2*a,3*a)`. The primitive finite boundary is 36; 34 rational times
+and 37 fixed-height kernel declarations supply that branch, the mixed-height
+theorem supplies larger primitive heights, and gcd scaling gives all heights
+and gcds. The exceptional-family analysis excludes every strict ordinary
+witness at every real time. The general K question and unrestricted LRC remain
+unresolved. Separate reviewed modular and tight-family screens restrict useful
+future searches; the latter adds no normalized comparable-height coverage.
+
 Pair-sum completeness is now proved for each already witnessed positive
 integer tuple: a finite floor-cell minimum returns an exact certificate without
 discarding repeated labels or closed endpoints. This replaces the former

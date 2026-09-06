@@ -6,21 +6,20 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/direct_to_mixed_unit_review",
-      "agent_id": "/root/mss_published_bound_audit",
-      "kind": "review",
+      "id": "/root/mixed_codimension_one_gcd_audit",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Independently review modular direct-to-mixed manuscript and exact exceptional/consecutive/designated-coordinate scopes.",
-      "source_checkpoint": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
+      "target": "Audit conditional all-coordinate1/(N-1) supply for primitive tuples when any N-2 moving speeds share gcd>1, N>=5 under H_N; compare existing divisor insertion scope and exact noMixed restrictions. Bounded manuscript only.",
+      "source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
       "owned_files": [
-        "research/astra-direct-to-mixed-units-review.md"
+        "research/astra-mixed-codimension-one-gcd.md"
       ],
-      "checks": [],
-      "next_action": "Read frozen manuscript, prove/check exact modular unit construction and global exceptional examples; fixed controls only."
+      "checks": []
     }
   ],
   "completed_tasks": [
@@ -4314,13 +4313,121 @@
       "next_action": "Inspect final source bytes and theorem types, probe stronger signatures/axioms; no source edits.",
       "result_artifact_sha256": "2d280adc4e51068db4b2c5fdb6684dc3e507d9027b522b332849891387d2fdff",
       "disposition": "Accept exact conditional mixed-height strengthening; all six source hashes frozen."
+    },
+    {
+      "id": "/root/direct_to_mixed_unit_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independently review modular direct-to-mixed manuscript and exact exceptional/consecutive/designated-coordinate scopes.",
+      "source_checkpoint": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
+      "owned_files": [
+        "research/astra-direct-to-mixed-units-review.md"
+      ],
+      "checks": [
+        "Independent full manuscript review and guarded fixed replay accepted",
+        "Root read full review and accepted exact scope"
+      ],
+      "next_action": "Read frozen manuscript, prove/check exact modular unit construction and global exceptional examples; fixed controls only.",
+      "result_artifact_sha256": "c424fc7970ade6a65e5388e0b3f60a34e091c01f2603f154646301bb5b9c96f5",
+      "disposition": "Reviewed modular construction and exact exceptional/scaled-consecutive classification; no uniform M/K/LRC result."
+    },
+    {
+      "id": "/root/tight_family_mixed_relevance",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Screen explicitly published tight speed families for genuine obstructions to fastest mixed supply beyond exceptional consecutive counts; distinguish unit-covered families from remaining primitive divisor-covered domain.",
+      "source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
+      "owned_files": [
+        "research/astra-tight-family-mixed-audit.md"
+      ],
+      "checks": [
+        "Author reports21 fixed controls passed; root final artifact read/replay and independent review pending."
+      ],
+      "next_action": "Use at most two primary papers and three explicit nontrivial families; symbolic scope audit with fixed exact controls only, no broad search.",
+      "result_artifact_sha256": "f6cd2d351226e36cf0bb2a283ca4ac002ebf151bb970e6379f9dbd034e2d25d2",
+      "disposition": "Two primary papers/three classes screened, no new mixed obstruction. Kravitz covered members already in fast-insertion regime, so no comparable-height frontier advance claimed."
+    },
+    {
+      "id": "/root/four_runner_mixed_implementation",
+      "agent_id": "/root/four_runner_completion",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement accepted complete positive-integer N4 mixed classification and strict-ordinary implication using34-time kernel finite coverage, mixed height, elementary exception and gcd normalization.",
+      "source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
+      "owned_files": [
+        "LonelyRunner/FourRunnerMixedCertificate.lean",
+        "LonelyRunner/FourRunnerMixed.lean",
+        "LonelyRunner.lean",
+        "LonelyRunner/AxiomAudit.lean",
+        "research/astra-four-runner-mixed-implementation.md"
+      ],
+      "checks": [
+        "Recovered certificate build passed after actualsourcefixes; rootindependent axiomprobe passed.",
+        "Root pinned Lean import/type/axiom probe after genuine37-declaration split: exit0; both finiteCoverage and rowOK soundness use only propext, Classical.choice, Quot.sound.",
+        "Worker focused FourRunnerMixed build exit0,2971jobs: H4 supply, primitive_gt36 and all-height primitive nonexceptional theorem. Root semantic/kernel probe pending.",
+        "Root independent pinned Lean probe exit0: H4, primitive_gt36, primitive_allheight exact contracts; primitive result has only permitted3 axioms."
+      ],
+      "next_action": "Fresh worker: complete analytic exceptions and gcd/full iff/K4, then focused verification.",
+      "previous_agent_id": "/root/family_review_replay",
+      "recovery": "Fresh same-route Terra medium bounded implementation reassignment after repeated incomplete finals at routine exploration steps. Existing verified finite/primitive work retained.",
+      "disposition": "Full iff and strict arbitrary-real-time corollary frozen after recovery; root final corrected direct check and full3640-job build passed; trust and independent review pending."
+    },
+    {
+      "id": "/root/four_runner_canonical_bridge_plan",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Plan exact fixed-count bridge from pending natural triple mixed classification to ordinary positive integer count4, H5 supply, and if feasible four-total-runner canonical real theorem using existing normalization/BHK; avoid global-hypothesis leakage. No Lean edits.",
+      "source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
+      "owned_files": [
+        "research/astra-four-runner-canonical-bridge-plan.md"
+      ],
+      "checks": [],
+      "disposition": "Root fully read final plan and guarded15-source replay passed; mathematically accepted plan conditional on independently accepted C4. Future work outsidePass33."
+    },
+    {
+      "id": "/root/tight_family_mixed_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Rebind completed review to root clarified author717995d2 (prior reviewfb0f6aec still guardsoldsource); rerun guarded controls, then independent frozen N4 formal review.",
+      "source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
+      "owned_files": [
+        "research/astra-tight-family-mixed-review.md",
+        "research/astra-four-runner-mixed-formal-review.md"
+      ],
+      "checks": [],
+      "disposition": "Clarified tight-familyreview accepted21f05428 and N4formalreview accepted07ce0bc6; root fullreads/guardedreplays passed20Leanexamples11typesaxioms plusfixedliteraturecontrols."
     }
   ],
-  "latest_checkpoint": "Pass32 verified on base fd99b6f550bcb931f101ef2186168f1fc09aec4d; publication pending. Fullbuild3638 jobs reported, trust438, independent review and root replay passed; LRC unresolved.",
+  "latest_checkpoint": "Pass33 verified locally: complete natural four-runner mixed classification, fullbuild3640, trust449, independentreview/rootreplay passed. Publication in progress; unrestricted LRC unresolved.",
   "next_actions": [
-    "Publish verified Pass32 zero-residual strengthening and reviewed strict-to-mixed narrowing.",
-    "Implement independently accepted N4 finite classification using the verified34-time candidate list and kernel coverage; no native trust.",
-    "Finish independent modular-unit manuscript review; preserve full-goal unresolved status."
+    "Finish independent final N4 formal review, root guarded replay, and Pass33 documentation/verification record.",
+    "Commit,push,openPR,merge exact verified Pass33 head and verify main; remote main ac36f4ba verified, no openPR yet.",
+    "After C4 acceptance, implement accepted ordinary/H5 and bounded canonical real count4 plan with Terra medium, then independent Astra xhigh review.",
+    "Full goal remains active and unresolved; maintain one shared cache while reviewer and next Lean task need it."
   ],
   "research_holds": [
     {
@@ -4846,14 +4953,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "9c55e405ef9066e60fef08c9eaafcd5e95d08345",
+    "verified_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-mixed-component-obstructions",
+    "branch": "codex/astra-zero-residual-mixed-height",
     "base": "main",
     "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/30",
-    "pr_number": 30,
-    "head_sha": "9c55e405ef9066e60fef08c9eaafcd5e95d08345",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/31",
+    "pr_number": 31,
+    "head_sha": "7e1b4073cfd0095a3e514df975313562feb82688",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -5132,15 +5239,24 @@
         "merge_sha": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
         "checks": "Lean build/trust passed 01:32:59Z; exact certificates passed 01:40:49Z; exact head merged 01:46:07Z on 2026-09-06.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 31,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/31",
+        "head_sha": "7e1b4073cfd0095a3e514df975313562feb82688",
+        "status": "merged_verified",
+        "merge_sha": "ac36f4bab463be33dda24f9272731f45e56618fb",
+        "checks": "Lean build/trust passed 2026-09-06T02:17:11Z; exact certificates passed02:24:46Z; exact-head merge02:25:27Z.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "9c55e405ef9066e60fef08c9eaafcd5e95d08345",
-    "remote_main": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
-    "local_main": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
+    "latest_published_source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
+    "remote_main": "ac36f4bab463be33dda24f9272731f45e56618fb",
+    "local_main": "ac36f4bab463be33dda24f9272731f45e56618fb",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
-    "checks": "Lean build/trust passed 01:32:59Z; exact certificates passed 01:40:49Z; exact head merged 01:46:07Z on 2026-09-06.",
+    "merge_sha": "ac36f4bab463be33dda24f9272731f45e56618fb",
+    "checks": "Lean build/trust passed 2026-09-06T02:17:11Z; exact certificates passed02:24:46Z; exact-head merge02:25:27Z.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
@@ -5165,10 +5281,11 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "checkpoint": "Pass32",
-    "branch": "codex/astra-zero-residual-mixed-height",
-    "status": "verified_ready_to_commit",
-    "next_action": "Commit only frozen17-file checkpoint, push, PR, exact-head CI and merge; preserve future N4/unit work."
+    "checkpoint": "Pass33",
+    "branch": "codex/astra-four-runner-mixed-classification",
+    "status": "commit_next",
+    "expected_head_sha": null,
+    "pr_url": null
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -5466,7 +5583,11 @@
       "action": "Preserve written independent family proof and docs draft; finish pending hash/replay mechanically. Recover absent equivalence review with early durable proof write."
     }
   ],
-  "last_continuation_assessment": "Progress: PR30 merged and main verified. Source audit supports stronger conditional mixed height theorem; K remains open. Goal active.",
+  "last_continuation_assessment": {
+    "classification": "progress",
+    "evidence": "Pass32 merged and verified; bounded N4 certificate kernel checked, full classification pending; actual goal remains active.",
+    "next_action": "Finish N4 composition after fixed-height resource split and independently review tight-family audit."
+  },
   "pending_two_hole_review": "Frozen author SHA256 2bbc12481c164bf5e4eaf30ea7ca966cb0b2614524d9bea779034a2ebf115ccb; independent review deferred until slot available; excluded from Pass29.",
   "pass29_final_semantic_acceptance": {
     "mixed_equivalence_review_sha256": "f340c0a311ed6e04d802ee8edfb407a84bc329145bc7e9b446d692cd4e52430a",
@@ -5524,7 +5645,7 @@
     "verification": "research/astra-pass31-verification.json"
   },
   "four_runner_mixed_finite_plan": {
-    "status": "independently_reviewed_plan_pending_kernel_implementation",
+    "status": "accepted_plan_and_affine_dependency_kernel_implementation_in_progress",
     "source_checkpoint": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
     "artifact": "research/astra-four-runner-mixed-finite-plan.md",
     "artifact_sha256": "9b71c56eb36093793df2bf02807e4f7da5f69ef1bccf4edeb68230c154dee085",
@@ -5542,14 +5663,15 @@
   },
   "zero_residual_root_initial_review": "Exact stronger statements match plan and closed shared-time margins. Root requested factoring duplicated phase identities in transfer/signed proofs before final independent review; no semantic flaw found.",
   "direct_to_mixed_unit_audit": {
-    "status": "root_accepted_pending_independent_review",
+    "status": "independently_reviewed_pending_next_checkpoint",
     "artifact_sha256": "a9ac1da5754a1ef8921ad22f3f28785a4dc841e2a2cfa1bd3a04f338224fcb01",
     "program_sha256": "8697cbd8e3828b06e69acc66ba3d366f1ef95a330543f562190d4a6712b24161",
     "stdout_sha256": "1730cce7193a1a642637df61ea90f736d2a9f72b80bab1c578101f54cfab15af",
-    "next_action": "Independent Astra xhigh manuscript review before publication."
+    "next_action": "Independent Astra xhigh manuscript review before publication.",
+    "review_sha256": "c424fc7970ade6a65e5388e0b3f60a34e091c01f2603f154646301bb5b9c96f5"
   },
   "pending_pass32": {
-    "status": "verified_ready_to_commit",
+    "status": "merged_verified",
     "branch": "codex/astra-zero-residual-mixed-height",
     "source_checkpoint": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
     "implementation_report_sha256": "3a037d5308e8def843b9b2ccca52375a92e349490f68da019ebe9b46d264f583",
@@ -5575,5 +5697,120 @@
     "source_base": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
     "formal_verification": "fullbuild3638 jobs reported, trust438, independent review/root guarded replay passed",
     "canonical_status": "unresolved"
+  },
+  "storage_checkpoint_next_action": "Single shared cache8,000,412,620bytes retained for active formalreview and immediatelyqueued canonicalbridge implementation; finalcertificate sourcecheck3,985,760KiBpeak, no persistentcompileroutputs. Clean whenbatchtrulyidle.",
+  "four_runner_mixed_build_recovery": {
+    "status": "separate_declaration_split_verified_composition_in_progress",
+    "actual_goal_status": "active",
+    "worker_report": "Worker initially reported successful certificate compilation, then reported termination without compiled output. Root confirmed no .olean or live process; earlier success report is withdrawn.",
+    "user_correction_sent": true,
+    "source_sha256": "99ebd16180dce67a0a78ac87c6524f6855c6644d6694d6fa17fd7a2df307b0d3",
+    "command": "/usr/bin/time -v lake build LonelyRunner.FourRunnerMixedCertificate",
+    "log": "/tmp/astra-four-runner-root-build.log",
+    "exec_session_id": 54492,
+    "next_action": "Split finite coverage into fixed-height kernels, then continue full classification composition; no global completion.",
+    "actual_exit_code": 1,
+    "elapsed_seconds": 54.3,
+    "max_resident_kib": 6895596,
+    "signals_delivered": 0,
+    "errors": [
+      "line34: Finset.min? unavailable in unused lookup function",
+      "line90: dependent elimination failure from malformed nested Bool conjunction destructuring"
+    ],
+    "worker_service_timeout_claim": "Not supported by root monitored run; actual build returned source errors normally.",
+    "worker_verified_command": "lake build LonelyRunner.FourRunnerMixedCertificate",
+    "worker_verified_result": "Built1842/1842,53s,exit0; after removingunusedlookup andfixingconjunction extraction.",
+    "tactical_split_result": {
+      "command": "/usr/bin/time -v lake build LonelyRunner.FourRunnerMixedCertificate",
+      "exit_code": 0,
+      "elapsed_seconds": 58.79,
+      "max_resident_kib": 8521964,
+      "assessment": "intro H; fin_cases H <;> decide compiles but does not reduce memory; separate declarations next."
+    }
+  },
+  "four_runner_mixed_kernel_progress": {
+    "status": "full_classification_final_source_built_root_independent_review_pending",
+    "source_sha256": "3fee16348b510ed25fd75194d59ed24ec5ffb6d02a3af1318761b772be167c56",
+    "root_check": "Split finiteCoverage and rowOK soundness use propext, Classical.choice, Quot.sound, no others.",
+    "remaining": [
+      "Construct and verify H4 from existing small counts",
+      "Connect primitive high-height tuple and all-height nonexceptional branch",
+      "Prove analytic exceptional family and strict exclusion",
+      "Transport via positive gcd and complete arbitrary integer iff/K4",
+      "Full build/trust and independent semantic review"
+    ],
+    "split_result": "37 private fixed-H decide declarations, identical public coverage type; worker focused build exit0 in27s; peakRSS not yet measured. Root check/axiom probe exit0.",
+    "primitive_all_height_worker_result": "fourRunnerMixed_lowerCount4, primitive_fourRunnerMixed_of_gt_36, primitive_fourRunnerMixed compiled in focused2971jobs build exit0; root checks next."
+  },
+  "tight_family_mixed_audit": {
+    "status": "clarified_source_independently_accepted_root_replay_passed",
+    "artifact_sha256": "717995d2f3adfdea64d09f8022493c31e2a606262c5361fee37ca1fc9879a7c4",
+    "program_sha256": "56bc4f0b72ffcadac9ec4e02437e5fe897b3752a1f2965d1a1da983c1c7203ab",
+    "stdout_sha256": "8e01feefa0786193cbb92aa8a935859e31a55baa9b8c720db06970c373935010",
+    "next_action": "Include normalized-scope manuscript and final review in next verified checkpoint.",
+    "root_replay": "/tmp/astra-tight-family-root-replay.json",
+    "scope_clarification": "Reviewer requires normalized/base-family scope for no comparable-height advance; scaling can destroy D while preserving H/b. Scaled(12,24,72) is raw covered and H<4b, inherits mixed5/216. Review artifact pending.",
+    "author_initial_sha256": "f6cd2d351226e36cf0bb2a283ca4ac002ebf151bb970e6379f9dbd034e2d25d2",
+    "review_sha256": "21f054285e1d2103b961598d1da00fdf51afcc96c672057ad9b435bf51fb80da",
+    "root_review_replay": "/tmp/astra-tight-family-review-root-replay.json"
+  },
+  "worker_recovery_latest": {
+    "actual_goal_status": "active",
+    "failure_scope": "Old Terra repeatedly returned final after one fixable step or helper inspection despite full bounded assignment; no mathematical blocker.",
+    "remaining_action": "Reassign unfinished analytic/gcd phase to fresh Terra medium in-session worker; preserve all verified artifacts."
+  },
+  "four_runner_completion_initial_check": {
+    "status": "worker_success_claim_withdrawn_root_exit1",
+    "command": "lake env lean LonelyRunner/FourRunnerMixed.lean",
+    "root_session": 24205,
+    "exit_code": 1,
+    "log": "/tmp/astra-four-runner-completion-root-initial.log",
+    "source_sha256_at_read": "c53c9aca6cbb066c5dbf326ab0dfc53e3cfb73e5b0f6c09204b298636df07030",
+    "issues": [
+      "fold abs rewrite and k1 phase rewrite fail",
+      "unused impossible positivity for scale0",
+      "wrong abs sign assertions need two-sided abs bounds",
+      "unknown Nat lemma and gcd cancellation orientation",
+      "extra tactics after closed goals",
+      "strict witness premise wrongly requires positive t; restore arbitrary real time"
+    ],
+    "user_correction_sent": true,
+    "next_action": "Same Terra worker fixes source and reports terminal evidence; root rechecks exact final bytes before accepting.",
+    "recovery": "Corrected direct root session87370 exit0; final sourceae47b419, root fullbuild session27658 terminalexit0,3640jobs. Initial claim remains withdrawn."
+  },
+  "pending_pass33": {
+    "status": "verified_ready_for_publication",
+    "branch": "codex/astra-four-runner-mixed-classification",
+    "source_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
+    "source_sha256": "ae47b419c5b4cebfa72a325bdb50cd32e03444c39850a74b885037d83e312a5c",
+    "full_build_jobs": 3640,
+    "full_build_exit_code": 0,
+    "full_build_log": "/tmp/astra-pass33-full-build.log",
+    "trust_session": 10760,
+    "scope": "Complete positive-natural four-total-runner mixed iff and strict arbitrary-real-time implication, plus reviewed modular/tight-family manuscripts. Canonical bridge plan remains future work.",
+    "trust_exit_code": 0,
+    "trust_reports": 449,
+    "trust_log": "/tmp/astra-pass33-trust.log",
+    "certificate_resources": {
+      "command": "/usr/bin/time -v lake env lean LonelyRunner/FourRunnerMixedCertificate.lean",
+      "exit_code": 0,
+      "wall_seconds": 28.49,
+      "max_resident_kib": 3985760,
+      "swaps": 0,
+      "signals": 0,
+      "filesystem_outputs": 0,
+      "log_sha256": "ae74162f4c247a6cbcad94856f3e0b9a9d5ecaca9eb3f43171782bbcb18f246c",
+      "source_sha256": "3fee16348b510ed25fd75194d59ed24ec5ffb6d02a3af1318761b772be167c56"
+    },
+    "formal_review_sha256": "07ce0bc6831899c3ac3f00482f7143b5daaff5ea0dacee284d0038c12742ca4b",
+    "verification": "research/astra-pass33-verification.json"
+  },
+  "four_runner_canonical_bridge_plan": {
+    "status": "root_accepted_plan_pending_C4_review_and_implementation",
+    "artifact_sha256": "9f752fa91fcbf56bb80d1a8a424697801e21b78262bc1315c138431c2e160f0c",
+    "program_sha256": "6e5ecddab2f0bfe3781ac219d8300726eb5daf3dd90ffb0d67167751561efd92",
+    "stdout_sha256": "56b4f981f84181586e284f41628874900bf74a8178ca2bac34f4e2327ae21aa8",
+    "scope": "Ordinary natural count4, H5, generic bounded real reduction and canonical real count4; no fixedN5 or fullLRC claim.",
+    "next_action": "After C4 independentreview, Terra implements additive bridges, with Astra review before publishing."
   }
 }

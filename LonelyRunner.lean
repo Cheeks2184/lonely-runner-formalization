@@ -114,6 +114,8 @@ import LonelyRunner.MirroredBlockFamily
 import LonelyRunner.TwoClusterFamily
 import LonelyRunner.FiniteHeightReduction
 import LonelyRunner.FiniteFamilyEquivalence
+import LonelyRunner.FourRunnerMixedCertificate
+import LonelyRunner.FourRunnerMixed
 
 /-!
 Root import for the formal Lonely Runner development.
