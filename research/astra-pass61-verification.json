@@ -1,0 +1,68 @@
+{
+  "checkpoint": "Pass61",
+  "parent_main": "1a24e2331d5d8fdcd49c1c77a546fe616671deff",
+  "status": "Accepted manuscript, exact-control and scheduled delegation-review checkpoint; unrestricted LRC remains unresolved.",
+  "hashes": {
+    "research/astra-uniform-seed-coupling.md": "b52f92b8dca3de5b0ba9f41c24c2dc6bd83a27329a035d40a1273a0401f215ea",
+    "research/astra-uniform-seed-coupling-review.md": "537c008719aa858c9d97ab46acb5b5cd197b873a78d0266aeae6c05950c7c0bb",
+    "research/astra-multiple-contact-seed-plan.md": "25b9b2010b944694de40757e79dee14ba37a8d4edc9440793b80ee9e8eeff7a5",
+    "research/astra-multiple-contact-seed-control.json": "adcfb74938b39dc6264ad78ee622860102d08e461487a114347224de910480c0",
+    "research/astra-subset-gcd-profile-screen.md": "979fb69005f60f4e0f4b350a272ac7234917695b7df085ab858a7bf9324456f9",
+    "research/astra-subset-gcd-profile-review.md": "f9826bab2d9810e6ff8427fcc57eaf12c0dcf5ff0d346d1a9ebdb182ab35cf81",
+    "research/astra-terra-high-twenty-review.md": "8fe2f095d6b702b3c9128b157c989872ed5865700257eec52260e5a9fb5fc217",
+    "research/astra-terra-high-twenty-review-data.json": "f5557ebf622e6f7563f459f9f5392066ec91da4c20e56812ba465df44a188f21"
+  },
+  "prior_publication": {
+    "pr": 59,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/59",
+    "head": "a2b9f01a47c836ae72ea6e62dc5388958c08161d",
+    "merge": "1a24e2331d5d8fdcd49c1c77a546fe616671deff",
+    "merged_at": "2026-09-06T17:15:06Z",
+    "ci_run": 34047571818,
+    "checks": [
+      {
+        "name": "Lean build and trust audit",
+        "job": 101525265948,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T17:08:23Z"
+      },
+      {
+        "name": "Exact computational certificates",
+        "job": 101525265854,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T17:13:39Z"
+      }
+    ],
+    "verification": "CLEAN exact head non-draft reviews empty; match-head merge succeeded. Fetched origin/main and checked source-head ancestry; current branch and local main advanced to verified merge."
+  },
+  "root_script_sha256": "34e37116d738befc1e1f3de10094e106b9a8ba9fc29529142796cbf0312085c9",
+  "root_control_check": {
+    "command": "python3 -B /tmp/astra-pass61-control-check.py",
+    "actual_script_utf8": "import ast, base64, hashlib, json\nfrom pathlib import Path\nfrom fractions import Fraction as F\n\ndef sha(b): return hashlib.sha256(b).hexdigest()\ndef norm(x):\n    y=x%1\n    return min(y,1-y)\n\npath=Path('research/astra-multiple-contact-seed-control.json')\nassert sha(path.read_bytes())=='adcfb74938b39dc6264ad78ee622860102d08e461487a114347224de910480c0'\nr=json.loads(path.read_text()); s=r['frozen_source_before_execution']; e=r['execution']\nfor label in ['checker','plan']:\n    assert sha(Path(s[label+'_path']).read_bytes())==s[label+'_sha256_before_execution']\nblobs={}\nfor label in ['frozen_definition_prefix','reporting_driver','actual_child_program','parent_harness']:\n    b=base64.b64decode(s[label+'_base64']);blobs[label]=b\n    assert len(b)==s[label+'_bytes'] and sha(b)==s[label+'_sha256_before_execution']\nassert blobs['actual_child_program']==blobs['frozen_definition_prefix']+b'\\n'+blobs['reporting_driver']\nassert Path(s['parent_harness_path']).read_bytes()==blobs['parent_harness']\ntree=ast.parse(blobs['parent_harness'])\ndriver=next(ast.literal_eval(n.value) for n in tree.body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='DRIVER' for t in n.targets))\nassert driver.encode()==blobs['reporting_driver']\nassert e['command']==s['outer_argv'][2]\nassert sha(e['command'].encode())==s['outer_inline_command_sha256_before_execution']\nassert e['child_exit_status']==0 and e['stderr']=='' and e['parse_error'] is None\nfor label in ['stdout','stderr']: assert sha(e[label].encode())==e[label+'_sha256']\ndata=r['results']; assert json.loads(e['stdout'])==data\nv=tuple(data['tuple']); assert v==(1,5,7,8,10,11,13,17,18,19,23)\nassert sha(json.dumps(v,separators=(',',':')).encode())==s['input_tuple_canonical_json_sha256']\ndelta,gamma=F(1,12),F(1,11)\nassert data['N']==12 and data['Q_succeeds'] and data['all_deletion_seed_sets_nonempty']\nassert len(data['per_label'])==11\nfor p,row in enumerate(data['per_label']):\n    assert row['pivot_index']==p and row['pivot_speed']==v[p]\n    assert row['seed_count']==len(row['seed_intervals'])>0\n    t=F(row['attaining_time']);old=v[:p]+v[p+1:]\n    assert all(norm(t*x)>=gamma for x in old)\n    assert norm(t*v[p])+v[p]*min((norm(t*x)-delta)/x for x in old)==F(row['score_maximum'])\nfor a in (1,5,7,11):\n    c=data['primitive_grid_contacts'][str(a)];phases=[(F(a,12)*x)%1 for x in v]\n    assert list(map(F,c['phases']))==phases\n    assert c['lower_delta_indices']==[i for i,x in enumerate(phases) if x==delta]\n    assert c['upper_one_minus_delta_indices']==[i for i,x in enumerate(phases) if x==1-delta]\n    assert c['lower_count']==c['upper_count']==2\nfull=[tuple(map(F,interval)) for interval in data['full_good_set']]\nassert len(full)==10 and sum(L==R for L,R in full)==4 and sum(L<R for L,R in full)==6\nfor L,R in full:\n    assert L<=R\n    for x in v:\n        k=(x*(L+R)/2).__floor__()\n        assert k+delta<=x*L<=x*R<=k+1-delta\nfor q in range(2,12): assert data['divisibility_cover_q_2_through_11'][str(q)]==[x for x in v if x%q==0]\nw=data['protected_witness'];t=F(w['time']);seed=F(w['seed_time']);p=w['pivot_index']\nassert t==seed==F(45,88)\nnorms=[norm(t*x) for x in v]\nassert norms==list(map(F,w['coordinate_norms'])) and min(norms)==gamma\nrho=min((norm(seed*x)-delta)/x for j,x in enumerate(v) if j!=p)\nassert rho==F(w['rho'])==F(1,1056) and abs(t-seed)<=rho\nprint(json.dumps({'status':'passed','receipt_sha256':sha(path.read_bytes()),'labels':11,'full_components':10,'singletons':4,'positive_length_components':6,'full_gamma_witness':'45/88','all_real_enumeration_replayed':False,'verification':'Actual full frozen source and raw output bindings, retained attainers, interval containment and contact/witness records checked.'},sort_keys=True))\n",
+    "exit_code": 0,
+    "complete_tool_output": "{\"all_real_enumeration_replayed\": false, \"full_components\": 10, \"full_gamma_witness\": \"45/88\", \"labels\": 11, \"positive_length_components\": 6, \"receipt_sha256\": \"adcfb74938b39dc6264ad78ee622860102d08e461487a114347224de910480c0\", \"singletons\": 4, \"status\": \"passed\", \"verification\": \"Actual full frozen source and raw output bindings, retained attainers, interval containment and contact/witness records checked.\"}\n",
+    "scope": "Actual full original driver/harness and source/byte/raw-output bindings;11 retained score attainers, all10 retained interval containments,4 grid contacts, divisibility cover and explicit full-gamma witness. No all-real enumeration replay."
+  },
+  "independent_mathematical_reviews": "Root read complete author/independent reports and bound inputs. Coupling review independently checked exact rational control algebra without duplicate execution; source hashes and retained code hash matched. Subset-gcd reviewer checked published primary theorem scope including explicit empty-subset convention and strict threshold, then all-N bound algebra;4 source bindings matched. No new full geometric-proof audit claimed.",
+  "delegation_review": "20 closed Terra High tasks,17 checked outputs and3 no-check returns. Second cohort:5 checked Lean outputs,3 returns,2 successful Python controls. Exact per-task usage0/20 unknown. Frozen cohort aggregates independently checked by root against reporting script and retained task records; no rerun of worker computations. No model/effort policy change.",
+  "checks": [
+    {
+      "command": "python3 -B scripts/validate_workflow.py",
+      "exit_code": 0,
+      "output": "workflow structural validation passed; it cannot certify mathematical validity.\n"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "python3 -B scripts/manage_storage.py",
+      "exit_code": 0,
+      "output": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n"
+    }
+  ],
+  "operational_corrections": "Root's initial storage --report flag was unsupported; the tool's ordinary no-argument report succeeded. Previous checkpoint commit required existing per-command Codex identity because no local author identity was configured; no global Git setting changed. These are root orchestration issues, not Terra repair rounds.",
+  "lean": "No Lean source changes or new kernel declarations. No duplicate local full build/trust or dependency restoration; prior canonical N6 checkpoint remains established.",
+  "remaining_gap": "Uniform Q requires a genuine global supply argument, not the rejected local transitions or positive controls. Stronger published arithmetic profile also leaves the accepted consecutive-family obstruction intact. Canonical unrestricted completion gate unmet."
+}

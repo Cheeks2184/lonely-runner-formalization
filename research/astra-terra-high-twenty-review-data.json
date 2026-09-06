@@ -1,0 +1,1449 @@
+{
+  "scope": "First twenty closed Terra High task records; includes three returns without a focused check, not twenty successful deliveries.",
+  "source_report_script_sha256": "ff245cd6d2fe5150bdd56a3610f7662138e04a96eebf14ef2a05c6c75761dafa",
+  "batches": {
+    "first_ten": {
+      "task_count": 10,
+      "active_count": 0,
+      "closed_count": 10,
+      "first_check": {
+        "successful": 3,
+        "known": 10
+      },
+      "repairs": {
+        "worker_rounds": 11,
+        "astra_rounds": 5,
+        "astra_lines": 0,
+        "astra_lines_coverage": 10
+      },
+      "usage": {
+        "covered_tasks": 0,
+        "task_count": 10,
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null
+      },
+      "tasks": [
+        {
+          "id": "/root/terra_high_workflow_controls",
+          "status": "closed",
+          "check_kind": "python",
+          "first_check_success": true,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/small_phase_orbits_high",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/affine_phase_certificate_foundations",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/remaining_phase_data_program",
+          "status": "closed",
+          "check_kind": "python",
+          "first_check_success": true,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/one_even_branch_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/weak_sixth_shifts_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/remaining_phase_kernel_pilot",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": true,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/remaining_phase_full_tables",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/remaining_phase_real_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/signed_remaining_phase_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        }
+      ],
+      "by_check_kind": {
+        "lean": {
+          "task_count": 8,
+          "active_count": 0,
+          "closed_count": 8,
+          "first_check": {
+            "successful": 1,
+            "known": 8
+          },
+          "repairs": {
+            "worker_rounds": 9,
+            "astra_rounds": 1,
+            "astra_lines": 0,
+            "astra_lines_coverage": 8
+          },
+          "usage": {
+            "covered_tasks": 0,
+            "task_count": 8,
+            "input_tokens": null,
+            "output_tokens": null,
+            "total_tokens": null
+          },
+          "tasks": [
+            {
+              "id": "/root/small_phase_orbits_high",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/affine_phase_certificate_foundations",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/one_even_branch_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/weak_sixth_shifts_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/remaining_phase_kernel_pilot",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": true,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/remaining_phase_full_tables",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/remaining_phase_real_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/signed_remaining_phase_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            }
+          ]
+        },
+        "python": {
+          "task_count": 2,
+          "active_count": 0,
+          "closed_count": 2,
+          "first_check": {
+            "successful": 2,
+            "known": 2
+          },
+          "repairs": {
+            "worker_rounds": 2,
+            "astra_rounds": 4,
+            "astra_lines": 0,
+            "astra_lines_coverage": 2
+          },
+          "usage": {
+            "covered_tasks": 0,
+            "task_count": 2,
+            "input_tokens": null,
+            "output_tokens": null,
+            "total_tokens": null
+          },
+          "tasks": [
+            {
+              "id": "/root/terra_high_workflow_controls",
+              "status": "closed",
+              "check_kind": "python",
+              "first_check_success": true,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/remaining_phase_data_program",
+              "status": "closed",
+              "check_kind": "python",
+              "first_check_success": true,
+              "usage_observed": false
+            }
+          ]
+        }
+      }
+    },
+    "second_ten": {
+      "task_count": 10,
+      "active_count": 0,
+      "closed_count": 10,
+      "first_check": {
+        "successful": 2,
+        "known": 7
+      },
+      "repairs": {
+        "worker_rounds": 7,
+        "astra_rounds": 4,
+        "astra_lines": 41,
+        "astra_lines_coverage": 10
+      },
+      "usage": {
+        "covered_tasks": 0,
+        "task_count": 10,
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null
+      },
+      "tasks": [
+        {
+          "id": "/root/three_even_orbit_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/three_even_runners_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": null,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/three_even_odd_zero_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": null,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/two_even_runners_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": null,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/three_even_odd_zero_fresh",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/three_even_witness_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/two_even_runners_fresh",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/six_runner_final_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/tight_seed_controls",
+          "status": "closed",
+          "check_kind": "python",
+          "first_check_success": true,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/multiple_contact_seed_control",
+          "status": "closed",
+          "check_kind": "python",
+          "first_check_success": true,
+          "usage_observed": false
+        }
+      ],
+      "by_check_kind": {
+        "lean": {
+          "task_count": 8,
+          "active_count": 0,
+          "closed_count": 8,
+          "first_check": {
+            "successful": 0,
+            "known": 5
+          },
+          "repairs": {
+            "worker_rounds": 7,
+            "astra_rounds": 3,
+            "astra_lines": 41,
+            "astra_lines_coverage": 8
+          },
+          "usage": {
+            "covered_tasks": 0,
+            "task_count": 8,
+            "input_tokens": null,
+            "output_tokens": null,
+            "total_tokens": null
+          },
+          "tasks": [
+            {
+              "id": "/root/three_even_orbit_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/three_even_runners_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": null,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/three_even_odd_zero_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": null,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/two_even_runners_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": null,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/three_even_odd_zero_fresh",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/three_even_witness_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/two_even_runners_fresh",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/six_runner_final_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            }
+          ]
+        },
+        "python": {
+          "task_count": 2,
+          "active_count": 0,
+          "closed_count": 2,
+          "first_check": {
+            "successful": 2,
+            "known": 2
+          },
+          "repairs": {
+            "worker_rounds": 0,
+            "astra_rounds": 1,
+            "astra_lines": 0,
+            "astra_lines_coverage": 2
+          },
+          "usage": {
+            "covered_tasks": 0,
+            "task_count": 2,
+            "input_tokens": null,
+            "output_tokens": null,
+            "total_tokens": null
+          },
+          "tasks": [
+            {
+              "id": "/root/tight_seed_controls",
+              "status": "closed",
+              "check_kind": "python",
+              "first_check_success": true,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/multiple_contact_seed_control",
+              "status": "closed",
+              "check_kind": "python",
+              "first_check_success": true,
+              "usage_observed": false
+            }
+          ]
+        }
+      }
+    },
+    "all_twenty": {
+      "task_count": 20,
+      "active_count": 0,
+      "closed_count": 20,
+      "first_check": {
+        "successful": 5,
+        "known": 17
+      },
+      "repairs": {
+        "worker_rounds": 18,
+        "astra_rounds": 9,
+        "astra_lines": 41,
+        "astra_lines_coverage": 20
+      },
+      "usage": {
+        "covered_tasks": 0,
+        "task_count": 20,
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null
+      },
+      "tasks": [
+        {
+          "id": "/root/terra_high_workflow_controls",
+          "status": "closed",
+          "check_kind": "python",
+          "first_check_success": true,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/small_phase_orbits_high",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/affine_phase_certificate_foundations",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/remaining_phase_data_program",
+          "status": "closed",
+          "check_kind": "python",
+          "first_check_success": true,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/one_even_branch_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/weak_sixth_shifts_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/remaining_phase_kernel_pilot",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": true,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/remaining_phase_full_tables",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/remaining_phase_real_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/signed_remaining_phase_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/three_even_orbit_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/three_even_runners_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": null,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/three_even_odd_zero_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": null,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/two_even_runners_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": null,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/three_even_odd_zero_fresh",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/three_even_witness_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/two_even_runners_fresh",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/six_runner_final_implementation",
+          "status": "closed",
+          "check_kind": "lean",
+          "first_check_success": false,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/tight_seed_controls",
+          "status": "closed",
+          "check_kind": "python",
+          "first_check_success": true,
+          "usage_observed": false
+        },
+        {
+          "id": "/root/multiple_contact_seed_control",
+          "status": "closed",
+          "check_kind": "python",
+          "first_check_success": true,
+          "usage_observed": false
+        }
+      ],
+      "by_check_kind": {
+        "lean": {
+          "task_count": 16,
+          "active_count": 0,
+          "closed_count": 16,
+          "first_check": {
+            "successful": 1,
+            "known": 13
+          },
+          "repairs": {
+            "worker_rounds": 16,
+            "astra_rounds": 4,
+            "astra_lines": 41,
+            "astra_lines_coverage": 16
+          },
+          "usage": {
+            "covered_tasks": 0,
+            "task_count": 16,
+            "input_tokens": null,
+            "output_tokens": null,
+            "total_tokens": null
+          },
+          "tasks": [
+            {
+              "id": "/root/small_phase_orbits_high",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/affine_phase_certificate_foundations",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/one_even_branch_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/weak_sixth_shifts_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/remaining_phase_kernel_pilot",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": true,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/remaining_phase_full_tables",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/remaining_phase_real_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/signed_remaining_phase_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/three_even_orbit_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/three_even_runners_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": null,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/three_even_odd_zero_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": null,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/two_even_runners_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": null,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/three_even_odd_zero_fresh",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/three_even_witness_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/two_even_runners_fresh",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/six_runner_final_implementation",
+              "status": "closed",
+              "check_kind": "lean",
+              "first_check_success": false,
+              "usage_observed": false
+            }
+          ]
+        },
+        "python": {
+          "task_count": 4,
+          "active_count": 0,
+          "closed_count": 4,
+          "first_check": {
+            "successful": 4,
+            "known": 4
+          },
+          "repairs": {
+            "worker_rounds": 2,
+            "astra_rounds": 5,
+            "astra_lines": 0,
+            "astra_lines_coverage": 4
+          },
+          "usage": {
+            "covered_tasks": 0,
+            "task_count": 4,
+            "input_tokens": null,
+            "output_tokens": null,
+            "total_tokens": null
+          },
+          "tasks": [
+            {
+              "id": "/root/terra_high_workflow_controls",
+              "status": "closed",
+              "check_kind": "python",
+              "first_check_success": true,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/remaining_phase_data_program",
+              "status": "closed",
+              "check_kind": "python",
+              "first_check_success": true,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/tight_seed_controls",
+              "status": "closed",
+              "check_kind": "python",
+              "first_check_success": true,
+              "usage_observed": false
+            },
+            {
+              "id": "/root/multiple_contact_seed_control",
+              "status": "closed",
+              "check_kind": "python",
+              "first_check_success": true,
+              "usage_observed": false
+            }
+          ]
+        }
+      }
+    }
+  },
+  "frozen_task_records": [
+    {
+      "id": "/root/terra_high_workflow_controls",
+      "agent_id": "/root/terra_high_workflow_controls",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "84d14b3",
+      "target": "Implement and test Terra-high routing migration validation and per-task delivery metrics reporting.",
+      "owned_files": [
+        "scripts/validate_workflow.py",
+        "tests/test_validate_workflow.py",
+        "scripts/report_delegation.py",
+        "tests/test_report_delegation.py"
+      ],
+      "checks": [
+        "Initial focused bundle:23tests passed, validator/reporter passed; root source review requested robustness repair for malformed history IDs and usage source requirements."
+      ],
+      "delivery_metrics": {
+        "check_kind": "python",
+        "first_check_success": true,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 2,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-pass54-verification.json"
+        ]
+      },
+      "result": "High migration/reporting source accepted by root;27focusedtests+validator+bothreportmodes passed, hash-bound raw receipts retained. Two root-review-guided worker repair rounds, no direct Astra edits."
+    },
+    {
+      "id": "/root/small_phase_orbits_high",
+      "agent_id": "/root/small_phase_orbits_high",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "c63bb23",
+      "target": "Implement compiled prescribed small-phase coprime orbit theorem and exact-phase helper from fully reviewed three-declaration plan.",
+      "owned_files": [
+        "LonelyRunner/SmallPhaseOrbits.lean",
+        "research/astra-small-phase-orbit-implementation.json"
+      ],
+      "checks": [
+        "Compiled source accepted in root full read. Receipt-only raw-log normalization requested; no further Lean check."
+      ],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-small-phase-orbit-implementation.json"
+        ]
+      },
+      "result": "Worker completed compiled delivery; final receipt hash checked by root. Final source/receipt semantic inspection and integration remain pending as applicable; delivery is not checkpoint acceptance.",
+      "receipt_sha256": "354905fb7b2fb718d72b9f4842296372b7456c779ba40d32ab5d0b6e8df3e71c",
+      "additional_delivery_observations": {
+        "lake_reported_module_build_seconds_sum": 5.9
+      }
+    },
+    {
+      "id": "/root/affine_phase_certificate_foundations",
+      "agent_id": "/root/terra_high_workflow_controls",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "5b85444",
+      "target": "Cohesive compiled generic affine-sixth band soundness, closed cut cover, typed common-candidate assembly for remaining N6 phase lemmas.",
+      "owned_files": [
+        "LonelyRunner/AffinePhaseCertificate.lean",
+        "research/astra-affine-phase-certificate-implementation.json"
+      ],
+      "checks": [],
+      "delivery_metrics": {
+        "astra_repair_lines": 0,
+        "astra_repair_rounds": 0,
+        "check_kind": "lean",
+        "evidence": [
+          "research/astra-affine-phase-certificate-implementation.json"
+        ],
+        "first_check_success": false,
+        "usage": null,
+        "worker_elapsed_seconds": null,
+        "worker_repair_rounds": 1
+      },
+      "receipt_sha256": "74c7d9542f1d24b7b0e01bb66f9de6325068f08012afc259f3182289c16958c8",
+      "result": "Worker completed compiled delivery; final receipt hash checked by root. Final source/receipt semantic inspection and integration remain pending as applicable; delivery is not checkpoint acceptance."
+    },
+    {
+      "id": "/root/remaining_phase_data_program",
+      "agent_id": "/root/small_phase_orbits_high",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a1d90c2ace37dc7779dc78e104da331965af6646",
+      "target": "Prepare exact bounded Renault6.1/6.4 data generator and execution declaration; do not execute numerical tables until root source review.",
+      "owned_files": [
+        "scripts/remaining_phase_data.py",
+        "research/astra-remaining-phase-data-program.json"
+      ],
+      "checks": [
+        "Root draft source read before any table execution: corrected missing factor2 singleton numerator and explicit 120/81 atom counts. No source edit or numerical run by root."
+      ],
+      "delivery_metrics": {
+        "check_kind": "python",
+        "first_check_success": true,
+        "worker_repair_rounds": 0,
+        "astra_repair_rounds": 2,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-remaining-phase-data-program.json",
+          "/tmp/astra-remaining-phase-data-fixed-v1"
+        ]
+      },
+      "result": "Singlefixeddata runexit0,6975bands19665containments41202triples; source/streams/hashesreadback. Independent supplied verification pending. Root gave2sourcecorrectionrounds and separate receipt timing-attribution clarification; no root code edits."
+    },
+    {
+      "id": "/root/one_even_branch_implementation",
+      "agent_id": "/root/terra_high_workflow_controls",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "9581b6c",
+      "target": "Cohesive compiled exact one-even residue and singleton-three/count adapter from fully root-read plan3c422d32...",
+      "owned_files": [
+        "LonelyRunner/OneEvenRunners.lean",
+        "research/astra-one-even-implementation.json"
+      ],
+      "checks": [],
+      "delivery_metrics": {
+        "astra_repair_lines": 0,
+        "astra_repair_rounds": 0,
+        "check_kind": "lean",
+        "evidence": [
+          "research/astra-one-even-implementation.json"
+        ],
+        "first_check_success": false,
+        "usage": null,
+        "worker_elapsed_seconds": null,
+        "worker_repair_rounds": 2
+      },
+      "result": "Compiledafter2workerrepairrounds; rootfullsource read accepts2contracts, receiptinspection/independentreview/integration pending."
+    },
+    {
+      "id": "/root/weak_sixth_shifts_implementation",
+      "agent_id": "/root/small_phase_orbits_high",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a4e324a",
+      "owned_files": [
+        "LonelyRunner/WeakSixthShifts.lean",
+        "research/astra-weak-sixth-shifts-implementation.json"
+      ],
+      "target": "Two exactweak-sixth helpers fromrootshortthird/halfshiftproofplan14b7ee8a...",
+      "checks": [],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 1,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-weak-sixth-shifts-implementation.json"
+        ]
+      },
+      "result": "Compiledafter1repair, source8c2ba998...; rootfullread/independentreviewpending. Worker again omitted rawfailedsource snapshots contrary to requested protocol; preserveprecheckhashes/logs and disclosegap, never reconstruct them.",
+      "additional_delivery_observations": {
+        "lake_reported_module_build_seconds_sum": 3.4
+      }
+    },
+    {
+      "id": "/root/remaining_phase_kernel_pilot",
+      "agent_id": "/root/terra_high_workflow_controls",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a4e324a",
+      "owned_files": [
+        "research/RemainingPhaseKernelPilot.lean",
+        "research/astra-remaining-phase-kernel-pilot.json"
+      ],
+      "target": "Prepare fixed five-row ordinary-kernel pilot on independentlyverified6.1/6.4 data; no execution until root releases sharedcache slot.",
+      "checks": [],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": true,
+        "worker_repair_rounds": 0,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-remaining-phase-kernel-pilot.json"
+        ]
+      },
+      "result": "Root accepted final source/review and exact hash-bound successful receipt; no duplicate focused Lean run."
+    },
+    {
+      "id": "/root/remaining_phase_full_tables",
+      "agent_id": "/root/terra_high_workflow_controls",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a4e324a",
+      "owned_files": [
+        "LonelyRunner/RemainingPhaseData.lean",
+        "LonelyRunner/RemainingPhaseFacts.lean",
+        "research/astra-remaining-phase-full-tables.json"
+      ],
+      "target": "Transcribe verified fixed data and prove all finite band, domination and core-intersection rows using ordinary kernel decide; focused check after root slot release.",
+      "checks": [
+        "Two invocation/startup failures before Lean elaboration; root authorized sequential direct lake env lean -j1 -s65536 with standard owned .olean/.ilean outputs under unchanged caps and lock."
+      ],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 0,
+        "astra_repair_rounds": 1,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-remaining-phase-full-tables.json"
+        ]
+      },
+      "result": "Direct focused Data/Facts checks passed unchanged after two launcher/startup failures; root source/receipt/transcription checks accepted; independent source review and real assembly pending.",
+      "additional_delivery_observations": {
+        "operational_failures": 2,
+        "data_check_wall_seconds": 2.2964511970058084,
+        "facts_check_wall_seconds": 71.88429277500836
+      }
+    },
+    {
+      "id": "/root/remaining_phase_real_implementation",
+      "agent_id": "/root/terra_high_workflow_controls",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "d85d256",
+      "owned_files": [
+        "LonelyRunner/RemainingPhaseLemma.lean",
+        "research/astra-remaining-phase-real-implementation.json"
+      ],
+      "target": "Implement exact two all-real phase theorems from root-accepted frozen assembly plan and compiled finite table interfaces.",
+      "checks": [],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 1,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-remaining-phase-real-implementation.json"
+        ]
+      },
+      "result": "Exact two real phase contracts compiled after one mechanical repair; root complete source/receipt review accepted; independent source review pending."
+    },
+    {
+      "id": "/root/signed_remaining_phase_implementation",
+      "agent_id": "/root/small_phase_orbits_high",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "d85d256",
+      "owned_files": [
+        "LonelyRunner/SignedRemainingPhase.lean",
+        "research/astra-signed-remaining-phase-implementation.json"
+      ],
+      "target": "Prepare exact signed and reflected6.1 and signed6.4 adapters from accepted manuscript and existing SignedRenaultFiveOne pattern; focused check waits for compiled RemainingPhaseLemma and root cache slot.",
+      "checks": [],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-signed-remaining-phase-implementation.json"
+        ]
+      },
+      "result": "All3exact signed adapters compiled after2workerrepairs, root source/receipts accepted; every physical failed-source snapshot retained this delivery. Independent review pending."
+    },
+    {
+      "id": "/root/three_even_orbit_implementation",
+      "agent_id": "/root/three_even_orbit_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "830a626",
+      "owned_files": [
+        "LonelyRunner/ThreeEvenOrbit.lean",
+        "research/astra-three-even-orbit-implementation.json"
+      ],
+      "target": "Implement eight settled scalar/norm/residue/orbit-divisibility helpers from root-accepted three-even plan, then focused compile under root serial slot.",
+      "checks": [
+        "Source8helpers compiled reportedexit0 after1repair; receipt corrected to disclose missingphysicalbefore snapshots/rawstream files/axiomstdin and absent CPUquota; raw_output is transcript transcription. Next integration/trust required."
+      ],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 1,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-three-even-orbit-implementation.json"
+        ]
+      },
+      "result": "Eight exact helpers compiled after one repair, independent source review accepted; historical snapshots/raw streams/axiom input absent and CPU quota not enforced. Fresh integrated build/trust pending."
+    },
+    {
+      "id": "/root/three_even_runners_implementation",
+      "agent_id": "/root/small_phase_orbits_high",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "62eef5c0c8a39cde54e37e0ea68095f98dd3c1a9",
+      "owned_files": [
+        "LonelyRunner/ThreeEvenRunners.lean",
+        "research/astra-three-even-runners-implementation.json"
+      ],
+      "target": "Cohesive implementation of remaining odd-zero obstruction, exact fixed-role and cardinality three-even witness from accepted plan and compiled ThreeEvenOrbit helpers.",
+      "checks": [],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": null,
+        "worker_repair_rounds": 0,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-three-even-assembly-return.json"
+        ]
+      },
+      "result": "Returned without source or checks: worker declined full assembly size, no mathematical gap. Task failure only; split at settled odd-zero interface, goal stays active."
+    },
+    {
+      "id": "/root/three_even_odd_zero_implementation",
+      "agent_id": "/root/small_phase_orbits_high",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "62eef5c0c8a39cde54e37e0ea68095f98dd3c1a9",
+      "owned_files": [
+        "LonelyRunner/ThreeEvenRunners.lean",
+        "research/astra-three-even-odd-zero-implementation.json"
+      ],
+      "target": "Implement only exact reusable odd-zero obstruction and FiveSafe conjunction from section3 of accepted three-even plan; no final fixed-role/count theorem yet.",
+      "checks": [],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": null,
+        "worker_repair_rounds": 0,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-three-even-odd-zero-return.json"
+        ]
+      },
+      "result": "Returned without source/check due remaining worker execution budget; no semantic gap. Reassign exact bounded interface to fresh Terra/high context."
+    },
+    {
+      "id": "/root/two_even_runners_implementation",
+      "agent_id": "/root/three_even_orbit_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "62eef5c0c8a39cde54e37e0ea68095f98dd3c1a9",
+      "owned_files": [
+        "LonelyRunner/TwoEvenRunners.lean",
+        "research/astra-two-even-runners-implementation.json"
+      ],
+      "target": "Implement complete exact two-even fixed-role/count witness from fully root-read accepted plan. Cache checks wait for granted slot.",
+      "checks": [],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": null,
+        "worker_repair_rounds": 0,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-two-even-initial-return.json"
+        ]
+      },
+      "result": "Partial scalar/transport source only; no check. Old worker context budget exhausted, no semantic gap. Fresh Terra/high continuation required."
+    },
+    {
+      "id": "/root/three_even_odd_zero_fresh",
+      "agent_id": "/root/three_even_odd_zero_fresh",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "62eef5c0c8a39cde54e37e0ea68095f98dd3c1a9",
+      "owned_files": [
+        "LonelyRunner/ThreeEvenRunners.lean",
+        "research/astra-three-even-odd-zero-implementation.json"
+      ],
+      "target": "Implement only exact reusable odd-zero obstruction and FiveSafe conjunction from section3 of accepted three-even plan; no final fixed-role/count theorem yet.",
+      "checks": [],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-three-even-odd-zero-implementation.json"
+        ]
+      },
+      "result": "Exact odd-zero helper compiled after2workerrepairs; root full source and physical3snapshots/rawstreams readback accepted; independent review queued."
+    },
+    {
+      "id": "/root/three_even_witness_implementation",
+      "agent_id": "/root/three_even_odd_zero_fresh",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "34afe4f",
+      "owned_files": [
+        "LonelyRunner/ThreeEvenRunners.lean",
+        "research/astra-three-even-witness-implementation.json"
+      ],
+      "target": "Complete fixed-role and cardinality three-even witness from compiled odd-zero helper and8orbithelpers; preserve existing prefix, wait for root review-freeze signal before appending and cache slot before checks.",
+      "checks": [],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 1,
+        "astra_repair_rounds": 1,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-three-even-witness-implementation.json"
+        ]
+      },
+      "result": "Exact2witnesses compiled after1workerrepair; root fulldraftread plus exactrepairdiff/prefix/actualcapture checks accepted; independent extensionreviewqueued."
+    },
+    {
+      "id": "/root/two_even_runners_fresh",
+      "agent_id": "/root/two_even_runners_fresh",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "62eef5c0c8a39cde54e37e0ea68095f98dd3c1a9",
+      "owned_files": [
+        "LonelyRunner/TwoEvenRunners.lean",
+        "research/astra-two-even-runners-implementation.json"
+      ],
+      "target": "Implement complete exact two-even fixed-role/count witness from fully root-read accepted plan. Cache checks wait for granted slot.",
+      "checks": [
+        "Initial and1repair Lean failures reported; receipt failed physical snapshots/rawlogs requirement. Root supplied exact structural/Finset/map repair guidance and /tmp/astra_focus_capture.py to capture actual finalrepair evidence automatically. No historical reconstruction."
+      ],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 2,
+        "astra_repair_lines": 41,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-two-even-runners-implementation.json",
+          "research/astra-two-even-astra-repair.json"
+        ]
+      },
+      "result": "Two exact witness contracts compiled after2workerrepairs and1directAstrarepair, plus1Astra guidance round. Historical firsttwo source/rawcapturegaps remain; finalworker androotcheckphysicallycaptured. Independentreviewqueued."
+    },
+    {
+      "id": "/root/six_runner_final_implementation",
+      "agent_id": "/root/six_runner_final_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "34afe4fcf77e06efd49f659edb9db261385ad385",
+      "owned_files": [
+        "LonelyRunner/SixRunnerOrdinary.lean",
+        "LonelyRunner/SixRunnerCanonical.lean",
+        "research/astra-six-runner-final-implementation.json"
+      ],
+      "target": "Prepare exact final primitive/normalization/H7/canonical assembly from accepted plan; no focused checks until parity dependencies accepted and root grants cache slot.",
+      "checks": [
+        "Actual3captures rootreadback: Ordinaryinitialexit1,repair1exit0; Canonicalinitialexit0; exact4lineS-boundrepairdiffaccepted; durable receiptfinishing."
+      ],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 1,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-six-runner-final-implementation.json"
+        ]
+      },
+      "result": "Four exact finaldeclarations compiled; Ordinaryoneworkerrepair, Canonicalfirstpass; rootfullsource/diff/physicalcaptures accepted."
+    },
+    {
+      "id": "/root/tight_seed_controls",
+      "agent_id": "/root/tight_seed_controls",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "e48f49d",
+      "owned_files": [
+        "research/astra-tight-seed-controls.json"
+      ],
+      "target": "Run settled exact all-real Q checker on twelve source-motivated fixed tuples, all deletion labels and explicit full/protected witnesses; no runner-count proof or search expansion.",
+      "checks": [
+        "research/astra-tight-seed-controls.json"
+      ],
+      "delivery_metrics": {
+        "astra_repair_lines": 0,
+        "astra_repair_rounds": 1,
+        "check_kind": "python",
+        "evidence": [
+          "research/astra-tight-seed-controls.json"
+        ],
+        "first_check_success": true,
+        "usage": null,
+        "worker_elapsed_seconds": null,
+        "worker_repair_rounds": 0
+      },
+      "result": "Twelve specified inputs, all 254 deletion labels; all own-margin sets nonempty and Q succeeds, with 24 explicit full/protected witnesses. Exact original driver recovered from persisted execution transcript after one Astra receipt-completeness correction; no mathematical replay. Root accepted source/byte/raw-stream bindings and directly checked retained attaining scores and witnesses. Receipt SHA256 1b45a4b38b4964ae192304f942aa00ed5a5e16089fb63d8a277548408b5de876."
+    },
+    {
+      "id": "/root/multiple_contact_seed_control",
+      "agent_id": "/root/tight_seed_controls",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "e45793996d7ab435ad93822b068ef489edf52f53",
+      "owned_files": [
+        "research/astra-multiple-contact-seed-control.json"
+      ],
+      "target": "One precise input testing a structurally derived multiple-contact obstruction to uniform Q; complete full-good-set and all-label exact seed check, no new runner-count theorem or expanded search.",
+      "checks": [
+        "research/astra-multiple-contact-seed-control.json"
+      ],
+      "delivery_metrics": {
+        "astra_repair_lines": 0,
+        "astra_repair_rounds": 0,
+        "check_kind": "python",
+        "evidence": [
+          "research/astra-multiple-contact-seed-control.json"
+        ],
+        "first_check_success": true,
+        "usage": null,
+        "worker_elapsed_seconds": null,
+        "worker_repair_rounds": 0
+      },
+      "result": "Initial exact check passed, no worker/Astra repairs. All11 seeds nonempty; Q succeeds, full gamma witness45/88. Complete full-good set has4 singleton and6 positive-length components, refuting the intended all-witness multiple-contact pattern for this one tuple. Complete original source/driver/argv frozen before execution; root full-source and retained-output review passed without all-real enumeration replay. Receipt SHA256 adcfb74938b39dc6264ad78ee622860102d08e461487a114347224de910480c0."
+    }
+  ],
+  "evidence_hashes": {
+    "research/astra-affine-phase-certificate-implementation.json": "74c7d9542f1d24b7b0e01bb66f9de6325068f08012afc259f3182289c16958c8",
+    "research/astra-multiple-contact-seed-control.json": "adcfb74938b39dc6264ad78ee622860102d08e461487a114347224de910480c0",
+    "research/astra-one-even-implementation.json": "91c51136837dfc992eb3fd8267cab7324be4272ddf8ee526c58ecd571515b5c1",
+    "research/astra-pass54-verification.json": "c48d2b46c571107dda85322e95de5f85d62a1e3e4249cf1a275f0992c569fccb",
+    "research/astra-remaining-phase-data-program.json": "56e559306f30988d75092733de797dfd30d069bb8a12d0880e3ecaf16cc4124b",
+    "research/astra-remaining-phase-full-tables.json": "b2f01a2c1627ca2475e45b07a09510490c0d34314e4f7fe966590022f6746db9",
+    "research/astra-remaining-phase-kernel-pilot.json": "d67f579521d335c79ed6829a763e08ad0e90372e181f84f946b1f113a8d2cf6f",
+    "research/astra-remaining-phase-real-implementation.json": "2e57c3e111ec656e039fc86db1132d150a176386d93b74a6f0ee781d45a2b920",
+    "research/astra-signed-remaining-phase-implementation.json": "b226bcaf42e215381b8e15df1ddda431ac8544d840e8f78ef604da44f30962c5",
+    "research/astra-six-runner-final-implementation.json": "8e4cb6be9364d02ea5dad0450a69ba6b2e4f3907a87a927d32c35c8285f5553d",
+    "research/astra-small-phase-orbit-implementation.json": "354905fb7b2fb718d72b9f4842296372b7456c779ba40d32ab5d0b6e8df3e71c",
+    "research/astra-three-even-assembly-return.json": "782dd9141c90daa31ca888836e17bd49bcfedfa9a8a7e7b518e99550fb19bfeb",
+    "research/astra-three-even-odd-zero-implementation.json": "c390e9fed0877536b62615de5c82f9ea653f9f0af2358bf80c92388b33a11b7c",
+    "research/astra-three-even-odd-zero-return.json": "6864047d7f6ef20bff70ff3593fe9e4eff7b20bf810ada93692c5d0a1722ec33",
+    "research/astra-three-even-orbit-implementation.json": "5e5998be0436540b2ca544264594aa4dd4ce5230ce7b7a1b9e11f94dbe692caf",
+    "research/astra-three-even-witness-implementation.json": "0ecd1232c8cb29d3974e1294a9580c93375d53dacda95c7c3e8a85af295a2f0c",
+    "research/astra-tight-seed-controls.json": "1b45a4b38b4964ae192304f942aa00ed5a5e16089fb63d8a277548408b5de876",
+    "research/astra-two-even-astra-repair.json": "3114d4c6b47bfff8e895b859bf92c8ec699ceac344970a8698ae3ec8677929dc",
+    "research/astra-two-even-initial-return.json": "9d5fa8320120acc9d3495c189297c06c84dd3e73fec2fa045cbcd5543a534692",
+    "research/astra-two-even-runners-implementation.json": "cabea4cbf4f81ce32fd628648ce0460036a8ca055fa4144a7e2c6527f525b90f",
+    "research/astra-weak-sixth-shifts-implementation.json": "5588a6caeb02169855768aa5f3289410df11438da8367262972f75ba258e2074"
+  },
+  "accounting_limits": "No per-task usage or total worker-duration receipts; task counts and repair lines do not measure token savings. First-check failures include launchers; successful calculations can still need receipt correction."
+}
