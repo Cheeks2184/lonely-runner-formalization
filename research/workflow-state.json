@@ -4,7 +4,24 @@
   "goal_status": "in_progress",
   "objective": "Produce a kernel-checked full proof or disproof of the canonical unrestricted Lonely Runner Conjecture.",
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
-  "active_tasks": [],
+  "active_tasks": [
+    {
+      "id": "/root/remaining_phase_certificate_assessment",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "in_progress",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "c63bb23",
+      "target": "Bounded assessment of reusing exact phase-certificate infrastructure for reviewed Renault6.1/6.4 versus direct symbolic implementation, preserving exact domains.",
+      "owned_files": [
+        "research/astra-remaining-phase-certificate-assessment.md"
+      ],
+      "checks": []
+    }
+  ],
   "completed_tasks": [
     {
       "id": "/root/workflow_validation",
@@ -7117,13 +7134,136 @@
       ],
       "checks": [],
       "result": "Source-only exact wrapper delivered; root full read accepted; compilation pending. Audit pause ended by active-goal continuation; proposed routing changes not applied."
+    },
+    {
+      "id": "/root/signed_renault_five_one",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "84d14b3",
+      "target": "Source-only signed and reflected unit-weight Renault5.1 transport, two settled exact common-choice contracts.",
+      "owned_files": [
+        "LonelyRunner/SignedRenaultFiveOne.lean"
+      ],
+      "checks": [
+        "Initial source-only draft fully read; focused compile failed 4diagnostics. Source and complete log preserved in pass55. Same worker source-only correction requested, exact theorem contracts unchanged."
+      ],
+      "result": "Source-only medium-era task complete: initial four compiler errors preserved, same worker corrected both reflected alternatives, second focused build actual0. No root source edits."
+    },
+    {
+      "id": "/root/one_three_orbit_contract_plan",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "84d14b3",
+      "target": "Exact Lean decomposition of reviewed prescribed coprime-residue small-phase orbit; no source implementation or experiments.",
+      "owned_files": [
+        "research/astra-small-phase-orbit-contract-plan.md"
+      ],
+      "checks": [],
+      "result": "Frozen orbit decomposition c8f8ff1f delivered; root full read pending."
+    },
+    {
+      "id": "/root/one_three_first_helpers_review",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "84d14b3",
+      "target": "Independent complete source review of five exact first one-three-divisible helper declarations; one capped import probe.",
+      "owned_files": [
+        "research/astra-one-three-first-helpers-source-review.md"
+      ],
+      "checks": [],
+      "source_hashes": {
+        "LonelyRunner/BadSixthDilate.lean": "5031f198c72e9b248962d7c91c263a7d4b1f6d5d4c55a01fd927ab769d8e3b96",
+        "LonelyRunner/NonzeroThirdShift.lean": "fc8bdba703053b9e13b07b273ed9110345a51815422352e7e42d0a5552e13611",
+        "LonelyRunner/OneSixthComplementMaximizer.lean": "5a7011ca680b8a2b26c7bad466a8ee4008cf47507eb8b700846f296894bb90a1",
+        "LonelyRunner/ThreeWeakExceptions.lean": "bdb75b5254a4a8bacb01f29ebdef34b40aa966c96de2b69285290ec03bb43d33"
+      },
+      "result": "Five exact contracts accepted; root complete report read and successful receipt inspected; 29 current guards match, no duplicate probe."
+    },
+    {
+      "id": "/root/terra_high_workflow_controls",
+      "agent_id": "/root/terra_high_workflow_controls",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "84d14b3",
+      "target": "Implement and test Terra-high routing migration validation and per-task delivery metrics reporting.",
+      "owned_files": [
+        "scripts/validate_workflow.py",
+        "tests/test_validate_workflow.py",
+        "scripts/report_delegation.py",
+        "tests/test_report_delegation.py"
+      ],
+      "checks": [
+        "Initial focused bundle:23tests passed, validator/reporter passed; root source review requested robustness repair for malformed history IDs and usage source requirements."
+      ],
+      "delivery_metrics": {
+        "check_kind": "python",
+        "first_check_success": true,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 2,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-pass54-verification.json"
+        ]
+      },
+      "result": "High migration/reporting source accepted by root;27focusedtests+validator+bothreportmodes passed, hash-bound raw receipts retained. Two root-review-guided worker repair rounds, no direct Astra edits."
+    },
+    {
+      "id": "/root/small_phase_orbits_high",
+      "agent_id": "/root/small_phase_orbits_high",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "c63bb23",
+      "target": "Implement compiled prescribed small-phase coprime orbit theorem and exact-phase helper from fully reviewed three-declaration plan.",
+      "owned_files": [
+        "LonelyRunner/SmallPhaseOrbits.lean",
+        "research/astra-small-phase-orbit-implementation.json"
+      ],
+      "checks": [],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-small-phase-orbit-implementation.json"
+        ]
+      },
+      "result": "Compiled exact two-public-theorem source delivered after two own repair rounds; root source/receipt inspection next. Not yet independently reviewed or integrated."
     }
   ],
-  "latest_checkpoint": "Pass50PR49openheadc538c85; allfour fullverified/read/replayed. Pass51 sevenfocusedcontracts, halfchoices/residue3review/rootreplaypassed, remaining4reviewactive; fullbuildstarted. Boundaryassemblystaticreviewactive; five-rowselectorTerra sourceactive.",
+  "latest_checkpoint": "Pass54: five one-three helpers built/trust-reviewed; TerraHigh workflow and27tests verified. Publish checkpoint, then inspect compiled SmallPhaseOrbits and SignedRenaultFiveOne for Pass55.",
   "next_actions": [
-    "Publish verified Pass53 with N=6 then uniform arbitrary-N priority.",
-    "Finish exact one-three-divisible helpers and canonical N=6 proof.",
-    "After verified canonical N=6, focus on explicit uniform arbitrary-N mechanisms."
+    "Publish verified Pass54 with TerraHigh workflow controls.",
+    "Review/integrate compiled SmallPhaseOrbits and SignedRenaultFiveOne; finish exact remaining N6 phase/parity contracts.",
+    "After verified canonical N6, focus uniform arbitraryN; evaluate next10High deliveries with actual accounting coverage."
   ],
   "research_holds": [
     {
@@ -10495,5 +10635,47 @@
     "status": "Author candidate; rootread; independent review queued. Two small scalar/weakshiftarguments rootvalidated for drafting.",
     "scope": "Remaining canonical N6 branch only; uniform arbitrary-N priority afterverifiedN6."
   },
-  "last_goal_turn_classification": "progress: read-only delegation audit established high routine repair overhead and recommendations; no workflow changes authorized or applied."
+  "last_goal_turn_classification": "progress: read-only delegation audit established high routine repair overhead and recommendations; no workflow changes authorized or applied.",
+  "one_three_manuscript_review": "Independent frozen 8f720fbd report fully read by root; exact static replay exit0 with sixteen bindings, twelve contract names. Specification accepted, not a Lean result.",
+  "publication_latest_pending": null,
+  "delegation_revision": {
+    "instruction_date": "2026-09-06",
+    "authorization": "User approved all four delegation audit recommendations and raised Terra standard from Medium to High.",
+    "status": "implemented and locally verified; publication pending",
+    "legacy_runtime_agents": "Existing Terra medium agents are idle and will not receive new work; fresh explicit Terra/high launches required.",
+    "measurement_batch_size": 10,
+    "next_batch_review_after_closed_high_tasks": 10
+  },
+  "verification_slot": {
+    "holder": null,
+    "scope": null,
+    "lock_path": ".lake/verification.lock",
+    "note": "Granted for this task; root performs no concurrent Lean cache-writing check or cleanup."
+  },
+  "delegation_measurement_baseline": {
+    "audit_date": "2026-09-06",
+    "requested_route": "gpt-5.6-terra medium",
+    "handoff": "source-only",
+    "recent_closed_tasks": 25,
+    "draft_deliveries": 23,
+    "returns_without_code": 2,
+    "latest_delivered_lean_modules": 10,
+    "modules_needing_root_fixes": 8,
+    "module_lines_after_root_fixes": 759,
+    "actual_per_task_token_usage": null,
+    "comparison_caveat": "Sample preceded SignedRenaultFiveOne; later deliveries excluded. New High compiled handoff changes both effort and ownership, so no causal effort-only attribution."
+  },
+  "publication_latest_verified": {
+    "pr": 52,
+    "head": "84d14b3712beba4a38e2110cf904669fedd120a2",
+    "merge": "c63bb235ad79f2f13451bcb8522aa9f1e827f15f",
+    "merged_at": "2026-09-06T13:32:01Z",
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/52",
+    "required_checks": "Both success on exact head; fetched origin/main ancestry and local main synchronization verified."
+  },
+  "small_phase_orbit_plan_root_read": {
+    "report": "research/astra-small-phase-orbit-contract-plan.md",
+    "sha256": "c8f8ff1f59e8dbe5859075ab7054f7a78d2e1bf939ce433daaf473a368c2bbca",
+    "accepted": "Complete root read of unchanged exact plan; underlying mathematical contract independently reviewed."
+  }
 }
