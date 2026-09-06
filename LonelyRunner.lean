@@ -150,6 +150,10 @@ import LonelyRunner.RenaultPhaseBandSoundness
 import LonelyRunner.RenaultPhaseConcreteData
 import LonelyRunner.RenaultPhaseLemma
 
+import LonelyRunner.RationalShiftGcd
+import LonelyRunner.RationalShiftInsertion
+import LonelyRunner.SixTotalDivisorCounts
+
 /-!
 Root import for the formal Lonely Runner development.
 -/

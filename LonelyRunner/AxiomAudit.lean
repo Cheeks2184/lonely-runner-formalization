@@ -691,3 +691,12 @@ project-specific axiom.
 #print axioms LonelyRunner.renaultPhaseDominators_and
 #print axioms LonelyRunner.renault_phase_common_candidate
 #print axioms LonelyRunner.renault_phase_five_one
+
+-- Reduced rational shifts, conditional five-moving insertion and primitive counts.
+-- The nondivisible exception and gcd-one premises remain explicit.
+#print axioms LonelyRunner.exists_nat_rational_shift_circleNorm_ge_mesh
+#print axioms LonelyRunner.exists_nat_rational_shift_circleNorm_ge_quarter
+#print axioms LonelyRunner.exists_nat_shift_preserving_divisible_family
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_four_divisible
+#print axioms LonelyRunner.primitive_no_sixth_witness_divisor_count_le_three
+#print axioms LonelyRunner.six_total_divisor_count_bounds
