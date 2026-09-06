@@ -6,21 +6,21 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/uniform_mixed_obstruction",
+      "id": "/root/strict_to_mixed_audit",
+      "agent_id": "/root/mixed_equivalence_freeze",
       "kind": "research",
       "status": "in_progress",
-      "target": "Investigate arbitrary direct-or-mixed supply: identify structural implication or obstruction beyond bounded-height families; preserve full canonical objective.",
-      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
+      "target": "Audit the global strict-ordinary-to-mixed conjecture for primitive positive tuples, N>=4; prove or refute exact implication without same-component assumption.",
+      "source_checkpoint": "0b0a033e9655b5f9d2fa0b57ac0f61729b2db123",
       "owned_files": [
-        "research/astra-uniform-direct-mixed-audit.md"
+        "research/astra-strict-to-mixed-audit.md"
       ],
       "checks": [],
-      "next_action": "Investigate arbitrary direct-or-mixed supply: identify structural implication or obstruction beyond bounded-height families; preserve full canonical objective.",
-      "agent_id": "/root/mixed_equivalence_freeze"
+      "next_action": "Use accepted localobstructions to testglobalimplication; bounded exact diagnostics onlyifmotivated, save analyticresult early."
     }
   ],
   "completed_tasks": [
@@ -4002,13 +4002,123 @@
         "rootreadfinaldocsandcorrectedexistingfilecountwording"
       ],
       "next_action": "Document exactbound, five theorem bridge, fullbuild/trust evidence, independentreviewdisposition onlywhenavailable."
+    },
+    {
+      "id": "/root/two_hole_independent_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent semantic audit of frozen two-hole direct-or-mixed constructor; review only, no new ordinary coverage.",
+      "source_checkpoint": "cdd7f2c1e6a077726ee45a71b98ddd8591c97bf3",
+      "owned_files": [
+        "research/astra-two-hole-mixed-review.md"
+      ],
+      "checks": [
+        "Independent reviewacceptedauthorfrozenhash",
+        "five exactboundarycontrols andtwo guards passedbyreviewer"
+      ],
+      "next_action": "Review complete branch partition, modular inverse conditions and perturbation boundary ranges; no Lean/cache work.",
+      "disposition": "Root finalread/replaypending; separateTerra16rowcontrolspending."
+    },
+    {
+      "id": "/root/uniform_mixed_obstruction",
+      "kind": "research",
+      "status": "complete",
+      "target": "Investigate arbitrary direct-or-mixed supply: identify structural implication or obstruction beyond bounded-height families; preserve full canonical objective.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-uniform-direct-mixed-audit.md"
+      ],
+      "checks": [
+        "author exactcontrols andfinite diagnostics passed; frozen program/output hashes",
+        "root read N3classification, endpoint obstruction and trappedcomponent proof"
+      ],
+      "next_action": "Investigate arbitrary direct-or-mixed supply: identify structural implication or obstruction beyond bounded-height families; preserve full canonical objective.",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "result_artifact_sha256": "6054472d7412bdb9c5a3c258191f58cf260d50c6240d81eecce05f3be3ba138b",
+      "disposition": "Authorfrozen; independentreview androotreplaypending. Rawunionfalse; primitiveuniformstillunresolved."
+    },
+    {
+      "id": "/root/two_hole_fixed_controls",
+      "agent_id": "/root/family_review_replay",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement exact frozen16positive/tworangeguard two-hole control specification; no mathematical expansion.",
+      "source_checkpoint": "27fe083febbc21b0b2c99d2ad421373bd1d0c300",
+      "owned_files": [
+        "research/astra-two-hole-mixed-controls.md"
+      ],
+      "checks": [
+        "TerraexactFractionprogram exit0 stderr empty",
+        "16positive3direct13mixed81coordinatechecks2guards",
+        "diffcheckpassed"
+      ],
+      "next_action": "Read frozen author contract; executeexactFractionchecks, emitallauxiliaryproofvaluesandhashes, no broadsearch.",
+      "disposition": "Root fullprograminspection/replaystillpending; do notpublishbeforeacceptance.",
+      "result_artifact_sha256": "8a6ab14aedf3c7017a15c6d00bbc204f396dca874a0da3cf043f4fa14954867b"
+    },
+    {
+      "id": "/root/uniform_mixed_independent_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent audit of normalization obstruction, completeN3classification, endpointlattice criterion and infinite trappedcomponent family; no primitiveuniformclaim.",
+      "source_checkpoint": "27fe083febbc21b0b2c99d2ad421373bd1d0c300",
+      "owned_files": [
+        "research/astra-uniform-direct-mixed-review.md"
+      ],
+      "checks": [
+        "Root read final owned artifact; exact scope accepted",
+        "Workflow validator passed"
+      ],
+      "next_action": "Review frozenauthorhash and exactscope; independent targeted controls, no newwideenumeration.",
+      "result_artifact_sha256": "d2b464ba4834a4ba54acf317f6d3877266b394c0c786db4d443596a139559816"
+    },
+    {
+      "id": "/root/pass31_documentation",
+      "agent_id": "/root/family_review_replay",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Document reviewedtwohole supply andraw/primitive/componentobstructions with exactscope andno newLeantheorem; maintainsharpestverifiedformalcheckpointPass30.",
+      "source_checkpoint": "0b0a033e9655b5f9d2fa0b57ac0f61729b2db123",
+      "owned_files": [
+        "README.md",
+        "STATUS.md",
+        "docs/approaches.md",
+        "docs/astra-research-31.md"
+      ],
+      "checks": [
+        "Root read final owned artifact; exact scope accepted",
+        "Workflow validator passed"
+      ],
+      "next_action": "Read frozenmanuscripts+reviews, summarizeacceptedresults andfinitereplays; excludeongoingstrict-to-mixedaudit."
     }
   ],
   "latest_checkpoint": "Pass28 merged and verified in PR27, main5e7d690e6606ad096bf4a2319be0328f9c6d2e68. Pass29 conditional exact-packet/mixed-anchor and one-deletion-family manuscripts under review. Canonical LRC unresolved.",
   "next_actions": [
-    "Finish independent review of exact two-anchor constructor, mixed-anchor lemma, and supplied one-deletion family.",
-    "Integrate only reviewed manuscript results into next checkpoint, preserving canonical unsupplied status.",
-    "Pursue unrestricted uniform supply or a genuine counterexample; do not equate auxiliary progress with completion."
+    "Read current independent uniform review whenfinished; root verify frozen twohole controlprogram and smallreviewfixtures.",
+    "Checkpoint only reviewed Pass31 manuscripts and exactevidence; commit/push/PR/merge perstandingauthorization.",
+    "Pursue unrestricted uniform supply, using primitive normalization and global rather than same-component arguments; do not treat equivalents or restrictedfamilies as LRCproof."
   ],
   "research_holds": [
     {
@@ -4534,14 +4644,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
+    "verified_checkpoint": "27fe083febbc21b0b2c99d2ad421373bd1d0c300",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-pair-sum-completeness",
+    "branch": "codex/astra-sharper-finite-cutoff",
     "base": "main",
     "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/27",
-    "pr_number": 27,
-    "head_sha": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/29",
+    "pr_number": 29,
+    "head_sha": "27fe083febbc21b0b2c99d2ad421373bd1d0c300",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -4793,15 +4903,33 @@
         "merge_sha": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
         "checks": "Lean build/trust passed23:44:38UTC; exact computational certificates passed23:49:50UTC. Exact-head merge23:50:22UTC.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 28,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/28",
+        "head_sha": "cdd7f2c1e6a077726ee45a71b98ddd8591c97bf3",
+        "status": "merged_verified",
+        "merge_sha": "5b5ece3710dec6ad1d5c06ee1edaa34f7e66c988",
+        "checks": "Lean/trust passed01:07:20UTC; exactcertificates passed01:15:27UTC; exactheadmerged01:16:16UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 29,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/29",
+        "head_sha": "27fe083febbc21b0b2c99d2ad421373bd1d0c300",
+        "status": "merged_verified",
+        "merge_sha": "0b0a033e9655b5f9d2fa0b57ac0f61729b2db123",
+        "checks": "Lean/trust passed01:12:26UTC; exactcertificates passed01:20:19UTC; exactheadmerged01:21:43UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
-    "remote_main": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
-    "local_main": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+    "latest_published_source_checkpoint": "27fe083febbc21b0b2c99d2ad421373bd1d0c300",
+    "remote_main": "0b0a033e9655b5f9d2fa0b57ac0f61729b2db123",
+    "local_main": "0b0a033e9655b5f9d2fa0b57ac0f61729b2db123",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
-    "checks": "Lean build/trust passed23:44:38UTC; exact computational certificates passed23:49:50UTC. Exact-head merge23:50:22UTC.",
+    "merge_sha": "0b0a033e9655b5f9d2fa0b57ac0f61729b2db123",
+    "checks": "Lean/trust passed01:12:26UTC; exactcertificates passed01:20:19UTC; exactheadmerged01:21:43UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
@@ -4826,16 +4954,10 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "checkpoint": "Pass29",
-    "branch": "codex/astra-mixed-margin-supply",
-    "status": "ci_running",
-    "verification": "Six frozen exact program replays; independent manuscript reviews; 15 focused workflow tests; workflow validation; diff check.",
-    "excluded": "Concurrent sharper cutoff Lean implementation, two-hole manuscript, unrestricted supply audit.",
-    "next_action": "Wait for required exact-head CI checks; inspect reviews; merge exact head and verify remote main.",
-    "pr_number": 28,
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/28",
-    "head_sha": "cdd7f2c1e6a077726ee45a71b98ddd8591c97bf3",
-    "ci_run": 34002993683
+    "checkpoint": "Pass31",
+    "branch": "codex/astra-mixed-component-obstructions",
+    "status": "verified_ready_to_commit",
+    "next_action": "Commit verified manuscripts, replay evidence and documentation; push, PR, required checks, exact-head merge and remote-main verification."
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -5135,7 +5257,7 @@
   ],
   "last_continuation_assessment": {
     "classification": "progress",
-    "evidence": "Completed read-only published finite-bound investigation and independent source audit; report delivered. No implementation authorized for that investigation. Resume original pending checkpoint and unrestricted supply research."
+    "evidence": "Completed independent review and root exact replay of two-hole and component-obstruction manuscripts; Pass31 verified; new global strict-to-mixed audit assigned."
   },
   "pending_two_hole_review": "Frozen author SHA256 2bbc12481c164bf5e4eaf30ea7ca966cb0b2614524d9bea779034a2ebf115ccb; independent review deferred until slot available; excluded from Pass29.",
   "pass29_final_semantic_acceptance": {
@@ -5145,11 +5267,52 @@
     "scope": "Independently reviewed manuscripts only. Stationary exact S iff mixed margin; one-deletion family supplied, no unrestricted canonical witness supply."
   },
   "pending_sharper_cutoff_checkpoint": {
-    "status": "verified_ready_to_commit",
+    "status": "merged_verified",
     "verification": "research/astra-pass30-verification.json",
-    "publication": "Commit/push/open PR after Pass29 parent; merge only after PR28 and exact-head checks pass.",
+    "publication": "PR29 mergedafterPR28; both exactheadchecks passed.",
     "full_lrc": "unresolved",
     "branch": "codex/astra-sharper-finite-cutoff",
-    "storage": "7,750,136,182 bytes rebuildable; safe cleanup deferred because active research process detected. Retry after research verifier stops; no forced deletion."
+    "storage": "7,750,136,182 bytes rebuildable; safe cleanup deferred because active research process detected. Retry after research verifier stops; no forced deletion.",
+    "pr_number": 29,
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/29",
+    "head_sha": "27fe083febbc21b0b2c99d2ad421373bd1d0c300",
+    "next_action": "No sharperimplementationworkremains; continuecanonicaluniformsupplyresearch.",
+    "merge_sha": "0b0a033e9655b5f9d2fa0b57ac0f61729b2db123",
+    "remote_main_contains_head": true
+  },
+  "sharper_cutoff_storage_cleanup": {
+    "removed_bytes": 7750136182,
+    "removed_paths": [
+      ".lake",
+      "scripts/__pycache__",
+      "tests/__pycache__"
+    ],
+    "status": "completed",
+    "note": "Initial guard detected local CIwatcher shell retaining a previous research-path command; stopped only own local statuswatcher, noCIjob cancellation. Retried normal storage manager after all Lean processes stopped; source/toolchain/evidence retained."
+  },
+  "pending_pass31": {
+    "branch": "codex/astra-mixed-component-obstructions",
+    "source_checkpoint": "0b0a033e9655b5f9d2fa0b57ac0f61729b2db123",
+    "status": "verified_ready_to_commit",
+    "owned_evidence": [
+      "research/astra-two-hole-mixed-supply.md",
+      "research/astra-two-hole-mixed-review.md",
+      "research/astra-two-hole-mixed-controls.md",
+      "research/astra-uniform-direct-mixed-audit.md",
+      "research/astra-uniform-direct-mixed-review.md"
+    ],
+    "two_hole_author_sha256": "2bbc12481c164bf5e4eaf30ea7ca966cb0b2614524d9bea779034a2ebf115ccb",
+    "two_hole_review_sha256": "16d309ca8d9f51981cd44687bdee7e6667a42cb4a5ac47b2e42865981b509081",
+    "two_hole_controls_sha256": "8a6ab14aedf3c7017a15c6d00bbc204f396dca874a0da3cf043f4fa14954867b",
+    "two_hole_program_sha256": "83180180b3428e8c3ace2b16a6b4145d18696ae930f6c5413ee85011a6e9eb5f",
+    "two_hole_stdout_sha256": "63d0ce84f1527085bbfa97dd314dfbd6327fccd2dad451390ca923244c8aca8c",
+    "uniform_author_sha256": "6054472d7412bdb9c5a3c258191f58cf260d50c6240d81eecce05f3be3ba138b",
+    "uniform_program_sha256": "cf160dd62d224fa675219fd36efac9c4b6703f9f799c656449d1cee00dd0dc4e",
+    "uniform_stdout_sha256": "e0697cefe8f43ed0554396fc9bb4e7977cd5619e02c4c88c600115de2bfce486",
+    "uniform_root_replay": "Passed exactartifact/program/stdout hashes, /tmp/astra-uniform-direct-mixed-root-replay.json",
+    "accepted_scope": "Twoholemanuscript H<=N+1 directormixed alreadyordinarycovered. RawuniformunionfalseN3 W(a,2a) iff3dividesa; primitiveN3success. Primitiveglobaluniform unresolved. Endpointownerlattice s congruent-(H+a) modN and0<=s<a/(N-1), positivewidthforcesa>=N. InfiniteprimitivecoveredW3..N plusH=N\u00b2\u22122N\u22121 has trappedcomponentwidth1/(N\u00b2H) butexplicitglobalmixedelsewhere. Uniformindependentreviewpending.",
+    "two_hole_root_replay": "Root fully inspectedsoleprogram; exactraw/program/stdout hashes passed; 16positive3direct13mixed81coordinate2guards; /tmp/astra-two-hole-mixed-controls-root-replay.json.",
+    "uniform_review_sha256": "d2b464ba4834a4ba54acf317f6d3877266b394c0c786db4d443596a139559816",
+    "verification": "research/astra-pass31-verification.json"
   }
 }

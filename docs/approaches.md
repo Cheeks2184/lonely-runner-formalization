@@ -67,6 +67,16 @@ strong count induction makes canonical LRC equivalent to
 the all-count finite-family premise remains open. It is a factor `2^(N-2)`
 smaller than the previous cutoff, while preserving the older public API.
 
+Pass 31 rules out a local route to direct-or-mixed supply. The raw N=3 union
+fails exactly for `(a,2a)` with `3` dividing `a`, but primitive N=3 still
+succeeds. A complete ordinary-good component without a mixed point has a sharp
+endpoint-owner lattice: positive width forces every oriented right upper owner
+to be at least `N`, while `s=0` is singleton-only. The primitive family
+`{3,...,N} union {N^2-2N-1}` realizes the bound but has a mixed witness in a
+different component. This direct-or-mixed route must account for normalization and cannot rely
+on staying in a supplied component. Primitive uniform supply and LRC remain
+unresolved.
+
 Pair-sum completeness is now proved for each already witnessed positive
 integer tuple: a finite floor-cell minimum returns an exact certificate without
 discarding repeated labels or closed endpoints. This replaces the former

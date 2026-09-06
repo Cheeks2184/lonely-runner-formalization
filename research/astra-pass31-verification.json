@@ -1,0 +1,75 @@
+{
+  "checkpoint": "Pass31",
+  "source_checkpoint": "0b0a033e9655b5f9d2fa0b57ac0f61729b2db123",
+  "scope": "Independently reviewed manuscripts, fixed rational controls, and bounded diagnostic enumeration. No new Lean theorem or unrestricted LRC result.",
+  "artifact_sha256": {
+    "research/astra-two-hole-mixed-supply.md": "2bbc12481c164bf5e4eaf30ea7ca966cb0b2614524d9bea779034a2ebf115ccb",
+    "research/astra-two-hole-mixed-review.md": "16d309ca8d9f51981cd44687bdee7e6667a42cb4a5ac47b2e42865981b509081",
+    "research/astra-two-hole-mixed-controls.md": "8a6ab14aedf3c7017a15c6d00bbc204f396dca874a0da3cf043f4fa14954867b",
+    "research/astra-uniform-direct-mixed-audit.md": "6054472d7412bdb9c5a3c258191f58cf260d50c6240d81eecce05f3be3ba138b",
+    "research/astra-uniform-direct-mixed-review.md": "d2b464ba4834a4ba54acf317f6d3877266b394c0c786db4d443596a139559816"
+  },
+  "replay_method": "Extract each sole fenced Python block byte-exactly from its manuscript; execute with python3 -B from repository root; require exit0, empty stderr and exact stdout hash.",
+  "replays": [
+    {
+      "artifact": "research/astra-two-hole-mixed-controls.md",
+      "program_sha256": "83180180b3428e8c3ace2b16a6b4145d18696ae930f6c5413ee85011a6e9eb5f",
+      "stdout_sha256": "63d0ce84f1527085bbfa97dd314dfbd6327fccd2dad451390ca923244c8aca8c",
+      "counts": {
+        "positive": 16,
+        "direct": 3,
+        "mixed": 13,
+        "ordinary_coordinates": 81,
+        "range_guards": 2
+      },
+      "root_status": "passed"
+    },
+    {
+      "artifact": "research/astra-uniform-direct-mixed-audit.md",
+      "program_sha256": "cf160dd62d224fa675219fd36efac9c4b6703f9f799c656449d1cee00dd0dc4e",
+      "stdout_sha256": "e0697cefe8f43ed0554396fc9bb4e7977cd5619e02c4c88c600115de2bfce486",
+      "output": {
+        "primitive_diagnostics": [
+          {
+            "H_max": 20,
+            "H_min": 6,
+            "N": 4,
+            "eligible": 351
+          },
+          {
+            "H_max": 20,
+            "H_min": 7,
+            "N": 5,
+            "eligible": 1506
+          },
+          {
+            "H_max": 18,
+            "H_min": 8,
+            "N": 6,
+            "eligible": 2406
+          }
+        ],
+        "raw_failures": 4,
+        "residue_fixtures": 4,
+        "sharp_family_fixed_N": [
+          4,
+          5,
+          6,
+          7,
+          10,
+          20
+        ],
+        "status": "PASS",
+        "trapped_component": [
+          "53/56",
+          "19/20"
+        ]
+      },
+      "root_status": "passed"
+    }
+  ],
+  "independent_reviews": "Both Astra/xhigh manuscript reviews accepted at the exact author hashes; root read the full proofs and replayed both reproducible programs. Reviewer-only fixtures are supplemental and are described in their respective reviews.",
+  "canonical_status": "unresolved",
+  "lean_verification": "No source build required for manuscript-only checkpoint. Last source verification is Pass30, 3638 jobs and432 permitted-only axiom reports.",
+  "excluded": "Ongoing strict-to-mixed implication audit; no unreviewed claim included."
+}
