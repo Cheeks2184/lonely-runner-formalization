@@ -23,6 +23,11 @@ import LonelyRunner.SmallPhaseOrbits
 import LonelyRunner.AffinePhaseCertificate
 import LonelyRunner.OneEvenRunners
 import LonelyRunner.WeakSixthShifts
+import LonelyRunner.RemainingPhaseData
+import LonelyRunner.RemainingPhaseFacts
+import LonelyRunner.RemainingPhaseLemma
+import LonelyRunner.SignedRemainingPhase
+
 
 
 
@@ -796,3 +801,29 @@ project-specific axiom.
 #print axioms LonelyRunner.one_three_divisible_one_even_witness
 #print axioms LonelyRunner.sixth_shift_weak_even
 #print axioms LonelyRunner.sixth_shift_weak_odd
+
+-- Complete remaining phase data and exact real/signed assemblies.
+#print axioms LonelyRunner.remainingSixOneSlope_pos
+#print axioms LonelyRunner.remainingSixFourSlope_pos
+#print axioms LonelyRunner.remainingSixOneWeightTwoAtomMasks_lt
+#print axioms LonelyRunner.remainingSixOneWeightOneAtomMasks_lt
+#print axioms LonelyRunner.remainingSixFourAtomMasks_lt
+#print axioms LonelyRunner.remainingSixOneWeightTwoCoreMasks_lt
+#print axioms LonelyRunner.remainingSixOneWeightOneCoreMasks_lt
+#print axioms LonelyRunner.remainingSixFourCoreMasks_lt
+#print axioms LonelyRunner.remainingSixOneWeightTwoCoreAtoms_masks
+#print axioms LonelyRunner.remainingSixOneWeightOneCoreAtoms_masks
+#print axioms LonelyRunner.remainingSixFourCoreAtoms_masks
+#print axioms LonelyRunner.remainingSixOneWeightTwoDominators_and
+#print axioms LonelyRunner.remainingSixOneWeightOneDominators_and
+#print axioms LonelyRunner.remainingSixFourDominators_and
+#print axioms LonelyRunner.remainingSixOneWeightTwoAtomBandFact
+#print axioms LonelyRunner.remainingSixOneWeightOneAtomBandFact
+#print axioms LonelyRunner.remainingSixFourAtomBandFact
+#print axioms LonelyRunner.remainingMixedCoreIntersections
+#print axioms LonelyRunner.remainingSafeCoreIntersections
+#print axioms LonelyRunner.renault_phase_six_one
+#print axioms LonelyRunner.renault_phase_six_four
+#print axioms LonelyRunner.renault_phase_six_one_signed
+#print axioms LonelyRunner.renault_phase_six_one_signed_reflected
+#print axioms LonelyRunner.renault_phase_six_four_signed

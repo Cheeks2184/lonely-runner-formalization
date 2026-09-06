@@ -208,6 +208,11 @@ import LonelyRunner.AffinePhaseCertificate
 import LonelyRunner.OneEvenRunners
 import LonelyRunner.WeakSixthShifts
 
+import LonelyRunner.RemainingPhaseData
+import LonelyRunner.RemainingPhaseFacts
+import LonelyRunner.RemainingPhaseLemma
+import LonelyRunner.SignedRemainingPhase
+
 /-!
 Root import for the formal Lonely Runner development.
 -/
