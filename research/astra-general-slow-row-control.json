@@ -1,0 +1,86 @@
+{
+  "task_id": "/root/general_slow_row_control",
+  "kind": "exact_rational_finite_enumeration",
+  "status": "complete_nonfinding_in_declared_domain",
+  "owned_files": [
+    "research/astra-general-slow-row-control.json"
+  ],
+  "scope": {
+    "N": 5,
+    "b": 3,
+    "slope_domain": "[0,5)",
+    "phase": "frac((k*x + ell)/5)",
+    "good_closed_interval": [
+      "1/5",
+      "4/5"
+    ],
+    "cut_set_definition": "{5} union {j/k : k=1,2,3,4 and integer j=0,...,5k}",
+    "candidates": "Three distinct midpoint slopes from consecutive sorted unique cuts, in increasing lexicographic cell-index order.",
+    "failure_condition": "For every (k,ell) with k=1,2,3 and ell=0,...,4, and also (4,0), at least one chosen slope has phase strictly outside the closed good interval."
+  },
+  "result": {
+    "counterexample_found": false,
+    "statement": "All 4,060 increasing triples of the 30 exact midpoint open cells were exhausted; none has strict bad witnesses for all 16 required labels.",
+    "nonfinding_scope": "This is only an exact N=5, b=3 midpoint-open-cell nonfinding. It makes no claim about cut boundaries, another slope domain, another N, or the Lonely Runner Conjecture.",
+    "cut_count": 31,
+    "open_cell_count": 30,
+    "candidate_triples_total": 4060,
+    "triples_examined": 4060,
+    "sorted_unique_cut_set": [
+      "0", "1/4", "1/3", "1/2", "2/3", "3/4", "1", "5/4", "4/3", "3/2", "5/3", "7/4", "2", "9/4", "7/3", "5/2", "8/3", "11/4", "3", "13/4", "10/3", "7/2", "11/3", "15/4", "4", "17/4", "13/3", "9/2", "14/3", "19/4", "5"
+    ]
+  },
+  "validation": {
+    "arithmetic": "The search used Python Fraction values only; no floating-point phase or inequality is used.",
+    "found_tuple_witness_validation": "Not applicable: the exhaustive search emitted no tuple and hence no selected witness phases. The frozen program contains the required independent integer numerator/denominator residue recomputation for every emitted witness: residue = (k*p + ell*q) mod (5*q), for x=p/q, followed by phase = residue/(5*q), and checks exact phase equality plus strict exteriority for all 16 labels.",
+    "boundary_interpretation": "The bad predicate is phase < 1/5 or 4/5 < phase. Equality at either endpoint is good.",
+    "receipt_integrity_check": {
+      "command": "python3 receipt-only JSON/base64/combinatorial consistency check",
+      "exit_code": 0,
+      "checks": {
+        "receipt_json_parses": true,
+        "decoded_source_hash_matches": true,
+        "stdout_json_parses": true,
+        "stdout_matches_receipt_result": true,
+        "combination_count_matches": true,
+        "stderr_recorded_empty": true,
+        "no_repairs_recorded": true
+      }
+    }
+  },
+  "execution": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "purpose": "Initial and successful exact Fraction enumeration; no repair run was needed.",
+        "program_source_encoding": "base64_utf8",
+        "program_source_bytes": 3776,
+        "program_source_sha256": "6b951fede947acc0791bc8f2ab46a0011717d81bd77d0dc0278756c3f49afbe3",
+        "program_source_base64": "ZnJvbSBmcmFjdGlvbnMgaW1wb3J0IEZyYWN0aW9uIGFzIEYKZnJvbSBpdGVydG9vbHMgaW1wb3J0IGNvbWJpbmF0aW9ucwppbXBvcnQgaGFzaGxpYgppbXBvcnQganNvbgppbXBvcnQgdGltZQoKc3RhcnQgPSB0aW1lLnBlcmZfY291bnRlcigpCk4gPSA1CmxvLCBoaSA9IEYoMSwgNSksIEYoNCwgNSkKCmRlZiBmcyh4KToKICAgIHJldHVybiBzdHIoeC5udW1lcmF0b3IpIGlmIHguZGVub21pbmF0b3IgPT0gMSBlbHNlIGYie3gubnVtZXJhdG9yfS97eC5kZW5vbWluYXRvcn0iCgpkZWYgcGhhc2UoaywgZWxsLCB4KToKICAgIHJldHVybiAoKEYoaykgKiB4ICsgZWxsKSAvIE4pICUgMQoKZGVmIHN0cmljdGx5X2JhZChwKToKICAgIHJldHVybiBwIDwgbG8gb3IgaGkgPCBwCgpjdXRzID0ge0YoTil9CmZvciBrIGluIHJhbmdlKDEsIE4pOgogICAgZm9yIGogaW4gcmFuZ2UoMCwgTiAqIGsgKyAxKToKICAgICAgICBjdXRzLmFkZChGKGosIGspKQpjdXRzID0gc29ydGVkKGN1dHMpCmNlbGxzID0gWyhjdXRzW2ldLCBjdXRzW2kgKyAxXSwgKGN1dHNbaV0gKyBjdXRzW2kgKyAxXSkgLyAyKSBmb3IgaSBpbiByYW5nZShsZW4oY3V0cykgLSAxKV0KbGFiZWxzID0gWyhrLCBlbGwpIGZvciBrIGluIHJhbmdlKDEsIDQpIGZvciBlbGwgaW4gcmFuZ2UoNSldICsgWyg0LCAwKV0KZm91bmQgPSBOb25lCnRyaXBsZXNfZXhhbWluZWQgPSAwCmZvciBpbmRpY2VzIGluIGNvbWJpbmF0aW9ucyhyYW5nZShsZW4oY2VsbHMpKSwgMyk6CiAgICBzbG9wZXMgPSBbY2VsbHNbaV1bMl0gZm9yIGkgaW4gaW5kaWNlc10KICAgIHdpdG5lc3NlcyA9IFtdCiAgICBmb3IgaywgZWxsIGluIGxhYmVsczoKICAgICAgICBoaXQgPSBuZXh0KCgoaSwgeCwgcGhhc2UoaywgZWxsLCB4KSkgZm9yIGksIHggaW4gZW51bWVyYXRlKHNsb3BlcykgaWYgc3RyaWN0bHlfYmFkKHBoYXNlKGssIGVsbCwgeCkpKSwgTm9uZSkKICAgICAgICBpZiBoaXQgaXMgTm9uZToKICAgICAgICAgICAgYnJlYWsKICAgICAgICBpLCB4LCBwID0gaGl0CiAgICAgICAgZGlzdGFuY2UgPSBsbyAtIHAgaWYgcCA8IGxvIGVsc2UgcCAtIGhpCiAgICAgICAgd2l0bmVzc2VzLmFwcGVuZCh7ImxhYmVsIjogeyJrIjogaywgImVsbCI6IGVsbH0sICJzbG9wZV9wb3NpdGlvbiI6IGksICJzbG9wZSI6IGZzKHgpLCAicGhhc2UiOiBmcyhwKSwgInNpZGUiOiAiYmVsb3ciIGlmIHAgPCBsbyBlbHNlICJhYm92ZSIsICJkaXN0YW5jZV90b19jbG9zZWRfZ29vZF9pbnRlcnZhbCI6IGZzKGRpc3RhbmNlKX0pCiAgICB0cmlwbGVzX2V4YW1pbmVkICs9IDEKICAgIGlmIGxlbih3aXRuZXNzZXMpID09IGxlbihsYWJlbHMpOgogICAgICAgIGZvdW5kID0gKGluZGljZXMsIHNsb3Blcywgd2l0bmVzc2VzKQogICAgICAgIGJyZWFrCgpvdXQgPSB7CiAgICAicGFyYW1ldGVycyI6IHsiTiI6IE4sICJiIjogMywgInNsb3BlX2RvbWFpbiI6ICJbMCw1KSIsICJnb29kX2Nsb3NlZF9pbnRlcnZhbCI6IFtmcyhsbyksIGZzKGhpKV19LAogICAgImN1dF9zZXQiOiBbZnMoeCkgZm9yIHggaW4gY3V0c10sCiAgICAiY3V0X2NvdW50IjogbGVuKGN1dHMpLAogICAgIm9wZW5fY2VsbF9jb3VudCI6IGxlbihjZWxscyksCiAgICAiY2FuZGlkYXRlX3RyaXBsZXNfdG90YWwiOiBsZW4obGlzdChjb21iaW5hdGlvbnMocmFuZ2UobGVuKGNlbGxzKSksIDMpKSksCiAgICAidHJpcGxlc19leGFtaW5lZCI6IHRyaXBsZXNfZXhhbWluZWQsCiAgICAiY291bnRlcmV4YW1wbGVfZm91bmQiOiBmb3VuZCBpcyBub3QgTm9uZSwKfQppZiBmb3VuZCBpcyBub3QgTm9uZToKICAgIGluZGljZXMsIHNsb3Blcywgd2l0bmVzc2VzID0gZm91bmQKICAgIHZlcmlmaWNhdGlvbiA9IFtdCiAgICBmb3IgdyBpbiB3aXRuZXNzZXM6CiAgICAgICAgaywgZWxsID0gd1sibGFiZWwiXVsiayJdLCB3WyJsYWJlbCJdWyJlbGwiXQogICAgICAgIHggPSBzbG9wZXNbd1sic2xvcGVfcG9zaXRpb24iXV0KICAgICAgICBtb2R1bHVzID0gTiAqIHguZGVub21pbmF0b3IKICAgICAgICByZXNpZHVlID0gKGsgKiB4Lm51bWVyYXRvciArIGVsbCAqIHguZGVub21pbmF0b3IpICUgbW9kdWx1cwogICAgICAgIHAgPSBGKHJlc2lkdWUsIG1vZHVsdXMpCiAgICAgICAgZXhwZWN0ZWQgPSBGKCptYXAoaW50LCB3WyJwaGFzZSJdLnNwbGl0KCIvIikpKSBpZiAiLyIgaW4gd1sicGhhc2UiXSBlbHNlIEYoaW50KHdbInBoYXNlIl0pKQogICAgICAgIGdvb2QgPSBsbyA8PSBwIDw9IGhpCiAgICAgICAgdmVyaWZpY2F0aW9uLmFwcGVuZCh7ImxhYmVsIjogd1sibGFiZWwiXSwgInNsb3BlX3Bvc2l0aW9uIjogd1sic2xvcGVfcG9zaXRpb24iXSwgImludGVnZXJfbW9kdWx1cyI6IG1vZHVsdXMsICJpbnRlZ2VyX3Jlc2lkdWUiOiByZXNpZHVlLCAicmVjb21wdXRlZF9waGFzZSI6IGZzKHApLCAibWF0Y2hlc19lbWl0dGVkX3BoYXNlIjogcCA9PSBleHBlY3RlZCwgInN0cmljdGx5X291dHNpZGVfY2xvc2VkX2dvb2RfaW50ZXJ2YWwiOiBub3QgZ29vZH0pCiAgICBtaW5fZGlzdGFuY2UgPSBtaW4oRigqbWFwKGludCwgd1siZGlzdGFuY2VfdG9fY2xvc2VkX2dvb2RfaW50ZXJ2YWwiXS5zcGxpdCgiLyIpKSkgaWYgIi8iIGluIHdbImRpc3RhbmNlX3RvX2Nsb3NlZF9nb29kX2ludGVydmFsIl0gZWxzZSBGKGludCh3WyJkaXN0YW5jZV90b19jbG9zZWRfZ29vZF9pbnRlcnZhbCJdKSkgZm9yIHcgaW4gd2l0bmVzc2VzKQogICAgb3V0WyJjb3VudGVyZXhhbXBsZSJdID0gewogICAgICAgICJjZWxsX2luZGljZXNfemVyb19iYXNlZCI6IGxpc3QoaW5kaWNlcyksCiAgICAgICAgImludGVydmFsX2NlbGxzIjogW3siaW5kZXhfemVyb19iYXNlZCI6IGksICJvcGVuX2ludGVydmFsIjogW2ZzKGNlbGxzW2ldWzBdKSwgZnMoY2VsbHNbaV1bMV0pXSwgIm1pZHBvaW50X3Nsb3BlIjogZnMoY2VsbHNbaV1bMl0pfSBmb3IgaSBpbiBpbmRpY2VzXSwKICAgICAgICAic2xvcGVfdHJpcGxlX2luY3JlYXNpbmciOiBbZnMoeCkgZm9yIHggaW4gc2xvcGVzXSwKICAgICAgICAid2l0bmVzc19zZWxlY3Rpb25fcnVsZSI6ICJGb3IgZWFjaCBsYWJlbCwgdGhlIGZpcnN0IHNlbGVjdGVkIHNsb3BlIGluIGluY3JlYXNpbmcgdHJpcGxlIG9yZGVyIHdpdGggcGhhc2Ugc3RyaWN0bHkgb3V0c2lkZSBbMS81LDQvNV0uIiwKICAgICAgICAiYmFkX2xhYmVsX3dpdG5lc3NlcyI6IHdpdG5lc3NlcywKICAgICAgICAicG9zaXRpdmVfbWluaW11bV9kaXN0YW5jZV9vZl9zZWxlY3RlZF93aXRuZXNzZXNfdG9fY2xvc2VkX2dvb2RfaW50ZXJ2YWwiOiBmcyhtaW5fZGlzdGFuY2UpLAogICAgICAgICJpbnRlZ2VyX21vZHVsYXJfcmVjb21wdXRhdGlvbiI6IHZlcmlmaWNhdGlvbiwKICAgICAgICAiYWxsXzE2X3BhaXJzX3ZlcmlmaWVkIjogbGVuKHZlcmlmaWNhdGlvbikgPT0gMTYgYW5kIGFsbCh2WyJtYXRjaGVzX2VtaXR0ZWRfcGhhc2UiXSBhbmQgdlsic3RyaWN0bHlfb3V0c2lkZV9jbG9zZWRfZ29vZF9pbnRlcnZhbCJdIGZvciB2IGluIHZlcmlmaWNhdGlvbiksCiAgICB9CmVsc2U6CiAgICBvdXRbIm5vbmZpbmRpbmdfc2NvcGUiXSA9ICJPbmx5IHRoaXMgZXhhY3QgTj01LCBiPTMsIG1pZHBvaW50LW9wZW4tY2VsbCBkb21haW4gd2FzIGV4aGF1c3RlZDsgbm8gaW5mZXJlbmNlIGFib3V0IGJvdW5kYXJpZXMsIG90aGVyIGRvbWFpbnMsIG9yIExSQy4iCm91dFsiZXhlY3V0aW9uX3NlY29uZHMiXSA9IHRpbWUucGVyZl9jb3VudGVyKCkgLSBzdGFydApwcmludChqc29uLmR1bXBzKG91dCwgaW5kZW50PTIsIHNvcnRfa2V5cz1UcnVlKSk="
+        ,"argv": [
+          "python3",
+          "-c",
+          "The literal third argument is exactly the decoded program_source_base64 value above."
+        ],
+        "exit_code": 0,
+        "stdout_complete_bounded": "{\n  \"candidate_triples_total\": 4060,\n  \"counterexample_found\": false,\n  \"cut_count\": 31,\n  \"cut_set\": [\n    \"0\",\n    \"1/4\",\n    \"1/3\",\n    \"1/2\",\n    \"2/3\",\n    \"3/4\",\n    \"1\",\n    \"5/4\",\n    \"4/3\",\n    \"3/2\",\n    \"5/3\",\n    \"7/4\",\n    \"2\",\n    \"9/4\",\n    \"7/3\",\n    \"5/2\",\n    \"8/3\",\n    \"11/4\",\n    \"3\",\n    \"13/4\",\n    \"10/3\",\n    \"7/2\",\n    \"11/3\",\n    \"15/4\",\n    \"4\",\n    \"17/4\",\n    \"13/3\",\n    \"9/2\",\n    \"14/3\",\n    \"19/4\",\n    \"5\"\n  ],\n  \"execution_seconds\": 0.1641577880072873,\n  \"nonfinding_scope\": \"Only this exact N=5, b=3, midpoint-open-cell domain was exhausted; no inference about boundaries, other domains, or LRC.\",\n  \"open_cell_count\": 30,\n  \"parameters\": {\n    \"N\": 5,\n    \"b\": 3,\n    \"good_closed_interval\": [\n      \"1/5\",\n      \"4/5\"\n    ],\n    \"slope_domain\": \"[0,5)\"\n  },\n  \"triples_examined\": 4060\n}\n",
+        "stderr_complete_bounded": "",
+        "execution_timing_seconds": 0.1641577880072873
+      }
+    ],
+    "failure_and_repair_history": [],
+    "execution_timing_is_separate_from_worker_elapsed": true
+  },
+  "delivery_metrics": {
+    "check_kind": "python",
+    "first_check_success": true,
+    "worker_repair_rounds": 0,
+    "astra_repair_rounds": 0,
+    "astra_repair_lines": 0,
+    "worker_elapsed_seconds": null,
+    "usage": null,
+    "evidence": [
+      "research/astra-general-slow-row-control.json"
+    ]
+  }
+}

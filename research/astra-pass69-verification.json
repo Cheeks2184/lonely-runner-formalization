@@ -1,0 +1,92 @@
+{
+  "checkpoint": "Pass69",
+  "parent_main": "4227fef76e8a2081460c27b3af627bc6dcb501d4",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-69.md": "d29a785b3f7e57ea356c4fc9cb84a7f15ba44624da9dc9532acb15f391bceda3",
+    "research/astra-general-slow-cluster-audit.md": "07d42aa0e48e2daa62d4799049b317eee526af42ecb025fcd0e6515a7cfa6478",
+    "research/astra-general-slow-cluster-review.md": "c02b3fa692c691371a9e04fa4c82ed8add27ac095a817356a62a6308c5b41cef",
+    "research/astra-general-slow-row-control.json": "fbef3674ec3c30719325cfc91d0fc15c1a347377d0b4e8bd114e487059363d0c",
+    "research/astra-ideal-row-integer-transfer.md": "a8e53ac960a0cd0907437a38042ed574498259a472dc92cf223e4568f1124ebc",
+    "research/astra-ideal-row-transfer-review.md": "6ff5010979d42c2ebfacf98c7e33a2e599a80c13c8caec1ec42f7b269f599921"
+  },
+  "review_bindings": {
+    "research/astra-general-slow-cluster-review.md": [
+      "research/astra-general-slow-cluster-audit.md"
+    ],
+    "research/astra-ideal-row-transfer-review.md": [
+      "research/astra-ideal-row-integer-transfer.md",
+      "research/astra-general-slow-row-control.json"
+    ]
+  },
+  "checks": [
+    {
+      "kind": "frozen_file_bindings_and_whitespace",
+      "count": 6,
+      "result": "passed"
+    },
+    {
+      "kind": "review_source_bindings",
+      "result": "passed"
+    },
+    {
+      "kind": "worker_receipt_integrity_without_mathematical_replay",
+      "result": "passed",
+      "program_sha256": "6b951fede947acc0791bc8f2ab46a0011717d81bd77d0dc0278756c3f49afbe3",
+      "found_witness_modular_branch_executed": false
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "/usr/bin/python3",
+      "/tmp/astra-pass69-verify.py"
+    ],
+    "source": "import base64\nimport hashlib\nimport json\nfrom pathlib import Path\nimport subprocess\nimport sys\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nmanifest_path = Path('/tmp/astra-pass69-inputs.json')\nmanifest = json.loads(manifest_path.read_text())\nchecks = []\nfor name, digest in manifest['hashes'].items():\n    data = (root / name).read_bytes()\n    assert hashlib.sha256(data).hexdigest() == digest, name\n    assert data.endswith(b'\\n'), name\n    assert all(line.rstrip() == line for line in data.splitlines()), name\nchecks.append({'kind': 'frozen_file_bindings_and_whitespace', 'count': len(manifest['hashes']), 'result': 'passed'})\nfor review, sources in manifest['review_bindings'].items():\n    text = (root / review).read_text()\n    for source in sources:\n        assert manifest['hashes'][source] in text, (review, source)\nchecks.append({'kind': 'review_source_bindings', 'result': 'passed'})\ncontrol = json.loads((root / 'research/astra-general-slow-row-control.json').read_text())\nattempt, = control['execution']['attempts']\nsource = base64.b64decode(attempt['program_source_base64'])\nassert hashlib.sha256(source).hexdigest() == attempt['program_source_sha256']\nassert len(source) == attempt['program_source_bytes']\nassert attempt['exit_code'] == 0 and attempt['stderr_complete_bounded'] == ''\noutput = json.loads(attempt['stdout_complete_bounded'])\nassert output['triples_examined'] == output['candidate_triples_total'] == 4060\nassert output['open_cell_count'] == 30 and output['cut_count'] == 31\nassert output['counterexample_found'] is False\nchecks.append({'kind': 'worker_receipt_integrity_without_mathematical_replay', 'result': 'passed', 'program_sha256': attempt['program_source_sha256'], 'found_witness_modular_branch_executed': False})\ncommands = []\nfor argv in ([sys.executable, '-B', 'scripts/validate_workflow.py'], ['git', 'diff', '--check'], [sys.executable, '-B', 'scripts/manage_storage.py']):\n    result = subprocess.run(argv, cwd=root, text=True, capture_output=True)\n    commands.append({'argv': argv, 'exit_code': result.returncode, 'stdout': result.stdout, 'stderr': result.stderr})\n    assert result.returncode == 0, commands[-1]\nreceipt = {\n    'checkpoint': 'Pass69',\n    'parent_main': '4227fef76e8a2081460c27b3af627bc6dcb501d4',\n    'status': 'verified_local_pending_publication',\n    'hashes': manifest['hashes'],\n    'review_bindings': manifest['review_bindings'],\n    'checks': checks,\n    'commands': commands,\n    'root_verifier': {'argv': [sys.executable, str(Path(__file__))], 'source': Path(__file__).read_text(), 'source_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), 'input_source': manifest_path.read_text(), 'input_sha256': hashlib.sha256(manifest_path.read_bytes()).hexdigest()},\n    'mathematical_verification': 'Independent hand reviews and root source reads; accepted hash-bound one-run Fraction receipt. No unchanged mathematical replay, no Lean work.',\n    'scope': 'General-slow audit, strict ideal failure transfer, and one bounded ideal-row nonfinding. Neither general candidate existence nor unrestricted LRC resolved.',\n    'excluded': 'Ongoing uniform ideal-row-selection audit and any draft it creates.',\n    'failure_history': 'One root task-metrics schema error before worker launch, retained in workflow-state orchestration_observations; no executable repair or verification-driver failure.',\n}\n(root / 'research/astra-pass69-verification.json').write_text(json.dumps(receipt, indent=2) + '\\n')\nprint(json.dumps({'checkpoint': 'Pass69', 'result': 'passed', 'frozen_files': len(manifest['hashes']), 'commands': commands}, indent=2))\n",
+    "source_sha256": "d2e946d9884558cca3a64ac44f48d127a3511bac013185c83ba042a6afaeda82",
+    "input_source": "{\n  \"hashes\": {\n    \"docs/astra-research-69.md\": \"d29a785b3f7e57ea356c4fc9cb84a7f15ba44624da9dc9532acb15f391bceda3\",\n    \"research/astra-general-slow-cluster-audit.md\": \"07d42aa0e48e2daa62d4799049b317eee526af42ecb025fcd0e6515a7cfa6478\",\n    \"research/astra-general-slow-cluster-review.md\": \"c02b3fa692c691371a9e04fa4c82ed8add27ac095a817356a62a6308c5b41cef\",\n    \"research/astra-general-slow-row-control.json\": \"fbef3674ec3c30719325cfc91d0fc15c1a347377d0b4e8bd114e487059363d0c\",\n    \"research/astra-ideal-row-integer-transfer.md\": \"a8e53ac960a0cd0907437a38042ed574498259a472dc92cf223e4568f1124ebc\",\n    \"research/astra-ideal-row-transfer-review.md\": \"6ff5010979d42c2ebfacf98c7e33a2e599a80c13c8caec1ec42f7b269f599921\"\n  },\n  \"review_bindings\": {\n    \"research/astra-general-slow-cluster-review.md\": [\n      \"research/astra-general-slow-cluster-audit.md\"\n    ],\n    \"research/astra-ideal-row-transfer-review.md\": [\n      \"research/astra-ideal-row-integer-transfer.md\",\n      \"research/astra-general-slow-row-control.json\"\n    ]\n  }\n}\n",
+    "input_sha256": "511c88b0a183ea5daf012395d3e7df90ae15127bed56e2561f1cb061cc7f2d3d",
+    "tool_result": {
+      "chunk_id": "c3fa67",
+      "wall_time_seconds": 6.472e-06,
+      "exit_code": 0,
+      "original_token_count": 196,
+      "output": "{\n  \"checkpoint\": \"Pass69\",\n  \"result\": \"passed\",\n  \"frozen_files\": 6,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": "Independent hand reviews and root source reads; accepted hash-bound one-run Fraction receipt. No unchanged mathematical replay, no Lean work.",
+  "scope": "General-slow audit, strict ideal failure transfer, and one bounded ideal-row nonfinding. Neither general candidate existence nor unrestricted LRC resolved.",
+  "excluded": "Ongoing uniform ideal-row-selection audit and any draft it creates.",
+  "failure_history": "One root task-metrics schema error before worker launch, retained in workflow-state orchestration_observations; no executable repair or verification-driver failure."
+}
