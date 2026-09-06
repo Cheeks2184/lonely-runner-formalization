@@ -6,18 +6,18 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/seven_adic_scope_independent_review",
-      "agent_id": "/root/seven_adic_scope_independent_review",
+      "id": "/root/six_total_maximizer_plan",
+      "agent_id": "/root/prime_difference_compression_plan",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "0608747f78d8e07100af900f4f746da902bd2fa9",
-      "target": "Independently audit restricted seven-adic counterexample and exact expandedJ1..6 candidate contract/resource plan; no expanded search or Lean implementation.",
+      "source_checkpoint": "312158239315a3488cb522695b58c0a2fece7621",
+      "target": "Settle general constrained-maximizer boundary lemma and exact finite phase leaf contracts for future six-total proof, based on Renault2004; manuscript only, no enumeration/build.",
       "owned_files": [
-        "research/astra-seven-adic-carry-scope-review.md"
+        "research/astra-six-total-maximizer-plan.md"
       ],
       "checks": []
     }
@@ -5378,13 +5378,135 @@
       "evidence": [
         "research/astra-five-runner-final-source-review.md"
       ]
+    },
+    {
+      "id": "/root/seven_adic_scope_independent_review",
+      "agent_id": "/root/seven_adic_scope_independent_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "0608747f78d8e07100af900f4f746da902bd2fa9",
+      "target": "Independently audit restricted seven-adic counterexample and exact expandedJ1..6 candidate contract/resource plan; no expanded search or Lean implementation.",
+      "owned_files": [
+        "research/astra-seven-adic-carry-scope-review.md"
+      ],
+      "checks": [
+        "Root sole bash exit0; fixed stdout SHA ec024deaad93a45f818b3f21f227cb122626f0ae0609a013ba84bd6f43bb8484."
+      ],
+      "result": "Accepted restricted F7 counterexample and expanded F7+ contract; root read entire manuscript and fixed-only replay passed. No expanded search performed."
+    },
+    {
+      "id": "/root/seven_adic_expanded_review",
+      "agent_id": null,
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "312158239315a3488cb522695b58c0a2fece7621",
+      "target": "Independent fixed-only arithmetic and scope review of reported F7+ counterexample; wait for frozen author report before its final source/program provenance acceptance. No search.",
+      "owned_files": [
+        "research/astra-seven-adic-expanded-review.md"
+      ],
+      "checks": [
+        "No report or computation created by failed launch."
+      ],
+      "result": "No worker launched: collaboration.spawn_agent returned agent thread limit reached. Reassign independent review to existing Astra xhigh prime-compression author after that bounded task ends; preserve role and effort."
+    },
+    {
+      "id": "/root/seven_adic_expanded_falsifier",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "312158239315a3488cb522695b58c0a2fece7621",
+      "target": "Execute reviewed bounded F7+ J1..6 falsifier and fixed verification, with early-cover padding and strict resource caps; no Lean changes.",
+      "owned_files": [
+        "research/astra-seven-adic-expanded-falsifier.md"
+      ],
+      "checks": [
+        "Discovery reported26seeds19656gains10584digits, no padding; root did not rerun discovery.",
+        "Root reconstructed predeclaration SHA19f1f9... exactly.",
+        "Root verifier and control exit0, inner stdout94578a... and1cf1a... matched."
+      ],
+      "result": "Restricted F7+ J1..6 family false; actual units1,73,2200,2201,1431 and top343 atP2401. Ordinary stationary witness1/6. No LRC disproof. Root read all report and fixed-only verifier/control passed.",
+      "artifact_sha256": "58f35ff3fdc138fd5ebadeeb09d10447734b1fd4cda82a49f263b727cf1d0845"
+    },
+    {
+      "id": "/root/prime_difference_compression_plan",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "312158239315a3488cb522695b58c0a2fece7621",
+      "target": "Audit exact general-prime unequal-valuation triple compression contract inspired by Barajas-Serra Lemma9(i); handle zero/modulus-collapsed differences explicitly and map minimal Lean dependencies. Manuscript only, no search/build.",
+      "owned_files": [
+        "research/astra-prime-difference-compression-plan.md"
+      ],
+      "checks": [
+        "Workflow structural validator passed; no mathematical machine check claimed."
+      ],
+      "result": "Frozen author manuscript claims general-prime two-target control and triple compression with collapsed/signed/endpoint splits; no computation or Lean execution. Independent review pending.",
+      "artifact_sha256": "ee396d22cae90460868ee13ba70c26204cafad190aea3b72835680218b3c88c2"
+    },
+    {
+      "id": "/root/seven_adic_expanded_review_retry",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "312158239315a3488cb522695b58c0a2fece7621",
+      "target": "Independent fixed-only review of frozen F7+ report58f35...; arithmetic, closed scope, predeclaration/program/resource audit; no discovery rerun.",
+      "owned_files": [
+        "research/astra-seven-adic-expanded-review.md"
+      ],
+      "checks": [
+        "210 unit comparisons,42top constraints,42distinctcandidates,30badpairs,5masks and1/6ordinarycontrol checked independently."
+      ],
+      "result": "Independent F7+ manuscript review accepted; root read entire report and fixed-only replay exit0 matching ded002... . No discovery rerun.",
+      "artifact_sha256": "f965b8b98d2f1abef6bc611c2e2e8cce8cddc2478ec32f1ce39ae7cb408bf370"
+    },
+    {
+      "id": "/root/prime_difference_compression_review",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "312158239315a3488cb522695b58c0a2fece7621",
+      "target": "Independent proof/Lean-contract review of general-prime compression manuscript ee396d...; audit signed/collapsed/top-boundary cases, no search/build.",
+      "owned_files": [
+        "research/astra-prime-difference-compression-review.md"
+      ],
+      "checks": [
+        "Eight triple fixtures, five two-target fixtures and fixed negative controls passed; no search.",
+        "Root child stdout73a26ab... matched; actualexit0."
+      ],
+      "result": "Independent proof and both exact natural contracts accepted unchanged; root read full review and fixed-only replay passed. No Lean implementation yet.",
+      "artifact_sha256": "a3a77cdfbc4f983755d38bd75a7aad6ccdeb4534d5c1ec455dfce0320c1d4947"
     }
   ],
-  "latest_checkpoint": "Pass39 fiveRunners exact Fin5 arbitraryinjectivereal/chosenrunner kernelproof verified; root64-example/28-guard reviewreplay passed, fullbuild3657/trust532+3free accepted. Safe cachecleanup then commit/push/PR/merge main. FullLRC unresolved.",
+  "latest_checkpoint": "Pass40 verified six frozen manuscripts/reviews, root fixed-only replays and compression F/C contracts accepted; no Lean source changes. Canonical Fin5 remains main312158... from PR38; unrestricted LRC unresolved. Ready to publish; six-total maximizer plan active separately.",
   "next_actions": [
-    "Complete exact hard-pattern assembly and freeze combined adapter evidence.",
-    "Read/replay Astra Fin4/H6/canonical assembly plan, implement using checked components, independently review exact quantifiers and bridges.",
-    "Integrate root/AxiomAudit, full build/trust, then publish next verified checkpoint by commit/push/PR/exact-head merge."
+    "Publish verified Pass40 then merge exact head after required CI/reviews and verify main.",
+    "Restore shared pinned dependencies and assign settled general-prime arithmetic/compression to Terra medium.",
+    "Review forthcoming six-total constrained-maximizer/phase plan; no enumeration before reviewed bounds.",
+    "Continue unrestricted goal without treating auxiliary refutations or finite counts as completion."
   ],
   "research_holds": [
     {
@@ -5910,14 +6032,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "ef64109257b09da2db481b43652ba0df891d3c1e",
+    "verified_checkpoint": "173f16275638c8d067d80b66b53094312294fbbf",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-five-adic-filtering",
+    "branch": "codex/astra-five-runner-ordinary",
     "base": "main",
     "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/37",
-    "pr_number": 37,
-    "head_sha": "ef64109257b09da2db481b43652ba0df891d3c1e",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/38",
+    "pr_number": 38,
+    "head_sha": "173f16275638c8d067d80b66b53094312294fbbf",
     "integration_note": "Prior GitHub integration 403 established authenticated gh fallback; this checkpoint used that fallback successfully.",
     "queue": [
       {
@@ -6325,40 +6447,52 @@
         "remote_main_ancestor_verified": true,
         "reviews": [],
         "status": "merged_verified"
-      }
-    ],
-    "latest_published_source_checkpoint": "ef64109257b09da2db481b43652ba0df891d3c1e",
-    "remote_main": "0608747f78d8e07100af900f4f746da902bd2fa9",
-    "local_main": "0608747f78d8e07100af900f4f746da902bd2fa9",
-    "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
-    "pending_checkpoint": null,
-    "merge_sha": "0608747f78d8e07100af900f4f746da902bd2fa9",
-    "checks": [
-      {
-        "name": "Lean build and trust audit",
-        "result": "SUCCESS 2026-09-06T07:26:38Z"
       },
       {
-        "name": "Exact computational certificates",
-        "result": "SUCCESS 2026-09-06T07:33:48Z"
+        "checkpoint": "Pass39",
+        "pr": 38,
+        "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/38",
+        "head_sha": "173f16275638c8d067d80b66b53094312294fbbf",
+        "merge_sha": "312158239315a3488cb522695b58c0a2fece7621",
+        "merged_at": "2026-09-06T08:12:59Z",
+        "ci_run": 34020720272,
+        "checks": {
+          "Lean build and trust audit": "SUCCESS 2026-09-06T08:04:15Z",
+          "Exact computational certificates": "SUCCESS 2026-09-06T08:09:44Z"
+        },
+        "exact_head_merge": true,
+        "remote_main_ancestor_verified": true,
+        "reviews": [],
+        "status": "merged_verified"
       }
     ],
+    "latest_published_source_checkpoint": "173f16275638c8d067d80b66b53094312294fbbf",
+    "remote_main": "312158239315a3488cb522695b58c0a2fece7621",
+    "local_main": "312158239315a3488cb522695b58c0a2fece7621",
+    "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
+    "pending_checkpoint": null,
+    "merge_sha": "312158239315a3488cb522695b58c0a2fece7621",
+    "checks": {
+      "Lean build and trust audit": "SUCCESS 2026-09-06T08:04:15Z",
+      "Exact computational certificates": "SUCCESS 2026-09-06T08:09:44Z"
+    },
     "remote_main_contains_head": true,
     "latest_receipt": {
-      "checkpoint": "Pass38",
-      "pr": 37,
-      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/37",
-      "head_sha": "ef64109257b09da2db481b43652ba0df891d3c1e",
-      "merge_sha": "0608747f78d8e07100af900f4f746da902bd2fa9",
-      "merged_at": "2026-09-06T07:34:50Z",
-      "ci_run": 34019053181,
+      "checkpoint": "Pass39",
+      "pr": 38,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/38",
+      "head_sha": "173f16275638c8d067d80b66b53094312294fbbf",
+      "merge_sha": "312158239315a3488cb522695b58c0a2fece7621",
+      "merged_at": "2026-09-06T08:12:59Z",
+      "ci_run": 34020720272,
       "checks": {
-        "Lean build and trust audit": "SUCCESS 2026-09-06T07:26:38Z",
-        "Exact computational certificates": "SUCCESS 2026-09-06T07:33:48Z"
+        "Lean build and trust audit": "SUCCESS 2026-09-06T08:04:15Z",
+        "Exact computational certificates": "SUCCESS 2026-09-06T08:09:44Z"
       },
       "exact_head_merge": true,
       "remote_main_ancestor_verified": true,
-      "reviews": []
+      "reviews": [],
+      "status": "merged_verified"
     }
   },
   "runtime_goal_observation": {
@@ -6381,12 +6515,7 @@
     "instructions_path": ".codex/config.toml",
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
-  "publication_in_progress": {
-    "checkpoint": "Pass39",
-    "phase": "verified_ready_to_commit",
-    "branch": "codex/astra-five-runner-ordinary",
-    "base": "0608747f78d8e07100af900f4f746da902bd2fa9"
-  },
+  "publication_in_progress": null,
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
     "author_sha256": "6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f",
@@ -7514,7 +7643,7 @@
     }
   },
   "pending_pass39": {
-    "phase": "verified_ready_to_commit",
+    "phase": "merged_verified",
     "source_base": "ef64109257b09da2db481b43652ba0df891d3c1e",
     "scope": "Complete carry-to-speed hard pattern, positive Fin4 five-adic decomposition and ordinary/canonical five-total integration. No unrestricted LRC claim.",
     "components": [
@@ -7659,14 +7788,31 @@
       "post_report": "No allowlisted cache or build paths are present.",
       "log_sha256": "a79dbfbcb4bb9662eebd6e96fcc4b46178ec5746c454ec28307b39aa3fee1649",
       "reason": "All localLean verification/replays completed; only cache-independent future manuscriptreview active. Pinned toolchain/source/Git/uniqueevidence retained."
+    },
+    "publication": {
+      "checkpoint": "Pass39",
+      "pr": 38,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/38",
+      "head_sha": "173f16275638c8d067d80b66b53094312294fbbf",
+      "merge_sha": "312158239315a3488cb522695b58c0a2fece7621",
+      "merged_at": "2026-09-06T08:12:59Z",
+      "ci_run": 34020720272,
+      "checks": {
+        "Lean build and trust audit": "SUCCESS 2026-09-06T08:04:15Z",
+        "Exact computational certificates": "SUCCESS 2026-09-06T08:09:44Z"
+      },
+      "exact_head_merge": true,
+      "remote_main_ancestor_verified": true,
+      "reviews": [],
+      "status": "merged_verified"
     }
   },
   "seven_adic_scope_audit": {
     "artifact": "research/astra-seven-adic-carry-scope-audit.md",
     "sha256": "4360a75613ba59fad5de8edcd23f37397876d0235816b9340b8707f93a63a126",
-    "status": "Root fully read manuscript and exact fixed-only replay passed; independent manuscript/nextcontract review queued.",
+    "status": "Author and independent manuscript review accepted; root fixed-only replays passed.",
     "scope": "Only restrictedJ1..5finitecandidatefamilyrefuted; explicitordinarywitnessesremain. NoLRCdisproof.",
-    "next_action": "Read/replay boundedfixedverification only, independentmanuscriptreview; noexpandedJ6searchuntilcontract/resourceplanreviewed.",
+    "next_action": "Execute reviewed bounded expanded F7+ falsifier with early-cover padding; inconclusive is not proof.",
     "root_replay": {
       "artifact_sha256": "4360a75613ba59fad5de8edcd23f37397876d0235816b9340b8707f93a63a126",
       "command_sha256": "b625b3ee9f1d578e3479ed3679e068166a1f9085fdc5bfcbd993f68ebd6901a7",
@@ -7674,6 +7820,122 @@
       "stdout": "{\"bad_k_by_row_then_J\": [[[0, 6], [0, 3], [0, 2], [0, 5], [0, 4]], [[0, 2], [0, 1], [0, 3], [0, 4], [5, 6]], [[0, 4], [2, 4], [5, 6], [2, 3], [1, 3]], [[0, 5], [5, 6], [1, 4], [2, 6], [2, 3]], [[1, 3], [1, 2], [1, 4], [1, 5], [0, 1]]], \"candidate_count\": 35, \"first_bad_row_by_J_then_k\": [[0, 4, 1, 4, 2, 3, 0], [0, 1, 2, 0, 2, 3, 3], [0, 3, 0, 1, 3, 2, 2], [0, 4, 2, 2, 1, 0, 3], [0, 2, 3, 2, 0, 1, 1]], \"gain_evaluations\": 0, \"indices\": [0, 21, 194, 204, 140], \"mode\": \"verify\", \"realization\": {\"P\": 343, \"R\": 49, \"m\": 2, \"top_speed\": 49, \"units\": [1, 10, 317, 318, 199], \"z\": [1, 10, 23, 24, 3]}, \"seed_pairs\": 0, \"source_guards\": 4, \"state_count\": 210, \"states\": [[0, 1, 0], [0, 3, 1], [6, 2, 4], [6, 3, 4], [4, 3, 0]], \"status\": \"F7_FALSE_FIXED_CERTIFICATE\"}\n{\"child_peak_rss_KiB\": 16404, \"child_system_seconds\": 0.0049099999999999994, \"child_user_seconds\": 0.016697, \"elapsed_seconds\": 0.021817238011863083, \"exit_code\": 0, \"program_sha256\": \"552e002164843889b7c19da7a6e4e1511201e83e94fee9a4392bdcfdaef1140d\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 764, \"stdout_sha256\": \"954bfaae5a245b193daa33de5c3fd27879137212a737c7952249619268cf8c9f\"}\nFixed quarter-time and J=6,k=4 arithmetic controls passed.\n",
       "stderr": "",
       "exit_code": 0
+    },
+    "review_artifact": "research/astra-seven-adic-carry-scope-review.md",
+    "review_sha256": "3be938da0c923c0894f768f18e807e39bfa08d8d6a999bb00a910813a201a452",
+    "review_root_replay": {
+      "artifact_sha256": "3be938da0c923c0894f768f18e807e39bfa08d8d6a999bb00a910813a201a452",
+      "command_sha256": "81fe7b253b6427ed3a9443703516a8554fb777eff55d8992ad6e4218bdfccdc8",
+      "stdout_sha256": "0a2ea38557e7d28643a11938cbd4022bc1cdccf6958b86d8dfdbe3d00de7bc9f",
+      "stdout": "{\"closed_boundary_controls\": \"passed\", \"expanded_candidate_count\": 42, \"expanded_carries\": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 1, 1], [0, 0, 0, 1, 1, 1], [0, 0, 1, 1, 1, 2], [0, 0, 1, 1, 2, 2], [0, 1, 1, 2, 2, 3], [0, 1, 1, 2, 3, 3], [0, 1, 2, 2, 3, 4], [0, 1, 2, 3, 3, 4], [0, 1, 2, 3, 4, 4], [0, 1, 2, 3, 4, 5]], \"expanded_cuts\": [\"0\", \"1/6\", \"1/5\", \"1/4\", \"1/3\", \"2/5\", \"1/2\", \"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"1\"], \"expanded_search_executed\": false, \"expanded_state_count\": 252, \"fixed_stdout_sha256\": \"954bfaae5a245b193daa33de5c3fd27879137212a737c7952249619268cf8c9f\", \"minimum_widths\": [\"1/20\", \"1/30\"], \"proposed_digit_cap\": 10584, \"proposed_gain_cap\": 23909256, \"proposed_seed_pair_cap\": 31626, \"realizability_R\": 343, \"source_guards\": 5, \"status\": \"FIXED_ARITHMETIC_AND_NEXT_CONTRACT_CHECKED\", \"tag_residue_checks\": [30, 36], \"unit_candidate_checks\": 175}\n{\"child_peak_rss_KiB\": 16464, \"child_system_seconds\": 0.003966, \"child_user_seconds\": 0.01983, \"elapsed_seconds\": 0.02400201599812135, \"exit_code\": 0, \"program_sha256\": \"5b9aee867f91f2ae1ae1b92911dbfed0996ae95cade59051b946e2637d1174bb\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 885, \"stdout_sha256\": \"ec024deaad93a45f818b3f21f227cb122626f0ae0609a013ba84bd6f43bb8484\"}\n",
+      "stderr": "",
+      "exit_code": 0,
+      "elapsed_seconds": 0.04835489101242274
     }
+  },
+  "seven_runner_canonical_bridge_gap": {
+    "status": "Read-only root source finding; no new theorem or code change.",
+    "source": "LonelyRunner/BoundedRealReduction.lean",
+    "source_sha256": "7eae68d2c46041b39c3e18f9a1e105c75680352f8e4b4edf65e0dd2a92becb72",
+    "finding": "Existing lonelyAt_of_lowerCount at m=6 requires H8: d=1..6 positive integer supply at each own threshold1/(d+1). Current H6 supplies d=1..4; both d5 at1/6 and d6 at1/7 remain. A natural Fin6 1/7 theorem alone does not supply d5 at1/6 by duplication. Irrational branch uses strict gain1/m over1/(m+1).",
+    "next_action": "Keep six-total ordinary supply as separate obligation when planning seven-runner integration."
+  },
+  "six_total_source_retrieval": {
+    "date": "2026-09-06",
+    "publisher_record": "https://www.sciencedirect.com/science/article/pii/S0012365X04002894",
+    "publisher_fetch": "403; search indexed abstract read",
+    "institutional_record": "https://www.tse-fr.eu/articles/view-obstruction-shorter-proof-6-lonely-runners",
+    "actual_paper_copy_read": "https://compmath.wordpress.com/wp-content/uploads/2008/08/view-obstruction_a_shorter_proof_for_6_lonely-runners.pdf",
+    "provenance": "Primary research paper hosted as a third-party PDF copy; header/author/DOI10.1016/j.disc.2004.06.008 match publisher/institutional records. No independent byte identity against inaccessible publisher PDF asserted. Nine pages, full main proof Sections1..6 read in web text, appendix only partly read; no local PDF retained.",
+    "finding": "Renault2004 supplies five positive integer speeds at closed1/6, using gcd normalization, mod6 divisibility splits, compact maximization over other four safe constraints, and finite phase lemmas5.1/6.1/6.4. Exact hypotheses and strict/closed endpoints require independent contract audit before implementation.",
+    "local_gap": "No corresponding six-total theorem or constrained-maximizer helper found in current Lean source. Existing Fin5 theorem supplies the lower-count input.",
+    "next_action": "Assign a bounded Astra xhigh contract plan for constrained-maximizer framework and exact six-total leaf obligations when a slot is available; do not expand fixed seven-adic candidate searches.",
+    "root_future_contract_note": "A possible exact finite model for Renault Lemma5.1 uses cuts at multiples of1/18,1/24,1/30 (1/12 redundant), giving60circlecutpoints and60openintervals,120one-dimensional atoms. Three-phase coverage has120^3 raw atom tuples. This is an unexecuted root-derived model to audit, not an authorized brute-force run or Lean cost estimate. Mixed strict/closed boundaries and a possible minimal-mask reduction need semantic review first.",
+    "queued_scope": {
+      "target": "General constrained-maximizer lemma for positive integer speeds, a distinguished label, 0<delta<1/2, and one strict-complement witness; under no full witness obtain a global complement-safe maximizer reflected so distinguished frac lies in(0,delta), and an actual other label at upper phase1-delta.",
+      "scope_notes": [
+        "Period1 yields compact maximum via continuous circleNorm; strict complement witness supplies positive maximum; sign reflection and positive perturbation produce an upper boundary. These arguments require independent review.",
+        "For delta1/N and N dividing distinguished speed, alpha2..N-1 and shiftsbeta/N strictly improve its norm when frac liesin(0,1/N); phase leaf must preserve complement constraints.",
+        "Exact Renault finite phase leaves and strict-vs-closed output boundaries remain separate mathematical obligations; do not run120^3 enumeration without reviewed resource plan."
+      ],
+      "source_api_hints": [
+        "LonelyRunner/PivotBoundary.lean:continuous_circleNorm",
+        "LonelyRunner/BufferedRunnerInsertion.lean:int_band_of_circleNorm_ge and positive finite-slack argument"
+      ],
+      "status": "Delegated bounded Astra xhigh manuscript plan; no implementation or enumeration authorized."
+    }
+  },
+  "worker_recovery_pass40": {
+    "failure": "Independent F7+ review spawn rejected: agent thread limit reached.",
+    "disposition": "Reuse existing Astra xhigh agents for cross-review after author tasks finish; no routing substitution; full goal remains active.",
+    "next_action": "Read frozen F7+ report and root-replay; queue independent review through existing prime-compression agent.",
+    "actual_goal_status_observed": "active (get_goal after thread-limit rejection)"
+  },
+  "seven_adic_expanded_falsifier": {
+    "artifact": "research/astra-seven-adic-expanded-falsifier.md",
+    "sha256": "58f35ff3fdc138fd5ebadeeb09d10447734b1fd4cda82a49f263b727cf1d0845",
+    "status": "Author and independent review accepted; root fixed-only replays passed.",
+    "root_replay": {
+      "artifact_sha256": "58f35ff3fdc138fd5ebadeeb09d10447734b1fd4cda82a49f263b727cf1d0845",
+      "predeclaration_reconstruction_sha256": "19f1f9b7acbc77507d652ad0aae6ac888e433fd35af461c0ac8f7194f39254b4",
+      "runs": [
+        {
+          "mode": "verify",
+          "command_sha256": "fba9c4816345b476573bba88c1b1bd99efaf25ed8233ae7ffe78291231067e56",
+          "stdout_sha256": "3b7f0c1fc1deb466ce7e8f12e0653aab65749b2c84fae331ca451d10e9c25fe7",
+          "stdout": "{\"bad_k_by_row_then_J\": [[[0, 6], [0, 3], [0, 2], [0, 5], [0, 4], [0, 1]], [[0, 2], [0, 1], [0, 3], [0, 4], [5, 6], [3, 5]], [[0, 4], [2, 4], [5, 6], [2, 3], [1, 3], [2, 5]], [[0, 5], [5, 6], [1, 4], [2, 6], [2, 3], [1, 6]], [[1, 3], [1, 2], [1, 4], [1, 5], [0, 1], [4, 6]]], \"candidate_count\": 42, \"discovery_digit_evaluations\": 0, \"first_bad_distance_by_J_then_k\": [[1, 59, 270, 284, 142, 143, 342], [2, 197, 59, 341, 284, 286, 57], [3, 86, 340, 124, 257, 83, 260], [4, 236, 118, 225, 51, 339, 114], [5, 24, 314, 319, 338, 321, 22], [6, 337, 177, 248, 332, 95, 171]], \"first_bad_row_by_J_then_k\": [[0, 4, 1, 4, 2, 3, 0], [0, 1, 2, 0, 2, 3, 3], [0, 3, 0, 1, 3, 2, 2], [0, 4, 2, 2, 1, 0, 3], [0, 2, 3, 2, 0, 1, 1], [0, 0, 2, 1, 4, 1, 3]], \"gain_evaluations\": 0, \"indices\": [0, 26, 233, 245, 169], \"mode\": \"verify\", \"realization\": {\"P\": 2401, \"R\": 343, \"m\": 3, \"top_speed\": 343, \"units\": [1, 73, 2200, 2201, 1431], \"z\": [1, 73, 142, 143, 59]}, \"seed_pairs\": 0, \"source_guards\": 6, \"state_count\": 252, \"states\": [[0, 1, 0], [0, 3, 2], [6, 2, 5], [6, 3, 5], [4, 3, 1]], \"status\": \"F7_PLUS_FALSE_FIXED_CERTIFICATE\", \"top_candidate_checks\": 42, \"top_distance_by_J_then_k\": [[343, 343, 343, 343, 343, 343, 343], [686, 686, 686, 686, 686, 686, 686], [1029, 1029, 1029, 1029, 1029, 1029, 1029], [1029, 1029, 1029, 1029, 1029, 1029, 1029], [686, 686, 686, 686, 686, 686, 686], [343, 343, 343, 343, 343, 343, 343]], \"unit_candidate_checks\": 210}\n{\"child_peak_rss_KiB\": 16312, \"child_system_seconds\": 0.004992, \"child_user_seconds\": 0.018972, \"elapsed_seconds\": 0.02416991800419055, \"exit_code\": 0, \"program_sha256\": \"ce122157dd4e408b325eb4c2156d28b5a65099a156480d55f017e03b5a8ba9ce\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 1436, \"stdout_sha256\": \"94578a03407c1d8e966c533cc7344de15a6b247d4ff619adfc1fc75f198f068b\"}\n",
+          "stderr": "",
+          "exit_code": 0,
+          "elapsed_seconds": 0.04944702799548395
+        },
+        {
+          "mode": "control",
+          "command_sha256": "401412a20814c70dd20539658fa084ecb8b52e21cf8d44c2478325085dade2f9",
+          "stdout_sha256": "9c8afcee3914984210e2cc0a34e23d66776f085b42b642bcd5a58f5b773e5f00",
+          "stdout": "{\"distance_numerators_over_6\": [1, 1, 2, 1, 3, 1], \"residues_mod_6\": [1, 1, 4, 5, 3, 1], \"source_guards\": 2, \"speeds\": [1, 73, 2200, 2201, 1431, 343], \"stationary_runner_only\": true, \"status\": \"ORDINARY_LONELY_TIME_CONTROL_PASSED\", \"time\": \"1/6\"}\n{\"child_peak_rss_KiB\": 15984, \"child_system_seconds\": 0.001905, \"child_user_seconds\": 0.016193, \"elapsed_seconds\": 0.01829224399989471, \"exit_code\": 0, \"program_sha256\": \"ad3edcf4d44bd4438aa87eb32e6859e17b78522f3ab25300e705ef2e8eb100f6\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 247, \"stdout_sha256\": \"1cf1a4646dcd1448755ecb0f0594c022ea88c404dd4027f4c2fe82c311738efe\"}\n",
+          "stderr": "",
+          "exit_code": 0,
+          "elapsed_seconds": 0.04383752602734603
+        }
+      ]
+    },
+    "next_action": "Include in Pass40; do not expand fixed seven-adic candidate family.",
+    "independent_review": "research/astra-seven-adic-expanded-review.md",
+    "review_sha256": "f965b8b98d2f1abef6bc611c2e2e8cce8cddc2478ec32f1ce39ae7cb408bf370",
+    "review_root_replay": {
+      "artifact_sha256": "f965b8b98d2f1abef6bc611c2e2e8cce8cddc2478ec32f1ce39ae7cb408bf370",
+      "command_sha256": "18b6163869e133e97c7eed864ded0f2e748892fa6d70966686503fc9e1863250",
+      "stdout_sha256": "1e080670186823c3e28219c843ff5ad48dedcc59fd47d1a27101b012af1f1713",
+      "stdout": "{\"author_programs_executed\": false, \"bad_k_pairs_checked\": 30, \"certificate_masks_checked\": 5, \"discovery_executed\": false, \"distinct_candidates\": 42, \"first_bad_rows\": [[0, 4, 1, 4, 2, 3, 0], [0, 1, 2, 0, 2, 3, 3], [0, 3, 0, 1, 3, 2, 2], [0, 4, 2, 2, 1, 0, 3], [0, 2, 3, 2, 0, 1, 1], [0, 0, 2, 1, 4, 1, 3]], \"fixed_stdout_sha256\": \"94578a03407c1d8e966c533cc7344de15a6b247d4ff619adfc1fc75f198f068b\", \"gain_evaluations\": 0, \"maximum_first_failure_distance\": 342, \"ordinary_control_stdout_sha256\": \"1cf1a4646dcd1448755ecb0f0594c022ea88c404dd4027f4c2fe82c311738efe\", \"seed_pairs\": 0, \"source_guards\": 7, \"status\": \"F7_PLUS_INDEPENDENT_FIXED_REVIEW_PASSED\", \"threshold\": 343, \"top_candidate_checks\": 42, \"unit_candidate_checks\": 210}\n{\"child_peak_rss_KiB\": 16516, \"child_system_seconds\": 0.001949, \"child_user_seconds\": 0.023389, \"elapsed_seconds\": 0.025537740992149338, \"exit_code\": 0, \"program_sha256\": \"2a2ee6a431b9842bc7ee269ba2f2539186a78471aad3ec4df0c7aeac2939ebf8\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 730, \"stdout_sha256\": \"ded002372cb7f3fcde1deb01cfdba20f6ffdb87d92310ed330d9a6c512450376\"}\n",
+      "stderr": "",
+      "exit_code": 0,
+      "elapsed_seconds": 0.048401929991086945
+    }
+  },
+  "prime_difference_compression_plan": {
+    "artifact": "research/astra-prime-difference-compression-plan.md",
+    "sha256": "ee396d22cae90460868ee13ba70c26204cafad190aea3b72835680218b3c88c2",
+    "status": "Author, independent manuscript review and root full read accepted; fixed-only review replay passed. Ready for settled-contract Terra implementation.",
+    "scope": "Arbitrary prime; oriented residue differences either collapsed or at distinct live levels; no all-count or new fixed-count LRC theorem.",
+    "independent_review": "research/astra-prime-difference-compression-review.md",
+    "review_sha256": "a3a77cdfbc4f983755d38bd75a7aad6ccdeb4534d5c1ec455dfce0320c1d4947",
+    "review_root_replay": {
+      "artifact_sha256": "a3a77cdfbc4f983755d38bd75a7aad6ccdeb4534d5c1ec455dfce0320c1d4947",
+      "command_sha256": "5ce52f818fbfb0c01e24e9275cc2baa70acdc31d296b1b8b37581e97ca0ad553",
+      "stdout_sha256": "a6468154fac335c48716a5b2a588bd00511a619c97569d6b5b5ef80f446ad70d",
+      "stdout": "{\"equal_level_fixed_digits\": [0, 1, 2], \"lean_executed\": false, \"negated_endpoint_digit\": 1, \"search_executed\": false, \"source_guards\": 9, \"status\": \"FIXED_COMPRESSION_CONTROLS_PASSED\", \"successful_triple_fixtures\": [{\"closed_lifts\": [-49, -7], \"difference_residues\": [294, 336], \"digits\": [6, 6, 0], \"lambda\": 1, \"name\": \"endpoint\", \"transformed_differences\": [294, 336]}, {\"closed_lifts\": [0, -42], \"difference_residues\": [0, 7], \"digits\": [0, 0, 0], \"lambda\": 43, \"name\": \"one_collapsed\", \"transformed_differences\": [0, 301]}, {\"closed_lifts\": [0, 0], \"difference_residues\": [0, 0], \"digits\": [0, 0, 0], \"lambda\": 1, \"name\": \"both_collapsed\", \"transformed_differences\": [0, 0]}, {\"closed_lifts\": [-1, 0], \"difference_residues\": [4, 0], \"digits\": [3, 4, 4], \"lambda\": 5, \"name\": \"m_zero\", \"transformed_differences\": [6, 0]}, {\"closed_lifts\": [-49, -7], \"difference_residues\": [294, 336], \"digits\": [6, 6, 0], \"lambda\": 1, \"name\": \"negative_anchor\", \"transformed_differences\": [294, 336]}, {\"closed_lifts\": [0, 0], \"difference_residues\": [0, 0], \"digits\": [6, 6, 6], \"lambda\": 1, \"name\": \"actual_zero\", \"transformed_differences\": [0, 0]}, {\"closed_lifts\": [-2, -1], \"difference_residues\": [2, 1], \"digits\": [0, 1, 1], \"lambda\": 3, \"name\": \"p_two\", \"transformed_differences\": [2, 3]}, {\"closed_lifts\": [-1, 0], \"difference_residues\": [1, 0], \"digits\": [0, 1, 1], \"lambda\": 1, \"name\": \"p_two_m_zero\", \"transformed_differences\": [1, 0]}], \"two_target_fixtures\": [{\"current_lower_coefficient\": 4, \"higher_residue_preserved\": 1715, \"inputs\": [686, 21], \"lambda\": 1182, \"lower_k\": 4, \"name\": \"top_then_lower\", \"targets\": [5, 2]}, {\"current_lower_coefficient\": 3, \"higher_residue_preserved\": 425, \"inputs\": [50, 3], \"lambda\": 396, \"lower_k\": 3, \"name\": \"both_below\", \"targets\": [3, 4]}, {\"current_lower_coefficient\": 2, \"higher_residue_preserved\": 9, \"inputs\": [4, 18], \"lambda\": 20, \"lower_k\": 1, \"name\": \"swapped_order\", \"targets\": [2, 1]}, {\"current_lower_coefficient\": 1, \"higher_residue_preserved\": 2, \"inputs\": [2, 1], \"lambda\": 3, \"lower_k\": 1, \"name\": \"binary_targets\", \"targets\": [1, 1]}, {\"current_lower_coefficient\": 3, \"higher_residue_preserved\": 147, \"inputs\": [392, 400], \"lambda\": 199, \"lower_k\": 6, \"name\": \"unreduced_inputs\", \"targets\": [3, 0]}], \"wrong_coefficient_digit\": 5}\n{\"child_peak_rss_KiB\": 15808, \"child_system_seconds\": 0.004961999999999999, \"child_user_seconds\": 0.013894, \"elapsed_seconds\": 0.019069995993049815, \"exit_code\": 0, \"program_sha256\": \"76f290f661060c490a6a86c3c3ea6648cd971914b308cfee670d72acbfcf1c43\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 2288, \"stdout_sha256\": \"73a26ab87c3f6e254166f6e9e92843023b48c0646f6a09cc58891bb9307f11a4\"}\n",
+      "stderr": "",
+      "exit_code": 0,
+      "elapsed_seconds": 0.044113019976066425
+    },
+    "next_action": "Implement exact F/C plus prerequisite arithmetic and oriented signed adapter in new modules; preserve existing Fin5 sources. Restore shared pinned cache only for implementation."
+  },
+  "pending_pass40": {
+    "phase": "verified_ready_to_publish",
+    "draft_document": "docs/astra-research-40.md",
+    "scope": "Restricted F7/F7+ counterexamples, independently reviewed next generic-prime difference-compression contract, exact canonical count-gap and future six-total source target. No Lean changes.",
+    "remaining": [
+      "Commit verified nine-file checkpoint, push/open PR, inspectchecks/reviews and exactheadmerge, verify main."
+    ]
   }
 }

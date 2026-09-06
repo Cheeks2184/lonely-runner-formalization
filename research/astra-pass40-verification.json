@@ -1,0 +1,109 @@
+{
+  "checkpoint": "Pass40",
+  "status": "verified_ready_to_publish",
+  "source_checkpoint": "312158239315a3488cb522695b58c0a2fece7621",
+  "scope": "Exact auxiliary-family counterexamples and manuscript compression plan; no new kernel theorem.",
+  "artifacts": {
+    "research/astra-seven-adic-carry-scope-audit.md": "4360a75613ba59fad5de8edcd23f37397876d0235816b9340b8707f93a63a126",
+    "research/astra-seven-adic-carry-scope-review.md": "3be938da0c923c0894f768f18e807e39bfa08d8d6a999bb00a910813a201a452",
+    "research/astra-seven-adic-expanded-falsifier.md": "58f35ff3fdc138fd5ebadeeb09d10447734b1fd4cda82a49f263b727cf1d0845",
+    "research/astra-prime-difference-compression-plan.md": "ee396d22cae90460868ee13ba70c26204cafad190aea3b72835680218b3c88c2",
+    "research/astra-seven-adic-expanded-review.md": "f965b8b98d2f1abef6bc611c2e2e8cce8cddc2478ec32f1ce39ae7cb408bf370",
+    "research/astra-prime-difference-compression-review.md": "a3a77cdfbc4f983755d38bd75a7aad6ccdeb4534d5c1ec455dfce0320c1d4947"
+  },
+  "root_replays": {
+    "F7": {
+      "artifact_sha256": "4360a75613ba59fad5de8edcd23f37397876d0235816b9340b8707f93a63a126",
+      "command_sha256": "b625b3ee9f1d578e3479ed3679e068166a1f9085fdc5bfcbd993f68ebd6901a7",
+      "stdout_sha256": "a08d1c5ea38d957ea19f301ecc24d19e356c1a8e9aff10d023c976a3a07505b3",
+      "stdout": "{\"bad_k_by_row_then_J\": [[[0, 6], [0, 3], [0, 2], [0, 5], [0, 4]], [[0, 2], [0, 1], [0, 3], [0, 4], [5, 6]], [[0, 4], [2, 4], [5, 6], [2, 3], [1, 3]], [[0, 5], [5, 6], [1, 4], [2, 6], [2, 3]], [[1, 3], [1, 2], [1, 4], [1, 5], [0, 1]]], \"candidate_count\": 35, \"first_bad_row_by_J_then_k\": [[0, 4, 1, 4, 2, 3, 0], [0, 1, 2, 0, 2, 3, 3], [0, 3, 0, 1, 3, 2, 2], [0, 4, 2, 2, 1, 0, 3], [0, 2, 3, 2, 0, 1, 1]], \"gain_evaluations\": 0, \"indices\": [0, 21, 194, 204, 140], \"mode\": \"verify\", \"realization\": {\"P\": 343, \"R\": 49, \"m\": 2, \"top_speed\": 49, \"units\": [1, 10, 317, 318, 199], \"z\": [1, 10, 23, 24, 3]}, \"seed_pairs\": 0, \"source_guards\": 4, \"state_count\": 210, \"states\": [[0, 1, 0], [0, 3, 1], [6, 2, 4], [6, 3, 4], [4, 3, 0]], \"status\": \"F7_FALSE_FIXED_CERTIFICATE\"}\n{\"child_peak_rss_KiB\": 16404, \"child_system_seconds\": 0.0049099999999999994, \"child_user_seconds\": 0.016697, \"elapsed_seconds\": 0.021817238011863083, \"exit_code\": 0, \"program_sha256\": \"552e002164843889b7c19da7a6e4e1511201e83e94fee9a4392bdcfdaef1140d\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 764, \"stdout_sha256\": \"954bfaae5a245b193daa33de5c3fd27879137212a737c7952249619268cf8c9f\"}\nFixed quarter-time and J=6,k=4 arithmetic controls passed.\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    "F7_review": {
+      "artifact_sha256": "3be938da0c923c0894f768f18e807e39bfa08d8d6a999bb00a910813a201a452",
+      "command_sha256": "81fe7b253b6427ed3a9443703516a8554fb777eff55d8992ad6e4218bdfccdc8",
+      "stdout_sha256": "0a2ea38557e7d28643a11938cbd4022bc1cdccf6958b86d8dfdbe3d00de7bc9f",
+      "stdout": "{\"closed_boundary_controls\": \"passed\", \"expanded_candidate_count\": 42, \"expanded_carries\": [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 1, 1], [0, 0, 0, 1, 1, 1], [0, 0, 1, 1, 1, 2], [0, 0, 1, 1, 2, 2], [0, 1, 1, 2, 2, 3], [0, 1, 1, 2, 3, 3], [0, 1, 2, 2, 3, 4], [0, 1, 2, 3, 3, 4], [0, 1, 2, 3, 4, 4], [0, 1, 2, 3, 4, 5]], \"expanded_cuts\": [\"0\", \"1/6\", \"1/5\", \"1/4\", \"1/3\", \"2/5\", \"1/2\", \"3/5\", \"2/3\", \"3/4\", \"4/5\", \"5/6\", \"1\"], \"expanded_search_executed\": false, \"expanded_state_count\": 252, \"fixed_stdout_sha256\": \"954bfaae5a245b193daa33de5c3fd27879137212a737c7952249619268cf8c9f\", \"minimum_widths\": [\"1/20\", \"1/30\"], \"proposed_digit_cap\": 10584, \"proposed_gain_cap\": 23909256, \"proposed_seed_pair_cap\": 31626, \"realizability_R\": 343, \"source_guards\": 5, \"status\": \"FIXED_ARITHMETIC_AND_NEXT_CONTRACT_CHECKED\", \"tag_residue_checks\": [30, 36], \"unit_candidate_checks\": 175}\n{\"child_peak_rss_KiB\": 16464, \"child_system_seconds\": 0.003966, \"child_user_seconds\": 0.01983, \"elapsed_seconds\": 0.02400201599812135, \"exit_code\": 0, \"program_sha256\": \"5b9aee867f91f2ae1ae1b92911dbfed0996ae95cade59051b946e2637d1174bb\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 885, \"stdout_sha256\": \"ec024deaad93a45f818b3f21f227cb122626f0ae0609a013ba84bd6f43bb8484\"}\n",
+      "stderr": "",
+      "exit_code": 0,
+      "elapsed_seconds": 0.04835489101242274
+    },
+    "F7_plus": {
+      "artifact_sha256": "58f35ff3fdc138fd5ebadeeb09d10447734b1fd4cda82a49f263b727cf1d0845",
+      "predeclaration_reconstruction_sha256": "19f1f9b7acbc77507d652ad0aae6ac888e433fd35af461c0ac8f7194f39254b4",
+      "runs": [
+        {
+          "mode": "verify",
+          "command_sha256": "fba9c4816345b476573bba88c1b1bd99efaf25ed8233ae7ffe78291231067e56",
+          "stdout_sha256": "3b7f0c1fc1deb466ce7e8f12e0653aab65749b2c84fae331ca451d10e9c25fe7",
+          "stdout": "{\"bad_k_by_row_then_J\": [[[0, 6], [0, 3], [0, 2], [0, 5], [0, 4], [0, 1]], [[0, 2], [0, 1], [0, 3], [0, 4], [5, 6], [3, 5]], [[0, 4], [2, 4], [5, 6], [2, 3], [1, 3], [2, 5]], [[0, 5], [5, 6], [1, 4], [2, 6], [2, 3], [1, 6]], [[1, 3], [1, 2], [1, 4], [1, 5], [0, 1], [4, 6]]], \"candidate_count\": 42, \"discovery_digit_evaluations\": 0, \"first_bad_distance_by_J_then_k\": [[1, 59, 270, 284, 142, 143, 342], [2, 197, 59, 341, 284, 286, 57], [3, 86, 340, 124, 257, 83, 260], [4, 236, 118, 225, 51, 339, 114], [5, 24, 314, 319, 338, 321, 22], [6, 337, 177, 248, 332, 95, 171]], \"first_bad_row_by_J_then_k\": [[0, 4, 1, 4, 2, 3, 0], [0, 1, 2, 0, 2, 3, 3], [0, 3, 0, 1, 3, 2, 2], [0, 4, 2, 2, 1, 0, 3], [0, 2, 3, 2, 0, 1, 1], [0, 0, 2, 1, 4, 1, 3]], \"gain_evaluations\": 0, \"indices\": [0, 26, 233, 245, 169], \"mode\": \"verify\", \"realization\": {\"P\": 2401, \"R\": 343, \"m\": 3, \"top_speed\": 343, \"units\": [1, 73, 2200, 2201, 1431], \"z\": [1, 73, 142, 143, 59]}, \"seed_pairs\": 0, \"source_guards\": 6, \"state_count\": 252, \"states\": [[0, 1, 0], [0, 3, 2], [6, 2, 5], [6, 3, 5], [4, 3, 1]], \"status\": \"F7_PLUS_FALSE_FIXED_CERTIFICATE\", \"top_candidate_checks\": 42, \"top_distance_by_J_then_k\": [[343, 343, 343, 343, 343, 343, 343], [686, 686, 686, 686, 686, 686, 686], [1029, 1029, 1029, 1029, 1029, 1029, 1029], [1029, 1029, 1029, 1029, 1029, 1029, 1029], [686, 686, 686, 686, 686, 686, 686], [343, 343, 343, 343, 343, 343, 343]], \"unit_candidate_checks\": 210}\n{\"child_peak_rss_KiB\": 16312, \"child_system_seconds\": 0.004992, \"child_user_seconds\": 0.018972, \"elapsed_seconds\": 0.02416991800419055, \"exit_code\": 0, \"program_sha256\": \"ce122157dd4e408b325eb4c2156d28b5a65099a156480d55f017e03b5a8ba9ce\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 1436, \"stdout_sha256\": \"94578a03407c1d8e966c533cc7344de15a6b247d4ff619adfc1fc75f198f068b\"}\n",
+          "stderr": "",
+          "exit_code": 0,
+          "elapsed_seconds": 0.04944702799548395
+        },
+        {
+          "mode": "control",
+          "command_sha256": "401412a20814c70dd20539658fa084ecb8b52e21cf8d44c2478325085dade2f9",
+          "stdout_sha256": "9c8afcee3914984210e2cc0a34e23d66776f085b42b642bcd5a58f5b773e5f00",
+          "stdout": "{\"distance_numerators_over_6\": [1, 1, 2, 1, 3, 1], \"residues_mod_6\": [1, 1, 4, 5, 3, 1], \"source_guards\": 2, \"speeds\": [1, 73, 2200, 2201, 1431, 343], \"stationary_runner_only\": true, \"status\": \"ORDINARY_LONELY_TIME_CONTROL_PASSED\", \"time\": \"1/6\"}\n{\"child_peak_rss_KiB\": 15984, \"child_system_seconds\": 0.001905, \"child_user_seconds\": 0.016193, \"elapsed_seconds\": 0.01829224399989471, \"exit_code\": 0, \"program_sha256\": \"ad3edcf4d44bd4438aa87eb32e6859e17b78522f3ab25300e705ef2e8eb100f6\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 247, \"stdout_sha256\": \"1cf1a4646dcd1448755ecb0f0594c022ea88c404dd4027f4c2fe82c311738efe\"}\n",
+          "stderr": "",
+          "exit_code": 0,
+          "elapsed_seconds": 0.04383752602734603
+        }
+      ]
+    },
+    "F7_plus_review": {
+      "artifact_sha256": "f965b8b98d2f1abef6bc611c2e2e8cce8cddc2478ec32f1ce39ae7cb408bf370",
+      "command_sha256": "18b6163869e133e97c7eed864ded0f2e748892fa6d70966686503fc9e1863250",
+      "stdout_sha256": "1e080670186823c3e28219c843ff5ad48dedcc59fd47d1a27101b012af1f1713",
+      "stdout": "{\"author_programs_executed\": false, \"bad_k_pairs_checked\": 30, \"certificate_masks_checked\": 5, \"discovery_executed\": false, \"distinct_candidates\": 42, \"first_bad_rows\": [[0, 4, 1, 4, 2, 3, 0], [0, 1, 2, 0, 2, 3, 3], [0, 3, 0, 1, 3, 2, 2], [0, 4, 2, 2, 1, 0, 3], [0, 2, 3, 2, 0, 1, 1], [0, 0, 2, 1, 4, 1, 3]], \"fixed_stdout_sha256\": \"94578a03407c1d8e966c533cc7344de15a6b247d4ff619adfc1fc75f198f068b\", \"gain_evaluations\": 0, \"maximum_first_failure_distance\": 342, \"ordinary_control_stdout_sha256\": \"1cf1a4646dcd1448755ecb0f0594c022ea88c404dd4027f4c2fe82c311738efe\", \"seed_pairs\": 0, \"source_guards\": 7, \"status\": \"F7_PLUS_INDEPENDENT_FIXED_REVIEW_PASSED\", \"threshold\": 343, \"top_candidate_checks\": 42, \"unit_candidate_checks\": 210}\n{\"child_peak_rss_KiB\": 16516, \"child_system_seconds\": 0.001949, \"child_user_seconds\": 0.023389, \"elapsed_seconds\": 0.025537740992149338, \"exit_code\": 0, \"program_sha256\": \"2a2ee6a431b9842bc7ee269ba2f2539186a78471aad3ec4df0c7aeac2939ebf8\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 730, \"stdout_sha256\": \"ded002372cb7f3fcde1deb01cfdba20f6ffdb87d92310ed330d9a6c512450376\"}\n",
+      "stderr": "",
+      "exit_code": 0,
+      "elapsed_seconds": 0.048401929991086945
+    },
+    "compression_review": {
+      "artifact_sha256": "a3a77cdfbc4f983755d38bd75a7aad6ccdeb4534d5c1ec455dfce0320c1d4947",
+      "command_sha256": "5ce52f818fbfb0c01e24e9275cc2baa70acdc31d296b1b8b37581e97ca0ad553",
+      "stdout_sha256": "a6468154fac335c48716a5b2a588bd00511a619c97569d6b5b5ef80f446ad70d",
+      "stdout": "{\"equal_level_fixed_digits\": [0, 1, 2], \"lean_executed\": false, \"negated_endpoint_digit\": 1, \"search_executed\": false, \"source_guards\": 9, \"status\": \"FIXED_COMPRESSION_CONTROLS_PASSED\", \"successful_triple_fixtures\": [{\"closed_lifts\": [-49, -7], \"difference_residues\": [294, 336], \"digits\": [6, 6, 0], \"lambda\": 1, \"name\": \"endpoint\", \"transformed_differences\": [294, 336]}, {\"closed_lifts\": [0, -42], \"difference_residues\": [0, 7], \"digits\": [0, 0, 0], \"lambda\": 43, \"name\": \"one_collapsed\", \"transformed_differences\": [0, 301]}, {\"closed_lifts\": [0, 0], \"difference_residues\": [0, 0], \"digits\": [0, 0, 0], \"lambda\": 1, \"name\": \"both_collapsed\", \"transformed_differences\": [0, 0]}, {\"closed_lifts\": [-1, 0], \"difference_residues\": [4, 0], \"digits\": [3, 4, 4], \"lambda\": 5, \"name\": \"m_zero\", \"transformed_differences\": [6, 0]}, {\"closed_lifts\": [-49, -7], \"difference_residues\": [294, 336], \"digits\": [6, 6, 0], \"lambda\": 1, \"name\": \"negative_anchor\", \"transformed_differences\": [294, 336]}, {\"closed_lifts\": [0, 0], \"difference_residues\": [0, 0], \"digits\": [6, 6, 6], \"lambda\": 1, \"name\": \"actual_zero\", \"transformed_differences\": [0, 0]}, {\"closed_lifts\": [-2, -1], \"difference_residues\": [2, 1], \"digits\": [0, 1, 1], \"lambda\": 3, \"name\": \"p_two\", \"transformed_differences\": [2, 3]}, {\"closed_lifts\": [-1, 0], \"difference_residues\": [1, 0], \"digits\": [0, 1, 1], \"lambda\": 1, \"name\": \"p_two_m_zero\", \"transformed_differences\": [1, 0]}], \"two_target_fixtures\": [{\"current_lower_coefficient\": 4, \"higher_residue_preserved\": 1715, \"inputs\": [686, 21], \"lambda\": 1182, \"lower_k\": 4, \"name\": \"top_then_lower\", \"targets\": [5, 2]}, {\"current_lower_coefficient\": 3, \"higher_residue_preserved\": 425, \"inputs\": [50, 3], \"lambda\": 396, \"lower_k\": 3, \"name\": \"both_below\", \"targets\": [3, 4]}, {\"current_lower_coefficient\": 2, \"higher_residue_preserved\": 9, \"inputs\": [4, 18], \"lambda\": 20, \"lower_k\": 1, \"name\": \"swapped_order\", \"targets\": [2, 1]}, {\"current_lower_coefficient\": 1, \"higher_residue_preserved\": 2, \"inputs\": [2, 1], \"lambda\": 3, \"lower_k\": 1, \"name\": \"binary_targets\", \"targets\": [1, 1]}, {\"current_lower_coefficient\": 3, \"higher_residue_preserved\": 147, \"inputs\": [392, 400], \"lambda\": 199, \"lower_k\": 6, \"name\": \"unreduced_inputs\", \"targets\": [3, 0]}], \"wrong_coefficient_digit\": 5}\n{\"child_peak_rss_KiB\": 15808, \"child_system_seconds\": 0.004961999999999999, \"child_user_seconds\": 0.013894, \"elapsed_seconds\": 0.019069995993049815, \"exit_code\": 0, \"program_sha256\": \"76f290f661060c490a6a86c3c3ea6648cd971914b308cfee670d72acbfcf1c43\", \"stderr\": \"\", \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 2288, \"stdout_sha256\": \"73a26ab87c3f6e254166f6e9e92843023b48c0646f6a09cc58891bb9307f11a4\"}\n",
+      "stderr": "",
+      "exit_code": 0,
+      "elapsed_seconds": 0.044113019976066425
+    }
+  },
+  "previous_publication": {
+    "checkpoint": "Pass39",
+    "pr": 38,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/38",
+    "head_sha": "173f16275638c8d067d80b66b53094312294fbbf",
+    "merge_sha": "312158239315a3488cb522695b58c0a2fece7621",
+    "merged_at": "2026-09-06T08:12:59Z",
+    "ci_run": 34020720272,
+    "checks": {
+      "Lean build and trust audit": "SUCCESS 2026-09-06T08:04:15Z",
+      "Exact computational certificates": "SUCCESS 2026-09-06T08:09:44Z"
+    },
+    "exact_head_merge": true,
+    "remote_main_ancestor_verified": true,
+    "reviews": [],
+    "status": "merged_verified"
+  },
+  "storage": "No allowlisted cache/build paths present; no restoration or builds for these reports.",
+  "actual_goal_status_after_thread_limit": "active",
+  "search_scope": "Only authors ran predeclared discovery; root replays fixed verification only.",
+  "pending": [],
+  "checks": [
+    "Root read all six complete frozen manuscripts/reviews.",
+    "Root exact fixed-only replays matched all recorded arithmetic stdout hashes; no discovery rerun.",
+    "Workflow structural validator and git diff whitespace checks passed.",
+    "No Lean source changes or local Lean build required for this manuscript checkpoint."
+  ],
+  "canonical_bridge_gap": {
+    "status": "Read-only root source finding; no new theorem or code change.",
+    "source": "LonelyRunner/BoundedRealReduction.lean",
+    "source_sha256": "7eae68d2c46041b39c3e18f9a1e105c75680352f8e4b4edf65e0dd2a92becb72",
+    "finding": "Existing lonelyAt_of_lowerCount at m=6 requires H8: d=1..6 positive integer supply at each own threshold1/(d+1). Current H6 supplies d=1..4; both d5 at1/6 and d6 at1/7 remain. A natural Fin6 1/7 theorem alone does not supply d5 at1/6 by duplication. Irrational branch uses strict gain1/m over1/(m+1).",
+    "next_action": "Keep six-total ordinary supply as separate obligation when planning seven-runner integration."
+  }
+}
