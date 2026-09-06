@@ -21,6 +21,9 @@ import LonelyRunner.FiveRunnerCanonical
 import LonelyRunner.SignedRenaultFiveOne
 import LonelyRunner.SmallPhaseOrbits
 import LonelyRunner.AffinePhaseCertificate
+import LonelyRunner.OneEvenRunners
+import LonelyRunner.WeakSixthShifts
+
 
 
 -- The exact finite-family equivalence does not prove either side.
@@ -787,3 +790,9 @@ project-specific axiom.
 #print axioms LonelyRunner.affineSixthBandFact_sound
 #print axioms LonelyRunner.cutAtomMem_covers_closed_interval
 #print axioms LonelyRunner.typed_phase_certificate_sound
+
+-- One-even residue branch and weak sixth-shift choices.
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_one_even_residues
+#print axioms LonelyRunner.one_three_divisible_one_even_witness
+#print axioms LonelyRunner.sixth_shift_weak_even
+#print axioms LonelyRunner.sixth_shift_weak_odd
