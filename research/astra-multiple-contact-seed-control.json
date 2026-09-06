@@ -1,0 +1,2087 @@
+{
+  "delivery_metrics": {
+    "astra_repair_lines": 0,
+    "astra_repair_rounds": 0,
+    "check_kind": "python",
+    "evidence": [
+      "research/astra-multiple-contact-seed-control.json"
+    ],
+    "first_check_success": true,
+    "usage": null,
+    "worker_elapsed_seconds": null,
+    "worker_repair_rounds": 0
+  },
+  "execution": {
+    "child_exit_status": 0,
+    "command": "timeout --kill-after=1s 60s python3 -B /tmp/lr-multiple-contact-harness.py",
+    "command_wall_seconds": 0.04738608098705299,
+    "limits": {
+      "address_space_bytes": 536870912,
+      "cpu_seconds": 59,
+      "wall_seconds": 60
+    },
+    "parse_error": null,
+    "stderr": "",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "{\"N\":12,\"Q_succeeds\":true,\"all_deletion_seed_sets_nonempty\":true,\"at_least_one_score_reaches_1_over_N\":true,\"delta\":\"1/12\",\"divisibility_cover_complete\":true,\"divisibility_cover_q_2_through_11\":{\"10\":[10],\"11\":[11],\"2\":[8,10,18],\"3\":[18],\"4\":[8],\"5\":[5,10],\"6\":[18],\"7\":[7],\"8\":[8],\"9\":[18]},\"full_good_pattern\":{\"every_full_witness_is_singleton_with_at_least_two_contacts_each_sign\":false,\"full_set_empty\":false,\"positive_length_component_count\":6,\"positive_length_components\":[[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"]],\"singleton_component_count\":4,\"singleton_contacts\":[{\"lower_count\":2,\"lower_delta_indices\":[0,6],\"phases\":[\"1/12\",\"5/12\",\"7/12\",\"2/3\",\"5/6\",\"11/12\",\"1/12\",\"5/12\",\"1/2\",\"7/12\",\"11/12\"],\"time\":\"1/12\",\"upper_count\":2,\"upper_one_minus_delta_indices\":[5,10]},{\"lower_count\":2,\"lower_delta_indices\":[1,7],\"phases\":[\"5/12\",\"1/12\",\"11/12\",\"1/3\",\"1/6\",\"7/12\",\"5/12\",\"1/12\",\"1/2\",\"11/12\",\"7/12\"],\"time\":\"5/12\",\"upper_count\":2,\"upper_one_minus_delta_indices\":[2,9]},{\"lower_count\":2,\"lower_delta_indices\":[2,9],\"phases\":[\"7/12\",\"11/12\",\"1/12\",\"2/3\",\"5/6\",\"5/12\",\"7/12\",\"11/12\",\"1/2\",\"1/12\",\"5/12\"],\"time\":\"7/12\",\"upper_count\":2,\"upper_one_minus_delta_indices\":[1,7]},{\"lower_count\":2,\"lower_delta_indices\":[5,10],\"phases\":[\"11/12\",\"7/12\",\"5/12\",\"1/3\",\"1/6\",\"1/12\",\"11/12\",\"7/12\",\"1/2\",\"5/12\",\"1/12\"],\"time\":\"11/12\",\"upper_count\":2,\"upper_one_minus_delta_indices\":[0,6]}]},\"full_good_set\":[[\"1/12\",\"1/12\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"5/12\",\"5/12\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"7/12\",\"7/12\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"11/12\",\"11/12\"]],\"gcd\":1,\"per_label\":[{\"attaining_time\":\"45/88\",\"pivot_index\":0,\"pivot_speed\":1,\"protected_ball_union\":[[\"1/60\",\"11/276\"],[\"13/276\",\"11/228\"],[\"13/204\",\"11/156\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"145/156\",\"191/204\"],[\"217/228\",\"263/276\"],[\"265/276\",\"59/60\"]],\"score_maximum\":\"47/96\",\"seed_count\":12,\"seed_intervals\":[[\"1/55\",\"10/253\"],[\"12/253\",\"10/209\"],[\"12/187\",\"10/143\"],[\"67/209\",\"65/198\"],[\"67/198\",\"87/253\"],[\"122/253\",\"43/88\"],[\"45/88\",\"131/253\"],[\"166/253\",\"131/198\"],[\"133/198\",\"142/209\"],[\"133/143\",\"175/187\"],[\"199/209\",\"241/253\"],[\"243/253\",\"54/55\"]],\"seeded_weak_intervals\":[[\"1/60\",\"11/276\"],[\"13/276\",\"11/228\"],[\"13/204\",\"11/156\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"145/156\",\"191/204\"],[\"217/228\",\"263/276\"],[\"265/276\",\"59/60\"]],\"whole_component_attaining_time\":\"49/96\",\"whole_component_pivot_maximum\":\"47/96\"},{\"attaining_time\":\"45/88\",\"pivot_index\":1,\"pivot_speed\":5,\"protected_ball_union\":[[\"25/132\",\"23/120\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"97/120\",\"107/132\"]],\"score_maximum\":\"43/96\",\"seed_count\":8,\"seed_intervals\":[[\"23/121\",\"21/110\"],[\"67/209\",\"65/198\"],[\"67/198\",\"87/253\"],[\"122/253\",\"43/88\"],[\"45/88\",\"131/253\"],[\"166/253\",\"131/198\"],[\"133/198\",\"142/209\"],[\"89/110\",\"98/121\"]],\"seeded_weak_intervals\":[[\"25/132\",\"23/120\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"97/120\",\"107/132\"]],\"whole_component_attaining_time\":\"49/96\",\"whole_component_pivot_maximum\":\"43/96\"},{\"attaining_time\":\"45/88\",\"pivot_index\":2,\"pivot_speed\":7,\"protected_ball_union\":[[\"13/96\",\"23/156\"],[\"61/216\",\"59/204\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"97/228\",\"119/276\"],[\"121/276\",\"95/216\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"121/216\",\"155/276\"],[\"157/276\",\"131/228\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"145/204\",\"155/216\"],[\"133/156\",\"83/96\"]],\"score_maximum\":\"41/96\",\"seed_count\":14,\"seed_intervals\":[[\"3/22\",\"21/143\"],[\"28/99\",\"54/187\"],[\"67/209\",\"65/198\"],[\"67/198\",\"87/253\"],[\"89/209\",\"109/253\"],[\"111/253\",\"29/66\"],[\"122/253\",\"43/88\"],[\"45/88\",\"131/253\"],[\"37/66\",\"142/253\"],[\"144/253\",\"120/209\"],[\"166/253\",\"131/198\"],[\"133/198\",\"142/209\"],[\"133/187\",\"71/99\"],[\"122/143\",\"19/22\"]],\"seeded_weak_intervals\":[[\"13/96\",\"23/156\"],[\"61/216\",\"59/204\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"97/228\",\"119/276\"],[\"121/276\",\"95/216\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"121/216\",\"155/276\"],[\"157/276\",\"131/228\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"145/204\",\"155/216\"],[\"133/156\",\"83/96\"]],\"whole_component_attaining_time\":\"49/96\",\"whole_component_pivot_maximum\":\"41/96\"},{\"attaining_time\":\"142/209\",\"pivot_index\":3,\"pivot_speed\":8,\"protected_ball_union\":[[\"25/204\",\"35/276\"],[\"49/204\",\"71/276\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"85/228\",\"59/156\"],[\"133/276\",\"59/120\"],[\"61/120\",\"143/276\"],[\"97/156\",\"143/228\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"205/276\",\"155/204\"],[\"241/276\",\"179/204\"]],\"score_maximum\":\"25/57\",\"seed_count\":12,\"seed_intervals\":[[\"23/187\",\"32/253\"],[\"45/187\",\"65/253\"],[\"67/209\",\"65/198\"],[\"67/198\",\"87/253\"],[\"78/209\",\"54/143\"],[\"122/253\",\"27/55\"],[\"28/55\",\"131/253\"],[\"89/143\",\"131/209\"],[\"166/253\",\"131/198\"],[\"133/198\",\"142/209\"],[\"188/253\",\"142/187\"],[\"221/253\",\"164/187\"]],\"seeded_weak_intervals\":[[\"25/204\",\"35/276\"],[\"49/204\",\"71/276\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"85/228\",\"59/156\"],[\"133/276\",\"59/120\"],[\"61/120\",\"143/276\"],[\"97/156\",\"143/228\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"205/276\",\"155/204\"],[\"241/276\",\"179/204\"]],\"whole_component_attaining_time\":\"155/228\",\"whole_component_pivot_maximum\":\"25/57\"},{\"attaining_time\":\"166/253\",\"pivot_index\":4,\"pivot_speed\":10,\"protected_ball_union\":[[\"13/132\",\"23/228\"],[\"61/204\",\"83/276\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"193/276\",\"143/204\"],[\"205/228\",\"119/132\"]],\"score_maximum\":\"61/138\",\"seed_count\":10,\"seed_intervals\":[[\"12/121\",\"21/209\"],[\"56/187\",\"76/253\"],[\"67/209\",\"65/198\"],[\"67/198\",\"87/253\"],[\"122/253\",\"43/88\"],[\"45/88\",\"131/253\"],[\"166/253\",\"131/198\"],[\"133/198\",\"142/209\"],[\"177/253\",\"131/187\"],[\"188/209\",\"109/121\"]],\"seeded_weak_intervals\":[[\"13/132\",\"23/228\"],[\"61/204\",\"83/276\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"193/276\",\"143/204\"],[\"205/228\",\"119/132\"]],\"whole_component_attaining_time\":\"181/276\",\"whole_component_pivot_maximum\":\"61/138\"},{\"attaining_time\":\"142/209\",\"pivot_index\":5,\"pivot_speed\":11,\"protected_ball_union\":[[\"25/276\",\"277/3036\"],[\"37/204\",\"409/2244\"],[\"61/228\",\"59/216\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"73/204\",\"83/228\"],[\"97/216\",\"71/156\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"85/156\",\"119/216\"],[\"145/228\",\"131/204\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"157/216\",\"167/228\"],[\"1835/2244\",\"167/204\"],[\"2759/3036\",\"251/276\"]],\"score_maximum\":\"109/228\",\"seed_count\":16,\"seed_intervals\":[[\"1/11\",\"1/11\"],[\"2/11\",\"2/11\"],[\"56/209\",\"3/11\"],[\"67/209\",\"65/198\"],[\"67/198\",\"87/253\"],[\"67/187\",\"4/11\"],[\"89/198\",\"5/11\"],[\"122/253\",\"43/88\"],[\"45/88\",\"131/253\"],[\"6/11\",\"109/198\"],[\"7/11\",\"120/187\"],[\"166/253\",\"131/198\"],[\"133/198\",\"142/209\"],[\"8/11\",\"153/209\"],[\"9/11\",\"9/11\"],[\"10/11\",\"10/11\"]],\"seeded_weak_intervals\":[[\"25/276\",\"11/120\"],[\"37/204\",\"11/60\"],[\"61/228\",\"59/216\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"73/204\",\"83/228\"],[\"97/216\",\"71/156\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"85/156\",\"119/216\"],[\"145/228\",\"131/204\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"157/216\",\"167/228\"],[\"49/60\",\"167/204\"],[\"109/120\",\"251/276\"]],\"whole_component_attaining_time\":\"155/228\",\"whole_component_pivot_maximum\":\"109/228\"},{\"attaining_time\":\"166/253\",\"pivot_index\":6,\"pivot_speed\":13,\"protected_ball_union\":[[\"49/216\",\"47/204\"],[\"37/120\",\"71/228\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"61/132\",\"95/204\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"109/204\",\"71/132\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"157/228\",\"83/120\"],[\"157/204\",\"167/216\"]],\"score_maximum\":\"131/276\",\"seed_count\":12,\"seed_intervals\":[[\"5/22\",\"43/187\"],[\"17/55\",\"65/209\"],[\"67/209\",\"65/198\"],[\"67/198\",\"87/253\"],[\"56/121\",\"87/187\"],[\"122/253\",\"43/88\"],[\"45/88\",\"131/253\"],[\"100/187\",\"65/121\"],[\"166/253\",\"131/198\"],[\"133/198\",\"142/209\"],[\"144/209\",\"38/55\"],[\"144/187\",\"17/22\"]],\"seeded_weak_intervals\":[[\"49/216\",\"47/204\"],[\"37/120\",\"71/228\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"61/132\",\"95/204\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"109/204\",\"71/132\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"157/228\",\"83/120\"],[\"157/204\",\"167/216\"]],\"whole_component_attaining_time\":\"181/276\",\"whole_component_pivot_maximum\":\"131/276\"},{\"attaining_time\":\"23/34\",\"pivot_index\":7,\"pivot_speed\":17,\"protected_ball_union\":[[\"37/156\",\"23/96\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"97/276\",\"47/132\"],[\"73/156\",\"107/228\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"121/228\",\"83/156\"],[\"85/132\",\"179/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"73/96\",\"119/156\"]],\"score_maximum\":\"127/228\",\"seed_count\":12,\"seed_intervals\":[[\"34/143\",\"21/88\"],[\"67/209\",\"65/198\"],[\"67/198\",\"87/253\"],[\"89/253\",\"43/121\"],[\"67/143\",\"98/209\"],[\"122/253\",\"43/88\"],[\"45/88\",\"131/253\"],[\"111/209\",\"76/143\"],[\"78/121\",\"164/253\"],[\"166/253\",\"131/198\"],[\"133/198\",\"142/209\"],[\"67/88\",\"109/143\"]],\"seeded_weak_intervals\":[[\"37/156\",\"23/96\"],[\"73/228\",\"71/216\"],[\"73/216\",\"95/276\"],[\"97/276\",\"47/132\"],[\"73/156\",\"107/228\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"121/228\",\"83/156\"],[\"85/132\",\"179/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"155/228\"],[\"73/96\",\"119/156\"]],\"whole_component_attaining_time\":\"23/34\",\"whole_component_pivot_maximum\":\"1/2\"},{\"attaining_time\":\"131/253\",\"pivot_index\":8,\"pivot_speed\":18,\"protected_ball_union\":[[\"25/228\",\"23/204\"],[\"37/228\",\"47/276\"],[\"61/276\",\"35/156\"],[\"73/228\",\"95/276\"],[\"37/84\",\"59/132\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"73/132\",\"47/84\"],[\"181/276\",\"155/228\"],[\"121/156\",\"215/276\"],[\"229/276\",\"191/228\"],[\"181/204\",\"203/228\"]],\"score_maximum\":\"15/46\",\"seed_count\":12,\"seed_intervals\":[[\"23/209\",\"21/187\"],[\"34/209\",\"43/253\"],[\"56/253\",\"32/143\"],[\"67/209\",\"87/253\"],[\"34/77\",\"54/121\"],[\"122/253\",\"43/88\"],[\"45/88\",\"131/253\"],[\"67/121\",\"43/77\"],[\"166/253\",\"142/209\"],[\"111/143\",\"197/253\"],[\"210/253\",\"175/209\"],[\"166/187\",\"186/209\"]],\"seeded_weak_intervals\":[[\"25/228\",\"23/204\"],[\"37/228\",\"47/276\"],[\"61/276\",\"35/156\"],[\"73/228\",\"95/276\"],[\"37/84\",\"59/132\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"73/132\",\"47/84\"],[\"181/276\",\"155/228\"],[\"121/156\",\"215/276\"],[\"229/276\",\"191/228\"],[\"181/204\",\"203/228\"]],\"whole_component_attaining_time\":\"143/276\",\"whole_component_pivot_maximum\":\"15/46\"},{\"attaining_time\":\"25/38\",\"pivot_index\":9,\"pivot_speed\":19,\"protected_ball_union\":[[\"25/156\",\"35/216\"],[\"49/156\",\"71/216\"],[\"73/216\",\"95/276\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"107/156\"],[\"181/216\",\"131/156\"]],\"score_maximum\":\"149/276\",\"seed_count\":8,\"seed_intervals\":[[\"23/143\",\"16/99\"],[\"45/143\",\"65/198\"],[\"67/198\",\"87/253\"],[\"122/253\",\"43/88\"],[\"45/88\",\"131/253\"],[\"166/253\",\"131/198\"],[\"133/198\",\"98/143\"],[\"83/99\",\"120/143\"]],\"seeded_weak_intervals\":[[\"25/156\",\"35/216\"],[\"49/156\",\"71/216\"],[\"73/216\",\"95/276\"],[\"133/276\",\"47/96\"],[\"49/96\",\"143/276\"],[\"181/276\",\"143/216\"],[\"145/216\",\"107/156\"],[\"181/216\",\"131/156\"]],\"whole_component_attaining_time\":\"25/38\",\"whole_component_pivot_maximum\":\"1/2\"},{\"attaining_time\":\"31/46\",\"pivot_index\":10,\"pivot_speed\":23,\"protected_ball_union\":[[\"73/228\",\"71/216\"],[\"73/216\",\"71/204\"],[\"109/228\",\"47/96\"],[\"49/96\",\"119/228\"],[\"133/204\",\"143/216\"],[\"145/216\",\"155/228\"]],\"score_maximum\":\"121/216\",\"seed_count\":6,\"seed_intervals\":[[\"67/209\",\"65/198\"],[\"67/198\",\"65/187\"],[\"100/209\",\"43/88\"],[\"45/88\",\"109/209\"],[\"122/187\",\"131/198\"],[\"133/198\",\"142/209\"]],\"seeded_weak_intervals\":[[\"73/228\",\"71/216\"],[\"73/216\",\"71/204\"],[\"109/228\",\"47/96\"],[\"49/96\",\"119/228\"],[\"133/204\",\"143/216\"],[\"145/216\",\"155/228\"]],\"whole_component_attaining_time\":\"31/46\",\"whole_component_pivot_maximum\":\"1/2\"}],\"primitive_grid_contacts\":{\"1\":{\"lower_count\":2,\"lower_delta_indices\":[0,6],\"phases\":[\"1/12\",\"5/12\",\"7/12\",\"2/3\",\"5/6\",\"11/12\",\"1/12\",\"5/12\",\"1/2\",\"7/12\",\"11/12\"],\"time\":\"1/12\",\"upper_count\":2,\"upper_one_minus_delta_indices\":[5,10]},\"11\":{\"lower_count\":2,\"lower_delta_indices\":[5,10],\"phases\":[\"11/12\",\"7/12\",\"5/12\",\"1/3\",\"1/6\",\"1/12\",\"11/12\",\"7/12\",\"1/2\",\"5/12\",\"1/12\"],\"time\":\"11/12\",\"upper_count\":2,\"upper_one_minus_delta_indices\":[0,6]},\"5\":{\"lower_count\":2,\"lower_delta_indices\":[1,7],\"phases\":[\"5/12\",\"1/12\",\"11/12\",\"1/3\",\"1/6\",\"7/12\",\"5/12\",\"1/12\",\"1/2\",\"11/12\",\"7/12\"],\"time\":\"5/12\",\"upper_count\":2,\"upper_one_minus_delta_indices\":[2,9]},\"7\":{\"lower_count\":2,\"lower_delta_indices\":[2,9],\"phases\":[\"7/12\",\"11/12\",\"1/12\",\"2/3\",\"5/6\",\"5/12\",\"7/12\",\"11/12\",\"1/2\",\"1/12\",\"5/12\"],\"time\":\"7/12\",\"upper_count\":2,\"upper_one_minus_delta_indices\":[1,7]}},\"protected_witness\":{\"all_coordinates_at_least_1_over_N\":true,\"coordinate_norms\":[\"43/88\",\"39/88\",\"37/88\",\"1/11\",\"5/44\",\"3/8\",\"31/88\",\"27/88\",\"9/44\",\"25/88\",\"21/88\"],\"direction\":0,\"displacement\":\"0\",\"minimum_norm\":\"1/11\",\"pivot_index\":0,\"pivot_speed\":1,\"rho\":\"1/1056\",\"seed_pivot_norm\":\"43/88\",\"seed_time\":\"45/88\",\"time\":\"45/88\",\"within_rho\":true},\"tuple\":[1,5,7,8,10,11,13,17,18,19,23]}\n",
+    "stdout_sha256": "48f3ed9d41bc6c360af4df4f7ae62b44a204d22318844093c38156e34b5de682",
+    "task_elapsed_seconds": null,
+    "usage": null
+  },
+  "failed_attempts": [],
+  "frozen_source_before_execution": {
+    "actual_child_argv": [
+      "/usr/bin/python3",
+      "-B",
+      "-c",
+      "<actual_child_program_base64>"
+    ],
+    "actual_child_program_base64": "ZnJvbSBmcmFjdGlvbnMgaW1wb3J0IEZyYWN0aW9uIGFzIEYKZnJvbSBmdW5jdG9vbHMgaW1wb3J0IHJlZHVjZQpmcm9tIG1hdGggaW1wb3J0IGdjZAoKZGVmIG5vcm0oeSk6CiAgICB6PXklMQogICAgcmV0dXJuIG1pbih6LDEteikKCmRlZiBpbnRlcnNlY3QoQSxCKToKICAgIG91dD1bXQogICAgaT1qPTAKICAgIHdoaWxlIGk8bGVuKEEpIGFuZCBqPGxlbihCKToKICAgICAgICBsPW1heChBW2ldWzBdLEJbal1bMF0pOyByPW1pbihBW2ldWzFdLEJbal1bMV0pCiAgICAgICAgaWYgbDw9cjoKICAgICAgICAgICAgaWYgb3V0IGFuZCBsPD1vdXRbLTFdWzFdOgogICAgICAgICAgICAgICAgb3V0Wy0xXT0ob3V0Wy0xXVswXSxtYXgocixvdXRbLTFdWzFdKSkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIG91dC5hcHBlbmQoKGwscikpCiAgICAgICAgaWYgQVtpXVsxXTxCW2pdWzFdOgogICAgICAgICAgICBpKz0xCiAgICAgICAgZWxzZToKICAgICAgICAgICAgais9MQogICAgcmV0dXJuIG91dAoKZGVmIGJhbmRzKHYsbWFyZ2luKToKICAgIEE9WyhGKDApLEYoMSkpXQogICAgZm9yIGQgaW4gdjoKICAgICAgICBBPWludGVyc2VjdChBLFsoRihrLGQpK21hcmdpbi9kLEYoaysxLGQpLW1hcmdpbi9kKSBmb3IgayBpbiByYW5nZShkKV0pCiAgICByZXR1cm4gQQoKZGVmIGNhbmRpZGF0ZXMoaW50ZXJ2YWxzLGQpOgogICAgQz17eCBmb3IgSSBpbiBpbnRlcnZhbHMgZm9yIHggaW4gSX0KICAgIEMudXBkYXRlKEYoMiprKzEsMipkKSBmb3IgayBpbiByYW5nZShkKQogICAgICAgICAgICAgaWYgYW55KGE8PUYoMiprKzEsMipkKTw9YiBmb3IgYSxiIGluIGludGVydmFscykpCiAgICByZXR1cm4gQwoKZGVmIGF1ZGl0KHYscCxkZXRhaWxzPUZhbHNlKToKICAgIE49bGVuKHYpKzE7IGRlbHRhPUYoMSxOKTsgZ2FtbWE9RigxLE4tMSkKICAgIGQ9dltwXTsgb2xkPXZbOnBdK3ZbcCsxOl0KICAgIFM9YmFuZHMob2xkLGdhbW1hKQogICAgaWYgbm90IFM6CiAgICAgICAgcmV0dXJuIE5vbmUKICAgIGRlZiBzY29yZSh0KToKICAgICAgICByZXR1cm4gbm9ybShkKnQpK2QqbWluKChub3JtKHgqdCktZGVsdGEpL3ggZm9yIHggaW4gb2xkKQogICAgYmVzdD1tYXgoKHNjb3JlKHQpLHQpIGZvciB0IGluIGNhbmRpZGF0ZXMoUyxkKSkKICAgIGlmIG5vdCBkZXRhaWxzOgogICAgICAgIHJldHVybiBiZXN0CiAgICBXPWJhbmRzKG9sZCxkZWx0YSkKICAgIHNlZWRlZD1bKGEsYikgZm9yIGEsYiBpbiBXIGlmIGFueShhPD15IGFuZCB4PD1iIGZvciB4LHkgaW4gUyldCiAgICB3aG9sZT1tYXgoKG5vcm0oZCp0KSx0KSBmb3IgdCBpbiBjYW5kaWRhdGVzKHNlZWRlZCxkKSkKICAgIGJhbGxzPVtdCiAgICBmb3IgbCxyIGluIFM6CiAgICAgICAgY29udGFpbmluZz1bKEwsUikgZm9yIEwsUiBpbiBXIGlmIEw8PWw8PXI8PVJdCiAgICAgICAgYXNzZXJ0IGxlbihjb250YWluaW5nKT09MQogICAgICAgIEwsUj1jb250YWluaW5nWzBdCiAgICAgICAgYmFsbHMuYXBwZW5kKChtYXgoTCwyKmwtUiksbWluKFIsMipyLUwpKSkKICAgIHJldHVybiBTLGJlc3Qsc2VlZGVkLHdob2xlLGJhbGxzCgoKaW1wb3J0IGpzb24KCmRlZiBfZnJhYyh4KToKICAgIHJldHVybiBmInt4Lm51bWVyYXRvcn0ve3guZGVub21pbmF0b3J9IiBpZiB4LmRlbm9taW5hdG9yICE9IDEgZWxzZSBzdHIoeC5udW1lcmF0b3IpCgpkZWYgX2ludGVydmFscyh4cyk6CiAgICByZXR1cm4gW1tfZnJhYyhhKSwgX2ZyYWMoYildIGZvciBhLGIgaW4geHNdCgpkZWYgX3BoYXNlX2NvbnRhY3RzKHYsIHQsIGRlbHRhKToKICAgIHBoYXNlcz1bKGQqdCklMSBmb3IgZCBpbiB2XQogICAgbG93ZXI9W2kgZm9yIGkseCBpbiBlbnVtZXJhdGUocGhhc2VzKSBpZiB4PT1kZWx0YV0KICAgIHVwcGVyPVtpIGZvciBpLHggaW4gZW51bWVyYXRlKHBoYXNlcykgaWYgeD09MS1kZWx0YV0KICAgIHJldHVybiB7InRpbWUiOl9mcmFjKHQpLCJwaGFzZXMiOltfZnJhYyh4KSBmb3IgeCBpbiBwaGFzZXNdLCJsb3dlcl9kZWx0YV9pbmRpY2VzIjpsb3dlciwidXBwZXJfb25lX21pbnVzX2RlbHRhX2luZGljZXMiOnVwcGVyLCJsb3dlcl9jb3VudCI6bGVuKGxvd2VyKSwidXBwZXJfY291bnQiOmxlbih1cHBlcil9CgpkZWYgX2xhYmVsKHYsIHApOgogICAgcmVzdWx0PWF1ZGl0KHYscCxUcnVlKQogICAgaWYgcmVzdWx0IGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIHsicGl2b3RfaW5kZXgiOnAsInBpdm90X3NwZWVkIjp2W3BdLCJzZWVkX2ludGVydmFscyI6W10sInNlZWRfY291bnQiOjAsInNjb3JlX21heGltdW0iOk5vbmUsImF0dGFpbmluZ190aW1lIjpOb25lLCJzZWVkZWRfd2Vha19pbnRlcnZhbHMiOltdLCJ3aG9sZV9jb21wb25lbnRfcGl2b3RfbWF4aW11bSI6Tm9uZSwid2hvbGVfY29tcG9uZW50X2F0dGFpbmluZ190aW1lIjpOb25lLCJwcm90ZWN0ZWRfYmFsbF91bmlvbiI6W119CiAgICBTLGJlc3Qsc2VlZGVkLHdob2xlLGJhbGxzPXJlc3VsdAogICAgcmV0dXJuIHsicGl2b3RfaW5kZXgiOnAsInBpdm90X3NwZWVkIjp2W3BdLCJzZWVkX2ludGVydmFscyI6X2ludGVydmFscyhTKSwic2VlZF9jb3VudCI6bGVuKFMpLCJzY29yZV9tYXhpbXVtIjpfZnJhYyhiZXN0WzBdKSwiYXR0YWluaW5nX3RpbWUiOl9mcmFjKGJlc3RbMV0pLCJzZWVkZWRfd2Vha19pbnRlcnZhbHMiOl9pbnRlcnZhbHMoc2VlZGVkKSwid2hvbGVfY29tcG9uZW50X3Bpdm90X21heGltdW0iOl9mcmFjKHdob2xlWzBdKSwid2hvbGVfY29tcG9uZW50X2F0dGFpbmluZ190aW1lIjpfZnJhYyh3aG9sZVsxXSksInByb3RlY3RlZF9iYWxsX3VuaW9uIjpfaW50ZXJ2YWxzKGJhbGxzKX0KCnY9KDEsNSw3LDgsMTAsMTEsMTMsMTcsMTgsMTksMjMpCk49bGVuKHYpKzEKZGVsdGE9RigxLE4pCmFzc2VydCBOPT0xMiBhbmQgbGVuKHNldCh2KSk9PWxlbih2KSBhbmQgYWxsKGQ+MCBmb3IgZCBpbiB2KSBhbmQgcmVkdWNlKGdjZCx2KT09MQpsYWJlbHM9W19sYWJlbCh2LHApIGZvciBwIGluIHJhbmdlKGxlbih2KSldCmZ1bGw9YmFuZHModixkZWx0YSkKc2luZ2xldG9ucz1bXQpwb3NpdGl2ZT1bXQpmb3IgTCxSIGluIGZ1bGw6CiAgICBpZiBMPT1SOgogICAgICAgIHNpbmdsZXRvbnMuYXBwZW5kKF9waGFzZV9jb250YWN0cyh2LEwsZGVsdGEpKQogICAgZWxzZToKICAgICAgICBwb3NpdGl2ZS5hcHBlbmQoW19mcmFjKEwpLF9mcmFjKFIpXSkKYWxsX3NlZWRfbm9uZW1wdHk9YWxsKHhbInNlZWRfY291bnQiXT4wIGZvciB4IGluIGxhYmVscykKcXVhbGlmeWluZz1beCBmb3IgeCBpbiBsYWJlbHMgaWYgeFsic2NvcmVfbWF4aW11bSJdIGlzIG5vdCBOb25lIGFuZCBGKHhbInNjb3JlX21heGltdW0iXSk+PWRlbHRhXQpwcm90ZWN0ZWQ9Tm9uZQppZiBxdWFsaWZ5aW5nOgogICAgcm93PXF1YWxpZnlpbmdbMF0KICAgIHA9cm93WyJwaXZvdF9pbmRleCJdOyBkPXZbcF07IHM9Rihyb3dbImF0dGFpbmluZ190aW1lIl0pOyBvbGQ9dls6cF0rdltwKzE6XQogICAgcmhvPW1pbigobm9ybSh4KnMpLWRlbHRhKS94IGZvciB4IGluIG9sZCkKICAgIHBpdm90X25vcm09bm9ybShkKnMpCiAgICBkaXNwbGFjZW1lbnQ9bWF4KEYoMCksZGVsdGEtcGl2b3Rfbm9ybSkvZAogICAgaWYgZGlzcGxhY2VtZW50PT0wOgogICAgICAgIGRpcmVjdGlvbj0wCiAgICBlbHNlOgogICAgICAgIGRpcmVjdGlvbj0xIGlmIChkKnMpJTE8RigxLDIpIGVsc2UgLTEKICAgIHQ9cytkaXJlY3Rpb24qZGlzcGxhY2VtZW50CiAgICBjb29yZGluYXRlX25vcm1zPVtub3JtKHgqdCkgZm9yIHggaW4gdl0KICAgIGFzc2VydCBhYnModC1zKTw9cmhvIGFuZCBhbGwoeD49ZGVsdGEgZm9yIHggaW4gY29vcmRpbmF0ZV9ub3JtcykKICAgIHByb3RlY3RlZD17InBpdm90X2luZGV4IjpwLCJwaXZvdF9zcGVlZCI6ZCwic2VlZF90aW1lIjpfZnJhYyhzKSwic2VlZF9waXZvdF9ub3JtIjpfZnJhYyhwaXZvdF9ub3JtKSwicmhvIjpfZnJhYyhyaG8pLCJkaXJlY3Rpb24iOmRpcmVjdGlvbiwiZGlzcGxhY2VtZW50IjpfZnJhYyhkaXNwbGFjZW1lbnQpLCJ0aW1lIjpfZnJhYyh0KSwid2l0aGluX3JobyI6YWJzKHQtcyk8PXJobywiY29vcmRpbmF0ZV9ub3JtcyI6W19mcmFjKHgpIGZvciB4IGluIGNvb3JkaW5hdGVfbm9ybXNdLCJtaW5pbXVtX25vcm0iOl9mcmFjKG1pbihjb29yZGluYXRlX25vcm1zKSksImFsbF9jb29yZGluYXRlc19hdF9sZWFzdF8xX292ZXJfTiI6YWxsKHg+PWRlbHRhIGZvciB4IGluIGNvb3JkaW5hdGVfbm9ybXMpfQpkaXZpc2liaWxpdHlfY292ZXI9e3N0cihxKTpbZCBmb3IgZCBpbiB2IGlmIGQlcT09MF0gZm9yIHEgaW4gcmFuZ2UoMiwxMil9CmdyaWRfY29udGFjdHM9e3N0cihhKTpfcGhhc2VfY29udGFjdHModixGKGEsMTIpLGRlbHRhKSBmb3IgYSBpbiAoMSw1LDcsMTEpfQpwYXR0ZXJuPXsiZnVsbF9zZXRfZW1wdHkiOm5vdCBib29sKGZ1bGwpLCJzaW5nbGV0b25fY29tcG9uZW50X2NvdW50IjpsZW4oc2luZ2xldG9ucyksInBvc2l0aXZlX2xlbmd0aF9jb21wb25lbnRfY291bnQiOmxlbihwb3NpdGl2ZSksInNpbmdsZXRvbl9jb250YWN0cyI6c2luZ2xldG9ucywicG9zaXRpdmVfbGVuZ3RoX2NvbXBvbmVudHMiOnBvc2l0aXZlLCJldmVyeV9mdWxsX3dpdG5lc3NfaXNfc2luZ2xldG9uX3dpdGhfYXRfbGVhc3RfdHdvX2NvbnRhY3RzX2VhY2hfc2lnbiI6Ym9vbChmdWxsKSBhbmQgbm90IHBvc2l0aXZlIGFuZCBhbGwoeFsibG93ZXJfY291bnQiXT49MiBhbmQgeFsidXBwZXJfY291bnQiXT49MiBmb3IgeCBpbiBzaW5nbGV0b25zKX0KcHJpbnQoanNvbi5kdW1wcyh7InR1cGxlIjp2LCJOIjpOLCJkZWx0YSI6X2ZyYWMoZGVsdGEpLCJnY2QiOnJlZHVjZShnY2QsdiksInBlcl9sYWJlbCI6bGFiZWxzLCJhbGxfZGVsZXRpb25fc2VlZF9zZXRzX25vbmVtcHR5IjphbGxfc2VlZF9ub25lbXB0eSwiYXRfbGVhc3Rfb25lX3Njb3JlX3JlYWNoZXNfMV9vdmVyX04iOmJvb2wocXVhbGlmeWluZyksIlFfc3VjY2VlZHMiOmFsbF9zZWVkX25vbmVtcHR5IGFuZCBib29sKHF1YWxpZnlpbmcpLCJwcm90ZWN0ZWRfd2l0bmVzcyI6cHJvdGVjdGVkLCJmdWxsX2dvb2Rfc2V0IjpfaW50ZXJ2YWxzKGZ1bGwpLCJmdWxsX2dvb2RfcGF0dGVybiI6cGF0dGVybiwiZGl2aXNpYmlsaXR5X2NvdmVyX3FfMl90aHJvdWdoXzExIjpkaXZpc2liaWxpdHlfY292ZXIsImRpdmlzaWJpbGl0eV9jb3Zlcl9jb21wbGV0ZSI6YWxsKGRpdmlzaWJpbGl0eV9jb3ZlcltzdHIocSldIGZvciBxIGluIHJhbmdlKDIsMTIpKSwicHJpbWl0aXZlX2dyaWRfY29udGFjdHMiOmdyaWRfY29udGFjdHN9LHNvcnRfa2V5cz1UcnVlLHNlcGFyYXRvcnM9KCcsJywnOicpKSkK",
+    "actual_child_program_bytes": 5328,
+    "actual_child_program_sha256_before_execution": "db669c080a73fe13069cf0510419f4e7c835bfd9a2ed88b68b1765f57eade118",
+    "actual_parent_argv": [
+      "/tmp/lr-multiple-contact-harness.py"
+    ],
+    "checker_path": "research/astra-uniform-all-deletion-seed-screen.md",
+    "checker_sha256_before_execution": "b2b6acd00dae3c8ed777bc3da4227fab0254016eec035c2c100f8d346a398f1b",
+    "frozen_definition_prefix_base64": "ZnJvbSBmcmFjdGlvbnMgaW1wb3J0IEZyYWN0aW9uIGFzIEYKZnJvbSBmdW5jdG9vbHMgaW1wb3J0IHJlZHVjZQpmcm9tIG1hdGggaW1wb3J0IGdjZAoKZGVmIG5vcm0oeSk6CiAgICB6PXklMQogICAgcmV0dXJuIG1pbih6LDEteikKCmRlZiBpbnRlcnNlY3QoQSxCKToKICAgIG91dD1bXQogICAgaT1qPTAKICAgIHdoaWxlIGk8bGVuKEEpIGFuZCBqPGxlbihCKToKICAgICAgICBsPW1heChBW2ldWzBdLEJbal1bMF0pOyByPW1pbihBW2ldWzFdLEJbal1bMV0pCiAgICAgICAgaWYgbDw9cjoKICAgICAgICAgICAgaWYgb3V0IGFuZCBsPD1vdXRbLTFdWzFdOgogICAgICAgICAgICAgICAgb3V0Wy0xXT0ob3V0Wy0xXVswXSxtYXgocixvdXRbLTFdWzFdKSkKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIG91dC5hcHBlbmQoKGwscikpCiAgICAgICAgaWYgQVtpXVsxXTxCW2pdWzFdOgogICAgICAgICAgICBpKz0xCiAgICAgICAgZWxzZToKICAgICAgICAgICAgais9MQogICAgcmV0dXJuIG91dAoKZGVmIGJhbmRzKHYsbWFyZ2luKToKICAgIEE9WyhGKDApLEYoMSkpXQogICAgZm9yIGQgaW4gdjoKICAgICAgICBBPWludGVyc2VjdChBLFsoRihrLGQpK21hcmdpbi9kLEYoaysxLGQpLW1hcmdpbi9kKSBmb3IgayBpbiByYW5nZShkKV0pCiAgICByZXR1cm4gQQoKZGVmIGNhbmRpZGF0ZXMoaW50ZXJ2YWxzLGQpOgogICAgQz17eCBmb3IgSSBpbiBpbnRlcnZhbHMgZm9yIHggaW4gSX0KICAgIEMudXBkYXRlKEYoMiprKzEsMipkKSBmb3IgayBpbiByYW5nZShkKQogICAgICAgICAgICAgaWYgYW55KGE8PUYoMiprKzEsMipkKTw9YiBmb3IgYSxiIGluIGludGVydmFscykpCiAgICByZXR1cm4gQwoKZGVmIGF1ZGl0KHYscCxkZXRhaWxzPUZhbHNlKToKICAgIE49bGVuKHYpKzE7IGRlbHRhPUYoMSxOKTsgZ2FtbWE9RigxLE4tMSkKICAgIGQ9dltwXTsgb2xkPXZbOnBdK3ZbcCsxOl0KICAgIFM9YmFuZHMob2xkLGdhbW1hKQogICAgaWYgbm90IFM6CiAgICAgICAgcmV0dXJuIE5vbmUKICAgIGRlZiBzY29yZSh0KToKICAgICAgICByZXR1cm4gbm9ybShkKnQpK2QqbWluKChub3JtKHgqdCktZGVsdGEpL3ggZm9yIHggaW4gb2xkKQogICAgYmVzdD1tYXgoKHNjb3JlKHQpLHQpIGZvciB0IGluIGNhbmRpZGF0ZXMoUyxkKSkKICAgIGlmIG5vdCBkZXRhaWxzOgogICAgICAgIHJldHVybiBiZXN0CiAgICBXPWJhbmRzKG9sZCxkZWx0YSkKICAgIHNlZWRlZD1bKGEsYikgZm9yIGEsYiBpbiBXIGlmIGFueShhPD15IGFuZCB4PD1iIGZvciB4LHkgaW4gUyldCiAgICB3aG9sZT1tYXgoKG5vcm0oZCp0KSx0KSBmb3IgdCBpbiBjYW5kaWRhdGVzKHNlZWRlZCxkKSkKICAgIGJhbGxzPVtdCiAgICBmb3IgbCxyIGluIFM6CiAgICAgICAgY29udGFpbmluZz1bKEwsUikgZm9yIEwsUiBpbiBXIGlmIEw8PWw8PXI8PVJdCiAgICAgICAgYXNzZXJ0IGxlbihjb250YWluaW5nKT09MQogICAgICAgIEwsUj1jb250YWluaW5nWzBdCiAgICAgICAgYmFsbHMuYXBwZW5kKChtYXgoTCwyKmwtUiksbWluKFIsMipyLUwpKSkKICAgIHJldHVybiBTLGJlc3Qsc2VlZGVkLHdob2xlLGJhbGxzCg==",
+    "frozen_definition_prefix_bytes": 1573,
+    "frozen_definition_prefix_sha256_before_execution": "470ad7aa7f0e6ab12ca65e404493b150f0d471ce684ac1bb87b9b2fb96128d48",
+    "input_tuple": [
+      1,
+      5,
+      7,
+      8,
+      10,
+      11,
+      13,
+      17,
+      18,
+      19,
+      23
+    ],
+    "input_tuple_canonical_json_sha256": "dea4971f6056761e8a8feb2fe6347bc1801ed9b63ab33b8133ce1677419ff177",
+    "outer_argv": [
+      "/bin/bash",
+      "-lc",
+      "timeout --kill-after=1s 60s python3 -B /tmp/lr-multiple-contact-harness.py"
+    ],
+    "outer_inline_command_bytes": 74,
+    "outer_inline_command_sha256_before_execution": "0765ecfab4e9f8c7808760f9f8e81585b4fbe4f903a2d8fef03fdbd5acbe01e0",
+    "parent_harness_base64": "aW1wb3J0IGJhc2U2NAppbXBvcnQgaGFzaGxpYgppbXBvcnQganNvbgppbXBvcnQgb3MKaW1wb3J0IHJlc291cmNlCmltcG9ydCBzdWJwcm9jZXNzCmltcG9ydCBzeXMKaW1wb3J0IHRpbWUKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgpST09UID0gUGF0aCgnL2hvbWUvam9zaHVhL2xvbmVseS1ydW5uZXItZm9ybWFsaXphdGlvbicpCkNIRUNLRVIgPSBST09UIC8gJ3Jlc2VhcmNoL2FzdHJhLXVuaWZvcm0tYWxsLWRlbGV0aW9uLXNlZWQtc2NyZWVuLm1kJwpQTEFOID0gUk9PVCAvICdyZXNlYXJjaC9hc3RyYS1tdWx0aXBsZS1jb250YWN0LXNlZWQtcGxhbi5tZCcKUkVDRUlQVCA9IFJPT1QgLyAncmVzZWFyY2gvYXN0cmEtbXVsdGlwbGUtY29udGFjdC1zZWVkLWNvbnRyb2wuanNvbicKT1VURVJfU0hFTExfQ09NTUFORCA9ICd0aW1lb3V0IC0ta2lsbC1hZnRlcj0xcyA2MHMgcHl0aG9uMyAtQiAvdG1wL2xyLW11bHRpcGxlLWNvbnRhY3QtaGFybmVzcy5weScKT1VURVJfQVJHViA9IFsnL2Jpbi9iYXNoJywgJy1sYycsIE9VVEVSX1NIRUxMX0NPTU1BTkRdCklOUFVUX1RVUExFID0gKDEsIDUsIDcsIDgsIDEwLCAxMSwgMTMsIDE3LCAxOCwgMTksIDIzKQoKIyBUaGlzIHJlcG9ydGluZyBkcml2ZXIgaXMgZnJvemVuIGludG8gdGhlIHJlY2VpcHQgYmVmb3JlIGl0cyBjaGlsZCBleGVjdXRpb24uCkRSSVZFUiA9IHInJycKaW1wb3J0IGpzb24KCmRlZiBfZnJhYyh4KToKICAgIHJldHVybiBmInt4Lm51bWVyYXRvcn0ve3guZGVub21pbmF0b3J9IiBpZiB4LmRlbm9taW5hdG9yICE9IDEgZWxzZSBzdHIoeC5udW1lcmF0b3IpCgpkZWYgX2ludGVydmFscyh4cyk6CiAgICByZXR1cm4gW1tfZnJhYyhhKSwgX2ZyYWMoYildIGZvciBhLGIgaW4geHNdCgpkZWYgX3BoYXNlX2NvbnRhY3RzKHYsIHQsIGRlbHRhKToKICAgIHBoYXNlcz1bKGQqdCklMSBmb3IgZCBpbiB2XQogICAgbG93ZXI9W2kgZm9yIGkseCBpbiBlbnVtZXJhdGUocGhhc2VzKSBpZiB4PT1kZWx0YV0KICAgIHVwcGVyPVtpIGZvciBpLHggaW4gZW51bWVyYXRlKHBoYXNlcykgaWYgeD09MS1kZWx0YV0KICAgIHJldHVybiB7InRpbWUiOl9mcmFjKHQpLCJwaGFzZXMiOltfZnJhYyh4KSBmb3IgeCBpbiBwaGFzZXNdLCJsb3dlcl9kZWx0YV9pbmRpY2VzIjpsb3dlciwidXBwZXJfb25lX21pbnVzX2RlbHRhX2luZGljZXMiOnVwcGVyLCJsb3dlcl9jb3VudCI6bGVuKGxvd2VyKSwidXBwZXJfY291bnQiOmxlbih1cHBlcil9CgpkZWYgX2xhYmVsKHYsIHApOgogICAgcmVzdWx0PWF1ZGl0KHYscCxUcnVlKQogICAgaWYgcmVzdWx0IGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIHsicGl2b3RfaW5kZXgiOnAsInBpdm90X3NwZWVkIjp2W3BdLCJzZWVkX2ludGVydmFscyI6W10sInNlZWRfY291bnQiOjAsInNjb3JlX21heGltdW0iOk5vbmUsImF0dGFpbmluZ190aW1lIjpOb25lLCJzZWVkZWRfd2Vha19pbnRlcnZhbHMiOltdLCJ3aG9sZV9jb21wb25lbnRfcGl2b3RfbWF4aW11bSI6Tm9uZSwid2hvbGVfY29tcG9uZW50X2F0dGFpbmluZ190aW1lIjpOb25lLCJwcm90ZWN0ZWRfYmFsbF91bmlvbiI6W119CiAgICBTLGJlc3Qsc2VlZGVkLHdob2xlLGJhbGxzPXJlc3VsdAogICAgcmV0dXJuIHsicGl2b3RfaW5kZXgiOnAsInBpdm90X3NwZWVkIjp2W3BdLCJzZWVkX2ludGVydmFscyI6X2ludGVydmFscyhTKSwic2VlZF9jb3VudCI6bGVuKFMpLCJzY29yZV9tYXhpbXVtIjpfZnJhYyhiZXN0WzBdKSwiYXR0YWluaW5nX3RpbWUiOl9mcmFjKGJlc3RbMV0pLCJzZWVkZWRfd2Vha19pbnRlcnZhbHMiOl9pbnRlcnZhbHMoc2VlZGVkKSwid2hvbGVfY29tcG9uZW50X3Bpdm90X21heGltdW0iOl9mcmFjKHdob2xlWzBdKSwid2hvbGVfY29tcG9uZW50X2F0dGFpbmluZ190aW1lIjpfZnJhYyh3aG9sZVsxXSksInByb3RlY3RlZF9iYWxsX3VuaW9uIjpfaW50ZXJ2YWxzKGJhbGxzKX0KCnY9KDEsNSw3LDgsMTAsMTEsMTMsMTcsMTgsMTksMjMpCk49bGVuKHYpKzEKZGVsdGE9RigxLE4pCmFzc2VydCBOPT0xMiBhbmQgbGVuKHNldCh2KSk9PWxlbih2KSBhbmQgYWxsKGQ+MCBmb3IgZCBpbiB2KSBhbmQgcmVkdWNlKGdjZCx2KT09MQpsYWJlbHM9W19sYWJlbCh2LHApIGZvciBwIGluIHJhbmdlKGxlbih2KSldCmZ1bGw9YmFuZHModixkZWx0YSkKc2luZ2xldG9ucz1bXQpwb3NpdGl2ZT1bXQpmb3IgTCxSIGluIGZ1bGw6CiAgICBpZiBMPT1SOgogICAgICAgIHNpbmdsZXRvbnMuYXBwZW5kKF9waGFzZV9jb250YWN0cyh2LEwsZGVsdGEpKQogICAgZWxzZToKICAgICAgICBwb3NpdGl2ZS5hcHBlbmQoW19mcmFjKEwpLF9mcmFjKFIpXSkKYWxsX3NlZWRfbm9uZW1wdHk9YWxsKHhbInNlZWRfY291bnQiXT4wIGZvciB4IGluIGxhYmVscykKcXVhbGlmeWluZz1beCBmb3IgeCBpbiBsYWJlbHMgaWYgeFsic2NvcmVfbWF4aW11bSJdIGlzIG5vdCBOb25lIGFuZCBGKHhbInNjb3JlX21heGltdW0iXSk+PWRlbHRhXQpwcm90ZWN0ZWQ9Tm9uZQppZiBxdWFsaWZ5aW5nOgogICAgcm93PXF1YWxpZnlpbmdbMF0KICAgIHA9cm93WyJwaXZvdF9pbmRleCJdOyBkPXZbcF07IHM9Rihyb3dbImF0dGFpbmluZ190aW1lIl0pOyBvbGQ9dls6cF0rdltwKzE6XQogICAgcmhvPW1pbigobm9ybSh4KnMpLWRlbHRhKS94IGZvciB4IGluIG9sZCkKICAgIHBpdm90X25vcm09bm9ybShkKnMpCiAgICBkaXNwbGFjZW1lbnQ9bWF4KEYoMCksZGVsdGEtcGl2b3Rfbm9ybSkvZAogICAgaWYgZGlzcGxhY2VtZW50PT0wOgogICAgICAgIGRpcmVjdGlvbj0wCiAgICBlbHNlOgogICAgICAgIGRpcmVjdGlvbj0xIGlmIChkKnMpJTE8RigxLDIpIGVsc2UgLTEKICAgIHQ9cytkaXJlY3Rpb24qZGlzcGxhY2VtZW50CiAgICBjb29yZGluYXRlX25vcm1zPVtub3JtKHgqdCkgZm9yIHggaW4gdl0KICAgIGFzc2VydCBhYnModC1zKTw9cmhvIGFuZCBhbGwoeD49ZGVsdGEgZm9yIHggaW4gY29vcmRpbmF0ZV9ub3JtcykKICAgIHByb3RlY3RlZD17InBpdm90X2luZGV4IjpwLCJwaXZvdF9zcGVlZCI6ZCwic2VlZF90aW1lIjpfZnJhYyhzKSwic2VlZF9waXZvdF9ub3JtIjpfZnJhYyhwaXZvdF9ub3JtKSwicmhvIjpfZnJhYyhyaG8pLCJkaXJlY3Rpb24iOmRpcmVjdGlvbiwiZGlzcGxhY2VtZW50IjpfZnJhYyhkaXNwbGFjZW1lbnQpLCJ0aW1lIjpfZnJhYyh0KSwid2l0aGluX3JobyI6YWJzKHQtcyk8PXJobywiY29vcmRpbmF0ZV9ub3JtcyI6W19mcmFjKHgpIGZvciB4IGluIGNvb3JkaW5hdGVfbm9ybXNdLCJtaW5pbXVtX25vcm0iOl9mcmFjKG1pbihjb29yZGluYXRlX25vcm1zKSksImFsbF9jb29yZGluYXRlc19hdF9sZWFzdF8xX292ZXJfTiI6YWxsKHg+PWRlbHRhIGZvciB4IGluIGNvb3JkaW5hdGVfbm9ybXMpfQpkaXZpc2liaWxpdHlfY292ZXI9e3N0cihxKTpbZCBmb3IgZCBpbiB2IGlmIGQlcT09MF0gZm9yIHEgaW4gcmFuZ2UoMiwxMil9CmdyaWRfY29udGFjdHM9e3N0cihhKTpfcGhhc2VfY29udGFjdHModixGKGEsMTIpLGRlbHRhKSBmb3IgYSBpbiAoMSw1LDcsMTEpfQpwYXR0ZXJuPXsiZnVsbF9zZXRfZW1wdHkiOm5vdCBib29sKGZ1bGwpLCJzaW5nbGV0b25fY29tcG9uZW50X2NvdW50IjpsZW4oc2luZ2xldG9ucyksInBvc2l0aXZlX2xlbmd0aF9jb21wb25lbnRfY291bnQiOmxlbihwb3NpdGl2ZSksInNpbmdsZXRvbl9jb250YWN0cyI6c2luZ2xldG9ucywicG9zaXRpdmVfbGVuZ3RoX2NvbXBvbmVudHMiOnBvc2l0aXZlLCJldmVyeV9mdWxsX3dpdG5lc3NfaXNfc2luZ2xldG9uX3dpdGhfYXRfbGVhc3RfdHdvX2NvbnRhY3RzX2VhY2hfc2lnbiI6Ym9vbChmdWxsKSBhbmQgbm90IHBvc2l0aXZlIGFuZCBhbGwoeFsibG93ZXJfY291bnQiXT49MiBhbmQgeFsidXBwZXJfY291bnQiXT49MiBmb3IgeCBpbiBzaW5nbGV0b25zKX0KcHJpbnQoanNvbi5kdW1wcyh7InR1cGxlIjp2LCJOIjpOLCJkZWx0YSI6X2ZyYWMoZGVsdGEpLCJnY2QiOnJlZHVjZShnY2QsdiksInBlcl9sYWJlbCI6bGFiZWxzLCJhbGxfZGVsZXRpb25fc2VlZF9zZXRzX25vbmVtcHR5IjphbGxfc2VlZF9ub25lbXB0eSwiYXRfbGVhc3Rfb25lX3Njb3JlX3JlYWNoZXNfMV9vdmVyX04iOmJvb2wocXVhbGlmeWluZyksIlFfc3VjY2VlZHMiOmFsbF9zZWVkX25vbmVtcHR5IGFuZCBib29sKHF1YWxpZnlpbmcpLCJwcm90ZWN0ZWRfd2l0bmVzcyI6cHJvdGVjdGVkLCJmdWxsX2dvb2Rfc2V0IjpfaW50ZXJ2YWxzKGZ1bGwpLCJmdWxsX2dvb2RfcGF0dGVybiI6cGF0dGVybiwiZGl2aXNpYmlsaXR5X2NvdmVyX3FfMl90aHJvdWdoXzExIjpkaXZpc2liaWxpdHlfY292ZXIsImRpdmlzaWJpbGl0eV9jb3Zlcl9jb21wbGV0ZSI6YWxsKGRpdmlzaWJpbGl0eV9jb3ZlcltzdHIocSldIGZvciBxIGluIHJhbmdlKDIsMTIpKSwicHJpbWl0aXZlX2dyaWRfY29udGFjdHMiOmdyaWRfY29udGFjdHN9LHNvcnRfa2V5cz1UcnVlLHNlcGFyYXRvcnM9KCcsJywnOicpKSkKJycnCgpkZWYgc2hhMjU2X2J5dGVzKGRhdGEpOgogICAgcmV0dXJuIGhhc2hsaWIuc2hhMjU2KGRhdGEpLmhleGRpZ2VzdCgpCgpkZWYgY2hpbGRfbGltaXRzKCk6CiAgICByZXNvdXJjZS5zZXRybGltaXQocmVzb3VyY2UuUkxJTUlUX0FTLCAoNTEyICogMTAyNCAqIDEwMjQsIDUxMiAqIDEwMjQgKiAxMDI0KSkKICAgIHJlc291cmNlLnNldHJsaW1pdChyZXNvdXJjZS5STElNSVRfQ1BVLCAoNTksIDU5KSkKCmRlZiBtYWluKCk6CiAgICBoYXJuZXNzX2J5dGVzID0gUGF0aChfX2ZpbGVfXykucmVhZF9ieXRlcygpCiAgICBjaGVja2VyX2J5dGVzID0gQ0hFQ0tFUi5yZWFkX2J5dGVzKCkKICAgIHBsYW5fYnl0ZXMgPSBQTEFOLnJlYWRfYnl0ZXMoKQogICAgY2hlY2tlcl90ZXh0ID0gY2hlY2tlcl9ieXRlcy5kZWNvZGUoJ3V0Zi04JykKICAgIGJsb2NrID0gY2hlY2tlcl90ZXh0LnNwbGl0KCdgYGBweXRob25cbicsIDEpWzFdLnNwbGl0KCdcbmBgYCcsIDEpWzBdCiAgICBwcmVmaXggPSBibG9jay5zcGxpdCgnXG52PSgxLDQsNSw2LDcsMTEpJywgMSlbMF0KICAgIHByZWZpeF9ieXRlcyA9IHByZWZpeC5lbmNvZGUoJ3V0Zi04JykKICAgIGRyaXZlcl9ieXRlcyA9IERSSVZFUi5lbmNvZGUoJ3V0Zi04JykKICAgIGNoaWxkX3NvdXJjZSA9IHByZWZpeCArICdcbicgKyBEUklWRVIKICAgIGNoaWxkX2J5dGVzID0gY2hpbGRfc291cmNlLmVuY29kZSgndXRmLTgnKQogICAgYXNzZXJ0IHNoYTI1Nl9ieXRlcyhjaGVja2VyX2J5dGVzKSA9PSAnYjJiNmFjZDAwZGFlM2M4ZWQ3NzdiYzNkYTQyMjdmYWIwMjU0MDE2ZWVjMDM1YzJjMTAwZjhkMzQ2YTM5OGYxYicKICAgIGFzc2VydCBzaGEyNTZfYnl0ZXMocHJlZml4X2J5dGVzKSA9PSAnNDcwYWQ3YWE3ZjBlNmFiMTJjYTY1ZTQwNDQ5M2IxNTBmMGQ0NzFjZTY4NGFjMWJiODdiOWIyZmI5NjEyOGQ0OCcKICAgIGJlZm9yZSA9IHsKICAgICAgICAnY2hlY2tlcl9wYXRoJzogJ3Jlc2VhcmNoL2FzdHJhLXVuaWZvcm0tYWxsLWRlbGV0aW9uLXNlZWQtc2NyZWVuLm1kJywKICAgICAgICAnY2hlY2tlcl9zaGEyNTZfYmVmb3JlX2V4ZWN1dGlvbic6IHNoYTI1Nl9ieXRlcyhjaGVja2VyX2J5dGVzKSwKICAgICAgICAncGxhbl9wYXRoJzogJ3Jlc2VhcmNoL2FzdHJhLW11bHRpcGxlLWNvbnRhY3Qtc2VlZC1wbGFuLm1kJywKICAgICAgICAncGxhbl9zaGEyNTZfYmVmb3JlX2V4ZWN1dGlvbic6IHNoYTI1Nl9ieXRlcyhwbGFuX2J5dGVzKSwKICAgICAgICAnaW5wdXRfdHVwbGUnOiBsaXN0KElOUFVUX1RVUExFKSwKICAgICAgICAnaW5wdXRfdHVwbGVfY2Fub25pY2FsX2pzb25fc2hhMjU2Jzogc2hhMjU2X2J5dGVzKGpzb24uZHVtcHMoSU5QVVRfVFVQTEUsIHNlcGFyYXRvcnM9KCcsJywgJzonKSkuZW5jb2RlKCkpLAogICAgICAgICdmcm96ZW5fZGVmaW5pdGlvbl9wcmVmaXhfYnl0ZXMnOiBsZW4ocHJlZml4X2J5dGVzKSwKICAgICAgICAnZnJvemVuX2RlZmluaXRpb25fcHJlZml4X3NoYTI1Nl9iZWZvcmVfZXhlY3V0aW9uJzogc2hhMjU2X2J5dGVzKHByZWZpeF9ieXRlcyksCiAgICAgICAgJ2Zyb3plbl9kZWZpbml0aW9uX3ByZWZpeF9iYXNlNjQnOiBiYXNlNjQuYjY0ZW5jb2RlKHByZWZpeF9ieXRlcykuZGVjb2RlKCdhc2NpaScpLAogICAgICAgICdyZXBvcnRpbmdfZHJpdmVyX2J5dGVzJzogbGVuKGRyaXZlcl9ieXRlcyksCiAgICAgICAgJ3JlcG9ydGluZ19kcml2ZXJfc2hhMjU2X2JlZm9yZV9leGVjdXRpb24nOiBzaGEyNTZfYnl0ZXMoZHJpdmVyX2J5dGVzKSwKICAgICAgICAncmVwb3J0aW5nX2RyaXZlcl9iYXNlNjQnOiBiYXNlNjQuYjY0ZW5jb2RlKGRyaXZlcl9ieXRlcykuZGVjb2RlKCdhc2NpaScpLAogICAgICAgICdhY3R1YWxfY2hpbGRfcHJvZ3JhbV9ieXRlcyc6IGxlbihjaGlsZF9ieXRlcyksCiAgICAgICAgJ2FjdHVhbF9jaGlsZF9wcm9ncmFtX3NoYTI1Nl9iZWZvcmVfZXhlY3V0aW9uJzogc2hhMjU2X2J5dGVzKGNoaWxkX2J5dGVzKSwKICAgICAgICAnYWN0dWFsX2NoaWxkX3Byb2dyYW1fYmFzZTY0JzogYmFzZTY0LmI2NGVuY29kZShjaGlsZF9ieXRlcykuZGVjb2RlKCdhc2NpaScpLAogICAgICAgICdwYXJlbnRfaGFybmVzc19wYXRoJzogc3RyKFBhdGgoX19maWxlX18pKSwKICAgICAgICAncGFyZW50X2hhcm5lc3NfYnl0ZXMnOiBsZW4oaGFybmVzc19ieXRlcyksCiAgICAgICAgJ3BhcmVudF9oYXJuZXNzX3NoYTI1Nl9iZWZvcmVfZXhlY3V0aW9uJzogc2hhMjU2X2J5dGVzKGhhcm5lc3NfYnl0ZXMpLAogICAgICAgICdwYXJlbnRfaGFybmVzc19iYXNlNjQnOiBiYXNlNjQuYjY0ZW5jb2RlKGhhcm5lc3NfYnl0ZXMpLmRlY29kZSgnYXNjaWknKSwKICAgICAgICAnb3V0ZXJfYXJndic6IE9VVEVSX0FSR1YsCiAgICAgICAgJ291dGVyX2lubGluZV9jb21tYW5kX2J5dGVzJzogbGVuKE9VVEVSX1NIRUxMX0NPTU1BTkQuZW5jb2RlKCd1dGYtOCcpKSwKICAgICAgICAnb3V0ZXJfaW5saW5lX2NvbW1hbmRfc2hhMjU2X2JlZm9yZV9leGVjdXRpb24nOiBzaGEyNTZfYnl0ZXMoT1VURVJfU0hFTExfQ09NTUFORC5lbmNvZGUoJ3V0Zi04JykpLAogICAgICAgICdhY3R1YWxfcGFyZW50X2FyZ3YnOiBzeXMuYXJndiwKICAgICAgICAnYWN0dWFsX2NoaWxkX2FyZ3YnOiBbc3lzLmV4ZWN1dGFibGUsICctQicsICctYycsICc8YWN0dWFsX2NoaWxkX3Byb2dyYW1fYmFzZTY0PiddLAogICAgICAgICdyZWNlaXB0X2V4aXN0ZWRfYmVmb3JlX2V4ZWN1dGlvbic6IFJFQ0VJUFQuZXhpc3RzKCksCiAgICB9CiAgICBzdGFydCA9IHRpbWUubW9ub3RvbmljKCkKICAgIGNoaWxkID0gc3VicHJvY2Vzcy5ydW4oW3N5cy5leGVjdXRhYmxlLCAnLUInLCAnLWMnLCBjaGlsZF9zb3VyY2VdLCBjd2Q9Uk9PVCwgc3Rkb3V0PXN1YnByb2Nlc3MuUElQRSwgc3RkZXJyPXN1YnByb2Nlc3MuUElQRSwgdGltZW91dD01OS41LCBwcmVleGVjX2ZuPWNoaWxkX2xpbWl0cywgY2hlY2s9RmFsc2UpCiAgICB3YWxsID0gdGltZS5tb25vdG9uaWMoKSAtIHN0YXJ0CiAgICBzdGRvdXQgPSBjaGlsZC5zdGRvdXQuZGVjb2RlKCd1dGYtOCcsICdzdXJyb2dhdGVlc2NhcGUnKQogICAgc3RkZXJyID0gY2hpbGQuc3RkZXJyLmRlY29kZSgndXRmLTgnLCAnc3Vycm9nYXRlZXNjYXBlJykKICAgIHBhcnNlZCA9IE5vbmUKICAgIHBhcnNlX2Vycm9yID0gTm9uZQogICAgaWYgY2hpbGQucmV0dXJuY29kZSA9PSAwOgogICAgICAgIHRyeToKICAgICAgICAgICAgcGFyc2VkID0ganNvbi5sb2FkcyhzdGRvdXQpCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBleGM6CiAgICAgICAgICAgIHBhcnNlX2Vycm9yID0gZid7dHlwZShleGMpLl9fbmFtZV9ffToge2V4Y30nCiAgICByZWNlaXB0ID0gewogICAgICAgICdzY2hlbWFfdmVyc2lvbic6IDEsCiAgICAgICAgJ3Rhc2tfaWQnOiAnL3Jvb3QvbXVsdGlwbGVfY29udGFjdF9zZWVkX2NvbnRyb2wnLAogICAgICAgICdzY29wZSc6ICdvbmUgZXhhY3Qgc3RydWN0dXJhbGx5IG1vdGl2YXRlZCBtdWx0aXBsZS1jb250YWN0IGNvbnRyb2wgZm9yIHRoZSBhcmJpdHJhcnktTiBkZWxldGlvbi1zZWVkIG1lY2hhbmlzbTsgbm8gcmFuZ2Ugc2VhcmNoIG9yIHN1Y2Nlc3Nvci1OIHRoZW9yZW0gY2xhaW0nLAogICAgICAgICdzdGF0dXMnOiAncGFzc2VkJyBpZiBjaGlsZC5yZXR1cm5jb2RlID09IDAgYW5kIHBhcnNlX2Vycm9yIGlzIE5vbmUgZWxzZSAnZmFpbGVkJywKICAgICAgICAnZnJvemVuX3NvdXJjZV9iZWZvcmVfZXhlY3V0aW9uJzogYmVmb3JlLAogICAgICAgICdleGVjdXRpb24nOiB7J2NvbW1hbmQnOiBPVVRFUl9TSEVMTF9DT01NQU5ELCAnbGltaXRzJzogeyd3YWxsX3NlY29uZHMnOiA2MCwgJ2NwdV9zZWNvbmRzJzogNTksICdhZGRyZXNzX3NwYWNlX2J5dGVzJzogNTM2ODcwOTEyfSwgJ2NoaWxkX2V4aXRfc3RhdHVzJzogY2hpbGQucmV0dXJuY29kZSwgJ2NvbW1hbmRfd2FsbF9zZWNvbmRzJzogd2FsbCwgJ3Rhc2tfZWxhcHNlZF9zZWNvbmRzJzogTm9uZSwgJ3VzYWdlJzogTm9uZSwgJ3N0ZG91dCc6IHN0ZG91dCwgJ3N0ZGVycic6IHN0ZGVyciwgJ3N0ZG91dF9zaGEyNTYnOiBzaGEyNTZfYnl0ZXMoY2hpbGQuc3Rkb3V0KSwgJ3N0ZGVycl9zaGEyNTYnOiBzaGEyNTZfYnl0ZXMoY2hpbGQuc3RkZXJyKSwgJ3BhcnNlX2Vycm9yJzogcGFyc2VfZXJyb3J9LAogICAgICAgICdmYWlsZWRfYXR0ZW1wdHMnOiBbXSwKICAgICAgICAnZGVsaXZlcnlfbWV0cmljcyc6IHsnY2hlY2tfa2luZCc6ICdweXRob24nLCAnZmlyc3RfY2hlY2tfc3VjY2Vzcyc6IGNoaWxkLnJldHVybmNvZGUgPT0gMCBhbmQgcGFyc2VfZXJyb3IgaXMgTm9uZSwgJ3dvcmtlcl9yZXBhaXJfcm91bmRzJzogMCwgJ2FzdHJhX3JlcGFpcl9yb3VuZHMnOiAwLCAnYXN0cmFfcmVwYWlyX2xpbmVzJzogMCwgJ3dvcmtlcl9lbGFwc2VkX3NlY29uZHMnOiBOb25lLCAndXNhZ2UnOiBOb25lLCAnZXZpZGVuY2UnOiBbJ3Jlc2VhcmNoL2FzdHJhLW11bHRpcGxlLWNvbnRhY3Qtc2VlZC1jb250cm9sLmpzb24nXX0sCiAgICAgICAgJ3Jlc3VsdHMnOiBwYXJzZWQsCiAgICAgICAgJ3ByZWNpc2Vfc2NvcGVfbm90ZSc6ICdUaGlzIG9uZSBjb250cm9sIHRlc3RzIGEgcHJvcG9zZWQgbXVsdGlwbGUtY29udGFjdCBvYnN0cnVjdGlvbi4gSXRzIG91dGNvbWUgZG9lcyBub3QgcHJvdmUgUSB1bmlmb3JtbHkgYW5kIGRvZXMgbm90IHByb3ZlIG9yIGRpc3Byb3ZlIHRoZSBMb25lbHkgUnVubmVyIENvbmplY3R1cmUuJwogICAgfQogICAgdGVtcG9yYXJ5ID0gUkVDRUlQVC53aXRoX3N1ZmZpeCgnLmpzb24udG1wLW11bHRpcGxlLWNvbnRhY3QnKQogICAgdGVtcG9yYXJ5LndyaXRlX3RleHQoanNvbi5kdW1wcyhyZWNlaXB0LCBpbmRlbnQ9Miwgc29ydF9rZXlzPVRydWUpICsgJ1xuJywgZW5jb2Rpbmc9J3V0Zi04JykKICAgIG9zLnJlcGxhY2UodGVtcG9yYXJ5LCBSRUNFSVBUKQogICAgcHJpbnQoanNvbi5kdW1wcyh7J3N0YXR1cyc6IHJlY2VpcHRbJ3N0YXR1cyddLCAnY2hpbGRfZXhpdF9zdGF0dXMnOiBjaGlsZC5yZXR1cm5jb2RlLCAnY29tbWFuZF93YWxsX3NlY29uZHMnOiB3YWxsLCAncmVjZWlwdF9wYXRoJzogc3RyKFJFQ0VJUFQpLCAncmVjZWlwdF9ieXRlcyc6IFJFQ0VJUFQuc3RhdCgpLnN0X3NpemUsICdzdGRvdXRfc2hhMjU2JzogcmVjZWlwdFsnZXhlY3V0aW9uJ11bJ3N0ZG91dF9zaGEyNTYnXX0sIHNvcnRfa2V5cz1UcnVlKSkKCmlmIF9fbmFtZV9fID09ICdfX21haW5fXyc6CiAgICBtYWluKCkK",
+    "parent_harness_bytes": 9684,
+    "parent_harness_path": "/tmp/lr-multiple-contact-harness.py",
+    "parent_harness_sha256_before_execution": "9347dd61a88fea735ae48196e763af6aa9abfd28fe076c74feecac9f45c73328",
+    "plan_path": "research/astra-multiple-contact-seed-plan.md",
+    "plan_sha256_before_execution": "25b9b2010b944694de40757e79dee14ba37a8d4edc9440793b80ee9e8eeff7a5",
+    "receipt_existed_before_execution": false,
+    "reporting_driver_base64": "CmltcG9ydCBqc29uCgpkZWYgX2ZyYWMoeCk6CiAgICByZXR1cm4gZiJ7eC5udW1lcmF0b3J9L3t4LmRlbm9taW5hdG9yfSIgaWYgeC5kZW5vbWluYXRvciAhPSAxIGVsc2Ugc3RyKHgubnVtZXJhdG9yKQoKZGVmIF9pbnRlcnZhbHMoeHMpOgogICAgcmV0dXJuIFtbX2ZyYWMoYSksIF9mcmFjKGIpXSBmb3IgYSxiIGluIHhzXQoKZGVmIF9waGFzZV9jb250YWN0cyh2LCB0LCBkZWx0YSk6CiAgICBwaGFzZXM9WyhkKnQpJTEgZm9yIGQgaW4gdl0KICAgIGxvd2VyPVtpIGZvciBpLHggaW4gZW51bWVyYXRlKHBoYXNlcykgaWYgeD09ZGVsdGFdCiAgICB1cHBlcj1baSBmb3IgaSx4IGluIGVudW1lcmF0ZShwaGFzZXMpIGlmIHg9PTEtZGVsdGFdCiAgICByZXR1cm4geyJ0aW1lIjpfZnJhYyh0KSwicGhhc2VzIjpbX2ZyYWMoeCkgZm9yIHggaW4gcGhhc2VzXSwibG93ZXJfZGVsdGFfaW5kaWNlcyI6bG93ZXIsInVwcGVyX29uZV9taW51c19kZWx0YV9pbmRpY2VzIjp1cHBlciwibG93ZXJfY291bnQiOmxlbihsb3dlciksInVwcGVyX2NvdW50IjpsZW4odXBwZXIpfQoKZGVmIF9sYWJlbCh2LCBwKToKICAgIHJlc3VsdD1hdWRpdCh2LHAsVHJ1ZSkKICAgIGlmIHJlc3VsdCBpcyBOb25lOgogICAgICAgIHJldHVybiB7InBpdm90X2luZGV4IjpwLCJwaXZvdF9zcGVlZCI6dltwXSwic2VlZF9pbnRlcnZhbHMiOltdLCJzZWVkX2NvdW50IjowLCJzY29yZV9tYXhpbXVtIjpOb25lLCJhdHRhaW5pbmdfdGltZSI6Tm9uZSwic2VlZGVkX3dlYWtfaW50ZXJ2YWxzIjpbXSwid2hvbGVfY29tcG9uZW50X3Bpdm90X21heGltdW0iOk5vbmUsIndob2xlX2NvbXBvbmVudF9hdHRhaW5pbmdfdGltZSI6Tm9uZSwicHJvdGVjdGVkX2JhbGxfdW5pb24iOltdfQogICAgUyxiZXN0LHNlZWRlZCx3aG9sZSxiYWxscz1yZXN1bHQKICAgIHJldHVybiB7InBpdm90X2luZGV4IjpwLCJwaXZvdF9zcGVlZCI6dltwXSwic2VlZF9pbnRlcnZhbHMiOl9pbnRlcnZhbHMoUyksInNlZWRfY291bnQiOmxlbihTKSwic2NvcmVfbWF4aW11bSI6X2ZyYWMoYmVzdFswXSksImF0dGFpbmluZ190aW1lIjpfZnJhYyhiZXN0WzFdKSwic2VlZGVkX3dlYWtfaW50ZXJ2YWxzIjpfaW50ZXJ2YWxzKHNlZWRlZCksIndob2xlX2NvbXBvbmVudF9waXZvdF9tYXhpbXVtIjpfZnJhYyh3aG9sZVswXSksIndob2xlX2NvbXBvbmVudF9hdHRhaW5pbmdfdGltZSI6X2ZyYWMod2hvbGVbMV0pLCJwcm90ZWN0ZWRfYmFsbF91bmlvbiI6X2ludGVydmFscyhiYWxscyl9Cgp2PSgxLDUsNyw4LDEwLDExLDEzLDE3LDE4LDE5LDIzKQpOPWxlbih2KSsxCmRlbHRhPUYoMSxOKQphc3NlcnQgTj09MTIgYW5kIGxlbihzZXQodikpPT1sZW4odikgYW5kIGFsbChkPjAgZm9yIGQgaW4gdikgYW5kIHJlZHVjZShnY2Qsdik9PTEKbGFiZWxzPVtfbGFiZWwodixwKSBmb3IgcCBpbiByYW5nZShsZW4odikpXQpmdWxsPWJhbmRzKHYsZGVsdGEpCnNpbmdsZXRvbnM9W10KcG9zaXRpdmU9W10KZm9yIEwsUiBpbiBmdWxsOgogICAgaWYgTD09UjoKICAgICAgICBzaW5nbGV0b25zLmFwcGVuZChfcGhhc2VfY29udGFjdHModixMLGRlbHRhKSkKICAgIGVsc2U6CiAgICAgICAgcG9zaXRpdmUuYXBwZW5kKFtfZnJhYyhMKSxfZnJhYyhSKV0pCmFsbF9zZWVkX25vbmVtcHR5PWFsbCh4WyJzZWVkX2NvdW50Il0+MCBmb3IgeCBpbiBsYWJlbHMpCnF1YWxpZnlpbmc9W3ggZm9yIHggaW4gbGFiZWxzIGlmIHhbInNjb3JlX21heGltdW0iXSBpcyBub3QgTm9uZSBhbmQgRih4WyJzY29yZV9tYXhpbXVtIl0pPj1kZWx0YV0KcHJvdGVjdGVkPU5vbmUKaWYgcXVhbGlmeWluZzoKICAgIHJvdz1xdWFsaWZ5aW5nWzBdCiAgICBwPXJvd1sicGl2b3RfaW5kZXgiXTsgZD12W3BdOyBzPUYocm93WyJhdHRhaW5pbmdfdGltZSJdKTsgb2xkPXZbOnBdK3ZbcCsxOl0KICAgIHJobz1taW4oKG5vcm0oeCpzKS1kZWx0YSkveCBmb3IgeCBpbiBvbGQpCiAgICBwaXZvdF9ub3JtPW5vcm0oZCpzKQogICAgZGlzcGxhY2VtZW50PW1heChGKDApLGRlbHRhLXBpdm90X25vcm0pL2QKICAgIGlmIGRpc3BsYWNlbWVudD09MDoKICAgICAgICBkaXJlY3Rpb249MAogICAgZWxzZToKICAgICAgICBkaXJlY3Rpb249MSBpZiAoZCpzKSUxPEYoMSwyKSBlbHNlIC0xCiAgICB0PXMrZGlyZWN0aW9uKmRpc3BsYWNlbWVudAogICAgY29vcmRpbmF0ZV9ub3Jtcz1bbm9ybSh4KnQpIGZvciB4IGluIHZdCiAgICBhc3NlcnQgYWJzKHQtcyk8PXJobyBhbmQgYWxsKHg+PWRlbHRhIGZvciB4IGluIGNvb3JkaW5hdGVfbm9ybXMpCiAgICBwcm90ZWN0ZWQ9eyJwaXZvdF9pbmRleCI6cCwicGl2b3Rfc3BlZWQiOmQsInNlZWRfdGltZSI6X2ZyYWMocyksInNlZWRfcGl2b3Rfbm9ybSI6X2ZyYWMocGl2b3Rfbm9ybSksInJobyI6X2ZyYWMocmhvKSwiZGlyZWN0aW9uIjpkaXJlY3Rpb24sImRpc3BsYWNlbWVudCI6X2ZyYWMoZGlzcGxhY2VtZW50KSwidGltZSI6X2ZyYWModCksIndpdGhpbl9yaG8iOmFicyh0LXMpPD1yaG8sImNvb3JkaW5hdGVfbm9ybXMiOltfZnJhYyh4KSBmb3IgeCBpbiBjb29yZGluYXRlX25vcm1zXSwibWluaW11bV9ub3JtIjpfZnJhYyhtaW4oY29vcmRpbmF0ZV9ub3JtcykpLCJhbGxfY29vcmRpbmF0ZXNfYXRfbGVhc3RfMV9vdmVyX04iOmFsbCh4Pj1kZWx0YSBmb3IgeCBpbiBjb29yZGluYXRlX25vcm1zKX0KZGl2aXNpYmlsaXR5X2NvdmVyPXtzdHIocSk6W2QgZm9yIGQgaW4gdiBpZiBkJXE9PTBdIGZvciBxIGluIHJhbmdlKDIsMTIpfQpncmlkX2NvbnRhY3RzPXtzdHIoYSk6X3BoYXNlX2NvbnRhY3RzKHYsRihhLDEyKSxkZWx0YSkgZm9yIGEgaW4gKDEsNSw3LDExKX0KcGF0dGVybj17ImZ1bGxfc2V0X2VtcHR5Ijpub3QgYm9vbChmdWxsKSwic2luZ2xldG9uX2NvbXBvbmVudF9jb3VudCI6bGVuKHNpbmdsZXRvbnMpLCJwb3NpdGl2ZV9sZW5ndGhfY29tcG9uZW50X2NvdW50IjpsZW4ocG9zaXRpdmUpLCJzaW5nbGV0b25fY29udGFjdHMiOnNpbmdsZXRvbnMsInBvc2l0aXZlX2xlbmd0aF9jb21wb25lbnRzIjpwb3NpdGl2ZSwiZXZlcnlfZnVsbF93aXRuZXNzX2lzX3NpbmdsZXRvbl93aXRoX2F0X2xlYXN0X3R3b19jb250YWN0c19lYWNoX3NpZ24iOmJvb2woZnVsbCkgYW5kIG5vdCBwb3NpdGl2ZSBhbmQgYWxsKHhbImxvd2VyX2NvdW50Il0+PTIgYW5kIHhbInVwcGVyX2NvdW50Il0+PTIgZm9yIHggaW4gc2luZ2xldG9ucyl9CnByaW50KGpzb24uZHVtcHMoeyJ0dXBsZSI6diwiTiI6TiwiZGVsdGEiOl9mcmFjKGRlbHRhKSwiZ2NkIjpyZWR1Y2UoZ2NkLHYpLCJwZXJfbGFiZWwiOmxhYmVscywiYWxsX2RlbGV0aW9uX3NlZWRfc2V0c19ub25lbXB0eSI6YWxsX3NlZWRfbm9uZW1wdHksImF0X2xlYXN0X29uZV9zY29yZV9yZWFjaGVzXzFfb3Zlcl9OIjpib29sKHF1YWxpZnlpbmcpLCJRX3N1Y2NlZWRzIjphbGxfc2VlZF9ub25lbXB0eSBhbmQgYm9vbChxdWFsaWZ5aW5nKSwicHJvdGVjdGVkX3dpdG5lc3MiOnByb3RlY3RlZCwiZnVsbF9nb29kX3NldCI6X2ludGVydmFscyhmdWxsKSwiZnVsbF9nb29kX3BhdHRlcm4iOnBhdHRlcm4sImRpdmlzaWJpbGl0eV9jb3Zlcl9xXzJfdGhyb3VnaF8xMSI6ZGl2aXNpYmlsaXR5X2NvdmVyLCJkaXZpc2liaWxpdHlfY292ZXJfY29tcGxldGUiOmFsbChkaXZpc2liaWxpdHlfY292ZXJbc3RyKHEpXSBmb3IgcSBpbiByYW5nZSgyLDEyKSksInByaW1pdGl2ZV9ncmlkX2NvbnRhY3RzIjpncmlkX2NvbnRhY3RzfSxzb3J0X2tleXM9VHJ1ZSxzZXBhcmF0b3JzPSgnLCcsJzonKSkpCg==",
+    "reporting_driver_bytes": 3754,
+    "reporting_driver_sha256_before_execution": "09bbc9b6d31e4888205eef42768aadab840783d4f2b647dc3a3ca5f110becb12"
+  },
+  "precise_scope_note": "This one control tests a proposed multiple-contact obstruction. Its outcome does not prove Q uniformly and does not prove or disprove the Lonely Runner Conjecture.",
+  "results": {
+    "N": 12,
+    "Q_succeeds": true,
+    "all_deletion_seed_sets_nonempty": true,
+    "at_least_one_score_reaches_1_over_N": true,
+    "delta": "1/12",
+    "divisibility_cover_complete": true,
+    "divisibility_cover_q_2_through_11": {
+      "10": [
+        10
+      ],
+      "11": [
+        11
+      ],
+      "2": [
+        8,
+        10,
+        18
+      ],
+      "3": [
+        18
+      ],
+      "4": [
+        8
+      ],
+      "5": [
+        5,
+        10
+      ],
+      "6": [
+        18
+      ],
+      "7": [
+        7
+      ],
+      "8": [
+        8
+      ],
+      "9": [
+        18
+      ]
+    },
+    "full_good_pattern": {
+      "every_full_witness_is_singleton_with_at_least_two_contacts_each_sign": false,
+      "full_set_empty": false,
+      "positive_length_component_count": 6,
+      "positive_length_components": [
+        [
+          "73/228",
+          "71/216"
+        ],
+        [
+          "73/216",
+          "95/276"
+        ],
+        [
+          "133/276",
+          "47/96"
+        ],
+        [
+          "49/96",
+          "143/276"
+        ],
+        [
+          "181/276",
+          "143/216"
+        ],
+        [
+          "145/216",
+          "155/228"
+        ]
+      ],
+      "singleton_component_count": 4,
+      "singleton_contacts": [
+        {
+          "lower_count": 2,
+          "lower_delta_indices": [
+            0,
+            6
+          ],
+          "phases": [
+            "1/12",
+            "5/12",
+            "7/12",
+            "2/3",
+            "5/6",
+            "11/12",
+            "1/12",
+            "5/12",
+            "1/2",
+            "7/12",
+            "11/12"
+          ],
+          "time": "1/12",
+          "upper_count": 2,
+          "upper_one_minus_delta_indices": [
+            5,
+            10
+          ]
+        },
+        {
+          "lower_count": 2,
+          "lower_delta_indices": [
+            1,
+            7
+          ],
+          "phases": [
+            "5/12",
+            "1/12",
+            "11/12",
+            "1/3",
+            "1/6",
+            "7/12",
+            "5/12",
+            "1/12",
+            "1/2",
+            "11/12",
+            "7/12"
+          ],
+          "time": "5/12",
+          "upper_count": 2,
+          "upper_one_minus_delta_indices": [
+            2,
+            9
+          ]
+        },
+        {
+          "lower_count": 2,
+          "lower_delta_indices": [
+            2,
+            9
+          ],
+          "phases": [
+            "7/12",
+            "11/12",
+            "1/12",
+            "2/3",
+            "5/6",
+            "5/12",
+            "7/12",
+            "11/12",
+            "1/2",
+            "1/12",
+            "5/12"
+          ],
+          "time": "7/12",
+          "upper_count": 2,
+          "upper_one_minus_delta_indices": [
+            1,
+            7
+          ]
+        },
+        {
+          "lower_count": 2,
+          "lower_delta_indices": [
+            5,
+            10
+          ],
+          "phases": [
+            "11/12",
+            "7/12",
+            "5/12",
+            "1/3",
+            "1/6",
+            "1/12",
+            "11/12",
+            "7/12",
+            "1/2",
+            "5/12",
+            "1/12"
+          ],
+          "time": "11/12",
+          "upper_count": 2,
+          "upper_one_minus_delta_indices": [
+            0,
+            6
+          ]
+        }
+      ]
+    },
+    "full_good_set": [
+      [
+        "1/12",
+        "1/12"
+      ],
+      [
+        "73/228",
+        "71/216"
+      ],
+      [
+        "73/216",
+        "95/276"
+      ],
+      [
+        "5/12",
+        "5/12"
+      ],
+      [
+        "133/276",
+        "47/96"
+      ],
+      [
+        "49/96",
+        "143/276"
+      ],
+      [
+        "7/12",
+        "7/12"
+      ],
+      [
+        "181/276",
+        "143/216"
+      ],
+      [
+        "145/216",
+        "155/228"
+      ],
+      [
+        "11/12",
+        "11/12"
+      ]
+    ],
+    "gcd": 1,
+    "per_label": [
+      {
+        "attaining_time": "45/88",
+        "pivot_index": 0,
+        "pivot_speed": 1,
+        "protected_ball_union": [
+          [
+            "1/60",
+            "11/276"
+          ],
+          [
+            "13/276",
+            "11/228"
+          ],
+          [
+            "13/204",
+            "11/156"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "145/156",
+            "191/204"
+          ],
+          [
+            "217/228",
+            "263/276"
+          ],
+          [
+            "265/276",
+            "59/60"
+          ]
+        ],
+        "score_maximum": "47/96",
+        "seed_count": 12,
+        "seed_intervals": [
+          [
+            "1/55",
+            "10/253"
+          ],
+          [
+            "12/253",
+            "10/209"
+          ],
+          [
+            "12/187",
+            "10/143"
+          ],
+          [
+            "67/209",
+            "65/198"
+          ],
+          [
+            "67/198",
+            "87/253"
+          ],
+          [
+            "122/253",
+            "43/88"
+          ],
+          [
+            "45/88",
+            "131/253"
+          ],
+          [
+            "166/253",
+            "131/198"
+          ],
+          [
+            "133/198",
+            "142/209"
+          ],
+          [
+            "133/143",
+            "175/187"
+          ],
+          [
+            "199/209",
+            "241/253"
+          ],
+          [
+            "243/253",
+            "54/55"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "1/60",
+            "11/276"
+          ],
+          [
+            "13/276",
+            "11/228"
+          ],
+          [
+            "13/204",
+            "11/156"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "145/156",
+            "191/204"
+          ],
+          [
+            "217/228",
+            "263/276"
+          ],
+          [
+            "265/276",
+            "59/60"
+          ]
+        ],
+        "whole_component_attaining_time": "49/96",
+        "whole_component_pivot_maximum": "47/96"
+      },
+      {
+        "attaining_time": "45/88",
+        "pivot_index": 1,
+        "pivot_speed": 5,
+        "protected_ball_union": [
+          [
+            "25/132",
+            "23/120"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "97/120",
+            "107/132"
+          ]
+        ],
+        "score_maximum": "43/96",
+        "seed_count": 8,
+        "seed_intervals": [
+          [
+            "23/121",
+            "21/110"
+          ],
+          [
+            "67/209",
+            "65/198"
+          ],
+          [
+            "67/198",
+            "87/253"
+          ],
+          [
+            "122/253",
+            "43/88"
+          ],
+          [
+            "45/88",
+            "131/253"
+          ],
+          [
+            "166/253",
+            "131/198"
+          ],
+          [
+            "133/198",
+            "142/209"
+          ],
+          [
+            "89/110",
+            "98/121"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "25/132",
+            "23/120"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "97/120",
+            "107/132"
+          ]
+        ],
+        "whole_component_attaining_time": "49/96",
+        "whole_component_pivot_maximum": "43/96"
+      },
+      {
+        "attaining_time": "45/88",
+        "pivot_index": 2,
+        "pivot_speed": 7,
+        "protected_ball_union": [
+          [
+            "13/96",
+            "23/156"
+          ],
+          [
+            "61/216",
+            "59/204"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "97/228",
+            "119/276"
+          ],
+          [
+            "121/276",
+            "95/216"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "121/216",
+            "155/276"
+          ],
+          [
+            "157/276",
+            "131/228"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "145/204",
+            "155/216"
+          ],
+          [
+            "133/156",
+            "83/96"
+          ]
+        ],
+        "score_maximum": "41/96",
+        "seed_count": 14,
+        "seed_intervals": [
+          [
+            "3/22",
+            "21/143"
+          ],
+          [
+            "28/99",
+            "54/187"
+          ],
+          [
+            "67/209",
+            "65/198"
+          ],
+          [
+            "67/198",
+            "87/253"
+          ],
+          [
+            "89/209",
+            "109/253"
+          ],
+          [
+            "111/253",
+            "29/66"
+          ],
+          [
+            "122/253",
+            "43/88"
+          ],
+          [
+            "45/88",
+            "131/253"
+          ],
+          [
+            "37/66",
+            "142/253"
+          ],
+          [
+            "144/253",
+            "120/209"
+          ],
+          [
+            "166/253",
+            "131/198"
+          ],
+          [
+            "133/198",
+            "142/209"
+          ],
+          [
+            "133/187",
+            "71/99"
+          ],
+          [
+            "122/143",
+            "19/22"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "13/96",
+            "23/156"
+          ],
+          [
+            "61/216",
+            "59/204"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "97/228",
+            "119/276"
+          ],
+          [
+            "121/276",
+            "95/216"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "121/216",
+            "155/276"
+          ],
+          [
+            "157/276",
+            "131/228"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "145/204",
+            "155/216"
+          ],
+          [
+            "133/156",
+            "83/96"
+          ]
+        ],
+        "whole_component_attaining_time": "49/96",
+        "whole_component_pivot_maximum": "41/96"
+      },
+      {
+        "attaining_time": "142/209",
+        "pivot_index": 3,
+        "pivot_speed": 8,
+        "protected_ball_union": [
+          [
+            "25/204",
+            "35/276"
+          ],
+          [
+            "49/204",
+            "71/276"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "85/228",
+            "59/156"
+          ],
+          [
+            "133/276",
+            "59/120"
+          ],
+          [
+            "61/120",
+            "143/276"
+          ],
+          [
+            "97/156",
+            "143/228"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "205/276",
+            "155/204"
+          ],
+          [
+            "241/276",
+            "179/204"
+          ]
+        ],
+        "score_maximum": "25/57",
+        "seed_count": 12,
+        "seed_intervals": [
+          [
+            "23/187",
+            "32/253"
+          ],
+          [
+            "45/187",
+            "65/253"
+          ],
+          [
+            "67/209",
+            "65/198"
+          ],
+          [
+            "67/198",
+            "87/253"
+          ],
+          [
+            "78/209",
+            "54/143"
+          ],
+          [
+            "122/253",
+            "27/55"
+          ],
+          [
+            "28/55",
+            "131/253"
+          ],
+          [
+            "89/143",
+            "131/209"
+          ],
+          [
+            "166/253",
+            "131/198"
+          ],
+          [
+            "133/198",
+            "142/209"
+          ],
+          [
+            "188/253",
+            "142/187"
+          ],
+          [
+            "221/253",
+            "164/187"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "25/204",
+            "35/276"
+          ],
+          [
+            "49/204",
+            "71/276"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "85/228",
+            "59/156"
+          ],
+          [
+            "133/276",
+            "59/120"
+          ],
+          [
+            "61/120",
+            "143/276"
+          ],
+          [
+            "97/156",
+            "143/228"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "205/276",
+            "155/204"
+          ],
+          [
+            "241/276",
+            "179/204"
+          ]
+        ],
+        "whole_component_attaining_time": "155/228",
+        "whole_component_pivot_maximum": "25/57"
+      },
+      {
+        "attaining_time": "166/253",
+        "pivot_index": 4,
+        "pivot_speed": 10,
+        "protected_ball_union": [
+          [
+            "13/132",
+            "23/228"
+          ],
+          [
+            "61/204",
+            "83/276"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "193/276",
+            "143/204"
+          ],
+          [
+            "205/228",
+            "119/132"
+          ]
+        ],
+        "score_maximum": "61/138",
+        "seed_count": 10,
+        "seed_intervals": [
+          [
+            "12/121",
+            "21/209"
+          ],
+          [
+            "56/187",
+            "76/253"
+          ],
+          [
+            "67/209",
+            "65/198"
+          ],
+          [
+            "67/198",
+            "87/253"
+          ],
+          [
+            "122/253",
+            "43/88"
+          ],
+          [
+            "45/88",
+            "131/253"
+          ],
+          [
+            "166/253",
+            "131/198"
+          ],
+          [
+            "133/198",
+            "142/209"
+          ],
+          [
+            "177/253",
+            "131/187"
+          ],
+          [
+            "188/209",
+            "109/121"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "13/132",
+            "23/228"
+          ],
+          [
+            "61/204",
+            "83/276"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "193/276",
+            "143/204"
+          ],
+          [
+            "205/228",
+            "119/132"
+          ]
+        ],
+        "whole_component_attaining_time": "181/276",
+        "whole_component_pivot_maximum": "61/138"
+      },
+      {
+        "attaining_time": "142/209",
+        "pivot_index": 5,
+        "pivot_speed": 11,
+        "protected_ball_union": [
+          [
+            "25/276",
+            "277/3036"
+          ],
+          [
+            "37/204",
+            "409/2244"
+          ],
+          [
+            "61/228",
+            "59/216"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "73/204",
+            "83/228"
+          ],
+          [
+            "97/216",
+            "71/156"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "85/156",
+            "119/216"
+          ],
+          [
+            "145/228",
+            "131/204"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "157/216",
+            "167/228"
+          ],
+          [
+            "1835/2244",
+            "167/204"
+          ],
+          [
+            "2759/3036",
+            "251/276"
+          ]
+        ],
+        "score_maximum": "109/228",
+        "seed_count": 16,
+        "seed_intervals": [
+          [
+            "1/11",
+            "1/11"
+          ],
+          [
+            "2/11",
+            "2/11"
+          ],
+          [
+            "56/209",
+            "3/11"
+          ],
+          [
+            "67/209",
+            "65/198"
+          ],
+          [
+            "67/198",
+            "87/253"
+          ],
+          [
+            "67/187",
+            "4/11"
+          ],
+          [
+            "89/198",
+            "5/11"
+          ],
+          [
+            "122/253",
+            "43/88"
+          ],
+          [
+            "45/88",
+            "131/253"
+          ],
+          [
+            "6/11",
+            "109/198"
+          ],
+          [
+            "7/11",
+            "120/187"
+          ],
+          [
+            "166/253",
+            "131/198"
+          ],
+          [
+            "133/198",
+            "142/209"
+          ],
+          [
+            "8/11",
+            "153/209"
+          ],
+          [
+            "9/11",
+            "9/11"
+          ],
+          [
+            "10/11",
+            "10/11"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "25/276",
+            "11/120"
+          ],
+          [
+            "37/204",
+            "11/60"
+          ],
+          [
+            "61/228",
+            "59/216"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "73/204",
+            "83/228"
+          ],
+          [
+            "97/216",
+            "71/156"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "85/156",
+            "119/216"
+          ],
+          [
+            "145/228",
+            "131/204"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "157/216",
+            "167/228"
+          ],
+          [
+            "49/60",
+            "167/204"
+          ],
+          [
+            "109/120",
+            "251/276"
+          ]
+        ],
+        "whole_component_attaining_time": "155/228",
+        "whole_component_pivot_maximum": "109/228"
+      },
+      {
+        "attaining_time": "166/253",
+        "pivot_index": 6,
+        "pivot_speed": 13,
+        "protected_ball_union": [
+          [
+            "49/216",
+            "47/204"
+          ],
+          [
+            "37/120",
+            "71/228"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "61/132",
+            "95/204"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "109/204",
+            "71/132"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "157/228",
+            "83/120"
+          ],
+          [
+            "157/204",
+            "167/216"
+          ]
+        ],
+        "score_maximum": "131/276",
+        "seed_count": 12,
+        "seed_intervals": [
+          [
+            "5/22",
+            "43/187"
+          ],
+          [
+            "17/55",
+            "65/209"
+          ],
+          [
+            "67/209",
+            "65/198"
+          ],
+          [
+            "67/198",
+            "87/253"
+          ],
+          [
+            "56/121",
+            "87/187"
+          ],
+          [
+            "122/253",
+            "43/88"
+          ],
+          [
+            "45/88",
+            "131/253"
+          ],
+          [
+            "100/187",
+            "65/121"
+          ],
+          [
+            "166/253",
+            "131/198"
+          ],
+          [
+            "133/198",
+            "142/209"
+          ],
+          [
+            "144/209",
+            "38/55"
+          ],
+          [
+            "144/187",
+            "17/22"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "49/216",
+            "47/204"
+          ],
+          [
+            "37/120",
+            "71/228"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "61/132",
+            "95/204"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "109/204",
+            "71/132"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "157/228",
+            "83/120"
+          ],
+          [
+            "157/204",
+            "167/216"
+          ]
+        ],
+        "whole_component_attaining_time": "181/276",
+        "whole_component_pivot_maximum": "131/276"
+      },
+      {
+        "attaining_time": "23/34",
+        "pivot_index": 7,
+        "pivot_speed": 17,
+        "protected_ball_union": [
+          [
+            "37/156",
+            "23/96"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "97/276",
+            "47/132"
+          ],
+          [
+            "73/156",
+            "107/228"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "121/228",
+            "83/156"
+          ],
+          [
+            "85/132",
+            "179/276"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "73/96",
+            "119/156"
+          ]
+        ],
+        "score_maximum": "127/228",
+        "seed_count": 12,
+        "seed_intervals": [
+          [
+            "34/143",
+            "21/88"
+          ],
+          [
+            "67/209",
+            "65/198"
+          ],
+          [
+            "67/198",
+            "87/253"
+          ],
+          [
+            "89/253",
+            "43/121"
+          ],
+          [
+            "67/143",
+            "98/209"
+          ],
+          [
+            "122/253",
+            "43/88"
+          ],
+          [
+            "45/88",
+            "131/253"
+          ],
+          [
+            "111/209",
+            "76/143"
+          ],
+          [
+            "78/121",
+            "164/253"
+          ],
+          [
+            "166/253",
+            "131/198"
+          ],
+          [
+            "133/198",
+            "142/209"
+          ],
+          [
+            "67/88",
+            "109/143"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "37/156",
+            "23/96"
+          ],
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "97/276",
+            "47/132"
+          ],
+          [
+            "73/156",
+            "107/228"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "121/228",
+            "83/156"
+          ],
+          [
+            "85/132",
+            "179/276"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ],
+          [
+            "73/96",
+            "119/156"
+          ]
+        ],
+        "whole_component_attaining_time": "23/34",
+        "whole_component_pivot_maximum": "1/2"
+      },
+      {
+        "attaining_time": "131/253",
+        "pivot_index": 8,
+        "pivot_speed": 18,
+        "protected_ball_union": [
+          [
+            "25/228",
+            "23/204"
+          ],
+          [
+            "37/228",
+            "47/276"
+          ],
+          [
+            "61/276",
+            "35/156"
+          ],
+          [
+            "73/228",
+            "95/276"
+          ],
+          [
+            "37/84",
+            "59/132"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "73/132",
+            "47/84"
+          ],
+          [
+            "181/276",
+            "155/228"
+          ],
+          [
+            "121/156",
+            "215/276"
+          ],
+          [
+            "229/276",
+            "191/228"
+          ],
+          [
+            "181/204",
+            "203/228"
+          ]
+        ],
+        "score_maximum": "15/46",
+        "seed_count": 12,
+        "seed_intervals": [
+          [
+            "23/209",
+            "21/187"
+          ],
+          [
+            "34/209",
+            "43/253"
+          ],
+          [
+            "56/253",
+            "32/143"
+          ],
+          [
+            "67/209",
+            "87/253"
+          ],
+          [
+            "34/77",
+            "54/121"
+          ],
+          [
+            "122/253",
+            "43/88"
+          ],
+          [
+            "45/88",
+            "131/253"
+          ],
+          [
+            "67/121",
+            "43/77"
+          ],
+          [
+            "166/253",
+            "142/209"
+          ],
+          [
+            "111/143",
+            "197/253"
+          ],
+          [
+            "210/253",
+            "175/209"
+          ],
+          [
+            "166/187",
+            "186/209"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "25/228",
+            "23/204"
+          ],
+          [
+            "37/228",
+            "47/276"
+          ],
+          [
+            "61/276",
+            "35/156"
+          ],
+          [
+            "73/228",
+            "95/276"
+          ],
+          [
+            "37/84",
+            "59/132"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "73/132",
+            "47/84"
+          ],
+          [
+            "181/276",
+            "155/228"
+          ],
+          [
+            "121/156",
+            "215/276"
+          ],
+          [
+            "229/276",
+            "191/228"
+          ],
+          [
+            "181/204",
+            "203/228"
+          ]
+        ],
+        "whole_component_attaining_time": "143/276",
+        "whole_component_pivot_maximum": "15/46"
+      },
+      {
+        "attaining_time": "25/38",
+        "pivot_index": 9,
+        "pivot_speed": 19,
+        "protected_ball_union": [
+          [
+            "25/156",
+            "35/216"
+          ],
+          [
+            "49/156",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "107/156"
+          ],
+          [
+            "181/216",
+            "131/156"
+          ]
+        ],
+        "score_maximum": "149/276",
+        "seed_count": 8,
+        "seed_intervals": [
+          [
+            "23/143",
+            "16/99"
+          ],
+          [
+            "45/143",
+            "65/198"
+          ],
+          [
+            "67/198",
+            "87/253"
+          ],
+          [
+            "122/253",
+            "43/88"
+          ],
+          [
+            "45/88",
+            "131/253"
+          ],
+          [
+            "166/253",
+            "131/198"
+          ],
+          [
+            "133/198",
+            "98/143"
+          ],
+          [
+            "83/99",
+            "120/143"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "25/156",
+            "35/216"
+          ],
+          [
+            "49/156",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "95/276"
+          ],
+          [
+            "133/276",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "143/276"
+          ],
+          [
+            "181/276",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "107/156"
+          ],
+          [
+            "181/216",
+            "131/156"
+          ]
+        ],
+        "whole_component_attaining_time": "25/38",
+        "whole_component_pivot_maximum": "1/2"
+      },
+      {
+        "attaining_time": "31/46",
+        "pivot_index": 10,
+        "pivot_speed": 23,
+        "protected_ball_union": [
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "71/204"
+          ],
+          [
+            "109/228",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "119/228"
+          ],
+          [
+            "133/204",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ]
+        ],
+        "score_maximum": "121/216",
+        "seed_count": 6,
+        "seed_intervals": [
+          [
+            "67/209",
+            "65/198"
+          ],
+          [
+            "67/198",
+            "65/187"
+          ],
+          [
+            "100/209",
+            "43/88"
+          ],
+          [
+            "45/88",
+            "109/209"
+          ],
+          [
+            "122/187",
+            "131/198"
+          ],
+          [
+            "133/198",
+            "142/209"
+          ]
+        ],
+        "seeded_weak_intervals": [
+          [
+            "73/228",
+            "71/216"
+          ],
+          [
+            "73/216",
+            "71/204"
+          ],
+          [
+            "109/228",
+            "47/96"
+          ],
+          [
+            "49/96",
+            "119/228"
+          ],
+          [
+            "133/204",
+            "143/216"
+          ],
+          [
+            "145/216",
+            "155/228"
+          ]
+        ],
+        "whole_component_attaining_time": "31/46",
+        "whole_component_pivot_maximum": "1/2"
+      }
+    ],
+    "primitive_grid_contacts": {
+      "1": {
+        "lower_count": 2,
+        "lower_delta_indices": [
+          0,
+          6
+        ],
+        "phases": [
+          "1/12",
+          "5/12",
+          "7/12",
+          "2/3",
+          "5/6",
+          "11/12",
+          "1/12",
+          "5/12",
+          "1/2",
+          "7/12",
+          "11/12"
+        ],
+        "time": "1/12",
+        "upper_count": 2,
+        "upper_one_minus_delta_indices": [
+          5,
+          10
+        ]
+      },
+      "11": {
+        "lower_count": 2,
+        "lower_delta_indices": [
+          5,
+          10
+        ],
+        "phases": [
+          "11/12",
+          "7/12",
+          "5/12",
+          "1/3",
+          "1/6",
+          "1/12",
+          "11/12",
+          "7/12",
+          "1/2",
+          "5/12",
+          "1/12"
+        ],
+        "time": "11/12",
+        "upper_count": 2,
+        "upper_one_minus_delta_indices": [
+          0,
+          6
+        ]
+      },
+      "5": {
+        "lower_count": 2,
+        "lower_delta_indices": [
+          1,
+          7
+        ],
+        "phases": [
+          "5/12",
+          "1/12",
+          "11/12",
+          "1/3",
+          "1/6",
+          "7/12",
+          "5/12",
+          "1/12",
+          "1/2",
+          "11/12",
+          "7/12"
+        ],
+        "time": "5/12",
+        "upper_count": 2,
+        "upper_one_minus_delta_indices": [
+          2,
+          9
+        ]
+      },
+      "7": {
+        "lower_count": 2,
+        "lower_delta_indices": [
+          2,
+          9
+        ],
+        "phases": [
+          "7/12",
+          "11/12",
+          "1/12",
+          "2/3",
+          "5/6",
+          "5/12",
+          "7/12",
+          "11/12",
+          "1/2",
+          "1/12",
+          "5/12"
+        ],
+        "time": "7/12",
+        "upper_count": 2,
+        "upper_one_minus_delta_indices": [
+          1,
+          7
+        ]
+      }
+    },
+    "protected_witness": {
+      "all_coordinates_at_least_1_over_N": true,
+      "coordinate_norms": [
+        "43/88",
+        "39/88",
+        "37/88",
+        "1/11",
+        "5/44",
+        "3/8",
+        "31/88",
+        "27/88",
+        "9/44",
+        "25/88",
+        "21/88"
+      ],
+      "direction": 0,
+      "displacement": "0",
+      "minimum_norm": "1/11",
+      "pivot_index": 0,
+      "pivot_speed": 1,
+      "rho": "1/1056",
+      "seed_pivot_norm": "43/88",
+      "seed_time": "45/88",
+      "time": "45/88",
+      "within_rho": true
+    },
+    "tuple": [
+      1,
+      5,
+      7,
+      8,
+      10,
+      11,
+      13,
+      17,
+      18,
+      19,
+      23
+    ]
+  },
+  "schema_version": 1,
+  "scope": "one exact structurally motivated multiple-contact control for the arbitrary-N deletion-seed mechanism; no range search or successor-N theorem claim",
+  "status": "passed",
+  "task_id": "/root/multiple_contact_seed_control"
+}
