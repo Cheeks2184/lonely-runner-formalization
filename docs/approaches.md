@@ -47,6 +47,18 @@ not an independent supply principle. These results do not exclude unions with
 the existing height or insertion methods; a viable route must add a genuinely
 new supply argument.
 
+Pass 29 adds an accepted conditional exact two-anchor constructor: a stronger
+mixed witness plus a nonzero second-anchor inequality yields an exact packet
+with true count `c=N-2`. Here mixed means that every original norm is at least
+`1/N` and the fastest norm is at least `1/(N-1)`. For `N>=3`, an independently
+reviewed manuscript proves that stationary exact `S` is equivalent to the
+mixed condition over both real and rational witnesses; its `N=3` all-half
+case supplies the zero-loss packet. This is not a uniform supply theorem. The
+accepted one-deletion family `W={1,...,N} minus {a}`, for `N>=4`, `2<=a`, and
+`2a<=N`, gives both signs over the frozen author's full analytical ranges,
+with a separate `N=2a` boundary formula. It is already within the verified
+bounded-height ordinary-witness class, so it adds no ordinary LRC coverage.
+
 Pair-sum completeness is now proved for each already witnessed positive
 integer tuple: a finite floor-cell minimum returns an exact certificate without
 discarding repeated labels or closed endpoints. This replaces the former

@@ -1,0 +1,73 @@
+{
+  "checkpoint": "Pass29",
+  "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+  "scope": "Independently reviewed manuscripts and six fixed exact rational control programs; no unrestricted witness supply or new kernel theorem.",
+  "replays": [
+    {
+      "artifact": "research/astra-exact-affine-union-audit.md",
+      "artifact_sha256": "a44b368e25bd88084ff7cd1d0098e912d452e77d28af7743a1b9f4d43c5be5b2",
+      "program_sha256": "5aef75b40a1cbb1a175ee98c0b349c0fc2ddee21da1c82812c270f23b763cc8f",
+      "stdout_sha256": "cba49a167680aa29ef8d92f676103c27d9fcad39ef89e4437813bdb580b45400",
+      "exit_code": 0,
+      "stderr": "",
+      "replay": "Extract sole fenced Python block byte-exactly; run python3 -B on extracted temporary file from repository root."
+    },
+    {
+      "artifact": "research/astra-exact-affine-union-review.md",
+      "artifact_sha256": "1bb496699831546d2b5377d77339b2b69efb55197fb76b4b5d488a77f34a0f02",
+      "program_sha256": "14119c0209df4afcfe4087b22f548b55dce77e8bbc001c0d77da6b3b834c2951",
+      "stdout_sha256": "facad043b8229753d47f0bafa4759cb4e25b738c1b8b4ff6d7a7f8a8e39f84ec",
+      "exit_code": 0,
+      "stderr": "",
+      "replay": "Extract sole fenced Python block byte-exactly; run python3 -B on extracted temporary file from repository root."
+    },
+    {
+      "artifact": "research/astra-mixed-anchor-lemma.md",
+      "artifact_sha256": "5f6f765ec83df352eecfdabe7a65202ed17a79029d5139e315c989ad7dcce273",
+      "program_sha256": "3d4e14d19998fa34aaa9625cfcf2a3eb1754351a540b667d120f610578e50118",
+      "stdout_sha256": "e4dcdf769f446acf52e8154415daa6759bda9ef7b8ea0b2fe071bed37f940a4e",
+      "exit_code": 0,
+      "stderr": "",
+      "replay": "Extract sole fenced Python block byte-exactly; run python3 -B on extracted temporary file from repository root."
+    },
+    {
+      "artifact": "research/astra-mixed-supply-equivalence-review.md",
+      "artifact_sha256": "f340c0a311ed6e04d802ee8edfb407a84bc329145bc7e9b446d692cd4e52430a",
+      "program_sha256": "39b3976e17e411205f0510368a96c0795fb6f8f2414f79a8c863a262489c8e3b",
+      "stdout_sha256": "350342151674b46fdb4b01cda788dba2370f3b88d7c8f7a89902979954cf0628",
+      "exit_code": 0,
+      "stderr": "",
+      "replay": "Extract sole fenced Python block byte-exactly; run python3 -B on extracted temporary file from repository root."
+    },
+    {
+      "artifact": "research/astra-direct-mixed-controls.md",
+      "artifact_sha256": "66bb36404e33f25f4b1372a3af8056d3cee742bc4bfd4caff0ace778680b612a",
+      "program_sha256": "854955e638a5ce5b137a4e6735f053e5dd0f2ae5ba96866221f787cb2db9fb91",
+      "stdout_sha256": "de0823ce759577795cd653dac0040548e12faf48578b1991fd88f92a144d8cd8",
+      "exit_code": 0,
+      "stderr": "",
+      "replay": "Extract sole fenced Python block byte-exactly; run python3 -B on extracted temporary file from repository root."
+    },
+    {
+      "artifact": "research/astra-direct-mixed-supply-review.md",
+      "artifact_sha256": "330fd88ee67faeac7f0ed596303fdbc65fb6e28db221b9606da3d8425501ec24",
+      "program_sha256": "44ffe22c5dd33ae8017d2b21bc45eb3bd9db2015d6bdfca2fc5e3046befc694b",
+      "stdout_sha256": "dceec2be34d313fd4a57ac6a7a050c7c18863c160d47ebbc8eb1aa60fb96bce6",
+      "exit_code": 0,
+      "stderr": "",
+      "replay": "Extract sole fenced Python block byte-exactly; run python3 -B on extracted temporary file from repository root."
+    }
+  ],
+  "analytical_family_author": {
+    "artifact": "research/astra-direct-mixed-supply.md",
+    "sha256": "a619c863d2d4c10c90f21572caee371bf1b55d6ebfdaf81d9e4f24aeec4fd818",
+    "has_python_program": false
+  },
+  "lean_verification": "No new Lean build or axiom audit for this checkpoint. Pass28 remains latest verified source baseline. Concurrent sharper cutoff implementation excluded.",
+  "canonical_status": "unresolved",
+  "workflow_verification": {
+    "validator": "python3 -B scripts/validate_workflow.py passed",
+    "tests": "python3 -B -m unittest discover -s tests -p test_validate_workflow.py -v: 15 tests passed",
+    "scope": "Explicit recorded user override for Astra/high research/review only; default routes unchanged."
+  }
+}

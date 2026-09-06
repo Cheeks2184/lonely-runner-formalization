@@ -86,6 +86,34 @@ def recorded(value: Any) -> bool:
     return bool(value)
 
 
+def has_explicit_user_high_override(task: Mapping[str, Any], label: str, errors: list[str]) -> bool:
+    """Accept only the durable record for a per-task user-authorized Astra/high route."""
+    override = task.get("routing_override")
+    expected = {
+        "source": "user",
+        "requested_model": "gpt-6-astra",
+        "requested_effort": "high",
+    }
+    if not isinstance(override, Mapping):
+        errors.append(f"{label} Astra high routing requires a routing_override object")
+        return False
+    if set(override) != {"source", "requested_model", "requested_effort", "instruction"}:
+        errors.append(f"{label}.routing_override must record exactly source, requested_model, requested_effort, and instruction")
+        return False
+    if any(override.get(field) != value for field, value in expected.items()):
+        errors.append(f"{label}.routing_override must record the explicit user Astra high route")
+        return False
+    if not nonempty_string(override.get("instruction")):
+        errors.append(f"{label}.routing_override.instruction must be a nonempty string")
+        return False
+    if (task.get("requested_model"), task.get("requested_effort")) != (
+        override["requested_model"], override["requested_effort"]
+    ):
+        errors.append(f"{label}.routing_override must match the task requested route")
+        return False
+    return True
+
+
 def validate_task(task: Any, collection: str, index: int, errors: list[str]) -> None:
     label = f"{collection}[{index}]"
     if not isinstance(task, Mapping):
@@ -109,14 +137,24 @@ def validate_task(task: Any, collection: str, index: int, errors: list[str]) -> 
         errors.append(f"{label}.checks must be an array")
 
     model, effort = task.get("requested_model"), task.get("requested_effort")
-    if kind in {"research", "review"} and (model, effort) != EXPECTED_ROLES["research"]:
-        errors.append(f"{label} {kind} routing must request gpt-6-astra xhigh")
+    if kind in {"research", "review"}:
+        if (model, effort) == EXPECTED_ROLES["research"]:
+            if "routing_override" in task:
+                errors.append(f"{label}.routing_override is allowed only for an explicit Astra high route")
+        elif (model, effort) == EXPECTED_ROLES["orchestrator"]:
+            has_explicit_user_high_override(task, label, errors)
+        else:
+            errors.append(f"{label} {kind} routing must request gpt-6-astra xhigh")
+            if "routing_override" in task:
+                errors.append(f"{label}.routing_override must match the task requested route")
     if kind == "routine" and (model, effort) != EXPECTED_ROLES["routine"]:
         errors.append(f"{label} routine routing must request gpt-5.6-terra medium")
     if kind == "setup" and (model, effort) not in {
         EXPECTED_ROLES["research"], EXPECTED_ROLES["routine"],
     }:
         errors.append(f"{label} setup routing must request an approved research or routine route")
+    if kind not in {"research", "review"} and "routing_override" in task:
+        errors.append(f"{label}.routing_override is allowed only for research or review tasks")
 
     # Observed runtime provenance is deliberately optional.  Its absence must
     # never be turned into a claim that the requested route was observed.

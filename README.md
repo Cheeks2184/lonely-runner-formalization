@@ -11,9 +11,13 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks. The
-[latest checkpoint](docs/astra-research-28.md) records the kernel-checked
+[latest Lean checkpoint](docs/astra-research-28.md) records the kernel-checked
 finite pair-sum witness/certificate completeness bridge and its canonical
 equivalence, with a passing full build, trust audit, and independent review.
+The [Pass 29 research checkpoint](docs/astra-research-29.md) records accepted
+conditional exact-packet work, an accepted mixed-margin equivalence, and an
+accepted one-deletion-family manuscript. It adds no Lean theorem, uniform
+witness supply, or new canonical LRC result.
 The [Pass 26 checkpoint](docs/astra-research-26.md) remains the earlier formal
 equivalence with inclusive primitive finite families. Neither finite supply is
 proved, so unrestricted LRC remains unresolved.

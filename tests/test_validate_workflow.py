@@ -106,6 +106,46 @@ class WorkflowValidatorTests(unittest.TestCase):
         self.change_json("research/workflow-state.json", start_research)
         self.assertEqual(validate_root(self.root), [])
 
+    def test_accepts_exact_explicit_user_astra_high_research_override(self):
+        def add_override(state):
+            state["active_tasks"] = [{
+                "id": "high-research", "kind": "research", "requested_model": "gpt-6-astra",
+                "requested_effort": "high", "target": "authorized implementation", "source_checkpoint": "abc",
+                "owned_files": [], "status": "in_progress", "checks": [],
+                "routing_override": {
+                    "source": "user", "requested_model": "gpt-6-astra", "requested_effort": "high",
+                    "instruction": "Use Astra high for this implementation.",
+                },
+            }]
+        self.change_json("research/workflow-state.json", add_override)
+        self.assertEqual(validate_root(self.root), [])
+
+    def test_rejects_absent_mismatched_and_malformed_astra_high_override(self):
+        def add_high_task(state):
+            state["active_tasks"] = [{
+                "id": "high-research", "kind": "research", "requested_model": "gpt-6-astra",
+                "requested_effort": "high", "target": "authorized implementation", "source_checkpoint": "abc",
+                "owned_files": [], "status": "in_progress", "checks": [],
+            }]
+        self.change_json("research/workflow-state.json", add_high_task)
+        self.assertError("requires a routing_override object")
+
+        def malformed(state):
+            state["active_tasks"][0]["routing_override"] = {
+                "source": "agent", "requested_model": "gpt-6-astra", "requested_effort": "high",
+                "instruction": "", "extra": "not allowed",
+            }
+        self.change_json("research/workflow-state.json", malformed)
+        self.assertError("must record exactly")
+
+        def mismatched(state):
+            state["active_tasks"][0]["routing_override"] = {
+                "source": "user", "requested_model": "gpt-6-astra", "requested_effort": "xhigh",
+                "instruction": "Use Astra high for this implementation.",
+            }
+        self.change_json("research/workflow-state.json", mismatched)
+        self.assertError("must record the explicit user Astra high route")
+
     def test_rejects_legacy_hash_drift(self):
         self.change_json("research/workflow-policy.json", lambda policy: policy["legacy_ledger"].update(sha256="0" * 64))
         self.assertError("legacy ledger hash has drifted")
