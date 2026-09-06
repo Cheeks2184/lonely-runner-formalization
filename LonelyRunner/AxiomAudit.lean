@@ -649,3 +649,22 @@ project-specific axiom.
 #print axioms LonelyRunner.reciprocal_dilate_shift_improves
 #print axioms LonelyRunner.PhaseGood
 #print axioms LonelyRunner.phase_certificate_sound
+
+-- Fixed mask intersections and generic real-band, cut and shift adapters.
+-- The concrete real-phase certificate premises are still separate obligations.
+#print axioms LonelyRunner.maskCandidates
+#print axioms LonelyRunner.mem_maskCandidates
+#print axioms LonelyRunner.exists_common_mask_bit
+#print axioms LonelyRunner.exists_common_mask_candidate
+#print axioms LonelyRunner.renaultPhaseCoreMasks
+#print axioms LonelyRunner.renaultPhaseCoreMasks_all_rows
+#print axioms LonelyRunner.renaultPhaseCoreMasks_lt
+#print axioms LonelyRunner.renaultPhaseCoreMasks_common_candidate
+#print axioms LonelyRunner.exists_nat_coprime_grid_circleNorm_ge
+#print axioms LonelyRunner.circleNorm_time_add_nat_div_of_dvd
+#print axioms LonelyRunner.circleNorm_gt_of_int_band
+#print axioms LonelyRunner.circleNorm_gt_of_affine_open_band
+#print axioms LonelyRunner.circleNorm_nat_affine_fract
+#print axioms LonelyRunner.CutAtomMem
+#print axioms LonelyRunner.exists_adjacent_cut_interval
+#print axioms LonelyRunner.cutAtomMem_covers_unit_interval

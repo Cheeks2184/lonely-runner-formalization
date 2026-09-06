@@ -138,6 +138,12 @@ import LonelyRunner.PrimeAdicCompression
 import LonelyRunner.ConstrainedMaximizer
 import LonelyRunner.RenaultPhaseCertificates
 
+import LonelyRunner.FiniteMaskCertificates
+import LonelyRunner.RenaultPhaseMasks
+import LonelyRunner.RationalShiftOrbits
+import LonelyRunner.RealPhaseBands
+import LonelyRunner.FiniteCutCover
+
 /-!
 Root import for the formal Lonely Runner development.
 -/

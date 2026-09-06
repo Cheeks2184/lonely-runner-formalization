@@ -6,51 +6,18 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/six_total_divisibility_seed_review",
-      "agent_id": "/root/prime_difference_compression_plan",
-      "kind": "research",
-      "status": "in_progress",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "xhigh",
-      "observed_model": null,
-      "observed_effort": null,
-      "source_checkpoint": "a39edc784be728b127aac6387277205136407c01",
-      "target": "Independent exact manuscript and eight-contract review of divisor orbit/insertion/count plan, no execution.",
-      "owned_files": [
-        "research/astra-six-total-divisibility-seed-review.md"
-      ],
-      "checks": []
-    },
-    {
-      "id": "/root/renault_phase_concrete_bridge_plan",
-      "agent_id": "/root/seven_adic_expanded_falsifier",
-      "kind": "research",
-      "status": "in_progress",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "xhigh",
-      "observed_model": null,
-      "observed_effort": null,
-      "source_checkpoint": "a39edc784be728b127aac6387277205136407c01",
-      "target": "Settle concrete Lean real-phase atom partition and true-bit band soundness using accepted frozen120-atom/23candidate certificate; no new search.",
-      "owned_files": [
-        "research/astra-renault-phase-concrete-bridge-plan.md"
-      ],
-      "checks": []
-    },
-    {
-      "id": "/root/renault_fixed_core_mask_implementation",
-      "agent_id": "/root/five_runner_ordinary_implementation",
+      "id": "/root/renault_concrete_data_implementation",
+      "agent_id": "/root/five_adic_carry_adapter_implementation",
       "kind": "routine",
       "status": "in_progress",
       "requested_model": "gpt-5.6-terra",
       "requested_effort": "medium",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "a39edc784be728b127aac6387277205136407c01",
-      "target": "Fixed41mask source,41 independently decided rows and all-row assembly, mask bound; no new search.",
+      "source_checkpoint": "2c503a4e3599646e77d5d9453be54e2667842ae6",
+      "target": "Source-only literal frozen cuts/masks/core/dom plus120 ordinary-decide endpoint rows and linkage facts. Root must review/hash before capped execution.",
       "owned_files": [
-        "LonelyRunner/RenaultPhaseMasks.lean",
-        "research/astra-renault-core-mask-implementation.md"
+        "LonelyRunner/RenaultPhaseConcreteData.lean"
       ],
       "checks": []
     }
@@ -5772,9 +5739,221 @@
       ],
       "report": "research/astra-six-total-divisibility-seed-plan.md",
       "report_sha256": "752cc8e216bde3cc8b533e84da02967972781a2bd7cbc95e6b62503f26d5e792"
+    },
+    {
+      "id": "/root/renault_fixed_core_mask_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a39edc784be728b127aac6387277205136407c01",
+      "target": "Fixed41mask source,41 independently decided rows and all-row assembly, mask bound; no new search.",
+      "owned_files": [
+        "LonelyRunner/RenaultPhaseMasks.lean",
+        "research/astra-renault-core-mask-implementation.md"
+      ],
+      "checks": [
+        "Root fully read source and corrected report; root actual focused build exit0/3001jobs. Worker raw outputs not retained; reported stream/cap claims corrected and not used as exact verification."
+      ],
+      "source_sha256": "65bb6c52e52e710f098b60ec1e3c00bebc43771845268789cd82519618d801b2",
+      "report_sha256": "35de58148d739dbe082c05c511e1be81fb088c4f9ed0faea089dd832b6d3548e"
+    },
+    {
+      "id": "/root/six_total_divisibility_seed_review",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a39edc784be728b127aac6387277205136407c01",
+      "target": "Independent exact manuscript and eight-contract review of divisor orbit/insertion/count plan, no execution.",
+      "owned_files": [
+        "research/astra-six-total-divisibility-seed-review.md"
+      ],
+      "checks": [
+        "Root fully read manuscript review; all8 exact contracts accepted; root static integrity replay actualexit0,12sourceguards and8signaturefence matched."
+      ],
+      "report": "research/astra-six-total-divisibility-seed-review.md",
+      "report_sha256": "50ed03a4832e989b533ad39480e5e16a21590f3567c90451436af032830819e6"
+    },
+    {
+      "id": "/root/finite_mask_common_bit_adapter",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "73189bbcfb2e7e735deae1483f9f6e8be35e80fa",
+      "target": "Settled generic bounded common-bit extraction from nonzero triple bitwise AND, with Finset membership adapter. Source only; root executes checks.",
+      "owned_files": [
+        "LonelyRunner/FiniteMaskCertificates.lean"
+      ],
+      "checks": [
+        "Source-only Terra draft; root retained two actual compile failures, changed final false-branch proof to rfl; focused build actualexit0. Root integrated one-line concrete candidate corollary separately."
+      ],
+      "source_sha256": "72629bc0780161890a31dd705b744c7ce2a77c884a915d7eaf4b3d69855b181e"
+    },
+    {
+      "id": "/root/rational_shift_representative_implementation",
+      "agent_id": "/root/five_adic_carry_adapter_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "73189bbcfb2e7e735deae1483f9f6e8be35e80fa",
+      "target": "Implement only independently settled bounded natural coprime-grid representative and exact divisible phase preservation (contracts1,4), source only.",
+      "owned_files": [
+        "LonelyRunner/RationalShiftOrbits.lean"
+      ],
+      "checks": [
+        "Root fully read source; retained actual compile failures; root added missing push_cast and nlinarith before final source build. Actual final combined focused build exit0/3006jobs; source SHA cf615dd6c6b3cf091cd5d31ac641f4f994c1c50d95e0120c311d3ac129b88591."
+      ]
+    },
+    {
+      "id": "/root/renault_phase_concrete_bridge_plan",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a39edc784be728b127aac6387277205136407c01",
+      "target": "Settle concrete Lean real-phase atom partition and true-bit band soundness using accepted frozen120-atom/23candidate certificate; no new search.",
+      "owned_files": [
+        "research/astra-renault-phase-concrete-bridge-plan.md"
+      ],
+      "checks": [
+        "Root fully read 505-line frozen manuscript ec29e6cba74dd87a9db823e712fba099d47d6277bf52b2d227ce2d633e0dca60; generic band/cut/periodicity and finite contracts accepted, not yet implemented."
+      ]
+    },
+    {
+      "id": "/root/real_phase_bands_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "73189bbcfb2e7e735deae1483f9f6e8be35e80fa",
+      "target": "Source-only generic strict band, affine open-band and affine fractional-part periodicity from settled manuscript.",
+      "owned_files": [
+        "LonelyRunner/RealPhaseBands.lean"
+      ],
+      "checks": [
+        "Root fixed accidental rewrite under floor/frac to nth_rw1; final focused build actualexit0."
+      ],
+      "source_sha256": "7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0"
+    },
+    {
+      "id": "/root/finite_cut_cover_implementation",
+      "agent_id": "/root/five_adic_carry_adapter_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "73189bbcfb2e7e735deae1483f9f6e8be35e80fa",
+      "target": "Source-only generic natural-indexed singleton/open cut atoms and unit-interval cover via adjacent crossing induction.",
+      "owned_files": [
+        "LonelyRunner/FiniteCutCover.lean"
+      ],
+      "checks": [
+        "Compiler-directed Terra fixes retained exact unsortedcut contracts; root renamed unusedpositive-n hypothesis, retainedpremise; finalfocusedbuild actualexit0."
+      ],
+      "source_sha256": "b7e7e50834bc86d13ffde759e3d0c2dc4d2480a03ec61eb88a70ca215fcc1011"
+    },
+    {
+      "id": "/root/phase_band_facts_definitions",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "2c503a4e3599646e77d5d9453be54e2667842ae6",
+      "target": "Source-only exact candidate decoding, representative/quotient and finite PhaseBandFacts structure with simple symbolic decoder/periodicity helpers.",
+      "owned_files": [
+        "LonelyRunner/RenaultPhaseBandFacts.lean"
+      ],
+      "checks": [
+        "Root fully read exact definitions/structure/decoder/periodicity; focused source build actualexit0,3003jobs. Not rootimported, not independent reviewed yet."
+      ],
+      "source_sha256": "c775da2dfb8d3c6ff24f6d66c49d7b690f3422cc7dc95b410c064cc08c78d721"
+    },
+    {
+      "id": "/root/renault_core_mask_source_review",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "73189bbcfb2e7e735deae1483f9f6e8be35e80fa",
+      "target": "Independent exact source/data/type/axiom review of41coremask rows and generic bounded common-bit adapter; no new enumeration.",
+      "owned_files": [
+        "research/astra-renault-core-mask-source-review.md"
+      ],
+      "checks": [
+        "Root fullyread430-line review; exact guarded rootreplay actualexit0,8publictypes/axioms,sourcevectorstaticcompare and2rflchecks;735-byte axiomstdoutmatchesindependent."
+      ],
+      "report": "research/astra-renault-core-mask-source-review.md",
+      "report_sha256": "09824b73136e147dd16ad175b78bb9f2b878749a2a3906b20cf54748693c0558"
+    },
+    {
+      "id": "/root/real_grid_helpers_source_review",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "2c503a4e3599646e77d5d9453be54e2667842ae6",
+      "target": "Independent frozen source/type/axiom review of two rationalshift,three realband and two finitecut helper theorems plus atomdefinition.",
+      "owned_files": [
+        "research/astra-real-grid-helpers-source-review.md"
+      ],
+      "checks": [
+        "Root fully read final837-line report and exact retry launcher; root exact retry entrypoint actualexit0,8universaltype/axiomreports,14guards matched,825-byte axiomstdoutmatchesindependent."
+      ],
+      "report": "research/astra-real-grid-helpers-source-review.md",
+      "report_sha256": "c05e20f187f31f2ab111e9a8ad9bc13a04e47b578fe9dcbc8d82a1a9761ebdbe"
+    },
+    {
+      "id": "/root/phase_band_soundness_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "2c503a4e3599646e77d5d9453be54e2667842ae6",
+      "target": "Implement exact generic PhaseBandFacts-to-real-PhaseGood soundness from accepted manuscript; source-only, no concrete table/search.",
+      "owned_files": [
+        "LonelyRunner/RenaultPhaseBandSoundness.lean"
+      ],
+      "checks": [
+        "Root fully read exact generic proof; firstfocusedbuildexit0 with8unusedtacticwarnings; root removed8unusedpush_casts; finalfocusedbuildactualexit0,3009jobs,nowarnings."
+      ],
+      "source_sha256": "b7773a0755413e03371c2322d221bfda68cf1174bcbfac694e61a4803189ccf7"
     }
   ],
-  "latest_checkpoint": "Pass42 exact maximizer and conditional phase transfer fully built/trust audited, independent reviews/root replays accepted; ready to commit/push/PR/merge. Full mask table and real-phase/divisor work remains separate.",
+  "latest_checkpoint": "Pass43 fullrootbuild/trust and both independent exactsource/rootreplays passed; readyforpublication. Pass44 generic finite-band facts/soundness focusedchecked; concrete literaldata source pending rootreview/cappedexecution.",
   "next_actions": [
     "Publish verified Pass41, await required CI, merge exact reviewed head and verify main.",
     "Finish independent maximizer source review; root replay and integrate next source checkpoint.",
@@ -6304,14 +6483,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
+    "verified_checkpoint": "73189bbcfb2e7e735deae1483f9f6e8be35e80fa",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-prime-adic-compression",
+    "branch": "codex/astra-constrained-maximizer",
     "base": "main",
     "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/40",
-    "pr_number": 40,
-    "head_sha": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/41",
+    "pr_number": 41,
+    "head_sha": "73189bbcfb2e7e735deae1483f9f6e8be35e80fa",
     "integration_note": "Prior GitHub integration 403 established authenticated gh fallback; this checkpoint used that fallback successfully.",
     "queue": [
       {
@@ -6766,40 +6945,57 @@
         "exact_head_merge": true,
         "remote_main_contains_head": true,
         "reviews": []
+      },
+      {
+        "checkpoint": "Pass42",
+        "pr_number": 41,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/41",
+        "head_sha": "73189bbcfb2e7e735deae1483f9f6e8be35e80fa",
+        "merge_sha": "2c503a4e3599646e77d5d9453be54e2667842ae6",
+        "merged_at": "2026-09-06T09:56:56Z",
+        "ci_run": 34025571412,
+        "checks": {
+          "Lean build and trust audit": "SUCCESS 2026-09-06T09:48:07Z",
+          "Exact computational certificates": "SUCCESS 2026-09-06T09:55:34Z"
+        },
+        "status": "merged_verified",
+        "exact_head_merge": true,
+        "remote_main_contains_head": true,
+        "reviews": []
       }
     ],
-    "latest_published_source_checkpoint": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
-    "remote_main": "a39edc784be728b127aac6387277205136407c01",
-    "local_main": "a39edc784be728b127aac6387277205136407c01",
+    "latest_published_source_checkpoint": "73189bbcfb2e7e735deae1483f9f6e8be35e80fa",
+    "remote_main": "2c503a4e3599646e77d5d9453be54e2667842ae6",
+    "local_main": "2c503a4e3599646e77d5d9453be54e2667842ae6",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "a39edc784be728b127aac6387277205136407c01",
+    "merge_sha": "2c503a4e3599646e77d5d9453be54e2667842ae6",
     "checks": {
-      "Lean build and trust audit": "SUCCESS 2026-09-06T09:21:04Z",
-      "Exact computational certificates": "SUCCESS 2026-09-06T09:29:03Z"
+      "Lean build and trust audit": "SUCCESS 2026-09-06T09:48:07Z",
+      "Exact computational certificates": "SUCCESS 2026-09-06T09:55:34Z"
     },
     "remote_main_contains_head": true,
     "latest_receipt": {
-      "checkpoint": "Pass41",
-      "pr_number": 40,
-      "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/40",
-      "head_sha": "a211fc2d332a9f6ab953fb46aa4362d9b208a14c",
-      "merge_sha": "a39edc784be728b127aac6387277205136407c01",
-      "merged_at": "2026-09-06T09:32:20Z",
-      "ci_run": 34024320508,
+      "checkpoint": "Pass42",
+      "pr_number": 41,
+      "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/41",
+      "head_sha": "73189bbcfb2e7e735deae1483f9f6e8be35e80fa",
+      "merge_sha": "2c503a4e3599646e77d5d9453be54e2667842ae6",
+      "merged_at": "2026-09-06T09:56:56Z",
+      "ci_run": 34025571412,
       "checks": {
-        "Lean build and trust audit": "SUCCESS 2026-09-06T09:21:04Z",
-        "Exact computational certificates": "SUCCESS 2026-09-06T09:29:03Z"
+        "Lean build and trust audit": "SUCCESS 2026-09-06T09:48:07Z",
+        "Exact computational certificates": "SUCCESS 2026-09-06T09:55:34Z"
       },
       "status": "merged_verified",
       "exact_head_merge": true,
       "remote_main_contains_head": true,
       "reviews": []
     },
-    "merged_at": "2026-09-06T09:32:20Z",
+    "merged_at": "2026-09-06T09:56:56Z",
     "verification": "Exact reviewed head merged after CLEAN/no blocking reviews/not draft; fetched origin/main, ancestor command exit0; local main and new branch HEAD equal merge SHA.",
-    "checkpoint": "Pass41",
-    "ci_run": 34024320508,
+    "checkpoint": "Pass42",
+    "ci_run": 34025571412,
     "exact_head_merge": true,
     "reviews": []
   },
@@ -6824,11 +7020,11 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "checkpoint": "Pass42",
+    "checkpoint": "Pass43",
     "phase": "verified_ready_to_commit",
-    "branch": "codex/astra-constrained-maximizer",
-    "base_main": "a39edc784be728b127aac6387277205136407c01",
-    "verification": "research/astra-pass42-verification.json"
+    "branch": "codex/astra-phase-mask-bridge",
+    "base_main": "2c503a4e3599646e77d5d9453be54e2667842ae6",
+    "verification": "research/astra-pass43-verification.json"
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -8426,7 +8622,7 @@
   },
   "pending_pass42": {
     "target": "Exact independently accepted maximizer P/M/D contracts",
-    "phase": "verified_ready_to_publish",
+    "phase": "merged_verified",
     "source": "LonelyRunner/ConstrainedMaximizer.lean",
     "helper_sha256": "b2c6d34e58e3b70e11bb3e84f479cdbf7b949a291dbe50ecd00bf2c1dfe760ec",
     "helper_status": "author focusedbuild/axioms passed; root read proof; not yet root integrated or independently kernel reviewed",
@@ -8837,10 +9033,71 @@
     }
   },
   "renault_all_row_kernel_check": {
-    "phase": "predeclared",
+    "phase": "independent_final_source_review",
     "plan": "research/astra-renault-all-row-kernel-plan.md",
     "certificate_sha256": "c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1",
     "first_row_reference": "research/astra-renault-kernel-pilot-success.json",
-    "next": "Terra fixed implementation and capped focused source invocation; exact evidence before independent review."
+    "next": "Terra fixed implementation and capped focused source invocation; exact evidence before independent review.",
+    "source": "LonelyRunner/RenaultPhaseMasks.lean",
+    "source_sha256": "fc1360b225d440c99c6dc44067f2bfda2668c9e6984078770c70dc23dc3a4857",
+    "root_focused_build": {
+      "command": "lake build LonelyRunner.RenaultPhaseMasks",
+      "exit_code": 0,
+      "jobs": 3001,
+      "log_sha256": "77a8fc9a15cae4af654eb3c7fb24e211822ca9486001702e95bbd1fad6c73f56"
+    },
+    "evidence_issue": "Worker report uses ellipses while claiming complete errors and no raw receipt path; root asked correction/exact records. Independent root actual build passed; no worker axiom result accepted.",
+    "generic_bit_source_sha256": "72629bc0780161890a31dd705b744c7ce2a77c884a915d7eaf4b3d69855b181e",
+    "scope": "Full41coremask rows and actualFin23 commoncandidate via checked generic bit extraction. Concrete atom data/soundness not yet implemented.",
+    "independent_root_replay": {
+      "report_sha256": "09824b73136e147dd16ad175b78bb9f2b878749a2a3906b20cf54748693c0558",
+      "launcher_sha256": "50a69e22407108d7f0a51c77ba565553327977951ed161e25e891231f4842622",
+      "exit_code": 0,
+      "wall_seconds": 1.9004416390089318,
+      "stdout": "EVIDENCE_DIR /tmp/astra-renault-core-review-5h0y0l4m\nRECEIPT_SHA256 6ad91a375f3d0b696dc5c266607ada13de197c6fd22846f1a578e6ba296d3fae\n{\n  \"argv\": [\n    \"lake\",\n    \"env\",\n    \"lean\",\n    \"-j\",\n    \"1\",\n    \"-s\",\n    \"65536\",\n    \"-DwarningAsError=true\",\n    \"--stdin\"\n  ],\n  \"child_max_rss_kib\": 3285376,\n  \"child_system_seconds\": 0.604529,\n  \"child_user_seconds\": 1.259284,\n  \"error\": null,\n  \"exit\": 0,\n  \"files\": {\n    \"launcher.sh\": {\n      \"bytes\": 6295,\n      \"sha256\": \"50a69e22407108d7f0a51c77ba565553327977951ed161e25e891231f4842622\"\n    },\n    \"stderr.bin\": {\n      \"bytes\": 0,\n      \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n    },\n    \"stdin.bin\": {\n      \"bytes\": 2251,\n      \"sha256\": \"894da5310baa2238e90e0e7c9eb422c545b7598ebc637de72348a50c73bed453\"\n    },\n    \"stdout.bin\": {\n      \"bytes\": 735,\n      \"sha256\": \"d6c627aea9ef46706974db6c995a14497ee9e8987d36126da5888e68565a38be\"\n    }\n  },\n  \"guards\": {\n    \".lake/build/lib/lean/LonelyRunner/FiniteMaskCertificates.olean\": \"f0ca24c85fa4ecef7643feec5c77d277fcbf62c312a65eb081a5161c6005cfb6\",\n    \".lake/build/lib/lean/LonelyRunner/RenaultPhaseMasks.olean\": \"f6d1245ea1ef3b57619ccc1056223969f75628397a1ccbd08459cba3ead72647\",\n    \"LonelyRunner/FiniteMaskCertificates.lean\": \"72629bc0780161890a31dd705b744c7ce2a77c884a915d7eaf4b3d69855b181e\",\n    \"LonelyRunner/RenaultPhaseMasks.lean\": \"fc1360b225d440c99c6dc44067f2bfda2668c9e6984078770c70dc23dc3a4857\",\n    \"lake-manifest.json\": \"887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218\",\n    \"lakefile.toml\": \"bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26\",\n    \"lean-toolchain\": \"8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af\",\n    \"research/astra-renault-phase-five-one-certificate.json\": \"c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1\"\n  },\n  \"guards_after\": true,\n  \"guards_before\": true,\n  \"limits\": {\n    \"address_space_bytes\": 8589934592,\n    \"cpu_seconds\": [\n      59,\n      60\n    ],\n    \"stream_bytes\": 262144,\n    \"wall_seconds\": 60\n  },\n  \"literal_list_sha256\": \"42a553c649834ee216d3a45280cfda1aca70069ab28fbbc539d04fae5fca71d3\",\n  \"passed\": true,\n  \"probe_expected_sha256\": \"894da5310baa2238e90e0e7c9eb422c545b7598ebc637de72348a50c73bed453\",\n  \"static_data\": true,\n  \"stream_cap_hit\": false,\n  \"timed_out\": false,\n  \"wall_seconds\": 1.870761678001145\n}\nSTDOUT-BEGIN\n'LonelyRunner.maskCandidates' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.mem_maskCandidates' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_common_mask_bit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_common_mask_candidate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.renaultPhaseCoreMasks' depends on axioms: [propext]\n'LonelyRunner.renaultPhaseCoreMasks_all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.renaultPhaseCoreMasks_lt' depends on axioms: [propext]\n'LonelyRunner.renaultPhaseCoreMasks_common_candidate' depends on axioms: [propext, Classical.choice, Quot.sound]\nSTDOUT-END\nSTDERR-BEGIN\nSTDERR-END\n",
+      "stderr": "",
+      "stdout_sha256": "9065c29ce1d87e50f16c88c577517cf6d636b1576aaf0b3d1382486a731fb8a3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "renault_phase_concrete_bridge": {
+    "phase": "generic_band_facts_and_real_soundness_focused_checked",
+    "plan": "research/astra-renault-phase-concrete-bridge-plan.md",
+    "plan_sha256": "ec29e6cba74dd87a9db823e712fba099d47d6277bf52b2d227ce2d633e0dca60",
+    "next": "Concrete data drafting; root read/hash before cappedsourcechecking, then final commoncandidate composition and independentreview.",
+    "band_facts_source_sha256": "c775da2dfb8d3c6ff24f6d66c49d7b690f3422cc7dc95b410c064cc08c78d721",
+    "soundness_source_sha256": "b7773a0755413e03371c2322d221bfda68cf1174bcbfac694e61a4803189ccf7"
+  },
+  "rational_shift_orbits": {
+    "phase": "two_adapters_focused_checked",
+    "source": "LonelyRunner/RationalShiftOrbits.lean",
+    "source_sha256": "cf615dd6c6b3cf091cd5d31ac641f4f994c1c50d95e0120c311d3ac129b88591",
+    "remaining": "Exact reduced mesh/quarter, preserving family, four-divisible insertion and divisor counts; six accepted contracts still unimplemented. Independent source review pending."
+  },
+  "renault_concrete_data_kernel_check": {
+    "phase": "source_drafting_before_root_review",
+    "plan": "research/astra-renault-concrete-data-kernel-plan.md",
+    "candidate_pairs": 2760,
+    "core_equalities": 41,
+    "domination_equalities": 120,
+    "scope": "Exact frozendata only; no search or realphase proof yet."
+  },
+  "real_grid_helpers_review_recovery": {
+    "phase": "corrected_probe_and_root_replay_passed",
+    "failure": "8GiB importprobe exited134 beforetheoremoutput, failedtocreatethread. All14guardsmatched.",
+    "goal_actual_status": "active",
+    "retry": "Sameprobe/source/guards/caps; add -j1 -s65536 andLEAN_NUM_THREADS1/LEAN_STACK_SIZE_KB65536, matching establishedsuccessful runtimeconfiguration.",
+    "no_math_or_resource_expansion": true,
+    "root_replay": {
+      "report_sha256": "c05e20f187f31f2ab111e9a8ad9bc13a04e47b578fe9dcbc8d82a1a9761ebdbe",
+      "entrypoint_sha256": "33caec09275aba83c48b82e14dc321643be31bfc36cab0e4c925ecb7cd34ed9b",
+      "launcher_sha256": "c18ecb8790a5f6f8d2e2fa2708ebd64c1ec37ce4a57166e6f3771f009dd45b17",
+      "exit_code": 0,
+      "wall_seconds": 1.902329540986102,
+      "stdout": "{\n  \"argv\": [\n    \"/home/joshua/.elan/bin/lake\",\n    \"env\",\n    \"lean\",\n    \"-j1\",\n    \"-s65536\",\n    \"--stdin\"\n  ],\n  \"axiom_records\": [\n    [\n      \"exists_nat_coprime_grid_circleNorm_ge\",\n      \"propext, Classical.choice, Quot.sound\"\n    ],\n    [\n      \"circleNorm_time_add_nat_div_of_dvd\",\n      \"propext, Classical.choice, Quot.sound\"\n    ],\n    [\n      \"circleNorm_gt_of_int_band\",\n      \"propext, Classical.choice, Quot.sound\"\n    ],\n    [\n      \"circleNorm_gt_of_affine_open_band\",\n      \"propext, Classical.choice, Quot.sound\"\n    ],\n    [\n      \"circleNorm_nat_affine_fract\",\n      \"propext, Classical.choice, Quot.sound\"\n    ],\n    [\n      \"exists_adjacent_cut_interval\",\n      \"propext, Classical.choice, Quot.sound\"\n    ],\n    [\n      \"cutAtomMem_covers_unit_interval\",\n      \"propext, Classical.choice, Quot.sound\"\n    ],\n    [\n      \"CutAtomMem\",\n      \"propext, Classical.choice, Quot.sound\"\n    ]\n  ],\n  \"axioms_ok\": true,\n  \"capture_ok\": true,\n  \"child_maxrss_kib\": 3281812,\n  \"child_system_seconds\": 0.592473,\n  \"child_user_seconds\": 1.287217,\n  \"cwd\": \"/home/joshua/lonely-runner-formalization\",\n  \"exit_code\": 0,\n  \"guards_after\": {\n    \".lake/build/lib/lean/LonelyRunner/FiniteCutCover.olean\": \"e135595b4c42102e9e2736492c39fc95914e1d09800615c3d943553abedc1ade\",\n    \".lake/build/lib/lean/LonelyRunner/RationalShiftOrbits.olean\": \"8194c5c6ac0b8495146728fcac70a6a1e9d317f9e7689c4759f22ed33c14340f\",\n    \".lake/build/lib/lean/LonelyRunner/RealPhaseBands.olean\": \"7442f9f49d9f1e2d214460557f6a891ba13717ededff679876033793ac2c6504\",\n    \"LonelyRunner/DivisorInsertion.lean\": \"212fa6d879bab6d70f09a4a43b2027b96724b5e5ac4a22cdf4b368509973166f\",\n    \"LonelyRunner/FastRunnerInsertion.lean\": \"dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5\",\n    \"LonelyRunner/FiniteCutCover.lean\": \"b7e7e50834bc86d13ffde759e3d0c2dc4d2480a03ec61eb88a70ca215fcc1011\",\n    \"LonelyRunner/RationalShiftOrbits.lean\": \"cf615dd6c6b3cf091cd5d31ac641f4f994c1c50d95e0120c311d3ac129b88591\",\n    \"LonelyRunner/RealPhaseBands.lean\": \"7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0\",\n    \"LonelyRunner/StructuredClasses.lean\": \"5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c\",\n    \"lake-manifest.json\": \"887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218\",\n    \"lean-toolchain\": \"8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af\",\n    \"research/astra-renault-phase-concrete-bridge-plan.md\": \"ec29e6cba74dd87a9db823e712fba099d47d6277bf52b2d227ce2d633e0dca60\",\n    \"research/astra-six-total-divisibility-seed-plan.md\": \"752cc8e216bde3cc8b533e84da02967972781a2bd7cbc95e6b62503f26d5e792\",\n    \"research/astra-six-total-divisibility-seed-review.md\": \"50ed03a4832e989b533ad39480e5e16a21590f3567c90451436af032830819e6\"\n  },\n  \"guards_before\": {\n    \".lake/build/lib/lean/LonelyRunner/FiniteCutCover.olean\": \"e135595b4c42102e9e2736492c39fc95914e1d09800615c3d943553abedc1ade\",\n    \".lake/build/lib/lean/LonelyRunner/RationalShiftOrbits.olean\": \"8194c5c6ac0b8495146728fcac70a6a1e9d317f9e7689c4759f22ed33c14340f\",\n    \".lake/build/lib/lean/LonelyRunner/RealPhaseBands.olean\": \"7442f9f49d9f1e2d214460557f6a891ba13717ededff679876033793ac2c6504\",\n    \"LonelyRunner/DivisorInsertion.lean\": \"212fa6d879bab6d70f09a4a43b2027b96724b5e5ac4a22cdf4b368509973166f\",\n    \"LonelyRunner/FastRunnerInsertion.lean\": \"dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5\",\n    \"LonelyRunner/FiniteCutCover.lean\": \"b7e7e50834bc86d13ffde759e3d0c2dc4d2480a03ec61eb88a70ca215fcc1011\",\n    \"LonelyRunner/RationalShiftOrbits.lean\": \"cf615dd6c6b3cf091cd5d31ac641f4f994c1c50d95e0120c311d3ac129b88591\",\n    \"LonelyRunner/RealPhaseBands.lean\": \"7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0\",\n    \"LonelyRunner/StructuredClasses.lean\": \"5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c\",\n    \"lake-manifest.json\": \"887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218\",\n    \"lean-toolchain\": \"8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af\",\n    \"research/astra-renault-phase-concrete-bridge-plan.md\": \"ec29e6cba74dd87a9db823e712fba099d47d6277bf52b2d227ce2d633e0dca60\",\n    \"research/astra-six-total-divisibility-seed-plan.md\": \"752cc8e216bde3cc8b533e84da02967972781a2bd7cbc95e6b62503f26d5e792\",\n    \"research/astra-six-total-divisibility-seed-review.md\": \"50ed03a4832e989b533ad39480e5e16a21590f3567c90451436af032830819e6\"\n  },\n  \"launcher_bytes\": 6666,\n  \"launcher_sha256\": \"c18ecb8790a5f6f8d2e2fa2708ebd64c1ec37ce4a57166e6f3771f009dd45b17\",\n  \"limits\": {\n    \"address_space_bytes\": 8589934592,\n    \"alarm_seconds\": 60,\n    \"combined_stream_bytes\": 262144,\n    \"cpu_seconds\": [\n      59,\n      60\n    ],\n    \"per_stream_bytes\": 131072,\n    \"wall_seconds\": 60.0\n  },\n  \"probe_bytes\": 2282,\n  \"probe_sha256\": \"3409d93575f40f57dd2f91ece2f4b81b6358c9b27e2a360ba7665d64d64c855b\",\n  \"report_prefix_after_sha256\": \"55451ca955c63c01089ce0ea8ef1928fa0742a8808bdc952f1a11902edf92228\",\n  \"report_prefix_before_sha256\": \"55451ca955c63c01089ce0ea8ef1928fa0742a8808bdc952f1a11902edf92228\",\n  \"runtime_env\": {\n    \"LEAN_NUM_THREADS\": \"1\",\n    \"LEAN_STACK_SIZE_KB\": \"65536\"\n  },\n  \"status\": \"passed\",\n  \"stderr_base64\": \"\",\n  \"stderr_bytes\": 0,\n  \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n  \"stderr_utf8\": \"\",\n  \"stdout_base64\": \"J0xvbmVseVJ1bm5lci5leGlzdHNfbmF0X2NvcHJpbWVfZ3JpZF9jaXJjbGVOb3JtX2dlJyBkZXBlbmRzIG9uIGF4aW9tczogW3Byb3BleHQsIENsYXNzaWNhbC5jaG9pY2UsIFF1b3Quc291bmRdCidMb25lbHlSdW5uZXIuY2lyY2xlTm9ybV90aW1lX2FkZF9uYXRfZGl2X29mX2R2ZCcgZGVwZW5kcyBvbiBheGlvbXM6IFtwcm9wZXh0LCBDbGFzc2ljYWwuY2hvaWNlLCBRdW90LnNvdW5kXQonTG9uZWx5UnVubmVyLmNpcmNsZU5vcm1fZ3Rfb2ZfaW50X2JhbmQnIGRlcGVuZHMgb24gYXhpb21zOiBbcHJvcGV4dCwgQ2xhc3NpY2FsLmNob2ljZSwgUXVvdC5zb3VuZF0KJ0xvbmVseVJ1bm5lci5jaXJjbGVOb3JtX2d0X29mX2FmZmluZV9vcGVuX2JhbmQnIGRlcGVuZHMgb24gYXhpb21zOiBbcHJvcGV4dCwgQ2xhc3NpY2FsLmNob2ljZSwgUXVvdC5zb3VuZF0KJ0xvbmVseVJ1bm5lci5jaXJjbGVOb3JtX25hdF9hZmZpbmVfZnJhY3QnIGRlcGVuZHMgb24gYXhpb21zOiBbcHJvcGV4dCwgQ2xhc3NpY2FsLmNob2ljZSwgUXVvdC5zb3VuZF0KJ0xvbmVseVJ1bm5lci5leGlzdHNfYWRqYWNlbnRfY3V0X2ludGVydmFsJyBkZXBlbmRzIG9uIGF4aW9tczogW3Byb3BleHQsIENsYXNzaWNhbC5jaG9pY2UsIFF1b3Quc291bmRdCidMb25lbHlSdW5uZXIuY3V0QXRvbU1lbV9jb3ZlcnNfdW5pdF9pbnRlcnZhbCcgZGVwZW5kcyBvbiBheGlvbXM6IFtwcm9wZXh0LCBDbGFzc2ljYWwuY2hvaWNlLCBRdW90LnNvdW5kXQonTG9uZWx5UnVubmVyLkN1dEF0b21NZW0nIGRlcGVuZHMgb24gYXhpb21zOiBbcHJvcGV4dCwgQ2xhc3NpY2FsLmNob2ljZSwgUXVvdC5zb3VuZF0K\",\n  \"stdout_bytes\": 825,\n  \"stdout_sha256\": \"957877af184f3162a1309d7802b725f9260d648aaea5471433804429b3c16349\",\n  \"stdout_utf8\": \"'LonelyRunner.exists_nat_coprime_grid_circleNorm_ge' depends on axioms: [propext, Classical.choice, Quot.sound]\\n'LonelyRunner.circleNorm_time_add_nat_div_of_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]\\n'LonelyRunner.circleNorm_gt_of_int_band' depends on axioms: [propext, Classical.choice, Quot.sound]\\n'LonelyRunner.circleNorm_gt_of_affine_open_band' depends on axioms: [propext, Classical.choice, Quot.sound]\\n'LonelyRunner.circleNorm_nat_affine_fract' depends on axioms: [propext, Classical.choice, Quot.sound]\\n'LonelyRunner.exists_adjacent_cut_interval' depends on axioms: [propext, Classical.choice, Quot.sound]\\n'LonelyRunner.cutAtomMem_covers_unit_interval' depends on axioms: [propext, Classical.choice, Quot.sound]\\n'LonelyRunner.CutAtomMem' depends on axioms: [propext, Classical.choice, Quot.sound]\\n\",\n  \"timed_out\": false,\n  \"wall_seconds\": 1.8704070310050156\n}\n",
+      "stderr": "",
+      "stdout_sha256": "941e9edb43a19df96548cf62e0b7a07116d1963cd36a174a2fe37ca5cbe17fbc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
   }
 }
