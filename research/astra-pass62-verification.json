@@ -1,0 +1,82 @@
+{
+  "checkpoint": "Pass62",
+  "parent_main": "665a35f68d468be388e4bc3a7538ff3e8c8a9cd3",
+  "status": "Accepted manuscript checkpoint; unrestricted LRC unresolved.",
+  "hashes": {
+    "research/astra-uniform-global-seed-geometry.md": "3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524",
+    "research/astra-uniform-global-seed-geometry-review.md": "dd1cb0c56f383cd9c4c92c7789a889c591da8a7f6eb7b418c06466546e05752d",
+    "research/astra-uniform-rational-margin-gap.md": "bf6e76bc38608d0255b3567ce1d67c26ac474f02e010f20a13c6601a1997e980",
+    "research/astra-uniform-rational-margin-gap-review.md": "8fc2e5badc499c25647cc1e73a41e455c0b7783ad5170dbb94b00f4e45198c1d",
+    "docs/astra-research-62.md": "548be5dea11f1e712d8882589f2a1b1dc420473b77468546e849f77077deda22"
+  },
+  "root_binding_script_utf8": "from pathlib import Path\nimport hashlib, json, re\nexpected={\n 'research/astra-uniform-rational-margin-gap-review.md':'8fc2e5badc499c25647cc1e73a41e455c0b7783ad5170dbb94b00f4e45198c1d',\n 'research/astra-uniform-global-seed-geometry.md':'3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524',\n 'research/astra-uniform-global-seed-geometry-review.md':'dd1cb0c56f383cd9c4c92c7789a889c591da8a7f6eb7b418c06466546e05752d',\n 'research/astra-uniform-rational-margin-gap.md':'bf6e76bc38608d0255b3567ce1d67c26ac474f02e010f20a13c6601a1997e980'}\nfor name,h in expected.items():\n data=Path(name).read_bytes()\n assert hashlib.sha256(data).hexdigest()==h,name\n for source,source_hash in re.findall(r'\\| `([^`]+)` \\| `([0-9a-f]{64})` \\|',data.decode()):\n  assert hashlib.sha256(Path(source).read_bytes()).hexdigest()==source_hash,source\nprint(json.dumps({'status':'passed','frozen_reports':expected,'scope':'Source and input hash bindings only; mathematical arguments read by root and independent reviewer. No mathematical enumeration or Lean replay.'},sort_keys=True))\n",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/tmp/astra-pass62-bindings.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"frozen_reports\": {\"research/astra-uniform-global-seed-geometry-review.md\": \"dd1cb0c56f383cd9c4c92c7789a889c591da8a7f6eb7b418c06466546e05752d\", \"research/astra-uniform-global-seed-geometry.md\": \"3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524\", \"research/astra-uniform-rational-margin-gap-review.md\": \"8fc2e5badc499c25647cc1e73a41e455c0b7783ad5170dbb94b00f4e45198c1d\", \"research/astra-uniform-rational-margin-gap.md\": \"bf6e76bc38608d0255b3567ce1d67c26ac474f02e010f20a13c6601a1997e980\"}, \"scope\": \"Source and input hash bindings only; mathematical arguments read by root and independent reviewer. No mathematical enumeration or Lean replay.\", \"status\": \"passed\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "prior_publication": {
+    "pr": 60,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/60",
+    "head": "9004e69f7afe90ea5ba60509938aae2e88d60b6a",
+    "merge": "665a35f68d468be388e4bc3a7538ff3e8c8a9cd3",
+    "merged_at": "2026-09-06T17:36:09Z",
+    "ci_run": 34048549575,
+    "checks": [
+      {
+        "name": "Lean build and trust audit",
+        "job": 101527879809,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T17:27:28Z"
+      },
+      {
+        "name": "Exact computational certificates",
+        "job": 101527879649,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T17:34:42Z"
+      }
+    ],
+    "verification": "CLEAN exact head non-draft reviews empty before match-head merge. Fetched origin/main, source-head ancestry exit0, current branch/localmain advanced to verified merge. No verification bypass."
+  },
+  "mathematical_verification": "Root read full author and independent reviews. Global manuscript accepted unchanged. Rational precision report received one scope wording correction, preserving algebra, then independent acceptance against exact PairSumCompleteness. No mathematical program, enumeration or unchanged local Lean build. Source bindings do not independently prove manuscript mathematics.",
+  "scope": "Global exact extension budget and endpoint limitation; explicit unbounded prime family with all deletion seeds; conditional rational margin lifting and positive-length equivalence. No uniform witness supply, Q proof or new Lean declaration.",
+  "storage": "No allowlisted cache/build paths present; no restoration or cleanup needed.",
+  "excluded": "Active endpoint Euler/graph investigation is unfinished and not part of this verified checkpoint."
+}
