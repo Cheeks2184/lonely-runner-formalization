@@ -1,0 +1,41 @@
+{
+  "checkpoint": "Pass59",
+  "parent_main": "76d51525dddaac5613e1bb613b7bb9dc7605dabe",
+  "status": "Verified manuscript and exact-control checkpoint; no Lean source change.",
+  "prior_publication": {
+    "pr": 57,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/57",
+    "head": "a064347f6bd3155cdae0507bc4aa763b9bacdc8d",
+    "merge": "76d51525dddaac5613e1bb613b7bb9dc7605dabe",
+    "merged_at": "2026-09-06T16:24:43Z",
+    "ci_run": 34044811780,
+    "checks": [
+      {
+        "name": "Lean build and trust audit",
+        "job": 101517869286,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T16:16:38Z"
+      },
+      {
+        "name": "Exact computational certificates",
+        "job": 101517869084,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T16:24:06Z"
+      }
+    ],
+    "verification": "CLEAN, exact head, non-draft and reviews empty before match-head merge. Fetch and checkpoint ancestry passed; current branch, local main and origin/main verified at merge."
+  },
+  "manuscript_hashes": {
+    "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+    "research/astra-uniform-affine-phase-screen.md": "c8b4ab3de95efaab20fa8d691d2e1fce48f0f206c0555df1d3302604b176f25e",
+    "research/astra-uniform-capacity-addendum.md": "7d0cb2070b455ac2978ee0544a9ebd86ed218fdba3cc6738696bb3b26986b706"
+  },
+  "independent_review": {
+    "path": "research/astra-uniform-screen-review.md",
+    "sha256": "4694285c064e53697343c9d04cbe05cac9714eb40be5799010e6058d1776af91"
+  },
+  "root_checks": "All three full reports and independent review read; three report hashes, 16 current source hashes, and both embedded-code hashes matched retained complete reviewer receipts. No duplicate execution of unchanged checks.",
+  "verification_scope": "Reviewer executed the exact sole Python block of each author report with python3 -B, exits0. Complete commands, raw output, code/output hashes in frozen review. Universal results depend on independently reviewed manuscript proofs, not finite extrapolation.",
+  "lean": "No Lean source change, no new Lean theorem, no additional local build or trust audit required.",
+  "unrestricted_goal": "Active and unresolved; N6 is only the previously completed transition milestone."
+}
