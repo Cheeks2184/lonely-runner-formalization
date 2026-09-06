@@ -1,0 +1,29 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j",
+    "1",
+    "/tmp/astra-renault-first-row-pilot.lean"
+  ],
+  "source_sha256": "793235f5bf75617b5e9590e9f6256ef41da62046486559ab636688b42cbe4233",
+  "exit_code": -6,
+  "signal": 6,
+  "wall_seconds": 1.1000995020149276,
+  "failure": null,
+  "capture_complete": true,
+  "stdout": "",
+  "stderr": "libc++abi: terminating due to uncaught exception of type lean::exception: failed to create thread\n",
+  "stdout_bytes": 0,
+  "stderr_bytes": 98,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "32a60967270365f092cad81a408cf0e68f13aceab4359f32700f140a54129b9b",
+  "child_max_rss_kib": 23232,
+  "cpu_limits": [
+    59,
+    60
+  ],
+  "address_bytes_per_process": 2147483648,
+  "wall_limit_seconds": 60
+}

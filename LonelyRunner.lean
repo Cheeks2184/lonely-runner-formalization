@@ -135,6 +135,8 @@ import LonelyRunner.FiveRunnerOrdinary
 import LonelyRunner.FiveRunnerCanonical
 import LonelyRunner.PrimeAdicArithmetic
 import LonelyRunner.PrimeAdicCompression
+import LonelyRunner.ConstrainedMaximizer
+import LonelyRunner.RenaultPhaseCertificates
 
 /-!
 Root import for the formal Lonely Runner development.

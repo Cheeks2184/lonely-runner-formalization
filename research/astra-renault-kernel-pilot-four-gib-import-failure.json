@@ -1,0 +1,29 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j",
+    "1",
+    "/tmp/astra-renault-first-row-pilot.lean"
+  ],
+  "source_sha256": "793235f5bf75617b5e9590e9f6256ef41da62046486559ab636688b42cbe4233",
+  "exit_code": 1,
+  "signal": null,
+  "wall_seconds": 0.8023839090019464,
+  "failure": null,
+  "capture_complete": true,
+  "stdout": "/tmp/astra-renault-first-row-pilot.lean:1:0: error: failed to read file '/home/joshua/.elan/toolchains/leanprover--lean4---v4.32.1/lib/lean/Lean/Language/Lean/Types.olean'\n",
+  "stderr": "",
+  "stdout_bytes": 172,
+  "stderr_bytes": 0,
+  "stdout_sha256": "7285109f9e8c047edab52a8e69ff49aa025d071609ba9eeed922a319e0ad1e58",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "child_max_rss_kib": 804912,
+  "cpu_limits": [
+    59,
+    60
+  ],
+  "address_bytes_per_process": 4294967296,
+  "wall_limit_seconds": 60
+}

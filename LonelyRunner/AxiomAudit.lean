@@ -640,3 +640,12 @@ project-specific axiom.
 #print axioms LonelyRunner.primeAdic_triple_compression
 #print axioms LonelyRunner.signedPrimeAdicDigit_mul
 #print axioms LonelyRunner.primeAdic_triple_compression_int
+
+-- Constrained maximizers and conditional finite-certificate transfer.
+-- These audit the local optimization and supplied-mask glue, not a runner theorem.
+#print axioms LonelyRunner.circleNorm_eq_min_fract
+#print axioms LonelyRunner.exists_forward_complement_improvement
+#print axioms LonelyRunner.exists_oriented_complement_maximizer
+#print axioms LonelyRunner.reciprocal_dilate_shift_improves
+#print axioms LonelyRunner.PhaseGood
+#print axioms LonelyRunner.phase_certificate_sound

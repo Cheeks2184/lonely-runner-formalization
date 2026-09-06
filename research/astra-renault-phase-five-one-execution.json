@@ -1,0 +1,68 @@
+{
+  "discovery_receipt": {
+    "capture_complete": true,
+    "child_address_bytes": 234881024,
+    "child_cpu_limits": [
+      59,
+      60
+    ],
+    "combined_output_limit": 425984,
+    "command": [
+      "/usr/bin/python3",
+      "-I",
+      "/tmp/renault-phase-five-one-reviewed/discovery-evidence/discover.py"
+    ],
+    "driver_address_soft_bytes": 33554432,
+    "failure": null,
+    "hashes": {
+      "discover.py": "57b157b6f02cc82a81c10a2e8b576e1aa84213a6c9f80d2154a77cc5770142e4",
+      "run-capped.py": "407325b3e7e57b5a873d8a3068c1a579e74a87ed06d8b8b4efd247332437fa33",
+      "stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.bin": "c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1",
+      "verify.py": "7f8be20e9ce9cbf6e257ab0e6042e207ed587873aa854acf4584fcd1fb4c39de"
+    },
+    "mode": "discover",
+    "platform": "linux",
+    "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+    "returncode": 0,
+    "signal": null,
+    "wall_limit_seconds": 60,
+    "wall_seconds": 0.022576235001906753
+  },
+  "fixed_receipt": {
+    "capture_complete": true,
+    "child_address_bytes": 234881024,
+    "child_cpu_limits": [
+      59,
+      60
+    ],
+    "combined_output_limit": 425984,
+    "command": [
+      "/usr/bin/python3",
+      "-I",
+      "/tmp/renault-phase-five-one-reviewed/fixed-evidence/verify.py"
+    ],
+    "driver_address_soft_bytes": 33554432,
+    "failure": null,
+    "hashes": {
+      "discover.py": "57b157b6f02cc82a81c10a2e8b576e1aa84213a6c9f80d2154a77cc5770142e4",
+      "run-capped.py": "407325b3e7e57b5a873d8a3068c1a579e74a87ed06d8b8b4efd247332437fa33",
+      "stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdin.bin": "c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1",
+      "stdout.bin": "c5a5255fa822e07684c32339d8a8fe64d149466f2f1c3f2b5cadd79e3e234309",
+      "verify.py": "7f8be20e9ce9cbf6e257ab0e6042e207ed587873aa854acf4584fcd1fb4c39de"
+    },
+    "mode": "verify",
+    "platform": "linux",
+    "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+    "returncode": 0,
+    "signal": null,
+    "wall_limit_seconds": 60,
+    "wall_seconds": 0.017076386022381485
+  },
+  "fixed_stdout": "{\"atoms\": 120, \"candidate_predicates\": 2760, \"classes\": 98, \"kernel_theorem\": false, \"retained\": 41, \"triple_witnesses\": 12341, \"verified\": \"fixed-coverage-certificate\"}\n",
+  "fixed_stderr": "",
+  "certificate_path": "research/astra-renault-phase-five-one-certificate.json",
+  "scope": "Exact finite certificate and fixed verifier only; no Lean continuum theorem."
+}
