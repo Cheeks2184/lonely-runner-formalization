@@ -1,0 +1,269 @@
+{
+  "checkpoint": "Pass44",
+  "status": "verified_ready_to_publish",
+  "files": {
+    "LonelyRunner.lean": "bdaf520652ac6ab70c836f298de2fde81c892ebb1452e758ad9e6d39b130fc9c",
+    "LonelyRunner/AxiomAudit.lean": "de160010540049cf0d20e70859db8cacb4ef6163c2f4685b20c3e2dbfb6fa767",
+    "LonelyRunner/FiniteMaskSubset.lean": "8a7dec857dc4a9c4f2b5d4360389e97487163bd69d2d01ed3408b1335f162c3e",
+    "LonelyRunner/RenaultPhaseBandFacts.lean": "c775da2dfb8d3c6ff24f6d66c49d7b690f3422cc7dc95b410c064cc08c78d721",
+    "LonelyRunner/RenaultPhaseBandSoundness.lean": "b7773a0755413e03371c2322d221bfda68cf1174bcbfac694e61a4803189ccf7",
+    "LonelyRunner/RenaultPhaseConcreteData.lean": "1d5709da3631bc51d60bb4dbeb94fa2668da5cdbf5a63007e7b4ebd96a5b6c17",
+    "LonelyRunner/RenaultPhaseLemma.lean": "1ceac85438299dffdd48d57fb0052b598a9bd5eda995cabff0256885529d89cb",
+    "docs/astra-research-44.md": "7024fea5555725771d014ac1923d100f58b621b2d282556c7fbc769026229399",
+    "research/astra-renault-band-soundness-source-review.md": "35c4b83912d2cd906d3d636995b4d76c714e6368edc021d3ea46f86e8189e912",
+    "research/astra-renault-concrete-assembly-source-review.md": "210ab3359ab9b2b1497427c907994bec3a7d29ccf3009eb6cd728a906feba233",
+    "research/astra-renault-concrete-data-kernel-plan.md": "801a0b22658489a041b6577a746eb48ff13667c07b1333fff8cd02f4e1cd42fd",
+    "research/astra-renault-concrete-data-kernel-execution.json": "cd4a3533af1780fb5d9ac6d6077c056e14319a41c62e1b372f758139020224b4",
+    "research/astra-renault-concrete-data-kernel-history.json": "d74996dc0c5597939fe966e19f6c138830e47f24e1c61bc362da0a5351282aee"
+  },
+  "verification": {
+    "full_build": {
+      "command": "LEAN_NUM_THREADS=1 LEAN_STACK_SIZE_KB=65536 lake build",
+      "exit_code": 0,
+      "jobs": 3674,
+      "log_sha256": "fe3855b1b0967db325b7742b01d9b81427d919a379e118f0d6231acd5d2be873"
+    },
+    "trust": {
+      "command": "python3 -B scripts/audit_lean_trust.py",
+      "exit_code": 0,
+      "accepted_theorem_reports": 589,
+      "dependency_lines": 589,
+      "axiom_free_lines": 8,
+      "log_sha256": "06e69fdd7f6eb1f3dd71d2a2c2d5812eb447b77ac5a2625315f8884fa5e2ac4c",
+      "new_axiom_output": [
+        "'LonelyRunner.maskCandidates_subset_of_and_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.phaseSlope' does not depend on any axioms",
+        "'LonelyRunner.phaseShift' does not depend on any axioms",
+        "'LonelyRunner.phaseSlope_pos' depends on axioms: [propext, Quot.sound]",
+        "'LonelyRunner.phaseRepresentative' does not depend on any axioms",
+        "'LonelyRunner.phaseNumerator' does not depend on any axioms",
+        "'LonelyRunner.phaseQuotient' does not depend on any axioms",
+        "'LonelyRunner.PhaseBandFacts' depends on axioms: [propext]",
+        "'LonelyRunner.phaseGood_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.phaseGood_fract' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.phaseBandFacts_sound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.renaultPhaseCuts' depends on axioms: [propext]",
+        "'LonelyRunner.renaultPhaseAtomMasks' depends on axioms: [propext]",
+        "'LonelyRunner.renaultPhaseCoreAtoms' depends on axioms: [propext]",
+        "'LonelyRunner.renaultPhaseDominators' depends on axioms: [propext]",
+        "'LonelyRunner.renaultPhaseBandFacts' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.renaultPhaseCoreAtoms_masks' depends on axioms: [propext]",
+        "'LonelyRunner.renaultPhaseDominators_and' depends on axioms: [propext]",
+        "'LonelyRunner.renault_phase_common_candidate' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LonelyRunner.renault_phase_five_one' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    "focused": {
+      "mask_subset": {
+        "exit_code": 0,
+        "jobs": 3002,
+        "log": "\u2714 [3002/3002] Built LonelyRunner.FiniteMaskSubset (1.3s)\nBuild completed successfully (3002 jobs).\n"
+      },
+      "concrete_and_assembly": {
+        "exit_code": 0,
+        "jobs": 3013,
+        "log": "\u2714 [3012/3013] Built LonelyRunner.RenaultPhaseConcreteData (4.7s)\n\u2714 [3013/3013] Built LonelyRunner.RenaultPhaseLemma (1.5s)\nBuild completed successfully (3013 jobs).\n"
+      }
+    },
+    "band_review_root_replay": {
+      "report_sha256": "35c4b83912d2cd906d3d636995b4d76c714e6368edc021d3ea46f86e8189e912",
+      "root_complete_read": true,
+      "exit_code": 0,
+      "wall_seconds": 1.9501523640064988,
+      "stdout": "EVIDENCE_DIR /tmp/astra-renault-band-review-64s_lnlr\nRECEIPT_SHA256 26849179127ed3b6bbaff857147b63cc8874d7185a7be5e64aa832e06c874a59\n{\n  \"argv\": [\n    \"lake\",\n    \"env\",\n    \"lean\",\n    \"-j1\",\n    \"-s65536\",\n    \"--stdin\"\n  ],\n  \"child_max_rss_kib\": 3284432,\n  \"child_system_seconds\": 0.5952219999999999,\n  \"child_user_seconds\": 1.299036,\n  \"error\": null,\n  \"exit\": 0,\n  \"files\": {\n    \"launcher.sh\": {\n      \"bytes\": 6735,\n      \"sha256\": \"6bef1fbae6de7a01d55ce3837256c8c9a2acf16cf346660cd37ce5d0cb0f3d3b\"\n    },\n    \"predeclared-report.md\": {\n      \"bytes\": 24589,\n      \"sha256\": \"35c4b83912d2cd906d3d636995b4d76c714e6368edc021d3ea46f86e8189e912\"\n    },\n    \"stderr.bin\": {\n      \"bytes\": 0,\n      \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n    },\n    \"stdin.bin\": {\n      \"bytes\": 2419,\n      \"sha256\": \"19d524cb19a668dc5b9ffda4a4a21ff4a12f252b9c7af42229479bfa781ef69a\"\n    },\n    \"stdout.bin\": {\n      \"bytes\": 344,\n      \"sha256\": \"2ff414a7978b3f7590f381958323041cc865592f63e4e331fb077d10ec3de216\"\n    }\n  },\n  \"guards\": {\n    \".lake/build/lib/lean/LonelyRunner/FiniteCutCover.olean\": \"e135595b4c42102e9e2736492c39fc95914e1d09800615c3d943553abedc1ade\",\n    \".lake/build/lib/lean/LonelyRunner/FiniteMaskCertificates.olean\": \"f0ca24c85fa4ecef7643feec5c77d277fcbf62c312a65eb081a5161c6005cfb6\",\n    \".lake/build/lib/lean/LonelyRunner/RealPhaseBands.olean\": \"7442f9f49d9f1e2d214460557f6a891ba13717ededff679876033793ac2c6504\",\n    \".lake/build/lib/lean/LonelyRunner/RenaultPhaseBandFacts.olean\": \"d1bae95cbd3ccfde10a90f58fe650d81cd4d6120bb815c4d9558c08b09d34a77\",\n    \".lake/build/lib/lean/LonelyRunner/RenaultPhaseBandSoundness.olean\": \"4867093c71b4b6e5d29dfc3255b426159f367aafccd5393543d9487fb40e1e4f\",\n    \".lake/build/lib/lean/LonelyRunner/RenaultPhaseCertificates.olean\": \"9ec36c868453c9889f616f0f4dd5d0a4d3a5d477fa09b07da786b3164b38e666\",\n    \"LonelyRunner/FastRunnerInsertion.lean\": \"dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5\",\n    \"LonelyRunner/FiniteCutCover.lean\": \"b7e7e50834bc86d13ffde759e3d0c2dc4d2480a03ec61eb88a70ca215fcc1011\",\n    \"LonelyRunner/FiniteMaskCertificates.lean\": \"72629bc0780161890a31dd705b744c7ce2a77c884a915d7eaf4b3d69855b181e\",\n    \"LonelyRunner/RealPhaseBands.lean\": \"7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0\",\n    \"LonelyRunner/RenaultPhaseBandFacts.lean\": \"c775da2dfb8d3c6ff24f6d66c49d7b690f3422cc7dc95b410c064cc08c78d721\",\n    \"LonelyRunner/RenaultPhaseBandSoundness.lean\": \"b7773a0755413e03371c2322d221bfda68cf1174bcbfac694e61a4803189ccf7\",\n    \"LonelyRunner/RenaultPhaseCertificates.lean\": \"36b58c04e0c755d462f32bae3388c30d744d97ccb20a3bc27aa0daa99b7e49f0\",\n    \"LonelyRunner/StructuredClasses.lean\": \"5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c\",\n    \"lake-manifest.json\": \"887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218\",\n    \"lakefile.toml\": \"bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26\",\n    \"lean-toolchain\": \"8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af\",\n    \"research/astra-renault-phase-concrete-bridge-plan.md\": \"ec29e6cba74dd87a9db823e712fba099d47d6277bf52b2d227ce2d633e0dca60\"\n  },\n  \"guards_after\": true,\n  \"guards_before\": true,\n  \"limits\": {\n    \"address_space_bytes\": 8589934592,\n    \"cpu_seconds\": [\n      59,\n      60\n    ],\n    \"stream_bytes\": 131072,\n    \"wall_seconds\": 60\n  },\n  \"passed\": true,\n  \"probe_expected_sha256\": \"19d524cb19a668dc5b9ffda4a4a21ff4a12f252b9c7af42229479bfa781ef69a\",\n  \"stream_cap_hit\": false,\n  \"timed_out\": false,\n  \"wall_seconds\": 1.9202591319917701\n}\nSTDOUT-BEGIN\n'LonelyRunner.phaseSlope_pos' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.phaseGood_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.phaseGood_fract' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.phaseBandFacts_sound' depends on axioms: [propext, Classical.choice, Quot.sound]\nSTDOUT-END\nSTDERR-BEGIN\nSTDERR-END\n",
+      "stderr": "",
+      "receipt": {
+        "argv": [
+          "lake",
+          "env",
+          "lean",
+          "-j1",
+          "-s65536",
+          "--stdin"
+        ],
+        "child_max_rss_kib": 3284432,
+        "child_system_seconds": 0.5952219999999999,
+        "child_user_seconds": 1.299036,
+        "error": null,
+        "exit": 0,
+        "files": {
+          "launcher.sh": {
+            "bytes": 6735,
+            "sha256": "6bef1fbae6de7a01d55ce3837256c8c9a2acf16cf346660cd37ce5d0cb0f3d3b"
+          },
+          "predeclared-report.md": {
+            "bytes": 24589,
+            "sha256": "35c4b83912d2cd906d3d636995b4d76c714e6368edc021d3ea46f86e8189e912"
+          },
+          "stderr.bin": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdin.bin": {
+            "bytes": 2419,
+            "sha256": "19d524cb19a668dc5b9ffda4a4a21ff4a12f252b9c7af42229479bfa781ef69a"
+          },
+          "stdout.bin": {
+            "bytes": 344,
+            "sha256": "2ff414a7978b3f7590f381958323041cc865592f63e4e331fb077d10ec3de216"
+          }
+        },
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/FiniteCutCover.olean": "e135595b4c42102e9e2736492c39fc95914e1d09800615c3d943553abedc1ade",
+          ".lake/build/lib/lean/LonelyRunner/FiniteMaskCertificates.olean": "f0ca24c85fa4ecef7643feec5c77d277fcbf62c312a65eb081a5161c6005cfb6",
+          ".lake/build/lib/lean/LonelyRunner/RealPhaseBands.olean": "7442f9f49d9f1e2d214460557f6a891ba13717ededff679876033793ac2c6504",
+          ".lake/build/lib/lean/LonelyRunner/RenaultPhaseBandFacts.olean": "d1bae95cbd3ccfde10a90f58fe650d81cd4d6120bb815c4d9558c08b09d34a77",
+          ".lake/build/lib/lean/LonelyRunner/RenaultPhaseBandSoundness.olean": "4867093c71b4b6e5d29dfc3255b426159f367aafccd5393543d9487fb40e1e4f",
+          ".lake/build/lib/lean/LonelyRunner/RenaultPhaseCertificates.olean": "9ec36c868453c9889f616f0f4dd5d0a4d3a5d477fa09b07da786b3164b38e666",
+          "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+          "LonelyRunner/FiniteCutCover.lean": "b7e7e50834bc86d13ffde759e3d0c2dc4d2480a03ec61eb88a70ca215fcc1011",
+          "LonelyRunner/FiniteMaskCertificates.lean": "72629bc0780161890a31dd705b744c7ce2a77c884a915d7eaf4b3d69855b181e",
+          "LonelyRunner/RealPhaseBands.lean": "7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0",
+          "LonelyRunner/RenaultPhaseBandFacts.lean": "c775da2dfb8d3c6ff24f6d66c49d7b690f3422cc7dc95b410c064cc08c78d721",
+          "LonelyRunner/RenaultPhaseBandSoundness.lean": "b7773a0755413e03371c2322d221bfda68cf1174bcbfac694e61a4803189ccf7",
+          "LonelyRunner/RenaultPhaseCertificates.lean": "36b58c04e0c755d462f32bae3388c30d744d97ccb20a3bc27aa0daa99b7e49f0",
+          "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lakefile.toml": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-renault-phase-concrete-bridge-plan.md": "ec29e6cba74dd87a9db823e712fba099d47d6277bf52b2d227ce2d633e0dca60"
+        },
+        "guards_after": true,
+        "guards_before": true,
+        "limits": {
+          "address_space_bytes": 8589934592,
+          "cpu_seconds": [
+            59,
+            60
+          ],
+          "stream_bytes": 131072,
+          "wall_seconds": 60
+        },
+        "passed": true,
+        "probe_expected_sha256": "19d524cb19a668dc5b9ffda4a4a21ff4a12f252b9c7af42229479bfa781ef69a",
+        "stream_cap_hit": false,
+        "timed_out": false,
+        "wall_seconds": 1.9202591319917701
+      }
+    },
+    "concrete_capped_check": "research/astra-renault-concrete-data-kernel-execution.json",
+    "concrete_failed_check_history": "research/astra-renault-concrete-data-kernel-history.json",
+    "concrete_review_root_replay": {
+      "report_sha256": "210ab3359ab9b2b1497427c907994bec3a7d29ccf3009eb6cd728a906feba233",
+      "root_complete_read": true,
+      "exit_code": 0,
+      "wall_seconds": 1.957584827003302,
+      "stdout": "EVIDENCE_DIR /tmp/astra-renault-assembly-review-fopk2y84\nRECEIPT_SHA256 a4c2deb1b6c156a0656ee3f3c8fc6c6f4518926e77f958ffac17c4d16d77729a\n{\n  \"argv\": [\n    \"lake\",\n    \"env\",\n    \"lean\",\n    \"-j1\",\n    \"-s65536\",\n    \"--stdin\"\n  ],\n  \"child_max_rss_kib\": 3294020,\n  \"child_system_seconds\": 0.564388,\n  \"child_user_seconds\": 1.35418,\n  \"error\": null,\n  \"exit\": 0,\n  \"files\": {\n    \"launcher.sh\": {\n      \"bytes\": 9513,\n      \"sha256\": \"9f43f3089a2d0b277af2f9bcabaec987df3e897a26d2868d16e8e77885cb4f24\"\n    },\n    \"predeclared-report.md\": {\n      \"bytes\": 32382,\n      \"sha256\": \"210ab3359ab9b2b1497427c907994bec3a7d29ccf3009eb6cd728a906feba233\"\n    },\n    \"stderr.bin\": {\n      \"bytes\": 0,\n      \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n    },\n    \"stdin.bin\": {\n      \"bytes\": 3680,\n      \"sha256\": \"6ce0561b7a61ee4f7fd6d1840f8e3dbb1d26346a44eee7c4ac76cceedbb21dfa\"\n    },\n    \"stdout.bin\": {\n      \"bytes\": 547,\n      \"sha256\": \"cfb32ed67fce740189748c5bf208958341f803aabf3f4694acb3c0f12222bd54\"\n    }\n  },\n  \"guards\": {\n    \".lake/build/lib/lean/LonelyRunner/FiniteCutCover.olean\": \"e135595b4c42102e9e2736492c39fc95914e1d09800615c3d943553abedc1ade\",\n    \".lake/build/lib/lean/LonelyRunner/FiniteMaskCertificates.olean\": \"f0ca24c85fa4ecef7643feec5c77d277fcbf62c312a65eb081a5161c6005cfb6\",\n    \".lake/build/lib/lean/LonelyRunner/FiniteMaskSubset.olean\": \"8d96f6d4086e6902567a8bdce7400520919e5db15e7e03a64165ba1dc3b7476d\",\n    \".lake/build/lib/lean/LonelyRunner/RealPhaseBands.olean\": \"7442f9f49d9f1e2d214460557f6a891ba13717ededff679876033793ac2c6504\",\n    \".lake/build/lib/lean/LonelyRunner/RenaultPhaseBandFacts.olean\": \"d1bae95cbd3ccfde10a90f58fe650d81cd4d6120bb815c4d9558c08b09d34a77\",\n    \".lake/build/lib/lean/LonelyRunner/RenaultPhaseBandSoundness.olean\": \"4867093c71b4b6e5d29dfc3255b426159f367aafccd5393543d9487fb40e1e4f\",\n    \".lake/build/lib/lean/LonelyRunner/RenaultPhaseCertificates.olean\": \"9ec36c868453c9889f616f0f4dd5d0a4d3a5d477fa09b07da786b3164b38e666\",\n    \".lake/build/lib/lean/LonelyRunner/RenaultPhaseConcreteData.olean\": \"16190e2dbd242294572d32ed017b600e640585278ed54c80c9968236c93e8bcc\",\n    \".lake/build/lib/lean/LonelyRunner/RenaultPhaseLemma.olean\": \"b5a78878c8fa760a5eed5d42d0ba5b28c1735a5e8750c5acc258e921d9df4c6f\",\n    \".lake/build/lib/lean/LonelyRunner/RenaultPhaseMasks.olean\": \"f6d1245ea1ef3b57619ccc1056223969f75628397a1ccbd08459cba3ead72647\",\n    \"LonelyRunner/FastRunnerInsertion.lean\": \"dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5\",\n    \"LonelyRunner/FiniteCutCover.lean\": \"b7e7e50834bc86d13ffde759e3d0c2dc4d2480a03ec61eb88a70ca215fcc1011\",\n    \"LonelyRunner/FiniteMaskCertificates.lean\": \"72629bc0780161890a31dd705b744c7ce2a77c884a915d7eaf4b3d69855b181e\",\n    \"LonelyRunner/FiniteMaskSubset.lean\": \"8a7dec857dc4a9c4f2b5d4360389e97487163bd69d2d01ed3408b1335f162c3e\",\n    \"LonelyRunner/RealPhaseBands.lean\": \"7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0\",\n    \"LonelyRunner/RenaultPhaseBandFacts.lean\": \"c775da2dfb8d3c6ff24f6d66c49d7b690f3422cc7dc95b410c064cc08c78d721\",\n    \"LonelyRunner/RenaultPhaseBandSoundness.lean\": \"b7773a0755413e03371c2322d221bfda68cf1174bcbfac694e61a4803189ccf7\",\n    \"LonelyRunner/RenaultPhaseCertificates.lean\": \"36b58c04e0c755d462f32bae3388c30d744d97ccb20a3bc27aa0daa99b7e49f0\",\n    \"LonelyRunner/RenaultPhaseConcreteData.lean\": \"1d5709da3631bc51d60bb4dbeb94fa2668da5cdbf5a63007e7b4ebd96a5b6c17\",\n    \"LonelyRunner/RenaultPhaseLemma.lean\": \"1ceac85438299dffdd48d57fb0052b598a9bd5eda995cabff0256885529d89cb\",\n    \"LonelyRunner/RenaultPhaseMasks.lean\": \"fc1360b225d440c99c6dc44067f2bfda2668c9e6984078770c70dc23dc3a4857\",\n    \"LonelyRunner/StructuredClasses.lean\": \"5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c\",\n    \"lake-manifest.json\": \"887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218\",\n    \"lakefile.toml\": \"bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26\",\n    \"lean-toolchain\": \"8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af\",\n    \"research/astra-renault-concrete-data-kernel-execution.json\": \"cd4a3533af1780fb5d9ac6d6077c056e14319a41c62e1b372f758139020224b4\",\n    \"research/astra-renault-concrete-data-kernel-history.json\": \"d74996dc0c5597939fe966e19f6c138830e47f24e1c61bc362da0a5351282aee\",\n    \"research/astra-renault-concrete-data-kernel-plan.md\": \"801a0b22658489a041b6577a746eb48ff13667c07b1333fff8cd02f4e1cd42fd\",\n    \"research/astra-renault-phase-concrete-bridge-plan.md\": \"ec29e6cba74dd87a9db823e712fba099d47d6277bf52b2d227ce2d633e0dca60\",\n    \"research/astra-renault-phase-five-one-certificate.json\": \"c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1\"\n  },\n  \"guards_after\": true,\n  \"guards_before\": true,\n  \"limits\": {\n    \"address_space_bytes\": 8589934592,\n    \"cpu_seconds\": [\n      59,\n      60\n    ],\n    \"stream_bytes\": 131072,\n    \"wall_seconds\": 60\n  },\n  \"literal_sha256\": {\n    \"cores\": \"9243ace4d3027ac51361aeb5751edd40fc73527e29a37f4db50a6e2e8d21a8ed\",\n    \"cuts\": \"2c6cfd6f93fe9b41f5f744cf4c621bf198e563405039e85fa40f9bb8c63a9981\",\n    \"dom\": \"62e6588fc86a000dc1e10cf111ca6d59982da7dcea275242fd879c767af834b8\",\n    \"masks\": \"366c03c646faa0920574356e1e5cabed4a5d29bc3e311d4a29bc56469f77976c\"\n  },\n  \"passed\": true,\n  \"probe_expected_sha256\": \"6ce0561b7a61ee4f7fd6d1840f8e3dbb1d26346a44eee7c4ac76cceedbb21dfa\",\n  \"static_data\": true,\n  \"stream_cap_hit\": false,\n  \"timed_out\": false,\n  \"wall_seconds\": 1.92648769900552\n}\nSTDOUT-BEGIN\n'LonelyRunner.maskCandidates_subset_of_and_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.renaultPhaseBandFacts' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.renaultPhaseCoreAtoms_masks' depends on axioms: [propext]\n'LonelyRunner.renaultPhaseDominators_and' depends on axioms: [propext]\n'LonelyRunner.renault_phase_common_candidate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.renault_phase_five_one' depends on axioms: [propext, Classical.choice, Quot.sound]\nSTDOUT-END\nSTDERR-BEGIN\nSTDERR-END\n",
+      "stderr": "",
+      "receipt": {
+        "argv": [
+          "lake",
+          "env",
+          "lean",
+          "-j1",
+          "-s65536",
+          "--stdin"
+        ],
+        "child_max_rss_kib": 3294020,
+        "child_system_seconds": 0.564388,
+        "child_user_seconds": 1.35418,
+        "error": null,
+        "exit": 0,
+        "files": {
+          "launcher.sh": {
+            "bytes": 9513,
+            "sha256": "9f43f3089a2d0b277af2f9bcabaec987df3e897a26d2868d16e8e77885cb4f24"
+          },
+          "predeclared-report.md": {
+            "bytes": 32382,
+            "sha256": "210ab3359ab9b2b1497427c907994bec3a7d29ccf3009eb6cd728a906feba233"
+          },
+          "stderr.bin": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdin.bin": {
+            "bytes": 3680,
+            "sha256": "6ce0561b7a61ee4f7fd6d1840f8e3dbb1d26346a44eee7c4ac76cceedbb21dfa"
+          },
+          "stdout.bin": {
+            "bytes": 547,
+            "sha256": "cfb32ed67fce740189748c5bf208958341f803aabf3f4694acb3c0f12222bd54"
+          }
+        },
+        "guards": {
+          ".lake/build/lib/lean/LonelyRunner/FiniteCutCover.olean": "e135595b4c42102e9e2736492c39fc95914e1d09800615c3d943553abedc1ade",
+          ".lake/build/lib/lean/LonelyRunner/FiniteMaskCertificates.olean": "f0ca24c85fa4ecef7643feec5c77d277fcbf62c312a65eb081a5161c6005cfb6",
+          ".lake/build/lib/lean/LonelyRunner/FiniteMaskSubset.olean": "8d96f6d4086e6902567a8bdce7400520919e5db15e7e03a64165ba1dc3b7476d",
+          ".lake/build/lib/lean/LonelyRunner/RealPhaseBands.olean": "7442f9f49d9f1e2d214460557f6a891ba13717ededff679876033793ac2c6504",
+          ".lake/build/lib/lean/LonelyRunner/RenaultPhaseBandFacts.olean": "d1bae95cbd3ccfde10a90f58fe650d81cd4d6120bb815c4d9558c08b09d34a77",
+          ".lake/build/lib/lean/LonelyRunner/RenaultPhaseBandSoundness.olean": "4867093c71b4b6e5d29dfc3255b426159f367aafccd5393543d9487fb40e1e4f",
+          ".lake/build/lib/lean/LonelyRunner/RenaultPhaseCertificates.olean": "9ec36c868453c9889f616f0f4dd5d0a4d3a5d477fa09b07da786b3164b38e666",
+          ".lake/build/lib/lean/LonelyRunner/RenaultPhaseConcreteData.olean": "16190e2dbd242294572d32ed017b600e640585278ed54c80c9968236c93e8bcc",
+          ".lake/build/lib/lean/LonelyRunner/RenaultPhaseLemma.olean": "b5a78878c8fa760a5eed5d42d0ba5b28c1735a5e8750c5acc258e921d9df4c6f",
+          ".lake/build/lib/lean/LonelyRunner/RenaultPhaseMasks.olean": "f6d1245ea1ef3b57619ccc1056223969f75628397a1ccbd08459cba3ead72647",
+          "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+          "LonelyRunner/FiniteCutCover.lean": "b7e7e50834bc86d13ffde759e3d0c2dc4d2480a03ec61eb88a70ca215fcc1011",
+          "LonelyRunner/FiniteMaskCertificates.lean": "72629bc0780161890a31dd705b744c7ce2a77c884a915d7eaf4b3d69855b181e",
+          "LonelyRunner/FiniteMaskSubset.lean": "8a7dec857dc4a9c4f2b5d4360389e97487163bd69d2d01ed3408b1335f162c3e",
+          "LonelyRunner/RealPhaseBands.lean": "7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0",
+          "LonelyRunner/RenaultPhaseBandFacts.lean": "c775da2dfb8d3c6ff24f6d66c49d7b690f3422cc7dc95b410c064cc08c78d721",
+          "LonelyRunner/RenaultPhaseBandSoundness.lean": "b7773a0755413e03371c2322d221bfda68cf1174bcbfac694e61a4803189ccf7",
+          "LonelyRunner/RenaultPhaseCertificates.lean": "36b58c04e0c755d462f32bae3388c30d744d97ccb20a3bc27aa0daa99b7e49f0",
+          "LonelyRunner/RenaultPhaseConcreteData.lean": "1d5709da3631bc51d60bb4dbeb94fa2668da5cdbf5a63007e7b4ebd96a5b6c17",
+          "LonelyRunner/RenaultPhaseLemma.lean": "1ceac85438299dffdd48d57fb0052b598a9bd5eda995cabff0256885529d89cb",
+          "LonelyRunner/RenaultPhaseMasks.lean": "fc1360b225d440c99c6dc44067f2bfda2668c9e6984078770c70dc23dc3a4857",
+          "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+          "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+          "lakefile.toml": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26",
+          "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+          "research/astra-renault-concrete-data-kernel-execution.json": "cd4a3533af1780fb5d9ac6d6077c056e14319a41c62e1b372f758139020224b4",
+          "research/astra-renault-concrete-data-kernel-history.json": "d74996dc0c5597939fe966e19f6c138830e47f24e1c61bc362da0a5351282aee",
+          "research/astra-renault-concrete-data-kernel-plan.md": "801a0b22658489a041b6577a746eb48ff13667c07b1333fff8cd02f4e1cd42fd",
+          "research/astra-renault-phase-concrete-bridge-plan.md": "ec29e6cba74dd87a9db823e712fba099d47d6277bf52b2d227ce2d633e0dca60",
+          "research/astra-renault-phase-five-one-certificate.json": "c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1"
+        },
+        "guards_after": true,
+        "guards_before": true,
+        "limits": {
+          "address_space_bytes": 8589934592,
+          "cpu_seconds": [
+            59,
+            60
+          ],
+          "stream_bytes": 131072,
+          "wall_seconds": 60
+        },
+        "literal_sha256": {
+          "cores": "9243ace4d3027ac51361aeb5751edd40fc73527e29a37f4db50a6e2e8d21a8ed",
+          "cuts": "2c6cfd6f93fe9b41f5f744cf4c621bf198e563405039e85fa40f9bb8c63a9981",
+          "dom": "62e6588fc86a000dc1e10cf111ca6d59982da7dcea275242fd879c767af834b8",
+          "masks": "366c03c646faa0920574356e1e5cabed4a5d29bc3e311d4a29bc56469f77976c"
+        },
+        "passed": true,
+        "probe_expected_sha256": "6ce0561b7a61ee4f7fd6d1840f8e3dbb1d26346a44eee7c4ac76cceedbb21dfa",
+        "static_data": true,
+        "stream_cap_hit": false,
+        "timed_out": false,
+        "wall_seconds": 1.92648769900552
+      }
+    }
+  },
+  "scope": "Unconditional Renault5.1 phase lemma for arbitrary three real phases; one common candidate; closed slope2..5 alternative or strict slope1 shifts1/2/4. No new runner count or LRC resolution.",
+  "prior_publication": {
+    "checkpoint": "Pass43",
+    "pr_number": 42,
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/42",
+    "head_sha": "a854ae88eaebd9594c297a7a22ef1e25ce2e34b8",
+    "merge_sha": "5e60390195660af375300233309f058f2d2cb452",
+    "merged_at": "2026-09-06T10:33:37Z",
+    "ci_run": 34027269340,
+    "checks": {
+      "Lean build and trust audit": "SUCCESS 2026-09-06T10:25:15Z job101470363152",
+      "Exact computational certificates": "SUCCESS 2026-09-06T10:32:35Z job101470362898"
+    },
+    "exact_head_merge": true,
+    "remote_main_ancestry_verified": true,
+    "local_main_verified": true
+  }
+}

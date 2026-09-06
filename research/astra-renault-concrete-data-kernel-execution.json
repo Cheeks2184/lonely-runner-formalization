@@ -1,0 +1,57 @@
+{
+  "source_sha256": "1d5709da3631bc51d60bb4dbeb94fa2668da5cdbf5a63007e7b4ebd96a5b6c17",
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "-s65536",
+    "/home/joshua/lonely-runner-formalization/LonelyRunner/RenaultPhaseConcreteData.lean"
+  ],
+  "guards_before": {
+    "LonelyRunner/RenaultPhaseConcreteData.lean": "1d5709da3631bc51d60bb4dbeb94fa2668da5cdbf5a63007e7b4ebd96a5b6c17",
+    "LonelyRunner/RenaultPhaseBandFacts.lean": "c775da2dfb8d3c6ff24f6d66c49d7b690f3422cc7dc95b410c064cc08c78d721",
+    "LonelyRunner/RenaultPhaseMasks.lean": "fc1360b225d440c99c6dc44067f2bfda2668c9e6984078770c70dc23dc3a4857",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+    ".lake/build/lib/lean/LonelyRunner/RenaultPhaseBandFacts.olean": "d1bae95cbd3ccfde10a90f58fe650d81cd4d6120bb815c4d9558c08b09d34a77",
+    ".lake/build/lib/lean/LonelyRunner/RenaultPhaseMasks.olean": "f6d1245ea1ef3b57619ccc1056223969f75628397a1ccbd08459cba3ead72647"
+  },
+  "guards_after": {
+    "LonelyRunner/RenaultPhaseConcreteData.lean": "1d5709da3631bc51d60bb4dbeb94fa2668da5cdbf5a63007e7b4ebd96a5b6c17",
+    "LonelyRunner/RenaultPhaseBandFacts.lean": "c775da2dfb8d3c6ff24f6d66c49d7b690f3422cc7dc95b410c064cc08c78d721",
+    "LonelyRunner/RenaultPhaseMasks.lean": "fc1360b225d440c99c6dc44067f2bfda2668c9e6984078770c70dc23dc3a4857",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+    ".lake/build/lib/lean/LonelyRunner/RenaultPhaseBandFacts.olean": "d1bae95cbd3ccfde10a90f58fe650d81cd4d6120bb815c4d9558c08b09d34a77",
+    ".lake/build/lib/lean/LonelyRunner/RenaultPhaseMasks.olean": "f6d1245ea1ef3b57619ccc1056223969f75628397a1ccbd08459cba3ead72647"
+  },
+  "exit_code": 0,
+  "wall_seconds": 9.085562850988936,
+  "timed_out": false,
+  "max_rss_kib": 3564752,
+  "limits": {
+    "address_bytes": 8589934592,
+    "cpu_seconds": [
+      59,
+      60
+    ],
+    "wall_seconds": 60,
+    "per_stream_file_bytes": 262144,
+    "threads": 1,
+    "stack_kib": 65536
+  },
+  "launcher_sha256": "ea0faa7aef34dc922e954c824759da6f0e5fefb5236f49206344275d14f5f44d",
+  "launcher": "import hashlib, json, os, pathlib, resource, subprocess, tempfile, time\nroot=pathlib.Path('/home/joshua/lonely-runner-formalization')\nsource=root/'LonelyRunner/RenaultPhaseConcreteData.lean'\nexpected='1d5709da3631bc51d60bb4dbeb94fa2668da5cdbf5a63007e7b4ebd96a5b6c17'\nsha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()\nassert sha(source)==expected\npaths=[source,root/'LonelyRunner/RenaultPhaseBandFacts.lean',root/'LonelyRunner/RenaultPhaseMasks.lean',root/'lean-toolchain',root/'lake-manifest.json',root/'.lake/build/lib/lean/LonelyRunner/RenaultPhaseBandFacts.olean',root/'.lake/build/lib/lean/LonelyRunner/RenaultPhaseMasks.olean']\nguards={str(p.relative_to(root)):sha(p) for p in paths}\nwork=pathlib.Path(tempfile.mkdtemp(prefix='astra-pass44-concrete-'))\nenv=os.environ.copy();env['PATH']=str(pathlib.Path.home()/'.elan/bin')+':'+env.get('PATH','');env['LEAN_NUM_THREADS']='1';env['LEAN_STACK_SIZE_KB']='65536'\ncommand=['lake','env','lean','-j1','-s65536',str(source)]\ndef cap():\n resource.setrlimit(resource.RLIMIT_AS,(8*1024**3,8*1024**3))\n resource.setrlimit(resource.RLIMIT_CPU,(59,60))\n resource.setrlimit(resource.RLIMIT_FSIZE,(256*1024,256*1024))\nstart=time.monotonic();timed_out=False\nwith open(work/'stdout','wb') as out,open(work/'stderr','wb') as err:\n p=subprocess.Popen(command,cwd=root,env=env,stdout=out,stderr=err,preexec_fn=cap,start_new_session=True)\n try:p.wait(timeout=60)\n except subprocess.TimeoutExpired:\n  import signal\n  timed_out=True;os.killpg(p.pid,signal.SIGKILL);p.wait()\nrecord={'source_sha256':expected,'command':command,'guards_before':guards,'guards_after':{str(p.relative_to(root)):sha(p) for p in paths},'exit_code':p.returncode,'wall_seconds':time.monotonic()-start,'timed_out':timed_out,'max_rss_kib':resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss,'limits':{'address_bytes':8*1024**3,'cpu_seconds':[59,60],'wall_seconds':60,'per_stream_file_bytes':256*1024,'threads':1,'stack_kib':65536},'launcher_sha256':sha(pathlib.Path(__file__)),'launcher':pathlib.Path(__file__).read_text()}\nfor name in ['stdout','stderr']:\n f=work/name;record[name]={'bytes':f.stat().st_size,'sha256':sha(f),'text':f.read_text(errors='replace')}\nrecord['captures_below_cap']=all(record[n]['bytes']<256*1024 for n in ['stdout','stderr'])\noutput=root/'research/astra-renault-concrete-data-kernel-execution.json'\noutput.write_text(json.dumps(record,indent=2)+'\\n')\nprint(json.dumps({k:record[k] for k in ['source_sha256','exit_code','wall_seconds','timed_out','max_rss_kib','captures_below_cap']}))\nprint(record['stdout']['text']);print(record['stderr']['text'])\nassert record['guards_before']==record['guards_after']\nraise SystemExit(0 if p.returncode==0 and not timed_out and record['captures_below_cap'] else 1)\n",
+  "stdout": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": ""
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": ""
+  },
+  "captures_below_cap": true
+}

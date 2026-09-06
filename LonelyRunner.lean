@@ -144,6 +144,12 @@ import LonelyRunner.RationalShiftOrbits
 import LonelyRunner.RealPhaseBands
 import LonelyRunner.FiniteCutCover
 
+import LonelyRunner.FiniteMaskSubset
+import LonelyRunner.RenaultPhaseBandFacts
+import LonelyRunner.RenaultPhaseBandSoundness
+import LonelyRunner.RenaultPhaseConcreteData
+import LonelyRunner.RenaultPhaseLemma
+
 /-!
 Root import for the formal Lonely Runner development.
 -/
