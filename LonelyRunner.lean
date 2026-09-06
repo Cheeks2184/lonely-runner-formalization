@@ -119,6 +119,9 @@ import LonelyRunner.FourRunnerMixed
 import LonelyRunner.FourRunnerOrdinary
 import LonelyRunner.BoundedRealReduction
 import LonelyRunner.FourRunnerCanonical
+import LonelyRunner.BufferedRunnerInsertion
+import LonelyRunner.FiveRunnerMixed
+import LonelyRunner.FiveRunnerBuffered
 
 /-!
 Root import for the formal Lonely Runner development.

@@ -11,6 +11,14 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks.
+The [Pass 35 checkpoint](docs/astra-research-35.md) adds insertion with unequal
+seed margins and sufficient five-runner mixed classes. For `0<a<b<c<H`, the
+conditions `10ab<=H(a+b)` and `30bc<=H(3c+8b)` give margins
+`1/5,1/5,1/5,1/4` at one positive time; `22b<=3H` is a simpler sufficient
+condition. The full family `(a,2a,3a,H)` is also covered for `H>3a>0`.
+The full build, 462-report trust audit, independent source reviews, and root
+replays passed. These results do not
+establish universal five-runner mixed supply or unrestricted LRC.
 The [Pass 34 checkpoint](docs/astra-research-34.md) proves
 `LonelyRunner.fourRunners` for arbitrary distinct real speeds and any chosen
 runner among four. Its reusable bounded reduction needs integer witness

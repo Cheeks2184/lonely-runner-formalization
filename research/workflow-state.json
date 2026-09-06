@@ -6,7 +6,7 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/five_runner_mixed_structure",
+      "id": "/root/five_runner_certificate_design",
       "agent_id": "/root/mixed_equivalence_freeze",
       "kind": "research",
       "status": "in_progress",
@@ -14,10 +14,10 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Bounded analytic investigation of N=5 global strict-ordinary-to-fastest-mixed implication, isolating a useful structural theorem or precise obstruction without large enumeration.",
-      "source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+      "target": "Assess exact bounded certificate design for remaining N5 strict-to-mixed implication, including correct finite reduction, resource complexity and alternatives, without tuple enumeration.",
+      "source_checkpoint": "5a621b8065fdbc69694168e6d406824b1fa23cff",
       "owned_files": [
-        "research/astra-five-runner-mixed-structure.md"
+        "research/astra-five-runner-certificate-design.md"
       ],
       "checks": []
     }
@@ -4519,14 +4519,162 @@
         "Deletion-gcd fixed controls and15historical interface guards passed"
       ],
       "result": "Both manuscript reviews and final canonical source review accepted. Root full reads, exact guards and replays passed. All child processes stopped."
+    },
+    {
+      "id": "/root/five_runner_mixed_structure",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Bounded analytic investigation of N=5 global strict-ordinary-to-fastest-mixed implication, isolating a useful structural theorem or precise obstruction without large enumeration.",
+      "source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+      "owned_files": [
+        "research/astra-five-runner-mixed-structure.md"
+      ],
+      "checks": [
+        "author program a3ce150750a3bed484dbfb49db945916dec76b4c107fc14402edfb7a74925ff1",
+        "stdout e07bfc14aa3e408b54da5646a5fd59fd0fe73bbde147d27dd9bea0d88a6c0021"
+      ],
+      "result": "Frozen manuscript8e82088a..., root full read and16sourceguards/6namedcontrols replay passed; independent review pending. K5 unresolved."
+    },
+    {
+      "id": "/root/five_runner_mixed_structure_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent mathematical review of the bounded N5 nonuniform-seed insertion criterion and exact prior-coverage comparison; author manuscript is being frozen.",
+      "source_checkpoint": "e3e13a0d2a4f0ed76f5bbdd10305130ad079e505",
+      "owned_files": [
+        "research/astra-five-runner-mixed-structure-review.md"
+      ],
+      "checks": [
+        "review ce3e6ecf5bb454ece9e9b71901db9504556a5ecd5c63888e3cb5a963fea9ff5f",
+        "program a27319964cdc5b582a2cf5b23fd381b561c063b86946bcd96a71144555079d91",
+        "stdout 8695a214ecde113b192580f0cee9e4f81b46a3fa81b6714d0183b32c00ab66b2"
+      ],
+      "result": "Accepted final manuscript/plan; root full read and guarded replay passed six author plus five independent fixed controls; global K5 unresolved."
+    },
+    {
+      "id": "/root/buffered_runner_insertion_implementation",
+      "agent_id": "/root/four_runner_completion",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement the settled generic positive-speed finite-band/endpoint-buffer insertion theorem; exact mathematical plan reviewed by Astra xhigh.",
+      "source_checkpoint": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+      "owned_files": [
+        "LonelyRunner/BufferedRunnerInsertion.lean",
+        "research/astra-buffered-runner-insertion-implementation.md"
+      ],
+      "checks": [
+        "Worker source78577,build15059,probe46531 reported terminal0",
+        "Root independent probe78634 terminal0",
+        "Exactsource SHA a135f5c41ead308a2a4250f07535bf3e32f78c88599497bf79bb632cd1e05f0a"
+      ],
+      "result": "Generic core source a135f5c4... compiled named2977jobs and root exacttype/allowedaxioms/n1closedwidth probe78634 terminal0; independent source review next."
+    },
+    {
+      "id": "/root/five_runner_exception_implementation",
+      "agent_id": "/root/five_runner_exception",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Recovery stage1: define FiveRunnerMixed and fully verify A=1 lower-exception lemma; then resume A>=2 grid and positive gcd scaling, preserving source during routine errors.",
+      "source_checkpoint": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+      "owned_files": [
+        "LonelyRunner/FiveRunnerMixed.lean",
+        "research/astra-five-runner-exception-implementation.md"
+      ],
+      "checks": [
+        "source exit0",
+        "namedbuild exit0,3002jobs",
+        "freshimport exactA1type/allowedaxioms verified byworker"
+      ],
+      "result": "Narrow recovery milestone complete: FiveRunnerMixed and normalizedA1lemma verified at6d5a15c2...; wholeexceptionnotyetimplemented. Ownership ofnextgrid/scalingstage transfers tofour_runner_completion."
+    },
+    {
+      "id": "/root/buffered_runner_insertion_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent exact-source review of frozen generic bufferedRunnerInsertion at its positive-real speed, distinct/same owner, closed-band contract.",
+      "source_checkpoint": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+      "owned_files": [
+        "research/astra-buffered-runner-insertion-formal-review.md"
+      ],
+      "checks": [
+        "review e43fda02baa1ec87a67a27d713ea0e148a7f634a2729e77677195fd24c0c59d5",
+        "rootreplay27378 terminal0",
+        "program7559eed92c6f3a20010315b7a575a810131e0426466d1ca3cb1a0109a354beac",
+        "stdoutc02252be56235e871cadb4caa2c48a23062b3d8fcbf15d9b6da3565da4d89411"
+      ],
+      "result": "Frozen core accepted; root fullyread review and exact guarded replay27378 passed fivekernel examples/fourallowed reports, sourceunchanged."
+    },
+    {
+      "id": "/root/five_runner_buffered_specialization",
+      "agent_id": "/root/four_runner_completion",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Finish A>=2 coprimegrid and positive gcd scaling in FiveRunnerMixed, then compose alreadydrafted FiveRunnerBuffered sufficient theorem and coarsecorollary.",
+      "source_checkpoint": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+      "owned_files": [
+        "LonelyRunner/FiveRunnerBuffered.lean",
+        "research/astra-five-runner-buffered-implementation.md",
+        "LonelyRunner/FiveRunnerMixed.lean",
+        "research/astra-five-runner-exception-implementation.md"
+      ],
+      "checks": [
+        "source and named builds terminal exit0",
+        "final four-theorem type/axiom and four-control probe13530 exit0"
+      ]
+    },
+    {
+      "id": "/root/five_runner_final_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent final five-runner source and integration review, binding accepted buffered core review; exact scopes, exceptional scaling, parameter inequalities, trust and fixed boundary controls.",
+      "source_checkpoint": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+      "owned_files": [
+        "research/astra-five-runner-buffered-formal-review.md"
+      ],
+      "checks": [
+        "independent final17examples/6allowedaxiomreports/15guards passed",
+        "root fullread and guarded replay50455 terminal0"
+      ],
+      "evidence_sha256": "9fb96dcb10485ccb2bcacb7966cf68bd3dd7503aa5c0e75338303ae823f7616e"
     }
   ],
-  "latest_checkpoint": "Pass34 canonical four-total-runner theorem verified: full build3643, trust457, independent review and root replay18examples/9reports. Source and evidence frozen; commit/push/PR/merge next. Unrestricted goal unresolved.",
+  "latest_checkpoint": "Pass35 mathematical source, full build3646, trust462, independent final review17examples/6reports, root guarded replay50455 all passed. Prepare publication; unrestricted LRC andglobalK5remainunresolved.",
   "next_actions": [
-    "Commit,push,openPR,merge exact reviewed Pass34 head after remote CI, verify main and persist receipt.",
-    "Continue manuscript-only N5 strict-ordinary-to-mixed structural investigation; separate from verified Pass34.",
-    "Review any useful new mathematical finding independently before implementation or publication; no huge finite sweep.",
-    "Unrestricted goal remains active; local rebuildable cache is absent."
+    "Publish verified Pass35: commit, push, open PR, inspect checks and reviews, merge exact head, verify main.",
+    "Finish bounded N5 certificate-design manuscript, independently review before implementation or enumeration.",
+    "Unrestricted LRC and globalK5 remain unresolved; no cache-dependent work currently queued."
   ],
   "research_holds": [
     {
@@ -5356,15 +5504,55 @@
         "merge_sha": "4e55a24baea869a4d6249003f0bb07c8a90533c2",
         "checks": "Lean build/trust passed2026-09-06T03:13:27Z; exactcertificates passed03:20:33Z; exact-headmerge03:23:00Z; CIrun34008344568.",
         "remote_main_contains_head": true
+      },
+      {
+        "checkpoint": "Pass34",
+        "pr_number": 33,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/33",
+        "head_sha": "e3e13a0d2a4f0ed76f5bbdd10305130ad079e505",
+        "merge_sha": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+        "merged_at": "2026-09-06T03:48:56Z",
+        "status": "merged_verified",
+        "ci_run": 34009494258,
+        "checks": [
+          {
+            "name": "Lean build and trust audit",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T03:40:39Z",
+            "job_id": 101422692222
+          },
+          {
+            "name": "Exact computational certificates",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T03:47:46Z",
+            "job_id": 101422692197
+          }
+        ],
+        "remote_main_contains_head": true,
+        "local_main": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+        "no_pending_reviews": true
       }
     ],
-    "latest_published_source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
-    "remote_main": "4e55a24baea869a4d6249003f0bb07c8a90533c2",
-    "local_main": "4e55a24baea869a4d6249003f0bb07c8a90533c2",
+    "latest_published_source_checkpoint": "e3e13a0d2a4f0ed76f5bbdd10305130ad079e505",
+    "remote_main": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+    "local_main": "5a621b8065fdbc69694168e6d406824b1fa23cff",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "4e55a24baea869a4d6249003f0bb07c8a90533c2",
-    "checks": "Lean build/trust passed2026-09-06T03:13:27Z; exactcertificates passed03:20:33Z; exact-headmerge03:23:00Z; CIrun34008344568.",
+    "merge_sha": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+    "checks": [
+      {
+        "name": "Lean build and trust audit",
+        "conclusion": "SUCCESS",
+        "completed_at": "2026-09-06T03:40:39Z",
+        "job_id": 101422692222
+      },
+      {
+        "name": "Exact computational certificates",
+        "conclusion": "SUCCESS",
+        "completed_at": "2026-09-06T03:47:46Z",
+        "job_id": 101422692197
+      }
+    ],
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
@@ -5387,12 +5575,7 @@
     "instructions_path": ".codex/config.toml",
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
-  "publication_in_progress": {
-    "checkpoint": "Pass34",
-    "branch": "codex/astra-four-runner-canonical-bridges",
-    "status": "verified_awaiting_commit",
-    "source_base": "0e49249d9fcbba5e4a8312d845224bc11466db76"
-  },
+  "publication_in_progress": null,
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
     "author_sha256": "6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f",
@@ -5520,10 +5703,10 @@
   "current_research_boundary": {
     "status": "research_in_progress",
     "canonical_resolution": false,
-    "latest_published": "Pass33 / PR32 merged at 4e55a24baea869a4d6249003f0bb07c8a90533c2",
-    "pending_formal": "Pass34 unconditional canonical four-total-runner theorem verified by full build and trust audit; independent review pending.",
+    "latest_published": "Pass34 / PR33 merged at 5a621b8065fdbc69694168e6d406824b1fa23cff",
+    "pending_formal": "None; canonical count4 verified and published. N5 buffer criterion is manuscript work pending final independent review.",
     "open_mathematics": "Uniform finite-family supply and higher-count global mixed supply remain unproved.",
-    "storage": "One shared dependency/build cache retained for active verification."
+    "storage": "Shared .lake cache removed after completed verification; pinned toolchain retained."
   },
   "adaptive_affine_audit": {
     "status": "accepted_manuscript",
@@ -5808,7 +5991,7 @@
     "formal_verification": "fullbuild3638 jobs reported, trust438, independent review/root guarded replay passed",
     "canonical_status": "unresolved"
   },
-  "storage_checkpoint_next_action": "Cache cleanup completed after all local verification processes stopped: removed .lake, 8,006,076,991 bytes. Retain toolchain and small unique evidence; restore pinned cache only for a settled future Lean task.",
+  "storage_checkpoint_next_action": "Pass35 verification/review/replay complete; safe cleanup95273 exit0 removed7,762,815,050 bytes of .lake. Pinned toolchain retained. Current certificate-design research uses tracked sources only.",
   "four_runner_mixed_build_recovery": {
     "status": "separate_declaration_split_verified_composition_in_progress",
     "actual_goal_status": "active",
@@ -5861,9 +6044,19 @@
     "current_disposition": "Verified and merged in Pass33 / PR32; historical intermediate fields retained below."
   },
   "worker_recovery_latest": {
+    "worker": "/root/five_runner_exception",
+    "status": "A1_helper_verified_remaining_scope_reassigned",
     "actual_goal_status": "active",
-    "failure_scope": "Old Terra repeatedly returned final after one fixable step or helper inspection despite full bounded assignment; no mathematical blocker.",
-    "remaining_action": "Reassign unfinished analytic/gcd phase to fresh Terra medium in-session worker; preserve all verified artifacts."
+    "failure": "Worker stopped after one source-only exit1 in unfinished A=1 modular branch and removed its own draft. No completed theorem was established; report preserved but draft not retained.",
+    "recovery": "Resume same role with bounded A=1 lemma first, preserve source, verify terminal results, then continue grid/scaling. No user permission needed and goal not blocked.",
+    "actual_exit_code": 1,
+    "root_reproduction_session": 88548,
+    "root_log": "/tmp/astra-five-exception-recovery.log",
+    "root_diagnosis": "All three remaining failures need the cast inequality 1 <= (d:Real), not just 0 < (d:Real). Since d:Nat and0<d, this follows immediately. No semantic obstacle; wholeA1helperstillunverified.",
+    "A1_source_sha256": "6d5a15c292ae4adf661a01f6cc82942398c1adaff0fc71d7ca1ac219b63bc15e",
+    "A1_build_exit_code": 0,
+    "A1_build_jobs": 3002,
+    "next_owner": "/root/four_runner_completion"
   },
   "four_runner_completion_initial_check": {
     "status": "worker_success_claim_withdrawn_root_exit1",
@@ -5931,7 +6124,7 @@
     "next_action": "Combine with reviewed boundedrealimplementation andcanonicalwrapper, thenfinalindependentreview/fullbuild/trustbeforePass34promotion."
   },
   "pending_pass34": {
-    "status": "verified_ready_for_publication",
+    "status": "merged_verified",
     "source_checkpoint": "0e49249d9fcbba5e4a8312d845224bc11466db76",
     "branch": "codex/astra-four-runner-canonical-bridges",
     "full_build_session": 45414,
@@ -5944,6 +6137,121 @@
     "root_formal_replay": "passed: 18 kernel examples, eight new exact types plus old compatibility, nine allowed reports; session20684 terminal exit0",
     "root_replay_record": "/tmp/astra-pass34-formal-review-root-replay.json",
     "verification_artifact": "research/astra-pass34-verification.json",
-    "formal_review_sha256": "101676b1aa7bff0a66064dfaad38e7fbb42e0e40d1568a12230c56984f05248f"
+    "formal_review_sha256": "101676b1aa7bff0a66064dfaad38e7fbb42e0e40d1568a12230c56984f05248f",
+    "head_sha": "e3e13a0d2a4f0ed76f5bbdd10305130ad079e505",
+    "pr_number": 33,
+    "checkpoint": "Pass34",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/33",
+    "merge_sha": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+    "merged_at": "2026-09-06T03:48:56Z",
+    "ci_run": 34009494258,
+    "checks": [
+      {
+        "name": "Lean build and trust audit",
+        "conclusion": "SUCCESS",
+        "completed_at": "2026-09-06T03:40:39Z",
+        "job_id": 101422692222
+      },
+      {
+        "name": "Exact computational certificates",
+        "conclusion": "SUCCESS",
+        "completed_at": "2026-09-06T03:47:46Z",
+        "job_id": 101422692197
+      }
+    ],
+    "remote_main_contains_head": true,
+    "local_main": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+    "no_pending_reviews": true
+  },
+  "five_runner_mixed_structure": {
+    "status": "independently_accepted_root_replayed_implementation_in_progress",
+    "candidate_criterion": "H >= max(10ab/(a+b),30bc/(3c+8b)) supplies mixed for0<a<b<c<H via C4 mixed seed; lower exception separately covered.",
+    "coarse_corollary": "3H >=22b",
+    "comparison_fixture": [
+      4,
+      5,
+      11,
+      30
+    ],
+    "comparison_caution": "Root preliminary(9,10,40,67) fixture passes existing determinant refinement, so is not a new-coverage witness.",
+    "integer_multiplier_obstruction": "(3,4,5,11), strict seed1/9 has no mixed integer multiple, although1/8 is global mixed. Fixed modulus9 deduction, nosearch.",
+    "formalized": false,
+    "global_K5_proved": false,
+    "artifact_sha256": "8e82088a40db9104237ece65d86900e9cf50b6ffe8e5ec39164fbf8b808473ac",
+    "root_replay": "/tmp/astra-five-runner-author-root-replay.json",
+    "reviewer_added_fixture": [
+      4,
+      5,
+      11,
+      24
+    ],
+    "reviewer_fixed_witness": "13/96",
+    "review_sha256": "ce3e6ecf5bb454ece9e9b71901db9504556a5ecd5c63888e3cb5a963fea9ff5f",
+    "root_review_replay": "/tmp/astra-five-runner-review-root-replay.json"
+  },
+  "buffered_insertion_preparation": {
+    "status": "settled_core_implementation_queued",
+    "branch": "codex/astra-buffered-runner-insertion",
+    "generic_plan": "Positive speed floors define bands; finite max/min owners give full-width same-owner or sum-of-buffer distinct-owner bound; midpoint plus existing small shift inserts new beta-good phase while preserving old delta bands. Positive seed and delta give positive final time.",
+    "semantic_review": "Astra xhigh reviewer explicitly approved this exact finite-band approach and exceptional-family modular/gcd plan; final manuscript review still being frozen.",
+    "cache_action": "Restore one pinned cache now for the settled implementation; do not duplicate or clean during builds.",
+    "cache_restore_session": 20735,
+    "cache_restore_log": "/tmp/astra-buffered-cache-restore.log",
+    "cache_restore_exit_code": 0,
+    "base_build_session": 39487,
+    "base_build_exit_code": 0,
+    "base_build_jobs": 1840,
+    "build_coordination": "A1helper namedbuild done; four_runner_completion now owns the namedbuild slot for wholeexception and caller. Astra core reviewprobe done, finalreadback only.",
+    "core_source_sha256": "a135f5c41ead308a2a4250f07535bf3e32f78c88599497bf79bb632cd1e05f0a",
+    "core_root_probe": "78634 terminal exit0: exacttype, permittedaxioms, n1 closedwidth equality with beta=1/2",
+    "core_independent_review": "accepted",
+    "core_review_sha256": "e43fda02baa1ec87a67a27d713ea0e148a7f634a2729e77677195fd24c0c59d5",
+    "core_review_root_replay": "/tmp/astra-buffered-core-review-root-replay.json",
+    "A1_root_probe": "87623 terminal0 exactA1type,allowedaxioms andK4/K12/K20 controls"
+  },
+  "pending_pass35": {
+    "phase": "verified_preparing_publication",
+    "build_session": 3712,
+    "source_hashes": {
+      "LonelyRunner/BufferedRunnerInsertion.lean": "a135f5c41ead308a2a4250f07535bf3e32f78c88599497bf79bb632cd1e05f0a",
+      "LonelyRunner/FiveRunnerMixed.lean": "1e27f19d8906ee0d71b452758a38a7c44fff54e0b1b3c1e08dd5354921eb1eb0",
+      "LonelyRunner/FiveRunnerBuffered.lean": "70f690a2300e122da3e9646e48d2f4e9c6af630c16da89d403e8508cb16b6d04",
+      "LonelyRunner.lean": "0568c0f96dc4c7612d27f39673a9770ce9b780e020b7d6eb4b1268296eb069df",
+      "LonelyRunner/AxiomAudit.lean": "699818b850898afe849785ffb6aae5ab3dc927cd58263f6e477389965c41ebd1"
+    },
+    "full_build": {
+      "session": 3712,
+      "exit_code": 0,
+      "jobs": 3646,
+      "log_sha256": "2eb8e7507c62f11d8d97768f7332a4d186ad01dbe4f6ed59d00d91d1e7eba47e"
+    },
+    "trust": {
+      "session": 2707,
+      "exit_code": 0,
+      "log_sha256": "c21d10f41ee0d9a8e7caa43bfcfaae4cc2a58493ab706639ba0d471a57e21129",
+      "reports": 462
+    },
+    "root_formal_replay": "passed50455 terminal0",
+    "verification_artifact": "research/astra-pass35-verification.json",
+    "storage": {
+      "cleanup_command": "python3 -B scripts/manage_storage.py --clean",
+      "exit_code": 0,
+      "removed_bytes": 7762815050,
+      "paths": [
+        ".lake"
+      ],
+      "log_sha256": "47d44c5c64d37de449fb805476228d42215d377db7af227de445aa41a4b2d2bf",
+      "no_active_or_queued_cache_dependent_work": true,
+      "pinned_toolchain_retained": true
+    }
+  },
+  "literature_screen_latest": {
+    "url": "https://arxiv.org/html/2605.27941v1",
+    "title": "Mixed thresholds in the Lonely Runner Conjecture",
+    "author": "Alathea Jensen",
+    "date": "2026-05-27",
+    "scope": "Advertised exact MLPS2 characterization, progression sum and unequal pair integral; higher mixed statements announced for future paper. No K5 or unrestricted result adopted.",
+    "independent_fixed_control": "For(1,2,3,4),t=2/5 has norms2/5,1/5,1/5,2/5, hence increasing only fourth target to1/4 is compatible with this tuple. Introductory consecutive-speed argument cannot alone exclude every single-coordinate increase. This does not prove the associated universal mixed statement.",
+    "status": "screening only, no implementation decision"
   }
 }
