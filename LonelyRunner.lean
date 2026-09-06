@@ -170,6 +170,12 @@ import LonelyRunner.ThirdShiftRescues
 import LonelyRunner.SpecialSixthPhase
 import LonelyRunner.ThirdShiftSpecialSeed
 
+import LonelyRunner.SixthAffinePhase
+import LonelyRunner.FoldedPairSafeBands
+import LonelyRunner.AnchoredPairTransport
+import LonelyRunner.AnchoredPairSafeBands
+import LonelyRunner.ThreeLabelPigeonhole
+
 /-!
 Root import for the formal Lonely Runner development.
 -/
