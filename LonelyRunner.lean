@@ -133,6 +133,8 @@ import LonelyRunner.FiveAdicHardPattern
 import LonelyRunner.FiveAdicDecomposition
 import LonelyRunner.FiveRunnerOrdinary
 import LonelyRunner.FiveRunnerCanonical
+import LonelyRunner.PrimeAdicArithmetic
+import LonelyRunner.PrimeAdicCompression
 
 /-!
 Root import for the formal Lonely Runner development.
