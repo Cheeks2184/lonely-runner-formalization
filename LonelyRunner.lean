@@ -180,6 +180,12 @@ import LonelyRunner.SmallSixthSeeds
 import LonelyRunner.TwoDivisibleSmallPair
 import LonelyRunner.TwoDivisibleCover
 
+import LonelyRunner.SixthAffineFoldedNorm
+import LonelyRunner.TwoPhaseHalfChoices
+import LonelyRunner.ThreeResidueModSix
+import LonelyRunner.BoundaryZeroDivisibility
+import LonelyRunner.SixthAffineSpecialAnchor
+
 /-!
 Root import for the formal Lonely Runner development.
 -/

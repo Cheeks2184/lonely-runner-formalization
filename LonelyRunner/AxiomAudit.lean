@@ -745,3 +745,12 @@ project-specific axiom.
 #print axioms LonelyRunner.three_exceptions_of_two_divisible_labels
 #print axioms LonelyRunner.two_divisible_pair_small_witness
 #print axioms LonelyRunner.fiveMovingNaturalRunners_of_two_divisible_cover
+
+-- Shared half choices, exact residues, anchor formulas and zero-bound divisibility.
+#print axioms LonelyRunner.circleNorm_sixth_affine_of_three_residue
+#print axioms LonelyRunner.two_phase_half_choices
+#print axioms LonelyRunner.exists_three_residue_mod_six
+#print axioms LonelyRunner.dvd_of_circleNorm_nat_div_eq_zero
+#print axioms LonelyRunner.dvd_or_dvd_of_five_sixths_pair_zero
+#print axioms LonelyRunner.circleNorm_add_signed_half
+#print axioms LonelyRunner.fract_sixth_affine_special_anchor
