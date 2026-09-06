@@ -1,0 +1,83 @@
+{
+  "checkpoint": "Pass67",
+  "parent_main": "600287d55a01d3c8c2d3bf4e4114eee4f9c1271e",
+  "status": "Reviewed adapted-grid manuscripts and one exact bounded forward control; unrestricted canonical goal unresolved.",
+  "hashes": {
+    "research/astra-adapted-grid-uniform-audit.md": "ed38f7cb6c07f0d476ceac661154fbddda7fe4757af2be6ec90be71fc01f5ef8",
+    "research/astra-adapted-grid-uniform-review.md": "b2e2cda1910a0ec941f9b4371e074c3a18f7a2363951600e64f5f9de764a2cf2",
+    "research/astra-forward-grid-insertion.md": "b1185bc69414dbb6dfa36bc04ed2a80f92b75856867190015b19c53216babb33",
+    "research/astra-forward-grid-insertion-review.md": "ba90a5a4fa2cb6e767a2c85d8b6d6c4a9d0d1a54bdc47e5f4c870591138adb82",
+    "research/astra-forward-grid-control.json": "ade2e5ad3f5f63e0d434ed92ee784389dd54ae84f13a0a406df4128b73072558",
+    "docs/astra-research-67.md": "0f8caa837b3fa62e751ca2efbd1cc57490f52b1678bc4a78ea0893de8c0b7c3b"
+  },
+  "root_verifier": {
+    "argv": [
+      "/tmp/astra-pass67-verify.py",
+      "/tmp/astra-pass67-inputs.json",
+      "research/astra-pass67-verification.json"
+    ],
+    "source_utf8": "from pathlib import Path\nimport hashlib, json, re, subprocess, sys\n\ninputs = Path(sys.argv[1])\nexpected = json.loads(inputs.read_text())\nfor name, wanted in expected.items():\n    data = Path(name).read_bytes()\n    assert hashlib.sha256(data).hexdigest() == wanted, name\n    if name.endswith('.md'):\n        assert data.endswith(b'\\n') and not re.search(rb'[ \\t]+$', data, re.M), name\n\nreview_bindings = {\n    'research/astra-adapted-grid-uniform-review.md': 'research/astra-adapted-grid-uniform-audit.md',\n    'research/astra-forward-grid-insertion-review.md': 'research/astra-forward-grid-insertion.md',\n}\nfor review, author in review_bindings.items():\n    assert expected[author] in Path(review).read_text(), review\n\nr = json.loads(Path('research/astra-forward-grid-control.json').read_text())\nfor item in r['frozen_execution'].values():\n    assert hashlib.sha256(item['source'].encode()).hexdigest() == item['sha256']\nprogram = r['frozen_execution']['program']\nassert program['exit_status'] == 0 and program['stderr'] == ''\nassert len(program['stdout'].encode()) == program['stdout_bytes']\nassert program['stderr_bytes'] == 0\noutput = json.loads(program['stdout'])\nassert output['program_source_sha256'] == program['sha256']\nassert output['boxes'] == r['result']['boxes']\nassert r['result']['status'] == 'bounded_nonfinding'\nfor box, count in [('N5', 1140), ('N6', 1820)]:\n    b = output['boxes'][box]\n    assert b['scanned_tuple_count'] == b['expected_tuple_count'] == count\n    assert b['aggregate_before_stop']['tuples_with_forward_good_residue'] == count\n    assert b['completed_entire_box'] and b['failure'] is None\nfor path, wanted in r['settled_contract'].items():\n    assert expected[path] == wanted\nassert r['delivery_metrics']['worker_elapsed_seconds'] is None\nassert r['delivery_metrics']['first_check_success'] is True\nassert r['delivery_metrics']['worker_repair_rounds'] == 0\nassert r['delivery_metrics']['astra_repair_rounds'] == 1\nassert not r['packaging_history']['mathematical_program_rerun_after_first_success']\n\nchecks = []\nfor argv in [\n    ['python3', '-B', 'scripts/validate_workflow.py'],\n    ['git', 'diff', '--check'],\n    ['python3', '-B', 'scripts/manage_storage.py'],\n]:\n    done = subprocess.run(argv, text=True, capture_output=True)\n    checks.append(dict(argv=argv, exit_code=done.returncode, stdout=done.stdout, stderr=done.stderr))\n    assert done.returncode == 0, checks[-1]\n\nrecord = dict(\n    checkpoint='Pass67',\n    parent_main='600287d55a01d3c8c2d3bf4e4114eee4f9c1271e',\n    status='Reviewed adapted-grid manuscripts and one exact bounded forward control; unrestricted canonical goal unresolved.',\n    hashes=expected,\n    root_verifier=dict(argv=sys.argv, source_utf8=Path(__file__).read_text(), input_utf8=inputs.read_text()),\n    checks=checks,\n    mathematical_verification='Source-bound independent Astra reviews and root full reads. Root inspected the actual frozen Terra executable and packer; verified bindings and retained output without replaying the screen. The integer phase construction matches the reviewed contract. Fraction inequalities share its modular residue calculation and do not constitute a separate phase implementation.',\n    bounded_control='All1140 increasing triples1..20 atN5 and1820 quadruples1..16 atN6 have a forward-good residue. No failure branch, appended-grid construction or full-witness search ran; no domain expansion.',\n    evidence_limits='The executable first run succeeded. One patch-transport packaging retry and one root metadata clarification are retained separately. No uniform grid supply, no new Lean declaration and no LRC proof or disproof.',\n    storage='No local Lean cache restored. Storage report retained among checks.',\n)\nPath(sys.argv[2]).write_text(json.dumps(record, indent=2) + '\\n')\nprint(json.dumps(dict(status='passed', frozen_files=len(expected), checks=checks, receipt=sys.argv[2]), sort_keys=True))\n",
+    "input_utf8": "{\n  \"research/astra-adapted-grid-uniform-audit.md\": \"ed38f7cb6c07f0d476ceac661154fbddda7fe4757af2be6ec90be71fc01f5ef8\",\n  \"research/astra-adapted-grid-uniform-review.md\": \"b2e2cda1910a0ec941f9b4371e074c3a18f7a2363951600e64f5f9de764a2cf2\",\n  \"research/astra-forward-grid-insertion.md\": \"b1185bc69414dbb6dfa36bc04ed2a80f92b75856867190015b19c53216babb33\",\n  \"research/astra-forward-grid-insertion-review.md\": \"ba90a5a4fa2cb6e767a2c85d8b6d6c4a9d0d1a54bdc47e5f4c870591138adb82\",\n  \"research/astra-forward-grid-control.json\": \"ade2e5ad3f5f63e0d434ed92ee784389dd54ae84f13a0a406df4128b73072558\",\n  \"docs/astra-research-67.md\": \"0f8caa837b3fa62e751ca2efbd1cc57490f52b1678bc4a78ea0893de8c0b7c3b\"\n}\n",
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "{\"checks\": [{\"argv\": [\"python3\", \"-B\", \"scripts/validate_workflow.py\"], \"exit_code\": 0, \"stderr\": \"\", \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\"}, {\"argv\": [\"git\", \"diff\", \"--check\"], \"exit_code\": 0, \"stderr\": \"\", \"stdout\": \"\"}, {\"argv\": [\"python3\", \"-B\", \"scripts/manage_storage.py\"], \"exit_code\": 0, \"stderr\": \"\", \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\"}], \"frozen_files\": 6, \"receipt\": \"research/astra-pass67-verification.json\", \"status\": \"passed\"}\n"
+  },
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "mathematical_verification": "Source-bound independent Astra reviews and root full reads. Root inspected the actual frozen Terra executable and packer; verified bindings and retained output without replaying the screen. The integer phase construction matches the reviewed contract. Fraction inequalities share its modular residue calculation and do not constitute a separate phase implementation.",
+  "bounded_control": "All1140 increasing triples1..20 atN5 and1820 quadruples1..16 atN6 have a forward-good residue. No failure branch, appended-grid construction or full-witness search ran; no domain expansion.",
+  "evidence_limits": "The executable first run succeeded. One patch-transport packaging retry and one root metadata clarification are retained separately. No uniform grid supply, no new Lean declaration and no LRC proof or disproof.",
+  "storage": "No local Lean cache restored. Storage report retained among checks.",
+  "root_integration_failure_history": [
+    {
+      "argv": [
+        "python3",
+        "/tmp/astra-pass67-verify.py",
+        "/tmp/astra-pass67-inputs.json",
+        "research/astra-pass67-verification.json"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/astra-pass67-verify.py\", line 51, in <module>\n    assert done.returncode == 0, checks[-1]\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'argv': ['python3', '-B', 'scripts/validate_workflow.py'], 'exit_code': 1, 'stdout': '', 'stderr': 'workflow validation error: completed_tasks[424].delivery_metrics must contain exactly the documented delivery metric fields\\n'}\n",
+      "cause": "Root copied a program duration into the state strict delivery_metrics object."
+    },
+    {
+      "correction_script_exit_code": 1,
+      "correction_script_stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 6, in <module>\nTypeError: list indices must be integers or slices, not str\n",
+      "subsequent_verifier_exit_code": 1,
+      "subsequent_verifier_stderr": "Traceback (most recent call last):\n  File \"/tmp/astra-pass67-verify.py\", line 51, in <module>\n    assert done.returncode == 0, checks[-1]\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'argv': ['python3', '-B', 'scripts/validate_workflow.py'], 'exit_code': 1, 'stdout': '', 'stderr': 'workflow validation error: completed_tasks[424].delivery_metrics must contain exactly the documented delivery metric fields\\n'}\n",
+      "cause": "Root attempted to index a list as a mapping before its atomic write; unchanged state caused the same validator rejection."
+    }
+  ],
+  "root_integration_resolution": "Root moved duration to task-level program_elapsed_seconds, recorded integration failures in a separate state field, and revalidated changed state. Frozen mathematical sources and executable unchanged; no mathematical replay."
+}
