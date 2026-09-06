@@ -6,6 +6,22 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [thirty-second Astra checkpoint](docs/astra-research-32.md) records the
+kernel-checked zero-residual affine and stationary mixed-height strengthening.
+For `N=m+2>=3`, under the lower-count hypothesis, a primitive sorted
+stationary row above the strict cutoff
+`B=choose(N,2)^(N-2)` receives at one positive time both the ordinary `1/N`
+margin and the fastest `1/(N-1)` margin. Under the same lower-count, sorted,
+stationary, and primitive hypotheses, absence of that mixed witness implies
+the inclusive bound `H<=B`. The old APIs remain projection wrappers. The full
+source build completed with 3,638 jobs reported and the trust audit accepted
+438 permitted-only reports. Independent semantic review and the root replay
+of its compatibility, boundary, and axiom probes passed. The checkpoint also
+records an accepted strict-to-mixed
+necessary-condition audit: it requires a primitive lower core and narrows a
+possible N=4 global failure to pairwise-coprime `a<b<H` with `b>=4` and
+`b<H<4b`. It proves no global mixed supply, finite-family supply, or LRC.
+
 The [thirty-first Astra checkpoint](docs/astra-research-31.md) records
 accepted manuscript-only direct-or-mixed component obstructions. The raw N=3
 direct-or-mixed union fails exactly at `(a,2a)` when `3` divides `a`, while

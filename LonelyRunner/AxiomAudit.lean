@@ -35,6 +35,12 @@ import LonelyRunner.TopTwoTransversal
 #print axioms LonelyRunner.rankTwo_of_primitive_approximation
 #print axioms LonelyRunner.rational_affine_lonelyAt
 #print axioms LonelyRunner.primitive_sorted_largeHeight_lonelyAt
+#print axioms LonelyRunner.exists_affinePhaseTransfer_with_zeroResidual
+#print axioms LonelyRunner.exists_positiveAffine_witness_with_zeroResidual
+#print axioms LonelyRunner.exists_signedAffine_witness_with_zeroResidual
+#print axioms LonelyRunner.rational_affine_lonelyAt_with_equalResidual
+#print axioms LonelyRunner.primitive_sorted_largeHeight_stationary_mixed
+#print axioms LonelyRunner.primitive_sorted_noMixed_height_le
 
 -- Unequal clusters retain their actual count through the canonical bridge.
 #print axioms LonelyRunner.twoClusterPhaseBand

@@ -77,6 +77,23 @@ different component. This direct-or-mixed route must account for normalization a
 on staying in a supplied component. Primitive uniform supply and LRC remain
 unresolved.
 
+Pass 32 kernel-checks a zero-residual strengthening of the affine transport
+pipeline. With `N=m+2>=3` and `B=choose(N,2)^(N-2)`, under the lower-count
+hypothesis a sorted primitive stationary tuple with `B<H` has a single
+positive time at which every norm
+is at least `1/N` and the fastest is at least `1/(N-1)`. The old ordinary
+theorems remain projection wrappers, and under the same lower-count, sorted,
+stationary, and primitive hypotheses a no-mixed premise implies `H<=B`.
+This does not give an arbitrary-runner cutoff or remove the finite-family
+supply obligation. Its independent exact-patch review and guarded root replay
+passed.
+
+The accepted strict-to-mixed audit gives necessary conditions for a separate
+global question, not a supply theorem. A possible counterexample has primitive
+lower core. At `N=4`, it must be pairwise coprime `a<b<H` with `b>=4` and
+`b<H<4b`; 2,330 narrowly direct-eligible tuples are exact diagnostics only.
+There is no proof of the global condition K or unrestricted LRC.
+
 Pair-sum completeness is now proved for each already witnessed positive
 integer tuple: a finite floor-cell minimum returns an exact certificate without
 discarding repeated labels or closed endpoints. This replaces the former

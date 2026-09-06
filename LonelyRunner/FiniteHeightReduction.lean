@@ -128,14 +128,16 @@ theorem primitive_sorted_largeHeight_lonelyAt {m : ℕ} (hm : 1 ≤ m)
 /-- The sharper height reduction applies to the stationary minimum label.
 The finite branch is inclusive at `choose (m+2) 2 ^ m`; this theorem treats
 strictly greater heights and preserves the closed lonely distance threshold. -/
-theorem primitive_sorted_largeHeight_stationary_lonelyAt {m : ℕ} (hm : 1 ≤ m)
+theorem primitive_sorted_largeHeight_stationary_mixed {m : ℕ} (hm : 1 ≤ m)
     (hLower : LowerCountPositiveIntegerHypothesis (m + 2))
     (s : Fin (m + 2) → ℕ)
     (hsorted : StrictMono s) (hs0 : s 0 = 0)
     (hprimitive : Finset.univ.gcd s = 1)
     (hheight : (Nat.choose (m + 2) 2) ^ m < s (Fin.last (m + 1))) :
     ∃ t : ℝ, 0 < t ∧
-      LonelyAt (fun i => (s i : ℝ)) 0 t := by
+      LonelyAt (fun i => (s i : ℝ)) 0 t ∧
+      (((m + 1 : ℕ) : ℝ)⁻¹) ≤
+        circleNorm (t * (s (Fin.last (m + 1)) : ℝ)) := by
   classical
   let H : ℕ := s (Fin.last (m + 1))
   let Q : ℕ := Nat.choose (m + 2) 2
@@ -205,14 +207,54 @@ theorem primitive_sorted_largeHeight_stationary_lonelyAt {m : ℕ} (hm : 1 ≤ m
         rw [← hQdouble]
         push_cast
         ring
-  obtain ⟨t, ht, hl⟩ := rational_affine_lonelyAt hm hLower u v p hp q hqpos hu0 hv0
+  obtain ⟨t, ht, hl, hzero⟩ := rational_affine_lonelyAt_with_equalResidual hm hLower u v p hp q hqpos hu0 hv0
     hrank hinj hperiod 0 herr
-  refine ⟨t, ht, ?_⟩
   have hspeed : (fun i => ((p * (u i : ℚ) + v i : ℚ) : ℝ)) =
       (fun i => (s i : ℝ)) := by
     funext i
     exact_mod_cast hactual i
-  rw [hspeed] at hl
-  exact hl
+  refine ⟨t, ht, ?_, ?_⟩
+  · rw [hspeed] at hl
+    exact hl
+  · have hlast : Fin.last (m + 1) ≠ 0 := by
+      intro h
+      have hval : m + 1 = 0 := by simpa using congrArg Fin.val h
+      omega
+    have hfast := hzero (Fin.last (m + 1)) hlast (by rw [hvH, hv0])
+    have hlastactual : ((p * (u (Fin.last (m + 1)) : ℚ) + v (Fin.last (m + 1)) : ℚ) : ℝ) =
+        (s (Fin.last (m + 1)) : ℝ) := by exact_mod_cast hactual (Fin.last (m + 1))
+    have hzeroactual : ((p * (u 0 : ℚ) + v 0 : ℚ) : ℝ) = (s 0 : ℝ) := by
+      exact_mod_cast hactual 0
+    rw [hlastactual, hzeroactual, hs0] at hfast
+    simpa [hs0] using hfast
+
+/-- The original stationary height theorem is the ordinary projection of the
+mixed-margin large-height reduction. -/
+theorem primitive_sorted_largeHeight_stationary_lonelyAt {m : ℕ} (hm : 1 ≤ m)
+    (hLower : LowerCountPositiveIntegerHypothesis (m + 2))
+    (s : Fin (m + 2) → ℕ)
+    (hsorted : StrictMono s) (hs0 : s 0 = 0)
+    (hprimitive : Finset.univ.gcd s = 1)
+    (hheight : (Nat.choose (m + 2) 2) ^ m < s (Fin.last (m + 1))) :
+    ∃ t : ℝ, 0 < t ∧ LonelyAt (fun i => (s i : ℝ)) 0 t := by
+  obtain ⟨t, ht, hl, _⟩ :=
+    primitive_sorted_largeHeight_stationary_mixed hm hLower s hsorted hs0 hprimitive hheight
+  exact ⟨t, ht, hl⟩
+
+/-- Under the same lower-count supply, a sorted primitive stationary tuple
+without a positive mixed witness lies in the inclusive sharper finite range. -/
+theorem primitive_sorted_noMixed_height_le {m : ℕ} (hm : 1 ≤ m)
+    (hLower : LowerCountPositiveIntegerHypothesis (m + 2))
+    (s : Fin (m + 2) → ℕ)
+    (hsorted : StrictMono s) (hs0 : s 0 = 0)
+    (hprimitive : Finset.univ.gcd s = 1)
+    (hnoMixed : ∀ t : ℝ, ¬ (0 < t ∧ LonelyAt (fun i => (s i : ℝ)) 0 t ∧
+      (((m + 1 : ℕ) : ℝ)⁻¹) ≤ circleNorm (t * (s (Fin.last (m + 1)) : ℝ))) ) :
+    s (Fin.last (m + 1)) ≤ (Nat.choose (m + 2) 2) ^ m := by
+  by_contra hnot
+  have hheight : (Nat.choose (m + 2) 2) ^ m < s (Fin.last (m + 1)) := by omega
+  obtain ⟨t, ht, hl, hfast⟩ :=
+    primitive_sorted_largeHeight_stationary_mixed hm hLower s hsorted hs0 hprimitive hheight
+  exact hnoMixed t ⟨ht, hl, hfast⟩
 
 end LonelyRunner

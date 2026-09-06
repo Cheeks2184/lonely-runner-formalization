@@ -10,7 +10,17 @@ the Lonely Runner Conjecture (LRC).
 **Current operating instructions:** [.codex/config.toml](.codex/config.toml) and
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
-[workflow-state.json](research/workflow-state.json) for current tasks. The
+[workflow-state.json](research/workflow-state.json) for current tasks.
+The [Pass 32 checkpoint](docs/astra-research-32.md) records a kernel-checked
+zero-residual affine strengthening. For total count `N=m+2>=3`, under the
+lower-count hypothesis, a sorted primitive stationary tuple receives
+the ordinary `1/N` margins and the fastest `1/(N-1)` margin at the same
+positive time above the strict cutoff `choose(N,2)^(N-2)`, while retaining the
+old public APIs. Its conditional converse bounds a no-mixed row inclusively;
+it supplies neither arbitrary-runner coverage nor the unresolved finite-family
+premise. The independent exact-patch review passed. The checkpoint also
+records an accepted strict-to-mixed necessary-condition audit, which narrows
+but does not prove the separate global mixed-supply question.
 The [Pass 30 checkpoint](docs/astra-research-30.md) records a kernel-checked
 sharper stationary finite-height reduction. For total runner count `N`, its
 inclusive finite cutoff is `choose(N,2)^(N-2)`, a factor `2^(N-2)` below the

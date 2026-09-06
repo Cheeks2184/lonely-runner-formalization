@@ -5,7 +5,7 @@ namespace LonelyRunner
 
 noncomputable section
 
-theorem rational_affine_lonelyAt {m : ℕ} (hm : 1 ≤ m)
+theorem rational_affine_lonelyAt_with_equalResidual {m : ℕ} (hm : 1 ≤ m)
     (hLower : LowerCountPositiveIntegerHypothesis (m + 2))
     (u : Fin (m + 2) → ℤ) (v : Fin (m + 2) → ℚ)
     (p : ℚ) (hp : 1 < p) (q : ℕ) (hq : 0 < q)
@@ -17,7 +17,11 @@ theorem rational_affine_lonelyAt {m : ℕ} (hm : 1 ≤ m)
     (herr : ∀ i, |v i - v r| ≤
       2 * p / (((m + 2) * (m + 1) : ℕ) : ℚ)) :
     ∃ t : ℝ, 0 < t ∧
-      LonelyAt (fun i => ((p * (u i : ℚ) + v i : ℚ) : ℝ)) r t := by
+      LonelyAt (fun i => ((p * (u i : ℚ) + v i : ℚ) : ℝ)) r t ∧
+      ∀ other : Fin (m + 2), other ≠ r → v other = v r →
+        (((m + 1 : ℕ) : ℝ)⁻¹) ≤ circleNorm
+          (t * (((p * (u other : ℚ) + v other : ℚ) : ℝ) -
+            ((p * (u r : ℚ) + v r : ℚ) : ℝ))) := by
   let U : Fin (m + 1) → ℤ := fun a => u (r.succAbove a) - u r
   let V : Fin (m + 1) → ℚ := fun a => v (r.succAbove a) - v r
   have hnonconstant := relative_ratio_nonconstant_of_rankTwo u v p hu0 hv0 hrank hinj r
@@ -50,19 +54,49 @@ theorem rational_affine_lonelyAt {m : ℕ} (hm : 1 ≤ m)
     calc
       |(V a : ℝ)| ≤ (2 * (p : ℝ)) / (((m + 2) * (m + 1) : ℕ) : ℝ) := haR
       _ = (((m + 2) * (m + 1) : ℕ) : ℝ)⁻¹ * (2 * (p : ℝ)) := by ring
-  obtain ⟨t, ht, hcomparisons⟩ := exists_signedAffine_witness
+  obtain ⟨t, ht, hcomparisons, hzero⟩ := exists_signedAffine_witness_with_zeroResidual
     (N := m + 2) (m := m + 1) (by omega) (by omega) (by omega)
     U V p hp (q : ℝ) (by exact_mod_cast (by omega : 1 ≤ q)) hperiodRel hactual
     hnonconstant herrRel hLower
-  refine ⟨t, ht, ?_⟩
-  apply (lonelyAt_iff_relativeLonelyAt _ r t).mpr
-  intro other hother
-  obtain ⟨a, rfl⟩ := Fin.exists_succAbove_eq hother
-  have ha := hcomparisons a
-  change ((m + 2 : ℕ) : ℝ)⁻¹ ≤
-    circleNorm (t * (((p * (u (r.succAbove a) : ℚ) + v (r.succAbove a) : ℚ) : ℝ) -
-      ((p * (u r : ℚ) + v r : ℚ) : ℝ)))
-  convert ha using 1 <;> dsimp [U, V] <;> push_cast <;> ring
+  refine ⟨t, ht, ?_, ?_⟩
+  · apply (lonelyAt_iff_relativeLonelyAt _ r t).mpr
+    intro other hother
+    obtain ⟨a, rfl⟩ := Fin.exists_succAbove_eq hother
+    have ha := hcomparisons a
+    change ((m + 2 : ℕ) : ℝ)⁻¹ ≤
+      circleNorm (t * (((p * (u (r.succAbove a) : ℚ) + v (r.succAbove a) : ℚ) : ℝ) -
+        ((p * (u r : ℚ) + v r : ℚ) : ℝ)))
+    convert ha using 1 <;> dsimp [U, V] <;> push_cast <;> ring
+  · intro other hother hresidual
+    obtain ⟨a, rfl⟩ := Fin.exists_succAbove_eq hother
+    have ha := hzero a (by
+      dsimp [V]
+      rw [hresidual]
+      ring)
+    change (((m + 1 : ℕ) : ℝ)⁻¹) ≤
+      circleNorm (t * (((p * (u (r.succAbove a) : ℚ) + v (r.succAbove a) : ℚ) : ℝ) -
+        ((p * (u r : ℚ) + v r : ℚ) : ℝ)))
+    convert ha using 1 <;> dsimp [U, V] <;> push_cast <;> ring
+
+/-- The original affine relative witness is the ordinary projection of the
+equal-residual-preserving theorem. -/
+theorem rational_affine_lonelyAt {m : ℕ} (hm : 1 ≤ m)
+    (hLower : LowerCountPositiveIntegerHypothesis (m + 2))
+    (u : Fin (m + 2) → ℤ) (v : Fin (m + 2) → ℚ)
+    (p : ℚ) (hp : 1 < p) (q : ℕ) (hq : 0 < q)
+    (hu0 : u 0 = 0) (hv0 : v 0 = 0)
+    (hrank : RationalPairRankTwo u v)
+    (hinj : Function.Injective (fun i => p * (u i : ℚ) + v i))
+    (hperiod : ∀ i, ∃ z : ℤ, (q : ℚ) * v i = (z : ℚ))
+    (r : Fin (m + 2))
+    (herr : ∀ i, |v i - v r| ≤
+      2 * p / (((m + 2) * (m + 1) : ℕ) : ℚ)) :
+    ∃ t : ℝ, 0 < t ∧
+      LonelyAt (fun i => ((p * (u i : ℚ) + v i : ℚ) : ℝ)) r t := by
+  obtain ⟨t, ht, hl, _⟩ :=
+    rational_affine_lonelyAt_with_equalResidual hm hLower u v p hp q hq hu0 hv0 hrank hinj
+      hperiod r herr
+  exact ⟨t, ht, hl⟩
 
 end
 
