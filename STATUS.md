@@ -6,6 +6,23 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [twenty-ninth Astra checkpoint](docs/astra-research-29.md) records an
+accepted conditional exact two-anchor packet constructor, an accepted
+mixed-margin equivalence, and an accepted one-deletion-family manuscript. A
+mixed witness has every original norm at least `1/N` and its fastest norm at
+least `1/(N-1)`. For `N>=3`, the reviewed result identifies this mixed real or
+rational witness condition exactly with stationary exact `S`; the `N=3`
+all-half zero-loss packet is included. The constructor still has its stated
+additional anchor premise and true collision count `c=N-2`, and no result here
+supplies that premise or a mixed witness uniformly. The one-deletion family is
+already ordinarily covered by `boundedHeight_stationary_witness`. Its corrected
+controls replay 28 positive times, 218 coordinate comparisons, 53 divisibility
+facts, and 8 negative controls, but are finite evidence only. There is no new
+Lean source, build, or axiom audit: Pass 28's 3,638-job build and 427
+permitted-only audit reports remain the latest such evidence. The canonical
+conjecture and the inclusive primitive finite-family proposition remain
+unproved.
+
 The [twenty-eighth Astra checkpoint](docs/astra-research-28.md) adds a
 kernel-checked fixed-instance pair-sum completeness bridge and the resulting
 canonical equivalence. The full source build passed 3,638 jobs, the trust audit

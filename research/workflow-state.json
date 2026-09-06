@@ -6,20 +6,65 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/cluster_limit_review-exact-affine-union-audit",
+      "id": "/root/uniform_mixed_obstruction",
       "kind": "research",
       "status": "in_progress",
-      "target": "Audit the still-unexamined union of a direct small-reciprocal witness and exact retained-margin two-anchor supply, first through its necessary fastest-coordinate mixed-margin condition.",
-      "source_checkpoint": "367a9dc22e093a0347a776f988cac67335bab379",
+      "target": "Investigate arbitrary direct-or-mixed supply: identify structural implication or obstruction beyond bounded-height families; preserve full canonical objective.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
       "owned_files": [
-        "research/astra-exact-affine-union-audit.md"
+        "research/astra-uniform-direct-mixed-audit.md"
       ],
       "checks": [],
-      "next_action": "Bounded analytical contract audit; obtain a precise fixed counterexample or new justified structural step, not another witness-equivalent premise. New work excluded from Pass28."
+      "next_action": "Investigate arbitrary direct-or-mixed supply: identify structural implication or obstruction beyond bounded-height families; preserve full canonical objective.",
+      "agent_id": "/root/mixed_equivalence_freeze"
+    },
+    {
+      "id": "/root/sharper_cutoff_implementation",
+      "kind": "research",
+      "status": "in_progress",
+      "target": "User-approved sharper stationary max-height reduction and canonical finite-family equivalence; explicitly requested Astra high overrides research xhigh for this assignment.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/FiniteHeightReduction.lean",
+        "LonelyRunner/FinitePrimitiveFamilies.lean",
+        "LonelyRunner/FiniteFamilyEquivalence.lean",
+        "research/astra-sharper-cutoff-implementation.md"
+      ],
+      "checks": [],
+      "next_action": "Implement additive sharper theorem and finite-family bridge; verify pinned Lean and report exact changes.",
+      "routing_override_authorization": "User explicitly requested Astra subagent at high effort for approved implementation.",
+      "agent_id": "/root/sharper_cutoff_implementation",
+      "routing_override": {
+        "source": "user",
+        "requested_model": "gpt-6-astra",
+        "requested_effort": "high",
+        "instruction": "Very well. The proposed implementation is approved. Hand that off to an Astra subagent at high effort and continue with your normal work."
+      }
+    },
+    {
+      "id": "/root/sharper_cutoff_semantic_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "review",
+      "status": "in_progress",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent semantic review of implemented sharper stationary cutoff and canonical iff; exact source hashes and trust boundaries.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "owned_files": [
+        "research/astra-sharper-cutoff-review.md"
+      ],
+      "checks": [],
+      "next_action": "Review all new declarations with exact primitive, stationary, low/high boundary, count and canonical scopes; no implementation edits."
     }
   ],
   "completed_tasks": [
@@ -3657,13 +3702,276 @@
         "Scope distinguishes equivalence from unresolved uniform supply"
       ],
       "next_action": "Replace pending-check wording with actual checks, preserving unresolved canonical/uniform supply boundary."
+    },
+    {
+      "id": "/root/cluster_limit_review-exact-affine-union-audit",
+      "kind": "research",
+      "status": "complete",
+      "target": "Audit the still-unexamined union of a direct small-reciprocal witness and exact retained-margin two-anchor supply, first through its necessary fastest-coordinate mixed-margin condition.",
+      "source_checkpoint": "367a9dc22e093a0347a776f988cac67335bab379",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-exact-affine-union-audit.md"
+      ],
+      "checks": [
+        "Root full manuscript/program read",
+        "Root exact source/program/output hash replay passed"
+      ],
+      "next_action": "Bounded analytical contract audit; obtain a precise fixed counterexample or new justified structural step, not another witness-equivalent premise. New work excluded from Pass28.",
+      "result": "Conditional constructor proposed, independent review pending; no universal mixed witness supply",
+      "artifact_sha256": "a44b368e25bd88084ff7cd1d0098e912d452e77d28af7743a1b9f4d43c5be5b2"
+    },
+    {
+      "id": "/root/endpoint_label_audit-mixed-anchor-lemma",
+      "kind": "research",
+      "status": "complete",
+      "target": "Determine whether a rational mixed-margin witness can be moved within finite good cells to satisfy a nonzero pair-sum anchor inequality; prove or refute the exact lemma, without asserting uniform mixed witness supply.",
+      "source_checkpoint": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-mixed-anchor-lemma.md"
+      ],
+      "checks": [
+        "Root full proof/program/output read",
+        "Root exact source/program/output replay passed"
+      ],
+      "next_action": "Independent analytical finite-cell lemma audit, no broad tuple search or Lean cache.",
+      "result": "N3 general statement refuted by W1,3; corrected N>=4 manuscript proved, independent review pending",
+      "artifact_sha256": "5f6f765ec83df352eecfdabe7a65202ed17a79029d5139e315c989ad7dcce273"
+    },
+    {
+      "id": "/root/single_anchor_review-exact-affine-constructor-review",
+      "kind": "research",
+      "status": "complete",
+      "target": "Independent semantic review of frozen conditional exact two-anchor constructor; verify actual collision cardinality, exact transport and boundary controls.",
+      "source_checkpoint": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-exact-affine-union-review.md"
+      ],
+      "checks": [
+        "Root complete review/program read",
+        "Root exact source/program/output replay passed"
+      ],
+      "next_action": "Review frozen a44b368e manuscript, replay source program and add independent fixed controls.",
+      "result": "Conditional manuscript theorem independently accepted without correction",
+      "artifact_sha256": "1bb496699831546d2b5377d77339b2b69efb55197fb76b4b5d488a77f34a0f02"
+    },
+    {
+      "id": "/root/cluster_limit_review-direct-mixed-supply",
+      "kind": "research",
+      "status": "complete",
+      "target": "Analyze direct-reciprocal-or-mixed-margin supply on the structured family W={1,...,N} minus one a with2<=a<=floor(N/2); derive a quantified argument or exact obstruction, avoiding broad tuple search.",
+      "source_checkpoint": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-direct-mixed-supply.md"
+      ],
+      "checks": [
+        "Author analytical manuscript frozen; numeric checks explicitly pending Terra"
+      ],
+      "next_action": "Analytical audit of necessary mixed target on small-divisor-covered structured family; no change to frozen constructor.",
+      "result": "One-deletion-family mixed supply proposed; independent review pending",
+      "artifact_sha256": "a619c863d2d4c10c90f21572caee371bf1b55d6ebfdaf81d9e4f24aeec4fd818"
+    },
+    {
+      "id": "/root/lower_count_supply-direct-mixed-controls",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Implement and execute exact rational controls for a settled one-deletion-family mixed-margin construction; no tuple discovery or semantic theorem changes.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-direct-mixed-controls.md"
+      ],
+      "checks": [
+        "Root entire artifact/program read",
+        "Root exact source/program/output replay passed"
+      ],
+      "next_action": "Write one standard-library Fraction reproducer for supplied fixed inputs, both signs and boundary failures; report exact hashes/counts.",
+      "result": "28 times,218 coordinate inequalities,53 divisor facts and8 negative evaluations passed",
+      "artifact_sha256": "653cef591d740507b8b0ba2d5a5de04b76ed59230bb3bfa60b3c076b73b0de44"
+    },
+    {
+      "id": "/root/lower_count_supply-direct-mixed-controls-correction",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Correct routine checker to execute every frozen control requirement and explicit divisor witness; preserve analytical author.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-direct-mixed-controls.md"
+      ],
+      "checks": [
+        "Root entire corrected program reviewed against frozen specification",
+        "Root exact program/output replay passed",
+        "Root fixed nonexistent awk reference and removed redundant self-checksum row; program unchanged"
+      ],
+      "next_action": "Add source guard, domain/phase/exact boundary checks and explicit divisor witnesses; rerun and freeze corrected hashes.",
+      "previous_handle_status": "missing from authoritative live inventory",
+      "recovery_status": "launched same requested model/effort; observed runtime metadata unexposed",
+      "agent_id": "/root/mixed_controls_recovery",
+      "result": "All required literal controls passed",
+      "artifact_sha256": "66bb36404e33f25f4b1372a3af8056d3cee742bc4bfd4caff0ace778680b612a"
+    },
+    {
+      "id": "/root/mixed_controls_recovery-pass29-docs",
+      "kind": "routine",
+      "status": "complete",
+      "agent_id": "/root/mixed_controls_recovery",
+      "target": "Draft Pass29 documentation from frozen conditional constructor, mixed-anchor lemma and family supply; preserve pending independent-review statuses until final evidence arrives.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "README.md",
+        "STATUS.md",
+        "docs/approaches.md",
+        "docs/astra-research-29.md"
+      ],
+      "checks": [
+        "Root read four-file draft"
+      ],
+      "next_action": "Concise source-linked manuscript-only checkpoint draft; no Lean changes or unsupported supply/completion claims.",
+      "result": "Draft saved and root full-read; pending review wording preserved; finalization needed"
+    },
+    {
+      "id": "/root/endpoint_label_audit-pass29-semantic-review",
+      "kind": "research",
+      "status": "complete",
+      "target": "Independent review of one-deletion-family uniform mixed supply and closed perturbation interval",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-direct-mixed-supply-review.md"
+      ],
+      "checks": [
+        "Root read complete independent mathematical derivation and code template"
+      ],
+      "next_action": "Review frozen source with exact domain, independent controls and honest no-uniform-canonical-supply scope.",
+      "previous_handle_status": "missing in authoritative live inventory",
+      "recovery_status": "launched same requested model/effort; observed runtime metadata unexposed",
+      "agent_id": null,
+      "result": "Independent Astra mathematical review saved and root full-read; source accepted without correction. Hash placeholders and exact replay delegated separately to Terra.",
+      "draft_sha256": "c584c4ea90608c26fcde9b1d1d2590b021f993f5d6a4b6d5b040a9e47973626b"
+    },
+    {
+      "id": "/root/pass29-family-review-replay",
+      "kind": "routine",
+      "status": "complete",
+      "target": "Finish hash placeholders and execute existing independent family review program, preserving accepted mathematical derivation.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-direct-mixed-supply-review.md"
+      ],
+      "checks": [
+        "Exact frozen routine and independent programs passed",
+        "Root exact artifact/program/output hash replay passed"
+      ],
+      "next_action": "Substitute known frozen control hashes; runprogram; record actualhashes/result without claiming Terra supplied semantic review.",
+      "agent_id": "/root/family_review_replay",
+      "result": "Independent Astra proof accepted; Terra finished hash/replay metadata after handle loss",
+      "artifact_sha256": "330fd88ee67faeac7f0ed596303fdbc65fb6e28db221b9606da3d8425501ec24"
+    },
+    {
+      "id": "/root/single_anchor_review-pass29-semantic-review",
+      "kind": "research",
+      "status": "complete",
+      "target": "Independent mixed-anchor review and exact stationary S/mixed-witness equivalence, including N3 all-half and real-to-rational witness cases",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-mixed-supply-equivalence-review.md"
+      ],
+      "checks": [],
+      "next_action": "Review frozen source with exact domain, independent controls and honest no-uniform-canonical-supply scope.",
+      "previous_handle_status": "missing in authoritative live inventory",
+      "recovery_status": "launched same requested model/effort; observed runtime metadata unexposed",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "disposition": "Mixed equivalence independently accepted and root exact replay passed."
+    },
+    {
+      "id": "/root/two_hole_constructor",
+      "kind": "research",
+      "status": "complete",
+      "target": "Audit and freeze analytical direct-or-mixed supply for sorted positive N\u22121 speeds bounded by N+1; preserve all prior frozen manuscripts.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "research/astra-two-hole-mixed-supply.md"
+      ],
+      "checks": [],
+      "next_action": "Read root pending_two_hole_analysis and existing BoundedHeight modular proof; verify exceptional formulas and save compact proof early. Excluded from Pass29.",
+      "agent_id": "/root/two_hole_constructor",
+      "disposition": "Author manuscript frozen; independent review pending; excluded from Pass29."
+    },
+    {
+      "id": "/root/family_review_replay-pass29-final-docs",
+      "kind": "routine",
+      "status": "complete",
+      "agent_id": "/root/family_review_replay",
+      "target": "Finalize existing four-file Pass29 draft after saved independent mathematical acceptance; leave excluded two-hole work separate. Include explicit user-authorized Astra/high per-task override validation and focused tests; preserve defaults.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "README.md",
+        "STATUS.md",
+        "docs/approaches.md",
+        "docs/astra-research-29.md",
+        "scripts/validate_workflow.py",
+        "tests/test_validate_workflow.py",
+        "docs/project-workflow.md"
+      ],
+      "checks": [
+        "15 focused workflow tests passed",
+        "workflow validator passed",
+        "git diff --check passed",
+        "root inspected override validation and exact six manuscript replays"
+      ],
+      "next_action": "Replace pending semantic statuses with actual accepted manuscript scope; clearly define mixed target and include concise family formulas."
     }
   ],
-  "latest_checkpoint": "Pass28 verified: kernel-checked finite pair-sum certificate completeness and canonical equivalence; independently reviewed one-anchor manuscript equivalence. Publication pending; PR26 remains latest merged checkpoint. Full LRC unresolved.",
+  "latest_checkpoint": "Pass28 merged and verified in PR27, main5e7d690e6606ad096bf4a2319be0328f9c6d2e68. Pass29 conditional exact-packet/mixed-anchor and one-deletion-family manuscripts under review. Canonical LRC unresolved.",
   "next_actions": [
-    "Publish verified Pass28 files: commit, push, open PR, inspect checks/reviews, merge exact head, verify remote main.",
-    "Continue excluded exact-affine-union analytical audit; independently review any proposed conditional constructor before accepting it.",
-    "Pursue unrestricted proof/disproof; equivalences and conditional supply do not establish canonical completion."
+    "Finish independent review of exact two-anchor constructor, mixed-anchor lemma, and supplied one-deletion family.",
+    "Integrate only reviewed manuscript results into next checkpoint, preserving canonical unsupplied status.",
+    "Pursue unrestricted uniform supply or a genuine counterexample; do not equate auxiliary progress with completion."
   ],
   "research_holds": [
     {
@@ -4189,14 +4497,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "dcee411946aff78931147df421e1095d25dbb948",
+    "verified_checkpoint": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-affine-supply-boundaries",
+    "branch": "codex/astra-pair-sum-completeness",
     "base": "main",
     "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/26",
-    "pr_number": 26,
-    "head_sha": "dcee411946aff78931147df421e1095d25dbb948",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/27",
+    "pr_number": 27,
+    "head_sha": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -4439,15 +4747,24 @@
         "merge_sha": "367a9dc22e093a0347a776f988cac67335bab379",
         "checks": "Lean build/trust passed22:51:24UTC; exact computational certificates passed22:59:16UTC. Exact-head merge23:00:23UTC.",
         "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 27,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/27",
+        "head_sha": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
+        "status": "merged_verified",
+        "merge_sha": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+        "checks": "Lean build/trust passed23:44:38UTC; exact computational certificates passed23:49:50UTC. Exact-head merge23:50:22UTC.",
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "dcee411946aff78931147df421e1095d25dbb948",
-    "remote_main": "367a9dc22e093a0347a776f988cac67335bab379",
-    "local_main": "367a9dc22e093a0347a776f988cac67335bab379",
+    "latest_published_source_checkpoint": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
+    "remote_main": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+    "local_main": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "367a9dc22e093a0347a776f988cac67335bab379",
-    "checks": "Lean build/trust passed22:51:24UTC; exact computational certificates passed22:59:16UTC. Exact-head merge23:00:23UTC.",
+    "merge_sha": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+    "checks": "Lean build/trust passed23:44:38UTC; exact computational certificates passed23:49:50UTC. Exact-head merge23:50:22UTC.",
     "remote_main_contains_head": true
   },
   "runtime_goal_observation": {
@@ -4472,15 +4789,12 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "pass_number": 28,
-    "branch": "codex/astra-pair-sum-completeness",
-    "base_sha": "367a9dc22e093a0347a776f988cac67335bab379",
-    "status": "verified_pending_commit",
-    "excluded_unfinished": [
-      "research/astra-exact-affine-union-audit.md"
-    ],
-    "merge_method": "merge",
-    "protection_bypass_allowed": false
+    "checkpoint": "Pass29",
+    "branch": "codex/astra-mixed-margin-supply",
+    "status": "verified_ready_to_commit",
+    "verification": "Six frozen exact program replays; independent manuscript reviews; 15 focused workflow tests; workflow validation; diff check.",
+    "excluded": "Concurrent sharper cutoff Lean implementation, two-hole manuscript, unrestricted supply audit.",
+    "next_action": "Commit exact staged 16 files, push, PR, required checks, exact-head merge and remote-main verification."
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -4644,7 +4958,7 @@
     "scope": "One claimed strict full proof fails original N3tight tuple; separate finite nesting lemma fails p2 one-level tests n3 andn11. No exhaustive literature conclusion or LRC disproof."
   },
   "pair_sum_formalization": {
-    "status": "Verified; commit/push/PR/merge pending",
+    "status": "Merged and verified in PR27",
     "branch": "codex/astra-pair-sum-completeness",
     "base_commit": "367a9dc22e093a0347a776f988cac67335bab379",
     "target": "Finite-cell balanced pair-sum witness completeness and exact PairSumCertificate reverse implication",
@@ -4718,5 +5032,75 @@
     "review_output_sha256": "cd0d960db8fede55e6843b806939a84425ae1db61d2e16f52fef508c3ad1904e",
     "result": "One-anchor exact-loss E plus true own-count C packet existence iff fixed positive integer stationary witness; reverse explicit A=rho+6beta^2 starts from existing balanced witness and returns same original phase at k+T.",
     "scope": "m>=2; positive integer speeds with repetitions allowed; q positive integer, p positive rational, pq positive integer; only stationary coordinate anchored. No uniform H_N time selector, no new packet Lean theorem, no canonical resolution. Prior two-anchor obstruction unchanged."
+  },
+  "exact_affine_union_audit": {
+    "status": "Independently accepted conditional manuscript; root full author/review reads and exact replays passed",
+    "path": "research/astra-exact-affine-union-audit.md",
+    "sha256": "a44b368e25bd88084ff7cd1d0098e912d452e77d28af7743a1b9f4d43c5be5b2",
+    "program_sha256": "5aef75b40a1cbb1a175ee98c0b349c0fc2ddee21da1c82812c270f23b763cc8f",
+    "output_sha256": "cba49a167680aa29ef8d92f676103c27d9fcad39ef89e4437813bdb580b45400",
+    "root_output": "/tmp/astra-exact-affine-union-root-replay.json",
+    "uniform_supply": false,
+    "review_path": "research/astra-exact-affine-union-review.md",
+    "review_sha256": "1bb496699831546d2b5377d77339b2b69efb55197fb76b4b5d488a77f34a0f02",
+    "review_program_sha256": "14119c0209df4afcfe4087b22f548b55dce77e8bbc001c0d77da6b3b834c2951",
+    "review_output_sha256": "facad043b8229753d47f0bafa4759cb4e25b738c1b8b4ff6d7a7f8a8e39f84ec"
+  },
+  "mixed_anchor_lemma": {
+    "path": "research/astra-mixed-anchor-lemma.md",
+    "sha256": "5f6f765ec83df352eecfdabe7a65202ed17a79029d5139e315c989ad7dcce273",
+    "status": "Root full read and exact replay passed; independent review pending",
+    "program_sha256": "3d4e14d19998fa34aaa9625cfcf2a3eb1754351a540b667d120f610578e50118",
+    "output_sha256": "e4dcdf769f446acf52e8154415daa6759bda9ef7b8ea0b2fe071bed37f940a4e",
+    "root_output": "/tmp/astra-mixed-anchor-root-replay.json",
+    "N3_original_claim": false,
+    "N4_corrected_claim": "manuscript proof",
+    "uniform_supply": false
+  },
+  "direct_mixed_supply": {
+    "status": "Independently accepted manuscript; corrected routine and independent controls/root exact replays passed",
+    "path": "research/astra-direct-mixed-supply.md",
+    "sha256": "a619c863d2d4c10c90f21572caee371bf1b55d6ebfdaf81d9e4f24aeec4fd818",
+    "controls_path": "research/astra-direct-mixed-controls.md",
+    "controls_sha256": "66bb36404e33f25f4b1372a3af8056d3cee742bc4bfd4caff0ace778680b612a",
+    "program_sha256": "854955e638a5ce5b137a4e6735f053e5dd0f2ae5ba96866221f787cb2db9fb91",
+    "output_sha256": "de0823ce759577795cd653dac0040548e12faf48578b1991fd88f92a144d8cd8",
+    "new_ordinary_LRC_coverage": false,
+    "scope": "One-deletion-family stronger endpoint margin, not arbitrary tuple supply",
+    "controls_status": "Corrected full frozen specification passed; root complete read and exact replay accepted",
+    "review_path": "research/astra-direct-mixed-supply-review.md",
+    "review_sha256": "330fd88ee67faeac7f0ed596303fdbc65fb6e28db221b9606da3d8425501ec24",
+    "review_program_sha256": "44ffe22c5dd33ae8017d2b21bc45eb3bd9db2015d6bdfca2fc5e3046befc694b",
+    "review_output_sha256": "dceec2be34d313fd4a57ac6a7a050c7c18863c160d47ebbc8eb1aa60fb96bce6"
+  },
+  "pending_two_hole_analysis": {
+    "status": "Proposed analytical derivation only; delegate after a slot frees",
+    "target": "For N>=4, N\u22121 sorted positive speeds H<=N+1, direct reciprocal or mixed1/N/fastest1/(N\u22121) supply. ExistingordinaryBoundedHeightcoversall.",
+    "proposal": "IfH=N one-deletion; missinga1 directmixedt1/(2N), missinga>N/2 directa. IfH=N+1 missingc<d. d>(N+1)/2 givesdirectd<=N. Otherwise2c<=N\u22121. IfN>=2c+3 chooseu in[N+2,2N\u2212c\u22122] congruent1modc; q=c+u<=2N\u22122, inversecmodq yieldsallnorm>=2/q>=1/(N\u22121). RemainingevenN2a holes(a\u22121,a),a>=3: c=a\u22121,T1/c\u22121/(2cN), nonmultipleslower(N\u22121)/(N(N\u22122))>=1/(N\u22121), multiplesexactk/(2cN), endpoint>=target; N4holes1,2 W3,4,5 T1/10. RemainingoddN2a+1 holes(a,a+1): T1/a\u22121/(2aN), ordinaryLipschitz>=1/N; endpointa2separate .3, a3 .476..., a>=4 residue2 phase (3a+1)/(a(2a+1))<=.5 and>=1/(2a). Must independently verify formulas/cases before acceptance."
+  },
+  "runtime_recoveries": [
+    {
+      "event": "Continuation inventory exposed only running root; all three prior worker handles missing and expected new outputs absent/unchanged",
+      "evidence": "collaboration.list_agents returned only /root; corrected controls retain old653cef hash; two new reviews absent",
+      "goal_status": "active",
+      "action": "Recover same requested Astra xhigh and Terra medium roles from frozen artifacts; no goal resume needed"
+    },
+    {
+      "event": "Next continuation again exposed only root",
+      "evidence": "live inventory only /root; family review and docs draft exist, equivalence review absent",
+      "goal_status": "active",
+      "action": "Preserve written independent family proof and docs draft; finish pending hash/replay mechanically. Recover absent equivalence review with early durable proof write."
+    }
+  ],
+  "last_continuation_assessment": {
+    "classification": "progress",
+    "evidence": "Completed read-only published finite-bound investigation and independent source audit; report delivered. No implementation authorized for that investigation. Resume original pending checkpoint and unrestricted supply research."
+  },
+  "pending_two_hole_review": "Frozen author SHA256 2bbc12481c164bf5e4eaf30ea7ca966cb0b2614524d9bea779034a2ebf115ccb; independent review deferred until slot available; excluded from Pass29.",
+  "pass29_final_semantic_acceptance": {
+    "mixed_equivalence_review_sha256": "f340c0a311ed6e04d802ee8edfb407a84bc329145bc7e9b446d692cd4e52430a",
+    "family_review_sha256": "330fd88ee67faeac7f0ed596303fdbc65fb6e28db221b9606da3d8425501ec24",
+    "root_exact_replays": "All six programs pass with frozen program and stdout hashes; research/astra-pass29-verification.json",
+    "scope": "Independently reviewed manuscripts only. Stationary exact S iff mixed margin; one-deletion family supplied, no unrestricted canonical witness supply."
   }
 }

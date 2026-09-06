@@ -33,7 +33,13 @@ owned files, acceptance checks, and setup/research boundary in its prompt. The
 They do not replace explicit routing in this session. Limit concurrency to the
 smaller of the runtime allowance and four agents including the orchestrator.
 If a requested model is unavailable, checkpoint the blocker; never silently use
-another model. Terra escalates unclear theorem contracts to Astra.
+another model. Research and review default to Astra/xhigh. A specific
+user instruction may instead authorize Astra/high for one research or review
+task only when its state record has a `routing_override` object recording
+`source: user`, the matching Astra/high requested route, and the nonempty
+instruction. The workflow validator checks that durable record; it does not
+establish the authorization itself. Terra escalates unclear theorem contracts
+to Astra.
 
 The old Sol, browser Pro, and Luna procedure is retired. Browser model sessions,
 external CLI model workers, and new user-visible tasks are not substitutes.
