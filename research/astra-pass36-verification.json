@@ -1,0 +1,104 @@
+{
+  "checkpoint": "Pass36",
+  "source_base": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+  "status": "verified_publication_pending",
+  "source_sha256": {
+    "LonelyRunner/RationalMarginCertificates.lean": "ffe31ce9636281f6c4b8fc2cdf618043a6c02b0195bf75ff6e0aee65c317c1d9",
+    "LonelyRunner/EndpointCompleteness.lean": "0e3f10f64daf41bedebf31bb71cb6b93ffa5358615c6c30ec941b01fc97b9d57",
+    "LonelyRunner/StrictPairSumCompleteness.lean": "549e879d49b54560a56f402aec18d64b6b227f86a71821a28c13c7356f622bd6",
+    "LonelyRunner.lean": "4e2bcd1c805cba6ac47c42a95298fafaa80047829127b7f367eedb13575d8ff4",
+    "LonelyRunner/AxiomAudit.lean": "f9dc948ca09cca91857ff9b75a21206ef82470fe774ac7bdb451c1ec3c17c54b"
+  },
+  "evidence_sha256": {
+    "research/astra-five-runner-certificate-design.md": "cc7990790d3ca8ddd50d36dc64d80af74b1f82d45b64ba20e31fbbc0b78fc403",
+    "research/astra-five-runner-certificate-design-review.md": "c86e42c2ed14c015f83776644469827a850614fc6fbdd5c55a96ce61c8b12b40",
+    "research/astra-rational-margin-certificates-implementation.md": "7442e38ecca4d57594090036c77d740af70d160fc0411a1c7dac5351bddda4ef",
+    "research/astra-endpoint-completeness-implementation.md": "137b0817326d6aeeb05b7f8cc9189b7d180492e15b885a62905613fb143edf6a",
+    "research/astra-strict-pair-sum-implementation.md": "e5ad89dc4ddd89613e27abcd3c5c14c5945f6c2a29b718761fde3c00983867fc",
+    "research/astra-rational-margin-formal-review.md": "deec0d70183627c53bdafc631c6496700d0f7cb9fbce67d9512e3fb6019227d3"
+  },
+  "formal_scope": {
+    "rational_margin_row": "Exact natural cross-products iff closed real margins atp/q; q andmargindenominators positive, num/p/speeds canzero; separatepositivep existence corollary.",
+    "endpoint": "Nonempty finitepositiveNatspeeds andreal0<d_i<=half, arbitraryreal suppliedwitness impliesownerfloorendpointT=(k+d_p)/w_p in(0,half],k<(w_p+1)/2,alloriginalclosedmargins. Repeatsallowed.",
+    "strict_pair_sum": "n>=2 positiveNat speeds,delta>0; strictrealwitness iffpositive r/(w_p+w_q),p!=q labels,r<sum,allnorms>delta. Repeatedvaluesallowed.",
+    "new_theorem_count": 8,
+    "no_uniform_witness_supply": true,
+    "N5_specific_total_decision": "not implemented",
+    "partition_pilot": "not run",
+    "full_tuple_scan": "not run"
+  },
+  "verification": {
+    "full_command": "lake build LonelyRunner",
+    "full_exit_code": 0,
+    "full_jobs_reported": 3649,
+    "full_log_sha256": "914f9c993770fd4f90eea73cadcb16b4bf30fa5c8bceb596be177ce65746126f",
+    "trust_command": "python3 -B scripts/audit_lean_trust.py",
+    "trust_exit_code": 0,
+    "trust_reports": 470,
+    "trust_log_sha256": "f014583ce8db5db95bdfb322723d7e4a1e45bd10ab2fb96567d226d9c482d11c",
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "note": "Job counts include cached targets. Sources frozen after fullbuild/trust."
+  },
+  "root_review": {
+    "complete_mathematical_source_read": true,
+    "design_replay": {
+      "artifact_sha256": "cc7990790d3ca8ddd50d36dc64d80af74b1f82d45b64ba20e31fbbc0b78fc403",
+      "program_sha256": "1f70819cca181bd17a630e7dcf417c9591c8f9b53444ac9ef8247dcfe4e4b7fb",
+      "stdout_sha256": "41817670c8a496155affbadd86f2738a64830bbe9b7d46e5c84135841adb37e0",
+      "status": "passed"
+    },
+    "design_review_replay": {
+      "artifact_sha256": "c86e42c2ed14c015f83776644469827a850614fc6fbdd5c55a96ce61c8b12b40",
+      "program_sha256": "b8cdf01759b31074e23c8672164866b3840ef52384d6d0dd1ffbeacd329c7835",
+      "stdout_sha256": "25ba84e81c44805a10986b6c89adf89b34e3104934d1eb3adebd4c1afbce85fe",
+      "status": "passed"
+    },
+    "strict_probe": {
+      "session": 56047,
+      "exit_code": 0,
+      "scope": "Exact generic type plus repeatedspeed Fin2 strictquarter application andallowedaxioms",
+      "prior_probe_failures": "40871 and96210 exited1 due testcast/norm simplification errors; sourceunchanged."
+    },
+    "final_source_review_replay": {
+      "path": "research/astra-rational-margin-formal-review.md",
+      "artifact_sha256": "deec0d70183627c53bdafc631c6496700d0f7cb9fbce67d9512e3fb6019227d3",
+      "program_sha256": "c6b4f8a9740bcae517c1484fe7452ed2d5478d06b6dcf1f25259bfad5822c518",
+      "stdout_sha256": "449bcbc7ba635810debc421b58b1acb6f8424b83e465ab3baa41cc579a41ec18",
+      "status": "passed",
+      "kernel_examples": 23,
+      "axiom_reports": 9,
+      "source_guards": 15,
+      "root_session": 45402,
+      "exit_code": 0
+    }
+  },
+  "implementation_checks": {
+    "row": "Source/named3001jobs andsixbydecidecontrols/types/axioms passed.",
+    "endpoint_strict": "Finalsavedsource/named92472 exit0; exacttypes/axioms andfixedcontrols98427 exit0. Endpointdraftfinaltwoissuesfixedbeforefreeze."
+  },
+  "research_scope": {
+    "inclusive_N5_height": 1000,
+    "endpoint_candidates_upper_bound": 1998,
+    "endpoint_denominator_upper_bound": 4995,
+    "increasing_quadruples": 41417124750,
+    "fully_filtered_residual_count": "unknown",
+    "pilot_caps": "Proposed256leaves,64KiB,60sperkernelcheck,4GiBRSS. Not measuredguarantees.",
+    "canonical_bridge_requirement": "Ordinaryclosedfinitecoverage suppliesH6/canonicalN5; not-Q leaf doesnot supplyordinaryO."
+  },
+  "canonical_lrc": "unresolved",
+  "excluded_future_work": [
+    "research/astra-rational-margin-box-pilot-plan.md",
+    "research/astra-rational-margin-box-pilot-plan-review.md",
+    "LonelyRunner/RationalMarginBoxes.lean",
+    "LonelyRunner/RationalMarginBoxPilot.lean",
+    "research/astra-rational-margin-box-pilot-implementation.md"
+  ],
+  "storage": {
+    "report_bytes": 7769166751,
+    "disposition": "One shared cache retained for immediately queued separate box pilot Lean implementation; all Pass36 verification processes finished."
+  }
+}

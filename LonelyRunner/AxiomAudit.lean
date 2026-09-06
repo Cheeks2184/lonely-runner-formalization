@@ -7,6 +7,9 @@ import LonelyRunner.FourRunnerCanonical
 import LonelyRunner.BufferedRunnerInsertion
 import LonelyRunner.FiveRunnerMixed
 import LonelyRunner.FiveRunnerBuffered
+import LonelyRunner.RationalMarginCertificates
+import LonelyRunner.EndpointCompleteness
+import LonelyRunner.StrictPairSumCompleteness
 
 -- The exact finite-family equivalence does not prove either side.
 #print axioms LonelyRunner.exists_strictMono_reindex
@@ -525,3 +528,14 @@ project-specific axiom.
 #print axioms LonelyRunner.fiveRunnerMixed_exceptional
 #print axioms LonelyRunner.fiveRunnerMixed_of_buffer_inequalities
 #print axioms LonelyRunner.fiveRunnerMixed_of_three_mul_height_ge
+
+-- Generic certificate interfaces preserve closed coordinatewise margins and
+-- strict common margins. These are completeness/checking tools, not supply.
+#print axioms LonelyRunner.rationalMargin_circleNorm_iff
+#print axioms LonelyRunner.rationalMarginResidueOK_iff
+#print axioms LonelyRunner.rationalMarginRowOK_iff
+#print axioms LonelyRunner.rationalMarginRowOK_sound
+#print axioms LonelyRunner.rationalMarginRowOK_circleNorm_iff
+#print axioms LonelyRunner.rationalMarginRowOK_exists_positive_time
+#print axioms LonelyRunner.exists_endpoint_time_of_witness
+#print axioms LonelyRunner.exists_strictWitness_iff_pairSum

@@ -122,6 +122,9 @@ import LonelyRunner.FourRunnerCanonical
 import LonelyRunner.BufferedRunnerInsertion
 import LonelyRunner.FiveRunnerMixed
 import LonelyRunner.FiveRunnerBuffered
+import LonelyRunner.RationalMarginCertificates
+import LonelyRunner.EndpointCompleteness
+import LonelyRunner.StrictPairSumCompleteness
 
 /-!
 Root import for the formal Lonely Runner development.

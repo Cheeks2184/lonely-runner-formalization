@@ -6,6 +6,16 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [thirty-sixth Astra checkpoint](docs/astra-research-36.md) adds generic
+rational-margin row equivalences and soundness, nonuniform closed endpoint
+completeness, and strict common-margin pair-sum completeness. The full build
+passed with 3,649 jobs and the trust audit accepted 470 permitted-only reports.
+Independent source review and root replay passed 23 kernel examples and nine
+axiom reports.
+The reviewed five-runner resource design distinguishes exact row decision from
+finite-domain coverage: this checkpoint includes no large scan or partition pilot, and
+neither K5 nor ordinary universal five-runner supply is proved by this work.
+
 The [thirty-fifth Astra checkpoint](docs/astra-research-35.md) adds a generic
 buffered insertion theorem for positive real speeds and sufficient stationary
 five-runner classes. Ordered natural `0<a<b<c<H` receive one positive mixed
