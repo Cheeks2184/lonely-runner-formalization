@@ -160,6 +160,10 @@ import LonelyRunner.ThirdShiftExceptions
 import LonelyRunner.ThirdShiftSeed
 import LonelyRunner.ThreeDivisibleRunners
 
+import LonelyRunner.FiveMovingFast
+import LonelyRunner.AnchoredPairMaximizer
+import LonelyRunner.ThirdShiftCollision
+
 /-!
 Root import for the formal Lonely Runner development.
 -/
