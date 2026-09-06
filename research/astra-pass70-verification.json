@@ -1,0 +1,93 @@
+{
+  "checkpoint": "Pass70",
+  "parent_main": "c11915b8ce83d98a4a6c859fce51e3ad4a1176da",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-70.md": "0148fe563dd5d828537f9155f26807bf0ecd10706edf2659cbdbd8ca467c3014",
+    "research/astra-ideal-row-selection-audit.md": "20752d3a362a153d4cdaa2f30373c01002fa0dd3ed708b3bf1d1b4a4d67c77b7",
+    "research/astra-ideal-row-selection-review.md": "09d2efe1a670a2b61b26964e0db315b500dd5bfbff39771635067f74062f67ab",
+    "research/astra-ideal-row-finite-cell-reduction.md": "44aca4f3cff905074d315515fb88a08b0957b9b200d016c34f55dce3701ac1fb",
+    "research/astra-ideal-row-finite-cell-review.md": "651b6eab42c20a1a0549c0b5cb21b54ef3826db6e92b4ac03d899a9dfabdfc62"
+  },
+  "dependency_hashes": {
+    "research/astra-general-slow-cluster-audit.md": "07d42aa0e48e2daa62d4799049b317eee526af42ecb025fcd0e6515a7cfa6478",
+    "research/astra-cluster-grid-rescue.md": "edc948e31d6939132dd44dec7fe84612912ab952ceb8e98140a6b9cb2e9b5f9c",
+    "research/astra-cluster-grid-rescue-review.md": "99caba49dd2b5b20475d89901d39fd6ce24fbbb5a060b949ab7707f52a6b569e",
+    "research/astra-ideal-row-integer-transfer.md": "a8e53ac960a0cd0907437a38042ed574498259a472dc92cf223e4568f1124ebc",
+    "research/astra-ideal-row-transfer-review.md": "6ff5010979d42c2ebfacf98c7e33a2e599a80c13c8caec1ec42f7b269f599921",
+    "research/astra-general-slow-row-control.json": "fbef3674ec3c30719325cfc91d0fc15c1a347377d0b4e8bd114e487059363d0c"
+  },
+  "review_bindings": {
+    "research/astra-ideal-row-selection-review.md": [
+      "research/astra-ideal-row-selection-audit.md",
+      "research/astra-general-slow-cluster-audit.md",
+      "research/astra-cluster-grid-rescue.md",
+      "research/astra-cluster-grid-rescue-review.md"
+    ],
+    "research/astra-ideal-row-finite-cell-review.md": [
+      "research/astra-ideal-row-finite-cell-reduction.md",
+      "research/astra-ideal-row-integer-transfer.md",
+      "research/astra-ideal-row-transfer-review.md",
+      "research/astra-general-slow-row-control.json"
+    ]
+  },
+  "checks": {
+    "frozen_source_bindings": 5,
+    "dependency_bindings": 6,
+    "review_bindings": "passed",
+    "newline_and_trailing_whitespace": "passed"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "/usr/bin/python3",
+      "/tmp/astra-pass70-verify.py"
+    ],
+    "source": "import hashlib\nimport json\nfrom pathlib import Path\nimport subprocess\nimport sys\n\nroot = Path('/home/joshua/lonely-runner-formalization')\ninputs = Path('/tmp/astra-pass70-inputs.json')\nmanifest = json.loads(inputs.read_text())\nbindings = manifest['hashes'] | manifest['dependency_hashes']\nfor name, digest in bindings.items():\n    data = (root / name).read_bytes()\n    assert hashlib.sha256(data).hexdigest() == digest, name\n    assert data.endswith(b'\\n'), name\n    assert all(line.rstrip() == line for line in data.splitlines()), name\nfor review, sources in manifest['review_bindings'].items():\n    text = (root / review).read_text()\n    for source in sources:\n        assert bindings[source] in text, (review, source)\ncommands = []\nfor argv in ([sys.executable, '-B', 'scripts/validate_workflow.py'], ['git', 'diff', '--check'], [sys.executable, '-B', 'scripts/manage_storage.py']):\n    result = subprocess.run(argv, cwd=root, text=True, capture_output=True)\n    commands.append({'argv': argv, 'exit_code': result.returncode, 'stdout': result.stdout, 'stderr': result.stderr})\n    assert result.returncode == 0, commands[-1]\nreceipt = {\n    'checkpoint': 'Pass70',\n    'parent_main': 'c11915b8ce83d98a4a6c859fce51e3ad4a1176da',\n    'status': 'verified_local_pending_publication',\n    **manifest,\n    'checks': {'frozen_source_bindings': len(manifest['hashes']), 'dependency_bindings': len(manifest['dependency_hashes']), 'review_bindings': 'passed', 'newline_and_trailing_whitespace': 'passed'},\n    'commands': commands,\n    'root_verifier': {'argv': [sys.executable, str(Path(__file__))], 'source': Path(__file__).read_text(), 'source_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), 'input_source': inputs.read_text(), 'input_sha256': hashlib.sha256(inputs.read_bytes()).hexdigest()},\n    'mathematical_verification': 'Two independent hand reviews and root full reads. No mathematical program or replay; the retained prior control is used through the independently reviewed finite-cell reduction.',\n    'scope': 'Uniform exact finite-cell equivalence, explicit conditional auxiliary failure height, and two restricted ideal-selection families. No unrestricted LRC resolution, general ideal selection or finite-M success.',\n    'excluded': 'Active uniform carry-exclusion task and any draft it creates.',\n    'failure_history': 'No integration verifier failures or mathematical reruns. One scope sentence in the selection author manuscript was corrected before independent review; all other author bytes were verified unchanged.',\n}\n(root / 'research/astra-pass70-verification.json').write_text(json.dumps(receipt, indent=2) + '\\n')\nprint(json.dumps({'checkpoint': 'Pass70', 'result': 'passed', 'source_bindings': len(manifest['hashes']), 'dependency_bindings': len(manifest['dependency_hashes']), 'commands': commands}, indent=2))\n",
+    "source_sha256": "6d7d6f873e043c248ebad3e6f9d4aedad268fdda1f65c0fa4968ffce2232c3c4",
+    "input_source": "{\n  \"hashes\": {\n    \"docs/astra-research-70.md\": \"0148fe563dd5d828537f9155f26807bf0ecd10706edf2659cbdbd8ca467c3014\",\n    \"research/astra-ideal-row-selection-audit.md\": \"20752d3a362a153d4cdaa2f30373c01002fa0dd3ed708b3bf1d1b4a4d67c77b7\",\n    \"research/astra-ideal-row-selection-review.md\": \"09d2efe1a670a2b61b26964e0db315b500dd5bfbff39771635067f74062f67ab\",\n    \"research/astra-ideal-row-finite-cell-reduction.md\": \"44aca4f3cff905074d315515fb88a08b0957b9b200d016c34f55dce3701ac1fb\",\n    \"research/astra-ideal-row-finite-cell-review.md\": \"651b6eab42c20a1a0549c0b5cb21b54ef3826db6e92b4ac03d899a9dfabdfc62\"\n  },\n  \"dependency_hashes\": {\n    \"research/astra-general-slow-cluster-audit.md\": \"07d42aa0e48e2daa62d4799049b317eee526af42ecb025fcd0e6515a7cfa6478\",\n    \"research/astra-cluster-grid-rescue.md\": \"edc948e31d6939132dd44dec7fe84612912ab952ceb8e98140a6b9cb2e9b5f9c\",\n    \"research/astra-cluster-grid-rescue-review.md\": \"99caba49dd2b5b20475d89901d39fd6ce24fbbb5a060b949ab7707f52a6b569e\",\n    \"research/astra-ideal-row-integer-transfer.md\": \"a8e53ac960a0cd0907437a38042ed574498259a472dc92cf223e4568f1124ebc\",\n    \"research/astra-ideal-row-transfer-review.md\": \"6ff5010979d42c2ebfacf98c7e33a2e599a80c13c8caec1ec42f7b269f599921\",\n    \"research/astra-general-slow-row-control.json\": \"fbef3674ec3c30719325cfc91d0fc15c1a347377d0b4e8bd114e487059363d0c\"\n  },\n  \"review_bindings\": {\n    \"research/astra-ideal-row-selection-review.md\": [\n      \"research/astra-ideal-row-selection-audit.md\",\n      \"research/astra-general-slow-cluster-audit.md\",\n      \"research/astra-cluster-grid-rescue.md\",\n      \"research/astra-cluster-grid-rescue-review.md\"\n    ],\n    \"research/astra-ideal-row-finite-cell-review.md\": [\n      \"research/astra-ideal-row-finite-cell-reduction.md\",\n      \"research/astra-ideal-row-integer-transfer.md\",\n      \"research/astra-ideal-row-transfer-review.md\",\n      \"research/astra-general-slow-row-control.json\"\n    ]\n  }\n}\n",
+    "input_sha256": "cda7870f1c17d8f4522a39cc461898abe86ba5ec0515f711a8f7d40c2140ea3c",
+    "tool_result": {
+      "chunk_id": "bc3683",
+      "wall_time_seconds": 3.857e-06,
+      "exit_code": 0,
+      "original_token_count": 204,
+      "output": "{\n  \"checkpoint\": \"Pass70\",\n  \"result\": \"passed\",\n  \"source_bindings\": 5,\n  \"dependency_bindings\": 6,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": "Two independent hand reviews and root full reads. No mathematical program or replay; the retained prior control is used through the independently reviewed finite-cell reduction.",
+  "scope": "Uniform exact finite-cell equivalence, explicit conditional auxiliary failure height, and two restricted ideal-selection families. No unrestricted LRC resolution, general ideal selection or finite-M success.",
+  "excluded": "Active uniform carry-exclusion task and any draft it creates.",
+  "failure_history": "No integration verifier failures or mathematical reruns. One scope sentence in the selection author manuscript was corrected before independent review; all other author bytes were verified unchanged."
+}
