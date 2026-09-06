@@ -754,3 +754,10 @@ project-specific axiom.
 #print axioms LonelyRunner.dvd_or_dvd_of_five_sixths_pair_zero
 #print axioms LonelyRunner.circleNorm_add_signed_half
 #print axioms LonelyRunner.fract_sixth_affine_special_anchor
+
+-- Boundary assembly and its phase/label helpers.
+#print axioms LonelyRunner.circleNorm_time_add_half_of_not_dvd_two
+#print axioms LonelyRunner.exists_pair_safe_special_sixth_affine
+#print axioms LonelyRunner.exists_two_odd_outside_three
+#print axioms LonelyRunner.both_six_even_anchor_three_time_witness
+#print axioms LonelyRunner.two_divisible_boundary_min_eq_zero
