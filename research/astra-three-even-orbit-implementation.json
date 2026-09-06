@@ -1,0 +1,112 @@
+{
+  "task": "/root/three_even_orbit_implementation",
+  "status": "focused_check_passed_with_historical_provenance_gaps",
+  "source_plan": "research/astra-three-even-assembly-plan.md",
+  "source_plan_sha256": "66a9bac477d1e985d23f6188197ca7af6f0d90ad29df38ab8e710ed417cf510a",
+  "owned_files": [
+    "LonelyRunner/ThreeEvenOrbit.lean",
+    "research/astra-three-even-orbit-implementation.json"
+  ],
+  "contracts": [
+    "threeEven_exists_even_unit_sixth_residue",
+    "threeEven_exists_odd_unit_sixth_residue",
+    "threeEven_circleNorm_nat_mul_fract",
+    "threeEven_circleNorm_sixth_weighted_shift",
+    "threeEven_small_phase_double_four_safe",
+    "threeEven_circleNorm_double_lt_third",
+    "threeEven_dvd_of_large_partner_at_zeros",
+    "threeEven_small_sixth_dilate_norm"
+  ],
+  "delivery_metrics": {
+    "check_kind": "lean",
+    "first_check_success": false,
+    "worker_repair_rounds": 1,
+    "astra_repair_rounds": 0,
+    "astra_repair_lines": 0,
+    "worker_elapsed_seconds": null,
+    "usage": null,
+    "evidence": [
+      "research/astra-three-even-orbit-implementation.json",
+      "LonelyRunner/ThreeEvenOrbit.lean",
+      ".lake/build/lib/lean/LonelyRunner/ThreeEvenOrbit.olean",
+      ".lake/build/lib/lean/LonelyRunner/ThreeEvenOrbit.ilean"
+    ]
+  },
+  "source_snapshots": [
+    {
+      "kind": "before_initial_focused_check",
+      "sha256_observed_before_check": "827b74b018d25e3a98bf511e01c09e5d5b5474b942017e2d384bf95e320c40da",
+      "physical_path": null,
+      "bytes": null,
+      "exact_bytes_embedded": false,
+      "preservation_status": "not_retained"
+    },
+    {
+      "kind": "before_repair_round_1_focused_check_and_final_source",
+      "sha256_observed_before_check_and_current_final_source": "2d2cbdd51dc51f1e23985feb9c7826ce5bb944118f01c8c7719e5ad25de4e088",
+      "physical_path": null,
+      "bytes": null,
+      "exact_bytes_embedded": false,
+      "preservation_status": "not_retained; the current source has this hash but is not an independently preserved historical snapshot"
+    }
+  ],
+  "historical_provenance_gaps": {
+    "initial_source_snapshot": "No physical copy or exact bytes of the failed initial source were retained. The observed SHA-256 is recorded above; this source must not be reconstructed.",
+    "repair_input_snapshot": "No separately preserved repair input exists. The current source has the observed successful-check hash, but that does not preserve a historical input copy.",
+    "raw_streams": "No original stdout/stderr stream files were retained. The raw_output fields are task-transcript transcriptions, not file-backed byte-for-byte streams.",
+    "axiom_input": "The #print axioms declarations were supplied in a shell heredoc to /dev/stdin. No physical input file or hash was retained.",
+    "cpu_quota": "No CPU 179/180 quota was actually applied or measured. Actual controls were Lean -j1, ulimit -v 8388608, and timeout 180."
+  },
+  "artifacts": {
+    "source": {
+      "path": "LonelyRunner/ThreeEvenOrbit.lean",
+      "sha256": "2d2cbdd51dc51f1e23985feb9c7826ce5bb944118f01c8c7719e5ad25de4e088",
+      "bytes": 10969
+    },
+    "olean": {
+      "path": ".lake/build/lib/lean/LonelyRunner/ThreeEvenOrbit.olean",
+      "sha256": "034caf4b00e47490dd1987ae394680b7ecd2b4ca9a186391aca7267177750363",
+      "bytes": 852008
+    },
+    "ilean": {
+      "path": ".lake/build/lib/lean/LonelyRunner/ThreeEvenOrbit.ilean",
+      "sha256": "2c7cd31c2a4af9596b57bc70bcba540cc191b388f3f4c25ee471dca1814cdaa2",
+      "bytes": 27267
+    }
+  },
+  "checks": [
+    {
+      "kind": "initial_focused_lean",
+      "command": "flock -n .lake/verification.lock bash -lc 'ulimit -v 8388608; timeout 180 lake env lean -j1 -s65536 -o .lake/build/lib/lean/LonelyRunner/ThreeEvenOrbit.olean -i .lake/build/lib/lean/LonelyRunner/ThreeEvenOrbit.ilean LonelyRunner/ThreeEvenOrbit.lean'",
+      "cpu_threads": 1,
+      "memory_limit_kib": 8388608,
+      "wall_timeout_seconds": 180,
+      "exit_status": 1,
+      "duration_seconds": 3.494255023,
+      "source_sha256": "827b74b018d25e3a98bf511e01c09e5d5b5474b942017e2d384bf95e320c40da",
+      "raw_output": "LonelyRunner/ThreeEvenOrbit.lean:26:55: error(lean.unknownIdentifier): Unknown identifier `h2`\nLonelyRunner/ThreeEvenOrbit.lean:28:4: error: linarith failed to find a contradiction\ncase inl\nd : ℕ\nh3 : ¬3 ∣ d\nz e : ℤ\nhd : ↑d = 6 * z + e\nhe : e = 1\nu : ℕ\nhu : d = 2 * u\nv : ℤ\nhv : ↑d = 2 * v\n⊢ False\nfailed\nLonelyRunner/ThreeEvenOrbit.lean:31:55: error(lean.unknownIdentifier): Unknown identifier `h2`\nLonelyRunner/ThreeEvenOrbit.lean:33:4: error: linarith failed to find a contradiction\ncase inr.inl\nd : ℕ\nh3 : ¬3 ∣ d\nz e : ℤ\nhd : ↑d = 6 * z + e\nhe : e = -1\nu : ℕ\nhu : d = 2 * u\nv : ℤ\nhv : ↑d = 2 * v\n⊢ False\nfailed\nLonelyRunner/ThreeEvenOrbit.lean:96:15: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  Int.fract ((↑1 * t + ↑↑b / 6) * ↑d)\nin the target expression\n  circleNorm (Int.fract ((t + ↑b / 6) * ↑d)) = circleNorm (Int.fract (t * ↑d) + ↑(↑b * (↑w * σ)) / 6)\nLonelyRunner/ThreeEvenOrbit.lean:101:2: error: unsolved goals\ncase inr.calc.step\n⊢ circleNorm (-Int.fract (t * ↑d) + ↑w * ↑b / 6) = circleNorm (↑(-1) * Int.fract (t * ↑d) + ↑w * ↑b / 6)\nLonelyRunner/ThreeEvenOrbit.lean:122:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  circleNorm (↑?n * ?x)\nin the target expression\n  1 / 6 ≤ circleNorm (2 * x)\nLonelyRunner/ThreeEvenOrbit.lean:126:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  circleNorm (↑?n * ?x)\nin the target expression\n  1 / 6 ≤ circleNorm (4 * x)\nLonelyRunner/ThreeEvenOrbit.lean:131:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  circleNorm (↑?n * ?x)\nin the target expression\n  1 / 6 ≤ circleNorm (2 * x)\nLonelyRunner/ThreeEvenOrbit.lean:135:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  circleNorm (↑?n * ?x)\nin the target expression\n  1 / 6 ≤ circleNorm (4 * x)\nLonelyRunner/ThreeEvenOrbit.lean:168:21: error: unsolved goals\n⊢ -(2 * u - 1) = 1 - 2 * u\nLonelyRunner/ThreeEvenOrbit.lean:189:4: error: No goals to be solved"
+    },
+    {
+      "kind": "repair_round_1_focused_lean",
+      "command": "flock -n .lake/verification.lock bash -lc 'ulimit -v 8388608; timeout 180 lake env lean -j1 -s65536 -o .lake/build/lib/lean/LonelyRunner/ThreeEvenOrbit.olean -i .lake/build/lib/lean/LonelyRunner/ThreeEvenOrbit.ilean LonelyRunner/ThreeEvenOrbit.lean'",
+      "cpu_threads": 1,
+      "memory_limit_kib": 8388608,
+      "wall_timeout_seconds": 180,
+      "exit_status": 0,
+      "duration_seconds": 4.470107668,
+      "source_sha256": "2d2cbdd51dc51f1e23985feb9c7826ce5bb944118f01c8c7719e5ad25de4e088",
+      "raw_output": "Try this:\n  [apply] ring_nf\n\nThe `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n\nTry this:\n  [apply] ring_nf\n\nThe `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n\nTry this:\n  [apply] ring_nf\n\nThe `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n\nTry this:\n  [apply] ring_nf\n\nThe `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n\nLonelyRunner/ThreeEvenOrbit.lean:107:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\nLonelyRunner/ThreeEvenOrbit.lean:107:40: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\nLonelyRunner/ThreeEvenOrbit.lean:112:34: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\nLonelyRunner/ThreeEvenOrbit.lean:112:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\nLonelyRunner/ThreeEvenOrbit.lean:203:25: warning: this tactic is never executed\nLonelyRunner/ThreeEvenOrbit.lean:203:25: warning: 'ring' tactic does nothing"
+    },
+    {
+      "kind": "axiom_audit",
+      "command": "flock -n .lake/verification.lock bash -lc 'ulimit -v 8388608; timeout 180 lake env lean -j1 -s65536 /dev/stdin'",
+      "cpu_threads": 1,
+      "memory_limit_kib": 8388608,
+      "wall_timeout_seconds": 180,
+      "exit_status": 0,
+      "duration_seconds": 1.702674986,
+      "raw_output": "'LonelyRunner.threeEven_exists_even_unit_sixth_residue' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.threeEven_exists_odd_unit_sixth_residue' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.threeEven_circleNorm_nat_mul_fract' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.threeEven_circleNorm_sixth_weighted_shift' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.threeEven_small_phase_double_four_safe' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.threeEven_circleNorm_double_lt_third' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.threeEven_dvd_of_large_partner_at_zeros' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.threeEven_small_sixth_dilate_norm' depends on axioms: [propext, Classical.choice, Quot.sound]"
+    }
+  ],
+  "next_action": "Root source review, integration, and publication checkpoint handling remain pending."
+}

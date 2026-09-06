@@ -1,0 +1,10 @@
+{
+  "task": "/root/three_even_runners_implementation",
+  "requested_model": "gpt-5.6-terra",
+  "requested_effort": "high",
+  "outcome": "returned_without_source_or_check",
+  "worker_report": "Full new proof assembly too large for current task slice; no mathematical gap, placeholder, source change or Lean check.",
+  "root_action": "Split at settled odd-zero helper interface; retain remaining fixed-role/count target; actual goal active.",
+  "source_or_execution_receipt": null,
+  "usage": null
+}

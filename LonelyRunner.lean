@@ -213,6 +213,12 @@ import LonelyRunner.RemainingPhaseFacts
 import LonelyRunner.RemainingPhaseLemma
 import LonelyRunner.SignedRemainingPhase
 
+import LonelyRunner.ThreeEvenOrbit
+import LonelyRunner.ThreeEvenRunners
+import LonelyRunner.TwoEvenRunners
+import LonelyRunner.SixRunnerOrdinary
+import LonelyRunner.SixRunnerCanonical
+
 /-!
 Root import for the formal Lonely Runner development.
 -/
