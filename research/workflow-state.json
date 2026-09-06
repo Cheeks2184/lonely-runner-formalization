@@ -21,50 +21,6 @@
       "checks": [],
       "next_action": "Investigate arbitrary direct-or-mixed supply: identify structural implication or obstruction beyond bounded-height families; preserve full canonical objective.",
       "agent_id": "/root/mixed_equivalence_freeze"
-    },
-    {
-      "id": "/root/sharper_cutoff_implementation",
-      "kind": "research",
-      "status": "in_progress",
-      "target": "User-approved sharper stationary max-height reduction and canonical finite-family equivalence; explicitly requested Astra high overrides research xhigh for this assignment.",
-      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "high",
-      "observed_model": null,
-      "observed_effort": null,
-      "owned_files": [
-        "LonelyRunner/FiniteHeightReduction.lean",
-        "LonelyRunner/FinitePrimitiveFamilies.lean",
-        "LonelyRunner/FiniteFamilyEquivalence.lean",
-        "research/astra-sharper-cutoff-implementation.md"
-      ],
-      "checks": [],
-      "next_action": "Implement additive sharper theorem and finite-family bridge; verify pinned Lean and report exact changes.",
-      "routing_override_authorization": "User explicitly requested Astra subagent at high effort for approved implementation.",
-      "agent_id": "/root/sharper_cutoff_implementation",
-      "routing_override": {
-        "source": "user",
-        "requested_model": "gpt-6-astra",
-        "requested_effort": "high",
-        "instruction": "Very well. The proposed implementation is approved. Hand that off to an Astra subagent at high effort and continue with your normal work."
-      }
-    },
-    {
-      "id": "/root/sharper_cutoff_semantic_review",
-      "agent_id": "/root/mss_published_bound_audit",
-      "kind": "review",
-      "status": "in_progress",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "xhigh",
-      "observed_model": null,
-      "observed_effort": null,
-      "target": "Independent semantic review of implemented sharper stationary cutoff and canonical iff; exact source hashes and trust boundaries.",
-      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
-      "owned_files": [
-        "research/astra-sharper-cutoff-review.md"
-      ],
-      "checks": [],
-      "next_action": "Review all new declarations with exact primitive, stationary, low/high boundary, count and canonical scopes; no implementation edits."
     }
   ],
   "completed_tasks": [
@@ -3965,6 +3921,87 @@
         "root inspected override validation and exact six manuscript replays"
       ],
       "next_action": "Replace pending semantic statuses with actual accepted manuscript scope; clearly define mixed target and include concise family formulas."
+    },
+    {
+      "id": "/root/sharper_cutoff_implementation",
+      "kind": "research",
+      "status": "complete",
+      "target": "User-approved sharper stationary max-height reduction and canonical finite-family equivalence; explicitly requested Astra high overrides research xhigh for this assignment.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "owned_files": [
+        "LonelyRunner/FiniteHeightReduction.lean",
+        "LonelyRunner/FinitePrimitiveFamilies.lean",
+        "LonelyRunner/FiniteFamilyEquivalence.lean",
+        "research/astra-sharper-cutoff-implementation.md",
+        "LonelyRunner/AxiomAudit.lean"
+      ],
+      "checks": [
+        "Focusedbuild3514jobs passed",
+        "full pinned build3638jobs passed",
+        "global trustaudit432 permitted-only reports passed",
+        "five new exacttype/axiomprobes passed",
+        "root inspected exactsource diff and logs"
+      ],
+      "next_action": "Implement additive sharper theorem and finite-family bridge; verify pinned Lean and report exact changes.",
+      "routing_override_authorization": "User explicitly requested Astra subagent at high effort for approved implementation.",
+      "agent_id": "/root/sharper_cutoff_implementation",
+      "routing_override": {
+        "source": "user",
+        "requested_model": "gpt-6-astra",
+        "requested_effort": "high",
+        "instruction": "Very well. The proposed implementation is approved. Hand that off to an Astra subagent at high effort and continue with your normal work."
+      },
+      "disposition": "Implementation kernel-checked; independent semanticreview pending; excludedfromPass29."
+    },
+    {
+      "id": "/root/sharper_cutoff_semantic_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent semantic review of implemented sharper stationary cutoff and canonical iff; exact source hashes and trust boundaries.",
+      "source_checkpoint": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+      "owned_files": [
+        "research/astra-sharper-cutoff-review.md"
+      ],
+      "checks": [
+        "Independent semantic review accepted at four frozen source hashes",
+        "root read all new source and reviewed exact scope",
+        "full build3638/trust432 evidence inspected"
+      ],
+      "next_action": "Review all new declarations with exact primitive, stationary, low/high boundary, count and canonical scopes; no implementation edits.",
+      "result_artifact_sha256": "ddd2c78b02357ace437f2c379d8088335149cca17b72e1f5906d56031ad68d2d"
+    },
+    {
+      "id": "/root/sharper_cutoff_docs",
+      "agent_id": "/root/family_review_replay",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Document kernel-checked sharper cutoff/equivalence as next separate checkpoint; preserve unresolvedfinitefamily obligation and reviewstatus.",
+      "source_checkpoint": "cdd7f2c1e6a077726ee45a71b98ddd8591c97bf3",
+      "owned_files": [
+        "README.md",
+        "STATUS.md",
+        "docs/approaches.md",
+        "docs/astra-research-30.md"
+      ],
+      "checks": [
+        "workflowvalidatorpassed",
+        "diffcheckpassed",
+        "rootreadfinaldocsandcorrectedexistingfilecountwording"
+      ],
+      "next_action": "Document exactbound, five theorem bridge, fullbuild/trust evidence, independentreviewdisposition onlywhenavailable."
     }
   ],
   "latest_checkpoint": "Pass28 merged and verified in PR27, main5e7d690e6606ad096bf4a2319be0328f9c6d2e68. Pass29 conditional exact-packet/mixed-anchor and one-deletion-family manuscripts under review. Canonical LRC unresolved.",
@@ -4791,10 +4828,14 @@
   "publication_in_progress": {
     "checkpoint": "Pass29",
     "branch": "codex/astra-mixed-margin-supply",
-    "status": "verified_ready_to_commit",
+    "status": "ci_running",
     "verification": "Six frozen exact program replays; independent manuscript reviews; 15 focused workflow tests; workflow validation; diff check.",
     "excluded": "Concurrent sharper cutoff Lean implementation, two-hole manuscript, unrestricted supply audit.",
-    "next_action": "Commit exact staged 16 files, push, PR, required checks, exact-head merge and remote-main verification."
+    "next_action": "Wait for required exact-head CI checks; inspect reviews; merge exact head and verify remote main.",
+    "pr_number": 28,
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/28",
+    "head_sha": "cdd7f2c1e6a077726ee45a71b98ddd8591c97bf3",
+    "ci_run": 34002993683
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -5102,5 +5143,13 @@
     "family_review_sha256": "330fd88ee67faeac7f0ed596303fdbc65fb6e28db221b9606da3d8425501ec24",
     "root_exact_replays": "All six programs pass with frozen program and stdout hashes; research/astra-pass29-verification.json",
     "scope": "Independently reviewed manuscripts only. Stationary exact S iff mixed margin; one-deletion family supplied, no unrestricted canonical witness supply."
+  },
+  "pending_sharper_cutoff_checkpoint": {
+    "status": "verified_ready_to_commit",
+    "verification": "research/astra-pass30-verification.json",
+    "publication": "Commit/push/open PR after Pass29 parent; merge only after PR28 and exact-head checks pass.",
+    "full_lrc": "unresolved",
+    "branch": "codex/astra-sharper-finite-cutoff",
+    "storage": "7,750,136,182 bytes rebuildable; safe cleanup deferred because active research process detected. Retry after research verifier stops; no forced deletion."
   }
 }

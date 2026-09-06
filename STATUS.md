@@ -6,6 +6,16 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [thirtieth Astra checkpoint](docs/astra-research-30.md) records the
+kernel-checked sharper stationary finite-height reduction and canonical
+finite-family equivalence. At total count `N`, it uses the inclusive cutoff
+`choose(N,2)^(N-2)` and stationary large-height branch, retaining the old API.
+The full pinned build passed 3,638 jobs; the trust audit accepted 432
+permitted-only reports, including five new theorem probes. Independent
+Astra/xhigh review gave semantic approval at this exact reduction scope. The
+unresolved premise is `AllSharperInclusivePrimitiveFiniteFamilies`, so neither
+this reduction nor the stronger cutoff proves unrestricted LRC.
+
 The [twenty-ninth Astra checkpoint](docs/astra-research-29.md) records an
 accepted conditional exact two-anchor packet constructor, an accepted
 mixed-margin equivalence, and an accepted one-deletion-family manuscript. A

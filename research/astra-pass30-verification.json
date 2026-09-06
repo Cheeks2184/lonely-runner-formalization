@@ -1,0 +1,60 @@
+{
+  "checkpoint": "Pass30",
+  "source_baseline": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+  "scope": "Sharper stationary max-height reduction and canonical finite-family equivalence; no full gcd-subset criterion and no unconditional LRC proof.",
+  "cutoff": "(Nat.choose (m + 2) 2)^m, m>=1, N=m+2",
+  "source_sha256": {
+    "LonelyRunner/FiniteHeightReduction.lean": "d6ebb1974372dd8356c76b57ce322a6a7ca076404c7049b968cad207469f3406",
+    "LonelyRunner/FinitePrimitiveFamilies.lean": "023b39b29e7939dd18b29a51217c3e3fcf353ee5843f3bc3effb27012137e9f0",
+    "LonelyRunner/FiniteFamilyEquivalence.lean": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3",
+    "LonelyRunner/AxiomAudit.lean": "c500b0996ad5defd4bbab337d17b8b9a448d7f2b9e901b3f11e53e25084452aa"
+  },
+  "independent_review": {
+    "artifact": "research/astra-sharper-cutoff-review.md",
+    "sha256": "ddd2c78b02357ace437f2c379d8088335149cca17b72e1f5906d56031ad68d2d",
+    "verdict": "accepted, no actionable findings",
+    "requested_role": "Astra/xhigh"
+  },
+  "implementation": {
+    "artifact": "research/astra-sharper-cutoff-implementation.md",
+    "requested_role": "Astra/high",
+    "authorization": "Explicit user request for this implementation"
+  },
+  "verification": {
+    "focused_build_jobs": 3514,
+    "full_build_jobs": 3638,
+    "axiom_reports": 432,
+    "new_theorem_reports": 5,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "exact_type_and_axiom_output": "LonelyRunner.primitive_sorted_largeHeight_stationary_lonelyAt {m : \u2115} (hm : 1 \u2264 m)\n  (hLower : LonelyRunner.LowerCountPositiveIntegerHypothesis (m + 2)) (s : Fin (m + 2) \u2192 \u2115) (hsorted : StrictMono s)\n  (hs0 : s 0 = 0) (hprimitive : Finset.univ.gcd s = 1) (hheight : (m + 2).choose 2 ^ m < s (Fin.last (m + 1))) :\n  \u2203 t, 0 < t \u2227 LonelyRunner.LonelyAt (fun i => \u2191(s i)) 0 t\n'LonelyRunner.primitive_sorted_largeHeight_stationary_lonelyAt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nLonelyRunner.nonnegative_integer_stationary_lonelyAt_of_lower_and_sharperFiniteFamily {m : \u2115} (hm : 1 \u2264 m)\n  (hLower : LonelyRunner.LowerCountPositiveIntegerHypothesis (m + 2))\n  (hFinite : LonelyRunner.SharperInclusivePrimitiveFiniteFamily m) (a : Fin (m + 2) \u2192 \u2124) (hinj : Function.Injective a)\n  (hnonneg : \u2200 (i : Fin (m + 2)), 0 \u2264 a i) (r : Fin (m + 2)) (hr : a r = 0) :\n  \u2203 t, LonelyRunner.LonelyAt (fun i => \u2191(a i)) r t\n'LonelyRunner.nonnegative_integer_stationary_lonelyAt_of_lower_and_sharperFiniteFamily' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nLonelyRunner.positiveIntegerAtCount_of_lower_and_sharperFiniteFamily {m : \u2115} (hm : 1 \u2264 m)\n  (hLower : LonelyRunner.LowerCountPositiveIntegerHypothesis (m + 2))\n  (hFinite : LonelyRunner.SharperInclusivePrimitiveFiniteFamily m) : LonelyRunner.PositiveIntegerAtCount (m + 1)\n'LonelyRunner.positiveIntegerAtCount_of_lower_and_sharperFiniteFamily' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nLonelyRunner.positiveIntegerConjecture_of_allSharperInclusivePrimitiveFiniteFamilies\n  (hFinite : LonelyRunner.AllSharperInclusivePrimitiveFiniteFamilies) : LonelyRunner.PositiveIntegerConjecture\n'LonelyRunner.positiveIntegerConjecture_of_allSharperInclusivePrimitiveFiniteFamilies' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\nLonelyRunner.conjecture_iff_allSharperInclusivePrimitiveFiniteFamilies :\n  LonelyRunner.Conjecture \u2194 LonelyRunner.AllSharperInclusivePrimitiveFiniteFamilies\n'LonelyRunner.conjecture_iff_allSharperInclusivePrimitiveFiniteFamilies' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\ndef LonelyRunner.SharperInclusivePrimitiveFiniteFamily : \u2115 \u2192 Prop :=\nfun m =>\n  \u2200 (s : Fin (m + 2) \u2192 \u2115),\n    StrictMono s \u2192\n      s 0 = 0 \u2192\n        Finset.univ.gcd s = 1 \u2192\n          s (Fin.last (m + 1)) \u2264 (m + 2).choose 2 ^ m \u2192\n            \u2200 (r : Fin (m + 2)), \u2203 t, LonelyRunner.LonelyAt (fun i => \u2191(s i)) r t\ndef LonelyRunner.AllSharperInclusivePrimitiveFiniteFamilies : Prop :=\n\u2200 (m : \u2115), 1 \u2264 m \u2192 LonelyRunner.SharperInclusivePrimitiveFiniteFamily m\n",
+    "commands": [
+      "lake build LonelyRunner.FiniteFamilyEquivalence",
+      "lake env lean <temporary probe importing FiniteFamilyEquivalence with five #check/#print axioms pairs and two #print definitions>",
+      "lake build",
+      "python3 scripts/audit_lean_trust.py"
+    ],
+    "logs": {
+      "build": {
+        "sha256": "853539e3920d549ea08652c2284bdf22f9198f5f08832ed0ba021717e192a65e",
+        "source_log": "/tmp/astra-sharper-cutoff-build.log"
+      },
+      "axioms": {
+        "sha256": "f2698c2ae4dbd0c4f52be6b5893cfe5816e2f18fb07cb82bce5b58d28347f99a",
+        "source_log": "/tmp/astra-sharper-cutoff-axioms.log"
+      },
+      "full-build": {
+        "sha256": "0f8d3f628d63198d98fae9e5d411e758f0a1e9573a2d7d62d33c568b1d7e1df7",
+        "source_log": "/tmp/astra-sharper-cutoff-full-build.log"
+      },
+      "trust": {
+        "sha256": "b1cceb67c7bdfbf9d2e84e46dd2804b80f52a22d3ea5af3d543109a0f3fa2f87",
+        "source_log": "/tmp/astra-sharper-cutoff-trust.log"
+      }
+    }
+  },
+  "canonical_status": "unresolved"
+}

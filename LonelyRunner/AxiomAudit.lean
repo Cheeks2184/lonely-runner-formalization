@@ -470,3 +470,11 @@ project-specific axiom.
 
 -- Nineteenth Astra pass: transport a supplied witness with explicit margins.
 #print axioms LonelyRunner.exists_nearestPivotGrid_residue
+
+-- Sharper inclusive cutoff: the large-height theorem is stationary, while
+-- normalization and induction connect the finite obligation to the conjecture.
+#print axioms LonelyRunner.primitive_sorted_largeHeight_stationary_lonelyAt
+#print axioms LonelyRunner.nonnegative_integer_stationary_lonelyAt_of_lower_and_sharperFiniteFamily
+#print axioms LonelyRunner.positiveIntegerAtCount_of_lower_and_sharperFiniteFamily
+#print axioms LonelyRunner.positiveIntegerConjecture_of_allSharperInclusivePrimitiveFiniteFamilies
+#print axioms LonelyRunner.conjecture_iff_allSharperInclusivePrimitiveFiniteFamilies
