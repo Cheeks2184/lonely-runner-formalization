@@ -6,7 +6,7 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/boundary_div_anchor_source_review",
+      "id": "/root/selector_oddhalf_source_review",
       "agent_id": "/root/prime_difference_compression_plan",
       "kind": "research",
       "status": "in_progress",
@@ -14,26 +14,10 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "1156abc",
-      "target": "Independent fourcontractsource review forboundaryzero divisibility andsignedhalf/anchorfract helpers; one cappedprobe.",
+      "source_checkpoint": "865b96f",
+      "target": "Independent exact two-contract source review of compiled selector and odd half-time identity; one capped import probe.",
       "owned_files": [
-        "research/astra-boundary-div-anchor-source-review.md"
-      ],
-      "checks": []
-    },
-    {
-      "id": "/root/boundary_assembly_independent_review",
-      "agent_id": "/root/seven_adic_expanded_falsifier",
-      "kind": "research",
-      "status": "in_progress",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "xhigh",
-      "observed_model": null,
-      "observed_effort": null,
-      "source_checkpoint": "901dcfd",
-      "target": "Independent exactscope/manuscript review of five-row selector, evenfallback and originalboundaryzero assembly. Staticonly.",
-      "owned_files": [
-        "research/astra-boundary-assembly-review.md"
+        "research/astra-selector-oddhalf-source-review.md"
       ],
       "checks": []
     }
@@ -6876,13 +6860,81 @@
       ],
       "checks": [],
       "result": "Frozenindependentsourceproofaccepted/singleprobe0; reportdab302a6 delivered; rootfullread/replaypending."
+    },
+    {
+      "id": "/root/pair_safe_sixth_affine_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "c538c85",
+      "target": "Source-only finite5rowthree-speed affine selector fromaccepted residue recipe, preservingexactanchorandsafepair.",
+      "owned_files": [
+        "LonelyRunner/PairSafeSixthAffine.lean"
+      ],
+      "checks": [],
+      "result": "Fullsource-onlyselector draftd0489851delivered, rootfullread/focusedcheckstarted."
+    },
+    {
+      "id": "/root/boundary_div_anchor_source_review",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "1156abc",
+      "target": "Independent fourcontractsource review forboundaryzero divisibility andsignedhalf/anchorfract helpers; one cappedprobe.",
+      "owned_files": [
+        "research/astra-boundary-div-anchor-source-review.md"
+      ],
+      "checks": [],
+      "result": "Frozen report fully read and exact replay passed."
+    },
+    {
+      "id": "/root/boundary_assembly_independent_review",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "901dcfd",
+      "target": "Independent exactscope/manuscript review of five-row selector, evenfallback and originalboundaryzero assembly. Staticonly.",
+      "owned_files": [
+        "research/astra-boundary-assembly-review.md"
+      ],
+      "checks": [],
+      "result": "Frozen report fully read and exact replay passed."
+    },
+    {
+      "id": "/root/two_odd_outside_three_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "c538c85",
+      "target": "Source-only finite-label lemma selecting exactlytwooddremaininglabels fromthreeevenlabelsanduppercardbound.",
+      "owned_files": [
+        "LonelyRunner/TwoOddOutsideThree.lean"
+      ],
+      "checks": [],
+      "result": "Full source delivered and root read; first focused build pending."
     }
   ],
-  "latest_checkpoint": "Pass49PR48openhead1156abc LeanCIpassed/certpending. Pass50 full3698build/trust627+8free passed, foursourcecontracts independentreviewactive. Pass51 genericfoldednormfocusedpassed, two-phasechoiceschecking, signedresidueassemblyplanactive.",
+  "latest_checkpoint": "Pass50PR49openheadc538c85; allfour fullverified/read/replayed. Pass51 sevenfocusedcontracts, halfchoices/residue3review/rootreplaypassed, remaining4reviewactive; fullbuildstarted. Boundaryassemblystaticreviewactive; five-rowselectorTerra sourceactive.",
   "next_actions": [
-    "Publish fully verified Pass48 nine phase and rescue lemmas; merge exact head after required checks and verify main.",
-    "Verify Pass49 pair transport; review affine and safe-band contracts; assemble pair-maximum consequence.",
-    "Review and implement conditional cover finisher, then boundary-zero assembly and canonical six-total bridge."
+    "Publish verified Pass51 seven phase/boundary helper declarations and reviewed assembly manuscript; merge exact head after CI.",
+    "Build two-odd-label helper; implement reviewed even-anchor fallback and boundary-zero maximum assembly.",
+    "Review selector and odd-half exact source contracts."
   ],
   "research_holds": [
     {
@@ -7946,10 +7998,13 @@
   },
   "publication_in_progress": {
     "checkpoint": "Pass50",
-    "phase": "verified_ready_commit",
+    "phase": "pushed_pr_open_required_checks_pending",
     "branch": "codex/astra-two-divisible-cover",
     "base_main": "901dcfda808cceb32718a2e98fdd793cc78154fe",
-    "verification": "research/astra-pass50-verification.json"
+    "verification": "research/astra-pass50-verification.json",
+    "pr_number": 49,
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/49",
+    "head_sha": "c538c85a8172822917135ac5665951dcdb649150"
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -10042,20 +10097,12 @@
     }
   },
   "last_publication": {
-    "checkpoint": "Pass49",
-    "pr_number": 48,
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/48",
-    "head_sha": "1156abcfad86eb1dfe9b1b5894a8848c64e8b984",
-    "merge_sha": "901dcfda808cceb32718a2e98fdd793cc78154fe",
-    "merged_at": "2026-09-06T12:21:30Z",
-    "ci_run": 34032307539,
-    "checks": {
-      "Lean build and trust audit": "SUCCESS 2026-09-06T12:12:01Z job101483958185",
-      "Exact computational certificates": "SUCCESS 2026-09-06T12:19:17Z job101483958386"
-    },
-    "exact_head_merge": true,
-    "remote_main_ancestry_verified": true,
-    "local_main_verified": true
+    "pr": 49,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/49",
+    "head": "c538c85a8172822917135ac5665951dcdb649150",
+    "merge": "865b96f66682599965694868505d8b5a0c1f67e8",
+    "merged_at": "2026-09-06T12:37:23Z",
+    "checks": "Lean/trust and exact certificates SUCCESS; CLEAN; no blocking reviews; exact head merged; fetched ancestry and main synchronized"
   },
   "publication_receipts": [
     {
