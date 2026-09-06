@@ -739,3 +739,9 @@ project-specific axiom.
 #print axioms LonelyRunner.pair_min_le_of_special_sixth_fiber_bound
 #print axioms LonelyRunner.foldedPairSafeBands_of_five_sixths_pair_bound
 #print axioms LonelyRunner.exists_two_same_side_of_three
+
+-- Positive witnesses from a supplied factor-six cover.
+#print axioms LonelyRunner.small_sixth_seed_norms
+#print axioms LonelyRunner.three_exceptions_of_two_divisible_labels
+#print axioms LonelyRunner.two_divisible_pair_small_witness
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_two_divisible_cover
