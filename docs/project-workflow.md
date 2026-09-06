@@ -89,6 +89,19 @@ of an open problem. Persist a precise restart point when that happens. Never
 mislabel a limit as a mathematical result. No scheduled run is installed during
 setup, and no credits are purchased or redeemed without user authorization.
 
+## Research transition after six total runners
+
+On 2026-09-06 the user directed that the current approach may continue through
+a working formalized theorem for N = 6 total runners. Establish the five-moving
+closed 1/6 result and its canonical six-runner bridge, with full build, trust
+audit and independent exact-scope review. Then focus research on a uniform
+arbitrary-N mechanism for unrestricted LRC. Do not pursue N = 7, 8 and successive
+individual counts as the roadmap. A finite-count lemma or experiment is useful
+only when its role in a specific uniform mechanism is stated explicitly.
+Six runners is a transition milestone and never satisfies the unrestricted
+completion gate. This instruction governs future plans and delegations even
+when older branch records mention higher-count targets.
+
 ## Completion gate
 
 The objective is a full kernel-checked proof or disproof of the unrestricted

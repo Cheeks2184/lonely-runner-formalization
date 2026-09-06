@@ -761,3 +761,9 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_two_odd_outside_three
 #print axioms LonelyRunner.both_six_even_anchor_three_time_witness
 #print axioms LonelyRunner.two_divisible_boundary_min_eq_zero
+
+-- Primitive and normalized two-divisible branches.
+#print axioms LonelyRunner.primitive_two_divisible_no_witness_contradiction
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_primitive_two_divisible_three
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_primitive_at_least_two_divisible_three
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_exactly_two_divisible_three
