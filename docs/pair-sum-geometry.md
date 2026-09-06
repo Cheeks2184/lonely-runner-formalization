@@ -23,11 +23,11 @@ That paper also proves an inductive finite-checking theorem in terms of the
 number of lattice points of the associated zonotope (Theorem A/A').
 
 The newer preprint by Blanco--Criado--Santos,
-[*Coloopless and cosimple zonotopes, and the Lonely Runner Conjectures*](https://arxiv.org/abs/2603.24784),
+[*Coloopless zonotopes and counterexamples to the Shifted Lonely Runner Conjecture*](https://arxiv.org/abs/2603.24784v2),
 places LR zonotopes in a wider coloopless class and explicitly warns against
 silently replacing the distinguished central-coset statement by a universal
-covering-radius assertion: it gives shifted-LRC counterexamples beginning in
-dimension five. Thus a valid unshifted geometry argument must retain the
+covering-radius assertion: its Theorem 1.17 gives shifted-LRC counterexamples beginning with
+five moving speeds (six total runners; zonotope dimension four). Thus a valid unshifted geometry argument must retain the
 specified centre/coset.
 
 ## 2. The finite certificate
