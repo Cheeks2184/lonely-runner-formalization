@@ -1,0 +1,89 @@
+{
+  "checkpoint": "Pass68",
+  "parent_main": "737ac0634c02c21025bcafebacc97c9152f04bf4",
+  "status": "passed",
+  "hashes": {
+    "research/astra-forward-grid-uniform-supply.md": "1a13ab3fab7652987d2494d1a799d8ee21857a5faca972d687b0c99c9017e8e2",
+    "research/astra-forward-grid-uniform-supply-review.md": "327258d23222fb30a6c54cf5338e62fd60540874e4972680f1da948142351199",
+    "research/astra-forward-grid-revisiting-repair.md": "701d79271d329f4a37ccf52a649d224e7c15238f71a282446762d591403527c8",
+    "research/astra-forward-grid-revisiting-review.md": "2fc28553b381156a098e6dee2b57fd7cb0d95c5b651a6c7cc71c8d17da049dcc",
+    "research/astra-cluster-grid-rescue.md": "edc948e31d6939132dd44dec7fe84612912ab952ceb8e98140a6b9cb2e9b5f9c",
+    "research/astra-cluster-grid-rescue-review.md": "99caba49dd2b5b20475d89901d39fd6ce24fbbb5a060b949ab7707f52a6b569e",
+    "docs/astra-research-68.md": "ae95b2045e3567da310e67cf9643bbc79a9d2af26f738e62a4d58d99de5f5b0c"
+  },
+  "embedded_source_bindings": [
+    {
+      "path": "LonelyRunner/FastRunnerInsertion.lean",
+      "sha256": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5"
+    },
+    {
+      "path": "research/astra-forward-grid-insertion-review.md",
+      "sha256": "ba90a5a4fa2cb6e767a2c85d8b6d6c4a9d0d1a54bdc47e5f4c870591138adb82"
+    },
+    {
+      "path": "research/astra-forward-grid-insertion.md",
+      "sha256": "b1185bc69414dbb6dfa36bc04ed2a80f92b75856867190015b19c53216babb33"
+    },
+    {
+      "path": "research/astra-forward-grid-revisiting-repair.md",
+      "sha256": "701d79271d329f4a37ccf52a649d224e7c15238f71a282446762d591403527c8"
+    },
+    {
+      "path": "research/astra-forward-grid-uniform-supply.md",
+      "sha256": "1a13ab3fab7652987d2494d1a799d8ee21857a5faca972d687b0c99c9017e8e2"
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "/tmp/astra-pass68-verify.py",
+      "/tmp/astra-pass68-inputs.json",
+      "research/astra-pass68-verification.json"
+    ],
+    "source_utf8": "from pathlib import Path\nimport hashlib, json, re, subprocess, sys\n\ninputs = Path(sys.argv[1])\nexpected = json.loads(inputs.read_text())\nbindings = set()\nfor name, wanted in expected.items():\n    data = Path(name).read_bytes()\n    assert hashlib.sha256(data).hexdigest() == wanted, name\n    assert data.endswith(b'\\n') and not re.search(rb'[ \\t]+$', data, re.M), name\n    text = data.decode()\n    for path, wanted_hash in re.findall(r'\\| `((?:research|LonelyRunner|docs)/[^`]+)` \\| `([0-9a-f]{64})` \\|', text):\n        assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == wanted_hash, path\n        bindings.add((path, wanted_hash))\n    for wanted_hash, path in re.findall(r'^([0-9a-f]{64})  ((?:research|LonelyRunner|docs)/[^\\n]+)$', text, re.M):\n        assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == wanted_hash, path\n        bindings.add((path, wanted_hash))\n\nfor author, review in [\n    ('research/astra-forward-grid-uniform-supply.md', 'research/astra-forward-grid-uniform-supply-review.md'),\n    ('research/astra-forward-grid-revisiting-repair.md', 'research/astra-forward-grid-revisiting-review.md'),\n    ('research/astra-cluster-grid-rescue.md', 'research/astra-cluster-grid-rescue-review.md'),\n]:\n    assert expected[author] in Path(review).read_text(), review\n\nchecks = []\nfor argv in [\n    ['python3', '-B', 'scripts/validate_workflow.py'],\n    ['git', 'diff', '--check'],\n    ['python3', '-B', 'scripts/manage_storage.py'],\n]:\n    done = subprocess.run(argv, text=True, capture_output=True)\n    checks.append(dict(argv=argv, exit_code=done.returncode, stdout=done.stdout, stderr=done.stderr))\n\nrecord = dict(\n    checkpoint='Pass68',\n    parent_main='737ac0634c02c21025bcafebacc97c9152f04bf4',\n    status='passed' if all(c['exit_code'] == 0 for c in checks) else 'failed',\n    hashes=expected,\n    embedded_source_bindings=[dict(path=p, sha256=h) for p,h in sorted(bindings)],\n    root_verifier=dict(argv=sys.argv, source_utf8=Path(__file__).read_text(), input_utf8=inputs.read_text()),\n    checks=checks,\n    mathematical_verification='Three independently reviewed manuscripts plus root full source and review reads. Exact greedy digits, entire invariant-region exclusion and finite budget termination, explicit alternate witness, prime/composite residue construction, and all forward/closed endpoints checked by hand. No mathematical program or numerical search ran.',\n    scope='Uniform sufficient separated and unit-plus-narrow-cluster classes, and a counterexample to the specified revisiting algorithm. No arbitrary-tuple reduction, no general grid impossibility, no new Lean declaration or unrestricted LRC resolution.',\n    ongoing_work_excluded='Separate general-slow cluster audit remains active and is not an accepted part of this checkpoint.',\n    storage='No local Lean cache restored; storage report retained among checks.',\n)\nPath(sys.argv[2]).write_text(json.dumps(record, indent=2)+'\\n')\nprint(json.dumps(dict(status=record['status'], frozen_files=len(expected), embedded_bindings=len(bindings), checks=checks, receipt=sys.argv[2]), sort_keys=True))\nsys.exit(0 if record['status'] == 'passed' else 1)\n",
+    "input_utf8": "{\n  \"research/astra-forward-grid-uniform-supply.md\": \"1a13ab3fab7652987d2494d1a799d8ee21857a5faca972d687b0c99c9017e8e2\",\n  \"research/astra-forward-grid-uniform-supply-review.md\": \"327258d23222fb30a6c54cf5338e62fd60540874e4972680f1da948142351199\",\n  \"research/astra-forward-grid-revisiting-repair.md\": \"701d79271d329f4a37ccf52a649d224e7c15238f71a282446762d591403527c8\",\n  \"research/astra-forward-grid-revisiting-review.md\": \"2fc28553b381156a098e6dee2b57fd7cb0d95c5b651a6c7cc71c8d17da049dcc\",\n  \"research/astra-cluster-grid-rescue.md\": \"edc948e31d6939132dd44dec7fe84612912ab952ceb8e98140a6b9cb2e9b5f9c\",\n  \"research/astra-cluster-grid-rescue-review.md\": \"99caba49dd2b5b20475d89901d39fd6ce24fbbb5a060b949ab7707f52a6b569e\",\n  \"docs/astra-research-68.md\": \"ae95b2045e3567da310e67cf9643bbc79a9d2af26f738e62a4d58d99de5f5b0c\"\n}\n",
+    "tool_result": {
+      "chunk_id": "29f196",
+      "wall_time_seconds": 8.376e-06,
+      "exit_code": 0,
+      "original_token_count": 151,
+      "output": "{\"checks\": [{\"argv\": [\"python3\", \"-B\", \"scripts/validate_workflow.py\"], \"exit_code\": 0, \"stderr\": \"\", \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\"}, {\"argv\": [\"git\", \"diff\", \"--check\"], \"exit_code\": 0, \"stderr\": \"\", \"stdout\": \"\"}, {\"argv\": [\"python3\", \"-B\", \"scripts/manage_storage.py\"], \"exit_code\": 0, \"stderr\": \"\", \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\"}], \"embedded_bindings\": 5, \"frozen_files\": 7, \"receipt\": \"research/astra-pass68-verification.json\", \"status\": \"passed\"}\n"
+    },
+    "source_sha256_before_execution": "c7666d63c7d9d1ca758deb3af3c866bd25d4e22583b781d6e1265172fe2ddd76"
+  },
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "mathematical_verification": "Three independently reviewed manuscripts plus root full source and review reads. Exact greedy digits, entire invariant-region exclusion and finite budget termination, explicit alternate witness, prime/composite residue construction, and all forward/closed endpoints checked by hand. No mathematical program or numerical search ran.",
+  "scope": "Uniform sufficient separated and unit-plus-narrow-cluster classes, and a counterexample to the specified revisiting algorithm. No arbitrary-tuple reduction, no general grid impossibility, no new Lean declaration or unrestricted LRC resolution.",
+  "ongoing_work_excluded": "Separate general-slow cluster audit remains active and is not an accepted part of this checkpoint.",
+  "storage": "No local Lean cache restored; storage report retained among checks."
+}
