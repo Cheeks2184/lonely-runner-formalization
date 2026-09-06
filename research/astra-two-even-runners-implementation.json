@@ -1,0 +1,87 @@
+{
+  "task": "/root/two_even_runners_fresh",
+  "status": "frozen_engineering_blocker_after_final_authorized_repair_check",
+  "source_plan": "research/astra-two-even-assembly-plan.md",
+  "source_plan_sha256": "3b1cf3018ebb78b01a2d43eaf8d534d80ee313db4e55a37b863a147c07bc0073",
+  "owned_files": [
+    "LonelyRunner/TwoEvenRunners.lean",
+    "research/astra-two-even-runners-implementation.json"
+  ],
+  "source": {
+    "path": "LonelyRunner/TwoEvenRunners.lean",
+    "sha256": "53c86efda33d942bb7e6f10362535c4c3962de5bbf85232d5b01ac30733d8789",
+    "lines": 557,
+    "public_declarations": [
+      "fiveMovingNaturalRunners_of_two_even_residues",
+      "one_three_divisible_two_even_witness"
+    ]
+  },
+  "delivery_metrics": {
+    "check_kind": "lean",
+    "first_check_success": false,
+    "worker_repair_rounds": 2,
+    "astra_repair_rounds": 1,
+    "astra_repair_lines": 0,
+    "worker_elapsed_seconds": null,
+    "usage": null,
+    "evidence": [
+      "python3 -B scripts/validate_workflow.py: exit 0",
+      "historical focused checks lack physical source snapshots and raw stream files; this is disclosed, not reconstructed"
+    ]
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/validate_workflow.py",
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.",
+      "scope": "workflow record only; no Lean or cache-writing command was run"
+    },
+    {
+      "kind": "initial focused Lean check",
+      "source_sha256_before_check": "6c7af32bf4e99c25276afebfc1929dcc90505820bfca279c5db6a9253cfac35a",
+      "command": "flock -n .lake/verification.lock bash -lc 'export PATH=/home/joshua/.elan/bin:$PATH; ulimit -v 8388608; ulimit -t 179; timeout 180s lake env lean -j1 -s65536 LonelyRunner/TwoEvenRunners.lean -o .lake/build/lib/lean/LonelyRunner/TwoEvenRunners.olean -i .lake/build/lib/lean/LonelyRunner/TwoEvenRunners.ilean'",
+      "exit_code": 1,
+      "wall_seconds": 9.976339751,
+      "raw_capture": "functions.exec chunk_id 8320ff; complete tool stdout/stderr retained in task transcript",
+      "diagnostic_summary": "scalar closed-face coercions; generic odd-map residue construction; signed phase tuple destructuring; closed face norm transport; 6.4 branch placement; Finset cardinal adapter"
+    },
+    {
+      "kind": "focused Lean check after repair 1",
+      "source_sha256_before_check": "09d5228cd9d8a627dc1ff15ff0e007660a75c25493b70c328bcb9de65ee0b1cf",
+      "command": "flock -n .lake/verification.lock bash -lc 'export PATH=/home/joshua/.elan/bin:$PATH; ulimit -v 8388608; ulimit -t 179; timeout 180s lake env lean -j1 -s65536 LonelyRunner/TwoEvenRunners.lean -o .lake/build/lib/lean/LonelyRunner/TwoEvenRunners.olean -i .lake/build/lib/lean/LonelyRunner/TwoEvenRunners.ilean'",
+      "exit_code": 1,
+      "wall_seconds": 11.292761658,
+      "raw_capture": "functions.exec chunk_id 85312c; complete tool stdout/stderr retained in task transcript",
+      "diagnostic_summary": "explicit Fin3 literal witnesses are required; norm-affine transports need directional rewrites; unit and closed signed-6.4 branches were accidentally placed after end LonelyRunner; Finset.card_eq_one returns an equality of finsets"
+    },
+    {
+      "kind": "final authorized focused Lean check after repair 2",
+      "capture_json": {
+        "path": "/tmp/astra-two-even-repair2.json",
+        "bytes": 82792,
+        "sha256": "6ed93ebf7aa95bbeb181b4490e01a1cab7c6fe1fa6703c642bfc2d1876127701",
+        "content_status": "The complete driver-generated JSON is retained at this immutable path and contains base64-embedded physical before/after source bytes and complete stdout/stderr streams. This concise durable receipt binds that full object by path, byte count, and SHA-256; it does not reproduce the 82,792-byte object a second time."
+      },
+      "source_sha256_before_check": "53c86efda33d942bb7e6f10362535c4c3962de5bbf85232d5b01ac30733d8789",
+      "source_sha256_after_check": "53c86efda33d942bb7e6f10362535c4c3962de5bbf85232d5b01ac30733d8789",
+      "argv": [
+        "flock", "-n", ".lake/verification.lock", "timeout", "--preserve-status", "180s", "prlimit", "--as=8589934592", "--cpu=179:180", "lake", "env", "lean", "-j1", "-s65536", "LonelyRunner/TwoEvenRunners.lean", "-o", ".lake/build/lib/lean/LonelyRunner/TwoEvenRunners.olean", "-i", ".lake/build/lib/lean/LonelyRunner/TwoEvenRunners.ilean"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 7.377033557015238,
+      "raw_streams": {
+        "stdout": {"path": "/tmp/astra-two-even-repair2.stdout", "bytes": 9234, "sha256": "8cdcececd7d7e99c83731a486f9c9f96d52eda3edf5f8b08c87b17b14631a33a"},
+        "stderr": {"path": "/tmp/astra-two-even-repair2.stderr", "bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+      },
+      "resource_controls": {"address_space_bytes": 8589934592, "cpu_soft_seconds": 179, "cpu_hard_seconds": 180, "wall_timeout_seconds": 180, "lean_threads": 1, "lean_stack_kib": 65536, "lock": ".lake/verification.lock"},
+      "artifacts": {},
+      "diagnostic_summary": "Final source does not elaborate: the three norm-affine rewrites require unfolding each local s before rw [h]; the two even-face fractional equalities need ring normalization from 5/6 plus the signed residue term; the doubled-face upper band needs the explicit 2/3 <= 5/6 proof; and the two-erase cardinal proof must supply membership in the first erase before using the second erase. No further check or source edit was performed."
+    }
+  ],
+  "next_check": {
+    "requires_root_serial_slot": true,
+    "status": "exhausted: final authorized repair check failed",
+    "policy": "no further Lean checks or source edits by this worker"
+  },
+  "note": "The final driver capture physically snapshots the actual source before the check and stores complete raw streams; the capture object includes all of those bytes and its path/hash are bound above. Astra correction guidance round 1 supplied the structural move, literal Fin3 witness requirement, Finset.card_eq_one API correction, and rewrite direction; Astra direct changed lines are 0. The two historical checks have transcript chunks only, not the required physical snapshots/raw log files; this missing evidence is not reconstructed. No axiom probe has run because neither public declaration has yet elaborated. No placeholder olean output was created."
+}

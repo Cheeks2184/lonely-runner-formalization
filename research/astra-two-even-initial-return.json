@@ -1,0 +1,25 @@
+{
+  "task": "/root/two_even_runners_implementation",
+  "status": "partial_source_preparation_not_ready_for_focused_check",
+  "source_plan": "research/astra-two-even-assembly-plan.md",
+  "source_plan_sha256": "3b1cf3018ebb78b01a2d43eaf8d534d80ee313db4e55a37b863a147c07bc0073",
+  "owned_files": [
+    "LonelyRunner/TwoEvenRunners.lean",
+    "research/astra-two-even-runners-implementation.json"
+  ],
+  "delivery_metrics": {
+    "check_kind": "lean",
+    "first_check_success": null,
+    "worker_repair_rounds": 0,
+    "astra_repair_rounds": 0,
+    "astra_repair_lines": 0,
+    "worker_elapsed_seconds": null,
+    "usage": null,
+    "evidence": []
+  },
+  "checks": [],
+  "note": "Only the settled local affine and scalar-face helpers have been saved. The required odd-face assembly, even-face signed-6.4 branches, public fixed-role theorem, and count adapter are not yet implemented; no focused Lean slot should be granted for this partial source.",
+  "root_recorded_reason": "Partial scalar/transport source only; no check. Old worker context budget exhausted, no semantic gap. Fresh Terra/high continuation required.",
+  "partial_source_sha256": "bf295112fc3831ee6478c80dee6b88d03f23c75555ee27f8fc4ba2cc931f2006",
+  "partial_source_utf8": "import LonelyRunner.OneSixthComplementMaximizer\nimport LonelyRunner.SignedRemainingPhase\nimport LonelyRunner.SixthAffinePhase\nimport LonelyRunner.SmallDenominatorWitness\nimport LonelyRunner.ThreeEvenOrbit\nimport Mathlib.Tactic\n\n/-!\n# The two-even branch for five moving speeds\n\nThe fixed roles are pivot `0`, other even label `1`, and odd labels `2,3,4`.\nAll phase choices are shared times; speed values themselves need not be distinct.\n-/\n\nnamespace LonelyRunner\n\nprivate theorem two_even_norm_affine (t : \u211d) (d : \u2115)\n    (\u03b1 \u03b2 z e : \u2124) (hd : (d : \u2124) = 6 * z + e) :\n    circleNorm (((\u03b1 : \u211d) * t + (\u03b2 : \u211d) / 6) * (d : \u211d)) =\n      circleNorm ((\u03b1 : \u211d) * Int.fract (t * (d : \u211d)) +\n        ((\u03b2 * e : \u2124) : \u211d) / 6) := by\n  rw [circleNorm_eq_min_fract, circleNorm_eq_min_fract,\n    fract_sixth_affine_time t d \u03b1 \u03b2 z e hd]\n\nprivate theorem two_even_fract_shift (d : \u2115) (hd : 6 \u2223 d)\n    (t : \u211d) (b : \u2124) :\n    Int.fract ((t + (b : \u211d) / 6) * (d : \u211d)) =\n      Int.fract (t * (d : \u211d)) := by\n  obtain \u27e8u, hu\u27e9 := hd\n  have hdu : (d : \u2124) = 6 * (u : \u2124) + 0 := by exact_mod_cast hu\n  simpa using fract_sixth_affine_time t d 1 b (u : \u2124) 0 hdu\n\nprivate theorem two_even_odd_face_closed (\u03c3 : \u2124) (b : \u2115)\n    (h\u03c3 : \u03c3 = 1 \u2228 \u03c3 = -1) (hb1 : 1 \u2264 b) (hb5 : b \u2264 5) :\n    (1 : \u211d) / 6 \u2264 circleNorm ((\u03c3 : \u211d) * (b : \u211d) / 6) := by\n  rcases h\u03c3 with rfl | rfl\n  \u00b7 apply circleNorm_ge_of_int_band 0 ((b : \u211d) / 6) ((1 : \u211d) / 6) <;>\n      norm_num at * <;> exact_mod_cast hb1 <;> exact_mod_cast hb5\n  \u00b7 rw [show ((-1 : \u2124) : \u211d) * (b : \u211d) / 6 = -((b : \u211d) / 6) by ring,\n      circleNorm_neg]\n    apply circleNorm_ge_of_int_band 0 ((b : \u211d) / 6) ((1 : \u211d) / 6) <;>\n      norm_num at * <;> exact_mod_cast hb1 <;> exact_mod_cast hb5\n\nprivate theorem two_even_odd_face_forward (\u03c3 : \u2124) (b : \u2115)\n    (hchoice : (\u03c3 = 1 \u2227 1 \u2264 b \u2227 b \u2264 4) \u2228\n      (\u03c3 = -1 \u2227 2 \u2264 b \u2227 b \u2264 5)) :\n    (1 : \u211d) / 6 \u2264 Int.fract ((\u03c3 : \u211d) * (b : \u211d) / 6) \u2227\n      Int.fract ((\u03c3 : \u211d) * (b : \u211d) / 6) < (5 : \u211d) / 6 := by\n  rcases hchoice with \u27e8rfl, hb1, hb4\u27e9 | \u27e8rfl, hb2, hb5\u27e9 <;>\n    interval_cases b <;> norm_num [Int.fract] at *\n\nprivate theorem two_even_face_double :\n    Int.fract ((5 : \u211d) * 2 / 6) = (2 : \u211d) / 3 := by norm_num [Int.fract]\n\nprivate theorem two_even_face_forward (\u03c3 : \u2124) (b : \u2115)\n    (h\u03c3 : \u03c3 = 1 \u2228 \u03c3 = -1) (hb : b = 1 \u2228 b = 5) :\n    (1 : \u211d) / 6 \u2264 Int.fract ((5 + 2 * (\u03c3 : \u211d) * (b : \u211d)) / 6) \u2227\n      Int.fract ((5 + 2 * (\u03c3 : \u211d) * (b : \u211d)) / 6) < (5 : \u211d) / 6 := by\n  rcases h\u03c3 with rfl | rfl <;> rcases hb with rfl | rfl <;>\n    norm_num [Int.fract]\n\nprivate theorem two_even_face_closed (\u03c3 : \u2124) (a b : \u2115)\n    (h\u03c3 : \u03c3 = 1 \u2228 \u03c3 = -1) (ha : a = 3 \u2228 a = 5) (hb : b \u2264 5) :\n    (1 : \u211d) / 6 \u2264 Int.fract ((5 * (a : \u211d) + 2 * (\u03c3 : \u211d) * (b : \u211d)) / 6) \u2227\n      Int.fract ((5 * (a : \u211d) + 2 * (\u03c3 : \u211d) * (b : \u211d)) / 6) \u2264\n        (5 : \u211d) / 6 := by\n  rcases h\u03c3 with rfl | rfl <;> rcases ha with rfl | rfl <;>\n    interval_cases b <;> norm_num [Int.fract] at *\n\nend LonelyRunner\n"
+}

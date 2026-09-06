@@ -827,3 +827,22 @@ project-specific axiom.
 #print axioms LonelyRunner.renault_phase_six_one_signed
 #print axioms LonelyRunner.renault_phase_six_one_signed_reflected
 #print axioms LonelyRunner.renault_phase_six_four_signed
+
+-- Remaining parity branches and the canonical six-total-runner transition.
+#print axioms LonelyRunner.threeEven_exists_even_unit_sixth_residue
+#print axioms LonelyRunner.threeEven_exists_odd_unit_sixth_residue
+#print axioms LonelyRunner.threeEven_circleNorm_nat_mul_fract
+#print axioms LonelyRunner.threeEven_circleNorm_sixth_weighted_shift
+#print axioms LonelyRunner.threeEven_small_phase_double_four_safe
+#print axioms LonelyRunner.threeEven_circleNorm_double_lt_third
+#print axioms LonelyRunner.threeEven_dvd_of_large_partner_at_zeros
+#print axioms LonelyRunner.threeEven_small_sixth_dilate_norm
+#print axioms LonelyRunner.three_even_at_odd_zero
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_three_even_residues
+#print axioms LonelyRunner.one_three_divisible_three_even_witness
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_two_even_residues
+#print axioms LonelyRunner.one_three_divisible_two_even_witness
+#print axioms LonelyRunner.fiveMovingNaturalRunners_of_primitive
+#print axioms LonelyRunner.fiveMovingNaturalRunners
+#print axioms LonelyRunner.lowerCountPositiveIntegerHypothesis_seven
+#print axioms LonelyRunner.sixRunners
