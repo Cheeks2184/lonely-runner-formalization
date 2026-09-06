@@ -186,6 +186,13 @@ import LonelyRunner.ThreeResidueModSix
 import LonelyRunner.BoundaryZeroDivisibility
 import LonelyRunner.SixthAffineSpecialAnchor
 
+
+import LonelyRunner.OddHalfTimeShift
+import LonelyRunner.PairSafeSixthAffine
+import LonelyRunner.TwoOddOutsideThree
+import LonelyRunner.EvenAnchorThreeTimes
+import LonelyRunner.TwoDivisibleBoundary
+
 /-!
 Root import for the formal Lonely Runner development.
 -/

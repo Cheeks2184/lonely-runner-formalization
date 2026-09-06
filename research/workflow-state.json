@@ -6,7 +6,23 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/selector_oddhalf_source_review",
+      "id": "/root/one_three_divisible_plan",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "in_progress",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a233f95",
+      "target": "Bounded published-proof analysis and exact Lean contract plan for remaining primitive five-moving one-three-divisible case; no implementation.",
+      "owned_files": [
+        "research/astra-one-three-divisible-plan.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "/root/two_divisible_final_source_review",
       "agent_id": "/root/prime_difference_compression_plan",
       "kind": "research",
       "status": "in_progress",
@@ -14,10 +30,10 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "865b96f",
-      "target": "Independent exact two-contract source review of compiled selector and odd half-time identity; one capped import probe.",
+      "source_checkpoint": "d2f5f28",
+      "target": "Independent fourcontract source review of primitive exacttwo contradiction/witness and primitive\u22652/nonprimitiveexact2 normalization wrappers.",
       "owned_files": [
-        "research/astra-selector-oddhalf-source-review.md"
+        "research/astra-two-divisible-final-source-review.md"
       ],
       "checks": []
     }
@@ -6928,13 +6944,98 @@
       ],
       "checks": [],
       "result": "Full source delivered and root read; first focused build pending."
+    },
+    {
+      "id": "/root/even_anchor_fallback_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a233f95",
+      "target": "Source-only exact reviewed three-time even-anchor fallback using compiled two-odd complement and phase helpers.",
+      "owned_files": [
+        "LonelyRunner/EvenAnchorThreeTimes.lean"
+      ],
+      "checks": [],
+      "result": "Source delivered SHA5eaffd7216e2bf0baec0d1d826e33eb60a80e918ff068997e48744bd15763557; root fully read; focused compile running."
+    },
+    {
+      "id": "/root/selector_oddhalf_source_review",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "865b96f",
+      "target": "Independent exact two-contract source review of compiled selector and odd half-time identity; one capped import probe.",
+      "owned_files": [
+        "research/astra-selector-oddhalf-source-review.md"
+      ],
+      "checks": [],
+      "result": "Independent source review frozen and accepted; root replay next."
+    },
+    {
+      "id": "/root/primitive_two_divisible_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a233f95",
+      "target": "Source-only primitive exact-two-divisible branch contradiction and positive witness wrapper from compiled boundary/cover/divisorcounts.",
+      "owned_files": [
+        "LonelyRunner/PrimitiveTwoDivisible.lean"
+      ],
+      "checks": [],
+      "result": "Delivered source rootread; focused pass after exposing let-bound set for rewrite; exact primitive contradiction and positive witness retained."
+    },
+    {
+      "id": "/root/two_divisible_normalization_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a233f95",
+      "target": "Source-only nonprimitive exact-two normalization and primitive at-least-two witness wrapper; preserve distinct scopes.",
+      "owned_files": [
+        "LonelyRunner/TwoDivisibleNormalization.lean"
+      ],
+      "checks": [],
+      "result": "Source delivered rootread; first actualbuild failed at final scaled phase cast equality. Root correction pending."
+    },
+    {
+      "id": "/root/boundary_assembly_source_review",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a233f95",
+      "target": "Independent exact three-contract source review: odd labels, even-anchor common times and full boundary-zero assembly; one capped import probe.",
+      "owned_files": [
+        "research/astra-boundary-assembly-source-review.md"
+      ],
+      "checks": [],
+      "result": "Allthree exact source contracts accepted; frozenreport e4f69d48fa3a5930347b33c6b73f0d4b942ab03d3100f80c7041ca64a45f9375; one guardedprobe passed. Root fullread/replay finishing."
     }
   ],
   "latest_checkpoint": "Pass50PR49openheadc538c85; allfour fullverified/read/replayed. Pass51 sevenfocusedcontracts, halfchoices/residue3review/rootreplaypassed, remaining4reviewactive; fullbuildstarted. Boundaryassemblystaticreviewactive; five-rowselectorTerra sourceactive.",
   "next_actions": [
-    "Publish verified Pass51 seven phase/boundary helper declarations and reviewed assembly manuscript; merge exact head after CI.",
-    "Build two-odd-label helper; implement reviewed even-anchor fallback and boundary-zero maximum assembly.",
-    "Review selector and odd-half exact source contracts."
+    "Read and replay frozen three-contract boundary source review, then publish/merge Pass52.",
+    "Integrate four compiled primitive/normalization contracts, run full build/trust and independent review for Pass53.",
+    "Complete one-three-divisible published-proof decomposition and review exact remaining lemmas."
   ],
   "research_holds": [
     {
@@ -7979,8 +8080,8 @@
   "runtime_goal_observation": {
     "status": "active",
     "objective": "Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
-    "observed_this_continuation": true,
-    "supported_resume_needed": false
+    "observed_at": "2026-09-06T12:53Z",
+    "note": "Full goal remains unresolved; no reset or status change."
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",
@@ -7996,16 +8097,7 @@
     "instructions_path": ".codex/config.toml",
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
-  "publication_in_progress": {
-    "checkpoint": "Pass50",
-    "phase": "pushed_pr_open_required_checks_pending",
-    "branch": "codex/astra-two-divisible-cover",
-    "base_main": "901dcfda808cceb32718a2e98fdd793cc78154fe",
-    "verification": "research/astra-pass50-verification.json",
-    "pr_number": 49,
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/49",
-    "head_sha": "c538c85a8172822917135ac5665951dcdb649150"
-  },
+  "publication_in_progress": null,
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
     "author_sha256": "6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f",
@@ -10097,12 +10189,27 @@
     }
   },
   "last_publication": {
-    "pr": 49,
-    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/49",
-    "head": "c538c85a8172822917135ac5665951dcdb649150",
-    "merge": "865b96f66682599965694868505d8b5a0c1f67e8",
-    "merged_at": "2026-09-06T12:37:23Z",
-    "checks": "Lean/trust and exact certificates SUCCESS; CLEAN; no blocking reviews; exact head merged; fetched ancestry and main synchronized"
+    "pr": 50,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/50",
+    "head": "a233f95d86cb4aec65fa57e74961afed9ba02581",
+    "merge": "d2f5f28efb2b7d093f38a9a951acd2571e4ece58",
+    "merged_at": "2026-09-06T12:51:37Z",
+    "ci_run": 34033812717,
+    "checks": [
+      {
+        "name": "Lean build and trust audit",
+        "job": 101488122687,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T12:42:36Z"
+      },
+      {
+        "name": "Exact computational certificates",
+        "job": 101488122600,
+        "result": "SUCCESS",
+        "completedAt": "2026-09-06T12:50:22Z"
+      }
+    ],
+    "verified": "CLEAN, exacthead, no blockingreviews, merge, fetch ancestry, ff and local main sync"
   },
   "publication_receipts": [
     {
@@ -10253,6 +10360,25 @@
     "fiber_source_sha256": "050888f1d9017183661dbca6e2e61bfeb518849c339bc77b43605a6b3918bdd8",
     "collision_source_sha256": "5b984687f89ea16bad34453d3c048ceb974f999af9cd1969f73d56ce30e13cec",
     "pass47_full_verification": "Fullbuild actual0/3685jobs; trust actual0/605dependency+8free. Exact source reviews/replays pending.",
-    "manuscript_review_sha256": "4d499c4477e80445646c6f82fcb72e36009ed1b9fc35b0023dd278f399598f71"
+    "manuscript_review_sha256": "4d499c4477e80445646c6f82fcb72e36009ed1b9fc35b0023dd278f399598f71",
+    "latest_boundary_status": {
+      "status": "focused kernel build passed",
+      "files": {
+        "LonelyRunner/OddHalfTimeShift.lean": "ea274daeadc4bf2242399663cd5da914b1c096f62b58cb43fdffa2e625af6b5c",
+        "LonelyRunner/PairSafeSixthAffine.lean": "290b5844fd7e3a11baf1c51d724a904362a41d76e31c3e78c45c7818b9763737",
+        "LonelyRunner/TwoOddOutsideThree.lean": "6b2c9fb02bffe58cdd2383246c56dfca3f91fe3b88c1a2902486b4d90cae6735",
+        "LonelyRunner/EvenAnchorThreeTimes.lean": "5fbaaa745630ff16ae02249f1a52032b7f63f7453d1c853fbffba0a88182e2f7",
+        "LonelyRunner/TwoDivisibleBoundary.lean": "5a3dc7ca4c0d777ba38d47e2f2b86a1036f9d6080f03f473ad87f6d31c1ca66c"
+      },
+      "scope": "Exact original allreal no-witness boundary-zero implication. Independent source review and full build pending."
+    },
+    "primitive_and_normalization_status": {
+      "files": {
+        "LonelyRunner/PrimitiveTwoDivisible.lean": "873916a4fd815c75731c7327de419d96efde4c40fe74ed15d011b40b577f678d",
+        "LonelyRunner/TwoDivisibleNormalization.lean": "d812237f06d63e67c8739122c76a5e67daa470402575ccafcdcee4c41d950286"
+      },
+      "status": "focused builds passed; full integration and independent source review queued after boundary checkpoint",
+      "scope": "Primitive exactly-two contradiction/witness; primitive at leasttwo witness; nonprimitive exactlytwo witness. Not unrestricted."
+    }
   }
 }
