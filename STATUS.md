@@ -6,6 +6,13 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [thirty-seventh Astra checkpoint](docs/astra-research-37.md) adds generic
+rational box and partition soundness, plus a fixed two-leaf pilot. The full
+build passed with 3,651 jobs; the trust audit accepted 497 dependency reports
+and the empty-index control has no axioms. The complete pilot source passed
+the 60-second, 4 GiB and 64 KiB gates. Its twelve-row box does not establish
+uniform five-runner supply.
+
 The [thirty-sixth Astra checkpoint](docs/astra-research-36.md) adds generic
 rational-margin row equivalences and soundness, nonuniform closed endpoint
 completeness, and strict common-margin pair-sum completeness. The full build

@@ -6,7 +6,40 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/rational_margin_box_pilot_plan_review",
+      "id": "/root/five_adic_carry_symbolic_plan",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "in_progress",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Settle symbolic finite triple proof decomposed into small <=1600-state geometry/carry helpers, preserving publiccontract; no Lean run or further full-domain decide.",
+      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "owned_files": [
+        "research/astra-five-adic-carry-symbolic-plan.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "/root/five_adic_filter_arithmetic_implementation",
+      "agent_id": "/root/four_runner_completion",
+      "kind": "routine",
+      "status": "in_progress",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement only settled natural digit/residue/correction algebra and small two-row mod5 avoidance, no descent/hard branch/assembly.",
+      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "owned_files": [
+        "LonelyRunner/FiveAdicFiltering.lean",
+        "research/astra-five-adic-filter-arithmetic-implementation.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "/root/five_adic_filter_plan_review",
       "agent_id": "/root/mss_published_bound_audit",
       "kind": "research",
       "status": "in_progress",
@@ -14,28 +47,10 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "target": "Independently check the exact settled generic box/partition API and two supplied leaves, no Lean or source change, before bounded Terra implementation.",
-      "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+      "target": "Independent exact decomposition/filtering/seeded-descent contract review, including current coefficient, topdigit4, cutoff and multiplier representative; no Lean.",
+      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
       "owned_files": [
-        "research/astra-rational-margin-box-pilot-plan-review.md"
-      ],
-      "checks": []
-    },
-    {
-      "id": "/root/rational_margin_box_pilot_implementation",
-      "agent_id": "/root/five_runner_exception",
-      "kind": "routine",
-      "status": "in_progress",
-      "requested_model": "gpt-5.6-terra",
-      "requested_effort": "medium",
-      "observed_model": null,
-      "observed_effort": null,
-      "target": "Implement root-reviewed generic rational-margin box/derived-partition checker and exactly the supplied two-leaf pilot, with resource gates; separate from frozen Pass36.",
-      "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f plus frozen Pass36 cores",
-      "owned_files": [
-        "LonelyRunner/RationalMarginBoxes.lean",
-        "LonelyRunner/RationalMarginBoxPilot.lean",
-        "research/astra-rational-margin-box-pilot-implementation.md"
+        "research/astra-five-adic-filter-plan-review.md"
       ],
       "checks": []
     }
@@ -4812,9 +4827,202 @@
       ],
       "checks": [],
       "result": "Frozen plan fully read and guarded root replay passed; independent review pending. No pilot execution."
+    },
+    {
+      "id": "/root/rational_margin_box_pilot_plan_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independently check the exact settled generic box/partition API and two supplied leaves, no Lean or source change, before bounded Terra implementation.",
+      "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+      "owned_files": [
+        "research/astra-rational-margin-box-pilot-plan-review.md"
+      ],
+      "checks": [
+        {
+          "artifact_sha256": "c327faf2230f223ac8abf7036e9ce5d3d52b0c34ca2c935e8253f61c5444c61a",
+          "program_sha256": "a426fd4c9522fd22f2d2deee7876a79909111e994bde124212210cef369b95aa",
+          "stdout_sha256": "ca40f6ddc2f72a189c94540b4fd47e0b5f56226975741bfb9f3d89b91519978a",
+          "status": "passed"
+        }
+      ],
+      "result": "Accepted exact box/partition plan; root guarded replay passed."
+    },
+    {
+      "id": "/root/five_runner_ordinary_insertion_plan",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Assess all-fifths ordinary five-runner insertion and first-lap sufficient classes versus mixed certificate route; exact symbolic conditions and finite-sum residual counts, no tuple scan or source edits.",
+      "source_checkpoint": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
+      "owned_files": [
+        "research/astra-five-runner-ordinary-insertion-plan.md"
+      ],
+      "checks": [
+        {
+          "artifact_sha256": "4a4dd3d92d290bb16d182083f62e2b105fa4cd1cc3854fb0944bacc6c15aeeca",
+          "program_sha256": "4d14debe65c2eacfdd19c6a648a1be6af87c887d2e044a8fe095c1e9c2b1a7ba",
+          "stdout_sha256": "53297f4758ec9d857cbc44edb68a18347dc8334fc67e39996a2fafd93bef7854",
+          "status": "passed",
+          "scope": "Root full read and independent algebra check; exact sum/controls replay. No Lean implementation.",
+          "implementation_disposition": "held as supporting mathematics; prioritize direct published proof assessment over expanding a 20.1-billion raw finite domain"
+        }
+      ],
+      "result": "Closed ordinary coefficients 8/24 and coarse16 verified; first-lap correctedH<=4a. Raw remaining20,140,328,530 beforeotherfilters. Implementation held pending direct proof assessment."
+    },
+    {
+      "id": "/root/rational_margin_box_pilot_implementation",
+      "agent_id": "/root/five_runner_exception",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement root-reviewed generic rational-margin box/derived-partition checker and exactly the supplied two-leaf pilot, with resource gates; separate from frozen Pass36.",
+      "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f plus frozen Pass36 cores",
+      "owned_files": [
+        "LonelyRunner/RationalMarginBoxes.lean",
+        "LonelyRunner/RationalMarginBoxPilot.lean",
+        "research/astra-rational-margin-box-pilot-implementation.md"
+      ],
+      "checks": [
+        {
+          "source_sha256": "9faab792a9e4120d931cb24eef071b072eee89a580d174f224ec2a7a123d51bf",
+          "pilot_sha256": "25e144207b1ef4121c155f50d9ca9209655bcca46fdc40b1b06a4bc88f1f84e8",
+          "report_sha256": "99e984b4885991504bb7beae1020e3acf91c31ff584c24131cffbb10e5c1ac24",
+          "source_exit_code": 0,
+          "named_exit_code": 0,
+          "peak_rss_kib": 3312732,
+          "wall_seconds": 1.82,
+          "pilot_source_bytes": 5646,
+          "pilot_leaves": 2
+        }
+      ],
+      "result": "Generic leaf/tree soundness and named two-leaf pilot completed; final source review/root replay pending."
+    },
+    {
+      "id": "/root/five_total_direct_proof_screen",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Screen a primary published proof for four positive moving speeds (five total runners), comparing concrete Lean obligations with current finite-height/partition route; no implementation or discovery scan.",
+      "source_checkpoint": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
+      "owned_files": [
+        "research/astra-five-total-direct-proof-screen.md"
+      ],
+      "checks": [],
+      "result": "Primary Barajas-Serra Sections2-3 direct five-total proof actually read; decomposition-first and correlated-carry formalization recommended. Frozen report received, root read/replay pending.",
+      "evidence_sha256": "5b670944920047d9a4909c8f40372a700d55da4acf0b25b7926c22a8dcc176d0"
+    },
+    {
+      "id": "/root/five_adic_carry_plan",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Derive small finite mod5 three-unit digit/carry avoidance contract for direct five-total proof, including correlated carries and signs; no implementation or speed-tuple scan.",
+      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "owned_files": [
+        "research/astra-five-adic-carry-plan.md"
+      ],
+      "checks": [
+        {
+          "artifact_sha256": "da1a4f4828f6e9d9cae6ed601151e0b56b518bea8e9add524e06b289b1713e69",
+          "program_sha256": "d11024c4ef750427d3b6826423dc413700fb17582e79cc1a32105122aa6375f4",
+          "stdout_sha256": "03b2a2ec127ba9d22b388a61885b714c3d52d8d1f6b30516644cd6d695855249",
+          "status": "passed",
+          "root_full_symbolic_read": true,
+          "states": 64000,
+          "candidate_attempts": 960000,
+          "failed_triples": 0,
+          "python_elapsed_seconds": 0.386974714
+        }
+      ],
+      "result": "Finite normalized triple contract symbolically established and root independently read/replayed; kernel proof not yet implemented."
+    },
+    {
+      "id": "/root/five_adic_filter_plan",
+      "agent_id": "/root/five_adic_filter_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Settle decomposition-first level identities and descending two-label mod5 avoidance contract, independently of hard triple carry lemma; no implementation or speed scan.",
+      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "owned_files": [
+        "research/astra-five-adic-filter-plan.md"
+      ],
+      "checks": [],
+      "result": "Frozen decomposition-first and seeded two-label filter plan received; root read/replay and independent review pending.",
+      "evidence_sha256": "9e320be8fc8ce9269fff41a23aeab36df4d5934cf3371902663ff9b8631a9e91"
+    },
+    {
+      "id": "/root/rational_margin_box_final_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent final exact-source box/tree and two-leaf pilot review, root/audit preservation, focused exact type/axiom/edge probes; no broader coverage claim.",
+      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "owned_files": [
+        "research/astra-rational-margin-box-formal-review.md"
+      ],
+      "checks": [
+        {
+          "artifact_sha256": "d3e75cededb7e8e5d33702f3d98dfe73582b85ee1121173b67bc3a9fd07eefc4",
+          "program_sha256": "c25a6a71f6512c0ad394bc4f4f43b846edd4a4bd2d370e575b4ffc200d95f75d",
+          "stdout_sha256": "c8a1453668676aecbe7f4a5a236ba6edc9a5c5a01b9a6df77caac5f3cfb3b215",
+          "status": "passed",
+          "kernel_examples": 21,
+          "dependency_reports": 11,
+          "axiom_free_reports": 1,
+          "source_guards": 14,
+          "stdout": "<stdin>:102:29: warning: Variable name `i` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'LonelyRunner.rationalMarginBandLeafOK_row' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.rationalMarginBandLeafOK_common_positive_time' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.rationalMarginBox_split_cover' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.rationalMarginBoxTreeOKCore_row' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.rationalMarginBoxTreeOK_row' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.rationalMarginBoxTreeOK_exists_positive_time' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.rationalMarginBoxPilot_accepts' depends on axioms: [propext]\n'LonelyRunner.rationalMarginBoxPilot_row' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.rationalMarginBoxPilot_exists_positive_time' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.rationalMarginBoxPilot_two_leaves' depends on axioms: [propext]\n'LonelyRunner.rationalMarginBoxPilot_fin_zero_accepts' does not depend on any axioms\n'LonelyRunner.fourRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n{\"axiom_free_reports\": 1, \"dependency_reports\": 11, \"kernel_examples\": 21, \"lean_exit_code\": 0, \"lean_stdin_sha256\": \"02f4249db79d355bbfe2c32f140f4067c67f2194bd30fa99b38724dba743d35d\", \"lean_stdout_sha256\": \"a15a266fef146a59b65c4f47bc965fb7098b38f575abd5bd1f6aeb165eb97bff\", \"resource_benchmark\": false, \"result\": \"PASS\", \"root_and_audit_prior_bytes_preserved\": true, \"source_guards\": 14, \"tuple_scan\": false}\n"
+        }
+      ],
+      "result": "Independent source review and guarded root replay passed."
+    },
+    {
+      "id": "/root/five_adic_carry_implementation",
+      "agent_id": "/root/five_runner_exception",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement exact finite coupled-carry triple contract, first one resource-capped kernel decide attempt; no integer adapter or changed contract.",
+      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "owned_files": [
+        "LonelyRunner/FiveAdicCarry.lean",
+        "research/astra-five-adic-carry-implementation.md"
+      ],
+      "checks": [],
+      "result": "Bounded enumeration branch stopped after default recursion failure and three memory-gated failures, including direct-binary and nested-state encoding. No verified carry theorem. Preserved source/report; symbolic helper plan next."
     }
   ],
-  "latest_checkpoint": "Pass36 verified: full build 3649 jobs, trust audit 470 reports, independent source review and exact root replay passed 23 examples/9 axiom reports/15 guards. Publication preparation; unrestricted LRC remains unresolved.",
+  "latest_checkpoint": "Pass37 source and resource verification complete: full3651/trust497dependency+2axiom-free; final21-example review/rootreplaypassed. Publicationpreparation. Carryfullenumerationstoppedat4GiB; symbolicsmallhelpersandfilterarithmeticcontinue; unrestrictedLRCunresolved.",
   "next_actions": [
     "Complete two Terra genericcertificate tasks and exactsource/type/axiom checks.",
     "Finish final independent resource-design report and rootreplay; then freeze sourceintegration/fullbuild/trust/finalsource review.",
@@ -5344,14 +5552,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "7e1b4073cfd0095a3e514df975313562feb82688",
+    "verified_checkpoint": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-zero-residual-mixed-height",
+    "branch": "codex/astra-rational-margin-certificates",
     "base": "main",
     "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/31",
-    "pr_number": 31,
-    "head_sha": "7e1b4073cfd0095a3e514df975313562feb82688",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/35",
+    "pr_number": 35,
+    "head_sha": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -5703,29 +5911,70 @@
         ],
         "remote_main_contains_head": true,
         "no_pending_reviews": true
+      },
+      {
+        "checkpoint": "Pass36",
+        "pr_number": 35,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/35",
+        "head_sha": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
+        "merge_sha": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+        "merged_at": "2026-09-06T05:29:49Z",
+        "status": "merged_verified",
+        "ci_run": 34013795701,
+        "checks": [
+          {
+            "name": "Lean build and trust audit",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T05:24:05Z",
+            "job_id": 101434011026
+          },
+          {
+            "name": "Exact computational certificates",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T05:29:27Z",
+            "job_id": 101434011128
+          }
+        ],
+        "remote_main_contains_head": true,
+        "local_main": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+        "no_pending_reviews": true
       }
     ],
-    "latest_published_source_checkpoint": "6ac2e9f46c9aeb376ea140de00b40a6be03d3a95",
-    "remote_main": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
-    "local_main": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+    "latest_published_source_checkpoint": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
+    "remote_main": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+    "local_main": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+    "merge_sha": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
     "checks": [
       {
         "name": "Lean build and trust audit",
         "conclusion": "SUCCESS",
-        "completed_at": "2026-09-06T04:36:24Z",
-        "job_id": 101428840613
+        "completed_at": "2026-09-06T05:24:05Z",
+        "job_id": 101434011026
       },
       {
         "name": "Exact computational certificates",
         "conclusion": "SUCCESS",
-        "completed_at": "2026-09-06T04:43:07Z",
-        "job_id": 101428840750
+        "completed_at": "2026-09-06T05:29:27Z",
+        "job_id": 101434011128
       }
     ],
-    "remote_main_contains_head": true
+    "remote_main_contains_head": true,
+    "latest_receipt": {
+      "checkpoint": "Pass36",
+      "pr": 35,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/35",
+      "head_sha": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
+      "merge_sha": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "merged_at": "2026-09-06T05:29:49Z",
+      "ci_run": 34013795701,
+      "checks": {
+        "Lean build and trust audit": "SUCCESS 2026-09-06T05:24:05Z",
+        "Exact computational certificates": "SUCCESS 2026-09-06T05:29:27Z"
+      },
+      "remote_main_ancestor_verified": true
+    }
   },
   "runtime_goal_observation": {
     "status": "active",
@@ -6216,13 +6465,10 @@
     "current_disposition": "Verified and merged in Pass33 / PR32; historical intermediate fields retained below."
   },
   "worker_recovery_latest": {
-    "worker": "/root/four_runner_completion",
-    "status": "recovered_verified",
+    "task": "/root/five_adic_carry_implementation",
     "actual_goal_status": "active",
-    "failure": "Worker ended after reporting strictpairbuildsuccess; endpointsource and both reports absent. No overall blockage.",
-    "recovery": "Followup same Terra medium worker to finish endpoint and exactprobes/reports. Retain strictpair draft; requested actual build/probe evidence.",
-    "next_action": "Continue endpoint implementation and record actual terminal verification results.",
-    "final_checks": "Endpoint/strict finalsaved source andnamed92472 exit0; exactprobes98427 exit0. Root isolatedendpointfinaltwo arithmetic/no-progressdraftissues, sourcefixedbyowner; no goalblock."
+    "resume_needed": false,
+    "disposition": "Default elaborator recursion failure preserved; same Terra/medium assigned explicitly bounded retry; externalcapsunchanged."
   },
   "four_runner_completion_initial_check": {
     "status": "worker_success_claim_withdrawn_root_exit1",
@@ -6467,7 +6713,7 @@
     }
   },
   "pending_pass36": {
-    "phase": "verified_publication_preparation",
+    "phase": "merged_main_verified",
     "branch": "codex/astra-rational-margin-certificates",
     "source_checkpoint": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
     "cache_restore_session": 33655,
@@ -6526,15 +6772,190 @@
     "storage": {
       "report_bytes": 7769166751,
       "disposition": "One shared cache retained for immediately queued separate box pilot Lean implementation; all Pass36 verification processes finished."
+    },
+    "pr": 35,
+    "head_sha": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
+    "publication_receipt": {
+      "checkpoint": "Pass36",
+      "pr": 35,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/35",
+      "head_sha": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
+      "merge_sha": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "merged_at": "2026-09-06T05:29:49Z",
+      "ci_run": 34013795701,
+      "checks": {
+        "Lean build and trust audit": "SUCCESS 2026-09-06T05:24:05Z",
+        "Exact computational certificates": "SUCCESS 2026-09-06T05:29:27Z"
+      },
+      "remote_main_ancestor_verified": true
     }
   },
   "pending_pass37": {
     "plan": "research/astra-rational-margin-box-pilot-plan.md",
     "plan_sha256": "0c1eecb6872e4c202643e5fdf237747b8262a06ed2de4cc7fea2bd84acf8a67a",
     "root_read_and_guarded_replay": "passed",
-    "independent_review": "in_progress",
+    "independent_review": {
+      "artifact_sha256": "c327faf2230f223ac8abf7036e9ce5d3d52b0c34ca2c935e8253f61c5444c61a",
+      "program_sha256": "a426fd4c9522fd22f2d2deee7876a79909111e994bde124212210cef369b95aa",
+      "stdout_sha256": "ca40f6ddc2f72a189c94540b4fd47e0b5f56226975741bfb9f3d89b91519978a",
+      "status": "passed"
+    },
     "cache_needed": true,
     "caps": "256 leaves; 64 KiB explicit certificate data; 60 seconds per whole pilot kernel check; 4 GiB peak RSS",
-    "scope": "Exactly two supplied leaves; no tuple scan or discovery."
+    "scope": "Exactly two supplied leaves; no tuple scan or discovery.",
+    "initial_pilot_check": {
+      "exit_code": 0,
+      "wall_seconds": 1.77,
+      "rss_kib": 3287692,
+      "scope": "Acceptance and two rejections only, missing semantic soundness; time enforced but RSS only measured."
+    },
+    "raw_leaf_milestone": {
+      "source_sha256": "25079f13366536571789cbd6992056e8d316ac83cb85a558472f35a74b051896",
+      "source_exit_code": 0,
+      "named_exit_code": 0,
+      "named_jobs": 3002,
+      "exact_type_axiom_probe_exit_code": 0,
+      "allowed_axioms_only": true,
+      "scope": "Raw leaf rational row and common positive time; recursive tree remains."
+    },
+    "tree_milestone": {
+      "source_sha256": "9faab792a9e4120d931cb24eef071b072eee89a580d174f224ec2a7a123d51bf",
+      "source_exit_code": 0,
+      "named_exit_code": 0,
+      "named_jobs": 3002,
+      "exact_type_axiom_probe_exit_code": 0,
+      "allowed_axioms_only": true
+    },
+    "branch": "codex/astra-rational-margin-box-pilot",
+    "source_base": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+    "root_generic_source_fully_read": true,
+    "implementation": "complete, root final read/replay and independent source review pending",
+    "source_sha256": {
+      "LonelyRunner/RationalMarginBoxes.lean": "9faab792a9e4120d931cb24eef071b072eee89a580d174f224ec2a7a123d51bf",
+      "LonelyRunner/RationalMarginBoxPilot.lean": "25e144207b1ef4121c155f50d9ca9209655bcca46fdc40b1b06a4bc88f1f84e8",
+      "LonelyRunner.lean": "a04502b8ac17cecdaa2aada77d66bac3e484e693f01c31c0b9d6f671cd586f96",
+      "LonelyRunner/AxiomAudit.lean": "170d1b3937d0c58b0a4b0601a33b570bb9e504b6102d943c5ee29d49718bd5c1"
+    },
+    "new_axiom_audit_reports": 28,
+    "root_sources_fully_read": true,
+    "full_build_session": 87992,
+    "full_build_exit_code": 0,
+    "full_build_jobs": 3651,
+    "full_build_log_sha256": "da77b590b789fb8c4cbae071bffa8a49e301a2d77104e4f8b6195ce652ee3081",
+    "trust_session": 60743,
+    "trust_exit_code": 0,
+    "trust_dependency_reports": 497,
+    "trust_axiom_free_reports": 2,
+    "trust_log_sha256": "985809ea21823abb8b23def831cd0ce3522cb83d6b0364b52c247b07c5409d69",
+    "trust_count_note": "497 dependency lists plus two axiom-free declarations: existing normalizedBadCount and new rationalMarginBoxPilot_fin_zero_accepts.",
+    "implementation_report_sha256": "8f5993f3ae0721cfc1a075eb982f583b39ccc9a382f8419229c326d19adffbdb",
+    "root_resource_replay": {
+      "report_sha256": "8f5993f3ae0721cfc1a075eb982f583b39ccc9a382f8419229c326d19adffbdb",
+      "command_sha256": "7e79d8262730f7258e3b50fff058f778fad4e0fadac1d5e9699e3527cbd2c1e1",
+      "stdout_sha256": "8750913f10f598e4ee295aa19e2652b6a24bc39dbd57315a84ad15a19617fe55",
+      "exit_code": 0,
+      "stdout": "LonelyRunner/RationalMarginBoxPilot.lean: OK\nLonelyRunner/RationalMarginBoxes.lean: OK\nmonitor=pass wall=1.853 sampled_rss_kib=4109700 child_exit=0\ngnu_time_wall=1.87 gnu_time_rss_kib=3311716 gnu_time_exit=0\nsource_bytes=5646 leaves=2\n",
+      "stderr": ""
+    },
+    "phase": "verified_publication_preparation",
+    "excluded_future_work": [
+      "research/astra-five-runner-ordinary-insertion-plan.md",
+      "research/astra-five-total-direct-proof-screen.md",
+      "research/astra-five-adic-carry-plan.md",
+      "research/astra-five-adic-filter-plan.md",
+      "LonelyRunner/FiveAdicCarry.lean",
+      "research/astra-five-adic-carry-implementation.md",
+      "research/astra-five-adic-carry-symbolic-plan.md",
+      "LonelyRunner/FiveAdicFiltering.lean",
+      "research/astra-five-adic-filter-arithmetic-implementation.md",
+      "research/astra-five-adic-filter-plan-review.md"
+    ],
+    "storage_disposition": "One shared cache retained for immediately queued settled five-adic arithmetic implementation; final box review and root replay completed.",
+    "final_source_review_root_replay": {
+      "artifact_sha256": "d3e75cededb7e8e5d33702f3d98dfe73582b85ee1121173b67bc3a9fd07eefc4",
+      "program_sha256": "c25a6a71f6512c0ad394bc4f4f43b846edd4a4bd2d370e575b4ffc200d95f75d",
+      "stdout_sha256": "c8a1453668676aecbe7f4a5a236ba6edc9a5c5a01b9a6df77caac5f3cfb3b215",
+      "status": "passed",
+      "kernel_examples": 21,
+      "dependency_reports": 11,
+      "axiom_free_reports": 1,
+      "source_guards": 14
+    }
+  },
+  "ordinary_insertion_plan": {
+    "artifact_sha256": "4a4dd3d92d290bb16d182083f62e2b105fa4cd1cc3854fb0944bacc6c15aeeca",
+    "program_sha256": "4d14debe65c2eacfdd19c6a648a1be6af87c887d2e044a8fe095c1e9c2b1a7ba",
+    "stdout_sha256": "53297f4758ec9d857cbc44edb68a18347dc8334fc67e39996a2fafd93bef7854",
+    "status": "passed",
+    "scope": "Root full read and independent algebra check; exact sum/controls replay. No Lean implementation.",
+    "implementation_disposition": "held as supporting mathematics; prioritize direct published proof assessment over expanding a 20.1-billion raw finite domain"
+  },
+  "direct_five_total_route": {
+    "artifact_sha256": "7a3affdab83961ce8e014496f8cff7ce00bce891f002b8b45a2844adf3420483",
+    "program_sha256": "46c85f5879d0ef723039c0798ac7ea415513b30dc185f379ccae76f9f7f48846",
+    "stdout_sha256": "e564d7f6c0f485751d0aeabfdad706c1bb9b5354ca65ae44cdab39388c952549",
+    "status": "passed",
+    "root_primary_sections_read": true,
+    "root_report_fully_read": true,
+    "implementation": "not begun; finite carry and decomposition contracts under review",
+    "primary_url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v15i1r48/pdf",
+    "decision": "Prioritize bounded mod5 carry/decomposition contracts over expanding height1000speedtuple checking; preserve existing finitefamily and box infrastructure."
+  },
+  "pending_pass38": {
+    "scope": "Direct five-total route, finite coupled-carry theorem first; full filtering/adapter/canonical assembly remains.",
+    "carry_plan_root_replay": {
+      "artifact_sha256": "da1a4f4828f6e9d9cae6ed601151e0b56b518bea8e9add524e06b289b1713e69",
+      "program_sha256": "d11024c4ef750427d3b6826423dc413700fb17582e79cc1a32105122aa6375f4",
+      "stdout_sha256": "03b2a2ec127ba9d22b388a61885b714c3d52d8d1f6b30516644cd6d695855249",
+      "status": "passed",
+      "root_full_symbolic_read": true,
+      "states": 64000,
+      "candidate_attempts": 960000,
+      "failed_triples": 0,
+      "python_elapsed_seconds": 0.386974714
+    },
+    "kernel_caps": "60 seconds whole source check; 4 GiB process/group RSS gate; no native_decide or silent cap increase",
+    "source_base": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+    "first_carry_attempt": {
+      "exit_code": 1,
+      "reason": "Lean default maximum recursion depth reached, not a counterexample or external resource breach.",
+      "source_sha256": "a388134939c22fa2d77fbc9e7c4128b22b36848cb72ab5f0aed7d229c74801ce",
+      "wall_seconds": 2.03,
+      "gnu_peak_rss_kib": 3315420
+    },
+    "next_carry_attempt": "No further full-domain decide attempts. Derive symbolic composition using small independently checked geometry/carry helpers.",
+    "second_carry_attempt": {
+      "exit_code": 137,
+      "reason": "Sampled process-group RSS exceeded gate; process group killed.",
+      "elapsed_seconds": 2.667,
+      "sampled_rss_kib": 4198360,
+      "source_sha256": "5f0d3e79ad44b98088546d652d88a33965ecabaa477a946897ed6ac01d6f881e",
+      "gnu_after_kill_rss_kib": 804216,
+      "note": "Killed-process GNU accounting is not a successful peak check."
+    },
+    "lean_env_preparation": "Allowlisted LEAN_PATH/LEAN_SRC_PATH/LEAN_SYSROOT/PATH/LD_LIBRARY_PATH captured; elan resolved pinned v4.32.1 binary. No target source evaluated in preparation.",
+    "direct_binary_attempt": {
+      "exit_code": 137,
+      "elapsed_seconds": 9.924,
+      "sampled_rss_kib": 4196836,
+      "gnu_after_kill_rss_kib": 4196500,
+      "source_unchanged_sha256": "5f0d3e79ad44b98088546d652d88a33965ecabaa477a946897ed6ac01d6f881e",
+      "conclusion": "Direct launch also exceeds gate; cannot attribute failure solely to launcher."
+    },
+    "nested_state_attempt": {
+      "exit_code": 137,
+      "elapsed_seconds": 8.554,
+      "sampled_rss_kib": 4194484,
+      "source_sha256": "edcc4c6a1c8a31ce6188b92d9d0a21d09f01013027290d6ed6cfeb3d1876fdb3",
+      "report_sha256": "610a1326baed5cab1aaef93030fa8e5ff36738c167514bd5685823c1d9ada9db"
+    },
+    "filter_plan_root_replay": {
+      "artifact_sha256": "34725cc13001013cdeefa89d36620442bbe7d6ccffcc0ff6f85585bdd208f500",
+      "program_sha256": "e17d3a5c02a94cffb1e599db2ceb57e3b36e954776e5b992e3fac9b1ebd527e3",
+      "stdout_sha256": "68be37f01856a5938e64e989c8b0b1ab90430f10dd04415a93e67497837003aa",
+      "status": "passed",
+      "root_full_read": true,
+      "root_correction": "Explicit positive unit residue normalization before claiming hard multiplier upper bound."
+    }
   }
 }
