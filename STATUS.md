@@ -6,6 +6,16 @@ Setup update: 2026-09-04. The current project-only workflow is documented in
 The live phase is `research` / `in_progress`. No mathematical source was changed during
 this setup.
 
+The [thirty-first Astra checkpoint](docs/astra-research-31.md) records
+accepted manuscript-only direct-or-mixed component obstructions. The raw N=3
+direct-or-mixed union fails exactly at `(a,2a)` when `3` divides `a`, while
+the primitive N=3 statement survives. The endpoint-owner lattice and an
+infinite primitive family rule out component-preserving conversion, but the
+same family has global mixed witnesses in other components. This is neither a
+primitive uniform-supply counterexample nor an LRC result. Pass 30 remains the
+latest Lean evidence: its 3,638-job build and 432 permitted-only axiom reports
+were not rerun for this manuscript checkpoint.
+
 The [thirtieth Astra checkpoint](docs/astra-research-30.md) records the
 kernel-checked sharper stationary finite-height reduction and canonical
 finite-family equivalence. At total count `N`, it uses the inclusive cutoff

@@ -20,6 +20,10 @@ The [latest prior Lean checkpoint](docs/astra-research-28.md) records the
 kernel-checked finite pair-sum witness/certificate completeness bridge and its
 canonical equivalence, with a passing full build, trust audit, and independent
 review.
+The [Pass 31 checkpoint](docs/astra-research-31.md) records accepted
+manuscript-only direct-or-mixed component obstructions. It classifies the raw
+N=3 failure, isolates a sharp local-component limitation, and preserves the
+fact that primitive global supply and unrestricted LRC are unresolved.
 The [Pass 29 research checkpoint](docs/astra-research-29.md) records accepted
 conditional exact-packet work, an accepted mixed-margin equivalence, and an
 accepted one-deletion-family manuscript. It adds no Lean theorem, uniform
