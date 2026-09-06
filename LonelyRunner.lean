@@ -127,6 +127,9 @@ import LonelyRunner.EndpointCompleteness
 import LonelyRunner.StrictPairSumCompleteness
 import LonelyRunner.RationalMarginBoxes
 import LonelyRunner.RationalMarginBoxPilot
+import LonelyRunner.FiveAdicCarry
+import LonelyRunner.FiveAdicFiltering
+import LonelyRunner.FiveAdicHardPattern
 
 /-!
 Root import for the formal Lonely Runner development.

@@ -4,57 +4,7 @@
   "goal_status": "in_progress",
   "objective": "Produce a kernel-checked full proof or disproof of the canonical unrestricted Lonely Runner Conjecture.",
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
-  "active_tasks": [
-    {
-      "id": "/root/five_adic_carry_symbolic_plan",
-      "agent_id": "/root/mixed_equivalence_freeze",
-      "kind": "research",
-      "status": "in_progress",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "xhigh",
-      "observed_model": null,
-      "observed_effort": null,
-      "target": "Settle symbolic finite triple proof decomposed into small <=1600-state geometry/carry helpers, preserving publiccontract; no Lean run or further full-domain decide.",
-      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
-      "owned_files": [
-        "research/astra-five-adic-carry-symbolic-plan.md"
-      ],
-      "checks": []
-    },
-    {
-      "id": "/root/five_adic_filter_arithmetic_implementation",
-      "agent_id": "/root/four_runner_completion",
-      "kind": "routine",
-      "status": "in_progress",
-      "requested_model": "gpt-5.6-terra",
-      "requested_effort": "medium",
-      "observed_model": null,
-      "observed_effort": null,
-      "target": "Implement only settled natural digit/residue/correction algebra and small two-row mod5 avoidance, no descent/hard branch/assembly.",
-      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
-      "owned_files": [
-        "LonelyRunner/FiveAdicFiltering.lean",
-        "research/astra-five-adic-filter-arithmetic-implementation.md"
-      ],
-      "checks": []
-    },
-    {
-      "id": "/root/five_adic_filter_plan_review",
-      "agent_id": "/root/mss_published_bound_audit",
-      "kind": "research",
-      "status": "in_progress",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "xhigh",
-      "observed_model": null,
-      "observed_effort": null,
-      "target": "Independent exact decomposition/filtering/seeded-descent contract review, including current coefficient, topdigit4, cutoff and multiplier representative; no Lean.",
-      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
-      "owned_files": [
-        "research/astra-five-adic-filter-plan-review.md"
-      ],
-      "checks": []
-    }
-  ],
+  "active_tasks": [],
   "completed_tasks": [
     {
       "id": "/root/workflow_validation",
@@ -5020,13 +4970,239 @@
       ],
       "checks": [],
       "result": "Bounded enumeration branch stopped after default recursion failure and three memory-gated failures, including direct-binary and nested-state encoding. No verified carry theorem. Preserved source/report; symbolic helper plan next."
+    },
+    {
+      "id": "/root/five_adic_carry_symbolic_plan",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Settle symbolic finite triple proof decomposed into small <=1600-state geometry/carry helpers, preserving publiccontract; no Lean run or further full-domain decide.",
+      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "owned_files": [
+        "research/astra-five-adic-carry-symbolic-plan.md"
+      ],
+      "checks": [],
+      "result": "Frozen manuscript and guarded controls passed; root final read/replay pending."
+    },
+    {
+      "id": "/root/five_adic_filter_plan_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Independent exact decomposition/filtering/seeded-descent contract review, including current coefficient, topdigit4, cutoff and multiplier representative; no Lean.",
+      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "owned_files": [
+        "research/astra-five-adic-filter-plan-review.md"
+      ],
+      "checks": [],
+      "result": "Frozen manuscript and guarded controls passed; root final read/replay pending."
+    },
+    {
+      "id": "/root/five_adic_symbolic_carry_plan_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f55744833dd2876e582f0e4e0726614b6b527a54",
+      "target": "Independent review of normalized helper types, ZMod bridges and unchanged public carry theorem assembly; no Lean or full-domain checking.",
+      "owned_files": [
+        "research/astra-five-adic-carry-symbolic-plan-review.md"
+      ],
+      "checks": [
+        "Accepted frozen7e26dfa590c14bc8ea1f680b51f5f508387983c23a703682440b4ad08aabd201; root full read/replay passed cf2eeb638a05889118e1037ec4886c7e60fd13e09539020d93287beafe01e309/cfe6f316074907d94ca56bbd91d781c34d80e3b70ee4c3917d9f5624942bb8ff."
+      ]
+    },
+    {
+      "id": "/root/five_adic_hard_adapter_plan",
+      "agent_id": "/root/mixed_equivalence_freeze",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f55744833dd2876e582f0e4e0726614b6b527a54",
+      "target": "Settle natural modular sign/coupled-carry adapter from three units and one top runner to unchanged finite fiveCarryTriple, avoiding signed division if sound.",
+      "owned_files": [
+        "research/astra-five-adic-hard-adapter-plan.md"
+      ],
+      "checks": [
+        {
+          "artifact_sha256": "f2d5e74769d86dc729d0f63f098654a9a538bf690e0c47d952272259bba37eef",
+          "program_sha256": "2f31b920d2a028b347ff727136f43316f6d4b6fb55596b53c607881b758eddeb",
+          "stdout_sha256": "5f8d96b8f0343722db74d39eb49b37da4d835510da24126482b294b4f73ab8b1",
+          "stdout": "source_and_manuscript_guards=5 passed; live_Carry_Filtering_guards=none\nhard_tuple_normalized=(1, 41, 76); raw=303; lambda=53\noriginal_closed_distances=(53, 48, 28, 25); top_residue=100=4R\nscalar_digits=(2, 3); omitted_J_countercontrol=passed\ninternal_boundary_tags=(1, 2, 3); complement_distances=(0, 5)\nfixed_groups=8 passed; speed_domain_enumeration=none; carry_replay=none; Lean_execution=none\n",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "/root/five_adic_filter_arithmetic_implementation",
+      "agent_id": "/root/four_runner_completion",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "target": "Implement seeded unbounded induction using newly verified fill-level and existing residue preservation lemmas; no bounded wrapper yet.",
+      "source_checkpoint": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+      "owned_files": [
+        "LonelyRunner/FiveAdicFiltering.lean",
+        "research/astra-five-adic-filter-arithmetic-implementation.md"
+      ],
+      "checks": [
+        "First four arithmetic lemmas source and named build passed; exact type/axiom probe passed. Source 5cd357bab5bb961cf15a06d3dbd86567be60842d7193f82c040492c5a3fb8a1c.",
+        "All nine arithmetic declarations source/named build passed. Source806ce4292128bf912b7a5a1c4cf6efd8f649868602e8d81611b2133d8304e7c4, report25d102c8d16ca160d3c8b67312962c313aef2b6446acc925491276bf9a546a28, durable probea31d4360c794b74f15f6f6b94fd490a6ba021dc70c9f6740fd2c1e5e537f8b6a passed.",
+        "Avoidance source/named3001 build and controls exit0. Source d7924f06b0dcd9108e02a39beaea9ce089b64be97014819bb1dbc5ef38919e4d; report e3257e184072e90a610d02976d437962c80a82c5fdc8952aba6ede0fa4ae8af3. Root fully read final proof.",
+        "Two residue prep lemmas source root19119exit0, named46689exit0, probe25491exit0. Source9d189c14a0b1f9fe47bac8fea52954436bf98cca7b8f5136e8e8dd26e76ff6b7 report9b059025b62d48e3386361129dc2b5a87860ef9bbe08b6deca24508f5ae78213.",
+        "Fill-level adapter source58248/named4295/probe37890 exits0. Source ad686ffdeba6eb545530b8f2eb673a6f87a3ea1709ed9942acfc9822a9424a5b reportb4351cb51c30b71a5afd77e953396c97d1a432173184fb3453b07058a5b14f43."
+      ],
+      "result": "Thirteen arithmetic/avoidance/representative/fill-level declarations verified. Attempted larger induction handoff produced no source changes; transfer to fresh same-route bounded worker."
+    },
+    {
+      "id": "/root/five_adic_hard_adapter_plan_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f55744833dd2876e582f0e4e0726614b6b527a54",
+      "target": "Independent natural complement/carry-tag/digit identity and conditional hard-pattern review; no Lean or mutable source guards.",
+      "owned_files": [
+        "research/astra-five-adic-hard-adapter-plan-review.md"
+      ],
+      "checks": [
+        {
+          "artifact_sha256": "579b1ea58b05788dc388cba4bcabb26aa152bf23fdebc919c497815973e2303f",
+          "program_sha256": "dbeed1d7d0877b80cdf0403e89039c8026e6065bb071b3ad5baddf52d981f5fc",
+          "stdout_sha256": "32d740a8452f81bc8aff63fe064f13772088d084f2415b7f27b0f23a799256b3",
+          "stdout": "source_and_manuscript_guards=5 passed; live_Carry_Filtering_guards=none\nhard_tuple_normalized=(1, 41, 76); raw=303; lambda=53\noriginal_closed_distances=(53, 48, 28, 25); top_residue=100=4R\nscalar_digits=(2, 3); omitted_J_countercontrol=passed\ninternal_boundary_tags=(1, 2, 3); complement_distances=(0, 5)\nfixed_groups=8 passed; speed_domain_enumeration=none; carry_replay=none; Lean_execution=none\n{\"Lean_execution\": false, \"author_guard\": true, \"boundary_inputs\": 3, \"complement_inputs\": 4, \"fixed_digit_identities\": 2, \"fixed_real_time\": \"53/125\", \"m0_normalization_multipliers\": 4, \"mutable_source_guards\": false, \"result\": \"PASS\", \"stable_guards\": 5, \"symmetry_inputs\": 4, \"tuple_scan\": false}\n",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "/root/five_adic_symbolic_carry_implementation",
+      "agent_id": "/root/five_adic_symbolic_carry_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f55744833dd2876e582f0e4e0726614b6b527a54",
+      "target": "Implement symbolic two-equal-residue pair case using accepted P, two translations and singleton escape; monitor safe prefix.",
+      "owned_files": [
+        "LonelyRunner/FiveAdicCarry.lean",
+        "research/astra-five-adic-carry-implementation.md"
+      ],
+      "checks": [
+        "Worker reports normalized helpers+forwardBlock+allscalar prefix e400e2fec6f9a68b22dee8b9d48aac9830201b3b8caa8fba2e22d04264da3f1c exit0 wall4.659s aggregateRSS3779956KiB. Fullpublicmodule stillunverified. Rootreconstructed edcc oldsource exacthash; workerembedded report.",
+        "Equal-residue safe prefix19678f95d44266542fa6a69f4bafecc82b388fe910cf6d59a42bb9cd1640143d source202940dbde1d30e7f95a5a36eaba9aa8f91ff4e5fcbf0272d31e52aa4017410f monitored exit0 wall4.738s/sample3755992KiB. Root source fullyread. Finalmodulepending."
+      ],
+      "result": "Normalized helpers+scalars+equal-residue case verified in capped prefix. Worker reached turn budget before pair implementation; preserved source. Pair transferred to fresh Terra/medium, no overall block."
+    },
+    {
+      "id": "/root/five_adic_natural_normalization",
+      "agent_id": "/root/five_adic_natural_normalization",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f55744833dd2876e582f0e4e0726614b6b527a54",
+      "target": "Implement only generic cyclic distance congruence/symmetry/complement and natural unit normalization from accepted hard-adapter plan.",
+      "owned_files": [
+        "LonelyRunner/FiveAdicHardPattern.lean",
+        "research/astra-five-adic-hard-pattern-implementation.md"
+      ],
+      "checks": [
+        "Source1ca9b35f3e642639dfebc87a96b45894bbea3536f9a28f018c71a61292fa7904; finalreportf6ac85dabb50e0c115533e4c1710c551a453990194c11fcc9904a2ecef3e0535."
+      ],
+      "result": "Fourgeneric/normalizationtheorems source/named/universaltype/axiom/controlpassed; noCarry/Filteringimports. Rootfullsourceread."
+    },
+    {
+      "id": "/root/five_adic_filter_descent",
+      "agent_id": "/root/five_adic_filter_descent",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f55744833dd2876e582f0e4e0726614b6b527a54",
+      "target": "Add bounded seeded wrapper and unseeded arbitrary finite-label multiplier theorem from verified induction; no Fin4adapter.",
+      "owned_files": [
+        "LonelyRunner/FiveAdicFiltering.lean",
+        "research/astra-five-adic-filter-arithmetic-implementation.md"
+      ],
+      "checks": [
+        "Seededunbounded source83bddfd3dd8b1874b5d54f3a96cc8f19cc59634c576f8ccac130b9ca33495df9 source/named/probe exit0. Probe832598f5a9a75c28caa6a4656822d8660aa71aace3614b7c9c34e3bbd36a90f0 reporteb1599be7435b582b9570bb9c235bd4194563e8635b4aba432efa8ebd85e61f3. Rootproofread.",
+        "Boundedseeded+unseeded wrappers source1a210e70383e9b00d1a3aec321e9e1a838efcd26c24ca180101964e8c6e71429 named/source/probe exit0. Probe d3c549bf059da1c4c684d160ed9cc6d7d9ba95225382af8eba2e13975623449d reporte81861a1a5757653a939921996ae092205af7d749bd60e274b81c14448ef084e. Rootproofread."
+      ]
+    },
+    {
+      "id": "/root/five_adic_carry_pair_implementation",
+      "agent_id": "/root/five_adic_carry_pair_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f55744833dd2876e582f0e4e0726614b6b527a54",
+      "target": "Implement pair-residue symbolic carry case on top of verified same-case prefix; no full-state enumeration.",
+      "owned_files": [
+        "LonelyRunner/FiveAdicCarry.lean",
+        "research/astra-five-adic-carry-implementation.md"
+      ],
+      "checks": [],
+      "result": "Symbolic pair and final eight-case assembly complete; fullsource/named/probe verified, selfcontainedresourcecommandrootreplayed. Sourcefrozen."
+    },
+    {
+      "id": "/root/five_adic_formal_review",
+      "agent_id": "/root/mss_published_bound_audit",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f55744833dd2876e582f0e4e0726614b6b527a54",
+      "target": "Independent source/type/axiom/scope review of five-adic filtering and normalization; add fullcarry review once final kernel/sourcefreeze delivered.",
+      "owned_files": [
+        "research/astra-five-adic-formal-review.md"
+      ],
+      "checks": [
+        "44 kernel examples; 21 new exact types plus fourRunners compatibility; 19 guards; permitted-only axioms."
+      ],
+      "result": "Accepted all three frozen modules and additive root/audit integration; no source corrections; root exact guarded replay passed.",
+      "evidence": [
+        "research/astra-five-adic-formal-review.md",
+        "research/astra-pass38-verification.json"
+      ]
     }
   ],
-  "latest_checkpoint": "Pass37 source and resource verification complete: full3651/trust497dependency+2axiom-free; final21-example review/rootreplaypassed. Publicationpreparation. Carryfullenumerationstoppedat4GiB; symbolicsmallhelpersandfilterarithmeticcontinue; unrestrictedLRCunresolved.",
+  "latest_checkpoint": "Pass38 verified: 21 new public theorems; full build 3654, trust 517 dependency lists plus 3 axiom-free declarations; independent review accepted and root 44-example/19-guard replay passed. Commit/push/PR/exact-head merge next. Full LRC unresolved.",
   "next_actions": [
-    "Complete two Terra genericcertificate tasks and exactsource/type/axiom checks.",
-    "Finish final independent resource-design report and rootreplay; then freeze sourceintegration/fullbuild/trust/finalsource review.",
-    "No fulltuple scan; scopedpilot only aftersoundness and measuredresourcechecks."
+    "Publish verified Pass38 via commit, push, PR, checks, exact-head merge and main verification.",
+    "Implement reviewed carry tag/state/digit and hard-pattern assembly, then valuation Fin4 case split and canonical Fin5 bridge.",
+    "Keep unrestricted goal active; these supporting results do not establish full LRC."
   ],
   "research_holds": [
     {
@@ -5552,14 +5728,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
+    "verified_checkpoint": "8a07fab875c2d9026b4abb5bc031b78dac92f5f8",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-rational-margin-certificates",
+    "branch": "codex/astra-rational-margin-box-pilot",
     "base": "main",
     "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/35",
-    "pr_number": 35,
-    "head_sha": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/36",
+    "pr_number": 36,
+    "head_sha": "8a07fab875c2d9026b4abb5bc031b78dac92f5f8",
     "integration_note": "GitHub integration PR creation returned 403; authenticated gh client created PR successfully.",
     "queue": [
       {
@@ -5938,42 +6114,52 @@
         "remote_main_contains_head": true,
         "local_main": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
         "no_pending_reviews": true
+      },
+      {
+        "pr_number": 36,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/36",
+        "head_sha": "8a07fab875c2d9026b4abb5bc031b78dac92f5f8",
+        "merge_sha": "f55744833dd2876e582f0e4e0726614b6b527a54",
+        "status": "merged",
+        "checks": {
+          "Lean build and trust audit": "SUCCESS 2026-09-06T06:05:34Z",
+          "Exact computational certificates": "SUCCESS 2026-09-06T06:11:21Z"
+        },
+        "remote_main_contains_head": true
       }
     ],
-    "latest_published_source_checkpoint": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
-    "remote_main": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
-    "local_main": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+    "latest_published_source_checkpoint": "8a07fab875c2d9026b4abb5bc031b78dac92f5f8",
+    "remote_main": "f55744833dd2876e582f0e4e0726614b6b527a54",
+    "local_main": "f55744833dd2876e582f0e4e0726614b6b527a54",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+    "merge_sha": "f55744833dd2876e582f0e4e0726614b6b527a54",
     "checks": [
       {
         "name": "Lean build and trust audit",
-        "conclusion": "SUCCESS",
-        "completed_at": "2026-09-06T05:24:05Z",
-        "job_id": 101434011026
+        "result": "SUCCESS 2026-09-06T06:05:34Z"
       },
       {
         "name": "Exact computational certificates",
-        "conclusion": "SUCCESS",
-        "completed_at": "2026-09-06T05:29:27Z",
-        "job_id": 101434011128
+        "result": "SUCCESS 2026-09-06T06:11:21Z"
       }
     ],
     "remote_main_contains_head": true,
     "latest_receipt": {
-      "checkpoint": "Pass36",
-      "pr": 35,
-      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/35",
-      "head_sha": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
-      "merge_sha": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
-      "merged_at": "2026-09-06T05:29:49Z",
-      "ci_run": 34013795701,
+      "checkpoint": "Pass37",
+      "pr": 36,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/36",
+      "head_sha": "8a07fab875c2d9026b4abb5bc031b78dac92f5f8",
+      "merge_sha": "f55744833dd2876e582f0e4e0726614b6b527a54",
+      "merged_at": "2026-09-06T06:28:00Z",
+      "ci_run": 34015516110,
       "checks": {
-        "Lean build and trust audit": "SUCCESS 2026-09-06T05:24:05Z",
-        "Exact computational certificates": "SUCCESS 2026-09-06T05:29:27Z"
+        "Lean build and trust audit": "SUCCESS 2026-09-06T06:05:34Z",
+        "Exact computational certificates": "SUCCESS 2026-09-06T06:11:21Z"
       },
-      "remote_main_ancestor_verified": true
+      "exact_head_merge": true,
+      "remote_main_ancestor_verified": true,
+      "reviews": []
     }
   },
   "runtime_goal_observation": {
@@ -5996,7 +6182,12 @@
     "instructions_path": ".codex/config.toml",
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
-  "publication_in_progress": null,
+  "publication_in_progress": {
+    "checkpoint": "Pass38",
+    "branch": "codex/astra-five-adic-filtering",
+    "phase": "verified_ready_to_commit",
+    "base": "f55744833dd2876e582f0e4e0726614b6b527a54"
+  },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
     "author_sha256": "6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f",
@@ -6465,10 +6656,10 @@
     "current_disposition": "Verified and merged in Pass33 / PR32; historical intermediate fields retained below."
   },
   "worker_recovery_latest": {
-    "task": "/root/five_adic_carry_implementation",
+    "task": "/root/five_adic_filter_arithmetic_implementation",
     "actual_goal_status": "active",
     "resume_needed": false,
-    "disposition": "Default elaborator recursion failure preserved; same Terra/medium assigned explicitly bounded retry; externalcapsunchanged."
+    "disposition": "Partial initial draft preserved, no report/namedbuild yet; same Terra/medium reassigned first4arithmetic lemmas with verified library-name guidance."
   },
   "four_runner_completion_initial_check": {
     "status": "worker_success_claim_withdrawn_root_exit1",
@@ -6829,7 +7020,7 @@
     "branch": "codex/astra-rational-margin-box-pilot",
     "source_base": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
     "root_generic_source_fully_read": true,
-    "implementation": "complete, root final read/replay and independent source review pending",
+    "implementation": "Complete; final independent review and root replays passed.",
     "source_sha256": {
       "LonelyRunner/RationalMarginBoxes.lean": "9faab792a9e4120d931cb24eef071b072eee89a580d174f224ec2a7a123d51bf",
       "LonelyRunner/RationalMarginBoxPilot.lean": "25e144207b1ef4121c155f50d9ca9209655bcca46fdc40b1b06a4bc88f1f84e8",
@@ -6857,7 +7048,7 @@
       "stdout": "LonelyRunner/RationalMarginBoxPilot.lean: OK\nLonelyRunner/RationalMarginBoxes.lean: OK\nmonitor=pass wall=1.853 sampled_rss_kib=4109700 child_exit=0\ngnu_time_wall=1.87 gnu_time_rss_kib=3311716 gnu_time_exit=0\nsource_bytes=5646 leaves=2\n",
       "stderr": ""
     },
-    "phase": "verified_publication_preparation",
+    "phase": "merged_verified",
     "excluded_future_work": [
       "research/astra-five-runner-ordinary-insertion-plan.md",
       "research/astra-five-total-direct-proof-screen.md",
@@ -6880,6 +7071,25 @@
       "dependency_reports": 11,
       "axiom_free_reports": 1,
       "source_guards": 14
+    },
+    "pr": 36,
+    "head_sha": "8a07fab875c2d9026b4abb5bc031b78dac92f5f8",
+    "ci_run": 34015516110,
+    "publication_receipt": {
+      "checkpoint": "Pass37",
+      "pr": 36,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/36",
+      "head_sha": "8a07fab875c2d9026b4abb5bc031b78dac92f5f8",
+      "merge_sha": "f55744833dd2876e582f0e4e0726614b6b527a54",
+      "merged_at": "2026-09-06T06:28:00Z",
+      "ci_run": 34015516110,
+      "checks": {
+        "Lean build and trust audit": "SUCCESS 2026-09-06T06:05:34Z",
+        "Exact computational certificates": "SUCCESS 2026-09-06T06:11:21Z"
+      },
+      "exact_head_merge": true,
+      "remote_main_ancestor_verified": true,
+      "reviews": []
     }
   },
   "ordinary_insertion_plan": {
@@ -6902,60 +7112,183 @@
     "decision": "Prioritize bounded mod5 carry/decomposition contracts over expanding height1000speedtuple checking; preserve existing finitefamily and box infrastructure."
   },
   "pending_pass38": {
-    "scope": "Direct five-total route, finite coupled-carry theorem first; full filtering/adapter/canonical assembly remains.",
-    "carry_plan_root_replay": {
-      "artifact_sha256": "da1a4f4828f6e9d9cae6ed601151e0b56b518bea8e9add524e06b289b1713e69",
-      "program_sha256": "d11024c4ef750427d3b6826423dc413700fb17582e79cc1a32105122aa6375f4",
-      "stdout_sha256": "03b2a2ec127ba9d22b388a61885b714c3d52d8d1f6b30516644cd6d695855249",
-      "status": "passed",
-      "root_full_symbolic_read": true,
-      "states": 64000,
-      "candidate_attempts": 960000,
-      "failed_triples": 0,
-      "python_elapsed_seconds": 0.386974714
+    "branch": "codex/astra-five-adic-filtering",
+    "base": "f55744833dd2876e582f0e4e0726614b6b527a54",
+    "scope": "21 public theorems: finite coupled carry, arbitrary-label filtering, and generic normalization; hard adapter and Fin4/canonical assembly pending.",
+    "symbolic_carry_plan_root_replay": {
+      "artifact_sha256": "d1fef1fafc6c7ae6adaf0ee885b4d44931e26bda667ff040f6c237f082555f80",
+      "program_sha256": "ffd0739e680cbc3c12e3ac0e35cb6b41e6f3b6c4a5a3db4500c76031de4aa6aa",
+      "stdout_sha256": "3e95ff25d9c4e17ecf30b7979b6d48ef1b6912fcfe2923bc6fbb4e9914e3553c",
+      "stdout": "source_guards=3 passed\nhelper_inputs_T_P_escape_ratio_unit_majority=(1600, 80, 10, 4, 6, 8)\nhelper_candidates_T_P=(24000, 1200)\nfailures_T_P=(0, 0); scalar_helpers=passed\ntotal_helper_inputs=1708; largest_helper_inputs=1600\nfull_64000_replay=none; Lean_execution=none; speed_enumeration=none\n",
+      "exit_code": 0
     },
-    "kernel_caps": "60 seconds whole source check; 4 GiB process/group RSS gate; no native_decide or silent cap increase",
-    "source_base": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
-    "first_carry_attempt": {
-      "exit_code": 1,
-      "reason": "Lean default maximum recursion depth reached, not a counterexample or external resource breach.",
-      "source_sha256": "a388134939c22fa2d77fbc9e7c4128b22b36848cb72ab5f0aed7d229c74801ce",
-      "wall_seconds": 2.03,
-      "gnu_peak_rss_kib": 3315420
+    "filter_review_root_replay": {
+      "artifact_sha256": "750f12219cc784560ec8c8822274f455a3a12c316c95072d645b9f94fe3f328e",
+      "program_sha256": "b8553819312dc09b1a9f96256b3116d671958fd602595a9905437c83e7cf7b1c",
+      "stdout_sha256": "c02fa5df95bc7ba25992e67a122beb7e0fe4c94064a8636e3152d5c3c1fdf075",
+      "stdout": "source_guards=7 passed\nfixed_controls=pass; false_strengthenings=exposed\nhard_multiplier_control=pass; raw=63; representative=13; modulus=25\nLean_execution=none; speed_tuple_scan=none; theorem_promotion=none\n{\"Lean_execution\": false, \"author_guard\": true, \"fixed_filter_calls\": 5, \"fixed_level_lists\": 3, \"fixed_scaling_coordinates\": 4, \"result\": \"PASS\", \"seeded_lambda\": 177, \"source_guards\": 8, \"speed_tuple_scan\": false, \"unseeded_lambda\": 156}\n",
+      "exit_code": 0
     },
-    "next_carry_attempt": "No further full-domain decide attempts. Derive symbolic composition using small independently checked geometry/carry helpers.",
-    "second_carry_attempt": {
-      "exit_code": 137,
-      "reason": "Sampled process-group RSS exceeded gate; process group killed.",
-      "elapsed_seconds": 2.667,
-      "sampled_rss_kib": 4198360,
-      "source_sha256": "5f0d3e79ad44b98088546d652d88a33965ecabaa477a946897ed6ac01d6f881e",
-      "gnu_after_kill_rss_kib": 804216,
-      "note": "Killed-process GNU accounting is not a successful peak check."
+    "arithmetic_recovery": "Worker ended after selected product/digit source check, before higher/top/named/probe/report. Same Terra continued remaining bounded pieces; actual goal verified active.",
+    "nine_arithmetic_lemmas": {
+      "source_sha256": "806ce4292128bf912b7a5a1c4cf6efd8f649868602e8d81611b2133d8304e7c4",
+      "report_sha256": "25d102c8d16ca160d3c8b67312962c313aef2b6446acc925491276bf9a546a28",
+      "named_jobs": 3001,
+      "probe_exit_code": 0,
+      "root_source_fully_read": true,
+      "independent_source_review": "pending"
     },
-    "lean_env_preparation": "Allowlisted LEAN_PATH/LEAN_SRC_PATH/LEAN_SYSROOT/PATH/LD_LIBRARY_PATH captured; elan resolved pinned v4.32.1 binary. No target source evaluated in preparation.",
-    "direct_binary_attempt": {
-      "exit_code": 137,
-      "elapsed_seconds": 9.924,
-      "sampled_rss_kib": 4196836,
-      "gnu_after_kill_rss_kib": 4196500,
-      "source_unchanged_sha256": "5f0d3e79ad44b98088546d652d88a33965ecabaa477a946897ed6ac01d6f881e",
-      "conclusion": "Direct launch also exceeds gate; cannot attribute failure solely to launcher."
+    "symbolic_carry_independent_review": {
+      "artifact_sha256": "7e26dfa590c14bc8ea1f680b51f5f508387983c23a703682440b4ad08aabd201",
+      "program_sha256": "cf2eeb638a05889118e1037ec4886c7e60fd13e09539020d93287beafe01e309",
+      "stdout_sha256": "cfe6f316074907d94ca56bbd91d781c34d80e3b70ee4c3917d9f5624942bb8ff",
+      "stdout": "source_guards=3 passed\nhelper_inputs_T_P_escape_ratio_unit_majority=(1600, 80, 10, 4, 6, 8)\nhelper_candidates_T_P=(24000, 1200)\nfailures_T_P=(0, 0); scalar_helpers=passed\ntotal_helper_inputs=1708; largest_helper_inputs=1600\nfull_64000_replay=none; Lean_execution=none; speed_enumeration=none\n{\"Lean_execution\": false, \"author_guard\": true, \"fixed_assemblies\": 5, \"fixed_representatives\": 4, \"full_64000_replay\": false, \"helper_inputs\": 1708, \"result\": \"PASS\", \"source_guards\": 3}\n",
+      "exit_code": 0
     },
-    "nested_state_attempt": {
-      "exit_code": 137,
-      "elapsed_seconds": 8.554,
-      "sampled_rss_kib": 4194484,
-      "source_sha256": "edcc4c6a1c8a31ce6188b92d9d0a21d09f01013027290d6ed6cfeb3d1876fdb3",
-      "report_sha256": "610a1326baed5cab1aaef93030fa8e5ff36738c167514bd5685823c1d9ada9db"
+    "avoidance": {
+      "source_sha256": "d7924f06b0dcd9108e02a39beaea9ce089b64be97014819bb1dbc5ef38919e4d",
+      "report_sha256": "e3257e184072e90a610d02976d437962c80a82c5fdc8952aba6ede0fa4ae8af3",
+      "source_named_probe_exit": 0,
+      "root_source_read": true,
+      "proof": "Symbolic union bound, no exhaustive state enumeration."
     },
-    "filter_plan_root_replay": {
-      "artifact_sha256": "34725cc13001013cdeefa89d36620442bbe7d6ccffcc0ff6f85585bdd208f500",
-      "program_sha256": "e17d3a5c02a94cffb1e599db2ceb57e3b36e954776e5b992e3fac9b1ebd527e3",
-      "stdout_sha256": "68be37f01856a5938e64e989c8b0b1ab90430f10dd04415a93e67497837003aa",
-      "status": "passed",
-      "root_full_read": true,
-      "root_correction": "Explicit positive unit residue normalization before claiming hard multiplier upper bound."
-    }
+    "hard_adapter_plan": {
+      "artifact_sha256": "f2d5e74769d86dc729d0f63f098654a9a538bf690e0c47d952272259bba37eef",
+      "program_sha256": "2f31b920d2a028b347ff727136f43316f6d4b6fb55596b53c607881b758eddeb",
+      "stdout_sha256": "5f8d96b8f0343722db74d39eb49b37da4d835510da24126482b294b4f73ab8b1",
+      "stdout": "source_and_manuscript_guards=5 passed; live_Carry_Filtering_guards=none\nhard_tuple_normalized=(1, 41, 76); raw=303; lambda=53\noriginal_closed_distances=(53, 48, 28, 25); top_residue=100=4R\nscalar_digits=(2, 3); omitted_J_countercontrol=passed\ninternal_boundary_tags=(1, 2, 3); complement_distances=(0, 5)\nfixed_groups=8 passed; speed_domain_enumeration=none; carry_replay=none; Lean_execution=none\n",
+      "exit_code": 0
+    },
+    "carry_helper_milestone": {
+      "status": "Worker reports T/P+bridges+scalars prefix passed; root final replay pending",
+      "prefix_sha256": "e400e2fec6f9a68b22dee8b9d48aac9830201b3b8caa8fba2e22d04264da3f1c",
+      "wall_seconds": 4.659,
+      "sampled_rss_kib": 3779956,
+      "exit_code": 0,
+      "current_public_module": "Unverified; never evaluate retained old full-state decide; equal-residue assembly next."
+    },
+    "representative_preparation": {
+      "source_sha256": "9d189c14a0b1f9fe47bac8fea52954436bf98cca7b8f5136e8e8dd26e76ff6b7",
+      "report_sha256": "9b059025b62d48e3386361129dc2b5a87860ef9bbe08b6deca24508f5ae78213",
+      "source_named_probe_exit": 0,
+      "root_source_read": true
+    },
+    "fill_level": {
+      "source_sha256": "ad686ffdeba6eb545530b8f2eb673a6f87a3ea1709ed9942acfc9822a9424a5b",
+      "report_sha256": "b4351cb51c30b71a5afd77e953396c97d1a432173184fb3453b07058a5b14f43",
+      "source_named_probe_exit": 0,
+      "root_source_read": true
+    },
+    "hard_adapter_independent_review": {
+      "artifact_sha256": "579b1ea58b05788dc388cba4bcabb26aa152bf23fdebc919c497815973e2303f",
+      "program_sha256": "dbeed1d7d0877b80cdf0403e89039c8026e6065bb071b3ad5baddf52d981f5fc",
+      "stdout_sha256": "32d740a8452f81bc8aff63fe064f13772088d084f2415b7f27b0f23a799256b3",
+      "stdout": "source_and_manuscript_guards=5 passed; live_Carry_Filtering_guards=none\nhard_tuple_normalized=(1, 41, 76); raw=303; lambda=53\noriginal_closed_distances=(53, 48, 28, 25); top_residue=100=4R\nscalar_digits=(2, 3); omitted_J_countercontrol=passed\ninternal_boundary_tags=(1, 2, 3); complement_distances=(0, 5)\nfixed_groups=8 passed; speed_domain_enumeration=none; carry_replay=none; Lean_execution=none\n{\"Lean_execution\": false, \"author_guard\": true, \"boundary_inputs\": 3, \"complement_inputs\": 4, \"fixed_digit_identities\": 2, \"fixed_real_time\": \"53/125\", \"m0_normalization_multipliers\": 4, \"mutable_source_guards\": false, \"result\": \"PASS\", \"stable_guards\": 5, \"symmetry_inputs\": 4, \"tuple_scan\": false}\n",
+      "exit_code": 0
+    },
+    "carry_same_case": {
+      "prefix_sha256": "19678f95d44266542fa6a69f4bafecc82b388fe910cf6d59a42bb9cd1640143d",
+      "source_sha256": "202940dbde1d30e7f95a5a36eaba9aa8f91ff4e5fcbf0272d31e52aa4017410f",
+      "exit_code": 0,
+      "wall_seconds": 4.738,
+      "sampled_rss_kib": 3755992,
+      "scope": "Safe prefix only, fullpublicmodulepending"
+    },
+    "seeded_unbounded": {
+      "source_sha256": "83bddfd3dd8b1874b5d54f3a96cc8f19cc59634c576f8ccac130b9ca33495df9",
+      "report_sha256": "eb1599be7435b582b9570bb9c235bd4194563e8635b4aba432efa8ebd85e61f3",
+      "probe_sha256": "832598f5a9a75c28caa6a4656822d8660aa71aace3614b7c9c34e3bbd36a90f0",
+      "source_named_probe_exit": 0,
+      "root_source_read": true
+    },
+    "normalization": {
+      "source_sha256": "1ca9b35f3e642639dfebc87a96b45894bbea3536f9a28f018c71a61292fa7904",
+      "report_sha256": "f6ac85dabb50e0c115533e4c1710c551a453990194c11fcc9904a2ecef3e0535",
+      "source_named_probe_exit": 0,
+      "root_source_read": true
+    },
+    "filtering_complete": {
+      "source_sha256": "1a210e70383e9b00d1a3aec321e9e1a838efcd26c24ca180101964e8c6e71429",
+      "report_sha256": "e81861a1a5757653a939921996ae092205af7d749bd60e274b81c14448ef084e",
+      "probe_sha256": "d3c549bf059da1c4c684d160ed9cc6d7d9ba95225382af8eba2e13975623449d",
+      "source_named_probe_exit": 0,
+      "public_theorems": 16,
+      "root_source_read": true
+    },
+    "source_sha256": {
+      "LonelyRunner.lean": "f9cf041a31ae8b9434c248c48c2ea59569549b307cb971d841244ca9f846a99b",
+      "LonelyRunner/AxiomAudit.lean": "5501c85618261d7b60668a47e7c4f3ef17bed9686341d4c1e460b978fd7fae72",
+      "LonelyRunner/FiveAdicCarry.lean": "f91d747198374da76ff9e62435db20a8917856d5b9dc52229ce576353cc11d81",
+      "LonelyRunner/FiveAdicFiltering.lean": "1a210e70383e9b00d1a3aec321e9e1a838efcd26c24ca180101964e8c6e71429",
+      "LonelyRunner/FiveAdicHardPattern.lean": "1ca9b35f3e642639dfebc87a96b45894bbea3536f9a28f018c71a61292fa7904"
+    },
+    "new_public_audit_reports": 21,
+    "root_all_sources_fully_read": true,
+    "phase": "verified_ready_for_publication",
+    "carry_complete": {
+      "source_sha256": "f91d747198374da76ff9e62435db20a8917856d5b9dc52229ce576353cc11d81",
+      "report_sha256": "749c2c43d8d87fa0f8b09302bc211b8ad25b78ee7c3d799a0c25ad187d879059",
+      "source_bytes": 16638,
+      "source_named_probe_exit": 0,
+      "root_resource_replay": {
+        "report_sha256": "749c2c43d8d87fa0f8b09302bc211b8ad25b78ee7c3d799a0c25ad187d879059",
+        "command_sha256": "0a21598ca158b955d04a55be60e11cb536f27421962d1f6f14688579fe9a3d67",
+        "exit_code": 0,
+        "stdout_sha256": "4e3460159d45487487fa5133863e3c89dbe177f9f21ca29c23915752af8f5757",
+        "stdout": "LonelyRunner/FiveAdicCarry.lean:193:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:193:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:193:63: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:199:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:199:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:199:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:205:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:205:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:205:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:293:6: warning: 'change\n  fiveCarryFGood\n    (fiveCarryJ u * fiveCarryCast c.top + fiveCarryC c.carry u +\n      fiveCarryJ u * fiveCarryCast k1 * fiveCarryR c.residue)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nLonelyRunner/FiveAdicCarry.lean:312:6: warning: 'change\n  fiveCarryFGood\n    (fiveCarryJ u * fiveCarryCast c.top + fiveCarryC c.carry u +\n      fiveCarryJ u * fiveCarryCast k1 * fiveCarryR c.residue)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nLonelyRunner/FiveAdicCarry.lean:297:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nLonelyRunner/FiveAdicCarry.lean:316:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nmonitor=pass wall=4.921 sampled_rss_kib=3853936 child_exit=0\n4.94 3853580 0\npostcheck=pass gnu_time_wall=4.94 gnu_time_rss_kib=3853580 gnu_time_exit=0\n",
+        "stderr": ""
+      }
+    },
+    "full_build": {
+      "session_id": 78054,
+      "exit_code": 0,
+      "jobs": 3654,
+      "log_sha256": "da969a453839b67325b7761867c53b63595221f98ece494c19294f47214715ed"
+    },
+    "trust": {
+      "session_id": 62541,
+      "exit_code": 0,
+      "dependency_lists": 517,
+      "axiom_free_reports": 3,
+      "log_sha256": "2ac6b236114e2185ecedb7cca2802bdddd12d8f5bb73e660f215a1710780400b"
+    },
+    "historical_reproduction": {
+      "archive_sha256": "4ace825e19f3ecaf96f3f13afa4d4d2fce594aabfce42fbd2abd8ccd942add3a",
+      "archive_bytes": 19276,
+      "checks": {
+        "astra-five-adic-carry-symbolic-plan.md": {
+          "exit_code": 0,
+          "stdout_sha256": "3e95ff25d9c4e17ecf30b7979b6d48ef1b6912fcfe2923bc6fbb4e9914e3553c",
+          "program_sha256": "ffd0739e680cbc3c12e3ac0e35cb6b41e6f3b6c4a5a3db4500c76031de4aa6aa"
+        },
+        "astra-five-adic-carry-symbolic-plan-review.md": {
+          "exit_code": 0,
+          "stdout_sha256": "cfe6f316074907d94ca56bbd91d781c34d80e3b70ee4c3917d9f5624942bb8ff",
+          "program_sha256": "cf2eeb638a05889118e1037ec4886c7e60fd13e09539020d93287beafe01e309"
+        }
+      },
+      "historical_Lean_execution": false
+    },
+    "cache_disposition": "One shared cache retained for immediately queued carry tag/state/digit/hard-pattern and valuation assembly after publication.",
+    "independent_source_review": {
+      "status": "accepted",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "root_replay": {
+        "artifact_sha256": "5a7969be45d653e43621ff6f1d23d93f2e2f3ed8ee44a62efecbd335fa900fa9",
+        "program_sha256": "db5231f4c54fa22a8678d36f291db5a1335d70762f7e0cf39eed07fb651b505c",
+        "exit_code": 0,
+        "stdout_sha256": "0a2f5d609b9bb4f2cb0a174c3c48a2852ccdda81233bdb40edd0b7e21273b306",
+        "stdout": "LonelyRunner.fiveAdicCorrection_pos (m j k : \u2115) : 0 < fiveAdicCorrection m j k\nLonelyRunner.fiveAdicCorrection_mod_five (m j k : \u2115) (hj : j < m) : fiveAdicCorrection m j k % 5 = 1\nLonelyRunner.fiveAdic_residue_decomposition (m x : \u2115) : x % (5 * 5 ^ m) = 5 ^ m * fiveAdicDigit m x + x % 5 ^ m\nLonelyRunner.fiveAdicGoodDigit_distance (m x : \u2115) (hgood : FiveAdicGoodDigit m x) :\n  5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) x\nLonelyRunner.fiveAdicCorrection_selected_product (m j k A u : \u2115) (hj : j \u2264 m) :\n  fiveAdicCorrection m j k * (A * (5 ^ j * u)) = A * (5 ^ j * u) + k * 5 ^ m * (A * u)\nLonelyRunner.fiveAdicCorrection_selected_digit (m j k A u : \u2115) (hj : j \u2264 m) :\n  fiveAdicDigit m (fiveAdicCorrection m j k * (A * (5 ^ j * u))) =\n    (fiveAdicDigit m (A * (5 ^ j * u)) + k * (A * u % 5)) % 5\nLonelyRunner.fiveAdicCorrection_higher_residue (m j ell k A u : \u2115) (hjell : j < ell) (hell : ell \u2264 m) :\n  fiveAdicCorrection m j k * (A * (5 ^ ell * u)) % (5 * 5 ^ m) = A * (5 ^ ell * u) % (5 * 5 ^ m)\nLonelyRunner.fiveAdic_top_residue (m A u : \u2115) : A * (5 ^ m * u) % (5 * 5 ^ m) = 5 ^ m * (A * u % 5)\nLonelyRunner.fiveAdic_top_distance (m A u : \u2115) (hunit : \u00ac5 \u2223 A * u) :\n  5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (A * (5 ^ m * u))\nLonelyRunner.fiveAdic_avoid_two.{u_1} {I : Type u_1} [Fintype I] (q s : I \u2192 \u2115) (hcard : Fintype.card I \u2264 2)\n  (hunit : \u2200 (i : I), \u00ac5 \u2223 s i) : \u2203 k, \u2200 (i : I), 1 \u2264 (q i + \u2191k * s i) % 5 \u2227 (q i + \u2191k * s i) % 5 \u2264 3\nLonelyRunner.fiveAdicDigit_of_mod_eq (m x y : \u2115) (h : x % (5 * 5 ^ m) = y % (5 * 5 ^ m)) :\n  fiveAdicDigit m x = fiveAdicDigit m y\nLonelyRunner.fiveAdic_unit_representative (m A : \u2115) (hA : \u00ac5 \u2223 A) :\n  0 < A % (5 * 5 ^ m) \u2227\n    A % (5 * 5 ^ m) < 5 * 5 ^ m \u2227\n      \u00ac5 \u2223 A % (5 * 5 ^ m) \u2227\n        A % (5 * 5 ^ m) % 5 = A % 5 \u2227 \u2200 (d : \u2115), A % (5 * 5 ^ m) * d % (5 * 5 ^ m) = A * d % (5 * 5 ^ m)\nLonelyRunner.fiveAdic_fill_level.{u_1} {I : Type u_1} [Fintype I] [DecidableEq I] (d ell u : I \u2192 \u2115) (m r A : \u2115)\n  (hr : r \u2264 m) (hdecomp : \u2200 (i : I), d i = 5 ^ ell i * u i) (hu : \u2200 (i : I), \u00ac5 \u2223 u i) (hA : \u00ac5 \u2223 A)\n  (hcard : {i | ell i = r}.card \u2264 2) :\n  \u2203 k, \u2200 (i : I), ell i = r \u2192 FiveAdicGoodDigit m (fiveAdicCorrection m r \u2191k * (A * d i))\nLonelyRunner.fiveAdic_seeded_unbounded.{u_1} {I : Type u_1} [Fintype I] [DecidableEq I] (d ell u : I \u2192 \u2115) (m h A : \u2115)\n  (hd : \u2200 (i : I), 0 < d i) (hdecomp : \u2200 (i : I), d i = 5 ^ ell i * u i) (hu : \u2200 (i : I), \u00ac5 \u2223 u i)\n  (hell : \u2200 (i : I), ell i \u2264 m) (hh : h \u2264 m) (hApos : 0 < A) (hAunit : \u00ac5 \u2223 A)\n  (hcard : \u2200 j < h, {i | ell i = j}.card \u2264 2)\n  (hhigh : \u2200 (i : I), h \u2264 ell i \u2192 5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (A * d i)) :\n  \u2203 B,\n    0 < B \u2227\n      \u00ac5 \u2223 B \u2227\n        B % 5 = A % 5 \u2227\n          (\u2200 (i : I), h \u2264 ell i \u2192 B * d i % (5 * 5 ^ m) = A * d i % (5 * 5 ^ m)) \u2227\n            (\u2200 (i : I), ell i < h \u2192 FiveAdicGoodDigit m (B * d i)) \u2227\n              \u2200 (i : I), 5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (B * d i)\nLonelyRunner.fiveAdic_seeded_multiplier.{u_1} {I : Type u_1} [Fintype I] [DecidableEq I] (d ell u : I \u2192 \u2115) (m h A : \u2115)\n  (hd : \u2200 (i : I), 0 < d i) (hdecomp : \u2200 (i : I), d i = 5 ^ ell i * u i) (hu : \u2200 (i : I), \u00ac5 \u2223 u i)\n  (hell : \u2200 (i : I), ell i \u2264 m) (hh : h \u2264 m) (hApos : 0 < A) (hAunit : \u00ac5 \u2223 A)\n  (hcard : \u2200 j < h, {i | ell i = j}.card \u2264 2)\n  (hhigh : \u2200 (i : I), h \u2264 ell i \u2192 5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (A * d i)) :\n  \u2203 lam,\n    0 < lam \u2227\n      lam < 5 * 5 ^ m \u2227\n        \u00ac5 \u2223 lam \u2227\n          lam % 5 = A % 5 \u2227\n            (\u2200 (i : I), h \u2264 ell i \u2192 lam * d i % (5 * 5 ^ m) = A * d i % (5 * 5 ^ m)) \u2227\n              (\u2200 (i : I), ell i < h \u2192 FiveAdicGoodDigit m (lam * d i)) \u2227\n                \u2200 (i : I), 5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (lam * d i)\nLonelyRunner.exists_five_adic_filtered_multiplier.{u_1} {I : Type u_1} [Fintype I] [DecidableEq I] (d ell u : I \u2192 \u2115)\n  (m : \u2115) (hd : \u2200 (i : I), 0 < d i) (hdecomp : \u2200 (i : I), d i = 5 ^ ell i * u i) (hu : \u2200 (i : I), \u00ac5 \u2223 u i)\n  (hell : \u2200 (i : I), ell i \u2264 m) (hcard : \u2200 j < m, {i | ell i = j}.card \u2264 2) :\n  \u2203 lam,\n    0 < lam \u2227\n      lam < 5 * 5 ^ m \u2227\n        lam % 5 = 1 \u2227\n          \u00ac5 \u2223 lam \u2227\n            (\u2200 (i : I), ell i < m \u2192 FiveAdicGoodDigit m (lam * d i)) \u2227\n              (\u2200 (i : I), ell i = m \u2192 lam * d i % (5 * 5 ^ m) = d i % (5 * 5 ^ m)) \u2227\n                \u2200 (i : I), 5 ^ m \u2264 cyclicResidueDistance (5 * 5 ^ m) (lam * d i)\nLonelyRunner.cyclicResidueDistance_eq_of_mod_eq (P x y : \u2115) (h : x % P = y % P) :\n  cyclicResidueDistance P x = cyclicResidueDistance P y\nLonelyRunner.cyclicResidueDistance_eq_of_add_mod_eq_zero (P X Y : \u2115) (hP : 0 < P) (h : (X + Y) % P = 0) :\n  cyclicResidueDistance P X = cyclicResidueDistance P Y\nLonelyRunner.cyclicResidueDistance_mul_complement (P s A : \u2115) (hP : 0 < P) (hs : s \u2264 P) :\n  cyclicResidueDistance P (A * (P - s)) = cyclicResidueDistance P (A * s)\nLonelyRunner.fiveAdic_normalize_unit (m d : \u2115) (hd : \u00ac5 \u2223 d) :\n  \u2203 x,\n    0 < x \u2227\n      x < 5 * 5 ^ m \u2227\n        (x % 5 = 1 \u2228 x % 5 = 2) \u2227\n          \u2200 (A : \u2115), cyclicResidueDistance (5 * 5 ^ m) (A * x) = cyclicResidueDistance (5 * 5 ^ m) (A * d)\nLonelyRunner.fiveCarryTriple (s : Fin 3 \u2192 FiveCarryState) :\n  \u2203 u k, \u2200 (i : Fin 3), \u2191(fiveCarryDigit (s i) u k) \u2208 {1, 2, 3}\nLonelyRunner.fourRunners (speeds : Fin 4 \u2192 \u211d) (hinj : Function.Injective speeds) (runner : Fin 4) :\n  \u2203 t, LonelyAt speeds runner t\n'LonelyRunner.fiveAdicCorrection_pos' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdicCorrection_mod_five' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdic_residue_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdicGoodDigit_distance' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdicCorrection_selected_product' depends on axioms: [propext]\n'LonelyRunner.fiveAdicCorrection_selected_digit' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdicCorrection_higher_residue' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdic_top_residue' depends on axioms: [propext]\n'LonelyRunner.fiveAdic_top_distance' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdic_avoid_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdicDigit_of_mod_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_unit_representative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_fill_level' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_seeded_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_seeded_multiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_five_adic_filtered_multiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.cyclicResidueDistance_eq_of_mod_eq' does not depend on any axioms\n'LonelyRunner.cyclicResidueDistance_eq_of_add_mod_eq_zero' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.cyclicResidueDistance_mul_complement' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.fiveAdic_normalize_unit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveCarryTriple' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n{\"axiom_free_reports\": 1, \"dependency_reports\": 21, \"full_state_replay\": false, \"kernel_examples\": 44, \"lean_exit_code\": 0, \"lean_stdin_sha256\": \"d2105319d804858fc10a4a14d6e318125541fb968d5c3642849770e47d9005de\", \"lean_stdout_sha256\": \"a87b636302712728a7fb3b51841b408b9a47f4569ebf63b2f4dee99bcb10e678\", \"new_public_types\": 21, \"old_root_audit_and_carry_public_bytes_preserved\": true, \"resource_benchmark\": false, \"result\": \"PASS\", \"source_guards\": 19}\n",
+        "stderr": ""
+      },
+      "source_corrections": false,
+      "kernel_examples": 44,
+      "new_public_types": 21,
+      "source_guards": 19
+    },
+    "historical_milestones_note": "Earlier partial-source hashes and pending statuses above are historical milestones, superseded by the final source hashes and accepted review."
   }
 }
