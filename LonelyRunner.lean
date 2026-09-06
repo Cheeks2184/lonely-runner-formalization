@@ -205,6 +205,9 @@ import LonelyRunner.SignedRenaultFiveOne
 import LonelyRunner.SmallPhaseOrbits
 import LonelyRunner.AffinePhaseCertificate
 
+import LonelyRunner.OneEvenRunners
+import LonelyRunner.WeakSixthShifts
+
 /-!
 Root import for the formal Lonely Runner development.
 -/

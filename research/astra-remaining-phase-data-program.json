@@ -1,0 +1,198 @@
+{
+  "task_id": "/root/remaining_phase_data_program",
+  "kind": "data-generator",
+  "status": "completed_single_authorized_run",
+  "assessment_sha256": "16ad698faeac6f3469c391094806f8bc301bc46fdfe294caefbf557051ba0589",
+  "source_sha256": "0a6f3d8a415323fa3f5ebc86a5686a238c399671a30a8edd4e275d7ea3914c31",
+  "freeze_history": [
+    {
+      "event": "before_astra_guidance_round_2",
+      "source_sha256": "f3383500933b2539692dff1bbe2f6854a1f326abdc0d6783d04fcb63354999b8"
+    },
+    {
+      "event": "after_astra_guidance_round_2",
+      "source_sha256": "0a6f3d8a415323fa3f5ebc86a5686a238c399671a30a8edd4e275d7ea3914c31",
+      "change": "Successful SystemExit is raised only after the Exception-only diagnostic handler."
+    }
+  ],
+  "owned_files": [
+    "scripts/remaining_phase_data.py",
+    "research/astra-remaining-phase-data-program.json"
+  ],
+  "fixed_contract": {
+    "six_one_atoms_per_weight": 120,
+    "six_one_candidates": 24,
+    "six_one_coordinate_order": [
+      "weight_two",
+      "weight_one",
+      "weight_one_sorted"
+    ],
+    "six_four_atoms": 81,
+    "six_four_candidates": 15,
+    "predicate_calls": 6975,
+    "directed_containment_tests_max": 70722,
+    "triple_intersections_max": 963081,
+    "witness_encoding": "one least-common-candidate-bit byte per deterministic compressed triple",
+    "stop_on_first_uncovered_triple": true
+  },
+  "execution_plan": {
+    "exact_command": "python3 scripts/remaining_phase_data.py --execute --output-dir <root-granted-new-output-dir>",
+    "outer_capture_shell": "OUT=<root-granted-new-output-dir>; mkdir -- \"$OUT\"; sha256sum scripts/remaining_phase_data.py >\"$OUT/source.sha256.before\"; /usr/bin/time -v -o \"$OUT/controller.time\" python3 scripts/remaining_phase_data.py --execute --output-dir \"$OUT/data\" >\"$OUT/controller.stdout\" 2>\"$OUT/controller.stderr\"; status=$?; printf '%s\\n' \"$status\" >\"$OUT/controller.exit\"; sha256sum scripts/remaining_phase_data.py >\"$OUT/source.sha256.after\"; exit \"$status\"",
+    "outer_capture_artifacts": [
+      "source.sha256.before",
+      "source.sha256.after",
+      "controller.exit",
+      "controller.time",
+      "controller.stdout",
+      "controller.stderr",
+      "data/metadata.json",
+      "data/six_one_witnesses.bin",
+      "data/six_four_witnesses.bin"
+    ],
+    "post_run_retention_invariants": {
+      "inclusive_bytes_max": 1048576,
+      "nonwitness_bytes_max": 65536,
+      "nonwitness_definition": "source plus every retained artifact other than the two binary witness files"
+    },
+    "resource_limits": {
+      "wall_seconds": 60,
+      "cpu_soft_seconds": 59,
+      "cpu_hard_seconds": 60,
+      "address_space_bytes": 268435456,
+      "retained_bytes_max": 1048576,
+      "code_metadata_diagnostics_reserve": 65536
+    },
+    "artifacts": [
+      "metadata.json",
+      "six_one_witnesses.bin",
+      "six_four_witnesses.bin"
+    ],
+    "failure_artifact": "failure.json"
+  },
+  "delivery_metrics": {
+    "check_kind": "python",
+    "first_check_success": true,
+    "worker_repair_rounds": 0,
+    "astra_repair_rounds": 2,
+    "astra_repair_lines": 0,
+    "worker_elapsed_seconds": null,
+    "usage": null,
+    "evidence": [
+      "research/astra-remaining-phase-data-program.json",
+      "/tmp/astra-remaining-phase-data-fixed-v1"
+    ]
+  },
+  "owned_runtime_artifacts": [
+    "/tmp/astra-remaining-phase-data-fixed-v1/controller.sh",
+    "/tmp/astra-remaining-phase-data-fixed-v1/controller.sha256.before",
+    "/tmp/astra-remaining-phase-data-fixed-v1/source.sha256.before",
+    "/tmp/astra-remaining-phase-data-fixed-v1/source.sha256.after",
+    "/tmp/astra-remaining-phase-data-fixed-v1/controller.exit",
+    "/tmp/astra-remaining-phase-data-fixed-v1/controller.time",
+    "/tmp/astra-remaining-phase-data-fixed-v1/controller.stdout",
+    "/tmp/astra-remaining-phase-data-fixed-v1/controller.stderr",
+    "/tmp/astra-remaining-phase-data-fixed-v1/retention.json",
+    "/tmp/astra-remaining-phase-data-fixed-v1/retention.exit",
+    "/tmp/astra-remaining-phase-data-fixed-v1/data/metadata.json",
+    "/tmp/astra-remaining-phase-data-fixed-v1/data/six_one_witnesses.bin",
+    "/tmp/astra-remaining-phase-data-fixed-v1/data/six_four_witnesses.bin"
+  ],
+  "pre_execution_checks": {
+    "ast_parse": {
+      "command": "python3 -c \"import ast, pathlib; ast.parse(pathlib.Path('scripts/remaining_phase_data.py').read_text(encoding='utf-8'))\"",
+      "exit": 0,
+      "distinct_from_table_run": true
+    }
+  },
+  "actual_run": {
+    "authorized_once": true,
+    "controller": {
+      "path": "/tmp/astra-remaining-phase-data-fixed-v1/controller.sh",
+      "sha256_before": "9d8fb652042df71f47e7b2b002fa0c26cb9c51627f395208660b45f09da49963",
+      "byte_count": 1704,
+      "checksum_output_verbatim": "9d8fb652042df71f47e7b2b002fa0c26cb9c51627f395208660b45f09da49963  /tmp/astra-remaining-phase-data-fixed-v1/controller.sh\n"
+    },
+    "source_hash_before_output_verbatim": "0a6f3d8a415323fa3f5ebc86a5686a238c399671a30a8edd4e275d7ea3914c31  /home/joshua/lonely-runner-formalization/scripts/remaining_phase_data.py\n",
+    "source_hash_after_output_verbatim": "0a6f3d8a415323fa3f5ebc86a5686a238c399671a30a8edd4e275d7ea3914c31  /home/joshua/lonely-runner-formalization/scripts/remaining_phase_data.py\n",
+    "source_unchanged_during_run": true,
+    "controller_exit_output_verbatim": "0\n",
+    "retention_exit_output_verbatim": "0\n",
+    "post_controller_retention_recheck": {
+      "method": "source bytes plus every file beneath the output root, excluding only the two binary witness files for the nonwitness subtotal",
+      "source_bytes": 15808,
+      "output_bytes": 51983,
+      "witness_bytes": 41202,
+      "inclusive_bytes": 67791,
+      "inclusive_limit": 1048576,
+      "nonwitness_bytes": 26589,
+      "nonwitness_limit": 65536,
+      "within_limits": true
+    },
+    "outputs": {
+      "controller_stdout": {
+        "path": "/tmp/astra-remaining-phase-data-fixed-v1/controller.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "byte_count": 0,
+        "output_verbatim": ""
+      },
+      "controller_stderr": {
+        "path": "/tmp/astra-remaining-phase-data-fixed-v1/controller.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "byte_count": 0,
+        "output_verbatim": ""
+      },
+      "controller_time": {
+        "path": "/tmp/astra-remaining-phase-data-fixed-v1/controller.time",
+        "sha256": "c6b059d792c460778f7a80850c6f97756a3b8883082e3243f2f7be57f3c96001",
+        "byte_count": 868,
+        "output_verbatim": "\tCommand being timed: \"python3 /home/joshua/lonely-runner-formalization/scripts/remaining_phase_data.py --execute --output-dir /tmp/astra-remaining-phase-data-fixed-v1/data\"\n\tUser time (seconds): 0.04\n\tSystem time (seconds): 0.00\n\tPercent of CPU this job got: 24%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:00.17\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 20104\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 3\n\tMinor (reclaiming a frame) page faults: 2731\n\tVoluntary context switches: 7\n\tInvoluntary context switches: 0\n\tSwaps: 0\n\tFile system inputs: 496\n\tFile system outputs: 104\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+      },
+      "retention": {
+        "path": "/tmp/astra-remaining-phase-data-fixed-v1/retention.json",
+        "sha256": "4806d5bdd164d51aa5dffabc246c6cefd7608113abee07017ceb7557c88ee4da",
+        "byte_count": 187,
+        "output_verbatim": "{\"inclusive_bytes\":67602,\"inclusive_limit\":1048576,\"nonwitness_bytes\":26400,\"nonwitness_limit\":65536,\"output_bytes\":51794,\"source_bytes\":15808,\"within_limits\":true,\"witness_bytes\":41202}\n"
+      }
+    },
+    "outcome": {
+      "status": "success",
+      "predicate_calls": 6975,
+      "directed_containment_tests": 19665,
+      "mixed_triples": 37926,
+      "equal_type_triples": 3276,
+      "triple_intersections": 41202,
+      "core_sizes": {
+        "six_one_weight_two": 42,
+        "six_one_weight_one": 42,
+        "six_four": 26
+      },
+      "retention": {
+        "inclusive_bytes": 67602,
+        "inclusive_limit": 1048576,
+        "nonwitness_bytes": 26400,
+        "nonwitness_limit": 65536,
+        "output_bytes": 51794,
+        "source_bytes": 15808,
+        "within_limits": true,
+        "witness_bytes": 41202
+      }
+    },
+    "artifacts": {
+      "metadata": {
+        "path": "/tmp/astra-remaining-phase-data-fixed-v1/data/metadata.json",
+        "sha256": "4fad760e1ce3231e0d66e8ef53b9eb401c6f7d2abf8403ed6f168a79fcdb01a9",
+        "byte_count": 7619
+      },
+      "six_one_witnesses": {
+        "path": "/tmp/astra-remaining-phase-data-fixed-v1/data/six_one_witnesses.bin",
+        "sha256": "0f56b854ddef56e49731684bc4ccd9d15366d13bd337e4a2e0c194734e9aa0ce",
+        "byte_count": 37926
+      },
+      "six_four_witnesses": {
+        "path": "/tmp/astra-remaining-phase-data-fixed-v1/data/six_four_witnesses.bin",
+        "sha256": "b68a691032caeed3ac4f71ea0967affc1946c19358774b928db53608e3846037",
+        "byte_count": 3276
+      }
+    }
+  }
+}
