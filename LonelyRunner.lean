@@ -125,6 +125,8 @@ import LonelyRunner.FiveRunnerBuffered
 import LonelyRunner.RationalMarginCertificates
 import LonelyRunner.EndpointCompleteness
 import LonelyRunner.StrictPairSumCompleteness
+import LonelyRunner.RationalMarginBoxes
+import LonelyRunner.RationalMarginBoxPilot
 
 /-!
 Root import for the formal Lonely Runner development.

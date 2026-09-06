@@ -10,6 +10,8 @@ import LonelyRunner.FiveRunnerBuffered
 import LonelyRunner.RationalMarginCertificates
 import LonelyRunner.EndpointCompleteness
 import LonelyRunner.StrictPairSumCompleteness
+import LonelyRunner.RationalMarginBoxes
+import LonelyRunner.RationalMarginBoxPilot
 
 -- The exact finite-family equivalence does not prove either side.
 #print axioms LonelyRunner.exists_strictMono_reindex
@@ -539,3 +541,34 @@ project-specific axiom.
 #print axioms LonelyRunner.rationalMarginRowOK_exists_positive_time
 #print axioms LonelyRunner.exists_endpoint_time_of_witness
 #print axioms LonelyRunner.exists_strictWitness_iff_pairSum
+
+-- Exact box and partition soundness, and the fixed two-leaf pilot.
+-- These assertions cover the stated root box only, not an entire runner count.
+#print axioms LonelyRunner.rationalMarginBandLeafOK_row
+#print axioms LonelyRunner.rationalMarginBandLeafOK_common_positive_time
+#print axioms LonelyRunner.rationalMarginBox_split_cover
+#print axioms LonelyRunner.rationalMarginBoxTreeOKCore_row
+#print axioms LonelyRunner.rationalMarginBoxTreeOK_row
+#print axioms LonelyRunner.rationalMarginBoxTreeOK_exists_positive_time
+#print axioms LonelyRunner.rationalMarginBoxPilot_accepts
+#print axioms LonelyRunner.rationalMarginBoxPilot_unsplit_rejects
+#print axioms LonelyRunner.rationalMarginBoxPilot_cut_below_rejects
+#print axioms LonelyRunner.rationalMarginBoxPilot_cut_at_upper_rejects
+#print axioms LonelyRunner.rationalMarginBoxPilot_failed_child_rejects
+#print axioms LonelyRunner.rationalMarginBoxPilot_wrong_band_rejects
+#print axioms LonelyRunner.rationalMarginBoxPilot_row
+#print axioms LonelyRunner.rationalMarginBoxPilot_exists_positive_time
+#print axioms LonelyRunner.rationalMarginBoxPilot_repeated_coordinates
+#print axioms LonelyRunner.rationalMarginBoxPilot_left_boundary_row
+#print axioms LonelyRunner.rationalMarginBoxPilot_right_boundary_row
+#print axioms LonelyRunner.rationalMarginBoxPilot_two_leaves
+#print axioms LonelyRunner.rationalMarginBoxPilot_zero_margin_integer_upper_accepts
+#print axioms LonelyRunner.rationalMarginBoxPilot_zero_speed_zero_margin_accepts
+#print axioms LonelyRunner.rationalMarginBoxPilot_half_closed_accepts
+#print axioms LonelyRunner.rationalMarginBoxPilot_above_half_rejects
+#print axioms LonelyRunner.rationalMarginBoxPilot_zero_den_rejects
+#print axioms LonelyRunner.rationalMarginBoxPilot_zero_q_rejects
+#print axioms LonelyRunner.rationalMarginBoxPilot_zero_p_rejects
+#print axioms LonelyRunner.rationalMarginBoxPilot_raw_empty_accepts
+#print axioms LonelyRunner.rationalMarginBoxPilot_public_empty_rejects
+#print axioms LonelyRunner.rationalMarginBoxPilot_fin_zero_accepts

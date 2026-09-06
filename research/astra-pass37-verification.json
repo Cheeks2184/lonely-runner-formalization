@@ -1,0 +1,90 @@
+{
+  "checkpoint": "Pass37",
+  "source_base": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+  "status": "verified_publication_pending",
+  "source_sha256": {
+    "LonelyRunner/RationalMarginBoxes.lean": "9faab792a9e4120d931cb24eef071b072eee89a580d174f224ec2a7a123d51bf",
+    "LonelyRunner/RationalMarginBoxPilot.lean": "25e144207b1ef4121c155f50d9ca9209655bcca46fdc40b1b06a4bc88f1f84e8",
+    "LonelyRunner.lean": "a04502b8ac17cecdaa2aada77d66bac3e484e693f01c31c0b9d6f671cd586f96",
+    "LonelyRunner/AxiomAudit.lean": "170d1b3937d0c58b0a4b0601a33b570bb9e504b6102d943c5ee29d49718bd5c1"
+  },
+  "evidence_sha256": {
+    "research/astra-rational-margin-box-pilot-plan.md": "0c1eecb6872e4c202643e5fdf237747b8262a06ed2de4cc7fea2bd84acf8a67a",
+    "research/astra-rational-margin-box-pilot-plan-review.md": "c327faf2230f223ac8abf7036e9ce5d3d52b0c34ca2c935e8253f61c5444c61a",
+    "research/astra-rational-margin-box-pilot-implementation.md": "8f5993f3ae0721cfc1a075eb982f583b39ccc9a382f8419229c326d19adffbdb",
+    "research/astra-rational-margin-box-formal-review.md": "d3e75cededb7e8e5d33702f3d98dfe73582b85ee1121173b67bc3a9fd07eefc4"
+  },
+  "formal_scope": {
+    "generic": "Natural speed boxes; exact rational-band leaf tests; structurally derived natural split children; each contained row of a passing tree has a positive rational witness for all original closed margins.",
+    "raw_empty_scope": "Vacuous raw leaf soundness; public tree rejects malformed empty roots. Fin0 allowed.",
+    "pilot": "Exactly lo=(2,3,5,6), hi=(3,4,5,8), margins=(1/5,1/5,1/5,1/4); split last coordinate at7; times1/10 and5/32. Twelve rows by product, no row enumeration.",
+    "new_theorem_count": 28,
+    "uniform_count_supply": false,
+    "full_lrc": "unresolved"
+  },
+  "verification": {
+    "full_build_session": 87992,
+    "full_build_exit_code": 0,
+    "full_build_jobs": 3651,
+    "full_build_log_sha256": "da77b590b789fb8c4cbae071bffa8a49e301a2d77104e4f8b6195ce652ee3081",
+    "trust_session": 60743,
+    "trust_exit_code": 0,
+    "trust_dependency_reports": 497,
+    "trust_axiom_free_reports": 2,
+    "trust_log_sha256": "985809ea21823abb8b23def831cd0ce3522cb83d6b0364b52c247b07c5409d69",
+    "trust_count_note": "497 dependency lists plus two axiom-free declarations: existing normalizedBadCount and new rationalMarginBoxPilot_fin_zero_accepts."
+  },
+  "resource_caps": {
+    "leaves": 256,
+    "source_data_bytes": 65536,
+    "whole_check_seconds": 60,
+    "rss_kib": 4194304
+  },
+  "root_resource_replay": {
+    "report_sha256": "8f5993f3ae0721cfc1a075eb982f583b39ccc9a382f8419229c326d19adffbdb",
+    "command_sha256": "7e79d8262730f7258e3b50fff058f778fad4e0fadac1d5e9699e3527cbd2c1e1",
+    "stdout_sha256": "8750913f10f598e4ee295aa19e2652b6a24bc39dbd57315a84ad15a19617fe55",
+    "exit_code": 0,
+    "stdout": "LonelyRunner/RationalMarginBoxPilot.lean: OK\nLonelyRunner/RationalMarginBoxes.lean: OK\nmonitor=pass wall=1.853 sampled_rss_kib=4109700 child_exit=0\ngnu_time_wall=1.87 gnu_time_rss_kib=3311716 gnu_time_exit=0\nsource_bytes=5646 leaves=2\n",
+    "stderr": ""
+  },
+  "root_sources_fully_read": true,
+  "plan_root_replay": {
+    "path": "research/astra-rational-margin-box-pilot-plan.md",
+    "artifact_sha256": "0c1eecb6872e4c202643e5fdf237747b8262a06ed2de4cc7fea2bd84acf8a67a",
+    "program_sha256": "6297f1298e7df800ade421f63cb2ec57e4239cf7d6177e08904044352d39814b",
+    "stdout_sha256": "b1f17b7de8ae306ed47efc9cf740772115dadf35d2be841c5bb8e4f8a0f3c946",
+    "status": "passed",
+    "stdout": "source_guards=6 passed\nleft_comparisons=(((10, 10), (25, 50)), ((10, 15), (30, 50)), ((10, 25), (35, 50)), ((10, 24), (38, 40)))\nright_comparisons=(((32, 50), (107, 160)), ((32, 75), (132, 160)), ((32, 125), (157, 160)), ((160, 160), (192, 256)))\nfixed_controls=21 passed; endpoint_inequalities=16; tree_leaves=2\nroot_rows_product=12; tuple_enumeration=none; Lean_execution=none\n"
+  },
+  "plan_review_root_replay": {
+    "artifact_sha256": "c327faf2230f223ac8abf7036e9ce5d3d52b0c34ca2c935e8253f61c5444c61a",
+    "program_sha256": "a426fd4c9522fd22f2d2deee7876a79909111e994bde124212210cef369b95aa",
+    "stdout_sha256": "ca40f6ddc2f72a189c94540b4fd47e0b5f56226975741bfb9f3d89b91519978a",
+    "status": "passed",
+    "stdout": "source_guards=6 passed\nleft_comparisons=(((10, 10), (25, 50)), ((10, 15), (30, 50)), ((10, 25), (35, 50)), ((10, 24), (38, 40)))\nright_comparisons=(((32, 50), (107, 160)), ((32, 75), (132, 160)), ((32, 125), (157, 160)), ((160, 160), (192, 256)))\nfixed_controls=21 passed; endpoint_inequalities=16; tree_leaves=2\nroot_rows_product=12; tuple_enumeration=none; Lean_execution=none\n{\"author_program_sha256\": \"6297f1298e7df800ade421f63cb2ec57e4239cf7d6177e08904044352d39814b\", \"author_sha256\": \"0c1eecb6872e4c202643e5fdf237747b8262a06ed2de4cc7fea2bd84acf8a67a\", \"author_stdout_sha256\": \"b1f17b7de8ae306ed47efc9cf740772115dadf35d2be841c5bb8e4f8a0f3c946\", \"independent_endpoint_checks\": 16, \"lean_execution\": false, \"named_leaves\": 2, \"result\": \"PASS\", \"root_rows_product\": 12, \"scalar_edge_controls\": 2, \"source_guards\": 7, \"split_coordinate_controls\": 3, \"tuple_enumeration\": false}\n"
+  },
+  "excluded_future_work": [
+    "research/astra-five-runner-ordinary-insertion-plan.md",
+    "research/astra-five-total-direct-proof-screen.md",
+    "research/astra-five-adic-carry-plan.md",
+    "research/astra-five-adic-filter-plan.md",
+    "LonelyRunner/FiveAdicCarry.lean",
+    "research/astra-five-adic-carry-implementation.md",
+    "research/astra-five-adic-carry-symbolic-plan.md",
+    "LonelyRunner/FiveAdicFiltering.lean",
+    "research/astra-five-adic-filter-arithmetic-implementation.md",
+    "research/astra-five-adic-filter-plan-review.md"
+  ],
+  "final_source_review_root_replay": {
+    "artifact_sha256": "d3e75cededb7e8e5d33702f3d98dfe73582b85ee1121173b67bc3a9fd07eefc4",
+    "program_sha256": "c25a6a71f6512c0ad394bc4f4f43b846edd4a4bd2d370e575b4ffc200d95f75d",
+    "stdout_sha256": "c8a1453668676aecbe7f4a5a236ba6edc9a5c5a01b9a6df77caac5f3cfb3b215",
+    "status": "passed",
+    "kernel_examples": 21,
+    "dependency_reports": 11,
+    "axiom_free_reports": 1,
+    "source_guards": 14
+  },
+  "storage": "One shared cache retained for immediately queued settled five-adic arithmetic implementation; final box review and root replay completed."
+}

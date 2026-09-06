@@ -11,6 +11,10 @@ the Lonely Runner Conjecture (LRC).
 [project workflow](docs/project-workflow.md). Astra High orchestrates in-session
 Astra Extra High research/review and Terra Medium implementation. The full unrestricted proof/disproof goal is now active; see
 [workflow-state.json](research/workflow-state.json) for current tasks.
+The [Pass 37 checkpoint](docs/astra-research-37.md) proves soundness of rational
+box certificates and derived split trees. A two-leaf pilot supplies positive
+witnesses for its stated twelve-row box and passes the time, memory and data
+caps. The full build and trust audit passed; full-domain coverage remains open.
 The [Pass 36 checkpoint](docs/astra-research-36.md) adds exact rational-margin
 row checks, closed nonuniform endpoint completeness in the half period, and
 strict pair-sum completeness. These generic interfaces allow repeated speeds

@@ -3,6 +3,10 @@
 This is a research map, not a list of claimed proofs. Each route terminates at
 an obligation that is currently open in general.
 
+The [Pass 37 checkpoint](astra-research-37.md) proves exact box/partition
+certificate soundness and passes a two-leaf resource pilot. This makes small
+box certificates usable; a compact full-domain certificate is still missing.
+
 The [Pass 36 checkpoint](astra-research-36.md) supplies generic exact rational
 row checks, nonuniform half-period endpoints, and strict pair-sum completeness.
 The associated resource design rejects a flat `Fin 1001` four-coordinate
