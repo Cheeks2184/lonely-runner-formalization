@@ -1,0 +1,83 @@
+{
+  "checkpoint": "Pass71",
+  "parent_main": "d0f1fee0850373e5b35a9883752d45b226d5f868",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-71.md": "6b89ddb8654c57584189e24c7484bed8ddd5c9fe8515cd475a121893c2f3abff",
+    "research/astra-ideal-row-carry-exclusion.md": "689c3255596a4fb9dfc8935d0bf6ac40775415e1782dc7c09ccbfdb3b30df286",
+    "research/astra-ideal-row-carry-review.md": "32136669aacd6653ffe9259ec65a1fb7e319dc491af5356a7a41e0a7c92a8b77",
+    "research/astra-ideal-mask-integer-control.json": "1136441fd160078f2cf7e08fe80582b5b70345cbebe30cfd0f02200be0d168bb"
+  },
+  "dependency_hashes": {
+    "research/astra-ideal-row-finite-cell-reduction.md": "44aca4f3cff905074d315515fb88a08b0957b9b200d016c34f55dce3701ac1fb",
+    "research/astra-ideal-row-selection-audit.md": "20752d3a362a153d4cdaa2f30373c01002fa0dd3ed708b3bf1d1b4a4d67c77b7"
+  },
+  "review_bindings": {
+    "research/astra-ideal-row-carry-review.md": [
+      "research/astra-ideal-row-carry-exclusion.md",
+      "research/astra-ideal-row-finite-cell-reduction.md",
+      "research/astra-ideal-row-selection-audit.md"
+    ]
+  },
+  "checks": {
+    "frozen_source_bindings": 4,
+    "dependency_bindings": 2,
+    "review_bindings": "passed",
+    "newline_and_trailing_whitespace": "passed",
+    "unknown_solver_receipt_integrity": "passed_without_mathematical_replay",
+    "temporary_solver_dependency_absent": true
+  },
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "/usr/bin/python3",
+      "/tmp/astra-pass71-verify.py"
+    ],
+    "source": "import hashlib\nimport json\nfrom pathlib import Path\nimport subprocess\nimport sys\n\nroot = Path('/home/joshua/lonely-runner-formalization')\ninputs = Path('/tmp/astra-pass71-inputs.json')\nmanifest = json.loads(inputs.read_text())\nbindings = manifest['hashes'] | manifest['dependency_hashes']\nfor name, digest in bindings.items():\n    data = (root / name).read_bytes()\n    assert hashlib.sha256(data).hexdigest() == digest, name\n    assert data.endswith(b'\\n'), name\n    assert all(line.rstrip() == line for line in data.splitlines()), name\nfor review, sources in manifest['review_bindings'].items():\n    text = (root / review).read_text()\n    for source in sources:\n        assert bindings[source] in text, (review, source)\ncontrol = json.loads((root / 'research/astra-ideal-mask-integer-control.json').read_text())\nassert hashlib.sha256(control['execution']['source_utf8'].encode()).hexdigest() == control['execution']['source_sha256'] == '68cb123b610cf068c353c68c332bb1e5d34025675e68fab483c0751c77ec285e'\nassert control['solver']['status'] == 'unknown'\nassert control['solver']['configuration'] == {'timeout_ms': 60000, 'random_seed': 0, 'optimization': False, 'solver_check_calls': 1}\nassert control['solver']['statistics']['num checks'] == '1'\nassert control['certificate'] is None and control['certificate_validation'] is None\nassert len(control['every_midpoint_integer_mask']) == 352\nassert len(control['pairs_in_bit_order']) == 100\nobserved = control['actual_process_receipt']['solver_invocation']['completion_tool_observation']\nassert observed['exit_status'] == 0 and observed['combined_output'] == ''\nassert control['delivery_metrics']['worker_elapsed_seconds'] is None\nassert control['delivery_metrics']['first_check_success'] is True\nassert not Path('/tmp/ideal-mask-integer-control-z3-20260906').exists()\ncommands = []\nfor argv in ([sys.executable, '-B', 'scripts/validate_workflow.py'], ['git', 'diff', '--check'], [sys.executable, '-B', 'scripts/manage_storage.py']):\n    result = subprocess.run(argv, cwd=root, text=True, capture_output=True)\n    commands.append({'argv': argv, 'exit_code': result.returncode, 'stdout': result.stdout, 'stderr': result.stderr})\n    assert result.returncode == 0, commands[-1]\nreceipt = {\n    'checkpoint': 'Pass71',\n    'parent_main': 'd0f1fee0850373e5b35a9883752d45b226d5f868',\n    'status': 'verified_local_pending_publication',\n    **manifest,\n    'checks': {'frozen_source_bindings': len(manifest['hashes']), 'dependency_bindings': len(manifest['dependency_hashes']), 'review_bindings': 'passed', 'newline_and_trailing_whitespace': 'passed', 'unknown_solver_receipt_integrity': 'passed_without_mathematical_replay', 'temporary_solver_dependency_absent': True},\n    'commands': commands,\n    'root_verifier': {'argv': [sys.executable, str(Path(__file__))], 'source': Path(__file__).read_text(), 'source_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), 'input_source': inputs.read_text(), 'input_sha256': hashlib.sha256(inputs.read_bytes()).hexdigest()},\n    'mathematical_verification': 'Independent hand review of carry audit and root full reads. Root source/receipt review of one solver-qualified unknown result; no solver or mask replay.',\n    'scope': 'Exact wall exchanges and fractional/additive method barriers; a single fixed integer feasibility check timed out unknown. No actual integral cover or uniform exclusion, no unrestricted LRC resolution.',\n    'excluded': 'Active joint all-deletion seed-maximum audit and any draft it creates.',\n    'failure_history': 'The solver returned unknown at its planned timeout, not an engineering failure. One Astra metadata clarification preserved original source, correct elapsed/success fields and the unexercised SAT padding limitation. No executable repairs or integration-verifier failures.',\n}\n(root / 'research/astra-pass71-verification.json').write_text(json.dumps(receipt, indent=2) + '\\n')\nprint(json.dumps({'checkpoint': 'Pass71', 'result': 'passed', 'source_bindings': len(manifest['hashes']), 'dependency_bindings': len(manifest['dependency_hashes']), 'unknown_solver_scope': True, 'dependency_absent': True, 'commands': commands}, indent=2))\n",
+    "source_sha256": "e1ccbfdfb987be108cfed180dc25ef34614dc8b7723dd29b495d406772fef068",
+    "input_source": "{\n  \"hashes\": {\n    \"docs/astra-research-71.md\": \"6b89ddb8654c57584189e24c7484bed8ddd5c9fe8515cd475a121893c2f3abff\",\n    \"research/astra-ideal-row-carry-exclusion.md\": \"689c3255596a4fb9dfc8935d0bf6ac40775415e1782dc7c09ccbfdb3b30df286\",\n    \"research/astra-ideal-row-carry-review.md\": \"32136669aacd6653ffe9259ec65a1fb7e319dc491af5356a7a41e0a7c92a8b77\",\n    \"research/astra-ideal-mask-integer-control.json\": \"1136441fd160078f2cf7e08fe80582b5b70345cbebe30cfd0f02200be0d168bb\"\n  },\n  \"dependency_hashes\": {\n    \"research/astra-ideal-row-finite-cell-reduction.md\": \"44aca4f3cff905074d315515fb88a08b0957b9b200d016c34f55dce3701ac1fb\",\n    \"research/astra-ideal-row-selection-audit.md\": \"20752d3a362a153d4cdaa2f30373c01002fa0dd3ed708b3bf1d1b4a4d67c77b7\"\n  },\n  \"review_bindings\": {\n    \"research/astra-ideal-row-carry-review.md\": [\n      \"research/astra-ideal-row-carry-exclusion.md\",\n      \"research/astra-ideal-row-finite-cell-reduction.md\",\n      \"research/astra-ideal-row-selection-audit.md\"\n    ]\n  }\n}\n",
+    "input_sha256": "f513381137a31a411b9374f2f6726b99529e80e39ce2ccba60418f308ba95e51",
+    "tool_result": {
+      "chunk_id": "20c439",
+      "wall_time_seconds": 4.148e-06,
+      "exit_code": 0,
+      "original_token_count": 219,
+      "output": "{\n  \"checkpoint\": \"Pass71\",\n  \"result\": \"passed\",\n  \"source_bindings\": 4,\n  \"dependency_bindings\": 2,\n  \"unknown_solver_scope\": true,\n  \"dependency_absent\": true,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": "Independent hand review of carry audit and root full reads. Root source/receipt review of one solver-qualified unknown result; no solver or mask replay.",
+  "scope": "Exact wall exchanges and fractional/additive method barriers; a single fixed integer feasibility check timed out unknown. No actual integral cover or uniform exclusion, no unrestricted LRC resolution.",
+  "excluded": "Active joint all-deletion seed-maximum audit and any draft it creates.",
+  "failure_history": "The solver returned unknown at its planned timeout, not an engineering failure. One Astra metadata clarification preserved original source, correct elapsed/success fields and the unexercised SAT padding limitation. No executable repairs or integration-verifier failures."
+}
