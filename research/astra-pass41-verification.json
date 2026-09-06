@@ -1,0 +1,572 @@
+{
+  "checkpoint": "Pass41",
+  "status": "verified_ready_to_publish",
+  "base_main": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+  "files": {
+    "LonelyRunner/PrimeAdicArithmetic.lean": "78387d8bb606398f240d435df8e5874259f9fb782f0ebc21830905efdc57edf6",
+    "LonelyRunner/PrimeAdicCompression.lean": "bd9f20169c49ac00acf6d27a53109d0d8770f2b224bf29f65d8ff76db8102eda",
+    "LonelyRunner.lean": "c4cdec234819184d3df0d376e1bf2111dd3ccadbd930a31fb073aa0b98e717d3",
+    "LonelyRunner/AxiomAudit.lean": "9f449224e85ed16ac3e3131c43d27ad78eddb05b8d1ce56e6958b6731c460e03",
+    "research/astra-prime-adic-compression-implementation.md": "93c159a3cc96758182cf906cf961a521296ebd8396168549d1ad00d55e1b2aa7",
+    "research/astra-prime-adic-final-source-review.md": "687ea1cd302b3ce741ee67cf4045c828e755ed986db3993c6dba06f026aecd8d",
+    "research/astra-six-total-maximizer-plan.md": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+    "research/astra-six-total-maximizer-review.md": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0",
+    "docs/astra-research-41.md": "9851f2d52397de393d7dfc529ba6b70f2d90cb9732bc9b469c68b4d73d50bc3f"
+  },
+  "verification": {
+    "focused_build": {
+      "exit_code": 0,
+      "jobs": 3002,
+      "log_sha256": "3fb3ff3dc6964c393c0abb5db9c680acee7756c02f2042ee2fe0e73eb87cdeda"
+    },
+    "full_build": {
+      "exit_code": 0,
+      "jobs": 3659,
+      "log_sha256": "9ff063201366984e55b495805547ea2dbdcfdd1d279e50229ff8a7aae04a8aef"
+    },
+    "trust": {
+      "exit_code": 0,
+      "dependency_reports": 552,
+      "axiom_free_reports": 3,
+      "log_sha256": "abab152a233bc26a3e1cccdfa370fc9f8cfd3f0836a0f65f2c9a9c3083a5effc",
+      "new_public_theorems": [
+        "primeAdicCorrection_pos",
+        "primeAdicCorrection_mod_prime",
+        "primeAdic_residue_decomposition",
+        "primeAdicCorrection_selected_product",
+        "primeAdicCorrection_selected_digit",
+        "primeAdicCorrection_higher_residue",
+        "primeAdicDigit_of_mod_eq",
+        "primeAdic_unit_representative",
+        "primeAdic_positive_bounded_residue_decomposition",
+        "primeAdicCorrection_exists_target",
+        "primeAdic_top_exists_target",
+        "primeAdicCorrection_not_dvd",
+        "primeAdic_one_target_unbounded",
+        "primeAdic_two_distinct_targets",
+        "primeAdicDifference_add_anchor",
+        "primeAdicDigit_add_last",
+        "primeAdic_zero_or_last_target",
+        "primeAdic_triple_compression",
+        "signedPrimeAdicDigit_mul",
+        "primeAdic_triple_compression_int"
+      ]
+    },
+    "independent_frozen_source_review": {
+      "path": "research/astra-prime-adic-final-source-review.md",
+      "sha256": "687ea1cd302b3ce741ee67cf4045c828e755ed986db3993c6dba06f026aecd8d",
+      "root_replay": {
+        "report_sha256": "687ea1cd302b3ce741ee67cf4045c828e755ed986db3993c6dba06f026aecd8d",
+        "bash_sha256": "397d5ce02bcc5199d848827a13da0cef8cba4fb89a2365f427eb94129601c58a",
+        "exit_code": 0,
+        "wall_seconds": 2.364794750988949,
+        "stdout": "{\"argv\": [\"lake\", \"env\", \"lean\", \"--stdin\"], \"child_max_rss_kib\": 3718728, \"child_system_seconds\": 0.665412, \"child_user_seconds\": 1.974497, \"exit\": 0, \"guard_count\": 15, \"guards\": \"PASS\", \"probe_bytes\": 9629, \"probe_sha256\": \"f100dcd2813c83d9e33732a7f9c7815c030358f5471428cb2e5f42f4ec9b947a\", \"stderr_bytes\": 0, \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 2750, \"stdout_sha256\": \"5df227e79508b513cd76296cea3180a5f9d99153f06c3435ea6fa285fe969642\", \"wall_seconds\": 2.337661}\nSTDOUT-BEGIN\n'LonelyRunner.primeAdicCorrection_pos' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdicCorrection_mod_prime' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.primeAdic_residue_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdicCorrection_selected_product' depends on axioms: [propext]\n'LonelyRunner.primeAdicCorrection_selected_digit' depends on axioms: [propext]\n'LonelyRunner.primeAdicCorrection_higher_residue' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.primeAdicDigit_of_mod_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_unit_representative' depends on axioms: [propext]\n'LonelyRunner.primeAdic_positive_bounded_residue_decomposition' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'LonelyRunner.primeAdicCorrection_exists_target' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_top_exists_target' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdicCorrection_not_dvd' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.primeAdic_one_target_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_two_distinct_targets' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdicDifference_add_anchor' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.primeAdicDigit_add_last' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_zero_or_last_target' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_triple_compression' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.signedPrimeAdicDigit_mul' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_triple_compression_int' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_four_label_multiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourMovingNaturalMultiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourMovingNaturalRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.lowerCountPositiveIntegerHypothesis_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PrimeAdicSourceReview.fixed_same_level_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PrimeAdicSourceReview.fixed_same_level_no_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\nSTDOUT-END\nSTDERR-BEGIN\nSTDERR-END\n",
+        "stderr": "",
+        "stdout_sha256": "04d7400c5d30b7ce2b3e8a059e6644d6a1d4dbc331a29e868fc0b39e5f583671",
+        "metadata": {
+          "argv": [
+            "lake",
+            "env",
+            "lean",
+            "--stdin"
+          ],
+          "child_max_rss_kib": 3718728,
+          "child_system_seconds": 0.665412,
+          "child_user_seconds": 1.974497,
+          "exit": 0,
+          "guard_count": 15,
+          "guards": "PASS",
+          "probe_bytes": 9629,
+          "probe_sha256": "f100dcd2813c83d9e33732a7f9c7815c030358f5471428cb2e5f42f4ec9b947a",
+          "stderr_bytes": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_bytes": 2750,
+          "stdout_sha256": "5df227e79508b513cd76296cea3180a5f9d99153f06c3435ea6fa285fe969642",
+          "wall_seconds": 2.337661
+        }
+      }
+    }
+  },
+  "previous_publication": {
+    "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
+    "status": "merged_verified",
+    "verified_checkpoint": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
+    "repository": "Cheeks2184/lonely-runner-formalization",
+    "branch": "codex/astra-seven-adic-scope",
+    "base": "main",
+    "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/39",
+    "pr_number": 39,
+    "head_sha": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
+    "integration_note": "Prior GitHub integration 403 established authenticated gh fallback; this checkpoint used that fallback successfully.",
+    "queue": [
+      {
+        "pr_number": 1,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/1",
+        "head_sha": "5f6c37ecf8c38fd0677f52aa8b88dfe7b4bcc391",
+        "status": "merged",
+        "lean_check": "passed",
+        "merge_sha": "599c59c47d398e1b669a6b0dc5015af2feeaf952",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 2,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/2",
+        "head_sha": "df8d71f899e37d48594351ead6dd622a3259a926",
+        "status": "merged",
+        "depends_on": 1,
+        "source_checkpoint": "fb4d78dc3f9f7b5a215c79ca139286810b1b362f",
+        "base_incorporated": "599c59c47d398e1b669a6b0dc5015af2feeaf952",
+        "source_tree_unchanged": true,
+        "merge_sha": "09eff14b7f970629c0c92c0455e62875b1c3861f",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 3,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/3",
+        "head_sha": "5df931f29a2447b5d8af7611a9060f79d0b78dec",
+        "status": "merged",
+        "merge_sha": "bbbb4193df062919949ec64d53b53fe7d16c8120",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 4,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/4",
+        "head_sha": "984721559caf37833beab5f65c17cff3d3fa52d6",
+        "status": "merged",
+        "merge_sha": "1686e67471336b29fa05f517013c25f02e37676d",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 5,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/5",
+        "head_sha": "7ac9e1f5cb711cf794f9524af31cc8460459bfab",
+        "status": "merged",
+        "merge_sha": "a2b96aee7e8890b25691fbbf791b93b85e3303fe",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 6,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/6",
+        "head_sha": "819525f972fcf1b9646f3610906cf3f8c72f1496",
+        "status": "merged",
+        "merge_sha": "4d65e3f47fdea6c0f920f01b928310af833d3247",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 7,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/7",
+        "head_sha": "17b448c3cd81266fbeae82d43b6c7e7d4abc16c4",
+        "status": "merged",
+        "merge_sha": "be9524b9d1f9634db3b78660ccb557e1fc84a51f",
+        "checks": "Both Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 8,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/8",
+        "head_sha": "49e27215fb1c1bf4d770d2368f34e7fff259a601",
+        "status": "merged",
+        "lean_check": "passed",
+        "certificate_check": "passed",
+        "merge_sha": "8f2aca63b49f28c906eede045dd778c9c71be48e",
+        "checks": "Both Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 9,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/9",
+        "head_sha": "d3a779a943666e07d966554f0e6868f38821a0ad",
+        "status": "merged",
+        "merge_sha": "5b7a1da6f40f1b264d16a689144f413a3ed047f9",
+        "checks": "Both Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 10,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/10",
+        "head_sha": "ab4f16694514557f7ff09ba109f4d0c28f859202",
+        "status": "merged",
+        "merge_sha": "daebd7ba9549814239408bbe8e74309fb83aa740",
+        "checks": "Both Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 11,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/11",
+        "head_sha": "5041997b350623693d00f6df4146ea395b51faff",
+        "status": "merged",
+        "merge_sha": "7a3ea75d1221b815a46b97f2b487807e48375649",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 12,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/12",
+        "head_sha": "d048804250ae5e80d94a5b7834cded8f203d1ec3",
+        "status": "merged",
+        "merge_sha": "a25799bfbbb41b4c31f222b25060a4d6e0e5d117",
+        "checks": "Lean build/trust and exact computational certificates passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 13,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/13",
+        "head_sha": "92500c86bb05254de4ad6f85f89d105b88f37afd",
+        "status": "merged",
+        "merge_sha": "8a3a407f729163316a11ffbb863ca9dddf249d36",
+        "checks": "Both required CI checks passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 14,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/14",
+        "head_sha": "96a47f0a7a6ae1f51d625b7979980c80a2629eca",
+        "status": "merged",
+        "merge_sha": "a04bbdb819860ec35174e94b565dcc4665c981ca",
+        "checks": "BothrequiredCIchecks passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 15,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/15",
+        "head_sha": "0f94d4741634c2c96a2567d0eb8f91c1c8501849",
+        "status": "merged",
+        "merge_sha": "f36d99af32027eee6037ef4967316a01faaf6ec6",
+        "checks": "BothrequiredCIchecks passed.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 16,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/16",
+        "head_sha": "ecc9652e3eefcff096ab6f0e35f36cf71878975b",
+        "status": "merged",
+        "merge_sha": "c3bad1e27509d3c189783af0a89a37097e64038d",
+        "checks": "Lean build/trust passed 15:11:58 UTC; exact computational certificates passed 15:18:11 UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 17,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/17",
+        "head_sha": "48ed42556286934ff516e4c357210d35d54c967a",
+        "status": "merged",
+        "merge_sha": "808595cf7615d01f849eb071648d8a82ee7c97c1",
+        "checks": "Lean build and trust audit passed 15:32:00 UTC; exact computational certificates passed 15:38:12 UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 18,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/18",
+        "head_sha": "963544eab50cc8c7cdbb24e733ec7d1a30947d09",
+        "status": "merged",
+        "merge_sha": "e371af814f023bf2761e7b25de980b763347d049",
+        "checks": "Lean build/trust passed 16:21:31 UTC; exact computational certificates passed 16:29:14 UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 19,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/19",
+        "head_sha": "bc7fc4fb7ff26d7f485c17fda9cae0ec0f0f0435",
+        "status": "merged",
+        "merge_sha": "98cdd1c1ab8d6c0cbac73bff3f0385a1f9970dbf",
+        "checks": "Lean build/trust passed16:53:58UTC; exact computational certificates passed17:01:44UTC. Exact-head merge17:03:49UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 20,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/20",
+        "head_sha": "08c02531792524741b5f71665408346e1f966d64",
+        "status": "merged",
+        "merge_sha": "b246af6f15198b5aee95ad5c5b4d84f4cc6ffd83",
+        "checks": "Lean build/trust passed17:28:51UTC; exact computational certificates passed17:36:40UTC. Exact-head merge17:39:02UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 21,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/21",
+        "head_sha": "3e6e7a6cb5423d3ec01b051e518b2f848d8def02",
+        "status": "merged",
+        "merge_sha": "8db7eb32fb0aec5f1a62d18f93a72c5096d76743",
+        "checks": "Lean build/trust passed18:11:04UTC; exact computational certificates passed18:17:33UTC. Exact-head merge18:18:47UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 22,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/22",
+        "head_sha": "a637d343d7bcc3b1f308de21241d1556126fd690",
+        "status": "merged",
+        "merge_sha": "7a5d0d69520a1d290c1dd6c85902488283394d1e",
+        "checks": "Lean build/trust passed19:12:29UTC; exact computational certificates passed19:19:43UTC. Exact-head merge19:20:12UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 23,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/23",
+        "head_sha": "48282c65d59a58e5b8c0dccce2935fcb567c9c79",
+        "status": "merged",
+        "merge_sha": "26a06cd76f9bb2f912f6365ace6b95f86ebe0322",
+        "checks": "Lean build/trust passed 20:09:54 UTC; exact computational certificates passed 20:17:40 UTC. Exact-head merge 20:19:45 UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 24,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/24",
+        "head_sha": "52eb99ea7d4cdd428dadd544c10f247a8a90d3e5",
+        "status": "merged",
+        "merge_sha": "bf31ea82629c4101755e950faeb6e406fae7c1c9",
+        "checks": "Lean build/trust passed21:18:37UTC; exact computational certificates passed21:26:10UTC. Exact-head merge21:26:56UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 25,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/25",
+        "head_sha": "cdfe75237327e3cc87671de30ca579f3a6fb8612",
+        "status": "merged_verified",
+        "merge_sha": "a4c395827100593500747904a1a11f4251fdb271",
+        "checks": "Lean build/trust passed22:11:46UTC; exact computational certificates passed22:19:14UTC. Exact-head merge22:21:34UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 26,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/26",
+        "head_sha": "dcee411946aff78931147df421e1095d25dbb948",
+        "status": "merged_verified",
+        "merge_sha": "367a9dc22e093a0347a776f988cac67335bab379",
+        "checks": "Lean build/trust passed22:51:24UTC; exact computational certificates passed22:59:16UTC. Exact-head merge23:00:23UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 27,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/27",
+        "head_sha": "1412a65421d2b0898f7dc28fd1b6f3b736131d33",
+        "status": "merged_verified",
+        "merge_sha": "5e7d690e6606ad096bf4a2319be0328f9c6d2e68",
+        "checks": "Lean build/trust passed23:44:38UTC; exact computational certificates passed23:49:50UTC. Exact-head merge23:50:22UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 28,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/28",
+        "head_sha": "cdd7f2c1e6a077726ee45a71b98ddd8591c97bf3",
+        "status": "merged_verified",
+        "merge_sha": "5b5ece3710dec6ad1d5c06ee1edaa34f7e66c988",
+        "checks": "Lean/trust passed01:07:20UTC; exactcertificates passed01:15:27UTC; exactheadmerged01:16:16UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 29,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/29",
+        "head_sha": "27fe083febbc21b0b2c99d2ad421373bd1d0c300",
+        "status": "merged_verified",
+        "merge_sha": "0b0a033e9655b5f9d2fa0b57ac0f61729b2db123",
+        "checks": "Lean/trust passed01:12:26UTC; exactcertificates passed01:20:19UTC; exactheadmerged01:21:43UTC.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 30,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/30",
+        "head_sha": "9c55e405ef9066e60fef08c9eaafcd5e95d08345",
+        "status": "merged_verified",
+        "merge_sha": "fd99b6f550bcb931f101ef2186168f1fc09aec4d",
+        "checks": "Lean build/trust passed 01:32:59Z; exact certificates passed 01:40:49Z; exact head merged 01:46:07Z on 2026-09-06.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 31,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/31",
+        "head_sha": "7e1b4073cfd0095a3e514df975313562feb82688",
+        "status": "merged_verified",
+        "merge_sha": "ac36f4bab463be33dda24f9272731f45e56618fb",
+        "checks": "Lean build/trust passed 2026-09-06T02:17:11Z; exact certificates passed02:24:46Z; exact-head merge02:25:27Z.",
+        "remote_main_contains_head": true
+      },
+      {
+        "pr_number": 32,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/32",
+        "head_sha": "0e49249d9fcbba5e4a8312d845224bc11466db76",
+        "status": "merged_verified",
+        "merge_sha": "4e55a24baea869a4d6249003f0bb07c8a90533c2",
+        "checks": "Lean build/trust passed2026-09-06T03:13:27Z; exactcertificates passed03:20:33Z; exact-headmerge03:23:00Z; CIrun34008344568.",
+        "remote_main_contains_head": true
+      },
+      {
+        "checkpoint": "Pass34",
+        "pr_number": 33,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/33",
+        "head_sha": "e3e13a0d2a4f0ed76f5bbdd10305130ad079e505",
+        "merge_sha": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+        "merged_at": "2026-09-06T03:48:56Z",
+        "status": "merged_verified",
+        "ci_run": 34009494258,
+        "checks": [
+          {
+            "name": "Lean build and trust audit",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T03:40:39Z",
+            "job_id": 101422692222
+          },
+          {
+            "name": "Exact computational certificates",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T03:47:46Z",
+            "job_id": 101422692197
+          }
+        ],
+        "remote_main_contains_head": true,
+        "local_main": "5a621b8065fdbc69694168e6d406824b1fa23cff",
+        "no_pending_reviews": true
+      },
+      {
+        "checkpoint": "Pass35",
+        "pr_number": 34,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/34",
+        "head_sha": "6ac2e9f46c9aeb376ea140de00b40a6be03d3a95",
+        "status": "merged_verified",
+        "ci_run": 34011811500,
+        "branch": "codex/astra-buffered-runner-insertion",
+        "next_action": "Inspect both CI checks/reviews; merge exacthead after success, fetch/verify main, record receipt.",
+        "merge_sha": "d1ac311bef74afad9220e19cb76077cc97f60b6f",
+        "merged_at": "2026-09-06T04:46:34Z",
+        "checks": [
+          {
+            "name": "Lean build and trust audit",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T04:36:24Z",
+            "job_id": 101428840613
+          },
+          {
+            "name": "Exact computational certificates",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T04:43:07Z",
+            "job_id": 101428840750
+          }
+        ],
+        "remote_main_contains_head": true,
+        "no_pending_reviews": true
+      },
+      {
+        "checkpoint": "Pass36",
+        "pr_number": 35,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/35",
+        "head_sha": "a9050d209eacb78dfe32b435d67a7e115819f3e9",
+        "merge_sha": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+        "merged_at": "2026-09-06T05:29:49Z",
+        "status": "merged_verified",
+        "ci_run": 34013795701,
+        "checks": [
+          {
+            "name": "Lean build and trust audit",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T05:24:05Z",
+            "job_id": 101434011026
+          },
+          {
+            "name": "Exact computational certificates",
+            "conclusion": "SUCCESS",
+            "completed_at": "2026-09-06T05:29:27Z",
+            "job_id": 101434011128
+          }
+        ],
+        "remote_main_contains_head": true,
+        "local_main": "84eacffc06cabd017d67c53d1d70995a8d25de3d",
+        "no_pending_reviews": true
+      },
+      {
+        "pr_number": 36,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/36",
+        "head_sha": "8a07fab875c2d9026b4abb5bc031b78dac92f5f8",
+        "merge_sha": "f55744833dd2876e582f0e4e0726614b6b527a54",
+        "status": "merged",
+        "checks": {
+          "Lean build and trust audit": "SUCCESS 2026-09-06T06:05:34Z",
+          "Exact computational certificates": "SUCCESS 2026-09-06T06:11:21Z"
+        },
+        "remote_main_contains_head": true
+      },
+      {
+        "checkpoint": "Pass38",
+        "pr": 37,
+        "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/37",
+        "head_sha": "ef64109257b09da2db481b43652ba0df891d3c1e",
+        "merge_sha": "0608747f78d8e07100af900f4f746da902bd2fa9",
+        "merged_at": "2026-09-06T07:34:50Z",
+        "ci_run": 34019053181,
+        "checks": {
+          "Lean build and trust audit": "SUCCESS 2026-09-06T07:26:38Z",
+          "Exact computational certificates": "SUCCESS 2026-09-06T07:33:48Z"
+        },
+        "exact_head_merge": true,
+        "remote_main_ancestor_verified": true,
+        "reviews": [],
+        "status": "merged_verified"
+      },
+      {
+        "checkpoint": "Pass39",
+        "pr": 38,
+        "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/38",
+        "head_sha": "173f16275638c8d067d80b66b53094312294fbbf",
+        "merge_sha": "312158239315a3488cb522695b58c0a2fece7621",
+        "merged_at": "2026-09-06T08:12:59Z",
+        "ci_run": 34020720272,
+        "checks": {
+          "Lean build and trust audit": "SUCCESS 2026-09-06T08:04:15Z",
+          "Exact computational certificates": "SUCCESS 2026-09-06T08:09:44Z"
+        },
+        "exact_head_merge": true,
+        "remote_main_ancestor_verified": true,
+        "reviews": [],
+        "status": "merged_verified"
+      },
+      {
+        "pr_number": 39,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/39",
+        "head_sha": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
+        "status": "merged_verified",
+        "merge_sha": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+        "merged_at": "2026-09-06T08:50:39Z",
+        "checks": {
+          "Lean build and trust audit": "SUCCESS 2026-09-06T08:39:27Z",
+          "Exact computational certificates": "SUCCESS 2026-09-06T08:47:25Z"
+        },
+        "verification": "Exact reviewed head merged after CLEAN/no blocking reviews/not draft; fetched origin/main, ancestor command exit0; local main and new branch HEAD equal merge SHA."
+      }
+    ],
+    "latest_published_source_checkpoint": "173f16275638c8d067d80b66b53094312294fbbf",
+    "remote_main": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+    "local_main": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+    "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
+    "pending_checkpoint": null,
+    "merge_sha": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+    "checks": {
+      "Lean build and trust audit": "SUCCESS 2026-09-06T08:39:27Z",
+      "Exact computational certificates": "SUCCESS 2026-09-06T08:47:25Z"
+    },
+    "remote_main_contains_head": true,
+    "latest_receipt": {
+      "checkpoint": "Pass40",
+      "pr": 39,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/39",
+      "head_sha": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
+      "merge_sha": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "merged_at": "2026-09-06T08:50:39Z",
+      "ci_run": 34022379313,
+      "checks": {
+        "Lean build and trust audit": "SUCCESS 2026-09-06T08:39:27Z",
+        "Exact computational certificates": "SUCCESS 2026-09-06T08:47:25Z"
+      },
+      "exact_head_merge": true,
+      "remote_main_ancestor_verified": true,
+      "reviews": [],
+      "status": "merged_verified"
+    },
+    "merged_at": "2026-09-06T08:50:39Z",
+    "verification": "Exact reviewed head merged after CLEAN/no blocking reviews/not draft; fetched origin/main, ancestor command exit0; local main and new branch HEAD equal merge SHA."
+  },
+  "scope": "Exact F/C/signed arithmetic proofs and accepted P/M/D manuscripts; no new runner count. Subsequent ConstrainedMaximizer source and phase certificate excluded."
+}

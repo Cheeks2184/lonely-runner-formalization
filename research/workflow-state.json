@@ -6,7 +6,7 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/six_total_maximizer_plan",
+      "id": "/root/constrained_maximizer_final_source_review",
       "agent_id": "/root/prime_difference_compression_plan",
       "kind": "research",
       "status": "in_progress",
@@ -14,10 +14,26 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "312158239315a3488cb522695b58c0a2fece7621",
-      "target": "Settle general constrained-maximizer boundary lemma and exact finite phase leaf contracts for future six-total proof, based on Renault2004; manuscript only, no enumeration/build.",
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Independent frozen ConstrainedMaximizer source/type/axiom review against exact independently accepted P/M/D contracts.",
       "owned_files": [
-        "research/astra-six-total-maximizer-plan.md"
+        "research/astra-constrained-maximizer-final-source-review.md"
+      ],
+      "checks": []
+    },
+    {
+      "id": "/root/renault_phase_fixed_certificate_review",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "in_progress",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Independent review of exact Renault5.1 fixed certificate and continuum endpoint/mask transfer; generic Lean soundness type/source review; no new discovery.",
+      "owned_files": [
+        "research/astra-renault-phase-fixed-certificate-review.md"
       ],
       "checks": []
     }
@@ -5499,14 +5515,176 @@
       ],
       "result": "Independent proof and both exact natural contracts accepted unchanged; root read full review and fixed-only replay passed. No Lean implementation yet.",
       "artifact_sha256": "a3a77cdfbc4f983755d38bd75a7aad6ccdeb4534d5c1ec455dfce0320c1d4947"
+    },
+    {
+      "id": "/root/six_total_maximizer_plan",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "312158239315a3488cb522695b58c0a2fece7621",
+      "target": "Settle general constrained-maximizer boundary lemma and exact finite phase leaf contracts for future six-total proof, based on Renault2004; manuscript only, no enumeration/build.",
+      "owned_files": [
+        "research/astra-six-total-maximizer-plan.md"
+      ],
+      "checks": [],
+      "result": "Author manuscript P/M/D and finite phase contracts; root fully read; independent review pending.",
+      "sha256": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100"
+    },
+    {
+      "id": "/root/prime_adic_compression_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "interrupted",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
+      "target": "Implement reviewed exact general-prime F/C natural contracts and oriented signed adapter, preserving old FiveAdic sources; root restores shared pinned cache.",
+      "owned_files": [
+        "LonelyRunner/PrimeAdicArithmetic.lean",
+        "LonelyRunner/PrimeAdicCompression.lean",
+        "research/astra-prime-adic-compression-implementation.md"
+      ],
+      "checks": [],
+      "result": "Partial prerequisite arithmetic only at SHA78387d8bb606398f240d435df8e5874259f9fb782f0ebc21830905efdc57edf6. Worker cited remaining runtime/context and made no F edit on followup. Preserve source; bounded F reassigned to existing same Terra/medium worker."
+    },
+    {
+      "id": "/root/prime_adic_two_targets_recovery",
+      "agent_id": "/root/five_adic_carry_adapter_implementation",
+      "kind": "routine",
+      "status": "interrupted",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Complete exact F two-distinct-target theorem using preserved compiled PrimeAdicArithmetic helpers.",
+      "owned_files": [
+        "LonelyRunner/PrimeAdicArithmetic.lean",
+        "LonelyRunner/PrimeAdicCompression.lean",
+        "research/astra-prime-adic-compression-implementation.md"
+      ],
+      "checks": [],
+      "result": "Replacement Terra read interfaces and created module shell only; cited remaining runtime and returned no F proof. Root takes ownership of bounded assembly after two same-role returns."
+    },
+    {
+      "id": "/root/six_total_maximizer_review",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Independent exact contract and proof review of six-total P/M/D and phase/atom plan, read-only source, no enumeration or Lean.",
+      "owned_files": [
+        "research/astra-six-total-maximizer-review.md"
+      ],
+      "checks": [],
+      "result": "Independent reviewer accepts P/M/D exact manuscript contracts and phase/atom scopes; root reading complete before final acceptance.",
+      "sha256": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0"
+    },
+    {
+      "id": "/root/fractional_norm_helper_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Implement single settled circleNorm_eq_min_fract helper for accepted maximizer plan, separate module; no max theorem yet.",
+      "owned_files": [
+        "LonelyRunner/ConstrainedMaximizer.lean"
+      ],
+      "checks": [],
+      "result": "Exact single helper author focused build and axiom probe passed; root source-read accepted for next unverified source batch.",
+      "sha256": "b2c6d34e58e3b70e11bb3e84f479cdbf7b949a291dbe50ecd00bf2c1dfe760ec"
+    },
+    {
+      "id": "/root/forward_complement_improvement_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "interrupted",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Implement reviewed P only: finite positive capacities forward-complement improvement, using checked fractional norm helper.",
+      "owned_files": [
+        "LonelyRunner/ConstrainedMaximizer.lean"
+      ],
+      "checks": [],
+      "result": "Worker located signatures but returned without writing P. Existing compiled fractional-norm helper preserved; root reassesses task partition and implements bounded integration as necessary. No mathematical obstacle supplied."
+    },
+    {
+      "id": "/root/renault_phase_certificate_plan",
+      "agent_id": "/root/prime_difference_compression_plan",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Predeclare minimal exact Renault5.1 phase certificate experiment and continuum-to-finite Lean bridge; no execution.",
+      "owned_files": [
+        "research/astra-renault-phase-certificate-plan.md"
+      ],
+      "checks": [],
+      "result": "Frozen unexecuted generator/verifier/capped driver and continuum endpoint/mask bridge; root read full report and all code, accepts one minimal capped discovery.",
+      "sha256": "7f9d296d61db16467e7b7bf34e5070b7497f3b6a0be939e2e8fa273887ecf4af"
+    },
+    {
+      "id": "/root/phase_generic_soundness_implementation",
+      "agent_id": "/root/five_runner_ordinary_implementation",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Implement single generic phase_certificate_sound transfer from supplied partition/masks/domination/ordered-triple witnesses; no finite tables/phase theorem claim.",
+      "owned_files": [
+        "LonelyRunner/RenaultPhaseCertificates.lean"
+      ],
+      "checks": [],
+      "result": "Author reports focused generic module build and axiom probe exit0; root reading source; no concrete phase theorem.",
+      "sha256": "36b58c04e0c755d462f32bae3388c30d744d97ccb20a3bc27aa0daa99b7e49f0"
+    },
+    {
+      "id": "/root/prime_adic_final_source_review",
+      "agent_id": "/root/seven_adic_expanded_falsifier",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "target": "Independent frozen source review of exact F/C/signed adapter and all public arithmetic, with focused kernel/type/axiom probes.",
+      "owned_files": [
+        "research/astra-prime-adic-final-source-review.md"
+      ],
+      "checks": [],
+      "result": "Independent source review accepts all exact F/C/int contracts; root fully read report/probe and replay passed,28allowed axiom outputs/15guards.",
+      "sha256": "687ea1cd302b3ce741ee67cf4045c828e755ed986db3993c6dba06f026aecd8d"
     }
   ],
-  "latest_checkpoint": "Pass40 verified six frozen manuscripts/reviews, root fixed-only replays and compression F/C contracts accepted; no Lean source changes. Canonical Fin5 remains main312158... from PR38; unrestricted LRC unresolved. Ready to publish; six-total maximizer plan active separately.",
+  "latest_checkpoint": "Pass41 exact F/C/int fullbuild/trust and independent source/rootreplay accepted; ready to publish. Pass42maxsource focusedchecked underreview; phase5.1 finitecertificate verified, continuumkernelpending.",
   "next_actions": [
-    "Publish verified Pass40 then merge exact head after required CI/reviews and verify main.",
-    "Restore shared pinned dependencies and assign settled general-prime arithmetic/compression to Terra medium.",
-    "Review forthcoming six-total constrained-maximizer/phase plan; no enumeration before reviewed bounds.",
-    "Continue unrestricted goal without treating auxiliary refutations or finite counts as completion."
+    "Publish verified Pass41, await required CI, merge exact reviewed head and verify main.",
+    "Finish independent maximizer source review; root replay and integrate next source checkpoint.",
+    "Finish independent fixed phase certificate/generic transfer review; formalize exact continuum/table bridge with bounded kernel checks."
   ],
   "research_holds": [
     {
@@ -6032,14 +6210,14 @@
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
-    "verified_checkpoint": "173f16275638c8d067d80b66b53094312294fbbf",
+    "verified_checkpoint": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
     "repository": "Cheeks2184/lonely-runner-formalization",
-    "branch": "codex/astra-five-runner-ordinary",
+    "branch": "codex/astra-seven-adic-scope",
     "base": "main",
     "next_action": "Receipt joins next substantive checkpoint; no receipt-only PR.",
-    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/38",
-    "pr_number": 38,
-    "head_sha": "173f16275638c8d067d80b66b53094312294fbbf",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/39",
+    "pr_number": 39,
+    "head_sha": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
     "integration_note": "Prior GitHub integration 403 established authenticated gh fallback; this checkpoint used that fallback successfully.",
     "queue": [
       {
@@ -6464,36 +6642,51 @@
         "remote_main_ancestor_verified": true,
         "reviews": [],
         "status": "merged_verified"
+      },
+      {
+        "pr_number": 39,
+        "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/39",
+        "head_sha": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
+        "status": "merged_verified",
+        "merge_sha": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+        "merged_at": "2026-09-06T08:50:39Z",
+        "checks": {
+          "Lean build and trust audit": "SUCCESS 2026-09-06T08:39:27Z",
+          "Exact computational certificates": "SUCCESS 2026-09-06T08:47:25Z"
+        },
+        "verification": "Exact reviewed head merged after CLEAN/no blocking reviews/not draft; fetched origin/main, ancestor command exit0; local main and new branch HEAD equal merge SHA."
       }
     ],
     "latest_published_source_checkpoint": "173f16275638c8d067d80b66b53094312294fbbf",
-    "remote_main": "312158239315a3488cb522695b58c0a2fece7621",
-    "local_main": "312158239315a3488cb522695b58c0a2fece7621",
+    "remote_main": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+    "local_main": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
     "receipt_note": "This receipt-only state update joins the next substantive checkpoint, as specified in the project publication policy.",
     "pending_checkpoint": null,
-    "merge_sha": "312158239315a3488cb522695b58c0a2fece7621",
+    "merge_sha": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
     "checks": {
-      "Lean build and trust audit": "SUCCESS 2026-09-06T08:04:15Z",
-      "Exact computational certificates": "SUCCESS 2026-09-06T08:09:44Z"
+      "Lean build and trust audit": "SUCCESS 2026-09-06T08:39:27Z",
+      "Exact computational certificates": "SUCCESS 2026-09-06T08:47:25Z"
     },
     "remote_main_contains_head": true,
     "latest_receipt": {
-      "checkpoint": "Pass39",
-      "pr": 38,
-      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/38",
-      "head_sha": "173f16275638c8d067d80b66b53094312294fbbf",
-      "merge_sha": "312158239315a3488cb522695b58c0a2fece7621",
-      "merged_at": "2026-09-06T08:12:59Z",
-      "ci_run": 34020720272,
+      "checkpoint": "Pass40",
+      "pr": 39,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/39",
+      "head_sha": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
+      "merge_sha": "f1d45fdf95af26f31cffcc92485fc5951c4b0169",
+      "merged_at": "2026-09-06T08:50:39Z",
+      "ci_run": 34022379313,
       "checks": {
-        "Lean build and trust audit": "SUCCESS 2026-09-06T08:04:15Z",
-        "Exact computational certificates": "SUCCESS 2026-09-06T08:09:44Z"
+        "Lean build and trust audit": "SUCCESS 2026-09-06T08:39:27Z",
+        "Exact computational certificates": "SUCCESS 2026-09-06T08:47:25Z"
       },
       "exact_head_merge": true,
       "remote_main_ancestor_verified": true,
       "reviews": [],
       "status": "merged_verified"
-    }
+    },
+    "merged_at": "2026-09-06T08:50:39Z",
+    "verification": "Exact reviewed head merged after CLEAN/no blocking reviews/not draft; fetched origin/main, ancestor command exit0; local main and new branch HEAD equal merge SHA."
   },
   "runtime_goal_observation": {
     "status": "active",
@@ -6515,7 +6708,13 @@
     "instructions_path": ".codex/config.toml",
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
-  "publication_in_progress": null,
+  "publication_in_progress": {
+    "checkpoint": "Pass41",
+    "phase": "verified_ready_to_commit",
+    "branch": "codex/astra-prime-adic-compression",
+    "base": "main",
+    "previous_main": "f1d45fdf95af26f31cffcc92485fc5951c4b0169"
+  },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
     "author_sha256": "6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f",
@@ -7931,11 +8130,317 @@
     "next_action": "Implement exact F/C plus prerequisite arithmetic and oriented signed adapter in new modules; preserve existing Fin5 sources. Restore shared pinned cache only for implementation."
   },
   "pending_pass40": {
-    "phase": "verified_ready_to_publish",
+    "phase": "merged_verified",
     "draft_document": "docs/astra-research-40.md",
     "scope": "Restricted F7/F7+ counterexamples, independently reviewed next generic-prime difference-compression contract, exact canonical count-gap and future six-total source target. No Lean changes.",
     "remaining": [
       "Commit verified nine-file checkpoint, push/open PR, inspectchecks/reviews and exactheadmerge, verify main."
-    ]
+    ],
+    "publication": {
+      "checkpoint": "Pass40",
+      "phase": "PR_checks_pending",
+      "pr": 39,
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/39",
+      "head_sha": "2e10da3f95bcf6c6d26edbf48967c935decfa7c7",
+      "branch": "codex/astra-seven-adic-scope",
+      "ci_run": 34022379313,
+      "checks_observed": {
+        "Lean build and trust audit": "IN_PROGRESS 2026-09-06T08:37:48Z",
+        "Exact computational certificates": "IN_PROGRESS 2026-09-06T08:37:46Z"
+      }
+    }
+  },
+  "pending_pass41": {
+    "phase": "verified_ready_to_publish",
+    "target": "Exact reviewed primeAdic_two_distinct_targets and primeAdic_triple_compression, oriented signed adapter and prerequisite arithmetic.",
+    "manuscript": "ee396d22cae90460868ee13ba70c26204cafad190aea3b72835680218b3c88c2",
+    "independent_review": "a3a77cdfbc4f983755d38bd75a7aad6ccdeb4534d5c1ec455dfce0320c1d4947",
+    "root_owns": [
+      "LonelyRunner.lean",
+      "LonelyRunner/AxiomAudit.lean",
+      "research/workflow-state.json",
+      "docs/astra-research-41.md",
+      "LonelyRunner/PrimeAdicArithmetic.lean",
+      "LonelyRunner/PrimeAdicCompression.lean",
+      "research/astra-prime-adic-compression-implementation.md"
+    ],
+    "no_existing_proof_replacement": true,
+    "cache_restore": {
+      "command": "export PATH=\"$HOME/.elan/bin:$PATH\"; lake exe cache get > /tmp/astra-pass41-cache-restore.log 2>&1",
+      "session_id": 1395,
+      "exit_code": 0,
+      "log_sha256": "d08fb6e31f772b29040d361d1e364c669f00ff5308d1ae887d1de3cf5b368451",
+      "result": "Pinned dependencies cloned; cache executable built;8638 cachedfilesdecompressed,no downloads; completedsuccessfully. Worker notified ready.",
+      "retention": "One shared .lake retained for active implementation and upcoming Lean review/build; cleanup after batch ends."
+    },
+    "signed_adapter_contract": {
+      "definition": "signedPrimeAdicDigit (p m : Nat) (z : Int) : Nat := primeAdicDigit p m (z.natMod (p^(m+1) : Int))",
+      "theorem": "primeAdic_triple_compression_int",
+      "inputs": "p,m:Nat; hp:Nat.Prime p; b:Fin3->Int; hsep:PrimeAdicDifferenceSeparated p m for the oriented differences from coordinatewise natMod b0/b1 to natMod b2, all modulo p^(m+1).",
+      "output": "Exists lam:Nat with0<lam<P, p does not divide lam, and for every i the signedPrimeAdicDigit of (lam:Int)*b i equals anchor signed digit or (anchor+p-1)%p.",
+      "authorization": "Root specified literal natural-residue signed adapter from accepted manuscript; Terra acknowledged exact signature. Final independent source review required."
+    },
+    "worker_progress": {
+      "status": "Terra returned partial helper source; root preserved and reassigns bounded F composition before C. No semantic obstacle or worker failure asserted.",
+      "arithmetic_sha256": "78387d8bb606398f240d435df8e5874259f9fb782f0ebc21830905efdc57edf6",
+      "checked_by_author": "Focused arithmetic module build passed; root full trust/build still pending.",
+      "remaining": [
+        "F composition",
+        "C compression",
+        "signed adapter",
+        "implementation report",
+        "independent frozen source review and full build/trust"
+      ]
+    },
+    "frozen_sources": {
+      "LonelyRunner/PrimeAdicArithmetic.lean": "78387d8bb606398f240d435df8e5874259f9fb782f0ebc21830905efdc57edf6",
+      "LonelyRunner/PrimeAdicCompression.lean": "bd9f20169c49ac00acf6d27a53109d0d8770f2b224bf29f65d8ff76db8102eda",
+      "LonelyRunner.lean": "c4cdec234819184d3df0d376e1bf2111dd3ccadbd930a31fb073aa0b98e717d3",
+      "LonelyRunner/AxiomAudit.lean": "9f449224e85ed16ac3e3131c43d27ad78eddb05b8d1ce56e6958b6731c460e03"
+    },
+    "root_implementation": {
+      "result": "Root implemented exact F, C using additive-anchor last-digit carry lemma, signed Euclidean adapter; focused complete module build exit0. Fullbuild pending.",
+      "focused_log": "/tmp/astra-pass41-int-build.log",
+      "full_build_session": 95696,
+      "method": "Add difference to anchor moduloP; last digit sum has carry0/1 giving predecessor/anchor. Equivalent to manuscript closed signed interval, avoids truncated signed subtraction."
+    },
+    "verification": {
+      "focused_build": {
+        "exit_code": 0,
+        "jobs": 3002,
+        "log_sha256": "3fb3ff3dc6964c393c0abb5db9c680acee7756c02f2042ee2fe0e73eb87cdeda"
+      },
+      "full_build": {
+        "exit_code": 0,
+        "jobs": 3659,
+        "log_sha256": "9ff063201366984e55b495805547ea2dbdcfdd1d279e50229ff8a7aae04a8aef"
+      },
+      "trust": {
+        "exit_code": 0,
+        "dependency_reports": 552,
+        "axiom_free_reports": 3,
+        "log_sha256": "abab152a233bc26a3e1cccdfa370fc9f8cfd3f0836a0f65f2c9a9c3083a5effc",
+        "new_public_theorems": [
+          "primeAdicCorrection_pos",
+          "primeAdicCorrection_mod_prime",
+          "primeAdic_residue_decomposition",
+          "primeAdicCorrection_selected_product",
+          "primeAdicCorrection_selected_digit",
+          "primeAdicCorrection_higher_residue",
+          "primeAdicDigit_of_mod_eq",
+          "primeAdic_unit_representative",
+          "primeAdic_positive_bounded_residue_decomposition",
+          "primeAdicCorrection_exists_target",
+          "primeAdic_top_exists_target",
+          "primeAdicCorrection_not_dvd",
+          "primeAdic_one_target_unbounded",
+          "primeAdic_two_distinct_targets",
+          "primeAdicDifference_add_anchor",
+          "primeAdicDigit_add_last",
+          "primeAdic_zero_or_last_target",
+          "primeAdic_triple_compression",
+          "signedPrimeAdicDigit_mul",
+          "primeAdic_triple_compression_int"
+        ]
+      },
+      "independent_frozen_source_review": {
+        "path": "research/astra-prime-adic-final-source-review.md",
+        "sha256": "687ea1cd302b3ce741ee67cf4045c828e755ed986db3993c6dba06f026aecd8d",
+        "root_replay": {
+          "report_sha256": "687ea1cd302b3ce741ee67cf4045c828e755ed986db3993c6dba06f026aecd8d",
+          "bash_sha256": "397d5ce02bcc5199d848827a13da0cef8cba4fb89a2365f427eb94129601c58a",
+          "exit_code": 0,
+          "wall_seconds": 2.364794750988949,
+          "stdout": "{\"argv\": [\"lake\", \"env\", \"lean\", \"--stdin\"], \"child_max_rss_kib\": 3718728, \"child_system_seconds\": 0.665412, \"child_user_seconds\": 1.974497, \"exit\": 0, \"guard_count\": 15, \"guards\": \"PASS\", \"probe_bytes\": 9629, \"probe_sha256\": \"f100dcd2813c83d9e33732a7f9c7815c030358f5471428cb2e5f42f4ec9b947a\", \"stderr_bytes\": 0, \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"stdout_bytes\": 2750, \"stdout_sha256\": \"5df227e79508b513cd76296cea3180a5f9d99153f06c3435ea6fa285fe969642\", \"wall_seconds\": 2.337661}\nSTDOUT-BEGIN\n'LonelyRunner.primeAdicCorrection_pos' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdicCorrection_mod_prime' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.primeAdic_residue_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdicCorrection_selected_product' depends on axioms: [propext]\n'LonelyRunner.primeAdicCorrection_selected_digit' depends on axioms: [propext]\n'LonelyRunner.primeAdicCorrection_higher_residue' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.primeAdicDigit_of_mod_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_unit_representative' depends on axioms: [propext]\n'LonelyRunner.primeAdic_positive_bounded_residue_decomposition' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'LonelyRunner.primeAdicCorrection_exists_target' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_top_exists_target' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdicCorrection_not_dvd' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.primeAdic_one_target_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_two_distinct_targets' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdicDifference_add_anchor' depends on axioms: [propext, Quot.sound]\n'LonelyRunner.primeAdicDigit_add_last' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_zero_or_last_target' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_triple_compression' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.signedPrimeAdicDigit_mul' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.primeAdic_triple_compression_int' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveAdic_four_label_multiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourMovingNaturalMultiplier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourMovingNaturalRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.lowerCountPositiveIntegerHypothesis_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fourRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.fiveRunners' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PrimeAdicSourceReview.fixed_same_level_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PrimeAdicSourceReview.fixed_same_level_no_pair' depends on axioms: [propext, Classical.choice, Quot.sound]\nSTDOUT-END\nSTDERR-BEGIN\nSTDERR-END\n",
+          "stderr": "",
+          "stdout_sha256": "04d7400c5d30b7ce2b3e8a059e6644d6a1d4dbc331a29e868fc0b39e5f583671",
+          "metadata": {
+            "argv": [
+              "lake",
+              "env",
+              "lean",
+              "--stdin"
+            ],
+            "child_max_rss_kib": 3718728,
+            "child_system_seconds": 0.665412,
+            "child_user_seconds": 1.974497,
+            "exit": 0,
+            "guard_count": 15,
+            "guards": "PASS",
+            "probe_bytes": 9629,
+            "probe_sha256": "f100dcd2813c83d9e33732a7f9c7815c030358f5471428cb2e5f42f4ec9b947a",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout_bytes": 2750,
+            "stdout_sha256": "5df227e79508b513cd76296cea3180a5f9d99153f06c3435ea6fa285fe969642",
+            "wall_seconds": 2.337661
+          }
+        }
+      }
+    }
+  },
+  "six_total_maximizer_plan": {
+    "path": "research/astra-six-total-maximizer-plan.md",
+    "sha256": "ef0b17914b831106650ff0f09152054131fcaba58ce47a10a0bf36c0fdccb100",
+    "status": "author and independent manuscript proofs accepted after root full reading; no kernel implementation",
+    "root_assessment": "P/M/D argument consistent; no kernel implementation yet; strict seed essential; finite phase and divisibility branches remain. Atom mask experiment not yet executed.",
+    "pinned_library_inspection": {
+      "extreme_value_api": "Mathlib/Topology/Order/Compact.lean:246 IsCompact.exists_isMaxOn (hs:IsCompact s) (ne_s:s.Nonempty) (hf:ContinuousOn f s): exists x in s, IsMaxOn f s x",
+      "time_normalization": "PivotBoundary.lean:169 circleNorm_fract_mul_nat",
+      "scope": "Read exact pinned sources, no Lean run for manuscript."
+    },
+    "independent_review": {
+      "path": "research/astra-six-total-maximizer-review.md",
+      "sha256": "d65b1a984cc6a6469b2200c40e061cdb5462d34c6fb15d5804d5e15057a418a0",
+      "root_disposition": "Read full self-contained proof and exact types; accepted unchanged. No enumeration or kernel result."
+    }
+  },
+  "worker_recovery_pass41": {
+    "failed_agent": "/root/five_runner_ordinary_implementation",
+    "reason": "Author cited remaining runtime/context and returned unchanged partial helpers after bounded F followup. No mathematical obstruction identified.",
+    "actual_goal_status": "active",
+    "goal_status_readback": "get_goal after worker return confirmed active; no resume required.",
+    "action": "Reassign bounded F to existing Terra/medium agent five_adic_carry_adapter_implementation, preserve all partial source.",
+    "source_sha256": "78387d8bb606398f240d435df8e5874259f9fb782f0ebc21830905efdc57edf6",
+    "second_attempt": {
+      "agent": "/root/five_adic_carry_adapter_implementation",
+      "result": "Only import/header shell; no F proof. Worker cited runtime.",
+      "actual_goal_readback": "active",
+      "next": "Root performs bounded proof integration locally; no silent model substitution or further failed thread spawning."
+    }
+  },
+  "pending_pass42": {
+    "target": "Exact independently accepted maximizer P/M/D contracts",
+    "phase": "focused_module_checked_independent_review",
+    "source": "LonelyRunner/ConstrainedMaximizer.lean",
+    "helper_sha256": "b2c6d34e58e3b70e11bb3e84f479cdbf7b949a291dbe50ecd00bf2c1dfe760ec",
+    "helper_status": "author focusedbuild/axioms passed; root read proof; not yet root integrated or independently kernel reviewed",
+    "next": "Independent frozen module review/probes; integrate root/AxiomAudit only after Pass41 frozen-source publication.",
+    "source_sha256": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+    "root_implementation": "Root implemented exact P/M/D after Terra returned helper only; full module focused build passed, not root integrated yet.",
+    "verification": {
+      "focused_build_exit_code": 0,
+      "jobs": 1844,
+      "log_sha256": "44d384d55316a62d5d3a07f21550ca840745307027ec46ac8663812ed5b2c28a"
+    }
+  },
+  "renault_phase_certificate_experiment": {
+    "phase": "finite_coverage_and_fixed_verification_complete",
+    "report": "research/astra-renault-phase-certificate-plan.md",
+    "report_sha256": "7f9d296d61db16467e7b7bf34e5070b7497f3b6a0be939e2e8fa273887ecf4af",
+    "root_review": "Read full 840-line report and all three programs; exact23bits/120atoms, proper-subset minimalization and first-dominator tie, triple repetition/coverage, strict singleton tests, open endpoint band implication, separate fixed verifier checked. Resource/output limits accepted. No program executed at this record.",
+    "authorized_operation": "Separate fixed verifier on exact discovery stdout SHA c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1. No new witness search; same resource limits.",
+    "bounds": {
+      "atoms": 120,
+      "bits": 23,
+      "predicates": 2760,
+      "class_comparisons": 14280,
+      "dominator_tests": 14400,
+      "triple_intersections": 295240,
+      "wall_seconds": 60,
+      "child_cpu_seconds": [
+        59,
+        60
+      ],
+      "combined_address_bytes": 268435456,
+      "evidence_bytes": 1048576
+    },
+    "source_hashes": {
+      "discover.py": "57b157b6f02cc82a81c10a2e8b576e1aa84213a6c9f80d2154a77cc5770142e4",
+      "verify.py": "7f8be20e9ce9cbf6e257ab0e6042e207ed587873aa854acf4584fcd1fb4c39de",
+      "run-capped.py": "407325b3e7e57b5a873d8a3068c1a579e74a87ed06d8b8b4efd247332437fa33"
+    },
+    "scope": "Exact finite evidence only; continuum/kernel target remains unproved.",
+    "discovery_receipt": {
+      "capture_complete": true,
+      "child_address_bytes": 234881024,
+      "child_cpu_limits": [
+        59,
+        60
+      ],
+      "combined_output_limit": 425984,
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "/tmp/renault-phase-five-one-reviewed/discovery-evidence/discover.py"
+      ],
+      "driver_address_soft_bytes": 33554432,
+      "failure": null,
+      "hashes": {
+        "discover.py": "57b157b6f02cc82a81c10a2e8b576e1aa84213a6c9f80d2154a77cc5770142e4",
+        "run-capped.py": "407325b3e7e57b5a873d8a3068c1a579e74a87ed06d8b8b4efd247332437fa33",
+        "stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdin.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout.bin": "c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1",
+        "verify.py": "7f8be20e9ce9cbf6e257ab0e6042e207ed587873aa854acf4584fcd1fb4c39de"
+      },
+      "mode": "discover",
+      "platform": "linux",
+      "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+      "returncode": 0,
+      "signal": null,
+      "wall_limit_seconds": 60,
+      "wall_seconds": 0.022576235001906753
+    },
+    "discovery_result": {
+      "kind": "coverage",
+      "classes": 98,
+      "retained": 41,
+      "triple_witnesses": 12341,
+      "predicates": 2760,
+      "class_comparisons": 9506,
+      "dominator_checks": 4920,
+      "endpoint_checks": 918,
+      "stdout_bytes": 19034,
+      "evidence_bytes": 36281
+    },
+    "fixed_receipt": {
+      "capture_complete": true,
+      "child_address_bytes": 234881024,
+      "child_cpu_limits": [
+        59,
+        60
+      ],
+      "combined_output_limit": 425984,
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "/tmp/renault-phase-five-one-reviewed/fixed-evidence/verify.py"
+      ],
+      "driver_address_soft_bytes": 33554432,
+      "failure": null,
+      "hashes": {
+        "discover.py": "57b157b6f02cc82a81c10a2e8b576e1aa84213a6c9f80d2154a77cc5770142e4",
+        "run-capped.py": "407325b3e7e57b5a873d8a3068c1a579e74a87ed06d8b8b4efd247332437fa33",
+        "stderr.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdin.bin": "c1374409d4f6804487179fe9765695a2f0d756ccd2a79b5ee8616e919acbb7b1",
+        "stdout.bin": "c5a5255fa822e07684c32339d8a8fe64d149466f2f1c3f2b5cadd79e3e234309",
+        "verify.py": "7f8be20e9ce9cbf6e257ab0e6042e207ed587873aa854acf4584fcd1fb4c39de"
+      },
+      "mode": "verify",
+      "platform": "linux",
+      "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+      "returncode": 0,
+      "signal": null,
+      "wall_limit_seconds": 60,
+      "wall_seconds": 0.017076386022381485
+    },
+    "fixed_result": {
+      "atoms": 120,
+      "candidate_predicates": 2760,
+      "classes": 98,
+      "kernel_theorem": false,
+      "retained": 41,
+      "triple_witnesses": 12341,
+      "verified": "fixed-coverage-certificate"
+    },
+    "certificate_path": "research/astra-renault-phase-five-one-certificate.json",
+    "execution_path": "research/astra-renault-phase-five-one-execution.json",
+    "remaining": "Independent final certificate/continuum review and kernel implementation; no larger experiment authorized.",
+    "generic_lean_transfer": {
+      "path": "LonelyRunner/RenaultPhaseCertificates.lean",
+      "sha256": "36b58c04e0c755d462f32bae3388c30d744d97ccb20a3bc27aa0daa99b7e49f0",
+      "status": "Terra completed generic certificate soundness only; focused build/axiom exit0 reported; root source reading, independent review pending."
+    }
   }
 }

@@ -618,3 +618,25 @@ project-specific axiom.
 #print axioms LonelyRunner.fourMovingNaturalRunners
 #print axioms LonelyRunner.lowerCountPositiveIntegerHypothesis_six
 #print axioms LonelyRunner.fiveRunners
+
+-- General-prime distinct-level digit selection and anchored compression.
+#print axioms LonelyRunner.primeAdicCorrection_pos
+#print axioms LonelyRunner.primeAdicCorrection_mod_prime
+#print axioms LonelyRunner.primeAdic_residue_decomposition
+#print axioms LonelyRunner.primeAdicCorrection_selected_product
+#print axioms LonelyRunner.primeAdicCorrection_selected_digit
+#print axioms LonelyRunner.primeAdicCorrection_higher_residue
+#print axioms LonelyRunner.primeAdicDigit_of_mod_eq
+#print axioms LonelyRunner.primeAdic_unit_representative
+#print axioms LonelyRunner.primeAdic_positive_bounded_residue_decomposition
+#print axioms LonelyRunner.primeAdicCorrection_exists_target
+#print axioms LonelyRunner.primeAdic_top_exists_target
+#print axioms LonelyRunner.primeAdicCorrection_not_dvd
+#print axioms LonelyRunner.primeAdic_one_target_unbounded
+#print axioms LonelyRunner.primeAdic_two_distinct_targets
+#print axioms LonelyRunner.primeAdicDifference_add_anchor
+#print axioms LonelyRunner.primeAdicDigit_add_last
+#print axioms LonelyRunner.primeAdic_zero_or_last_target
+#print axioms LonelyRunner.primeAdic_triple_compression
+#print axioms LonelyRunner.signedPrimeAdicDigit_mul
+#print axioms LonelyRunner.primeAdic_triple_compression_int
