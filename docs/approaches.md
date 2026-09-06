@@ -59,6 +59,14 @@ accepted one-deletion family `W={1,...,N} minus {a}`, for `N>=4`, `2<=a`, and
 with a separate `N=2a` boundary formula. It is already within the verified
 bounded-height ordinary-witness class, so it adds no ordinary LRC coverage.
 
+Pass 30 kernel-checks a sharper finite-height reduction with total count `N`
+and inclusive finite cutoff `B=choose(N,2)^(N-2)`. The large-height branch is
+stationary and uses `B<H`; normalization preserves the zero label, while
+strong count induction makes canonical LRC equivalent to
+`AllSharperInclusivePrimitiveFiniteFamilies`. This replaces no uniform supply:
+the all-count finite-family premise remains open. It is a factor `2^(N-2)`
+smaller than the previous cutoff, while preserving the older public API.
+
 Pair-sum completeness is now proved for each already witnessed positive
 integer tuple: a finite floor-cell minimum returns an exact certificate without
 discarding repeated labels or closed endpoints. This replaces the former

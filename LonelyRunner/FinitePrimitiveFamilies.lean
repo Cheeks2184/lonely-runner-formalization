@@ -50,6 +50,62 @@ theorem integer_lonelyAt_of_lower_and_finiteFamily {m : ℕ} (hm : 1 ≤ m)
   intro j
   exact_mod_cast hfactor j
 
+/-- The sharper inclusive height family. Keeping all runner labels makes this
+obligation convenient to compare with the canonical conjecture, although the
+reverse reduction only uses its stationary label. -/
+def SharperInclusivePrimitiveFiniteFamily (m : ℕ) : Prop :=
+  ∀ s : Fin (m + 2) → ℕ,
+    StrictMono s → s 0 = 0 → Finset.univ.gcd s = 1 →
+    s (Fin.last (m + 1)) ≤ (Nat.choose (m + 2) 2) ^ m →
+    ∀ r : Fin (m + 2), ∃ t : ℝ,
+      LonelyAt (fun i => (s i : ℝ)) r t
+
+def AllSharperInclusivePrimitiveFiniteFamilies : Prop :=
+  ∀ m : ℕ, 1 ≤ m → SharperInclusivePrimitiveFiniteFamily m
+
+/-- For a nonnegative integer tuple containing zero, normalization has zero
+translation and sends the distinguished stationary label to index zero. Thus
+only the stationary sharper large-height theorem is needed. -/
+theorem nonnegative_integer_stationary_lonelyAt_of_lower_and_sharperFiniteFamily
+    {m : ℕ} (hm : 1 ≤ m)
+    (hLower : LowerCountPositiveIntegerHypothesis (m + 2))
+    (hFinite : SharperInclusivePrimitiveFiniteFamily m)
+    (a : Fin (m + 2) → ℤ) (hinj : Function.Injective a)
+    (hnonneg : ∀ i, 0 ≤ a i) (r : Fin (m + 2)) (hr : a r = 0) :
+    ∃ t : ℝ, LonelyAt (fun i => (a i : ℝ)) r t := by
+  obtain ⟨e, c, g, b, hg, hbmono, hbzero, hbgcd, hfactor⟩ :=
+    exists_sorted_primitive_integer_normalization a hinj
+  have hc_nonneg : 0 ≤ c := by
+    have hzero := hfactor 0
+    simp only [hbzero, Nat.cast_zero, mul_zero, add_zero] at hzero
+    rw [← hzero]
+    exact hnonneg (e 0)
+  have hc : c = 0 := by
+    have hat_r := hfactor (e.symm r)
+    simp only [Equiv.apply_symm_apply, hr] at hat_r
+    have hprod : (0 : ℤ) ≤ (g : ℤ) * (b (e.symm r) : ℤ) := by positivity
+    omega
+  have hezero : e 0 = r := by
+    apply hinj
+    simpa [hc, hbzero, hr] using hfactor 0
+  have hrzero : e.symm r = 0 := by
+    rw [← hezero]
+    exact e.symm_apply_apply 0
+  have hnormalized : ∃ T : ℝ, LonelyAt (fun i => (b i : ℝ)) 0 T := by
+    by_cases hlow : b (Fin.last (m + 1)) ≤ (Nat.choose (m + 2) 2) ^ m
+    · exact hFinite b hbmono hbzero hbgcd hlow 0
+    · obtain ⟨T, _, hT⟩ := primitive_sorted_largeHeight_stationary_lonelyAt
+        hm hLower b hbmono hbzero hbgcd (Nat.lt_of_not_ge hlow)
+      exact ⟨T, hT⟩
+  obtain ⟨T, hT⟩ := hnormalized
+  refine ⟨T / (g : ℝ), ?_⟩
+  apply (lonelyAt_reindex_translate_scale_iff
+    (fun i => (a i : ℝ)) (fun i => (b i : ℝ)) e (c : ℝ) (g : ℝ)
+    (by exact_mod_cast hg.ne') ?_ r T).mpr
+  · simpa [hrzero] using hT
+  · intro j
+    exact_mod_cast hfactor j
+
 end
 
 end LonelyRunner
