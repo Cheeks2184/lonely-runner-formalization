@@ -1,0 +1,235 @@
+{
+  "checkpoint": "Pass81",
+  "parent_main": "55df0b86d08964d2927000435006ac14a53c51a3",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-81.md": "06f0c9756a27d021bd28cbf0b2cbaa5d10f455fd120958e672307e286316b80b",
+    "research/astra-cyclic-global-compensation.md": "06b3eabe5f9b8031801faa9d8f6aedd5a7d43f048bbd90656b0804943f8b3088",
+    "research/astra-cyclic-global-review.md": "556974a0b6c0e31d5ea97569460893c86e5b13adc0941479f3a9322c400c5e03"
+  },
+  "dependency_hashes": {
+    "research/astra-uniform-strategy-after-fold.md": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+    "research/astra-slack-energy-review.md": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+    "research/astra-rational-cell-compensation.md": "3304bb071092c71e6516b5c1e16b0d47d918f1c21042f7c47592865d2ac10076",
+    "research/astra-rational-cell-review.md": "d6f17b4cb2188aa2b552fa30ac7643822dadf45c50dec63479737cc58decf62d",
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-pass80-verification.json": "78ac99290b10ac3528372001e09cef07c80af7666ca39c9f06ff877bc06a4c77"
+  },
+  "document_bindings": [
+    {
+      "document": "research/astra-cyclic-global-compensation.md",
+      "path": "research/astra-uniform-strategy-after-fold.md",
+      "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871"
+    },
+    {
+      "document": "research/astra-cyclic-global-compensation.md",
+      "path": "research/astra-slack-energy-review.md",
+      "sha256": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573"
+    },
+    {
+      "document": "research/astra-cyclic-global-compensation.md",
+      "path": "research/astra-rational-cell-compensation.md",
+      "sha256": "3304bb071092c71e6516b5c1e16b0d47d918f1c21042f7c47592865d2ac10076"
+    },
+    {
+      "document": "research/astra-cyclic-global-compensation.md",
+      "path": "research/astra-rational-cell-review.md",
+      "sha256": "d6f17b4cb2188aa2b552fa30ac7643822dadf45c50dec63479737cc58decf62d"
+    },
+    {
+      "document": "research/astra-cyclic-global-review.md",
+      "path": "research/astra-cyclic-global-compensation.md",
+      "sha256": "06b3eabe5f9b8031801faa9d8f6aedd5a7d43f048bbd90656b0804943f8b3088"
+    },
+    {
+      "document": "research/astra-cyclic-global-review.md",
+      "path": "research/astra-uniform-strategy-after-fold.md",
+      "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871"
+    },
+    {
+      "document": "research/astra-cyclic-global-review.md",
+      "path": "research/astra-slack-energy-review.md",
+      "sha256": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573"
+    },
+    {
+      "document": "research/astra-cyclic-global-review.md",
+      "path": "research/astra-rational-cell-compensation.md",
+      "sha256": "3304bb071092c71e6516b5c1e16b0d47d918f1c21042f7c47592865d2ac10076"
+    },
+    {
+      "document": "research/astra-cyclic-global-review.md",
+      "path": "research/astra-rational-cell-review.md",
+      "sha256": "d6f17b4cb2188aa2b552fa30ac7643822dadf45c50dec63479737cc58decf62d"
+    },
+    {
+      "document": "research/astra-cyclic-global-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-cyclic-global-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-cyclic-global-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-cyclic-global-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass81-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport hashlib,json,subprocess,sys\nroot=Path('/home/joshua/lonely-runner-formalization')\nm=json.loads(Path('/tmp/astra-pass81-inputs.json').read_text())\nfor name,digest in (m['hashes']|m['dependency_hashes']).items():\n    data=(root/name).read_bytes()\n    assert hashlib.sha256(data).hexdigest()==digest,name\n    assert data.endswith(b'\\n'),name\n    assert all(line.rstrip()==line for line in data.splitlines()),name\nfor b in m['document_bindings']:\n    assert b['sha256'] in (root/b['document']).read_text(),b\n    assert hashlib.sha256((root/b['path']).read_bytes()).hexdigest()==b['sha256'],b\ncommands=[]\nfor argv in ([sys.executable,'-B','scripts/validate_workflow.py'],['git','diff','--check'],[sys.executable,'-B','scripts/manage_storage.py']):\n    r=subprocess.run(argv,cwd=root,capture_output=True,text=True)\n    commands.append(dict(argv=argv,exit_code=r.returncode,stdout=r.stdout,stderr=r.stderr))\n    assert r.returncode==0,commands[-1]\nprint(json.dumps(dict(frozen_files=len(m['hashes']),dependency_bindings=len(m['dependency_hashes']),document_bindings=len(m['document_bindings']),numerical_replay=False,local_lean_build=False,commands=commands),indent=2))\n",
+    "source_sha256": "513b2519041c0e0ba0f3a2ea88d3d196447b03535fc29ec2041446176b99e25f",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-81.md": "06f0c9756a27d021bd28cbf0b2cbaa5d10f455fd120958e672307e286316b80b",
+        "research/astra-cyclic-global-compensation.md": "06b3eabe5f9b8031801faa9d8f6aedd5a7d43f048bbd90656b0804943f8b3088",
+        "research/astra-cyclic-global-review.md": "556974a0b6c0e31d5ea97569460893c86e5b13adc0941479f3a9322c400c5e03"
+      },
+      "dependency_hashes": {
+        "research/astra-uniform-strategy-after-fold.md": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+        "research/astra-slack-energy-review.md": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+        "research/astra-rational-cell-compensation.md": "3304bb071092c71e6516b5c1e16b0d47d918f1c21042f7c47592865d2ac10076",
+        "research/astra-rational-cell-review.md": "d6f17b4cb2188aa2b552fa30ac7643822dadf45c50dec63479737cc58decf62d",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-pass80-verification.json": "78ac99290b10ac3528372001e09cef07c80af7666ca39c9f06ff877bc06a4c77"
+      },
+      "document_bindings": [
+        {
+          "document": "research/astra-cyclic-global-compensation.md",
+          "path": "research/astra-uniform-strategy-after-fold.md",
+          "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871"
+        },
+        {
+          "document": "research/astra-cyclic-global-compensation.md",
+          "path": "research/astra-slack-energy-review.md",
+          "sha256": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573"
+        },
+        {
+          "document": "research/astra-cyclic-global-compensation.md",
+          "path": "research/astra-rational-cell-compensation.md",
+          "sha256": "3304bb071092c71e6516b5c1e16b0d47d918f1c21042f7c47592865d2ac10076"
+        },
+        {
+          "document": "research/astra-cyclic-global-compensation.md",
+          "path": "research/astra-rational-cell-review.md",
+          "sha256": "d6f17b4cb2188aa2b552fa30ac7643822dadf45c50dec63479737cc58decf62d"
+        },
+        {
+          "document": "research/astra-cyclic-global-review.md",
+          "path": "research/astra-cyclic-global-compensation.md",
+          "sha256": "06b3eabe5f9b8031801faa9d8f6aedd5a7d43f048bbd90656b0804943f8b3088"
+        },
+        {
+          "document": "research/astra-cyclic-global-review.md",
+          "path": "research/astra-uniform-strategy-after-fold.md",
+          "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871"
+        },
+        {
+          "document": "research/astra-cyclic-global-review.md",
+          "path": "research/astra-slack-energy-review.md",
+          "sha256": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573"
+        },
+        {
+          "document": "research/astra-cyclic-global-review.md",
+          "path": "research/astra-rational-cell-compensation.md",
+          "sha256": "3304bb071092c71e6516b5c1e16b0d47d918f1c21042f7c47592865d2ac10076"
+        },
+        {
+          "document": "research/astra-cyclic-global-review.md",
+          "path": "research/astra-rational-cell-review.md",
+          "sha256": "d6f17b4cb2188aa2b552fa30ac7643822dadf45c50dec63479737cc58decf62d"
+        },
+        {
+          "document": "research/astra-cyclic-global-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-cyclic-global-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-cyclic-global-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-cyclic-global-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        }
+      ]
+    },
+    "observed_tool_result": {
+      "chunk_id": "408b4f",
+      "wall_time_seconds": 6.883e-06,
+      "exit_code": 0,
+      "original_token_count": 212,
+      "output": "{\n  \"frozen_files\": 3,\n  \"dependency_bindings\": 9,\n  \"document_bindings\": 13,\n  \"numerical_replay\": false,\n  \"local_lean_build\": false,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": {
+    "scope": "Independent manuscript proof and root exact-scope review; no kernel theorem.",
+    "author": "research/astra-cyclic-global-compensation.md",
+    "review": "research/astra-cyclic-global-review.md",
+    "result": "Full cyclic identities and arbitrary-count progression asymptotics. Exact d4 rational-interval falsifier to coarse remainder budget G with strictly positive full E defect; E and LRC unresolved."
+  },
+  "failure_history": [
+    "Before final freeze, wording clarified a witness at1/d strictlyabovealpha and nondecreasing rather than unspecified monotonicity. Independent final review needed no correction."
+  ],
+  "excluded": [
+    "Active uniform-strategy reassessment",
+    "Unrestricted proof/disproof claim",
+    "Local build or numerical search"
+  ]
+}
