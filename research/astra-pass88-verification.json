@@ -1,0 +1,317 @@
+{
+  "checkpoint": "pass88",
+  "parent_main": "653c532a3d3a98816b4de63ceefce191c4c19c3c",
+  "status": "independently_accepted_and_root_verified",
+  "hashes": {
+    "docs/astra-research-88.md": "ee5dcfb530baf75db871c460c0da309d014b499327cc0dd9f6845d819fdb4349",
+    "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+    "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
+  },
+  "dependency_hashes": {
+    "research/astra-arithmetic-completion-saving.md": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403",
+    "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+    "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02",
+    "research/astra-coupled-descent-strategy.md": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+    "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+    "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+    "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-arithmetic-completion-review.md": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019",
+    "research/astra-pass87-verification.json": "3aab4c1a51ca78b385a8a242055a133e9946e6a1a2ba218530ad7509ad4734b6"
+  },
+  "document_bindings": [
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": "research/astra-arithmetic-completion-saving.md",
+      "sha256": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403"
+    },
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": "research/astra-forced-arc-completion.md",
+      "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+    },
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": "research/astra-forced-completion-review.md",
+      "sha256": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
+    },
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": "research/astra-coupled-descent-strategy.md",
+      "sha256": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2"
+    },
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": "research/astra-private-repair-review.md",
+      "sha256": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512"
+    },
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": "research/astra-uniform-divisor-minimality.md",
+      "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+    },
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-strict-core-shell-supply.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "research/astra-strict-core-shell-supply.md",
+      "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "research/astra-arithmetic-completion-saving.md",
+      "sha256": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "research/astra-arithmetic-completion-review.md",
+      "sha256": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "research/astra-forced-arc-completion.md",
+      "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "research/astra-forced-completion-review.md",
+      "sha256": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "research/astra-coupled-descent-strategy.md",
+      "sha256": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "research/astra-private-repair-review.md",
+      "sha256": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "research/astra-uniform-divisor-minimality.md",
+      "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-strict-core-shell-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass88-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport hashlib,json,subprocess,sys\nroot=Path('/home/joshua/lonely-runner-formalization')\nm=json.loads(Path('/tmp/astra-pass88-inputs.json').read_text())\nfor name,digest in (m['hashes']|m['dependency_hashes']).items():\n    data=(root/name).read_bytes()\n    assert hashlib.sha256(data).hexdigest()==digest,name\n    assert data.endswith(b'\\n'),name\n    assert all(line.rstrip()==line for line in data.splitlines()),name\nfor b in m['document_bindings']:\n    assert b['sha256'] in (root/b['document']).read_text(),b\n    assert hashlib.sha256((root/b['path']).read_bytes()).hexdigest()==b['sha256'],b\ncommands=[]\nfor argv in ([sys.executable,'-B','scripts/validate_workflow.py'],['git','diff','--check'],[sys.executable,'-B','scripts/manage_storage.py']):\n    r=subprocess.run(argv,cwd=root,capture_output=True,text=True)\n    commands.append(dict(argv=argv,exit_code=r.returncode,stdout=r.stdout,stderr=r.stderr))\n    assert r.returncode==0,commands[-1]\nprint(json.dumps(dict(frozen_files=len(m['hashes']),dependency_bindings=len(m['dependency_hashes']),document_bindings=len(m['document_bindings']),numerical_replay=False,local_lean_build=False,commands=commands),indent=2))\n",
+    "source_sha256": "c31c5469772b1f78d8a3d202b1823a51a2c4de3d658f2c47e0150db6ade060b1",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-88.md": "ee5dcfb530baf75db871c460c0da309d014b499327cc0dd9f6845d819fdb4349",
+        "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+        "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
+      },
+      "dependency_hashes": {
+        "research/astra-arithmetic-completion-saving.md": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403",
+        "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+        "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02",
+        "research/astra-coupled-descent-strategy.md": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+        "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-arithmetic-completion-review.md": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019",
+        "research/astra-pass87-verification.json": "3aab4c1a51ca78b385a8a242055a133e9946e6a1a2ba218530ad7509ad4734b6"
+      },
+      "document_bindings": [
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": "research/astra-arithmetic-completion-saving.md",
+          "sha256": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403"
+        },
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": "research/astra-forced-arc-completion.md",
+          "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+        },
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": "research/astra-forced-completion-review.md",
+          "sha256": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
+        },
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": "research/astra-coupled-descent-strategy.md",
+          "sha256": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2"
+        },
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": "research/astra-private-repair-review.md",
+          "sha256": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512"
+        },
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": "research/astra-uniform-divisor-minimality.md",
+          "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+        },
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-strict-core-shell-supply.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "research/astra-strict-core-shell-supply.md",
+          "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "research/astra-arithmetic-completion-saving.md",
+          "sha256": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "research/astra-arithmetic-completion-review.md",
+          "sha256": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "research/astra-forced-arc-completion.md",
+          "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "research/astra-forced-completion-review.md",
+          "sha256": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "research/astra-coupled-descent-strategy.md",
+          "sha256": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "research/astra-private-repair-review.md",
+          "sha256": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "research/astra-uniform-divisor-minimality.md",
+          "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-strict-core-shell-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        }
+      ]
+    },
+    "observed_tool_result": {
+      "chunk_id": "6aeea0",
+      "wall_time_seconds": 3.637e-06,
+      "exit_code": 0,
+      "original_token_count": 212,
+      "output": "{\n  \"frozen_files\": 3,\n  \"dependency_bindings\": 13,\n  \"document_bindings\": 24,\n  \"numerical_replay\": false,\n  \"local_lean_build\": false,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": {
+    "author": "research/astra-strict-core-shell-supply.md",
+    "review": "research/astra-strict-core-shell-review.md",
+    "disposition": "Accepted without correction. Root read both full frozen texts. All-W contraction, exact indexed-core identity, strip deficit and noncanonical control scope are manuscript proofs only; no kernel theorem or unrestricted LRC resolution."
+  },
+  "failure_history": [],
+  "excluded": [
+    "Live forced-cycle-frequency exchange research.",
+    "No numerical replay, local Lean build or dependency restoration."
+  ]
+}
