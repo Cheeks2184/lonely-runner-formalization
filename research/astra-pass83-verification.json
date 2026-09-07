@@ -1,0 +1,260 @@
+{
+  "checkpoint": "Pass83",
+  "parent_main": "0f92e9a2f29ab5beccc22059baa916a2f82ce897",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-83.md": "b27c4d1cc45d0e0b5747b97fb0d648f74fc12a41e295fc72970a31a9aac34ef8",
+    "research/astra-arithmetic-winding-exchange.md": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4",
+    "research/astra-arithmetic-winding-review.md": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243"
+  },
+  "dependency_hashes": {
+    "research/astra-pass82-verification.json": "fc7e0ffabbc308c1f6eed1c0f52530793ed1adc083d9dd5ec877391fbbe0ce80",
+    "research/astra-uniform-strategy-after-energy.md": "ee253b7ade891196bdf213250badac0ddf5992937eba32b625dbc9adb79f506e",
+    "research/astra-prime-progression-cover-cost.md": "e5e26e0cffff1031dd1b14cd88f127ac5b624c2c798d22b0d0baa51e89a7ccd7",
+    "research/astra-uniform-colour-critical-cover.md": "84b7f417a73dd8e580300390a3e1081f61904ad1860215487f03f7c1a51e578f",
+    "research/astra-uniform-colour-critical-review.md": "49e42ed76159de73c3e2fd568021c82942913f76d976a596544323e1ef1caed9",
+    "research/astra-uniform-endpoint-euler-screen.md": "00f37303fc266b1843964293500a1be112e3a9d8439d3dcad65a662d60be1b25",
+    "research/astra-uniform-endpoint-euler-review.md": "b3dd8f9923bd77814cff6c8171ca1a930df5058cbf123cdfe165ec9591102aec",
+    "research/astra-cover-selection-review.md": "a0fe2ed43372520ac30caec3844bbc90dc145089a8ba9113be4bba8b9bbab770",
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+  },
+  "document_bindings": [
+    {
+      "document": "research/astra-arithmetic-winding-exchange.md",
+      "path": "research/astra-uniform-strategy-after-energy.md",
+      "sha256": "ee253b7ade891196bdf213250badac0ddf5992937eba32b625dbc9adb79f506e"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-exchange.md",
+      "path": "research/astra-prime-progression-cover-cost.md",
+      "sha256": "e5e26e0cffff1031dd1b14cd88f127ac5b624c2c798d22b0d0baa51e89a7ccd7"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-exchange.md",
+      "path": "research/astra-uniform-colour-critical-cover.md",
+      "sha256": "84b7f417a73dd8e580300390a3e1081f61904ad1860215487f03f7c1a51e578f"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-exchange.md",
+      "path": "research/astra-uniform-colour-critical-review.md",
+      "sha256": "49e42ed76159de73c3e2fd568021c82942913f76d976a596544323e1ef1caed9"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-exchange.md",
+      "path": "research/astra-uniform-endpoint-euler-screen.md",
+      "sha256": "00f37303fc266b1843964293500a1be112e3a9d8439d3dcad65a662d60be1b25"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-exchange.md",
+      "path": "research/astra-uniform-endpoint-euler-review.md",
+      "sha256": "b3dd8f9923bd77814cff6c8171ca1a930df5058cbf123cdfe165ec9591102aec"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "research/astra-arithmetic-winding-exchange.md",
+      "sha256": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "research/astra-uniform-strategy-after-energy.md",
+      "sha256": "ee253b7ade891196bdf213250badac0ddf5992937eba32b625dbc9adb79f506e"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "research/astra-prime-progression-cover-cost.md",
+      "sha256": "e5e26e0cffff1031dd1b14cd88f127ac5b624c2c798d22b0d0baa51e89a7ccd7"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "research/astra-cover-selection-review.md",
+      "sha256": "a0fe2ed43372520ac30caec3844bbc90dc145089a8ba9113be4bba8b9bbab770"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "research/astra-uniform-colour-critical-cover.md",
+      "sha256": "84b7f417a73dd8e580300390a3e1081f61904ad1860215487f03f7c1a51e578f"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "research/astra-uniform-colour-critical-review.md",
+      "sha256": "49e42ed76159de73c3e2fd568021c82942913f76d976a596544323e1ef1caed9"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "research/astra-uniform-endpoint-euler-screen.md",
+      "sha256": "00f37303fc266b1843964293500a1be112e3a9d8439d3dcad65a662d60be1b25"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "research/astra-uniform-endpoint-euler-review.md",
+      "sha256": "b3dd8f9923bd77814cff6c8171ca1a930df5058cbf123cdfe165ec9591102aec"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-arithmetic-winding-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    }
+  ],
+  "checks": [
+    "Workflow structural validation, frozen source/newline/whitespace checks, git diff and storage report passed.",
+    "Exact hand argument independently accepted without corrections; root read full author and review."
+  ],
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass83-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport hashlib,json,subprocess,sys\nroot=Path('/home/joshua/lonely-runner-formalization')\nm=json.loads(Path('/tmp/astra-pass83-inputs.json').read_text())\nfor name,digest in (m['hashes']|m['dependency_hashes']).items():\n    data=(root/name).read_bytes()\n    assert hashlib.sha256(data).hexdigest()==digest,name\n    assert data.endswith(b'\\n'),name\n    assert all(line.rstrip()==line for line in data.splitlines()),name\nfor b in m['document_bindings']:\n    assert b['sha256'] in (root/b['document']).read_text(),b\n    assert hashlib.sha256((root/b['path']).read_bytes()).hexdigest()==b['sha256'],b\ncommands=[]\nfor argv in ([sys.executable,'-B','scripts/validate_workflow.py'],['git','diff','--check'],[sys.executable,'-B','scripts/manage_storage.py']):\n    r=subprocess.run(argv,cwd=root,capture_output=True,text=True)\n    commands.append(dict(argv=argv,exit_code=r.returncode,stdout=r.stdout,stderr=r.stderr))\n    assert r.returncode==0,commands[-1]\nprint(json.dumps(dict(frozen_files=len(m['hashes']),dependency_bindings=len(m['dependency_hashes']),document_bindings=len(m['document_bindings']),numerical_replay=False,local_lean_build=False,commands=commands),indent=2))\n",
+    "source_sha256": "ac7daaa17778d40dde46c0d9f424266ade550c2d6b9bc6456cde95359ca63d87",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-83.md": "b27c4d1cc45d0e0b5747b97fb0d648f74fc12a41e295fc72970a31a9aac34ef8",
+        "research/astra-arithmetic-winding-exchange.md": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4",
+        "research/astra-arithmetic-winding-review.md": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243"
+      },
+      "dependency_hashes": {
+        "research/astra-pass82-verification.json": "fc7e0ffabbc308c1f6eed1c0f52530793ed1adc083d9dd5ec877391fbbe0ce80",
+        "research/astra-uniform-strategy-after-energy.md": "ee253b7ade891196bdf213250badac0ddf5992937eba32b625dbc9adb79f506e",
+        "research/astra-prime-progression-cover-cost.md": "e5e26e0cffff1031dd1b14cd88f127ac5b624c2c798d22b0d0baa51e89a7ccd7",
+        "research/astra-uniform-colour-critical-cover.md": "84b7f417a73dd8e580300390a3e1081f61904ad1860215487f03f7c1a51e578f",
+        "research/astra-uniform-colour-critical-review.md": "49e42ed76159de73c3e2fd568021c82942913f76d976a596544323e1ef1caed9",
+        "research/astra-uniform-endpoint-euler-screen.md": "00f37303fc266b1843964293500a1be112e3a9d8439d3dcad65a662d60be1b25",
+        "research/astra-uniform-endpoint-euler-review.md": "b3dd8f9923bd77814cff6c8171ca1a930df5058cbf123cdfe165ec9591102aec",
+        "research/astra-cover-selection-review.md": "a0fe2ed43372520ac30caec3844bbc90dc145089a8ba9113be4bba8b9bbab770",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+      },
+      "document_bindings": [
+        {
+          "document": "research/astra-arithmetic-winding-exchange.md",
+          "path": "research/astra-uniform-strategy-after-energy.md",
+          "sha256": "ee253b7ade891196bdf213250badac0ddf5992937eba32b625dbc9adb79f506e"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-exchange.md",
+          "path": "research/astra-prime-progression-cover-cost.md",
+          "sha256": "e5e26e0cffff1031dd1b14cd88f127ac5b624c2c798d22b0d0baa51e89a7ccd7"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-exchange.md",
+          "path": "research/astra-uniform-colour-critical-cover.md",
+          "sha256": "84b7f417a73dd8e580300390a3e1081f61904ad1860215487f03f7c1a51e578f"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-exchange.md",
+          "path": "research/astra-uniform-colour-critical-review.md",
+          "sha256": "49e42ed76159de73c3e2fd568021c82942913f76d976a596544323e1ef1caed9"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-exchange.md",
+          "path": "research/astra-uniform-endpoint-euler-screen.md",
+          "sha256": "00f37303fc266b1843964293500a1be112e3a9d8439d3dcad65a662d60be1b25"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-exchange.md",
+          "path": "research/astra-uniform-endpoint-euler-review.md",
+          "sha256": "b3dd8f9923bd77814cff6c8171ca1a930df5058cbf123cdfe165ec9591102aec"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "research/astra-arithmetic-winding-exchange.md",
+          "sha256": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "research/astra-uniform-strategy-after-energy.md",
+          "sha256": "ee253b7ade891196bdf213250badac0ddf5992937eba32b625dbc9adb79f506e"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "research/astra-prime-progression-cover-cost.md",
+          "sha256": "e5e26e0cffff1031dd1b14cd88f127ac5b624c2c798d22b0d0baa51e89a7ccd7"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "research/astra-cover-selection-review.md",
+          "sha256": "a0fe2ed43372520ac30caec3844bbc90dc145089a8ba9113be4bba8b9bbab770"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "research/astra-uniform-colour-critical-cover.md",
+          "sha256": "84b7f417a73dd8e580300390a3e1081f61904ad1860215487f03f7c1a51e578f"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "research/astra-uniform-colour-critical-review.md",
+          "sha256": "49e42ed76159de73c3e2fd568021c82942913f76d976a596544323e1ef1caed9"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "research/astra-uniform-endpoint-euler-screen.md",
+          "sha256": "00f37303fc266b1843964293500a1be112e3a9d8439d3dcad65a662d60be1b25"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "research/astra-uniform-endpoint-euler-review.md",
+          "sha256": "b3dd8f9923bd77814cff6c8171ca1a930df5058cbf123cdfe165ec9591102aec"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-arithmetic-winding-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        }
+      ]
+    },
+    "observed_tool_result": {
+      "chunk_id": "9f0e29",
+      "wall_time_seconds": 4.729e-06,
+      "exit_code": 0,
+      "original_token_count": 212,
+      "output": "{\n  \"frozen_files\": 3,\n  \"dependency_bindings\": 12,\n  \"document_bindings\": 18,\n  \"numerical_replay\": false,\n  \"local_lean_build\": false,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": {
+    "scope": "Manuscript proof and exact control, not kernel theorem.",
+    "author": "research/astra-arithmetic-winding-exchange.md",
+    "review": "research/astra-arithmetic-winding-review.md",
+    "result": "Exact block-exchange condition and general determinant identity; unit-transition premise would imply contradiction but is unproved under strict failure. Unique optimal supercritical(1,5,8) control refutes unrestricted uncrossing only."
+  },
+  "failure_history": [],
+  "excluded": [
+    "Unreviewed research/astra-minimal-frequency-synthesis.md and subsequent research outputs.",
+    "No numerical search or local Lean build."
+  ]
+}
