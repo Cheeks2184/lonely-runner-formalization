@@ -1,0 +1,117 @@
+{
+  "status": "private_interval_helper_compiled",
+  "scope": "Only the reviewed positive-circleNorm point in any nonempty open interval; three public adapter theorems still missing.",
+  "worker_initial_escalation": {
+    "task": "minimal_failure_deletion_implementation",
+    "status": "escalated_before_compile",
+    "contract": {
+      "path": "research/astra-minimal-failure-deletion-contract.md",
+      "sha256": "76bdf41ee81543c9251f3f5c3236082c20a0d62afd81d854a0f44be5227ba880"
+    },
+    "review": {
+      "path": "research/astra-minimal-failure-deletion-contract-review.md",
+      "sha256": "991255a339c8c0be9164422879d5ba66e6ca332beb8acd43d405677c0b4a0f6e",
+      "status": "accepted_without_correction"
+    },
+    "verified_dependencies": {
+      "StrictCoreContraction.lean": "b26dbff907c02e5874dbf635fdd5f9406e7d080045238818090d6b7149c91daf",
+      "MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+      "BaseCases.lean": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f"
+    },
+    "workflow_validation": {
+      "command": "python3 scripts/validate_workflow.py",
+      "exit_status": 0,
+      "observed_output": "workflow structural validation passed; it cannot certify mathematical validity."
+    },
+    "blocker": {
+      "kind": "semantic_assembly_escalation",
+      "detail": "The exact strict-radius clause requires a formal nonzero target-phase perturbation inside the deletion seed interval when the center has zero norm. The accepted manuscript gives the intended round-residual construction, but no existing imported theorem packages the required interval-contained perturbation. A private helper can be added, but its exact Lean interface and proof decomposition require Astra review before implementation; no statement was weakened."
+    },
+    "attempts": [],
+    "source_status": "No Lean source file is retained: an uncompiled draft was removed before any compiler invocation because it contained no admissible completion of the strict-radius subgoal. No sorry, admit, axiom, native_decide, or other trust shortcut was saved.",
+    "delivery_metrics": {
+      "check_kind": "lean",
+      "first_check_success": null,
+      "worker_repair_rounds": 0,
+      "astra_repair_rounds": null,
+      "astra_repair_lines": 0,
+      "worker_elapsed_seconds": null,
+      "usage": null
+    }
+  },
+  "script_source": "from pathlib import Path\nimport hashlib\nimport json\nimport subprocess\nimport time\n\nsource = Path('LonelyRunner/MinimalFailureDeletion.lean')\ntext = source.read_text()\ncgroup = Path('/sys/fs/cgroup') / Path('/proc/self/cgroup').read_text().strip().split('::', 1)[1].lstrip('/')\nargv = ['/home/joshua/.elan/bin/lake', 'env', 'lean', '-j1', '-o',\n        '.lake/build/lib/lean/LonelyRunner/MinimalFailureDeletion.olean', str(source)]\nstart = time.monotonic()\nrun = subprocess.run(argv, text=True, capture_output=True)\nreceipt = {'argv': argv, 'source_sha256': hashlib.sha256(text.encode()).hexdigest(),\n           'source_text': text, 'exit_code': run.returncode, 'stdout': run.stdout,\n           'stderr': run.stderr, 'elapsed_seconds': time.monotonic() - start,\n           'cgroup': {key: (cgroup / key).read_text().strip() for key in\n                      ['memory.max', 'memory.swap.max', 'memory.peak', 'memory.swap.peak']}}\nPath('/tmp/astra-deletion-helper-compile.json').write_text(json.dumps(receipt, indent=2) + '\\n')\nprint(json.dumps({k: v for k, v in receipt.items() if k != 'source_text'}, indent=2), flush=True)\nraise SystemExit(run.returncode)\n",
+  "command_prefix": [
+    "systemd-run",
+    "--user",
+    "--wait",
+    "--pipe",
+    "--collect",
+    "-p",
+    "MemoryMax=4G",
+    "-p",
+    "MemorySwapMax=512M",
+    "-p",
+    "TasksMax=128",
+    "--working-directory=/home/joshua/lonely-runner-formalization",
+    "/usr/bin/flock",
+    "-n",
+    ".lake/verification.lock",
+    "/usr/bin/python3",
+    "/tmp/astra-deletion-helper-compile.py"
+  ],
+  "attempts": [
+    {
+      "argv": [
+        "/home/joshua/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/LonelyRunner/MinimalFailureDeletion.olean",
+        "LonelyRunner/MinimalFailureDeletion.lean"
+      ],
+      "source_sha256": "69f624ccfea8552829586ce2ca10067a7b4b3a9596e6bc5a1d9a0e60c72e72b4",
+      "source_text": "import LonelyRunner.MinimalCounterexample\nimport LonelyRunner.StrictCoreContraction\nimport LonelyRunner.BaseCases\n\nnamespace LonelyRunner\n\n/-- A positive speed cannot have zero circle norm throughout an open interval.\nAt a zero center phase, use a short positive shift before the half-period. -/\nprivate theorem exists_positive_circleNorm_in_interval\n    (a : \u2115) (ha : 0 < a) (s epsilon : \u211d) (hepsilon : 0 < epsilon) :\n    \u2203 t : \u211d, t \u2208 Set.Ioo (s - epsilon) (s + epsilon) \u2227\n      0 < circleNorm (t * (a : \u211d)) := by\n  by_cases hs : 0 < circleNorm (s * (a : \u211d))\n  \u00b7 exact \u27e8s, \u27e8by linarith, by linarith\u27e9, hs\u27e9\n  \u00b7 have haR : 0 < (a : \u211d) := by exact_mod_cast ha\n    have hzero : circleNorm (s * (a : \u211d)) = 0 :=\n      le_antisymm (le_of_not_gt hs) (norm_nonneg _)\n    have hphase_zero : s * (a : \u211d) = (round (s * (a : \u211d)) : \u211d) := by\n      rw [circleNorm_eq_abs_sub_round] at hzero\n      exact sub_eq_zero.mp (abs_eq_zero.mp hzero)\n    let b : \u211d := min epsilon (1 / (2 * (a : \u211d)))\n    let h : \u211d := b / 2\n    have hb : 0 < b := lt_min hepsilon (by positivity)\n    have hh : 0 < h := by dsimp [h]; positivity\n    have hhb : h < b := by dsimp [h]; linarith\n    have hhepsilon : h < epsilon := lt_of_lt_of_le hhb (min_le_left _ _)\n    have hhsmall : h < 1 / (2 * (a : \u211d)) :=\n      lt_of_lt_of_le hhb (min_le_right _ _)\n    have hproduct : 0 < h * (a : \u211d) := mul_pos hh haR\n    have hproduct_half : h * (a : \u211d) < (1 : \u211d) / 2 := by\n      have hmul := (lt_div_iff\u2080 (show 0 < 2 * (a : \u211d) by positivity)).mp hhsmall\n      nlinarith\n    refine \u27e8s + h, \u27e8by linarith, by linarith\u27e9, ?_\u27e9\n    have hphase : (s + h) * (a : \u211d) =\n        (round (s * (a : \u211d)) : \u211d) + h * (a : \u211d) := by\n      rw [add_mul, hphase_zero]\n    rw [hphase, circleNorm_add_int,\n      circleNorm_eq_abs_of_abs_le_half (by\n        rw [abs_of_pos hproduct]\n        exact hproduct_half.le), abs_of_pos hproduct]\n    exact hproduct\n\nend LonelyRunner\n",
+      "exit_code": 1,
+      "stdout": "LonelyRunner/MinimalFailureDeletion.lean:35:51: error: unsolved goals\na : \u2115\nha : 0 < a\ns epsilon : \u211d\nhepsilon : 0 < epsilon\nhs : \u00ac0 < circleNorm (s * \u2191a)\nhaR : 0 < \u2191a\nhzero : circleNorm (s * \u2191a) = 0\nhphase_zero : s * \u2191a = \u2191(round (s * \u2191a))\nb : \u211d := min epsilon (1 / (2 * \u2191a))\nh : \u211d := b / 2\nhb : 0 < b\nhh : 0 < h\nhhb : h < b\nhhepsilon : h < epsilon\nhhsmall : h < 1 / (2 * \u2191a)\nhproduct : 0 < h * \u2191a\nhproduct_half : h * \u2191a < 1 / 2\n\u22a2 \u2191(round (s * \u2191a)) + h * \u2191a = \u2191(round \u2191(round (s * \u2191a))) + h * \u2191a\n",
+      "stderr": "",
+      "elapsed_seconds": 2.6426581319974503,
+      "cgroup": {
+        "memory.max": "4294967296",
+        "memory.swap.max": "536870912",
+        "memory.peak": "498655232",
+        "memory.swap.peak": "0"
+      },
+      "terminal_tool_chunk": "9478e4",
+      "unit": "lrc-deletion-helper"
+    },
+    {
+      "argv": [
+        "/home/joshua/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/LonelyRunner/MinimalFailureDeletion.olean",
+        "LonelyRunner/MinimalFailureDeletion.lean"
+      ],
+      "source_sha256": "fe208e0ff7bcb35f56c3d1d0d9caf222f6ac25e630ba29d0a7e63b51dd081887",
+      "source_text": "import LonelyRunner.MinimalCounterexample\nimport LonelyRunner.StrictCoreContraction\nimport LonelyRunner.BaseCases\n\nnamespace LonelyRunner\n\n/-- A positive speed cannot have zero circle norm throughout an open interval.\nAt a zero center phase, use a short positive shift before the half-period. -/\nprivate theorem exists_positive_circleNorm_in_interval\n    (a : \u2115) (ha : 0 < a) (s epsilon : \u211d) (hepsilon : 0 < epsilon) :\n    \u2203 t : \u211d, t \u2208 Set.Ioo (s - epsilon) (s + epsilon) \u2227\n      0 < circleNorm (t * (a : \u211d)) := by\n  by_cases hs : 0 < circleNorm (s * (a : \u211d))\n  \u00b7 exact \u27e8s, \u27e8by linarith, by linarith\u27e9, hs\u27e9\n  \u00b7 have haR : 0 < (a : \u211d) := by exact_mod_cast ha\n    have hzero : circleNorm (s * (a : \u211d)) = 0 :=\n      le_antisymm (le_of_not_gt hs) (norm_nonneg _)\n    have hphase_zero : s * (a : \u211d) = (round (s * (a : \u211d)) : \u211d) := by\n      rw [circleNorm_eq_abs_sub_round] at hzero\n      exact sub_eq_zero.mp (abs_eq_zero.mp hzero)\n    let b : \u211d := min epsilon (1 / (2 * (a : \u211d)))\n    let h : \u211d := b / 2\n    have hb : 0 < b := lt_min hepsilon (by positivity)\n    have hh : 0 < h := by dsimp [h]; positivity\n    have hhb : h < b := by dsimp [h]; linarith\n    have hhepsilon : h < epsilon := lt_of_lt_of_le hhb (min_le_left _ _)\n    have hhsmall : h < 1 / (2 * (a : \u211d)) :=\n      lt_of_lt_of_le hhb (min_le_right _ _)\n    have hproduct : 0 < h * (a : \u211d) := mul_pos hh haR\n    have hproduct_half : h * (a : \u211d) < (1 : \u211d) / 2 := by\n      have hmul := (lt_div_iff\u2080 (show 0 < 2 * (a : \u211d) by positivity)).mp hhsmall\n      nlinarith\n    refine \u27e8s + h, \u27e8by linarith, by linarith\u27e9, ?_\u27e9\n    have hphase : (s + h) * (a : \u211d) =\n        (round (s * (a : \u211d)) : \u211d) + h * (a : \u211d) := by\n      calc\n        (s + h) * (a : \u211d) = s * (a : \u211d) + h * (a : \u211d) := add_mul _ _ _\n        _ = (round (s * (a : \u211d)) : \u211d) + h * (a : \u211d) :=\n          congrArg (fun x : \u211d => x + h * (a : \u211d)) hphase_zero\n    rw [hphase, circleNorm_add_int,\n      circleNorm_eq_abs_of_abs_le_half (by\n        rw [abs_of_pos hproduct]\n        exact hproduct_half.le), abs_of_pos hproduct]\n    exact hproduct\n\nend LonelyRunner\n",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "elapsed_seconds": 2.3705568500008667,
+      "cgroup": {
+        "memory.max": "4294967296",
+        "memory.swap.max": "536870912",
+        "memory.peak": "478973952",
+        "memory.swap.peak": "0"
+      },
+      "terminal_tool_chunk": "c81028",
+      "unit": "lrc-deletion-helper-repair1"
+    }
+  ],
+  "root_source_lines_added": 46,
+  "repair": "Initial rw rewrote the round argument on both sides. Replaced with congrArg in a calc so only the intended phase is substituted. No mathematical change.",
+  "completion_limit": "Full adapter, three public axiom probes, and independent final review remain required."
+}

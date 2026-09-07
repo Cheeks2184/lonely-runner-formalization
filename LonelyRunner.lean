@@ -221,6 +221,7 @@ import LonelyRunner.SixRunnerCanonical
 
 import LonelyRunner.MinimalCounterexample
 import LonelyRunner.StrictCoreContraction
+import LonelyRunner.MinimalFailureDeletion
 
 /-!
 Root import for the formal Lonely Runner development.

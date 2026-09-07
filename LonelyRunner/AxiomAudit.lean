@@ -857,3 +857,8 @@ project-specific axiom.
 -- The global full-minimum bound contracts every closed deletion-good set.
 #print axioms LonelyRunner.strict_core_bound_of_global_minimum
 #print axioms LonelyRunner.not_complementSafe_of_global_maximum
+
+-- One actual failure margin controls all deletion seeds and excludes all maximizers.
+#print axioms LonelyRunner.MinimalPositiveIntegerFailure.two_le_count
+#print axioms LonelyRunner.MinimalPositiveIntegerFailure.deletion_seed_interval
+#print axioms LonelyRunner.MinimalPositiveIntegerFailure.exists_common_deletion_margin
