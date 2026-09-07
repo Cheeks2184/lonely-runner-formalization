@@ -6,19 +6,19 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/positive_candidate_coherence",
-      "agent_id": "/root/fold_zero_restoration_resume",
+      "id": "/root/zero_only_deletion_amplification",
+      "agent_id": "/root/uniform_strategy_after_fold",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "07d39f4feb40f5fdf7fd26b900d70c7a553e8709",
+      "source_checkpoint": "7d5e9677d56d6ff4d04268c0829f0ee6cbade6c0",
       "owned_files": [
-        "research/astra-positive-candidate-coherence.md"
+        "research/astra-zero-only-deletion-amplification.md"
       ],
-      "target": "Test the remaining all-positive but incoherent maximum endpoint-candidate branch: derive a uniform common-candidate mechanism using actual minimal-failure data or a precise native-width LRC-good control delimiting purely local candidate-set coherence. At most two hand approaches; no computation or higher-count roadmap.",
+      "target": "Investigate a global zero-only maximum-deletion amplification mechanism under actual strict failure: with nu=max retained margin, can all-zero endpoint structure plus full mu-cover force nu<=mu/(1-mu), or another genuine arbitrary-count contradiction? At most two hand approaches; retain explicit first missing global implication and reject the known false unconditional recurrence.",
       "checks": []
     }
   ],
@@ -10501,9 +10501,49 @@
       ],
       "source_hash": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
       "result": "Accept author f21fc1de without corrections; independent full mathematical review and root full review readback complete."
+    },
+    {
+      "id": "/root/positive_candidate_coherence",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "07d39f4feb40f5fdf7fd26b900d70c7a553e8709",
+      "owned_files": [
+        "research/astra-positive-candidate-coherence.md"
+      ],
+      "target": "Test the remaining all-positive but incoherent maximum endpoint-candidate branch: derive a uniform common-candidate mechanism using actual minimal-failure data or a precise native-width LRC-good control delimiting purely local candidate-set coherence. At most two hand approaches; no computation or higher-count roadmap.",
+      "checks": [
+        "Worker full readback, ten bindings, workflow and formatting passed; hand derivations only."
+      ],
+      "source_hash": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea",
+      "result": "Frozen structural denominator/reflection/window constraints and stronger native control with all actual private C fresh/nonempty but intersection empty. No global-trapping or canonical-failure claim. Awaiting independent review."
+    },
+    {
+      "id": "/root/positive_candidate_coherence_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "7d5e9677d56d6ff4d04268c0829f0ee6cbade6c0",
+      "owned_files": [
+        "research/astra-positive-candidate-coherence-review.md"
+      ],
+      "target": "Independent exact review of a5c01c2e: full modular windows, denominator witness, reflection constraints, all actual private arcs and full nearest-index distinction in stronger fresh incoherence control V1,5,6,7,8; no canonical failure claimed.",
+      "checks": [
+        "Eleven bindings, workflow, whitespace and all hand calculations passed; no kernel proof."
+      ],
+      "source_hash": "5624364765087862f67f41b24e8c5ea0c7d5a08fa7ff449a00b799f9707bbc67",
+      "result": "Independent full review accepts frozen a5c01c2e without corrections; root full reviewer readback0e5561 complete."
     }
   ],
-  "latest_checkpoint": "Pass90 independently accepted and root verified: exact maximum-owner private intervals, beta-seeded zero-only restrictions, and exact local rounding limitation. Publication pending; positive candidate coherence active; unrestricted LRC unresolved.",
+  "latest_checkpoint": "Pass91 independently accepted and root verified: modular windows, denominator witness, reflection restrictions and exact fresh private-local incoherence control; publication pending. Zero-only deletion amplification research active; unrestricted LRC unresolved.",
   "next_actions": [
     "Publish verified Pass89 through commit/push/PR/checks/exact-head merge/fetched-main verification.",
     "Continue live zero-only maximum-gap investigation; its exact gap and beta seed implications are not yet frozen or independently reviewed.",
@@ -17100,10 +17140,14 @@
       "date": "2026-09-07T08:08:01.242311+00:00",
       "kind": "resource_pause_resumption",
       "result": "User resumed full goal after read-only resource attribution. No Rust/Lean/solver process observed; research worker resumed same requested Astra/xhigh. No local heavy build queued. Previous goal research turn progress; resource diagnosis produced verified attribution."
+    },
+    {
+      "kind": "goal_turn_progress",
+      "result": "Merged and verified PR88 and PR89, independently accepted exact zero-only gap and residue restrictions. Root derived stronger positivefresh private-local incoherence control V1,5,6,7,8 and sharper denominator witness; author froze a5c01c2e, review live. Full goal remains active and unresolved; no local build/search/cache restoration."
     }
   ],
   "pass90_publication": {
-    "status": "verified_ready_to_commit",
+    "status": "merged_verified",
     "branch": "codex/astra-zero-only-maximum-gaps",
     "parent_main": "07d39f4feb40f5fdf7fd26b900d70c7a553e8709",
     "owned_checkpoint_files": [
@@ -17125,11 +17169,157 @@
       "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
     },
     "receipt": "research/astra-pass90-verification.json",
-    "root_verifier_chunk": "9655b8"
+    "root_verifier_chunk": "9655b8",
+    "head": "ee0f68c82e00cfb406816d46e877be8d94043329",
+    "pr": 89,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/89",
+    "ci_run": 34099731929,
+    "checks": {
+      "Lean build and trust audit": 101671150792,
+      "Exact computational certificates": 101671150672
+    },
+    "push_result": {
+      "session_id": 50787,
+      "terminal_chunk": "f56132",
+      "exit_code": 0
+    },
+    "create_result": {
+      "session_id": 6871,
+      "terminal_chunk": "735625",
+      "exit_code": 0
+    },
+    "main_verifier_source": "from pathlib import Path\nimport json,hashlib,subprocess\nm=json.loads(Path('/tmp/astra-pass90-main-inputs.json').read_text())\np=json.loads(Path('/tmp/astra-pass90-merged.json').read_text())\nassert p['state']=='MERGED',p\nassert p['headRefOid']==m['head'],p\nmerge=p['mergeCommit']['oid']\nmain=subprocess.check_output(['git','rev-parse','origin/main'],text=True).strip()\nfor ref in [merge,m['head'],m['parent']]:\n    assert subprocess.run(['git','merge-base','--is-ancestor',ref,main]).returncode==0,ref\nfor path,digest in m['hashes'].items():\n    data=subprocess.check_output(['git','show',main+':'+path])\n    assert hashlib.sha256(data).hexdigest()==digest,path\nprint(json.dumps(dict(main=main,merge=merge,head=m['head'],verified_hashes=len(m['hashes']),head_ancestry=True,parent_ancestry=True,merged_at=p['mergedAt']),indent=2))\n",
+    "main_input_manifest": {
+      "head": "ee0f68c82e00cfb406816d46e877be8d94043329",
+      "parent": "07d39f4feb40f5fdf7fd26b900d70c7a553e8709",
+      "hashes": {
+        "docs/astra-research-90.md": "13fabd78ee783e294b12ebd6176af6f66a7425e37703117c62c7fbb271a4f505",
+        "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+        "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
+        "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+        "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+        "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+        "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+        "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-pass89-verification.json": "6b43a4b3268984f9002570a91689a9dcab42db57b38d5b05de1d9e2426f96c4d",
+        "research/astra-pass90-verification.json": "82be7853559a93be592f76806da32f58e8c6e53eba00202a8e2ba9d7196865d2",
+        "research/workflow-state.json": "016a08a4fc385e7ed596d796cee637dda6d28d2a3d1fab56666d7d80734c42ae"
+      }
+    },
+    "watch_session": 18768,
+    "merge": "7d5e9677d56d6ff4d04268c0829f0ee6cbade6c0",
+    "merged_at": "2026-09-07T08:27:18Z",
+    "premerge_chunk": "a52983",
+    "watch_terminal": {
+      "chunk_id": "cdc8dc",
+      "exit_code": 0
+    },
+    "merge_result": {
+      "session_id": 51340,
+      "terminal_chunk": "d33c98",
+      "exit_code": 0
+    },
+    "main_verification": {
+      "chunk_id": "db7958",
+      "exit_code": 0,
+      "verified_hashes": 17,
+      "head_ancestry": true,
+      "parent_ancestry": true,
+      "main": "7d5e9677d56d6ff4d04268c0829f0ee6cbade6c0"
+    },
+    "ci_results": {
+      "Lean build and trust audit": {
+        "conclusion": "SUCCESS",
+        "job": 101671150792,
+        "started_at": "2026-09-07T08:16:35Z",
+        "completed_at": "2026-09-07T08:18:42Z"
+      },
+      "Exact computational certificates": {
+        "conclusion": "SUCCESS",
+        "job": 101671150672,
+        "started_at": "2026-09-07T08:16:35Z",
+        "completed_at": "2026-09-07T08:26:16Z"
+      }
+    }
   },
   "positive_candidate_coherence_root_notes": {
-    "status": "candidate_sent_to_author_pending_review",
+    "status": "independently_accepted",
     "reflection": "Full W_m reflected by t->-t; k->m-k swaps endpoint owners and preserves C_k. One reflection pair with nonempty C implies common candidate. Maximum attained k=0 impossible since every lower v bad on A_m. If evenm indexm/2: any even retained label covers entireA_m; allodd retained labels give full witness1/2+alpha/m. Thus actual allpositive incoherent branch requires >=4 attainedindices in >=2 reflectionpairs.",
-    "denominator": "More generally reduced denominator q of an attained maximum index must exceed N/2: a lower q-multiple covers entireA_m; if no such label, c+alpha/m gives retainednorm>=1/q-v alpha/m>alpha for q<=N/2 and mnorm=alpha. No uniform contradiction inferred."
+    "denominator": "More generally reduced denominator q of an attained maximum index must exceed N/2: a lower q-multiple covers entireA_m; if no such label, c+alpha/m gives retainednorm>=1/q-v alpha/m>alpha for q<=N/2 and mnorm=alpha. No uniform contradiction inferred.",
+    "sharper_denominator": "For any attained reduced q, no retained q-multiple. With Q=max retained, s=1/[q(m+Q)] gives mnorm=m/[q(m+Q)]<=1/2 (q>=2), allretainednorms>=1/q\u2212Qs=s*m. Hence mu>=m/[q(m+Q)] and q>=m/[mu(m+Q)]>N*m/(m+Q)>N/2. Sent to author; pending review.",
+    "strong_control": {
+      "status": "root_hand_derived_author_checked_pending_freeze_and_independent_review",
+      "V": [
+        1,
+        5,
+        6,
+        7,
+        8
+      ],
+      "n": 5,
+      "alpha": "1/6",
+      "W_half": [
+        "[7/30,11/42]",
+        "[13/36,11/30]",
+        "[19/42,17/36]"
+      ],
+      "W_full": "W_half and reflection around1/2",
+      "K_arc": [
+        2,
+        3,
+        5,
+        6
+      ],
+      "C": {
+        "2": [
+          4
+        ],
+        "6": [
+          4
+        ],
+        "3": [
+          3
+        ],
+        "5": [
+          3
+        ]
+      },
+      "all_positive_and_fresh": true,
+      "intersection_empty": true,
+      "endpoint_owners": {
+        "2": "left(5,1),right(7,2)",
+        "3": "left(6,2),right(5,2)"
+      },
+      "full_witness": "t11/24, norms11/24,7/24,1/4,5/24,1/3; minimum5/24>alpha",
+      "test_local_contraction": "Testmu0=4/25 is not globalmu; mu0\u22128(alpha\u2212mu0)/7=16/105>2/15=max private m-phase absolute error. No contraction of fullW or actualfailure asserted.",
+      "replacement_consequence": "At1/4 everyretainednorm>=1/4,u2norm1/2,u3norm1/4; u4 has13/36 withnorm4/9; retainedu1,5,6,7trivial. Thus allu<8havealpha-goodpointinW, evenprivateparts. K_arc collectivegcd1.",
+      "scope": "Refutes local all-private positivefresh common-candidate supply even with these listed structural consequences; fullfailure/globalmu missing. Raw weakerV1,4,5,6,8 replaced."
+    },
+    "source_hash": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea",
+    "root_full_readback": {
+      "chunk_id": "8ecea4",
+      "source_hash": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea",
+      "status": "full_read_hand_checked_no_correction_pending_independent_review",
+      "scope": "Checked exact modular endpoint windows, rational witness and reflection, fullW intervals, K_arc/K_near distinction, all control endpointnorms, candidate bounds on entireprivateintervals and allsmallreplacementwitnesses. Optionalmu0 is not in finalauthor."
+    },
+    "review_hash": "5624364765087862f67f41b24e8c5ea0c7d5a08fa7ff449a00b799f9707bbc67"
+  },
+  "pass91_publication": {
+    "status": "verified_ready_to_commit",
+    "branch": "codex/astra-positive-candidate-coherence",
+    "parent_main": "7d5e9677d56d6ff4d04268c0829f0ee6cbade6c0",
+    "hashes": {
+      "docs/astra-research-91.md": "3eaf0829b8925f31e73d2df837ce65c037465cd92937264e1379096b369abd40",
+      "research/astra-positive-candidate-coherence.md": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea",
+      "research/astra-positive-candidate-coherence-review.md": "5624364765087862f67f41b24e8c5ea0c7d5a08fa7ff449a00b799f9707bbc67"
+    },
+    "receipt": "research/astra-pass91-verification.json",
+    "root_verifier_chunk": "2716b7"
   }
 }
