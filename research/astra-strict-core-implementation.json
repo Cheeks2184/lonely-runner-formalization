@@ -1,0 +1,119 @@
+{
+  "task": "strict_core_contraction_implementation",
+  "status": "compiled",
+  "owned_files": [
+    "LonelyRunner/StrictCoreContraction.lean",
+    "research/astra-strict-core-implementation.json"
+  ],
+  "input_bindings": {
+    "contract": {
+      "path": "research/astra-strict-core-kernel-contract.md",
+      "sha256": "2e531b5a040bdd4d48c6a4f2237c27d485b6f08ffb6ac83841da936cb643de8c"
+    },
+    "review": {
+      "path": "research/astra-strict-core-kernel-contract-review.md",
+      "sha256": "f9b8bf75a66df74e1b8d95fd957d4f8dab145dd0fbc36d825ba23bb2e13ea75e",
+      "status": "accepted_without_correction"
+    },
+    "dependency_receipt": {
+      "path": "research/astra-strictcore-dependency-verification.json",
+      "sha256": "11efb1004bd004ccfb02ff2952c28780b01041b1e94035756f41dfba1a2ff99f"
+    }
+  },
+  "source": {
+    "path": "LonelyRunner/StrictCoreContraction.lean",
+    "sha256_final": "b26dbff907c02e5874dbf635fdd5f9406e7d080045238818090d6b7149c91daf",
+    "readback": "Source ends with the complete global-maximum exclusion theorem and `end LonelyRunner`; final byte is newline (0a).",
+    "trust_scan": {
+      "command": "rg -n \\\"\\b(sorry|admit|axiom|native_decide)\\b\\\" LonelyRunner/StrictCoreContraction.lean || true",
+      "observed_combined_output": "",
+      "result": "no prohibited token found"
+    },
+    "whitespace_scan": {
+      "command": "rg -n \\\"[ \\t]+$\\\" LonelyRunner/StrictCoreContraction.lean || true; tail -c 1 LonelyRunner/StrictCoreContraction.lean | od -An -t x1",
+      "observed_combined_output": " 0a\n",
+      "result": "no trailing whitespace; final newline present"
+    },
+    "discarded_malformed_scan": {
+      "command": "awk 'sub(/[[:space:]]+$/, \"\") != $0 { print NR \": trailing whitespace\"; bad=1 } END { exit bad }' LonelyRunner/StrictCoreContraction.lean",
+      "result": "invalid check: `sub` mutates $0 before comparison and therefore falsely reports every line; not used as evidence"
+    }
+  },
+  "verification": {
+    "compile_argv": "systemd-run --user --wait --pipe --collect -p MemoryMax=4G -p MemorySwapMax=512M -p TasksMax=128 --working-directory=/home/joshua/lonely-runner-formalization /usr/bin/flock -n .lake/verification.lock /home/joshua/.elan/bin/lake env lean -j1 -o .lake/build/lib/lean/LonelyRunner/StrictCoreContraction.olean LonelyRunner/StrictCoreContraction.lean",
+    "attempts": [
+      {
+        "kind": "initial_compile",
+        "source_sha256": "cb3177ad64286cf39f57a5a7291090fb9d9bb5a47707bbccae88c965367affb4",
+        "tool_chunk_id": "16a2c2",
+        "systemd_unit": "run-u7702.service",
+        "exit_status": 1,
+        "wall_time_seconds": 2.822180924,
+        "inside_cgroup_memory_peak": null,
+        "inside_cgroup_swap_peak": null,
+        "service_reported_memory_peak": "256.0K",
+        "service_reported_swap_peak": "0B",
+        "separately_captured_stderr": null,
+        "combined_stdout_stderr_raw": "cb3177ad64286cf39f57a5a7291090fb9d9bb5a47707bbccae88c965367affb4  LonelyRunner/StrictCoreContraction.lean\nRunning as unit: run-u7702.service; invocation ID: c3a7309d0dbe4e58b3d00bb979c2bd13\nLonelyRunner/StrictCoreContraction.lean:15:20: error: Application type mismatch: The argument\n  Nat.cast_nonneg a\nhas type\n  0 ≤ ↑a\nbut is expected to have type\n  0 ≤ s\nin the application\n  abs_of_nonneg (Nat.cast_nonneg a)\nLonelyRunner/StrictCoreContraction.lean:66:18: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  circleNorm (↑?z + ?x)\nin the target expression\n  circleNorm (↑(round x) - r) = r\n\ncase neg.refine_2\na : ℕ\nha : 0 < a\nt r : ℝ\nhqr : circleNorm (t * ↑a) < r\nhrhalf : r < 1 / 2\nx : ℝ := t * ↑a\ne : ℝ := x - ↑(round x)\nhaR : 0 < ↑a\nhnorm : circleNorm (t * ↑a) = |e|\nhrpos : 0 < r\nhe : ¬0 ≤ e\nheneg : e < 0\ns : ℝ := (-r - e) / ↑a\nhnegr : -e < r\nhsum : 0 ≤ r + e\nhsnum : -r - e ≤ 0\nhphase : (t + s) * ↑a = ↑(round x) - r\n⊢ circleNorm (↑(round x) - r) = r\nLonelyRunner/StrictCoreContraction.lean:89:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  circleNorm (t * ↑(v i))\nin the target expression\n  q ≤ mu\n\ncase pos\nn : ℕ\nv : Fin n → ℕ\nanchor i : Fin n\nalpha mu Q : ℝ\nhi : 0 < v i\nhQ : 0 < Q\nhretained : ∀ (j : Fin n), j ≠ i → ↑(v j) ≤ Q\nhgap : mu < alpha\nhhalf : alpha ≤ 1 / 2\nhglobal : ∀ (s : ℝ), minimumCircleNorm (fun j => ↑(v j)) anchor s ≤ mu\nt : ℝ\nht : ComplementSafe v i alpha t\nq : ℝ := circleNorm (t * ↑(v i))\nhiR : 0 < ↑(v i)\nhdelta : 0 < (alpha - mu) / Q\nhj : circleNorm (t * ↑(v i)) = minimumCircleNorm (fun j => ↑(v j)) anchor t\n⊢ q ≤ mu\nLonelyRunner/StrictCoreContraction.lean:118:4: error: linarith failed to find a contradiction\nn : ℕ\nv : Fin n → ℕ\nanchor i : Fin n\nalpha mu Q : ℝ\nhi : 0 < v i\nhQ : 0 < Q\nhretained : ∀ (j : Fin n), j ≠ i → ↑(v j) ≤ Q\nhgap : mu < alpha\nhhalf : alpha ≤ 1 / 2\nhglobal : ∀ (s : ℝ), minimumCircleNorm (fun j => ↑(v j)) anchor s ≤ mu\nt : ℝ\nht : ComplementSafe v i alpha t\nq : ℝ := circleNorm (t * ↑(v i))\nhiR : 0 < ↑(v i)\nhdelta : 0 < (alpha - mu) / Q\nhqle : q ≤ mu\nhbad : ¬circleNorm (t * ↑(v i)) + ↑(v i) * (alpha - mu) / Q ≤ mu\nhescape : mu < q + ↑(v i) * (alpha - mu) / Q\nc : ℝ := min (1 / 2) (q + ↑(v i) * (alpha - mu) / Q)\nr : ℝ := (mu + c) / 2\nhc_mu : mu < c\nhrmu : mu < r\nhrhalf : r < 1 / 2\nhrc : r < c\nhqr : q < r\ns : ℝ\nhsabs : |s| = (r - circleNorm (t * ↑(v i))) / ↑(v i)\nhsradial : circleNorm ((t + s) * ↑(v i)) = r\nhrc' : r < q + ↑(v i) * (alpha - mu) / Q\na✝ : (alpha - mu) / Q * ↑(v i) ≤ r - circleNorm (t * ↑(v i))\n⊢ False\nLonelyRunner/StrictCoreContraction.lean:142:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  circleNorm ((t + s) * ↑(v i))\nin the target expression\n  minimumCircleNorm (fun j => ↑(v j)) anchor (t + s) ≤ mu\n\nFinished with result: exit-code\nMain processes terminated with: code=exited/status=1\nService runtime: 2.954s\nCPU time consumed: 2.892s\nMemory peak: 256.0K\nMemory swap peak: 0B\n"
+      },
+      {
+        "kind": "repair_round_1_compile",
+        "source_sha256": "123bf7f0213f2b6765a8e37ac9bbf62aa4328c7bdbcdca901e481bcbae977eaf",
+        "tool_chunk_id": "f1b288",
+        "systemd_unit": "run-u7718.service",
+        "exit_status": 1,
+        "wall_time_seconds": 2.913467915,
+        "inside_cgroup_memory_peak": null,
+        "inside_cgroup_swap_peak": null,
+        "service_reported_memory_peak": "256.0K",
+        "service_reported_swap_peak": "0B",
+        "separately_captured_stderr": null,
+        "combined_stdout_stderr_raw": "123bf7f0213f2b6765a8e37ac9bbf62aa4328c7bdbcdca901e481bcbae977eaf  LonelyRunner/StrictCoreContraction.lean\nRunning as unit: run-u7718.service; invocation ID: e5227cf740a44d91b2888d53484ec78e\nLonelyRunner/StrictCoreContraction.lean:49:18: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  ↑(round x) - r\nin the target expression\n  circleNorm (↑(round x) + r) = r\n\ncase pos.refine_2\na : ℕ\nha : 0 < a\nt r : ℝ\nhqr : circleNorm (t * ↑a) < r\nhrhalf : r < 1 / 2\nx : ℝ := t * ↑a\ne : ℝ := x - ↑(round x)\nhaR : 0 < ↑a\nhnorm : circleNorm (t * ↑a) = |e|\nhrpos : 0 < r\nhe : 0 ≤ e\ns : ℝ := (r - e) / ↑a\nher : e < r\nhnum : 0 ≤ r - e\nhphase : (t + s) * ↑a = ↑(round x) + r\n⊢ circleNorm (↑(round x) + r) = r\nLonelyRunner/StrictCoreContraction.lean:70:18: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  circleNorm (↑?z + ?x)\nin the target expression\n  circleNorm (↑(round x) - r) = r\n\ncase neg.refine_2\na : ℕ\nha : 0 < a\nt r : ℝ\nhqr : circleNorm (t * ↑a) < r\nhrhalf : r < 1 / 2\nx : ℝ := t * ↑a\ne : ℝ := x - ↑(round x)\nhaR : 0 < ↑a\nhnorm : circleNorm (t * ↑a) = |e|\nhrpos : 0 < r\nhe : ¬0 ≤ e\nheneg : e < 0\ns : ℝ := (-r - e) / ↑a\nhnegr : -e < r\nhsum : 0 ≤ r + e\nhsnum : -r - e ≤ 0\nhphase : (t + s) * ↑a = ↑(round x) - r\n⊢ circleNorm (↑(round x) - r) = r\nLonelyRunner/StrictCoreContraction.lean:124:6: error: linarith failed to find a contradiction\nn : ℕ\nv : Fin n → ℕ\nanchor i : Fin n\nalpha mu Q : ℝ\nhi : 0 < v i\nhQ : 0 < Q\nhretained : ∀ (j : Fin n), j ≠ i → ↑(v j) ≤ Q\nhgap : mu < alpha\nhhalf : alpha ≤ 1 / 2\nhglobal : ∀ (s : ℝ), minimumCircleNorm (fun j => ↑(v j)) anchor s ≤ mu\nt : ℝ\nht : ComplementSafe v i alpha t\nq : ℝ := circleNorm (t * ↑(v i))\nhiR : 0 < ↑(v i)\nhdelta : 0 < (alpha - mu) / Q\nhqle : q ≤ mu\nhbad : ¬circleNorm (t * ↑(v i)) + ↑(v i) * (alpha - mu) / Q ≤ mu\nhescape : mu < q + ↑(v i) * (alpha - mu) / Q\nc : ℝ := min (1 / 2) (q + ↑(v i) * (alpha - mu) / Q)\nr : ℝ := (mu + c) / 2\nhc_mu : mu < c\nhrmu : mu < r\nhrhalf : r < 1 / 2\nhrc : r < c\nhqr : q < r\ns : ℝ\nhsabs : |s| = (r - circleNorm (t * ↑(v i))) / ↑(v i)\nhsradial : circleNorm ((t + s) * ↑(v i)) = r\nhrc' : r < circleNorm (t * ↑(v i)) + ↑(v i) * (alpha - mu) / Q\na✝ : ↑(v i) * ((alpha - mu) / Q) ≤ r - circleNorm (t * ↑(v i))\n⊢ False\nFinished with result: exit-code\nMain processes terminated with: code=exited/status=1\nService runtime: 3.043s\nCPU time consumed: 3.070s\nMemory peak: 256.0K\nMemory swap peak: 0B\n"
+      },
+      {
+        "kind": "repair_round_2_compile",
+        "source_sha256": "b26dbff907c02e5874dbf635fdd5f9406e7d080045238818090d6b7149c91daf",
+        "tool_chunk_id": "78b604",
+        "systemd_unit": "run-u7729.service",
+        "exit_status": 0,
+        "wall_time_seconds": 2.995350019,
+        "inside_cgroup_memory_peak": null,
+        "inside_cgroup_swap_peak": null,
+        "service_reported_memory_peak": "512.0K",
+        "service_reported_swap_peak": "0B",
+        "separately_captured_stderr": null,
+        "combined_stdout_stderr_raw": "b26dbff907c02e5874dbf635fdd5f9406e7d080045238818090d6b7149c91daf  LonelyRunner/StrictCoreContraction.lean\nRunning as unit: run-u7729.service; invocation ID: ad8a74b128304288a8c9db3a45e0b918\nFinished with result: success\nMain processes terminated with: code=exited/status=0\nService runtime: 3.132s\nCPU time consumed: 3.144s\nMemory peak: 512.0K\nMemory swap peak: 0B\n"
+      }
+    ],
+    "axiom_probe": {
+      "source_path": "/tmp/StrictCoreContractionAxiomProbe.lean",
+      "source_text": "import LonelyRunner.StrictCoreContraction\n\n#print axioms LonelyRunner.strict_core_bound_of_global_minimum\n#print axioms LonelyRunner.not_complementSafe_of_global_maximum\n",
+      "argv": "systemd-run --user --wait --pipe --collect -p MemoryMax=4G -p MemorySwapMax=512M -p TasksMax=128 --working-directory=/home/joshua/lonely-runner-formalization /usr/bin/flock -n .lake/verification.lock /home/joshua/.elan/bin/lake env lean -j1 /tmp/StrictCoreContractionAxiomProbe.lean",
+      "tool_chunk_id": "715535",
+      "systemd_unit": "run-u7734.service",
+      "exit_status": 0,
+      "wall_time_seconds": 1.273867295,
+      "inside_cgroup_memory_peak": null,
+      "inside_cgroup_swap_peak": null,
+      "service_reported_memory_peak": "256.0K",
+      "service_reported_swap_peak": "0B",
+      "separately_captured_stderr": null,
+      "combined_stdout_stderr_raw": "Running as unit: run-u7734.service; invocation ID: 930603e229e3488bbd8c9fc978113fef\n'LonelyRunner.strict_core_bound_of_global_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.not_complementSafe_of_global_maximum' depends on axioms: [propext, Classical.choice, Quot.sound]\nFinished with result: success\nMain processes terminated with: code=exited/status=0\nService runtime: 1.405s\nCPU time consumed: 1.419s\nMemory peak: 256.0K\nMemory swap peak: 0B\n"
+    }
+  },
+  "workflow_validation": {
+    "command": "python3 scripts/validate_workflow.py",
+    "observed_output": "workflow structural validation passed; it cannot certify mathematical validity.",
+    "exit_status": 0
+  },
+  "delivery_metrics": {
+    "check_kind": "lean",
+    "first_check_success": false,
+    "worker_repair_rounds": 2,
+    "astra_repair_rounds": 0,
+    "astra_repair_lines": 0,
+    "worker_elapsed_seconds": null,
+    "usage": null
+  },
+  "scope": "The compiled declarations prove only the accepted pointwise strict-core contraction and its global-maximum exclusion corollary. They do not establish deletion-set nonemptiness, a uniform descent argument, or the Lonely Runner Conjecture."
+}

@@ -1,0 +1,41 @@
+{
+  "argv": [
+    "/home/joshua/.elan/bin/lake",
+    "env",
+    "lean",
+    "-j1",
+    "-o",
+    ".lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean",
+    "LonelyRunner/ConstrainedMaximizer.lean"
+  ],
+  "source_sha256": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "elapsed_seconds": 5.431461506999767,
+  "cgroup": {
+    "memory.max": "4294967296",
+    "memory.swap.max": "536870912",
+    "memory.peak": "383520768",
+    "memory.swap.peak": "0"
+  },
+  "script_source": "from pathlib import Path\nimport hashlib,json,subprocess,time\np=Path('LonelyRunner/ConstrainedMaximizer.lean')\ncp=Path('/sys/fs/cgroup')/Path('/proc/self/cgroup').read_text().strip().split('::',1)[1].lstrip('/')\ncmd=['/home/joshua/.elan/bin/lake','env','lean','-j1','-o','.lake/build/lib/lean/LonelyRunner/ConstrainedMaximizer.olean',str(p)]\nstart=time.monotonic();r=subprocess.run(cmd,text=True,capture_output=True)\nreceipt={'argv':cmd,'source_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'exit_code':r.returncode,'stdout':r.stdout,'stderr':r.stderr,'elapsed_seconds':time.monotonic()-start,'cgroup':{k:(cp/k).read_text().strip() for k in ['memory.max','memory.swap.max','memory.peak','memory.swap.peak']}}\nPath('/tmp/astra-strictcore-dependency.json').write_text(json.dumps(receipt,indent=2)+'\\n');print(json.dumps(receipt,indent=2),flush=True);raise SystemExit(r.returncode)\n",
+  "command_prefix": [
+    "systemd-run",
+    "--user",
+    "--wait",
+    "--pipe",
+    "--collect",
+    "--unit=lrc-strictcore-dependency",
+    "-p",
+    "MemoryMax=4G",
+    "-p",
+    "MemorySwapMax=512M",
+    "-p",
+    "TasksMax=128",
+    "--working-directory=/home/joshua/lonely-runner-formalization",
+    "/usr/bin/flock",
+    "-n",
+    ".lake/verification.lock"
+  ]
+}
