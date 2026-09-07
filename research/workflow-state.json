@@ -6,19 +6,19 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/strict_core_shell_supply",
-      "agent_id": "/root/uniform_strategy_after_fold",
+      "id": "/root/forced_cycle_frequency_exchange",
+      "agent_id": "/root/fold_zero_restoration_resume",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "33b5b430b443014241f99030dacb2cb66576feea",
+      "source_checkpoint": "c40889087108333dbe948221b045553fd44a5b0d",
       "owned_files": [
-        "research/astra-strict-core-shell-supply.md"
+        "research/astra-forced-cycle-frequency-exchange.md"
       ],
-      "target": "Test whether canonical strict failure and forced core-shell separation give an additional cross-center saving or valid lower-sum exchange beyond coincident tails; at most two hand approaches, exact boundaries and no stronger unproved replacement.",
+      "target": "Determine whether all forced adjacencies for one owner, using strict private-core contraction and full coordinate minimality, supply one fresh smaller frequency bad on its whole W_m. Test at most two exact propagation/exchange claims; retain all collision components, not just one edge.",
       "checks": []
     }
   ],
@@ -10377,13 +10377,55 @@
       ],
       "result": "Accepted unchanged abfb14f without correction; root full review readback accepted.",
       "sha256": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019"
+    },
+    {
+      "id": "/root/strict_core_shell_supply",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "33b5b430b443014241f99030dacb2cb66576feea",
+      "owned_files": [
+        "research/astra-strict-core-shell-supply.md"
+      ],
+      "target": "Test whether canonical strict failure and forced core-shell separation give an additional cross-center saving or valid lower-sum exchange beyond coincident tails; at most two hand approaches, exact boundaries and no stronger unproved replacement.",
+      "checks": [
+        "Worker full readback, eleven bindings and workflow validation passed; no math programs/builds.",
+        "Root full frozen source readback."
+      ],
+      "result": "Frozen manuscript; root full read accepted pending independent review. Exact all-same-center capacity identity, uniform private-core contraction, quantitative remaining deficit, and all-n shell countercontrol at noncanonical width.",
+      "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+    },
+    {
+      "id": "/root/strict_core_shell_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "c40889087108333dbe948221b045553fd44a5b0d",
+      "owned_files": [
+        "research/astra-strict-core-shell-review.md"
+      ],
+      "target": "Independent exact-boundary review of frozen strict core-shell source 5cc9866b: all-W contraction, exact core capacity identity, strip deficit and noncanonical forced-shell control.",
+      "checks": [
+        "Independent full hand derivations and thirteen bindings, formatting and workflow validation passed.",
+        "Root full frozen author and review readback complete."
+      ],
+      "result": "Accepted frozen 5cc9866b without corrections; root full review readback accepted.",
+      "sha256": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
     }
   ],
-  "latest_checkpoint": "Pass87 independently accepted and root verified: same-center depth-two pruning, C3-only obstruction and exact all-n progression totient cost; publication pending. Stronger core-shell manuscript remains unfinished and unreviewed.",
+  "latest_checkpoint": "Pass88 independently accepted and root verified: whole-deletion-set contraction, exact core capacity identity, full same-center pruning deficit and forced-shell control. Publication pending; unrestricted LRC unresolved.",
   "next_actions": [
-    "Complete independent review of arithmetic completion saving, integrate only accepted mathematics and publish the checkpoint.",
-    "Seek an essential uniform arithmetic mechanism using canonical strict failure; do not substitute near-linear-height or noncanonical-width results.",
-    "Keep all local Lean builds/cache restoration unqueued during lightweight source research."
+    "Publish verified Pass88: commit, push, PR, required CI, exact-head merge and fetched-main hashes/ancestry.",
+    "Continue live forced-cycle-frequency exchange task; retain whole W_m and canonical strict failure, accept no edge-only replacement.",
+    "No local builds/cache restoration/heavy searches queued."
   ],
   "research_holds": [
     {
@@ -14848,6 +14890,12 @@
       "event": "resource_diagnosis_complete_and_goal_resumed",
       "classification": "progress",
       "evidence": "Kernel prior-boot OOM logs and Kiyori task build commands identify parallel Rust build; no current cargo/rustc/lean/lake/z3. Goal remains active. No local builds queued."
+    },
+    {
+      "event": "goal_turn_progress_pass87_and_strict_core_deficit",
+      "classification": "progress",
+      "evidence": "PR85 merged and remote main17hashes verified. Pass87 independently accepted, integration verifier b89359 passed3files11deps21bindings, committed/pushed/openedPR86. New strict-core contraction and full pruning deficit frozen5cc9866b, root read, independent review live.",
+      "goal": "active; unrestricted theorem unproved"
     }
   ],
   "two_even_escalation": {
@@ -16586,10 +16634,16 @@
     "review_sha256": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019"
   },
   "strict_core_shell_root_observation": {
-    "status": "candidate_under_Astra_derivation_not_yet_independently_reviewed",
+    "status": "independently_accepted_without_correction_root_read_complete",
     "bound": "At each forced center, the second alpha-arc lies inside the owner mu-core and is disjoint from its M=1 private portion. Summing yields P<=2mu*f-2alpha*C2F. With P=2alpha+T3 and E=T3/(2alpha)-C3>=0, obtain rho*f>=1+S_c+E and f-1-S_c >= (1-rho)*f+E>0.",
     "scope": "Charges ALL same-center pruning, not only third-and-later tails. Does not control color imbalance or produce full LRC contradiction. Keep outside frozen abfb14f checkpoint until reviewed.",
-    "exact_defect": "Define U_A the unique-private region of forced A, H_A its closed mu-core, J_A its open second-center alpha arc or empty. U_A and J_A are disjoint subsets H_A. R=sum_A measure(H_A minus (U_A union J_A))>=0 gives 2mu f=P+2alpha C2F+R, hence rho f=1+S_c+E+R/(2alpha). Not yet independently reviewed."
+    "exact_defect": "Define U_A the unique-private region of forced A, H_A its closed mu-core, J_A its open second-center alpha arc or empty. U_A and J_A are disjoint subsets H_A. R=sum_A measure(H_A minus (U_A union J_A))>=0 gives 2mu f=P+2alpha C2F+R, hence rho f=1+S_c+E+R/(2alpha). Not yet independently reviewed.",
+    "source_sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+    "source": "research/astra-strict-core-shell-supply.md",
+    "contraction": "For every t in W_m, norm(mt)+m*(alpha-mu)/Q_m<=mu. Thus private portions and second arcs lie in radius mu/m-(alpha-mu)/Q_m.",
+    "quantitative": "With L=sum_m |K_m|/Q_m, R>=2(alpha-mu)L and f-1-S_c >= (1-rho)(f+L)+E>0.",
+    "control": "Every outer test-width shell of V=1..n is covered by other forced primitive closed native cores; all nonforced arcs are coincident descendants. Test width a>native mu, so not canonical strict failure.",
+    "review_sha256": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
   },
   "literature_refresh_pass87": {
     "source": "https://arxiv.org/pdf/2109.09860",
@@ -16600,7 +16654,7 @@
     "disposition": "No new proof imported; near-linear height and missing-pair supply do not establish arbitrary-height LRC. Focused source check only."
   },
   "pass87_publication": {
-    "status": "locally_verified_publication_pending",
+    "status": "merged_verified_on_main",
     "branch": "codex/astra-arithmetic-completion-saving",
     "parent_main": "33b5b430b443014241f99030dacb2cb66576feea",
     "receipt": "research/astra-pass87-verification.json",
@@ -16609,6 +16663,129 @@
       "research/astra-arithmetic-completion-saving.md": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403",
       "research/astra-arithmetic-completion-review.md": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019"
     },
-    "root_verifier_chunk": "b89359"
+    "root_verifier_chunk": "b89359",
+    "pr": 86,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/86",
+    "head": "c40889087108333dbe948221b045553fd44a5b0d",
+    "push_result": {
+      "session_id": 65341,
+      "terminal_chunk": "b89e65",
+      "exit_code": 0
+    },
+    "create_result": {
+      "session_id": 81505,
+      "terminal_chunk": "1eb13a",
+      "exit_code": 0
+    },
+    "ci_run": 34095036212,
+    "watch_session_id": 40679,
+    "checks": {
+      "Lean build and trust audit": 101656650934,
+      "Exact computational certificates": 101656651111
+    },
+    "main_verifier_source": "from pathlib import Path\nimport json,hashlib,subprocess\nm=json.loads(Path('/tmp/astra-pass87-main-inputs.json').read_text())\np=json.loads(Path('/tmp/astra-pass87-merged.json').read_text())\nassert p['state']=='MERGED',p\nassert p['headRefOid']==m['head'],p\nmerge=p['mergeCommit']['oid']\nmain=subprocess.check_output(['git','rev-parse','origin/main'],text=True).strip()\nfor ref in [merge,m['head'],m['parent']]:\n    assert subprocess.run(['git','merge-base','--is-ancestor',ref,main]).returncode==0,ref\nfor path,digest in m['hashes'].items():\n    data=subprocess.check_output(['git','show',main+':'+path])\n    assert hashlib.sha256(data).hexdigest()==digest,path\nprint(json.dumps(dict(main=main,merge=merge,head=m['head'],verified_hashes=len(m['hashes']),head_ancestry=True,parent_ancestry=True,merged_at=p['mergedAt']),indent=2))\n",
+    "main_verifier_inputs": {
+      "head": "c40889087108333dbe948221b045553fd44a5b0d",
+      "parent": "33b5b430b443014241f99030dacb2cb66576feea",
+      "hashes": {
+        "docs/astra-research-87.md": "522205d388f8fb301666d9c9e2e053d5d730552d78d5671618bb2c5f2b43acec",
+        "research/astra-arithmetic-completion-saving.md": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403",
+        "research/astra-arithmetic-completion-review.md": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019",
+        "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+        "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02",
+        "research/astra-coupled-descent-strategy.md": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+        "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+        "research/astra-prime-progression-cover-cost.md": "e5e26e0cffff1031dd1b14cd88f127ac5b624c2c798d22b0d0baa51e89a7ccd7",
+        "research/astra-cover-selection-review.md": "a0fe2ed43372520ac30caec3844bbc90dc145089a8ba9113be4bba8b9bbab770",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-pass86-verification.json": "f4f2d42dadaf7b4529a59354bf9a283ba619d22894f1995ef89330637fb5cb77",
+        "research/astra-pass87-verification.json": "3aab4c1a51ca78b385a8a242055a133e9946e6a1a2ba218530ad7509ad4734b6",
+        "research/workflow-state.json": "22fef24b1840f633ee91eb3f7668f244d4ce58a397f668e47df872c2c030a99a"
+      }
+    },
+    "last_observation": {
+      "chunk_id": "e0a948",
+      "head": "c40889087108333dbe948221b045553fd44a5b0d",
+      "lean": "SUCCESS",
+      "exact": "IN_PROGRESS",
+      "run": 34095036212,
+      "exact_job": 101656651111
+    },
+    "merge": "653c532a3d3a98816b4de63ceefce191c4c19c3c",
+    "merged_at": "2026-09-07T07:32:47Z",
+    "premerge_check_chunk": "4be506",
+    "merge_result": {
+      "session_id": 12016,
+      "chunk_id": "c9b7a7",
+      "exit_code": 0,
+      "output": ""
+    },
+    "watcher_terminal": {
+      "session_id": 40679,
+      "chunk_id": "c5a2b3",
+      "exit_code": 0
+    },
+    "main_verifier_result": {
+      "chunk_id": "b43521",
+      "wall_time_seconds": 0.854182543,
+      "exit_code": 0,
+      "original_token_count": 110,
+      "output": "From https://github.com/Cheeks2184/lonely-runner-formalization\n * branch            main       -> FETCH_HEAD\n   33b5b43..653c532  main       -> origin/main\n{\n  \"main\": \"653c532a3d3a98816b4de63ceefce191c4c19c3c\",\n  \"merge\": \"653c532a3d3a98816b4de63ceefce191c4c19c3c\",\n  \"head\": \"c40889087108333dbe948221b045553fd44a5b0d\",\n  \"verified_hashes\": 16,\n  \"head_ancestry\": true,\n  \"parent_ancestry\": true,\n  \"merged_at\": \"2026-09-07T07:32:47Z\"\n}\n"
+    },
+    "merged_metadata": {
+      "headRefOid": "c40889087108333dbe948221b045553fd44a5b0d",
+      "mergeCommit": {
+        "oid": "653c532a3d3a98816b4de63ceefce191c4c19c3c"
+      },
+      "mergedAt": "2026-09-07T07:32:47Z",
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T07:23:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34095036212/job/101656650934",
+          "name": "Lean build and trust audit",
+          "startedAt": "2026-09-07T07:21:04Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T07:31:59Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34095036212/job/101656651111",
+          "name": "Exact computational certificates",
+          "startedAt": "2026-09-07T07:21:05Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        }
+      ]
+    }
+  },
+  "pending_pass88": {
+    "status": "independently_accepted_root_verified_publication_pending",
+    "document": "docs/astra-research-88.md",
+    "source": "research/astra-strict-core-shell-supply.md",
+    "source_sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+    "review": "research/astra-strict-core-shell-review.md",
+    "root_full_source_read": true,
+    "local_build_queued": false,
+    "review_sha256": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
+  },
+  "pass88_publication": {
+    "status": "locally_verified_publication_pending",
+    "branch": "codex/astra-strict-core-shell",
+    "parent_main": "653c532a3d3a98816b4de63ceefce191c4c19c3c",
+    "receipt": "research/astra-pass88-verification.json",
+    "hashes": {
+      "docs/astra-research-88.md": "ee5dcfb530baf75db871c460c0da309d014b499327cc0dd9f6845d819fdb4349",
+      "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+      "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
+    },
+    "root_verifier_chunk": "6aeea0"
   }
 }
