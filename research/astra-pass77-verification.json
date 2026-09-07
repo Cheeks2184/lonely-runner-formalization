@@ -1,0 +1,142 @@
+{
+  "checkpoint": "Pass77",
+  "parent_main": "27309c7e0a0d93c8f9ce90245cec013a3ffcd5d8",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-77.md": "2d975b7d6836e199c26fcebb58c3ef079dc574df077841779a49a6d83249b7db",
+    "research/astra-rank-three-coordinate-cancellation.md": "f95f4e72452cd12d775b496d8fb3d585f204d71fff608f1ba505841e96c154de",
+    "research/astra-rank-three-coordinate-review.md": "9d53e7f9426a9ae828462e66f045a35ef39580b519bf3910ac3070d484d0b258",
+    "research/astra-harmonic-fold-obstruction.md": "a5037d4b8f33d493b26ee1a7854bd654d7ea373e500c364cad10070954e2ca9a",
+    "research/astra-harmonic-fold-obstruction-review.md": "a29f8ca92677cf175cf2567ecaf978e3234b5e0e9a5049dd4fe93f1929bbdb36",
+    "research/astra-harmonic-fold-control.py": "511f2a02114a62ee8cbfbd74bceb44038d0bd15a1967559c24c3dd283c428510",
+    "research/astra-harmonic-fold-control.json": "82d44fb595f8eef792f78ec1896d92d4a286cbe02f84938356de1e052c9183c9",
+    "research/astra-harmonic-fold-control-initial.json": "0e50da097bbd3999b2f1bb956b4ebe0f93ee9cd410b93f98a2faba6658769a32"
+  },
+  "dependency_hashes": {
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+    "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140"
+  },
+  "review_bindings": {
+    "research/astra-rank-three-coordinate-review.md": [
+      "research/astra-rank-three-coordinate-cancellation.md",
+      ".codex/config.toml",
+      "docs/project-workflow.md",
+      "research/workflow-policy.json",
+      "scripts/validate_workflow.py",
+      "research/astra-parity-rank-three-transport.md",
+      "research/astra-parity-rank-three-review.md"
+    ],
+    "research/astra-harmonic-fold-obstruction-review.md": [
+      "research/astra-harmonic-fold-obstruction.md",
+      ".codex/config.toml",
+      "docs/project-workflow.md",
+      "research/workflow-policy.json",
+      "scripts/validate_workflow.py",
+      "research/astra-harmonic-fold-control-initial.json"
+    ]
+  },
+  "checks": {
+    "frozen_files": 8,
+    "dependency_bindings": 6,
+    "review_bindings": 13,
+    "numerical_replay": false,
+    "commands": [
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "-B",
+          "scripts/validate_workflow.py"
+        ],
+        "exit_code": 0,
+        "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "-B",
+          "scripts/manage_storage.py"
+        ],
+        "exit_code": 0,
+        "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass77-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport ast\nimport hashlib\nimport json\nimport subprocess\nimport sys\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nmanifest = json.loads(Path('/tmp/astra-pass77-inputs.json').read_text())\nfor name, digest in (manifest['hashes'] | manifest['dependency_hashes']).items():\n    data = (root / name).read_bytes()\n    assert hashlib.sha256(data).hexdigest() == digest, name\n    assert data.endswith(b'\\n'), name\n    assert all(line.rstrip() == line for line in data.splitlines()), name\nfor review, inputs in manifest['review_bindings'].items():\n    content = (root / review).read_text()\n    for name in inputs:\n        digest = (manifest['hashes'] | manifest['dependency_hashes'])[name]\n        assert digest in content, (review, name)\nsource = (root / 'research/astra-harmonic-fold-control.py').read_text()\nast.parse(source)\nreceipt = json.loads((root / 'research/astra-harmonic-fold-control.json').read_text())\nassert source == receipt['execution']['source_utf8']\nassert hashlib.sha256(source.encode()).hexdigest() == receipt['execution']['source_sha256']\nassert receipt['observed_tool_result']['observed_exit_code'] == 0\nassert receipt['observed_tool_result']['chunk_id'] == '26f718'\nassert receipt['observed_tool_result']['separately_captured_stderr'] is None\nobserved = json.loads(receipt['observed_tool_result']['full_combined_output'])\nassert observed['checked_tuple_count'] == 33 and observed['counterexample_found'] is True\nassert observed['stop_reason'] == 'first_all_choice_failure'\nassert receipt['focused_regressions']['status'] == 'passed'\nassert receipt['result']['counterexample']['v'] == [1, 6, 12]\nassert receipt['result']['counterexample']['all_global_maximizing_times'] == ['7/18', '4/9']\nold = json.loads((root / 'research/astra-harmonic-fold-control-initial.json').read_text())\nassert hashlib.sha256(old['execution']['source_utf8'].encode()).hexdigest() == old['execution']['source_sha256']\ncommands = []\nfor argv in ([sys.executable, '-B', 'scripts/validate_workflow.py'],\n             ['git', 'diff', '--check'],\n             [sys.executable, '-B', 'scripts/manage_storage.py']):\n    result = subprocess.run(argv, cwd=root, capture_output=True, text=True)\n    commands.append({'argv': argv, 'exit_code': result.returncode,\n                     'stdout': result.stdout, 'stderr': result.stderr})\n    assert result.returncode == 0, commands[-1]\nprint(json.dumps({'frozen_files': len(manifest['hashes']),\n                  'dependency_bindings': len(manifest['dependency_hashes']),\n                  'review_bindings': sum(map(len, manifest['review_bindings'].values())),\n                  'numerical_replay': False, 'commands': commands}, indent=2))\n",
+    "source_sha256": "d0ca9ff1fe0acdbeff08b7b44a5a1c12f0c9ca52e4eba8072cd6b91533615c78",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-77.md": "2d975b7d6836e199c26fcebb58c3ef079dc574df077841779a49a6d83249b7db",
+        "research/astra-rank-three-coordinate-cancellation.md": "f95f4e72452cd12d775b496d8fb3d585f204d71fff608f1ba505841e96c154de",
+        "research/astra-rank-three-coordinate-review.md": "9d53e7f9426a9ae828462e66f045a35ef39580b519bf3910ac3070d484d0b258",
+        "research/astra-harmonic-fold-obstruction.md": "a5037d4b8f33d493b26ee1a7854bd654d7ea373e500c364cad10070954e2ca9a",
+        "research/astra-harmonic-fold-obstruction-review.md": "a29f8ca92677cf175cf2567ecaf978e3234b5e0e9a5049dd4fe93f1929bbdb36",
+        "research/astra-harmonic-fold-control.py": "511f2a02114a62ee8cbfbd74bceb44038d0bd15a1967559c24c3dd283c428510",
+        "research/astra-harmonic-fold-control.json": "82d44fb595f8eef792f78ec1896d92d4a286cbe02f84938356de1e052c9183c9",
+        "research/astra-harmonic-fold-control-initial.json": "0e50da097bbd3999b2f1bb956b4ebe0f93ee9cd410b93f98a2faba6658769a32"
+      },
+      "dependency_hashes": {
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+        "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140"
+      },
+      "review_bindings": {
+        "research/astra-rank-three-coordinate-review.md": [
+          "research/astra-rank-three-coordinate-cancellation.md",
+          ".codex/config.toml",
+          "docs/project-workflow.md",
+          "research/workflow-policy.json",
+          "scripts/validate_workflow.py",
+          "research/astra-parity-rank-three-transport.md",
+          "research/astra-parity-rank-three-review.md"
+        ],
+        "research/astra-harmonic-fold-obstruction-review.md": [
+          "research/astra-harmonic-fold-obstruction.md",
+          ".codex/config.toml",
+          "docs/project-workflow.md",
+          "research/workflow-policy.json",
+          "scripts/validate_workflow.py",
+          "research/astra-harmonic-fold-control-initial.json"
+        ]
+      }
+    },
+    "actual_tool_result": {
+      "chunk_id": "d17bc3",
+      "wall_time_seconds": 7.093e-06,
+      "exit_code": 0,
+      "original_token_count": 204,
+      "output": "{\n  \"frozen_files\": 8,\n  \"dependency_bindings\": 6,\n  \"review_bindings\": 13,\n  \"numerical_replay\": false,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": "Two complete independent Astra/xhigh reviews accepted without corrections; root full author/review reads. Uniform hand algebra is independent of numerical checker. No unrestricted LRC resolution.",
+  "numerical_verification": "One corrected Terra/high run after endpoint source fix, bounded domain unchanged and512MiB address space. Complete observed exit0 and output at tool chunk26f718. Root source and receipt check without identical numerical replay.",
+  "failure_history": [
+    "Initial checker omitted half endpoint for all-odd folded tuples; original source/receipt preserved.",
+    "One root-guided receipt-only repair distinguished program-written status from actual terminal observation; no rerun."
+  ],
+  "excluded": "Active first-fold-zero restoration manuscript; no Lean source or cache changes."
+}
