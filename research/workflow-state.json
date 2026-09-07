@@ -6,7 +6,7 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/large_block_minimality",
+      "id": "/root/relation_changing_transport",
       "agent_id": "/root/fold_zero_restoration_resume",
       "kind": "research",
       "status": "in_progress",
@@ -14,11 +14,11 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
+      "source_checkpoint": "94a96d13c7877aeb37ef341543830ef253299008",
       "owned_files": [
-        "research/astra-large-block-minimality.md"
+        "research/astra-relation-changing-transport.md"
       ],
-      "target": "Find an actual use of strict all-time failure and complete count/sum replacement minimality in the remaining large restriction-indecomposable block. Derive one exact justified uniform reduction or locate the first obstructed inference with a precise contract; avoid standalone coefficient improvements or another count ladder.",
+      "target": "Investigate one justified uniform all-coordinate witness transfer that changes bounded relations in the forced full-rank case. Use complete strict failure/count-sum minimality, retain exact phase defect; compare existing projection/parent/parity holds. Prove a usable estimate or identify/refute the first genuinely new precise claim. Do not repackage compatible lowering or rank defect.",
       "checks": []
     }
   ],
@@ -11750,13 +11750,105 @@
         ]
       },
       "result": "Accepted first captured mechanical verification:15frozen hashes,38binding rows,complete Lean source/pinned parity,format/workflow. Root authored mathematical summary; no Lean build."
+    },
+    {
+      "id": "/root/large_block_minimality",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
+      "owned_files": [
+        "research/astra-large-block-minimality.md"
+      ],
+      "target": "Find an actual use of strict all-time failure and complete count/sum replacement minimality in the remaining large restriction-indecomposable block. Derive one exact justified uniform reduction or locate the first obstructed inference with a precise contract; avoid standalone coefficient improvements or another count ladder.",
+      "checks": [
+        {
+          "kind": "author_administrative_checks",
+          "evidence": "e2c4d9 full readback,5df6f3 all18bindings/format,115b99 workflow,all exit0"
+        },
+        {
+          "kind": "root_full_source_read",
+          "evidence": "ab65c6"
+        }
+      ],
+      "result": "Frozen quartic bounded-relation rank manuscript; independent review pending. Root read full source atab65c6 and found displayed derivations consistent. Eliminates proper-half-core and fully compatible smaller integer replacements; no unrestricted contradiction.",
+      "output_sha256": "7fee5332b73f99e0c8ec9b7de85d59b57d9c5e9e19425d58ba5ae5ac1ce64b9f"
+    },
+    {
+      "id": "/root/large_block_minimality_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "71ecb331e43687a5d2be31c8c2599e44d9ee1b6c",
+      "owned_files": [
+        "research/astra-large-block-minimality-review.md"
+      ],
+      "target": "Independently test quartic bounded-relation rank candidate via Fejer power phase transfer and existing BHK lower-count bridge; wait for frozen author before final source-bound acceptance. Compare rank saturation with all-preserving smaller-tuple condition, half-core proposal and sharper finite-height reduction. No builds or large computations.",
+      "checks": [
+        {
+          "kind": "independent_review",
+          "evidence": "a1b0e4 author read,75a6b4 review readback,6e1d6d19bindings/format,77bc35workflow,allpass",
+          "review_sha256": "032f5c8a4d7a6086727a299fe2e132b7f500b163f1e82d1ddc89415059f0ebf2"
+        },
+        {
+          "kind": "root_review",
+          "evidence": "e1f637 fullreviewread;currentfrozenhashes+19bindingsverified"
+        }
+      ],
+      "result": "Independently accepted quartic finite-phase/rank theorem without mathematical correction. No integral-lattice generation, height improvement or full LRC contradiction. Root read complete reviewe1f637 and checked frozen source/review+19bindings."
+    },
+    {
+      "id": "/root/pass101_document_verification",
+      "agent_id": "/root/harmonic_fold_endpoint_repair",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "94a96d13c7877aeb37ef341543830ef253299008",
+      "owned_files": [
+        "research/astra-pass101-verification.json",
+        "/tmp/astra-pass101-verifier.py",
+        "/tmp/astra-pass101-attempts.jsonl"
+      ],
+      "target": "Cohesive mechanical verification of frozen Pass101 manuscript checkpoint via root supplied manifest and raw capture recorder. No mathematical prose edits or builds.",
+      "checks": [
+        {
+          "kind": "focused_receipt",
+          "evidence": "0965ba fullreceipt read;af2b9e raw-attempt equality, source hashes and all21currentinputhashes; b960a5 inspected parsed whitespace literals; no identical focused rerun.",
+          "receipt_sha256": "d1899de80b0aed3d087535ba72bd0724a97967d9f92fe63fd4ae9cd461caaa9d"
+        }
+      ],
+      "delivery_metrics": {
+        "check_kind": "python",
+        "first_check_success": true,
+        "worker_repair_rounds": 0,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-pass101-verification.json"
+        ]
+      },
+      "delivery_number": 36,
+      "result": "First captured focused check passed:37bindings,noerrors;source/pinnedparity,format,workflow. Unknown taskelapsed/usage remainnull. Rootacceptedcompleteprovenance."
     }
   ],
-  "latest_checkpoint": "Pass100 independently reviewed manuscripts and first-pass verification accepted; commit/push/PR/merge pending. Large-block minimality research active. Unrestricted LRC unresolved.",
+  "latest_checkpoint": "Pass100/PR99 fullymerged94a96d1;17remotehashes+ancestry,3731buildjobs710trustreportsverified. Nextbranchcodex/astra-bounded-relation-rank. Quartic rank source7fee5332/review032f5c8a independentlyaccepted,awaitnextcheckpointintegration. Full-rank relation-changing transport unresolved;unrestrictedgoalactive.",
   "next_actions": [
-    "Review positive block manuscript independently.",
-    "Investigate how actual strict failure and full minimality can control its large finest arithmetic block.",
-    "Publish accepted finite-height and positive block work as next substantive checkpoint; no local cache/build."
+    "Integrate accepted quartic bounded-relation rank source/review into next substantive checkpoint with concise exact-scope docs and mechanical receipt, thenpublish. CLIauthcurrentlyinvalid;GitHubintegrationreadworksbutmergewrite403;existingbrowserauthorizedmergewassuccessful.",
+    "Investigate actual relation-changing full-coordinate transport in the forced full-rank case; do not relaunch rankdefect/fullycompatiblelowering/proper-half-core atD>=E.",
+    "Keep all localbuilds off unless an accepted useful Leancontract is supplied; no such contract yet."
   ],
   "research_holds": [
     {
@@ -12340,8 +12432,8 @@
   },
   "previous_goal_turn_classification": {
     "classification": "progress",
-    "evidence": "Current resource check b3e920 confirms6.3GiB available and no compiler processes; all agent handles terminal. Prior captured diagnosis identifies parallel Kiyori Rust build. New goal continuation authorizes resource-light mathematics.",
-    "next_action": "Independent positive block source review and actual minimality gap analysis; local builds remain off."
+    "evidence": "Read-only previous-boot kernel logs independently confirmed seven Rust compiler processes around12GiB RSS and swap exhaustion before ChatGPT OOM-kill; current snapshot no Rust/Lean builds. User now explicitly continued goal.",
+    "next_action": "Resume relation-changing transport and accept saved Pass101 receipt; no local builds."
   },
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
@@ -20180,7 +20272,8 @@
       "c1123e"
     ],
     "finding": "Parallel Kiyori codex-cli Rust release build: seven rustc processes about 12 GiB resident, all 4 GiB swap exhausted; kernel killed rustc then ChatGPT on September 6. No cargo/rustc/lean/lake currently running. Research agent was explicitly interrupted during diagnosis.",
-    "resume": "User goal continuation authorizes resuming hand mathematics. Keep local builds off; retain aggregate 4 GiB RAM/512 MiB swap cap and serial check policy for any later build."
+    "resume": "User goal continuation authorizes resuming hand mathematics. Keep local builds off; retain aggregate 4 GiB RAM/512 MiB swap cap and serial check policy for any later build.",
+    "latest_resume": "User goal continuation after fresh resource diagnosis; active research worker interrupted by root for diagnosis, now same-route resumption authorized. No unrelated settings changed."
   },
   "global_bonferroni_candidate": {
     "status": "Independently accepted manuscript theorem; no Lean theorem or descent.",
@@ -20448,13 +20541,319 @@
     "next_action": "Do not implement this weak extension. Seek an actual large-block transport using strict failure and full minimality, or a substantially sharper mass/degree relation with a justified useful domain."
   },
   "pass100_publication": {
-    "status": "verified locally, preparing commit",
+    "status": "merged and remote-main verified",
     "parent_main": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
     "branch": "codex/astra-positive-block-transport",
     "document_sha256": "93458ec4400ffc12002f01b9f065968cd5a871b659fc0e8b73f2693cdde90f37",
     "receipt_sha256": "a83086b2969727697fd6e4265e2c46ebd66e48dd73134e869db12a39dc96e4be",
     "scope": "Independent manuscript theorem and finite-height unit obstruction; no new Lean source or unrestricted proof. Large-block research remains active.",
     "verification": "15frozen input hashes;38binding rows;complete Lean/pinned parity;first captured focused check passed;root reviewed full source and raw evidence without identical rerun.",
-    "delivery_number": 35
+    "delivery_number": 35,
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/99",
+    "head_sha": "71ecb331e43687a5d2be31c8c2599e44d9ee1b6c",
+    "initial_pr": {
+      "headRefOid": "71ecb331e43687a5d2be31c8c2599e44d9ee1b6c",
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "number": 99,
+      "reviews": [],
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34131713662/job/101773138759",
+          "name": "Lean build and trust audit",
+          "startedAt": "2026-09-07T14:12:53Z",
+          "status": "IN_PROGRESS",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34131713662/job/101773138414",
+          "name": "Exact computational certificates",
+          "startedAt": "2026-09-07T14:12:53Z",
+          "status": "IN_PROGRESS",
+          "workflowName": "CI"
+        }
+      ],
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/99"
+    },
+    "remote_manifest": {
+      "head_sha": "71ecb331e43687a5d2be31c8c2599e44d9ee1b6c",
+      "parent_main": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
+      "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/99",
+      "hashes": {
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "LonelyRunner/FiniteFamilyEquivalence.lean": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3",
+        "LonelyRunner/FiniteHeightReduction.lean": "cb41059260b943411e2ab5360b84b59cd13f2ddf352c3c50a0b3715b9b9987d6",
+        "LonelyRunner/FinitePrimitiveFamilies.lean": "023b39b29e7939dd18b29a51217c3e3fcf353ee5843f3bc3effb27012137e9f0",
+        "docs/astra-research-100.md": "93458ec4400ffc12002f01b9f065968cd5a871b659fc0e8b73f2693cdde90f37",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/astra-bounded-unit-relation-diagnostic.md": "5c68faac8901bde8e82cb564b3c4ff8dc4918bd08240873e6bbd1047a72c1ba7",
+        "research/astra-finite-height-unit-obstruction-review.md": "64809ab4ac32f5991fa65587ff79c938ee4860bb5a4f4ccfa92a52c2a5fd9183",
+        "research/astra-finite-height-unit-obstruction.md": "0c6c83bdd2188576121391b0e232486a4af259580d842c850111581ca87c55e0",
+        "research/astra-positive-block-transport-review.md": "b006c41c455328e5d5d98999cb52f81b1e945059846135f6a569a54cf2da5080",
+        "research/astra-positive-block-transport.md": "ced2c8cfac1bcc529e73a5ee8eef4af3595d30ebfa7db49273aa3ebd6f39f232",
+        "research/astra-uniform-global-transport-strategy-review.md": "5eb21ae36164e68f29ac1ce0f70ca897cbfe558165cc90d8a2de3ee982ca98f7",
+        "research/astra-uniform-global-transport-strategy.md": "c6d433ea553cc5507a0faa97387fba75108d15bece45ac14489c879c2078d618",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-pass100-verification.json": "a83086b2969727697fd6e4265e2c46ebd66e48dd73134e869db12a39dc96e4be",
+        "research/workflow-state.json": "a60ac940bed9e009535505d880225b7c178c72bab46d37f7b7aedd78275dd5c8"
+      }
+    },
+    "remote_verifier_source": "from pathlib import Path\nimport hashlib\nimport json\nimport subprocess\n\nm = json.loads(Path('/tmp/astra-pass100-main-inputs.json').read_text())\np = json.loads(Path('/tmp/astra-pass100-merged.json').read_text())\nassert p['merged'] is True and p['state'] == 'closed' and p['head_sha'] == m['head_sha']\nassert p['number'] == 99 and p['url'] == m['pr_url']\nmerge = p['merge_commit_sha']\nfor ancestor, descendant in [(m['parent_main'], m['head_sha']),\n                             (m['head_sha'], merge), (merge, 'origin/main')]:\n    subprocess.run(['git', 'merge-base', '--is-ancestor', ancestor, descendant], check=True)\nfor path, expected in m['hashes'].items():\n    content = subprocess.check_output(['git', 'show', 'origin/main:' + path])\n    assert hashlib.sha256(content).hexdigest() == expected, path\nprint(json.dumps({'pr': p['url'], 'head': m['head_sha'], 'merge': merge,\n                  'remote_main': subprocess.check_output(['git', 'rev-parse', 'origin/main'], text=True).strip(),\n                  'verified_hashes': len(m['hashes']), 'ancestry': 'parent, head and merge verified',\n                  'scope': 'Published conditional checkpoint, not unrestricted LRC resolution.'}, indent=2))\n",
+    "check_run": 34131713662,
+    "watcher_session": 64866,
+    "publication_evidence": [
+      "45c0a6 commit",
+      "4f1d77 push exit0",
+      "b83098 PR99created",
+      "52e7f3/2b30ea actual PRhead/status",
+      "61b32e actual live checkwatch"
+    ],
+    "last_ci_observation": {
+      "run": 34131713662,
+      "lean": "success,1m58s",
+      "certificates": "in_progress,actual regression-suite step",
+      "evidence": "cc4af5/08435a actual run job state;watch64866 remainslive817e74;completed-job log download deferred by GH until whole run completes52aa2c"
+    },
+    "merged_pr": {
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/99",
+      "number": 99,
+      "state": "closed",
+      "merged": true,
+      "mergeable": false,
+      "draft": false,
+      "body": "For positive integer moving speeds, the new manuscript proves that sufficiently small arithmetic blocks share a strict native lonely time when every bounded relation splits across those blocks. The proof uses buffered Fourier envelopes and relative error, with coefficient bound 6272n\u00b2\u22122. Its independent review checks the common-time argument, endpoints, exact finest partition and remaining large-block gap.\n\nA separate reviewed construction shows that the full fifth-Fourier signature and deletion gcd conditions still cannot force the specified bounded unit relation, even inside the exact sharper finite-height cutoff. The construction has an explicit lonely time and is not an LRC counterexample.\n\nThis is a research checkpoint, with no new Lean declarations or unrestricted proof. The remaining research must use actual strict failure and full count/sum minimality to control the large arithmetic block.\n\nValidation: independent manuscript reviews; first captured mechanical check passed with 15 frozen input hashes and 38 source-binding rows; complete Lean source and pinned dependency parity; formatting and workflow checks. No local Lean build or cache restoration was run. The full verification source, manifest and actual subprocess receipt are included.\n",
+      "title": "Prove manuscript block transport and audit finite-height unit extraction",
+      "base": "main",
+      "base_sha": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
+      "head": "codex/astra-positive-block-transport",
+      "head_sha": "71ecb331e43687a5d2be31c8c2599e44d9ee1b6c",
+      "head_repo_id": 1320320167,
+      "head_repo_full_name": "Cheeks2184/lonely-runner-formalization",
+      "merge_commit_sha": "94a96d13c7877aeb37ef341543830ef253299008",
+      "user": {
+        "login": "Cheeks2184",
+        "name": "Cheeks2184",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/248285463?v=4",
+        "id": 248285463
+      },
+      "requested_reviewers": null,
+      "requested_team_reviewers": null,
+      "diff": null,
+      "comments": null,
+      "created_at": "2026-09-07T14:12:47Z",
+      "updated_at": "2026-09-07T14:26:21Z",
+      "closed_at": "2026-09-07T14:26:21Z",
+      "merged_at": "2026-09-07T14:26:21Z",
+      "commits": 1,
+      "changed_files": 7,
+      "additions": 1572,
+      "deletions": 28,
+      "display_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/99",
+      "display_title": "Prove manuscript block transport and audit finite-height unit extraction"
+    },
+    "premerge_connector_evidence": {
+      "jobs": {
+        "jobs": [
+          {
+            "id": 101773138414,
+            "name": "Exact computational certificates",
+            "status": "completed",
+            "conclusion": "success",
+            "run_id": 34131713662,
+            "logs_url": null,
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1
+              },
+              {
+                "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2
+              },
+              {
+                "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3
+              },
+              {
+                "name": "Install native certificate dependencies",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4
+              },
+              {
+                "name": "Validate current project workflow",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5
+              },
+              {
+                "name": "Run the complete deterministic regression suite",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6
+              },
+              {
+                "name": "Replay Response 50 affine transversal certificate",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7
+              },
+              {
+                "name": "Replay coefficient-two Gamma selector evidence",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8
+              },
+              {
+                "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15
+              },
+              {
+                "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 16
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 17
+              }
+            ]
+          },
+          {
+            "id": 101773138759,
+            "name": "Lean build and trust audit",
+            "status": "completed",
+            "conclusion": "success",
+            "run_id": 34131713662,
+            "logs_url": null,
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1
+              },
+              {
+                "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2
+              },
+              {
+                "name": "Run leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3
+              },
+              {
+                "name": "Audit Lean sources and theorem axioms",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4
+              },
+              {
+                "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9
+              }
+            ]
+          }
+        ]
+      },
+      "reviews": [],
+      "lean_log_summary": [
+        "2026-09-07T14:14:18.2835572Z Build completed successfully (3731 jobs).",
+        "2026-09-07T14:14:49.0576970Z Trust audit accepted 710 theorem reports."
+      ],
+      "source": "GitHub integration; actual successful run34131713662",
+      "cli_fallback": "gh authentication failed401 after watcher had confirmed bothchecks success; integration read succeeded."
+    },
+    "merge_sha": "94a96d13c7877aeb37ef341543830ef253299008",
+    "remote_main_sha": "94a96d13c7877aeb37ef341543830ef253299008",
+    "verified_remote_hashes": 17,
+    "verification_evidence": "ec1da0 successful17hashes+ancestry;6bcf07 actualfetch;GitHub integration confirms merged exacthead;browser confirmed merge94a96d1 and tabclosed",
+    "watcher_terminal": {
+      "session_id": 64866,
+      "exit_code": 0,
+      "evidence": "39cbbc",
+      "jobs": [
+        "Lean/trust success1m58s",
+        "Exactcertificates success9m32s"
+      ]
+    },
+    "authentication_recovery": {
+      "cli": "gh auth status failed;premerge401,logfetch403",
+      "connector": "Read/jobreviews/logs succeeded;merge403 Resource not accessible by integration",
+      "browser": "Existing signed-in GitHub session showed reviewed71ecb33,2checksOK,no conflicts;ordinary Merge pull request / Confirm merge succeeded;no login/security changes or bypass",
+      "readback": "GitHub integrationmergedtrue;publicGitfetchwithcredentialhelperdisabled;17hashesandancestryverified"
+    },
+    "build_jobs": 3731,
+    "trust_reports": 710
+  },
+  "large_block_rank_candidate": {
+    "status": "Independently accepted manuscript; next checkpoint integration/publication pending",
+    "phase_transfer": "Nonnegative Fourier coefficients of normalized Fejer power: epsilon=1/[n(n+1)], M=n(n+1), P=2n\u00b2, E=P(M\u22121)=2n\u00b2[n(n+1)\u22121]. Author proposed normalization bound c_P>=M^(P\u22121)/(8P), peak<=8PM; outside any epsilon-coordinate neighborhood product<=[16n\u00b3(n+1)/16^n]^n<1. Any phase annihilating all E-bounded original relations has kernel integral>=1, hence an actual original time within epsilon in every coordinate.",
+    "lower_count_use": "If bounded-relation span has rank<=n\u22122, its rational annihilator has dimension>=2. Existing BHK adjacent-ratio combination yields a nowhere-zero signed rational vector with an opposite pair. Lower-count supply gives all-coordinate norm>=1/n; transfer gives original strict norm>1/(n+1). Thus obstruction with maximum<=1/(n+1) forces full rank n\u22121. Exact constants and source scope independently accepted in032f5c8a.",
+    "selection_consequence": "Since E<D_half=1568n\u00b2(n+1)\u00b2\u22122, full rank forces the finest D_half splitting partition to have one full block: b splitting blocks allow rank at most n\u2212b. Hence a proper-half-core residual is impossible under actual lower-count obstruction; do not spend new implementation on it.",
+    "remaining": "The actual lower-count obstruction has full rational relation rank at E. A primitive positive integer replacement preserving all E-relations cannot lower sum. Need justified all-coordinate transfer after changing a bounded relation; no supported implementation contract yet.",
+    "source_sha256": "7fee5332b73f99e0c8ec9b7de85d59b57d9c5e9e19425d58ba5ae5ac1ce64b9f",
+    "owned_source": "research/astra-large-block-minimality.md",
+    "exact_depth": "E=2n\u00b2[n(n+1)\u22121], epsilon=1/[n(n+1)]",
+    "review_sha256": "032f5c8a4d7a6086727a299fe2e132b7f500b163f1e82d1ddc89415059f0ebf2"
+  },
+  "literature_refresh_pass100": {
+    "source": "https://arxiv.org/pdf/1701.02048",
+    "location": "Section4, Theorem1.3 proof, Lemmas4.1,4.3,4.4",
+    "evidence": "Root opened primary PDF, read relevant Section4 passages; web282/284/285.",
+    "comparison": "Tao already combines a nonzero collision, lower-count margin and finite Fourier transfer using proper progressions and a weighted comparison identity. The candidate explicit rank certificate is not a novelty claim or an improved project height cutoff."
+  },
+  "goal_turn_progress_2026_09_07_pass100": {
+    "classification": "progress",
+    "evidence": "Pass100 independentproofreview,first-passverification,andfullpublicationtoPR99/main94a96d1. Newquarticboundedranksourcefrozen,reviewactive. PublishedchecksproveunchangedLeanbaseline,notnewmanuscriptformalization.",
+    "completion": "Unproven: no kernel-checked unrestrictedConjecture/NotConjecture and no full-rank contradiction. Goal staysactive.",
+    "resources": "No localbuild/cache. Temporarymerge browser tabclosed;no unrelatedproject changes.",
+    "publication": "Recovered ordinaryauthorizedmerge through existingbrowser afterCLIandconnectorwrite failures;no new permissions or userinterruption.",
+    "additional_progress": "Independent quartic rank review nowaccepted,rootfullreadand19bindingsverified. Compatiblelowering/proper-half-core branchesexcludedatE;ranktheoremnotkernelproof. Nextcheckpointintegrationpending."
+  },
+  "pass101_publication": {
+    "status": "verified_local_checkpoint_preparing_publication",
+    "branch": "codex/astra-bounded-relation-rank",
+    "base_sha": "94a96d13c7877aeb37ef341543830ef253299008",
+    "files": [
+      "docs/astra-research-101.md",
+      "research/astra-large-block-minimality.md",
+      "research/astra-large-block-minimality-review.md",
+      "research/astra-pass101-verification.json",
+      "research/workflow-state.json"
+    ],
+    "method": "Local commit retained; existing signed-in GitHub browser upload on featurebranch because CLI credential invalid and connectorwrite403. Compare exact published bytes; browser commits will differ from local commit. No credentials or permissions altered.",
+    "review": "Independent Astraxhigh032f5c8a accepted author7fee5332;rootcompleteauthor/reviewreadpreviously and review/docsreadab76fc. Manuscript only."
   }
 }
