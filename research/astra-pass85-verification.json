@@ -1,0 +1,212 @@
+{
+  "checkpoint": "Pass85",
+  "parent_main": "7144d32c867a2fc70504dd0d797a885d5107de77",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-85.md": "7e047e7c3664625bab5816cb4ec2b6842a4402657e805a9eb3433e0186dd97d8",
+    "research/astra-coupled-divisor-descent.md": "df7717b031d827d622a00ce1b60074e1f737ce864fc3dd81838b227a0fe8a4c3",
+    "research/astra-coupled-divisor-review.md": "7f70aec1e57b9a33561287a02495d0c28f30adbfae68b7d5b5390d49e4cf2b43"
+  },
+  "dependency_hashes": {
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+    "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+    "research/astra-minimal-frequency-review.md": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d",
+    "research/astra-pass84-verification.json": "1159dcc003cc0ea8d4f1472b80264acf04617f07902b857e3b881b1ee52920fd"
+  },
+  "document_bindings": [
+    {
+      "document": "research/astra-coupled-divisor-descent.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-coupled-divisor-descent.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-coupled-divisor-descent.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-coupled-divisor-descent.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-coupled-divisor-descent.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-coupled-divisor-descent.md",
+      "path": "research/astra-uniform-divisor-minimality.md",
+      "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+    },
+    {
+      "document": "research/astra-coupled-divisor-review.md",
+      "path": "research/astra-coupled-divisor-descent.md",
+      "sha256": "df7717b031d827d622a00ce1b60074e1f737ce864fc3dd81838b227a0fe8a4c3"
+    },
+    {
+      "document": "research/astra-coupled-divisor-review.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-coupled-divisor-review.md",
+      "path": "research/astra-minimal-frequency-review.md",
+      "sha256": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d"
+    },
+    {
+      "document": "research/astra-coupled-divisor-review.md",
+      "path": "research/astra-uniform-divisor-minimality.md",
+      "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+    },
+    {
+      "document": "research/astra-coupled-divisor-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-coupled-divisor-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-coupled-divisor-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-coupled-divisor-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    }
+  ],
+  "checks": [
+    "Complete independent mathematical acceptance without corrections, including root two-prime corollary. Root read full author and review.",
+    "Frozen hashes, dependencies, document bindings, workflow, formatting and storage checks passed."
+  ],
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass85-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport hashlib,json,subprocess,sys\nroot=Path('/home/joshua/lonely-runner-formalization')\nm=json.loads(Path('/tmp/astra-pass85-inputs.json').read_text())\nfor name,digest in (m['hashes']|m['dependency_hashes']).items():\n    data=(root/name).read_bytes()\n    assert hashlib.sha256(data).hexdigest()==digest,name\n    assert data.endswith(b'\\n'),name\n    assert all(line.rstrip()==line for line in data.splitlines()),name\nfor b in m['document_bindings']:\n    assert b['sha256'] in (root/b['document']).read_text(),b\n    assert hashlib.sha256((root/b['path']).read_bytes()).hexdigest()==b['sha256'],b\ncommands=[]\nfor argv in ([sys.executable,'-B','scripts/validate_workflow.py'],['git','diff','--check'],[sys.executable,'-B','scripts/manage_storage.py']):\n    r=subprocess.run(argv,cwd=root,capture_output=True,text=True)\n    commands.append(dict(argv=argv,exit_code=r.returncode,stdout=r.stdout,stderr=r.stderr))\n    assert r.returncode==0,commands[-1]\nprint(json.dumps(dict(frozen_files=len(m['hashes']),dependency_bindings=len(m['dependency_hashes']),document_bindings=len(m['document_bindings']),numerical_replay=False,local_lean_build=False,commands=commands),indent=2))\n",
+    "source_sha256": "777ad5d6c126ec5a4c6bfd01accc135e98d6047b95117ce6b6f3f9dd3ee30c1b",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-85.md": "7e047e7c3664625bab5816cb4ec2b6842a4402657e805a9eb3433e0186dd97d8",
+        "research/astra-coupled-divisor-descent.md": "df7717b031d827d622a00ce1b60074e1f737ce864fc3dd81838b227a0fe8a4c3",
+        "research/astra-coupled-divisor-review.md": "7f70aec1e57b9a33561287a02495d0c28f30adbfae68b7d5b5390d49e4cf2b43"
+      },
+      "dependency_hashes": {
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+        "research/astra-minimal-frequency-review.md": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d",
+        "research/astra-pass84-verification.json": "1159dcc003cc0ea8d4f1472b80264acf04617f07902b857e3b881b1ee52920fd"
+      },
+      "document_bindings": [
+        {
+          "document": "research/astra-coupled-divisor-descent.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-coupled-divisor-descent.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-coupled-divisor-descent.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-coupled-divisor-descent.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-coupled-divisor-descent.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-coupled-divisor-descent.md",
+          "path": "research/astra-uniform-divisor-minimality.md",
+          "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+        },
+        {
+          "document": "research/astra-coupled-divisor-review.md",
+          "path": "research/astra-coupled-divisor-descent.md",
+          "sha256": "df7717b031d827d622a00ce1b60074e1f737ce864fc3dd81838b227a0fe8a4c3"
+        },
+        {
+          "document": "research/astra-coupled-divisor-review.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-coupled-divisor-review.md",
+          "path": "research/astra-minimal-frequency-review.md",
+          "sha256": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d"
+        },
+        {
+          "document": "research/astra-coupled-divisor-review.md",
+          "path": "research/astra-uniform-divisor-minimality.md",
+          "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+        },
+        {
+          "document": "research/astra-coupled-divisor-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-coupled-divisor-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-coupled-divisor-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-coupled-divisor-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        }
+      ]
+    },
+    "observed_tool_result": {
+      "chunk_id": "f4433e",
+      "wall_time_seconds": 4.859e-06,
+      "exit_code": 0,
+      "original_token_count": 212,
+      "output": "{\n  \"frozen_files\": 3,\n  \"dependency_bindings\": 8,\n  \"document_bindings\": 14,\n  \"numerical_replay\": false,\n  \"local_lean_build\": false,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": {
+    "scope": "Independently reviewed manuscript proofs and exact controls; no new kernel theorem.",
+    "author": "research/astra-coupled-divisor-descent.md",
+    "review": "research/astra-coupled-divisor-review.md",
+    "result": "Whole-circle bundle transport, count/sum/native-margin distinction, all-label mixed irredundancy, common-alpha private/exchange constraints and generic weighted-budget controls accepted. Admissible extraction and unrestricted LRC remain open."
+  },
+  "failure_history": [],
+  "excluded": [
+    "Unfinished coupled-descent strategy and forced-arc bridge investigation.",
+    "No numerical search, local Lean build or cache restoration."
+  ]
+}
