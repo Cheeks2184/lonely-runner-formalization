@@ -6,19 +6,19 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/arithmetic_completion_saving",
-      "agent_id": "/root/fold_zero_restoration_resume",
+      "id": "/root/strict_core_shell_supply",
+      "agent_id": "/root/uniform_strategy_after_fold",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "9f276366960df7a55c1f934d4f52fae1169a62fb",
+      "source_checkpoint": "33b5b430b443014241f99030dacb2cb66576feea",
       "owned_files": [
-        "research/astra-arithmetic-completion-saving.md"
+        "research/astra-strict-core-shell-supply.md"
       ],
-      "target": "Seek a justified uniform arithmetic cost saving for the exact private-cell completions beyond the coarse two-color bound, retaining all actual grids and minimum-count/sum hypotheses. Test at most two motivated analytic claims; do not merely restate the needed saving or mistake arbitrary-width controls for canonical strict failures.",
+      "target": "Test whether canonical strict failure and forced core-shell separation give an additional cross-center saving or valid lower-sum exchange beyond coincident tails; at most two hand approaches, exact boundaries and no stronger unproved replacement.",
       "checks": []
     }
   ],
@@ -10335,15 +10335,55 @@
           "sha256": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
         }
       ]
+    },
+    {
+      "id": "/root/arithmetic_completion_saving",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "9f276366960df7a55c1f934d4f52fae1169a62fb",
+      "owned_files": [
+        "research/astra-arithmetic-completion-saving.md"
+      ],
+      "target": "Seek a justified uniform arithmetic cost saving for the exact private-cell completions beyond the coarse two-color bound, retaining all actual grids and minimum-count/sum hypotheses. Test at most two motivated analytic claims; do not merely restate the needed saving or mistake arbitrary-width controls for canonical strict failures.",
+      "checks": [
+        "Worker reports full readback, ten input bindings and workflow validator passed; no mathematical programs or local builds.",
+        "Root read full frozen manuscript."
+      ],
+      "result": "Frozen manuscript; independent review pending. Safe same-center depth-two pruning; C3 saving insufficient by multiplicity identity; exact all-n progression totient cost with noncanonical-width scope.",
+      "sha256": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403"
+    },
+    {
+      "id": "/root/arithmetic_completion_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "4675bc0877fe732e0fd42946cc46154f09bda807",
+      "owned_files": [
+        "research/astra-arithmetic-completion-review.md"
+      ],
+      "target": "Independent exact-scope review of frozen arithmetic-completion-saving manuscript abfb14f; inspect pruning multiplicity, C3 obstruction and exact all-n totient cost.",
+      "checks": [
+        "Full independent hand derivation, eleven bindings, whitespace and workflow validator passed.",
+        "Root full source/review readback."
+      ],
+      "result": "Accepted unchanged abfb14f without correction; root full review readback accepted.",
+      "sha256": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019"
     }
   ],
-  "latest_checkpoint": "Pass86 independently accepted and root verified locally: private-region limits and exact forced-arc completions; publication pending. Unrestricted LRC remains unresolved.",
+  "latest_checkpoint": "Pass87 independently accepted and root verified: same-center depth-two pruning, C3-only obstruction and exact all-n progression totient cost; publication pending. Stronger core-shell manuscript remains unfinished and unreviewed.",
   "next_actions": [
-    "Commit/push verified Pass86, open PR, inspect both required checks, merge exact head and verify fetched main hashes and ancestry.",
-    "Inspect live /root/uniform_strategy_after_fold task /root/forced_arc_completion. Author is writing positive forced-arc geometry, interval two-color completion and exact cellwise saving formula; do not restart while live. Freeze and obtain independent review before publication.",
-    "If forced-completion author/review are ready during the next integration, combine related private-region and completion evidence in one coherent checkpoint; otherwise keep unfinished files excluded. Publish verified checkpoint via commit/push/PR/both CI/exact-head merge/main hashes.",
-    "Next substantive research must seek arithmetic saving beyond the exact two-completion cost bound, or another justified uniform mechanism. Do not claim f<=1, automatic unit determinants, or successful transport from private regions alone.",
-    "No local builds, cache restoration or mathematical searches are queued. Terra High deliveries27, next measurement30. Unrestricted goal active and unresolved."
+    "Complete independent review of arithmetic completion saving, integrate only accepted mathematics and publish the checkpoint.",
+    "Seek an essential uniform arithmetic mechanism using canonical strict failure; do not substitute near-linear-height or noncanonical-width results.",
+    "Keep all local Lean builds/cache restoration unqueued during lightweight source research."
   ],
   "research_holds": [
     {
@@ -14803,6 +14843,11 @@
       "event": "pass81_delivered_prime_cover_author_live",
       "classification": "progress",
       "evidence": "PR80 bothCI success, exacthead merge and14remotehashes/ancestryverified. Strategy assessment found no surviving E ingredient; n3 essentiality-only cost claim refuted at correct open threshold. Root derived unbounded-prime extension with explicit all-deletion witnesses, now being checked by Astra/xhigh. Fullgoal unresolved."
+    },
+    {
+      "event": "resource_diagnosis_complete_and_goal_resumed",
+      "classification": "progress",
+      "evidence": "Kernel prior-boot OOM logs and Kiyori task build commands identify parallel Rust build; no current cargo/rustc/lean/lake/z3. Goal remains active. No local builds queued."
     }
   ],
   "two_even_escalation": {
@@ -16438,7 +16483,7 @@
     "review_sha256": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
   },
   "pass86_publication": {
-    "status": "verified_local_pending_commit",
+    "status": "merged_verified_on_main",
     "branch": "codex/astra-forced-arc-completion",
     "parent_main": "9f276366960df7a55c1f934d4f52fae1169a62fb",
     "receipt": "research/astra-pass86-verification.json",
@@ -16449,6 +16494,121 @@
       "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
       "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
     },
-    "root_verifier_chunk": "00d728"
+    "root_verifier_chunk": "00d728",
+    "pr": 85,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/85",
+    "head": "4675bc0877fe732e0fd42946cc46154f09bda807",
+    "ci_run": 34093175773,
+    "checks": {
+      "Lean build and trust audit": 101650846777,
+      "Exact computational certificates": 101650846999
+    },
+    "merge": "33b5b430b443014241f99030dacb2cb66576feea",
+    "merged_at": "2026-09-07T07:08:34Z",
+    "premerge_check_chunk": "d84102",
+    "merge_result": {
+      "chunk_id": "669d64",
+      "exit_code": 0,
+      "output": ""
+    },
+    "main_verifier_source": "from pathlib import Path\nimport json,hashlib,subprocess\nm=json.loads(Path('/tmp/astra-pass86-main-inputs.json').read_text())\np=json.loads(Path('/tmp/astra-pass86-merged.json').read_text())\nassert p['state']=='MERGED',p\nassert p['headRefOid']==m['head'],p\nmerge=p['mergeCommit']['oid']\nmain=subprocess.check_output(['git','rev-parse','origin/main'],text=True).strip()\nfor ref in [merge,m['head'],m['parent']]:\n    assert subprocess.run(['git','merge-base','--is-ancestor',ref,main]).returncode==0,ref\nfor path,digest in m['hashes'].items():\n    data=subprocess.check_output(['git','show',main+':'+path])\n    assert hashlib.sha256(data).hexdigest()==digest,path\nprint(json.dumps(dict(main=main,merge=merge,head=m['head'],verified_hashes=len(m['hashes']),head_ancestry=True,parent_ancestry=True,merged_at=p['mergedAt']),indent=2))\n",
+    "main_verifier_inputs": {
+      "head": "4675bc0877fe732e0fd42946cc46154f09bda807",
+      "parent": "9f276366960df7a55c1f934d4f52fae1169a62fb",
+      "hashes": {
+        "docs/astra-research-86.md": "5216fb58c255345b330c0813721283cf52df21185e94d1708e5ed43f348e8823",
+        "research/astra-coupled-descent-strategy.md": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+        "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+        "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+        "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        "research/astra-minimal-frequency-review.md": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d",
+        "research/astra-arithmetic-winding-exchange.md": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4",
+        "research/astra-arithmetic-winding-review.md": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243",
+        "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-pass85-verification.json": "e525d38fcf7cf6216e5a24f8f4a66bcbdac3bc39234261a582fb8dbd8e62c586",
+        "research/astra-pass86-verification.json": "f4f2d42dadaf7b4529a59354bf9a283ba619d22894f1995ef89330637fb5cb77",
+        "research/workflow-state.json": "2bcb56a00afcd43cb13bd36ed956e60500474362544caeb1d16b01446bd69ef3"
+      }
+    },
+    "main_verifier_result": {
+      "chunk_id": "52a4ae",
+      "exit_code": 0,
+      "output": "From https://github.com/Cheeks2184/lonely-runner-formalization\n * branch            main       -> FETCH_HEAD\n   9f27636..33b5b43  main       -> origin/main\n{\n  \"main\": \"33b5b430b443014241f99030dacb2cb66576feea\",\n  \"merge\": \"33b5b430b443014241f99030dacb2cb66576feea\",\n  \"head\": \"4675bc0877fe732e0fd42946cc46154f09bda807\",\n  \"verified_hashes\": 17,\n  \"head_ancestry\": true,\n  \"parent_ancestry\": true,\n  \"merged_at\": \"2026-09-07T07:08:34Z\"\n}\n"
+    },
+    "merged_metadata": {
+      "headRefOid": "4675bc0877fe732e0fd42946cc46154f09bda807",
+      "mergeCommit": {
+        "oid": "33b5b430b443014241f99030dacb2cb66576feea"
+      },
+      "mergedAt": "2026-09-07T07:08:34Z",
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T07:00:02Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34093175773/job/101650846777",
+          "name": "Lean build and trust audit",
+          "startedAt": "2026-09-07T06:57:53Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T07:07:36Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34093175773/job/101650846999",
+          "name": "Exact computational certificates",
+          "startedAt": "2026-09-07T06:57:52Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        }
+      ]
+    },
+    "watcher_terminal": {
+      "session_id": 11744,
+      "chunk_id": "fc6fa8",
+      "exit_code": 0,
+      "note": "Prior live gh check watcher was drained after both checks completed; full CI metadata already preserved separately."
+    }
+  },
+  "arithmetic_completion_root_notes": {
+    "source_sha256": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403",
+    "status": "independently_accepted_without_correction_root_read_complete",
+    "saving": "S_c=C3+C_(2,F); constructed cover cost (n+f-S_c-B_c)/2. Same-center prefix truncation preserves depth two in all closed completion gaps.",
+    "limitation": "rho f >= 1+C3+E, E>=0, rho=mu/alpha<1, so f-1-C3 >= (1-rho)f+E>0. No extra sharp saving proved.",
+    "control": "V=1..n at 1/(n+1)<a<1/n has forced primitive-center arcs exactly; min cover sum phi(q)/q >= (n+1)/2+(n-2)/(2n(n-1)). Native maximum 1/(n+1), so not strict canonical failure.",
+    "review_sha256": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019"
+  },
+  "strict_core_shell_root_observation": {
+    "status": "candidate_under_Astra_derivation_not_yet_independently_reviewed",
+    "bound": "At each forced center, the second alpha-arc lies inside the owner mu-core and is disjoint from its M=1 private portion. Summing yields P<=2mu*f-2alpha*C2F. With P=2alpha+T3 and E=T3/(2alpha)-C3>=0, obtain rho*f>=1+S_c+E and f-1-S_c >= (1-rho)*f+E>0.",
+    "scope": "Charges ALL same-center pruning, not only third-and-later tails. Does not control color imbalance or produce full LRC contradiction. Keep outside frozen abfb14f checkpoint until reviewed.",
+    "exact_defect": "Define U_A the unique-private region of forced A, H_A its closed mu-core, J_A its open second-center alpha arc or empty. U_A and J_A are disjoint subsets H_A. R=sum_A measure(H_A minus (U_A union J_A))>=0 gives 2mu f=P+2alpha C2F+R, hence rho f=1+S_c+E+R/(2alpha). Not yet independently reviewed."
+  },
+  "literature_refresh_pass87": {
+    "source": "https://arxiv.org/pdf/2109.09860",
+    "version": "2109.09860v1",
+    "authors": "Tom Bohman and Fei Peng",
+    "title": "Coprime Mappings and Lonely Runners",
+    "scope": "Theorem1.3: sufficiently large n, n<vmax<=2n-exp(C(loglog n)^2) gives strict common margin above1/(n+1). Section3 inverse of a coprime missing pair excludes residues0,+1,-1 because chosen modulus exceeds vmax.",
+    "disposition": "No new proof imported; near-linear height and missing-pair supply do not establish arbitrary-height LRC. Focused source check only."
+  },
+  "pass87_publication": {
+    "status": "locally_verified_publication_pending",
+    "branch": "codex/astra-arithmetic-completion-saving",
+    "parent_main": "33b5b430b443014241f99030dacb2cb66576feea",
+    "receipt": "research/astra-pass87-verification.json",
+    "hashes": {
+      "docs/astra-research-87.md": "522205d388f8fb301666d9c9e2e053d5d730552d78d5671618bb2c5f2b43acec",
+      "research/astra-arithmetic-completion-saving.md": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403",
+      "research/astra-arithmetic-completion-review.md": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019"
+    },
+    "root_verifier_chunk": "b89359"
   }
 }
