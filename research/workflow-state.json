@@ -6,35 +6,19 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/finite_height_unit_obstruction",
-      "agent_id": "/root/uniform_strategy_after_fold",
+      "id": "/root/large_block_minimality",
+      "agent_id": "/root/fold_zero_restoration_resume",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "76a0ee0f467161e1b6a14794381333fdf2b95850",
+      "source_checkpoint": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
       "owned_files": [
-        "research/astra-finite-height-unit-obstruction.md"
+        "research/astra-large-block-minimality.md"
       ],
-      "target": "Check whether a three-speed block family fits the canonical finite-height cutoff while satisfying the full Fourier signature, deletion gcds one, and absence of D_n-bounded unit coefficients. This audits the remaining cutoff premise, not actual failure. Hand proof only; preserve frozen Pass99 manuscripts.",
-      "checks": []
-    },
-    {
-      "id": "/root/finite_height_unit_obstruction_review",
-      "agent_id": "/root/coordinate_cancellation_review",
-      "kind": "research",
-      "status": "in_progress",
-      "requested_model": "gpt-6-astra",
-      "requested_effort": "xhigh",
-      "observed_model": null,
-      "observed_effort": null,
-      "source_checkpoint": "76a0ee0f467161e1b6a14794381333fdf2b95850",
-      "owned_files": [
-        "research/astra-finite-height-unit-obstruction-review.md"
-      ],
-      "target": "Independently verify three-speed block obstruction including actual canonical finite-height membership, exact pair/triple moments, signature and D_n-unit exclusion. Separate from frozen Pass99 publication.",
+      "target": "Find an actual use of strict all-time failure and complete count/sum replacement minimality in the remaining large restriction-indecomposable block. Derive one exact justified uniform reduction or locate the first obstructed inference with a precise contract; avoid standalone coefficient improvements or another count ladder.",
       "checks": []
     }
   ],
@@ -11634,13 +11618,145 @@
         ]
       },
       "result": "Accepted first captured mechanical verification: 30 frozen input hashes, 73 binding rows, unchanged complete Lean source set and pinned inputs, format and workflow. Root authored all mathematical summary prose; no Lean run."
+    },
+    {
+      "id": "/root/finite_height_unit_obstruction",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "76a0ee0f467161e1b6a14794381333fdf2b95850",
+      "owned_files": [
+        "research/astra-finite-height-unit-obstruction.md"
+      ],
+      "target": "Check whether a three-speed block family fits the canonical finite-height cutoff while satisfying the full Fourier signature, deletion gcds one, and absence of D_n-bounded unit coefficients. This audits the remaining cutoff premise, not actual failure. Hand proof only; preserve frozen Pass99 manuscripts.",
+      "checks": [
+        {
+          "kind": "source_review",
+          "sha256": "0c6c83bdd2188576121391b0e232486a4af259580d842c850111581ca87c55e0",
+          "binding_rows": 10,
+          "evidence": "root e13df9 author and48b130 review; all21bindings matched; author2d4623/98ac53/15fd5f; reviewer7195e8/5b120e/67143d/fddfa3"
+        }
+      ],
+      "result": "Accepted exact finite-height-domain counterexample to D_n-unit extraction from listed signatures; not a strict failure or canonical all-count supply."
+    },
+    {
+      "id": "/root/finite_height_unit_obstruction_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "76a0ee0f467161e1b6a14794381333fdf2b95850",
+      "owned_files": [
+        "research/astra-finite-height-unit-obstruction-review.md"
+      ],
+      "target": "Independently verify three-speed block obstruction including actual canonical finite-height membership, exact pair/triple moments, signature and D_n-unit exclusion. Separate from frozen Pass99 publication.",
+      "checks": [
+        {
+          "kind": "source_review",
+          "sha256": "64809ab4ac32f5991fa65587ff79c938ee4860bb5a4f4ccfa92a52c2a5fd9183",
+          "binding_rows": 11,
+          "evidence": "root e13df9 author and48b130 review; all21bindings matched; author2d4623/98ac53/15fd5f; reviewer7195e8/5b120e/67143d/fddfa3"
+        }
+      ],
+      "result": "Accepted exact finite-height-domain counterexample to D_n-unit extraction from listed signatures; not a strict failure or canonical all-count supply."
+    },
+    {
+      "id": "/root/positive_block_transport",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "fdf2ae4d56727f6fb007aa34eabb909de4eebe55",
+      "owned_files": [
+        "research/astra-positive-block-transport.md"
+      ],
+      "target": "Develop a positive uniform block factorization theorem using buffered arc Fourier majorants/minorants and relative error, avoiding exponential absolute-error losses and unit extraction. Check proposed degree6272n^2-2 and large-component consequence for bounded relation hypergraph. Assess actual use toward minimal failure; no premature Lean work.",
+      "checks": [
+        {
+          "command": "Root full source read and workflow validation",
+          "exit_code": 0,
+          "evidence_chunk": "37276f"
+        }
+      ],
+      "result": "Frozen positive block theorem and finest splitting partition characterization; independent review pending.",
+      "output_sha256": "ced2c8cfac1bcc529e73a5ee8eef4af3595d30ebfa7db49273aa3ebd6f39f232"
+    },
+    {
+      "id": "/root/positive_block_transport_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
+      "owned_files": [
+        "research/astra-positive-block-transport-review.md"
+      ],
+      "target": "Independent exact-source mathematical review of ced2c8c positive block transport: buffered endpoints, degree, global product minorant, same-time factorization, measure, finest splitting partition and finite-height scope. No builds.",
+      "checks": [
+        {
+          "kind": "independent_source_review",
+          "evidence": "Agent9c2752/dce9f5/eb2ccb/4d2763/1e6053, root full review read7a1d1c and hash8e1e80",
+          "review_sha256": "b006c41c455328e5d5d98999cb52f81b1e945059846135f6a569a54cf2da5080"
+        }
+      ],
+      "result": "Accepted complete positive-block author ced2c8c without mathematical correction. Root summary corrected to explicitly state positive integer speeds."
+    },
+    {
+      "id": "/root/pass100_document_verification",
+      "agent_id": "/root/harmonic_fold_endpoint_repair",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
+      "owned_files": [
+        "research/astra-pass100-verification.json",
+        "/tmp/astra-pass100-verifier.py",
+        "/tmp/astra-pass100-attempts.jsonl"
+      ],
+      "target": "Cohesive mechanical verification of frozen Pass100 manuscript checkpoint and raw subprocess evidence capture. Root supplies frozen manifest and recorder; wait for manifest before first check. No mathematical text edits or Lean builds.",
+      "checks": [
+        {
+          "kind": "root_receipt_review",
+          "evidence": "60219a full verifier/source/manifest/capture read; current raw record equality and hash validation; no identical focused rerun",
+          "receipt_sha256": "a83086b2969727697fd6e4265e2c46ebd66e48dd73134e869db12a39dc96e4be"
+        }
+      ],
+      "delivery_metrics": {
+        "check_kind": "python",
+        "first_check_success": true,
+        "worker_repair_rounds": 0,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-pass100-verification.json"
+        ]
+      },
+      "result": "Accepted first captured mechanical verification:15frozen hashes,38binding rows,complete Lean source/pinned parity,format/workflow. Root authored mathematical summary; no Lean build."
     }
   ],
-  "latest_checkpoint": "Pass99 verified: conditional global relation theorem, pair descent limitations, and signature-only unit obstruction independently reviewed. Committing and publishing documentation checkpoint. Separate finite-height obstruction research/review active. Unrestricted LRC unresolved; no local cache/build.",
+  "latest_checkpoint": "Pass100 independently reviewed manuscripts and first-pass verification accepted; commit/push/PR/merge pending. Large-block minimality research active. Unrestricted LRC unresolved.",
   "next_actions": [
-    "Pursue the active global-mechanism reassessment with whole-time hypotheses and a substantive new deduction, not an isolated local inequality.",
-    "Combine accepted pair-descent limitations with the next substantive reviewed research checkpoint and Pass98 publication receipt.",
-    "Use no local build/cache for hand research; any future compile requires capped serial restoration."
+    "Review positive block manuscript independently.",
+    "Investigate how actual strict failure and full minimality can control its large finest arithmetic block.",
+    "Publish accepted finite-height and positive block work as next substantive checkpoint; no local cache/build."
   ],
   "research_holds": [
     {
@@ -12222,7 +12338,11 @@
     "coordination": "All worker commands and root verification stopped before cleanup; manuscript-only research released after cleanup.",
     "preserved": "Pinned toolchain, Git history, sources, unique evidence, small replay programs and outputs; unrelated projects untouched."
   },
-  "previous_goal_turn_classification": "Progress: previous continuation completed PR95 publication, full build/trust and exact certificates, remote50hash verification, cachecleanup, accepted path/potential limitation and corrected root seed-domain error.",
+  "previous_goal_turn_classification": {
+    "classification": "progress",
+    "evidence": "Current resource check b3e920 confirms6.3GiB available and no compiler processes; all agent handles terminal. Prior captured diagnosis identifies parallel Kiyori Rust build. New goal continuation authorizes resource-light mathematics.",
+    "next_action": "Independent positive block source review and actual minimality gap analysis; local builds remain off."
+  },
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
@@ -20138,13 +20258,203 @@
     "objective_unchanged": true
   },
   "pass99_publication": {
-    "status": "verified checkpoint ready to commit and publish",
+    "status": "merged and remote main verified",
     "parent_main": "76a0ee0f467161e1b6a14794381333fdf2b95850",
     "branch": "codex/astra-global-transport",
     "document_sha256": "f688b7b12421b3bc52c85764e5ce4e3d8f6c827515ab777d1a84dba05adc4502",
     "receipt_sha256": "6e7bc78a09ec80c3d4c005fd5401e5c20c756a4fb80a82924d03af6d28fb6999",
     "scope": "Three independently accepted manuscript/review pairs: same-parity pair, fifth global measure/relation detector, and unit signature obstruction. No Lean change or unrestricted proof. Finite-height three-block follow-up excluded until its own checkpoint.",
     "verification": "30 current input hashes,73 bindings,all Lean source paths and bytes plus pinned inputs unchanged; focused captured check0. Root review source a2f80d and provenance dae37d. No identical rerun.",
-    "delivery_number": 34
+    "delivery_number": 34,
+    "head_sha": "fdf2ae4d56727f6fb007aa34eabb909de4eebe55",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/98",
+    "initial_pr": {
+      "baseRefName": "main",
+      "headRefOid": "fdf2ae4d56727f6fb007aa34eabb909de4eebe55",
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "number": 98,
+      "reviews": [],
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34128750054/job/101763524240",
+          "name": "Lean build and trust audit",
+          "startedAt": "2026-09-07T13:40:58Z",
+          "status": "IN_PROGRESS",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "0001-01-01T00:00:00Z",
+          "conclusion": "",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34128750054/job/101763523826",
+          "name": "Exact computational certificates",
+          "startedAt": "2026-09-07T13:40:58Z",
+          "status": "IN_PROGRESS",
+          "workflowName": "CI"
+        }
+      ],
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/98"
+    },
+    "remote_manifest": {
+      "head_sha": "fdf2ae4d56727f6fb007aa34eabb909de4eebe55",
+      "parent_main": "76a0ee0f467161e1b6a14794381333fdf2b95850",
+      "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/98",
+      "hashes": {
+        "research/astra-parity-coset-minimum-audit.md": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+        "research/astra-parity-coset-minimum-review.md": "fda600dd2cdbf2f470bc18e24baeab0bb4b9a90616f34b10d160ba3fa86b3360",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        "research/astra-minimal-frequency-review.md": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d",
+        "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+        "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-same-parity-pair-descent.md": "9ccb99d3ef297b5e1e3bb1f0dd6bc20234ff895ebcbe40d362098aaf72903a35",
+        "research/astra-same-parity-pair-descent-review.md": "4e4d1345ad7ac9cd0a5b027f8ca197d77b394c4ff07fce08487b8ecb6a2a69fb",
+        "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+        "research/astra-positive-candidate-escape-cycles.md": "d7c8ff0d24f43ce30c272b4eed93686eeaad8b7dfca41449d1f1b22781e7ad49",
+        "research/astra-positive-candidate-escape-cycles-review.md": "b458336f8e4ce912259d356fcc7971e73400b88838824e2372a5e2163a4f62b7",
+        "research/astra-mixed-candidate-zero-sinks.md": "c51b493cadda81760e221b8bc747df465d3865e8aa39361e581c3de1672c18eb",
+        "research/astra-mixed-candidate-zero-sinks-review.md": "4fa7964cdbf91b618cefdf959dda5158274c5872f80b344e168f1309647040a3",
+        "research/astra-slack-energy-global-compensation.md": "8032d020e4beccc1112b025c8b85f6be6c2ec5cb67cdd763d4ae62a029627cb9",
+        "research/astra-uniform-strategy-after-energy.md": "ee253b7ade891196bdf213250badac0ddf5992937eba32b625dbc9adb79f506e",
+        "research/astra-phase-riesz-global-contract.md": "66c83f09a66f169ef9e212d5e5d4ca32acc2fa3732c94def184d4015061ef848",
+        "research/astra-bonferroni-weight-audit.md": "9116444bc4b55f976a148ecd0431c3032ec4b4d62b7396bd4ed420cc477cfaa0",
+        "research/astra-bonferroni-weight-review.md": "35a5db5bad8a895743491ac2f84dc45d2d25cc1c18c6b50680144dcf15f7f625",
+        "research/astra-uniform-global-transport-strategy.md": "c6d433ea553cc5507a0faa97387fba75108d15bece45ac14489c879c2078d618",
+        "research/astra-uniform-global-transport-strategy-review.md": "5eb21ae36164e68f29ac1ce0f70ca897cbfe558165cc90d8a2de3ee982ca98f7",
+        "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+        "LonelyRunner/RationalShiftGcd.lean": "6e9d1e3e084188a651e4c875cf36fd5d6fc7cbd5f1914784019a207a0cec01f4",
+        "LonelyRunner/RationalShiftInsertion.lean": "6ab6e77e8f5edcdc2a2d242fb2616327004b376496616f46896303a06876db23",
+        "research/astra-bounded-unit-relation-diagnostic.md": "5c68faac8901bde8e82cb564b3c4ff8dc4918bd08240873e6bbd1047a72c1ba7",
+        "research/astra-bounded-unit-relation-review.md": "f14b25502faa7f6a14561a89f21821bfd367c0a72a8a6e982016029dc11b3cd3",
+        "docs/astra-research-99.md": "f688b7b12421b3bc52c85764e5ce4e3d8f6c827515ab777d1a84dba05adc4502",
+        "research/astra-pass99-verification.json": "6e7bc78a09ec80c3d4c005fd5401e5c20c756a4fb80a82924d03af6d28fb6999",
+        "research/workflow-state.json": "24425f4f3fce7624c7fa20b0d40c27135db92f07f94d5c49f622e7cc13fc190e"
+      }
+    },
+    "remote_verifier_source": "from pathlib import Path\nimport hashlib\nimport json\nimport subprocess\n\nm = json.loads(Path('/tmp/astra-pass99-main-inputs.json').read_text())\np = json.loads(Path('/tmp/astra-pass99-merged.json').read_text())\nassert p['state'] == 'MERGED' and p['headRefOid'] == m['head_sha']\nassert p['number'] == 98 and p['url'] == m['pr_url']\nmerge = p['mergeCommit']['oid']\nfor ancestor, descendant in [(m['parent_main'], m['head_sha']),\n                             (m['head_sha'], merge), (merge, 'origin/main')]:\n    subprocess.run(['git', 'merge-base', '--is-ancestor', ancestor, descendant], check=True)\nfor path, expected in m['hashes'].items():\n    content = subprocess.check_output(['git', 'show', 'origin/main:' + path])\n    assert hashlib.sha256(content).hexdigest() == expected, path\nprint(json.dumps({'pr': p['url'], 'head': m['head_sha'], 'merge': merge,\n                  'remote_main': subprocess.check_output(['git', 'rev-parse', 'origin/main'], text=True).strip(),\n                  'verified_hashes': len(m['hashes']), 'ancestry': 'parent, head and merge verified',\n                  'scope': 'Published conditional checkpoint, not unrestricted LRC resolution.'}, indent=2))\n",
+    "check_run": 34128750054,
+    "publication_evidence": [
+      "3e895a commit",
+      "a2e0d1 push",
+      "f2fbaf PR create",
+      "8066b6 exact-head running checks"
+    ],
+    "last_ci_observation": {
+      "source": "9d5b8c then corrected JSON field handling76dcb4",
+      "status": "Lean/trust succeeded. Exact certificates job still live in setup-python post step; no restart warranted.",
+      "run": 34128750054,
+      "watch_session": 30340
+    },
+    "merged_pr": {
+      "headRefOid": "fdf2ae4d56727f6fb007aa34eabb909de4eebe55",
+      "mergeCommit": {
+        "oid": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a"
+      },
+      "mergedAt": "2026-09-07T13:52:37Z",
+      "number": 98,
+      "state": "MERGED",
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/98"
+    },
+    "premerge": {
+      "baseRefName": "main",
+      "headRefOid": "fdf2ae4d56727f6fb007aa34eabb909de4eebe55",
+      "isDraft": false,
+      "mergeStateStatus": "CLEAN",
+      "number": 98,
+      "reviews": [],
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T13:42:35Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34128750054/job/101763524240",
+          "name": "Lean build and trust audit",
+          "startedAt": "2026-09-07T13:40:58Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T13:50:24Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34128750054/job/101763523826",
+          "name": "Exact computational certificates",
+          "startedAt": "2026-09-07T13:40:58Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        }
+      ],
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/98"
+    },
+    "merge_sha": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
+    "remote_main_sha": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
+    "verified_remote_hashes": 32,
+    "verification_evidence": [
+      "128c3f:3731 build jobs and710 trust reports",
+      "238e98:exact reviewed head CLEAN, both checks SUCCESS",
+      "005f39:merge exit0",
+      "445ef4:32 hashes plus parent/head/merge ancestry verified"
+    ],
+    "watcher_terminal": {
+      "session_id": 30340,
+      "exit_code": 0,
+      "tool_chunk": "83976b"
+    },
+    "source_check_scope": "Hosted CI verifies existing Lean source, not the newly reviewed manuscript theorems. No Lean source changed."
+  },
+  "positive_block_transport_candidate": {
+    "status": "Independently accepted manuscript theorem; not Lean formalized",
+    "degree": "delta=1/(56n), M=(56n)^2, D=2(M-1)=6272n^2-2",
+    "hypothesis": "Partition all labels into blocks with4|block|<=n+1. Every relation with all coefficients<=D splits into zero relations within each block.",
+    "positive_envelopes": "For good arc g=1_{norm>=alpha}, use U=(J_M*g_(alpha-delta))/(1-delta), L=J_M*g_(alpha+delta)-delta. Kernel first moment implies tail beyond delta<=3delta/4. Then0<=g<=U, L<=g,0<=U-L, U<=1/(1-delta), and integral(U-L)<=7delta.",
+    "block_gap": "U_b=product individual U; L_b=U_b-sum_i(U_i-L_i)product other U. Thus L_b<=G_b<=U_b; mean U_b>=meanG_b>=1-2|b|/(n+1)>=1/2. Bernoulli gives other U product<=2. Mean gap<=14|b|delta.",
+    "global": "Finite bounded-relation splitting factors exact polynomial integrals across blocks. Full good indicator >= product U_b - sum_b(U_b-L_b) product other U. Its integral >= product u_b*(1-sum d_b/u_b)>=productu_b/2>=2^(-number_blocks-1)>0, since sum d_b/u_b<=28n delta=1/2.",
+    "consequence": "If actual maximum mu<=1/(n+1), unique finest D-splitting partition has a block larger than(n+1)/4. Its blocks are components of supports of restriction-indecomposable bounded relations, not raw relation supports.",
+    "source_sha256": "ced2c8cfac1bcc529e73a5ee8eef4af3595d30ebfa7db49273aa3ebd6f39f232",
+    "canonical_partition": "Common refinements preserve splitting by restricting a bounded relation to one block and then splitting again. Every relation recursively decomposes by zero restrictions with identical coefficients. Every valid partition contains each restriction-indecomposable support in a block; the component partition splits all relations.",
+    "missing": "No derivation from actual strict failure and full count/sum minimality controls the large block. Positive criterion is manuscript-only; no unrestricted resolution.",
+    "review_sha256": "b006c41c455328e5d5d98999cb52f81b1e945059846135f6a569a54cf2da5080"
+  },
+  "finite_height_unit_obstruction_result": {
+    "status": "independently accepted manuscript; pending next substantive publication",
+    "source_hashes": {
+      "research/astra-finite-height-unit-obstruction.md": "0c6c83bdd2188576121391b0e232486a4af259580d842c850111581ca87c55e0",
+      "research/astra-finite-height-unit-obstruction-review.md": "64809ab4ac32f5991fa65587ff79c938ee4860bb5a4f4ccfa92a52c2a5fd9183"
+    },
+    "scope": "n=3000 triple blocks meet full Gamma inequality, primitive sorted inclusive sharper height domain and all deletion gcds1, but no D_n-unit relation. Actual stationary t=1/4 is strict good. Does not meet denominator4 cover condition or actual minimal failure; does not refute arbitrary coefficient bounds at finite height.",
+    "next_action": "Retain the obstruction with the pending positive block transport investigation; do not relaunch unit extraction from these summaries."
+  },
+  "goal_turn_progress_2026_09_07_pass99": {
+    "classification": "progress",
+    "evidence": "Independently proved uniform bounded-relation measure theorem; verified signature-only and finite-height unit obstructions; completed PR98 publication and remote verification; developed and delegated new positive relative-error block mechanism.",
+    "completion": "Unrestricted proof/disproof not established; actual goal remains active.",
+    "next_action": "Complete positive block transport author proof, independent review, and assess actual-minimality application; combine with accepted finite-height obstruction at next logical checkpoint."
+  },
+  "positive_block_lower_count_mass_diagnostic": {
+    "status": "Root hand derivation, not independently accepted or formalized; selection evidence only",
+    "question": "Can lower-count supply remove the N/4 block-size restriction without losing usefulness inside the existing finite-height domain?",
+    "mass_derivation": "For k<n positive speeds and a beta=1/(k+1) witness s, let alpha=1/(n+1), q=ceil(1/(beta-alpha)). Partition the k-dimensional phase torus into q^k half-open cubes. A largest fiber A has Haar mass>=q^(-k). Fix u in A. Every t in A has all coordinate differences from u strictly smaller than1/q, so s+t-u is strictly alpha-good. Hence native-good mass>=q^(-k), uniformly in speeds.",
+    "uniform_bound": "For any proper nonempty block k<=n-1, q<=n(n+1), so mass>=m=[n(n+1)]^(-(n-1)). Put C=n/m, delta=1/(28C), M=(28C)^2, D=2(M-1)=1568n^2[n(n+1)]^(2n-2)-2. Existing positive-envelope argument gives sum d_B/u_B<=14delta*n/m=1/2 for any nontrivial partition satisfying D-splitting; a common witness follows.",
+    "vacuity_in_remaining_domain": "The existing height cutoff is H=[n(n+1)/2]^(n-1). The above D exceeds H. For ANY positive tuple of height<=H, every pair has the primitive relation coefficients(v_j/gcd(v_i,v_j),-v_i/gcd(v_i,v_j))<=H<=D. These pair supports force the finest D-splitting partition to have one block. Thus this generic lower-count-mass extension supplies no contradiction in the remaining finite-height domain, even for native-good controls.",
+    "next_action": "Do not implement this weak extension. Seek an actual large-block transport using strict failure and full minimality, or a substantially sharper mass/degree relation with a justified useful domain."
+  },
+  "pass100_publication": {
+    "status": "verified locally, preparing commit",
+    "parent_main": "52758d2e85ca73f7daa1b579dc55dc8dc69c193a",
+    "branch": "codex/astra-positive-block-transport",
+    "document_sha256": "93458ec4400ffc12002f01b9f065968cd5a871b659fc0e8b73f2693cdde90f37",
+    "receipt_sha256": "a83086b2969727697fd6e4265e2c46ebd66e48dd73134e869db12a39dc96e4be",
+    "scope": "Independent manuscript theorem and finite-height unit obstruction; no new Lean source or unrestricted proof. Large-block research remains active.",
+    "verification": "15frozen input hashes;38binding rows;complete Lean/pinned parity;first captured focused check passed;root reviewed full source and raw evidence without identical rerun.",
+    "delivery_number": 35
   }
 }
