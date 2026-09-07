@@ -1,0 +1,310 @@
+{
+  "checkpoint": "Pass90",
+  "parent_main": "07d39f4feb40f5fdf7fd26b900d70c7a553e8709",
+  "status": "verified_independently_accepted_manuscript",
+  "hashes": {
+    "docs/astra-research-90.md": "13fabd78ee783e294b12ebd6176af6f66a7425e37703117c62c7fbb271a4f505",
+    "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+    "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
+  },
+  "dependency_hashes": {
+    "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+    "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515",
+    "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+    "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+    "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+    "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+    "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f",
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-pass89-verification.json": "6b43a4b3268984f9002570a91689a9dcab42db57b38d5b05de1d9e2426f96c4d"
+  },
+  "document_bindings": [
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": "research/astra-forced-cycle-frequency-exchange.md",
+      "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": "research/astra-maximum-frequency-exchange-review.md",
+      "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": "research/astra-uniform-divisor-minimality.md",
+      "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": "research/astra-joint-seed-maximum-audit.md",
+      "sha256": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": "research/astra-strict-core-shell-supply.md",
+      "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": "research/astra-strict-core-shell-review.md",
+      "sha256": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "research/astra-zero-only-maximum-gaps.md",
+      "sha256": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "research/astra-forced-cycle-frequency-exchange.md",
+      "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "research/astra-maximum-frequency-exchange-review.md",
+      "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "research/astra-uniform-divisor-minimality.md",
+      "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "research/astra-joint-seed-maximum-audit.md",
+      "sha256": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "research/astra-strict-core-shell-supply.md",
+      "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "research/astra-strict-core-shell-review.md",
+      "sha256": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-zero-only-maximum-gaps-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass90-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport hashlib,json,subprocess,sys\nroot=Path('/home/joshua/lonely-runner-formalization')\nm=json.loads(Path('/tmp/astra-pass90-inputs.json').read_text())\nfor name,digest in (m['hashes']|m['dependency_hashes']).items():\n    data=(root/name).read_bytes()\n    assert hashlib.sha256(data).hexdigest()==digest,name\n    assert data.endswith(b'\\n'),name\n    assert all(line.rstrip()==line for line in data.splitlines()),name\nfor b in m['document_bindings']:\n    assert b['sha256'] in (root/b['document']).read_text(),b\n    assert hashlib.sha256((root/b['path']).read_bytes()).hexdigest()==b['sha256'],b\ncommands=[]\nfor argv in ([sys.executable,'-B','scripts/validate_workflow.py'],['git','diff','--check'],[sys.executable,'-B','scripts/manage_storage.py']):\n    r=subprocess.run(argv,cwd=root,capture_output=True,text=True)\n    commands.append(dict(argv=argv,exit_code=r.returncode,stdout=r.stdout,stderr=r.stderr))\n    assert r.returncode==0,commands[-1]\nprint(json.dumps(dict(frozen_files=len(m['hashes']),dependency_bindings=len(m['dependency_hashes']),document_bindings=len(m['document_bindings']),numerical_replay=False,local_lean_build=False,commands=commands),indent=2))\n",
+    "source_sha256": "9b5170921daad89c9f967a0992b237b39c459fa04ff7627e8332965df1f36504",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-90.md": "13fabd78ee783e294b12ebd6176af6f66a7425e37703117c62c7fbb271a4f505",
+        "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+        "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
+      },
+      "dependency_hashes": {
+        "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+        "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+        "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+        "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+        "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-pass89-verification.json": "6b43a4b3268984f9002570a91689a9dcab42db57b38d5b05de1d9e2426f96c4d"
+      },
+      "document_bindings": [
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": "research/astra-forced-cycle-frequency-exchange.md",
+          "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": "research/astra-maximum-frequency-exchange-review.md",
+          "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": "research/astra-uniform-divisor-minimality.md",
+          "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": "research/astra-joint-seed-maximum-audit.md",
+          "sha256": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": "research/astra-strict-core-shell-supply.md",
+          "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": "research/astra-strict-core-shell-review.md",
+          "sha256": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "research/astra-zero-only-maximum-gaps.md",
+          "sha256": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "research/astra-forced-cycle-frequency-exchange.md",
+          "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "research/astra-maximum-frequency-exchange-review.md",
+          "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "research/astra-uniform-divisor-minimality.md",
+          "sha256": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "research/astra-joint-seed-maximum-audit.md",
+          "sha256": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "research/astra-strict-core-shell-supply.md",
+          "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "research/astra-strict-core-shell-review.md",
+          "sha256": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-zero-only-maximum-gaps-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        }
+      ]
+    },
+    "observed_tool_result": {
+      "chunk_id": "9655b8",
+      "wall_time_seconds": 4.929e-06,
+      "exit_code": 0,
+      "original_token_count": 225,
+      "output": "{\"files\": 3, \"dependencies\": 12, \"bindings\": 23}\n{\n  \"frozen_files\": 3,\n  \"dependency_bindings\": 12,\n  \"document_bindings\": 23,\n  \"numerical_replay\": false,\n  \"local_lean_build\": false,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": {
+    "author_hash": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+    "review_hash": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
+    "independent_disposition": "accept_without_corrections",
+    "root_full_review_readback": "e4cea3",
+    "kernel_checked": false
+  },
+  "failure_history": [],
+  "excluded": [
+    "Unrestricted LRC resolution",
+    "Simultaneous small nondivisor blocker exclusion",
+    "Positive coherent replacement supply",
+    "New Lean theorem",
+    "Numerical replay or local Lean build"
+  ]
+}
