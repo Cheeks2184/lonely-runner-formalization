@@ -6,7 +6,7 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/coupled_descent_strategy",
+      "id": "/root/arithmetic_completion_saving",
       "agent_id": "/root/fold_zero_restoration_resume",
       "kind": "research",
       "status": "in_progress",
@@ -14,11 +14,11 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "eade37d00c179fe6cc7837c4960cd58add0d572e",
+      "source_checkpoint": "9f276366960df7a55c1f934d4f52fae1169a62fb",
       "owned_files": [
-        "research/astra-coupled-descent-strategy.md"
+        "research/astra-arithmetic-completion-saving.md"
       ],
-      "target": "Choose one precise positive arbitrary-N mechanism using all coordinate replacement constraints, after assessing where collision arithmetic still loses common-time information. Derive one bounded analytic lemma or a concrete obstruction; avoid rephrasing LRC, a generic route list, or a finite-count ladder.",
+      "target": "Seek a justified uniform arithmetic cost saving for the exact private-cell completions beyond the coarse two-color bound, retaining all actual grids and minimum-count/sum hypotheses. Test at most two motivated analytic claims; do not merely restate the needed saving or mistake arbitrary-width controls for canonical strict failures.",
       "checks": []
     }
   ],
@@ -10235,15 +10235,115 @@
           "sha256": "7f70aec1e57b9a33561287a02495d0c28f30adbfae68b7d5b5390d49e4cf2b43"
         }
       ]
+    },
+    {
+      "id": "/root/coupled_descent_strategy",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "eade37d00c179fe6cc7837c4960cd58add0d572e",
+      "owned_files": [
+        "research/astra-coupled-descent-strategy.md"
+      ],
+      "target": "Choose one precise positive arbitrary-N mechanism using all coordinate replacement constraints, after assessing where collision arithmetic still loses common-time information. Derive one bounded analytic lemma or a concrete obstruction; avoid rephrasing LRC, a generic route list, or a finite-count ladder.",
+      "checks": [
+        "Author full readback, bindings and workflow validation passed. Root read full frozen manuscript."
+      ],
+      "result": "Frozen manuscript: actual collision arcs are forced through target alpha, no triple overlap, exact all-private repair control and simultaneous-lowering overlap constraint. No valid uniform descent supplied.",
+      "evidence": [
+        {
+          "path": "research/astra-coupled-descent-strategy.md",
+          "sha256": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2"
+        }
+      ]
+    },
+    {
+      "id": "/root/private_repair_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "4ee48f74a1a2c7cfd163f42f4143c3d961bc2036",
+      "owned_files": [
+        "research/astra-private-repair-review.md"
+      ],
+      "target": "Independent exact review of frozen d9a029cb: actual forced indexed arcs, alpha-limit no triple overlap, full bad-label strata, minimum-sum simultaneous witness and two-bad constraint, complete (1,2) to (5,8) private repair at5/12 including robust hole and strict scope limitations.",
+      "checks": [
+        "Complete hand review; ten bindings, formatting and workflow validation passed."
+      ],
+      "result": "Independent acceptance without corrections: forced indexed arc bridge through alpha, bad-stratum identity and simultaneous lower-sum witness restrictions, exact robust private-region control with scope limitations.",
+      "evidence": [
+        {
+          "path": "research/astra-private-repair-review.md",
+          "sha256": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512"
+        }
+      ]
+    },
+    {
+      "id": "/root/forced_arc_completion",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "4ee48f74a1a2c7cfd163f42f4143c3d961bc2036",
+      "owned_files": [
+        "research/astra-forced-arc-completion.md"
+      ],
+      "target": "Use actual forced collision arc positions and their no-triple-overlap restriction to seek one useful uniform completion/exchange implication beyond residue arithmetic. Audit exact interval/circle topology and the missing multiply-bad region; at most two motivated analytic attempts, no rephrased LRC or claim arbitrary controls refute strict-failure hypotheses.",
+      "checks": [
+        "Author full readback, eight input bindings and workflow validation passed. Root read full final manuscript, including added exact minimum-cost decomposition."
+      ],
+      "result": "Frozen positive manuscript: forced path/cycle geometry, exact independent gap cost decomposition, two-cover completion and cellwise cost formula, strict forced-edge arithmetic and owner bound. No arithmetic saving reaches contradiction.",
+      "evidence": [
+        {
+          "path": "research/astra-forced-arc-completion.md",
+          "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+        }
+      ]
+    },
+    {
+      "id": "/root/forced_completion_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "9f276366960df7a55c1f934d4f52fae1169a62fb",
+      "owned_files": [
+        "research/astra-forced-completion-review.md"
+      ],
+      "target": "Independent complete review of e48f8029 forced-arc geometry, exact closed-gap optimal-cost factorization, open interval two-color lemma, full covers/cellwise cost saving, private-mass obstruction and strict determinant/owner arithmetic.",
+      "checks": [
+        "Full hand review; eleven bindings, formatting and workflow validation passed. Root read the full frozen review."
+      ],
+      "result": "Independent acceptance without corrections: exact private-cell optimum, path/cycle topology, interval coloring, actual full covers and cost, multiplicity f>1, strict determinant window and owner separation.",
+      "evidence": [
+        {
+          "path": "research/astra-forced-completion-review.md",
+          "sha256": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
+        }
+      ]
     }
   ],
-  "latest_checkpoint": "Pass85 independently accepted and root verified locally: exact divisor bundle transport and extraction obstruction; publication pending. Unrestricted LRC remains unresolved.",
+  "latest_checkpoint": "Pass86 independently accepted and root verified locally: private-region limits and exact forced-arc completions; publication pending. Unrestricted LRC remains unresolved.",
   "next_actions": [
-    "Commit and push verified Pass85, open PR, inspect both required checks, merge exact head and verify fetched main hashes and ancestry.",
-    "Publish the next coherent verified checkpoint via commit, push, PR, both CI checks, exact-head merge and fetched-main hash/ancestry verification.",
-    "Inspect live /root/fold_zero_restoration_resume task /root/coupled_descent_strategy before acting. It investigates actual private-set repair and higher old-bad multiplicity, compares prior joint-seed work, and may include the forced-arc bridge. Do not restart while live.",
-    "No local builds, dependency restoration or mathematical searches are queued. Terra High deliveries remain27; next aggregate review30.",
-    "Keep unrestricted canonical LRC goal active. Neither bundle transport nor collision constraints establish an arbitrary-N contradiction."
+    "Commit/push verified Pass86, open PR, inspect both required checks, merge exact head and verify fetched main hashes and ancestry.",
+    "Inspect live /root/uniform_strategy_after_fold task /root/forced_arc_completion. Author is writing positive forced-arc geometry, interval two-color completion and exact cellwise saving formula; do not restart while live. Freeze and obtain independent review before publication.",
+    "If forced-completion author/review are ready during the next integration, combine related private-region and completion evidence in one coherent checkpoint; otherwise keep unfinished files excluded. Publish verified checkpoint via commit/push/PR/both CI/exact-head merge/main hashes.",
+    "Next substantive research must seek arithmetic saving beyond the exact two-completion cost bound, or another justified uniform mechanism. Do not claim f<=1, automatic unit determinants, or successful transport from private regions alone.",
+    "No local builds, cache restoration or mathematical searches are queued. Terra High deliveries27, next measurement30. Unrestricted goal active and unresolved."
   ],
   "research_holds": [
     {
@@ -14452,7 +14552,7 @@
   },
   "last_goal_turn_classification": {
     "classification": "progress",
-    "evidence": "Pass84 committed, pushed, PR83 opened, both remote checks passed, exact head merged, and remote main15 hash/ancestry checks passed. Divisor author and independent review completed; next strategy agent is confirmed live."
+    "evidence": "Previous goal continuation merged PR84 after both CI checks and thirteen fetched-main hashes plus ancestry. Private-repair review completed and forced-arc completion construction derived."
   },
   "one_three_manuscript_review": "Independent frozen 8f720fbd report fully read by root; exact static replay exit0 with sixteen bindings, twelve contract names. Specification accepted, not a Lean result.",
   "publication_latest_pending": null,
@@ -16203,7 +16303,7 @@
     "scope": "Uses full strict failure, actual attained points and open intermediate width; no conclusion for arbitrary residue sets or center membership in W_i."
   },
   "pass85_publication": {
-    "status": "verified_local_pending_commit",
+    "status": "merged_verified",
     "branch": "codex/astra-coupled-divisor-descent",
     "parent_main": "7144d32c867a2fc70504dd0d797a885d5107de77",
     "receipt": "research/astra-pass85-verification.json",
@@ -16212,6 +16312,143 @@
       "research/astra-coupled-divisor-descent.md": "df7717b031d827d622a00ce1b60074e1f737ce864fc3dd81838b227a0fe8a4c3",
       "research/astra-coupled-divisor-review.md": "7f70aec1e57b9a33561287a02495d0c28f30adbfae68b7d5b5390d49e4cf2b43"
     },
-    "root_verifier_chunk": "f4433e"
+    "root_verifier_chunk": "f4433e",
+    "pr": 84,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/84",
+    "head": "4ee48f74a1a2c7cfd163f42f4143c3d961bc2036",
+    "ci_run": 34090983198,
+    "checks": {
+      "Lean build and trust audit": 101644224575,
+      "Exact computational certificates": 101644224375
+    },
+    "premerge": {
+      "headRefOid": "4ee48f74a1a2c7cfd163f42f4143c3d961bc2036",
+      "isDraft": false,
+      "mergeStateStatus": "CLEAN",
+      "reviews": [],
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T06:30:22Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34090983198/job/101644224575",
+          "name": "Lean build and trust audit",
+          "startedAt": "2026-09-07T06:28:22Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T06:37:46Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34090983198/job/101644224375",
+          "name": "Exact computational certificates",
+          "startedAt": "2026-09-07T06:28:22Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        }
+      ]
+    },
+    "premerge_tool_result": {
+      "chunk_id": "952fd7",
+      "wall_time_seconds": 0.355705483,
+      "exit_code": 0,
+      "original_token_count": 240,
+      "output": "{\n  \"headRefOid\": \"4ee48f74a1a2c7cfd163f42f4143c3d961bc2036\",\n  \"isDraft\": false,\n  \"mergeStateStatus\": \"CLEAN\",\n  \"reviews\": [],\n  \"state\": \"OPEN\",\n  \"statusCheckRollup\": [\n    {\n      \"__typename\": \"CheckRun\",\n      \"completedAt\": \"2026-09-07T06:30:22Z\",\n      \"conclusion\": \"SUCCESS\",\n      \"detailsUrl\": \"https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34090983198/job/101644224575\",\n      \"name\": \"Lean build and trust audit\",\n      \"startedAt\": \"2026-09-07T06:28:22Z\",\n      \"status\": \"COMPLETED\",\n      \"workflowName\": \"CI\"\n    },\n    {\n      \"__typename\": \"CheckRun\",\n      \"completedAt\": \"2026-09-07T06:37:46Z\",\n      \"conclusion\": \"SUCCESS\",\n      \"detailsUrl\": \"https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34090983198/job/101644224375\",\n      \"name\": \"Exact computational certificates\",\n      \"startedAt\": \"2026-09-07T06:28:22Z\",\n      \"status\": \"COMPLETED\",\n      \"workflowName\": \"CI\"\n    }\n  ]\n}\n"
+    },
+    "push_session": 33616,
+    "push_exit_code": 0,
+    "create_session": 54064,
+    "create_exit_code": 0,
+    "watch_session": 58019,
+    "watch_exit_code": 0,
+    "merge_command": [
+      "gh",
+      "pr",
+      "merge",
+      "84",
+      "--merge",
+      "--match-head-commit",
+      "4ee48f74a1a2c7cfd163f42f4143c3d961bc2036"
+    ],
+    "merge_session": 10732,
+    "merge_exit_code": 0,
+    "merged": {
+      "headRefOid": "4ee48f74a1a2c7cfd163f42f4143c3d961bc2036",
+      "mergeCommit": {
+        "oid": "9f276366960df7a55c1f934d4f52fae1169a62fb"
+      },
+      "mergedAt": "2026-09-07T06:39:03Z",
+      "state": "MERGED",
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/84"
+    },
+    "main_verification": {
+      "argv": [
+        "python3",
+        "-B",
+        "/tmp/astra-pass85-mainverify.py"
+      ],
+      "source": "from pathlib import Path\nimport json,hashlib,subprocess\nm=json.loads(Path('/tmp/astra-pass85-main-inputs.json').read_text())\np=json.loads(Path('/tmp/astra-pass85-merged.json').read_text())\nassert p['state']=='MERGED',p\nassert p['headRefOid']==m['head'],p\nmerge=p['mergeCommit']['oid']\nmain=subprocess.check_output(['git','rev-parse','origin/main'],text=True).strip()\nfor ref in [merge,m['head'],m['parent']]:\n    assert subprocess.run(['git','merge-base','--is-ancestor',ref,main]).returncode==0,ref\nfor path,digest in m['hashes'].items():\n    data=subprocess.check_output(['git','show',main+':'+path])\n    assert hashlib.sha256(data).hexdigest()==digest,path\nprint(json.dumps(dict(main=main,merge=merge,head=m['head'],verified_hashes=len(m['hashes']),head_ancestry=True,parent_ancestry=True,merged_at=p['mergedAt']),indent=2))\n",
+      "input_manifest": {
+        "head": "4ee48f74a1a2c7cfd163f42f4143c3d961bc2036",
+        "parent": "7144d32c867a2fc70504dd0d797a885d5107de77",
+        "hashes": {
+          "docs/astra-research-85.md": "7e047e7c3664625bab5816cb4ec2b6842a4402657e805a9eb3433e0186dd97d8",
+          "research/astra-coupled-divisor-descent.md": "df7717b031d827d622a00ce1b60074e1f737ce864fc3dd81838b227a0fe8a4c3",
+          "research/astra-coupled-divisor-review.md": "7f70aec1e57b9a33561287a02495d0c28f30adbfae68b7d5b5390d49e4cf2b43",
+          ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+          "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+          "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+          "research/astra-minimal-frequency-review.md": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d",
+          "research/astra-pass84-verification.json": "1159dcc003cc0ea8d4f1472b80264acf04617f07902b857e3b881b1ee52920fd",
+          "research/astra-pass85-verification.json": "e525d38fcf7cf6216e5a24f8f4a66bcbdac3bc39234261a582fb8dbd8e62c586",
+          "research/workflow-state.json": "28c815cc9f9f1bbc3596679384a7ae84bd429db6587da239c1c68836b24bc7d0"
+        }
+      },
+      "observed_tool_result": {
+        "chunk_id": "168e5f",
+        "wall_time_seconds": 0.746871258,
+        "exit_code": 0,
+        "original_token_count": 110,
+        "output": "From https://github.com/Cheeks2184/lonely-runner-formalization\n * branch            main       -> FETCH_HEAD\n   7144d32..9f27636  main       -> origin/main\n{\n  \"main\": \"9f276366960df7a55c1f934d4f52fae1169a62fb\",\n  \"merge\": \"9f276366960df7a55c1f934d4f52fae1169a62fb\",\n  \"head\": \"4ee48f74a1a2c7cfd163f42f4143c3d961bc2036\",\n  \"verified_hashes\": 13,\n  \"head_ancestry\": true,\n  \"parent_ancestry\": true,\n  \"merged_at\": \"2026-09-07T06:39:03Z\"\n}\n"
+      }
+    }
+  },
+  "private_repair_root_notes": {
+    "status": "independently_accepted_root_full_author_and_review_read_pending_coherent_integration",
+    "author_sha256": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+    "result": "All private regions may be repaired while an actual two-old-bad overlap becomes new-good. Example old(1,2), width5/12, new(5,8), t5/16; this increases sum and exceeds native margin. For actual lower-sum same-count replacements satisfying complete private repair, every new witness has at least two changed old labels bad; no contradiction.",
+    "next": "Independent review, then package separately from PR84.",
+    "review_sha256": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512"
+  },
+  "forced_arc_completion_root_notes": {
+    "status": "independently_accepted_root_full_author_and_review_read",
+    "pair_window": "For overlapping forced alpha-arcs with actual labels a,b and lifted positive determinant D, D>=alpha*max(a,b)-mu*min(a,b)>alpha*abs(a-b), while D<alpha*(a+b). Proper-union lift and actual mu-core private points justify the lower bound. D is divisible by gcd(a,b). A forced speed-1 arc can therefore overlap only speeds divisible by N; if speed1 exists, its sole arc is forced by nonempty W_1.",
+    "topology": "Author checked degree at most two using no containment and no triple overlap: forced components are paths or a circle-covering cycle. Every nonforced arc avoids chosen actual private points of all forced arcs, so lies in one cell between consecutive private points.",
+    "completion": "Outside the forced union, full coverage has multiplicity at least two, since a point covered by just one original arc would force that arc. Sort nonforced intervals in each cell by left endpoint. Assign each interval to the color with smaller current maximum right endpoint, updating by max. The two color maxima remain the two largest right endpoints of all processed intervals. At x, use the prefix left<x; depth>=2 implies both maxima>x, proving two-color coverage with exact open endpoints. Thus two full alpha-covers share exactly F and partition all nonforced arcs.",
+    "cost": "Write f=cost(F), full original-grid cost=n. The two covers average (n+f)/2. If c_j^0,c_j^1 are the color costs per private-point cell, choosing the cheaper color in each cell yields an actual cover of exact cost (n+f-sum_j abs(c_j^0-c_j^1))/2. Required arithmetic saving for the N/2 target is sum_j abs(c_j^0-c_j^1)>=f-1; it is NOT established.",
+    "private_mass_limit": "With full original bad multiplicity M_alpha>=1, integral M_alpha=2nalpha. Total private-region measure P=2alpha+T where T=integral(M_alpha-2)_+. Private regions lie in forced mu-cores, so P<=2mu f; mu>0 by a small nonzero time. Hence f>=alpha/mu+T/(2mu)>1. Coarse (n+f)/2 bound alone cannot reach N/2.",
+    "scope": "Root derivations and author hand confirmations only until frozen manuscript and independent review; no uniform contradiction or kernel theorem.",
+    "author_sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+    "exact_optimum": "Between consecutive forced private points only their two owner arcs can occur. The uncovered gap is empty or one closed interval, including a singleton. The minimum full-grid cover cost is exactly f+sum_j kappa_j, where kappa_j is the minimum weighted nonforced interval-cover cost for that gap; independent cells. No bound by N/2 supplied.",
+    "review_sha256": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
+  },
+  "pass86_publication": {
+    "status": "verified_local_pending_commit",
+    "branch": "codex/astra-forced-arc-completion",
+    "parent_main": "9f276366960df7a55c1f934d4f52fae1169a62fb",
+    "receipt": "research/astra-pass86-verification.json",
+    "hashes": {
+      "docs/astra-research-86.md": "5216fb58c255345b330c0813721283cf52df21185e94d1708e5ed43f348e8823",
+      "research/astra-coupled-descent-strategy.md": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+      "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+      "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+      "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
+    },
+    "root_verifier_chunk": "00d728"
   }
 }
