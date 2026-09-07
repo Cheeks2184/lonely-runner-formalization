@@ -846,3 +846,10 @@ project-specific axiom.
 #print axioms LonelyRunner.fiveMovingNaturalRunners
 #print axioms LonelyRunner.lowerCountPositiveIntegerHypothesis_seven
 #print axioms LonelyRunner.sixRunners
+
+-- Uniform minimal-counterexample selection and its actual strict margin.
+#print axioms LonelyRunner.positiveIntegerFailure_iff_no_witness
+#print axioms LonelyRunner.positiveIntegerFailure_factor_iff
+#print axioms LonelyRunner.exists_minimalPositiveIntegerFailure
+#print axioms LonelyRunner.MinimalPositiveIntegerFailure.witness_of_sum_lt
+#print axioms LonelyRunner.exists_attained_strict_failure_margin

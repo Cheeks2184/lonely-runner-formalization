@@ -1,0 +1,1178 @@
+{
+  "checkpoint": "Pass94",
+  "parent_main": "ae64785d3e3a61281bd5baaff773916d72383a78",
+  "status": "local_checks_and_independent_review_passed_hosted_integration_pending",
+  "hashes": {
+    "LonelyRunner/MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+    "LonelyRunner.lean": "9bdb661179ab2b29af311271da6c688d76275e9cf116205001395e67d0b05a01",
+    "LonelyRunner/AxiomAudit.lean": "959ddd972dbd984d82aa9b2f50067b0811e3d948609d083e4324fb62405aa75c",
+    "scripts/audit_lean_trust.py": "42fd0592b63f6487fa8217f7e416923b3219dbd542b7e07c012553b360932b39",
+    "docs/storage-policy.md": "bd596c16a98417199837886fd02e4ab60aefecedf2c7b699f4c216df5ee8fd3d",
+    "docs/astra-research-94.md": "f6a1f356ec315c215a6bf470ecbeba298a3812b3dd32f9836dbc71faeaf0ebf0",
+    "research/astra-forced-parent-endpoint-propagation.md": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb",
+    "research/astra-forced-parent-endpoint-review.md": "b2d1d8e6ef81a6e8d450cfb74f0d74477773b359f06eb3cf3b39cb70b2816eef",
+    "research/astra-minimal-failure-kernel-contract.md": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8",
+    "research/astra-minimal-failure-kernel-contract-review.md": "d891f197d6f232c3f4e255fb885e599527c8c14ab67c6562c8059af54edcc34a",
+    "research/astra-minimal-counterexample-final-review.md": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf",
+    "research/astra-minimal-dependency-verification.json": "fc35116f08c657ba9293d64383c93a114cf4576bfcdeff4a5f690f2015f75512",
+    "research/astra-minimal-counterexample-implementation.json": "d522cb878f29db6bb7774bb2d5d6676738d4d03ffc9b4e64bd8996364e9ea9d4",
+    "research/astra-minimal-counterexample-root-verification.json": "a3759b5f986cfca72c601a6102ebf0ba5e84c8cbc15cddd5339812477cce4d9e"
+  },
+  "dependency_hashes": {
+    "research/astra-zero-only-deletion-amplification.md": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0",
+    "research/astra-zero-only-deletion-amplification-review.md": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4",
+    "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+    "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
+    "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+    "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515",
+    "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+    "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+    "research/astra-zero-only-parent-reduction.md": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71",
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-forced-parent-endpoint-propagation.md": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb",
+    "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa",
+    "LonelyRunner/Formulations.lean": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788",
+    "LonelyRunner/BHKRealReduction.lean": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26",
+    "LonelyRunner/FiniteFamilyEquivalence.lean": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3",
+    "LonelyRunner/PrimitiveTupleNormalization.lean": "cac3351bf8c755c0bd354d0330e766f49c255d7ef21637d0975a8d8633cd94b0",
+    "LonelyRunner/TwoDivisibleNormalization.lean": "d812237f06d63e67c8739122c76a5e67daa470402575ccafcdcee4c41d950286",
+    "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+    "LonelyRunner/PivotBoundary.lean": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f",
+    "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+    "LonelyRunner/LowerCountSupply.lean": "0705291adc53011fb72fc718a7260876512b092741442d6a6cceb4b76eb5ccf4",
+    "LonelyRunner/BaseCases.lean": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f",
+    "LonelyRunner/SixRunnerOrdinary.lean": "8da5bb6f35373ab4da8d0ab8e2a1040376a74b028efdc7e00d006ee91eb25755",
+    "LonelyRunner/LonelyAtTransport.lean": "6596481a6087174f7f7bb7d5140e339d0a571b05bc369fd3a9f0c432875ee1ee",
+    "LonelyRunner/WeightedConditionalExpectation.lean": "72745fdfb1d779d9956b9bd0e515b1b3a971ddebe4c217db862fddffa6dcfe8b",
+    "LonelyRunner/OverlapCapacity.lean": "2048568e30b8754b5a6d2807860105e957b8c2b353daa0ec6c72d8c895ca8ca6",
+    "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "lakefile.toml": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26",
+    "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+    "research/astra-minimal-failure-kernel-contract.md": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8",
+    "LonelyRunner/MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+    "research/astra-minimal-failure-kernel-contract-review.md": "d891f197d6f232c3f4e255fb885e599527c8c14ab67c6562c8059af54edcc34a",
+    "LonelyRunner.lean": "9bdb661179ab2b29af311271da6c688d76275e9cf116205001395e67d0b05a01",
+    "LonelyRunner/AxiomAudit.lean": "959ddd972dbd984d82aa9b2f50067b0811e3d948609d083e4324fb62405aa75c",
+    "scripts/audit_lean_trust.py": "42fd0592b63f6487fa8217f7e416923b3219dbd542b7e07c012553b360932b39",
+    "LonelyRunner/FiniteTupleSorting.lean": "71b47c20282d091129fe9990b2d1bbdfdebff45e49dea2bfbd7d4425fe89f775",
+    "LonelyRunner/SimultaneousApproximation.lean": "144aec242a3f4d06853fed110bf8ee20f1cabf88b925acda889fe08cfe57c729",
+    "LonelyRunner/EndpointAffineApproximation.lean": "19989c0528c028bd0bcb8ef4e514ac35177fafd1a0f889e69b82f25651aaa3d3",
+    "LonelyRunner/StationaryEquivalence.lean": "12dce8930c34b211bc01e2dc21e932087270726bce2bf127fa2d8d6594544b49",
+    "LonelyRunner/RationalPairRank.lean": "8ab0d557ad561415b2fdf06566482e780fca1aa5b37c2a9e2340c24805ca6cbe",
+    "LonelyRunner/PrimitiveAffineRank.lean": "0b82838ac09e0572a329d7fe12091c250caa746441216e5a7ec84ceb7ff89eb9",
+    "LonelyRunner/BHKAdjacentRatios.lean": "677c365618fc612a5ee7d3d9e9696273da2d9e775b77487d0b3e208cea9d6733",
+    "LonelyRunner/BHKAdjacentPair.lean": "3d36d812db7ed18db8fce521b2505d5904a8387d8e315c6e7d08d9eb7dc75708",
+    "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+    "LonelyRunner/Normalization.lean": "20193ad984f308ce8512930fe683d3118a2b3b5c18636a6a1f4454aa6df43797",
+    "LonelyRunner/RationalReduction.lean": "c707227a24eb53d06b20ff00e2e86ce52c158ba7eed55c1d8eba32cf9c457a4e",
+    "LonelyRunner/BHKTwoPhaseSupply.lean": "2890e8ad41f9e3c2a0f098ba2a0da7060fa14ac2fe12842adf1c11905148ac09",
+    "LonelyRunner/AffinePhasePeriod.lean": "340c4dd29276544566175cf791307ca42753ddc964345aa793d33abef1e9b176",
+    "LonelyRunner/AffinePhaseTransfer.lean": "62291689ea8fb589ae96f50e159363277713ee67ad6bc172f8f2804cbd69ba05",
+    "LonelyRunner/PositiveAffineWitness.lean": "94532f1686bc612e9f0e852f541ed06a0e20362878c2be1ecaff645df69f261f",
+    "LonelyRunner/SignedAffineWitness.lean": "a1652cdad78c03da52c39d869b0e37d5c97d3aafb14359674492f8d4e17c3c6e",
+    "LonelyRunner/AffineLonelyAt.lean": "6866bbb379b7b8fcd62f686818d5929e2ba8b2def5b06f2bf5def2b587a68459",
+    "LonelyRunner/FiniteHeightReduction.lean": "cb41059260b943411e2ab5360b84b59cd13f2ddf352c3c50a0b3715b9b9987d6",
+    "LonelyRunner/FinitePrimitiveFamilies.lean": "023b39b29e7939dd18b29a51217c3e3fcf353ee5843f3bc3effb27012137e9f0",
+    "LonelyRunner/RationalRelationSpace.lean": "540f0ef0da35cea31a6c82d063a8c2fde84ddf18e6f04abb6f73740b230fd11a",
+    "LonelyRunner/BHKBridgeAssembly.lean": "85cdff6609ffe604c1a090b000e7ea34a4155a384b9ced55a52ee277793d3f57",
+    "LonelyRunner/KroneckerAveraging.lean": "101efb0a698d89b445682decc9771efa5350e250beeefe1e3f08db34ce446ca2",
+    "LonelyRunner/KroneckerCharacters.lean": "88cb49a836f51050855fffd8f0c7e68fb680345652f183765315e873752fb926",
+    "LonelyRunner/KroneckerOrbit.lean": "c152c31987265ee86cc7590d2f3148695cda97adbe20fa55b7880c4648f64487",
+    "LonelyRunner/KroneckerSeparationSetup.lean": "782a05f6ce6816a355addab21a9cc9ca9abccaa555884af10588437da9af6fa3",
+    "LonelyRunner/KroneckerSeparation.lean": "50e0ff4babbe451598f84ada0907180bb17b0a8f8ae5aa84d7cb923d227c4198",
+    "LonelyRunner/BHKCollisionToWitness.lean": "e5175b1f55a2d73e850ffd3e5a5dab140b6e4d84f0cefd94ebf6d7663d3a0d6a",
+    "LonelyRunner/BHKBridgeCore.lean": "43d0371d3fa213daa895d5431e9cfdd28d79d2de4ba89e02d9a9da93273678a3",
+    "LonelyRunner/BHKNongenericRow.lean": "0780c53aa676a356e6e0b2ce1d451c51bc15690f65bd4e121c9125cebd86c3ec",
+    "LonelyRunner/PositiveRationalRelation.lean": "7f45dee887a837ed4564f0516f5141f154e0a2d32594e7eb57cf1afa0a3eeb29",
+    "LonelyRunner/BHKPositiveCollision.lean": "7569f6798bc42be6ffd5ae04e0f8110f386f941aa58f02a2f168d597a17a514e",
+    "LonelyRunner/RepeatedStationaryEquivalence.lean": "ae4ce972eb4a8969e671f982e8cb1c9e4ea99c59b529008da8b6a9e2f38bdc04",
+    "LonelyRunner/PivotResidues.lean": "362da5ab923f22e900ae7ac821dd4cf4aab91dfe70889987bc9e5a05d19c276a"
+  },
+  "document_bindings": [
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "research/astra-zero-only-deletion-amplification.md",
+      "sha256": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "research/astra-zero-only-deletion-amplification-review.md",
+      "sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "research/astra-zero-only-maximum-gaps.md",
+      "sha256": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "research/astra-zero-only-maximum-gaps-review.md",
+      "sha256": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "research/astra-forced-cycle-frequency-exchange.md",
+      "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "research/astra-maximum-frequency-exchange-review.md",
+      "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "research/astra-forced-arc-completion.md",
+      "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "research/astra-strict-core-shell-supply.md",
+      "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "research/astra-zero-only-parent-reduction.md",
+      "sha256": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-propagation.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/astra-forced-parent-endpoint-propagation.md",
+      "sha256": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/astra-zero-only-deletion-amplification.md",
+      "sha256": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/astra-zero-only-deletion-amplification-review.md",
+      "sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/astra-zero-only-maximum-gaps.md",
+      "sha256": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/astra-zero-only-maximum-gaps-review.md",
+      "sha256": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/astra-forced-cycle-frequency-exchange.md",
+      "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/astra-maximum-frequency-exchange-review.md",
+      "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/astra-forced-arc-completion.md",
+      "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/astra-strict-core-shell-supply.md",
+      "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/astra-zero-only-parent-reduction.md",
+      "sha256": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-forced-parent-endpoint-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/Definitions.lean",
+      "sha256": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/Formulations.lean",
+      "sha256": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/BHKRealReduction.lean",
+      "sha256": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/FiniteFamilyEquivalence.lean",
+      "sha256": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/PrimitiveTupleNormalization.lean",
+      "sha256": "cac3351bf8c755c0bd354d0330e766f49c255d7ef21637d0975a8d8633cd94b0"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/TwoDivisibleNormalization.lean",
+      "sha256": "d812237f06d63e67c8739122c76a5e67daa470402575ccafcdcee4c41d950286"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/FastRunnerInsertion.lean",
+      "sha256": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/PivotBoundary.lean",
+      "sha256": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/ConstrainedMaximizer.lean",
+      "sha256": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/LowerCountSupply.lean",
+      "sha256": "0705291adc53011fb72fc718a7260876512b092741442d6a6cceb4b76eb5ccf4"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/BaseCases.lean",
+      "sha256": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/SixRunnerOrdinary.lean",
+      "sha256": "8da5bb6f35373ab4da8d0ab8e2a1040376a74b028efdc7e00d006ee91eb25755"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/LonelyAtTransport.lean",
+      "sha256": "6596481a6087174f7f7bb7d5140e339d0a571b05bc369fd3a9f0c432875ee1ee"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/WeightedConditionalExpectation.lean",
+      "sha256": "72745fdfb1d779d9956b9bd0e515b1b3a971ddebe4c217db862fddffa6dcfe8b"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "LonelyRunner/OverlapCapacity.lean",
+      "sha256": "2048568e30b8754b5a6d2807860105e957b8c2b353daa0ec6c72d8c895ca8ca6"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "lakefile.toml",
+      "sha256": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "lake-manifest.json",
+      "sha256": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "research/astra-minimal-failure-kernel-contract.md",
+      "sha256": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/Definitions.lean",
+      "sha256": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/Formulations.lean",
+      "sha256": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/BHKRealReduction.lean",
+      "sha256": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/FiniteFamilyEquivalence.lean",
+      "sha256": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/PrimitiveTupleNormalization.lean",
+      "sha256": "cac3351bf8c755c0bd354d0330e766f49c255d7ef21637d0975a8d8633cd94b0"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/TwoDivisibleNormalization.lean",
+      "sha256": "d812237f06d63e67c8739122c76a5e67daa470402575ccafcdcee4c41d950286"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/FastRunnerInsertion.lean",
+      "sha256": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/PivotBoundary.lean",
+      "sha256": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/ConstrainedMaximizer.lean",
+      "sha256": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/LowerCountSupply.lean",
+      "sha256": "0705291adc53011fb72fc718a7260876512b092741442d6a6cceb4b76eb5ccf4"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/BaseCases.lean",
+      "sha256": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/SixRunnerOrdinary.lean",
+      "sha256": "8da5bb6f35373ab4da8d0ab8e2a1040376a74b028efdc7e00d006ee91eb25755"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/LonelyAtTransport.lean",
+      "sha256": "6596481a6087174f7f7bb7d5140e339d0a571b05bc369fd3a9f0c432875ee1ee"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/WeightedConditionalExpectation.lean",
+      "sha256": "72745fdfb1d779d9956b9bd0e515b1b3a971ddebe4c217db862fddffa6dcfe8b"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "LonelyRunner/OverlapCapacity.lean",
+      "sha256": "2048568e30b8754b5a6d2807860105e957b8c2b353daa0ec6c72d8c895ca8ca6"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "lakefile.toml",
+      "sha256": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "lake-manifest.json",
+      "sha256": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-minimal-failure-kernel-contract-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "LonelyRunner/MinimalCounterexample.lean",
+      "sha256": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "research/astra-minimal-failure-kernel-contract.md",
+      "sha256": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "research/astra-minimal-failure-kernel-contract-review.md",
+      "sha256": "d891f197d6f232c3f4e255fb885e599527c8c14ab67c6562c8059af54edcc34a"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "LonelyRunner.lean",
+      "sha256": "9bdb661179ab2b29af311271da6c688d76275e9cf116205001395e67d0b05a01"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "LonelyRunner/AxiomAudit.lean",
+      "sha256": "959ddd972dbd984d82aa9b2f50067b0811e3d948609d083e4324fb62405aa75c"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "scripts/audit_lean_trust.py",
+      "sha256": "42fd0592b63f6487fa8217f7e416923b3219dbd542b7e07c012553b360932b39"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "LonelyRunner/BHKRealReduction.lean",
+      "sha256": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "LonelyRunner/FiniteFamilyEquivalence.lean",
+      "sha256": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "LonelyRunner/PivotBoundary.lean",
+      "sha256": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "lean-toolchain",
+      "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "lakefile.toml",
+      "sha256": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26"
+    },
+    {
+      "document": "research/astra-minimal-counterexample-final-review.md",
+      "path": "lake-manifest.json",
+      "sha256": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218"
+    },
+    {
+      "document": "docs/astra-research-94.md",
+      "path": "LonelyRunner/MinimalCounterexample.lean",
+      "sha256": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539"
+    },
+    {
+      "document": "docs/astra-research-94.md",
+      "path": "research/astra-minimal-counterexample-final-review.md",
+      "sha256": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf"
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass94-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport hashlib,json,re,subprocess,sys\nroot=Path('/home/joshua/lonely-runner-formalization')\nm=json.loads(Path('/tmp/astra-pass94-inputs.json').read_text())\nfor name,digest in (m['hashes']|m['dependency_hashes']).items():\n data=(root/name).read_bytes()\n assert hashlib.sha256(data).hexdigest()==digest,name\n assert data.endswith(b'\\n'),name\n assert all(line.rstrip()==line for line in data.splitlines()),name\nfor b in m['document_bindings']:\n assert b['sha256'] in (root/b['document']).read_text(),b\n assert hashlib.sha256((root/b['path']).read_bytes()).hexdigest()==b['sha256'],b\nsys.path.insert(0,str(root))\nfrom scripts.audit_lean_trust import source_has_forbidden_constructs\nleanfiles=[root/'LonelyRunner.lean',*sorted((root/'LonelyRunner').rglob('*.lean'))]\nassert not [str(p) for p in leanfiles if source_has_forbidden_constructs(p.read_text())]\nassert 'import LonelyRunner.MinimalCounterexample' in (root/'LonelyRunner.lean').read_text()\nfor n in m['required_theorems']:\n assert '#print axioms '+n in (root/'LonelyRunner/AxiomAudit.lean').read_text(),n\n assert '\"'+n+'\"' in (root/'scripts/audit_lean_trust.py').read_text(),n\ncommands=[]\nfor argv in ([sys.executable,'-B','scripts/validate_workflow.py'],['git','diff','--check']):\n r=subprocess.run(argv,cwd=root,capture_output=True,text=True)\n commands.append(dict(argv=argv,exit_code=r.returncode,stdout=r.stdout,stderr=r.stderr));assert r.returncode==0,commands[-1]\nprint(json.dumps(dict(frozen_files=len(m['hashes']),dependency_bindings=len(m['dependency_hashes']),document_bindings=len(m['document_bindings']),source_scan_files=len(leanfiles),required_axiom_probes=len(m['required_theorems']),commands=commands),indent=2))\n",
+    "source_sha256": "1b00158be58d5caddcd97ed47f7eff39c1b074507483130a5a1db68e2daa3595",
+    "input_manifest": {
+      "hashes": {
+        "LonelyRunner/MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+        "LonelyRunner.lean": "9bdb661179ab2b29af311271da6c688d76275e9cf116205001395e67d0b05a01",
+        "LonelyRunner/AxiomAudit.lean": "959ddd972dbd984d82aa9b2f50067b0811e3d948609d083e4324fb62405aa75c",
+        "scripts/audit_lean_trust.py": "42fd0592b63f6487fa8217f7e416923b3219dbd542b7e07c012553b360932b39",
+        "docs/storage-policy.md": "bd596c16a98417199837886fd02e4ab60aefecedf2c7b699f4c216df5ee8fd3d",
+        "docs/astra-research-94.md": "f6a1f356ec315c215a6bf470ecbeba298a3812b3dd32f9836dbc71faeaf0ebf0",
+        "research/astra-forced-parent-endpoint-propagation.md": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb",
+        "research/astra-forced-parent-endpoint-review.md": "b2d1d8e6ef81a6e8d450cfb74f0d74477773b359f06eb3cf3b39cb70b2816eef",
+        "research/astra-minimal-failure-kernel-contract.md": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8",
+        "research/astra-minimal-failure-kernel-contract-review.md": "d891f197d6f232c3f4e255fb885e599527c8c14ab67c6562c8059af54edcc34a",
+        "research/astra-minimal-counterexample-final-review.md": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf",
+        "research/astra-minimal-dependency-verification.json": "fc35116f08c657ba9293d64383c93a114cf4576bfcdeff4a5f690f2015f75512",
+        "research/astra-minimal-counterexample-implementation.json": "d522cb878f29db6bb7774bb2d5d6676738d4d03ffc9b4e64bd8996364e9ea9d4",
+        "research/astra-minimal-counterexample-root-verification.json": "a3759b5f986cfca72c601a6102ebf0ba5e84c8cbc15cddd5339812477cce4d9e"
+      },
+      "dependency_hashes": {
+        "research/astra-zero-only-deletion-amplification.md": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0",
+        "research/astra-zero-only-deletion-amplification-review.md": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4",
+        "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+        "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
+        "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+        "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515",
+        "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+        "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+        "research/astra-zero-only-parent-reduction.md": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-forced-parent-endpoint-propagation.md": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb",
+        "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa",
+        "LonelyRunner/Formulations.lean": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788",
+        "LonelyRunner/BHKRealReduction.lean": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26",
+        "LonelyRunner/FiniteFamilyEquivalence.lean": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3",
+        "LonelyRunner/PrimitiveTupleNormalization.lean": "cac3351bf8c755c0bd354d0330e766f49c255d7ef21637d0975a8d8633cd94b0",
+        "LonelyRunner/TwoDivisibleNormalization.lean": "d812237f06d63e67c8739122c76a5e67daa470402575ccafcdcee4c41d950286",
+        "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+        "LonelyRunner/PivotBoundary.lean": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f",
+        "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+        "LonelyRunner/LowerCountSupply.lean": "0705291adc53011fb72fc718a7260876512b092741442d6a6cceb4b76eb5ccf4",
+        "LonelyRunner/BaseCases.lean": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f",
+        "LonelyRunner/SixRunnerOrdinary.lean": "8da5bb6f35373ab4da8d0ab8e2a1040376a74b028efdc7e00d006ee91eb25755",
+        "LonelyRunner/LonelyAtTransport.lean": "6596481a6087174f7f7bb7d5140e339d0a571b05bc369fd3a9f0c432875ee1ee",
+        "LonelyRunner/WeightedConditionalExpectation.lean": "72745fdfb1d779d9956b9bd0e515b1b3a971ddebe4c217db862fddffa6dcfe8b",
+        "LonelyRunner/OverlapCapacity.lean": "2048568e30b8754b5a6d2807860105e957b8c2b353daa0ec6c72d8c895ca8ca6",
+        "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+        "lakefile.toml": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26",
+        "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+        "research/astra-minimal-failure-kernel-contract.md": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8",
+        "LonelyRunner/MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+        "research/astra-minimal-failure-kernel-contract-review.md": "d891f197d6f232c3f4e255fb885e599527c8c14ab67c6562c8059af54edcc34a",
+        "LonelyRunner.lean": "9bdb661179ab2b29af311271da6c688d76275e9cf116205001395e67d0b05a01",
+        "LonelyRunner/AxiomAudit.lean": "959ddd972dbd984d82aa9b2f50067b0811e3d948609d083e4324fb62405aa75c",
+        "scripts/audit_lean_trust.py": "42fd0592b63f6487fa8217f7e416923b3219dbd542b7e07c012553b360932b39",
+        "LonelyRunner/FiniteTupleSorting.lean": "71b47c20282d091129fe9990b2d1bbdfdebff45e49dea2bfbd7d4425fe89f775",
+        "LonelyRunner/SimultaneousApproximation.lean": "144aec242a3f4d06853fed110bf8ee20f1cabf88b925acda889fe08cfe57c729",
+        "LonelyRunner/EndpointAffineApproximation.lean": "19989c0528c028bd0bcb8ef4e514ac35177fafd1a0f889e69b82f25651aaa3d3",
+        "LonelyRunner/StationaryEquivalence.lean": "12dce8930c34b211bc01e2dc21e932087270726bce2bf127fa2d8d6594544b49",
+        "LonelyRunner/RationalPairRank.lean": "8ab0d557ad561415b2fdf06566482e780fca1aa5b37c2a9e2340c24805ca6cbe",
+        "LonelyRunner/PrimitiveAffineRank.lean": "0b82838ac09e0572a329d7fe12091c250caa746441216e5a7ec84ceb7ff89eb9",
+        "LonelyRunner/BHKAdjacentRatios.lean": "677c365618fc612a5ee7d3d9e9696273da2d9e775b77487d0b3e208cea9d6733",
+        "LonelyRunner/BHKAdjacentPair.lean": "3d36d812db7ed18db8fce521b2505d5904a8387d8e315c6e7d08d9eb7dc75708",
+        "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+        "LonelyRunner/Normalization.lean": "20193ad984f308ce8512930fe683d3118a2b3b5c18636a6a1f4454aa6df43797",
+        "LonelyRunner/RationalReduction.lean": "c707227a24eb53d06b20ff00e2e86ce52c158ba7eed55c1d8eba32cf9c457a4e",
+        "LonelyRunner/BHKTwoPhaseSupply.lean": "2890e8ad41f9e3c2a0f098ba2a0da7060fa14ac2fe12842adf1c11905148ac09",
+        "LonelyRunner/AffinePhasePeriod.lean": "340c4dd29276544566175cf791307ca42753ddc964345aa793d33abef1e9b176",
+        "LonelyRunner/AffinePhaseTransfer.lean": "62291689ea8fb589ae96f50e159363277713ee67ad6bc172f8f2804cbd69ba05",
+        "LonelyRunner/PositiveAffineWitness.lean": "94532f1686bc612e9f0e852f541ed06a0e20362878c2be1ecaff645df69f261f",
+        "LonelyRunner/SignedAffineWitness.lean": "a1652cdad78c03da52c39d869b0e37d5c97d3aafb14359674492f8d4e17c3c6e",
+        "LonelyRunner/AffineLonelyAt.lean": "6866bbb379b7b8fcd62f686818d5929e2ba8b2def5b06f2bf5def2b587a68459",
+        "LonelyRunner/FiniteHeightReduction.lean": "cb41059260b943411e2ab5360b84b59cd13f2ddf352c3c50a0b3715b9b9987d6",
+        "LonelyRunner/FinitePrimitiveFamilies.lean": "023b39b29e7939dd18b29a51217c3e3fcf353ee5843f3bc3effb27012137e9f0",
+        "LonelyRunner/RationalRelationSpace.lean": "540f0ef0da35cea31a6c82d063a8c2fde84ddf18e6f04abb6f73740b230fd11a",
+        "LonelyRunner/BHKBridgeAssembly.lean": "85cdff6609ffe604c1a090b000e7ea34a4155a384b9ced55a52ee277793d3f57",
+        "LonelyRunner/KroneckerAveraging.lean": "101efb0a698d89b445682decc9771efa5350e250beeefe1e3f08db34ce446ca2",
+        "LonelyRunner/KroneckerCharacters.lean": "88cb49a836f51050855fffd8f0c7e68fb680345652f183765315e873752fb926",
+        "LonelyRunner/KroneckerOrbit.lean": "c152c31987265ee86cc7590d2f3148695cda97adbe20fa55b7880c4648f64487",
+        "LonelyRunner/KroneckerSeparationSetup.lean": "782a05f6ce6816a355addab21a9cc9ca9abccaa555884af10588437da9af6fa3",
+        "LonelyRunner/KroneckerSeparation.lean": "50e0ff4babbe451598f84ada0907180bb17b0a8f8ae5aa84d7cb923d227c4198",
+        "LonelyRunner/BHKCollisionToWitness.lean": "e5175b1f55a2d73e850ffd3e5a5dab140b6e4d84f0cefd94ebf6d7663d3a0d6a",
+        "LonelyRunner/BHKBridgeCore.lean": "43d0371d3fa213daa895d5431e9cfdd28d79d2de4ba89e02d9a9da93273678a3",
+        "LonelyRunner/BHKNongenericRow.lean": "0780c53aa676a356e6e0b2ce1d451c51bc15690f65bd4e121c9125cebd86c3ec",
+        "LonelyRunner/PositiveRationalRelation.lean": "7f45dee887a837ed4564f0516f5141f154e0a2d32594e7eb57cf1afa0a3eeb29",
+        "LonelyRunner/BHKPositiveCollision.lean": "7569f6798bc42be6ffd5ae04e0f8110f386f941aa58f02a2f168d597a17a514e",
+        "LonelyRunner/RepeatedStationaryEquivalence.lean": "ae4ce972eb4a8969e671f982e8cb1c9e4ea99c59b529008da8b6a9e2f38bdc04",
+        "LonelyRunner/PivotResidues.lean": "362da5ab923f22e900ae7ac821dd4cf4aab91dfe70889987bc9e5a05d19c276a"
+      },
+      "document_bindings": [
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "research/astra-zero-only-deletion-amplification.md",
+          "sha256": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "research/astra-zero-only-deletion-amplification-review.md",
+          "sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "research/astra-zero-only-maximum-gaps.md",
+          "sha256": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "research/astra-zero-only-maximum-gaps-review.md",
+          "sha256": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "research/astra-forced-cycle-frequency-exchange.md",
+          "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "research/astra-maximum-frequency-exchange-review.md",
+          "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "research/astra-forced-arc-completion.md",
+          "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "research/astra-strict-core-shell-supply.md",
+          "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "research/astra-zero-only-parent-reduction.md",
+          "sha256": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-propagation.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/astra-forced-parent-endpoint-propagation.md",
+          "sha256": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/astra-zero-only-deletion-amplification.md",
+          "sha256": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/astra-zero-only-deletion-amplification-review.md",
+          "sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/astra-zero-only-maximum-gaps.md",
+          "sha256": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/astra-zero-only-maximum-gaps-review.md",
+          "sha256": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/astra-forced-cycle-frequency-exchange.md",
+          "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/astra-maximum-frequency-exchange-review.md",
+          "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/astra-forced-arc-completion.md",
+          "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/astra-strict-core-shell-supply.md",
+          "sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/astra-zero-only-parent-reduction.md",
+          "sha256": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-forced-parent-endpoint-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/Definitions.lean",
+          "sha256": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/Formulations.lean",
+          "sha256": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/BHKRealReduction.lean",
+          "sha256": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/FiniteFamilyEquivalence.lean",
+          "sha256": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/PrimitiveTupleNormalization.lean",
+          "sha256": "cac3351bf8c755c0bd354d0330e766f49c255d7ef21637d0975a8d8633cd94b0"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/TwoDivisibleNormalization.lean",
+          "sha256": "d812237f06d63e67c8739122c76a5e67daa470402575ccafcdcee4c41d950286"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/FastRunnerInsertion.lean",
+          "sha256": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/PivotBoundary.lean",
+          "sha256": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/ConstrainedMaximizer.lean",
+          "sha256": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/LowerCountSupply.lean",
+          "sha256": "0705291adc53011fb72fc718a7260876512b092741442d6a6cceb4b76eb5ccf4"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/BaseCases.lean",
+          "sha256": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/SixRunnerOrdinary.lean",
+          "sha256": "8da5bb6f35373ab4da8d0ab8e2a1040376a74b028efdc7e00d006ee91eb25755"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/LonelyAtTransport.lean",
+          "sha256": "6596481a6087174f7f7bb7d5140e339d0a571b05bc369fd3a9f0c432875ee1ee"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/WeightedConditionalExpectation.lean",
+          "sha256": "72745fdfb1d779d9956b9bd0e515b1b3a971ddebe4c217db862fddffa6dcfe8b"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "LonelyRunner/OverlapCapacity.lean",
+          "sha256": "2048568e30b8754b5a6d2807860105e957b8c2b353daa0ec6c72d8c895ca8ca6"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "lean-toolchain",
+          "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "lakefile.toml",
+          "sha256": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "lake-manifest.json",
+          "sha256": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "research/astra-minimal-failure-kernel-contract.md",
+          "sha256": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/Definitions.lean",
+          "sha256": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/Formulations.lean",
+          "sha256": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/BHKRealReduction.lean",
+          "sha256": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/FiniteFamilyEquivalence.lean",
+          "sha256": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/PrimitiveTupleNormalization.lean",
+          "sha256": "cac3351bf8c755c0bd354d0330e766f49c255d7ef21637d0975a8d8633cd94b0"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/TwoDivisibleNormalization.lean",
+          "sha256": "d812237f06d63e67c8739122c76a5e67daa470402575ccafcdcee4c41d950286"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/FastRunnerInsertion.lean",
+          "sha256": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/PivotBoundary.lean",
+          "sha256": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/ConstrainedMaximizer.lean",
+          "sha256": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/LowerCountSupply.lean",
+          "sha256": "0705291adc53011fb72fc718a7260876512b092741442d6a6cceb4b76eb5ccf4"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/BaseCases.lean",
+          "sha256": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/SixRunnerOrdinary.lean",
+          "sha256": "8da5bb6f35373ab4da8d0ab8e2a1040376a74b028efdc7e00d006ee91eb25755"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/LonelyAtTransport.lean",
+          "sha256": "6596481a6087174f7f7bb7d5140e339d0a571b05bc369fd3a9f0c432875ee1ee"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/WeightedConditionalExpectation.lean",
+          "sha256": "72745fdfb1d779d9956b9bd0e515b1b3a971ddebe4c217db862fddffa6dcfe8b"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "LonelyRunner/OverlapCapacity.lean",
+          "sha256": "2048568e30b8754b5a6d2807860105e957b8c2b353daa0ec6c72d8c895ca8ca6"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "lean-toolchain",
+          "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "lakefile.toml",
+          "sha256": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "lake-manifest.json",
+          "sha256": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-minimal-failure-kernel-contract-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "LonelyRunner/MinimalCounterexample.lean",
+          "sha256": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "research/astra-minimal-failure-kernel-contract.md",
+          "sha256": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "research/astra-minimal-failure-kernel-contract-review.md",
+          "sha256": "d891f197d6f232c3f4e255fb885e599527c8c14ab67c6562c8059af54edcc34a"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "LonelyRunner.lean",
+          "sha256": "9bdb661179ab2b29af311271da6c688d76275e9cf116205001395e67d0b05a01"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "LonelyRunner/AxiomAudit.lean",
+          "sha256": "959ddd972dbd984d82aa9b2f50067b0811e3d948609d083e4324fb62405aa75c"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "scripts/audit_lean_trust.py",
+          "sha256": "42fd0592b63f6487fa8217f7e416923b3219dbd542b7e07c012553b360932b39"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "LonelyRunner/BHKRealReduction.lean",
+          "sha256": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "LonelyRunner/FiniteFamilyEquivalence.lean",
+          "sha256": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "LonelyRunner/PivotBoundary.lean",
+          "sha256": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "lean-toolchain",
+          "sha256": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "lakefile.toml",
+          "sha256": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26"
+        },
+        {
+          "document": "research/astra-minimal-counterexample-final-review.md",
+          "path": "lake-manifest.json",
+          "sha256": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218"
+        },
+        {
+          "document": "docs/astra-research-94.md",
+          "path": "LonelyRunner/MinimalCounterexample.lean",
+          "sha256": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539"
+        },
+        {
+          "document": "docs/astra-research-94.md",
+          "path": "research/astra-minimal-counterexample-final-review.md",
+          "sha256": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf"
+        }
+      ],
+      "required_theorems": [
+        "LonelyRunner.positiveIntegerFailure_iff_no_witness",
+        "LonelyRunner.positiveIntegerFailure_factor_iff",
+        "LonelyRunner.exists_minimalPositiveIntegerFailure",
+        "LonelyRunner.MinimalPositiveIntegerFailure.witness_of_sum_lt",
+        "LonelyRunner.exists_attained_strict_failure_margin"
+      ]
+    },
+    "observed_tool_result": {
+      "chunk": "f5d792",
+      "exit_code": 0,
+      "output": {
+        "frozen_files": 14,
+        "dependency_bindings": 71,
+        "document_bindings": 90,
+        "source_scan_files": 223,
+        "required_axiom_probes": 5,
+        "commands": [
+          {
+            "argv": [
+              "/usr/bin/python3",
+              "-B",
+              "scripts/validate_workflow.py"
+            ],
+            "exit_code": 0,
+            "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+            "stderr": ""
+          },
+          {
+            "argv": [
+              "git",
+              "diff",
+              "--check"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": ""
+          }
+        ]
+      }
+    }
+  },
+  "mathematical_scope": {
+    "endpoint": "Accepted manuscript far-parent triple exclusion, determinant bounds and indexed-parent injection; no global propagation or fresh frequency supply.",
+    "kernel": "Unrestricted-count conditional selection from Not Conjecture; minimum count and sum among all positive injective failures, gcd one, closed smaller-sum witnesses; separate attained positive actual global margin. No contradiction or counterexample supplied.",
+    "final_review": "research/astra-minimal-counterexample-final-review.md",
+    "root_full_reads": [
+      "e9186a",
+      "dc07cb",
+      "eae680",
+      "4d890c",
+      "fa3836",
+      "50e43f",
+      "44e947",
+      "87005f",
+      "9acc7f"
+    ]
+  },
+  "focused_execution_receipts": [
+    "research/astra-minimal-dependency-verification.json",
+    "research/astra-minimal-counterexample-root-verification.json"
+  ],
+  "failure_history": {
+    "worker_receipt": "research/astra-minimal-counterexample-implementation.json",
+    "worker_initial_check_passed": false,
+    "worker_repairs": 2,
+    "root_repairs": 2,
+    "root_changed_lines": 11,
+    "failure_receipt_scope": "Worker-reported diagnostic summaries retained; not a successful execution receipt. Root successful source compile and axiom check have direct full observed outputs.",
+    "memory_accounting": "Exact new theorem run peaks use in-cgroup memory.peak; service exit summaries underreported a bounded accounting probe."
+  },
+  "storage": {
+    "report_chunk": "c1a711",
+    "bytes": 4182135156,
+    "retention_reason": "Active final-review/next strict-core contract batch; no heavy compiler remains running. Pinned source APIs still needed by pending contract task.",
+    "policy": "docs/storage-policy.md"
+  },
+  "excluded": [
+    "research/astra-strict-core-kernel-contract.md: pending next task",
+    "No full unrestricted proof or disproof claim",
+    "No local full integration build; required hosted CI provides source build and complete trust audit"
+  ]
+}

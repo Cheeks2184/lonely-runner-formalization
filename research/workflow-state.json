@@ -6,19 +6,19 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/forced_parent_endpoint_propagation",
-      "agent_id": "/root/uniform_strategy_after_fold",
+      "id": "/root/strict_core_kernel_contract",
+      "agent_id": "/root/fold_zero_restoration_resume",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "f102e7ec81958ef064555f1b470499b5a075fe72",
+      "source_checkpoint": "ae64785d3e3a61281bd5baaff773916d72383a78",
       "owned_files": [
-        "research/astra-forced-parent-endpoint-propagation.md"
+        "research/astra-strict-core-kernel-contract.md"
       ],
-      "target": "Use actual deletion-good maximum-arc endpoints L in W_a and R in W_b to test a native global propagation or height-descent argument across forced parent arcs. Distinguish these legitimate seeds from contact times outside every W_j. Derive exact other-endpoint alternatives, preserve every attained index and full-minimum strict-core constraints, and identify any genuinely new consequence or exact unresolved implication.",
+      "target": "Settle exact reusable uniform Lean contract and proof plan for strict-core contraction on full ComplementSafe from actual global margin, reusing compiled MinimalCounterexample and existing norm APIs. No code/build or new research-sweep; preserve every endpoint and time quantifier.",
       "checks": []
     }
   ],
@@ -10679,13 +10679,175 @@
       ],
       "result": "Accepted frozen author9b67661e without author corrections; exact q-multiple/lcm and proper-divisor criteria checked; native common supply remains unproved.",
       "output_sha256": "959a7c42d4a8c37bf9dc50e09ab6b6b00527690b8cfcd76e90848e2f9ebf2a7a"
+    },
+    {
+      "id": "/root/forced_parent_endpoint_propagation",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f102e7ec81958ef064555f1b470499b5a075fe72",
+      "owned_files": [
+        "research/astra-forced-parent-endpoint-propagation.md"
+      ],
+      "target": "Use actual deletion-good maximum-arc endpoints L in W_a and R in W_b to test a native global propagation or height-descent argument across forced parent arcs. Distinguish these legitimate seeds from contact times outside every W_j. Derive exact other-endpoint alternatives, preserve every attained index and full-minimum strict-core constraints, and identify any genuinely new consequence or exact unresolved implication.",
+      "checks": [
+        "Worker full hand checks,13 bound sources,readback/format/workflow; no mathematical program or Lean build."
+      ],
+      "result": "Author frozen: far endpoint of larger parent excludes triple for n>=5, exact determinant bounds, injective larger-parent assignment; unique transition may fail and speed monotonicity false in exact native local control. Independent review pending.",
+      "output_sha256": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb"
+    },
+    {
+      "id": "/root/forced_parent_endpoint_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "598f969732186d9ee39641d343d5e79ddeb1eb77",
+      "owned_files": [
+        "research/astra-forced-parent-endpoint-review.md"
+      ],
+      "target": "Independently review frozen82215474 far-endpoint triple exclusion at n>=5, indexed larger-parent injectivity, exact determinant restrictions and nonmonotone unique endpoint control, preserving full canonical versus local scope.",
+      "checks": [
+        {
+          "kind": "worker_report",
+          "result": "Full readback, bound source hashes, whitespace and workflow passed; no Lean execution.",
+          "sha256": "b2d1d8e6ef81a6e8d450cfb74f0d74477773b359f06eb3cf3b39cb70b2816eef"
+        }
+      ],
+      "result": "Accepted author 82215474 without correction at manuscript level; no global propagation or common replacement supply.",
+      "evidence": [
+        "research/astra-forced-parent-endpoint-review.md"
+      ]
+    },
+    {
+      "id": "/root/minimal_failure_kernel_contract",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "598f969732186d9ee39641d343d5e79ddeb1eb77",
+      "owned_files": [
+        "research/astra-minimal-failure-kernel-contract.md"
+      ],
+      "target": "Settle exact Lean contract and proof plan for deriving a least-moving-count, least-sum, positive distinct primitive counterexample from Not Conjecture, with lower-count supply and optional attained strict global margin. Reuse existing canonical bridge and finite minimum APIs; no code or cache restoration yet. This formalizes common assumptions of all uniform routes, not a replacement for unrestricted resolution.",
+      "checks": [
+        {
+          "kind": "worker_report",
+          "result": "Full readback, bound source hashes, whitespace and workflow passed; no Lean execution.",
+          "sha256": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8"
+        }
+      ],
+      "result": "Delivered exact selection and attained-margin contract, not implemented; independent review next.",
+      "evidence": [
+        "research/astra-minimal-failure-kernel-contract.md"
+      ]
+    },
+    {
+      "id": "/root/minimal_failure_kernel_contract_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "598f969732186d9ee39641d343d5e79ddeb1eb77",
+      "owned_files": [
+        "research/astra-minimal-failure-kernel-contract-review.md"
+      ],
+      "target": "Independent exact-scope mathematical and Lean contract review of frozen 17067b1c selection, gcd division, same-count minimality, and attained all-real strict margin. No code or build.",
+      "checks": [
+        {
+          "kind": "worker_report",
+          "sha256": "d891f197d6f232c3f4e255fb885e599527c8c14ab67c6562c8059af54edcc34a",
+          "result": "Full readback, 23 bindings, whitespace and workflow passed; no Lean execution."
+        }
+      ],
+      "result": "Accepted frozen 17067b1c contract without corrections; hand mathematics and source contract only.",
+      "evidence": [
+        "research/astra-minimal-failure-kernel-contract-review.md"
+      ]
+    },
+    {
+      "id": "/root/minimal_counterexample_implementation",
+      "agent_id": "/root/harmonic_fold_endpoint_repair",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "ae64785d3e3a61281bd5baaff773916d72383a78",
+      "owned_files": [
+        "LonelyRunner/MinimalCounterexample.lean",
+        "research/astra-minimal-counterexample-implementation.json"
+      ],
+      "target": "Implement accepted 17067b1c exact contract: failure/no-witness and scaling, least count then all-admissible least sum, gcd one, smaller-sum witness, attained positive actual global margin. Own focused serial capped compilation and at most two repair rounds. Root owns imports/audit/integration.",
+      "checks": [
+        {
+          "receipt": "research/astra-minimal-counterexample-implementation.json",
+          "sha256": "d522cb878f29db6bb7774bb2d5d6676738d4d03ffc9b4e64bd8996364e9ea9d4",
+          "final_exit_code": 1,
+          "final_chunk": "7029d9"
+        }
+      ],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 2,
+        "astra_repair_lines": 11,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-minimal-counterexample-implementation.json"
+        ]
+      },
+      "result": "Terra escalation after initial compile and two repairs, final source aa51082f not compiled; root owns bounded repair."
+    },
+    {
+      "id": "/root/minimal_counterexample_final_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "ae64785d3e3a61281bd5baaff773916d72383a78",
+      "owned_files": [
+        "research/astra-minimal-counterexample-final-review.md"
+      ],
+      "target": "Independent final semantic review of frozen compiled b0c13b22 MinimalCounterexample.lean against accepted contract17067b1c; no new Lean execution. Root owns axiom probe and hosted integration.",
+      "checks": [
+        {
+          "kind": "worker_report",
+          "sha256": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf",
+          "result": "Full source/review readback, 16 bindings, newline/whitespace, workflow; no repeated Lean execution."
+        }
+      ],
+      "result": "Accepted compiled b0c13b22 without corrections. Conditional bridge; all-real native threshold, minimum directions, and actual attained margin verified.",
+      "evidence": [
+        "research/astra-minimal-counterexample-final-review.md"
+      ]
     }
   ],
-  "latest_checkpoint": "Pass93 parent-center replacement families and source inventory accepted/root verified (4 frozen files,21 dependencies,36bindings), preparing commit/push/PR. Forced-parent endpoint propagation active. Unrestricted LRC unresolved.",
+  "latest_checkpoint": "Pass94 locally verified: uniform MinimalCounterexample kernel bridge, attained strict margin and independently accepted endpoint analysis; publication pending.",
   "next_actions": [
-    "Publish verified Pass89 through commit/push/PR/checks/exact-head merge/fetched-main verification.",
-    "Continue live zero-only maximum-gap investigation; its exact gap and beta seed implications are not yet frozen or independently reviewed.",
-    "Keep unrestricted scope and no runner-count ladder; no local builds or heavy searches queued."
+    "Accept or repair Terra minimal-counterexample implementation within the two-repair policy and capped serial slot.",
+    "Independent Astra final Lean source review; root import and explicit axiom audit integration.",
+    "Freeze Pass94 endpoint research plus uniform minimal-counterexample kernel bridge only after actual verification; publish exact head through required hosted full build/trust and certificates; merge and verify main.",
+    "Continue the unrestricted uniform mechanism; neither local endpoint propagation nor minimal-counterexample normal form supplies the missing contradiction."
   ],
   "research_holds": [
     {
@@ -11269,7 +11431,7 @@
   },
   "previous_goal_turn_classification": {
     "classification": "progress",
-    "reason": "Completed resource diagnosis and received prime author. This resumed mathematical turn independently reviewed and published Pass82 withbothCIchecks and23 remote hash checks, and derived a general rational-center identity during new bounded research."
+    "evidence": "PR92 merged/main verified; new uniform MinimalCounterexample module compiled and five allowed-axiom probes passed; independent final source review accepted; strict-core formal contract underway."
   },
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
@@ -14894,7 +15056,7 @@
   },
   "last_goal_turn_classification": {
     "classification": "progress",
-    "evidence": "Previous goal continuation merged PR84 after both CI checks and thirteen fetched-main hashes plus ancestry. Private-repair review completed and forced-arc completion construction derived."
+    "evidence": "Read-only kernel OOM and task launch evidence identified unrelated parallel Kiyori Rust build causing crashes; current compiler list empty."
   },
   "one_three_manuscript_review": "Independent frozen 8f720fbd report fully read by root; exact static replay exit0 with sixteen bindings, twelve contract names. Specification accepted, not a Lean result.",
   "publication_latest_pending": null,
@@ -15049,7 +15211,8 @@
   },
   "actual_goal_recovery_readback": {
     "status": "active",
-    "cause": "Exhausted inherited Terra contexts returned no source/check or partial source; fresh explicit Terra/high tasks launched with exact scoped context. No supported resume needed."
+    "tokensUsed": 58642520,
+    "reason": "Terra minimal-counterexample task hit engineering repair cap; overall goal remained active, so no resume was needed."
   },
   "delegation_first_high_batch_review": {
     "report": "research/astra-terra-high-first-ten-review.md",
@@ -17728,7 +17891,7 @@
     "repair_burden": "Two semantic wording corrections after original return plus initial root envelope contract refinement; use in batch30 audit. Exact token savings unknown."
   },
   "pass93_publication": {
-    "status": "verified_pending_commit",
+    "status": "merged_main_verified",
     "branch": "codex/astra-parent-center-reduction",
     "parent_main": "f102e7ec81958ef064555f1b470499b5a075fe72",
     "hashes": {
@@ -17738,6 +17901,247 @@
       "research/astra-zero-only-contact-lean-inventory.md": "726f8f5de2c596bffa41abf31db619ba420f72209f8ea64de3cef9afe6569db3"
     },
     "receipt": "research/astra-pass93-verification.json",
-    "root_verifier_chunk": "ebebdf"
+    "root_verifier_chunk": "ebebdf",
+    "head": "598f969732186d9ee39641d343d5e79ddeb1eb77",
+    "pr": 92,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/92",
+    "ci_run": 34106912454,
+    "checks": {
+      "Lean build and trust audit": 101693930587,
+      "Exact computational certificates": 101693930138
+    },
+    "push_result": {
+      "session_id": 44543,
+      "terminal_chunk": "07f887",
+      "exit_code": 0
+    },
+    "create_result": {
+      "session_id": 78606,
+      "terminal_chunk": "d91288",
+      "exit_code": 0
+    },
+    "main_verifier_source": "from pathlib import Path\nimport json,hashlib,subprocess\nm=json.loads(Path('/tmp/astra-pass93-main-inputs.json').read_text())\np=json.loads(Path('/tmp/astra-pass93-merged.json').read_text())\nassert p['state']=='MERGED',p\nassert p['headRefOid']==m['head'],p\nmerge=p['mergeCommit']['oid']\nmain=subprocess.check_output(['git','rev-parse','origin/main'],text=True).strip()\nfor ref in [merge,m['head'],m['parent']]:\n    assert subprocess.run(['git','merge-base','--is-ancestor',ref,main]).returncode==0,ref\nfor path,digest in m['hashes'].items():\n    data=subprocess.check_output(['git','show',main+':'+path])\n    assert hashlib.sha256(data).hexdigest()==digest,path\nprint(json.dumps(dict(main=main,merge=merge,head=m['head'],verified_hashes=len(m['hashes']),head_ancestry=True,parent_ancestry=True,merged_at=p['mergedAt']),indent=2))\n",
+    "main_input_manifest": {
+      "head": "598f969732186d9ee39641d343d5e79ddeb1eb77",
+      "parent": "f102e7ec81958ef064555f1b470499b5a075fe72",
+      "hashes": {
+        "docs/astra-research-93.md": "7ca2550bef278cd804d936861e32b724e54b9e72ef522f4805b731e006bfd8c2",
+        "research/astra-zero-only-parent-reduction.md": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71",
+        "research/astra-zero-only-parent-reduction-review.md": "959a7c42d4a8c37bf9dc50e09ab6b6b00527690b8cfcd76e90848e2f9ebf2a7a",
+        "research/astra-zero-only-contact-lean-inventory.md": "726f8f5de2c596bffa41abf31db619ba420f72209f8ea64de3cef9afe6569db3",
+        "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+        "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
+        "research/astra-zero-only-deletion-amplification.md": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0",
+        "research/astra-zero-only-deletion-amplification-review.md": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4",
+        "research/astra-positive-candidate-coherence.md": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea",
+        "research/astra-positive-candidate-coherence-review.md": "5624364765087862f67f41b24e8c5ea0c7d5a08fa7ff449a00b799f9707bbc67",
+        "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+        "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa",
+        "LonelyRunner/FoldedCirclePhase.lean": "957606878108847d5ceff47be621ff0fc9c0a0d976568b5f5ef3dbb6db10481e",
+        "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+        "LonelyRunner/RealPhaseBands.lean": "7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0",
+        "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+        "LonelyRunner/PairSumCompleteness.lean": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f",
+        "LonelyRunner/PivotBoundary.lean": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f",
+        "research/astra-pass92-verification.json": "6e88e4d50f935ed1f4a0f12a7834229b9c70b365ac04e4b401a34eaa41cf3302",
+        "research/astra-pass93-verification.json": "7810c186d8215138f073dc9917c7585a0bdf5317841154006d95f99edc7d7d43",
+        "research/workflow-state.json": "e1788be4ce1f5048c7e085cd73581f87cd1fd90d7ed70da0a5b756a3e693ab35"
+      }
+    },
+    "watch_session": 61242,
+    "premerge_check": {
+      "chunk": "81d55e",
+      "state": "OPEN",
+      "mergeStateStatus": "CLEAN",
+      "isDraft": false,
+      "reviewDecision": "",
+      "head": "598f969732186d9ee39641d343d5e79ddeb1eb77",
+      "both_checks": "SUCCESS",
+      "Lean_completedAt": "2026-09-07T09:37:55Z",
+      "Exact_completedAt": "2026-09-07T09:45:33Z"
+    },
+    "merge": "ae64785d3e3a61281bd5baaff773916d72383a78",
+    "merged_at": "2026-09-07T09:51:07Z",
+    "merge_result": {
+      "terminal_chunk": "a51999",
+      "exit_code": 0
+    },
+    "main_verification": {
+      "chunk": "ea6be6",
+      "exit_code": 0,
+      "output": {
+        "main": "ae64785d3e3a61281bd5baaff773916d72383a78",
+        "merge": "ae64785d3e3a61281bd5baaff773916d72383a78",
+        "head": "598f969732186d9ee39641d343d5e79ddeb1eb77",
+        "verified_hashes": 27,
+        "head_ancestry": true,
+        "parent_ancestry": true,
+        "merged_at": "2026-09-07T09:51:07Z"
+      }
+    },
+    "watch_terminal": {
+      "chunk": "109aa7",
+      "exit_code": 0
+    }
+  },
+  "forced_parent_endpoint_root_notes": {
+    "status": "author_frozen_pending_independent_review",
+    "larger_parent_far_endpoint": "Orient larger left parent a>b, P=(l-alpha)/a. X=(D+b*alpha)/a in(alpha,4alpha), Y=(D+m*alpha)/a in(2alpha,5alpha). For n>=5, alpha<=1/6, both are strictly between alpha and1-alpha, so otherparent b and maximum m alpha-good at P. Full mu-cover supplies a label outside{a,b,m}. Root hand-checked ranges.",
+    "indexed_parent_injectivity": "Author claims larger forced parent arc meets at most its assigned forced maxarc: any other shorter forcedmArc touching parent must meet an endpoint (containment contradictsprivacy orlength), nearendpoint already covered by originalmArc, farendpointm-good. Root handchecked open-intersection version and requested precise tangency scope.",
+    "chain_control": "V1,4,5,11,16 nativealpha1/6 unique endpoint chain(16,7)->(11,5)->(4,2)->(11,6)->(16,9) with times43/96,31/66,13/24,37/66. Root exact norms inlabelorder1,4,5,11,16: (43,20,23,7,16)/96;(31,8,23,11,32)/66;(11,4,7,1,8)/24;(29,16,13,11,2)/66. Height rises after4; fulltuplegood1/3, no canonicalfailure claim.",
+    "next": "Await bounded manuscript; independently review new depth/injectivity and legitimate transition domain before promotion.",
+    "author_hash": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb",
+    "independent_review": {
+      "status": "accepted_without_corrections",
+      "path": "research/astra-forced-parent-endpoint-review.md",
+      "sha256": "b2d1d8e6ef81a6e8d450cfb74f0d74477773b359f06eb3cf3b39cb70b2816eef",
+      "root_full_read_chunk": "4d890c"
+    }
+  },
+  "minimal_failure_kernel_contract_root_notes": {
+    "status": "delegated_contract_only",
+    "root_source_reads": [
+      "f2f158",
+      "4a0782",
+      "09afea",
+      "c10fab",
+      "93f97e"
+    ],
+    "finding": "No current Lean minimal counterexample/least-count least-sum theorem located by repository search. PositiveIntegerAtCount, canonical iff PositiveIntegerConjecture, normalization pattern, and minimumCircleNorm continuity exist.",
+    "purpose": "Provide the actual kernel bridge that instantiates common research minimal-failure hypotheses from negated canonical conjecture; keep unrestricted proof obligation unchanged.",
+    "scope": "Contract first; no implementation or .lake restoration queued.",
+    "independent_review": {
+      "path": "research/astra-minimal-failure-kernel-contract-review.md",
+      "sha256": "d891f197d6f232c3f4e255fb885e599527c8c14ab67c6562c8059af54edcc34a",
+      "status": "accepted_without_corrections"
+    },
+    "root_acceptance": {
+      "status": "accepted_for_implementation",
+      "full_review_read_chunk": "eae680",
+      "current_bindings_check_chunk": "dbc0fe",
+      "exact_scope": "Least count and sum among all admissible failures; primitive derived; actual positive attained global maximum under strict native failure. Not unrestricted contradiction."
+    },
+    "integration_preparation": {
+      "root_import": "LonelyRunner.MinimalCounterexample",
+      "required_axiom_probes": [
+        "positiveIntegerFailure_iff_no_witness",
+        "positiveIntegerFailure_factor_iff",
+        "exists_minimalPositiveIntegerFailure",
+        "MinimalPositiveIntegerFailure.witness_of_sum_lt",
+        "exists_attained_strict_failure_margin"
+      ],
+      "status": "source_edits_pending_compiled_delivery_and_review",
+      "static_source_scan": {
+        "chunk": "0a2b12",
+        "result": "222 existing current files passed before implementation appeared; not final source verification"
+      }
+    },
+    "kernel_compile": {
+      "source_sha256": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+      "chunk": "94cfb3",
+      "exit_code": 0,
+      "stdout": "",
+      "memory_peak_bytes": 487964672,
+      "swap_peak_bytes": 0,
+      "receipt": "research/astra-minimal-counterexample-root-verification.json"
+    },
+    "focused_axioms": {
+      "chunk": "5ab0af",
+      "exit_code": 0,
+      "reports": 5,
+      "allowed": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "final_independent_review": {
+      "path": "research/astra-minimal-counterexample-final-review.md",
+      "sha256": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf",
+      "status": "accepted_without_corrections"
+    }
+  },
+  "resource_safe_lean_preparation": {
+    "status": "dependencies_verified_slot_released",
+    "command": "systemd-run --user --wait --pipe --collect --unit=lrc-memory-cap-probe -p MemoryMax=4G -p MemorySwapMax=512M -p TasksMax=64 /usr/bin/python3 -c <read own cgroup memory.max, memory.swap.max, pids.max>",
+    "result": {
+      "chunk": "20088b",
+      "exit_code": 0,
+      "memory.max": "4294967296",
+      "memory.swap.max": "536870912",
+      "pids.max": "64"
+    },
+    "scope": "Future project compilation aggregate cap; no global or unrelated configuration changed. Need focused dependency restore and serial compile plan before grant.",
+    "restoration_source": "from pathlib import Path\nimport hashlib,json,re,subprocess,time\nseen=set();order=[];external=set()\ndef visit(m):\n if m in seen:return\n seen.add(m);p=Path(m.replace('.', '/')+'.lean')\n if not p.exists():external.add(m);return\n for line in p.read_text().splitlines():\n  z=re.match(r'(?:public\\s+|private\\s+)?import\\s+(\\S+)',line)\n  if z:visit(z[1])\n order.append(m)\nfor m in ['LonelyRunner.FiniteFamilyEquivalence','LonelyRunner.PivotBoundary']:visit(m)\nreceipt={'source_hashes':{m:hashlib.sha256(Path(m.replace('.', '/')+'.lean').read_bytes()).hexdigest() for m in order},'external_roots':sorted(external),'commands':[],'status':'running'}\nrpath=Path('/tmp/astra-minimal-dependency-restore.json')\ndef run(cmd):\n start=time.monotonic();r=subprocess.run(cmd,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)\n receipt['commands'].append({'argv':cmd,'exit_code':r.returncode,'seconds':time.monotonic()-start,'output':r.stdout})\n rpath.write_text(json.dumps(receipt,indent=2)+'\\n')\n print(json.dumps({'target':cmd[-1],'exit_code':r.returncode,'seconds':round(time.monotonic()-start,2),'output':r.stdout}),flush=True)\n if r.returncode:raise SystemExit(r.returncode)\nlake='/home/joshua/.elan/bin/lake'\nrun([lake,'exe','cache','get',*sorted(external)])\nfor m in order:\n p=Path(m.replace('.', '/')+'.lean');out=Path('.lake/build/lib/lean')/p.with_suffix('.olean');out.parent.mkdir(parents=True,exist_ok=True)\n run([lake,'env','lean','-j1','-o',str(out),str(p)])\nreceipt['status']='passed';rpath.write_text(json.dumps(receipt,indent=2)+'\\n');print('All 43 project dependency modules compiled serially.',flush=True)\n",
+    "cache_directory": ".lake/download-cache",
+    "compiler_threads": 1,
+    "project_modules": 43,
+    "help_check": {
+      "terminal_chunk": "03046c",
+      "exit_code": 0,
+      "service_runtime": "1min39.129s",
+      "memory_peak": "1.3G",
+      "swap_peak": "0B"
+    },
+    "receipt": "research/astra-minimal-dependency-verification.json",
+    "terminal_chunk": "ec928a",
+    "exit_code": 0,
+    "package_count": 9,
+    "memory_peak": "3.5G",
+    "swap_peak": "56.8M",
+    "project_documentation": "docs/storage-policy.md",
+    "accounting_probe": {
+      "chunk": "050a0e",
+      "exit_code": 0,
+      "allocation_bytes": 67108864,
+      "kernel_memory_current": 72347648,
+      "kernel_memory_peak": 72347648,
+      "memory_max": 4294967296,
+      "memory_swap_max": 536870912,
+      "systemd_summary_peak": "256.0K",
+      "finding": "Transient service exit summary underreported this short-lived allocation. Use in-cgroup memory.peak for exact future peak evidence; previous service summary values remain labelled as reported, not exact measured maxima."
+    }
+  },
+  "pass94_publication": {
+    "status": "locally_verified_ready_to_commit",
+    "branch": "codex/astra-endpoint-and-counterexample",
+    "parent_main": "ae64785d3e3a61281bd5baaff773916d72383a78",
+    "receipt": "research/astra-pass94-verification.json",
+    "hashes": {
+      "LonelyRunner/MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+      "LonelyRunner.lean": "9bdb661179ab2b29af311271da6c688d76275e9cf116205001395e67d0b05a01",
+      "LonelyRunner/AxiomAudit.lean": "959ddd972dbd984d82aa9b2f50067b0811e3d948609d083e4324fb62405aa75c",
+      "scripts/audit_lean_trust.py": "42fd0592b63f6487fa8217f7e416923b3219dbd542b7e07c012553b360932b39",
+      "docs/storage-policy.md": "bd596c16a98417199837886fd02e4ab60aefecedf2c7b699f4c216df5ee8fd3d",
+      "docs/astra-research-94.md": "f6a1f356ec315c215a6bf470ecbeba298a3812b3dd32f9836dbc71faeaf0ebf0",
+      "research/astra-forced-parent-endpoint-propagation.md": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb",
+      "research/astra-forced-parent-endpoint-review.md": "b2d1d8e6ef81a6e8d450cfb74f0d74477773b359f06eb3cf3b39cb70b2816eef",
+      "research/astra-minimal-failure-kernel-contract.md": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8",
+      "research/astra-minimal-failure-kernel-contract-review.md": "d891f197d6f232c3f4e255fb885e599527c8c14ab67c6562c8059af54edcc34a",
+      "research/astra-minimal-counterexample-final-review.md": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf",
+      "research/astra-minimal-dependency-verification.json": "fc35116f08c657ba9293d64383c93a114cf4576bfcdeff4a5f690f2015f75512",
+      "research/astra-minimal-counterexample-implementation.json": "d522cb878f29db6bb7774bb2d5d6676738d4d03ffc9b4e64bd8996364e9ea9d4",
+      "research/astra-minimal-counterexample-root-verification.json": "a3759b5f986cfca72c601a6102ebf0ba5e84c8cbc15cddd5339812477cce4d9e"
+    },
+    "root_verifier_chunk": "f5d792",
+    "administrative_repair": {
+      "chunk": "bb9311",
+      "result": "Root initially assigned latest_checkpoint an object; validator requires nonempty string. Corrected to string and retained detailed fields separately before any commit."
+    }
+  },
+  "pass94_checkpoint_details": {
+    "name": "Pass94 locally verified conditional uniform kernel bridge and accepted endpoint analysis",
+    "parent_main": "ae64785d3e3a61281bd5baaff773916d72383a78",
+    "source": "LonelyRunner/MinimalCounterexample.lean",
+    "source_sha256": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+    "verification": "research/astra-pass94-verification.json",
+    "publication": "pending commit/push/PR/full hosted CI/merge/main verification",
+    "unrestricted_goal": "in_progress"
   }
 }
