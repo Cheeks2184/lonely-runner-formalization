@@ -1,0 +1,1287 @@
+{
+  "source_checkpoint": "7147fd8d9d12bfb3599f931a117f8e27d84f24af",
+  "report_script_sha256": "ff245cd6d2fe5150bdd56a3610f7662138e04a96eebf14ef2a05c6c75761dafa",
+  "command": "python3 -B scripts/report_delegation.py --json",
+  "observed_tool_chunk": "dfb80e",
+  "input_metric_snapshot": {
+    "active_tasks": [],
+    "completed_tasks": [
+      {
+        "id": "/root/terra_high_workflow_controls",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "python",
+          "first_check_success": true,
+          "worker_repair_rounds": 2,
+          "astra_repair_rounds": 2,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-pass54-verification.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/small_phase_orbits_high",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 2,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-small-phase-orbit-implementation.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/affine_phase_certificate_foundations",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "astra_repair_lines": 0,
+          "astra_repair_rounds": 0,
+          "check_kind": "lean",
+          "evidence": [
+            "research/astra-affine-phase-certificate-implementation.json"
+          ],
+          "first_check_success": false,
+          "usage": null,
+          "worker_elapsed_seconds": null,
+          "worker_repair_rounds": 1
+        }
+      },
+      {
+        "id": "/root/remaining_phase_data_program",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "python",
+          "first_check_success": true,
+          "worker_repair_rounds": 0,
+          "astra_repair_rounds": 2,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-remaining-phase-data-program.json",
+            "/tmp/astra-remaining-phase-data-fixed-v1"
+          ]
+        }
+      },
+      {
+        "id": "/root/one_even_branch_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "astra_repair_lines": 0,
+          "astra_repair_rounds": 0,
+          "check_kind": "lean",
+          "evidence": [
+            "research/astra-one-even-implementation.json"
+          ],
+          "first_check_success": false,
+          "usage": null,
+          "worker_elapsed_seconds": null,
+          "worker_repair_rounds": 2
+        }
+      },
+      {
+        "id": "/root/weak_sixth_shifts_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 1,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-weak-sixth-shifts-implementation.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/remaining_phase_kernel_pilot",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": true,
+          "worker_repair_rounds": 0,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-remaining-phase-kernel-pilot.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/remaining_phase_full_tables",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 0,
+          "astra_repair_rounds": 1,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-remaining-phase-full-tables.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/remaining_phase_real_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 1,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-remaining-phase-real-implementation.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/signed_remaining_phase_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 2,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-signed-remaining-phase-implementation.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/three_even_orbit_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 1,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-three-even-orbit-implementation.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/three_even_runners_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": null,
+          "worker_repair_rounds": 0,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-three-even-assembly-return.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/three_even_odd_zero_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": null,
+          "worker_repair_rounds": 0,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-three-even-odd-zero-return.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/two_even_runners_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": null,
+          "worker_repair_rounds": 0,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-two-even-initial-return.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/three_even_odd_zero_fresh",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 2,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-three-even-odd-zero-implementation.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/three_even_witness_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 1,
+          "astra_repair_rounds": 1,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-three-even-witness-implementation.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/two_even_runners_fresh",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 2,
+          "astra_repair_rounds": 2,
+          "astra_repair_lines": 41,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-two-even-runners-implementation.json",
+            "research/astra-two-even-astra-repair.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/six_runner_final_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 1,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-six-runner-final-implementation.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/tight_seed_controls",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "astra_repair_lines": 0,
+          "astra_repair_rounds": 1,
+          "check_kind": "python",
+          "evidence": [
+            "research/astra-tight-seed-controls.json"
+          ],
+          "first_check_success": true,
+          "usage": null,
+          "worker_elapsed_seconds": null,
+          "worker_repair_rounds": 0
+        }
+      },
+      {
+        "id": "/root/multiple_contact_seed_control",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "astra_repair_lines": 0,
+          "astra_repair_rounds": 0,
+          "check_kind": "python",
+          "evidence": [
+            "research/astra-multiple-contact-seed-control.json"
+          ],
+          "first_check_success": true,
+          "usage": null,
+          "worker_elapsed_seconds": null,
+          "worker_repair_rounds": 0
+        }
+      },
+      {
+        "id": "/root/adapted_grid_control",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "astra_repair_lines": 0,
+          "astra_repair_rounds": 1,
+          "check_kind": "python",
+          "first_check_success": true,
+          "usage": null,
+          "worker_elapsed_seconds": null,
+          "worker_repair_rounds": 0,
+          "evidence": [
+            "research/astra-adapted-grid-control.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/forward_grid_control",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "python",
+          "first_check_success": true,
+          "worker_repair_rounds": 0,
+          "astra_repair_rounds": 1,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-forward-grid-control.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/general_slow_row_control",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "python",
+          "first_check_success": true,
+          "worker_repair_rounds": 0,
+          "astra_repair_rounds": 0,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-general-slow-row-control.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/ideal_mask_integer_control",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "astra_repair_lines": 0,
+          "astra_repair_rounds": 1,
+          "check_kind": "python",
+          "evidence": [
+            "research/astra-ideal-mask-integer-control.json"
+          ],
+          "first_check_success": true,
+          "usage": null,
+          "worker_elapsed_seconds": null,
+          "worker_repair_rounds": 0
+        }
+      },
+      {
+        "id": "/root/harmonic_fold_control",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "astra_repair_lines": 0,
+          "astra_repair_rounds": 1,
+          "check_kind": "python",
+          "evidence": [
+            "research/astra-harmonic-fold-control-initial.json",
+            "research/astra-harmonic-fold-control.json"
+          ],
+          "first_check_success": true,
+          "usage": null,
+          "worker_elapsed_seconds": null,
+          "worker_repair_rounds": 0
+        }
+      },
+      {
+        "id": "/root/harmonic_fold_endpoint_repair",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "astra_repair_lines": 0,
+          "astra_repair_rounds": 1,
+          "check_kind": "python",
+          "evidence": [
+            "research/astra-harmonic-fold-control.py",
+            "research/astra-harmonic-fold-control.json",
+            "research/astra-harmonic-fold-control-initial.json"
+          ],
+          "first_check_success": true,
+          "usage": null,
+          "worker_elapsed_seconds": null,
+          "worker_repair_rounds": 0
+        }
+      },
+      {
+        "id": "/root/slack_energy_exact_control",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "astra_repair_lines": 0,
+          "astra_repair_rounds": 0,
+          "check_kind": "python",
+          "evidence": [
+            "research/astra-slack-energy-control.py",
+            "research/astra-slack-energy-control.json"
+          ],
+          "first_check_success": true,
+          "usage": null,
+          "worker_elapsed_seconds": null,
+          "worker_repair_rounds": 0
+        }
+      },
+      {
+        "id": "/root/zero_only_contact_lean_inventory",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "static",
+          "first_check_success": true,
+          "worker_repair_rounds": 2,
+          "astra_repair_rounds": 3,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-zero-only-contact-lean-inventory.md"
+          ]
+        }
+      },
+      {
+        "id": "/root/minimal_counterexample_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 2,
+          "astra_repair_rounds": 2,
+          "astra_repair_lines": 11,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-minimal-counterexample-implementation.json"
+          ]
+        }
+      },
+      {
+        "id": "/root/strict_core_contraction_implementation",
+        "requested_model": "gpt-5.6-terra",
+        "requested_effort": "high",
+        "delivery_metrics": {
+          "check_kind": "lean",
+          "first_check_success": false,
+          "worker_repair_rounds": 2,
+          "astra_repair_rounds": 1,
+          "astra_repair_lines": 0,
+          "worker_elapsed_seconds": null,
+          "usage": null,
+          "evidence": [
+            "research/astra-strict-core-implementation.json",
+            "research/astra-strict-core-failure-sources.json",
+            "research/astra-strict-core-final-review.md"
+          ]
+        }
+      }
+    ]
+  },
+  "full_report": {
+    "task_count": 30,
+    "active_count": 0,
+    "closed_count": 30,
+    "first_check": {
+      "successful": 13,
+      "known": 27
+    },
+    "repairs": {
+      "worker_rounds": 24,
+      "astra_rounds": 20,
+      "astra_lines": 52,
+      "astra_lines_coverage": 30
+    },
+    "usage": {
+      "covered_tasks": 0,
+      "task_count": 30,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null
+    },
+    "tasks": [
+      {
+        "id": "/root/terra_high_workflow_controls",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/small_phase_orbits_high",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/affine_phase_certificate_foundations",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/remaining_phase_data_program",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/one_even_branch_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/weak_sixth_shifts_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/remaining_phase_kernel_pilot",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/remaining_phase_full_tables",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/remaining_phase_real_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/signed_remaining_phase_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/three_even_orbit_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/three_even_runners_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": null,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/three_even_odd_zero_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": null,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/two_even_runners_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": null,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/three_even_odd_zero_fresh",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/three_even_witness_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/two_even_runners_fresh",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/six_runner_final_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/tight_seed_controls",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/multiple_contact_seed_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/adapted_grid_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/forward_grid_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/general_slow_row_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/ideal_mask_integer_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/harmonic_fold_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/harmonic_fold_endpoint_repair",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/slack_energy_exact_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/zero_only_contact_lean_inventory",
+        "status": "closed",
+        "check_kind": "static",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/minimal_counterexample_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/strict_core_contraction_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      }
+    ],
+    "by_check_kind": {
+      "lean": {
+        "task_count": 18,
+        "active_count": 0,
+        "closed_count": 18,
+        "first_check": {
+          "successful": 1,
+          "known": 15
+        },
+        "repairs": {
+          "worker_rounds": 20,
+          "astra_rounds": 7,
+          "astra_lines": 52,
+          "astra_lines_coverage": 18
+        },
+        "usage": {
+          "covered_tasks": 0,
+          "task_count": 18,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null
+        },
+        "tasks": [
+          {
+            "id": "/root/small_phase_orbits_high",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/affine_phase_certificate_foundations",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/one_even_branch_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/weak_sixth_shifts_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/remaining_phase_kernel_pilot",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/remaining_phase_full_tables",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/remaining_phase_real_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/signed_remaining_phase_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/three_even_orbit_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/three_even_runners_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": null,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/three_even_odd_zero_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": null,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/two_even_runners_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": null,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/three_even_odd_zero_fresh",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/three_even_witness_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/two_even_runners_fresh",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/six_runner_final_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/minimal_counterexample_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/strict_core_contraction_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          }
+        ]
+      },
+      "python": {
+        "task_count": 11,
+        "active_count": 0,
+        "closed_count": 11,
+        "first_check": {
+          "successful": 11,
+          "known": 11
+        },
+        "repairs": {
+          "worker_rounds": 2,
+          "astra_rounds": 10,
+          "astra_lines": 0,
+          "astra_lines_coverage": 11
+        },
+        "usage": {
+          "covered_tasks": 0,
+          "task_count": 11,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null
+        },
+        "tasks": [
+          {
+            "id": "/root/terra_high_workflow_controls",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/remaining_phase_data_program",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/tight_seed_controls",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/multiple_contact_seed_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/adapted_grid_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/forward_grid_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/general_slow_row_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/ideal_mask_integer_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/harmonic_fold_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/harmonic_fold_endpoint_repair",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/slack_energy_exact_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          }
+        ]
+      },
+      "static": {
+        "task_count": 1,
+        "active_count": 0,
+        "closed_count": 1,
+        "first_check": {
+          "successful": 1,
+          "known": 1
+        },
+        "repairs": {
+          "worker_rounds": 2,
+          "astra_rounds": 3,
+          "astra_lines": 0,
+          "astra_lines_coverage": 1
+        },
+        "usage": {
+          "covered_tasks": 0,
+          "task_count": 1,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null
+        },
+        "tasks": [
+          {
+            "id": "/root/zero_only_contact_lean_inventory",
+            "status": "closed",
+            "check_kind": "static",
+            "first_check_success": true,
+            "usage_observed": false
+          }
+        ]
+      }
+    }
+  },
+  "latest_ten": {
+    "task_count": 10,
+    "active_count": 0,
+    "closed_count": 10,
+    "first_check": {
+      "successful": 8,
+      "known": 10
+    },
+    "repairs": {
+      "worker_rounds": 6,
+      "astra_rounds": 11,
+      "astra_lines": 11,
+      "astra_lines_coverage": 10
+    },
+    "usage": {
+      "covered_tasks": 0,
+      "task_count": 10,
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null
+    },
+    "tasks": [
+      {
+        "id": "/root/adapted_grid_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/forward_grid_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/general_slow_row_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/ideal_mask_integer_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/harmonic_fold_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/harmonic_fold_endpoint_repair",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/slack_energy_exact_control",
+        "status": "closed",
+        "check_kind": "python",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/zero_only_contact_lean_inventory",
+        "status": "closed",
+        "check_kind": "static",
+        "first_check_success": true,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/minimal_counterexample_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      },
+      {
+        "id": "/root/strict_core_contraction_implementation",
+        "status": "closed",
+        "check_kind": "lean",
+        "first_check_success": false,
+        "usage_observed": false
+      }
+    ],
+    "by_check_kind": {
+      "lean": {
+        "task_count": 2,
+        "active_count": 0,
+        "closed_count": 2,
+        "first_check": {
+          "successful": 0,
+          "known": 2
+        },
+        "repairs": {
+          "worker_rounds": 4,
+          "astra_rounds": 3,
+          "astra_lines": 11,
+          "astra_lines_coverage": 2
+        },
+        "usage": {
+          "covered_tasks": 0,
+          "task_count": 2,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null
+        },
+        "tasks": [
+          {
+            "id": "/root/minimal_counterexample_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/strict_core_contraction_implementation",
+            "status": "closed",
+            "check_kind": "lean",
+            "first_check_success": false,
+            "usage_observed": false
+          }
+        ]
+      },
+      "python": {
+        "task_count": 7,
+        "active_count": 0,
+        "closed_count": 7,
+        "first_check": {
+          "successful": 7,
+          "known": 7
+        },
+        "repairs": {
+          "worker_rounds": 0,
+          "astra_rounds": 5,
+          "astra_lines": 0,
+          "astra_lines_coverage": 7
+        },
+        "usage": {
+          "covered_tasks": 0,
+          "task_count": 7,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null
+        },
+        "tasks": [
+          {
+            "id": "/root/adapted_grid_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/forward_grid_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/general_slow_row_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/ideal_mask_integer_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/harmonic_fold_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/harmonic_fold_endpoint_repair",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          },
+          {
+            "id": "/root/slack_energy_exact_control",
+            "status": "closed",
+            "check_kind": "python",
+            "first_check_success": true,
+            "usage_observed": false
+          }
+        ]
+      },
+      "static": {
+        "task_count": 1,
+        "active_count": 0,
+        "closed_count": 1,
+        "first_check": {
+          "successful": 1,
+          "known": 1
+        },
+        "repairs": {
+          "worker_rounds": 2,
+          "astra_rounds": 3,
+          "astra_lines": 0,
+          "astra_lines_coverage": 1
+        },
+        "usage": {
+          "covered_tasks": 0,
+          "task_count": 1,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null
+        },
+        "tasks": [
+          {
+            "id": "/root/zero_only_contact_lean_inventory",
+            "status": "closed",
+            "check_kind": "static",
+            "first_check_success": true,
+            "usage_observed": false
+          }
+        ]
+      }
+    }
+  },
+  "reproduction": "Import scripts/report_delegation.py and call summarize(input_metric_snapshot); compare to full_report. For latest_ten use its final ten completed_tasks.",
+  "evidence_correction": "One additional root correction requested exact failure sources for delivery30; code unchanged, root source repair lines0. Metric snapshot refreshed after completion."
+}

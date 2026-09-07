@@ -6,19 +6,35 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/strict_core_kernel_contract",
-      "agent_id": "/root/fold_zero_restoration_resume",
+      "id": "/root/forced_parent_global_cycle",
+      "agent_id": "/root/uniform_strategy_after_fold",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "ae64785d3e3a61281bd5baaff773916d72383a78",
+      "source_checkpoint": "7147fd8d9d12bfb3599f931a117f8e27d84f24af",
       "owned_files": [
-        "research/astra-strict-core-kernel-contract.md"
+        "research/astra-forced-parent-global-cycle.md"
       ],
-      "target": "Settle exact reusable uniform Lean contract and proof plan for strict-core contraction on full ComplementSafe from actual global margin, reusing compiled MinimalCounterexample and existing norm APIs. No code/build or new research-sweep; preserve every endpoint and time quantifier.",
+      "target": "Investigate a uniform global consequence of the accepted larger-parent injection and endpoint determinant identities, retaining full native strict failure and sum minimality; exact global double-count or cycle invariant, not successive runner counts.",
+      "checks": []
+    },
+    {
+      "id": "/root/minimal_failure_deletion_contract_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "in_progress",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "7147fd8d9d12bfb3599f931a117f8e27d84f24af",
+      "owned_files": [
+        "research/astra-minimal-failure-deletion-contract-review.md"
+      ],
+      "target": "Independent review of exact76bdf41e adapter contract; native stronger deletion seeds, exact retained maximum, one shared global margin, strict radius via interval, all maximizers excluded. No Lean.",
       "checks": []
     }
   ],
@@ -10840,9 +10856,164 @@
       "evidence": [
         "research/astra-minimal-counterexample-final-review.md"
       ]
+    },
+    {
+      "id": "/root/strict_core_kernel_contract",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "ae64785d3e3a61281bd5baaff773916d72383a78",
+      "owned_files": [
+        "research/astra-strict-core-kernel-contract.md"
+      ],
+      "target": "Settle exact reusable uniform Lean contract and proof plan for strict-core contraction on full ComplementSafe from actual global margin, reusing compiled MinimalCounterexample and existing norm APIs. No code/build or new research-sweep; preserve every endpoint and time quantifier.",
+      "checks": [
+        {
+          "kind": "worker_report",
+          "sha256": "2e531b5a040bdd4d48c6a4f2237c27d485b6f08ffb6ac83841da936cb643de8c",
+          "result": "Full readback,12 bindings,whitespace and workflow passed."
+        }
+      ],
+      "result": "Delivered exact uniform contraction contract and residual-shift proof; weak boundary is sharp. No Lean execution.",
+      "evidence": [
+        "research/astra-strict-core-kernel-contract.md"
+      ]
+    },
+    {
+      "id": "/root/strict_core_kernel_contract_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "490f7530987390cee87e2e61611af46c29a2851c",
+      "owned_files": [
+        "research/astra-strict-core-kernel-contract-review.md"
+      ],
+      "target": "Independent review of frozen2e531b5a exact uniform strict-core kernel contract, residual-shift proof, full-time/minimum domain and equality control; no Lean execution or new code.",
+      "checks": [
+        {
+          "kind": "worker_report",
+          "sha256": "f9b8bf75a66df74e1b8d95fd957d4f8dab145dd0fbc36d825ba23bb2e13ea75e",
+          "result": "Full readback,15 bindings,whitespace and workflow passed."
+        }
+      ],
+      "result": "Accepted frozen2e531b5a without corrections, including separately checked maximizer-exclusion consequence; manuscript contract only.",
+      "evidence": [
+        "research/astra-strict-core-kernel-contract-review.md"
+      ]
+    },
+    {
+      "id": "/root/strict_core_final_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "7147fd8d9d12bfb3599f931a117f8e27d84f24af",
+      "owned_files": [
+        "research/astra-strict-core-final-review.md"
+      ],
+      "target": "Independent semantic review of frozen compiled strict-core source b26dbff, exact full-time domain and weak endpoint, two allowed-axiom reports; no compile.",
+      "checks": [
+        {
+          "kind": "worker_report",
+          "review_sha256": "1fcb97cf90eeacc4d4d5765d1310e255fb146efa4f7e2fd01827a3aac3b62834",
+          "binding_count": 15
+        }
+      ],
+      "result": "Accepted b26dbff without corrections; frozen review1fcb97cf; exact conditional theorem and corollary; no rerun.",
+      "evidence": [
+        "research/astra-strict-core-final-review.md"
+      ]
+    },
+    {
+      "id": "/root/strict_core_contraction_implementation",
+      "agent_id": "/root/harmonic_fold_endpoint_repair",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "490f7530987390cee87e2e61611af46c29a2851c",
+      "owned_files": [
+        "LonelyRunner/StrictCoreContraction.lean",
+        "research/astra-strict-core-implementation.json",
+        "research/astra-strict-core-failure-sources.json"
+      ],
+      "target": "Evidence-only continuation: preserve exact failed source snapshots missing from delivered receipt; compiled code and frozen implementation receipt remain unchanged. No compilation.",
+      "checks": [
+        {
+          "kind": "worker_receipt",
+          "compile_chunk": "78b604",
+          "axiom_chunk": "715535",
+          "source_sha256": "b26dbff907c02e5874dbf635fdd5f9406e7d080045238818090d6b7149c91daf",
+          "receipt_sha256": "83888493901b9f0208bdadeca550ac5600e95970573385cf339eca3ed41a42c1"
+        },
+        {
+          "kind": "failure_source_recovery",
+          "sha256": "33b7890e98b95c79f59cc76083a4ed20ee6b35bc59620bcc6c87a72de4557507",
+          "hashes_match": true
+        }
+      ],
+      "delivery_metrics": {
+        "check_kind": "lean",
+        "first_check_success": false,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 1,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-strict-core-implementation.json",
+          "research/astra-strict-core-failure-sources.json",
+          "research/astra-strict-core-final-review.md"
+        ]
+      },
+      "result": "Exact contraction and maximizer exclusion compiled after two Terra repairs; independently accepted without code corrections. One root evidence correction recovered both failed sources exactly; no additional Lean run or source edits.",
+      "evidence": [
+        "research/astra-strict-core-implementation.json",
+        "research/astra-strict-core-failure-sources.json",
+        "research/astra-strict-core-final-review.md"
+      ]
+    },
+    {
+      "id": "/root/minimal_failure_deletion_contract",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "7147fd8d9d12bfb3599f931a117f8e27d84f24af",
+      "owned_files": [
+        "research/astra-minimal-failure-deletion-contract.md"
+      ],
+      "target": "Derive exact uniform Lean contract joining minimal counterexample, smaller-count strict deletion seeds/interior, one common attained global margin, and strict-core contraction; identify minimal needed definitions and formal proof route. No new Lean or compile.",
+      "checks": [
+        {
+          "kind": "worker_report",
+          "sha256": "76bdf41ee81543c9251f3f5c3236082c20a0d62afd81d854a0f44be5227ba880",
+          "bindings": 15
+        }
+      ],
+      "result": "Frozen76bdf41e exact uniform count/deletion interval/common-margin contract; root fully read ae5b4c; independent review pending.",
+      "evidence": [
+        "research/astra-minimal-failure-deletion-contract.md"
+      ]
     }
   ],
-  "latest_checkpoint": "Pass94 locally verified: uniform MinimalCounterexample kernel bridge, attained strict margin and independently accepted endpoint analysis; publication pending.",
+  "latest_checkpoint": "Pass95 locally verified: compiled strict-core contraction and maximizer exclusion, independent review accepted, full failure sources preserved and30delivery review complete; publication pending. Unrestricted LRC unresolved.",
   "next_actions": [
     "Accept or repair Terra minimal-counterexample implementation within the two-repair policy and capped serial slot.",
     "Independent Astra final Lean source review; root import and explicit axiom audit integration.",
@@ -15068,7 +15239,12 @@
     "measurement_batch_size": 10,
     "next_batch_review_after_closed_high_tasks": 30
   },
-  "verification_slot": null,
+  "verification_slot": {
+    "owner": "root",
+    "status": "reserved",
+    "scope": "No active compilation; preserve caches for immediately queued uniform deletion assembly. Full integration via hosted CI.",
+    "lock": ".lake/verification.lock"
+  },
   "delegation_measurement_baseline": {
     "audit_date": "2026-09-06",
     "requested_route": "gpt-5.6-terra medium",
@@ -18109,7 +18285,7 @@
     }
   },
   "pass94_publication": {
-    "status": "locally_verified_ready_to_commit",
+    "status": "merged_remote_main_verified",
     "branch": "codex/astra-endpoint-and-counterexample",
     "parent_main": "ae64785d3e3a61281bd5baaff773916d72383a78",
     "receipt": "research/astra-pass94-verification.json",
@@ -18133,6 +18309,143 @@
     "administrative_repair": {
       "chunk": "bb9311",
       "result": "Root initially assigned latest_checkpoint an object; validator requires nonempty string. Corrected to string and retained detailed fields separately before any commit."
+    },
+    "head": "490f7530987390cee87e2e61611af46c29a2851c",
+    "main_verifier_source": "from pathlib import Path\nimport json,hashlib,subprocess\nm=json.loads(Path('/tmp/astra-pass94-main-inputs.json').read_text())\np=json.loads(Path('/tmp/astra-pass94-merged.json').read_text())\nassert p['state']=='MERGED',p\nassert p['headRefOid']==m['head'],p\nmerge=p['mergeCommit']['oid']\nmain=subprocess.check_output(['git','rev-parse','origin/main'],text=True).strip()\nfor ref in [merge,m['head'],m['parent']]:\n    assert subprocess.run(['git','merge-base','--is-ancestor',ref,main]).returncode==0,ref\nfor path,digest in m['hashes'].items():\n    data=subprocess.check_output(['git','show',main+':'+path])\n    assert hashlib.sha256(data).hexdigest()==digest,path\nprint(json.dumps(dict(main=main,merge=merge,head=m['head'],verified_hashes=len(m['hashes']),head_ancestry=True,parent_ancestry=True,merged_at=p['mergedAt']),indent=2))\n",
+    "main_input_manifest": {
+      "head": "490f7530987390cee87e2e61611af46c29a2851c",
+      "parent": "ae64785d3e3a61281bd5baaff773916d72383a78",
+      "hashes": {
+        "research/astra-zero-only-deletion-amplification.md": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0",
+        "research/astra-zero-only-deletion-amplification-review.md": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4",
+        "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+        "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
+        "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+        "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515",
+        "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+        "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+        "research/astra-zero-only-parent-reduction.md": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-forced-parent-endpoint-propagation.md": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb",
+        "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa",
+        "LonelyRunner/Formulations.lean": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788",
+        "LonelyRunner/BHKRealReduction.lean": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26",
+        "LonelyRunner/FiniteFamilyEquivalence.lean": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3",
+        "LonelyRunner/PrimitiveTupleNormalization.lean": "cac3351bf8c755c0bd354d0330e766f49c255d7ef21637d0975a8d8633cd94b0",
+        "LonelyRunner/TwoDivisibleNormalization.lean": "d812237f06d63e67c8739122c76a5e67daa470402575ccafcdcee4c41d950286",
+        "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+        "LonelyRunner/PivotBoundary.lean": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f",
+        "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+        "LonelyRunner/LowerCountSupply.lean": "0705291adc53011fb72fc718a7260876512b092741442d6a6cceb4b76eb5ccf4",
+        "LonelyRunner/BaseCases.lean": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f",
+        "LonelyRunner/SixRunnerOrdinary.lean": "8da5bb6f35373ab4da8d0ab8e2a1040376a74b028efdc7e00d006ee91eb25755",
+        "LonelyRunner/LonelyAtTransport.lean": "6596481a6087174f7f7bb7d5140e339d0a571b05bc369fd3a9f0c432875ee1ee",
+        "LonelyRunner/WeightedConditionalExpectation.lean": "72745fdfb1d779d9956b9bd0e515b1b3a971ddebe4c217db862fddffa6dcfe8b",
+        "LonelyRunner/OverlapCapacity.lean": "2048568e30b8754b5a6d2807860105e957b8c2b353daa0ec6c72d8c895ca8ca6",
+        "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+        "lakefile.toml": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26",
+        "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+        "research/astra-minimal-failure-kernel-contract.md": "17067b1cfc7ebc5d473769fa03821eb7a203cfc53bc8936d95653d71cf253de8",
+        "LonelyRunner/MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+        "research/astra-minimal-failure-kernel-contract-review.md": "d891f197d6f232c3f4e255fb885e599527c8c14ab67c6562c8059af54edcc34a",
+        "LonelyRunner.lean": "9bdb661179ab2b29af311271da6c688d76275e9cf116205001395e67d0b05a01",
+        "LonelyRunner/AxiomAudit.lean": "959ddd972dbd984d82aa9b2f50067b0811e3d948609d083e4324fb62405aa75c",
+        "scripts/audit_lean_trust.py": "42fd0592b63f6487fa8217f7e416923b3219dbd542b7e07c012553b360932b39",
+        "LonelyRunner/FiniteTupleSorting.lean": "71b47c20282d091129fe9990b2d1bbdfdebff45e49dea2bfbd7d4425fe89f775",
+        "LonelyRunner/SimultaneousApproximation.lean": "144aec242a3f4d06853fed110bf8ee20f1cabf88b925acda889fe08cfe57c729",
+        "LonelyRunner/EndpointAffineApproximation.lean": "19989c0528c028bd0bcb8ef4e514ac35177fafd1a0f889e69b82f25651aaa3d3",
+        "LonelyRunner/StationaryEquivalence.lean": "12dce8930c34b211bc01e2dc21e932087270726bce2bf127fa2d8d6594544b49",
+        "LonelyRunner/RationalPairRank.lean": "8ab0d557ad561415b2fdf06566482e780fca1aa5b37c2a9e2340c24805ca6cbe",
+        "LonelyRunner/PrimitiveAffineRank.lean": "0b82838ac09e0572a329d7fe12091c250caa746441216e5a7ec84ceb7ff89eb9",
+        "LonelyRunner/BHKAdjacentRatios.lean": "677c365618fc612a5ee7d3d9e9696273da2d9e775b77487d0b3e208cea9d6733",
+        "LonelyRunner/BHKAdjacentPair.lean": "3d36d812db7ed18db8fce521b2505d5904a8387d8e315c6e7d08d9eb7dc75708",
+        "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+        "LonelyRunner/Normalization.lean": "20193ad984f308ce8512930fe683d3118a2b3b5c18636a6a1f4454aa6df43797",
+        "LonelyRunner/RationalReduction.lean": "c707227a24eb53d06b20ff00e2e86ce52c158ba7eed55c1d8eba32cf9c457a4e",
+        "LonelyRunner/BHKTwoPhaseSupply.lean": "2890e8ad41f9e3c2a0f098ba2a0da7060fa14ac2fe12842adf1c11905148ac09",
+        "LonelyRunner/AffinePhasePeriod.lean": "340c4dd29276544566175cf791307ca42753ddc964345aa793d33abef1e9b176",
+        "LonelyRunner/AffinePhaseTransfer.lean": "62291689ea8fb589ae96f50e159363277713ee67ad6bc172f8f2804cbd69ba05",
+        "LonelyRunner/PositiveAffineWitness.lean": "94532f1686bc612e9f0e852f541ed06a0e20362878c2be1ecaff645df69f261f",
+        "LonelyRunner/SignedAffineWitness.lean": "a1652cdad78c03da52c39d869b0e37d5c97d3aafb14359674492f8d4e17c3c6e",
+        "LonelyRunner/AffineLonelyAt.lean": "6866bbb379b7b8fcd62f686818d5929e2ba8b2def5b06f2bf5def2b587a68459",
+        "LonelyRunner/FiniteHeightReduction.lean": "cb41059260b943411e2ab5360b84b59cd13f2ddf352c3c50a0b3715b9b9987d6",
+        "LonelyRunner/FinitePrimitiveFamilies.lean": "023b39b29e7939dd18b29a51217c3e3fcf353ee5843f3bc3effb27012137e9f0",
+        "LonelyRunner/RationalRelationSpace.lean": "540f0ef0da35cea31a6c82d063a8c2fde84ddf18e6f04abb6f73740b230fd11a",
+        "LonelyRunner/BHKBridgeAssembly.lean": "85cdff6609ffe604c1a090b000e7ea34a4155a384b9ced55a52ee277793d3f57",
+        "LonelyRunner/KroneckerAveraging.lean": "101efb0a698d89b445682decc9771efa5350e250beeefe1e3f08db34ce446ca2",
+        "LonelyRunner/KroneckerCharacters.lean": "88cb49a836f51050855fffd8f0c7e68fb680345652f183765315e873752fb926",
+        "LonelyRunner/KroneckerOrbit.lean": "c152c31987265ee86cc7590d2f3148695cda97adbe20fa55b7880c4648f64487",
+        "LonelyRunner/KroneckerSeparationSetup.lean": "782a05f6ce6816a355addab21a9cc9ca9abccaa555884af10588437da9af6fa3",
+        "LonelyRunner/KroneckerSeparation.lean": "50e0ff4babbe451598f84ada0907180bb17b0a8f8ae5aa84d7cb923d227c4198",
+        "LonelyRunner/BHKCollisionToWitness.lean": "e5175b1f55a2d73e850ffd3e5a5dab140b6e4d84f0cefd94ebf6d7663d3a0d6a",
+        "LonelyRunner/BHKBridgeCore.lean": "43d0371d3fa213daa895d5431e9cfdd28d79d2de4ba89e02d9a9da93273678a3",
+        "LonelyRunner/BHKNongenericRow.lean": "0780c53aa676a356e6e0b2ce1d451c51bc15690f65bd4e121c9125cebd86c3ec",
+        "LonelyRunner/PositiveRationalRelation.lean": "7f45dee887a837ed4564f0516f5141f154e0a2d32594e7eb57cf1afa0a3eeb29",
+        "LonelyRunner/BHKPositiveCollision.lean": "7569f6798bc42be6ffd5ae04e0f8110f386f941aa58f02a2f168d597a17a514e",
+        "LonelyRunner/RepeatedStationaryEquivalence.lean": "ae4ce972eb4a8969e671f982e8cb1c9e4ea99c59b529008da8b6a9e2f38bdc04",
+        "LonelyRunner/PivotResidues.lean": "362da5ab923f22e900ae7ac821dd4cf4aab91dfe70889987bc9e5a05d19c276a",
+        "docs/storage-policy.md": "bd596c16a98417199837886fd02e4ab60aefecedf2c7b699f4c216df5ee8fd3d",
+        "docs/astra-research-94.md": "f6a1f356ec315c215a6bf470ecbeba298a3812b3dd32f9836dbc71faeaf0ebf0",
+        "research/astra-forced-parent-endpoint-review.md": "b2d1d8e6ef81a6e8d450cfb74f0d74477773b359f06eb3cf3b39cb70b2816eef",
+        "research/astra-minimal-counterexample-final-review.md": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf",
+        "research/astra-minimal-dependency-verification.json": "fc35116f08c657ba9293d64383c93a114cf4576bfcdeff4a5f690f2015f75512",
+        "research/astra-minimal-counterexample-implementation.json": "d522cb878f29db6bb7774bb2d5d6676738d4d03ffc9b4e64bd8996364e9ea9d4",
+        "research/astra-minimal-counterexample-root-verification.json": "a3759b5f986cfca72c601a6102ebf0ba5e84c8cbc15cddd5339812477cce4d9e",
+        "research/astra-pass94-verification.json": "5024078781c974233d05db73a0361d88e6f17168c3bb3b5b85bc061e9e445cd9",
+        "research/workflow-state.json": "bb1b1d11b9ccd19a31fab806946851cfa31234046028d23f4e6b32411aa517fa"
+      }
+    },
+    "push_result": {
+      "session_id": 84822,
+      "terminal_chunk": "5b6035",
+      "exit_code": 0
+    },
+    "commit_result": {
+      "chunk": "73be84",
+      "exit_code": 0
+    },
+    "pr": 93,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/93",
+    "ci_run": 34110923618,
+    "checks": {
+      "Lean build and trust audit": 101706730544,
+      "Exact computational certificates": 101706730258
+    },
+    "create_result": {
+      "session_id": 32977,
+      "terminal_chunk": "581ec2",
+      "exit_code": 0
+    },
+    "watch_session": 75547,
+    "lean_ci": {
+      "status": "SUCCESS",
+      "completedAt": "2026-09-07T10:22:09Z",
+      "job": 101706730544,
+      "observed_chunk": "947ea4"
+    },
+    "merge": "7147fd8d9d12bfb3599f931a117f8e27d84f24af",
+    "merged_at": "2026-09-07T10:37:32Z",
+    "merge_terminal": {
+      "chunk": "305aae",
+      "exit_code": 0
+    },
+    "remote_verification": {
+      "chunk": "5964c5",
+      "exit_code": 0,
+      "verified_hashes": 80,
+      "head_ancestry": true,
+      "parent_ancestry": true
+    },
+    "ci_final": {
+      "observed_chunk": "b8a12c",
+      "both_required_checks": "SUCCESS",
+      "lean_job": 101706730544,
+      "certificate_job": 101706730258,
+      "trust_log_chunk": "069b26",
+      "accepted_theorem_reports": 705
     }
   },
   "pass94_checkpoint_details": {
@@ -18143,5 +18456,112 @@
     "verification": "research/astra-pass94-verification.json",
     "publication": "pending commit/push/PR/full hosted CI/merge/main verification",
     "unrestricted_goal": "in_progress"
+  },
+  "strict_core_formalization_root_notes": {
+    "contract": "research/astra-strict-core-kernel-contract.md",
+    "sha256": "2e531b5a040bdd4d48c6a4f2237c27d485b6f08ffb6ac83841da936cb643de8c",
+    "root_full_read": "c14025",
+    "status": "compiled_independently_accepted_integration_prepared",
+    "dependency_receipt": "research/astra-strictcore-dependency-verification.json",
+    "next": "Save verified Pass95 and publish exact checkpoint; full integration via hosted CI. Continue separate canonical deletion assembly and full endpoint-cycle research.",
+    "root_derivation": "At a safe point, global finite minimum identifies target norm q<=mu. All shifts |s|<(alpha-mu)/Q keep retained norms>mu. A signed round-residual radial shift to r between mu and min(1/2,q+speed*delta) contradicts global bound unless q+speed*delta<=mu. Equality control V12,alpha2/5,mu1/3,target1,Q2,t3/10 checks weak endpoint. No global LRC supply established.",
+    "dependency_terminal": {
+      "chunk": "3f62c1",
+      "exit_code": 0,
+      "memory_peak_bytes": 383520768,
+      "swap_peak_bytes": 0
+    },
+    "argmax_domain_consequence": "If the same full minimum equals mu at t, then no ComplementSafe v i alpha t with the theorem premises can hold: contraction gives coordinate q<mu, whereas minimumCircleNorm_le gives mu<=q. This is a prospective corollary, not yet Lean checked; no two-coordinate equality or seed-supply claim follows.",
+    "independent_review": {
+      "path": "research/astra-strict-core-kernel-contract-review.md",
+      "sha256": "f9b8bf75a66df74e1b8d95fd957d4f8dab145dd0fbc36d825ba23bb2e13ea75e",
+      "root_full_read": "3eb461",
+      "status": "accepted_without_corrections"
+    },
+    "source_integration_boundary": "Do not change root import or AxiomAudit until PR93 merge/main80hash verification finishes. Worker owns only new untracked module/evidence; next checkpoint.",
+    "final_source_sha256": "b26dbff907c02e5874dbf635fdd5f9406e7d080045238818090d6b7149c91daf",
+    "final_review": {
+      "path": "research/astra-strict-core-final-review.md",
+      "sha256": "1fcb97cf90eeacc4d4d5765d1310e255fb146efa4f7e2fd01827a3aac3b62834",
+      "root_read_chunk": "bcf868",
+      "binding_check_chunk": "fb87a4"
+    }
+  },
+  "memory_diagnostic_latest": {
+    "status": "read_only_memory_diagnosis_completed",
+    "previous_goal_turn_classification": "progress: actual OOM evidence confirmed, next compilation cap retained",
+    "current_available_ram": "7 GiB",
+    "current_swap_used": "182 MiB",
+    "current_compilers": "none at diagnostic snapshot",
+    "evidence": [
+      "d63b4c",
+      "fda55c",
+      "1421ab"
+    ],
+    "administrative_failure": "9ba5e0: attempted dict update of historical string resource_resume_2026_09_07; failed before write, corrected with separate key."
+  },
+  "minimal_failure_deletion_root_notes": {
+    "contract": "research/astra-minimal-failure-deletion-contract.md",
+    "sha256": "76bdf41ee81543c9251f3f5c3236082c20a0d62afd81d854a0f44be5227ba880",
+    "root_full_read": "ae5b4c",
+    "status": "root_accepted_independent_review_pending",
+    "gap": "No uniform contradiction supplied; all seeds refer to same tuple and common mu/anchor. Pointwise contraction alone does not prove strict positive radius; use deletion interior."
+  },
+  "pass95_publication": {
+    "status": "locally_verified_pending_commit",
+    "branch": "codex/astra-strict-core-contraction",
+    "parent_main": "7147fd8d9d12bfb3599f931a117f8e27d84f24af",
+    "receipt": "research/astra-pass95-verification.json",
+    "root_verifier_chunk": "4b4f1b",
+    "hashes": {
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "LonelyRunner.lean": "f6c4468b511bc8479bd6675d3bee25a98b4558b24bcecbf3c8a3aa35594fc9eb",
+      "LonelyRunner/AxiomAudit.lean": "8e4a2c6368ed3ed6da08867a2893371b2802abd69ca6ac52b31721deffd2a3f3",
+      "LonelyRunner/BaseCases.lean": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f",
+      "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+      "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa",
+      "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+      "LonelyRunner/FiniteFamilyEquivalence.lean": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3",
+      "LonelyRunner/Formulations.lean": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788",
+      "LonelyRunner/MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+      "LonelyRunner/OneSixthComplementMaximizer.lean": "5a7011ca680b8a2b26c7bad466a8ee4008cf47507eb8b700846f296894bb90a1",
+      "LonelyRunner/PivotBoundary.lean": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f",
+      "LonelyRunner/PivotResidues.lean": "362da5ab923f22e900ae7ac821dd4cf4aab91dfe70889987bc9e5a05d19c276a",
+      "LonelyRunner/StrictCoreContraction.lean": "b26dbff907c02e5874dbf635fdd5f9406e7d080045238818090d6b7149c91daf",
+      "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+      "docs/astra-delegation-review-30.md": "d5fbe1df2637847e171ad2e34885ca7e5ea420d404b6629dcea42e4c694e2857",
+      "docs/astra-research-95.md": "e1c0fadbe59cccb2b332c758ea23a299732116952d63cc3b2276c375e9cb07fe",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "docs/storage-policy.md": "bd596c16a98417199837886fd02e4ab60aefecedf2c7b699f4c216df5ee8fd3d",
+      "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+      "lakefile.toml": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26",
+      "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "research/astra-minimal-counterexample-final-review.md": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf",
+      "research/astra-strict-core-failure-sources.json": "33b7890e98b95c79f59cc76083a4ed20ee6b35bc59620bcc6c87a72de4557507",
+      "research/astra-strict-core-final-review.md": "1fcb97cf90eeacc4d4d5765d1310e255fb146efa4f7e2fd01827a3aac3b62834",
+      "research/astra-strict-core-implementation.json": "83888493901b9f0208bdadeca550ac5600e95970573385cf339eca3ed41a42c1",
+      "research/astra-strict-core-kernel-contract-review.md": "f9b8bf75a66df74e1b8d95fd957d4f8dab145dd0fbc36d825ba23bb2e13ea75e",
+      "research/astra-strict-core-kernel-contract.md": "2e531b5a040bdd4d48c6a4f2237c27d485b6f08ffb6ac83841da936cb643de8c",
+      "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f",
+      "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+      "research/astra-strictcore-dependency-verification.json": "11efb1004bd004ccfb02ff2952c28780b01041b1e94035756f41dfba1a2ff99f",
+      "research/astra-terra-high-deliveries-30.json": "1b0d603fe61eb25b0be1275d4bbc6f82e7d029145136c5bc64002023cc3542f5",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/audit_lean_trust.py": "d02f8ac3c3f21835759a9c932e700fe5df7dcfc5e319ff3c194c6876abd02c07",
+      "scripts/report_delegation.py": "ff245cd6d2fe5150bdd56a3610f7662138e04a96eebf14ef2a05c6c75761dafa",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    }
+  },
+  "terra_high_delivery_review_30": {
+    "report": "research/astra-terra-high-deliveries-30.json",
+    "assessment": "docs/astra-delegation-review-30.md",
+    "closed_tasks": 30,
+    "last_ten_first_checks": "8/10",
+    "last_ten_worker_repair_rounds": 6,
+    "last_ten_astra_repair_rounds": 11,
+    "last_ten_astra_repair_lines": 11,
+    "usage_covered_tasks": 0,
+    "next_review_after_closed_deliveries": 40,
+    "routing_change": false
   }
 }

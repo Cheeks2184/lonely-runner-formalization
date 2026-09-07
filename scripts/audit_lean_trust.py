@@ -185,6 +185,8 @@ def main() -> None:
         "LonelyRunner.exists_minimalPositiveIntegerFailure",
         "LonelyRunner.MinimalPositiveIntegerFailure.witness_of_sum_lt",
         "LonelyRunner.exists_attained_strict_failure_margin",
+        "LonelyRunner.strict_core_bound_of_global_minimum",
+        "LonelyRunner.not_complementSafe_of_global_maximum",
         "LonelyRunner.logarithmicHeightGain_positiveInteger_witness",
         "LonelyRunner.boundedPrimorialHeight_family_witness",
         "LonelyRunner.kanoldIntervalBound_vandermonde",

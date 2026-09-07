@@ -220,6 +220,7 @@ import LonelyRunner.SixRunnerOrdinary
 import LonelyRunner.SixRunnerCanonical
 
 import LonelyRunner.MinimalCounterexample
+import LonelyRunner.StrictCoreContraction
 
 /-!
 Root import for the formal Lonely Runner development.

@@ -1,0 +1,109 @@
+{
+  "checkpoint": "Pass95",
+  "parent_main": "7147fd8d9d12bfb3599f931a117f8e27d84f24af",
+  "status": "local_checks_and_independent_review_passed_hosted_integration_pending",
+  "input_manifest": {
+    "hashes": {
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "LonelyRunner.lean": "f6c4468b511bc8479bd6675d3bee25a98b4558b24bcecbf3c8a3aa35594fc9eb",
+      "LonelyRunner/AxiomAudit.lean": "8e4a2c6368ed3ed6da08867a2893371b2802abd69ca6ac52b31721deffd2a3f3",
+      "LonelyRunner/BaseCases.lean": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f",
+      "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+      "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa",
+      "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+      "LonelyRunner/FiniteFamilyEquivalence.lean": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3",
+      "LonelyRunner/Formulations.lean": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788",
+      "LonelyRunner/MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+      "LonelyRunner/OneSixthComplementMaximizer.lean": "5a7011ca680b8a2b26c7bad466a8ee4008cf47507eb8b700846f296894bb90a1",
+      "LonelyRunner/PivotBoundary.lean": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f",
+      "LonelyRunner/PivotResidues.lean": "362da5ab923f22e900ae7ac821dd4cf4aab91dfe70889987bc9e5a05d19c276a",
+      "LonelyRunner/StrictCoreContraction.lean": "b26dbff907c02e5874dbf635fdd5f9406e7d080045238818090d6b7149c91daf",
+      "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+      "docs/astra-delegation-review-30.md": "d5fbe1df2637847e171ad2e34885ca7e5ea420d404b6629dcea42e4c694e2857",
+      "docs/astra-research-95.md": "e1c0fadbe59cccb2b332c758ea23a299732116952d63cc3b2276c375e9cb07fe",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "docs/storage-policy.md": "bd596c16a98417199837886fd02e4ab60aefecedf2c7b699f4c216df5ee8fd3d",
+      "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+      "lakefile.toml": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26",
+      "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "research/astra-minimal-counterexample-final-review.md": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf",
+      "research/astra-strict-core-failure-sources.json": "33b7890e98b95c79f59cc76083a4ed20ee6b35bc59620bcc6c87a72de4557507",
+      "research/astra-strict-core-final-review.md": "1fcb97cf90eeacc4d4d5765d1310e255fb146efa4f7e2fd01827a3aac3b62834",
+      "research/astra-strict-core-implementation.json": "83888493901b9f0208bdadeca550ac5600e95970573385cf339eca3ed41a42c1",
+      "research/astra-strict-core-kernel-contract-review.md": "f9b8bf75a66df74e1b8d95fd957d4f8dab145dd0fbc36d825ba23bb2e13ea75e",
+      "research/astra-strict-core-kernel-contract.md": "2e531b5a040bdd4d48c6a4f2237c27d485b6f08ffb6ac83841da936cb643de8c",
+      "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f",
+      "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+      "research/astra-strictcore-dependency-verification.json": "11efb1004bd004ccfb02ff2952c28780b01041b1e94035756f41dfba1a2ff99f",
+      "research/astra-terra-high-deliveries-30.json": "1b0d603fe61eb25b0be1275d4bbc6f82e7d029145136c5bc64002023cc3542f5",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/audit_lean_trust.py": "d02f8ac3c3f21835759a9c932e700fe5df7dcfc5e319ff3c194c6876abd02c07",
+      "scripts/report_delegation.py": "ff245cd6d2fe5150bdd56a3610f7662138e04a96eebf14ef2a05c6c75761dafa",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    "binding_documents": [
+      "research/astra-strict-core-kernel-contract.md",
+      "research/astra-strict-core-kernel-contract-review.md",
+      "research/astra-strict-core-final-review.md"
+    ],
+    "new_text_files": [
+      "LonelyRunner/StrictCoreContraction.lean",
+      "LonelyRunner.lean",
+      "LonelyRunner/AxiomAudit.lean",
+      "scripts/audit_lean_trust.py",
+      "docs/astra-research-95.md",
+      "docs/astra-delegation-review-30.md",
+      "research/astra-strict-core-kernel-contract.md",
+      "research/astra-strict-core-kernel-contract-review.md",
+      "research/astra-strict-core-final-review.md",
+      "research/astra-strictcore-dependency-verification.json",
+      "research/astra-strict-core-implementation.json",
+      "research/astra-strict-core-failure-sources.json",
+      "research/astra-terra-high-deliveries-30.json"
+    ],
+    "checkpoint_files": [
+      "LonelyRunner/StrictCoreContraction.lean",
+      "LonelyRunner.lean",
+      "LonelyRunner/AxiomAudit.lean",
+      "scripts/audit_lean_trust.py",
+      "docs/astra-research-95.md",
+      "docs/astra-delegation-review-30.md",
+      "research/astra-strict-core-kernel-contract.md",
+      "research/astra-strict-core-kernel-contract-review.md",
+      "research/astra-strict-core-final-review.md",
+      "research/astra-strictcore-dependency-verification.json",
+      "research/astra-strict-core-implementation.json",
+      "research/astra-strict-core-failure-sources.json",
+      "research/astra-terra-high-deliveries-30.json"
+    ]
+  },
+  "root_verifier": {
+    "command": [
+      "python3",
+      "/tmp/astra-pass95-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport ast\nimport hashlib\nimport importlib.util\nimport json\nimport re\nimport subprocess\n\nmanifest = json.loads(Path('/tmp/astra-pass95-inputs.json').read_text())\ndef digest(path):\n    return hashlib.sha256(Path(path).read_bytes()).hexdigest()\nfor path, expected in manifest['hashes'].items():\n    assert digest(path) == expected, path\ndocument_count = 0\nfor document in manifest['binding_documents']:\n    for path, expected in re.findall(r'\\| `([^`]+)` \\| `([0-9a-f]{64})` \\|', Path(document).read_text()):\n        assert digest(path) == expected, (document, path)\n        document_count += 1\nreceipt = json.loads(Path('research/astra-strict-core-implementation.json').read_text())\nassert digest(receipt['source']['path']) == receipt['source']['sha256_final']\nfor binding in receipt['input_bindings'].values():\n    assert digest(binding['path']) == binding['sha256']\nattempts = receipt['verification']['attempts']\nassert [a['exit_status'] for a in attempts] == [1, 1, 0]\nassert attempts[-1]['source_sha256'] == receipt['source']['sha256_final']\nhistory = json.loads(Path('research/astra-strict-core-failure-sources.json').read_text())\nfor snapshot, attempt in zip(history['failed_attempt_sources'].values(), attempts[:2], strict=True):\n    assert hashlib.sha256(snapshot['source_text'].encode()).hexdigest() == attempt['source_sha256']\nprobe = receipt['verification']['axiom_probe']\nassert probe['exit_status'] == 0\nrequired = {'LonelyRunner.strict_core_bound_of_global_minimum',\n            'LonelyRunner.not_complementSafe_of_global_maximum'}\nreports = re.findall(r\"'([^']+)' depends on axioms: \\[([^]]*)\\]\", probe['combined_stdout_stderr_raw'])\nassert {name for name, _ in reports} == required and len(reports) == 2\nfor name, axioms in reports:\n    assert set(axioms.split(', ')) <= {'propext', 'Classical.choice', 'Quot.sound'}, name\nassert probe['source_text'].splitlines()[0] == 'import LonelyRunner.StrictCoreContraction'\nfor command in [receipt['verification']['compile_argv'], probe['argv']]:\n    for fragment in ['MemoryMax=4G', 'MemorySwapMax=512M', 'TasksMax=128',\n                     'flock -n .lake/verification.lock', 'lean -j1']:\n        assert fragment in command, fragment\ndef load_module(name, path):\n    spec = importlib.util.spec_from_file_location(name, path)\n    module = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(module)\n    return module\ntrust = load_module('trust', 'scripts/audit_lean_trust.py')\nsources = [Path('LonelyRunner.lean'), *sorted(Path('LonelyRunner').rglob('*.lean'))]\nfor source in sources:\n    assert not trust.source_has_forbidden_constructs(source.read_text()), source\nassert 'import LonelyRunner.StrictCoreContraction' in Path('LonelyRunner.lean').read_text().splitlines()\naudit = Path('LonelyRunner/AxiomAudit.lean').read_text().splitlines()\ntree = ast.parse(Path('scripts/audit_lean_trust.py').read_text())\nsets = [ast.literal_eval(n.value) for n in ast.walk(tree) if isinstance(n, ast.Assign)\n        and any(isinstance(t, ast.Name) and t.id == 'required_probes' for t in n.targets)]\nassert len(sets) == 1 and required <= sets[0]\nfor name in required:\n    assert audit.count('#print axioms ' + name) == 1\ndelegation = load_module('delegation', 'scripts/report_delegation.py')\nmetrics = json.loads(Path('research/astra-terra-high-deliveries-30.json').read_text())\nassert digest('scripts/report_delegation.py') == metrics['report_script_sha256']\nassert delegation.summarize(metrics['input_metric_snapshot']) == metrics['full_report']\nassert metrics['full_report']['closed_count'] == 30\nassert metrics['latest_ten'] == delegation.summarize({\n    'active_tasks': [], 'completed_tasks': metrics['input_metric_snapshot']['completed_tasks'][-10:]})\nlive_report = subprocess.run(['python3', '-B', 'scripts/report_delegation.py', '--json'],\n                            text=True, capture_output=True, check=True)\nassert json.loads(live_report.stdout) == metrics['full_report']\nsubprocess.run(['python3', '-B', 'scripts/validate_workflow.py'], check=True)\nsubprocess.run(['git', 'diff', '--check'], check=True)\nfor path in manifest['new_text_files']:\n    text = Path(path).read_text()\n    assert text.endswith('\\n'), path\n    assert not re.search(r'[ \\t]+$', text, re.M), path\nprint(json.dumps({'frozen_hashes': len(manifest['hashes']),\n                  'document_bindings': document_count,\n                  'lean_sources_scanned': len(sources),\n                  'required_new_axiom_probes': len(required),\n                  'failed_sources_recovered': 2,\n                  'terra_high_deliveries_reproduced': 30,\n                  'scope': 'Local source, receipt and integration checks. Full hosted build pending; unrestricted LRC unresolved.'}, indent=2))\n",
+    "observed_tool_chunk": "4b4f1b",
+    "exit_code": 0,
+    "observed_output": "Frozen Pass95 manifest: 36 hashes; 13 checkpoint files\nworkflow structural validation passed; it cannot certify mathematical validity.\n{\n  \"frozen_hashes\": 36,\n  \"document_bindings\": 42,\n  \"lean_sources_scanned\": 224,\n  \"required_new_axiom_probes\": 2,\n  \"failed_sources_recovered\": 2,\n  \"terra_high_deliveries_reproduced\": 30,\n  \"scope\": \"Local source, receipt and integration checks. Full hosted build pending; unrestricted LRC unresolved.\"\n}\n"
+  },
+  "scope": "Two exact conditional all-time strict-core/exclusion theorems; no full LRC proof or disproof. Full source review1fcb97cf accepted without corrections; unchanged compiled sourceb26dbff.",
+  "execution_evidence": [
+    "research/astra-strict-core-implementation.json",
+    "research/astra-strict-core-failure-sources.json",
+    "research/astra-strictcore-dependency-verification.json"
+  ],
+  "root_readbacks": {
+    "complete_source_and_receipt": "b54107",
+    "complete_independent_review": "bcf868",
+    "review_bindings": "fb87a4",
+    "successful_receipt_validation": "54beb8",
+    "failed_source_recovery": "fa4ab4"
+  },
+  "storage": "4GiB aggregate RAM/512MiB swap cap, serial lean -j1 under flock; no duplicate local integration build. Shared cache retained for immediately queued deletion adapter.",
+  "excluded": [
+    "research/astra-minimal-failure-deletion-contract.md",
+    "research/astra-minimal-failure-deletion-contract-review.md",
+    "research/astra-forced-parent-global-cycle.md"
+  ]
+}

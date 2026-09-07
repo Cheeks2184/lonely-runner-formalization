@@ -853,3 +853,7 @@ project-specific axiom.
 #print axioms LonelyRunner.exists_minimalPositiveIntegerFailure
 #print axioms LonelyRunner.MinimalPositiveIntegerFailure.witness_of_sum_lt
 #print axioms LonelyRunner.exists_attained_strict_failure_margin
+
+-- The global full-minimum bound contracts every closed deletion-good set.
+#print axioms LonelyRunner.strict_core_bound_of_global_minimum
+#print axioms LonelyRunner.not_complementSafe_of_global_maximum
