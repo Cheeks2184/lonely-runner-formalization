@@ -6,7 +6,7 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/relation_changing_transport",
+      "id": "/root/nonlocal_arithmetic_charging",
       "agent_id": "/root/fold_zero_restoration_resume",
       "kind": "research",
       "status": "in_progress",
@@ -14,11 +14,11 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "94a96d13c7877aeb37ef341543830ef253299008",
+      "source_checkpoint": "24dcc214a08e860ce12127011865c591a332b02c",
       "owned_files": [
-        "research/astra-relation-changing-transport.md"
+        "research/astra-nonlocal-arithmetic-charging.md"
       ],
-      "target": "Investigate one justified uniform all-coordinate witness transfer that changes bounded relations in the forced full-rank case. Use complete strict failure/count-sum minimality, retain exact phase defect; compare existing projection/parent/parity holds. Prove a usable estimate or identify/refute the first genuinely new precise claim. Do not repackage compatible lowering or rank defect.",
+      "target": "Test one nonlocal common-time charging mechanism using exact rational shifts that fix an original coordinate. Seek a uniform sufficient inequality with genuine arithmetic content beyond arbitrary primitives of K or rephrased E, preserving all original labels. Derive a substantive useful step or precise obstruction to the first selected candidate; no count/support ladder.",
       "checks": []
     }
   ],
@@ -11842,12 +11842,140 @@
       },
       "delivery_number": 36,
       "result": "First captured focused check passed:37bindings,noerrors;source/pinnedparity,format,workflow. Unknown taskelapsed/usage remainnull. Rootacceptedcompleteprovenance."
+    },
+    {
+      "id": "/root/relation_changing_transport",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "94a96d13c7877aeb37ef341543830ef253299008",
+      "owned_files": [
+        "research/astra-relation-changing-transport.md"
+      ],
+      "target": "Investigate one justified uniform all-coordinate witness transfer that changes bounded relations in the forced full-rank case. Use complete strict failure/count-sum minimality, retain exact phase defect; compare existing projection/parent/parity holds. Prove a usable estimate or identify/refute the first genuinely new precise claim. Do not repackage compatible lowering or rank defect.",
+      "checks": [
+        "4b539e fullread",
+        "903226 seventeen bindings/format",
+        "ac300e workflow",
+        "root fullread ba762a and frozenhash verified"
+      ],
+      "result": "Frozen manuscript8712e1db: complete phase-defect, necessary phase separation and universal scalar comparison obstruction. No specialized failure-dependent positive comparison. Pending independent review."
+    },
+    {
+      "id": "/root/relation_changing_transport_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "ece90ad9f84e50f0158946daf329bb67341105fe",
+      "owned_files": [
+        "research/astra-relation-changing-transport-review.md"
+      ],
+      "target": "Independently audit frozen8712e1db exact phase-loss, full global-failure/all-coordinate scope, iff frequency-fiber criterion and quantitative uniform scalar obstruction. Distinguish specialized unshifted open route; no broad impossibility or Lean claim.",
+      "checks": [
+        "44b2cc authorread",
+        "bbdd66 fullreviewread",
+        "6b82dc eighteenbindings/format",
+        "23c9f5 workflow",
+        "505bde rootfullread;current18bindings verified"
+      ],
+      "result": "Independently accepted frozen8712e1db without mathematical correction; review015315c8. Scalar all-phase comparison obstructed, specialized unshifted transfer remainsopen."
+    },
+    {
+      "id": "/root/slack_energy_phase_cell_charging",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "ece90ad9f84e50f0158946daf329bb67341105fe",
+      "owned_files": [
+        "research/astra-slack-energy-phase-cell-charging.md"
+      ],
+      "target": "Test global slack-energy E through an actual time-domain integration-by-parts/phase-cell charging identity. Retain phase integers and boundary flux across all cells; do not repeat sign-by-support budgets or restate E as phase supply. Derive a usable uniform estimate or a specific exact obstruction with explicit new mathematical content.",
+      "checks": [
+        "cc2d0e finalfullread",
+        "2b082d eightbindings/format",
+        "8c1c49 workflow",
+        "rootfullread e129c9"
+      ],
+      "result": "Frozen c87e03e8: exact distributional product derivative, threshold/peak atoms, and negative-cell obstruction to bounded local lambdaP+nuPprime residual-measure certificate. E/generalnonlocalcharging unresolved."
+    },
+    {
+      "id": "/root/slack_energy_phase_cell_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "24dcc214a08e860ce12127011865c591a332b02c",
+      "owned_files": [
+        "research/astra-slack-energy-phase-cell-review.md"
+      ],
+      "target": "Independently review c87e03e8 full distributional derivative and atom weights, negative-cell exact polynomials, bounded piecewise-C1 local flux class and precise restricted impossibility. Verify full E unaffected and nonlocal route open. No builds.",
+      "checks": [
+        "9262fa authorread",
+        "94fd4a fullreview",
+        "1d0582 ninebindings/format",
+        "ebcadd workflow",
+        "rootcomplete review b7e6d2"
+      ],
+      "result": "Accepted c87e03e8 without correction; reviewea120784. Exact differential residual-measure class obstructed on goodcontrol; E/nonlocal/strict-failure-only mechanisms notrefuted."
+    },
+    {
+      "id": "/root/pass102_document_verification",
+      "agent_id": "/root/harmonic_fold_endpoint_repair",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "24dcc214a08e860ce12127011865c591a332b02c",
+      "owned_files": [
+        "research/astra-pass102-verification.json",
+        "/tmp/astra-pass102-verifier.py",
+        "/tmp/astra-pass102-attempts.jsonl"
+      ],
+      "target": "Verify frozen Pass102 manuscripts/reviews/summary with root manifest and raw recorder; exact source bindings, unchanged Lean/pinnedinputs,format,workflow. No prose edits or builds.",
+      "checks": [
+        {
+          "kind": "focused_receipt",
+          "receipt_sha256": "5c5eb92ee21025943bbcfa118e1aceb720c59949f85e8b680aeb6f1c50180345",
+          "evidence": "b5a015 fullreceipt and provenance"
+        }
+      ],
+      "delivery_metrics": {
+        "check_kind": "python",
+        "first_check_success": true,
+        "worker_repair_rounds": 0,
+        "astra_repair_rounds": 0,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-pass102-verification.json"
+        ]
+      },
+      "delivery_number": 37,
+      "result": "Firstcapturedcheckpassed52bindings;source/pinnedparity,format,workflow. Rootfullreceipt/source/manifestread and rawattempt/current26hashes equality b5a015 accepted; nofocusedrerun."
     }
   ],
   "latest_checkpoint": "Pass100/PR99 fullymerged94a96d1;17remotehashes+ancestry,3731buildjobs710trustreportsverified. Nextbranchcodex/astra-bounded-relation-rank. Quartic rank source7fee5332/review032f5c8a independentlyaccepted,awaitnextcheckpointintegration. Full-rank relation-changing transport unresolved;unrestrictedgoalactive.",
   "next_actions": [
-    "Integrate accepted quartic bounded-relation rank source/review into next substantive checkpoint with concise exact-scope docs and mechanical receipt, thenpublish. CLIauthcurrentlyinvalid;GitHubintegrationreadworksbutmergewrite403;existingbrowserauthorizedmergewassuccessful.",
-    "Investigate actual relation-changing full-coordinate transport in the forced full-rank case; do not relaunch rankdefect/fullycompatiblelowering/proper-half-core atD>=E.",
+    "Publish frozenPass102sevenfiles on codex/astra-relation-transport-defect:localcommit/browserupload/treeparity/PR/checks/merge/remoteverification. Preserve unfinished nonlocal-arithmetic manuscript.",
+    "Integrate accepted relation-changing transport source/review at next substantive checkpoint; continue time-domain phase-cell charging task. Do not repackage excluded all-phase scalar identity as specialized proof.",
     "Keep all localbuilds off unless an accepted useful Leancontract is supplied; no such contract yet."
   ],
   "research_holds": [
@@ -12432,8 +12560,8 @@
   },
   "previous_goal_turn_classification": {
     "classification": "progress",
-    "evidence": "Read-only previous-boot kernel logs independently confirmed seven Rust compiler processes around12GiB RSS and swap exhaustion before ChatGPT OOM-kill; current snapshot no Rust/Lean builds. User now explicitly continued goal.",
-    "next_action": "Resume relation-changing transport and accept saved Pass101 receipt; no local builds."
+    "evidence": "PR100 merged24dcc21:fullpublishedtreeparity,23remotehashes,3731buildjobs710trustreports,2hostedcheckssuccess. Relation-changing scalar obstruction independentlyaccepted8712e1db/015315c8. Local differential-flux research active.",
+    "next_action": "Review and integrate exact new uniform-mechanism exclusions, then pursue a genuinely nonlocal or specialized arithmetic estimate."
   },
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
@@ -20843,7 +20971,7 @@
     "additional_progress": "Independent quartic rank review nowaccepted,rootfullreadand19bindingsverified. Compatiblelowering/proper-half-core branchesexcludedatE;ranktheoremnotkernelproof. Nextcheckpointintegrationpending."
   },
   "pass101_publication": {
-    "status": "verified_local_checkpoint_preparing_publication",
+    "status": "merged_verified",
     "branch": "codex/astra-bounded-relation-rank",
     "base_sha": "94a96d13c7877aeb37ef341543830ef253299008",
     "files": [
@@ -20854,6 +20982,242 @@
       "research/workflow-state.json"
     ],
     "method": "Local commit retained; existing signed-in GitHub browser upload on featurebranch because CLI credential invalid and connectorwrite403. Compare exact published bytes; browser commits will differ from local commit. No credentials or permissions altered.",
-    "review": "Independent Astraxhigh032f5c8a accepted author7fee5332;rootcompleteauthor/reviewreadpreviously and review/docsreadab76fc. Manuscript only."
+    "review": "Independent Astraxhigh032f5c8a accepted author7fee5332;rootcompleteauthor/reviewreadpreviously and review/docsreadab76fc. Manuscript only.",
+    "local_commit": "ece90ad9f84e50f0158946daf329bb67341105fe",
+    "head_sha": "f830d87a810e51dc2006cc524310cdaaa427358c",
+    "browser_commits": [
+      "604210f663e92a672bee89076e892e4649c17c19",
+      "f830d87a810e51dc2006cc524310cdaaa427358c"
+    ],
+    "tree_sha": "378ea145ccd740a7fd9b97262b5e4f6539f8900f",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/100",
+    "ci_run_id": 34134676894,
+    "verification": "c4ab9f complete Git tree equality local reviewed commit vs browserpublishedhead; PRreadback exactbase/head/fivefiles; CI confirmedin_progress. Local commit retained and not falsely described as pushed.",
+    "published_hashes": {
+      "docs/astra-research-101.md": "4346db3902c9bd96ce27dbc43c9599fbccd365453d0fe463ca1b3ee359744515",
+      "research/astra-large-block-minimality.md": "7fee5332b73f99e0c8ec9b7de85d59b57d9c5e9e19425d58ba5ae5ac1ce64b9f",
+      "research/astra-large-block-minimality-review.md": "032f5c8a4d7a6086727a299fe2e132b7f500b163f1e82d1ddc89415059f0ebf2",
+      "research/astra-pass101-verification.json": "d1899de80b0aed3d087535ba72bd0724a97967d9f92fe63fd4ae9cd461caaa9d",
+      "research/workflow-state.json": "409580aba6d96c86a815284f642f6b731925050b77336f8cf5f613967ed537dc"
+    },
+    "remote_verification": {
+      "verifier_source": "from pathlib import Path\nimport json,hashlib,subprocess\nroot=Path('/home/joshua/lonely-runner-formalization')\nm=json.loads(Path('/tmp/astra-pass101-main-inputs.json').read_text())\np=json.loads(Path('/tmp/astra-pass101-merged.json').read_text())\nj=json.loads(Path('/tmp/astra-pass101-jobs.json').read_text())\ndef git(*a): return subprocess.check_output(['git',*a],cwd=root).decode().strip()\nassert p['number']==m['pr_number'] and p['url']==m['pr_url']\nassert p['merged'] is True and p['state']=='closed'\nassert p['head_sha']==m['head_sha'] and p['base_sha']==m['baseline']\nmerge=p['merge_commit_sha']\nfor a,b in [(m['baseline'],m['head_sha']),(m['head_sha'],merge),(merge,'origin/main')]:\n subprocess.run(['git','merge-base','--is-ancestor',a,b],cwd=root,check=True)\nassert git('rev-parse',m['local_commit']+'^{tree}')==git('rev-parse',m['head_sha']+'^{tree}')\nassert git('rev-parse',merge+'^{tree}')==git('rev-parse',m['head_sha']+'^{tree}')\nassert {x['id'] for x in j['jobs']}==set(m['job_ids'])\nassert all(x['run_id']==m['ci_run_id'] and x['status']=='completed' and x['conclusion']=='success' for x in j['jobs'])\nfor path,h in m['hashes'].items():\n b=subprocess.check_output(['git','show','origin/main:'+path],cwd=root)\n assert hashlib.sha256(b).hexdigest()==h,path\nprint(json.dumps({'result':'passed','hashes':len(m['hashes']),'published_head':m['head_sha'],'merge_sha':merge,'origin_main':git('rev-parse','origin/main'),'complete_tree_parity':True},sort_keys=True))\n",
+      "verifier_sha256": "0337c47ef11ca8ff999c35b2ca0914247eaab97e3defc40c7982c89ee3177c12",
+      "manifest_text": "{\n  \"baseline\": \"94a96d13c7877aeb37ef341543830ef253299008\",\n  \"hashes\": {\n    \".codex/config.toml\": \"28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c\",\n    \"LonelyRunner/BHKAdjacentPair.lean\": \"3d36d812db7ed18db8fce521b2505d5904a8387d8e315c6e7d08d9eb7dc75708\",\n    \"LonelyRunner/BHKAdjacentRatios.lean\": \"677c365618fc612a5ee7d3d9e9696273da2d9e775b77487d0b3e208cea9d6733\",\n    \"LonelyRunner/BHKCollisionToWitness.lean\": \"e5175b1f55a2d73e850ffd3e5a5dab140b6e4d84f0cefd94ebf6d7663d3a0d6a\",\n    \"LonelyRunner/FiniteFamilyEquivalence.lean\": \"475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3\",\n    \"LonelyRunner/FiniteHeightReduction.lean\": \"cb41059260b943411e2ab5360b84b59cd13f2ddf352c3c50a0b3715b9b9987d6\",\n    \"LonelyRunner/MinimalCounterexample.lean\": \"b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539\",\n    \"LonelyRunner/MinimalFailureDeletion.lean\": \"2c9b11be2996fec5ef56278d6df0acda3723669a30f4003be374300d4a10342c\",\n    \"docs/astra-research-101.md\": \"4346db3902c9bd96ce27dbc43c9599fbccd365453d0fe463ca1b3ee359744515\",\n    \"docs/project-workflow.md\": \"2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67\",\n    \"research/astra-affine-finite-height-audit.md\": \"6b676a05eb3a0036cd69e779150a5f1a868024d089ea75c142daeddccede938f\",\n    \"research/astra-affine-finite-height-review.md\": \"eb0fb96e22096175fa3b68dc70a1b7981f39356aaf1377863dcaa95b6a510876\",\n    \"research/astra-large-block-minimality-review.md\": \"032f5c8a4d7a6086727a299fe2e132b7f500b163f1e82d1ddc89415059f0ebf2\",\n    \"research/astra-large-block-minimality.md\": \"7fee5332b73f99e0c8ec9b7de85d59b57d9c5e9e19425d58ba5ae5ac1ce64b9f\",\n    \"research/astra-parity-coset-minimum-review.md\": \"fda600dd2cdbf2f470bc18e24baeab0bb4b9a90616f34b10d160ba3fa86b3360\",\n    \"research/astra-positive-block-transport.md\": \"ced2c8cfac1bcc529e73a5ee8eef4af3595d30ebfa7db49273aa3ebd6f39f232\",\n    \"research/astra-private-repair-review.md\": \"a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512\",\n    \"research/astra-same-parity-pair-descent.md\": \"9ccb99d3ef297b5e1e3bb1f0dd6bc20234ff895ebcbe40d362098aaf72903a35\",\n    \"research/astra-uniform-global-transport-strategy.md\": \"c6d433ea553cc5507a0faa97387fba75108d15bece45ac14489c879c2078d618\",\n    \"research/workflow-policy.json\": \"833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b\",\n    \"scripts/validate_workflow.py\": \"250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383\",\n    \"research/astra-pass101-verification.json\": \"d1899de80b0aed3d087535ba72bd0724a97967d9f92fe63fd4ae9cd461caaa9d\",\n    \"research/workflow-state.json\": \"409580aba6d96c86a815284f642f6b731925050b77336f8cf5f613967ed537dc\"\n  },\n  \"binding_documents\": [\n    \"research/astra-large-block-minimality.md\",\n    \"research/astra-large-block-minimality-review.md\"\n  ],\n  \"expected_binding_rows\": [\n    18,\n    19\n  ],\n  \"new_text_files\": [\n    \"research/astra-large-block-minimality.md\",\n    \"research/astra-large-block-minimality-review.md\",\n    \"docs/astra-research-101.md\"\n  ],\n  \"local_commit\": \"ece90ad9f84e50f0158946daf329bb67341105fe\",\n  \"head_sha\": \"f830d87a810e51dc2006cc524310cdaaa427358c\",\n  \"pr_number\": 100,\n  \"pr_url\": \"https://github.com/Cheeks2184/lonely-runner-formalization/pull/100\",\n  \"ci_run_id\": 34134676894,\n  \"job_ids\": [\n    101782703337,\n    101782703617\n  ]\n}\n",
+      "manifest_sha256": "73a387907d2547e098d646698a7fd1dc21e73a3e94411dd10a88ff44fbf20fda",
+      "status": "passed",
+      "receipt": "84fa91 exit0;23remotehashes,completepublished/local/mergedtreeequality,base/head/merge/mainancestry.",
+      "result": {
+        "complete_tree_parity": true,
+        "hashes": 23,
+        "merge_sha": "24dcc214a08e860ce12127011865c591a332b02c",
+        "origin_main": "24dcc214a08e860ce12127011865c591a332b02c",
+        "published_head": "f830d87a810e51dc2006cc524310cdaaa427358c",
+        "result": "passed"
+      }
+    },
+    "lean_audit": {
+      "job_id": 101782703337,
+      "conclusion": "success",
+      "build_jobs": 3731,
+      "trust_reports": 710,
+      "build_log_line": "2026-09-07T14:47:05.0183640Z Build completed successfully (3731 jobs).",
+      "trust_log_line": "2026-09-07T14:47:33.9112116Z Trust audit accepted 710 theorem reports."
+    },
+    "review_readback": "GitHub reviews [] confirmed; independent math review in checkpoint accepted.",
+    "merge_sha": "24dcc214a08e860ce12127011865c591a332b02c",
+    "checks": {
+      "jobs": [
+        {
+          "id": 101782703337,
+          "name": "Lean build and trust audit",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 34134676894,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Audit Lean sources and theorem axioms",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            }
+          ]
+        },
+        {
+          "id": 101782703617,
+          "name": "Exact computational certificates",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 34134676894,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Install native certificate dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Validate current project workflow",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run the complete deterministic regression suite",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Replay Response 50 affine transversal certificate",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Replay coefficient-two Gamma selector evidence",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            }
+          ]
+        }
+      ]
+    },
+    "merged_pr_readback": {
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/100",
+      "number": 100,
+      "state": "closed",
+      "merged": true,
+      "mergeable": false,
+      "draft": false,
+      "body": "Under lower-count LRC supply, n >= 6 distinct positive integer moving speeds with actual maximum at most 1/(n+1) have rational relation rank n-1 already at coefficient bound E = 2n^2(n(n+1)-1). The independently reviewed manuscript rules out fully relation-preserving descent and the specified proper splitting proposal. It does not improve the existing finite-height cutoff or resolve unrestricted LRC.\r\n\r\nVerification: independent Astra mathematical review; first-attempt mechanical receipt with 37 source bindings and unchanged Lean/pinned dependencies; root receipt and 21 input hashes checked. The entire published tree matches verified local checkpoint ece90ad9f84e50f0158946daf329bb67341105fe. Browser publication produced two commits ending f830d87a810e51dc2006cc524310cdaaa427358c because CLI authentication and connector write access were unavailable. No local build or cache restoration.",
+      "title": "Record bounded-relation rank theorem and reduction limits",
+      "base": "main",
+      "base_sha": "94a96d13c7877aeb37ef341543830ef253299008",
+      "head": "codex/astra-bounded-relation-rank",
+      "head_sha": "f830d87a810e51dc2006cc524310cdaaa427358c",
+      "head_repo_id": 1320320167,
+      "head_repo_full_name": "Cheeks2184/lonely-runner-formalization",
+      "merge_commit_sha": "24dcc214a08e860ce12127011865c591a332b02c",
+      "user": {
+        "login": "Cheeks2184",
+        "name": "Cheeks2184",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/248285463?v=4",
+        "id": 248285463
+      },
+      "requested_reviewers": null,
+      "requested_team_reviewers": null,
+      "diff": null,
+      "comments": null,
+      "created_at": "2026-09-07T14:45:08Z",
+      "updated_at": "2026-09-07T14:56:08Z",
+      "closed_at": "2026-09-07T14:56:08Z",
+      "merged_at": "2026-09-07T14:56:08Z",
+      "commits": 2,
+      "changed_files": 5,
+      "additions": 1123,
+      "deletions": 13,
+      "display_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/100",
+      "display_title": "Record bounded-relation rank theorem and reduction limits"
+    }
+  },
+  "relation_changing_transport_result": {
+    "author_sha256": "8712e1dbc753e6ef77c87067171914fdcaa5f3635772836a4bb44d7de83b8bb3",
+    "review_sha256": "015315c881a9f2df7ac8a0d74bd39d27463b454f190a71b23016f0b5f370f981",
+    "status": "accepted_manuscript_pending_next_integration_checkpoint",
+    "result": "Complete G_w tail and gcdphase exclusion; exact iff frequency-fiber criterion for scalar weighting of every independent phase shift of fixed positive kernel; changed bounded original relation violates it. Error>=a/(1+a),>=1/[2M^(2Pn)] explicit but not compared with tail. No specialized/unshifted obstruction, no phase-selected supply, no kernel declaration."
+  },
+  "slack_energy_phase_cell_result": {
+    "author_sha256": "c87e03e848261ceae8355a564bb7be3b2b5b8914048d7bfcb40ee44bba0c1c73",
+    "review_sha256": "ea12078496524231a8d3735d7bc089adb7adf5b51549958270dd507dbf9a690f",
+    "status": "accepted_manuscript_pending_integration",
+    "result": "Accepted c87e03e8 without correction; reviewea120784. Exact differential residual-measure class obstructed on goodcontrol; E/nonlocal/strict-failure-only mechanisms notrefuted."
+  },
+  "pass102_publication": {
+    "status": "verified_local_preparing_commit",
+    "branch": "codex/astra-relation-transport-defect",
+    "base_sha": "24dcc214a08e860ce12127011865c591a332b02c",
+    "files": [
+      "docs/astra-research-102.md",
+      "research/astra-relation-changing-transport.md",
+      "research/astra-relation-changing-transport-review.md",
+      "research/astra-slack-energy-phase-cell-charging.md",
+      "research/astra-slack-energy-phase-cell-review.md",
+      "research/astra-pass102-verification.json",
+      "research/workflow-state.json"
+    ],
+    "method": "Localcommitretained;browseruploadexactfilesontofeaturebranch because previouslyconfirmed CLIcredentialinvalid/connectorwrite403. Verifyentiretreeparityandactualpublishedcommitancestry. No credential or permissionchanges.",
+    "branch_evidence": "b6a49e/e68a4b publicfetchcreatedbranchbase24dcc21",
+    "semantic_review": "Transport8712e1db reviewed015315c8;localfluxc87e03e8 reviewedea120784. Rootfullauthor/reviewreads and frozenbindings accepted; docsf4e1b32a reviewed exactscope. No Lean or fullLRCclaim."
   }
 }
