@@ -6,19 +6,19 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/forced_cycle_frequency_exchange",
-      "agent_id": "/root/fold_zero_restoration_resume",
+      "id": "/root/zero_only_maximum_gaps",
+      "agent_id": "/root/uniform_strategy_after_fold",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "c40889087108333dbe948221b045553fd44a5b0d",
+      "source_checkpoint": "c63ea896f8218dce44ac270883867d7808c01a51",
       "owned_files": [
-        "research/astra-forced-cycle-frequency-exchange.md"
+        "research/astra-zero-only-maximum-gaps.md"
       ],
-      "target": "Determine whether all forced adjacencies for one owner, using strict private-core contraction and full coordinate minimality, supply one fresh smaller frequency bad on its whole W_m. Test at most two exact propagation/exchange claims; retain all collision components, not just one edge.",
+      "target": "Analyze zero-only maximum-speed collision intervals under canonical strict failure using exact complementary endpoint geometry and stronger lower-count margin1/n. Prove a uniform contradiction or a substantive restriction with precise remaining gap, at most two hand approaches.",
       "checks": []
     }
   ],
@@ -10419,13 +10419,55 @@
       ],
       "result": "Accepted frozen 5cc9866b without corrections; root full review readback accepted.",
       "sha256": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
+    },
+    {
+      "id": "/root/forced_cycle_frequency_exchange",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "c40889087108333dbe948221b045553fd44a5b0d",
+      "owned_files": [
+        "research/astra-forced-cycle-frequency-exchange.md"
+      ],
+      "target": "Determine whether all forced adjacencies for one owner, using strict private-core contraction and full coordinate minimality, supply one fresh smaller frequency bad on its whole W_m. Test at most two exact propagation/exchange claims; retain all collision components, not just one edge.",
+      "checks": [
+        "Worker full readback, fifteen source bindings, whitespace and workflow validation passed.",
+        "Root read complete frozen source and checked new algebra, endpoint upgrade, zero alternative and control."
+      ],
+      "result": "Frozen manuscript4ac28414; root full read accepts pending independent review. Entire-private-portion cancellation, automatic original endpoint supply for max speed, coherent one-slot descent, zero-only complementary neighbors and determinant restriction, uniform nonnative zero control.",
+      "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+    },
+    {
+      "id": "/root/maximum_frequency_exchange_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "c63ea896f8218dce44ac270883867d7808c01a51",
+      "owned_files": [
+        "research/astra-maximum-frequency-exchange-review.md"
+      ],
+      "target": "Independent review of frozen maximum-frequency endpoint cancellation source4ac28414, including full private portions, all endpoint choices, common nonzero descent, zero-only unique forced parents, determinant bound and uniform noncanonical control.",
+      "checks": [
+        "Independent full hand derivations, sixteen bindings, formatting and workflow validation passed.",
+        "Root full author and frozen review readback complete."
+      ],
+      "result": "Accepted unchanged4ac28414 without correction; root full source and review readback accepted.",
+      "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
     }
   ],
-  "latest_checkpoint": "Pass88 independently accepted and root verified: whole-deletion-set contraction, exact core capacity identity, full same-center pruning deficit and forced-shell control. Publication pending; unrestricted LRC unresolved.",
+  "latest_checkpoint": "Pass89 independently accepted and root verified: maximum-speed endpoint cancellation, coherent one-slot descent and zero-only alternative; publication pending. Zero-only maximum-gap research active; unrestricted LRC unresolved.",
   "next_actions": [
-    "Publish verified Pass88: commit, push, PR, required CI, exact-head merge and fetched-main hashes/ancestry.",
-    "Continue live forced-cycle-frequency exchange task; retain whole W_m and canonical strict failure, accept no edge-only replacement.",
-    "No local builds/cache restoration/heavy searches queued."
+    "Publish verified Pass89 through commit/push/PR/checks/exact-head merge/fetched-main verification.",
+    "Continue live zero-only maximum-gap investigation; its exact gap and beta seed implications are not yet frozen or independently reviewed.",
+    "Keep unrestricted scope and no runner-count ladder; no local builds or heavy searches queued."
   ],
   "research_holds": [
     {
@@ -14896,6 +14938,11 @@
       "classification": "progress",
       "evidence": "PR85 merged and remote main17hashes verified. Pass87 independently accepted, integration verifier b89359 passed3files11deps21bindings, committed/pushed/openedPR86. New strict-core contraction and full pruning deficit frozen5cc9866b, root read, independent review live.",
       "goal": "active; unrestricted theorem unproved"
+    },
+    {
+      "event": "goal_turn_progress_pass88_and_endpoint_exchange",
+      "classification": "progress",
+      "evidence": "PR86 merged and main16hashes checked; Pass88 source/review accepted without correction, root verifier6aeea0 checked3files13dependencies24documentbindings, PR87 merged and main18hashes checked. New maximum-frequency local cancellation upgraded to original endpoint neighbors; global nonzero coherence remains unproved."
     }
   ],
   "two_even_escalation": {
@@ -14940,10 +14987,12 @@
     "stronger_capacity": "N9 basic affine control fails stronger O_3, explicitly disclosed. Root independently reviewed addendum proves factorial obstruction meets every O_ell plus MSS height for every N>=28."
   },
   "storage_latest_cleanup": {
-    "command": "python3 -B scripts/manage_storage.py --clean",
+    "command": "python3 scripts/manage_storage.py --clean",
+    "chunk_id": "15638e",
     "exit_code": 0,
-    "output": "Removed 0 bytes from 0 allowlisted paths.",
-    "local_builds_queued": false
+    "removed_bytes": 0,
+    "removed_paths": 0,
+    "note": "No build/cache work queued; no allowlisted paths existed."
   },
   "uniform_all_deletion_seed": {
     "status": "Manuscript finite reduction accepted; uniform supply Q unresolved.",
@@ -16767,7 +16816,7 @@
     }
   },
   "pending_pass88": {
-    "status": "independently_accepted_root_verified_publication_pending",
+    "status": "merged_verified_on_main",
     "document": "docs/astra-research-88.md",
     "source": "research/astra-strict-core-shell-supply.md",
     "source_sha256": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
@@ -16777,7 +16826,7 @@
     "review_sha256": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
   },
   "pass88_publication": {
-    "status": "locally_verified_publication_pending",
+    "status": "merged_verified_on_main",
     "branch": "codex/astra-strict-core-shell",
     "parent_main": "653c532a3d3a98816b4de63ceefce191c4c19c3c",
     "receipt": "research/astra-pass88-verification.json",
@@ -16786,6 +16835,140 @@
       "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
       "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f"
     },
-    "root_verifier_chunk": "6aeea0"
+    "root_verifier_chunk": "6aeea0",
+    "pr": 87,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/87",
+    "head": "2cd079ca3eb3f79ceda54c9cf4ddcd99c5c70b45",
+    "ci_run": 34096151943,
+    "checks": {
+      "Lean build and trust audit": 101660160186,
+      "Exact computational certificates": 101660160353
+    },
+    "push_result": {
+      "session_id": 49850,
+      "terminal_chunk": "2ed564",
+      "exit_code": 0
+    },
+    "create_result": {
+      "session_id": 87617,
+      "terminal_chunk": "857a93",
+      "exit_code": 0
+    },
+    "main_verifier_source": "from pathlib import Path\nimport json,hashlib,subprocess\nm=json.loads(Path('/tmp/astra-pass88-main-inputs.json').read_text())\np=json.loads(Path('/tmp/astra-pass88-merged.json').read_text())\nassert p['state']=='MERGED',p\nassert p['headRefOid']==m['head'],p\nmerge=p['mergeCommit']['oid']\nmain=subprocess.check_output(['git','rev-parse','origin/main'],text=True).strip()\nfor ref in [merge,m['head'],m['parent']]:\n    assert subprocess.run(['git','merge-base','--is-ancestor',ref,main]).returncode==0,ref\nfor path,digest in m['hashes'].items():\n    data=subprocess.check_output(['git','show',main+':'+path])\n    assert hashlib.sha256(data).hexdigest()==digest,path\nprint(json.dumps(dict(main=main,merge=merge,head=m['head'],verified_hashes=len(m['hashes']),head_ancestry=True,parent_ancestry=True,merged_at=p['mergedAt']),indent=2))\n",
+    "main_verifier_inputs": {
+      "head": "2cd079ca3eb3f79ceda54c9cf4ddcd99c5c70b45",
+      "parent": "653c532a3d3a98816b4de63ceefce191c4c19c3c",
+      "hashes": {
+        "docs/astra-research-88.md": "ee5dcfb530baf75db871c460c0da309d014b499327cc0dd9f6845d819fdb4349",
+        "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+        "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f",
+        "research/astra-arithmetic-completion-saving.md": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403",
+        "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+        "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02",
+        "research/astra-coupled-descent-strategy.md": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+        "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        "research/astra-uniform-divisor-minimality.md": "8c4b6ee094f0f311f360d3abf371e95f731e28cee997d3810dd3218ff6f25746",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-arithmetic-completion-review.md": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019",
+        "research/astra-pass87-verification.json": "3aab4c1a51ca78b385a8a242055a133e9946e6a1a2ba218530ad7509ad4734b6",
+        "research/astra-pass88-verification.json": "c1294ba4a1db2534f1d8b400108ecfb547087bbdbfa50019c720dd02e807e4f6",
+        "research/workflow-state.json": "ff1ecd9bd3319d131913b3ae96425e0add60a3e4a5acab0c49e0e1a772ded79e"
+      }
+    },
+    "watch_session_id": 75650,
+    "last_observation": {
+      "chunk_id": "eee149",
+      "head": "2cd079ca3eb3f79ceda54c9cf4ddcd99c5c70b45",
+      "lean": "SUCCESS",
+      "exact": "IN_PROGRESS",
+      "run": 34096151943,
+      "exact_job": 101660160353
+    },
+    "merge": "c63ea896f8218dce44ac270883867d7808c01a51",
+    "merged_at": "2026-09-07T07:46:04Z",
+    "premerge_check_chunk": "f35b26",
+    "merge_result": {
+      "session_id": 12543,
+      "chunk_id": "f6c326",
+      "exit_code": 0,
+      "output": ""
+    },
+    "watcher_terminal": {
+      "session_id": 75650,
+      "chunk_id": "817ae3",
+      "exit_code": 0
+    },
+    "main_verifier_result": {
+      "chunk_id": "6267f0",
+      "wall_time_seconds": 0.90507864,
+      "exit_code": 0,
+      "original_token_count": 110,
+      "output": "From https://github.com/Cheeks2184/lonely-runner-formalization\n * branch            main       -> FETCH_HEAD\n   653c532..c63ea89  main       -> origin/main\n{\n  \"main\": \"c63ea896f8218dce44ac270883867d7808c01a51\",\n  \"merge\": \"c63ea896f8218dce44ac270883867d7808c01a51\",\n  \"head\": \"2cd079ca3eb3f79ceda54c9cf4ddcd99c5c70b45\",\n  \"verified_hashes\": 18,\n  \"head_ancestry\": true,\n  \"parent_ancestry\": true,\n  \"merged_at\": \"2026-09-07T07:46:04Z\"\n}\n"
+    },
+    "merged_metadata": {
+      "headRefOid": "2cd079ca3eb3f79ceda54c9cf4ddcd99c5c70b45",
+      "mergeCommit": {
+        "oid": "c63ea896f8218dce44ac270883867d7808c01a51"
+      },
+      "mergedAt": "2026-09-07T07:46:04Z",
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T07:36:25Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34096151943/job/101660160186",
+          "name": "Lean build and trust audit",
+          "startedAt": "2026-09-07T07:34:48Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T07:44:19Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34096151943/job/101660160353",
+          "name": "Exact computational certificates",
+          "startedAt": "2026-09-07T07:34:50Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        }
+      ]
+    }
+  },
+  "forced_cycle_frequency_root_notes": {
+    "status": "independently_accepted_without_correction_root_read_complete",
+    "local_lemma": "For forced m-arc with lower-speed forced neighbors a,b on both sides and attained offset |e|<=mu_m, x=at-l>=alpha, y=r-bt>=alpha; strict overlaps bound x,y. Then z=(a+b-m)t-(l+r-k)=x-y-e lies strictly between -alpha+(m-b)(alpha-mu_m)/m and alpha-(m-a)(alpha-mu_m)/m. Thus |a+b-m|<m is bad on the entire W_m portion; if positive it is fresh. If zero, l+r=k.",
+    "root_check": "Root hand-checked algebra and strict endpoint bounds from worker message, but full source not yet frozen.",
+    "global_gap": "All maximum collision candidate sets are supplied by endpoint choices. A common positive candidate across all K_m gives true one-slot lower-sum descent after gcd normalization. Minimality forces empty intersection of positive candidates; this is not a coherence theorem. Zero and variable candidates remain.",
+    "endpoint_upgrade": "For maximum m, each endpoint of every forced m-arc is covered by a lower ORIGINAL arc. A covering lift cannot contain the opposite endpoint, else the m-arc has no private point. Its center is on the appropriate side because its radius exceeds alpha/m. All W_m points in that arc lie between the two covering-arc boundaries. Hence local cancellation needs no forced-neighbor hypothesis. Equal endpoint labels would imply 1<2alpha(1+a/m)<4alpha<=1, so labels differ.",
+    "zero_only": "If all cross-pairs of endpoint owners have a+b=m, both endpoint-owner sets are singleton. Both endpoints are private for their complementary owners, so these neighbor arcs are forced; lifts satisfy l+r=k.",
+    "control": "V=1..m at test width delta\u2208(1/(m+1),1/m): every primitive maximum center k/m has unique endpoint owners v,w solving vk=1 and wk=-1 modm, hence v+w=m. Their determinants are1 and every candidate iszero. Native maximum equals1/(m+1), so not canonical strict failure.",
+    "zero_only_core_overlap": "Candidate checked by root, pending worker/source review: with m=a+b and common determinant D=ar-bl, private m point gives D>=alpha*m. Zero-only endpoints are in W_a,W_b; Q_a=Q_b=m. Contracted endpoint norms give D<=(m+a)*mu and D<=(m+b)*mu, so neighboring closed mu-cores meet/overlap the m core. This restricts zero-only case but is not a contradiction.",
+    "source": "research/astra-forced-cycle-frequency-exchange.md",
+    "source_sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+    "review": "research/astra-maximum-frequency-exchange-review.md",
+    "review_sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+  },
+  "zero_only_gap_root_candidate": {
+    "status": "candidate_pending_worker_derivation_and_independent_review",
+    "observation": "For max m, any lower original alpha-arc intersecting forced A_m must cover an endpoint: it has greater length and cannot contain A_m. If C_k empty, unique complementary endpoint arcs are therefore the only other original arcs meeting A_m. W_(m,k) is exactly [I.right,J.left], contains k/m, and e endpoints are (alpha*m-D)/a and (D-alpha*m)/b. This needs full lift/wrap verification.",
+    "strong_seed": "If such portion contains a deletion witness at beta=1/n, b*x+a*y=D gives D>=beta*m; combined with accepted zero-only bound D<=mu(m+min(a,b)) implies min(a,b)>m/n. Do not assume every portion contains a beta witness or that all lower labels have complementary partners."
+  },
+  "pass89_publication": {
+    "status": "locally_verified_publication_pending",
+    "branch": "codex/astra-maximum-frequency-exchange",
+    "parent_main": "c63ea896f8218dce44ac270883867d7808c01a51",
+    "receipt": "research/astra-pass89-verification.json",
+    "hashes": {
+      "docs/astra-research-89.md": "4b10ea49c595bc525dbbcea6ab4fc6b5ed3b53951a58b0bf2254cc05ee01cb77",
+      "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+      "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+    },
+    "root_verifier_chunk": "7e14ca"
   }
 }
