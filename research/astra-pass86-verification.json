@@ -1,0 +1,466 @@
+{
+  "checkpoint": "Pass86",
+  "parent_main": "9f276366960df7a55c1f934d4f52fae1169a62fb",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-86.md": "5216fb58c255345b330c0813721283cf52df21185e94d1708e5ed43f348e8823",
+    "research/astra-coupled-descent-strategy.md": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+    "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+    "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+    "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
+  },
+  "dependency_hashes": {
+    "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+    "research/astra-minimal-frequency-review.md": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d",
+    "research/astra-arithmetic-winding-exchange.md": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4",
+    "research/astra-arithmetic-winding-review.md": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243",
+    "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-pass85-verification.json": "e525d38fcf7cf6216e5a24f8f4a66bcbdac3bc39234261a582fb8dbd8e62c586"
+  },
+  "document_bindings": [
+    {
+      "document": "research/astra-coupled-descent-strategy.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-coupled-descent-strategy.md",
+      "path": "research/astra-minimal-frequency-review.md",
+      "sha256": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d"
+    },
+    {
+      "document": "research/astra-coupled-descent-strategy.md",
+      "path": "research/astra-arithmetic-winding-exchange.md",
+      "sha256": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4"
+    },
+    {
+      "document": "research/astra-coupled-descent-strategy.md",
+      "path": "research/astra-arithmetic-winding-review.md",
+      "sha256": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243"
+    },
+    {
+      "document": "research/astra-coupled-descent-strategy.md",
+      "path": "research/astra-joint-seed-maximum-audit.md",
+      "sha256": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac"
+    },
+    {
+      "document": "research/astra-coupled-descent-strategy.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-coupled-descent-strategy.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-coupled-descent-strategy.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-coupled-descent-strategy.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-private-repair-review.md",
+      "path": "research/astra-coupled-descent-strategy.md",
+      "sha256": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2"
+    },
+    {
+      "document": "research/astra-private-repair-review.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-private-repair-review.md",
+      "path": "research/astra-minimal-frequency-review.md",
+      "sha256": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d"
+    },
+    {
+      "document": "research/astra-private-repair-review.md",
+      "path": "research/astra-arithmetic-winding-exchange.md",
+      "sha256": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4"
+    },
+    {
+      "document": "research/astra-private-repair-review.md",
+      "path": "research/astra-arithmetic-winding-review.md",
+      "sha256": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243"
+    },
+    {
+      "document": "research/astra-private-repair-review.md",
+      "path": "research/astra-joint-seed-maximum-audit.md",
+      "sha256": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac"
+    },
+    {
+      "document": "research/astra-private-repair-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-private-repair-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-private-repair-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-private-repair-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-forced-arc-completion.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-forced-arc-completion.md",
+      "path": "research/astra-minimal-frequency-review.md",
+      "sha256": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d"
+    },
+    {
+      "document": "research/astra-forced-arc-completion.md",
+      "path": "research/astra-arithmetic-winding-exchange.md",
+      "sha256": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4"
+    },
+    {
+      "document": "research/astra-forced-arc-completion.md",
+      "path": "research/astra-arithmetic-winding-review.md",
+      "sha256": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243"
+    },
+    {
+      "document": "research/astra-forced-arc-completion.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-forced-arc-completion.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-forced-arc-completion.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-forced-arc-completion.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": "research/astra-forced-arc-completion.md",
+      "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": "research/astra-coupled-descent-strategy.md",
+      "sha256": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": "research/astra-private-repair-review.md",
+      "sha256": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": "research/astra-minimal-frequency-review.md",
+      "sha256": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": "research/astra-arithmetic-winding-exchange.md",
+      "sha256": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": "research/astra-arithmetic-winding-review.md",
+      "sha256": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-forced-completion-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    }
+  ],
+  "checks": [
+    "Both manuscripts independently accepted without corrections; root read both full authors and reviews.",
+    "Frozen hashes, dependencies, document bindings, workflow, formatting and storage checks passed."
+  ],
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass86-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport hashlib,json,subprocess,sys\nroot=Path('/home/joshua/lonely-runner-formalization')\nm=json.loads(Path('/tmp/astra-pass86-inputs.json').read_text())\nfor name,digest in (m['hashes']|m['dependency_hashes']).items():\n    data=(root/name).read_bytes()\n    assert hashlib.sha256(data).hexdigest()==digest,name\n    assert data.endswith(b'\\n'),name\n    assert all(line.rstrip()==line for line in data.splitlines()),name\nfor b in m['document_bindings']:\n    assert b['sha256'] in (root/b['document']).read_text(),b\n    assert hashlib.sha256((root/b['path']).read_bytes()).hexdigest()==b['sha256'],b\ncommands=[]\nfor argv in ([sys.executable,'-B','scripts/validate_workflow.py'],['git','diff','--check'],[sys.executable,'-B','scripts/manage_storage.py']):\n    r=subprocess.run(argv,cwd=root,capture_output=True,text=True)\n    commands.append(dict(argv=argv,exit_code=r.returncode,stdout=r.stdout,stderr=r.stderr))\n    assert r.returncode==0,commands[-1]\nprint(json.dumps(dict(frozen_files=len(m['hashes']),dependency_bindings=len(m['dependency_hashes']),document_bindings=len(m['document_bindings']),numerical_replay=False,local_lean_build=False,commands=commands),indent=2))\n",
+    "source_sha256": "13a6a1d97257331c4c4f2398e3598a8d5d9661be44ca81114f84e2775c255468",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-86.md": "5216fb58c255345b330c0813721283cf52df21185e94d1708e5ed43f348e8823",
+        "research/astra-coupled-descent-strategy.md": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+        "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+        "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+        "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02"
+      },
+      "dependency_hashes": {
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        "research/astra-minimal-frequency-review.md": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d",
+        "research/astra-arithmetic-winding-exchange.md": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4",
+        "research/astra-arithmetic-winding-review.md": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243",
+        "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-pass85-verification.json": "e525d38fcf7cf6216e5a24f8f4a66bcbdac3bc39234261a582fb8dbd8e62c586"
+      },
+      "document_bindings": [
+        {
+          "document": "research/astra-coupled-descent-strategy.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-coupled-descent-strategy.md",
+          "path": "research/astra-minimal-frequency-review.md",
+          "sha256": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d"
+        },
+        {
+          "document": "research/astra-coupled-descent-strategy.md",
+          "path": "research/astra-arithmetic-winding-exchange.md",
+          "sha256": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4"
+        },
+        {
+          "document": "research/astra-coupled-descent-strategy.md",
+          "path": "research/astra-arithmetic-winding-review.md",
+          "sha256": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243"
+        },
+        {
+          "document": "research/astra-coupled-descent-strategy.md",
+          "path": "research/astra-joint-seed-maximum-audit.md",
+          "sha256": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac"
+        },
+        {
+          "document": "research/astra-coupled-descent-strategy.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-coupled-descent-strategy.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-coupled-descent-strategy.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-coupled-descent-strategy.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-private-repair-review.md",
+          "path": "research/astra-coupled-descent-strategy.md",
+          "sha256": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2"
+        },
+        {
+          "document": "research/astra-private-repair-review.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-private-repair-review.md",
+          "path": "research/astra-minimal-frequency-review.md",
+          "sha256": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d"
+        },
+        {
+          "document": "research/astra-private-repair-review.md",
+          "path": "research/astra-arithmetic-winding-exchange.md",
+          "sha256": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4"
+        },
+        {
+          "document": "research/astra-private-repair-review.md",
+          "path": "research/astra-arithmetic-winding-review.md",
+          "sha256": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243"
+        },
+        {
+          "document": "research/astra-private-repair-review.md",
+          "path": "research/astra-joint-seed-maximum-audit.md",
+          "sha256": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac"
+        },
+        {
+          "document": "research/astra-private-repair-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-private-repair-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-private-repair-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-private-repair-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-forced-arc-completion.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-forced-arc-completion.md",
+          "path": "research/astra-minimal-frequency-review.md",
+          "sha256": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d"
+        },
+        {
+          "document": "research/astra-forced-arc-completion.md",
+          "path": "research/astra-arithmetic-winding-exchange.md",
+          "sha256": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4"
+        },
+        {
+          "document": "research/astra-forced-arc-completion.md",
+          "path": "research/astra-arithmetic-winding-review.md",
+          "sha256": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243"
+        },
+        {
+          "document": "research/astra-forced-arc-completion.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-forced-arc-completion.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-forced-arc-completion.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-forced-arc-completion.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": "research/astra-forced-arc-completion.md",
+          "sha256": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": "research/astra-coupled-descent-strategy.md",
+          "sha256": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": "research/astra-private-repair-review.md",
+          "sha256": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": "research/astra-minimal-frequency-review.md",
+          "sha256": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": "research/astra-arithmetic-winding-exchange.md",
+          "sha256": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": "research/astra-arithmetic-winding-review.md",
+          "sha256": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-forced-completion-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        }
+      ]
+    },
+    "observed_tool_result": {
+      "chunk_id": "00d728",
+      "wall_time_seconds": 5.721e-06,
+      "exit_code": 0,
+      "original_token_count": 212,
+      "output": "{\n  \"frozen_files\": 5,\n  \"dependency_bindings\": 10,\n  \"document_bindings\": 38,\n  \"numerical_replay\": false,\n  \"local_lean_build\": false,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": {
+    "scope": "Independently reviewed manuscript proofs and exact control; no new kernel theorem.",
+    "authors": [
+      "research/astra-coupled-descent-strategy.md",
+      "research/astra-forced-arc-completion.md"
+    ],
+    "reviews": [
+      "research/astra-private-repair-review.md",
+      "research/astra-forced-completion-review.md"
+    ],
+    "result": "Private-region transport control and forced indexed arc bridge accepted. Exact gap-cost factorization, two-color full covers, cellwise costs, multiplicity obstruction and forced-edge arithmetic accepted. Required arithmetic saving and unrestricted LRC remain open."
+  },
+  "failure_history": [],
+  "excluded": [
+    "Unfinished arithmetic-completion-saving manuscript and subsequent research.",
+    "No numerical search, local Lean build or cache restoration."
+  ]
+}
