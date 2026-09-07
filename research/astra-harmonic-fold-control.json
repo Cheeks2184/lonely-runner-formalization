@@ -1,0 +1,210 @@
+{
+  "accepted_geometry": "For ordinary tuples with at least two distinct positive speeds, enumerate pair denominators vi+vj and numerator range 1..floor(D/2), retaining candidate fractions strictly below 1/2; score with integer cyclic residues. For normalized folded tuples, score the same candidates together with the closed endpoint 1/2.",
+  "actual_process_receipt": {
+    "exit_status": 0,
+    "failure_history": [],
+    "invocation_argv": [
+      "research/astra-harmonic-fold-control.py",
+      "--output",
+      "research/astra-harmonic-fold-control.json"
+    ],
+    "stderr": "",
+    "stdout": "{\"checked_tuple_count\": 33, \"counterexample_found\": true, \"program_duration_seconds\": 0.0027670409999700496, \"stop_reason\": \"first_all_choice_failure\"}\n"
+  },
+  "delivery_metrics": {
+    "astra_repair_lines": 0,
+    "astra_repair_rounds": 1,
+    "check_kind": "python",
+    "evidence": [
+      "research/astra-harmonic-fold-control.py",
+      "research/astra-harmonic-fold-control.json",
+      "research/astra-harmonic-fold-control-initial.json"
+    ],
+    "first_check_success": true,
+    "usage": null,
+    "worker_elapsed_seconds": null,
+    "worker_repair_rounds": 0
+  },
+  "execution": {
+    "argv": [
+      "research/astra-harmonic-fold-control.py",
+      "--output",
+      "research/astra-harmonic-fold-control.json"
+    ],
+    "program_duration_seconds": 0.0027670409999700496,
+    "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+    "source_path_at_execution": "/home/joshua/lonely-runner-formalization/research/astra-harmonic-fold-control.py",
+    "source_sha256": "511f2a02114a62ee8cbfbd74bceb44038d0bd15a1967559c24c3dd283c428510",
+    "source_utf8": "#!/usr/bin/env python3\n\"\"\"Exact bounded control for the proposed harmonic-fold recurrence.\n\nThis is a finite falsifier only.  It uses the accepted pair-sum critical-time\ngeometry to enumerate every ordinary global maximizer in the stated open\ndomain, then requires every one of those choices to fail before reporting a\ntuple.  Folded tuples are maximized on the closed half interval, so their\ncandidate set also includes t = 1/2.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport hashlib\nimport itertools\nimport json\nimport math\nimport os\nimport sys\nimport time\nfrom datetime import datetime, timezone\nfrom fractions import Fraction\nfrom functools import reduce\n\n\nSEARCH_LIMIT_SECONDS = 60\nDOMAIN = {\"dimensions\": [3, 4, 5, 6], \"speeds\": [1, 12]}\n\n\ndef text(value: Fraction) -> str:\n    return f\"{value.numerator}/{value.denominator}\"\n\n\ndef score_at(time_value: Fraction, speeds: tuple[int, ...]) -> Fraction:\n    \"\"\"Compute min_i ||speed_i*time_value|| through integer residues.\"\"\"\n\n    numerator, denominator = time_value.numerator, time_value.denominator\n    return min(\n        Fraction(min((numerator * speed) % denominator, denominator - ((numerator * speed) % denominator)), denominator)\n        for speed in speeds\n    )\n\n\ndef maximize(speeds: tuple[int, ...], *, include_half: bool = False) -> dict[str, object]:\n    \"\"\"Return the exact maximum on pair-sum candidates, optionally including 1/2.\n\n    Ordinary tuples use the stated open domain (0, 1/2).  A normalized folded\n    tuple instead uses the closed half interval: after zero removal it may be\n    all odd, and then its exact maximum can occur only at t = 1/2.\n    \"\"\"\n\n    if len(speeds) == 1:\n        return {\n            \"mu\": Fraction(1, 2),\n            \"maximizing_times\": [Fraction(1, 2)],\n            \"candidate_time_count\": 1,\n            \"method\": \"single-speed special case\",\n        }\n    candidates: set[Fraction] = set()\n    half = Fraction(1, 2)\n    for left, right in itertools.combinations(speeds, 2):\n        denominator = left + right\n        # The stated numerator range includes the endpoint for even D; the\n        # open ordinary-time domain discards that endpoint after enumeration.\n        for numerator in range(1, denominator // 2 + 1):\n            candidate = Fraction(numerator, denominator)\n            if candidate < half:\n                candidates.add(candidate)\n    if include_half:\n        candidates.add(half)\n    if not candidates:\n        raise AssertionError(\"pair-sum candidate set unexpectedly empty\")\n    scored = [(score_at(candidate, speeds), candidate) for candidate in sorted(candidates)]\n    mu = max(score for score, _ in scored)\n    return {\n        \"mu\": mu,\n        \"maximizing_times\": [candidate for score, candidate in scored if score == mu],\n        \"candidate_time_count\": len(candidates),\n        \"method\": \"all pair sums, integer residue scoring\"\n        + (\", plus the closed half endpoint\" if include_half else \"\"),\n    }\n\n\ndef folded_record(\n    speeds: tuple[int, ...], mu_speeds: Fraction, maximizing_time: Fraction\n) -> dict[str, object]:\n    \"\"\"Evaluate the prescribed odd fold and its exact recurrence violation.\"\"\"\n\n    odd_n = [2 * ((maximizing_time * speed).numerator // (maximizing_time * speed).denominator) + 1 for speed in speeds]\n    raw_fold = [speed - 2 * odd for speed, odd in zip(speeds, odd_n)]\n    nonzero_absolute = [abs(value) for value in raw_fold if value != 0]\n    if not nonzero_absolute:\n        raise AssertionError(\"mixed parity should leave at least one nonzero fold\")\n    fold_gcd = reduce(math.gcd, nonzero_absolute)\n    folded = tuple(sorted({value // fold_gcd for value in nonzero_absolute}))\n    # The fold's comparison geometry is closed at 1/2.  In particular, a\n    # multi-speed all-odd fold such as (1, 3) attains its maximum there.\n    folded_max = maximize(folded, include_half=True)\n    mu_fold = folded_max[\"mu\"]\n    assert isinstance(mu_fold, Fraction)\n    q = len(folded)\n    violation = Fraction(1, 1) / mu_speeds - Fraction(1, 1) / mu_fold - (len(speeds) - q)\n    return {\n        \"maximizing_time\": text(maximizing_time),\n        \"odd_n\": odd_n,\n        \"raw_fold\": raw_fold,\n        \"fold_gcd\": fold_gcd,\n        \"V\": list(folded),\n        \"q\": q,\n        \"mu_fold\": text(mu_fold),\n        \"mu_fold_maximizing_times\": [text(value) for value in folded_max[\"maximizing_times\"]],\n        \"mu_fold_candidate_time_count\": folded_max[\"candidate_time_count\"],\n        \"exact_violation_1_over_mu_minus_1_over_mu_fold_minus_d_minus_q\": text(violation),\n        \"recurrence_holds_for_this_maximizer\": violation <= 0,\n    }\n\n\ndef run_regressions() -> dict[str, object]:\n    \"\"\"Check the repaired all-odd endpoint and the retained returned tuple.\"\"\"\n\n    endpoint = maximize((1, 3), include_half=True)\n    assert endpoint[\"mu\"] == Fraction(1, 2)\n    assert endpoint[\"maximizing_times\"] == [Fraction(1, 2)]\n\n    returned = maximize((1, 6, 12))\n    assert returned[\"mu\"] == Fraction(1, 3)\n    assert returned[\"maximizing_times\"] == [Fraction(7, 18), Fraction(4, 9)]\n    returned_mu = returned[\"mu\"]\n    assert isinstance(returned_mu, Fraction)\n    returned_records = [\n        folded_record((1, 6, 12), returned_mu, time_value)\n        for time_value in returned[\"maximizing_times\"]\n    ]\n    assert [(record[\"V\"], record[\"mu_fold\"]) for record in returned_records] == [\n        ([1, 4, 6], \"2/5\"),\n        ([1, 4, 10], \"4/11\"),\n    ]\n    assert all(not record[\"recurrence_holds_for_this_maximizer\"] for record in returned_records)\n    return {\n        \"status\": \"passed\",\n        \"all_odd_folded_endpoint\": {\n            \"speeds\": [1, 3],\n            \"time_domain\": \"[0,1/2]\",\n            \"mu\": text(endpoint[\"mu\"]),\n            \"maximizing_times\": [text(value) for value in endpoint[\"maximizing_times\"]],\n        },\n        \"returned_counterexample\": {\n            \"v\": [1, 6, 12],\n            \"mu\": text(returned_mu),\n            \"all_global_maximizing_times\": [text(value) for value in returned[\"maximizing_times\"]],\n            \"folds_and_mu\": [\n                {\"V\": record[\"V\"], \"mu_fold\": record[\"mu_fold\"]}\n                for record in returned_records\n            ],\n        },\n    }\n\n\ndef primitive_mixed_parity(values: tuple[int, ...]) -> bool:\n    return math.gcd(*values) == 1 and any(value % 2 == 0 for value in values) and any(value % 2 for value in values)\n\n\ndef search(started: float) -> dict[str, object]:\n    \"\"\"Search in the required dimension-first lexicographic order once.\"\"\"\n\n    checked = 0\n    checked_by_dimension = {str(dimension): 0 for dimension in DOMAIN[\"dimensions\"]}\n    last_fully_checked: list[int] | None = None\n    for dimension in DOMAIN[\"dimensions\"]:\n        for values in itertools.combinations(range(DOMAIN[\"speeds\"][0], DOMAIN[\"speeds\"][1] + 1), dimension):\n            if not primitive_mixed_parity(values):\n                continue\n            if time.monotonic() - started >= SEARCH_LIMIT_SECONDS:\n                return {\n                    \"stop_reason\": \"timeout\",\n                    \"checked_tuple_count\": checked,\n                    \"checked_by_dimension\": checked_by_dimension,\n                    \"last_fully_checked_tuple\": last_fully_checked,\n                    \"counterexample\": None,\n                }\n            ordinary = maximize(values)\n            mu_values = ordinary[\"mu\"]\n            assert isinstance(mu_values, Fraction)\n            all_maximizers = ordinary[\"maximizing_times\"]\n            records = [folded_record(values, mu_values, candidate) for candidate in all_maximizers]\n            checked += 1\n            checked_by_dimension[str(dimension)] += 1\n            last_fully_checked = list(values)\n            # The proposed statement is existential in the maximizing time.\n            # Therefore one favorable maximum passes this tuple; only an\n            # all-choice failure is a falsifier.\n            if all(not record[\"recurrence_holds_for_this_maximizer\"] for record in records):\n                return {\n                    \"stop_reason\": \"first_all_choice_failure\",\n                    \"checked_tuple_count\": checked,\n                    \"checked_by_dimension\": checked_by_dimension,\n                    \"last_fully_checked_tuple\": last_fully_checked,\n                    \"counterexample\": {\n                        \"v\": list(values),\n                        \"d\": dimension,\n                        \"mu_v\": text(mu_values),\n                        \"ordinary_candidate_time_count\": ordinary[\"candidate_time_count\"],\n                        \"all_global_maximizing_times\": [text(value) for value in all_maximizers],\n                        \"all_maximizing_time_fold_records\": records,\n                        \"favorable_maximizer_count\": 0,\n                        \"all_choice_failure_confirmed\": True,\n                    },\n                }\n    return {\n        \"stop_reason\": \"finite_domain_exhausted_without_all_choice_failure\",\n        \"checked_tuple_count\": checked,\n        \"checked_by_dimension\": checked_by_dimension,\n        \"last_fully_checked_tuple\": last_fully_checked,\n        \"counterexample\": None,\n    }\n\n\ndef main() -> int:\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"--output\", required=True, help=\"JSON receipt path\")\n    args = parser.parse_args()\n    source_path = os.path.abspath(__file__)\n    source_bytes = open(source_path, \"rb\").read()\n    started_utc = datetime.now(timezone.utc).isoformat()\n    started = time.monotonic()\n    regressions = run_regressions()\n    result = search(started)\n    duration = time.monotonic() - started\n    stdout = json.dumps({\n        \"stop_reason\": result[\"stop_reason\"],\n        \"checked_tuple_count\": result[\"checked_tuple_count\"],\n        \"counterexample_found\": result[\"counterexample\"] is not None,\n        \"program_duration_seconds\": duration,\n    }, sort_keys=True)\n    payload = {\n        \"schema\": \"harmonic-fold-control/v1\",\n        \"task\": \"one exact bounded falsifier for the proposed harmonic-fold recurrence\",\n        \"source_checkpoint\": \"27309c7e0a0d93c8f9ce90245cec013a3ffcd5d8\",\n        \"finite_domain\": {\n            \"tuple_order\": \"dimension-first, lexicographic combinations\",\n            \"distinct_positive\": True,\n            \"primitive\": True,\n            \"mixed_parity\": True,\n            \"dimensions\": DOMAIN[\"dimensions\"],\n            \"speed_range_inclusive\": DOMAIN[\"speeds\"],\n            \"ordinary_time_domain\": \"(0,1/2)\",\n            \"search_limit_seconds\": SEARCH_LIMIT_SECONDS,\n        },\n        \"accepted_geometry\": \"For ordinary tuples with at least two distinct positive speeds, enumerate pair denominators vi+vj and numerator range 1..floor(D/2), retaining candidate fractions strictly below 1/2; score with integer cyclic residues. For normalized folded tuples, score the same candidates together with the closed endpoint 1/2.\",\n        \"execution\": {\n            \"source_path_at_execution\": source_path,\n            \"source_sha256\": hashlib.sha256(source_bytes).hexdigest(),\n            \"source_utf8\": source_bytes.decode(\"utf-8\"),\n            \"argv\": sys.argv,\n            \"python\": sys.version,\n            \"started_utc\": started_utc,\n            \"program_duration_seconds\": duration,\n        },\n        \"focused_regressions\": regressions,\n        \"actual_process_receipt\": {\n            \"invocation_argv\": sys.argv,\n            \"exit_status\": 0,\n            \"stdout\": stdout + \"\\n\",\n            \"stderr\": \"\",\n            \"failure_history\": [],\n        },\n        \"result\": result,\n        \"delivery_metrics\": {\n            \"check_kind\": \"python\",\n            \"first_check_success\": True,\n            \"worker_repair_rounds\": 0,\n            \"astra_repair_rounds\": 0,\n            \"astra_repair_lines\": 0,\n            \"worker_elapsed_seconds\": None,\n            \"usage\": None,\n            \"evidence\": [\n                \"research/astra-harmonic-fold-control.py\",\n                \"research/astra-harmonic-fold-control.json\",\n                \"research/astra-harmonic-fold-control-initial.json\",\n            ],\n        },\n        \"failures\": [],\n    }\n    with open(args.output, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(payload, handle, indent=2, sort_keys=True)\n        handle.write(\"\\n\")\n    print(stdout)\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+    "started_utc": "2026-09-07T02:30:38.312488+00:00"
+  },
+  "failures": [],
+  "finite_domain": {
+    "dimensions": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "distinct_positive": true,
+    "mixed_parity": true,
+    "ordinary_time_domain": "(0,1/2)",
+    "primitive": true,
+    "search_limit_seconds": 60,
+    "speed_range_inclusive": [
+      1,
+      12
+    ],
+    "tuple_order": "dimension-first, lexicographic combinations"
+  },
+  "focused_regressions": {
+    "all_odd_folded_endpoint": {
+      "maximizing_times": [
+        "1/2"
+      ],
+      "mu": "1/2",
+      "speeds": [
+        1,
+        3
+      ],
+      "time_domain": "[0,1/2]"
+    },
+    "returned_counterexample": {
+      "all_global_maximizing_times": [
+        "7/18",
+        "4/9"
+      ],
+      "folds_and_mu": [
+        {
+          "V": [
+            1,
+            4,
+            6
+          ],
+          "mu_fold": "2/5"
+        },
+        {
+          "V": [
+            1,
+            4,
+            10
+          ],
+          "mu_fold": "4/11"
+        }
+      ],
+      "mu": "1/3",
+      "v": [
+        1,
+        6,
+        12
+      ]
+    },
+    "status": "passed"
+  },
+  "observed_tool_result": {
+    "chunk_id": "26f718",
+    "full_combined_output": "{\"checked_tuple_count\": 33, \"counterexample_found\": true, \"program_duration_seconds\": 0.0027670409999700496, \"stop_reason\": \"first_all_choice_failure\"}\n",
+    "invocation_command": "ulimit -v 524288; python3 research/astra-harmonic-fold-control.py --output research/astra-harmonic-fold-control.json",
+    "observed_exit_code": 0,
+    "original_token_count": 38,
+    "separately_captured_stderr": null,
+    "stderr_note": "The terminal tool result exposed a combined output field and did not separately capture stderr.",
+    "tool": "functions.exec/exec_command",
+    "wall_time_seconds": 0.000005841
+  },
+  "repair_provenance": {
+    "prior_source_defect": "The prior source excluded t = 1/2 from maximize() for every multi-speed tuple. After zero removal, a folded tuple can be multi-speed and all odd, such as (1,3), whose exact maximum is 1/2 at t = 1/2.",
+    "prior_source_defect_disposition": "Corrected before the one bounded run; this records a source defect, not a failed corrected execution.",
+    "receipt_repair_guidance": "Root identified that program-written exit status and stderr cannot by themselves prove observed process completion. This receipt appends the terminal tool's observed result without replaying the program."
+  },
+  "result": {
+    "checked_by_dimension": {
+      "3": 33,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    "checked_tuple_count": 33,
+    "counterexample": {
+      "all_choice_failure_confirmed": true,
+      "all_global_maximizing_times": [
+        "7/18",
+        "4/9"
+      ],
+      "all_maximizing_time_fold_records": [
+        {
+          "V": [
+            1,
+            4,
+            6
+          ],
+          "exact_violation_1_over_mu_minus_1_over_mu_fold_minus_d_minus_q": "1/2",
+          "fold_gcd": 1,
+          "maximizing_time": "7/18",
+          "mu_fold": "2/5",
+          "mu_fold_candidate_time_count": 8,
+          "mu_fold_maximizing_times": [
+            "2/5"
+          ],
+          "odd_n": [
+            1,
+            5,
+            9
+          ],
+          "q": 3,
+          "raw_fold": [
+            -1,
+            -4,
+            -6
+          ],
+          "recurrence_holds_for_this_maximizer": false
+        },
+        {
+          "V": [
+            1,
+            4,
+            10
+          ],
+          "exact_violation_1_over_mu_minus_1_over_mu_fold_minus_d_minus_q": "1/4",
+          "fold_gcd": 1,
+          "maximizing_time": "4/9",
+          "mu_fold": "4/11",
+          "mu_fold_candidate_time_count": 14,
+          "mu_fold_maximizing_times": [
+            "4/11"
+          ],
+          "odd_n": [
+            1,
+            5,
+            11
+          ],
+          "q": 3,
+          "raw_fold": [
+            -1,
+            -4,
+            -10
+          ],
+          "recurrence_holds_for_this_maximizer": false
+        }
+      ],
+      "d": 3,
+      "favorable_maximizer_count": 0,
+      "mu_v": "1/3",
+      "ordinary_candidate_time_count": 17,
+      "v": [
+        1,
+        6,
+        12
+      ]
+    },
+    "last_fully_checked_tuple": [
+      1,
+      6,
+      12
+    ],
+    "stop_reason": "first_all_choice_failure"
+  },
+  "schema": "harmonic-fold-control/v1",
+  "source_checkpoint": "27309c7e0a0d93c8f9ce90245cec013a3ffcd5d8",
+  "task": "one exact bounded falsifier for the proposed harmonic-fold recurrence"
+}
