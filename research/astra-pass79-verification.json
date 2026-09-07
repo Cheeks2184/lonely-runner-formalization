@@ -1,0 +1,511 @@
+{
+  "checkpoint": "Pass79",
+  "parent_main": "92d567677620fec37008cff35a70092339a87fd3",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-79.md": "691428ff2c9c195da271029d04ffa33d27be0741a7cf26f3b96c5485814c192f",
+    "research/astra-slack-energy-global-compensation.md": "8032d020e4beccc1112b025c8b85f6be6c2ec5cb67cdd763d4ae62a029627cb9",
+    "research/astra-slack-energy-global-review.md": "c6416983efcbeeb909449a372be2ff316647f0ab6d92ba4d199429bd35e75e79",
+    "research/astra-phase-riesz-global-contract.md": "66c83f09a66f169ef9e212d5e5d4ca32acc2fa3732c94def184d4015061ef848",
+    "research/astra-phase-riesz-contract-review.md": "e1fc63cb735696edfe2340788e4fb9b8958f708af77adbba790fc6ba23d99a97",
+    "research/astra-normalized-phase-signal.md": "55f23f7eaed77263ef713783ef4d3083fd444f6b1c4f3ea398974afd81ef3a4e",
+    "research/astra-normalized-phase-review.md": "14fa947ec96fe22d40586be251e0e65d32ee81131b667b5b2c29d4254b88e790"
+  },
+  "dependency_hashes": {
+    "research/astra-uniform-strategy-after-fold.md": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-slack-energy-review.md": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+    "research/astra-pass78-verification.json": "fa8d673d855267abb92c9b896cf71c0cd47fbfea4141d2b3e9babc61acd0239f"
+  },
+  "document_bindings": [
+    {
+      "document": "research/astra-slack-energy-global-compensation.md",
+      "path": "research/astra-uniform-strategy-after-fold.md",
+      "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-slack-energy-global-compensation.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-slack-energy-global-compensation.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-slack-energy-global-compensation.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-slack-energy-global-compensation.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-slack-energy-global-review.md",
+      "path": "research/astra-slack-energy-global-compensation.md",
+      "sha256": "8032d020e4beccc1112b025c8b85f6be6c2ec5cb67cdd763d4ae62a029627cb9",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-slack-energy-global-review.md",
+      "path": "research/astra-uniform-strategy-after-fold.md",
+      "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-slack-energy-global-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-slack-energy-global-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-slack-energy-global-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-slack-energy-global-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-phase-riesz-global-contract.md",
+      "path": "/tmp/astra-bedert-hu-d53fa46.tex",
+      "sha256": "b50d17e25c4e8c4841e7350463b3f08a0ce5fd1b9ecec0d9cc97cd9924761079",
+      "kind": "external"
+    },
+    {
+      "document": "research/astra-phase-riesz-global-contract.md",
+      "path": "research/astra-uniform-strategy-after-fold.md",
+      "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-phase-riesz-global-contract.md",
+      "path": "research/astra-slack-energy-review.md",
+      "sha256": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-phase-riesz-global-contract.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-phase-riesz-global-contract.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-phase-riesz-global-contract.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-phase-riesz-global-contract.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-phase-riesz-contract-review.md",
+      "path": "research/astra-phase-riesz-global-contract.md",
+      "sha256": "b1830a7afa75b9283d2f45344ed29cbbe2512033d60f93fa34580789acf068d1",
+      "kind": "historical_initial_author"
+    },
+    {
+      "document": "research/astra-phase-riesz-contract-review.md",
+      "path": "research/astra-phase-riesz-global-contract.md",
+      "sha256": "66c83f09a66f169ef9e212d5e5d4ca32acc2fa3732c94def184d4015061ef848",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-phase-riesz-contract-review.md",
+      "path": "/tmp/astra-bedert-hu-d53fa46.tex",
+      "sha256": "b50d17e25c4e8c4841e7350463b3f08a0ce5fd1b9ecec0d9cc97cd9924761079",
+      "kind": "external"
+    },
+    {
+      "document": "research/astra-phase-riesz-contract-review.md",
+      "path": "research/astra-uniform-strategy-after-fold.md",
+      "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-phase-riesz-contract-review.md",
+      "path": "research/astra-slack-energy-review.md",
+      "sha256": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-normalized-phase-signal.md",
+      "path": "research/astra-phase-riesz-global-contract.md",
+      "sha256": "66c83f09a66f169ef9e212d5e5d4ca32acc2fa3732c94def184d4015061ef848",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-normalized-phase-signal.md",
+      "path": "research/astra-phase-riesz-contract-review.md",
+      "sha256": "e1fc63cb735696edfe2340788e4fb9b8958f708af77adbba790fc6ba23d99a97",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-normalized-phase-signal.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-normalized-phase-signal.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-normalized-phase-signal.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-normalized-phase-signal.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-normalized-phase-review.md",
+      "path": "research/astra-normalized-phase-signal.md",
+      "sha256": "55f23f7eaed77263ef713783ef4d3083fd444f6b1c4f3ea398974afd81ef3a4e",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-normalized-phase-review.md",
+      "path": "research/astra-phase-riesz-global-contract.md",
+      "sha256": "66c83f09a66f169ef9e212d5e5d4ca32acc2fa3732c94def184d4015061ef848",
+      "kind": "repository"
+    },
+    {
+      "document": "research/astra-normalized-phase-review.md",
+      "path": "research/astra-phase-riesz-contract-review.md",
+      "sha256": "e1fc63cb735696edfe2340788e4fb9b8958f708af77adbba790fc6ba23d99a97",
+      "kind": "repository"
+    }
+  ],
+  "external_source": {
+    "local_path": "/tmp/astra-bedert-hu-d53fa46.tex",
+    "bytes": 36745,
+    "sha256": "b50d17e25c4e8c4841e7350463b3f08a0ce5fd1b9ecec0d9cc97cd9924761079",
+    "commit": "d53fa46aedf01779481fc5f17726bb0ab6770ac4",
+    "url": "https://github.com/hxypqr/phase_riesz_products_lonely_runner/blob/d53fa46aedf01779481fc5f17726bb0ab6770ac4/main.tex"
+  },
+  "checks": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass79-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport hashlib\nimport json\nimport subprocess\nimport sys\nroot=Path('/home/joshua/lonely-runner-formalization')\nm=json.loads(Path('/tmp/astra-pass79-inputs.json').read_text())\nfor name,digest in (m['hashes'] | m['dependency_hashes']).items():\n    data=(root/name).read_bytes()\n    assert hashlib.sha256(data).hexdigest()==digest,name\n    assert data.endswith(b'\\n'),name\n    assert all(line.rstrip()==line for line in data.splitlines()),name\nfor b in m['document_bindings']:\n    assert b['sha256'] in (root/b['document']).read_text(),b\n    if b['kind']=='repository':\n        assert hashlib.sha256((root/b['path']).read_bytes()).hexdigest()==b['sha256'],b\n    elif b['kind']=='external':\n        assert hashlib.sha256(Path(b['path']).read_bytes()).hexdigest()==b['sha256'],b\n    else:\n        assert b['kind']=='historical_initial_author',b\n        assert b['sha256']=='b1830a7afa75b9283d2f45344ed29cbbe2512033d60f93fa34580789acf068d1',b\nexternal=m['external_source']\nassert len(Path(external['local_path']).read_bytes())==external['bytes']\nassert hashlib.sha256(Path(external['local_path']).read_bytes()).hexdigest()==external['sha256']\ncommands=[]\nfor argv in ([sys.executable,'-B','scripts/validate_workflow.py'],['git','diff','--check'],[sys.executable,'-B','scripts/manage_storage.py']):\n    r=subprocess.run(argv,cwd=root,capture_output=True,text=True)\n    commands.append(dict(argv=argv,exit_code=r.returncode,stdout=r.stdout,stderr=r.stderr))\n    assert r.returncode==0,commands[-1]\nprint(json.dumps(dict(frozen_files=len(m['hashes']),dependency_bindings=len(m['dependency_hashes']),document_bindings=len(m['document_bindings']),external_source_verified=True,historical_initial_author_compared_to_current=False,numerical_replay=False,local_lean_build=False,commands=commands),indent=2))\n",
+    "source_sha256": "33b0c6f7d583e62b570d6d5ad0b6be894072482c87f0032376d040b6072cccf3",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-79.md": "691428ff2c9c195da271029d04ffa33d27be0741a7cf26f3b96c5485814c192f",
+        "research/astra-slack-energy-global-compensation.md": "8032d020e4beccc1112b025c8b85f6be6c2ec5cb67cdd763d4ae62a029627cb9",
+        "research/astra-slack-energy-global-review.md": "c6416983efcbeeb909449a372be2ff316647f0ab6d92ba4d199429bd35e75e79",
+        "research/astra-phase-riesz-global-contract.md": "66c83f09a66f169ef9e212d5e5d4ca32acc2fa3732c94def184d4015061ef848",
+        "research/astra-phase-riesz-contract-review.md": "e1fc63cb735696edfe2340788e4fb9b8958f708af77adbba790fc6ba23d99a97",
+        "research/astra-normalized-phase-signal.md": "55f23f7eaed77263ef713783ef4d3083fd444f6b1c4f3ea398974afd81ef3a4e",
+        "research/astra-normalized-phase-review.md": "14fa947ec96fe22d40586be251e0e65d32ee81131b667b5b2c29d4254b88e790"
+      },
+      "dependency_hashes": {
+        "research/astra-uniform-strategy-after-fold.md": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-slack-energy-review.md": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+        "research/astra-pass78-verification.json": "fa8d673d855267abb92c9b896cf71c0cd47fbfea4141d2b3e9babc61acd0239f"
+      },
+      "document_bindings": [
+        {
+          "document": "research/astra-slack-energy-global-compensation.md",
+          "path": "research/astra-uniform-strategy-after-fold.md",
+          "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-slack-energy-global-compensation.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-slack-energy-global-compensation.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-slack-energy-global-compensation.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-slack-energy-global-compensation.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-slack-energy-global-review.md",
+          "path": "research/astra-slack-energy-global-compensation.md",
+          "sha256": "8032d020e4beccc1112b025c8b85f6be6c2ec5cb67cdd763d4ae62a029627cb9",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-slack-energy-global-review.md",
+          "path": "research/astra-uniform-strategy-after-fold.md",
+          "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-slack-energy-global-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-slack-energy-global-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-slack-energy-global-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-slack-energy-global-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-phase-riesz-global-contract.md",
+          "path": "/tmp/astra-bedert-hu-d53fa46.tex",
+          "sha256": "b50d17e25c4e8c4841e7350463b3f08a0ce5fd1b9ecec0d9cc97cd9924761079",
+          "kind": "external"
+        },
+        {
+          "document": "research/astra-phase-riesz-global-contract.md",
+          "path": "research/astra-uniform-strategy-after-fold.md",
+          "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-phase-riesz-global-contract.md",
+          "path": "research/astra-slack-energy-review.md",
+          "sha256": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-phase-riesz-global-contract.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-phase-riesz-global-contract.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-phase-riesz-global-contract.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-phase-riesz-global-contract.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-phase-riesz-contract-review.md",
+          "path": "research/astra-phase-riesz-global-contract.md",
+          "sha256": "b1830a7afa75b9283d2f45344ed29cbbe2512033d60f93fa34580789acf068d1",
+          "kind": "historical_initial_author"
+        },
+        {
+          "document": "research/astra-phase-riesz-contract-review.md",
+          "path": "research/astra-phase-riesz-global-contract.md",
+          "sha256": "66c83f09a66f169ef9e212d5e5d4ca32acc2fa3732c94def184d4015061ef848",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-phase-riesz-contract-review.md",
+          "path": "/tmp/astra-bedert-hu-d53fa46.tex",
+          "sha256": "b50d17e25c4e8c4841e7350463b3f08a0ce5fd1b9ecec0d9cc97cd9924761079",
+          "kind": "external"
+        },
+        {
+          "document": "research/astra-phase-riesz-contract-review.md",
+          "path": "research/astra-uniform-strategy-after-fold.md",
+          "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-phase-riesz-contract-review.md",
+          "path": "research/astra-slack-energy-review.md",
+          "sha256": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-normalized-phase-signal.md",
+          "path": "research/astra-phase-riesz-global-contract.md",
+          "sha256": "66c83f09a66f169ef9e212d5e5d4ca32acc2fa3732c94def184d4015061ef848",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-normalized-phase-signal.md",
+          "path": "research/astra-phase-riesz-contract-review.md",
+          "sha256": "e1fc63cb735696edfe2340788e4fb9b8958f708af77adbba790fc6ba23d99a97",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-normalized-phase-signal.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-normalized-phase-signal.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-normalized-phase-signal.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-normalized-phase-signal.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-normalized-phase-review.md",
+          "path": "research/astra-normalized-phase-signal.md",
+          "sha256": "55f23f7eaed77263ef713783ef4d3083fd444f6b1c4f3ea398974afd81ef3a4e",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-normalized-phase-review.md",
+          "path": "research/astra-phase-riesz-global-contract.md",
+          "sha256": "66c83f09a66f169ef9e212d5e5d4ca32acc2fa3732c94def184d4015061ef848",
+          "kind": "repository"
+        },
+        {
+          "document": "research/astra-normalized-phase-review.md",
+          "path": "research/astra-phase-riesz-contract-review.md",
+          "sha256": "e1fc63cb735696edfe2340788e4fb9b8958f708af77adbba790fc6ba23d99a97",
+          "kind": "repository"
+        }
+      ],
+      "external_source": {
+        "local_path": "/tmp/astra-bedert-hu-d53fa46.tex",
+        "bytes": 36745,
+        "sha256": "b50d17e25c4e8c4841e7350463b3f08a0ce5fd1b9ecec0d9cc97cd9924761079",
+        "commit": "d53fa46aedf01779481fc5f17726bb0ab6770ac4",
+        "url": "https://github.com/hxypqr/phase_riesz_products_lonely_runner/blob/d53fa46aedf01779481fc5f17726bb0ab6770ac4/main.tex"
+      }
+    },
+    "observed_tool_result": {
+      "chunk_id": "3c7d34",
+      "exit_code": 0,
+      "full_combined_output": "{\"frozen\": 7, \"dependencies\": 7, \"bindings\": 32}\n{\n  \"frozen_files\": 7,\n  \"dependency_bindings\": 7,\n  \"document_bindings\": 32,\n  \"external_source_verified\": true,\n  \"historical_initial_author_compared_to_current\": false,\n  \"numerical_replay\": false,\n  \"local_lean_build\": false,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n",
+      "separately_captured_stderr": null,
+      "note": "Same shell invocation first prepared state and manifest; its first output line reports manifest counts. Remaining output is the verifier."
+    }
+  },
+  "mathematical_verification": {
+    "scope": "Independent hand proofs and exact-contract review; no new Lean theorem.",
+    "reviews": [
+      "research/astra-slack-energy-global-review.md",
+      "research/astra-phase-riesz-contract-review.md",
+      "research/astra-normalized-phase-review.md"
+    ],
+    "root": "Read complete author/review files; independently checked normalization, coefficients, variance and endpoint scope.",
+    "external_input_scope": "Phase source contract conditional on named earlier Bedert and Bonami inputs; new normalized derivations are direct hand proofs."
+  },
+  "failure_history": [
+    "Initial phase-source manuscript falsely denied normalized phase average; corrected before final independent acceptance. Historical initial hash is retained as error history, not compared against corrected source."
+  ],
+  "excluded": [
+    "Unreviewed active rational-cell compensation manuscript",
+    "Any assertion of unrestricted LRC proof or disproof",
+    "Any local Lean build or new numerical experiment"
+  ]
+}

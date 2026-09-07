@@ -6,19 +6,19 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/slack_energy_global_compensation",
-      "agent_id": "/root/uniform_strategy_after_fold",
+      "id": "/root/rational_cell_compensation",
+      "agent_id": "/root/coordinate_cancellation_review",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+      "source_checkpoint": "92d567677620fec37008cff35a70092339a87fd3",
       "owned_files": [
-        "research/astra-slack-energy-global-compensation.md"
+        "research/astra-rational-cell-compensation.md"
       ],
-      "target": "One bounded analytic attempt at global slack-energy derivative compensation using actual integer-speed phase coupling. Prove or refute uniform proposed inequality, not further local reformulations or count controls.",
+      "target": "Bounded direct arithmetic attempt at global slack-energy compensation using neighboring rational zero endpoints and exact cell integrals. Seek actual global estimate or exact obstruction to proposed endpoint pairing; no repeat Fourier truncation, mere reformulation, runner-count screen or build.",
       "checks": []
     }
   ],
@@ -9822,13 +9822,141 @@
         "research/astra-slack-energy-review.md"
       ],
       "sha256": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573"
+    },
+    {
+      "id": "/root/slack_energy_global_compensation",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+      "owned_files": [
+        "research/astra-slack-energy-global-compensation.md"
+      ],
+      "target": "One bounded analytic attempt at global slack-energy derivative compensation using actual integer-speed phase coupling. Prove or refute uniform proposed inequality, not further local reformulations or count controls.",
+      "checks": [],
+      "sha256": "8032d020e4beccc1112b025c8b85f6be6c2ec5cb67cdd763d4ae62a029627cb9",
+      "result": "Bounded full-relation attempt unsuccessful: full mixed-support terms repair one exact good example but have no termwise positive defect. No global bound or falsifier of E. Author manuscript pending review."
+    },
+    {
+      "id": "/root/slack_energy_global_review",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "6cdabaff21e525ee1728ecf215ecf77e2b54f95d",
+      "owned_files": [
+        "research/astra-slack-energy-global-review.md"
+      ],
+      "target": "Independently verify exact higher-support repair and negative full-support defect scope of frozen8032d0 manuscript; no claim that partial-sum failure refutes proposed E.",
+      "checks": [],
+      "sha256": "c6416983efcbeeb909449a372be2ff316647f0ab6d92ba4d199429bd35e75e79",
+      "result": "Accepted at exact scope without correction. Root read complete author/review and checked support endpoint identity. No global inequality proof or falsifier; no further partial-sum screen.",
+      "evidence": [
+        "research/astra-slack-energy-global-review.md"
+      ]
+    },
+    {
+      "id": "/root/phase_riesz_global_contract",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "6cdabaff21e525ee1728ecf215ecf77e2b54f95d",
+      "owned_files": [
+        "research/astra-phase-riesz-global-contract.md"
+      ],
+      "target": "Bounded primary-source audit of author-linked Bedert-Hu phase-randomised Riesz product note at immutable commitd53fa46aedf01779481fc5f17726bb0ab6770ac4. Determine exact global higher-order mechanism and its quantitative barrier to canonical1/N or slack-energy derivative estimate; no lower-goal formalization.",
+      "checks": [
+        "Independent normalized-average correction accepted; exact source and final hashes checked."
+      ],
+      "sha256": "66c83f09a66f169ef9e212d5e5d4ca32acc2fa3732c94def184d4015061ef848",
+      "result": "Corrected author accepted by independent source-contract review e1fc63cb, conditional on named earlier inputs. Root read full corrected author and review. No sharp signal or E proof.",
+      "evidence": [
+        "research/astra-phase-riesz-global-contract.md"
+      ],
+      "failure_history": [
+        "Initial manuscript b1830a7afa75b9283d2f45344ed29cbbe2512033d60f93fa34580789acf068d1 falsely denied preservation of phase average after normalization; independent Astra reviewer supplied correction, preserved in final manuscript."
+      ]
+    },
+    {
+      "id": "/root/phase_riesz_contract_review",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "92d567677620fec37008cff35a70092339a87fd3",
+      "owned_files": [
+        "research/astra-phase-riesz-contract-review.md"
+      ],
+      "target": "Independent audit of frozen source-contract and new homogeneous phase transfer; verify exact hypotheses/parameter losses and no averaging-to-zero-phase inference. Do not accept a full external theorem beyond the stated cited inputs.",
+      "checks": [],
+      "sha256": "e1fc63cb735696edfe2340788e4fb9b8958f708af77adbba790fc6ba23d99a97",
+      "result": "Accepted corrected author66c83f09 at source-contract scope conditional on named earlier inputs. Root full author/review read; normalized phase average correction independently verified. No sharp signal or E proof.",
+      "evidence": [
+        "research/astra-phase-riesz-contract-review.md"
+      ]
+    },
+    {
+      "id": "/root/normalized_phase_signal",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "92d567677620fec37008cff35a70092339a87fd3",
+      "owned_files": [
+        "research/astra-normalized-phase-signal.md"
+      ],
+      "target": "Investigate corrected full-speed normalized phase density: exact coefficients and whether actual uniform signal can yield sharp cover contradiction, retaining dependent Fourier weights and full low-additive-dimension cases. No mere averaging-to-actual-time inference.",
+      "checks": [],
+      "sha256": "55f23f7eaed77263ef713783ef4d3083fd444f6b1c4f3ea398974afd81ef3a4e",
+      "result": "Full manuscript delivered; root read. Exact normalized signal and scoped certificate limits await independent review.",
+      "evidence": [
+        "research/astra-normalized-phase-signal.md"
+      ]
+    },
+    {
+      "id": "/root/normalized_phase_review",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "92d567677620fec37008cff35a70092339a87fd3",
+      "owned_files": [
+        "research/astra-normalized-phase-review.md"
+      ],
+      "target": "Independent exact mathematical review of normalized-phase manuscript55f23f7e, all identities, aggregate signals, first-level bound, actual-max versus subthreshold scope. No build or computation.",
+      "checks": [],
+      "sha256": "14fa947ec96fe22d40586be251e0e65d32ee81131b667b5b2c29d4254b88e790",
+      "result": "Accepted frozen55f23f7e without corrections; root fully read author and review. Exact normalized weights, first-order bound, aggregate variance and scoped compactness obstruction pass manuscript review; sharp implication unresolved.",
+      "evidence": [
+        "research/astra-normalized-phase-review.md"
+      ]
     }
   ],
-  "latest_checkpoint": "Pass78 reviewed research prepared for final source verification and publication: zero-contact restoration limits plus explicitly unproved global-energy strategy and bounded controls.",
+  "latest_checkpoint": "Pass79 locally verified: seven frozen manuscripts/docs, seven dependencies,32 document bindings and immutable external source; publication pending. Unrestricted theorem remains unresolved.",
   "next_actions": [
-    "Verify and publish Pass78 through exact-head PR/CI/merge/main readback.",
-    "Pursue actual global slack-energy compensation; no further finite sweep or isolated local obstruction substitutes for it.",
-    "Keep local Lean/cache absent; next Terra High aggregate review at30 closed tasks (27 now)."
+    "Publish accepted Pass79 checkpoint after final review receipt.",
+    "Direct bounded rational-cell compensation attempt; retain actual shared integer orbit, all cells and weights.",
+    "No local builds/cache; use remote CI for publication. Uniform canonical goal remains unresolved."
   ],
   "research_holds": [
     {
@@ -10951,24 +11079,12 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "checkpoint": "Pass78",
-    "status": "verified_local_ready_to_commit",
-    "branch": "codex/astra-zero-contact-escape",
-    "parent_main": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
-    "files": [
-      "docs/astra-research-78.md",
-      "research/astra-fold-zero-restoration.md",
-      "research/astra-fold-zero-restoration-review.md",
-      "research/astra-zero-contact-global-escape.md",
-      "research/astra-zero-contact-global-review.md",
-      "research/astra-uniform-strategy-after-fold.md",
-      "research/astra-slack-energy-review.md",
-      "research/astra-slack-energy-control.py",
-      "research/astra-slack-energy-control.json",
-      "research/astra-pass78-verification.json",
-      "research/workflow-state.json"
-    ],
-    "verification": "research/astra-pass78-verification.json"
+    "checkpoint": "Pass79",
+    "branch": "codex/astra-global-phase-audit",
+    "parent_main": "92d567677620fec37008cff35a70092339a87fd3",
+    "status": "verified_pending_commit",
+    "receipt": "research/astra-pass79-verification.json",
+    "receipt_sha256": "814e1064229fc9ffe0241c666afc2c1139f6a1d8ebff3d5856e5ff832495b5de"
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -11276,6 +11392,11 @@
       "event": "live_handles_missing_after_continuation",
       "evidence": "collaboration.list_agents returned root only; all three persisted active worker handles absent. Coordinate manuscript and harmonic numerical receipt preserved; zero-restoration file not delivered.",
       "action": "Close delivered tasks from preserved evidence; resume missing zero task at same explicit Astra/xhigh route; no goal status change."
+    },
+    {
+      "event": "resource_diagnosis_verified_resume",
+      "evidence": "Kernel OOM and current process inspection confirm unrelated Kiyori parallel Rust build consumed about12GiB and swap4GiB; now no local Rust/Lean builds. User goal continuation resumes review only; no setting changes.",
+      "previous_goal_turn_classification": "progress: resource evidence resolved immediate next-action concern"
     }
   ],
   "last_continuation_assessment": {
@@ -14267,6 +14388,20 @@
       "event": "memory_diagnosis_and_resume",
       "previous_turn_classification": "progress",
       "evidence": "Kernel prior-boot OOM tables show seven rustc processes used 11.922 and 11.957 GiB, swap exhausted, ChatGPT killed; unrelated Kiyori Codex release build identified. No unrelated settings modified. User goal continuation resumes low-resource research; no local builds queued."
+    },
+    {
+      "event": "new_specific_primary_source",
+      "url": "https://github.com/hxypqr/phase_riesz_products_lonely_runner",
+      "author_link": "https://sites.google.com/view/benjamin-bedert",
+      "commit": "d53fa46aedf01779481fc5f17726bb0ab6770ac4",
+      "source_sha256": "b50d17e25c4e8c4841e7350463b3f08a0ce5fd1b9ecec0d9cc97cd9924761079",
+      "temporary_source": "/tmp/astra-bedert-hu-d53fa46.tex",
+      "scope": "Primary author page links note improving13/8secondary exponent, not sharp target. Specific interaction-method audit, no claim of complete theorem review yet."
+    },
+    {
+      "event": "goal_continuation_pass78_revalidated",
+      "previous_turn_classification": "progress",
+      "evidence": "PR77 exact reviewed head6cdabaff21e525ee1728ecf215ecf77e2b54f95d merged to92d567677620fec37008cff35a70092339a87fd3; both CI passed and33 hashes verified. Fullrelation support review now completed, primary phase-Riesz source audit confirmed live. No goal-blocking condition."
     }
   ],
   "two_even_escalation": {
@@ -14960,5 +15095,127 @@
       "status": "Intermediate handalgebra, authorfullmanuscript andindependentreviewpending; no numericalcountorformalclaim."
     },
     "root_best_orbit_blocker": "Retainedspeed4g has phase\u00b11/Q0 throughoutbestorbit; Q0>N Bprime\u2265N underfullfailure, so this is nonzero butbad. It is notmultipleD andoldoptimumdoesnotimmediatelyexcludeit whenBprime\u2264h. Forallphaseorbits phaseisoddcoeff/Q0; allbadifh/Q0<alpha. Unreviewedrootalgebra sharedwithauthor."
+  },
+  "pass78_publication": {
+    "checkpoint": "Pass78",
+    "status": "merged_verified",
+    "branch": "codex/astra-zero-contact-escape",
+    "parent_main": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+    "files": [
+      "docs/astra-research-78.md",
+      "research/astra-fold-zero-restoration.md",
+      "research/astra-fold-zero-restoration-review.md",
+      "research/astra-zero-contact-global-escape.md",
+      "research/astra-zero-contact-global-review.md",
+      "research/astra-uniform-strategy-after-fold.md",
+      "research/astra-slack-energy-review.md",
+      "research/astra-slack-energy-control.py",
+      "research/astra-slack-energy-control.json",
+      "research/astra-pass78-verification.json",
+      "research/workflow-state.json"
+    ],
+    "verification": "research/astra-pass78-verification.json",
+    "head": "6cdabaff21e525ee1728ecf215ecf77e2b54f95d",
+    "pr": 77,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/77",
+    "ci_run": 34080013032,
+    "sessions": {
+      "push": {
+        "id": 2523,
+        "exit_code": 0
+      },
+      "create": {
+        "id": 8394,
+        "exit_code": 0
+      },
+      "watch": {
+        "id": 11785,
+        "exit_code": 0
+      },
+      "merge": {
+        "id": 80956,
+        "exit_code": 0
+      }
+    },
+    "merge_commit": "92d567677620fec37008cff35a70092339a87fd3",
+    "merged_at": "2026-09-07T03:43:00Z",
+    "premerge": {
+      "headRefOid": "6cdabaff21e525ee1728ecf215ecf77e2b54f95d",
+      "isDraft": false,
+      "mergeStateStatus": "CLEAN",
+      "reviews": [],
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T03:35:08Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34080013032/job/101613399089",
+          "name": "Lean build and trust audit",
+          "startedAt": "2026-09-07T03:33:02Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T03:42:33Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34080013032/job/101613398862",
+          "name": "Exact computational certificates",
+          "startedAt": "2026-09-07T03:33:02Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        }
+      ],
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/77"
+    },
+    "verified_remote_main": "92d567677620fec37008cff35a70092339a87fd3",
+    "verified_file_hashes": {
+      "docs/astra-research-78.md": "9cde410188f5e6624a51bde8ea04aaa557ac6e954c908467bc53e53a0ae91531",
+      "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+      "research/astra-fold-zero-restoration-review.md": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e",
+      "research/astra-zero-contact-global-escape.md": "deff1f1667f885ff793414988889806bf259247fb64c2d4ab264672fa2202d71",
+      "research/astra-zero-contact-global-review.md": "d7d8e86a11b3ab7df83b4a3a37e57e2889b63f6951ef626637dfaa5aa0b31fa6",
+      "research/astra-uniform-strategy-after-fold.md": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+      "research/astra-slack-energy-review.md": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+      "research/astra-slack-energy-control.py": "7c693ad658c59afb615965b551c42ebffd068d99d85b62f1ee954b35c6f69d73",
+      "research/astra-slack-energy-control.json": "3d3ee3c559a07a6242ec347a35a72ec5ae4a11b77aac5c438bb2814e5576aaeb",
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "research/astra-parity-plane-joint-descent.md": "2b9a2350701206bd4bf5af0589cb607b545afe5a96258239a5ad77a031f58472",
+      "research/astra-parity-plane-joint-review.md": "eafc2a8545ffe8ab2eae1014be5c40ddb8b955723658e3bf0aeb00fc9a497e88",
+      "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+      "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140",
+      "research/astra-rank-three-coordinate-cancellation.md": "f95f4e72452cd12d775b496d8fb3d585f204d71fff608f1ba505841e96c154de",
+      "research/astra-rank-three-coordinate-review.md": "9d53e7f9426a9ae828462e66f045a35ef39580b519bf3910ac3070d484d0b258",
+      "research/astra-harmonic-fold-obstruction.md": "a5037d4b8f33d493b26ee1a7854bd654d7ea373e500c364cad10070954e2ca9a",
+      "research/astra-harmonic-fold-obstruction-review.md": "a29f8ca92677cf175cf2567ecaf978e3234b5e0e9a5049dd4fe93f1929bbdb36",
+      "research/astra-center-preserving-projection-audit.md": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e",
+      "research/astra-parity-coset-minimum-audit.md": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+      "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+      "research/astra-ideal-row-carry-exclusion.md": "689c3255596a4fb9dfc8935d0bf6ac40775415e1782dc7c09ccbfdb3b30df286",
+      "research/astra-uniform-seed-coupling.md": "b52f92b8dca3de5b0ba9f41c24c2dc6bd83a27329a035d40a1273a0401f215ea",
+      "research/astra-uniform-global-seed-geometry.md": "3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524",
+      "research/astra-fourier-lp-source-contract.md": "cf3ea5b08fbaee07e56b34d295632f7c67a35cc80679055a74725b0596b96043",
+      "research/astra-uniform-fourier-upper-barrier.md": "d3ba7474730fb2c17ba5118ee9753367336673eb175bf00080493e7e74a37bb1",
+      "LonelyRunner/BHKRealReduction.lean": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26",
+      "LonelyRunner/Formulations.lean": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788",
+      "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa",
+      "research/astra-pass78-verification.json": "fa8d673d855267abb92c9b896cf71c0cd47fbfea4141d2b3e9babc61acd0239f"
+    },
+    "ancestry_verified": [
+      "6cdabaff21e525ee1728ecf215ecf77e2b54f95d",
+      "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665"
+    ]
+  },
+  "normalized_phase_root_derivation": {
+    "status": "independently_reviewed_manuscript_no_kernel_proof",
+    "target": "research/astra-normalized-phase-signal.md",
+    "identities": "For full positiveintegerfrequency product, B(theta)>0 is orbit-invariant and W=R/B has phase average1. w(theta)=Rtheta(0)/Btheta, Wtheta(t)=w(theta+vt); ZFhat(sigma)=what(sigma)Fhat(-v.sigma); nonzero zero-relations have what=0.",
+    "signal_bound": "sum_i abs(what(e_i)) <= 1+sqrt(n log(8 sum_i v_i)). Choose deterministic phase offsets aligning coefficients; phase covariance expresses coefficient sum as expected W-weighted cosine sum, bounded by expected time supremum. K=8 sumv mesh has derivative error<1. Independent uniform cos phases satisfy E exp(lambda S)<=exp(n lambda^2/4), via I0 series. Logsumexp/Jensen and lambda=2sqrt(logK/n) give bound. For v1..n average firstweight tends0.",
+    "scope": "Limits uniform first-order signal replacement only, not whole normalized density or LRC; no mathematical program.",
+    "review": "research/astra-normalized-phase-review.md"
   }
 }
