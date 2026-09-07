@@ -179,6 +179,12 @@ def main() -> None:
         if unexpected:
             raise SystemExit("unexpected axiom names: " + ", ".join(sorted(unexpected)))
     required_probes = {
+        # These are the canonical failure-to-normal-form bridge, not a proof of LRC.
+        "LonelyRunner.positiveIntegerFailure_iff_no_witness",
+        "LonelyRunner.positiveIntegerFailure_factor_iff",
+        "LonelyRunner.exists_minimalPositiveIntegerFailure",
+        "LonelyRunner.MinimalPositiveIntegerFailure.witness_of_sum_lt",
+        "LonelyRunner.exists_attained_strict_failure_margin",
         "LonelyRunner.logarithmicHeightGain_positiveInteger_witness",
         "LonelyRunner.boundedPrimorialHeight_family_witness",
         "LonelyRunner.kanoldIntervalBound_vandermonde",

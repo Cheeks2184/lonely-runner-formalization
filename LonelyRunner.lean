@@ -219,6 +219,8 @@ import LonelyRunner.TwoEvenRunners
 import LonelyRunner.SixRunnerOrdinary
 import LonelyRunner.SixRunnerCanonical
 
+import LonelyRunner.MinimalCounterexample
+
 /-!
 Root import for the formal Lonely Runner development.
 -/

@@ -1,0 +1,130 @@
+{
+  "status": "focused_compile_and_axiom_check_passed",
+  "parent_main": "ae64785d3e3a61281bd5baaff773916d72383a78",
+  "source_path": "LonelyRunner/MinimalCounterexample.lean",
+  "source_sha256": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+  "root_compile": {
+    "argv": [
+      "/home/joshua/.elan/bin/lake",
+      "env",
+      "lean",
+      "-j1",
+      "-o",
+      ".lake/build/lib/lean/LonelyRunner/MinimalCounterexample.olean",
+      "LonelyRunner/MinimalCounterexample.lean"
+    ],
+    "source_sha256": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "elapsed_seconds": 2.7424899590005225,
+    "cgroup": {
+      "memory.max": "4294967296",
+      "memory.swap.max": "536870912",
+      "memory.peak": "487964672",
+      "memory.swap.peak": "0"
+    },
+    "observed_terminal": {
+      "chunk": "94cfb3",
+      "exit_code": 0
+    },
+    "script_source": "from pathlib import Path\nimport hashlib,json,subprocess,time\np=Path('LonelyRunner/MinimalCounterexample.lean')\ncp=Path('/sys/fs/cgroup')/Path('/proc/self/cgroup').read_text().strip().split('::',1)[1].lstrip('/')\ncmd=['/home/joshua/.elan/bin/lake','env','lean','-j1','-o','.lake/build/lib/lean/LonelyRunner/MinimalCounterexample.olean',str(p)]\nstart=time.monotonic();r=subprocess.run(cmd,text=True,capture_output=True)\nreceipt={'argv':cmd,'source_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'exit_code':r.returncode,'stdout':r.stdout,'stderr':r.stderr,'elapsed_seconds':time.monotonic()-start,'cgroup':{k:(cp/k).read_text().strip() for k in ['memory.max','memory.swap.max','memory.peak','memory.swap.peak']}}\nPath('/tmp/astra-minimal-root-compile.json').write_text(json.dumps(receipt,indent=2)+'\\n');print(json.dumps(receipt,indent=2),flush=True);raise SystemExit(r.returncode)\n"
+  },
+  "root_repair_failures": [
+    {
+      "argv": [
+        "/home/joshua/.elan/bin/lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/LonelyRunner/MinimalCounterexample.olean",
+        "LonelyRunner/MinimalCounterexample.lean"
+      ],
+      "source_sha256": "ad1b36f7ee5174db59e0572463d3aab448751e449de7189a0c40ea91e90a4706",
+      "exit_code": 1,
+      "stdout": "LonelyRunner/MinimalCounterexample.lean:93:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\nLonelyRunner/MinimalCounterexample.lean:129:32: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c \u2264 -1\n  b \u2265 2\n  a \u2265 1\nwhere\n a := \u2191n\n b := \u2191g\n c := \u2191(v i) / \u2191g\n",
+      "stderr": "",
+      "elapsed_seconds": 2.5935472800010757,
+      "cgroup": {
+        "memory.max": "4294967296",
+        "memory.swap.max": "536870912",
+        "memory.peak": "482811904",
+        "memory.swap.peak": "0"
+      },
+      "observed_terminal": {
+        "chunk": "92a852",
+        "exit_code": 1
+      },
+      "script_source": "from pathlib import Path\nimport hashlib,json,subprocess,time\np=Path('LonelyRunner/MinimalCounterexample.lean')\ncp=Path('/sys/fs/cgroup')/Path('/proc/self/cgroup').read_text().strip().split('::',1)[1].lstrip('/')\ncmd=['/home/joshua/.elan/bin/lake','env','lean','-j1','-o','.lake/build/lib/lean/LonelyRunner/MinimalCounterexample.olean',str(p)]\nstart=time.monotonic();r=subprocess.run(cmd,text=True,capture_output=True)\nreceipt={'argv':cmd,'source_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'exit_code':r.returncode,'stdout':r.stdout,'stderr':r.stderr,'elapsed_seconds':time.monotonic()-start,'cgroup':{k:(cp/k).read_text().strip() for k in ['memory.max','memory.swap.max','memory.peak','memory.swap.peak']}}\nPath('/tmp/astra-minimal-root-compile.json').write_text(json.dumps(receipt,indent=2)+'\\n');print(json.dumps(receipt,indent=2),flush=True);raise SystemExit(r.returncode)\n"
+    }
+  ],
+  "worker_failure_receipt": {
+    "path": "research/astra-minimal-counterexample-implementation.json",
+    "sha256": "d522cb878f29db6bb7774bb2d5d6676738d4d03ffc9b4e64bd8996364e9ea9d4",
+    "evidence_scope": "Worker-reported failed-check history; diagnostic text fidelity has not been independently checked. Not a successful focused compilation receipt."
+  },
+  "focused_axiom_probe_source": "import LonelyRunner.MinimalCounterexample\n\n#print axioms LonelyRunner.positiveIntegerFailure_iff_no_witness\n#print axioms LonelyRunner.positiveIntegerFailure_factor_iff\n#print axioms LonelyRunner.exists_minimalPositiveIntegerFailure\n#print axioms LonelyRunner.MinimalPositiveIntegerFailure.witness_of_sum_lt\n#print axioms LonelyRunner.exists_attained_strict_failure_margin\n",
+  "repair_description": "Root replaced broad quotient rewrite by a direct strict-product calc, used Nat.eq_zero_of_not_pos instead of omega on a variable divisor, corrected htS direction, and migrated deprecated push_neg to push Not. No signature changed.",
+  "resource_command_prefix": [
+    "systemd-run",
+    "--user",
+    "--wait",
+    "--pipe",
+    "--collect",
+    "-p",
+    "MemoryMax=4G",
+    "-p",
+    "MemorySwapMax=512M",
+    "-p",
+    "TasksMax=128",
+    "--working-directory=/home/joshua/lonely-runner-formalization",
+    "/usr/bin/flock",
+    "-n",
+    ".lake/verification.lock"
+  ],
+  "axioms_pending": false,
+  "worker_final_source": "import LonelyRunner.FiniteFamilyEquivalence\nimport LonelyRunner.PivotBoundary\nimport Mathlib.Algebra.GCDMonoid.Finset\nimport Mathlib.Tactic\n\nopen scoped BigOperators\n\nnamespace LonelyRunner\n\n/-- A positive integer speed family fails when every time has a runner strictly\nbelow the closed lonely-runner threshold. -/\ndef PositiveIntegerFailure {n : \u2115} (v : Fin n \u2192 \u2115) : Prop :=\n  \u2200 t : \u211d, \u2203 i : Fin n,\n    circleNorm (t * (v i : \u211d)) < (((n + 1 : \u2115) : \u211d)\u207b\u00b9)\n\n/-- A lexicographically minimal positive injective integer failure, with a\nsecondary minimum of the sum of its speeds. -/\nstructure MinimalPositiveIntegerFailure {n : \u2115}\n    (v : Fin n \u2192 \u2115) : Prop where\n  count_pos : 1 \u2264 n\n  positive : \u2200 i, 0 < v i\n  injective : Function.Injective v\n  failure : PositiveIntegerFailure v\n  previous_counts : \u2200 d : \u2115, 1 \u2264 d \u2192 d < n \u2192 PositiveIntegerAtCount d\n  sum_minimal : \u2200 w : Fin n \u2192 \u2115,\n    Function.Injective w \u2192 (\u2200 i, 0 < w i) \u2192\n    PositiveIntegerFailure w \u2192\n    (\u2211 i : Fin n, v i) \u2264 (\u2211 i : Fin n, w i)\n  primitive : Finset.univ.gcd v = 1\n\ntheorem positiveIntegerFailure_iff_no_witness\n    {n : \u2115} (v : Fin n \u2192 \u2115) :\n    PositiveIntegerFailure v \u2194\n      \u00ac \u2203 t : \u211d, \u2200 i : Fin n,\n        (((n + 1 : \u2115) : \u211d)\u207b\u00b9) \u2264 circleNorm (t * (v i : \u211d)) := by\n  constructor\n  \u00b7 intro h hw\n    obtain \u27e8t, ht\u27e9 := hw\n    obtain \u27e8i, hi\u27e9 := h t\n    exact (not_lt_of_ge (ht i)) hi\n  \u00b7 intro h t\n    by_contra hnone\n    apply h\n    refine \u27e8t, ?_\u27e9\n    intro i\n    exact le_of_not_gt (fun hi => hnone \u27e8i, hi\u27e9)\n\ntheorem positiveIntegerFailure_factor_iff\n    {n : \u2115} (v w : Fin n \u2192 \u2115) (g : \u2115) (hg : 0 < g)\n    (hfactor : \u2200 i, v i = g * w i) :\n    PositiveIntegerFailure v \u2194 PositiveIntegerFailure w := by\n  have hgR : (g : \u211d) \u2260 0 := by exact_mod_cast (Nat.ne_of_gt hg)\n  constructor\n  \u00b7 intro hv t\n    obtain \u27e8i, hi\u27e9 := hv (t / (g : \u211d))\n    refine \u27e8i, ?_\u27e9\n    rw [hfactor i] at hi\n    have hphase : (t / (g : \u211d)) * (((g * w i : \u2115) : \u211d)) =\n        t * (w i : \u211d) := by\n      push_cast\n      field_simp\n    rwa [hphase] at hi\n  \u00b7 intro hw t\n    obtain \u27e8i, hi\u27e9 := hw ((g : \u211d) * t)\n    refine \u27e8i, ?_\u27e9\n    rw [hfactor i]\n    have hphase : ((g : \u211d) * t) * (w i : \u211d) =\n        t * (((g * w i : \u2115) : \u211d)) := by\n      push_cast\n      ring\n    rwa [\u2190 hphase]\n\nprivate theorem exists_failed_positive_count (hnot : \u00ac Conjecture) :\n    \u2203 d : \u2115, 1 \u2264 d \u2227 \u00ac PositiveIntegerAtCount d := by\n  have hnotPositive : \u00ac PositiveIntegerConjecture := by\n    intro h\n    exact hnot (conjecture_iff_positiveIntegerConjecture.mpr h)\n  by_contra hnone\n  apply hnotPositive\n  intro d hd speeds hinj hpos\n  by_contra hnowitness\n  apply hnone\n  refine \u27e8d, hd, ?_\u27e9\n  intro hatcount\n  exact hnowitness (hatcount speeds hinj hpos)\n\nprivate theorem exists_positive_failure_at_count\n    {n : \u2115} (hnot : \u00ac PositiveIntegerAtCount n) :\n    \u2203 v : Fin n \u2192 \u2115, Function.Injective v \u2227 (\u2200 i, 0 < v i) \u2227\n      PositiveIntegerFailure v := by\n  classical\n  simp only [PositiveIntegerAtCount] at hnot\n  push_neg at hnot\n  obtain \u27e8v, hinj, hpos, hnowitness\u27e9 := hnot\n  refine \u27e8v, hinj, hpos, ?_\u27e9\n  exact hnowitness\n\nprivate theorem positive_sum_of_positive {n : \u2115} (v : Fin n \u2192 \u2115)\n    (hpos : \u2200 i, 0 < v i) (i : Fin n) : 0 < \u2211 j : Fin n, v j := by\n  exact lt_of_lt_of_le (hpos i)\n    (Finset.single_le_sum (fun _ _ => Nat.zero_le _) (Finset.mem_univ i))\n\nprivate theorem quotient_injective {n : \u2115} {v : Fin n \u2192 \u2115} {g : \u2115}\n    (hinj : Function.Injective v) (hfactor : \u2200 i, v i = g * (v i / g)) :\n    Function.Injective (fun i => v i / g) := by\n  intro i j hij\n  apply hinj\n  rw [hfactor i, hfactor j]\n  exact congrArg (fun q => g * q) hij\n\nprivate theorem quotient_positive {n : \u2115} {v : Fin n \u2192 \u2115} {g : \u2115}\n    (hpos : \u2200 i, 0 < v i) (hg : 0 < g)\n    (hdiv : \u2200 i, g \u2223 v i) : \u2200 i, 0 < v i / g := by\n  intro i\n  exact Nat.div_pos (Nat.le_of_dvd (hpos i) (hdiv i)) hg\n\nprivate theorem sum_quotient_lt_sum_of_factor_gt_one\n    {n : \u2115} {v : Fin n \u2192 \u2115} {g : \u2115}\n    (hn : 1 \u2264 n) (hpos : \u2200 i, 0 < v i) (hg : 1 < g)\n    (hfactor : \u2200 i, v i = g * (v i / g)) :\n    (\u2211 i : Fin n, v i / g) < \u2211 i : Fin n, v i := by\n  let i0 : Fin n := \u27e80, Nat.zero_lt_of_lt hn\u27e9\n  have hnonempty : (Finset.univ : Finset (Fin n)).Nonempty :=\n    \u27e8i0, Finset.mem_univ _\u27e9\n  apply Finset.sum_lt_sum_of_nonempty hnonempty\n  intro i _\n  rw [hfactor i]\n  have hqpos : 0 < v i / g := by\n    by_contra hzero\n    have : v i = 0 := by\n      calc v i = g * (v i / g) := hfactor i\n           _ = 0 := by simp [hzero]\n    exact (Nat.ne_of_gt (hpos i)) this\n  exact lt_mul_of_one_lt_left hqpos hg\n\nprivate theorem gcd_is_one_of_sum_minimal\n    {n : \u2115} {v : Fin n \u2192 \u2115} (hn : 1 \u2264 n)\n    (hpos : \u2200 i, 0 < v i) (hinj : Function.Injective v)\n    (hfailure : PositiveIntegerFailure v)\n    (hsum : \u2200 w : Fin n \u2192 \u2115, Function.Injective w \u2192 (\u2200 i, 0 < w i) \u2192\n      PositiveIntegerFailure w \u2192 (\u2211 i : Fin n, v i) \u2264 \u2211 i : Fin n, w i) :\n    Finset.univ.gcd v = 1 := by\n  let g := Finset.univ.gcd v\n  have hdiv : \u2200 i, g \u2223 v i := by\n    intro i\n    exact Finset.gcd_dvd (Finset.mem_univ i)\n  have hgpos : 0 < g := by\n    let i0 : Fin n := \u27e80, Nat.zero_lt_of_lt hn\u27e9\n    apply Nat.pos_of_ne_zero\n    exact (Finset.gcd_ne_zero_iff).mpr\n      \u27e8i0, Finset.mem_univ _, Nat.ne_of_gt (hpos i0)\u27e9\n  have hfactor : \u2200 i, v i = g * (v i / g) := by\n    intro i\n    exact (Nat.mul_div_cancel' (hdiv i)).symm\n  have hqinj : Function.Injective (fun i => v i / g) :=\n    quotient_injective hinj hfactor\n  have hqpos : \u2200 i, 0 < v i / g := quotient_positive hpos hgpos hdiv\n  have hqfail : PositiveIntegerFailure (fun i => v i / g) :=\n    (positiveIntegerFailure_factor_iff v (fun i => v i / g) g hgpos hfactor).mp hfailure\n  have hgle : g \u2264 1 := by\n    by_contra hnotle\n    have hgt : 1 < g := by omega\n    have hlt := sum_quotient_lt_sum_of_factor_gt_one hn hpos hgt hfactor\n    exact (not_lt_of_ge (hsum _ hqinj hqpos hqfail)) hlt\n  omega\n\ntheorem exists_minimalPositiveIntegerFailure\n    (hnot : \u00ac Conjecture) :\n    \u2203 (n : \u2115) (v : Fin n \u2192 \u2115), MinimalPositiveIntegerFailure v := by\n  classical\n  have hcount := exists_failed_positive_count hnot\n  let n : \u2115 := Nat.find hcount\n  have hnspec : 1 \u2264 n \u2227 \u00ac PositiveIntegerAtCount n := Nat.find_spec hcount\n  obtain \u27e8u, huinj, hupos, hufail\u27e9 := exists_positive_failure_at_count hnspec.2\n  let Q : \u2115 \u2192 Prop := fun s => \u2203 w : Fin n \u2192 \u2115,\n    Function.Injective w \u2227 (\u2200 i, 0 < w i) \u2227 PositiveIntegerFailure w \u2227\n      (\u2211 i : Fin n, w i) = s\n  have hQ : \u2203 s, Q s := \u27e8\u2211 i : Fin n, u i, u, huinj, hupos, hufail, rfl\u27e9\n  let s : \u2115 := Nat.find hQ\n  have hsspec : Q s := Nat.find_spec hQ\n  obtain \u27e8v, hv_inj, hv_pos, hv_fail, hv_sum\u27e9 := hsspec\n  refine \u27e8n, v, ?_\u27e9\n  refine \u27e8hnspec.1, hv_pos, hv_inj, hv_fail, ?_, ?_, ?_\u27e9\n  \u00b7 intro d hd hdn\n    by_contra hbad\n    exact (Nat.find_min hcount hdn) \u27e8hd, hbad\u27e9\n  \u00b7 intro w hwinj hwpos hwfail\n    have hQw : Q (\u2211 i : Fin n, w i) := \u27e8w, hwinj, hwpos, hwfail, rfl\u27e9\n    have hmin : s \u2264 \u2211 i : Fin n, w i := Nat.find_min' hQ hQw\n    simpa [hv_sum] using hmin\n  \u00b7 exact gcd_is_one_of_sum_minimal hnspec.1 hv_pos hv_inj hv_fail (by\n      intro w hwinj hwpos hwfail\n      have hQw : Q (\u2211 i : Fin n, w i) := \u27e8w, hwinj, hwpos, hwfail, rfl\u27e9\n      have hmin : s \u2264 \u2211 i : Fin n, w i := Nat.find_min' hQ hQw\n      simpa [hv_sum] using hmin)\n\ntheorem MinimalPositiveIntegerFailure.witness_of_sum_lt\n    {n : \u2115} {v : Fin n \u2192 \u2115} (hv : MinimalPositiveIntegerFailure v)\n    (w : Fin n \u2192 \u2115) (hinj : Function.Injective w)\n    (hpos : \u2200 i, 0 < w i)\n    (hlt : (\u2211 i : Fin n, w i) < (\u2211 i : Fin n, v i)) :\n    \u2203 t : \u211d, \u2200 i : Fin n,\n      (((n + 1 : \u2115) : \u211d)\u207b\u00b9) \u2264 circleNorm (t * (w i : \u211d)) := by\n  by_contra hnone\n  have hfail : PositiveIntegerFailure w :=\n    positiveIntegerFailure_iff_no_witness w |>.mpr hnone\n  exact (not_lt_of_ge (hv.sum_minimal w hinj hpos hfail)) hlt\n\nprivate theorem exists_positive_minimum_time\n    {n : \u2115} (v : Fin n \u2192 \u2115) (anchor : Fin n) (hpos : \u2200 i, 0 < v i) :\n    \u2203 t : \u211d, t \u2208 Set.Icc (0 : \u211d) 1 \u2227\n      0 < minimumCircleNorm (fun i => (v i : \u211d)) anchor t := by\n  let S : \u2115 := \u2211 i : Fin n, v i\n  let t : \u211d := 1 / (2 * (S : \u211d))\n  have hS : 0 < S := positive_sum_of_positive v hpos anchor\n  have hSR : 0 < (S : \u211d) := by exact_mod_cast hS\n  have ht : 0 < t := by\n    dsimp [t]\n    positivity\n  have htS : t * (S : \u211d) = 1 / 2 := by\n    dsimp [t]\n    field_simp\n  have hmem : t \u2208 Set.Icc (0 : \u211d) 1 := by\n    constructor\n    \u00b7 exact ht.le\n    \u00b7 have hSone : (1 : \u211d) \u2264 S := by\n        exact_mod_cast (Nat.succ_le_iff.mpr hS)\n      dsimp [t]\n      apply (div_le_iff\u2080 (by positivity)).mpr\n      nlinarith\n  refine \u27e8t, hmem, ?_\u27e9\n  apply lt_of_lt_of_le ht\n  apply le_minimumCircleNorm\n  intro i\n  have hvi : v i \u2264 S := by\n    dsimp [S]\n    exact Finset.single_le_sum (fun _ _ => Nat.zero_le _) (Finset.mem_univ i)\n  have hviR : (v i : \u211d) \u2264 (S : \u211d) := by exact_mod_cast hvi\n  have hvone : (1 : \u211d) \u2264 v i := by exact_mod_cast (Nat.succ_le_iff.mpr (hpos i))\n  have hphase_nonneg : 0 \u2264 t * (v i : \u211d) := mul_nonneg ht.le (by positivity)\n  have hphase_le : t * (v i : \u211d) \u2264 1 / 2 := by\n    have := mul_le_mul_of_nonneg_left hviR ht.le\n    rw [\u2190 htS] at this\n    linarith\n  have hnorm : circleNorm (t * (v i : \u211d)) = t * (v i : \u211d) := by\n    rw [circleNorm_eq_abs_of_abs_le_half (by\n      rwa [abs_of_nonneg hphase_nonneg]), abs_of_nonneg hphase_nonneg]\n  rw [hnorm]\n  calc t = t * 1 := (mul_one t).symm\n       _ \u2264 t * (v i : \u211d) := mul_le_mul_of_nonneg_left hvone ht.le\n\nprivate theorem minimumCircleNorm_fract\n    {n : \u2115} (v : Fin n \u2192 \u2115) (anchor : Fin n) (t : \u211d) :\n    minimumCircleNorm (fun i => (v i : \u211d)) anchor (Int.fract t) =\n      minimumCircleNorm (fun i => (v i : \u211d)) anchor t := by\n  apply le_antisymm\n  \u00b7 obtain \u27e8i, hi\u27e9 := exists_eq_minimumCircleNorm (fun i => (v i : \u211d)) anchor t\n    calc\n      minimumCircleNorm (fun i => (v i : \u211d)) anchor (Int.fract t) \u2264\n          circleNorm (Int.fract t * (v i : \u211d)) :=\n        minimumCircleNorm_le (fun i => (v i : \u211d)) anchor i (Int.fract t)\n      _ = circleNorm (t * (v i : \u211d)) := by\n        rw [circleNorm_fract_mul_nat t (v i)]\n      _ = minimumCircleNorm (fun i => (v i : \u211d)) anchor t := hi\n  \u00b7 obtain \u27e8i, hi\u27e9 :=\n      exists_eq_minimumCircleNorm (fun i => (v i : \u211d)) anchor (Int.fract t)\n    calc\n      minimumCircleNorm (fun i => (v i : \u211d)) anchor t \u2264\n          circleNorm (t * (v i : \u211d)) :=\n        minimumCircleNorm_le (fun i => (v i : \u211d)) anchor i t\n      _ = circleNorm (Int.fract t * (v i : \u211d)) := by\n        rw [circleNorm_fract_mul_nat t (v i)]\n      _ = minimumCircleNorm (fun i => (v i : \u211d)) anchor (Int.fract t) := hi\n\ntheorem exists_attained_strict_failure_margin\n    {n : \u2115} (v : Fin n \u2192 \u2115) (anchor : Fin n)\n    (hpos : \u2200 i, 0 < v i) (hfail : PositiveIntegerFailure v) :\n    \u2203 (mu tau : \u211d), tau \u2208 Set.Icc (0 : \u211d) 1 \u2227\n      0 < mu \u2227 mu < (((n + 1 : \u2115) : \u211d)\u207b\u00b9) \u2227\n      minimumCircleNorm (fun i => (v i : \u211d)) anchor tau = mu \u2227\n      \u2200 t : \u211d,\n        minimumCircleNorm (fun i => (v i : \u211d)) anchor t \u2264 mu := by\n  classical\n  let F : \u211d \u2192 \u211d := minimumCircleNorm (fun i => (v i : \u211d)) anchor\n  have hcont : Continuous F := continuous_minimumCircleNorm (fun i => (v i : \u211d)) anchor\n  have hcompact : IsCompact (Set.Icc (0 : \u211d) 1) := isCompact_Icc\n  obtain \u27e8tau, htau, hmax\u27e9 :=\n    hcompact.exists_isMaxOn (by exact \u27e80, by norm_num\u27e9) hcont.continuousOn\n  obtain \u27e8tpos, htpos_mem, htpos\u27e9 := exists_positive_minimum_time v anchor hpos\n  have hmu_pos : 0 < F tau := by\n    have hle := hmax htpos_mem\n    exact lt_of_lt_of_le htpos hle\n  have hglobal : \u2200 t : \u211d, F t \u2264 F tau := by\n    intro t\n    have hfract_mem : Int.fract t \u2208 Set.Icc (0 : \u211d) 1 :=\n      \u27e8Int.fract_nonneg t, (Int.fract_lt_one t).le\u27e9\n    calc\n      F t = F (Int.fract t) := by\n        dsimp [F]\n        exact (minimumCircleNorm_fract v anchor t).symm\n      _ \u2264 F tau := hmax hfract_mem\n  obtain \u27e8i, hi\u27e9 := hfail tau\n  have hmu_lt : F tau < (((n + 1 : \u2115) : \u211d)\u207b\u00b9) :=\n    lt_of_le_of_lt (minimumCircleNorm_le (fun i => (v i : \u211d)) anchor i tau) hi\n  exact \u27e8F tau, tau, htau, hmu_pos, hmu_lt, rfl, hglobal\u27e9\n\nend LonelyRunner\n",
+  "root_repair_diff": "--- Terra-final-aa51082f\n+++ root-compiled-b0c13b22\n@@ -90,7 +90,7 @@\n       PositiveIntegerFailure v := by\n   classical\n   simp only [PositiveIntegerAtCount] at hnot\n-  push_neg at hnot\n+  push Not at hnot\n   obtain \u27e8v, hinj, hpos, hnowitness\u27e9 := hnot\n   refine \u27e8v, hinj, hpos, ?_\u27e9\n   exact hnowitness\n@@ -124,14 +124,15 @@\n     \u27e8i0, Finset.mem_univ _\u27e9\n   apply Finset.sum_lt_sum_of_nonempty hnonempty\n   intro i _\n-  rw [hfactor i]\n   have hqpos : 0 < v i / g := by\n-    by_contra hzero\n-    have : v i = 0 := by\n-      calc v i = g * (v i / g) := hfactor i\n-           _ = 0 := by simp [hzero]\n-    exact (Nat.ne_of_gt (hpos i)) this\n-  exact lt_mul_of_one_lt_left hqpos hg\n+    by_contra hnot\n+    have hz : v i / g = 0 := Nat.eq_zero_of_not_pos hnot\n+    have hf := hfactor i\n+    rw [hz, mul_zero] at hf\n+    exact (Nat.ne_of_gt (hpos i)) hf\n+  calc\n+    v i / g < g * (v i / g) := lt_mul_of_one_lt_left hqpos hg\n+    _ = v i := (hfactor i).symm\n \n private theorem gcd_is_one_of_sum_minimal\n     {n : \u2115} {v : Fin n \u2192 \u2115} (hn : 1 \u2264 n)\n@@ -240,8 +241,8 @@\n   have hphase_nonneg : 0 \u2264 t * (v i : \u211d) := mul_nonneg ht.le (by positivity)\n   have hphase_le : t * (v i : \u211d) \u2264 1 / 2 := by\n     have := mul_le_mul_of_nonneg_left hviR ht.le\n-    rw [\u2190 htS] at this\n-    linarith\n+    rw [htS] at this\n+    exact this\n   have hnorm : circleNorm (t * (v i : \u211d)) = t * (v i : \u211d) := by\n     rw [circleNorm_eq_abs_of_abs_le_half (by\n       rwa [abs_of_nonneg hphase_nonneg]), abs_of_nonneg hphase_nonneg]\n",
+  "astra_repair_lines": 11,
+  "root_axiom_check": {
+    "argv": [
+      "/home/joshua/.elan/bin/lake",
+      "env",
+      "lean",
+      "-j1",
+      ".lake/MinimalCounterexampleAxiomProbe.lean"
+    ],
+    "source_sha256": "b5c534e14c3e0f49ba8203423f5d65dafa0218379dcd6cf3f5ce4f18fdeb769d",
+    "exit_code": 0,
+    "stdout": "'LonelyRunner.positiveIntegerFailure_iff_no_witness' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.positiveIntegerFailure_factor_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.exists_minimalPositiveIntegerFailure' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LonelyRunner.MinimalPositiveIntegerFailure.witness_of_sum_lt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'LonelyRunner.exists_attained_strict_failure_margin' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "stderr": "",
+    "elapsed_seconds": 1.9885644880014297,
+    "cgroup": {
+      "memory.max": "4294967296",
+      "memory.swap.max": "536870912",
+      "memory.peak": "457121792",
+      "memory.swap.peak": "0"
+    },
+    "observed_terminal": {
+      "chunk": "5ab0af",
+      "exit_code": 0
+    },
+    "script_source": "from pathlib import Path\nimport hashlib,json,subprocess,time\np=Path('.lake/MinimalCounterexampleAxiomProbe.lean')\ncp=Path('/sys/fs/cgroup')/Path('/proc/self/cgroup').read_text().strip().split('::',1)[1].lstrip('/')\ncmd=['/home/joshua/.elan/bin/lake','env','lean','-j1',str(p)]\nstart=time.monotonic();r=subprocess.run(cmd,text=True,capture_output=True)\nreceipt={'argv':cmd,'source_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'exit_code':r.returncode,'stdout':r.stdout,'stderr':r.stderr,'elapsed_seconds':time.monotonic()-start,'cgroup':{k:(cp/k).read_text().strip() for k in ['memory.max','memory.swap.max','memory.peak','memory.swap.peak']}}\nPath('/tmp/astra-minimal-root-axioms.json').write_text(json.dumps(receipt,indent=2)+'\\n');print(json.dumps(receipt,indent=2),flush=True);raise SystemExit(r.returncode)\n"
+  },
+  "artifact_hashes": {
+    ".lake/build/lib/lean/LonelyRunner/MinimalCounterexample.olean": "bc7d45ce01ddc1ab689a71714007f40d357c6dab2e6c41f81e2725888c9547c3"
+  },
+  "trust_filter_regression": {
+    "command": "systemd-run --user --wait --pipe --collect --unit=lrc-trust-filter-tests -p MemoryMax=4G -p MemorySwapMax=512M -p TasksMax=128 --working-directory=/home/joshua/lonely-runner-formalization /usr/bin/flock -n .lake/verification.lock /usr/bin/python3 -B -m unittest discover -s tests -p test_audit_lean_trust.py -v",
+    "observed_chunk": "45f0bd",
+    "exit_code": 0,
+    "tests": 10,
+    "result": "Ran 10 tests in 0.245s; OK. Includes rejecting a false decide proof under synchronous elaboration."
+  },
+  "root_source_readback": {
+    "chunk": "dc07cb",
+    "source_sha256": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+    "result": "Full successful source read; exact public contracts retained."
+  }
+}
