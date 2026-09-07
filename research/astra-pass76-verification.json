@@ -1,0 +1,112 @@
+{
+  "checkpoint": "Pass76",
+  "parent_main": "93cdc554c4b15337aa6aa29450e88e7a628251d5",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-76.md": "3c974dbba9204ede57486e5e3ec93ddeb77232261c7cd9512b275cd4f8e7e446",
+    "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+    "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140"
+  },
+  "dependency_hashes": {
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-parity-plane-joint-descent.md": "2b9a2350701206bd4bf5af0589cb607b545afe5a96258239a5ad77a031f58472",
+    "research/astra-parity-plane-joint-review.md": "eafc2a8545ffe8ab2eae1014be5c40ddb8b955723658e3bf0aeb00fc9a497e88",
+    "research/astra-parity-coset-minimum-audit.md": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+    "research/astra-parity-coset-minimum-review.md": "fda600dd2cdbf2f470bc18e24baeab0bb4b9a90616f34b10d160ba3fa86b3360",
+    "research/astra-center-preserving-projection-audit.md": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e",
+    "research/astra-center-preserving-projection-review.md": "a1402e6545dd2de6a2d4b2f832b2ff13ec52f759a1ae5fb183122d1ad3d0c7e6"
+  },
+  "review_bindings": {
+    "research/astra-parity-rank-three-review.md": [
+      "research/astra-parity-rank-three-transport.md",
+      ".codex/config.toml",
+      "docs/project-workflow.md",
+      "research/workflow-policy.json",
+      "scripts/validate_workflow.py",
+      "research/astra-parity-plane-joint-descent.md",
+      "research/astra-parity-plane-joint-review.md",
+      "research/astra-parity-coset-minimum-audit.md",
+      "research/astra-parity-coset-minimum-review.md",
+      "research/astra-center-preserving-projection-audit.md",
+      "research/astra-center-preserving-projection-review.md"
+    ]
+  },
+  "checks": {
+    "frozen_files": 3,
+    "dependency_bindings": 10,
+    "review_bindings": 11
+  },
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/validate_workflow.py"
+      ],
+      "exit_code": 0,
+      "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "scripts/manage_storage.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+      "stderr": ""
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "/usr/bin/python3",
+      "/tmp/astra-pass76-verify.py"
+    ],
+    "source": "import hashlib\nimport json\nfrom pathlib import Path\nimport subprocess\nimport sys\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nmanifest = json.loads(Path('/tmp/astra-pass76-inputs.json').read_text())\nassert len(manifest['hashes']) == 3\nassert len(manifest['dependency_hashes']) == 10\nbindings = manifest['hashes'] | manifest['dependency_hashes']\nfor name, digest in bindings.items():\n    assert hashlib.sha256((root / name).read_bytes()).hexdigest() == digest, name\nfor name in manifest['hashes']:\n    data = (root / name).read_bytes()\n    assert data.endswith(b'\\n'), name\n    assert all(line.rstrip() == line for line in data.splitlines()), name\nauthor = 'research/astra-parity-rank-three-transport.md'\nreview = 'research/astra-parity-rank-three-review.md'\nassert bindings[author] in (root / review).read_text()\nfor digest in manifest['dependency_hashes'].values():\n    assert digest in (root / author).read_text()\n    assert digest in (root / review).read_text()\ncommands = []\nfor argv in ([sys.executable, '-B', 'scripts/validate_workflow.py'],\n             ['git', 'diff', '--check'],\n             [sys.executable, '-B', 'scripts/manage_storage.py']):\n    result = subprocess.run(argv, cwd=root, capture_output=True, text=True)\n    commands.append({'argv': argv, 'exit_code': result.returncode,\n                     'stdout': result.stdout, 'stderr': result.stderr})\n    assert result.returncode == 0, commands[-1]\nprint(json.dumps({'frozen_files': 3, 'dependency_bindings': 10,\n                  'review_bindings': 11, 'commands': commands}, indent=2))\n",
+    "source_sha256": "95e01927e63cec7215fdd14bd4b033934f0b55795ae251d54606f257409db4d0",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-76.md": "3c974dbba9204ede57486e5e3ec93ddeb77232261c7cd9512b275cd4f8e7e446",
+        "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+        "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140"
+      },
+      "dependency_hashes": {
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-parity-plane-joint-descent.md": "2b9a2350701206bd4bf5af0589cb607b545afe5a96258239a5ad77a031f58472",
+        "research/astra-parity-plane-joint-review.md": "eafc2a8545ffe8ab2eae1014be5c40ddb8b955723658e3bf0aeb00fc9a497e88",
+        "research/astra-parity-coset-minimum-audit.md": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+        "research/astra-parity-coset-minimum-review.md": "fda600dd2cdbf2f470bc18e24baeab0bb4b9a90616f34b10d160ba3fa86b3360",
+        "research/astra-center-preserving-projection-audit.md": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e",
+        "research/astra-center-preserving-projection-review.md": "a1402e6545dd2de6a2d4b2f832b2ff13ec52f759a1ae5fb183122d1ad3d0c7e6"
+      }
+    },
+    "actual_tool_result": {
+      "chunk_id": "35d716",
+      "wall_time_seconds": 0.380697631,
+      "exit_code": 0,
+      "original_token_count": 197,
+      "output": "{\n  \"frozen_files\": 3,\n  \"dependency_bindings\": 10,\n  \"review_bindings\": 11,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": "Independent Astra/xhigh full author and10 input review accepted without corrections; root complete author/review reads and direct checks of parity, exact residual, midpoint, strict short-fibre index bound and scalar envelope. No mathematical program or historical replay.",
+  "scope": "Uniform strict bound on rank-three even index in nonzero-fold hypothetical failure, with exact parity/midpoint and norm-envelope statements. No coordinate cancellation, zero restoration, full witness transport or failure invariant.",
+  "excluded": "Active coordinate-cancellation and first-fold-zero research manuscripts.",
+  "failure_history": "No mathematical correction. Root binding verifier first execution passed."
+}
