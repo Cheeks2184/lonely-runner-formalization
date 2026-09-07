@@ -1,0 +1,496 @@
+{
+  "checkpoint": "Pass93 exact parent-center replacement families",
+  "parent_main": "f102e7ec81958ef064555f1b470499b5a075fe72",
+  "status": "independently_reviewed_and_root_verified",
+  "hashes": {
+    "docs/astra-research-93.md": "7ca2550bef278cd804d936861e32b724e54b9e72ef522f4805b731e006bfd8c2",
+    "research/astra-zero-only-parent-reduction.md": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71",
+    "research/astra-zero-only-parent-reduction-review.md": "959a7c42d4a8c37bf9dc50e09ab6b6b00527690b8cfcd76e90848e2f9ebf2a7a",
+    "research/astra-zero-only-contact-lean-inventory.md": "726f8f5de2c596bffa41abf31db619ba420f72209f8ea64de3cef9afe6569db3"
+  },
+  "dependency_hashes": {
+    "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+    "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
+    "research/astra-zero-only-deletion-amplification.md": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0",
+    "research/astra-zero-only-deletion-amplification-review.md": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4",
+    "research/astra-positive-candidate-coherence.md": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea",
+    "research/astra-positive-candidate-coherence-review.md": "5624364765087862f67f41b24e8c5ea0c7d5a08fa7ff449a00b799f9707bbc67",
+    "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+    "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515",
+    "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa",
+    "LonelyRunner/FoldedCirclePhase.lean": "957606878108847d5ceff47be621ff0fc9c0a0d976568b5f5ef3dbb6db10481e",
+    "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+    "LonelyRunner/RealPhaseBands.lean": "7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0",
+    "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+    "LonelyRunner/PairSumCompleteness.lean": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f",
+    "LonelyRunner/PivotBoundary.lean": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f",
+    "research/astra-pass92-verification.json": "6e88e4d50f935ed1f4a0f12a7834229b9c70b365ac04e4b401a34eaa41cf3302"
+  },
+  "document_bindings": [
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "research/astra-zero-only-maximum-gaps.md",
+      "sha256": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "research/astra-zero-only-maximum-gaps-review.md",
+      "sha256": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "research/astra-zero-only-deletion-amplification.md",
+      "sha256": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "research/astra-zero-only-deletion-amplification-review.md",
+      "sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "research/astra-positive-candidate-coherence.md",
+      "sha256": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "research/astra-positive-candidate-coherence-review.md",
+      "sha256": "5624364765087862f67f41b24e8c5ea0c7d5a08fa7ff449a00b799f9707bbc67"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "research/astra-forced-cycle-frequency-exchange.md",
+      "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "research/astra-maximum-frequency-exchange-review.md",
+      "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/astra-zero-only-parent-reduction.md",
+      "sha256": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/astra-zero-only-maximum-gaps.md",
+      "sha256": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/astra-zero-only-maximum-gaps-review.md",
+      "sha256": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/astra-zero-only-deletion-amplification.md",
+      "sha256": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/astra-zero-only-deletion-amplification-review.md",
+      "sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/astra-positive-candidate-coherence.md",
+      "sha256": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/astra-positive-candidate-coherence-review.md",
+      "sha256": "5624364765087862f67f41b24e8c5ea0c7d5a08fa7ff449a00b799f9707bbc67"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/astra-forced-cycle-frequency-exchange.md",
+      "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/astra-maximum-frequency-exchange-review.md",
+      "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/astra-minimal-frequency-synthesis.md",
+      "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": ".codex/config.toml",
+      "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "docs/project-workflow.md",
+      "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "research/workflow-policy.json",
+      "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+    },
+    {
+      "document": "research/astra-zero-only-parent-reduction-review.md",
+      "path": "scripts/validate_workflow.py",
+      "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    {
+      "document": "research/astra-zero-only-contact-lean-inventory.md",
+      "path": "research/astra-zero-only-deletion-amplification.md",
+      "sha256": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0"
+    },
+    {
+      "document": "research/astra-zero-only-contact-lean-inventory.md",
+      "path": "research/astra-zero-only-deletion-amplification-review.md",
+      "sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+    },
+    {
+      "document": "research/astra-zero-only-contact-lean-inventory.md",
+      "path": "LonelyRunner/Definitions.lean",
+      "sha256": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa"
+    },
+    {
+      "document": "research/astra-zero-only-contact-lean-inventory.md",
+      "path": "LonelyRunner/FoldedCirclePhase.lean",
+      "sha256": "957606878108847d5ceff47be621ff0fc9c0a0d976568b5f5ef3dbb6db10481e"
+    },
+    {
+      "document": "research/astra-zero-only-contact-lean-inventory.md",
+      "path": "LonelyRunner/ConstrainedMaximizer.lean",
+      "sha256": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92"
+    },
+    {
+      "document": "research/astra-zero-only-contact-lean-inventory.md",
+      "path": "LonelyRunner/RealPhaseBands.lean",
+      "sha256": "7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0"
+    },
+    {
+      "document": "research/astra-zero-only-contact-lean-inventory.md",
+      "path": "LonelyRunner/StructuredClasses.lean",
+      "sha256": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c"
+    },
+    {
+      "document": "research/astra-zero-only-contact-lean-inventory.md",
+      "path": "LonelyRunner/PairSumCompleteness.lean",
+      "sha256": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f"
+    },
+    {
+      "document": "research/astra-zero-only-contact-lean-inventory.md",
+      "path": "LonelyRunner/PivotBoundary.lean",
+      "sha256": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f"
+    }
+  ],
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass93-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport hashlib,json,subprocess,sys\nroot=Path('/home/joshua/lonely-runner-formalization')\nm=json.loads(Path('/tmp/astra-pass93-inputs.json').read_text())\nfor name,digest in (m['hashes']|m['dependency_hashes']).items():\n    data=(root/name).read_bytes()\n    assert hashlib.sha256(data).hexdigest()==digest,name\n    assert data.endswith(b'\\n'),name\n    assert all(line.rstrip()==line for line in data.splitlines()),name\nfor b in m['document_bindings']:\n    assert b['sha256'] in (root/b['document']).read_text(),b\n    assert hashlib.sha256((root/b['path']).read_bytes()).hexdigest()==b['sha256'],b\ncommands=[]\nfor argv in ([sys.executable,'-B','scripts/validate_workflow.py'],['git','diff','--check'],[sys.executable,'-B','scripts/manage_storage.py']):\n    r=subprocess.run(argv,cwd=root,capture_output=True,text=True)\n    commands.append(dict(argv=argv,exit_code=r.returncode,stdout=r.stdout,stderr=r.stderr))\n    assert r.returncode==0,commands[-1]\nprint(json.dumps(dict(frozen_files=len(m['hashes']),dependency_bindings=len(m['dependency_hashes']),document_bindings=len(m['document_bindings']),numerical_replay=False,local_lean_build=False,commands=commands),indent=2))\n",
+    "source_sha256": "8a687e1b8d18cabe4eb1abf50e3ab708946ad40f74ee10bda1a81307172ae682",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-93.md": "7ca2550bef278cd804d936861e32b724e54b9e72ef522f4805b731e006bfd8c2",
+        "research/astra-zero-only-parent-reduction.md": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71",
+        "research/astra-zero-only-parent-reduction-review.md": "959a7c42d4a8c37bf9dc50e09ab6b6b00527690b8cfcd76e90848e2f9ebf2a7a",
+        "research/astra-zero-only-contact-lean-inventory.md": "726f8f5de2c596bffa41abf31db619ba420f72209f8ea64de3cef9afe6569db3"
+      },
+      "dependency_hashes": {
+        "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+        "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
+        "research/astra-zero-only-deletion-amplification.md": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0",
+        "research/astra-zero-only-deletion-amplification-review.md": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4",
+        "research/astra-positive-candidate-coherence.md": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea",
+        "research/astra-positive-candidate-coherence-review.md": "5624364765087862f67f41b24e8c5ea0c7d5a08fa7ff449a00b799f9707bbc67",
+        "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+        "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa",
+        "LonelyRunner/FoldedCirclePhase.lean": "957606878108847d5ceff47be621ff0fc9c0a0d976568b5f5ef3dbb6db10481e",
+        "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+        "LonelyRunner/RealPhaseBands.lean": "7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0",
+        "LonelyRunner/StructuredClasses.lean": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c",
+        "LonelyRunner/PairSumCompleteness.lean": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f",
+        "LonelyRunner/PivotBoundary.lean": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f",
+        "research/astra-pass92-verification.json": "6e88e4d50f935ed1f4a0f12a7834229b9c70b365ac04e4b401a34eaa41cf3302"
+      },
+      "document_bindings": [
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "research/astra-zero-only-maximum-gaps.md",
+          "sha256": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "research/astra-zero-only-maximum-gaps-review.md",
+          "sha256": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "research/astra-zero-only-deletion-amplification.md",
+          "sha256": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "research/astra-zero-only-deletion-amplification-review.md",
+          "sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "research/astra-positive-candidate-coherence.md",
+          "sha256": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "research/astra-positive-candidate-coherence-review.md",
+          "sha256": "5624364765087862f67f41b24e8c5ea0c7d5a08fa7ff449a00b799f9707bbc67"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "research/astra-forced-cycle-frequency-exchange.md",
+          "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "research/astra-maximum-frequency-exchange-review.md",
+          "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/astra-zero-only-parent-reduction.md",
+          "sha256": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/astra-zero-only-maximum-gaps.md",
+          "sha256": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/astra-zero-only-maximum-gaps-review.md",
+          "sha256": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/astra-zero-only-deletion-amplification.md",
+          "sha256": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/astra-zero-only-deletion-amplification-review.md",
+          "sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/astra-positive-candidate-coherence.md",
+          "sha256": "a5c01c2ebbaa8b008787f61e9ec51aa1fcc2e01c7865409d775af0a5e5b8beea"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/astra-positive-candidate-coherence-review.md",
+          "sha256": "5624364765087862f67f41b24e8c5ea0c7d5a08fa7ff449a00b799f9707bbc67"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/astra-forced-cycle-frequency-exchange.md",
+          "sha256": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/astra-maximum-frequency-exchange-review.md",
+          "sha256": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/astra-minimal-frequency-synthesis.md",
+          "sha256": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": ".codex/config.toml",
+          "sha256": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "docs/project-workflow.md",
+          "sha256": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "research/workflow-policy.json",
+          "sha256": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b"
+        },
+        {
+          "document": "research/astra-zero-only-parent-reduction-review.md",
+          "path": "scripts/validate_workflow.py",
+          "sha256": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        {
+          "document": "research/astra-zero-only-contact-lean-inventory.md",
+          "path": "research/astra-zero-only-deletion-amplification.md",
+          "sha256": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0"
+        },
+        {
+          "document": "research/astra-zero-only-contact-lean-inventory.md",
+          "path": "research/astra-zero-only-deletion-amplification-review.md",
+          "sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+        },
+        {
+          "document": "research/astra-zero-only-contact-lean-inventory.md",
+          "path": "LonelyRunner/Definitions.lean",
+          "sha256": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa"
+        },
+        {
+          "document": "research/astra-zero-only-contact-lean-inventory.md",
+          "path": "LonelyRunner/FoldedCirclePhase.lean",
+          "sha256": "957606878108847d5ceff47be621ff0fc9c0a0d976568b5f5ef3dbb6db10481e"
+        },
+        {
+          "document": "research/astra-zero-only-contact-lean-inventory.md",
+          "path": "LonelyRunner/ConstrainedMaximizer.lean",
+          "sha256": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92"
+        },
+        {
+          "document": "research/astra-zero-only-contact-lean-inventory.md",
+          "path": "LonelyRunner/RealPhaseBands.lean",
+          "sha256": "7f70467bad6bb5a8a859bff8947af1dc73e685910b69157b49bab259b3c02ca0"
+        },
+        {
+          "document": "research/astra-zero-only-contact-lean-inventory.md",
+          "path": "LonelyRunner/StructuredClasses.lean",
+          "sha256": "5328a7a88d2b42f86ffc3f0f0418ca22c761219e8fa3e5822bda5a18ac286e8c"
+        },
+        {
+          "document": "research/astra-zero-only-contact-lean-inventory.md",
+          "path": "LonelyRunner/PairSumCompleteness.lean",
+          "sha256": "838a3bcec806b0e9d01cd117e64e5348de58a05127a3f7bef5dbe2d879ff292f"
+        },
+        {
+          "document": "research/astra-zero-only-contact-lean-inventory.md",
+          "path": "LonelyRunner/PivotBoundary.lean",
+          "sha256": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f"
+        }
+      ]
+    },
+    "observed_tool_result": {
+      "chunk_id": "ebebdf",
+      "wall_time_seconds": 5.801e-06,
+      "exit_code": 0,
+      "original_token_count": 212,
+      "output": "{\n  \"frozen_files\": 4,\n  \"dependency_bindings\": 21,\n  \"document_bindings\": 36,\n  \"numerical_replay\": false,\n  \"local_lean_build\": false,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": {
+    "author_hash": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71",
+    "review_hash": "959a7c42d4a8c37bf9dc50e09ab6b6b00527690b8cfcd76e90848e2f9ebf2a7a",
+    "independent_disposition": "accepted_without_author_corrections",
+    "root_full_author_readback": "7a877f",
+    "root_full_review_readback": "832fc7",
+    "root_final_review_clarification_readback": "40b54a",
+    "kernel_checked": false
+  },
+  "inventory_verification": {
+    "hash": "726f8f5de2c596bffa41abf31db619ba420f72209f8ea64de3cef9afe6569db3",
+    "scope": "Static source/API inventory; proposed interfaces are not Lean elaboration evidence.",
+    "worker_static_receipts": [
+      "3bd7b6",
+      "e0c4f6"
+    ],
+    "root_binding_check": "ac3bac",
+    "current_input_hashes": 9,
+    "terra_high_delivery": 28,
+    "worker_repair_rounds": 2,
+    "astra_repair_rounds": 3,
+    "astra_repair_lines": 0,
+    "usage": null,
+    "worker_elapsed_seconds": null
+  },
+  "failure_history": [
+    {
+      "scope": "Terra inventory contract",
+      "original_hash": "da94769ba3997e803cb84569de485364ee92a8cf130ca74be91636d665dba52d",
+      "correction": "Only maximal norm |e|<=alpha is needed to remove nonparents; other parent norms may exceed alpha.",
+      "intermediate_hash": "f09d65bfe64f7c43d296c6fce3666107194d72fe6723f9ec674943537f9fc5e4"
+    },
+    {
+      "scope": "Terra inventory contract",
+      "correction": "ComplementSafe exactly represents full W_m membership and must be reused; collision/forced-arc geometry remains missing.",
+      "final_hash": "726f8f5de2c596bffa41abf31db619ba420f72209f8ea64de3cef9afe6569db3"
+    },
+    {
+      "scope": "Root inventory binding parser",
+      "failed_chunk": "fa531f",
+      "finding": "Documented historical pre-append self hash was incorrectly compared against final inventory bytes.",
+      "correction": "Separate explicitly historical self hash from nine current input bindings; corrected root check ac3bac passed."
+    }
+  ],
+  "excluded": [
+    "Unrestricted LRC resolution",
+    "Canonical common-candidate supply",
+    "Native strict-failure counterexample",
+    "New Lean theorem or checked Lean interface",
+    "Local build or numerical search"
+  ]
+}

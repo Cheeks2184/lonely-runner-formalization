@@ -6,19 +6,19 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/zero_only_parent_reduction",
-      "agent_id": "/root/fold_zero_restoration_resume",
+      "id": "/root/forced_parent_endpoint_propagation",
+      "agent_id": "/root/uniform_strategy_after_fold",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "efc49c3806584c607d98c006927fb116442d9fc0",
+      "source_checkpoint": "f102e7ec81958ef064555f1b470499b5a075fe72",
       "owned_files": [
-        "research/astra-zero-only-parent-reduction.md"
+        "research/astra-forced-parent-endpoint-propagation.md"
       ],
-      "target": "Derive and assess parent-center reduction candidates under full zero-only maximum-gap hypotheses; prove exact local containment and freshness, then determine the additional global coherence needed for actual one-slot descent. No heavy computation or unproved global supply.",
+      "target": "Use actual deletion-good maximum-arc endpoints L in W_a and R in W_b to test a native global propagation or height-descent argument across forced parent arcs. Distinguish these legitimate seeds from contact times outside every W_j. Derive exact other-endpoint alternatives, preserve every attained index and full-minimum strict-core constraints, and identify any genuinely new consequence or exact unresolved implication.",
       "checks": []
     }
   ],
@@ -10603,9 +10603,85 @@
       ],
       "result": "Accepted revised a2846508 after one sign correction; full control and contact domains checked; canonical recurrence unresolved.",
       "output_sha256": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
+    },
+    {
+      "id": "/root/zero_only_contact_lean_inventory",
+      "agent_id": "/root/harmonic_fold_endpoint_repair",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "040badb71f62085915279651b86094e1676a32df",
+      "owned_files": [
+        "research/astra-zero-only-contact-lean-inventory.md"
+      ],
+      "target": "Read-only Lean API inventory and exact proposed theorem interface for the accepted zero-only closed-arc minimum/contact identity. No source edits or local builds; identify reusable existing norm/lift/min/interval and canonical good-set APIs with source line/hash evidence; flag missing semantic bridges rather than assuming them.",
+      "checks": [
+        "Prelaunch root record validation failed cb2853: wrong metric field names/check kind. Corrected to documented schema before launch; no worker attempt occurred.",
+        "Root full original inventory readback 6e7356 and PivotBoundary source953335; requested exact correction of bridge item4: only maximal norm |e|<=alpha, not all three coordinates. Requested full bounded static receipt. Original inventory sha256 da94769ba3997e803cb84569de485364ee92a8cf130ca74be91636d665dba52d preserved.",
+        "Root corrected second semantic inventory overstatement at source232c6a: ComplementSafe is exactly full W_m membership, reusable as is; only geometry/indices bridge absent. f09d65bfe64f7c43d296c6fce3666107194d72fe6723f9ec674943537f9fc5e4 superseded. Final allowed worker repair round2; further fixes root-owned if needed. Static commands/outputs in note are not Lean compilation evidence.",
+        "Root original full readback6e7356, correction/receipt readbacks eae5ad,a01fa0,8de33d,2db337; current frozen hash checked against all nine actual input hashes.",
+        "Root binding probe fa531f incorrectly treated documented pre-append self hash d1f6787c as current; corrected parser separates that historical self hash from current input bindings. No source defect or mathematical check failure."
+      ],
+      "delivery_metrics": {
+        "check_kind": "static",
+        "first_check_success": true,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 3,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-zero-only-contact-lean-inventory.md"
+        ]
+      },
+      "result": "Source/API inventory accepted after two worker repairs and three root contract corrections. ComplementSafe exactly reuses W_m; algebraic contact unit separated from unformalized arc geometry. No Lean source/build.",
+      "output_sha256": "726f8f5de2c596bffa41abf31db619ba420f72209f8ea64de3cef9afe6569db3"
+    },
+    {
+      "id": "/root/zero_only_parent_reduction",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "efc49c3806584c607d98c006927fb116442d9fc0",
+      "owned_files": [
+        "research/astra-zero-only-parent-reduction.md"
+      ],
+      "target": "Derive and assess parent-center reduction candidates under full zero-only maximum-gap hypotheses; prove exact local containment and freshness, then determine the additional global coherence needed for actual one-slot descent. No heavy computation or unproved global supply.",
+      "checks": [
+        "Root full author readback7a877f; worker hand derivations and all13 source bindings/whitespace/workflow passed; no numerical or Lean run."
+      ],
+      "result": "Frozen manuscript: automatic parent-divisor repair and full same-center q-multiple family, exact lcm coherence criterion, noncoincident divisor test, scoped controls. Independent review pending.",
+      "output_sha256": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71"
+    },
+    {
+      "id": "/root/zero_only_parent_reduction_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "f102e7ec81958ef064555f1b470499b5a075fe72",
+      "owned_files": [
+        "research/astra-zero-only-parent-reduction-review.md"
+      ],
+      "target": "Independent full mathematical review of frozen9b67661e: whole-closure parent reduction, exact q-multiple family and lcm criterion, proper-divisor residual predicate and h>=N, full minimality transport and exact control scopes. No global supply assumed.",
+      "checks": [
+        "Root full review readback832fc7, final clarified-range readback40b54a, finalhash4701e5; worker14boundinputs/format/workflow passed."
+      ],
+      "result": "Accepted frozen author9b67661e without author corrections; exact q-multiple/lcm and proper-divisor criteria checked; native common supply remains unproved.",
+      "output_sha256": "959a7c42d4a8c37bf9dc50e09ab6b6b00527690b8cfcd76e90848e2f9ebf2a7a"
     }
   ],
-  "latest_checkpoint": "Pass92 independently accepted after one sign correction and root verified (3 frozen files, 11 dependencies, 21 manuscript bindings); preparing commit/push/PR. Pass91 merged and remote-main verified. Parent-center reduction research active; unrestricted LRC unresolved.",
+  "latest_checkpoint": "Pass93 parent-center replacement families and source inventory accepted/root verified (4 frozen files,21 dependencies,36bindings), preparing commit/push/PR. Forced-parent endpoint propagation active. Unrestricted LRC unresolved.",
   "next_actions": [
     "Publish verified Pass89 through commit/push/PR/checks/exact-head merge/fetched-main verification.",
     "Continue live zero-only maximum-gap investigation; its exact gap and beta seed implications are not yet frozen or independently reviewed.",
@@ -17499,7 +17575,7 @@
   },
   "resource_resume_2026_09_07": "User explicitly resumed goal after memory diagnosis. All prior agents terminal, no local rustc/cargo/Lean/Z3 processes. Continue hand research and hosted CI; no local compilation queued.",
   "pass92_publication": {
-    "status": "verified_pending_commit",
+    "status": "merged_and_remote_main_verified",
     "branch": "codex/astra-zero-only-amplification",
     "parent_main": "fcfae157223d221734d248f62b413cd33d382e93",
     "hashes": {
@@ -17508,6 +17584,160 @@
       "research/astra-zero-only-deletion-amplification-review.md": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4"
     },
     "receipt": "research/astra-pass92-verification.json",
-    "root_verifier_chunk": "536787"
+    "root_verifier_chunk": "536787",
+    "head": "040badb71f62085915279651b86094e1676a32df",
+    "pr": 91,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/91",
+    "ci_run": 34104309899,
+    "checks": {
+      "Lean build and trust audit": 101685683891,
+      "Exact computational certificates": 101685683601
+    },
+    "push_result": {
+      "session_id": 97665,
+      "terminal_chunk": "6e185d",
+      "exit_code": 0
+    },
+    "create_result": {
+      "session_id": 54919,
+      "terminal_chunk": "a2413a",
+      "exit_code": 0
+    },
+    "main_verifier_source": "from pathlib import Path\nimport json,hashlib,subprocess\nm=json.loads(Path('/tmp/astra-pass92-main-inputs.json').read_text())\np=json.loads(Path('/tmp/astra-pass92-merged.json').read_text())\nassert p['state']=='MERGED',p\nassert p['headRefOid']==m['head'],p\nmerge=p['mergeCommit']['oid']\nmain=subprocess.check_output(['git','rev-parse','origin/main'],text=True).strip()\nfor ref in [merge,m['head'],m['parent']]:\n    assert subprocess.run(['git','merge-base','--is-ancestor',ref,main]).returncode==0,ref\nfor path,digest in m['hashes'].items():\n    data=subprocess.check_output(['git','show',main+':'+path])\n    assert hashlib.sha256(data).hexdigest()==digest,path\nprint(json.dumps(dict(main=main,merge=merge,head=m['head'],verified_hashes=len(m['hashes']),head_ancestry=True,parent_ancestry=True,merged_at=p['mergedAt']),indent=2))\n",
+    "main_input_manifest": {
+      "head": "040badb71f62085915279651b86094e1676a32df",
+      "parent": "fcfae157223d221734d248f62b413cd33d382e93",
+      "hashes": {
+        "docs/astra-research-92.md": "843c0c3355126dc0598d5e931e8d3292ae4ed095fc43391931c23f2801fcc6be",
+        "research/astra-zero-only-deletion-amplification.md": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0",
+        "research/astra-zero-only-deletion-amplification-review.md": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4",
+        "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+        "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
+        "research/astra-forced-cycle-frequency-exchange.md": "4ac28414ec9043c9ed11d69b7cc8520a2a1acc3b74168147acfc38091959046f",
+        "research/astra-maximum-frequency-exchange-review.md": "9cd1282b49034073ad59e8df183df7e7b2cc65ce359d8ec8b088c6c032ab9515",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-pass91-verification.json": "394a00993ffb96bc116bf197b6b896fdfc7630ead7bb5cdad445e455a43f2bd3",
+        "research/astra-pass92-verification.json": "6e88e4d50f935ed1f4a0f12a7834229b9c70b365ac04e4b401a34eaa41cf3302",
+        "research/workflow-state.json": "d65c67b9f8210532bbf3a40836050de9bbcf72c8b690d551332c17843e5c29f2"
+      }
+    },
+    "watch_session": 19359,
+    "merge_sha": "f102e7ec81958ef064555f1b470499b5a075fe72",
+    "merged_at": "2026-09-07T09:18:51Z",
+    "premerge_check": {
+      "chunk_id": "12a38d",
+      "state": "OPEN",
+      "isDraft": false,
+      "mergeStateStatus": "CLEAN",
+      "head": "040badb71f62085915279651b86094e1676a32df",
+      "reviewDecision": "",
+      "both_checks_success": true
+    },
+    "merge_result": {
+      "session_id": 26746,
+      "terminal_chunk": "577bd8",
+      "exit_code": 0
+    },
+    "main_verification": {
+      "chunk_id": "0bb8ce",
+      "exit_code": 0,
+      "main": "f102e7ec81958ef064555f1b470499b5a075fe72",
+      "verified_hashes": 16,
+      "head_ancestry": true,
+      "parent_ancestry": true
+    },
+    "watch_result": {
+      "session_id": 19359,
+      "terminal_chunk": "085c85",
+      "exit_code": 0
+    },
+    "ci_results": [
+      {
+        "name": "Lean build and trust audit",
+        "job": 101685683891,
+        "conclusion": "SUCCESS",
+        "started_at": "2026-09-07T09:08:14Z",
+        "completed_at": "2026-09-07T09:09:52Z"
+      },
+      {
+        "name": "Exact computational certificates",
+        "job": 101685683601,
+        "conclusion": "SUCCESS",
+        "started_at": "2026-09-07T09:08:13Z",
+        "completed_at": "2026-09-07T09:18:00Z"
+      }
+    ]
+  },
+  "parent_reduction_root_notes": {
+    "status": "independently_accepted_without_author_corrections",
+    "scope": "Whole actual maximum-speed private arcs in all-zero branch; no common supply asserted.",
+    "local_containment": "For g>1 dividing both right-parent b and r, u=b/g at same center r/b strictly covers closure(A_m) because D<alpha(m+s)<=alpha(2m-b)<=alpha(gm-b). Left parent analogous. Freshness follows from original privacy.",
+    "primitive_local_obstruction": "a=5,l=2,b=11,r=5,m=16,k=7,D=3: all three center representations primitive. At alpha1/6 local parent strict overlaps/private interval hold. Candidate n5 tuple V1,4,5,11,16 preserves local uniqueness, but t1/3 has all norms1/3 so global trapping fails. Sent agent for exact verification; not an accepted full control.",
+    "global_gap": "Every local smaller candidate needs a common frequency over ALL K for one-slot failure transport. Pass91 refutes inferring intersection from fresh positive local candidates alone.",
+    "global_width_obstruction": "Accepted consecutive V1..n at separate delta in(1/(n+1),1/n) is globally all-zero at maximum n and has absolute minimum primitive sum. Forced maximum indices primitive, complementary parent determinant D=1 makes both parent centers primitive. All parent-reduction families empty. Thus full cover plus all-zero plus arbitrary-width sum minimality alone does not force reductions; native strictness excluded. Bound source research/astra-forced-cycle-frequency-exchange.md section Exact uniform control; root current readback after prior accepted review.",
+    "same_center_extension_pending_review": {
+      "local": "For parent(p,z), q=p/gcd(p,z); any positive u with q|u uses its center, whether or not u|p. Strict containment of closure(A_m) by that coincident u-arc is u*(D+alpha*p)<alpha*p*m. Thus family q-multiples below B=alpha*p*m/(D+alpha*p), not just proper divisors.",
+      "global": "Choose one parent per attained k. With Q=lcm(q_k), a common coincident-parent cover exists iff Q<min_k B_k, witnessed by u=Q. The parent choice is existential and the condition is not shown forced. B_k<p_k<m, and privacy gives freshness.",
+      "provenance": "Root hand derivation sent to author for verification and optional integration before freeze. Not independently accepted or kernel-checked.",
+      "author_response": "Frozen into author9b67661e and accepted by independent review959a7c42; native global supply still unproved."
+    },
+    "state_write_failure": "Root pre-write Python syntax error a3d587 from using reserved keyword global as dict argument; no file mutation occurred. Corrected to explicit dictionary literal.",
+    "author_hash": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71",
+    "root_full_author_readback": "7a877f",
+    "review_hash": "959a7c42d4a8c37bf9dc50e09ab6b6b00527690b8cfcd76e90848e2f9ebf2a7a",
+    "root_full_review_readback": "832fc7",
+    "root_final_review_range_readback": "40b54a"
+  },
+  "literature_refresh_pass92": {
+    "date": "2026-09-07",
+    "scope": "Bounded current search for ordinary unrestricted LRC proof and 2026 uniform results, followed by primary arXiv abstract/version checks; not exhaustive or a proof audit.",
+    "queries": [
+      "site.arxiv.org \"lonely runner\" \"2026\"",
+      "site.arxiv.org \"lonely runner conjecture\" proof arbitrary"
+    ],
+    "primary_results": [
+      {
+        "url": "https://arxiv.org/abs/2603.24784",
+        "version": "v2 2026-04-27",
+        "result": "Already held/reviewed in astra-uniform-literature-refresh.md. Explicit counterexamples concern shifted LRC; no ordinary disproof adopted."
+      },
+      {
+        "url": "https://arxiv.org/abs/2607.16082",
+        "version": "v2 2026-07-24",
+        "result": "Hyunwoo Lee, time-dependent strictly ordered velocities. Abstract gives extreme-runner bound strictly above 2^(1-N) and intermediate-runner counterexamples. This is weaker than 1/N for N>=3 and changes velocity hypotheses; not a solution of constant-speed ordinary LRC. Abstract scope screen only, no theorem or proof imported."
+      },
+      {
+        "url": "https://arxiv.org/abs/1209.3920",
+        "version": "v5 2017-12-14 withdrawn",
+        "result": "Search title claims proof, but primary page explicitly says author withdrew due to an error. Not proof evidence."
+      }
+    ],
+    "disposition": "No new unrestricted proof source established in this bounded screen. Finite higher-count papers do not change uniform-N priority. No downloads or large artifacts retained."
+  },
+  "zero_only_contact_inventory_root_notes": {
+    "status": "accepted_source_inventory_pending_pass93_integration",
+    "hash": "726f8f5de2c596bffa41abf31db619ba420f72209f8ea64de3cef9afe6569db3",
+    "terra_high_delivery_number": 28,
+    "scope": "Textual API/hash evidence only; no Lean syntax or imports checked.",
+    "decision": "Reuse ComplementSafe and minimumCircleNorm. Do not restore build cache or implement disconnected algebra alone before deciding the useful uniform geometry integration scope.",
+    "repair_burden": "Two semantic wording corrections after original return plus initial root envelope contract refinement; use in batch30 audit. Exact token savings unknown."
+  },
+  "pass93_publication": {
+    "status": "verified_pending_commit",
+    "branch": "codex/astra-parent-center-reduction",
+    "parent_main": "f102e7ec81958ef064555f1b470499b5a075fe72",
+    "hashes": {
+      "docs/astra-research-93.md": "7ca2550bef278cd804d936861e32b724e54b9e72ef522f4805b731e006bfd8c2",
+      "research/astra-zero-only-parent-reduction.md": "9b67661ec12a1b51e6de9405c04f3a0d071b3a5630b6ad772d19da18baf99d71",
+      "research/astra-zero-only-parent-reduction-review.md": "959a7c42d4a8c37bf9dc50e09ab6b6b00527690b8cfcd76e90848e2f9ebf2a7a",
+      "research/astra-zero-only-contact-lean-inventory.md": "726f8f5de2c596bffa41abf31db619ba420f72209f8ea64de3cef9afe6569db3"
+    },
+    "receipt": "research/astra-pass93-verification.json",
+    "root_verifier_chunk": "ebebdf"
   }
 }
