@@ -6,7 +6,7 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/optimal_endpoint_cycle_exchange",
+      "id": "/root/positive_candidate_escape_cycles",
       "agent_id": "/root/uniform_strategy_after_fold",
       "kind": "research",
       "status": "in_progress",
@@ -14,11 +14,11 @@
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "1e4a89034bcab452949734f0d0d689d7de5e27f2",
+      "source_checkpoint": "2dca882840ede6444cca50aeda81c72f283de1c4",
       "owned_files": [
-        "research/astra-optimal-endpoint-cycle-exchange.md"
+        "research/astra-positive-candidate-escape-cycles.md"
       ],
-      "target": "Bounded extension: exploit minimum full alpha endpoint-cycle optimality via replacement paths or exact finite graph dual; determine whether original grid symmetry adds a usable upper cost bound or fresh all-time failure descent beyond necessary deficit. At most two hand mechanisms, no programs.",
+      "target": "Bounded uniform investigation of positive-candidate incoherence using actual full-Wm global trapping and all-admissible smaller-tuple witnesses; test whether a cycle of candidate escapes forces an untrapped Wm component or a valid smaller tuple. Do not repeat static sumset/reflection/individual-witness arguments refuted by accepted native-good control.",
       "checks": []
     }
   ],
@@ -11203,14 +11203,129 @@
       ],
       "result": "Accepted without semantic correction. All three exact signatures, private helper, shared margin and all-real maximizer exclusion reviewed.",
       "source_sha256": "bee6d1b6f4144eed0d1708b1601eaa7d594e8ae2881723171e34e02367eb7f21"
+    },
+    {
+      "id": "/root/optimal_endpoint_cycle_exchange",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "1e4a89034bcab452949734f0d0d689d7de5e27f2",
+      "owned_files": [
+        "research/astra-optimal-endpoint-cycle-exchange.md"
+      ],
+      "target": "Bounded extension: exploit minimum full alpha endpoint-cycle optimality via replacement paths or exact finite graph dual; determine whether original grid symmetry adds a usable upper cost bound or fresh all-time failure descent beyond necessary deficit. At most two hand mechanisms, no programs.",
+      "checks": [
+        "Author13 bindings/readback d4a093, c908b2, workflow859939; root full read aa5256. Independent review pending."
+      ],
+      "result": "Frozen exact all-path exchange and equivalent potential formulation; at N/2 zero potential strictly feasible. No new upper cost or failure descent.",
+      "source_sha256": "efb3fcd3117d363c4d9f9413a67b837e5e5986a3c519f0163fcaf0dcfeaaffb2"
+    },
+    {
+      "id": "/root/optimal_endpoint_cycle_exchange_review",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "20ec10f1093b10962ddebd59732723c2ab3ff40e",
+      "owned_files": [
+        "research/astra-optimal-endpoint-cycle-exchange-review.md"
+      ],
+      "target": "Independently check all-path extra-winding inequality, finite potential equivalence, threshold positivity and original-grid symmetry limitation; no programs.",
+      "checks": [
+        "Root full review readbcd97f; all27author/review bindings checked current bytes."
+      ],
+      "result": "Accepted without correction. Extra winding and equivalent finite potential exact; no novel upper-cost mechanism.",
+      "source_sha256": "b30966b20d5e87f28f14d81e323d8677f178ad18fced43764eb3535ca1ae9348"
+    },
+    {
+      "id": "/root/forced_small_parent_reuse",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "20ec10f1093b10962ddebd59732723c2ab3ff40e",
+      "owned_files": [
+        "research/astra-forced-small-parent-reuse.md"
+      ],
+      "target": "Bounded hand investigation of repeated smaller-parent arcs shared by two forced maximum arcs, matching/adjacency constraints, and whether these yield a real completion imbalance or fresh blocker; no programs.",
+      "checks": [
+        "Author full reads68683f/d77411,18bindings5143a8,workflowabca21. Independent review pending."
+      ],
+      "result": "Frozen corrected general reuse gap, matching and safe off-center pruning. Coarse bound discount leaves positive capacity deficit; exact optimum already ignores removed arcs.",
+      "source_sha256": "897c6646545e5c57c29531cfb21a553304ab2627f754f69d71cbaaf0b534aedc"
+    },
+    {
+      "id": "/root/forced_small_parent_reuse_review",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "2dca882840ede6444cca50aeda81c72f283de1c4",
+      "owned_files": [
+        "research/astra-forced-small-parent-reuse-review.md"
+      ],
+      "target": "Independent review of corrected seed-component scope, general q matching, off-center arc pruning and disjoint pointwise charge, recomputed color imbalance and absence of sharp supply.",
+      "checks": [
+        "Root full review readda2acc; reviewer all19bindings, fullread,format/workflow passed."
+      ],
+      "result": "Accepted without correction; exact general q, seeded adjacency, off-center discount and positive remaining deficit. No sharp imbalance bound.",
+      "source_sha256": "34f89f33f10f8de533e8d19656fee115a55182537ed03c453de615ebc1c2b057"
+    },
+    {
+      "id": "/root/pass97_document_verification",
+      "agent_id": "/root/harmonic_fold_endpoint_repair",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "2dca882840ede6444cca50aeda81c72f283de1c4",
+      "owned_files": [
+        "research/astra-pass97-verification.json",
+        "/tmp/astra-pass97-verifier.py",
+        "/tmp/astra-pass97-attempts.jsonl"
+      ],
+      "target": "Implement and run cohesive manuscript-only checkpoint verifier against root frozen manifest using supplied raw subprocess recorder; preserve every attempt and final full reproducibility receipt. No Lean execution.",
+      "checks": [
+        "Root receipt/source review bab2ff: initial parser returned0bindings with exit0; worker repaired parser and64bindings passed. Root found omitted root LonelyRunner.lean baseline comparison, missing nonzero binding guard and omitted recorder source/hash; one remaining repair round assigned.",
+        "Root full final verifier and raw receipt read ebabe1; all3recorded attempts, recorder/manifest/source hashes, exact last output and28currentinputhashes bound. No identical successful verifier rerun."
+      ],
+      "delivery_metrics": {
+        "check_kind": "python",
+        "first_check_success": false,
+        "worker_repair_rounds": 2,
+        "astra_repair_rounds": 1,
+        "astra_repair_lines": 0,
+        "worker_elapsed_seconds": null,
+        "usage": null,
+        "evidence": [
+          "research/astra-pass97-verification.json",
+          "/tmp/astra-pass97-attempts.jsonl"
+        ]
+      },
+      "result": "Final document verifier accepted after two worker repairs and one Astra scope correction; all28hashes and64bindings, complete Lean baseline/path and pinned-source checks passed. No Lean execution.",
+      "source_sha256": "94f9d2bc7f7952b365509561db44e23b04fca536b4adc3e289e1e2b54f5f7b15"
     }
   ],
-  "latest_checkpoint": "Pass96 local verified: exact deletion adapter2c9b11 with3allowed axiom probes and accepted source review; full endpoint and native arithmetic manuscripts accepted. Publication through required hosted CI is next; unrestricted LRC remains active.",
+  "latest_checkpoint": "Pass97 local verified: independent exact reviews of path/potential equivalence and corrected parent-reuse pruning;64documentbindings and28hashes bound,225Lean sources unchanged. Publication next. Positive-candidate escape cycles in progress; unrestricted LRC remains active.",
   "next_actions": [
-    "Complete independent final deletion Lean source review and integrate three mandatory probes.",
-    "Review frozen native endpoint arithmetic independently; preserve exact actual-versus-auxiliary margin distinction.",
-    "Verify and publish Pass96 through full hosted build/trust and certificates, merge exact reviewed head and verify main.",
-    "Continue uniform arbitrary-N mechanism beyond necessary cover-cost deficit; no successive-count roadmap."
+    "Complete bounded small-parent reuse and off-center pruning argument; independently review exact general gap q and conditional seed adjacency.",
+    "Prepare next substantive checkpoint combining accepted path/potential limitation and independently accepted parent-pruning results with Pass96 publication receipt.",
+    "Pursue a uniform opposing saving or all-time admissible descent; current conditional deletion lemmas and cost lower restrictions do not prove unrestricted LRC."
   ],
   "research_holds": [
     {
@@ -11792,10 +11907,7 @@
     "coordination": "All worker commands and root verification stopped before cleanup; manuscript-only research released after cleanup.",
     "preserved": "Pinned toolchain, Git history, sources, unique evidence, small replay programs and outputs; unrelated projects untouched."
   },
-  "previous_goal_turn_classification": {
-    "classification": "progress",
-    "evidence": "PR92 merged/main verified; new uniform MinimalCounterexample module compiled and five allowed-axiom probes passed; independent final source review accepted; strict-core formal contract underway."
-  },
+  "previous_goal_turn_classification": "Progress: previous continuation completed PR95 publication, full build/trust and exact certificates, remote50hash verification, cachecleanup, accepted path/potential limitation and corrected root seed-domain error.",
   "publication": {
     "authorization": "2026-09-05: User instructed commit, push, open a PR, then merge to main after every saved and verified checkpoint.",
     "status": "merged_verified",
@@ -12316,10 +12428,12 @@
     "reviews": []
   },
   "runtime_goal_observation": {
+    "observed_at": "2026-09-07T11:49:15.224044+00:00",
     "status": "active",
-    "objective": "Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
-    "tokensUsed": 53872506,
-    "source": "get_goal live read this continuation"
+    "tokens_used": 60803665,
+    "token_budget": null,
+    "source": "Actual get_goal result in current continuation; no completion or blocked update performed.",
+    "completion": "Unrestricted Conjecture or its negation has not been proved."
   },
   "worker_recovery_authorization": {
     "received_on": "2026-09-05",
@@ -15417,7 +15531,7 @@
     "status": "Author candidate; rootread; independent review queued. Two small scalar/weakshiftarguments rootvalidated for drafting.",
     "scope": "Remaining canonical N6 branch only; uniform arbitrary-N priority afterverifiedN6."
   },
-  "last_goal_turn_classification": "Progress: confirmed kernel OOM evidence and separate Rust build provenance; current continuation resumes final-source review and native arithmetic review.",
+  "last_goal_turn_classification": "Progress: integrated and published three compiled uniform deletion theorems with independent exact-source review; PR95 full build/trust andcertificate checks passed, merged and50remote hashes verified. Accepted cycle optimization limitation and corrected seed-domain overgeneralization in next research branch.",
   "one_three_manuscript_review": "Independent frozen 8f720fbd report fully read by root; exact static replay exit0 with sixteen bindings, twelve contract names. Specification accepted, not a Lean result.",
   "publication_latest_pending": null,
   "delegation_revision": {
@@ -18907,7 +19021,7 @@
   },
   "routine_receipt_followup": "Next Terra compile handoff must include a root-provided subprocess capture recorder that stores source_text, hash, stdout and stderr directly per attempt. Manual reconstruction/transcription of raw diagnostics repeatedly required correction. This is execution hygiene, not permission to exceed repair/cgroup caps.",
   "pass96_checkpoint_details": {
-    "status": "local_verified_publication_next",
+    "status": "delivered_main_verified",
     "parent_main": "1e4a89034bcab452949734f0d0d689d7de5e27f2",
     "root_source_read": "6344c8",
     "focused_trust_regressions": {
@@ -18924,7 +19038,7 @@
     "receipt": "research/astra-pass96-verification.json"
   },
   "pass96_publication": {
-    "status": "local_verified_not_yet_committed",
+    "status": "merged_remote_main_verified",
     "branch": "codex/astra-deletion-margin-and-endpoint-cycle",
     "parent_main": "1e4a89034bcab452949734f0d0d689d7de5e27f2",
     "receipt": "research/astra-pass96-verification.json",
@@ -18978,6 +19092,164 @@
       "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
       "scripts/audit_lean_trust.py": "749c96deb5a5a3635943ad31ce66e07154abe200f822bc5efd8701ccf44c5b7b",
       "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    "head_sha": "20ec10f1093b10962ddebd59732723c2ab3ff40e",
+    "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/95",
+    "pr_number": 95,
+    "ci_run": 34117387086,
+    "lean_job": 101727274161,
+    "certificate_job": 101727274426,
+    "commit_chunk": "65dfd0",
+    "push_chunk": "ec2bfe",
+    "pr_create_chunk": "16336d",
+    "live_check_chunk": "c2bf42",
+    "remote_main_expected_hashes": {
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "LonelyRunner.lean": "8a06094dd50310b84a22bbdea832769d070a2a75e361bf38b7e448749ed786f0",
+      "LonelyRunner/AxiomAudit.lean": "f6374f05ca5175ebf9497f0f7773310c4f6205f4443c372d9ad2abbd1254c614",
+      "LonelyRunner/BaseCases.lean": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f",
+      "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+      "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+      "LonelyRunner/FiniteFamilyEquivalence.lean": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3",
+      "LonelyRunner/MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+      "LonelyRunner/MinimalFailureDeletion.lean": "2c9b11be2996fec5ef56278d6df0acda3723669a30f4003be374300d4a10342c",
+      "LonelyRunner/OneSixthComplementMaximizer.lean": "5a7011ca680b8a2b26c7bad466a8ee4008cf47507eb8b700846f296894bb90a1",
+      "LonelyRunner/PivotBoundary.lean": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f",
+      "LonelyRunner/SoftFeedbackLayers.lean": "723a97470b0514ddcf23594f04dfe938a4c4deb862046d700383429540abbf14",
+      "LonelyRunner/StationaryEquivalence.lean": "12dce8930c34b211bc01e2dc21e932087270726bce2bf127fa2d8d6594544b49",
+      "LonelyRunner/StrictCoreContraction.lean": "b26dbff907c02e5874dbf635fdd5f9406e7d080045238818090d6b7149c91daf",
+      "docs/astra-research-96.md": "1083ca44f025d769d38624877b174fd9b7b6459d3e8bafb406f5d982dedc33de",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+      "lakefile.toml": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26",
+      "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+      "research/astra-arithmetic-completion-review.md": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019",
+      "research/astra-arithmetic-completion-saving.md": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403",
+      "research/astra-coupled-descent-strategy.md": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+      "research/astra-deletion-helper-root-verification.json": "c414bc30cee35beaf5d16a09e329783a46fdc0542b28b0da0c573dcbfda9e04f",
+      "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+      "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02",
+      "research/astra-forced-parent-endpoint-propagation.md": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb",
+      "research/astra-forced-parent-endpoint-review.md": "b2d1d8e6ef81a6e8d450cfb74f0d74477773b359f06eb3cf3b39cb70b2816eef",
+      "research/astra-forced-parent-global-cycle-review.md": "eaf481831b74dc031f697481a8f133e12646dc4c7282ff67dfcc9cbb16d566ca",
+      "research/astra-forced-parent-global-cycle.md": "e265c08b2e0204a8d539e1577ff9907c754287902e6474f043b42be6f5de7bae",
+      "research/astra-minimal-counterexample-final-review.md": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf",
+      "research/astra-minimal-failure-deletion-contract-review.md": "991255a339c8c0be9164422879d5ba66e6ca332beb8acd43d405677c0b4a0f6e",
+      "research/astra-minimal-failure-deletion-contract.md": "76bdf41ee81543c9251f3f5c3236082c20a0d62afd81d854a0f44be5227ba880",
+      "research/astra-minimal-failure-deletion-final-review.md": "bee6d1b6f4144eed0d1708b1601eaa7d594e8ae2881723171e34e02367eb7f21",
+      "research/astra-minimal-failure-deletion-implementation.json": "025f7fb7256b9ba5ff7de788641d342e21996746e06e623a823534c1b7099e2b",
+      "research/astra-minimal-failure-deletion-root-verification.json": "fc536be37b38e9d3ad8b981af15936a95085c2a404416ed0faf0e0c4631df669",
+      "research/astra-minimal-frequency-review.md": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d",
+      "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+      "research/astra-native-endpoint-cycle-arithmetic-review.md": "098c4da30496a606b3d4b9ff0bd41933d6b55f61f9c5da4f085b5e412a889404",
+      "research/astra-native-endpoint-cycle-arithmetic.md": "2c80cee9d9f84f1850bda7aa1fc7798e890d7471b09d89578494cf208997257e",
+      "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+      "research/astra-strict-core-final-review.md": "1fcb97cf90eeacc4d4d5765d1310e255fb146efa4f7e2fd01827a3aac3b62834",
+      "research/astra-strict-core-kernel-contract-review.md": "f9b8bf75a66df74e1b8d95fd957d4f8dab145dd0fbc36d825ba23bb2e13ea75e",
+      "research/astra-strict-core-kernel-contract.md": "2e531b5a040bdd4d48c6a4f2237c27d485b6f08ffb6ac83841da936cb643de8c",
+      "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f",
+      "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/audit_lean_trust.py": "749c96deb5a5a3635943ad31ce66e07154abe200f822bc5efd8701ccf44c5b7b",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "research/workflow-state.json": "a15c64d96acde6830c42e71c6613aede99e5bd01176957067828327eaee16fbb",
+      "research/astra-pass96-verification.json": "f4b76c73c16c4d1ddf215a71d3f48a7c0d23cde4a39af67d0aebae0682f4bd35"
+    },
+    "remote_main_verifier_source": "from pathlib import Path\nimport hashlib\nimport json\nimport subprocess\n\nm = json.loads(Path('/tmp/astra-pass96-main-inputs.json').read_text())\np = json.loads(Path('/tmp/astra-pass96-merged.json').read_text())\nassert p['state'] == 'MERGED' and p['headRefOid'] == m['head_sha']\nassert p['number'] == 95 and p['url'] == m['pr_url']\nmerge = p['mergeCommit']['oid']\nfor ancestor, descendant in [(m['parent_main'], m['head_sha']),\n                             (m['head_sha'], merge), (merge, 'origin/main')]:\n    subprocess.run(['git', 'merge-base', '--is-ancestor', ancestor, descendant], check=True)\nfor path, expected in m['hashes'].items():\n    content = subprocess.check_output(['git', 'show', 'origin/main:' + path])\n    assert hashlib.sha256(content).hexdigest() == expected, path\nprint(json.dumps({'pr': p['url'], 'head': m['head_sha'], 'merge': merge,\n                  'remote_main': subprocess.check_output(['git', 'rev-parse', 'origin/main'], text=True).strip(),\n                  'verified_hashes': len(m['hashes']), 'ancestry': 'parent, head and merge verified',\n                  'scope': 'Published conditional checkpoint, not unrestricted LRC resolution.'}, indent=2))\n",
+    "remote_main_verifier_manifest": {
+      "head_sha": "20ec10f1093b10962ddebd59732723c2ab3ff40e",
+      "parent_main": "1e4a89034bcab452949734f0d0d689d7de5e27f2",
+      "pr_url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/95",
+      "hashes": {
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "LonelyRunner.lean": "8a06094dd50310b84a22bbdea832769d070a2a75e361bf38b7e448749ed786f0",
+        "LonelyRunner/AxiomAudit.lean": "f6374f05ca5175ebf9497f0f7773310c4f6205f4443c372d9ad2abbd1254c614",
+        "LonelyRunner/BaseCases.lean": "31e2c328e060c077c6c9928e3fb431601326e4e54a949ee5148aed5cd3687d1f",
+        "LonelyRunner/ConstrainedMaximizer.lean": "2ef07e6b83b8675a22184571c31d2a71dab9d5c072e3cd165cb8382957b46e92",
+        "LonelyRunner/FastRunnerInsertion.lean": "dda82d1f8830d961499292656c3dfac884a471ad5ef38bd925b1a25c403603a5",
+        "LonelyRunner/FiniteFamilyEquivalence.lean": "475a46b9e10226f3de30628e595073a9765a8c03cb0ab071bdcc10acb6446be3",
+        "LonelyRunner/MinimalCounterexample.lean": "b0c13b2212abd6bca49fe59f16b0c9d5b124e07e85226e35c14378baa1ffd539",
+        "LonelyRunner/MinimalFailureDeletion.lean": "2c9b11be2996fec5ef56278d6df0acda3723669a30f4003be374300d4a10342c",
+        "LonelyRunner/OneSixthComplementMaximizer.lean": "5a7011ca680b8a2b26c7bad466a8ee4008cf47507eb8b700846f296894bb90a1",
+        "LonelyRunner/PivotBoundary.lean": "0e56cab74d30ef8b537ed4ec24503aae875bd8aadc369d26da99ba882cc3603f",
+        "LonelyRunner/SoftFeedbackLayers.lean": "723a97470b0514ddcf23594f04dfe938a4c4deb862046d700383429540abbf14",
+        "LonelyRunner/StationaryEquivalence.lean": "12dce8930c34b211bc01e2dc21e932087270726bce2bf127fa2d8d6594544b49",
+        "LonelyRunner/StrictCoreContraction.lean": "b26dbff907c02e5874dbf635fdd5f9406e7d080045238818090d6b7149c91daf",
+        "docs/astra-research-96.md": "1083ca44f025d769d38624877b174fd9b7b6459d3e8bafb406f5d982dedc33de",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "lake-manifest.json": "887450bc75a38effdae452a14b60f6d225bc10b48c71b3827e3479b800f41218",
+        "lakefile.toml": "bdcbaaa18d518409619215e8acf7892452c1fa5c6e80ba742ce67f7380682a26",
+        "lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+        "research/astra-arithmetic-completion-review.md": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019",
+        "research/astra-arithmetic-completion-saving.md": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403",
+        "research/astra-coupled-descent-strategy.md": "d9a029cb16c866a45741f97841f3b007d4823f86712fe827e899801208289bb2",
+        "research/astra-deletion-helper-root-verification.json": "c414bc30cee35beaf5d16a09e329783a46fdc0542b28b0da0c573dcbfda9e04f",
+        "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+        "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02",
+        "research/astra-forced-parent-endpoint-propagation.md": "822154740aab96a1e5f3d4a18761c0596d8bde4c2337bd6bef67d33571e15fcb",
+        "research/astra-forced-parent-endpoint-review.md": "b2d1d8e6ef81a6e8d450cfb74f0d74477773b359f06eb3cf3b39cb70b2816eef",
+        "research/astra-forced-parent-global-cycle-review.md": "eaf481831b74dc031f697481a8f133e12646dc4c7282ff67dfcc9cbb16d566ca",
+        "research/astra-forced-parent-global-cycle.md": "e265c08b2e0204a8d539e1577ff9907c754287902e6474f043b42be6f5de7bae",
+        "research/astra-minimal-counterexample-final-review.md": "ea2ecd4b04cf2f5db060be84087619bdc9b6712ed2c8fd508bbe48fdc1a7ddbf",
+        "research/astra-minimal-failure-deletion-contract-review.md": "991255a339c8c0be9164422879d5ba66e6ca332beb8acd43d405677c0b4a0f6e",
+        "research/astra-minimal-failure-deletion-contract.md": "76bdf41ee81543c9251f3f5c3236082c20a0d62afd81d854a0f44be5227ba880",
+        "research/astra-minimal-failure-deletion-final-review.md": "bee6d1b6f4144eed0d1708b1601eaa7d594e8ae2881723171e34e02367eb7f21",
+        "research/astra-minimal-failure-deletion-implementation.json": "025f7fb7256b9ba5ff7de788641d342e21996746e06e623a823534c1b7099e2b",
+        "research/astra-minimal-failure-deletion-root-verification.json": "fc536be37b38e9d3ad8b981af15936a95085c2a404416ed0faf0e0c4631df669",
+        "research/astra-minimal-frequency-review.md": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d",
+        "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+        "research/astra-native-endpoint-cycle-arithmetic-review.md": "098c4da30496a606b3d4b9ff0bd41933d6b55f61f9c5da4f085b5e412a889404",
+        "research/astra-native-endpoint-cycle-arithmetic.md": "2c80cee9d9f84f1850bda7aa1fc7798e890d7471b09d89578494cf208997257e",
+        "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+        "research/astra-strict-core-final-review.md": "1fcb97cf90eeacc4d4d5765d1310e255fb146efa4f7e2fd01827a3aac3b62834",
+        "research/astra-strict-core-kernel-contract-review.md": "f9b8bf75a66df74e1b8d95fd957d4f8dab145dd0fbc36d825ba23bb2e13ea75e",
+        "research/astra-strict-core-kernel-contract.md": "2e531b5a040bdd4d48c6a4f2237c27d485b6f08ffb6ac83841da936cb643de8c",
+        "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f",
+        "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/audit_lean_trust.py": "749c96deb5a5a3635943ad31ce66e07154abe200f822bc5efd8701ccf44c5b7b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/workflow-state.json": "a15c64d96acde6830c42e71c6613aede99e5bd01176957067828327eaee16fbb",
+        "research/astra-pass96-verification.json": "f4b76c73c16c4d1ddf215a71d3f48a7c0d23cde4a39af67d0aebae0682f4bd35"
+      }
+    },
+    "lean_verification": {
+      "job": 101727274161,
+      "status": "success",
+      "duration": "1m45s",
+      "log_chunk": "1f41de",
+      "build_jobs": 3731,
+      "trust_reports": 710,
+      "new_module_build": "LonelyRunner.MinimalFailureDeletion (3.4s)",
+      "log_retrieval_note": "gh run view withheld logs until whole run terminal; job logs API returned completed job evidence."
+    },
+    "merge_sha": "2dca882840ede6444cca50aeda81c72f283de1c4",
+    "merged_at": "2026-09-07T11:46:18Z",
+    "premerge_check_chunk": "e49d1c",
+    "merge_terminal_chunk": "ec6c78",
+    "remote_main_verifier_chunk": "daaeb9",
+    "remote_main_verified_hashes": 50,
+    "merged_pr_response": {
+      "headRefOid": "20ec10f1093b10962ddebd59732723c2ab3ff40e",
+      "mergeCommit": {
+        "oid": "2dca882840ede6444cca50aeda81c72f283de1c4"
+      },
+      "mergedAt": "2026-09-07T11:46:18Z",
+      "number": 95,
+      "state": "MERGED",
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/95"
+    },
+    "certificate_verification": {
+      "job": 101727274426,
+      "status": "success",
+      "started_at": "2026-09-07T11:35:22Z",
+      "completed_at": "2026-09-07T11:44:51Z",
+      "duration": "9m29s"
+    },
+    "watcher_terminal": {
+      "session_id": 4600,
+      "chunk": "6c14d1",
+      "exit_code": 0
     }
   },
   "pass96_storage": {
@@ -18990,6 +19262,104 @@
       ".lake",
       "scripts/__pycache__"
     ],
-    "scope": "All local checks and dependency reads complete; no build queued. Pinned toolchain and unique source/probe receipts preserved; full integration hosted."
+    "scope": "All local checks and dependency reads complete; no build queued. Pinned toolchain and unique source/probe receipts preserved; full integration hosted.",
+    "post_cleanup_report": {
+      "chunk": "be072f",
+      "exit_code": 0,
+      "result": "No allowlisted cache or build paths are present."
+    }
+  },
+  "small_parent_reuse_root_notes": {
+    "status": "independently_accepted_manuscript",
+    "setting": "All-zero branch, actual original forced arcs, parents a>b and a+b=m. Larger parent has no other original m-arc intersection. Each smaller parent has at most one assignment per side via fixed unique-covered endpoints.",
+    "candidate": "General reused smaller b-parent on maxima h<k: q=k\u2212h positive integer, D1+D2=b*q and2alpha*m<=b*q<=2mu*(m+b). Numerical adjacency q=1 is conditional on either gap carrying a beta seed, givingb>m/n. General reuse is still a matching; check consecutive order within K_m via nonparent separation. Need actual completion saving, not only lowercost.",
+    "gap": "These are proposed incidence consequences; do not count raw forced cost twice or assume a saving. Need actual completion B_c improvement or admissible fresh all-Wm blocker. Native-good controls not failurecounterexamples.",
+    "correction": "The accepted b>m/n holds only for a maximum gap carrying a beta seed, in particular a retained-nu maximizer. It does not hold for every forced m arc. Root initial generalization was unsupported; no published source in PR95 uses it.",
+    "historical_scope_check": "Root6b19c3 confirmed prior durable zero_only_gap_root_candidate/strong_seed already explicitly restricts b>m/n to a portion carrying beta witness. Generalization error was confined to the new root candidate, now corrected. PR95 source/manuscripts do not use the invalid generalization.",
+    "author": {
+      "path": "research/astra-forced-small-parent-reuse.md",
+      "sha256": "897c6646545e5c57c29531cfb21a553304ab2627f754f69d71cbaaf0b534aedc",
+      "root_full_read": "3db044"
+    },
+    "review": {
+      "path": "research/astra-forced-small-parent-reuse-review.md",
+      "sha256": "34f89f33f10f8de533e8d19656fee115a55182537ed03c453de615ebc1c2b057",
+      "root_full_read": "da2acc"
+    },
+    "result": "General q matching with beta-seeded q=1; intermediate m-alpha arcs lie in shared forced contracted core. New coarse discount D_off requires recomputed B_new and satisfies f\u22121\u2212Sc\u2212D_off>=(epsilon/alpha)(f+Lambda)>0. Exact optimum already ignores removed arcs; no new sharp supply."
+  },
+  "optimal_cycle_exchange_disposition": {
+    "status": "independently_accepted_manuscript_branch_limited",
+    "author": {
+      "path": "research/astra-optimal-endpoint-cycle-exchange.md",
+      "sha256": "efb3fcd3117d363c4d9f9413a67b837e5e5986a3c519f0163fcaf0dcfeaaffb2",
+      "root_full_read": "aa5256"
+    },
+    "review": {
+      "path": "research/astra-optimal-endpoint-cycle-exchange-review.md",
+      "sha256": "b30966b20d5e87f28f14d81e323d8677f178ad18fced43764eb3535ca1ae9348",
+      "root_full_read": "bcd97f"
+    },
+    "result": "Every original path P from optimal C vertices i to j with displacement d_ij+h has cost(P)>=c_ij+h*c. Finite potential feasible iff lambda<=c; gives identical path inequality. At lambdaN/2 constantzero potentialstrictlyfeasible sinceedgeweight(a+r)/(2ab)>0. Label-preserving common grid translations trivial by gcd1. No new upper cost/fresh failure transport.",
+    "next": "Do not rerun potential feasibility or independent label-grid averaging as upper-cost supply. Parent reuse/off-center pruning is a separate bounded branch."
+  },
+  "positive_escape_root_preparation": {
+    "root_source_read": "a11057",
+    "source": "research/astra-positive-candidate-coherence.md",
+    "scope": "All C_k nonempty but intersection empty; retained endpoint sum candidates fresh u=abs(a+b\u2212m)<m repair whole W_k. Accepted native-good V=(1,5,6,7,8) gives C2=C6={4}, C3=C5={3} plus individual smaller replacement witnesses, but has untrapped extra W components. Escape cycles must use full trapping beyond these already-refuted local consequences. No assumed monotone frequency order.",
+    "height_crosscheck": "Root de954c checked existing threeHeight_family_witness: all positive injective n=N\u22121 speeds boundedN+t with t>0 and3t<=N have a native closed witness. Do not investigate m=n+2 as a novel unresolved uniform subcase; existing bounded-height theorem excludes it for N>=3."
+  },
+  "pending_pass97": {
+    "status": "local_verified_publication_next",
+    "baseline": "2dca882840ede6444cca50aeda81c72f283de1c4",
+    "binding_documents": [
+      "research/astra-optimal-endpoint-cycle-exchange.md",
+      "research/astra-optimal-endpoint-cycle-exchange-review.md",
+      "research/astra-forced-small-parent-reuse.md",
+      "research/astra-forced-small-parent-reuse-review.md"
+    ],
+    "root_manifest_hash": "dcb06c77ef120eb7c4f81d078824d58ff34ba6e2441d9bdd683059f3366a3d8a",
+    "source_changes": "All225Lean sources and pinned build/trust inputs match baseline; no formal changes.",
+    "mathematical_status": "Independent reviews accepted exact path/potential limitation and corrected parent pruning; no unrestricted proof or disproof.",
+    "receipt": "research/astra-pass97-verification.json",
+    "receipt_sha256": "94f9d2bc7f7952b365509561db44e23b04fca536b4adc3e289e1e2b54f5f7b15",
+    "root_final_verifier_read": "ebabe1",
+    "bindings_verified": 64
+  },
+  "pass97_publication": {
+    "status": "local_verified_not_yet_committed",
+    "branch": "codex/astra-forced-parent-pruning",
+    "parent_main": "2dca882840ede6444cca50aeda81c72f283de1c4",
+    "receipt": "research/astra-pass97-verification.json",
+    "hashes": {
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "docs/astra-research-97.md": "2da880525e8e38b24b6c95c221d31de7a8836e68964ba9ae0e7dba7f038d8c93",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "research/astra-arithmetic-completion-review.md": "568e9a678777f93de6a4adace739d1b443177662ba7a95e231be30ef2551c019",
+      "research/astra-arithmetic-completion-saving.md": "abfb14f274fb5c72461ce884b7fc44fb89367e056091f628933a601f52a33403",
+      "research/astra-arithmetic-winding-exchange.md": "6fbd8b96223e1697c33d5e187c25fb9f93707c880f2794892dfa16ca0ab2d6d4",
+      "research/astra-arithmetic-winding-review.md": "45eca69dd2c8b48a0cec68ca737262b9f1a616b08f85046629c9c4e632618243",
+      "research/astra-forced-arc-completion.md": "e48f80297a70e6630e76fe2b905ed86372383a5d170a539abccdba3decdd98a1",
+      "research/astra-forced-completion-review.md": "8e72687760576dc0e8524ecbae0bad81bcf3e8cd33f180219848da86a23adb02",
+      "research/astra-forced-parent-global-cycle-review.md": "eaf481831b74dc031f697481a8f133e12646dc4c7282ff67dfcc9cbb16d566ca",
+      "research/astra-forced-parent-global-cycle.md": "e265c08b2e0204a8d539e1577ff9907c754287902e6474f043b42be6f5de7bae",
+      "research/astra-forced-small-parent-reuse-review.md": "34f89f33f10f8de533e8d19656fee115a55182537ed03c453de615ebc1c2b057",
+      "research/astra-forced-small-parent-reuse.md": "897c6646545e5c57c29531cfb21a553304ab2627f754f69d71cbaaf0b534aedc",
+      "research/astra-minimal-frequency-review.md": "b26182c2e482e7f83480eab9904779b958eb8b8b753c70bc45c6fabec55b747d",
+      "research/astra-minimal-frequency-synthesis.md": "03cf038021f0bc1a2328bb77a02f6ab4fe649f5d3626d7bc368a67cd6c7b0000",
+      "research/astra-native-endpoint-cycle-arithmetic-review.md": "098c4da30496a606b3d4b9ff0bd41933d6b55f61f9c5da4f085b5e412a889404",
+      "research/astra-native-endpoint-cycle-arithmetic.md": "2c80cee9d9f84f1850bda7aa1fc7798e890d7471b09d89578494cf208997257e",
+      "research/astra-optimal-endpoint-cycle-exchange-review.md": "b30966b20d5e87f28f14d81e323d8677f178ad18fced43764eb3535ca1ae9348",
+      "research/astra-optimal-endpoint-cycle-exchange.md": "efb3fcd3117d363c4d9f9413a67b837e5e5986a3c519f0163fcaf0dcfeaaffb2",
+      "research/astra-private-repair-review.md": "a8aaec8468969723207dc12e9ff2c112a4560c1f51e97f13b43f4e342c849512",
+      "research/astra-strict-core-shell-review.md": "dd733c2910f1f4579846c1c945ecac8e83d140eb29917b81dc11d2b1b119b95f",
+      "research/astra-strict-core-shell-supply.md": "5cc9866b3c8a516494ad998355265335a5edd15158cf9701c7d814843b97210e",
+      "research/astra-zero-only-deletion-amplification-review.md": "ef37fc563a75ea59b5b57b9fd3af43b3f09f7763971059268cf7878cfa8ffdb4",
+      "research/astra-zero-only-deletion-amplification.md": "a28465087b02b4763833ffa43263a899b4db262f076b60dffd2342d9a51b5ba0",
+      "research/astra-zero-only-maximum-gaps-review.md": "df1898cb979bc683f172a61e429e9ab48f01f1846bba0821097bdd4979161d4e",
+      "research/astra-zero-only-maximum-gaps.md": "f21fc1de78ee9802ecf8992677395507984d26894b220b9890849054077546da",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    }
   }
 }
