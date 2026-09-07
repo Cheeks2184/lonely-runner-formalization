@@ -6,24 +6,20 @@
   "start_authorization": "2026-09-05T04:12:25.208107+00:00: User activated the thread goal: Provide a formalized, full proof or disproof of the Lonely Runner Conjecture. Follow this project's established research approaches.",
   "active_tasks": [
     {
-      "id": "/root/fold_zero_restoration",
-      "agent_id": "/root/fold_zero_restoration_resume",
+      "id": "/root/slack_energy_global_compensation",
+      "agent_id": "/root/uniform_strategy_after_fold",
       "kind": "research",
       "status": "in_progress",
       "requested_model": "gpt-6-astra",
       "requested_effort": "xhigh",
       "observed_model": null,
       "observed_effort": null,
-      "source_checkpoint": "93cdc554c4b15337aa6aa29450e88e7a628251d5",
+      "source_checkpoint": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
       "owned_files": [
-        "research/astra-fold-zero-restoration.md"
+        "research/astra-slack-energy-global-compensation.md"
       ],
-      "target": "Seek a uniform restoration of zero coordinates created by closest-odd folding, using their exact valuation-one structure and genuine smaller-tuple witnesses. Investigate a retained mixed-margin or reverse-fold invariant; do not assume zero deletion preserves the original odd-coset problem. One analytic approach, no numerical or Lean work.",
-      "checks": [
-        "Prior handle absent from authoritative live inventory; same-route recovery planned.",
-        "Explicit in-session requested model/effort launch recorded; runtime observed metadata remains null."
-      ],
-      "previous_agent_id": "/root/uniform_seed_coupling"
+      "target": "One bounded analytic attempt at global slack-energy derivative compensation using actual integer-speed phase coupling. Prove or refute uniform proposed inequality, not further local reformulations or count controls.",
+      "checks": []
     }
   ],
   "completed_tasks": [
@@ -9655,13 +9651,184 @@
       "evidence": [
         "research/astra-harmonic-fold-obstruction-review.md"
       ]
+    },
+    {
+      "id": "/root/fold_zero_restoration",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "93cdc554c4b15337aa6aa29450e88e7a628251d5",
+      "owned_files": [
+        "research/astra-fold-zero-restoration.md"
+      ],
+      "target": "Seek a uniform restoration of zero coordinates created by closest-odd folding, using their exact valuation-one structure and genuine smaller-tuple witnesses. Investigate a retained mixed-margin or reverse-fold invariant; do not assume zero deletion preserves the original odd-coset problem. One analytic approach, no numerical or Lean work.",
+      "checks": [
+        "Prior handle absent from authoritative live inventory; same-route recovery planned.",
+        "Explicit in-session requested model/effort launch recorded; runtime observed metadata remains null."
+      ],
+      "previous_agent_id": "/root/uniform_seed_coupling",
+      "result": "Author delivered exact quarter-cell ceiling, strict zero-to-multiple4 ratio restriction and activezeroK2 local obstruction; uniform good-family localized-supply counter. Root full manuscript read; independent review pending.",
+      "sha256": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+      "evidence": [
+        "research/astra-fold-zero-restoration.md"
+      ]
+    },
+    {
+      "id": "/root/fold_zero_restoration_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a1bb6a4196ef55d46b81846d767a887c747b15d9",
+      "owned_files": [
+        "research/astra-fold-zero-restoration-review.md"
+      ],
+      "target": "Independently audit complete first-fold-zero quarter-cell argument, exact all-real control, full strict-failure conditional contact obstruction and global missing step.",
+      "checks": [],
+      "sha256": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e",
+      "result": "Accepted without corrections at exact manuscript scope. Complete quarter-cell, strict interval-union, both contact signs, K2 and uniform good-family real-time proofs checked; root full review read. Global escape remains unresolved.",
+      "evidence": [
+        "research/astra-fold-zero-restoration-review.md"
+      ]
+    },
+    {
+      "id": "/root/zero_contact_global_escape",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "a1bb6a4196ef55d46b81846d767a887c747b15d9",
+      "owned_files": [
+        "research/astra-zero-contact-global-escape.md"
+      ],
+      "target": "One analytic attempt to rule out activezero K2 under strict minimalfailure or restore original canonical witness through other zero-good components; retain full ratio band and parity conditions, no local-cell or false shifted-LRC substitution.",
+      "checks": [],
+      "result": "Author manuscript delivered; independent review pending.",
+      "sha256": "deff1f1667f885ff793414988889806bf259247fb64c2d4ab264672fa2202d71",
+      "evidence": [
+        "research/astra-zero-contact-global-escape.md"
+      ]
+    },
+    {
+      "id": "/root/uniform_strategy_after_fold",
+      "agent_id": "/root/uniform_strategy_after_fold",
+      "kind": "research",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+      "owned_files": [
+        "research/astra-uniform-strategy-after-fold.md"
+      ],
+      "target": "Independent bounded strategy assessment of the uniform closest-odd fold route and actual formal frontier. Determine whether its restrictions give a credible route to full arbitrary-N proof; propose one genuinely different next mathematical mechanism or a precise reason to retain the route, avoiding already refuted shortcuts and disconnected reformulation work.",
+      "checks": [
+        "Explicit researcher/gpt-6-astra/xhigh/fork none launch; observed metadata null."
+      ],
+      "result": "Author manuscript delivered; independent review pending.",
+      "sha256": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+      "evidence": [
+        "research/astra-uniform-strategy-after-fold.md"
+      ]
+    },
+    {
+      "id": "/root/slack_energy_exact_control",
+      "agent_id": "/root/harmonic_fold_endpoint_repair",
+      "kind": "routine",
+      "status": "complete",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "high",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+      "owned_files": [
+        "research/astra-slack-energy-control.py",
+        "research/astra-slack-energy-control.json"
+      ],
+      "target": "Settled exact rational phase integration for bounded falsification of proposed global slack energy derivative inequality, with 256 MiB virtual-memory cap, 60-second program budget and at most 1000 tuple-threshold evaluations. No Lean/cache.",
+      "checks": [
+        "Root corrected initial administrative record: check_kind uses allowed python enum; active task worker repair rounds initialized0. No worker implementation failure.",
+        "Root corrected initial administrative kind to routine; validator required allowed enum.",
+        "Worker observed tool40c532 exit0 under256MiB cap; source-bound receipt preserves exact output."
+      ],
+      "delivery_metrics": {
+        "astra_repair_lines": 0,
+        "astra_repair_rounds": 0,
+        "check_kind": "python",
+        "evidence": [
+          "research/astra-slack-energy-control.py",
+          "research/astra-slack-energy-control.json"
+        ],
+        "first_check_success": true,
+        "usage": null,
+        "worker_elapsed_seconds": null,
+        "worker_repair_rounds": 0
+      },
+      "result": "Exact Fraction integrator delivered; first focused regressions and single bounded run passed. 1000 evaluations in dimensions2/3, no negative defect; no general mathematical conclusion. Root complete source read, source/receipt accepted without replay.",
+      "hashes": {
+        "research/astra-slack-energy-control.py": "7c693ad658c59afb615965b551c42ebffd068d99d85b62f1ee954b35c6f69d73",
+        "research/astra-slack-energy-control.json": "3d3ee3c559a07a6242ec347a35a72ec5ae4a11b77aac5c438bb2814e5576aaeb"
+      }
+    },
+    {
+      "id": "/root/zero_contact_global_review",
+      "agent_id": "/root/coordinate_cancellation_review",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+      "owned_files": [
+        "research/astra-zero-contact-global-review.md"
+      ],
+      "target": "Independent exact-scope review of frozen global translations manuscript deff1f1667f885ff793414988889806bf259247fb64c2d4ab264672fa2202d71.",
+      "checks": [],
+      "result": "Accepted without mathematical corrections; root full author/review read. All common-time limitations retained. Reviewer fixed one patch-format error.",
+      "evidence": [
+        "research/astra-zero-contact-global-review.md"
+      ],
+      "sha256": "d7d8e86a11b3ab7df83b4a3a37e57e2889b63f6951ef626637dfaa5aa0b31fa6"
+    },
+    {
+      "id": "/root/slack_energy_review",
+      "agent_id": "/root/fold_zero_restoration_resume",
+      "kind": "review",
+      "status": "complete",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "xhigh",
+      "observed_model": null,
+      "observed_effort": null,
+      "source_checkpoint": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+      "owned_files": [
+        "research/astra-slack-energy-review.md"
+      ],
+      "target": "Independently audit strategy manuscript e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871 and analytically attack proposed global slack-energy monotonicity; no computation or builds.",
+      "checks": [],
+      "result": "Derivative/local homothety/defect/Fourier/conditional implication accepted, E remains unproved. Root checked full hand(1,2,3) positive-defect proof and complete integrator source/receipt; no numerical replay.",
+      "evidence": [
+        "research/astra-slack-energy-review.md"
+      ],
+      "sha256": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573"
     }
   ],
-  "latest_checkpoint": "Pass77 independently reviewed and locally verified: uniform harmonic-fold and coordinate-integer obstructions plus endpoint checker correction; publication in progress.",
+  "latest_checkpoint": "Pass78 reviewed research prepared for final source verification and publication: zero-contact restoration limits plus explicitly unproved global-energy strategy and bounded controls.",
   "next_actions": [
-    "Finish independent coordinate review and zero-restoration analysis; accept only actual uniform deductions with strict-failure scope preserved.",
-    "Complete bounded harmonic checker half-time correction and independently review all-dimension hand counterfamily; publish verified substantive evidence together.",
-    "Keep no local Lean cache while manuscript research is active. Next Terra High aggregate review at30 closed deliveries;26 currently closed."
+    "Verify and publish Pass78 through exact-head PR/CI/merge/main readback.",
+    "Pursue actual global slack-energy compensation; no further finite sweep or isolated local obstruction substitutes for it.",
+    "Keep local Lean/cache absent; next Terra High aggregate review at30 closed tasks (27 now)."
   ],
   "research_holds": [
     {
@@ -10784,23 +10951,24 @@
     "documentation_checked": "https://learn.chatgpt.com/use-cases/follow-goals documents user /goal resume; current callable goal tool inventory exposes no resume operation. Goal remains active, so no resume needed."
   },
   "publication_in_progress": {
-    "checkpoint": "Pass77",
-    "status": "verified_ready_to_commit",
-    "branch": "codex/astra-fold-obstructions",
-    "parent_main": "27309c7e0a0d93c8f9ce90245cec013a3ffcd5d8",
+    "checkpoint": "Pass78",
+    "status": "verified_local_ready_to_commit",
+    "branch": "codex/astra-zero-contact-escape",
+    "parent_main": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
     "files": [
-      "docs/astra-research-77.md",
-      "research/astra-rank-three-coordinate-cancellation.md",
-      "research/astra-rank-three-coordinate-review.md",
-      "research/astra-harmonic-fold-obstruction.md",
-      "research/astra-harmonic-fold-obstruction-review.md",
-      "research/astra-harmonic-fold-control.py",
-      "research/astra-harmonic-fold-control.json",
-      "research/astra-harmonic-fold-control-initial.json",
-      "research/astra-pass77-verification.json",
+      "docs/astra-research-78.md",
+      "research/astra-fold-zero-restoration.md",
+      "research/astra-fold-zero-restoration-review.md",
+      "research/astra-zero-contact-global-escape.md",
+      "research/astra-zero-contact-global-review.md",
+      "research/astra-uniform-strategy-after-fold.md",
+      "research/astra-slack-energy-review.md",
+      "research/astra-slack-energy-control.py",
+      "research/astra-slack-energy-control.json",
+      "research/astra-pass78-verification.json",
       "research/workflow-state.json"
     ],
-    "verification": "research/astra-pass77-verification.json"
+    "verification": "research/astra-pass78-verification.json"
   },
   "affine_height_formalization_preparation": {
     "status": "Complete and independently verified; final theorem source61a5ac9e, review723e52d4, root fresh replay passed.",
@@ -13877,7 +14045,7 @@
   },
   "last_goal_turn_classification": {
     "classification": "progress",
-    "reason": "Pass76 merged/main verified. Uniform all-dimension counterfamily and coordinate obstruction independently accepted; endpoint checker repaired and verified with preserved initial evidence. Pass77 local verification passed."
+    "reason": "Merged PR76 withbothCIsuccess and15 mainhashchecks; independentlyacceptedzeroquartermanuscript; recoveredglobalescapeauthor derivedactualtranslatedsubsetwitnessformula, stillunreviewed and notfullLRC."
   },
   "one_three_manuscript_review": "Independent frozen 8f720fbd report fully read by root; exact static replay exit0 with sixteen bindings, twelve contract names. Specification accepted, not a Lean result.",
   "publication_latest_pending": null,
@@ -14094,6 +14262,11 @@
       "event": "resource_incident_diagnosis",
       "evidence": "Previous-boot kernel OOM snapshots: 2026-09-06 21:03 CDT seven rustc processes 11.922 GiB RSS; 21:17 seven rustc 11.957 GiB RSS plus1.078 GiB swap; swap full. Kiyori task history links cargo build --locked --release -p codex-cli to its codex-source checkout. ChatGPT OOM-killed. No local rustc/cargo/lean/lake/z3 now.",
       "action": "Continue LRC manuscript-only work and small bounded Python repair; no local Lean cache restoration or unrelated-project changes. Latest free reports9.0 GiB available, swap unused."
+    },
+    {
+      "event": "memory_diagnosis_and_resume",
+      "previous_turn_classification": "progress",
+      "evidence": "Kernel prior-boot OOM tables show seven rustc processes used 11.922 and 11.957 GiB, swap exhausted, ChatGPT killed; unrelated Kiyori Codex release build identified. No unrelated settings modified. User goal continuation resumes low-resource research; no local builds queued."
     }
   ],
   "two_even_escalation": {
@@ -14662,5 +14835,130 @@
       "fddfa9b202967e8b8c58f864e5c38aecbc36622a",
       "93cdc554c4b15337aa6aa29450e88e7a628251d5"
     ]
+  },
+  "zero_restoration_pending_review": {
+    "author": "research/astra-fold-zero-restoration.md",
+    "sha256": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+    "result": "At actual old optimum zero maxz and anymultiple4b implymu\u2264b/[2(z+b)] andz<(d\u22121)b. IfzeroactiveandoppositefoldK2, equalityforces(d\u22121)b/2<z<(d\u22121)b andcentralquartercellcannotrestoretargetunderfullfailure. Exactgoodfamily(1,3,4k)+all4j+2,j0..k,k\u22652, hasmu=k/(4k+1),uniquehalfperiodmax,fold(1,2); allfold1/3witskilldeleted6.",
+    "next": "Finish actual global-escape analytic attempt; publish complete accepted zero evidence in next substantive checkpoint after PR76.",
+    "status": "independently_accepted_in_pass78",
+    "review": "research/astra-fold-zero-restoration-review.md",
+    "review_sha256": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e"
+  },
+  "pass77_publication": {
+    "checkpoint": "Pass77",
+    "status": "merged_verified",
+    "branch": "codex/astra-fold-obstructions",
+    "parent_main": "27309c7e0a0d93c8f9ce90245cec013a3ffcd5d8",
+    "files": [
+      "docs/astra-research-77.md",
+      "research/astra-rank-three-coordinate-cancellation.md",
+      "research/astra-rank-three-coordinate-review.md",
+      "research/astra-harmonic-fold-obstruction.md",
+      "research/astra-harmonic-fold-obstruction-review.md",
+      "research/astra-harmonic-fold-control.py",
+      "research/astra-harmonic-fold-control.json",
+      "research/astra-harmonic-fold-control-initial.json",
+      "research/astra-pass77-verification.json",
+      "research/workflow-state.json"
+    ],
+    "verification": "research/astra-pass77-verification.json",
+    "head": "a1bb6a4196ef55d46b81846d767a887c747b15d9",
+    "pr": 76,
+    "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/76",
+    "ci_run": 34076990925,
+    "sessions": {
+      "push": {
+        "id": 81608,
+        "exit_code": 0
+      },
+      "create": {
+        "id": 49542,
+        "exit_code": 0
+      },
+      "watch": {
+        "id": 40528,
+        "exit_code": 0
+      },
+      "merge": {
+        "id": 55833,
+        "exit_code": 0
+      }
+    },
+    "watch_session": 40528,
+    "merge_commit": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+    "merged_at": "2026-09-07T02:50:16Z",
+    "premerge": {
+      "headRefOid": "a1bb6a4196ef55d46b81846d767a887c747b15d9",
+      "isDraft": false,
+      "mergeStateStatus": "CLEAN",
+      "reviews": [],
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T02:40:47Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34076990925/job/101604965732",
+          "name": "Lean build and trust audit",
+          "startedAt": "2026-09-07T02:39:10Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-07T02:48:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/Cheeks2184/lonely-runner-formalization/actions/runs/34076990925/job/101604966027",
+          "name": "Exact computational certificates",
+          "startedAt": "2026-09-07T02:39:12Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        }
+      ],
+      "url": "https://github.com/Cheeks2184/lonely-runner-formalization/pull/76"
+    },
+    "verified_remote_main": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+    "verified_file_hashes": {
+      "docs/astra-research-77.md": "2d975b7d6836e199c26fcebb58c3ef079dc574df077841779a49a6d83249b7db",
+      "research/astra-rank-three-coordinate-cancellation.md": "f95f4e72452cd12d775b496d8fb3d585f204d71fff608f1ba505841e96c154de",
+      "research/astra-rank-three-coordinate-review.md": "9d53e7f9426a9ae828462e66f045a35ef39580b519bf3910ac3070d484d0b258",
+      "research/astra-harmonic-fold-obstruction.md": "a5037d4b8f33d493b26ee1a7854bd654d7ea373e500c364cad10070954e2ca9a",
+      "research/astra-harmonic-fold-obstruction-review.md": "a29f8ca92677cf175cf2567ecaf978e3234b5e0e9a5049dd4fe93f1929bbdb36",
+      "research/astra-harmonic-fold-control.py": "511f2a02114a62ee8cbfbd74bceb44038d0bd15a1967559c24c3dd283c428510",
+      "research/astra-harmonic-fold-control.json": "82d44fb595f8eef792f78ec1896d92d4a286cbe02f84938356de1e052c9183c9",
+      "research/astra-harmonic-fold-control-initial.json": "0e50da097bbd3999b2f1bb956b4ebe0f93ee9cd410b93f98a2faba6658769a32",
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+      "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140",
+      "research/astra-pass77-verification.json": "172d34e0e9fdd8222a83d2c7c10ce13c26347d66e9968180d20ead7be43c7669"
+    },
+    "ancestry_verified": [
+      "a1bb6a4196ef55d46b81846d767a887c747b15d9",
+      "27309c7e0a0d93c8f9ce90245cec013a3ffcd5d8"
+    ]
+  },
+  "zero_global_escape_intermediate": {
+    "status": "author_derivation_in_progress_not_independently_reviewed",
+    "source": "author live message plus root direct algebra check; full manuscript pending",
+    "notation": "D=z+b; G=gcd(deleted speeds)=2g withgodd; c_l=1/4+l/(2g); r=z/D,mu=b/(2D); h=g/gcd(g,b/4).",
+    "formula": "T_l=c_l+(1/2-frac(b*c_l))/D belongs(1/D)Z. All deleted speeds andb have marginatleastlambda_l=mu+r*norm(b*c_l), withz,b attainingequality.",
+    "nontrivial_case": "Ifh>1 thenoddh>=3 and somephasehasnorm(b*c_l)=(h\u22121)/(2h), givinglambda=1/2\u2212r/(2h)>1/3.",
+    "trivial_case": "Ifh=1 allcommoncentrephaseszero; everytranslatedcentralcellpairceilingmu<alpha, so commoncentretranslations cannotescape. This saysnothingaboutotherzerogoodcomponents.",
+    "root_constraints": [
+      "Oldactualt*=1/4\u00b11/(2D)=m/D withm=(D\u00b12)/4 andgcd(m,D)in{1,2}; nooriginalspeeddivisiblebyD/gcd(m,D), elseoldpositive\u03bc impossible. Atzero centrephase retainbothpairmaxima ifoldselectedsignminus; T0definitionalonepicksplus.",
+      "Withonezero,g=z/2 impliesh>=2z/b>d\u22121 fromstrictK2band. Thisprovidesmanyphasevalues, notcommonchoice forremainingrows.",
+      "Halfshift preservesallzeroandb evenmargins andcomplementsoddoutsider; onlyoneoddoutsidecase alreadyexcludedbylowercount/halfshiftminimalfailureprofile."
+    ],
+    "remaining": "Control every retained outside label atoneT_l or othergenuineglobaltime. No uniform row-capacity bound orfailurecontradiction yet.",
+    "arithmetic_refinement": {
+      "author_message": "Writeb=4B,z=2gA,c=gcd(g,B),h=g/c,Q0=hA+2(B/c),D=2cQ0. Bestphase seeds up toordinaryreflection formoneorbit T+j/(2c), T=K/D,2hK\u2261\u00b11modQ0, gcd(K,Q0)=1. A speedvanishingon entirebestorbit would be divisibleD, excludedbyold\u03bc>0. Nonzerobadphasesstillpossible.",
+      "root_all_phase_extension": "Forl modh putq=2(B/c)l modh. For k_l=D*T_l, 2h*k_l\u2261h\u22122q modQ0, gcd(2h,Q0)=1. Allphaseorbits correspondtoodddilations a=h\u22122q ofinverse2h seed. Thephase0tiealsohas\u2212h counterpart. Targetgoodsubset conditionlambda=1/2\u2212r|a|/(2h)\u2265alpha; understrictfailure\u00b1h endpointsnoteligible. Exactcommonchoice acrossremainingrowsstillunproved.",
+      "status": "Intermediate handalgebra, authorfullmanuscript andindependentreviewpending; no numericalcountorformalclaim."
+    },
+    "root_best_orbit_blocker": "Retainedspeed4g has phase\u00b11/Q0 throughoutbestorbit; Q0>N Bprime\u2265N underfullfailure, so this is nonzero butbad. It is notmultipleD andoldoptimumdoesnotimmediatelyexcludeit whenBprime\u2264h. Forallphaseorbits phaseisoddcoeff/Q0; allbadifh/Q0<alpha. Unreviewedrootalgebra sharedwithauthor."
   }
 }

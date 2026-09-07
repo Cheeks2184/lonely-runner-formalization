@@ -1,0 +1,282 @@
+{
+  "checkpoint": "Pass78",
+  "parent_main": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+  "status": "verified_local_pending_publication",
+  "hashes": {
+    "docs/astra-research-78.md": "9cde410188f5e6624a51bde8ea04aaa557ac6e954c908467bc53e53a0ae91531",
+    "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+    "research/astra-fold-zero-restoration-review.md": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e",
+    "research/astra-zero-contact-global-escape.md": "deff1f1667f885ff793414988889806bf259247fb64c2d4ab264672fa2202d71",
+    "research/astra-zero-contact-global-review.md": "d7d8e86a11b3ab7df83b4a3a37e57e2889b63f6951ef626637dfaa5aa0b31fa6",
+    "research/astra-uniform-strategy-after-fold.md": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+    "research/astra-slack-energy-review.md": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+    "research/astra-slack-energy-control.py": "7c693ad658c59afb615965b551c42ebffd068d99d85b62f1ee954b35c6f69d73",
+    "research/astra-slack-energy-control.json": "3d3ee3c559a07a6242ec347a35a72ec5ae4a11b77aac5c438bb2814e5576aaeb"
+  },
+  "dependency_hashes": {
+    ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+    "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+    "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+    "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+    "research/astra-parity-plane-joint-descent.md": "2b9a2350701206bd4bf5af0589cb607b545afe5a96258239a5ad77a031f58472",
+    "research/astra-parity-plane-joint-review.md": "eafc2a8545ffe8ab2eae1014be5c40ddb8b955723658e3bf0aeb00fc9a497e88",
+    "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+    "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140",
+    "research/astra-rank-three-coordinate-cancellation.md": "f95f4e72452cd12d775b496d8fb3d585f204d71fff608f1ba505841e96c154de",
+    "research/astra-rank-three-coordinate-review.md": "9d53e7f9426a9ae828462e66f045a35ef39580b519bf3910ac3070d484d0b258",
+    "research/astra-harmonic-fold-obstruction.md": "a5037d4b8f33d493b26ee1a7854bd654d7ea373e500c364cad10070954e2ca9a",
+    "research/astra-harmonic-fold-obstruction-review.md": "a29f8ca92677cf175cf2567ecaf978e3234b5e0e9a5049dd4fe93f1929bbdb36",
+    "research/astra-center-preserving-projection-audit.md": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e",
+    "research/astra-parity-coset-minimum-audit.md": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+    "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+    "research/astra-ideal-row-carry-exclusion.md": "689c3255596a4fb9dfc8935d0bf6ac40775415e1782dc7c09ccbfdb3b30df286",
+    "research/astra-uniform-seed-coupling.md": "b52f92b8dca3de5b0ba9f41c24c2dc6bd83a27329a035d40a1273a0401f215ea",
+    "research/astra-uniform-global-seed-geometry.md": "3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524",
+    "research/astra-fourier-lp-source-contract.md": "cf3ea5b08fbaee07e56b34d295632f7c67a35cc80679055a74725b0596b96043",
+    "research/astra-uniform-fourier-upper-barrier.md": "d3ba7474730fb2c17ba5118ee9753367336673eb175bf00080493e7e74a37bb1",
+    "LonelyRunner/BHKRealReduction.lean": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26",
+    "LonelyRunner/Formulations.lean": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788",
+    "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa"
+  },
+  "document_bindings": {
+    "research/astra-fold-zero-restoration.md": {
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "research/astra-parity-plane-joint-descent.md": "2b9a2350701206bd4bf5af0589cb607b545afe5a96258239a5ad77a031f58472",
+      "research/astra-parity-plane-joint-review.md": "eafc2a8545ffe8ab2eae1014be5c40ddb8b955723658e3bf0aeb00fc9a497e88",
+      "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+      "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140"
+    },
+    "research/astra-fold-zero-restoration-review.md": {
+      "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "research/astra-parity-plane-joint-descent.md": "2b9a2350701206bd4bf5af0589cb607b545afe5a96258239a5ad77a031f58472",
+      "research/astra-parity-plane-joint-review.md": "eafc2a8545ffe8ab2eae1014be5c40ddb8b955723658e3bf0aeb00fc9a497e88",
+      "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+      "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140"
+    },
+    "research/astra-zero-contact-global-escape.md": {
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+      "research/astra-fold-zero-restoration-review.md": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e"
+    },
+    "research/astra-zero-contact-global-review.md": {
+      "research/astra-zero-contact-global-escape.md": "deff1f1667f885ff793414988889806bf259247fb64c2d4ab264672fa2202d71",
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+      "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+      "research/astra-fold-zero-restoration-review.md": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e"
+    },
+    "research/astra-uniform-strategy-after-fold.md": {
+      "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+      "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140",
+      "research/astra-rank-three-coordinate-cancellation.md": "f95f4e72452cd12d775b496d8fb3d585f204d71fff608f1ba505841e96c154de",
+      "research/astra-rank-three-coordinate-review.md": "9d53e7f9426a9ae828462e66f045a35ef39580b519bf3910ac3070d484d0b258",
+      "research/astra-harmonic-fold-obstruction.md": "a5037d4b8f33d493b26ee1a7854bd654d7ea373e500c364cad10070954e2ca9a",
+      "research/astra-harmonic-fold-obstruction-review.md": "a29f8ca92677cf175cf2567ecaf978e3234b5e0e9a5049dd4fe93f1929bbdb36",
+      "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+      "research/astra-fold-zero-restoration-review.md": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e",
+      "research/astra-center-preserving-projection-audit.md": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e",
+      "research/astra-parity-coset-minimum-audit.md": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+      "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+      "research/astra-ideal-row-carry-exclusion.md": "689c3255596a4fb9dfc8935d0bf6ac40775415e1782dc7c09ccbfdb3b30df286",
+      "research/astra-uniform-seed-coupling.md": "b52f92b8dca3de5b0ba9f41c24c2dc6bd83a27329a035d40a1273a0401f215ea",
+      "research/astra-uniform-global-seed-geometry.md": "3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524",
+      "research/astra-fourier-lp-source-contract.md": "cf3ea5b08fbaee07e56b34d295632f7c67a35cc80679055a74725b0596b96043",
+      "research/astra-uniform-fourier-upper-barrier.md": "d3ba7474730fb2c17ba5118ee9753367336673eb175bf00080493e7e74a37bb1",
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    },
+    "research/astra-slack-energy-review.md": {
+      "research/astra-uniform-strategy-after-fold.md": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+      "research/astra-slack-energy-control.py": "7c693ad658c59afb615965b551c42ebffd068d99d85b62f1ee954b35c6f69d73",
+      "research/astra-slack-energy-control.json": "3d3ee3c559a07a6242ec347a35a72ec5ae4a11b77aac5c438bb2814e5576aaeb",
+      ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+      "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+      "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+      "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+    }
+  },
+  "checks": {
+    "frozen_files": 9,
+    "dependency_bindings": 23,
+    "document_bindings": 57,
+    "numerical_replay": false,
+    "commands": [
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "-B",
+          "scripts/validate_workflow.py"
+        ],
+        "exit_code": 0,
+        "stdout": "workflow structural validation passed; it cannot certify mathematical validity.\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "-B",
+          "scripts/manage_storage.py"
+        ],
+        "exit_code": 0,
+        "stdout": "Repository: /home/joshua/lonely-runner-formalization\nNo allowlisted cache or build paths are present.\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "root_verifier": {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/astra-pass78-verify.py"
+    ],
+    "source": "from pathlib import Path\nimport ast\nimport hashlib\nimport json\nimport subprocess\nimport sys\n\nroot = Path('/home/joshua/lonely-runner-formalization')\nmanifest = json.loads(Path('/tmp/astra-pass78-inputs.json').read_text())\nfor name, digest in (manifest['hashes'] | manifest['dependency_hashes']).items():\n    data = (root / name).read_bytes()\n    assert hashlib.sha256(data).hexdigest() == digest, name\n    assert data.endswith(b'\\n'), name\n    assert all(line.rstrip() == line for line in data.splitlines()), name\nfor document, bindings in manifest['document_bindings'].items():\n    content = (root / document).read_text()\n    for name, digest in bindings.items():\n        assert digest in content, (document, name)\n        assert hashlib.sha256((root / name).read_bytes()).hexdigest() == digest\nsource = (root / 'research/astra-slack-energy-control.py').read_text()\nast.parse(source)\nreceipt = json.loads((root / 'research/astra-slack-energy-control.json').read_text())\nassert source == receipt['execution']['source_utf8']\nassert hashlib.sha256(source.encode()).hexdigest() == receipt['execution']['source_sha256']\nobserved = receipt['observed_tool_result']\nassert observed['observed_exit_code'] == 0 and observed['chunk_id'] == '40c532'\nassert observed['separately_captured_stderr'] is None\noutput = json.loads(observed['full_combined_output'])\nassert output['checked_tuple_threshold_count'] == 1000\nassert output['strictly_negative_defect_found'] is False\nassert output['stop_reason'] == 'evaluation_limit_reached'\nassert receipt['result']['checked_by_dimension'] == {'2':315, '3':685, '4':0, '5':0}\nassert receipt['result']['first_strictly_negative_defect'] is None\nregressions = receipt['focused_regressions']\nassert regressions['status'] == 'passed'\nassert regressions['v_1_2_a_1_4']['I'] == '1/768'\nassert regressions['v_1_2_a_1_4']['H'] == '3/64'\nassert regressions['v_1_2_a_1_4']['defect'] == '0/1'\nassert regressions['v_1_a_1_4']['I'] == '1/16'\nassert regressions['v_1_a_1_4']['H'] == '1/2'\ncommands = []\nfor argv in ([sys.executable, '-B', 'scripts/validate_workflow.py'],\n             ['git', 'diff', '--check'],\n             [sys.executable, '-B', 'scripts/manage_storage.py']):\n    result = subprocess.run(argv, cwd=root, capture_output=True, text=True)\n    commands.append({'argv':argv, 'exit_code':result.returncode,\n                     'stdout':result.stdout, 'stderr':result.stderr})\n    assert result.returncode == 0, commands[-1]\nprint(json.dumps({'frozen_files':len(manifest['hashes']),\n                  'dependency_bindings':len(manifest['dependency_hashes']),\n                  'document_bindings':sum(map(len, manifest['document_bindings'].values())),\n                  'numerical_replay':False, 'commands':commands}, indent=2))\n",
+    "source_sha256": "37b9fcf8404660236f8d22d3a6f133551c19613ffaad750f1040d8350395ce6c",
+    "input_manifest": {
+      "hashes": {
+        "docs/astra-research-78.md": "9cde410188f5e6624a51bde8ea04aaa557ac6e954c908467bc53e53a0ae91531",
+        "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+        "research/astra-fold-zero-restoration-review.md": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e",
+        "research/astra-zero-contact-global-escape.md": "deff1f1667f885ff793414988889806bf259247fb64c2d4ab264672fa2202d71",
+        "research/astra-zero-contact-global-review.md": "d7d8e86a11b3ab7df83b4a3a37e57e2889b63f6951ef626637dfaa5aa0b31fa6",
+        "research/astra-uniform-strategy-after-fold.md": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+        "research/astra-slack-energy-review.md": "1c526b214e7772088555642447d5fa2f93030f40195fd4aaca7a79bb1f6bd573",
+        "research/astra-slack-energy-control.py": "7c693ad658c59afb615965b551c42ebffd068d99d85b62f1ee954b35c6f69d73",
+        "research/astra-slack-energy-control.json": "3d3ee3c559a07a6242ec347a35a72ec5ae4a11b77aac5c438bb2814e5576aaeb"
+      },
+      "dependency_hashes": {
+        ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+        "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+        "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+        "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+        "research/astra-parity-plane-joint-descent.md": "2b9a2350701206bd4bf5af0589cb607b545afe5a96258239a5ad77a031f58472",
+        "research/astra-parity-plane-joint-review.md": "eafc2a8545ffe8ab2eae1014be5c40ddb8b955723658e3bf0aeb00fc9a497e88",
+        "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+        "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140",
+        "research/astra-rank-three-coordinate-cancellation.md": "f95f4e72452cd12d775b496d8fb3d585f204d71fff608f1ba505841e96c154de",
+        "research/astra-rank-three-coordinate-review.md": "9d53e7f9426a9ae828462e66f045a35ef39580b519bf3910ac3070d484d0b258",
+        "research/astra-harmonic-fold-obstruction.md": "a5037d4b8f33d493b26ee1a7854bd654d7ea373e500c364cad10070954e2ca9a",
+        "research/astra-harmonic-fold-obstruction-review.md": "a29f8ca92677cf175cf2567ecaf978e3234b5e0e9a5049dd4fe93f1929bbdb36",
+        "research/astra-center-preserving-projection-audit.md": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e",
+        "research/astra-parity-coset-minimum-audit.md": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+        "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+        "research/astra-ideal-row-carry-exclusion.md": "689c3255596a4fb9dfc8935d0bf6ac40775415e1782dc7c09ccbfdb3b30df286",
+        "research/astra-uniform-seed-coupling.md": "b52f92b8dca3de5b0ba9f41c24c2dc6bd83a27329a035d40a1273a0401f215ea",
+        "research/astra-uniform-global-seed-geometry.md": "3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524",
+        "research/astra-fourier-lp-source-contract.md": "cf3ea5b08fbaee07e56b34d295632f7c67a35cc80679055a74725b0596b96043",
+        "research/astra-uniform-fourier-upper-barrier.md": "d3ba7474730fb2c17ba5118ee9753367336673eb175bf00080493e7e74a37bb1",
+        "LonelyRunner/BHKRealReduction.lean": "98d7c878eef7e4a3b7f7c504c882cf35191c1343816a59d731193ac8a207ed26",
+        "LonelyRunner/Formulations.lean": "0c3328e975bee236ff66862d3a5cadeb58fbc7c804fa953e53701ba466b9d788",
+        "LonelyRunner/Definitions.lean": "5f0258a6ab99950fc7045b2200d6708fe7603d3caa4d62855ef2b19a330c95aa"
+      },
+      "document_bindings": {
+        "research/astra-fold-zero-restoration.md": {
+          ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+          "research/astra-parity-plane-joint-descent.md": "2b9a2350701206bd4bf5af0589cb607b545afe5a96258239a5ad77a031f58472",
+          "research/astra-parity-plane-joint-review.md": "eafc2a8545ffe8ab2eae1014be5c40ddb8b955723658e3bf0aeb00fc9a497e88",
+          "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+          "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140"
+        },
+        "research/astra-fold-zero-restoration-review.md": {
+          "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+          ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+          "research/astra-parity-plane-joint-descent.md": "2b9a2350701206bd4bf5af0589cb607b545afe5a96258239a5ad77a031f58472",
+          "research/astra-parity-plane-joint-review.md": "eafc2a8545ffe8ab2eae1014be5c40ddb8b955723658e3bf0aeb00fc9a497e88",
+          "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+          "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140"
+        },
+        "research/astra-zero-contact-global-escape.md": {
+          ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+          "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+          "research/astra-fold-zero-restoration-review.md": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e"
+        },
+        "research/astra-zero-contact-global-review.md": {
+          "research/astra-zero-contact-global-escape.md": "deff1f1667f885ff793414988889806bf259247fb64c2d4ab264672fa2202d71",
+          ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383",
+          "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+          "research/astra-fold-zero-restoration-review.md": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e"
+        },
+        "research/astra-uniform-strategy-after-fold.md": {
+          "research/astra-parity-rank-three-transport.md": "7dd4d626a3efb1d2b8061261a9b286240f5207ac8655827079a0f887ef3a5048",
+          "research/astra-parity-rank-three-review.md": "9051141c4e70f62b8192e01dc00d82c97849ba6c2fda0aca936cfcedcaa95140",
+          "research/astra-rank-three-coordinate-cancellation.md": "f95f4e72452cd12d775b496d8fb3d585f204d71fff608f1ba505841e96c154de",
+          "research/astra-rank-three-coordinate-review.md": "9d53e7f9426a9ae828462e66f045a35ef39580b519bf3910ac3070d484d0b258",
+          "research/astra-harmonic-fold-obstruction.md": "a5037d4b8f33d493b26ee1a7854bd654d7ea373e500c364cad10070954e2ca9a",
+          "research/astra-harmonic-fold-obstruction-review.md": "a29f8ca92677cf175cf2567ecaf978e3234b5e0e9a5049dd4fe93f1929bbdb36",
+          "research/astra-fold-zero-restoration.md": "70bbf19a595c63f7940c02ae62b815125731131f27aeade818c9a1fa1ab3507a",
+          "research/astra-fold-zero-restoration-review.md": "559deadd612ca99a4ebc99d8fba104f2e5243ae412785d3572b70633af7ac59e",
+          "research/astra-center-preserving-projection-audit.md": "0efe2d8bfb272f194249e6201491a64165d6a102900a71c8953618253f18c60e",
+          "research/astra-parity-coset-minimum-audit.md": "b5dd0bbc3ef5d27a986a47b144e225637e338d81c6abceedc2d05d37d392a942",
+          "research/astra-joint-seed-maximum-audit.md": "ac73e29474e272167403c91db34331236bb3832f7ce916b2997d7c2f0d6b46ac",
+          "research/astra-ideal-row-carry-exclusion.md": "689c3255596a4fb9dfc8935d0bf6ac40775415e1782dc7c09ccbfdb3b30df286",
+          "research/astra-uniform-seed-coupling.md": "b52f92b8dca3de5b0ba9f41c24c2dc6bd83a27329a035d40a1273a0401f215ea",
+          "research/astra-uniform-global-seed-geometry.md": "3a4a825f3f801282eb39b469571bbd4cac3a4e1f768d58542b7c1555cd725524",
+          "research/astra-fourier-lp-source-contract.md": "cf3ea5b08fbaee07e56b34d295632f7c67a35cc80679055a74725b0596b96043",
+          "research/astra-uniform-fourier-upper-barrier.md": "d3ba7474730fb2c17ba5118ee9753367336673eb175bf00080493e7e74a37bb1",
+          ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        },
+        "research/astra-slack-energy-review.md": {
+          "research/astra-uniform-strategy-after-fold.md": "e569596af4ebab9f9d5e1c796d8da435bc433c1c238bc10f9901e644f9f49871",
+          "research/astra-slack-energy-control.py": "7c693ad658c59afb615965b551c42ebffd068d99d85b62f1ee954b35c6f69d73",
+          "research/astra-slack-energy-control.json": "3d3ee3c559a07a6242ec347a35a72ec5ae4a11b77aac5c438bb2814e5576aaeb",
+          ".codex/config.toml": "28212a53cf42cdc377df1f7dab040732d657e59d7bb97ee78791256d01d4bb2c",
+          "docs/project-workflow.md": "2b42a133352b6b53ba2106fc73882733f176e04a0deffbb183b4c16eefd9cd67",
+          "research/workflow-policy.json": "833c397b61d1ffdb994fb115019f6d60d6c1a62ff85f19cdd2c9f8ac3a979c8b",
+          "scripts/validate_workflow.py": "250a3ce2a080f5835ac4fd2e4b2803568424c777cda5d421f9fe92efd34d5383"
+        }
+      }
+    },
+    "actual_tool_result": {
+      "chunk_id": "42ee78",
+      "wall_time_seconds": 4.799e-06,
+      "exit_code": 0,
+      "original_token_count": 205,
+      "output": "{\n  \"frozen_files\": 9,\n  \"dependency_bindings\": 23,\n  \"document_bindings\": 57,\n  \"numerical_replay\": false,\n  \"commands\": [\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/validate_workflow.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"workflow structural validation passed; it cannot certify mathematical validity.\\n\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"git\",\n        \"diff\",\n        \"--check\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"\",\n      \"stderr\": \"\"\n    },\n    {\n      \"argv\": [\n        \"/usr/bin/python3\",\n        \"-B\",\n        \"scripts/manage_storage.py\"\n      ],\n      \"exit_code\": 0,\n      \"stdout\": \"Repository: /home/joshua/lonely-runner-formalization\\nNo allowlisted cache or build paths are present.\\n\",\n      \"stderr\": \"\"\n    }\n  ]\n}\n"
+    }
+  },
+  "mathematical_verification": "Zero restoration and global translation independently accepted; global energy derivative/local/conditional derivations independently accepted while proposed E remains unproved. Root full authors/reviews read and complete reviewer hand polynomial checked. No unrestricted proof or disproof.",
+  "numerical_verification": "Single bounded Terra/high exact Fraction run40c532 exit0 under256MiB virtual-memory cap,1000 actual evaluations315d2+685d3. Source and receipt independently inspected; no root replay.",
+  "failure_history": [
+    "Root initial routine-task ledger had disallowed kind/check_kind and null active worker repair round; corrected to routine/python/0 before integration validation. No worker-code repair.",
+    "Global-translation reviewer corrected one patch-format rejection before delivery; no mathematical correction."
+  ],
+  "excluded": "Active full global-energy compensation manuscript, no Lean source changes or local build/cache."
+}

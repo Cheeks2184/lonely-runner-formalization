@@ -1,0 +1,127 @@
+{
+  "delivery_metrics": {
+    "astra_repair_lines": 0,
+    "astra_repair_rounds": 0,
+    "check_kind": "python",
+    "evidence": [
+      "research/astra-slack-energy-control.py",
+      "research/astra-slack-energy-control.json"
+    ],
+    "first_check_success": true,
+    "usage": null,
+    "worker_elapsed_seconds": null,
+    "worker_repair_rounds": 0
+  },
+  "exact_domain": {
+    "dimensions": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "distinct_positive": true,
+    "primitive": true,
+    "search_limit_seconds": 60,
+    "speed_range_inclusive": [
+      1,
+      12
+    ],
+    "thresholds": {
+      "formula": "j/(8*(d+1))",
+      "j_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "tuple_order": "dimension-first, lexicographic combinations",
+    "tuple_threshold_evaluation_limit": 1000
+  },
+  "exact_method": "Partition [0,1] at every k/(2*vi) and every in-range (k+a)/vi and (k+1-a)/vi. On each interval choose norm affine branches from the rational midpoint, retain only all-positive slack intervals, and integrate product and leave-one-out polynomials over Fraction coefficients.",
+  "execution": {
+    "argv": [
+      "research/astra-slack-energy-control.py",
+      "--output",
+      "research/astra-slack-energy-control.json"
+    ],
+    "program_duration_seconds": 1.8090054899998904,
+    "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+    "source_path_at_execution": "/home/joshua/lonely-runner-formalization/research/astra-slack-energy-control.py",
+    "source_sha256": "7c693ad658c59afb615965b551c42ebffd068d99d85b62f1ee954b35c6f69d73",
+    "source_utf8": "#!/usr/bin/env python3\n\"\"\"Exact bounded control for a proposed global slack-energy inequality.\n\nEvery mathematical quantity in this script is a Fraction.  The only use of\nwall-clock time is the explicit finite-search limit; it never selects a phase,\nsign, or integral value.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport hashlib\nimport itertools\nimport json\nimport math\nimport os\nimport sys\nimport time\nfrom datetime import datetime, timezone\nfrom fractions import Fraction\n\n\nSEARCH_LIMIT_SECONDS = 60\nEVALUATION_LIMIT = 1000\nSPEED_RANGE = (1, 12)\nDIMENSIONS = (2, 3, 4, 5)\n\n\ndef text(value: Fraction) -> str:\n    \"\"\"Render an exact rational value uniformly in the evidence receipt.\"\"\"\n\n    return f\"{value.numerator}/{value.denominator}\"\n\n\ndef multiply_affine(polynomial: list[Fraction], affine: tuple[Fraction, Fraction]) -> list[Fraction]:\n    \"\"\"Multiply a low-to-high polynomial by intercept + slope*t exactly.\"\"\"\n\n    intercept, slope = affine\n    result = [Fraction(0) for _ in range(len(polynomial) + 1)]\n    for degree, coefficient in enumerate(polynomial):\n        result[degree] += coefficient * intercept\n        result[degree + 1] += coefficient * slope\n    return result\n\n\ndef integrate_polynomial(polynomial: list[Fraction], left: Fraction, right: Fraction) -> Fraction:\n    \"\"\"Integrate a low-to-high polynomial on a rational interval.\"\"\"\n\n    return sum(\n        coefficient * (right ** (degree + 1) - left ** (degree + 1)) / (degree + 1)\n        for degree, coefficient in enumerate(polynomial)\n    )\n\n\ndef norm_affine(speed: int, midpoint: Fraction) -> tuple[Fraction, Fraction]:\n    \"\"\"Return the affine branch for ||speed*t|| containing midpoint.\n\n    The partition includes every half-integer speed breakpoint, so midpoint is\n    strictly inside one branch and never needs a numerical tie decision.\n    \"\"\"\n\n    scaled = speed * midpoint\n    integer_part = scaled.numerator // scaled.denominator\n    fractional_part = scaled - integer_part\n    if fractional_part < Fraction(1, 2):\n        return Fraction(-integer_part), Fraction(speed)\n    if fractional_part > Fraction(1, 2):\n        return Fraction(integer_part + 1), Fraction(-speed)\n    raise AssertionError(\"global partition midpoint unexpectedly hit a norm breakpoint\")\n\n\ndef partition_points(speeds: tuple[int, ...], threshold: Fraction) -> list[Fraction]:\n    \"\"\"Return every affine or slack-sign boundary in [0, 1].\"\"\"\n\n    points = {Fraction(0), Fraction(1)}\n    for speed in speeds:\n        # The norm changes affine slope at each multiple of 1/(2*speed).\n        points.update(Fraction(index, 2 * speed) for index in range(2 * speed + 1))\n        # On each period, distance equals threshold at these two rational times.\n        points.update(Fraction(index + threshold, speed) for index in range(speed))\n        points.update(Fraction(index + 1 - threshold, speed) for index in range(speed))\n    return sorted(point for point in points if Fraction(0) <= point <= Fraction(1))\n\n\ndef slack_energy(speeds: tuple[int, ...], threshold: Fraction) -> dict[str, object]:\n    \"\"\"Integrate I and H exactly over the positive-slack phase partition.\n\n    I is the integral of every slack factor.  H is the integral, on the same\n    all-positive region, of the sum of all leave-one-out slack products.\n    \"\"\"\n\n    if not speeds or any(speed <= 0 for speed in speeds) or len(set(speeds)) != len(speeds):\n        raise ValueError(\"speeds must be a nonempty tuple of distinct positive integers\")\n    if not Fraction(0) <= threshold <= Fraction(1, 2):\n        raise ValueError(\"threshold must lie in [0, 1/2]\")\n\n    points = partition_points(speeds, threshold)\n    integral_i = Fraction(0)\n    integral_h = Fraction(0)\n    positive_intervals = 0\n    for left, right in zip(points, points[1:]):\n        if left == right:\n            continue\n        midpoint = (left + right) / 2\n        slacks = [\n            (intercept - threshold, slope)\n            for intercept, slope in (norm_affine(speed, midpoint) for speed in speeds)\n        ]\n        # Threshold-crossing points are partition boundaries.  One midpoint\n        # sign therefore classifies the entire open interval exactly.\n        if any(intercept + slope * midpoint <= 0 for intercept, slope in slacks):\n            continue\n        positive_intervals += 1\n        all_product = [Fraction(1)]\n        for slack in slacks:\n            all_product = multiply_affine(all_product, slack)\n        integral_i += integrate_polynomial(all_product, left, right)\n        for omitted in range(len(slacks)):\n            leave_one_out = [Fraction(1)]\n            for index, slack in enumerate(slacks):\n                if index != omitted:\n                    leave_one_out = multiply_affine(leave_one_out, slack)\n            integral_h += integrate_polynomial(leave_one_out, left, right)\n    dimension = len(speeds)\n    defect = (dimension + 1) * integral_i - (Fraction(1, dimension + 1) - threshold) * integral_h\n    return {\n        \"I\": integral_i,\n        \"H\": integral_h,\n        \"defect\": defect,\n        \"partition_point_count\": len(points),\n        \"all_positive_interval_count\": positive_intervals,\n    }\n\n\ndef result_record(speeds: tuple[int, ...], threshold: Fraction, result: dict[str, object]) -> dict[str, object]:\n    \"\"\"Convert exact evaluator output to receipt-safe rational text.\"\"\"\n\n    integral_i = result[\"I\"]\n    integral_h = result[\"H\"]\n    defect = result[\"defect\"]\n    assert isinstance(integral_i, Fraction)\n    assert isinstance(integral_h, Fraction)\n    assert isinstance(defect, Fraction)\n    return {\n        \"v\": list(speeds),\n        \"d\": len(speeds),\n        \"a\": text(threshold),\n        \"I\": text(integral_i),\n        \"H\": text(integral_h),\n        \"defect\": text(defect),\n        \"partition_point_count\": result[\"partition_point_count\"],\n        \"all_positive_interval_count\": result[\"all_positive_interval_count\"],\n    }\n\n\ndef run_regressions() -> dict[str, object]:\n    \"\"\"Check the two supplied exact values before the bounded search.\"\"\"\n\n    threshold = Fraction(1, 4)\n    two_speed = slack_energy((1, 2), threshold)\n    assert two_speed[\"I\"] == Fraction(1, 768)\n    assert two_speed[\"H\"] == Fraction(3, 64)\n    assert two_speed[\"defect\"] == Fraction(0)\n    one_speed = slack_energy((1,), threshold)\n    assert one_speed[\"I\"] == Fraction(1, 16)\n    assert one_speed[\"H\"] == Fraction(1, 2)\n    return {\n        \"status\": \"passed\",\n        \"v_1_2_a_1_4\": result_record((1, 2), threshold, two_speed),\n        \"v_1_a_1_4\": result_record((1,), threshold, one_speed),\n    }\n\n\ndef primitive(speeds: tuple[int, ...]) -> bool:\n    \"\"\"Restrict the finite domain to its requested primitive representatives.\"\"\"\n\n    return math.gcd(*speeds) == 1\n\n\ndef bounded_search(started: float) -> dict[str, object]:\n    \"\"\"Search the supplied finite lexicographic domain once, with hard bounds.\"\"\"\n\n    checked = 0\n    checked_by_dimension = {str(dimension): 0 for dimension in DIMENSIONS}\n    last_evaluation: dict[str, object] | None = None\n    for dimension in DIMENSIONS:\n        for speeds in itertools.combinations(range(SPEED_RANGE[0], SPEED_RANGE[1] + 1), dimension):\n            if not primitive(speeds):\n                continue\n            for numerator in range(1, 8):\n                if time.monotonic() - started >= SEARCH_LIMIT_SECONDS:\n                    return {\n                        \"stop_reason\": \"timeout\",\n                        \"checked_tuple_threshold_count\": checked,\n                        \"checked_by_dimension\": checked_by_dimension,\n                        \"last_evaluation\": last_evaluation,\n                        \"first_strictly_negative_defect\": None,\n                    }\n                if checked >= EVALUATION_LIMIT:\n                    return {\n                        \"stop_reason\": \"evaluation_limit_reached\",\n                        \"checked_tuple_threshold_count\": checked,\n                        \"checked_by_dimension\": checked_by_dimension,\n                        \"last_evaluation\": last_evaluation,\n                        \"first_strictly_negative_defect\": None,\n                    }\n                threshold = Fraction(numerator, 8 * (dimension + 1))\n                evaluation = result_record(speeds, threshold, slack_energy(speeds, threshold))\n                checked += 1\n                checked_by_dimension[str(dimension)] += 1\n                last_evaluation = evaluation\n                defect = Fraction(evaluation[\"defect\"])\n                if defect < 0:\n                    return {\n                        \"stop_reason\": \"first_strictly_negative_defect\",\n                        \"checked_tuple_threshold_count\": checked,\n                        \"checked_by_dimension\": checked_by_dimension,\n                        \"last_evaluation\": last_evaluation,\n                        \"first_strictly_negative_defect\": evaluation,\n                    }\n    return {\n        \"stop_reason\": \"finite_domain_exhausted_without_negative_defect\",\n        \"checked_tuple_threshold_count\": checked,\n        \"checked_by_dimension\": checked_by_dimension,\n        \"last_evaluation\": last_evaluation,\n        \"first_strictly_negative_defect\": None,\n    }\n\n\ndef main() -> int:\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"--output\", required=True, help=\"JSON receipt path\")\n    args = parser.parse_args()\n    source_path = os.path.abspath(__file__)\n    source_bytes = open(source_path, \"rb\").read()\n    started_utc = datetime.now(timezone.utc).isoformat()\n    program_started = time.monotonic()\n    regressions = run_regressions()\n    search_started = time.monotonic()\n    result = bounded_search(search_started)\n    duration = time.monotonic() - program_started\n    payload = {\n        \"schema\": \"slack-energy-exact-control/v1\",\n        \"task\": \"one exact bounded control for a proposed global slack-energy inequality\",\n        \"source_checkpoint\": \"5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665\",\n        \"exact_domain\": {\n            \"tuple_order\": \"dimension-first, lexicographic combinations\",\n            \"distinct_positive\": True,\n            \"primitive\": True,\n            \"dimensions\": list(DIMENSIONS),\n            \"speed_range_inclusive\": list(SPEED_RANGE),\n            \"thresholds\": {\n                \"formula\": \"j/(8*(d+1))\",\n                \"j_values\": list(range(1, 8)),\n            },\n            \"search_limit_seconds\": SEARCH_LIMIT_SECONDS,\n            \"tuple_threshold_evaluation_limit\": EVALUATION_LIMIT,\n        },\n        \"exact_method\": \"Partition [0,1] at every k/(2*vi) and every in-range (k+a)/vi and (k+1-a)/vi. On each interval choose norm affine branches from the rational midpoint, retain only all-positive slack intervals, and integrate product and leave-one-out polynomials over Fraction coefficients.\",\n        \"execution\": {\n            \"source_path_at_execution\": source_path,\n            \"source_sha256\": hashlib.sha256(source_bytes).hexdigest(),\n            \"source_utf8\": source_bytes.decode(\"utf-8\"),\n            \"argv\": sys.argv,\n            \"python\": sys.version,\n            \"started_utc\": started_utc,\n            \"program_duration_seconds\": duration,\n        },\n        \"focused_regressions\": regressions,\n        \"result\": result,\n        \"delivery_metrics\": {\n            \"check_kind\": \"python\",\n            \"first_check_success\": None,\n            \"worker_repair_rounds\": 0,\n            \"astra_repair_rounds\": 0,\n            \"astra_repair_lines\": 0,\n            \"worker_elapsed_seconds\": None,\n            \"usage\": None,\n            \"evidence\": [\n                \"research/astra-slack-energy-control.py\",\n                \"research/astra-slack-energy-control.json\",\n            ],\n        },\n        \"failures\": [],\n        \"scope_note\": \"A strictly negative defect would refute only the proposed slack-energy inequality, never the Lonely Runner Conjecture.\",\n    }\n    with open(args.output, \"w\", encoding=\"utf-8\") as handle:\n        json.dump(payload, handle, indent=2, sort_keys=True)\n        handle.write(\"\\n\")\n    print(json.dumps({\n        \"stop_reason\": result[\"stop_reason\"],\n        \"checked_tuple_threshold_count\": result[\"checked_tuple_threshold_count\"],\n        \"strictly_negative_defect_found\": result[\"first_strictly_negative_defect\"] is not None,\n        \"program_duration_seconds\": duration,\n    }, sort_keys=True))\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+    "started_utc": "2026-09-07T03:24:08.539586+00:00"
+  },
+  "failures": [],
+  "focused_regressions": {
+    "status": "passed",
+    "v_1_2_a_1_4": {
+      "H": "3/64",
+      "I": "1/768",
+      "a": "1/4",
+      "all_positive_interval_count": 2,
+      "d": 2,
+      "defect": "0/1",
+      "partition_point_count": 9,
+      "v": [
+        1,
+        2
+      ]
+    },
+    "v_1_a_1_4": {
+      "H": "1/2",
+      "I": "1/16",
+      "a": "1/4",
+      "all_positive_interval_count": 2,
+      "d": 1,
+      "defect": "0/1",
+      "partition_point_count": 5,
+      "v": [
+        1
+      ]
+    }
+  },
+  "observed_tool_result": {
+    "chunk_id": "40c532",
+    "full_combined_output": "{\"checked_tuple_threshold_count\": 1000, \"program_duration_seconds\": 1.8090054899998904, \"stop_reason\": \"evaluation_limit_reached\", \"strictly_negative_defect_found\": false}\n",
+    "invocation_command": "ulimit -v 262144; python3 research/astra-slack-energy-control.py --output research/astra-slack-energy-control.json",
+    "observed_exit_code": 0,
+    "original_token_count": 43,
+    "separately_captured_stderr": null,
+    "stderr_note": "The terminal tool result exposed a combined output field and did not separately capture stderr.",
+    "tool": "functions.exec/exec_command",
+    "wall_time_seconds": 1.682510904
+  },
+  "result": {
+    "checked_by_dimension": {
+      "2": 315,
+      "3": 685,
+      "4": 0,
+      "5": 0
+    },
+    "checked_tuple_threshold_count": 1000,
+    "first_strictly_negative_defect": null,
+    "last_evaluation": {
+      "H": "3467/221184",
+      "I": "12775/14155776",
+      "a": "3/16",
+      "all_positive_interval_count": 12,
+      "d": 3,
+      "defect": "2327/884736",
+      "partition_point_count": 63,
+      "v": [
+        3,
+        4,
+        12
+      ]
+    },
+    "stop_reason": "evaluation_limit_reached"
+  },
+  "schema": "slack-energy-exact-control/v1",
+  "scope_note": "A strictly negative defect would refute only the proposed slack-energy inequality, never the Lonely Runner Conjecture.",
+  "source_checkpoint": "5aecd6775dd9480e3e4eaa8e8ec7fe76ebd80665",
+  "task": "one exact bounded control for a proposed global slack-energy inequality"
+}
